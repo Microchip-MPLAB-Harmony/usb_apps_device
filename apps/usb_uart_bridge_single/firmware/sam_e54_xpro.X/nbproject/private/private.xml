@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Repos/H3/usb/apps/device/usb_uart_bridge_single/firmware/src/app.c</file>
+            <file>file:/C:/Repos/H3/usb/apps/device/usb_uart_bridge_single/firmware/src/app_sam_d21_xpro.c</file>
+            <file>file:/C:/Repos/H3/usb/apps/device/usb_uart_bridge_single/firmware/src/main.c</file>
+            <file>file:/C:/Repos/H3/usb/apps/device/usb_uart_bridge_single/firmware/src/config/sam_d21_xpro/definitions.h</file>
+            <file>file:/C:/Repos/H3/usb/apps/device/usb_uart_bridge_single/firmware/src/config/sam_d21_xpro/driver/usb/usbfsv1/src/drv_usbfsv1.c</file>
+            <file>file:/C:/Repos/H3/usb/apps/device/usb_uart_bridge_single/firmware/src/config/sam_d21_xpro/usb/src/usb_device.c</file>
+        </group>
+    </open-files>
+</project-private>
