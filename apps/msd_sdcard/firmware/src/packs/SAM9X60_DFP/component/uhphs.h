@@ -1,7 +1,7 @@
 /**
  * \brief Component description for UHPHS
  *
- * Copyright (c) 2020 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2020-05-19T13:57:46Z */
+/* file generated from device description version 2020-12-18T05:22:35Z */
 #ifndef _SAM9X_UHPHS_COMPONENT_H_
 #define _SAM9X_UHPHS_COMPONENT_H_
 
@@ -300,6 +300,9 @@
 #define UHPHS_ASYNCLISTADDR_REG_OFST   (0x28)              /**< (UHPHS_ASYNCLISTADDR) UHPHS Asynchronous List Address Register Offset */
 #define UHPHS_CONFIGFLAG_REG_OFST      (0x50)              /**< (UHPHS_CONFIGFLAG) UHPHS Configured Flag Register Offset */
 #define UHPHS_PORTSC_REG_OFST          (0x54)              /**< (UHPHS_PORTSC) UHPHS Port Status and Control Register (port = 0) Offset */
+#define UHPHS_PORTSC0_REG_OFST         (0x54)              /**< (UHPHS_PORTSC0) UHPHS Port Status and Control Register (port = 0) Offset */
+#define UHPHS_PORTSC1_REG_OFST         (0x58)              /**< (UHPHS_PORTSC1) UHPHS Port Status and Control Register (port = 0) Offset */
+#define UHPHS_PORTSC2_REG_OFST         (0x5C)              /**< (UHPHS_PORTSC2) UHPHS Port Status and Control Register (port = 0) Offset */
 #define UHPHS_INSNREG06_REG_OFST       (0xA8)              /**< (UHPHS_INSNREG06) EHCI Specific Registers 06 Offset */
 #define UHPHS_INSNREG07_REG_OFST       (0xAC)              /**< (UHPHS_INSNREG07) EHCI Specific Registers 07 Offset */
 

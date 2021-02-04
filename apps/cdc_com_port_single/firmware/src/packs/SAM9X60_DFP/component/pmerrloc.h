@@ -1,7 +1,7 @@
 /**
  * \brief Component description for PMERRLOC
  *
- * Copyright (c) 2020 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2020-05-19T13:57:46Z */
+/* file generated from device description version 2020-12-18T05:22:35Z */
 #ifndef _SAM9X_PMERRLOC_COMPONENT_H_
 #define _SAM9X_PMERRLOC_COMPONENT_H_
 
@@ -315,6 +315,30 @@
 #define PMERRLOC_SIGMA23_REG_OFST      (0x84)              /**< (PMERRLOC_SIGMA23) SIGMA23 Register Offset */
 #define PMERRLOC_SIGMA24_REG_OFST      (0x88)              /**< (PMERRLOC_SIGMA24) SIGMA24 Register Offset */
 #define PMERRLOC_EL_REG_OFST           (0x8C)              /**< (PMERRLOC_EL) Error Location 0 Register Offset */
+#define PMERRLOC_EL0_REG_OFST          (0x8C)              /**< (PMERRLOC_EL0) Error Location 0 Register Offset */
+#define PMERRLOC_EL1_REG_OFST          (0x90)              /**< (PMERRLOC_EL1) Error Location 0 Register Offset */
+#define PMERRLOC_EL2_REG_OFST          (0x94)              /**< (PMERRLOC_EL2) Error Location 0 Register Offset */
+#define PMERRLOC_EL3_REG_OFST          (0x98)              /**< (PMERRLOC_EL3) Error Location 0 Register Offset */
+#define PMERRLOC_EL4_REG_OFST          (0x9C)              /**< (PMERRLOC_EL4) Error Location 0 Register Offset */
+#define PMERRLOC_EL5_REG_OFST          (0xA0)              /**< (PMERRLOC_EL5) Error Location 0 Register Offset */
+#define PMERRLOC_EL6_REG_OFST          (0xA4)              /**< (PMERRLOC_EL6) Error Location 0 Register Offset */
+#define PMERRLOC_EL7_REG_OFST          (0xA8)              /**< (PMERRLOC_EL7) Error Location 0 Register Offset */
+#define PMERRLOC_EL8_REG_OFST          (0xAC)              /**< (PMERRLOC_EL8) Error Location 0 Register Offset */
+#define PMERRLOC_EL9_REG_OFST          (0xB0)              /**< (PMERRLOC_EL9) Error Location 0 Register Offset */
+#define PMERRLOC_EL10_REG_OFST         (0xB4)              /**< (PMERRLOC_EL10) Error Location 0 Register Offset */
+#define PMERRLOC_EL11_REG_OFST         (0xB8)              /**< (PMERRLOC_EL11) Error Location 0 Register Offset */
+#define PMERRLOC_EL12_REG_OFST         (0xBC)              /**< (PMERRLOC_EL12) Error Location 0 Register Offset */
+#define PMERRLOC_EL13_REG_OFST         (0xC0)              /**< (PMERRLOC_EL13) Error Location 0 Register Offset */
+#define PMERRLOC_EL14_REG_OFST         (0xC4)              /**< (PMERRLOC_EL14) Error Location 0 Register Offset */
+#define PMERRLOC_EL15_REG_OFST         (0xC8)              /**< (PMERRLOC_EL15) Error Location 0 Register Offset */
+#define PMERRLOC_EL16_REG_OFST         (0xCC)              /**< (PMERRLOC_EL16) Error Location 0 Register Offset */
+#define PMERRLOC_EL17_REG_OFST         (0xD0)              /**< (PMERRLOC_EL17) Error Location 0 Register Offset */
+#define PMERRLOC_EL18_REG_OFST         (0xD4)              /**< (PMERRLOC_EL18) Error Location 0 Register Offset */
+#define PMERRLOC_EL19_REG_OFST         (0xD8)              /**< (PMERRLOC_EL19) Error Location 0 Register Offset */
+#define PMERRLOC_EL20_REG_OFST         (0xDC)              /**< (PMERRLOC_EL20) Error Location 0 Register Offset */
+#define PMERRLOC_EL21_REG_OFST         (0xE0)              /**< (PMERRLOC_EL21) Error Location 0 Register Offset */
+#define PMERRLOC_EL22_REG_OFST         (0xE4)              /**< (PMERRLOC_EL22) Error Location 0 Register Offset */
+#define PMERRLOC_EL23_REG_OFST         (0xE8)              /**< (PMERRLOC_EL23) Error Location 0 Register Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief PMERRLOC register API structure */
