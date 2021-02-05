@@ -5,7 +5,7 @@ frameworkPath: ../../../..
 processor: PIC32CM5164LE00100
 projectName: ''
 settings:
-  PackageFilter: bsp;core;csp;csp_apps_pic32mk;quick_docs;usb;
+  PackageFilter: bsp;core;core_apps_sam_d21_da1;csp;csp_apps_sam_d21_da1;quick_docs;usb;usb_apps_device;
   FORCE_OPTIMIZATION: 'false'
   GENERATE_BACKUP: 'true'
   TRUSTZONE: 'false'

@@ -6,13 +6,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: null
-- generatedChecksum: 1A81761E8B71DEB8D8FBEA31DBFD4738
+- generatedChecksum: B6F74CAA039679C5F9B590D45123C8B3
   logicalPath: config\pic32cm_le00_curiosity_pro\bsp
   name: bsp.c
   physicalPath: bsp
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 1A81761E8B71DEB8D8FBEA31DBFD4738
+  userChecksum: B6F74CAA039679C5F9B590D45123C8B3
 - generatedChecksum: 941C09024124A4937C0E368A25C140DE
   logicalPath: config\pic32cm_le00_curiosity_pro\driver\usb\usbfsv1\src
   name: drv_usbfsv1.c
@@ -97,13 +97,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 0BAD7EAAF0E8E55ED22EAA616638AD6B
-- generatedChecksum: 2C9ECC0942179B6D15A6EFFCFBAE45CA
+- generatedChecksum: BCF1C8AEE7B1A264120CFD0B2BA8B4B8
   logicalPath: config\pic32cm_le00_curiosity_pro\peripheral\port
   name: plib_port.c
   physicalPath: peripheral\port
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 2C9ECC0942179B6D15A6EFFCFBAE45CA
+  userChecksum: BCF1C8AEE7B1A264120CFD0B2BA8B4B8
 - generatedChecksum: 949BBD944EC8B81E639121B72E7C7510
   logicalPath: config\pic32cm_le00_curiosity_pro
   name: startup_xc32.c
@@ -174,13 +174,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: null
-- generatedChecksum: 9E33A2EF7751EE6A0D23C29F3F3701CA
+- generatedChecksum: B0853BAC257B2CB1327EB5B94514FC18
   logicalPath: config\pic32cm_le00_curiosity_pro\bsp
   name: bsp.h
   physicalPath: bsp
   security: NON_SECURE
   type: HEADER
-  userChecksum: 9E33A2EF7751EE6A0D23C29F3F3701CA
+  userChecksum: B0853BAC257B2CB1327EB5B94514FC18
 - generatedChecksum: 01B82424BC59A54620F7E9E0DB808EBB
   logicalPath: packs\CMSIS\CMSIS\Core\Include
   name: cachel1_armv7.h
