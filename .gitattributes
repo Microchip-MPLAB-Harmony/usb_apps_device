@@ -16,3 +16,4 @@
 *.elf binary
 *.bin binary
 *.dll binary
+*.inf binary
