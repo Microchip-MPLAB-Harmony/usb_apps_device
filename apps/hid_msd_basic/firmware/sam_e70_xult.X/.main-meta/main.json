@@ -1,0 +1,75 @@
+{
+	"metaDataVersion": "1.0.0",
+	"category": "com.microchip.ide.project",
+	"content": {
+		"metaDataVersion": "1.1.0",
+		"name": "com.microchip.mcu32.mplabx.project.usb_apps_device_hid_msd_basic_sam_e70_xult",
+		"version": "3.0.0",
+		"displayName": "HID MSD Basic Example (hid_msd_basic) Example for SAM E70/S70/V70/V71 Family",
+		"projectName": "hid_msd_basic_sam_e70_xult",
+		"shortDescription": "This demonstration application creates a USB Device that combines the functionality of the hid_basic and msd_basic demonstration applications. ",
+		"ide": {
+			"name": "MPLABX",
+			"semverRange": ">=5.45.0"
+		},
+		"compiler": [
+			{
+				"name": "XC32",
+				"semverRange": ">=2.50.0"
+			}
+		],
+		"dfp": {
+			"name": "SAME70_DFP",
+			"semverRange": "^4.4.78"
+		},
+		"configurator": {
+			"name": "MHC",
+			"semverRange": ">=3.6.1"
+		},
+		"device": {
+			"metaDataVersion": "1.0.0",
+			"category": "com.microchip.portal.contentRef",
+			"content": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.device",
+				"name": "ATSAME70Q21B",
+				"versionRange": "*"
+			}
+		},
+		"author": "Microchip",
+		"subcategories": [
+			[
+				"Development Kit", "SAM E70 Xplained Ultra Evaluation Kit"
+			],
+			[
+				"Harmony", "Middleware", "USB", "HID_MSD_BASIC"
+			],
+			[
+				"Middleware", "USB", "HID_MSD_BASIC"
+			]
+		],
+		"peripherals": [
+			"USB"
+		],
+		"keywords": [
+			"MHC",
+			"Harmony",
+			"Middleware",
+			"USB",
+			"ATSAME70Q21B",
+			"SAM E70/S70/V70/V71 Family",
+			"USB"
+		],
+		"additionalData": {
+			"longDescription": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.portal.fileRef",
+				"content": {
+					"metaDataVersion": "1.0.0",
+					"fileName": "./../../readme.md",
+					"mimeType": "text/markdown"
+				}
+			}
+		}
+	}
+}

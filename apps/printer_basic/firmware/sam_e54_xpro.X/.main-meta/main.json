@@ -1,0 +1,75 @@
+{
+	"metaDataVersion": "1.0.0",
+	"category": "com.microchip.ide.project",
+	"content": {
+		"metaDataVersion": "1.1.0",
+		"name": "com.microchip.mcu32.mplabx.project.usb_apps_device_printer_basic_sam_e54_xpro",
+		"version": "3.0.0",
+		"displayName": "Printer Example (printer) Example for SAM D5x/E5x Family",
+		"projectName": "printer_basic_sam_e54_xpro",
+		"shortDescription": "This demo uses PC running Windows 7 as a USB Host. The demo board programmed with the demo application, enumerates as "USB Printing Support" device when connected to the USB Host. This demo allows the user to print the text from Notepad or similar application in Windows using built in **Generic/Text Only** print driver.",
+		"ide": {
+			"name": "MPLABX",
+			"semverRange": ">=5.45.0"
+		},
+		"compiler": [
+			{
+				"name": "XC32",
+				"semverRange": ">=2.50.0"
+			}
+		],
+		"dfp": {
+			"name": "SAME54_DFP",
+			"semverRange": "^3.3.64"
+		},
+		"configurator": {
+			"name": "MHC",
+			"semverRange": ">=3.6.1"
+		},
+		"device": {
+			"metaDataVersion": "1.0.0",
+			"category": "com.microchip.portal.contentRef",
+			"content": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.device",
+				"name": "ATSAME54P20A",
+				"versionRange": "*"
+			}
+		},
+		"author": "Microchip",
+		"subcategories": [
+			[
+				"Development Kit", "SAM E54 Xplained Pro Evaluation Kit"
+			],
+			[
+				"Harmony", "Middleware", "USB", "PRINTER_BASIC"
+			],
+			[
+				"Middleware", "USB", "PRINTER_BASIC"
+			]
+		],
+		"peripherals": [
+			"USB"
+		],
+		"keywords": [
+			"MHC",
+			"Harmony",
+			"Middleware",
+			"USB",
+			"ATSAME54P20A",
+			"SAM D5x/E5x Family",
+			"USB"
+		],
+		"additionalData": {
+			"longDescription": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.portal.fileRef",
+				"content": {
+					"metaDataVersion": "1.0.0",
+					"fileName": "./../../readme.md",
+					"mimeType": "text/markdown"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,75 @@
+{
+	"metaDataVersion": "1.0.0",
+	"category": "com.microchip.ide.project",
+	"content": {
+		"metaDataVersion": "1.1.0",
+		"name": "com.microchip.mcu32.mplabx.project.usb_apps_device_hid_basic_sam_d11_xpro",
+		"version": "3.0.0",
+		"displayName": "HID Basic Example (hid_basic) Example for SAM D09/D10/D11 Family",
+		"projectName": "hid_basic_sam_d11_xpro",
+		"shortDescription": "This application creates a USB HID Device that enumerates as a custom USB HID device on the USB host PC. The device allows the USB Host utility to control the LEDs on the board and query the status of a switch.",
+		"ide": {
+			"name": "MPLABX",
+			"semverRange": ">=5.45.0"
+		},
+		"compiler": [
+			{
+				"name": "XC32",
+				"semverRange": ">=2.50.0"
+			}
+		],
+		"dfp": {
+			"name": "SAMD11_DFP",
+			"semverRange": "^2.3.40"
+		},
+		"configurator": {
+			"name": "MHC",
+			"semverRange": ">=3.6.1"
+		},
+		"device": {
+			"metaDataVersion": "1.0.0",
+			"category": "com.microchip.portal.contentRef",
+			"content": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.device",
+				"name": "ATSAMD11D14AM",
+				"versionRange": "*"
+			}
+		},
+		"author": "Microchip",
+		"subcategories": [
+			[
+				"Development Kit", "SAM D11 Xplained Pro Evaluation Kit"
+			],
+			[
+				"Harmony", "Middleware", "USB", "HID_BASIC"
+			],
+			[
+				"Middleware", "USB", "HID_BASIC"
+			]
+		],
+		"peripherals": [
+			"USB"
+		],
+		"keywords": [
+			"MHC",
+			"Harmony",
+			"Middleware",
+			"USB",
+			"ATSAMD11D14AM",
+			"SAM D09/D10/D11 Family",
+			"USB"
+		],
+		"additionalData": {
+			"longDescription": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.portal.fileRef",
+				"content": {
+					"metaDataVersion": "1.0.0",
+					"fileName": "./../../readme.md",
+					"mimeType": "text/markdown"
+				}
+			}
+		}
+	}
+}

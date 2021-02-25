@@ -1,0 +1,75 @@
+{
+	"metaDataVersion": "1.0.0",
+	"category": "com.microchip.ide.project",
+	"content": {
+		"metaDataVersion": "1.1.0",
+		"name": "com.microchip.mcu32.mplabx.project.usb_apps_device_usb_uart_bridge_dual_sam_d21_xpro",
+		"version": "3.0.0",
+		"displayName": "USB UART Bridge Dual Channel Example (usb_usart_bridge_dual) Example for SAM D21/DA1 Family",
+		"projectName": "usb_uart_bridge_dual_sam_d21_xpro",
+		"shortDescription": "This application demonstrates the use of the CDC device class to implement a dual USB-UART bridge. The application enumerates two COM ports on the personal computer. Any data sent through the virtual COM ports will be seen at the respective UART port Tx pin and data sent through the UART Rx pin of the MCU will be seen at the virtual COM port.",
+		"ide": {
+			"name": "MPLABX",
+			"semverRange": ">=5.45.0"
+		},
+		"compiler": [
+			{
+				"name": "XC32",
+				"semverRange": ">=2.50.0"
+			}
+		],
+		"dfp": {
+			"name": "SAMD21_DFP",
+			"semverRange": "^3.3.98"
+		},
+		"configurator": {
+			"name": "MHC",
+			"semverRange": ">=3.6.1"
+		},
+		"device": {
+			"metaDataVersion": "1.0.0",
+			"category": "com.microchip.portal.contentRef",
+			"content": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.device",
+				"name": "ATSAMD21J18A",
+				"versionRange": "*"
+			}
+		},
+		"author": "Microchip",
+		"subcategories": [
+			[
+				"Development Kit", "SAM D21 Xplained Pro Evaluation Kit"
+			],
+			[
+				"Harmony", "Middleware", "USB", "USB_UART_BRIDGE_DUAL"
+			],
+			[
+				"Middleware", "USB", "USB_UART_BRIDGE_DUAL"
+			]
+		],
+		"peripherals": [
+			"USB"
+		],
+		"keywords": [
+			"MHC",
+			"Harmony",
+			"Middleware",
+			"USB",
+			"ATSAMD21J18A",
+			"SAM D21/DA1 Family",
+			"USB"
+		],
+		"additionalData": {
+			"longDescription": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.portal.fileRef",
+				"content": {
+					"metaDataVersion": "1.0.0",
+					"fileName": "./../../readme.md",
+					"mimeType": "text/markdown"
+				}
+			}
+		}
+	}
+}

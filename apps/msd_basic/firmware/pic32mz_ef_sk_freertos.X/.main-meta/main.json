@@ -1,0 +1,75 @@
+{
+	"metaDataVersion": "1.0.0",
+	"category": "com.microchip.ide.project",
+	"content": {
+		"metaDataVersion": "1.1.0",
+		"name": "com.microchip.mcu32.mplabx.project.usb_apps_device_msd_basic_pic32mz_ef_sk_freertos",
+		"version": "3.0.0",
+		"displayName": "MSD Basic Example (msd_basic) Example for PIC32MZ EF Family",
+		"projectName": "msd_basic_pic32mz_ef_sk_freertos",
+		"shortDescription": "This application creates a USB MSD Device that enumerates as a Flash Drive on the USB host PC. The application allows read / write / modify / delete data from a PC host like any normal Flash drive.",
+		"ide": {
+			"name": "MPLABX",
+			"semverRange": ">=5.45.0"
+		},
+		"compiler": [
+			{
+				"name": "XC32",
+				"semverRange": ">=2.50.0"
+			}
+		],
+		"dfp": {
+			"name": "PIC32MZ-EF_DFP",
+			"semverRange": "^1.2.51"
+		},
+		"configurator": {
+			"name": "MHC",
+			"semverRange": ">=3.6.1"
+		},
+		"device": {
+			"metaDataVersion": "1.0.0",
+			"category": "com.microchip.portal.contentRef",
+			"content": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.device",
+				"name": "PIC32MZ2048EFH144",
+				"versionRange": "*"
+			}
+		},
+		"author": "Microchip",
+		"subcategories": [
+			[
+				"Development Kit", "PIC32MZ Embedded Connectivity with FPU (EF) Starter Kit"
+			],
+			[
+				"Harmony", "Middleware", "USB", "MSD_BASIC"
+			],
+			[
+				"Middleware", "USB", "MSD_BASIC"
+			]
+		],
+		"peripherals": [
+			"USB"
+		],
+		"keywords": [
+			"MHC",
+			"Harmony",
+			"Middleware",
+			"USB",
+			"PIC32MZ2048EFH144",
+			"PIC32MZ EF Family",
+			"USB"
+		],
+		"additionalData": {
+			"longDescription": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.portal.fileRef",
+				"content": {
+					"metaDataVersion": "1.0.0",
+					"fileName": "./../../readme.md",
+					"mimeType": "text/markdown"
+				}
+			}
+		}
+	}
+}

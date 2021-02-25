@@ -1,0 +1,75 @@
+{
+	"metaDataVersion": "1.0.0",
+	"category": "com.microchip.ide.project",
+	"content": {
+		"metaDataVersion": "1.1.0",
+		"name": "com.microchip.mcu32.mplabx.project.usb_apps_device_vendor_pic32cm_le00_curiosity_pro",
+		"version": "3.0.0",
+		"displayName": "Vendor Example (vendor) Example for PIC32CM LE00/LS00/LS60 Family",
+		"projectName": "vendor_pic32cm_le00_curiosity_pro",
+		"shortDescription": "This application creates a USB CDC Device that enumerates as a custom vendor USB device on the USB host PC. The device uses USB Device Layer Endpoint functions and demonstrates the PC host's ability to control the LEDs on the board and query the status of a switch through PC utility.",
+		"ide": {
+			"name": "MPLABX",
+			"semverRange": ">=5.45.0"
+		},
+		"compiler": [
+			{
+				"name": "XC32",
+				"semverRange": ">=2.50.0"
+			}
+		],
+		"dfp": {
+			"name": "PIC32CM-LE_DFP",
+			"semverRange": "^1.0.88"
+		},
+		"configurator": {
+			"name": "MHC",
+			"semverRange": ">=3.6.1"
+		},
+		"device": {
+			"metaDataVersion": "1.0.0",
+			"category": "com.microchip.portal.contentRef",
+			"content": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.device",
+				"name": "PIC32CM5164LE00100",
+				"versionRange": "*"
+			}
+		},
+		"author": "Microchip",
+		"subcategories": [
+			[
+				"Development Kit", "PIC32CM LE00/LS00/LS60 Curiosity Pro Evaluation Kit"
+			],
+			[
+				"Harmony", "Middleware", "USB", "VENDOR"
+			],
+			[
+				"Middleware", "USB", "VENDOR"
+			]
+		],
+		"peripherals": [
+			"USB"
+		],
+		"keywords": [
+			"MHC",
+			"Harmony",
+			"Middleware",
+			"USB",
+			"PIC32CM5164LE00100",
+			"PIC32CM LE00/LS00/LS60 Family",
+			"USB"
+		],
+		"additionalData": {
+			"longDescription": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.portal.fileRef",
+				"content": {
+					"metaDataVersion": "1.0.0",
+					"fileName": "./../../readme.md",
+					"mimeType": "text/markdown"
+				}
+			}
+		}
+	}
+}
