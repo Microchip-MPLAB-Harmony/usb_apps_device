@@ -78,9 +78,38 @@ extern "C" {
 /* Defines the Switch Press condition */
 #define SWITCH_STATE_PRESSED            false
 
-/* Defines minumum suspend duration before which Remote Wakeup cannot occur */
+/* Defines minimum suspend duration before which Remote Wakeup cannot occur */
 #define USB_SUSPEND_DURATION_5MS        5
 
+/* Disable SERCOM interrupts */
+#if defined (_SAML21J18B_H_)
+    #define DISABLE_SERCOM_INTERRUPT() \
+        SERCOM3_REGS->USART_INT.SERCOM_INTENCLR = SERCOM_USART_INT_INTENCLR_RXC_Msk; \
+        SERCOM3_REGS->USART_INT.SERCOM_INTENCLR = SERCOM_USART_INT_INTENCLR_DRE_Msk; \
+        SERCOM3_REGS->USART_INT.SERCOM_INTENCLR = (uint8_t)SERCOM_USART_INT_INTENCLR_ERROR_Msk; \
+        SERCOM3_REGS->USART_INT.SERCOM_INTENCLR = (uint8_t)SERCOM_USART_INT_INTENCLR_RXC_Msk;
+
+    #define ENABLE_SERCOM_INTERRUPT() \
+        SERCOM3_REGS->USART_INT.SERCOM_INTENSET = SERCOM_USART_INT_INTENSET_RXC_Msk; \
+        SERCOM3_REGS->USART_INT.SERCOM_INTENSET = SERCOM_USART_INT_INTENSET_DRE_Msk; \
+        SERCOM3_REGS->USART_INT.SERCOM_INTENSET = (uint8_t)SERCOM_USART_INT_INTENSET_ERROR_Msk; \
+        SERCOM3_REGS->USART_INT.SERCOM_INTENSET = (uint8_t)SERCOM_USART_INT_INTENSET_RXC_Msk;
+
+#elif defined (_SAME54P20A_H_)
+    #define DISABLE_SERCOM_INTERRUPT() \
+        SERCOM2_REGS->USART_INT.SERCOM_INTENCLR = SERCOM_USART_INT_INTENCLR_RXC_Msk; \
+        SERCOM2_REGS->USART_INT.SERCOM_INTENCLR = SERCOM_USART_INT_INTENCLR_DRE_Msk; \
+        SERCOM2_REGS->USART_INT.SERCOM_INTENCLR = (uint8_t)SERCOM_USART_INT_INTENCLR_ERROR_Msk; \
+        SERCOM2_REGS->USART_INT.SERCOM_INTENCLR = (uint8_t)SERCOM_USART_INT_INTENCLR_RXC_Msk;
+
+    #define ENABLE_SERCOM_INTERRUPT() \
+        SERCOM2_REGS->USART_INT.SERCOM_INTENSET = SERCOM_USART_INT_INTENSET_RXC_Msk; \
+        SERCOM2_REGS->USART_INT.SERCOM_INTENSET = SERCOM_USART_INT_INTENSET_DRE_Msk; \
+        SERCOM2_REGS->USART_INT.SERCOM_INTENSET = (uint8_t)SERCOM_USART_INT_INTENSET_ERROR_Msk; \
+        SERCOM2_REGS->USART_INT.SERCOM_INTENSET = (uint8_t)SERCOM_USART_INT_INTENSET_RXC_Msk;
+#else
+    #error "ENABLE_SERCOM_INTERRUPT and DISABLE_SERCOM_INTERRUPT must be define"
+#endif
 
 // *****************************************************************************
 /* Application States
@@ -137,7 +166,7 @@ typedef struct
     /* The application's current state */
     APP_STATES state;
 
-    /* Recieve data buffer */
+    /* Receive data buffer */
     uint8_t * receiveDataBuffer;
 
     /* Transmit data buffer */

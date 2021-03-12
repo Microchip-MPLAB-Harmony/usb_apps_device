@@ -27,6 +27,7 @@ Following table gives the details of project configurations, target device used,
 | Project Name                    | IDE    | Target Device       | Hardware / Configuration                                                   |
 | ------------------------------- | ------ | ------------------- | -------------------------------------------------------------------------- |
 | sam_e54_xpro.X                  | MPLABX | ATSAME54P20A        | [SAM E54 Xplained Pro Board](#config_3)                                    |
+| sam_l21_xpro.X                  | MPLABX | ATSAML21J18B        | [SAML21 Xplained Pro Board](#config_7)                                    |
 
 
 ## <a name="config_title"></a> Configuring the Hardware
@@ -39,6 +40,12 @@ Following table gives the details of project configurations, target device used,
 - When the device is in Standby sleep, SW0 acts as wakeup source and brings the device to active mode. The device sends Remote wakeup to PC host and then goes back to Standby sleep mode to let the PC host drive the resume.
 - To measure current consumed by the device in different Sleep modes, refer to Section **Current Measurement Header** in [SAME54 Xplained Pro Hardware User Guide](https://ww1.microchip.com/downloads/en/DeviceDoc/70005321A.pdf). Refer to **Virtual COM Port** section to know more on using EDBG to send runtime messages.
 
+### <a name="config_7"></a> [SAML21 Xplained Pro Board](https://www.microchip.com/developmenttools/ProductDetails/PartNO/ATSAML21-XPRO-B)
+
+- Use TARGET USB connector on the board to connect the USB Device to the USB Host PC.
+- LED0 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
+- Press the switch SW0 to trigger communication from the USB Device to the USB Host.
+- When the device is in Standby sleep, SW0 acts as wakeup source and brings the device to active mode. The device sends Remote wakeup to PC host and then goes back to Standby sleep mode to let the PC host drive the resume.
 
 ## Running the Application
 

@@ -225,6 +225,7 @@ void APP_USBDeviceEventHandler(USB_DEVICE_EVENT event, void * eventData, uintptr
 
         case USB_DEVICE_EVENT_SUSPENDED:
 
+            LED_Off();
             /* Device is suspended. */ 
             appData.IsSuspended = true;
             
@@ -487,10 +488,8 @@ void APP_Tasks (void )
             /* Disable the system interrupt before going to Standby Mode */
             appData.interruptStatus = NVIC_INT_Disable();
 
-            SERCOM2_REGS->USART_INT.SERCOM_INTENCLR = SERCOM_USART_INT_INTENCLR_RXC_Msk;
-            SERCOM2_REGS->USART_INT.SERCOM_INTENCLR = SERCOM_USART_INT_INTENCLR_DRE_Msk;
-            SERCOM2_REGS->USART_INT.SERCOM_INTENCLR = (uint8_t)SERCOM_USART_INT_INTENCLR_ERROR_Msk;
-            SERCOM2_REGS->USART_INT.SERCOM_INTENCLR = (uint8_t)SERCOM_USART_INT_INTENCLR_RXC_Msk;            
+            /* Disable SERCOM interrupts */
+            DISABLE_SERCOM_INTERRUPT();
 
             SYSTICK_TimerInterruptDisable();            
 
@@ -505,10 +504,8 @@ void APP_Tasks (void )
 
                 SYSTICK_TimerInterruptEnable();            
 
-                SERCOM2_REGS->USART_INT.SERCOM_INTENSET = SERCOM_USART_INT_INTENSET_RXC_Msk;
-                SERCOM2_REGS->USART_INT.SERCOM_INTENSET = SERCOM_USART_INT_INTENSET_DRE_Msk;
-                SERCOM2_REGS->USART_INT.SERCOM_INTENSET = (uint8_t)SERCOM_USART_INT_INTENSET_ERROR_Msk;
-                SERCOM2_REGS->USART_INT.SERCOM_INTENSET = (uint8_t)SERCOM_USART_INT_INTENSET_RXC_Msk;
+                /* Enable SERCOM interrupts */
+                ENABLE_SERCOM_INTERRUPT();
 
                 /* Go back to executing Main HID tasks */
                 appData.state = APP_STATE_HID_TASK;
@@ -523,10 +520,8 @@ void APP_Tasks (void )
 
                 SYSTICK_TimerInterruptEnable();            
 
-                SERCOM2_REGS->USART_INT.SERCOM_INTENSET = SERCOM_USART_INT_INTENSET_RXC_Msk;
-                SERCOM2_REGS->USART_INT.SERCOM_INTENSET = SERCOM_USART_INT_INTENSET_DRE_Msk;
-                SERCOM2_REGS->USART_INT.SERCOM_INTENSET = (uint8_t)SERCOM_USART_INT_INTENSET_ERROR_Msk;
-                SERCOM2_REGS->USART_INT.SERCOM_INTENSET = (uint8_t)SERCOM_USART_INT_INTENSET_RXC_Msk;
+                /* Enable SERCOM interrupts */
+                ENABLE_SERCOM_INTERRUPT();
 
                 /* There could be only two wakeup sources. USB activity by Host
                  * or User Switch Press */
