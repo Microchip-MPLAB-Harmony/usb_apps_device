@@ -34,6 +34,7 @@ Following table gives the details of project configurations, target device used,
 | sam_e70_xult_freertos.X         | MPLABX | ATSAME70Q21B        | [SAM E70 Xplained Ultra board](#config_4)                                  |
 | sam_v71_xult.X                  | MPLABX | ATSAMV71Q21B        | [SAM V71 Xplained Ultra board](config_5)                                   |
 | sam_v71_xult_freertos.X         | MPLABX | ATSAMV71Q21B        | [SAM V71 Xplained Ultra board](config_5)                                   |
+| pic32mz_ef_curiosity_2_0.X         | MPLABX | PIC32MZ2048EFM144        | [Curiosity PIC32MZ EF 2.0 Development Board](config_6)                                   |
 
 ## <a name="config_title"></a> Configuring the Hardware
 
@@ -63,6 +64,11 @@ Following table gives the details of project configurations, target device used,
 - Jumper titled "USB VBUS" must be shorted between PC09 and VBUS (positions 2 and 3)
 - Use TARGET USB connector on the board to connect the USB Device to the USB Host PC.
 - LED0 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
+
+### <a name="config_6"></a> [Curiosity PIC32MZ EF 2.0 Development Board](https://www.microchip.com/developmenttools/ProductDetails/DM320209)
+
+- Use the USB micro-B port J201 to connect the USB Device to the USB Host PC.
+- LED1 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
 
 ## Running the Application
 
