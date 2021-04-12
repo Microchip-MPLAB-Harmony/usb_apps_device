@@ -36,6 +36,7 @@ Following table gives the details of project configurations, target device used,
 | sam_e70_xult.X                  | MPLABX | ATSAME70Q21B        | [SAM E70 Xplained Ultra Board](#config_4)                                  |
 | sam_e70_xult_freertos.X         | MPLABX | ATSAME70Q21B        | [SAM E70 Xplained Ultra Board](#config_4)                                  |
 | sam_g55_xpro.X                  | MPLABX | ATSAMG55J19         | [SAM G55 Xplained Pro Board](#config_6)                                    |
+| pic32mz_ef_curiosity_2.X                  | MPLABX | PIC32MZ2048EFM144         | [Curiosity PIC32MZ EF 2.0 Development Board](#config_7)                                    |
 
 ## <a name="config_title"></a> Configuring the Hardware
 
@@ -87,6 +88,12 @@ Following table gives the details of project configurations, target device used,
 - Use TARGET USB connector on the board to connect the USB Device to the USB Host PC.
 - LED0 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
 - Press the switch SW0 to trigger communication from the USB Device to the USB Host.
+
+### <a name="config_7"></a> [Curiosity PIC32MZ EF 2.0 Development Board](https://www.microchip.com/Developmenttools/ProductDetails/DM320209)
+
+- Use the USB micro-B port J201 to connect the USB Device to the USB Host PC.
+- LED1 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
+- Press the switch SW1 to trigger communication from the USB Device to the USB Host.
 
 ## Running the Application
 
