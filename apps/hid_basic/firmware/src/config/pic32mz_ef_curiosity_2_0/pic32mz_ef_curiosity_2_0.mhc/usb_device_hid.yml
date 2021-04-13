@@ -30,5 +30,12 @@ children:
           children:
           - type: Dynamic
             attributes: {id: usb_device_hid_0, value: '1'}
+      - type: Combo
+        attributes: {id: CONFIG_USB_DEVICE_HID_REPORT_DESCRIPTOR_TYPE}
+        children:
+        - type: Values
+          children:
+          - type: User
+            attributes: {value: Custom}
 - type: ElementPosition
   attributes: {x: '350', y: '174', id: usb_device_hid}
