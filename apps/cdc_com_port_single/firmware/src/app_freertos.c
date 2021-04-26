@@ -497,17 +497,12 @@ void APP_FREERTOS_Initialize ( void )
     {     
         while(1);
     }
-	/* Initialize the application object */
+    /* Initialize the application object */
     appData.deviceHandle = USB_DEVICE_HANDLE_INVALID;
     appData.appCOMPortObjects[0].getLineCodingData.dwDTERate = 9600;
     appData.appCOMPortObjects[0].getLineCodingData.bDataBits = 8;
     appData.appCOMPortObjects[0].getLineCodingData.bParityType = 0;
     appData.appCOMPortObjects[0].getLineCodingData.bCharFormat = 0;
-
-    appData.appCOMPortObjects[1].getLineCodingData.dwDTERate = 9600;
-    appData.appCOMPortObjects[1].getLineCodingData.bDataBits = 8;
-    appData.appCOMPortObjects[1].getLineCodingData.bParityType = 0;
-    appData.appCOMPortObjects[1].getLineCodingData.bCharFormat = 0;
     
     appData.ignoreSwitchPress = false;
     appData.switchDebounceTimer = 0;
