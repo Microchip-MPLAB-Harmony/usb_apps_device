@@ -60,6 +60,10 @@
             <logicalFolder name="f2" displayName="debug" projectFiles="true">
               <itemPath>../src/config/sam_e70_xult_freertos/system/debug/sys_debug.h</itemPath>
             </logicalFolder>
+            <logicalFolder name="f4" displayName="dma" projectFiles="true">
+              <itemPath>../src/config/sam_e70_xult_freertos/system/dma/sys_dma.h</itemPath>
+              <itemPath>../src/config/sam_e70_xult_freertos/system/dma/sys_dma_mapping.h</itemPath>
+            </logicalFolder>
             <logicalFolder name="f3" displayName="int" projectFiles="true">
               <itemPath>../src/config/sam_e70_xult_freertos/system/int/sys_int.h</itemPath>
               <itemPath>../src/config/sam_e70_xult_freertos/system/int/sys_int_mapping.h</itemPath>
@@ -93,6 +97,8 @@
           <itemPath>../src/config/sam_e70_xult_freertos/FreeRTOSConfig.h</itemPath>
           <itemPath>../src/config/sam_e70_xult_freertos/user.h</itemPath>
           <itemPath>../src/config/sam_e70_xult_freertos/configuration.h</itemPath>
+          <itemPath>../src/config/sam_e70_xult_freertos/interrupts.h</itemPath>
+          <itemPath>../src/config/sam_e70_xult_freertos/device_vectors.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="f2" displayName="FreeRTOS" projectFiles="true">
@@ -166,10 +172,68 @@
             <itemPath>../src/packs/ATSAME70Q21B_DFP/component/wdt.h</itemPath>
             <itemPath>../src/packs/ATSAME70Q21B_DFP/component/xdmac.h</itemPath>
           </logicalFolder>
+          <logicalFolder name="f3" displayName="instance" projectFiles="true">
+            <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/acc.h</itemPath>
+            <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/aes.h</itemPath>
+            <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/afec0.h</itemPath>
+            <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/afec1.h</itemPath>
+            <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/chipid.h</itemPath>
+            <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/dacc.h</itemPath>
+            <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/efc.h</itemPath>
+            <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/gmac.h</itemPath>
+            <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/gpbr.h</itemPath>
+            <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/hsmci.h</itemPath>
+            <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/i2sc0.h</itemPath>
+            <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/i2sc1.h</itemPath>
+            <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/icm.h</itemPath>
+            <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/isi.h</itemPath>
+            <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/matrix.h</itemPath>
+            <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/mcan0.h</itemPath>
+            <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/mcan1.h</itemPath>
+            <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/pioa.h</itemPath>
+            <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/piob.h</itemPath>
+            <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/pioc.h</itemPath>
+            <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/piod.h</itemPath>
+            <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/pioe.h</itemPath>
+            <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/pmc.h</itemPath>
+            <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/pwm0.h</itemPath>
+            <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/pwm1.h</itemPath>
+            <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/qspi.h</itemPath>
+            <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/rstc.h</itemPath>
+            <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/rswdt.h</itemPath>
+            <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/rtc.h</itemPath>
+            <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/rtt.h</itemPath>
+            <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/sdramc.h</itemPath>
+            <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/smc.h</itemPath>
+            <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/spi0.h</itemPath>
+            <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/spi1.h</itemPath>
+            <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/ssc.h</itemPath>
+            <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/supc.h</itemPath>
+            <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/tc0.h</itemPath>
+            <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/tc1.h</itemPath>
+            <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/tc2.h</itemPath>
+            <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/tc3.h</itemPath>
+            <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/trng.h</itemPath>
+            <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/twihs0.h</itemPath>
+            <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/twihs1.h</itemPath>
+            <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/twihs2.h</itemPath>
+            <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/uart0.h</itemPath>
+            <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/uart1.h</itemPath>
+            <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/uart2.h</itemPath>
+            <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/uart3.h</itemPath>
+            <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/uart4.h</itemPath>
+            <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/usart0.h</itemPath>
+            <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/usart1.h</itemPath>
+            <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/usart2.h</itemPath>
+            <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/usbhs.h</itemPath>
+            <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/utmi.h</itemPath>
+            <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/wdt.h</itemPath>
+            <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/xdmac.h</itemPath>
+          </logicalFolder>
           <logicalFolder name="f2" displayName="pio" projectFiles="true">
             <itemPath>../src/packs/ATSAME70Q21B_DFP/pio/same70q21b.h</itemPath>
           </logicalFolder>
-          <itemPath>../src/packs/ATSAME70Q21B_DFP/atsame70q21b.h</itemPath>
+          <itemPath>../src/packs/ATSAME70Q21B_DFP/same70q21b.h</itemPath>
         </logicalFolder>
         <logicalFolder name="f2" displayName="CMSIS" projectFiles="true">
           <logicalFolder name="f1" displayName="CMSIS" projectFiles="true">
@@ -198,21 +262,21 @@
       <logicalFolder name="f1"
                      displayName="sam_e70_xult_freertos.mhc"
                      projectFiles="true">
-        <itemPath>..\src\config\sam_e70_xult_freertos\sam_e70_xult_freertos.mhc\BSP_SAM_E70_Xplained_Ultra.yml</itemPath>
-        <itemPath>..\src\config\sam_e70_xult_freertos\sam_e70_xult_freertos.mhc\cmsis.yml</itemPath>
-        <itemPath>..\src\config\sam_e70_xult_freertos\sam_e70_xult_freertos.mhc\core.yml</itemPath>
-        <itemPath>..\src\config\sam_e70_xult_freertos\sam_e70_xult_freertos.mhc\dfp.yml</itemPath>
-        <itemPath>..\src\config\sam_e70_xult_freertos\sam_e70_xult_freertos.mhc\drv_usart.yml</itemPath>
-        <itemPath>..\src\config\sam_e70_xult_freertos\sam_e70_xult_freertos.mhc\drv_usbhs_v1.yml</itemPath>
-        <itemPath>..\src\config\sam_e70_xult_freertos\sam_e70_xult_freertos.mhc\efc.yml</itemPath>
-        <itemPath>..\src\config\sam_e70_xult_freertos\sam_e70_xult_freertos.mhc\FreeRTOS.yml</itemPath>
-        <itemPath>..\src\config\sam_e70_xult_freertos\sam_e70_xult_freertos.mhc\GraphSettings.yml</itemPath>
-        <itemPath>..\src\config\sam_e70_xult_freertos\sam_e70_xult_freertos.mhc\HarmonyCore.yml</itemPath>
-        <itemPath>..\src\config\sam_e70_xult_freertos\sam_e70_xult_freertos.mhc\project.yml</itemPath>
-        <itemPath>..\src\config\sam_e70_xult_freertos\sam_e70_xult_freertos.mhc\settings.yml</itemPath>
-        <itemPath>..\src\config\sam_e70_xult_freertos\sam_e70_xult_freertos.mhc\usart1.yml</itemPath>
-        <itemPath>..\src\config\sam_e70_xult_freertos\sam_e70_xult_freertos.mhc\usb_device.yml</itemPath>
-        <itemPath>..\src\config\sam_e70_xult_freertos\sam_e70_xult_freertos.mhc\usb_device_cdc.yml</itemPath>
+        <itemPath>../src/config/sam_e70_xult_freertos/sam_e70_xult_freertos.mhc/BSP_SAM_E70_Xplained_Ultra.yml</itemPath>
+        <itemPath>../src/config/sam_e70_xult_freertos/sam_e70_xult_freertos.mhc/cmsis.yml</itemPath>
+        <itemPath>../src/config/sam_e70_xult_freertos/sam_e70_xult_freertos.mhc/core.yml</itemPath>
+        <itemPath>../src/config/sam_e70_xult_freertos/sam_e70_xult_freertos.mhc/dfp.yml</itemPath>
+        <itemPath>../src/config/sam_e70_xult_freertos/sam_e70_xult_freertos.mhc/drv_usart.yml</itemPath>
+        <itemPath>../src/config/sam_e70_xult_freertos/sam_e70_xult_freertos.mhc/drv_usbhs_v1.yml</itemPath>
+        <itemPath>../src/config/sam_e70_xult_freertos/sam_e70_xult_freertos.mhc/efc.yml</itemPath>
+        <itemPath>../src/config/sam_e70_xult_freertos/sam_e70_xult_freertos.mhc/FreeRTOS.yml</itemPath>
+        <itemPath>../src/config/sam_e70_xult_freertos/sam_e70_xult_freertos.mhc/GraphSettings.yml</itemPath>
+        <itemPath>../src/config/sam_e70_xult_freertos/sam_e70_xult_freertos.mhc/HarmonyCore.yml</itemPath>
+        <itemPath>../src/config/sam_e70_xult_freertos/sam_e70_xult_freertos.mhc/project.yml</itemPath>
+        <itemPath>../src/config/sam_e70_xult_freertos/sam_e70_xult_freertos.mhc/settings.yml</itemPath>
+        <itemPath>../src/config/sam_e70_xult_freertos/sam_e70_xult_freertos.mhc/usart1.yml</itemPath>
+        <itemPath>../src/config/sam_e70_xult_freertos/sam_e70_xult_freertos.mhc/usb_device.yml</itemPath>
+        <itemPath>../src/config/sam_e70_xult_freertos/sam_e70_xult_freertos.mhc/usb_device_cdc.yml</itemPath>
       </logicalFolder>
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/sam_e70_xult_freertos/harmony-manifest-success.yml</itemPath>
@@ -278,6 +342,9 @@
           <logicalFolder name="f6" displayName="system" projectFiles="true">
             <logicalFolder name="f1" displayName="cache" projectFiles="true">
               <itemPath>../src/config/sam_e70_xult_freertos/system/cache/sys_cache.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="f3" displayName="dma" projectFiles="true">
+              <itemPath>../src/config/sam_e70_xult_freertos/system/dma/sys_dma.c</itemPath>
             </logicalFolder>
             <logicalFolder name="f2" displayName="int" projectFiles="true">
               <itemPath>../src/config/sam_e70_xult_freertos/system/int/src/sys_int.c</itemPath>
@@ -407,7 +474,7 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src/third_party/rtos/FreeRTOS/Source/portable/GCC/SAM/CM7;../src/third_party/rtos/FreeRTOS/Source/include;../src;../src/config/sam_e70_xult_freertos;../src/packs/ATSAME70Q21B_DFP;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/CMSIS/"/>
+                  value="../src;../src/config/sam_e70_xult_freertos;../src/packs/ATSAME70Q21B_DFP;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include;../src/third_party/rtos/FreeRTOS/Source/include;../src/third_party/rtos/FreeRTOS/Source/portable/GCC/SAM/CM7"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -503,7 +570,7 @@
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/sam_e70_xult_freertos;../src/packs/ATSAME70Q21B_DFP;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/CMSIS/;"/>
+                  value="../src;../src/config/sam_e70_xult_freertos;../src/packs/ATSAME70Q21B_DFP;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include;../src/third_party/rtos/FreeRTOS/Source/include;../src/third_party/rtos/FreeRTOS/Source/portable/GCC/SAM/CM7"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
