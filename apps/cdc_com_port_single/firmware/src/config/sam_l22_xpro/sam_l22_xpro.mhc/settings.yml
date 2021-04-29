@@ -1,7 +1,7 @@
 configName: sam_l22_xpro
 folderName: ''
 format_version: v1.0
-frameworkPath: ../../../..
+frameworkPath: ../../..
 processor: ATSAML22N18A
 projectName: ''
 settings:

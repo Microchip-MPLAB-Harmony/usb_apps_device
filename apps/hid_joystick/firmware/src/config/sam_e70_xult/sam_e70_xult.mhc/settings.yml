@@ -1,7 +1,7 @@
 configName: sam_e70_xult
 folderName: ''
 format_version: v1.0
-frameworkPath: ../../../..
+frameworkPath: ../../..
 processor: ATSAME70Q21B
 projectName: ''
 settings:

@@ -1,7 +1,7 @@
 configName: pic32mz_das_sk
 folderName: ''
 format_version: v1.0
-frameworkPath: ../../../..
+frameworkPath: ../../..
 processor: PIC32MZ2064DAS169
 projectName: ''
 settings:

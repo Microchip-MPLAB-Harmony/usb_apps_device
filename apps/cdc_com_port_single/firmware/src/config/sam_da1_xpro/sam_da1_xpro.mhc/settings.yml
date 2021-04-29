@@ -1,7 +1,7 @@
 configName: sam_da1_xpro
 folderName: ''
 format_version: v1.0
-frameworkPath: ../../../..
+frameworkPath: ../../..
 processor: ATSAMDA1J16B
 projectName: ''
 settings:

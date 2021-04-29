@@ -1,7 +1,7 @@
 configName: sam_g55_xpro
 folderName: ''
 format_version: v1.0
-frameworkPath: ../../../..
+frameworkPath: ../../..
 processor: ATSAMG55J19
 projectName: ''
 settings:

@@ -1,7 +1,7 @@
 configName: sam_d11_xpro
 folderName: ''
 format_version: v1.0
-frameworkPath: ../../../..
+frameworkPath: ../../..
 processor: ATSAMD11D14AM
 projectName: ''
 settings:

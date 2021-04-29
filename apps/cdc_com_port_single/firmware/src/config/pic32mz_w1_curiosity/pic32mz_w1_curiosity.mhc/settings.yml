@@ -1,7 +1,7 @@
 configName: pic32mz_w1_curiosity
 folderName: ''
 format_version: v1.0
-frameworkPath: ../../../..
+frameworkPath: ../../..
 processor: PIC32MZ1025W104132
 projectName: ''
 settings:

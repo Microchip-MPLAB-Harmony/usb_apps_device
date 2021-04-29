@@ -1,7 +1,7 @@
 configName: pic32mx470_curiosity_freertos
 folderName: ''
 format_version: v1.0
-frameworkPath: ../../../..
+frameworkPath: ../../..
 processor: PIC32MX470F512H
 projectName: ''
 settings:

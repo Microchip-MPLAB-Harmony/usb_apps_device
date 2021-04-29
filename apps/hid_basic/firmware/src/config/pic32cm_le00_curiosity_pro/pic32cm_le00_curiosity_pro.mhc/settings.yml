@@ -1,7 +1,7 @@
 configName: pic32cm_le00_curiosity_pro
 folderName: ''
 format_version: v1.0
-frameworkPath: ../../../..
+frameworkPath: ../../..
 processor: PIC32CM5164LE00100
 projectName: ''
 settings:

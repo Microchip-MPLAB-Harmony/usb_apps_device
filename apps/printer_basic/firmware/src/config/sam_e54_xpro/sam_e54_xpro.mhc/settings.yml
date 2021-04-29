@@ -1,7 +1,7 @@
 configName: sam_e54_xpro
 folderName: ''
 format_version: v1.0
-frameworkPath: ../../../..
+frameworkPath: ../../..
 processor: ATSAME54P20A
 projectName: ''
 settings:

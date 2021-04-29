@@ -1,7 +1,7 @@
 configName: pic32mk_gp_db_freertos
 folderName: ''
 format_version: v1.0
-frameworkPath: ../../../..
+frameworkPath: ../../..
 processor: PIC32MK1024GPE100
 projectName: ''
 settings:

@@ -1,7 +1,7 @@
 configName: pic32mz_ef_sk
 folderName: ''
 format_version: v1.0
-frameworkPath: ../../../..
+frameworkPath: ../../..
 processor: PIC32MZ2048EFH144
 projectName: ''
 settings:

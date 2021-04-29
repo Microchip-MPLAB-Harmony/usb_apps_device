@@ -1,7 +1,7 @@
 configName: pic32mz_ef_curiosity_2
 folderName: ''
 format_version: v1.0
-frameworkPath: ../../../..
+frameworkPath: ../../..
 processor: PIC32MZ2048EFM144
 projectName: ''
 settings:

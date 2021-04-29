@@ -1,7 +1,7 @@
 configName: sam_d21_xpro
 folderName: ''
 format_version: v1.0
-frameworkPath: ../../../..
+frameworkPath: ../../..
 processor: ATSAMD21J18A
 projectName: ''
 settings:
