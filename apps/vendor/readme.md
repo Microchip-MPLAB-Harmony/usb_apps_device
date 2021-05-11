@@ -26,6 +26,7 @@ Following table gives the details of project configurations, target device used,
 
 | Project Name                    | IDE    | Target Device       | Hardware / Configuration                                                   |
 | ------------------------------- | ------ | ------------------- | -------------------------------------------------------------------------- |
+| pic32mz_ef_curiosity_2_0.X      | MPLABX | PIC32MZ2048EFM144   | [Curiosity PIC32MZ EF 2.0 Development Board](#config_15)                   |
 | pic32mz_ef_sk.X                 | MPLABX | PIC32MZ2048EFH144   | [PIC32MZ Embedded Connectivity with FPU (EF) Starter Kit](#config_16)      |
 | pic32mz_ef_sk_freertos.X        | MPLABX | PIC32MZ2048EFH144   | [PIC32MZ Embedded Connectivity with FPU (EF) Starter Kit](#config_16)      |
 | sam_a5d2_xult_iar.IAR           | IAR    | ATSAMA5D27C         | [SAM A5D2 Xplained Ultra Board](#config_10)                                |
@@ -39,10 +40,16 @@ Following table gives the details of project configurations, target device used,
 
 ## <a name="config_title"></a> Configuring the Hardware
 
+### <a name="config_15"></a> [Curiosity PIC32MZ EF 2.0 Development Board](https://www.microchip.com/Developmenttools/ProductDetails/DM320209)
+
+- Use the USB micro-B port J201 to connect the USB Device to the USB Host PC.
+- LED2 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
+- Press the switch SW1 to trigger communication from the USB Device to the USB Host.
+
 ### <a name="config_16"></a> [PIC32MZ Embedded Connectivity with FPU (EF) Starter Kit](https://www.microchip.com/Developmenttools/ProductDetails/DM320007)
 
 - Use the micro-A/B port J4 (which is located on the bottom side of the board) to connect the USB Device to the USB Host PC.
-- LED1 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
+- LED2 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
 - Press the switch SW1 to trigger communication from the USB Device to the USB Host.
 
 ### <a name="config_10"></a> [SAM A5D2 Xplained Ultra Board](https://www.microchip.com/Developmenttools/ProductDetails/ATSAMA5D2C-XULT)
