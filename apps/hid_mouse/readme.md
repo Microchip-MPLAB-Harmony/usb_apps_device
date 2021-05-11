@@ -26,6 +26,7 @@ Following table gives the details of project configurations, target device used,
 
 | Project Name                    | IDE    | Target Device       | Hardware / Configuration                                                   |
 | ------------------------------- | ------ | ------------------- | -------------------------------------------------------------------------- |
+| pic32mz_ef_curiosity_2_0.X      | MPLABX | PIC32MZ2048EFM144   | [Curiosity PIC32MZ EF 2.0 Development Board](#config_15)                   |
 | sam_e54_xpro.X                  | MPLABX | ATSAME54P20A        | [SAM E54 Xplained Pro Board](#config_3)                                    |
 | sam_e54_xpro_freertos.X         | MPLABX | ATSAME54P20A        | [SAM E54 Xplained Pro Board](#config_3)                                    |
 | sam_e70_xult.X                  | MPLABX | ATSAME70Q21B        | [SAM E70 Xplained Ultra Board](#config_4)                                  |
@@ -33,7 +34,11 @@ Following table gives the details of project configurations, target device used,
 
 ## <a name="config_title"></a> Configuring the Hardware
 
+### <a name="config_15"></a> [Curiosity PIC32MZ EF 2.0 Development Board](https://www.microchip.com/Developmenttools/ProductDetails/DM320209)
 
+- Use the USB micro-B port J201 to connect the USB Device to the USB Host PC.
+- LED2 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
+- Use Switch SW1 to stop and start the circular motion of the mouse pointer.
 
 ### <a name="config_3"></a> [SAM E54 Xplained Pro Board](https://www.microchip.com/developmenttools/productdetails/atsame54-xpro)
 
