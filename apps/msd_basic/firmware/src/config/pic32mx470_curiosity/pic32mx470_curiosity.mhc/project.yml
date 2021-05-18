@@ -125,13 +125,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: BCCEF5B801FFD0CF22D0B454D2F25F1F
-- generatedChecksum: 2DA5CFB3F64B364E85342825794A49B7
+- generatedChecksum: BA1A25F1722B7E149B86908609E22021
   logicalPath: config/pic32mx470_curiosity
   name: usb_device_init_data.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 2DA5CFB3F64B364E85342825794A49B7
+  userChecksum: BA1A25F1722B7E149B86908609E22021
 - generatedChecksum: 5B2E4F04BB9E3347BD0D10242479D4F0
   logicalPath: config/pic32mx470_curiosity/usb/src
   name: usb_device_msd.c
@@ -167,13 +167,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 5DA70AA0FD2895A32EA6C306D5712FFB
-- generatedChecksum: 30734EB73B5DA266E04C241847CC792F
+- generatedChecksum: ACEDE01B2445878E2CE09415B2C23314
   logicalPath: config/pic32mx470_curiosity
   name: definitions.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 30734EB73B5DA266E04C241847CC792F
+  userChecksum: ACEDE01B2445878E2CE09415B2C23314
 - generatedChecksum: E189C26B2269F8DE46033CCD0621958D
   logicalPath: config/pic32mx470_curiosity
   name: device.h
