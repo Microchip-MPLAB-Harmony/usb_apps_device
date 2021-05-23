@@ -1,0 +1,36 @@
+format_version: v1.0
+type: UniqueComponent
+attributes: {id: usb_device}
+children:
+- type: Symbols
+  children:
+  - type: Integer
+    attributes: {id: CONFIG_USB_DEVICE_CONFIG_DESCRPTR_SIZE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: usb_device, value: '55'}
+  - type: Integer
+    attributes: {id: CONFIG_USB_DEVICE_ENDPOINTS_NUMBER}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: usb_device, value: '2'}
+  - type: Integer
+    attributes: {id: CONFIG_USB_DEVICE_FUNCTIONS_NUMBER}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: usb_device, value: '2'}
+  - type: Integer
+    attributes: {id: CONFIG_USB_DEVICE_INTERFACES_NUMBER}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: usb_device, value: '2'}
+- type: ElementPosition
+  attributes: {x: '175', y: '254', id: usb_device}

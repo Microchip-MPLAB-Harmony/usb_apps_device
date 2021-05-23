@@ -1,0 +1,57 @@
+format_version: v1.0
+type: UniqueComponent
+attributes: {id: tmr1}
+children:
+- type: Symbols
+  children:
+  - type: String
+    attributes: {id: SYS_TIME_COMPONENT_ID}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: tmr1, value: sys_time}
+  - type: Integer
+    attributes: {id: TIMER1_CLOCK_FREQ}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: tmr1, value: '48000000'}
+  - type: Long
+    attributes: {id: TIMER1_PERIOD}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: tmr1, value: '47999'}
+  - type: Float
+    attributes: {id: TIMER1_TIME_PERIOD_MS}
+    children:
+    - type: Attributes
+      children:
+      - type: Float
+        attributes: {id: max}
+        children:
+        - {type: Value, value: '1.3653542'}
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: tmr1, value: '1.0'}
+- type: Attachments
+  children:
+  - type: DirectCapability
+    attributes: {id: TMR1_TMR}
+    children:
+    - type: Attributes
+      children:
+      - type: String
+        attributes: {id: targetComponentID}
+        children:
+        - {type: Value, value: sys_time}
+      - type: String
+        attributes: {id: targetAttachmentID}
+        children:
+        - {type: Value, value: sys_time_TMR_dependency}
+- type: ElementPosition
+  attributes: {x: '30', y: '100', id: tmr1}
