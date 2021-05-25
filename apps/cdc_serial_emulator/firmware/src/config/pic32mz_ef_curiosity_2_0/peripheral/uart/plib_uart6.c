@@ -95,7 +95,7 @@ void UART6_Initialize( void )
     U6STASET = (_U6STA_UTXEN_MASK | _U6STA_URXEN_MASK | _U6STA_UTXISEL1_MASK );
 
     /* BAUD Rate register Setup */
-    U6BRG = 2577;
+    U6BRG = 214;
 
     /* Disable Interrupts */
     IEC5CLR = _IEC5_U6EIE_MASK;

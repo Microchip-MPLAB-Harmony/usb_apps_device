@@ -127,17 +127,17 @@ static DRV_USART_CLIENT_OBJ drvUSART0ClientObjPool[DRV_USART_CLIENTS_NUMBER_IDX0
 static DRV_USART_BUFFER_OBJ drvUSART0BufferObjPool[DRV_USART_QUEUE_SIZE_IDX0];
 
 const DRV_USART_PLIB_INTERFACE drvUsart0PlibAPI = {
-    .readCallbackRegister = (DRV_USART_PLIB_READ_CALLBACK_REG)UART3_ReadCallbackRegister,
-    .read = (DRV_USART_PLIB_READ)UART3_Read,
-    .readIsBusy = (DRV_USART_PLIB_READ_IS_BUSY)UART3_ReadIsBusy,
-    .readCountGet = (DRV_USART_PLIB_READ_COUNT_GET)UART3_ReadCountGet,
-    .readAbort = (DRV_USART_PLIB_READ_ABORT)UART3_ReadAbort,
-    .writeCallbackRegister = (DRV_USART_PLIB_WRITE_CALLBACK_REG)UART3_WriteCallbackRegister,
-    .write = (DRV_USART_PLIB_WRITE)UART3_Write,
-    .writeIsBusy = (DRV_USART_PLIB_WRITE_IS_BUSY)UART3_WriteIsBusy,
-    .writeCountGet = (DRV_USART_PLIB_WRITE_COUNT_GET)UART3_WriteCountGet,
-    .errorGet = (DRV_USART_PLIB_ERROR_GET)UART3_ErrorGet,
-    .serialSetup = (DRV_USART_PLIB_SERIAL_SETUP)UART3_SerialSetup
+    .readCallbackRegister = (DRV_USART_PLIB_READ_CALLBACK_REG)UART6_ReadCallbackRegister,
+    .read = (DRV_USART_PLIB_READ)UART6_Read,
+    .readIsBusy = (DRV_USART_PLIB_READ_IS_BUSY)UART6_ReadIsBusy,
+    .readCountGet = (DRV_USART_PLIB_READ_COUNT_GET)UART6_ReadCountGet,
+    .readAbort = (DRV_USART_PLIB_READ_ABORT)UART6_ReadAbort,
+    .writeCallbackRegister = (DRV_USART_PLIB_WRITE_CALLBACK_REG)UART6_WriteCallbackRegister,
+    .write = (DRV_USART_PLIB_WRITE)UART6_Write,
+    .writeIsBusy = (DRV_USART_PLIB_WRITE_IS_BUSY)UART6_WriteIsBusy,
+    .writeCountGet = (DRV_USART_PLIB_WRITE_COUNT_GET)UART6_WriteCountGet,
+    .errorGet = (DRV_USART_PLIB_ERROR_GET)UART6_ErrorGet,
+    .serialSetup = (DRV_USART_PLIB_SERIAL_SETUP)UART6_SerialSetup
 };
 
 const uint32_t drvUsart0remapDataWidth[] = { 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0, 0x6 };
@@ -151,10 +151,10 @@ const DRV_USART_INTERRUPT_SOURCES drvUSART0InterruptSources =
     .isSingleIntSrc                        = false,
 
     /* Peripheral interrupt lines */
-    .intSources.multi.usartTxCompleteInt   = _UART3_TX_VECTOR,
+    .intSources.multi.usartTxCompleteInt   = _UART6_TX_VECTOR,
     .intSources.multi.usartTxReadyInt      = -1,
-    .intSources.multi.usartRxCompleteInt   = _UART3_RX_VECTOR,
-    .intSources.multi.usartErrorInt        = _UART3_FAULT_VECTOR,
+    .intSources.multi.usartRxCompleteInt   = _UART6_RX_VECTOR,
+    .intSources.multi.usartErrorInt        = _UART6_FAULT_VECTOR,
 };
 
 const DRV_USART_INIT drvUsart0InitData =
@@ -305,9 +305,9 @@ void SYS_Initialize ( void* data )
 	GPIO_Initialize();
 
 	BSP_Initialize();
-    CORETIMER_Initialize();
-	UART3_Initialize();
+	UART6_Initialize();
 
+    CORETIMER_Initialize();
 
     sysObj.drvUsart0 = DRV_USART_Initialize(DRV_USART_INDEX_0, (SYS_MODULE_INIT *)&drvUsart0InitData);
 

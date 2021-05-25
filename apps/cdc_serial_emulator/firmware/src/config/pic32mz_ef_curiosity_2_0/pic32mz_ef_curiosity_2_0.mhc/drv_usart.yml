@@ -13,42 +13,6 @@ children:
         attributes: {id: drv_usart, value: Asynchronous}
       - type: User
         attributes: {value: Asynchronous}
-  - type: File
-    attributes: {id: USART_ASYNC_LOCAL}
-    children:
-    - type: Attributes
-      children:
-      - type: Boolean
-        attributes: {id: enabled}
-        children:
-        - {type: Value, value: 'true'}
-  - type: File
-    attributes: {id: USART_ASYNC_SOURCE}
-    children:
-    - type: Attributes
-      children:
-      - type: Boolean
-        attributes: {id: enabled}
-        children:
-        - {type: Value, value: 'true'}
-  - type: File
-    attributes: {id: USART_SYNC_LOCAL}
-    children:
-    - type: Attributes
-      children:
-      - type: Boolean
-        attributes: {id: enabled}
-        children:
-        - {type: Value, value: 'false'}
-  - type: File
-    attributes: {id: USART_SYNC_SOURCE}
-    children:
-    - type: Attributes
-      children:
-      - type: Boolean
-        attributes: {id: enabled}
-        children:
-        - {type: Value, value: 'false'}
 - type: Instances
   children:
   - type: InstanceComponent
@@ -71,16 +35,7 @@ children:
         - type: Values
           children:
           - type: Dynamic
-            attributes: {id: drv_usart_0, value: UART3}
-      - type: Integer
-        attributes: {id: DRV_USART_QUEUE_SIZE}
-        children:
-        - type: Attributes
-          children:
-          - type: Boolean
-            attributes: {id: visible}
-            children:
-            - {type: Value, value: 'true'}
+            attributes: {id: drv_usart_0, value: UART6}
       - type: Boolean
         attributes: {id: DRV_USART_RX_DMA}
         children:
@@ -93,12 +48,6 @@ children:
       - type: Integer
         attributes: {id: DRV_USART_RX_DMA_CHANNEL}
         children:
-        - type: Attributes
-          children:
-          - type: Boolean
-            attributes: {id: visible}
-            children:
-            - {type: Value, value: 'false'}
         - type: Values
           children:
           - type: Dynamic
@@ -115,12 +64,6 @@ children:
       - type: Integer
         attributes: {id: DRV_USART_TX_DMA_CHANNEL}
         children:
-        - type: Attributes
-          children:
-          - type: Boolean
-            attributes: {id: visible}
-            children:
-            - {type: Value, value: 'false'}
         - type: Values
           children:
           - type: Dynamic
@@ -135,10 +78,10 @@ children:
           - type: String
             attributes: {id: targetComponentID}
             children:
-            - {type: Value, value: uart3}
+            - {type: Value, value: uart6}
           - type: String
             attributes: {id: targetAttachmentID}
             children:
-            - {type: Value, value: UART3_UART}
+            - {type: Value, value: UART6_UART}
 - type: ElementPosition
   attributes: {x: '220', y: '338', id: drv_usart}

@@ -57,8 +57,8 @@
 // Section: Global Data Definitions
 // *****************************************************************************
 // *****************************************************************************
-uint8_t APP_MAKE_BUFFER_DMA_READY cdcReadBuffer[APP_READ_BUFFER_SIZE] ;
-uint8_t APP_MAKE_BUFFER_DMA_READY uartReadBuffer[APP_READ_BUFFER_SIZE];
+uint8_t USB_ALIGN cdcReadBuffer[APP_READ_BUFFER_SIZE] ;
+uint8_t USB_ALIGN uartReadBuffer[APP_READ_BUFFER_SIZE];
 
 // *****************************************************************************
 /* Application Data

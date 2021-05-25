@@ -1,6 +1,6 @@
 format_version: v1.0
 type: UniqueComponent
-attributes: {id: uart3}
+attributes: {id: uart6}
 children:
 - type: Symbols
   children:
@@ -10,21 +10,21 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: uart3, value: '214'}
+        attributes: {id: uart6, value: '214'}
   - type: KeyValueSet
     attributes: {id: UART_BRGH}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: uart3, value: '0'}
+        attributes: {id: uart6, value: '0'}
   - type: Boolean
     attributes: {id: UART_INTERRUPT_MODE_ENABLE}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: uart3, value: 'true'}
+        attributes: {id: uart6, value: 'true'}
   - type: KeyValueSet
     attributes: {id: UART_OPERATING_MODE}
     children:
@@ -37,25 +37,25 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: uart3, value: '1'}
+        attributes: {id: uart6, value: '1'}
   - type: Boolean
     attributes: {id: UART_RING_BUFFER_MODE_ENABLE}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: uart3, value: 'false'}
+        attributes: {id: uart6, value: 'false'}
   - type: Hex
     attributes: {id: UMODE_VALUE}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: uart3, value: '8'}
+        attributes: {id: uart6, value: '8'}
 - type: Attachments
   children:
   - type: DirectCapability
-    attributes: {id: UART3_UART}
+    attributes: {id: UART6_UART}
     children:
     - type: Attributes
       children:
@@ -68,4 +68,4 @@ children:
         children:
         - {type: Value, value: drv_usart_UART_dependency}
 - type: ElementPosition
-  attributes: {x: '88', y: '421', id: uart3}
+  attributes: {x: '79', y: '428', id: uart6}

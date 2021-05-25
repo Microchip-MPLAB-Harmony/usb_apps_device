@@ -64,9 +64,9 @@
 void CORE_TIMER_InterruptHandler( void );
 void DRV_USBHS_InterruptHandler( void );
 void DRV_USBHS_DMAInterruptHandler( void );
-void UART3_FAULT_InterruptHandler( void );
-void UART3_RX_InterruptHandler( void );
-void UART3_TX_InterruptHandler( void );
+void UART6_FAULT_InterruptHandler( void );
+void UART6_RX_InterruptHandler( void );
+void UART6_TX_InterruptHandler( void );
 
 
 
@@ -86,19 +86,19 @@ void __ISR(_USB_DMA_VECTOR, ipl1SRS) USB_DMA_Handler (void)
     DRV_USBHS_DMAInterruptHandler();
 }
 
-void __ISR(_UART3_FAULT_VECTOR, ipl1SRS) UART3_FAULT_Handler (void)
+void __ISR(_UART6_FAULT_VECTOR, ipl1SRS) UART6_FAULT_Handler (void)
 {
-    UART3_FAULT_InterruptHandler();
+    UART6_FAULT_InterruptHandler();
 }
 
-void __ISR(_UART3_RX_VECTOR, ipl1SRS) UART3_RX_Handler (void)
+void __ISR(_UART6_RX_VECTOR, ipl1SRS) UART6_RX_Handler (void)
 {
-    UART3_RX_InterruptHandler();
+    UART6_RX_InterruptHandler();
 }
 
-void __ISR(_UART3_TX_VECTOR, ipl1SRS) UART3_TX_Handler (void)
+void __ISR(_UART6_TX_VECTOR, ipl1SRS) UART6_TX_Handler (void)
 {
-    UART3_TX_InterruptHandler();
+    UART6_TX_InterruptHandler();
 }
 
 
