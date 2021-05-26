@@ -80,8 +80,8 @@
 APP_DATA appData;
 
 /* Mouse Report */
-MOUSE_REPORT mouseReport __attribute__ ((aligned(16)));
-MOUSE_REPORT mouseReportPrevious __attribute__ ((aligned(16)));
+MOUSE_REPORT mouseReport USB_ALIGN ;
+MOUSE_REPORT mouseReportPrevious  USB_ALIGN ;
 
 
 // *****************************************************************************
