@@ -181,13 +181,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 17957B12B25F5C94CFD3EBD2D56ECC64
-- generatedChecksum: 6A2BC24F45D74C3A27351B8F9580830A
+- generatedChecksum: 7E230905B661D0260B40D8CF4BB0156F
   logicalPath: config/pic32mz_ef_curiosity_2_0
   name: configuration.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 6A2BC24F45D74C3A27351B8F9580830A
+  userChecksum: 7E230905B661D0260B40D8CF4BB0156F
 - generatedChecksum: 8BEBFC9BBBC90EC00CE2944674F93527
   logicalPath: config/pic32mz_ef_curiosity_2_0
   name: definitions.h
@@ -335,13 +335,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 4C6C4A7B7E33767128AA763FFAE2E394
-- generatedChecksum: D56C272B20A77F07A4DAF8D2AD351F4B
+- generatedChecksum: 311CEBAAC39EBB5B594FBFED684D28DF
   logicalPath: config/pic32mz_ef_curiosity_2_0/peripheral/nvm
   name: plib_nvm.h
   physicalPath: peripheral/nvm
   security: NON_SECURE
   type: HEADER
-  userChecksum: D56C272B20A77F07A4DAF8D2AD351F4B
+  userChecksum: 311CEBAAC39EBB5B594FBFED684D28DF
 - generatedChecksum: F7512D94687ACDF1178ABC3B80CEFFC0
   logicalPath: config/pic32mz_ef_curiosity_2_0/driver/usb/usbhs/src
   name: plib_usbhs.h
@@ -727,13 +727,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: A0803FFCE7DA932883C0B89AD48FA04C
-- generatedChecksum: 4B3C3EF8A318908A22B78500515C3288
+- generatedChecksum: null
   logicalPath: config/pic32mz_ef_curiosity_2_0
   name: user.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 4B3C3EF8A318908A22B78500515C3288
+  userChecksum: null
 - generatedChecksum: 07A482DAB7473FC475EA656561967B15
   logicalPath: config/pic32mz_ef_curiosity_2_0
   name: p32MZ2048EFM144.ld

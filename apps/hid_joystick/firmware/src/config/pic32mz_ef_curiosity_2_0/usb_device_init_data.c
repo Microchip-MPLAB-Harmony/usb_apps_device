@@ -227,7 +227,7 @@ const uint8_t highSpeedConfigurationDescriptor[]=
 
     0x07,                           // Size of this descriptor in bytes
     USB_DESCRIPTOR_ENDPOINT,        // Endpoint Descriptor
-    2 | USB_EP_DIRECTION_OUT,   // EndpointAddress ( EP2 OUT )
+    1 | USB_EP_DIRECTION_OUT,   // EndpointAddress ( EP1 OUT )
     USB_TRANSFER_TYPE_INTERRUPT,    // Attributes
     0x40,0x00,                      // size
     0x01,                           // Interval
@@ -298,7 +298,7 @@ const uint8_t fullSpeedConfigurationDescriptor[]=
 
     0x07,                           // Size of this descriptor in bytes
     USB_DESCRIPTOR_ENDPOINT,        // Endpoint Descriptor
-    2 | USB_EP_DIRECTION_OUT,   // EndpointAddress ( EP2 OUT )
+    1 | USB_EP_DIRECTION_OUT,   // EndpointAddress ( EP1 OUT )
     USB_TRANSFER_TYPE_INTERRUPT,    // Attributes
     0x40,0x00,                      // size
     0x01,                           // Interval

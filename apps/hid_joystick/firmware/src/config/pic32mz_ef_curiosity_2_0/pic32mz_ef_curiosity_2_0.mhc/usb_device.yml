@@ -61,4 +61,4 @@ children:
       - type: Dynamic
         attributes: {id: usb_device, value: HID Joystick Demo}
 - type: ElementPosition
-  attributes: {x: '162', y: '210', id: usb_device}
+  attributes: {x: '162', y: '211', id: usb_device}

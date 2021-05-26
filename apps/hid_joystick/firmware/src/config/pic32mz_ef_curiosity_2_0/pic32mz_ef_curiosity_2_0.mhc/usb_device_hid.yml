@@ -30,8 +30,6 @@ children:
           children:
           - type: Dynamic
             attributes: {id: usb_device_hid_0, value: '1'}
-          - type: User
-            attributes: {value: '2'}
       - type: Combo
         attributes: {id: CONFIG_USB_DEVICE_HID_REPORT_DESCRIPTOR_TYPE}
         children:
@@ -40,4 +38,4 @@ children:
           - type: User
             attributes: {value: Joystick}
 - type: ElementPosition
-  attributes: {x: '306', y: '211', id: usb_device_hid}
+  attributes: {x: '306', y: '210', id: usb_device_hid}

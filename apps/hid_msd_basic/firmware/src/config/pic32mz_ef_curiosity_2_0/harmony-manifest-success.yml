@@ -4,13 +4,13 @@
 
 
 project: hid_msd_basic
-creation_date: 2021-05-18T16:27:53.757+02:00[Europe/Paris]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+creation_date: 2021-05-26T14:47:56.471+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
 operating_system: Windows 10
 mhc_mode: IDE            # [IDE|Standalone|Headless]
 mhc_version: v3.7.2
-mplabx_version: v5.45        # if MPLAB X plugin only
+mplabx_version: v5.50        # if MPLAB X plugin only
 plugin_version: v3.6.4        # if MPLAB X plugin only
-compiler: XC32 (2.50)
+compiler: XC32 (3.00)
 
 modules:
     - {name: "csp", version: "v3.9.1"}

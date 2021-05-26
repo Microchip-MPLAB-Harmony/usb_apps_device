@@ -118,13 +118,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: B8D87B6533E2CE239E9EEB8486DF6996
-- generatedChecksum: 08A1F6FEE07C467233A4AC9D7D7D0167
+- generatedChecksum: F4A47A1DF847B3CB086EE0EC3FE9CCC7
   logicalPath: config/pic32mz_ef_curiosity_2_0
   name: usb_device_init_data.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 08A1F6FEE07C467233A4AC9D7D7D0167
+  userChecksum: F4A47A1DF847B3CB086EE0EC3FE9CCC7
 - generatedChecksum: 7806B30ECAE0D18D08CD583D8775530D
   logicalPath: config/pic32mz_ef_curiosity_2_0/stdio
   name: xc32_monitor.c
