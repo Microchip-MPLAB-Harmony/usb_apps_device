@@ -87,9 +87,9 @@ void APP_ProcessSwitchPress(void);
 APP_DATA appData;
 
 /*Keyboard Report to be transmitted*/
-KEYBOARD_INPUT_REPORT __attribute__((aligned(16))) keyboardInputReport;
+KEYBOARD_INPUT_REPORT __attribute__((aligned(16))) keyboardInputReport USB_ALIGN ;
 /* Keyboard output report */
-KEYBOARD_OUTPUT_REPORT __attribute__((aligned(16))) keyboardOutputReport;
+KEYBOARD_OUTPUT_REPORT __attribute__((aligned(16))) keyboardOutputReport USB_ALIGN ;
 
 
 // *****************************************************************************
