@@ -80,7 +80,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 APP_DATA appData;
 
 /*Keyboard Report to be transmitted*/
-USB_HID_JOYSTICK_REPORT  joystickReport;
+USB_HID_JOYSTICK_REPORT  joystickReport USB_ALIGN ;
 
 
 // *****************************************************************************
