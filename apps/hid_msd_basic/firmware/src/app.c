@@ -63,10 +63,10 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 // *****************************************************************************
 
 /* Recieve data buffer */
-uint8_t receiveDataBuffer[64] CACHE_ALIGN;
+uint8_t receiveDataBuffer[64] USB_ALIGN;
 
 /* Transmit data buffer */
-uint8_t  transmitDataBuffer[64] CACHE_ALIGN;
+uint8_t  transmitDataBuffer[64] USB_ALIGN;
 
 // *****************************************************************************
 /* Application Data
