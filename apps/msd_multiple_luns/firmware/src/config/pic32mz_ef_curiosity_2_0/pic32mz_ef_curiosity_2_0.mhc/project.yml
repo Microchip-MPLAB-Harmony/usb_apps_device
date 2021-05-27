@@ -202,13 +202,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 3A3D90BBDFDB486B57C8FED3BA7D4135
-- generatedChecksum: 3FF8F26836FF296382CE2D09D64FFBB2
+- generatedChecksum: 8C556EA83A3F459E5DA16CC347AEA324
   logicalPath: config/pic32mz_ef_curiosity_2_0
   name: configuration.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 3FF8F26836FF296382CE2D09D64FFBB2
+  userChecksum: 8C556EA83A3F459E5DA16CC347AEA324
 - generatedChecksum: 57EA7E13D395BC4B0ABE600A48E0AF17
   logicalPath: config/pic32mz_ef_curiosity_2_0
   name: definitions.h
@@ -391,13 +391,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 1C1B4729A4E6844899DF7040245073DC
-- generatedChecksum: D56C272B20A77F07A4DAF8D2AD351F4B
+- generatedChecksum: 311CEBAAC39EBB5B594FBFED684D28DF
   logicalPath: config/pic32mz_ef_curiosity_2_0/peripheral/nvm
   name: plib_nvm.h
   physicalPath: peripheral/nvm
   security: NON_SECURE
   type: HEADER
-  userChecksum: D56C272B20A77F07A4DAF8D2AD351F4B
+  userChecksum: 311CEBAAC39EBB5B594FBFED684D28DF
 - generatedChecksum: 8B538ED26B7B1F9177E6F490AAE66B57
   logicalPath: config/pic32mz_ef_curiosity_2_0/peripheral/spi/spi_master
   name: plib_spi1_master.h
@@ -804,13 +804,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: A0803FFCE7DA932883C0B89AD48FA04C
-- generatedChecksum: null
+- generatedChecksum: 4B3C3EF8A318908A22B78500515C3288
   logicalPath: config/pic32mz_ef_curiosity_2_0
   name: user.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: null
+  userChecksum: 4B3C3EF8A318908A22B78500515C3288
 - generatedChecksum: 07A482DAB7473FC475EA656561967B15
   logicalPath: config/pic32mz_ef_curiosity_2_0
   name: p32MZ2048EFM144.ld
