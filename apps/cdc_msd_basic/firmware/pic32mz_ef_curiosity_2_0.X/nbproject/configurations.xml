@@ -643,6 +643,8 @@
         <property key="memories.programmemory.start" value="0x1d000000"/>
         <property key="memories.rww" value="true"/>
         <property key="poweroptions.powerenable" value="false"/>
+        <property key="programmerToGoFilePath"
+                  value="D:/usbR3.72/usb_apps_device/apps/cdc_msd_basic/firmware/pic32mz_ef_curiosity_2_0.X/debug/pic32mz_ef_curiosity_2_0/pic32mz_ef_curiosity_2_0_ptg"/>
         <property key="programmertogo.imagename" value=""/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
