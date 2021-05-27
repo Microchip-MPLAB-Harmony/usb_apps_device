@@ -195,13 +195,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 422E1C8A22D0D55EE2FF73295DFF965E
-- generatedChecksum: 1EFF062861A2CB4CB15279B1CF22548C
+- generatedChecksum: D99328248D0A80188257B9673AB3A626
   logicalPath: config/pic32mx470_curiosity
   name: configuration.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 1EFF062861A2CB4CB15279B1CF22548C
+  userChecksum: D99328248D0A80188257B9673AB3A626
 - generatedChecksum: 943B8708AF288ADAF41F0A33F715CF76
   logicalPath: config/pic32mx470_curiosity
   name: definitions.h
@@ -1392,13 +1392,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: D048A36DC93E66C9CA02E4D6CD9827B9
-- generatedChecksum: null
+- generatedChecksum: 4B3C3EF8A318908A22B78500515C3288
   logicalPath: config/pic32mx470_curiosity
   name: user.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: null
+  userChecksum: 4B3C3EF8A318908A22B78500515C3288
 - generatedChecksum: 52AA20E8BAA488B3B6581379249C0FCE
   logicalPath: config/pic32mx470_curiosity
   name: p32MX470F512H.ld
