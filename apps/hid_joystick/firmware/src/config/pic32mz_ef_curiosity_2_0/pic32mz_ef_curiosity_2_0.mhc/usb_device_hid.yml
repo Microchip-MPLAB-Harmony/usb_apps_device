@@ -38,4 +38,4 @@ children:
           - type: User
             attributes: {value: Joystick}
 - type: ElementPosition
-  attributes: {x: '306', y: '210', id: usb_device_hid}
+  attributes: {x: '311', y: '135', id: usb_device_hid}
