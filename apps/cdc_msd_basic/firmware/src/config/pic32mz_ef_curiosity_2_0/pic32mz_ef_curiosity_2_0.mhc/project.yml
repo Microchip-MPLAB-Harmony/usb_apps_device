@@ -188,13 +188,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 17957B12B25F5C94CFD3EBD2D56ECC64
-- generatedChecksum: 55D776090896370C0F31210BE4707765
+- generatedChecksum: CF73EEFB58EEC3CFF738F2D4EB74C8D4
   logicalPath: config/pic32mz_ef_curiosity_2_0
   name: configuration.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 55D776090896370C0F31210BE4707765
+  userChecksum: CF73EEFB58EEC3CFF738F2D4EB74C8D4
 - generatedChecksum: 46EB441459DCECB902DAFCDEE29868C0
   logicalPath: config/pic32mz_ef_curiosity_2_0
   name: definitions.h
@@ -335,13 +335,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 4C6C4A7B7E33767128AA763FFAE2E394
-- generatedChecksum: D56C272B20A77F07A4DAF8D2AD351F4B
+- generatedChecksum: 311CEBAAC39EBB5B594FBFED684D28DF
   logicalPath: config/pic32mz_ef_curiosity_2_0/peripheral/nvm
   name: plib_nvm.h
   physicalPath: peripheral/nvm
   security: NON_SECURE
   type: HEADER
-  userChecksum: D56C272B20A77F07A4DAF8D2AD351F4B
+  userChecksum: 311CEBAAC39EBB5B594FBFED684D28DF
 - generatedChecksum: 32D7539D9231F3C159ABECE91A0281EA
   logicalPath: config/pic32mz_ef_curiosity_2_0/peripheral/tmr1
   name: plib_tmr1.h
