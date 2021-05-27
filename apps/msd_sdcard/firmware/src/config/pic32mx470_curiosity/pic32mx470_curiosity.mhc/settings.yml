@@ -5,7 +5,7 @@ frameworkPath: ..\..\..
 processor: PIC32MX470F512H
 projectName: msd_sdcard_pic32mx470_curiosity
 settings:
-  PackageFilter: bsp;core;core_apps_pic32mx;csp;usb;usb_apps_device;usb_apps_dual_role;usb_apps_host;usb_apps_multi_controller
+  PackageFilter: bsp;core;core_apps_pic32mx;core_apps_pic32mz_ef;csp;usb;usb_apps_device;usb_apps_dual_role;usb_apps_host;usb_apps_multi_controller
   FORCE_OPTIMIZATION: 'false'
   GENERATE_BACKUP: 'true'
   TRUSTZONE: 'false'
