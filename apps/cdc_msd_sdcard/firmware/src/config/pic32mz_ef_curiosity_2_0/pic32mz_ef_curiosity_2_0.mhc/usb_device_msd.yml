@@ -40,4 +40,4 @@ children:
           - type: TargetAttachment
             attributes: {targetComponentID: drv_sdspi_0, targetAttachmentID: drv_media}
 - type: ElementPosition
-  attributes: {x: '399', y: '376', id: usb_device_msd}
+  attributes: {x: '381', y: '311', id: usb_device_msd}

@@ -131,4 +131,4 @@ children:
             children:
             - {type: Value, value: SPI1_SPI}
 - type: ElementPosition
-  attributes: {x: '240', y: '345', id: drv_sdspi}
+  attributes: {x: '233', y: '314', id: drv_sdspi}
