@@ -13,6 +13,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 8E6E4893125920C25696936C33DBF3E4
+- generatedChecksum: 1C8E0685B0B99622BABC95848E7EB0E4
+  logicalPath: config/pic32mx470_curiosity
+  name: diskImage.c
+  physicalPath: ''
+  security: NON_SECURE
+  type: SOURCE
+  userChecksum: 1C8E0685B0B99622BABC95848E7EB0E4
 - generatedChecksum: 257ACC61A57EA8DE78BA7E1F78DB85A3
   logicalPath: config/pic32mx470_curiosity/driver/memory
   name: drv_memory.c
@@ -1413,13 +1420,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: D048A36DC93E66C9CA02E4D6CD9827B9
-- generatedChecksum: null
+- generatedChecksum: 4B3C3EF8A318908A22B78500515C3288
   logicalPath: config/pic32mx470_curiosity
   name: user.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: null
+  userChecksum: 4B3C3EF8A318908A22B78500515C3288
 - generatedChecksum: 52AA20E8BAA488B3B6581379249C0FCE
   logicalPath: config/pic32mx470_curiosity
   name: p32MX470F512H.ld
