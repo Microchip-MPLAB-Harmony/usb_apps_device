@@ -34,20 +34,20 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: D230A6B646D2E78CEAA6AA924E04FCA0
-- generatedChecksum: F9471470EAC4E46AD31B57119DDA62C9
+- generatedChecksum: 86B19C010206193825BAC0F96908A3C9
   logicalPath: config/pic32mz_ef_curiosity_2_0
   name: initialization.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: F9471470EAC4E46AD31B57119DDA62C9
-- generatedChecksum: 6C0A4481A33A6ABCFDA1819A2679A307
+  userChecksum: 86B19C010206193825BAC0F96908A3C9
+- generatedChecksum: 6A3A1E522DCF68B9F90640B7390845BF
   logicalPath: config/pic32mz_ef_curiosity_2_0
   name: interrupts.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 6C0A4481A33A6ABCFDA1819A2679A307
+  userChecksum: 6A3A1E522DCF68B9F90640B7390845BF
 - generatedChecksum: null
   logicalPath: ''
   name: main.c
@@ -62,20 +62,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 283DF3113B63A68D1DDA854ECCA7F4AF
-- generatedChecksum: 2FEFEA0D4E94F5A5F3D76BAEC3D602E5
-  logicalPath: config/pic32mz_ef_curiosity_2_0/peripheral/coretimer
-  name: plib_coretimer.c
-  physicalPath: peripheral/coretimer
-  security: NON_SECURE
-  type: SOURCE
-  userChecksum: 2FEFEA0D4E94F5A5F3D76BAEC3D602E5
-- generatedChecksum: 5F15DEA8329424F376B881CF2D74F3CC
+- generatedChecksum: CE5C781E061C3ACA9D50557DE49DBE90
   logicalPath: config/pic32mz_ef_curiosity_2_0/peripheral/evic
   name: plib_evic.c
   physicalPath: peripheral/evic
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 5F15DEA8329424F376B881CF2D74F3CC
+  userChecksum: CE5C781E061C3ACA9D50557DE49DBE90
 - generatedChecksum: A70EEF6C533B6AA7F5CEC5E9954449D2
   logicalPath: config/pic32mz_ef_curiosity_2_0/peripheral/gpio
   name: plib_gpio.c
@@ -90,13 +83,6 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: C95CE0ABB86E6B11CF77E8891D294510
-- generatedChecksum: 83BDE663A1AAB20C9E52263F22E2ED3C
-  logicalPath: config/pic32mz_ef_curiosity_2_0/system/time
-  name: sys_time.c
-  physicalPath: system/time/src
-  security: NON_SECURE
-  type: SOURCE
-  userChecksum: 83BDE663A1AAB20C9E52263F22E2ED3C
 - generatedChecksum: A45FCCC37B1DA296971694112DDE881D
   logicalPath: config/pic32mz_ef_curiosity_2_0
   name: tasks.c
@@ -146,20 +132,20 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 17957B12B25F5C94CFD3EBD2D56ECC64
-- generatedChecksum: 320164DB29A65C4BC160DB978D4BF9A7
+- generatedChecksum: D8FC8E29D55BCC821FCFB68EAE10A129
   logicalPath: config/pic32mz_ef_curiosity_2_0
   name: configuration.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 320164DB29A65C4BC160DB978D4BF9A7
-- generatedChecksum: 065D7C6947C3E8D3E8BED5AC43BE650C
+  userChecksum: D8FC8E29D55BCC821FCFB68EAE10A129
+- generatedChecksum: 25E1D9461B6813CF9C8085A4E714D32D
   logicalPath: config/pic32mz_ef_curiosity_2_0
   name: definitions.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 065D7C6947C3E8D3E8BED5AC43BE650C
+  userChecksum: 25E1D9461B6813CF9C8085A4E714D32D
 - generatedChecksum: E189C26B2269F8DE46033CCD0621958D
   logicalPath: config/pic32mz_ef_curiosity_2_0
   name: device.h
@@ -251,13 +237,6 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 7066CC390335CF75126E2A50C46E3BDD
-- generatedChecksum: 21233A0A53C6AC48E24C8A7C17A33D00
-  logicalPath: config/pic32mz_ef_curiosity_2_0/peripheral/coretimer
-  name: plib_coretimer.h
-  physicalPath: peripheral/coretimer
-  security: NON_SECURE
-  type: HEADER
-  userChecksum: 21233A0A53C6AC48E24C8A7C17A33D00
 - generatedChecksum: 815CCB981B6CB758464D89480121DC08
   logicalPath: config/pic32mz_ef_curiosity_2_0/peripheral/evic
   name: plib_evic.h
@@ -307,27 +286,6 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: FC7B55936A09E0CA1395AE4DFB1A188F
-- generatedChecksum: 466D676839280C0E7FC2CC6F78BA6EE9
-  logicalPath: config/pic32mz_ef_curiosity_2_0/system/time
-  name: sys_time.h
-  physicalPath: system/time
-  security: NON_SECURE
-  type: HEADER
-  userChecksum: 466D676839280C0E7FC2CC6F78BA6EE9
-- generatedChecksum: 9463F9BBF69C9593FF3B30F8BC587234
-  logicalPath: config/pic32mz_ef_curiosity_2_0/system/time
-  name: sys_time_definitions.h
-  physicalPath: system/time
-  security: NON_SECURE
-  type: HEADER
-  userChecksum: 9463F9BBF69C9593FF3B30F8BC587234
-- generatedChecksum: 62F39464265EC34979649F761FB4FE57
-  logicalPath: config/pic32mz_ef_curiosity_2_0/system/time
-  name: sys_time_local.h
-  physicalPath: system/time/src
-  security: NON_SECURE
-  type: HEADER
-  userChecksum: 62F39464265EC34979649F761FB4FE57
 - generatedChecksum: BE95B4F134C5C929787B9DA6FDBF3501
   logicalPath: config/pic32mz_ef_curiosity_2_0/system
   name: system.h
@@ -622,13 +580,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: A0803FFCE7DA932883C0B89AD48FA04C
-- generatedChecksum: null
+- generatedChecksum: 4B3C3EF8A318908A22B78500515C3288
   logicalPath: config/pic32mz_ef_curiosity_2_0
   name: user.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: null
+  userChecksum: 4B3C3EF8A318908A22B78500515C3288
 - generatedChecksum: 07A482DAB7473FC475EA656561967B15
   logicalPath: config/pic32mz_ef_curiosity_2_0
   name: p32MZ2048EFM144.ld

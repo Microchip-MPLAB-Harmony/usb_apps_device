@@ -40,4 +40,4 @@ children:
           - type: User
             attributes: {value: Keyboard}
 - type: ElementPosition
-  attributes: {x: '314', y: '205', id: usb_device_hid}
+  attributes: {x: '316', y: '126', id: usb_device_hid}

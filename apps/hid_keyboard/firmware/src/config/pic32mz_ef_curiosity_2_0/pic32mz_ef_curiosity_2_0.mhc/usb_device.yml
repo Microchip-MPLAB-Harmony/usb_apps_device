@@ -68,4 +68,4 @@ children:
       - type: Dynamic
         attributes: {id: usb_device, value: HID Keyboard Demo}
 - type: ElementPosition
-  attributes: {x: '170', y: '205', id: usb_device}
+  attributes: {x: '168', y: '129', id: usb_device}
