@@ -84,4 +84,4 @@ children:
             children:
             - {type: Value, value: UART6_UART}
 - type: ElementPosition
-  attributes: {x: '220', y: '338', id: drv_usart}
+  attributes: {x: '207', y: '236', id: drv_usart}

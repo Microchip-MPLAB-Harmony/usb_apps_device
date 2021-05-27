@@ -67,9 +67,6 @@
             <logicalFolder name="f1" displayName="clk" projectFiles="true">
               <itemPath>../src/config/pic32mz_ef_curiosity_2_0/peripheral/clk/plib_clk.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f5" displayName="coretimer" projectFiles="true">
-              <itemPath>../src/config/pic32mz_ef_curiosity_2_0/peripheral/coretimer/plib_coretimer.h</itemPath>
-            </logicalFolder>
             <logicalFolder name="f3" displayName="evic" projectFiles="true">
               <itemPath>../src/config/pic32mz_ef_curiosity_2_0/peripheral/evic/plib_evic.h</itemPath>
             </logicalFolder>
@@ -92,11 +89,6 @@
             <logicalFolder name="f2" displayName="int" projectFiles="true">
               <itemPath>../src/config/pic32mz_ef_curiosity_2_0/system/int/sys_int.h</itemPath>
               <itemPath>../src/config/pic32mz_ef_curiosity_2_0/system/int/sys_int_mapping.h</itemPath>
-            </logicalFolder>
-            <logicalFolder name="f1" displayName="time" projectFiles="true">
-              <itemPath>../src/config/pic32mz_ef_curiosity_2_0/system/time/sys_time.h</itemPath>
-              <itemPath>../src/config/pic32mz_ef_curiosity_2_0/system/time/sys_time_definitions.h</itemPath>
-              <itemPath>../src/config/pic32mz_ef_curiosity_2_0/system/time/src/sys_time_local.h</itemPath>
             </logicalFolder>
             <itemPath>../src/config/pic32mz_ef_curiosity_2_0/system/system.h</itemPath>
             <itemPath>../src/config/pic32mz_ef_curiosity_2_0/system/system_common.h</itemPath>
@@ -169,9 +161,6 @@
             <logicalFolder name="f1" displayName="clk" projectFiles="true">
               <itemPath>../src/config/pic32mz_ef_curiosity_2_0/peripheral/clk/plib_clk.c</itemPath>
             </logicalFolder>
-            <logicalFolder name="f5" displayName="coretimer" projectFiles="true">
-              <itemPath>../src/config/pic32mz_ef_curiosity_2_0/peripheral/coretimer/plib_coretimer.c</itemPath>
-            </logicalFolder>
             <logicalFolder name="f3" displayName="evic" projectFiles="true">
               <itemPath>../src/config/pic32mz_ef_curiosity_2_0/peripheral/evic/plib_evic.c</itemPath>
             </logicalFolder>
@@ -191,9 +180,6 @@
             </logicalFolder>
             <logicalFolder name="f2" displayName="int" projectFiles="true">
               <itemPath>../src/config/pic32mz_ef_curiosity_2_0/system/int/src/sys_int.c</itemPath>
-            </logicalFolder>
-            <logicalFolder name="f1" displayName="time" projectFiles="true">
-              <itemPath>../src/config/pic32mz_ef_curiosity_2_0/system/time/src/sys_time.c</itemPath>
             </logicalFolder>
           </logicalFolder>
           <logicalFolder name="f3" displayName="usb" projectFiles="true">
@@ -221,7 +207,6 @@
                      projectFiles="true">
         <itemPath>../src/config/pic32mz_ef_curiosity_2_0/pic32mz_ef_curiosity_2_0.mhc/BSP_PIC32MZ_EF_Curiosity_2.0.yml</itemPath>
         <itemPath>../src/config/pic32mz_ef_curiosity_2_0/pic32mz_ef_curiosity_2_0.mhc/core.yml</itemPath>
-        <itemPath>../src/config/pic32mz_ef_curiosity_2_0/pic32mz_ef_curiosity_2_0.mhc/core_timer.yml</itemPath>
         <itemPath>../src/config/pic32mz_ef_curiosity_2_0/pic32mz_ef_curiosity_2_0.mhc/dfp.yml</itemPath>
         <itemPath>../src/config/pic32mz_ef_curiosity_2_0/pic32mz_ef_curiosity_2_0.mhc/drv_usart.yml</itemPath>
         <itemPath>../src/config/pic32mz_ef_curiosity_2_0/pic32mz_ef_curiosity_2_0.mhc/drv_usbhs_v1.yml</itemPath>
@@ -229,7 +214,6 @@
         <itemPath>../src/config/pic32mz_ef_curiosity_2_0/pic32mz_ef_curiosity_2_0.mhc/HarmonyCore.yml</itemPath>
         <itemPath>../src/config/pic32mz_ef_curiosity_2_0/pic32mz_ef_curiosity_2_0.mhc/project.yml</itemPath>
         <itemPath>../src/config/pic32mz_ef_curiosity_2_0/pic32mz_ef_curiosity_2_0.mhc/settings.yml</itemPath>
-        <itemPath>../src/config/pic32mz_ef_curiosity_2_0/pic32mz_ef_curiosity_2_0.mhc/sys_time.yml</itemPath>
         <itemPath>../src/config/pic32mz_ef_curiosity_2_0/pic32mz_ef_curiosity_2_0.mhc/uart6.yml</itemPath>
         <itemPath>../src/config/pic32mz_ef_curiosity_2_0/pic32mz_ef_curiosity_2_0.mhc/usb_device.yml</itemPath>
         <itemPath>../src/config/pic32mz_ef_curiosity_2_0/pic32mz_ef_curiosity_2_0.mhc/usb_device_cdc.yml</itemPath>

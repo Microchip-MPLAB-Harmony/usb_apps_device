@@ -18,6 +18,23 @@ children:
       children:
       - type: Dynamic
         attributes: {id: uart6, value: '0'}
+  - type: Comment
+    attributes: {id: UART_BRGH_MODE_COMMENT}
+    children:
+    - type: Attributes
+      children:
+      - type: String
+        attributes: {id: text}
+        children:
+        - {type: Value, value: '*** High Speed mode 4x baud clock enabled (BRGH =
+            1) ***'}
+  - type: Integer
+    attributes: {id: UART_CLOCK_FREQ}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: uart6, value: '99000000'}
   - type: Boolean
     attributes: {id: UART_INTERRUPT_MODE_ENABLE}
     children:
@@ -68,4 +85,4 @@ children:
         children:
         - {type: Value, value: drv_usart_UART_dependency}
 - type: ElementPosition
-  attributes: {x: '79', y: '428', id: uart6}
+  attributes: {x: '73', y: '314', id: uart6}
