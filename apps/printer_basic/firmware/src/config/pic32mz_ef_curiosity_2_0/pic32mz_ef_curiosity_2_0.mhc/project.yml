@@ -6,13 +6,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: null
-- generatedChecksum: 4A517B234375FC0E5AD15CC411FF3B92
+- generatedChecksum: 9F36FCC3C572E5CBBD85D922575C8255
   logicalPath: config/pic32mz_ef_curiosity_2_0/bsp
   name: bsp.c
   physicalPath: bsp
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 4A517B234375FC0E5AD15CC411FF3B92
+  userChecksum: 9F36FCC3C572E5CBBD85D922575C8255
 - generatedChecksum: ECB9B16BD7D2C1A33E4F3AAD97883927
   logicalPath: config/pic32mz_ef_curiosity_2_0/driver/usart
   name: drv_usart.c
@@ -90,13 +90,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: EC454E297A6DCCE0F82A9C919B0C461E
-- generatedChecksum: A70EEF6C533B6AA7F5CEC5E9954449D2
+- generatedChecksum: 2AFB72B5B43970D5C84E3B0DA713F935
   logicalPath: config/pic32mz_ef_curiosity_2_0/peripheral/gpio
   name: plib_gpio.c
   physicalPath: peripheral/gpio
   security: NON_SECURE
   type: SOURCE
-  userChecksum: A70EEF6C533B6AA7F5CEC5E9954449D2
+  userChecksum: 2AFB72B5B43970D5C84E3B0DA713F935
 - generatedChecksum: CAFC7758EA067AFE68AB54623BBF1283
   logicalPath: config/pic32mz_ef_curiosity_2_0/peripheral/uart
   name: plib_uart6.c
@@ -139,13 +139,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: BCCEF5B801FFD0CF22D0B454D2F25F1F
-- generatedChecksum: 9A59FEF483E989FED1845F9123FC70CD
+- generatedChecksum: 94635B81A074F33FB6A648421A6CDE20
   logicalPath: config/pic32mz_ef_curiosity_2_0
   name: usb_device_init_data.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 9A59FEF483E989FED1845F9123FC70CD
+  userChecksum: 94635B81A074F33FB6A648421A6CDE20
 - generatedChecksum: 728C269A7A7BA126E759539BD7253D42
   logicalPath: config/pic32mz_ef_curiosity_2_0/usb/src
   name: usb_device_printer.c
@@ -167,27 +167,27 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: null
-- generatedChecksum: 17957B12B25F5C94CFD3EBD2D56ECC64
+- generatedChecksum: AEDE5DE4926B0706E3319B53D9A47349
   logicalPath: config/pic32mz_ef_curiosity_2_0/bsp
   name: bsp.h
   physicalPath: bsp
   security: NON_SECURE
   type: HEADER
-  userChecksum: 17957B12B25F5C94CFD3EBD2D56ECC64
-- generatedChecksum: 4DE6A036099D3503BECDD4D38C645DFC
+  userChecksum: AEDE5DE4926B0706E3319B53D9A47349
+- generatedChecksum: 737B0D5C8C991B9A10F7A2A4A0F8A579
   logicalPath: config/pic32mz_ef_curiosity_2_0
   name: configuration.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 4DE6A036099D3503BECDD4D38C645DFC
-- generatedChecksum: 883542B6FCDCBB726796D15FC62C46BD
+  userChecksum: 737B0D5C8C991B9A10F7A2A4A0F8A579
+- generatedChecksum: 0F81AE465B8296F3ADAE8C79E826A748
   logicalPath: config/pic32mz_ef_curiosity_2_0
   name: definitions.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 883542B6FCDCBB726796D15FC62C46BD
+  userChecksum: 0F81AE465B8296F3ADAE8C79E826A748
 - generatedChecksum: E189C26B2269F8DE46033CCD0621958D
   logicalPath: config/pic32mz_ef_curiosity_2_0
   name: device.h

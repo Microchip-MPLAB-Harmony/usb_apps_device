@@ -362,6 +362,27 @@ children:
       - type: User
         attributes: {value: DIGITAL}
   - type: String
+    attributes: {id: BSP_PIN_28_DIR}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: Out}
+  - type: String
+    attributes: {id: BSP_PIN_28_FUNCTION_NAME}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: VBUS_AH}
+  - type: String
+    attributes: {id: BSP_PIN_28_FUNCTION_TYPE}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: VBUS_AH}
+  - type: String
     attributes: {id: BSP_PIN_28_MODE}
     children:
     - type: Values
@@ -481,6 +502,20 @@ children:
       - type: User
         attributes: {value: DIGITAL}
   - type: String
+    attributes: {id: BSP_PIN_57_FUNCTION_TYPE}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: U6RX}
+  - type: String
+    attributes: {id: BSP_PIN_57_MODE}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: DIGITAL}
+  - type: String
     attributes: {id: BSP_PIN_68_MODE}
     children:
     - type: Values
@@ -508,6 +543,13 @@ children:
       children:
       - type: User
         attributes: {value: DIGITAL}
+  - type: String
+    attributes: {id: BSP_PIN_79_FUNCTION_TYPE}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: U6TX}
   - type: String
     attributes: {id: BSP_PIN_79_MODE}
     children:
@@ -1489,6 +1531,13 @@ children:
       - type: Dynamic
         attributes: {id: core, value: '896'}
   - type: Hex
+    attributes: {id: SYS_PORT_F_ANSEL}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: '8192'}
+  - type: Hex
     attributes: {id: SYS_PORT_J_LAT}
     children:
     - type: Values
@@ -1508,7 +1557,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '136'}
+        attributes: {id: core, value: '8328'}
   - type: Hex
     attributes: {id: SYS_PORT_K_LAT}
     children:
@@ -1530,6 +1579,58 @@ children:
       children:
       - type: Dynamic
         attributes: {id: core, value: '128'}
+  - type: Combo
+    attributes: {id: SYS_PORT_PPS_INPUT_FUNCTION_0}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'true'}
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: U6RX}
+  - type: KeyValueSet
+    attributes: {id: SYS_PORT_PPS_INPUT_PIN_0}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'true'}
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: '27'}
+  - type: KeyValueSet
+    attributes: {id: SYS_PORT_PPS_OUTPUT_FUNCTION_0}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'true'}
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: '16'}
+  - type: Combo
+    attributes: {id: SYS_PORT_PPS_OUTPUT_PIN_0}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'true'}
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: RPF2}
   - type: Integer
     attributes: {id: TMR1_CLOCK_FREQUENCY}
     children:
@@ -1789,6 +1890,20 @@ children:
       children:
       - type: Dynamic
         attributes: {id: drv_usbhs_v1, value: 'true'}
+  - type: Boolean
+    attributes: {id: USE_PPS_INPUT_0}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: 'true'}
+  - type: Boolean
+    attributes: {id: USE_PPS_OUTPUT_0}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: 'true'}
   - type: KeyValueSet
     attributes: {id: clkSvcMode}
     children:

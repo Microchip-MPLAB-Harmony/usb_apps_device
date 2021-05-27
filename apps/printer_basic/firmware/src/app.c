@@ -63,8 +63,8 @@
 // *****************************************************************************
 // *****************************************************************************
 
-uint8_t APP_MAKE_BUFFER_DMA_READY printerReadBuffer[APP_READ_BUFFER_SIZE];
-uint8_t APP_MAKE_BUFFER_DMA_READY printerWriteBuffer[APP_WRITE_BUFFER_SIZE];
+uint8_t USB_ALIGN printerReadBuffer[APP_READ_BUFFER_SIZE];
+uint8_t USB_ALIGN printerWriteBuffer[APP_WRITE_BUFFER_SIZE];
 
 #define LANG_PARSE_ACK  0x1
 #define LANG_PARSE_NACK 0x0

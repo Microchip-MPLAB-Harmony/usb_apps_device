@@ -106,6 +106,9 @@
 #define SWITCH3_Get() ((PORTJ >> 6) & 0x1)
 #define SWITCH3_STATE_PRESSED 0
 #define SWITCH3_STATE_RELEASED 1
+/*** VBUS Macros for VBUS_AH ***/
+#define VBUS_AH_PowerEnable() (LATJSET = (1<<13))
+#define VBUS_AH_PowerDisable() (LATJCLR = (1<<13))
 
 
 

@@ -18,6 +18,13 @@ children:
       children:
       - type: Dynamic
         attributes: {id: usb_device, value: '1'}
+  - type: Boolean
+    attributes: {id: CONFIG_USB_DEVICE_EVENT_ENABLE_SOF}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: 'true'}
   - type: Integer
     attributes: {id: CONFIG_USB_DEVICE_FUNCTIONS_NUMBER}
     children:
@@ -60,5 +67,21 @@ children:
       children:
       - type: Dynamic
         attributes: {id: usb_device, value: Generic Text Printer Demo}
+  - type: String
+    attributes: {id: CONFIG_USB_DEVICE_SERIAL_NUMBER_STRING_DESCRIPTOR}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'true'}
+  - type: Boolean
+    attributes: {id: CONFIG_USB_DEVICE_SERIAL_NUMBER_STRING_ENABLE}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: 'true'}
 - type: ElementPosition
-  attributes: {x: '163', y: '278', id: usb_device}
+  attributes: {x: '172', y: '271', id: usb_device}
