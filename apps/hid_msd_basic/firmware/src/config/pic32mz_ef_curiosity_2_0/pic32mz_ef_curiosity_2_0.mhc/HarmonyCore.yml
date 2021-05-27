@@ -33,9 +33,9 @@ children:
         - type: Pairs
           children:
           - type: Pair
-            attributes: {description: 'FALSE', value: '1', key: ENABLE_DRV_COMMON}
+            attributes: {description: 'TRUE', value: '1', key: ENABLE_DRV_COMMON}
           - type: Pair
-            attributes: {description: 'TRUE', value: '2', key: ENABLE_SYS_COMMON}
+            attributes: {description: 'TRUE', value: '1', key: ENABLE_SYS_COMMON}
           - type: Pair
             attributes: {description: 'TRUE', value: '1', key: ENABLE_SYS_MEDIA}
           - type: Pair
@@ -81,10 +81,16 @@ children:
   - type: Boolean
     attributes: {id: ENABLE_DRV_COMMON}
     children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: readOnly}
+        children:
+        - {type: Value, value: 'true'}
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: drv_usbhs_v1, value: 'true'}
+        attributes: {id: HarmonyCore, value: 'true'}
   - type: Boolean
     attributes: {id: ENABLE_OSAL}
     children:

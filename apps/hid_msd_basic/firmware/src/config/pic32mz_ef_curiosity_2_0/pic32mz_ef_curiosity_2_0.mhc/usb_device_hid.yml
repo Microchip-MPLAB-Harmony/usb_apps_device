@@ -38,4 +38,4 @@ children:
           - type: User
             attributes: {value: Custom}
 - type: ElementPosition
-  attributes: {x: '317', y: '154', id: usb_device_hid}
+  attributes: {x: '348', y: '124', id: usb_device_hid}
