@@ -2,6 +2,15 @@ format_version: v1.0
 type: GeneratorComponent
 attributes: {id: drv_usart}
 children:
+- type: Symbols
+  children:
+  - type: Combo
+    attributes: {id: DRV_USART_COMMON_MODE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: drv_usart, value: Asynchronous}
 - type: Instances
   children:
   - type: InstanceComponent
@@ -73,4 +82,4 @@ children:
             children:
             - {type: Value, value: UART6_UART}
 - type: ElementPosition
-  attributes: {x: '472', y: '59', id: drv_usart}
+  attributes: {x: '343', y: '51', id: drv_usart}

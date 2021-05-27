@@ -280,25 +280,6 @@ const DRV_USBHS_INIT drvUSBInit =
 // Section: System Initialization
 // *****************************************************************************
 // *****************************************************************************
-// <editor-fold defaultstate="collapsed" desc="SYS_TIME Initialization Data">
-
-const SYS_TIME_PLIB_INTERFACE sysTimePlibAPI = {
-    .timerCallbackSet = (SYS_TIME_PLIB_CALLBACK_REGISTER)CORETIMER_CallbackSet,
-    .timerStart = (SYS_TIME_PLIB_START)CORETIMER_Start,
-    .timerStop = (SYS_TIME_PLIB_STOP)CORETIMER_Stop ,
-    .timerFrequencyGet = (SYS_TIME_PLIB_FREQUENCY_GET)CORETIMER_FrequencyGet,
-    .timerPeriodSet = (SYS_TIME_PLIB_PERIOD_SET)NULL,
-    .timerCompareSet = (SYS_TIME_PLIB_COMPARE_SET)CORETIMER_CompareSet,
-    .timerCounterGet = (SYS_TIME_PLIB_COUNTER_GET)CORETIMER_CounterGet,
-};
-
-const SYS_TIME_INIT sysTimeInitData =
-{
-    .timePlib = &sysTimePlibAPI,
-    .hwTimerIntNum = 0,
-};
-
-// </editor-fold>
 
 
 
@@ -343,14 +324,12 @@ void SYS_Initialize ( void* data )
 
 	UART6_Initialize();
 
-    CORETIMER_Initialize();
 
     sysObj.drvUsart0 = DRV_USART_Initialize(DRV_USART_INDEX_0, (SYS_MODULE_INIT *)&drvUsart0InitData);
 
     sysObj.drvMemory0 = DRV_MEMORY_Initialize((SYS_MODULE_INDEX)DRV_MEMORY_INDEX_0, (SYS_MODULE_INIT *)&drvMemory0InitData);
 
 
-    sysObj.sysTime = SYS_TIME_Initialize(SYS_TIME_INDEX_0, (SYS_MODULE_INIT *)&sysTimeInitData);
 
 
 	 /* Initialize the USB device layer */

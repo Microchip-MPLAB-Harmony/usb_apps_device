@@ -79,15 +79,6 @@ extern "C" {
 // Section: System Service Configuration
 // *****************************************************************************
 // *****************************************************************************
-/* TIME System Service Configuration Options */
-#define SYS_TIME_INDEX_0                            (0)
-#define SYS_TIME_MAX_TIMERS                         (5)
-#define SYS_TIME_HW_COUNTER_WIDTH                   (32)
-#define SYS_TIME_HW_COUNTER_PERIOD                  (4294967295U)
-#define SYS_TIME_HW_COUNTER_HALF_PERIOD             (SYS_TIME_HW_COUNTER_PERIOD>>1)
-#define SYS_TIME_CPU_CLOCK_FREQUENCY                (198000000)
-#define SYS_TIME_COMPARE_UPDATE_EXECUTION_CYCLES    (620)
-
 
 
 // *****************************************************************************
@@ -108,7 +99,7 @@ extern "C" {
 #define DRV_MEMORY_CLIENTS_NUMBER_IDX0       1
 #define DRV_MEMORY_BUFFER_QUEUE_SIZE_IDX0    1
 #define DRV_MEMORY_DEVICE_START_ADDRESS      0x9d100000
-#define DRV_MEMORY_DEVICE_MEDIA_SIZE         1024UL
+#define DRV_MEMORY_DEVICE_MEDIA_SIZE         32UL
 #define DRV_MEMORY_DEVICE_PROGRAM_SIZE       2048
 #define DRV_MEMORY_DEVICE_ERASE_SIZE         16384
 
@@ -134,6 +125,8 @@ extern "C" {
 /* EP0 size in bytes */
 #define USB_DEVICE_EP0_BUFFER_SIZE                          64
 
+/* Enable SOF Events */
+#define USB_DEVICE_SOF_EVENT_ENABLE
 
 
 
