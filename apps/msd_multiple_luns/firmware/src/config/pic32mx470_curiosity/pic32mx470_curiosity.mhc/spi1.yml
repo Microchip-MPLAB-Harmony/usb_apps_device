@@ -26,7 +26,7 @@ children:
       - type: Boolean
         attributes: {id: readOnly}
         children:
-        - {type: Value, value: 'true'}
+        - {type: Value, value: 'false'}
     - type: Values
       children:
       - type: Dynamic
@@ -73,4 +73,4 @@ children:
         children:
         - {type: Value, value: drv_sdspi_SPI_dependency}
 - type: ElementPosition
-  attributes: {x: '58', y: '608', id: spi1}
+  attributes: {x: '53', y: '500', id: spi1}

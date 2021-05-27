@@ -62,20 +62,20 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 4BBDE3B7B0DAEE2CA5A8F519001D5BFF
-- generatedChecksum: 91750380C7708A8ADA27B8049F1448A4
+- generatedChecksum: C8EAB37032BBCA9EE273F2AA1947594A
   logicalPath: config/pic32mx470_curiosity
   name: initialization.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 91750380C7708A8ADA27B8049F1448A4
-- generatedChecksum: E1DBF41AE3783F630099D84C7F6EEC54
+  userChecksum: C8EAB37032BBCA9EE273F2AA1947594A
+- generatedChecksum: 9E8C5E3B6181C3B755182017C98EB4D5
   logicalPath: config/pic32mx470_curiosity
   name: interrupts.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: E1DBF41AE3783F630099D84C7F6EEC54
+  userChecksum: 9E8C5E3B6181C3B755182017C98EB4D5
 - generatedChecksum: null
   logicalPath: ''
   name: main.c
@@ -83,13 +83,20 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: null
-- generatedChecksum: 8B5814AAD9B8E492080048ABAA1D46A5
+- generatedChecksum: AF384F8AD977972A94D30392AC3134C0
   logicalPath: config/pic32mx470_curiosity/peripheral/clk
   name: plib_clk.c
   physicalPath: peripheral/clk
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 8B5814AAD9B8E492080048ABAA1D46A5
+  userChecksum: AF384F8AD977972A94D30392AC3134C0
+- generatedChecksum: 2FEFEA0D4E94F5A5F3D76BAEC3D602E5
+  logicalPath: config/pic32mx470_curiosity/peripheral/coretimer
+  name: plib_coretimer.c
+  physicalPath: peripheral/coretimer
+  security: NON_SECURE
+  type: SOURCE
+  userChecksum: 2FEFEA0D4E94F5A5F3D76BAEC3D602E5
 - generatedChecksum: 364F6F7EA67A6BB144A757C4EFF441B4
   logicalPath: config/pic32mx470_curiosity/peripheral/dmac
   name: plib_dmac.c
@@ -97,13 +104,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 364F6F7EA67A6BB144A757C4EFF441B4
-- generatedChecksum: 79D822C51EF7D5D1D40E595C609403AB
+- generatedChecksum: BFDDF2619A3CB6F07AA62761779306E6
   logicalPath: config/pic32mx470_curiosity/peripheral/evic
   name: plib_evic.c
   physicalPath: peripheral/evic
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 79D822C51EF7D5D1D40E595C609403AB
+  userChecksum: BFDDF2619A3CB6F07AA62761779306E6
 - generatedChecksum: A5580BB69470EDFDA418D3D9E5C470B9
   logicalPath: config/pic32mx470_curiosity/peripheral/gpio
   name: plib_gpio.c
@@ -125,13 +132,6 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: BFAA263B592234CE6747F050C32A6F69
-- generatedChecksum: E83BEAD1894FE542FA106B720193D31D
-  logicalPath: config/pic32mx470_curiosity/peripheral/tmr1
-  name: plib_tmr1.c
-  physicalPath: peripheral/tmr1
-  security: NON_SECURE
-  type: SOURCE
-  userChecksum: E83BEAD1894FE542FA106B720193D31D
 - generatedChecksum: FDC8377D4C00CF6776ADA09DB0BBF5DA
   logicalPath: config/pic32mx470_curiosity/system/dma
   name: sys_dma.c
@@ -146,13 +146,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: C95CE0ABB86E6B11CF77E8891D294510
-- generatedChecksum: DBC3FFA1F53A676024E28EEA2F25E2FE
+- generatedChecksum: 83BDE663A1AAB20C9E52263F22E2ED3C
   logicalPath: config/pic32mx470_curiosity/system/time
   name: sys_time.c
   physicalPath: system/time/src
   security: NON_SECURE
   type: SOURCE
-  userChecksum: DBC3FFA1F53A676024E28EEA2F25E2FE
+  userChecksum: 83BDE663A1AAB20C9E52263F22E2ED3C
 - generatedChecksum: 9BC60FCFA7820CAD47995375636E8EF8
   logicalPath: config/pic32mx470_curiosity
   name: tasks.c
@@ -167,13 +167,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: BCCEF5B801FFD0CF22D0B454D2F25F1F
-- generatedChecksum: A8206104BB829EA80AC7862E796AC7A2
+- generatedChecksum: A081C13154AFB470BEB89A1630989DF3
   logicalPath: config/pic32mx470_curiosity
   name: usb_device_init_data.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: A8206104BB829EA80AC7862E796AC7A2
+  userChecksum: A081C13154AFB470BEB89A1630989DF3
 - generatedChecksum: 5B2E4F04BB9E3347BD0D10242479D4F0
   logicalPath: config/pic32mx470_curiosity/usb/src
   name: usb_device_msd.c
@@ -202,20 +202,20 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 3AD9B94DC2D509696331D0EA0B4CFD37
-- generatedChecksum: 32019B0A590FEC1B22510CF6D9A68186
+- generatedChecksum: 9D1A053BE2BACC9B17B45D29FCCB8B93
   logicalPath: config/pic32mx470_curiosity
   name: configuration.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 32019B0A590FEC1B22510CF6D9A68186
-- generatedChecksum: 70E0803B1A47377AC5A7B7EACAF48E14
+  userChecksum: 9D1A053BE2BACC9B17B45D29FCCB8B93
+- generatedChecksum: A5EBAF154998470B0FBF3064D396CC13
   logicalPath: config/pic32mx470_curiosity
   name: definitions.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 70E0803B1A47377AC5A7B7EACAF48E14
+  userChecksum: A5EBAF154998470B0FBF3064D396CC13
 - generatedChecksum: E189C26B2269F8DE46033CCD0621958D
   logicalPath: config/pic32mx470_curiosity
   name: device.h
@@ -363,6 +363,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 7066CC390335CF75126E2A50C46E3BDD
+- generatedChecksum: 1306AA00E21EBF7497D0078107233220
+  logicalPath: config/pic32mx470_curiosity/peripheral/coretimer
+  name: plib_coretimer.h
+  physicalPath: peripheral/coretimer
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: 1306AA00E21EBF7497D0078107233220
 - generatedChecksum: 044A6F7964F68A977E26A257A31D6C2C
   logicalPath: config/pic32mx470_curiosity/peripheral/dmac
   name: plib_dmac.h
@@ -405,20 +412,6 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: CFA758C8B7258190473EF7C60C4BA4E9
-- generatedChecksum: 32D7539D9231F3C159ABECE91A0281EA
-  logicalPath: config/pic32mx470_curiosity/peripheral/tmr1
-  name: plib_tmr1.h
-  physicalPath: peripheral/tmr1
-  security: NON_SECURE
-  type: HEADER
-  userChecksum: 32D7539D9231F3C159ABECE91A0281EA
-- generatedChecksum: 69E7C8CDAB1B32838331EE261170CEA4
-  logicalPath: config/pic32mx470_curiosity/peripheral/tmr1
-  name: plib_tmr1_common.h
-  physicalPath: peripheral/tmr1
-  security: NON_SECURE
-  type: HEADER
-  userChecksum: 69E7C8CDAB1B32838331EE261170CEA4
 - generatedChecksum: 3224466D03D8DDF1B5307028B2E5583F
   logicalPath: config/pic32mx470_curiosity/driver/usb/usbfs/src
   name: plib_usbfs.h
@@ -496,20 +489,20 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 466D676839280C0E7FC2CC6F78BA6EE9
-- generatedChecksum: 8DC356D2CAE8EB275CC79AF20A6196FC
+- generatedChecksum: 9463F9BBF69C9593FF3B30F8BC587234
   logicalPath: config/pic32mx470_curiosity/system/time
   name: sys_time_definitions.h
   physicalPath: system/time
   security: NON_SECURE
   type: HEADER
-  userChecksum: 8DC356D2CAE8EB275CC79AF20A6196FC
-- generatedChecksum: D0C1F2390BDD59E74ACC6ACDE6A1495C
+  userChecksum: 9463F9BBF69C9593FF3B30F8BC587234
+- generatedChecksum: 62F39464265EC34979649F761FB4FE57
   logicalPath: config/pic32mx470_curiosity/system/time
   name: sys_time_local.h
   physicalPath: system/time/src
   security: NON_SECURE
   type: HEADER
-  userChecksum: D0C1F2390BDD59E74ACC6ACDE6A1495C
+  userChecksum: 62F39464265EC34979649F761FB4FE57
 - generatedChecksum: BE95B4F134C5C929787B9DA6FDBF3501
   logicalPath: config/pic32mx470_curiosity/system
   name: system.h

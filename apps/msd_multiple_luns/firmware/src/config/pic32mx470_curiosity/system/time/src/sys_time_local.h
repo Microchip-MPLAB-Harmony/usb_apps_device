@@ -111,8 +111,12 @@ typedef struct{
     SYS_STATUS status;
     const SYS_TIME_PLIB_INTERFACE*  timePlib;
     INT_SOURCE                      hwTimerIntNum;
-	uint32_t                        hwTimerTickFreq;
-    uint32_t                        hwTimerPeriodValue;   
+    uint32_t                        hwTimerFrequency;
+    volatile uint32_t               hwTimerPreviousValue;
+    volatile uint32_t               hwTimerCurrentValue;
+    uint32_t                        hwTimerPeriodValue;
+    volatile uint32_t               hwTimerCompareValue;
+    uint32_t                        hwTimerCompareMargin;
     volatile uint32_t               swCounter64Low;           /* Software counter */
     volatile uint32_t               swCounter64High;          /* Software 64-bit counter */
     uint8_t                         interruptNestingCount;

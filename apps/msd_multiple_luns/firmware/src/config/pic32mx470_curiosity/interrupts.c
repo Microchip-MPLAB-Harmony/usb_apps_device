@@ -61,7 +61,7 @@
 // *****************************************************************************
 
 
-void TIMER_1_InterruptHandler( void );
+void CORE_TIMER_InterruptHandler( void );
 void NVM_InterruptHandler( void );
 void DRV_USBFS_USB_Handler( void );
 void SPI_1_InterruptHandler( void );
@@ -71,9 +71,9 @@ void DMA_1_InterruptHandler( void );
 
 
 /* All the handlers are defined here.  Each will call its PLIB-specific function. */
-void __ISR(_TIMER_1_VECTOR, ipl1SOFT) TIMER_1_Handler (void)
+void __ISR(_CORE_TIMER_VECTOR, ipl1SOFT) CORE_TIMER_Handler (void)
 {
-    TIMER_1_InterruptHandler();
+    CORE_TIMER_InterruptHandler();
 }
 
 void __ISR(_FCE_VECTOR, ipl1SOFT) FCE_Handler (void)

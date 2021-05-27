@@ -160,6 +160,9 @@
             <logicalFolder name="f1" displayName="clk" projectFiles="true">
               <itemPath>../src/config/pic32mx470_curiosity/peripheral/clk/plib_clk.h</itemPath>
             </logicalFolder>
+            <logicalFolder name="f6" displayName="coretimer" projectFiles="true">
+              <itemPath>../src/config/pic32mx470_curiosity/peripheral/coretimer/plib_coretimer.h</itemPath>
+            </logicalFolder>
             <logicalFolder name="f4" displayName="dmac" projectFiles="true">
               <itemPath>../src/config/pic32mx470_curiosity/peripheral/dmac/plib_dmac.h</itemPath>
             </logicalFolder>
@@ -177,10 +180,6 @@
                 <itemPath>../src/config/pic32mx470_curiosity/peripheral/spi/spi_master/plib_spi_master_common.h</itemPath>
                 <itemPath>../src/config/pic32mx470_curiosity/peripheral/spi/spi_master/plib_spi1_master.h</itemPath>
               </logicalFolder>
-            </logicalFolder>
-            <logicalFolder name="f6" displayName="tmr1" projectFiles="true">
-              <itemPath>../src/config/pic32mx470_curiosity/peripheral/tmr1/plib_tmr1_common.h</itemPath>
-              <itemPath>../src/config/pic32mx470_curiosity/peripheral/tmr1/plib_tmr1.h</itemPath>
             </logicalFolder>
           </logicalFolder>
           <logicalFolder name="f4" displayName="system" projectFiles="true">
@@ -277,6 +276,9 @@
             <logicalFolder name="f1" displayName="clk" projectFiles="true">
               <itemPath>../src/config/pic32mx470_curiosity/peripheral/clk/plib_clk.c</itemPath>
             </logicalFolder>
+            <logicalFolder name="f6" displayName="coretimer" projectFiles="true">
+              <itemPath>../src/config/pic32mx470_curiosity/peripheral/coretimer/plib_coretimer.c</itemPath>
+            </logicalFolder>
             <logicalFolder name="f4" displayName="dmac" projectFiles="true">
               <itemPath>../src/config/pic32mx470_curiosity/peripheral/dmac/plib_dmac.c</itemPath>
             </logicalFolder>
@@ -293,9 +295,6 @@
               <logicalFolder name="f1" displayName="spi_master" projectFiles="true">
                 <itemPath>../src/config/pic32mx470_curiosity/peripheral/spi/spi_master/plib_spi1_master.c</itemPath>
               </logicalFolder>
-            </logicalFolder>
-            <logicalFolder name="f6" displayName="tmr1" projectFiles="true">
-              <itemPath>../src/config/pic32mx470_curiosity/peripheral/tmr1/plib_tmr1.c</itemPath>
             </logicalFolder>
           </logicalFolder>
           <logicalFolder name="f3" displayName="stdio" projectFiles="true">
@@ -323,6 +322,7 @@
           <itemPath>../src/config/pic32mx470_curiosity/exceptions.c</itemPath>
           <itemPath>../src/config/pic32mx470_curiosity/usb_device_init_data.c</itemPath>
           <itemPath>../src/config/pic32mx470_curiosity/tasks.c</itemPath>
+          <itemPath>../src/config/pic32mx470_curiosity/diskImage.c</itemPath>
         </logicalFolder>
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
@@ -336,6 +336,7 @@
                      projectFiles="true">
         <itemPath>../src/config/pic32mx470_curiosity/pic32mx470_curiosity.mhc/BSP_PIC32MX470_Curiosity_Development_Board.yml</itemPath>
         <itemPath>../src/config/pic32mx470_curiosity/pic32mx470_curiosity.mhc/core.yml</itemPath>
+        <itemPath>../src/config/pic32mx470_curiosity/pic32mx470_curiosity.mhc/core_timer.yml</itemPath>
         <itemPath>../src/config/pic32mx470_curiosity/pic32mx470_curiosity.mhc/dfp.yml</itemPath>
         <itemPath>../src/config/pic32mx470_curiosity/pic32mx470_curiosity.mhc/drv_memory.yml</itemPath>
         <itemPath>../src/config/pic32mx470_curiosity/pic32mx470_curiosity.mhc/drv_sdspi.yml</itemPath>
@@ -347,7 +348,6 @@
         <itemPath>../src/config/pic32mx470_curiosity/pic32mx470_curiosity.mhc/settings.yml</itemPath>
         <itemPath>../src/config/pic32mx470_curiosity/pic32mx470_curiosity.mhc/spi1.yml</itemPath>
         <itemPath>../src/config/pic32mx470_curiosity/pic32mx470_curiosity.mhc/sys_time.yml</itemPath>
-        <itemPath>../src/config/pic32mx470_curiosity/pic32mx470_curiosity.mhc/tmr1.yml</itemPath>
         <itemPath>../src/config/pic32mx470_curiosity/pic32mx470_curiosity.mhc/usb_device.yml</itemPath>
         <itemPath>../src/config/pic32mx470_curiosity/pic32mx470_curiosity.mhc/usb_device_msd.yml</itemPath>
       </logicalFolder>
@@ -615,7 +615,29 @@
         <property key="voltagevalue" value="3.25"/>
       </PICkit3PlatformTool>
       <PKOBSKDEPlatformTool>
-        <property key="firmware.download.all" value="false"/>
+        <property key="AutoSelectMemRanges" value="auto"/>
+        <property key="SecureSegment.SegmentProgramming" value="FullChipProgramming"/>
+        <property key="ToolFirmwareFilePath"
+                  value="Press to browse for a specific firmware version"/>
+        <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
+        <property key="memories.configurationmemory" value="true"/>
+        <property key="memories.dataflash" value="true"/>
+        <property key="memories.eeprom" value="true"/>
+        <property key="memories.id" value="true"/>
+        <property key="memories.programmemory" value="true"/>
+        <property key="memories.programmemory.ranges" value="1d000000-1d07ffff"/>
+        <property key="memories.userotp" value="true"/>
+        <property key="programoptions.donoteraseauxmem" value="false"/>
+        <property key="programoptions.eraseb4program" value="true"/>
+        <property key="programoptions.preservedataflash" value="false"/>
+        <property key="programoptions.preservedataflash.ranges" value=""/>
+        <property key="programoptions.preserveeeprom" value="false"/>
+        <property key="programoptions.preserveeeprom.ranges"
+                  value="${memories.eedata.default}"/>
+        <property key="programoptions.preserveprogram.ranges" value=""/>
+        <property key="programoptions.preserveprogramrange" value="false"/>
+        <property key="programoptions.usehighvoltageonmclr" value="false"/>
+        <property key="programoptions.uselvpprogramming" value="true"/>
       </PKOBSKDEPlatformTool>
       <Tool>
         <property key="ADC 1" value="true"/>
@@ -657,6 +679,7 @@
         <property key="UART4" value="true"/>
         <property key="USB" value="true"/>
         <property key="debugoptions.useswbreakpoints" value="false"/>
+        <property key="firmware.download.all" value="false"/>
         <property key="hwtoolclock.frcindebug" value="false"/>
         <property key="memories.aux" value="false"/>
         <property key="memories.bootflash" value="true"/>
@@ -671,18 +694,19 @@
                   value="${memories.instruction.ram.ranges}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.end" value="0x1d003fff"/>
-        <property key="memories.programmemory.ranges" value="1d000000-1d003fff"/>
+        <property key="memories.programmemory.ranges" value="1d000000-1d07ffff"/>
         <property key="memories.programmemory.start" value="0x1d000000"/>
+        <property key="memories.userotp" value="true"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programmertogo.imagename" value=""/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmspeed" value="2"/>
         <property key="programoptions.preservedataflash" value="false"/>
-        <property key="programoptions.preservedataflash.ranges"
-                  value="${programoptions.preservedataflash.ranges}"/>
+        <property key="programoptions.preservedataflash.ranges" value=""/>
         <property key="programoptions.preserveeeprom" value="false"/>
-        <property key="programoptions.preserveeeprom.ranges" value=""/>
+        <property key="programoptions.preserveeeprom.ranges"
+                  value="${memories.eedata.default}"/>
         <property key="programoptions.preserveprogram.ranges" value=""/>
         <property key="programoptions.preserveprogramrange" value="false"/>
         <property key="programoptions.preserveprogramrange.end" value="0x1d003fff"/>
@@ -692,7 +716,7 @@
         <property key="programoptions.programuserotp" value="false"/>
         <property key="programoptions.testmodeentrymethod" value="VPPFirst"/>
         <property key="programoptions.usehighvoltageonmclr" value="false"/>
-        <property key="programoptions.uselvpprogramming" value="false"/>
+        <property key="programoptions.uselvpprogramming" value="true"/>
         <property key="voltagevalue" value="3.25"/>
       </Tool>
     </conf>

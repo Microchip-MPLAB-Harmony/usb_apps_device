@@ -86,6 +86,8 @@ typedef struct
     SYS_TIME_PLIB_STOP                  timerStop;
     SYS_TIME_PLIB_FREQUENCY_GET         timerFrequencyGet;
     SYS_TIME_PLIB_PERIOD_SET            timerPeriodSet;
+    SYS_TIME_PLIB_COMPARE_SET           timerCompareSet;
+    SYS_TIME_PLIB_COUNTER_GET           timerCounterGet;
 } SYS_TIME_PLIB_INTERFACE;
 
 
