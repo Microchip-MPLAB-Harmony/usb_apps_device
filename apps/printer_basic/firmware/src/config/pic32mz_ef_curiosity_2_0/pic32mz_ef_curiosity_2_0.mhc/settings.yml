@@ -5,7 +5,7 @@ frameworkPath: ..\..\..
 processor: PIC32MZ2048EFM144
 projectName: printer_basic_pic32mz_ef_curiosity_2_0
 settings:
-  PackageFilter: bsp;core;core_apps_pic32mx;core_apps_pic32mz_ef;csp;usb;usb_apps_device;usb_apps_dual_role;usb_apps_host;usb_apps_multi_controller
+  PackageFilter: audio;bsp;core;csp;quick_docs;usb;usb_apps_device;usb_apps_dual_role;usb_apps_host;usb_apps_multi_controller
   FORCE_OPTIMIZATION: 'false'
   GENERATE_BACKUP: 'true'
   TRUSTZONE: 'false'

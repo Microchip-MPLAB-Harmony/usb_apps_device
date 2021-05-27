@@ -85,4 +85,4 @@ children:
         children:
         - {type: Value, value: drv_usart_UART_dependency}
 - type: ElementPosition
-  attributes: {x: '11', y: '185', id: uart6}
+  attributes: {x: '34', y: '161', id: uart6}

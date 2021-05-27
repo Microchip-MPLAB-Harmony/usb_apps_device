@@ -24,4 +24,4 @@ children:
           - type: Dynamic
             attributes: {id: usb_device_printer_0, value: '0'}
 - type: ElementPosition
-  attributes: {x: '311', y: '279', id: usb_device_printer}
+  attributes: {x: '341', y: '266', id: usb_device_printer}

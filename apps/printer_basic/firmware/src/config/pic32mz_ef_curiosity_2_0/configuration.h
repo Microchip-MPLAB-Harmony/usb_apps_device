@@ -79,15 +79,6 @@ extern "C" {
 // Section: System Service Configuration
 // *****************************************************************************
 // *****************************************************************************
-/* TIME System Service Configuration Options */
-#define SYS_TIME_INDEX_0                            (0)
-#define SYS_TIME_MAX_TIMERS                         (5)
-#define SYS_TIME_HW_COUNTER_WIDTH                   (32)
-#define SYS_TIME_HW_COUNTER_PERIOD                  (4294967295U)
-#define SYS_TIME_HW_COUNTER_HALF_PERIOD             (SYS_TIME_HW_COUNTER_PERIOD>>1)
-#define SYS_TIME_CPU_CLOCK_FREQUENCY                (198000000)
-#define SYS_TIME_COMPARE_UPDATE_EXECUTION_CYCLES    (620)
-
 
 
 // *****************************************************************************
@@ -95,13 +86,13 @@ extern "C" {
 // Section: Driver Configuration
 // *****************************************************************************
 // *****************************************************************************
+/* USART Driver Global Configuration Options */
+#define DRV_USART_INSTANCES_NUMBER         1
 /* USART Driver Instance 0 Configuration Options */
 #define DRV_USART_INDEX_0                  0
 #define DRV_USART_CLIENTS_NUMBER_IDX0      1
 #define DRV_USART_QUEUE_SIZE_IDX0          5
 
-/* USART Driver Global Configuration Options */
-#define DRV_USART_INSTANCES_NUMBER         1
 
 
 // *****************************************************************************
@@ -109,6 +100,27 @@ extern "C" {
 // Section: Middleware & Other Library Configuration
 // *****************************************************************************
 // *****************************************************************************
+/*** USB Driver Configuration ***/
+
+/* Maximum USB driver instances */
+#define DRV_USBHS_INSTANCES_NUMBER                        1
+
+/* Interrupt mode enabled */
+#define DRV_USBHS_INTERRUPT_MODE                          true
+
+
+/* Enables Device Support */
+#define DRV_USBHS_DEVICE_SUPPORT                          true
+	
+/* Disable Host Support */
+#define DRV_USBHS_HOST_SUPPORT                            false
+
+
+
+
+/* Alignment for buffers that are submitted to USB Driver*/ 
+#define USB_ALIGN  CACHE_ALIGN  __ALIGNED(16)
+
 /* Maximum instances of Printer function driver */
 #define USB_DEVICE_PRINTER_INSTANCES_NUMBER          1 
 
@@ -141,27 +153,6 @@ extern "C" {
 
 
 
-
-/*** USB Driver Configuration ***/
-
-/* Maximum USB driver instances */
-#define DRV_USBHS_INSTANCES_NUMBER                        1
-
-/* Interrupt mode enabled */
-#define DRV_USBHS_INTERRUPT_MODE                          true
-
-
-/* Enables Device Support */
-#define DRV_USBHS_DEVICE_SUPPORT                          true
-	
-/* Disable Host Support */
-#define DRV_USBHS_HOST_SUPPORT                            false
-
-
-
-
-/* Alignment for buffers that are submitted to USB Driver*/ 
-#define USB_ALIGN  CACHE_ALIGN
 
 
 
