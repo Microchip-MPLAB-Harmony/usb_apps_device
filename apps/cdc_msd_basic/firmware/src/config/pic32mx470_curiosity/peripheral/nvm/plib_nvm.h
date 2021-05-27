@@ -68,7 +68,7 @@
 #define NVM_FLASH_PAGESIZE         (4096U)
 
 #define NVM_START_ADDRESS              0x9d040000
-#define NVM_MEDIA_SIZE                 256
+#define NVM_MEDIA_SIZE                 32
 #define NVM_ERASE_BUFFER_SIZE          4096
 
 typedef enum

@@ -94,7 +94,7 @@ extern "C" {
 #define DRV_MEMORY_CLIENTS_NUMBER_IDX0       1
 #define DRV_MEMORY_BUFFER_QUEUE_SIZE_IDX0    1
 #define DRV_MEMORY_DEVICE_START_ADDRESS      0x9d040000
-#define DRV_MEMORY_DEVICE_MEDIA_SIZE         256UL
+#define DRV_MEMORY_DEVICE_MEDIA_SIZE         32UL
 #define DRV_MEMORY_DEVICE_PROGRAM_SIZE       512
 #define DRV_MEMORY_DEVICE_ERASE_SIZE         4096
 
@@ -118,6 +118,8 @@ extern "C" {
 /* EP0 size in bytes */
 #define USB_DEVICE_EP0_BUFFER_SIZE                          64
 
+/* Enable SOF Events */
+#define USB_DEVICE_SOF_EVENT_ENABLE
 
 
 

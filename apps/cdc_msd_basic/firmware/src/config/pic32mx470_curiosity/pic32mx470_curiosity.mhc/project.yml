@@ -174,20 +174,20 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 422E1C8A22D0D55EE2FF73295DFF965E
-- generatedChecksum: EDAC3ADEE8211FED1B8F794B8285E037
+- generatedChecksum: BFC3B810E7BB7B38421748BCACEA1C4B
   logicalPath: config/pic32mx470_curiosity
   name: configuration.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: EDAC3ADEE8211FED1B8F794B8285E037
-- generatedChecksum: 4453DBE5107DF94B67003D31CA649937
+  userChecksum: BFC3B810E7BB7B38421748BCACEA1C4B
+- generatedChecksum: 98B597795BE93E9618C90BB6C40663C0
   logicalPath: config/pic32mx470_curiosity
   name: definitions.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 4453DBE5107DF94B67003D31CA649937
+  userChecksum: 98B597795BE93E9618C90BB6C40663C0
 - generatedChecksum: E189C26B2269F8DE46033CCD0621958D
   logicalPath: config/pic32mx470_curiosity
   name: device.h
@@ -321,13 +321,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 3034BE358F7BD4B7B31FE392CCBDA3D6
-- generatedChecksum: A7741B1B3001372A5CC20C88BB99A8CF
+- generatedChecksum: FE2E710CB2EB2D79B05D76BBD76883CD
   logicalPath: config/pic32mx470_curiosity/peripheral/nvm
   name: plib_nvm.h
   physicalPath: peripheral/nvm
   security: NON_SECURE
   type: HEADER
-  userChecksum: A7741B1B3001372A5CC20C88BB99A8CF
+  userChecksum: FE2E710CB2EB2D79B05D76BBD76883CD
 - generatedChecksum: 3224466D03D8DDF1B5307028B2E5583F
   logicalPath: config/pic32mx470_curiosity/driver/usb/usbfs/src
   name: plib_usbfs.h
@@ -1301,13 +1301,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: D048A36DC93E66C9CA02E4D6CD9827B9
-- generatedChecksum: null
+- generatedChecksum: 4B3C3EF8A318908A22B78500515C3288
   logicalPath: config/pic32mx470_curiosity
   name: user.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: null
+  userChecksum: 4B3C3EF8A318908A22B78500515C3288
 - generatedChecksum: 52AA20E8BAA488B3B6581379249C0FCE
   logicalPath: config/pic32mx470_curiosity
   name: p32MX470F512H.ld
