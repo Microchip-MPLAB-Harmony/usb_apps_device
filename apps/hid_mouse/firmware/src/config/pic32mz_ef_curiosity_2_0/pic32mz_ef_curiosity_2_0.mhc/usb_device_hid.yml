@@ -31,4 +31,4 @@ children:
           - type: Dynamic
             attributes: {id: usb_device_hid_0, value: '1'}
 - type: ElementPosition
-  attributes: {x: '311', y: '215', id: usb_device_hid}
+  attributes: {x: '327', y: '124', id: usb_device_hid}

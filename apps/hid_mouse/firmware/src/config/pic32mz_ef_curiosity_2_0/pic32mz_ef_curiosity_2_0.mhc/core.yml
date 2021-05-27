@@ -824,33 +824,12 @@ children:
       - type: Dynamic
         attributes: {id: core, value: 'true'}
   - type: Boolean
-    attributes: {id: CORE_TIMER_INTERRUPT_ENABLE}
-    children:
-    - type: Values
-      children:
-      - type: Dynamic
-        attributes: {id: core_timer, value: 'true'}
-  - type: Boolean
     attributes: {id: CORE_TIMER_INTERRUPT_ENABLE_UPDATE}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: 'false'}
-  - type: String
-    attributes: {id: CORE_TIMER_INTERRUPT_HANDLER}
-    children:
-    - type: Values
-      children:
-      - type: Dynamic
-        attributes: {id: core_timer, value: CORE_TIMER_InterruptHandler}
-  - type: Boolean
-    attributes: {id: CORE_TIMER_INTERRUPT_HANDLER_LOCK}
-    children:
-    - type: Values
-      children:
-      - type: Dynamic
-        attributes: {id: core_timer, value: 'true'}
+        attributes: {id: core, value: 'true'}
   - type: String
     attributes: {id: CPU_CLOCK_FREQUENCY}
     children:
@@ -899,21 +878,21 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: 'true'}
+        attributes: {id: core, value: 'false'}
   - type: Boolean
     attributes: {id: EVIC_0_HANDLER_LOCK}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: 'true'}
+        attributes: {id: core, value: 'false'}
   - type: String
     attributes: {id: EVIC_0_INTERRUPT_HANDLER}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: CORE_TIMER_InterruptHandler}
+        attributes: {id: core, value: CORE_TIMER_Handler}
   - type: Boolean
     attributes: {id: EVIC_132_ENABLE}
     children:

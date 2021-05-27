@@ -68,4 +68,4 @@ children:
       - type: Dynamic
         attributes: {id: usb_device, value: HID Mouse Demo}
 - type: ElementPosition
-  attributes: {x: '167', y: '215', id: usb_device}
+  attributes: {x: '173', y: '123', id: usb_device}
