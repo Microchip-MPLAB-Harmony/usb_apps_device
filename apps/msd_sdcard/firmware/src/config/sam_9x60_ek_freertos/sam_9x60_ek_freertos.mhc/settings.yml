@@ -1,7 +1,7 @@
 configName: sam_9x60_ek_freertos
 folderName: sam_9x60_ek_freertos
 format_version: v1.0
-frameworkPath: ..\..\..\..
+frameworkPath: ../../..
 processor: SAM9X60
 projectName: msd_sdcard_sam_9x60_ek_freertos
 settings:

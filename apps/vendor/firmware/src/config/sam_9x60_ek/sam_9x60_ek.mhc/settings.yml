@@ -1,7 +1,7 @@
 configName: sam_9x60_ek
 folderName: sam_9x60_ek
 format_version: v1.0
-frameworkPath: ..\..\..\..
+frameworkPath: ../../..
 processor: SAM9X60
 projectName: vendor_sam_9x60_ek
 settings:

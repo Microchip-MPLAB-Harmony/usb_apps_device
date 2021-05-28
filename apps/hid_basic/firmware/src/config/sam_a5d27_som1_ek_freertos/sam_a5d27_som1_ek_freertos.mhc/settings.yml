@@ -1,7 +1,7 @@
 configName: sam_a5d27_som1_ek_freertos
 folderName: sam_a5d27_som1_ek_freertos
 format_version: v1.0
-frameworkPath: ..\..\..\..
+frameworkPath: ../../..
 processor: ATSAMA5D27CD1G
 projectName: hid_basic_sam_a5d27_som1_ek_freertos
 settings:
