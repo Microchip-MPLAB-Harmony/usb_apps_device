@@ -48,11 +48,6 @@ extern "C" {
 // *****************************************************************************
 // *****************************************************************************
 /*** Application Instance 0 Configuration ***/
-
-#define APP_MAKE_BUFFER_DMA_READY                           __attribute__((aligned(16)))
-    
-#define APP_MAKE_BUFFER_DMA_READY1                           __attribute__((aligned(512)))
-
 #define APP_UART_RX_BUFF_SIZE                               (1024*6)
 
 #define APP_USB_RX_BUFF_SIZE                                (2048*3)
@@ -93,8 +88,36 @@ extern "C" {
 // Section: Configuration specific application constants
 // *****************************************************************************
 // *****************************************************************************
+// *****************************************************************************
+/* Application structure for  
 
+  Summary:
+    Group of function pointers to the application for UART Interface Functions.
 
+  Description:
+    This structure is a group of Group of function pointers to the application 
+    for UART Interface Functions. 
+
+  Remarks:
+    None.
+*/
+
+typedef struct
+{
+    sercom_registers_t * (*addressGet)(void);
+    
+    void (*dmaChannelDisbale)(void); 
+    
+    void (*dmaChannelEnable)(void); 
+    
+    uint32_t (*frequencyGet)(void); 
+    
+    bool (*serialSetup)(USART_SERIAL_SETUP * serialSetup, uint32_t clkFrequency);
+    
+    USART_ERROR (*errorGet)(void);
+
+} APP_USART_INTERFACE;
+    
 // *****************************************************************************
 /* Application states
 
@@ -379,8 +402,19 @@ void APP_Initialize ( void );
 
 void APP_Tasks( void );
 
+// *****************************************************************************
+/* USART Interface Functions.
 
+  Summary:
+    USART Interface Functions.
 
+  Description:
+    This is a pointer to USART Interface functions.
+
+  Remarks:
+    None.
+*/
+extern APP_USART_INTERFACE appUSARTInterface;
 #endif /* _APP_H */
 
 //DOM-IGNORE-BEGIN

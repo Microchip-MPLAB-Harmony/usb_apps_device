@@ -65,24 +65,6 @@
 // *****************************************************************************
 // *****************************************************************************
 
-/*** Macros for GPIO_PB04 pin ***/
-#define GPIO_PB04_Set()               (PORT_REGS->GROUP[1].PORT_OUTSET = ((uint32_t)1U << 4U))
-#define GPIO_PB04_Clear()             (PORT_REGS->GROUP[1].PORT_OUTCLR = ((uint32_t)1U << 4U))
-#define GPIO_PB04_Toggle()            (PORT_REGS->GROUP[1].PORT_OUTTGL = ((uint32_t)1U << 4U))
-#define GPIO_PB04_OutputEnable()      (PORT_REGS->GROUP[1].PORT_DIRSET = ((uint32_t)1U << 4U))
-#define GPIO_PB04_InputEnable()       (PORT_REGS->GROUP[1].PORT_DIRCLR = ((uint32_t)1U << 4U))
-#define GPIO_PB04_Get()               (((PORT_REGS->GROUP[1].PORT_IN >> 4U)) & 0x01U)
-#define GPIO_PB04_PIN                  PORT_PIN_PB04
-
-/*** Macros for GPIO_PB06 pin ***/
-#define GPIO_PB06_Set()               (PORT_REGS->GROUP[1].PORT_OUTSET = ((uint32_t)1U << 6U))
-#define GPIO_PB06_Clear()             (PORT_REGS->GROUP[1].PORT_OUTCLR = ((uint32_t)1U << 6U))
-#define GPIO_PB06_Toggle()            (PORT_REGS->GROUP[1].PORT_OUTTGL = ((uint32_t)1U << 6U))
-#define GPIO_PB06_OutputEnable()      (PORT_REGS->GROUP[1].PORT_DIRSET = ((uint32_t)1U << 6U))
-#define GPIO_PB06_InputEnable()       (PORT_REGS->GROUP[1].PORT_DIRCLR = ((uint32_t)1U << 6U))
-#define GPIO_PB06_Get()               (((PORT_REGS->GROUP[1].PORT_IN >> 6U)) & 0x01U)
-#define GPIO_PB06_PIN                  PORT_PIN_PB06
-
 /*** Macros for USB_VBUS_SENSE pin ***/
 #define USB_VBUS_SENSE_Set()               (PORT_REGS->GROUP[0].PORT_OUTSET = ((uint32_t)1U << 14U))
 #define USB_VBUS_SENSE_Clear()             (PORT_REGS->GROUP[0].PORT_OUTCLR = ((uint32_t)1U << 14U))

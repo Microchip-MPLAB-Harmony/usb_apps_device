@@ -52,8 +52,8 @@
 	
 const USB_DEVICE_CDC_INIT cdcInit0 =
 {
-	.queueSizeRead = 1,
-	.queueSizeWrite = 1,
+	.queueSizeRead = 4,
+	.queueSizeWrite = 4,
 	.queueSizeSerialStateNotification = 1
 };
 

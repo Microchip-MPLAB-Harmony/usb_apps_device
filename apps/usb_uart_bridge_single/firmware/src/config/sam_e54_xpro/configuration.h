@@ -119,7 +119,7 @@ extern "C" {
 /* CDC Transfer Queue Size for both read and
    write. Applicable to all instances of the
    function driver */
-#define USB_DEVICE_CDC_QUEUE_DEPTH_COMBINED                 3
+#define USB_DEVICE_CDC_QUEUE_DEPTH_COMBINED                 9
 
 /*** USB Driver Configuration ***/
 
@@ -137,7 +137,7 @@ extern "C" {
 #define DRV_USBFSV1_DUAL_BANK_ENABLE                        false
 
 /* Alignment for buffers that are submitted to USB Driver*/ 
-#define USB_ALIGN  CACHE_ALIGN
+#define USB_ALIGN  __ALIGNED(CACHE_LINE_SIZE)
 
 
 

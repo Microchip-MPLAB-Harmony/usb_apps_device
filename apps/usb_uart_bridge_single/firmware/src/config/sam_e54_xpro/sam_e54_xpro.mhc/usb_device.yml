@@ -10,14 +10,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: usb_device, value: '58'}
-  - type: Boolean
-    attributes: {id: CONFIG_USB_DEVICE_DESCRIPTOR_IAD_ENABLE}
-    children:
-    - type: Values
-      children:
-      - type: Dynamic
-        attributes: {id: usb_device, value: 'true'}
+        attributes: {id: usb_device, value: '67'}
   - type: Integer
     attributes: {id: CONFIG_USB_DEVICE_ENDPOINTS_NUMBER}
     children:
@@ -74,7 +67,5 @@ children:
       children:
       - type: Dynamic
         attributes: {id: usb_device, value: Simple CDC Device Demo}
-      - type: User
-        attributes: {value: USB-UART Bridge Demo}
 - type: ElementPosition
-  attributes: {x: '154', y: '389', id: usb_device}
+  attributes: {x: '163', y: '361', id: usb_device}
