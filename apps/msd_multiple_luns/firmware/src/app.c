@@ -123,6 +123,7 @@ void APP_USBDeviceEventHandler( USB_DEVICE_EVENT event, void * pEventData, uintp
 
             /* VBUS is not detected. Detach the device */
             USB_DEVICE_Detach(appDataObject->usbDevHandle);
+			LED1_Off();
             break;
 
         /* These events are not used in this demo */

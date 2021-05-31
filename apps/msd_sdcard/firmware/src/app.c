@@ -121,6 +121,8 @@ void APP_USBDeviceEventHandler( USB_DEVICE_EVENT event, void * pEventData, uintp
             break;
 
         case USB_DEVICE_EVENT_SUSPENDED:
+		
+			LED_Off();
             break;
 
         case USB_DEVICE_EVENT_POWER_DETECTED:

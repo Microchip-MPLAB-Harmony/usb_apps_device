@@ -139,6 +139,7 @@ void APP_USBDeviceEventHandler(USB_DEVICE_EVENT event, void * eventData, uintptr
 
         case USB_DEVICE_EVENT_SUSPENDED:
 
+			LED_Off();
             /* Device is suspended. */ 
             break;
 

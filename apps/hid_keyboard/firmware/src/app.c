@@ -244,6 +244,7 @@ void APP_USBDeviceEventHandler(USB_DEVICE_EVENT event,
             break;
 
         case USB_DEVICE_EVENT_SUSPENDED:
+			LED_Off();
             break;
 
         case USB_DEVICE_EVENT_RESUMED:
