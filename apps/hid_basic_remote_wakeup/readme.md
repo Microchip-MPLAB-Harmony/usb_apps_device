@@ -9,7 +9,7 @@ has_toc: false
 
 # HID Basic Remote Wakeup Example (hid_basic_remote_wakeup)
 
-This application demonstrates the ability of the MPLAB Harmony USB Device Stack to support Remote Wakeup feature using a custom HID device class example. 
+This application demonstrates the ability of the MPLAB® Harmony USB Device Stack to support the Remote Wakeup feature using a custom HID device class example. 
 
 ## Description
 
@@ -18,9 +18,9 @@ This application creates a USB HID Device that enumerates as a custom USB HID de
 ## Downloading and building the application
 
 To clone or download this application from Github, go to the [main page of this repository](https://github.com/Microchip-MPLAB-Harmony/usb_apps_device) and then click **Clone** button to clone this repository or download as zip file.
-This content can also be downloaded using content manager by following these [instructions](https://github.com/Microchip-MPLAB-Harmony/contentmanager/wiki).
+This content can also be downloaded using the MPLAB® Harmony Content Manager by following these [instructions](https://github.com/Microchip-MPLAB-Harmony/contentmanager/wiki).
 
-Path of the application within the repository is [usb_apps_device/apps/hid_basic_remote_wakeup](https://github.com/Microchip-MPLAB-Harmony/usb_apps_device/apps/hid_basic_remote_wakeup).
+Path of the application within the repository is [usb_apps_device/apps/hid_basic_remote_wakeup](https://github.com/Microchip-MPLAB-Harmony/usb_apps_device/tree/master/apps/hid_basic_remote_wakeup).
 
 Following table gives the details of project configurations, target device used, hardware and its IDE. Open the project using the respective IDE and build it. 
 
@@ -90,7 +90,8 @@ The HID Basic operation is same as *hid_basic* demo. Refer to local documentatio
 1. If the message ***USB host Suspend device or Remote wakeup is not enabled*** is seen when PC host is put to sleep, it means the USB device is not allowed to do Remote Wakeup. Go to the power settings of the USB device in PC host and enable Remote wakeup feature. This can be done in a Windows machine through device manager or command prompt. Below are the commands and their usage.
    - **powercfg -devicequery wake_from_any** - Displays all devices that are connected to the PC.
    - **powercfg -devicequery wake_armed** - Devices that can wake up PC from its sleep state.
-   - **powercfg -deviceenablewake** - To enable Remote wakeup privilege for any of the connected Devices.
+   - **powercfg -deviceenablewake** - To enable Remote wakeup privilege for any of the connected Devices
+        - eg:-  powercfg -deviceenablewake "HID-compliant vendor-defined device (002)"
    - **powercfg -devicedisablewake** - To disable Remote wakeup privilege for any of the connected Devices.
 1. If the Remote Wakeup is enabled and the device is put to sleep, press the switch to initiate a **Remote Wakeup**. The PC host will respond back with a resume and device will continue with its HID operation. The screenshot showing suspend, resume and remote wakeup operations are shown below.
 
