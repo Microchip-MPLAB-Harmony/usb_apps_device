@@ -1,7 +1,7 @@
 /**
  * \brief Component description for UDPHS
  *
- * Copyright (c) 2020 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2020-05-04T06:27:45Z */
+/* file generated from device description version 2020-12-17T18:15:19Z */
 #ifndef _SAMA5D2_UDPHS_COMPONENT_H_
 #define _SAMA5D2_UDPHS_COMPONENT_H_
 
@@ -1001,6 +1001,8 @@
 #define UDPHS_TST_REG_OFST             (0xE0)              /**< (UDPHS_TST) UDPHS Test Register Offset */
 #define UDPHS_ADDRSIZE_REG_OFST        (0xEC)              /**< (UDPHS_ADDRSIZE) UDPHS IP Address Size Register Offset */
 #define UDPHS_IPNAME_REG_OFST          (0xF0)              /**< (UDPHS_IPNAME) UDPHS IP Name1 Register Offset */
+#define UDPHS_IPNAME0_REG_OFST         (0xF0)              /**< (UDPHS_IPNAME0) UDPHS IP Name1 Register Offset */
+#define UDPHS_IPNAME1_REG_OFST         (0xF4)              /**< (UDPHS_IPNAME1) UDPHS IP Name1 Register Offset */
 #define UDPHS_FEATURES_REG_OFST        (0xF8)              /**< (UDPHS_FEATURES) UDPHS Features Register Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))

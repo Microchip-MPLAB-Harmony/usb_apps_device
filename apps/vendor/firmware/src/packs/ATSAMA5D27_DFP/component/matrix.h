@@ -1,7 +1,7 @@
 /**
  * \brief Component description for MATRIX
  *
- * Copyright (c) 2020 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2020-05-04T06:27:45Z */
+/* file generated from device description version 2020-12-17T18:15:19Z */
 #ifndef _SAMA5D2_MATRIX_COMPONENT_H_
 #define _SAMA5D2_MATRIX_COMPONENT_H_
 
@@ -563,18 +563,104 @@
 #define MATRIX_PRAS_REG_OFST           (0x00)              /**< (MATRIX_PRAS) Priority Register A for Slave 0 Offset */
 #define MATRIX_PRBS_REG_OFST           (0x04)              /**< (MATRIX_PRBS) Priority Register B for Slave 0 Offset */
 #define MATRIX_MCFG_REG_OFST           (0x00)              /**< (MATRIX_MCFG) Master Configuration Register Offset */
+#define MATRIX_MCFG0_REG_OFST          (0x00)              /**< (MATRIX_MCFG0) Master Configuration Register Offset */
+#define MATRIX_MCFG1_REG_OFST          (0x04)              /**< (MATRIX_MCFG1) Master Configuration Register Offset */
+#define MATRIX_MCFG2_REG_OFST          (0x08)              /**< (MATRIX_MCFG2) Master Configuration Register Offset */
+#define MATRIX_MCFG3_REG_OFST          (0x0C)              /**< (MATRIX_MCFG3) Master Configuration Register Offset */
+#define MATRIX_MCFG4_REG_OFST          (0x10)              /**< (MATRIX_MCFG4) Master Configuration Register Offset */
+#define MATRIX_MCFG5_REG_OFST          (0x14)              /**< (MATRIX_MCFG5) Master Configuration Register Offset */
+#define MATRIX_MCFG6_REG_OFST          (0x18)              /**< (MATRIX_MCFG6) Master Configuration Register Offset */
+#define MATRIX_MCFG7_REG_OFST          (0x1C)              /**< (MATRIX_MCFG7) Master Configuration Register Offset */
+#define MATRIX_MCFG8_REG_OFST          (0x20)              /**< (MATRIX_MCFG8) Master Configuration Register Offset */
+#define MATRIX_MCFG9_REG_OFST          (0x24)              /**< (MATRIX_MCFG9) Master Configuration Register Offset */
+#define MATRIX_MCFG10_REG_OFST         (0x28)              /**< (MATRIX_MCFG10) Master Configuration Register Offset */
+#define MATRIX_MCFG11_REG_OFST         (0x2C)              /**< (MATRIX_MCFG11) Master Configuration Register Offset */
 #define MATRIX_SCFG_REG_OFST           (0x40)              /**< (MATRIX_SCFG) Slave Configuration Register Offset */
+#define MATRIX_SCFG0_REG_OFST          (0x40)              /**< (MATRIX_SCFG0) Slave Configuration Register Offset */
+#define MATRIX_SCFG1_REG_OFST          (0x44)              /**< (MATRIX_SCFG1) Slave Configuration Register Offset */
+#define MATRIX_SCFG2_REG_OFST          (0x48)              /**< (MATRIX_SCFG2) Slave Configuration Register Offset */
+#define MATRIX_SCFG3_REG_OFST          (0x4C)              /**< (MATRIX_SCFG3) Slave Configuration Register Offset */
+#define MATRIX_SCFG4_REG_OFST          (0x50)              /**< (MATRIX_SCFG4) Slave Configuration Register Offset */
+#define MATRIX_SCFG5_REG_OFST          (0x54)              /**< (MATRIX_SCFG5) Slave Configuration Register Offset */
+#define MATRIX_SCFG6_REG_OFST          (0x58)              /**< (MATRIX_SCFG6) Slave Configuration Register Offset */
+#define MATRIX_SCFG7_REG_OFST          (0x5C)              /**< (MATRIX_SCFG7) Slave Configuration Register Offset */
+#define MATRIX_SCFG8_REG_OFST          (0x60)              /**< (MATRIX_SCFG8) Slave Configuration Register Offset */
+#define MATRIX_SCFG9_REG_OFST          (0x64)              /**< (MATRIX_SCFG9) Slave Configuration Register Offset */
+#define MATRIX_SCFG10_REG_OFST         (0x68)              /**< (MATRIX_SCFG10) Slave Configuration Register Offset */
+#define MATRIX_SCFG11_REG_OFST         (0x6C)              /**< (MATRIX_SCFG11) Slave Configuration Register Offset */
+#define MATRIX_SCFG12_REG_OFST         (0x70)              /**< (MATRIX_SCFG12) Slave Configuration Register Offset */
+#define MATRIX_SCFG13_REG_OFST         (0x74)              /**< (MATRIX_SCFG13) Slave Configuration Register Offset */
+#define MATRIX_SCFG14_REG_OFST         (0x78)              /**< (MATRIX_SCFG14) Slave Configuration Register Offset */
 #define MATRIX_MEIER_REG_OFST          (0x150)             /**< (MATRIX_MEIER) Master Error Interrupt Enable Register Offset */
 #define MATRIX_MEIDR_REG_OFST          (0x154)             /**< (MATRIX_MEIDR) Master Error Interrupt Disable Register Offset */
 #define MATRIX_MEIMR_REG_OFST          (0x158)             /**< (MATRIX_MEIMR) Master Error Interrupt Mask Register Offset */
 #define MATRIX_MESR_REG_OFST           (0x15C)             /**< (MATRIX_MESR) Master Error Status Register Offset */
 #define MATRIX_MEAR_REG_OFST           (0x160)             /**< (MATRIX_MEAR) Master 0 Error Address Register Offset */
+#define MATRIX_MEAR0_REG_OFST          (0x160)             /**< (MATRIX_MEAR0) Master 0 Error Address Register Offset */
+#define MATRIX_MEAR1_REG_OFST          (0x164)             /**< (MATRIX_MEAR1) Master 0 Error Address Register Offset */
+#define MATRIX_MEAR2_REG_OFST          (0x168)             /**< (MATRIX_MEAR2) Master 0 Error Address Register Offset */
+#define MATRIX_MEAR3_REG_OFST          (0x16C)             /**< (MATRIX_MEAR3) Master 0 Error Address Register Offset */
+#define MATRIX_MEAR4_REG_OFST          (0x170)             /**< (MATRIX_MEAR4) Master 0 Error Address Register Offset */
+#define MATRIX_MEAR5_REG_OFST          (0x174)             /**< (MATRIX_MEAR5) Master 0 Error Address Register Offset */
+#define MATRIX_MEAR6_REG_OFST          (0x178)             /**< (MATRIX_MEAR6) Master 0 Error Address Register Offset */
+#define MATRIX_MEAR7_REG_OFST          (0x17C)             /**< (MATRIX_MEAR7) Master 0 Error Address Register Offset */
+#define MATRIX_MEAR8_REG_OFST          (0x180)             /**< (MATRIX_MEAR8) Master 0 Error Address Register Offset */
+#define MATRIX_MEAR9_REG_OFST          (0x184)             /**< (MATRIX_MEAR9) Master 0 Error Address Register Offset */
+#define MATRIX_MEAR10_REG_OFST         (0x188)             /**< (MATRIX_MEAR10) Master 0 Error Address Register Offset */
+#define MATRIX_MEAR11_REG_OFST         (0x18C)             /**< (MATRIX_MEAR11) Master 0 Error Address Register Offset */
 #define MATRIX_WPMR_REG_OFST           (0x1E4)             /**< (MATRIX_WPMR) Write Protection Mode Register Offset */
 #define MATRIX_WPSR_REG_OFST           (0x1E8)             /**< (MATRIX_WPSR) Write Protection Status Register Offset */
 #define MATRIX_SSR_REG_OFST            (0x200)             /**< (MATRIX_SSR) Security Slave 0 Register Offset */
+#define MATRIX_SSR0_REG_OFST           (0x200)             /**< (MATRIX_SSR0) Security Slave 0 Register Offset */
+#define MATRIX_SSR1_REG_OFST           (0x204)             /**< (MATRIX_SSR1) Security Slave 0 Register Offset */
+#define MATRIX_SSR2_REG_OFST           (0x208)             /**< (MATRIX_SSR2) Security Slave 0 Register Offset */
+#define MATRIX_SSR3_REG_OFST           (0x20C)             /**< (MATRIX_SSR3) Security Slave 0 Register Offset */
+#define MATRIX_SSR4_REG_OFST           (0x210)             /**< (MATRIX_SSR4) Security Slave 0 Register Offset */
+#define MATRIX_SSR5_REG_OFST           (0x214)             /**< (MATRIX_SSR5) Security Slave 0 Register Offset */
+#define MATRIX_SSR6_REG_OFST           (0x218)             /**< (MATRIX_SSR6) Security Slave 0 Register Offset */
+#define MATRIX_SSR7_REG_OFST           (0x21C)             /**< (MATRIX_SSR7) Security Slave 0 Register Offset */
+#define MATRIX_SSR8_REG_OFST           (0x220)             /**< (MATRIX_SSR8) Security Slave 0 Register Offset */
+#define MATRIX_SSR9_REG_OFST           (0x224)             /**< (MATRIX_SSR9) Security Slave 0 Register Offset */
+#define MATRIX_SSR10_REG_OFST          (0x228)             /**< (MATRIX_SSR10) Security Slave 0 Register Offset */
+#define MATRIX_SSR11_REG_OFST          (0x22C)             /**< (MATRIX_SSR11) Security Slave 0 Register Offset */
+#define MATRIX_SSR12_REG_OFST          (0x230)             /**< (MATRIX_SSR12) Security Slave 0 Register Offset */
+#define MATRIX_SSR13_REG_OFST          (0x234)             /**< (MATRIX_SSR13) Security Slave 0 Register Offset */
+#define MATRIX_SSR14_REG_OFST          (0x238)             /**< (MATRIX_SSR14) Security Slave 0 Register Offset */
 #define MATRIX_SASSR_REG_OFST          (0x240)             /**< (MATRIX_SASSR) Security Areas Split Slave 0 Register Offset */
+#define MATRIX_SASSR0_REG_OFST         (0x240)             /**< (MATRIX_SASSR0) Security Areas Split Slave 0 Register Offset */
+#define MATRIX_SASSR1_REG_OFST         (0x244)             /**< (MATRIX_SASSR1) Security Areas Split Slave 0 Register Offset */
+#define MATRIX_SASSR2_REG_OFST         (0x248)             /**< (MATRIX_SASSR2) Security Areas Split Slave 0 Register Offset */
+#define MATRIX_SASSR3_REG_OFST         (0x24C)             /**< (MATRIX_SASSR3) Security Areas Split Slave 0 Register Offset */
+#define MATRIX_SASSR4_REG_OFST         (0x250)             /**< (MATRIX_SASSR4) Security Areas Split Slave 0 Register Offset */
+#define MATRIX_SASSR5_REG_OFST         (0x254)             /**< (MATRIX_SASSR5) Security Areas Split Slave 0 Register Offset */
+#define MATRIX_SASSR6_REG_OFST         (0x258)             /**< (MATRIX_SASSR6) Security Areas Split Slave 0 Register Offset */
+#define MATRIX_SASSR7_REG_OFST         (0x25C)             /**< (MATRIX_SASSR7) Security Areas Split Slave 0 Register Offset */
+#define MATRIX_SASSR8_REG_OFST         (0x260)             /**< (MATRIX_SASSR8) Security Areas Split Slave 0 Register Offset */
+#define MATRIX_SASSR9_REG_OFST         (0x264)             /**< (MATRIX_SASSR9) Security Areas Split Slave 0 Register Offset */
+#define MATRIX_SASSR10_REG_OFST        (0x268)             /**< (MATRIX_SASSR10) Security Areas Split Slave 0 Register Offset */
+#define MATRIX_SASSR11_REG_OFST        (0x26C)             /**< (MATRIX_SASSR11) Security Areas Split Slave 0 Register Offset */
+#define MATRIX_SASSR12_REG_OFST        (0x270)             /**< (MATRIX_SASSR12) Security Areas Split Slave 0 Register Offset */
+#define MATRIX_SASSR13_REG_OFST        (0x274)             /**< (MATRIX_SASSR13) Security Areas Split Slave 0 Register Offset */
+#define MATRIX_SASSR14_REG_OFST        (0x278)             /**< (MATRIX_SASSR14) Security Areas Split Slave 0 Register Offset */
 #define MATRIX_SRTSR_REG_OFST          (0x284)             /**< (MATRIX_SRTSR) Security Region Top Slave 1 Register Offset */
+#define MATRIX_SRTSR0_REG_OFST         (0x284)             /**< (MATRIX_SRTSR0) Security Region Top Slave 1 Register Offset */
+#define MATRIX_SRTSR1_REG_OFST         (0x288)             /**< (MATRIX_SRTSR1) Security Region Top Slave 1 Register Offset */
+#define MATRIX_SRTSR2_REG_OFST         (0x28C)             /**< (MATRIX_SRTSR2) Security Region Top Slave 1 Register Offset */
+#define MATRIX_SRTSR3_REG_OFST         (0x290)             /**< (MATRIX_SRTSR3) Security Region Top Slave 1 Register Offset */
+#define MATRIX_SRTSR4_REG_OFST         (0x294)             /**< (MATRIX_SRTSR4) Security Region Top Slave 1 Register Offset */
+#define MATRIX_SRTSR5_REG_OFST         (0x298)             /**< (MATRIX_SRTSR5) Security Region Top Slave 1 Register Offset */
+#define MATRIX_SRTSR6_REG_OFST         (0x29C)             /**< (MATRIX_SRTSR6) Security Region Top Slave 1 Register Offset */
+#define MATRIX_SRTSR7_REG_OFST         (0x2A0)             /**< (MATRIX_SRTSR7) Security Region Top Slave 1 Register Offset */
+#define MATRIX_SRTSR8_REG_OFST         (0x2A4)             /**< (MATRIX_SRTSR8) Security Region Top Slave 1 Register Offset */
+#define MATRIX_SRTSR9_REG_OFST         (0x2A8)             /**< (MATRIX_SRTSR9) Security Region Top Slave 1 Register Offset */
+#define MATRIX_SRTSR10_REG_OFST        (0x2AC)             /**< (MATRIX_SRTSR10) Security Region Top Slave 1 Register Offset */
+#define MATRIX_SRTSR11_REG_OFST        (0x2B0)             /**< (MATRIX_SRTSR11) Security Region Top Slave 1 Register Offset */
+#define MATRIX_SRTSR12_REG_OFST        (0x2B4)             /**< (MATRIX_SRTSR12) Security Region Top Slave 1 Register Offset */
+#define MATRIX_SRTSR13_REG_OFST        (0x2B8)             /**< (MATRIX_SRTSR13) Security Region Top Slave 1 Register Offset */
 #define MATRIX_SPSELR_REG_OFST         (0x2C0)             /**< (MATRIX_SPSELR) Security Peripheral Select 1 Register Offset */
+#define MATRIX_SPSELR0_REG_OFST        (0x2C0)             /**< (MATRIX_SPSELR0) Security Peripheral Select 1 Register Offset */
+#define MATRIX_SPSELR1_REG_OFST        (0x2C4)             /**< (MATRIX_SPSELR1) Security Peripheral Select 1 Register Offset */
+#define MATRIX_SPSELR2_REG_OFST        (0x2C8)             /**< (MATRIX_SPSELR2) Security Peripheral Select 1 Register Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief MATRIX_PR register API structure */
