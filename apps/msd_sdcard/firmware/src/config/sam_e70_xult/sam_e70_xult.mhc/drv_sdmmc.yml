@@ -16,6 +16,15 @@ children:
           children:
           - type: Dynamic
             attributes: {id: drv_sdmmc_0, value: Use Polling}
+      - type: Combo
+        attributes: {id: DRV_SDMMC_CARD_DETECTION_METHODS_LIST2}
+        children:
+        - type: Attributes
+          children:
+          - type: Boolean
+            attributes: {id: visible}
+            children:
+            - {type: Value, value: 'true'}
       - type: String
         attributes: {id: DRV_SDMMC_PLIB}
         children:
@@ -37,6 +46,15 @@ children:
           children:
           - type: Dynamic
             attributes: {id: drv_sdmmc_0, value: 'false'}
+      - type: Integer
+        attributes: {id: DRV_SDMMC_POLLING_INTERVAL}
+        children:
+        - type: Attributes
+          children:
+          - type: Boolean
+            attributes: {id: visible}
+            children:
+            - {type: Value, value: 'true'}
       - type: Combo
         attributes: {id: DRV_SDMMC_PROTOCOL_SUPPORT}
         children:
