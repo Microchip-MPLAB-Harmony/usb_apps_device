@@ -1,22 +1,18 @@
-#ifndef PLIB_AIC_H
-#define PLIB_AIC_H
 /*******************************************************************************
-  AIC PLIB Header
+ System Interrupts File
 
   Company:
     Microchip Technology Inc.
 
   File Name:
-    plib_aic.h
+    interrupt.h
 
   Summary:
-    This file provides the public declarations for the Advanced Interrupt
-    Controller.
+    Interrupt vectors mapping
 
   Description:
-    None
-
-*******************************************************************************/
+    This file contains declarations of device vectors used by Harmony 3
+ *******************************************************************************/
 
 // DOM-IGNORE-BEGIN
 /*******************************************************************************
@@ -40,33 +36,26 @@
 * FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
-*******************************************************************************/
-#ifdef __cplusplus  // Provide C++ Compatibility
-    extern "C" {
-#endif
-// DOM-IGNORE-END
-#include <stddef.h>
-#include <stdbool.h>
-#include <device.h>
-
-typedef void (*IrqHandler)(void);
-typedef struct {
-    uint32_t    peripheralId;
-    uint32_t    targetRegisters;
-    IrqHandler  handler;
-    uint32_t    srcType;
-    uint32_t    priority;
-} IrqData;
-
-void AIC_INT_Initialize( void );
-void AIC_INT_IrqEnable( void );
-bool AIC_INT_IrqDisable( void );
-void AIC_INT_IrqRestore( bool state );
-
-// DOM-IGNORE-BEGIN
-#ifdef __cplusplus  // Provide C++ Compatibility
-    }
-#endif
+ *******************************************************************************/
 // DOM-IGNORE-END
 
-#endif // PLIB_AIC_H
+#ifndef INTERRUPTS_H
+#define INTERRUPTS_H
+
+// *****************************************************************************
+// *****************************************************************************
+// Section: Included Files
+// *****************************************************************************
+// *****************************************************************************
+#include <stdint.h>
+
+
+// *****************************************************************************
+// *****************************************************************************
+// Section: Handler Routines
+// *****************************************************************************
+// *****************************************************************************
+
+
+
+#endif // INTERRUPTS_H
