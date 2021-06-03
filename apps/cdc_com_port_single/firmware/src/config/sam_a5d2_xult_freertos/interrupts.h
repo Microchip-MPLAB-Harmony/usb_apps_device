@@ -1,20 +1,18 @@
 /*******************************************************************************
-  Device Header File
+ System Interrupts File
 
   Company:
     Microchip Technology Inc.
 
   File Name:
-    device.h
+    interrupt.h
 
   Summary:
-    This file includes the selected device from within the project.
-    The device will provide access to respective device packs.
+    Interrupt vectors mapping
 
   Description:
-    None
-
-*******************************************************************************/
+    This file contains declarations of device vectors used by Harmony 3
+ *******************************************************************************/
 
 // DOM-IGNORE-BEGIN
 /*******************************************************************************
@@ -38,28 +36,26 @@
 * FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
-*******************************************************************************/
+ *******************************************************************************/
 // DOM-IGNORE-END
 
-#ifndef DEVICE_H
-#define DEVICE_H
+#ifndef INTERRUPTS_H
+#define INTERRUPTS_H
 
-#pragma GCC diagnostic push
-#ifndef __cplusplus
-#pragma GCC diagnostic ignored "-Wnested-externs"
-#endif
-#pragma GCC diagnostic ignored "-Wsign-conversion"
-#pragma GCC diagnostic ignored "-Wattributes"
-#pragma GCC diagnostic ignored "-Wundef"
-#ifndef DONT_USE_PREDEFINED_CORE_HANDLERS
-    #define DONT_USE_PREDEFINED_CORE_HANDLERS
-#endif //DONT_USE_PREDEFINED_CORE_HANDLERS
-#ifndef DONT_USE_PREDEFINED_PERIPHERALS_HANDLERS
-    #define DONT_USE_PREDEFINED_PERIPHERALS_HANDLERS
-#endif //DONT_USE_PREDEFINED_PERIPHERALS_HANDLERS
-#include "sama5d27.h"
-#pragma GCC diagnostic pop
-#include "device_cache.h"
-#include "toolchain_specifics.h"
+// *****************************************************************************
+// *****************************************************************************
+// Section: Included Files
+// *****************************************************************************
+// *****************************************************************************
+#include <stdint.h>
 
-#endif //DEVICE_H
+
+// *****************************************************************************
+// *****************************************************************************
+// Section: Handler Routines
+// *****************************************************************************
+// *****************************************************************************
+
+
+
+#endif // INTERRUPTS_H

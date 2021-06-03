@@ -92,11 +92,6 @@
 
 
 /* Interrupt nesting behaviour configuration. */
-/* The priority at which the tick interrupt runs.  This should probably be kept at lowest priority. */
-#define configKERNEL_INTERRUPT_PRIORITY         (7<<5)
-/* The maximum interrupt priority from which FreeRTOS.org API functions can be called.
- * Only API functions that end in ...FromISR() can be used within interrupts. */
-#define configMAX_SYSCALL_INTERRUPT_PRIORITY    (1<<5)
 
 /* Optional functions - most linkers will remove unused functions anyway. */
 #define INCLUDE_vTaskPrioritySet                1
