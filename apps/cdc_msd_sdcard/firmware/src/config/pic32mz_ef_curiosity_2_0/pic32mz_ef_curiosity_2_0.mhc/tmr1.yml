@@ -11,6 +11,13 @@ children:
       children:
       - type: Dynamic
         attributes: {id: tmr1, value: sys_time}
+  - type: Integer
+    attributes: {id: TIMER1_CLOCK_FREQ}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: tmr1, value: '99000000'}
   - type: Long
     attributes: {id: TIMER1_PERIOD}
     children:
@@ -21,6 +28,12 @@ children:
   - type: Float
     attributes: {id: TIMER1_TIME_PERIOD_MS}
     children:
+    - type: Attributes
+      children:
+      - type: Float
+        attributes: {id: max}
+        children:
+        - {type: Value, value: '0.6619899'}
     - type: Values
       children:
       - type: Dynamic
