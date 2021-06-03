@@ -1,7 +1,7 @@
 /**
  * \brief Component description for AC
  *
- * Copyright (c) 2020 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2020-08-25T15:51:45Z */
+/* file generated from device description version 2020-11-17T07:15:55Z */
 #ifndef _PIC32CMLE00_AC_COMPONENT_H_
 #define _PIC32CMLE00_AC_COMPONENT_H_
 
@@ -487,7 +487,15 @@
 #define AC_DBGCTRL_REG_OFST            (0x09)              /**< (AC_DBGCTRL) Debug Control Offset */
 #define AC_WINCTRL_REG_OFST            (0x0A)              /**< (AC_WINCTRL) Window Control Offset */
 #define AC_SCALER_REG_OFST             (0x0C)              /**< (AC_SCALER) Scaler n Offset */
+#define AC_SCALER0_REG_OFST            (0x0C)              /**< (AC_SCALER0) Scaler n Offset */
+#define AC_SCALER1_REG_OFST            (0x0D)              /**< (AC_SCALER1) Scaler n Offset */
+#define AC_SCALER2_REG_OFST            (0x0E)              /**< (AC_SCALER2) Scaler n Offset */
+#define AC_SCALER3_REG_OFST            (0x0F)              /**< (AC_SCALER3) Scaler n Offset */
 #define AC_COMPCTRL_REG_OFST           (0x10)              /**< (AC_COMPCTRL) Comparator Control n Offset */
+#define AC_COMPCTRL0_REG_OFST          (0x10)              /**< (AC_COMPCTRL0) Comparator Control n Offset */
+#define AC_COMPCTRL1_REG_OFST          (0x14)              /**< (AC_COMPCTRL1) Comparator Control n Offset */
+#define AC_COMPCTRL2_REG_OFST          (0x18)              /**< (AC_COMPCTRL2) Comparator Control n Offset */
+#define AC_COMPCTRL3_REG_OFST          (0x1C)              /**< (AC_COMPCTRL3) Comparator Control n Offset */
 #define AC_SYNCBUSY_REG_OFST           (0x20)              /**< (AC_SYNCBUSY) Synchronization Busy Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
