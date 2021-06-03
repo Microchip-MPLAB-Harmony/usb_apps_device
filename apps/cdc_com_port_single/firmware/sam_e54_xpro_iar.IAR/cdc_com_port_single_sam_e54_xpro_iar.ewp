@@ -2170,6 +2170,9 @@
                         </file>
                     </group>
                     <file>
+                        <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\device.h</name>
+                    </file>
+                    <file>
                         <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\device_cache.h</name>
                     </file>
                     <file>
@@ -2179,7 +2182,10 @@
                         <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\definitions.h</name>
                     </file>
                     <file>
-                        <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\device.h</name>
+                        <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\interrupts.h</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\device_vectors.h</name>
                     </file>
                     <group>
                         <name>driver</name>
@@ -2439,8 +2445,188 @@
                             <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\component\wdt.h</name>
                         </file>
                     </group>
+                    <group>
+                        <name>instance</name>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\ac.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\adc0.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\adc1.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\aes.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\can0.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\can1.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\ccl.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\cmcc.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\dac.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\dmac.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\dsu.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\eic.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\evsys.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\freqm.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\gclk.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\gmac.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\hmatrix.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\i2s.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\icm.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\mclk.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\nvmctrl.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\osc32kctrl.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\oscctrl.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\pac.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\pcc.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\pdec.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\pm.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\port.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\qspi.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\ramecc.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\rstc.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\rtc.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\sdhc0.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\sdhc1.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\sercom0.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\sercom1.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\sercom2.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\sercom3.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\sercom4.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\sercom5.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\sercom6.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\sercom7.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\supc.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\tc0.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\tc1.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\tc2.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\tc3.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\tc4.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\tc5.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\tc6.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\tc7.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\tcc0.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\tcc1.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\tcc2.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\tcc3.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\tcc4.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\trng.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\usb.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\wdt.h</name>
+                        </file>
+                    </group>
                     <file>
-                        <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\atsame54p20a.h</name>
+                        <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\same54p20a.h</name>
                     </file>
                     <group>
                         <name>pio</name>

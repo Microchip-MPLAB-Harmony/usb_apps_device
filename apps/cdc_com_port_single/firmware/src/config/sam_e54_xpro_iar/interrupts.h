@@ -1,20 +1,20 @@
 /*******************************************************************************
-  EVSYS Peripheral Library
+ System Interrupts File
 
   Company:
     Microchip Technology Inc.
 
   File Name:
-    plib_evsys.c
+    interrupt.h
 
   Summary:
-    EVSYS Source File
+    Interrupt vectors mapping
 
   Description:
-    None
+    This file contains declarations of device vectors used by Harmony 3
+ *******************************************************************************/
 
-*******************************************************************************/
-
+// DOM-IGNORE-BEGIN
 /*******************************************************************************
 * Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
 *
@@ -36,15 +36,34 @@
 * FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
-*******************************************************************************/
+ *******************************************************************************/
+// DOM-IGNORE-END
 
-#include "plib_evsys.h"
-#include "interrupts.h"
+#ifndef INTERRUPTS_H
+#define INTERRUPTS_H
+
+// *****************************************************************************
+// *****************************************************************************
+// Section: Included Files
+// *****************************************************************************
+// *****************************************************************************
+#include <stdint.h>
+
+
+// *****************************************************************************
+// *****************************************************************************
+// Section: Handler Routines
+// *****************************************************************************
+// *****************************************************************************
+
+void Reset_Handler (void);
+void NonMaskableInt_Handler (void);
+void HardFault_Handler (void);
+void DRV_USBFSV1_OTHER_Handler (void);
+void DRV_USBFSV1_SOF_HSOF_Handler (void);
+void DRV_USBFSV1_TRCPT0_Handler (void);
+void DRV_USBFSV1_TRCPT1_Handler (void);
 
 
 
-void EVSYS_Initialize( void )
-{
-    /*Event Channel User Configuration*/
-
-}
+#endif // INTERRUPTS_H
