@@ -1189,13 +1189,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: D048A36DC93E66C9CA02E4D6CD9827B9
-- generatedChecksum: 4B3C3EF8A318908A22B78500515C3288
+- generatedChecksum: null
   logicalPath: config/pic32mx470_curiosity
   name: user.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 4B3C3EF8A318908A22B78500515C3288
+  userChecksum: null
 - generatedChecksum: 52AA20E8BAA488B3B6581379249C0FCE
   logicalPath: config/pic32mx470_curiosity
   name: p32MX470F512H.ld
