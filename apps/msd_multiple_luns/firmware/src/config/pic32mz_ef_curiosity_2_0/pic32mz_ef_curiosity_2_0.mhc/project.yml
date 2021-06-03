@@ -13,6 +13,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 82184E6E6BF21D7C0E91DE0BD7609E90
+- generatedChecksum: 1C8E0685B0B99622BABC95848E7EB0E4
+  logicalPath: config/pic32mz_ef_curiosity_2_0
+  name: diskImage.c
+  physicalPath: ''
+  security: NON_SECURE
+  type: SOURCE
+  userChecksum: 1C8E0685B0B99622BABC95848E7EB0E4
 - generatedChecksum: 257ACC61A57EA8DE78BA7E1F78DB85A3
   logicalPath: config/pic32mz_ef_curiosity_2_0/driver/memory
   name: drv_memory.c
@@ -202,13 +209,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 3A3D90BBDFDB486B57C8FED3BA7D4135
-- generatedChecksum: 8C556EA83A3F459E5DA16CC347AEA324
+- generatedChecksum: 7B8C052AF9FD774015A53773F0C21AB2
   logicalPath: config/pic32mz_ef_curiosity_2_0
   name: configuration.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 8C556EA83A3F459E5DA16CC347AEA324
+  userChecksum: 7B8C052AF9FD774015A53773F0C21AB2
 - generatedChecksum: 57EA7E13D395BC4B0ABE600A48E0AF17
   logicalPath: config/pic32mz_ef_curiosity_2_0
   name: definitions.h
@@ -804,13 +811,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: A0803FFCE7DA932883C0B89AD48FA04C
-- generatedChecksum: 4B3C3EF8A318908A22B78500515C3288
+- generatedChecksum: null
   logicalPath: config/pic32mz_ef_curiosity_2_0
   name: user.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 4B3C3EF8A318908A22B78500515C3288
+  userChecksum: null
 - generatedChecksum: 07A482DAB7473FC475EA656561967B15
   logicalPath: config/pic32mz_ef_curiosity_2_0
   name: p32MZ2048EFM144.ld
