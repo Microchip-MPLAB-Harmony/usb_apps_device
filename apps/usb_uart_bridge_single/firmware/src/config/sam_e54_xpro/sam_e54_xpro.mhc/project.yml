@@ -20,13 +20,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 941C09024124A4937C0E368A25C140DE
-- generatedChecksum: ED2E5C23BC7415104D7AD4F7AA544CC5
+- generatedChecksum: DE6B2F7A6193E5F8C2F36196B0B687AC
   logicalPath: config/sam_e54_xpro/driver/usb/usbfsv1/src
   name: drv_usbfsv1_device.c
   physicalPath: driver/usb/usbfsv1/src
   security: NON_SECURE
   type: SOURCE
-  userChecksum: ED2E5C23BC7415104D7AD4F7AA544CC5
+  userChecksum: DE6B2F7A6193E5F8C2F36196B0B687AC
 - generatedChecksum: 6069C4FD56993BDA3B1FC223DD5BAA4A
   logicalPath: config/sam_e54_xpro
   name: exceptions.c
@@ -1301,13 +1301,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 3E3CC6BC9128194CB4D19F29C57E312B
-- generatedChecksum: 4B3C3EF8A318908A22B78500515C3288
+- generatedChecksum: null
   logicalPath: config/sam_e54_xpro
   name: user.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 4B3C3EF8A318908A22B78500515C3288
+  userChecksum: null
 - generatedChecksum: F5BB5BF684CF04E45383E4B8D309A483
   logicalPath: packs/ATSAME54P20A_DFP/component
   name: wdt.h
