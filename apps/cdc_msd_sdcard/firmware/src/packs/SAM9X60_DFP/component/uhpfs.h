@@ -1,7 +1,7 @@
 /**
  * \brief Component description for UHPFS
  *
- * Copyright (c) 2020 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2020-05-19T13:57:46Z */
+/* file generated from device description version 2020-12-18T05:22:35Z */
 #ifndef _SAM9X_UHPFS_COMPONENT_H_
 #define _SAM9X_UHPFS_COMPONENT_H_
 
@@ -505,6 +505,9 @@
 #define UHPFS_HcRhDescriptorB_REG_OFST (0x4C)              /**< (UHPFS_HcRhDescriptorB) HC Root Hub B Register Offset */
 #define UHPFS_HcRhStatus_REG_OFST      (0x50)              /**< (UHPFS_HcRhStatus) HC Root Hub Status Register Offset */
 #define UHPFS_HcRhPortStatus_REG_OFST  (0x54)              /**< (UHPFS_HcRhPortStatus) HC Port Status and Control Register (ndp = 0) Offset */
+#define UHPFS_HcRhPortStatus0_REG_OFST (0x54)              /**< (UHPFS_HcRhPortStatus0) HC Port Status and Control Register (ndp = 0) Offset */
+#define UHPFS_HcRhPortStatus1_REG_OFST (0x58)              /**< (UHPFS_HcRhPortStatus1) HC Port Status and Control Register (ndp = 0) Offset */
+#define UHPFS_HcRhPortStatus2_REG_OFST (0x5C)              /**< (UHPFS_HcRhPortStatus2) HC Port Status and Control Register (ndp = 0) Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief UHPFS register API structure */

@@ -1,7 +1,7 @@
 /**
  * \brief Component description for SHA
  *
- * Copyright (c) 2020 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2020-05-19T13:57:46Z */
+/* file generated from device description version 2020-12-18T05:22:35Z */
 #ifndef _SAM9X_SHA_COMPONENT_H_
 #define _SAM9X_SHA_COMPONENT_H_
 
@@ -319,7 +319,39 @@
 #define SHA_MSR_REG_OFST               (0x20)              /**< (SHA_MSR) Message Size Register Offset */
 #define SHA_BCR_REG_OFST               (0x30)              /**< (SHA_BCR) Bytes Count Register Offset */
 #define SHA_IDATAR_REG_OFST            (0x40)              /**< (SHA_IDATAR) Input Data 0 Register Offset */
+#define SHA_IDATAR0_REG_OFST           (0x40)              /**< (SHA_IDATAR0) Input Data 0 Register Offset */
+#define SHA_IDATAR1_REG_OFST           (0x44)              /**< (SHA_IDATAR1) Input Data 0 Register Offset */
+#define SHA_IDATAR2_REG_OFST           (0x48)              /**< (SHA_IDATAR2) Input Data 0 Register Offset */
+#define SHA_IDATAR3_REG_OFST           (0x4C)              /**< (SHA_IDATAR3) Input Data 0 Register Offset */
+#define SHA_IDATAR4_REG_OFST           (0x50)              /**< (SHA_IDATAR4) Input Data 0 Register Offset */
+#define SHA_IDATAR5_REG_OFST           (0x54)              /**< (SHA_IDATAR5) Input Data 0 Register Offset */
+#define SHA_IDATAR6_REG_OFST           (0x58)              /**< (SHA_IDATAR6) Input Data 0 Register Offset */
+#define SHA_IDATAR7_REG_OFST           (0x5C)              /**< (SHA_IDATAR7) Input Data 0 Register Offset */
+#define SHA_IDATAR8_REG_OFST           (0x60)              /**< (SHA_IDATAR8) Input Data 0 Register Offset */
+#define SHA_IDATAR9_REG_OFST           (0x64)              /**< (SHA_IDATAR9) Input Data 0 Register Offset */
+#define SHA_IDATAR10_REG_OFST          (0x68)              /**< (SHA_IDATAR10) Input Data 0 Register Offset */
+#define SHA_IDATAR11_REG_OFST          (0x6C)              /**< (SHA_IDATAR11) Input Data 0 Register Offset */
+#define SHA_IDATAR12_REG_OFST          (0x70)              /**< (SHA_IDATAR12) Input Data 0 Register Offset */
+#define SHA_IDATAR13_REG_OFST          (0x74)              /**< (SHA_IDATAR13) Input Data 0 Register Offset */
+#define SHA_IDATAR14_REG_OFST          (0x78)              /**< (SHA_IDATAR14) Input Data 0 Register Offset */
+#define SHA_IDATAR15_REG_OFST          (0x7C)              /**< (SHA_IDATAR15) Input Data 0 Register Offset */
 #define SHA_IODATAR_REG_OFST           (0x80)              /**< (SHA_IODATAR) Input/Output Data 0 Register Offset */
+#define SHA_IODATAR0_REG_OFST          (0x80)              /**< (SHA_IODATAR0) Input/Output Data 0 Register Offset */
+#define SHA_IODATAR1_REG_OFST          (0x84)              /**< (SHA_IODATAR1) Input/Output Data 0 Register Offset */
+#define SHA_IODATAR2_REG_OFST          (0x88)              /**< (SHA_IODATAR2) Input/Output Data 0 Register Offset */
+#define SHA_IODATAR3_REG_OFST          (0x8C)              /**< (SHA_IODATAR3) Input/Output Data 0 Register Offset */
+#define SHA_IODATAR4_REG_OFST          (0x90)              /**< (SHA_IODATAR4) Input/Output Data 0 Register Offset */
+#define SHA_IODATAR5_REG_OFST          (0x94)              /**< (SHA_IODATAR5) Input/Output Data 0 Register Offset */
+#define SHA_IODATAR6_REG_OFST          (0x98)              /**< (SHA_IODATAR6) Input/Output Data 0 Register Offset */
+#define SHA_IODATAR7_REG_OFST          (0x9C)              /**< (SHA_IODATAR7) Input/Output Data 0 Register Offset */
+#define SHA_IODATAR8_REG_OFST          (0xA0)              /**< (SHA_IODATAR8) Input/Output Data 0 Register Offset */
+#define SHA_IODATAR9_REG_OFST          (0xA4)              /**< (SHA_IODATAR9) Input/Output Data 0 Register Offset */
+#define SHA_IODATAR10_REG_OFST         (0xA8)              /**< (SHA_IODATAR10) Input/Output Data 0 Register Offset */
+#define SHA_IODATAR11_REG_OFST         (0xAC)              /**< (SHA_IODATAR11) Input/Output Data 0 Register Offset */
+#define SHA_IODATAR12_REG_OFST         (0xB0)              /**< (SHA_IODATAR12) Input/Output Data 0 Register Offset */
+#define SHA_IODATAR13_REG_OFST         (0xB4)              /**< (SHA_IODATAR13) Input/Output Data 0 Register Offset */
+#define SHA_IODATAR14_REG_OFST         (0xB8)              /**< (SHA_IODATAR14) Input/Output Data 0 Register Offset */
+#define SHA_IODATAR15_REG_OFST         (0xBC)              /**< (SHA_IODATAR15) Input/Output Data 0 Register Offset */
 #define SHA_WPMR_REG_OFST              (0xE4)              /**< (SHA_WPMR) Write Protection Mode Register Offset */
 #define SHA_WPSR_REG_OFST              (0xE8)              /**< (SHA_WPSR) Write Protection Status Register Offset */
 

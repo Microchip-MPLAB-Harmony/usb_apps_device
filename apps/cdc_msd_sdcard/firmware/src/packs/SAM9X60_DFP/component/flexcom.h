@@ -1,7 +1,7 @@
 /**
  * \brief Component description for FLEXCOM
  *
- * Copyright (c) 2020 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2020-05-19T13:57:46Z */
+/* file generated from device description version 2020-12-18T05:22:35Z */
 #ifndef _SAM9X_FLEXCOM_COMPONENT_H_
 #define _SAM9X_FLEXCOM_COMPONENT_H_
 
@@ -2357,6 +2357,10 @@
 #define FLEX_SPI_IDR_REG_OFST          (0x418)             /**< (FLEX_SPI_IDR) SPI Interrupt Disable Register Offset */
 #define FLEX_SPI_IMR_REG_OFST          (0x41C)             /**< (FLEX_SPI_IMR) SPI Interrupt Mask Register Offset */
 #define FLEX_SPI_CSR_REG_OFST          (0x430)             /**< (FLEX_SPI_CSR) SPI Chip Select Register Offset */
+#define FLEX_SPI_CSR0_REG_OFST         (0x430)             /**< (FLEX_SPI_CSR0) SPI Chip Select Register Offset */
+#define FLEX_SPI_CSR1_REG_OFST         (0x434)             /**< (FLEX_SPI_CSR1) SPI Chip Select Register Offset */
+#define FLEX_SPI_CSR2_REG_OFST         (0x438)             /**< (FLEX_SPI_CSR2) SPI Chip Select Register Offset */
+#define FLEX_SPI_CSR3_REG_OFST         (0x43C)             /**< (FLEX_SPI_CSR3) SPI Chip Select Register Offset */
 #define FLEX_SPI_FMR_REG_OFST          (0x440)             /**< (FLEX_SPI_FMR) SPI FIFO Mode Register Offset */
 #define FLEX_SPI_FLR_REG_OFST          (0x444)             /**< (FLEX_SPI_FLR) SPI FIFO Level Register Offset */
 #define FLEX_SPI_CMPR_REG_OFST         (0x448)             /**< (FLEX_SPI_CMPR) SPI Comparison Register Offset */

@@ -127,11 +127,13 @@ uint32_t PIT_TimerFrequencyGet(void)
 void PIT_DelayMs(uint32_t delay)
 {
     uint32_t tickStart, delayTicks;
+    uint32_t periodVal = (PIT_REGS->PIT_MR & PIT_MR_PIV_Msk) + 1;
+    uint32_t timerFreq = 200000000 / 16;
 
     if((PIT_REGS->PIT_MR & (PIT_MR_PITEN_Msk | PIT_MR_PITIEN_Msk)) == (PIT_MR_PITEN_Msk | PIT_MR_PITIEN_Msk))
     {
         tickStart=pit.tickCounter;
-        delayTicks=delay/1;
+        delayTicks = ((timerFreq / periodVal) * delay ) / 1000;
 
         while( (pit.tickCounter-tickStart) < delayTicks ) {
             ;
