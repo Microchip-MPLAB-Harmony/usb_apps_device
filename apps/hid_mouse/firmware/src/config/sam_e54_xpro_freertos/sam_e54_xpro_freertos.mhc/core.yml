@@ -183,7 +183,7 @@ children:
         children:
         - {type: Value, value: 'false'}
   - type: KeyValueSet
-    attributes: {id: DEVICE_SECURITY}
+    attributes: {id: DEVICE_SECURITY_CMD}
     children:
     - type: Values
       children:
@@ -4745,13 +4745,22 @@ children:
       children:
       - type: Dynamic
         attributes: {id: FreeRTOS, value: 'true'}
+  - type: Comment
+    attributes: {id: SYSTICK_COMMENT}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'true'}
   - type: String
     attributes: {id: SYSTICK_PERIOD}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '0x1d4c0'}
+        attributes: {id: core, value: '0x1D4C0'}
   - type: Float
     attributes: {id: SYSTICK_PERIOD_MS}
     children:
@@ -4945,5 +4954,14 @@ children:
       children:
       - type: Dynamic
         attributes: {id: core, value: '3'}
+  - type: Boolean
+    attributes: {id: systickEnable}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'false'}
 - type: ElementPosition
   attributes: {x: '151', y: '70', id: core}
