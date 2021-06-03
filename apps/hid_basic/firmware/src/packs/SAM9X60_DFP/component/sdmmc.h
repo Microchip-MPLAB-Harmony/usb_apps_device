@@ -1,7 +1,7 @@
 /**
  * \brief Component description for SDMMC
  *
- * Copyright (c) 2020 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2020-05-19T13:57:46Z */
+/* file generated from device description version 2020-12-18T05:22:35Z */
 #ifndef _SAM9X_SDMMC_COMPONENT_H_
 #define _SAM9X_SDMMC_COMPONENT_H_
 
@@ -1370,6 +1370,10 @@
 #define SDMMC_TMR_REG_OFST             (0x0C)              /**< (SDMMC_TMR) Transfer Mode Register Offset */
 #define SDMMC_CR_REG_OFST              (0x0E)              /**< (SDMMC_CR) Command Register Offset */
 #define SDMMC_RR_REG_OFST              (0x10)              /**< (SDMMC_RR) Response Register Offset */
+#define SDMMC_RR0_REG_OFST             (0x10)              /**< (SDMMC_RR0) Response Register Offset */
+#define SDMMC_RR1_REG_OFST             (0x14)              /**< (SDMMC_RR1) Response Register Offset */
+#define SDMMC_RR2_REG_OFST             (0x18)              /**< (SDMMC_RR2) Response Register Offset */
+#define SDMMC_RR3_REG_OFST             (0x1C)              /**< (SDMMC_RR3) Response Register Offset */
 #define SDMMC_BDPR_REG_OFST            (0x20)              /**< (SDMMC_BDPR) Buffer Data Port Register Offset */
 #define SDMMC_PSR_REG_OFST             (0x24)              /**< (SDMMC_PSR) Present State Register Offset */
 #define SDMMC_HC1R_REG_OFST            (0x28)              /**< (SDMMC_HC1R) Host Control 1 Register Offset */
@@ -1395,6 +1399,9 @@
 #define SDMMC_AESR_REG_OFST            (0x54)              /**< (SDMMC_AESR) ADMA Error Status Register Offset */
 #define SDMMC_ASAR0_REG_OFST           (0x58)              /**< (SDMMC_ASAR0) ADMA System Address Register 0 Offset */
 #define SDMMC_PVR_REG_OFST             (0x60)              /**< (SDMMC_PVR) Preset Value Register 0 (for initialization) Offset */
+#define SDMMC_PVR0_REG_OFST            (0x60)              /**< (SDMMC_PVR0) Preset Value Register 0 (for initialization) Offset */
+#define SDMMC_PVR1_REG_OFST            (0x62)              /**< (SDMMC_PVR1) Preset Value Register 0 (for initialization) Offset */
+#define SDMMC_PVR2_REG_OFST            (0x64)              /**< (SDMMC_PVR2) Preset Value Register 0 (for initialization) Offset */
 #define SDMMC_SISR_REG_OFST            (0xFC)              /**< (SDMMC_SISR) Slot Interrupt Status Register Offset */
 #define SDMMC_HCVR_REG_OFST            (0xFE)              /**< (SDMMC_HCVR) Host Controller Version Register Offset */
 #define SDMMC_APSR_REG_OFST            (0x200)             /**< (SDMMC_APSR) Additional Present State Register Offset */
