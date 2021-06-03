@@ -1,7 +1,7 @@
 /**
  * \brief Component description for SFC
  *
- * Copyright (c) 2020 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2020-05-04T06:27:45Z */
+/* file generated from device description version 2020-12-17T18:15:19Z */
 #ifndef _SAMA5D2_SFC_COMPONENT_H_
 #define _SAMA5D2_SFC_COMPONENT_H_
 
@@ -127,6 +127,23 @@
 #define SFC_IMR_REG_OFST               (0x18)              /**< (SFC_IMR) SFC Interrupt Mask Register Offset */
 #define SFC_SR_REG_OFST                (0x1C)              /**< (SFC_SR) SFC Status Register Offset */
 #define SFC_DR_REG_OFST                (0x20)              /**< (SFC_DR) SFC Data Register Offset */
+#define SFC_DR0_REG_OFST               (0x20)              /**< (SFC_DR0) SFC Data Register Offset */
+#define SFC_DR1_REG_OFST               (0x24)              /**< (SFC_DR1) SFC Data Register Offset */
+#define SFC_DR2_REG_OFST               (0x28)              /**< (SFC_DR2) SFC Data Register Offset */
+#define SFC_DR3_REG_OFST               (0x2C)              /**< (SFC_DR3) SFC Data Register Offset */
+#define SFC_DR4_REG_OFST               (0x30)              /**< (SFC_DR4) SFC Data Register Offset */
+#define SFC_DR5_REG_OFST               (0x34)              /**< (SFC_DR5) SFC Data Register Offset */
+#define SFC_DR6_REG_OFST               (0x38)              /**< (SFC_DR6) SFC Data Register Offset */
+#define SFC_DR7_REG_OFST               (0x3C)              /**< (SFC_DR7) SFC Data Register Offset */
+#define SFC_DR8_REG_OFST               (0x40)              /**< (SFC_DR8) SFC Data Register Offset */
+#define SFC_DR9_REG_OFST               (0x44)              /**< (SFC_DR9) SFC Data Register Offset */
+#define SFC_DR10_REG_OFST              (0x48)              /**< (SFC_DR10) SFC Data Register Offset */
+#define SFC_DR11_REG_OFST              (0x4C)              /**< (SFC_DR11) SFC Data Register Offset */
+#define SFC_DR12_REG_OFST              (0x50)              /**< (SFC_DR12) SFC Data Register Offset */
+#define SFC_DR13_REG_OFST              (0x54)              /**< (SFC_DR13) SFC Data Register Offset */
+#define SFC_DR14_REG_OFST              (0x58)              /**< (SFC_DR14) SFC Data Register Offset */
+#define SFC_DR15_REG_OFST              (0x5C)              /**< (SFC_DR15) SFC Data Register Offset */
+#define SFC_DR16_REG_OFST              (0x60)              /**< (SFC_DR16) SFC Data Register Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief SFC register API structure */

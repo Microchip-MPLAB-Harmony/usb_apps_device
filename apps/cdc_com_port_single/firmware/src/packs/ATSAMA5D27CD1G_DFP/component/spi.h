@@ -1,7 +1,7 @@
 /**
  * \brief Component description for SPI
  *
- * Copyright (c) 2020 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2020-05-04T06:27:45Z */
+/* file generated from device description version 2020-12-17T18:15:19Z */
 #ifndef _SAMA5D2_SPI_COMPONENT_H_
 #define _SAMA5D2_SPI_COMPONENT_H_
 
@@ -523,6 +523,10 @@
 #define SPI_IDR_REG_OFST               (0x18)              /**< (SPI_IDR) Interrupt Disable Register Offset */
 #define SPI_IMR_REG_OFST               (0x1C)              /**< (SPI_IMR) Interrupt Mask Register Offset */
 #define SPI_CSR_REG_OFST               (0x30)              /**< (SPI_CSR) Chip Select Register Offset */
+#define SPI_CSR0_REG_OFST              (0x30)              /**< (SPI_CSR0) Chip Select Register Offset */
+#define SPI_CSR1_REG_OFST              (0x34)              /**< (SPI_CSR1) Chip Select Register Offset */
+#define SPI_CSR2_REG_OFST              (0x38)              /**< (SPI_CSR2) Chip Select Register Offset */
+#define SPI_CSR3_REG_OFST              (0x3C)              /**< (SPI_CSR3) Chip Select Register Offset */
 #define SPI_FMR_REG_OFST               (0x40)              /**< (SPI_FMR) FIFO Mode Register Offset */
 #define SPI_FLR_REG_OFST               (0x44)              /**< (SPI_FLR) FIFO Level Register Offset */
 #define SPI_CMPR_REG_OFST              (0x48)              /**< (SPI_CMPR) Comparison Register Offset */
