@@ -1,23 +1,18 @@
 /*******************************************************************************
-  Interrupt System Service Library Interface Implementation File
+ System Interrupts File
 
-  Company
+  Company:
     Microchip Technology Inc.
 
-  File Name
-    sys_int_nvic.c
+  File Name:
+    interrupt.h
 
-  Summary
-    NVIC implementation of interrupt system service library.
+  Summary:
+    Interrupt vectors mapping
 
-  Description
-    This file implements the interface to the interrupt system service library
-    not provided in CMSIS.
-
-  Remarks:
-    None.
-
-*******************************************************************************/
+  Description:
+    This file contains declarations of device vectors used by Harmony 3
+ *******************************************************************************/
 
 // DOM-IGNORE-BEGIN
 /*******************************************************************************
@@ -41,62 +36,35 @@
 * FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
-*******************************************************************************/
+ *******************************************************************************/
 // DOM-IGNORE-END
 
+#ifndef INTERRUPTS_H
+#define INTERRUPTS_H
 
 // *****************************************************************************
 // *****************************************************************************
 // Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
-#include "system/int/sys_int.h"
-#include "peripheral/nvic/plib_nvic.h"
+#include <stdint.h>
 
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: Interface Implementation
+// Section: Handler Routines
 // *****************************************************************************
 // *****************************************************************************
 
-// *****************************************************************************
-void SYS_INT_Enable( void )
-{
-    NVIC_INT_Enable();
-}
+void Reset_Handler (void);
+void NonMaskableInt_Handler (void);
+void HardFault_Handler (void);
+void xPortSysTickHandler (void);
+void DRV_USBFSV1_OTHER_Handler (void);
+void DRV_USBFSV1_SOF_HSOF_Handler (void);
+void DRV_USBFSV1_TRCPT0_Handler (void);
+void DRV_USBFSV1_TRCPT1_Handler (void);
 
-bool SYS_INT_Disable( void )
-{
-    return NVIC_INT_Disable();
-}
 
-void SYS_INT_Restore( bool state )
-{
-    NVIC_INT_Restore(state);
-}
 
-bool SYS_INT_SourceDisable( INT_SOURCE source )
-{
-    bool processorStatus;
-    bool intSrcStatus;
-
-    processorStatus = SYS_INT_Disable();
-
-    intSrcStatus = NVIC_GetEnableIRQ(source);
-
-    NVIC_DisableIRQ( source );
-
-    SYS_INT_Restore( processorStatus );
-
-    /* return the source status */
-    return intSrcStatus;
-}
-
-void SYS_INT_SourceRestore( INT_SOURCE source, bool status )
-{
-    if( status ) {
-        SYS_INT_SourceEnable( source );
-    }
-    return;
-}
+#endif // INTERRUPTS_H
