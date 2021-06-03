@@ -42,6 +42,13 @@
 //DOM-IGNORE-END
 #include "definitions.h"
 
+
+// *****************************************************************************
+// *****************************************************************************
+// Section: Local Functions
+// *****************************************************************************
+// *****************************************************************************
+
 // *****************************************************************************
 // *****************************************************************************
 // Section: AIC Implementation
@@ -52,7 +59,7 @@ extern uint32_t irqDataEntryCount;
 void DefaultInterruptHandlerForSpurious( void );
 
 void
-INT_Initialize( void )
+AIC_INT_Initialize( void )
 {   
     const uint32_t      keyGuard = 0xb6d81c4d;
     const unsigned      MaxNumPeripherals = 77;
@@ -81,7 +88,7 @@ INT_Initialize( void )
     }
 
     for( ii = 0; ii < irqDataEntryCount; ++ii )
-    {   // inspect irqData array in interrupts.c to see the configuration data 
+    {   // inspect irqData array in interrupts.c to see the configuration data
         aicPtr = (aic_registers_t *) irqData[ ii ].targetRegisters;
         aicPtr->AIC_SSR = AIC_SSR_INTSEL( irqData[ ii ].peripheralId );
         aicPtr->AIC_SMR = (aicPtr->AIC_SMR & ~AIC_SMR_SRCTYPE_Msk)  | AIC_SMR_SRCTYPE( irqData[ ii ].srcType );
@@ -94,4 +101,33 @@ INT_Initialize( void )
     __DSB();                                                // Data Synchronization Barrier
     __enable_irq();
     __ISB();                                                // Allow pended interrupts to be recognized immediately
+}
+
+void AIC_INT_IrqEnable( void )
+{
+    __DMB();
+    __enable_irq();
+}
+
+bool AIC_INT_IrqDisable( void )
+{
+    /* Add a volatile qualifier to the return value to prevent the compiler from optimizing out this function */
+    volatile bool previousValue = (CPSR_I_Msk & __get_CPSR())? false:true;
+    __disable_irq();
+    __DMB();
+    return( previousValue );
+}
+
+void AIC_INT_IrqRestore( bool state )
+{
+    if( state == true )
+    {
+        __DMB();
+        __enable_irq();
+    }
+    else
+    {
+        __disable_irq();
+        __DMB();
+    }
 }
