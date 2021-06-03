@@ -1,7 +1,7 @@
 /*--------------------------------------------------------------------------
  * MPLAB XC32 Compiler -  PIC32CM5164LE00100 linker script
  * 
- * Copyright (c) 2020, Microchip Technology Inc. and its subsidiaries ("Microchip")
+ * Copyright (c) 2021, Microchip Technology Inc. and its subsidiaries ("Microchip")
  * All rights reserved.
  * 
  * This software is developed by Microchip Technology Inc. and its
@@ -89,17 +89,17 @@ MEMORY
   rom (LRX) : ORIGIN = ROM_ORIGIN, LENGTH = ROM_LENGTH
   ram (WX!R) : ORIGIN = RAM_ORIGIN, LENGTH = RAM_LENGTH
   config_D0804000 : ORIGIN = 0xD0804000, LENGTH = 0x4
-  config_D0804004 : ORIGIN = 0xD0804004, LENGTH = 0x4
-  config_D080400C : ORIGIN = 0xD080400C, LENGTH = 0x4
   config_D0806000 : ORIGIN = 0xD0806000, LENGTH = 0x4
-  config_D0806004 : ORIGIN = 0xD0806004, LENGTH = 0x4
-  config_D080600C : ORIGIN = 0xD080600C, LENGTH = 0x4
+  config_D0804004 : ORIGIN = 0xD0804004, LENGTH = 0x4
   config_D0806020 : ORIGIN = 0xD0806020, LENGTH = 0x4
-  config_D080C004 : ORIGIN = 0xD080C004, LENGTH = 0x4
   config_D080C040 : ORIGIN = 0xD080C040, LENGTH = 0x4
+  config_D080600C : ORIGIN = 0xD080600C, LENGTH = 0x4
+  config_D080400C : ORIGIN = 0xD080400C, LENGTH = 0x4
+  config_D080C04C : ORIGIN = 0xD080C04C, LENGTH = 0x4
   config_D080C044 : ORIGIN = 0xD080C044, LENGTH = 0x4
   config_D080C048 : ORIGIN = 0xD080C048, LENGTH = 0x4
-  config_D080C04C : ORIGIN = 0xD080C04C, LENGTH = 0x4
+  config_D0806004 : ORIGIN = 0xD0806004, LENGTH = 0x4
+  config_D080C004 : ORIGIN = 0xD080C004, LENGTH = 0x4
 
 }
 
@@ -139,39 +139,39 @@ SECTIONS
     .config_D0804000 : {
       KEEP(*(.config_D0804000))
     } > config_D0804000
-    .config_D0804004 : {
-      KEEP(*(.config_D0804004))
-    } > config_D0804004
-    .config_D080400C : {
-      KEEP(*(.config_D080400C))
-    } > config_D080400C
     .config_D0806000 : {
       KEEP(*(.config_D0806000))
     } > config_D0806000
-    .config_D0806004 : {
-      KEEP(*(.config_D0806004))
-    } > config_D0806004
-    .config_D080600C : {
-      KEEP(*(.config_D080600C))
-    } > config_D080600C
+    .config_D0804004 : {
+      KEEP(*(.config_D0804004))
+    } > config_D0804004
     .config_D0806020 : {
       KEEP(*(.config_D0806020))
     } > config_D0806020
-    .config_D080C004 : {
-      KEEP(*(.config_D080C004))
-    } > config_D080C004
     .config_D080C040 : {
       KEEP(*(.config_D080C040))
     } > config_D080C040
+    .config_D080600C : {
+      KEEP(*(.config_D080600C))
+    } > config_D080600C
+    .config_D080400C : {
+      KEEP(*(.config_D080400C))
+    } > config_D080400C
+    .config_D080C04C : {
+      KEEP(*(.config_D080C04C))
+    } > config_D080C04C
     .config_D080C044 : {
       KEEP(*(.config_D080C044))
     } > config_D080C044
     .config_D080C048 : {
       KEEP(*(.config_D080C048))
     } > config_D080C048
-    .config_D080C04C : {
-      KEEP(*(.config_D080C04C))
-    } > config_D080C04C
+    .config_D0806004 : {
+      KEEP(*(.config_D0806004))
+    } > config_D0806004
+    .config_D080C004 : {
+      KEEP(*(.config_D080C004))
+    } > config_D080C004
 
     /*
      * The linker moves the .vectors section into itcm when itcm is

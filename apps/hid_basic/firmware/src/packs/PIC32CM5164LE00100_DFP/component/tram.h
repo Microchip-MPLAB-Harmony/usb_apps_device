@@ -1,7 +1,7 @@
 /**
  * \brief Component description for TRAM
  *
- * Copyright (c) 2020 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2020-08-25T15:51:45Z */
+/* file generated from device description version 2020-11-17T07:15:55Z */
 #ifndef _PIC32CMLE00_TRAM_COMPONENT_H_
 #define _PIC32CMLE00_TRAM_COMPONENT_H_
 
@@ -129,6 +129,30 @@
 #define TRAM_RAM_DATA(value)                  (TRAM_RAM_DATA_Msk & ((value) << TRAM_RAM_DATA_Pos))
 #define TRAM_RAM_Msk                          _U_(0xFFFFFFFF)                                      /**< (TRAM_RAM) Register Mask  */
 
+/* BYTE mode */
+#define TRAM_RAM_BYTE_BYTE0_Pos               _U_(0)                                               /**< (TRAM_RAM) Trust RAM Data Position */
+#define TRAM_RAM_BYTE_BYTE0_Msk               (_U_(0xFF) << TRAM_RAM_BYTE_BYTE0_Pos)               /**< (TRAM_RAM) Trust RAM Data Mask */
+#define TRAM_RAM_BYTE_BYTE0(value)            (TRAM_RAM_BYTE_BYTE0_Msk & ((value) << TRAM_RAM_BYTE_BYTE0_Pos))
+#define TRAM_RAM_BYTE_BYTE1_Pos               _U_(8)                                               /**< (TRAM_RAM) Trust RAM Data Position */
+#define TRAM_RAM_BYTE_BYTE1_Msk               (_U_(0xFF) << TRAM_RAM_BYTE_BYTE1_Pos)               /**< (TRAM_RAM) Trust RAM Data Mask */
+#define TRAM_RAM_BYTE_BYTE1(value)            (TRAM_RAM_BYTE_BYTE1_Msk & ((value) << TRAM_RAM_BYTE_BYTE1_Pos))
+#define TRAM_RAM_BYTE_BYTE2_Pos               _U_(16)                                              /**< (TRAM_RAM) Trust RAM Data Position */
+#define TRAM_RAM_BYTE_BYTE2_Msk               (_U_(0xFF) << TRAM_RAM_BYTE_BYTE2_Pos)               /**< (TRAM_RAM) Trust RAM Data Mask */
+#define TRAM_RAM_BYTE_BYTE2(value)            (TRAM_RAM_BYTE_BYTE2_Msk & ((value) << TRAM_RAM_BYTE_BYTE2_Pos))
+#define TRAM_RAM_BYTE_BYTE3_Pos               _U_(24)                                              /**< (TRAM_RAM) Trust RAM Data Position */
+#define TRAM_RAM_BYTE_BYTE3_Msk               (_U_(0xFF) << TRAM_RAM_BYTE_BYTE3_Pos)               /**< (TRAM_RAM) Trust RAM Data Mask */
+#define TRAM_RAM_BYTE_BYTE3(value)            (TRAM_RAM_BYTE_BYTE3_Msk & ((value) << TRAM_RAM_BYTE_BYTE3_Pos))
+#define TRAM_RAM_BYTE_Msk                     _U_(0xFFFFFFFF)                                       /**< (TRAM_RAM_BYTE) Register Mask  */
+
+/* HALFWORD mode */
+#define TRAM_RAM_HALFWORD_HWORD0_Pos          _U_(0)                                               /**< (TRAM_RAM) Trust RAM Halfword Data Position */
+#define TRAM_RAM_HALFWORD_HWORD0_Msk          (_U_(0xFFFF) << TRAM_RAM_HALFWORD_HWORD0_Pos)        /**< (TRAM_RAM) Trust RAM Halfword Data Mask */
+#define TRAM_RAM_HALFWORD_HWORD0(value)       (TRAM_RAM_HALFWORD_HWORD0_Msk & ((value) << TRAM_RAM_HALFWORD_HWORD0_Pos))
+#define TRAM_RAM_HALFWORD_HWORD1_Pos          _U_(16)                                              /**< (TRAM_RAM) Trust RAM Halfword Data Position */
+#define TRAM_RAM_HALFWORD_HWORD1_Msk          (_U_(0xFFFF) << TRAM_RAM_HALFWORD_HWORD1_Pos)        /**< (TRAM_RAM) Trust RAM Halfword Data Mask */
+#define TRAM_RAM_HALFWORD_HWORD1(value)       (TRAM_RAM_HALFWORD_HWORD1_Msk & ((value) << TRAM_RAM_HALFWORD_HWORD1_Pos))
+#define TRAM_RAM_HALFWORD_Msk                 _U_(0xFFFFFFFF)                                       /**< (TRAM_RAM_HALFWORD) Register Mask  */
+
 
 /** \brief TRAM register offsets definitions */
 #define TRAM_CTRLA_REG_OFST            (0x00)              /**< (TRAM_CTRLA) Control Offset */
@@ -139,6 +163,134 @@
 #define TRAM_SYNCBUSY_REG_OFST         (0x08)              /**< (TRAM_SYNCBUSY) Synchronization Busy Status Offset */
 #define TRAM_DSCC_REG_OFST             (0x0C)              /**< (TRAM_DSCC) Data Scramble Control Offset */
 #define TRAM_RAM_REG_OFST              (0x200)             /**< (TRAM_RAM) TrustRAM Offset */
+#define TRAM_RAM0_REG_OFST             (0x200)             /**< (TRAM_RAM0) TrustRAM Offset */
+#define TRAM_RAM1_REG_OFST             (0x204)             /**< (TRAM_RAM1) TrustRAM Offset */
+#define TRAM_RAM2_REG_OFST             (0x208)             /**< (TRAM_RAM2) TrustRAM Offset */
+#define TRAM_RAM3_REG_OFST             (0x20C)             /**< (TRAM_RAM3) TrustRAM Offset */
+#define TRAM_RAM4_REG_OFST             (0x210)             /**< (TRAM_RAM4) TrustRAM Offset */
+#define TRAM_RAM5_REG_OFST             (0x214)             /**< (TRAM_RAM5) TrustRAM Offset */
+#define TRAM_RAM6_REG_OFST             (0x218)             /**< (TRAM_RAM6) TrustRAM Offset */
+#define TRAM_RAM7_REG_OFST             (0x21C)             /**< (TRAM_RAM7) TrustRAM Offset */
+#define TRAM_RAM8_REG_OFST             (0x220)             /**< (TRAM_RAM8) TrustRAM Offset */
+#define TRAM_RAM9_REG_OFST             (0x224)             /**< (TRAM_RAM9) TrustRAM Offset */
+#define TRAM_RAM10_REG_OFST            (0x228)             /**< (TRAM_RAM10) TrustRAM Offset */
+#define TRAM_RAM11_REG_OFST            (0x22C)             /**< (TRAM_RAM11) TrustRAM Offset */
+#define TRAM_RAM12_REG_OFST            (0x230)             /**< (TRAM_RAM12) TrustRAM Offset */
+#define TRAM_RAM13_REG_OFST            (0x234)             /**< (TRAM_RAM13) TrustRAM Offset */
+#define TRAM_RAM14_REG_OFST            (0x238)             /**< (TRAM_RAM14) TrustRAM Offset */
+#define TRAM_RAM15_REG_OFST            (0x23C)             /**< (TRAM_RAM15) TrustRAM Offset */
+#define TRAM_RAM16_REG_OFST            (0x240)             /**< (TRAM_RAM16) TrustRAM Offset */
+#define TRAM_RAM17_REG_OFST            (0x244)             /**< (TRAM_RAM17) TrustRAM Offset */
+#define TRAM_RAM18_REG_OFST            (0x248)             /**< (TRAM_RAM18) TrustRAM Offset */
+#define TRAM_RAM19_REG_OFST            (0x24C)             /**< (TRAM_RAM19) TrustRAM Offset */
+#define TRAM_RAM20_REG_OFST            (0x250)             /**< (TRAM_RAM20) TrustRAM Offset */
+#define TRAM_RAM21_REG_OFST            (0x254)             /**< (TRAM_RAM21) TrustRAM Offset */
+#define TRAM_RAM22_REG_OFST            (0x258)             /**< (TRAM_RAM22) TrustRAM Offset */
+#define TRAM_RAM23_REG_OFST            (0x25C)             /**< (TRAM_RAM23) TrustRAM Offset */
+#define TRAM_RAM24_REG_OFST            (0x260)             /**< (TRAM_RAM24) TrustRAM Offset */
+#define TRAM_RAM25_REG_OFST            (0x264)             /**< (TRAM_RAM25) TrustRAM Offset */
+#define TRAM_RAM26_REG_OFST            (0x268)             /**< (TRAM_RAM26) TrustRAM Offset */
+#define TRAM_RAM27_REG_OFST            (0x26C)             /**< (TRAM_RAM27) TrustRAM Offset */
+#define TRAM_RAM28_REG_OFST            (0x270)             /**< (TRAM_RAM28) TrustRAM Offset */
+#define TRAM_RAM29_REG_OFST            (0x274)             /**< (TRAM_RAM29) TrustRAM Offset */
+#define TRAM_RAM30_REG_OFST            (0x278)             /**< (TRAM_RAM30) TrustRAM Offset */
+#define TRAM_RAM31_REG_OFST            (0x27C)             /**< (TRAM_RAM31) TrustRAM Offset */
+#define TRAM_RAM32_REG_OFST            (0x280)             /**< (TRAM_RAM32) TrustRAM Offset */
+#define TRAM_RAM33_REG_OFST            (0x284)             /**< (TRAM_RAM33) TrustRAM Offset */
+#define TRAM_RAM34_REG_OFST            (0x288)             /**< (TRAM_RAM34) TrustRAM Offset */
+#define TRAM_RAM35_REG_OFST            (0x28C)             /**< (TRAM_RAM35) TrustRAM Offset */
+#define TRAM_RAM36_REG_OFST            (0x290)             /**< (TRAM_RAM36) TrustRAM Offset */
+#define TRAM_RAM37_REG_OFST            (0x294)             /**< (TRAM_RAM37) TrustRAM Offset */
+#define TRAM_RAM38_REG_OFST            (0x298)             /**< (TRAM_RAM38) TrustRAM Offset */
+#define TRAM_RAM39_REG_OFST            (0x29C)             /**< (TRAM_RAM39) TrustRAM Offset */
+#define TRAM_RAM40_REG_OFST            (0x2A0)             /**< (TRAM_RAM40) TrustRAM Offset */
+#define TRAM_RAM41_REG_OFST            (0x2A4)             /**< (TRAM_RAM41) TrustRAM Offset */
+#define TRAM_RAM42_REG_OFST            (0x2A8)             /**< (TRAM_RAM42) TrustRAM Offset */
+#define TRAM_RAM43_REG_OFST            (0x2AC)             /**< (TRAM_RAM43) TrustRAM Offset */
+#define TRAM_RAM44_REG_OFST            (0x2B0)             /**< (TRAM_RAM44) TrustRAM Offset */
+#define TRAM_RAM45_REG_OFST            (0x2B4)             /**< (TRAM_RAM45) TrustRAM Offset */
+#define TRAM_RAM46_REG_OFST            (0x2B8)             /**< (TRAM_RAM46) TrustRAM Offset */
+#define TRAM_RAM47_REG_OFST            (0x2BC)             /**< (TRAM_RAM47) TrustRAM Offset */
+#define TRAM_RAM48_REG_OFST            (0x2C0)             /**< (TRAM_RAM48) TrustRAM Offset */
+#define TRAM_RAM49_REG_OFST            (0x2C4)             /**< (TRAM_RAM49) TrustRAM Offset */
+#define TRAM_RAM50_REG_OFST            (0x2C8)             /**< (TRAM_RAM50) TrustRAM Offset */
+#define TRAM_RAM51_REG_OFST            (0x2CC)             /**< (TRAM_RAM51) TrustRAM Offset */
+#define TRAM_RAM52_REG_OFST            (0x2D0)             /**< (TRAM_RAM52) TrustRAM Offset */
+#define TRAM_RAM53_REG_OFST            (0x2D4)             /**< (TRAM_RAM53) TrustRAM Offset */
+#define TRAM_RAM54_REG_OFST            (0x2D8)             /**< (TRAM_RAM54) TrustRAM Offset */
+#define TRAM_RAM55_REG_OFST            (0x2DC)             /**< (TRAM_RAM55) TrustRAM Offset */
+#define TRAM_RAM56_REG_OFST            (0x2E0)             /**< (TRAM_RAM56) TrustRAM Offset */
+#define TRAM_RAM57_REG_OFST            (0x2E4)             /**< (TRAM_RAM57) TrustRAM Offset */
+#define TRAM_RAM58_REG_OFST            (0x2E8)             /**< (TRAM_RAM58) TrustRAM Offset */
+#define TRAM_RAM59_REG_OFST            (0x2EC)             /**< (TRAM_RAM59) TrustRAM Offset */
+#define TRAM_RAM60_REG_OFST            (0x2F0)             /**< (TRAM_RAM60) TrustRAM Offset */
+#define TRAM_RAM61_REG_OFST            (0x2F4)             /**< (TRAM_RAM61) TrustRAM Offset */
+#define TRAM_RAM62_REG_OFST            (0x2F8)             /**< (TRAM_RAM62) TrustRAM Offset */
+#define TRAM_RAM63_REG_OFST            (0x2FC)             /**< (TRAM_RAM63) TrustRAM Offset */
+#define TRAM_RAM64_REG_OFST            (0x300)             /**< (TRAM_RAM64) TrustRAM Offset */
+#define TRAM_RAM65_REG_OFST            (0x304)             /**< (TRAM_RAM65) TrustRAM Offset */
+#define TRAM_RAM66_REG_OFST            (0x308)             /**< (TRAM_RAM66) TrustRAM Offset */
+#define TRAM_RAM67_REG_OFST            (0x30C)             /**< (TRAM_RAM67) TrustRAM Offset */
+#define TRAM_RAM68_REG_OFST            (0x310)             /**< (TRAM_RAM68) TrustRAM Offset */
+#define TRAM_RAM69_REG_OFST            (0x314)             /**< (TRAM_RAM69) TrustRAM Offset */
+#define TRAM_RAM70_REG_OFST            (0x318)             /**< (TRAM_RAM70) TrustRAM Offset */
+#define TRAM_RAM71_REG_OFST            (0x31C)             /**< (TRAM_RAM71) TrustRAM Offset */
+#define TRAM_RAM72_REG_OFST            (0x320)             /**< (TRAM_RAM72) TrustRAM Offset */
+#define TRAM_RAM73_REG_OFST            (0x324)             /**< (TRAM_RAM73) TrustRAM Offset */
+#define TRAM_RAM74_REG_OFST            (0x328)             /**< (TRAM_RAM74) TrustRAM Offset */
+#define TRAM_RAM75_REG_OFST            (0x32C)             /**< (TRAM_RAM75) TrustRAM Offset */
+#define TRAM_RAM76_REG_OFST            (0x330)             /**< (TRAM_RAM76) TrustRAM Offset */
+#define TRAM_RAM77_REG_OFST            (0x334)             /**< (TRAM_RAM77) TrustRAM Offset */
+#define TRAM_RAM78_REG_OFST            (0x338)             /**< (TRAM_RAM78) TrustRAM Offset */
+#define TRAM_RAM79_REG_OFST            (0x33C)             /**< (TRAM_RAM79) TrustRAM Offset */
+#define TRAM_RAM80_REG_OFST            (0x340)             /**< (TRAM_RAM80) TrustRAM Offset */
+#define TRAM_RAM81_REG_OFST            (0x344)             /**< (TRAM_RAM81) TrustRAM Offset */
+#define TRAM_RAM82_REG_OFST            (0x348)             /**< (TRAM_RAM82) TrustRAM Offset */
+#define TRAM_RAM83_REG_OFST            (0x34C)             /**< (TRAM_RAM83) TrustRAM Offset */
+#define TRAM_RAM84_REG_OFST            (0x350)             /**< (TRAM_RAM84) TrustRAM Offset */
+#define TRAM_RAM85_REG_OFST            (0x354)             /**< (TRAM_RAM85) TrustRAM Offset */
+#define TRAM_RAM86_REG_OFST            (0x358)             /**< (TRAM_RAM86) TrustRAM Offset */
+#define TRAM_RAM87_REG_OFST            (0x35C)             /**< (TRAM_RAM87) TrustRAM Offset */
+#define TRAM_RAM88_REG_OFST            (0x360)             /**< (TRAM_RAM88) TrustRAM Offset */
+#define TRAM_RAM89_REG_OFST            (0x364)             /**< (TRAM_RAM89) TrustRAM Offset */
+#define TRAM_RAM90_REG_OFST            (0x368)             /**< (TRAM_RAM90) TrustRAM Offset */
+#define TRAM_RAM91_REG_OFST            (0x36C)             /**< (TRAM_RAM91) TrustRAM Offset */
+#define TRAM_RAM92_REG_OFST            (0x370)             /**< (TRAM_RAM92) TrustRAM Offset */
+#define TRAM_RAM93_REG_OFST            (0x374)             /**< (TRAM_RAM93) TrustRAM Offset */
+#define TRAM_RAM94_REG_OFST            (0x378)             /**< (TRAM_RAM94) TrustRAM Offset */
+#define TRAM_RAM95_REG_OFST            (0x37C)             /**< (TRAM_RAM95) TrustRAM Offset */
+#define TRAM_RAM96_REG_OFST            (0x380)             /**< (TRAM_RAM96) TrustRAM Offset */
+#define TRAM_RAM97_REG_OFST            (0x384)             /**< (TRAM_RAM97) TrustRAM Offset */
+#define TRAM_RAM98_REG_OFST            (0x388)             /**< (TRAM_RAM98) TrustRAM Offset */
+#define TRAM_RAM99_REG_OFST            (0x38C)             /**< (TRAM_RAM99) TrustRAM Offset */
+#define TRAM_RAM100_REG_OFST           (0x390)             /**< (TRAM_RAM100) TrustRAM Offset */
+#define TRAM_RAM101_REG_OFST           (0x394)             /**< (TRAM_RAM101) TrustRAM Offset */
+#define TRAM_RAM102_REG_OFST           (0x398)             /**< (TRAM_RAM102) TrustRAM Offset */
+#define TRAM_RAM103_REG_OFST           (0x39C)             /**< (TRAM_RAM103) TrustRAM Offset */
+#define TRAM_RAM104_REG_OFST           (0x3A0)             /**< (TRAM_RAM104) TrustRAM Offset */
+#define TRAM_RAM105_REG_OFST           (0x3A4)             /**< (TRAM_RAM105) TrustRAM Offset */
+#define TRAM_RAM106_REG_OFST           (0x3A8)             /**< (TRAM_RAM106) TrustRAM Offset */
+#define TRAM_RAM107_REG_OFST           (0x3AC)             /**< (TRAM_RAM107) TrustRAM Offset */
+#define TRAM_RAM108_REG_OFST           (0x3B0)             /**< (TRAM_RAM108) TrustRAM Offset */
+#define TRAM_RAM109_REG_OFST           (0x3B4)             /**< (TRAM_RAM109) TrustRAM Offset */
+#define TRAM_RAM110_REG_OFST           (0x3B8)             /**< (TRAM_RAM110) TrustRAM Offset */
+#define TRAM_RAM111_REG_OFST           (0x3BC)             /**< (TRAM_RAM111) TrustRAM Offset */
+#define TRAM_RAM112_REG_OFST           (0x3C0)             /**< (TRAM_RAM112) TrustRAM Offset */
+#define TRAM_RAM113_REG_OFST           (0x3C4)             /**< (TRAM_RAM113) TrustRAM Offset */
+#define TRAM_RAM114_REG_OFST           (0x3C8)             /**< (TRAM_RAM114) TrustRAM Offset */
+#define TRAM_RAM115_REG_OFST           (0x3CC)             /**< (TRAM_RAM115) TrustRAM Offset */
+#define TRAM_RAM116_REG_OFST           (0x3D0)             /**< (TRAM_RAM116) TrustRAM Offset */
+#define TRAM_RAM117_REG_OFST           (0x3D4)             /**< (TRAM_RAM117) TrustRAM Offset */
+#define TRAM_RAM118_REG_OFST           (0x3D8)             /**< (TRAM_RAM118) TrustRAM Offset */
+#define TRAM_RAM119_REG_OFST           (0x3DC)             /**< (TRAM_RAM119) TrustRAM Offset */
+#define TRAM_RAM120_REG_OFST           (0x3E0)             /**< (TRAM_RAM120) TrustRAM Offset */
+#define TRAM_RAM121_REG_OFST           (0x3E4)             /**< (TRAM_RAM121) TrustRAM Offset */
+#define TRAM_RAM122_REG_OFST           (0x3E8)             /**< (TRAM_RAM122) TrustRAM Offset */
+#define TRAM_RAM123_REG_OFST           (0x3EC)             /**< (TRAM_RAM123) TrustRAM Offset */
+#define TRAM_RAM124_REG_OFST           (0x3F0)             /**< (TRAM_RAM124) TrustRAM Offset */
+#define TRAM_RAM125_REG_OFST           (0x3F4)             /**< (TRAM_RAM125) TrustRAM Offset */
+#define TRAM_RAM126_REG_OFST           (0x3F8)             /**< (TRAM_RAM126) TrustRAM Offset */
+#define TRAM_RAM127_REG_OFST           (0x3FC)             /**< (TRAM_RAM127) TrustRAM Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief TRAM register API structure */
