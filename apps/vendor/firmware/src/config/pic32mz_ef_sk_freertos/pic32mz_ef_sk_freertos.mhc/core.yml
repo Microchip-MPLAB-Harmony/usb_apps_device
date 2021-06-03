@@ -2239,6 +2239,15 @@ children:
       children:
       - type: Dynamic
         attributes: {id: core, value: '0'}
+  - type: File
+    attributes: {id: EVIC_INT_ASM}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: enabled}
+        children:
+        - {type: Value, value: 'true'}
   - type: Combo
     attributes: {id: EVIC_PRIORITY_1ATTRIBUTE}
     children:
