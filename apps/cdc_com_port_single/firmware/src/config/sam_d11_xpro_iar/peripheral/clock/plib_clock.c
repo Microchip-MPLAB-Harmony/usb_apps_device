@@ -48,6 +48,7 @@
 
 #include "plib_clock.h"
 #include "device.h"
+#include "interrupts.h"
 
 // *****************************************************************************
 // *****************************************************************************
@@ -90,7 +91,7 @@ static void FDPLL_Initialize( void )
 
     /* Selection of the DPLL Enable */
     SYSCTRL_REGS->SYSCTRL_DPLLCTRLA = SYSCTRL_DPLLCTRLA_ENABLE_Msk   ;
-    
+
     while((SYSCTRL_REGS->SYSCTRL_DPLLSTATUS & (SYSCTRL_DPLLSTATUS_LOCK_Msk | SYSCTRL_DPLLSTATUS_CLKRDY_Msk)) !=
                 (SYSCTRL_DPLLSTATUS_LOCK_Msk | SYSCTRL_DPLLSTATUS_CLKRDY_Msk))
     {

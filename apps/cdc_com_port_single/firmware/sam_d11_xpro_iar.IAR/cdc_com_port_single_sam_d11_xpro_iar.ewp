@@ -2158,6 +2158,9 @@
                         </group>
                     </group>
                     <file>
+                        <name>$PROJ_DIR$\..\src\config\sam_d11_xpro_iar\device.h</name>
+                    </file>
+                    <file>
                         <name>$PROJ_DIR$\..\src\config\sam_d11_xpro_iar\device_cache.h</name>
                     </file>
                     <file>
@@ -2167,7 +2170,10 @@
                         <name>$PROJ_DIR$\..\src\config\sam_d11_xpro_iar\definitions.h</name>
                     </file>
                     <file>
-                        <name>$PROJ_DIR$\..\src\config\sam_d11_xpro_iar\device.h</name>
+                        <name>$PROJ_DIR$\..\src\config\sam_d11_xpro_iar\interrupts.h</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\src\config\sam_d11_xpro_iar\device_vectors.h</name>
                     </file>
                     <group>
                         <name>driver</name>
@@ -2376,8 +2382,92 @@
                             <name>$PROJ_DIR$\..\src\packs\ATSAMD11D14AM_DFP\component\wdt.h</name>
                         </file>
                     </group>
+                    <group>
+                        <name>instance</name>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAMD11D14AM_DFP\instance\ac.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAMD11D14AM_DFP\instance\adc.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAMD11D14AM_DFP\instance\dac.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAMD11D14AM_DFP\instance\dmac.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAMD11D14AM_DFP\instance\dsu.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAMD11D14AM_DFP\instance\eic.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAMD11D14AM_DFP\instance\evsys.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAMD11D14AM_DFP\instance\gclk.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAMD11D14AM_DFP\instance\mtb.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAMD11D14AM_DFP\instance\nvmctrl.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAMD11D14AM_DFP\instance\pac0.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAMD11D14AM_DFP\instance\pac1.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAMD11D14AM_DFP\instance\pac2.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAMD11D14AM_DFP\instance\pm.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAMD11D14AM_DFP\instance\port.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAMD11D14AM_DFP\instance\ptc.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAMD11D14AM_DFP\instance\rtc.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAMD11D14AM_DFP\instance\sbmatrix.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAMD11D14AM_DFP\instance\sercom0.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAMD11D14AM_DFP\instance\sercom1.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAMD11D14AM_DFP\instance\sercom2.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAMD11D14AM_DFP\instance\sysctrl.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAMD11D14AM_DFP\instance\tc1.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAMD11D14AM_DFP\instance\tc2.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAMD11D14AM_DFP\instance\tcc0.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAMD11D14AM_DFP\instance\usb.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAMD11D14AM_DFP\instance\wdt.h</name>
+                        </file>
+                    </group>
                     <file>
-                        <name>$PROJ_DIR$\..\src\packs\ATSAMD11D14AM_DFP\atsamd11d14am.h</name>
+                        <name>$PROJ_DIR$\..\src\packs\ATSAMD11D14AM_DFP\samd11d14am.h</name>
                     </file>
                     <group>
                         <name>pio</name>
