@@ -88,6 +88,15 @@ children:
           children:
           - type: Dynamic
             attributes: {id: usb_device_0, value: DRV_USBFS_INDEX_0}
+      - type: File
+        attributes: {id: USB_DEVICE_SYS_RTOS_TASK}
+        children:
+        - type: Attributes
+          children:
+          - type: Boolean
+            attributes: {id: enabled}
+            children:
+            - {type: Value, value: 'true'}
     - type: Attachments
       children:
       - type: DirectCapability
