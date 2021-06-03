@@ -50,7 +50,10 @@
 // *****************************************************************************
 
 #include "configuration.h"
+#include "device_vectors.h"
+#include "interrupts.h"
 #include "definitions.h"
+
 
 // *****************************************************************************
 // *****************************************************************************
@@ -58,270 +61,266 @@
 // *****************************************************************************
 // *****************************************************************************
 
+extern const H3DeviceVectors exception_table;
+
+extern void Dummy_Handler(void);
+
 #pragma section="CSTACK"
 
 void Dummy_Handler( void )
 {
-    while(1)
+    while(true)
     {
 
     }
 }
 /* Device vectors list dummy definition*/
-void Reset_Handler ( void );
-#pragma weak Reset_Handler=Dummy_Handler
-void NonMaskableInt_Handler ( void );
-#pragma weak NonMaskableInt_Handler=Dummy_Handler
-void HardFault_Handler ( void );
-#pragma weak HardFault_Handler=Dummy_Handler
-void MemoryManagement_Handler ( void );
+extern void MemoryManagement_Handler ( void );
 #pragma weak MemoryManagement_Handler=Dummy_Handler
-void BusFault_Handler ( void );
+extern void BusFault_Handler ( void );
 #pragma weak BusFault_Handler=Dummy_Handler
-void UsageFault_Handler ( void );
+extern void UsageFault_Handler ( void );
 #pragma weak UsageFault_Handler=Dummy_Handler
-void SVCall_Handler ( void );
+extern void SVCall_Handler ( void );
 #pragma weak SVCall_Handler=Dummy_Handler
-void DebugMonitor_Handler ( void );
+extern void DebugMonitor_Handler ( void );
 #pragma weak DebugMonitor_Handler=Dummy_Handler
-void PendSV_Handler ( void );
+extern void PendSV_Handler ( void );
 #pragma weak PendSV_Handler=Dummy_Handler
-void SysTick_Handler ( void );
+extern void SysTick_Handler ( void );
 #pragma weak SysTick_Handler=Dummy_Handler
-void SUPC_Handler ( void );
+extern void SUPC_Handler ( void );
 #pragma weak SUPC_Handler=Dummy_Handler
-void RSTC_Handler ( void );
+extern void RSTC_Handler ( void );
 #pragma weak RSTC_Handler=Dummy_Handler
-void RTC_Handler ( void );
+extern void RTC_Handler ( void );
 #pragma weak RTC_Handler=Dummy_Handler
-void RTT_Handler ( void );
+extern void RTT_Handler ( void );
 #pragma weak RTT_Handler=Dummy_Handler
-void WDT_Handler ( void );
+extern void WDT_Handler ( void );
 #pragma weak WDT_Handler=Dummy_Handler
-void PMC_Handler ( void );
+extern void PMC_Handler ( void );
 #pragma weak PMC_Handler=Dummy_Handler
-void EFC_Handler ( void );
+extern void EFC_Handler ( void );
 #pragma weak EFC_Handler=Dummy_Handler
-void UART0_Handler ( void );
+extern void UART0_Handler ( void );
 #pragma weak UART0_Handler=Dummy_Handler
-void UART1_Handler ( void );
+extern void UART1_Handler ( void );
 #pragma weak UART1_Handler=Dummy_Handler
-void PIOA_Handler ( void );
+extern void PIOA_Handler ( void );
 #pragma weak PIOA_Handler=Dummy_Handler
-void PIOB_Handler ( void );
+extern void PIOB_Handler ( void );
 #pragma weak PIOB_Handler=Dummy_Handler
-void PIOC_Handler ( void );
+extern void PIOC_Handler ( void );
 #pragma weak PIOC_Handler=Dummy_Handler
-void USART0_Handler ( void );
+extern void USART0_Handler ( void );
 #pragma weak USART0_Handler=Dummy_Handler
-void USART1_Handler ( void );
+extern void USART1_Handler ( void );
 #pragma weak USART1_Handler=Dummy_Handler
-void USART2_Handler ( void );
+extern void USART2_Handler ( void );
 #pragma weak USART2_Handler=Dummy_Handler
-void PIOD_Handler ( void );
+extern void PIOD_Handler ( void );
 #pragma weak PIOD_Handler=Dummy_Handler
-void PIOE_Handler ( void );
+extern void PIOE_Handler ( void );
 #pragma weak PIOE_Handler=Dummy_Handler
-void HSMCI_Handler ( void );
+extern void HSMCI_Handler ( void );
 #pragma weak HSMCI_Handler=Dummy_Handler
-void TWIHS0_Handler ( void );
+extern void TWIHS0_Handler ( void );
 #pragma weak TWIHS0_Handler=Dummy_Handler
-void TWIHS1_Handler ( void );
+extern void TWIHS1_Handler ( void );
 #pragma weak TWIHS1_Handler=Dummy_Handler
-void SPI0_Handler ( void );
+extern void SPI0_Handler ( void );
 #pragma weak SPI0_Handler=Dummy_Handler
-void SSC_Handler ( void );
+extern void SSC_Handler ( void );
 #pragma weak SSC_Handler=Dummy_Handler
-void TC0_CH0_Handler ( void );
+extern void TC0_CH0_Handler ( void );
 #pragma weak TC0_CH0_Handler=Dummy_Handler
-void TC0_CH1_Handler ( void );
+extern void TC0_CH1_Handler ( void );
 #pragma weak TC0_CH1_Handler=Dummy_Handler
-void TC0_CH2_Handler ( void );
+extern void TC0_CH2_Handler ( void );
 #pragma weak TC0_CH2_Handler=Dummy_Handler
-void TC1_CH0_Handler ( void );
+extern void TC1_CH0_Handler ( void );
 #pragma weak TC1_CH0_Handler=Dummy_Handler
-void TC1_CH1_Handler ( void );
+extern void TC1_CH1_Handler ( void );
 #pragma weak TC1_CH1_Handler=Dummy_Handler
-void TC1_CH2_Handler ( void );
+extern void TC1_CH2_Handler ( void );
 #pragma weak TC1_CH2_Handler=Dummy_Handler
-void AFEC0_Handler ( void );
+extern void AFEC0_Handler ( void );
 #pragma weak AFEC0_Handler=Dummy_Handler
-void DACC_Handler ( void );
+extern void DACC_Handler ( void );
 #pragma weak DACC_Handler=Dummy_Handler
-void PWM0_Handler ( void );
+extern void PWM0_Handler ( void );
 #pragma weak PWM0_Handler=Dummy_Handler
-void ICM_Handler ( void );
+extern void ICM_Handler ( void );
 #pragma weak ICM_Handler=Dummy_Handler
-void ACC_Handler ( void );
+extern void ACC_Handler ( void );
 #pragma weak ACC_Handler=Dummy_Handler
-void DRV_USBHSV1_USBHS_Handler ( void );
-#pragma weak DRV_USBHSV1_USBHS_Handler=Dummy_Handler
-void MCAN0_INT0_Handler ( void );
+extern void MCAN0_INT0_Handler ( void );
 #pragma weak MCAN0_INT0_Handler=Dummy_Handler
-void MCAN0_INT1_Handler ( void );
+extern void MCAN0_INT1_Handler ( void );
 #pragma weak MCAN0_INT1_Handler=Dummy_Handler
-void MCAN1_INT0_Handler ( void );
+extern void MCAN1_INT0_Handler ( void );
 #pragma weak MCAN1_INT0_Handler=Dummy_Handler
-void MCAN1_INT1_Handler ( void );
+extern void MCAN1_INT1_Handler ( void );
 #pragma weak MCAN1_INT1_Handler=Dummy_Handler
-void GMAC_Handler ( void );
+extern void GMAC_Handler ( void );
 #pragma weak GMAC_Handler=Dummy_Handler
-void AFEC1_Handler ( void );
+extern void AFEC1_Handler ( void );
 #pragma weak AFEC1_Handler=Dummy_Handler
-void TWIHS2_Handler ( void );
+extern void TWIHS2_Handler ( void );
 #pragma weak TWIHS2_Handler=Dummy_Handler
-void SPI1_Handler ( void );
+extern void SPI1_Handler ( void );
 #pragma weak SPI1_Handler=Dummy_Handler
-void QSPI_Handler ( void );
+extern void QSPI_Handler ( void );
 #pragma weak QSPI_Handler=Dummy_Handler
-void UART2_Handler ( void );
+extern void UART2_Handler ( void );
 #pragma weak UART2_Handler=Dummy_Handler
-void UART3_Handler ( void );
+extern void UART3_Handler ( void );
 #pragma weak UART3_Handler=Dummy_Handler
-void UART4_Handler ( void );
+extern void UART4_Handler ( void );
 #pragma weak UART4_Handler=Dummy_Handler
-void TC2_CH0_Handler ( void );
+extern void TC2_CH0_Handler ( void );
 #pragma weak TC2_CH0_Handler=Dummy_Handler
-void TC2_CH1_Handler ( void );
+extern void TC2_CH1_Handler ( void );
 #pragma weak TC2_CH1_Handler=Dummy_Handler
-void TC2_CH2_Handler ( void );
+extern void TC2_CH2_Handler ( void );
 #pragma weak TC2_CH2_Handler=Dummy_Handler
-void TC3_CH0_Handler ( void );
+extern void TC3_CH0_Handler ( void );
 #pragma weak TC3_CH0_Handler=Dummy_Handler
-void TC3_CH1_Handler ( void );
+extern void TC3_CH1_Handler ( void );
 #pragma weak TC3_CH1_Handler=Dummy_Handler
-void TC3_CH2_Handler ( void );
+extern void TC3_CH2_Handler ( void );
 #pragma weak TC3_CH2_Handler=Dummy_Handler
-void AES_Handler ( void );
+extern void AES_Handler ( void );
 #pragma weak AES_Handler=Dummy_Handler
-void TRNG_Handler ( void );
+extern void TRNG_Handler ( void );
 #pragma weak TRNG_Handler=Dummy_Handler
-void XDMAC_Handler ( void );
+extern void XDMAC_Handler ( void );
 #pragma weak XDMAC_Handler=Dummy_Handler
-void ISI_Handler ( void );
+extern void ISI_Handler ( void );
 #pragma weak ISI_Handler=Dummy_Handler
-void PWM1_Handler ( void );
+extern void PWM1_Handler ( void );
 #pragma weak PWM1_Handler=Dummy_Handler
-void FPU_Handler ( void );
+extern void FPU_Handler ( void );
 #pragma weak FPU_Handler=Dummy_Handler
-void SDRAMC_Handler ( void );
+extern void SDRAMC_Handler ( void );
 #pragma weak SDRAMC_Handler=Dummy_Handler
-void RSWDT_Handler ( void );
+extern void RSWDT_Handler ( void );
 #pragma weak RSWDT_Handler=Dummy_Handler
-void CCW_Handler ( void );
+extern void CCW_Handler ( void );
 #pragma weak CCW_Handler=Dummy_Handler
-void CCF_Handler ( void );
+extern void CCF_Handler ( void );
 #pragma weak CCF_Handler=Dummy_Handler
-void GMAC_Q1_Handler ( void );
+extern void GMAC_Q1_Handler ( void );
 #pragma weak GMAC_Q1_Handler=Dummy_Handler
-void GMAC_Q2_Handler ( void );
+extern void GMAC_Q2_Handler ( void );
 #pragma weak GMAC_Q2_Handler=Dummy_Handler
-void IXC_Handler ( void );
+extern void IXC_Handler ( void );
 #pragma weak IXC_Handler=Dummy_Handler
-void I2SC0_Handler ( void );
+extern void I2SC0_Handler ( void );
 #pragma weak I2SC0_Handler=Dummy_Handler
-void I2SC1_Handler ( void );
+extern void I2SC1_Handler ( void );
 #pragma weak I2SC1_Handler=Dummy_Handler
-void GMAC_Q3_Handler ( void );
+extern void GMAC_Q3_Handler ( void );
 #pragma weak GMAC_Q3_Handler=Dummy_Handler
-void GMAC_Q4_Handler ( void );
+extern void GMAC_Q4_Handler ( void );
 #pragma weak GMAC_Q4_Handler=Dummy_Handler
-void GMAC_Q5_Handler ( void );
+extern void GMAC_Q5_Handler ( void );
 #pragma weak GMAC_Q5_Handler=Dummy_Handler
 
 
 
-/* Mutiple handlers for vector */
+/* Multiple handlers for vector */
 
 
 
 #pragma location = ".intvec"
-__root const DeviceVectors __vector_table=
+__root const H3DeviceVectors __vector_table=
 {
     /* Configure Initial Stack Pointer, using linker-generated symbols */
     .pvStack = __sfe( "CSTACK" ),
 
 
-    .pfnReset_Handler              = ( void * ) Reset_Handler,
-    .pfnNonMaskableInt_Handler     = ( void * ) NonMaskableInt_Handler,
-    .pfnHardFault_Handler          = ( void * ) HardFault_Handler,
-    .pfnMemoryManagement_Handler   = ( void * ) MemoryManagement_Handler,
-    .pfnBusFault_Handler           = ( void * ) BusFault_Handler,
-    .pfnUsageFault_Handler         = ( void * ) UsageFault_Handler,
-    .pfnSVCall_Handler             = ( void * ) SVCall_Handler,
-    .pfnDebugMonitor_Handler       = ( void * ) DebugMonitor_Handler,
-    .pfnPendSV_Handler             = ( void * ) PendSV_Handler,
-    .pfnSysTick_Handler            = ( void * ) SysTick_Handler,
-    .pfnSUPC_Handler               = ( void * ) SUPC_Handler,
-    .pfnRSTC_Handler               = ( void * ) RSTC_Handler,
-    .pfnRTC_Handler                = ( void * ) RTC_Handler,
-    .pfnRTT_Handler                = ( void * ) RTT_Handler,
-    .pfnWDT_Handler                = ( void * ) WDT_Handler,
-    .pfnPMC_Handler                = ( void * ) PMC_Handler,
-    .pfnEFC_Handler                = ( void * ) EFC_Handler,
-    .pfnUART0_Handler              = ( void * ) UART0_Handler,
-    .pfnUART1_Handler              = ( void * ) UART1_Handler,
-    .pfnPIOA_Handler               = ( void * ) PIOA_Handler,
-    .pfnPIOB_Handler               = ( void * ) PIOB_Handler,
-    .pfnPIOC_Handler               = ( void * ) PIOC_Handler,
-    .pfnUSART0_Handler             = ( void * ) USART0_Handler,
-    .pfnUSART1_Handler             = ( void * ) USART1_Handler,
-    .pfnUSART2_Handler             = ( void * ) USART2_Handler,
-    .pfnPIOD_Handler               = ( void * ) PIOD_Handler,
-    .pfnPIOE_Handler               = ( void * ) PIOE_Handler,
-    .pfnHSMCI_Handler              = ( void * ) HSMCI_Handler,
-    .pfnTWIHS0_Handler             = ( void * ) TWIHS0_Handler,
-    .pfnTWIHS1_Handler             = ( void * ) TWIHS1_Handler,
-    .pfnSPI0_Handler               = ( void * ) SPI0_Handler,
-    .pfnSSC_Handler                = ( void * ) SSC_Handler,
-    .pfnTC0_CH0_Handler            = ( void * ) TC0_CH0_Handler,
-    .pfnTC0_CH1_Handler            = ( void * ) TC0_CH1_Handler,
-    .pfnTC0_CH2_Handler            = ( void * ) TC0_CH2_Handler,
-    .pfnTC1_CH0_Handler            = ( void * ) TC1_CH0_Handler,
-    .pfnTC1_CH1_Handler            = ( void * ) TC1_CH1_Handler,
-    .pfnTC1_CH2_Handler            = ( void * ) TC1_CH2_Handler,
-    .pfnAFEC0_Handler              = ( void * ) AFEC0_Handler,
-    .pfnDACC_Handler               = ( void * ) DACC_Handler,
-    .pfnPWM0_Handler               = ( void * ) PWM0_Handler,
-    .pfnICM_Handler                = ( void * ) ICM_Handler,
-    .pfnACC_Handler                = ( void * ) ACC_Handler,
-    .pfnUSBHS_Handler              = ( void * ) DRV_USBHSV1_USBHS_Handler,
-    .pfnMCAN0_INT0_Handler         = ( void * ) MCAN0_INT0_Handler,
-    .pfnMCAN0_INT1_Handler         = ( void * ) MCAN0_INT1_Handler,
-    .pfnMCAN1_INT0_Handler         = ( void * ) MCAN1_INT0_Handler,
-    .pfnMCAN1_INT1_Handler         = ( void * ) MCAN1_INT1_Handler,
-    .pfnGMAC_Handler               = ( void * ) GMAC_Handler,
-    .pfnAFEC1_Handler              = ( void * ) AFEC1_Handler,
-    .pfnTWIHS2_Handler             = ( void * ) TWIHS2_Handler,
-    .pfnSPI1_Handler               = ( void * ) SPI1_Handler,
-    .pfnQSPI_Handler               = ( void * ) QSPI_Handler,
-    .pfnUART2_Handler              = ( void * ) UART2_Handler,
-    .pfnUART3_Handler              = ( void * ) UART3_Handler,
-    .pfnUART4_Handler              = ( void * ) UART4_Handler,
-    .pfnTC2_CH0_Handler            = ( void * ) TC2_CH0_Handler,
-    .pfnTC2_CH1_Handler            = ( void * ) TC2_CH1_Handler,
-    .pfnTC2_CH2_Handler            = ( void * ) TC2_CH2_Handler,
-    .pfnTC3_CH0_Handler            = ( void * ) TC3_CH0_Handler,
-    .pfnTC3_CH1_Handler            = ( void * ) TC3_CH1_Handler,
-    .pfnTC3_CH2_Handler            = ( void * ) TC3_CH2_Handler,
-    .pfnAES_Handler                = ( void * ) AES_Handler,
-    .pfnTRNG_Handler               = ( void * ) TRNG_Handler,
-    .pfnXDMAC_Handler              = ( void * ) XDMAC_Handler,
-    .pfnISI_Handler                = ( void * ) ISI_Handler,
-    .pfnPWM1_Handler               = ( void * ) PWM1_Handler,
-    .pfnFPU_Handler                = ( void * ) FPU_Handler,
-    .pfnSDRAMC_Handler             = ( void * ) SDRAMC_Handler,
-    .pfnRSWDT_Handler              = ( void * ) RSWDT_Handler,
-    .pfnCCW_Handler                = ( void * ) CCW_Handler,
-    .pfnCCF_Handler                = ( void * ) CCF_Handler,
-    .pfnGMAC_Q1_Handler            = ( void * ) GMAC_Q1_Handler,
-    .pfnGMAC_Q2_Handler            = ( void * ) GMAC_Q2_Handler,
-    .pfnIXC_Handler                = ( void * ) IXC_Handler,
-    .pfnI2SC0_Handler              = ( void * ) I2SC0_Handler,
-    .pfnI2SC1_Handler              = ( void * ) I2SC1_Handler,
-    .pfnGMAC_Q3_Handler            = ( void * ) GMAC_Q3_Handler,
-    .pfnGMAC_Q4_Handler            = ( void * ) GMAC_Q4_Handler,
-    .pfnGMAC_Q5_Handler            = ( void * ) GMAC_Q5_Handler,
+    .pfnReset_Handler              = Reset_Handler,
+    .pfnNonMaskableInt_Handler     = NonMaskableInt_Handler,
+    .pfnHardFault_Handler          = HardFault_Handler,
+    .pfnMemoryManagement_Handler   = MemoryManagement_Handler,
+    .pfnBusFault_Handler           = BusFault_Handler,
+    .pfnUsageFault_Handler         = UsageFault_Handler,
+    .pfnSVCall_Handler             = SVCall_Handler,
+    .pfnDebugMonitor_Handler       = DebugMonitor_Handler,
+    .pfnPendSV_Handler             = PendSV_Handler,
+    .pfnSysTick_Handler            = SysTick_Handler,
+    .pfnSUPC_Handler               = SUPC_Handler,
+    .pfnRSTC_Handler               = RSTC_Handler,
+    .pfnRTC_Handler                = RTC_Handler,
+    .pfnRTT_Handler                = RTT_Handler,
+    .pfnWDT_Handler                = WDT_Handler,
+    .pfnPMC_Handler                = PMC_Handler,
+    .pfnEFC_Handler                = EFC_Handler,
+    .pfnUART0_Handler              = UART0_Handler,
+    .pfnUART1_Handler              = UART1_Handler,
+    .pfnPIOA_Handler               = PIOA_Handler,
+    .pfnPIOB_Handler               = PIOB_Handler,
+    .pfnPIOC_Handler               = PIOC_Handler,
+    .pfnUSART0_Handler             = USART0_Handler,
+    .pfnUSART1_Handler             = USART1_Handler,
+    .pfnUSART2_Handler             = USART2_Handler,
+    .pfnPIOD_Handler               = PIOD_Handler,
+    .pfnPIOE_Handler               = PIOE_Handler,
+    .pfnHSMCI_Handler              = HSMCI_Handler,
+    .pfnTWIHS0_Handler             = TWIHS0_Handler,
+    .pfnTWIHS1_Handler             = TWIHS1_Handler,
+    .pfnSPI0_Handler               = SPI0_Handler,
+    .pfnSSC_Handler                = SSC_Handler,
+    .pfnTC0_CH0_Handler            = TC0_CH0_Handler,
+    .pfnTC0_CH1_Handler            = TC0_CH1_Handler,
+    .pfnTC0_CH2_Handler            = TC0_CH2_Handler,
+    .pfnTC1_CH0_Handler            = TC1_CH0_Handler,
+    .pfnTC1_CH1_Handler            = TC1_CH1_Handler,
+    .pfnTC1_CH2_Handler            = TC1_CH2_Handler,
+    .pfnAFEC0_Handler              = AFEC0_Handler,
+    .pfnDACC_Handler               = DACC_Handler,
+    .pfnPWM0_Handler               = PWM0_Handler,
+    .pfnICM_Handler                = ICM_Handler,
+    .pfnACC_Handler                = ACC_Handler,
+    .pfnUSBHS_Handler              = DRV_USBHSV1_USBHS_Handler,
+    .pfnMCAN0_INT0_Handler         = MCAN0_INT0_Handler,
+    .pfnMCAN0_INT1_Handler         = MCAN0_INT1_Handler,
+    .pfnMCAN1_INT0_Handler         = MCAN1_INT0_Handler,
+    .pfnMCAN1_INT1_Handler         = MCAN1_INT1_Handler,
+    .pfnGMAC_Handler               = GMAC_Handler,
+    .pfnAFEC1_Handler              = AFEC1_Handler,
+    .pfnTWIHS2_Handler             = TWIHS2_Handler,
+    .pfnSPI1_Handler               = SPI1_Handler,
+    .pfnQSPI_Handler               = QSPI_Handler,
+    .pfnUART2_Handler              = UART2_Handler,
+    .pfnUART3_Handler              = UART3_Handler,
+    .pfnUART4_Handler              = UART4_Handler,
+    .pfnTC2_CH0_Handler            = TC2_CH0_Handler,
+    .pfnTC2_CH1_Handler            = TC2_CH1_Handler,
+    .pfnTC2_CH2_Handler            = TC2_CH2_Handler,
+    .pfnTC3_CH0_Handler            = TC3_CH0_Handler,
+    .pfnTC3_CH1_Handler            = TC3_CH1_Handler,
+    .pfnTC3_CH2_Handler            = TC3_CH2_Handler,
+    .pfnAES_Handler                = AES_Handler,
+    .pfnTRNG_Handler               = TRNG_Handler,
+    .pfnXDMAC_Handler              = XDMAC_Handler,
+    .pfnISI_Handler                = ISI_Handler,
+    .pfnPWM1_Handler               = PWM1_Handler,
+    .pfnFPU_Handler                = FPU_Handler,
+    .pfnSDRAMC_Handler             = SDRAMC_Handler,
+    .pfnRSWDT_Handler              = RSWDT_Handler,
+    .pfnCCW_Handler                = CCW_Handler,
+    .pfnCCF_Handler                = CCF_Handler,
+    .pfnGMAC_Q1_Handler            = GMAC_Q1_Handler,
+    .pfnGMAC_Q2_Handler            = GMAC_Q2_Handler,
+    .pfnIXC_Handler                = IXC_Handler,
+    .pfnI2SC0_Handler              = I2SC0_Handler,
+    .pfnI2SC1_Handler              = I2SC1_Handler,
+    .pfnGMAC_Q3_Handler            = GMAC_Q3_Handler,
+    .pfnGMAC_Q4_Handler            = GMAC_Q4_Handler,
+    .pfnGMAC_Q5_Handler            = GMAC_Q5_Handler,
 
 
 };

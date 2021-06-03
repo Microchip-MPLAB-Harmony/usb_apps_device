@@ -2206,6 +2206,9 @@
                         </file>
                     </group>
                     <file>
+                        <name>$PROJ_DIR$\..\src\config\sam_e70_xult_iar\device.h</name>
+                    </file>
+                    <file>
                         <name>$PROJ_DIR$\..\src\config\sam_e70_xult_iar\device_cache.h</name>
                     </file>
                     <file>
@@ -2213,6 +2216,12 @@
                     </file>
                     <file>
                         <name>$PROJ_DIR$\..\src\config\sam_e70_xult_iar\definitions.h</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\src\config\sam_e70_xult_iar\interrupts.h</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\src\config\sam_e70_xult_iar\device_vectors.h</name>
                     </file>
                     <group>
                         <name>peripheral</name>
@@ -2241,9 +2250,6 @@
                             </file>
                         </group>
                     </group>
-                    <file>
-                        <name>$PROJ_DIR$\..\src\config\sam_e70_xult_iar\device.h</name>
-                    </file>
                     <group>
                         <name>bsp</name>
                         <file>
@@ -2418,8 +2424,179 @@
                             <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\component\xdmac.h</name>
                         </file>
                     </group>
+                    <group>
+                        <name>instance</name>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\acc.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\aes.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\afec0.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\afec1.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\chipid.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\dacc.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\efc.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\gmac.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\gpbr.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\hsmci.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\i2sc0.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\i2sc1.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\icm.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\isi.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\matrix.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\mcan0.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\mcan1.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\pioa.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\piob.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\pioc.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\piod.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\pioe.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\pmc.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\pwm0.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\pwm1.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\qspi.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\rstc.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\rswdt.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\rtc.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\rtt.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\sdramc.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\smc.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\spi0.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\spi1.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\ssc.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\supc.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\tc0.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\tc1.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\tc2.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\tc3.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\trng.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\twihs0.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\twihs1.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\twihs2.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\uart0.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\uart1.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\uart2.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\uart3.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\uart4.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\usart0.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\usart1.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\usart2.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\usbhs.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\utmi.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\wdt.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\xdmac.h</name>
+                        </file>
+                    </group>
                     <file>
-                        <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\atsame70q21b.h</name>
+                        <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\same70q21b.h</name>
                     </file>
                     <group>
                         <name>pio</name>
