@@ -5,17 +5,13 @@
     Microchip Technology Inc.
 
   File Name:
-    interrupt.c
+    interrupt.h
 
   Summary:
     Interrupt vectors mapping
 
   Description:
-    This file maps all the interrupt vectors to their corresponding
-    implementations. If a particular module interrupt is used, then its ISR
-    definition can be found in corresponding PLIB source file. If a module
-    interrupt is not used, then its ISR implementation is mapped to dummy
-    handler.
+    This file contains declarations of device vectors used by Harmony 3
  *******************************************************************************/
 
 // DOM-IGNORE-BEGIN
@@ -43,46 +39,23 @@
  *******************************************************************************/
 // DOM-IGNORE-END
 
+#ifndef INTERRUPTS_H
+#define INTERRUPTS_H
+
 // *****************************************************************************
 // *****************************************************************************
 // Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
-
-#include "configuration.h"
-#include "interrupts.h"
-#include "definitions.h"
+#include <stdint.h>
 
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: System Interrupt Vector Functions
+// Section: Handler Routines
 // *****************************************************************************
 // *****************************************************************************
 
 
-void DRV_USBHS_InterruptHandler( void );
-void DRV_USBHS_DMAInterruptHandler( void );
 
-
-
-/* All the handlers are defined here.  Each will call its PLIB-specific function. */
-
-
-
-void USB_Handler (void)
-{
-    DRV_USBHS_InterruptHandler();
-}
-
-void USB_DMA_Handler (void)
-{
-    DRV_USBHS_DMAInterruptHandler();
-}
-
-
-
-
-/*******************************************************************************
- End of File
-*/
+#endif // INTERRUPTS_H
