@@ -1,20 +1,18 @@
 /*******************************************************************************
-  Non-Volatile Memory Controller(NVMCTRL) PLIB.
+ System Interrupts File
 
   Company:
     Microchip Technology Inc.
 
   File Name:
-    plib_nvmctrl.h
+    interrupt.h
 
   Summary:
-    Interface definition of NVMCTRL Plib.
+    Interrupt vectors mapping
 
   Description:
-    This file defines the interface for the NVMCTRL Plib.
-    It allows user to Program, Erase and lock the on-chip Non Volatile Flash
-    Memory.
-*******************************************************************************/
+    This file contains declarations of device vectors used by Harmony 3
+ *******************************************************************************/
 
 // DOM-IGNORE-BEGIN
 /*******************************************************************************
@@ -38,70 +36,31 @@
 * FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
-*******************************************************************************/
+ *******************************************************************************/
 // DOM-IGNORE-END
 
-#ifndef PLIB_NVMCTRL_H
-#define PLIB_NVMCTRL_H
+#ifndef INTERRUPTS_H
+#define INTERRUPTS_H
 
 // *****************************************************************************
 // *****************************************************************************
 // Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
-
-#include "device.h"
 #include <stdint.h>
-#include <stdbool.h>
-#include <stddef.h>
 
-// DOM-IGNORE-BEGIN
-#ifdef __cplusplus // Provide C++ Compatibility
- extern "C" {
-#endif
 
-// DOM-IGNORE-END
 // *****************************************************************************
 // *****************************************************************************
-// Section: Preprocessor macros
+// Section: Handler Routines
 // *****************************************************************************
 // *****************************************************************************
 
-#define NVMCTRL_FLASH_START_ADDRESS        (0x00000000U)
-#define NVMCTRL_FLASH_PAGESIZE             (64U)
-#define NVMCTRL_FLASH_ROWSIZE              (256U)
+void Reset_Handler (void);
+void NonMaskableInt_Handler (void);
+void HardFault_Handler (void);
+void DRV_USBFSV1_USB_Handler (void);
 
 
 
-#define NVMCTRL_ERROR_NONE 0x0U
-#define NVMCTRL_ERROR_PROG 0x4U
-#define NVMCTRL_ERROR_LOCK 0x8U
-#define NVMCTRL_ERROR_NVM 0x10U
-
-typedef uint32_t NVMCTRL_ERROR;
-
-
-void NVMCTRL_Initialize(void);
-
-bool NVMCTRL_Read( uint32_t *data, uint32_t length, uint32_t address );
-
-bool NVMCTRL_PageWrite( uint32_t* data, uint32_t address );
-
-bool NVMCTRL_RowErase( uint32_t address );
-NVMCTRL_ERROR NVMCTRL_ErrorGet( void );
-
-bool NVMCTRL_IsBusy( void );
-
-void NVMCTRL_RegionLock (uint32_t address);
-
-void NVMCTRL_RegionUnlock (uint32_t address);
-
-
-void NVMCTRL_CacheInvalidate ( void );
-
-// DOM-IGNORE-BEGIN
-#ifdef __cplusplus // Provide C++ Compatibility
-}
-#endif
-// DOM-IGNORE-END
-#endif // PLIB_NVMCTRL_H
+#endif // INTERRUPTS_H
