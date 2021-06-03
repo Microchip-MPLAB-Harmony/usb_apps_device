@@ -20,13 +20,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 941C09024124A4937C0E368A25C140DE
-- generatedChecksum: ED2E5C23BC7415104D7AD4F7AA544CC5
+- generatedChecksum: DE6B2F7A6193E5F8C2F36196B0B687AC
   logicalPath: config/sam_d21_xpro/driver/usb/usbfsv1/src
   name: drv_usbfsv1_device.c
   physicalPath: driver/usb/usbfsv1/src
   security: NON_SECURE
   type: SOURCE
-  userChecksum: ED2E5C23BC7415104D7AD4F7AA544CC5
+  userChecksum: DE6B2F7A6193E5F8C2F36196B0B687AC
 - generatedChecksum: 0D18A719A1E40A8875895284967F66D0
   logicalPath: config/sam_d21_xpro
   name: exceptions.c
