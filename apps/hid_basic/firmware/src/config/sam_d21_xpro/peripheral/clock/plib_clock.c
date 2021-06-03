@@ -40,6 +40,7 @@
 
 #include "plib_clock.h"
 #include "device.h"
+#include "interrupts.h"
 
 static void SYSCTRL_Initialize(void)
 {
