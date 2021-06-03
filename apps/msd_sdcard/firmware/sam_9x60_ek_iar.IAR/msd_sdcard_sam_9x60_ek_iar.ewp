@@ -2286,6 +2286,9 @@
                     <file>
                         <name>$PROJ_DIR$\..\src\config\sam_9x60_ek_iar\definitions.h</name>
                     </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\src\config\sam_9x60_ek_iar\interrupts.h</name>
+                    </file>
                     <group>
                         <name>system</name>
                         <group>
@@ -2335,6 +2338,21 @@
                         </group>
                     </group>
                     <file>
+                        <name>$PROJ_DIR$\..\src\config\sam_9x60_ek_iar\device.h</name>
+                    </file>
+                    <group>
+                        <name>osal</name>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\config\sam_9x60_ek_iar\osal\osal.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\config\sam_9x60_ek_iar\osal\osal_definitions.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\config\sam_9x60_ek_iar\osal\osal_impl_basic.h</name>
+                        </file>
+                    </group>
+                    <file>
                         <name>$PROJ_DIR$\..\src\config\sam_9x60_ek_iar\user.h</name>
                     </file>
                     <file>
@@ -2346,9 +2364,6 @@
                 <name>packs</name>
                 <group>
                     <name>SAM9X60_DFP</name>
-                    <file>
-                        <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\device.h</name>
-                    </file>
                     <group>
                         <name>component</name>
                         <file>
@@ -2487,6 +2502,201 @@
                             <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\component\xdmac.h</name>
                         </file>
                     </group>
+                    <group>
+                        <name>instance</name>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\adc.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\aes.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\aic.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\bsc.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\can0.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\can1.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\classd.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\dbgu.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\emac0.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\emac1.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\flexcom0.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\flexcom1.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\flexcom10.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\flexcom11.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\flexcom12.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\flexcom2.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\flexcom3.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\flexcom4.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\flexcom5.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\flexcom6.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\flexcom7.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\flexcom8.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\flexcom9.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\gfx2d.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\gpbr.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\i2smcc.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\isi.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\lcdc.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\matrix.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\mpddrc.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\otpc.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\pioa.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\piob.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\pioc.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\piod.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\pit.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\pit64b.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\pmc.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\pmecc.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\pmerrloc.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\pwm.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\qspi.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\rstc.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\rtc.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\rtt.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\sckc.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\sdmmc0.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\sdmmc1.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\sdramc.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\sfr.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\sha.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\shdwc.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\smc.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\ssc.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\syscwp.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\tc0.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\tc1.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\tdes.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\trng.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\udphs.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\uhphs_ehci.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\uhphs_ohci.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\wdt.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\instance\xdmac.h</name>
+                        </file>
+                    </group>
                     <file>
                         <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\sam9x60.h</name>
                     </file>
@@ -2498,15 +2708,6 @@
                     </group>
                 </group>
             </group>
-            <file>
-                <name>$PROJ_DIR$\..\src\config\sam_9x60_ek_iar\osal\osal.h</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\src\config\sam_9x60_ek_iar\osal\osal_definitions.h</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\src\config\sam_9x60_ek_iar\osal\osal_impl_basic.h</name>
-            </file>
             <file>
                 <name>$PROJ_DIR$\..\src\app.h</name>
             </file>
