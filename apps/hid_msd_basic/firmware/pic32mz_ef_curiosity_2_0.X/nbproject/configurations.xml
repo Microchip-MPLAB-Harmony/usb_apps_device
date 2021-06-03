@@ -1,27 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <configurationDescriptor version="65">
-  <logicalFolder name="root" displayName="root" projectFiles="true">
-    <logicalFolder name="HeaderFiles"
-                   displayName="Header Files"
-                   projectFiles="true">
-      <logicalFolder name="f1" displayName="config" projectFiles="true">
-        <logicalFolder name="f1"
-                       displayName="pic32mz_ef_curiosity_2_0"
-                       projectFiles="true">
-          <logicalFolder name="f4" displayName="bsp" projectFiles="true">
+  <logicalFolder displayName="root" name="root" projectFiles="true">
+    <logicalFolder displayName="Header Files" name="HeaderFiles" projectFiles="true">
+      <logicalFolder displayName="config" name="f1" projectFiles="true">
+        <logicalFolder displayName="pic32mz_ef_curiosity_2_0" name="f1" projectFiles="true">
+          <logicalFolder displayName="bsp" name="f1" projectFiles="true">
             <itemPath>../src/config/pic32mz_ef_curiosity_2_0/bsp/bsp.h</itemPath>
           </logicalFolder>
-          <logicalFolder name="f3" displayName="driver" projectFiles="true">
-            <logicalFolder name="f1" displayName="memory" projectFiles="true">
+          <logicalFolder displayName="driver" name="f2" projectFiles="true">
+            <logicalFolder displayName="memory" name="f1" projectFiles="true">
               <itemPath>../src/config/pic32mz_ef_curiosity_2_0/driver/memory/src/drv_memory_local.h</itemPath>
               <itemPath>../src/config/pic32mz_ef_curiosity_2_0/driver/memory/drv_memory.h</itemPath>
               <itemPath>../src/config/pic32mz_ef_curiosity_2_0/driver/memory/drv_memory_definitions.h</itemPath>
               <itemPath>../src/config/pic32mz_ef_curiosity_2_0/driver/memory/drv_memory_nvm.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f3" displayName="usb" projectFiles="true">
-              <logicalFolder name="f1" displayName="usbhs" projectFiles="true">
-                <logicalFolder name="f1" displayName="src" projectFiles="true">
-                  <logicalFolder name="f1" displayName="templates" projectFiles="true">
+            <logicalFolder displayName="usb" name="f2" projectFiles="true">
+              <logicalFolder displayName="usbhs" name="f1" projectFiles="true">
+                <logicalFolder displayName="src" name="f1" projectFiles="true">
+                  <logicalFolder displayName="templates" name="f1" projectFiles="true">
                     <itemPath>../src/config/pic32mz_ef_curiosity_2_0/driver/usb/usbhs/src/templates/usbhs_registers.h</itemPath>
                     <itemPath>../src/config/pic32mz_ef_curiosity_2_0/driver/usb/usbhs/src/templates/usbhs_ClockResetControl_Default.h</itemPath>
                     <itemPath>../src/config/pic32mz_ef_curiosity_2_0/driver/usb/usbhs/src/templates/usbhs_ClockResetControl_Unsupported.h</itemPath>
@@ -60,30 +56,30 @@
             <itemPath>../src/config/pic32mz_ef_curiosity_2_0/driver/driver.h</itemPath>
             <itemPath>../src/config/pic32mz_ef_curiosity_2_0/driver/driver_common.h</itemPath>
           </logicalFolder>
-          <logicalFolder name="f6" displayName="osal" projectFiles="true">
+          <logicalFolder displayName="osal" name="f3" projectFiles="true">
             <itemPath>../src/config/pic32mz_ef_curiosity_2_0/osal/osal.h</itemPath>
             <itemPath>../src/config/pic32mz_ef_curiosity_2_0/osal/osal_definitions.h</itemPath>
             <itemPath>../src/config/pic32mz_ef_curiosity_2_0/osal/osal_impl_basic.h</itemPath>
           </logicalFolder>
-          <logicalFolder name="f2" displayName="peripheral" projectFiles="true">
-            <logicalFolder name="f1" displayName="clk" projectFiles="true">
+          <logicalFolder displayName="peripheral" name="f4" projectFiles="true">
+            <logicalFolder displayName="clk" name="f1" projectFiles="true">
               <itemPath>../src/config/pic32mz_ef_curiosity_2_0/peripheral/clk/plib_clk.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f3" displayName="evic" projectFiles="true">
+            <logicalFolder displayName="evic" name="f2" projectFiles="true">
               <itemPath>../src/config/pic32mz_ef_curiosity_2_0/peripheral/evic/plib_evic.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f2" displayName="gpio" projectFiles="true">
+            <logicalFolder displayName="gpio" name="f3" projectFiles="true">
               <itemPath>../src/config/pic32mz_ef_curiosity_2_0/peripheral/gpio/plib_gpio.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f5" displayName="nvm" projectFiles="true">
+            <logicalFolder displayName="nvm" name="f4" projectFiles="true">
               <itemPath>../src/config/pic32mz_ef_curiosity_2_0/peripheral/nvm/plib_nvm.h</itemPath>
             </logicalFolder>
           </logicalFolder>
-          <logicalFolder name="f5" displayName="system" projectFiles="true">
-            <logicalFolder name="f3" displayName="debug" projectFiles="true">
+          <logicalFolder displayName="system" name="f5" projectFiles="true">
+            <logicalFolder displayName="debug" name="f1" projectFiles="true">
               <itemPath>../src/config/pic32mz_ef_curiosity_2_0/system/debug/sys_debug.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f2" displayName="int" projectFiles="true">
+            <logicalFolder displayName="int" name="f2" projectFiles="true">
               <itemPath>../src/config/pic32mz_ef_curiosity_2_0/system/int/sys_int.h</itemPath>
               <itemPath>../src/config/pic32mz_ef_curiosity_2_0/system/int/sys_int_mapping.h</itemPath>
             </logicalFolder>
@@ -92,8 +88,8 @@
             <itemPath>../src/config/pic32mz_ef_curiosity_2_0/system/system_module.h</itemPath>
             <itemPath>../src/config/pic32mz_ef_curiosity_2_0/system/system_media.h</itemPath>
           </logicalFolder>
-          <logicalFolder name="f1" displayName="usb" projectFiles="true">
-            <logicalFolder name="f1" displayName="src" projectFiles="true">
+          <logicalFolder displayName="usb" name="f6" projectFiles="true">
+            <logicalFolder displayName="src" name="f1" projectFiles="true">
               <itemPath>../src/config/pic32mz_ef_curiosity_2_0/usb/src/usb_device_msd_local.h</itemPath>
               <itemPath>../src/config/pic32mz_ef_curiosity_2_0/usb/src/usb_device_local.h</itemPath>
               <itemPath>../src/config/pic32mz_ef_curiosity_2_0/usb/src/usb_device_mapping.h</itemPath>
@@ -124,65 +120,57 @@
       </logicalFolder>
       <itemPath>../src/app.h</itemPath>
     </logicalFolder>
-    <logicalFolder name="LinkerScript"
-                   displayName="Linker Files"
-                   projectFiles="true">
-      <logicalFolder name="f1" displayName="config" projectFiles="true">
-        <logicalFolder name="f1"
-                       displayName="pic32mz_ef_curiosity_2_0"
-                       projectFiles="true">
+    <logicalFolder displayName="Linker Files" name="LinkerScript" projectFiles="true">
+      <logicalFolder displayName="config" name="f1" projectFiles="true">
+        <logicalFolder displayName="pic32mz_ef_curiosity_2_0" name="f1" projectFiles="true">
           <itemPath>../src/config/pic32mz_ef_curiosity_2_0/p32MZ2048EFM144.ld</itemPath>
         </logicalFolder>
       </logicalFolder>
     </logicalFolder>
-    <logicalFolder name="SourceFiles"
-                   displayName="Source Files"
-                   projectFiles="true">
-      <logicalFolder name="f1" displayName="config" projectFiles="true">
-        <logicalFolder name="f1"
-                       displayName="pic32mz_ef_curiosity_2_0"
-                       projectFiles="true">
-          <logicalFolder name="f5" displayName="bsp" projectFiles="true">
+    <logicalFolder displayName="Source Files" name="SourceFiles" projectFiles="true">
+      <logicalFolder displayName="config" name="f1" projectFiles="true">
+        <logicalFolder displayName="pic32mz_ef_curiosity_2_0" name="f1" projectFiles="true">
+          <logicalFolder displayName="bsp" name="f1" projectFiles="true">
             <itemPath>../src/config/pic32mz_ef_curiosity_2_0/bsp/bsp.c</itemPath>
           </logicalFolder>
-          <logicalFolder name="f4" displayName="driver" projectFiles="true">
-            <logicalFolder name="f1" displayName="memory" projectFiles="true">
+          <logicalFolder displayName="driver" name="f2" projectFiles="true">
+            <logicalFolder displayName="memory" name="f1" projectFiles="true">
               <itemPath>../src/config/pic32mz_ef_curiosity_2_0/driver/memory/src/drv_memory.c</itemPath>
               <itemPath>../src/config/pic32mz_ef_curiosity_2_0/driver/memory/src/drv_memory_nvm.c</itemPath>
             </logicalFolder>
-            <logicalFolder name="f3" displayName="usb" projectFiles="true">
-              <logicalFolder name="f1" displayName="usbhs" projectFiles="true">
-                <logicalFolder name="f1" displayName="src" projectFiles="true">
+            <logicalFolder displayName="usb" name="f2" projectFiles="true">
+              <logicalFolder displayName="usbhs" name="f1" projectFiles="true">
+                <logicalFolder displayName="src" name="f1" projectFiles="true">
                   <itemPath>../src/config/pic32mz_ef_curiosity_2_0/driver/usb/usbhs/src/drv_usbhs.c</itemPath>
                   <itemPath>../src/config/pic32mz_ef_curiosity_2_0/driver/usb/usbhs/src/drv_usbhs_device.c</itemPath>
                 </logicalFolder>
               </logicalFolder>
             </logicalFolder>
           </logicalFolder>
-          <logicalFolder name="f3" displayName="peripheral" projectFiles="true">
-            <logicalFolder name="f1" displayName="clk" projectFiles="true">
+          <logicalFolder displayName="peripheral" name="f3" projectFiles="true">
+            <logicalFolder displayName="clk" name="f1" projectFiles="true">
               <itemPath>../src/config/pic32mz_ef_curiosity_2_0/peripheral/clk/plib_clk.c</itemPath>
             </logicalFolder>
-            <logicalFolder name="f3" displayName="evic" projectFiles="true">
+            <logicalFolder displayName="evic" name="f2" projectFiles="true">
               <itemPath>../src/config/pic32mz_ef_curiosity_2_0/peripheral/evic/plib_evic.c</itemPath>
             </logicalFolder>
-            <logicalFolder name="f2" displayName="gpio" projectFiles="true">
+            <logicalFolder displayName="gpio" name="f3" projectFiles="true">
               <itemPath>../src/config/pic32mz_ef_curiosity_2_0/peripheral/gpio/plib_gpio.c</itemPath>
             </logicalFolder>
-            <logicalFolder name="f5" displayName="nvm" projectFiles="true">
+            <logicalFolder displayName="nvm" name="f4" projectFiles="true">
               <itemPath>../src/config/pic32mz_ef_curiosity_2_0/peripheral/nvm/plib_nvm.c</itemPath>
             </logicalFolder>
           </logicalFolder>
-          <logicalFolder name="f2" displayName="stdio" projectFiles="true">
+          <logicalFolder displayName="stdio" name="f4" projectFiles="true">
             <itemPath>../src/config/pic32mz_ef_curiosity_2_0/stdio/xc32_monitor.c</itemPath>
           </logicalFolder>
-          <logicalFolder name="f6" displayName="system" projectFiles="true">
-            <logicalFolder name="f2" displayName="int" projectFiles="true">
+          <logicalFolder displayName="system" name="f5" projectFiles="true">
+            <logicalFolder displayName="int" name="f1" projectFiles="true">
               <itemPath>../src/config/pic32mz_ef_curiosity_2_0/system/int/src/sys_int.c</itemPath>
             </logicalFolder>
           </logicalFolder>
-          <logicalFolder name="f1" displayName="usb" projectFiles="true">
-            <logicalFolder name="f1" displayName="src" projectFiles="true">
+          <logicalFolder displayName="usb" name="f6" projectFiles="true">
+            <logicalFolder displayName="src" name="f1" projectFiles="true">
               <itemPath>../src/config/pic32mz_ef_curiosity_2_0/usb/src/usb_device_msd.c</itemPath>
               <itemPath>../src/config/pic32mz_ef_curiosity_2_0/usb/src/usb_device.c</itemPath>
               <itemPath>../src/config/pic32mz_ef_curiosity_2_0/usb/src/usb_device_hid.c</itemPath>
@@ -199,12 +187,8 @@
       <itemPath>../src/main.c</itemPath>
       <itemPath>../src/app.c</itemPath>
     </logicalFolder>
-    <logicalFolder name="ExternalFiles"
-                   displayName="Important Files"
-                   projectFiles="false">
-      <logicalFolder name="f1"
-                     displayName="pic32mz_ef_curiosity_2_0.mhc"
-                     projectFiles="true">
+    <logicalFolder displayName="Important Files" name="ExternalFiles" projectFiles="true">
+      <logicalFolder displayName="pic32mz_ef_curiosity_2_0.mhc" name="f1" projectFiles="true">
         <itemPath>../src/config/pic32mz_ef_curiosity_2_0/pic32mz_ef_curiosity_2_0.mhc/BSP_PIC32MZ_EF_Curiosity_2.0.yml</itemPath>
         <itemPath>../src/config/pic32mz_ef_curiosity_2_0/pic32mz_ef_curiosity_2_0.mhc/core.yml</itemPath>
         <itemPath>../src/config/pic32mz_ef_curiosity_2_0/pic32mz_ef_curiosity_2_0.mhc/dfp.yml</itemPath>
@@ -232,8 +216,8 @@
       <toolsSet>
         <developmentServer>localhost</developmentServer>
         <targetDevice>PIC32MZ2048EFM144</targetDevice>
-        <targetHeader></targetHeader>
-        <targetPluginBoard></targetPluginBoard>
+        <targetHeader/>
+        <targetPluginBoard/>
         <platformTool>noID</platformTool>
         <languageToolchain>XC32</languageToolchain>
         <languageToolchainVersion>3.00</languageToolchainVersion>
@@ -254,7 +238,7 @@
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
           <parseOnProdLoad>false</parseOnProdLoad>
-          <alternateLoadableFile></alternateLoadableFile>
+          <alternateLoadableFile/>
         </loading>
         <subordinates>
         </subordinates>
@@ -262,9 +246,9 @@
       <makeCustomizationType>
         <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
         <makeUseCleanTarget>false</makeUseCleanTarget>
-        <makeCustomizationPreStep></makeCustomizationPreStep>
+        <makeCustomizationPreStep/>
         <makeCustomizationPostStepEnabled>false</makeCustomizationPostStepEnabled>
-        <makeCustomizationPostStep></makeCustomizationPostStep>
+        <makeCustomizationPostStep/>
         <makeCustomizationPutChecksumInUserID>false</makeCustomizationPutChecksumInUserID>
         <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
@@ -277,8 +261,7 @@
         <property key="enable-symbols" value="true"/>
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
-        <property key="extra-include-directories"
-                  value="../src;../src/config/pic32mz_ef_curiosity_2_0;../src/packs/PIC32MZ2048EFM144_DFP"/>
+        <property key="extra-include-directories" value="../src;../src/config/pic32mz_ef_curiosity_2_0;../src/packs/PIC32MZ2048EFM144_DFP"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -376,8 +359,7 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
-        <property key="extra-include-directories"
-                  value="../src;../src/config/pic32mz_ef_curiosity_2_0;../src/packs/PIC32MZ2048EFM144_DFP"/>
+        <property key="extra-include-directories" value="../src;../src/config/pic32mz_ef_curiosity_2_0;../src/packs/PIC32MZ2048EFM144_DFP"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -473,8 +455,7 @@
         <property key="TIMER7" value="true"/>
         <property key="TIMER8" value="true"/>
         <property key="TIMER9" value="true"/>
-        <property key="ToolFirmwareFilePath"
-                  value="Press to browse for a specific firmware version"/>
+        <property key="ToolFirmwareFilePath" value="Press to browse for a specific firmware version"/>
         <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
         <property key="UART1" value="true"/>
         <property key="UART2" value="true"/>
@@ -493,8 +474,7 @@
         <property key="memories.flashdata" value="true"/>
         <property key="memories.id" value="true"/>
         <property key="memories.instruction.ram" value="true"/>
-        <property key="memories.instruction.ram.ranges"
-                  value="${memories.instruction.ram.ranges}"/>
+        <property key="memories.instruction.ram.ranges" value="${memories.instruction.ram.ranges}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="1d000000-1d003fff"/>
         <property key="poweroptions.powerenable" value="false"/>
@@ -503,8 +483,7 @@
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmspeed" value="2"/>
         <property key="programoptions.preservedataflash" value="false"/>
-        <property key="programoptions.preservedataflash.ranges"
-                  value="${programoptions.preservedataflash.ranges}"/>
+        <property key="programoptions.preservedataflash.ranges" value="${programoptions.preservedataflash.ranges}"/>
         <property key="programoptions.preserveeeprom" value="false"/>
         <property key="programoptions.preserveeeprom.ranges" value=""/>
         <property key="programoptions.preserveprogram.ranges" value=""/>
@@ -581,12 +560,9 @@
         <property key="TIMER7" value="true"/>
         <property key="TIMER8" value="true"/>
         <property key="TIMER9" value="true"/>
-        <property key="ToolFirmwareFilePath"
-                  value="Press to browse for a specific firmware version"/>
-        <property key="ToolFirmwareOption.UpdateOptions"
-                  value="ToolFirmwareOption.UseLatest"/>
-        <property key="ToolFirmwareToolPack"
-                  value="Press to select which tool pack to use"/>
+        <property key="ToolFirmwareFilePath" value="Press to browse for a specific firmware version"/>
+        <property key="ToolFirmwareOption.UpdateOptions" value="ToolFirmwareOption.UseLatest"/>
+        <property key="ToolFirmwareToolPack" value="Press to select which tool pack to use"/>
         <property key="UART1" value="true"/>
         <property key="UART2" value="true"/>
         <property key="UART3" value="true"/>
@@ -608,8 +584,7 @@
         <property key="memories.exclude.configurationmemory" value="true"/>
         <property key="memories.flashdata" value="true"/>
         <property key="memories.id" value="true"/>
-        <property key="memories.instruction.ram.ranges"
-                  value="${memories.instruction.ram.ranges}"/>
+        <property key="memories.instruction.ram.ranges" value="${memories.instruction.ram.ranges}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="1d000000-1d1fffff"/>
         <property key="memories.rww" value="true"/>
@@ -618,8 +593,7 @@
         <property key="programoptions.pgmentry.voltage" value="low"/>
         <property key="programoptions.pgmspeed" value="Med"/>
         <property key="programoptions.preservedataflash" value="false"/>
-        <property key="programoptions.preservedataflash.ranges"
-                  value="${memories.dataflash.default}"/>
+        <property key="programoptions.preservedataflash.ranges" value="${memories.dataflash.default}"/>
         <property key="programoptions.preserveeeprom" value="false"/>
         <property key="programoptions.preserveeeprom.ranges" value=""/>
         <property key="programoptions.preserveprogram.ranges" value=""/>
@@ -628,10 +602,8 @@
         <property key="programoptions.programcalmem" value="false"/>
         <property key="programoptions.programuserotp" value="false"/>
         <property key="programoptions.testmodeentrymethod" value="VDDFirst"/>
-        <property key="toolpack.updateoptions"
-                  value="toolpack.updateoptions.uselatestoolpack"/>
-        <property key="toolpack.updateoptions.packversion"
-                  value="Press to select which tool pack to use"/>
+        <property key="toolpack.updateoptions" value="toolpack.updateoptions.uselatestoolpack"/>
+        <property key="toolpack.updateoptions.packversion" value="Press to select which tool pack to use"/>
       </Tool>
       <pkob4hybrid>
         <property key="ADC" value="true"/>
@@ -697,12 +669,9 @@
         <property key="TIMER7" value="true"/>
         <property key="TIMER8" value="true"/>
         <property key="TIMER9" value="true"/>
-        <property key="ToolFirmwareFilePath"
-                  value="Press to browse for a specific firmware version"/>
-        <property key="ToolFirmwareOption.UpdateOptions"
-                  value="ToolFirmwareOption.UseLatest"/>
-        <property key="ToolFirmwareToolPack"
-                  value="Press to select which tool pack to use"/>
+        <property key="ToolFirmwareFilePath" value="Press to browse for a specific firmware version"/>
+        <property key="ToolFirmwareOption.UpdateOptions" value="ToolFirmwareOption.UseLatest"/>
+        <property key="ToolFirmwareToolPack" value="Press to select which tool pack to use"/>
         <property key="UART1" value="true"/>
         <property key="UART2" value="true"/>
         <property key="UART3" value="true"/>
@@ -724,8 +693,7 @@
         <property key="memories.exclude.configurationmemory" value="true"/>
         <property key="memories.flashdata" value="true"/>
         <property key="memories.id" value="true"/>
-        <property key="memories.instruction.ram.ranges"
-                  value="${memories.instruction.ram.ranges}"/>
+        <property key="memories.instruction.ram.ranges" value="${memories.instruction.ram.ranges}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="1d000000-1d1fffff"/>
         <property key="memories.rww" value="true"/>
@@ -734,8 +702,7 @@
         <property key="programoptions.pgmentry.voltage" value="low"/>
         <property key="programoptions.pgmspeed" value="Med"/>
         <property key="programoptions.preservedataflash" value="false"/>
-        <property key="programoptions.preservedataflash.ranges"
-                  value="${memories.dataflash.default}"/>
+        <property key="programoptions.preservedataflash.ranges" value="${memories.dataflash.default}"/>
         <property key="programoptions.preserveeeprom" value="false"/>
         <property key="programoptions.preserveeeprom.ranges" value=""/>
         <property key="programoptions.preserveprogram.ranges" value=""/>
@@ -744,10 +711,8 @@
         <property key="programoptions.programcalmem" value="false"/>
         <property key="programoptions.programuserotp" value="false"/>
         <property key="programoptions.testmodeentrymethod" value="VDDFirst"/>
-        <property key="toolpack.updateoptions"
-                  value="toolpack.updateoptions.uselatestoolpack"/>
-        <property key="toolpack.updateoptions.packversion"
-                  value="Press to select which tool pack to use"/>
+        <property key="toolpack.updateoptions" value="toolpack.updateoptions.uselatestoolpack"/>
+        <property key="toolpack.updateoptions.packversion" value="Press to select which tool pack to use"/>
       </pkob4hybrid>
     </conf>
   </confs>
