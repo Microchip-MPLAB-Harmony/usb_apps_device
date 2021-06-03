@@ -181,13 +181,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 151729F1C9106E599EB94600618F070C
-- generatedChecksum: B4B4827011A60FDB6271A5512D532ED9
+- generatedChecksum: 0DAEDD74D330AE9957729491A261C37F
   logicalPath: config/pic32mz_ef_curiosity_2_0
   name: configuration.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: B4B4827011A60FDB6271A5512D532ED9
+  userChecksum: 0DAEDD74D330AE9957729491A261C37F
 - generatedChecksum: BCF83C9FF71D27EF34D58C487FD5442E
   logicalPath: config/pic32mz_ef_curiosity_2_0
   name: definitions.h
