@@ -2308,7 +2308,7 @@ children:
       - type: String
         attributes: {id: value}
         children:
-        - {type: Value, value: ROM_ORIGIN=0x0x23f00000;ROM_LENGTH=-0x23f00000}
+        - {type: Value}
   - type: Integer
     attributes: {id: XDMAC0_CLOCK_FREQUENCY}
     children:
