@@ -137,7 +137,7 @@ children:
       - type: Dynamic
         attributes: {id: core, value: '0'}
   - type: KeyValueSet
-    attributes: {id: DEVICE_SECURITY}
+    attributes: {id: DEVICE_SECURITY_CMD}
     children:
     - type: Values
       children:
@@ -845,7 +845,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: 'true'}
+        attributes: {id: core, value: 'false'}
       - type: User
         attributes: {value: 'false'}
   - type: String
@@ -854,21 +854,21 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: TC3_TimerInterruptHandler}
+        attributes: {id: core, value: TC3_Handler}
   - type: Boolean
     attributes: {id: NVIC_18_0_HANDLER_LOCK}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: 'true'}
+        attributes: {id: core, value: 'false'}
   - type: Boolean
     attributes: {id: NVIC_19_0_ENABLE}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: 'true'}
+        attributes: {id: core, value: 'false'}
       - type: User
         attributes: {value: 'false'}
   - type: String
@@ -877,14 +877,14 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: TC4_TimerInterruptHandler}
+        attributes: {id: core, value: TC4_Handler}
   - type: Boolean
     attributes: {id: NVIC_19_0_HANDLER_LOCK}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: 'true'}
+        attributes: {id: core, value: 'false'}
   - type: Boolean
     attributes: {id: NVIC_6_0_ENABLE}
     children:
@@ -1745,7 +1745,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '0xbb80'}
+        attributes: {id: core, value: '0xBB80'}
   - type: Float
     attributes: {id: SYSTICK_PERIOD_MS}
     children:
@@ -1782,7 +1782,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: tc3, value: 'true'}
+        attributes: {id: tc3, value: 'false'}
   - type: Boolean
     attributes: {id: TC3_INTERRUPT_ENABLE_UPDATE}
     children:
@@ -1796,14 +1796,14 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: tc3, value: TC3_TimerInterruptHandler}
+        attributes: {id: tc3, value: TC3_Handler}
   - type: Boolean
     attributes: {id: TC3_INTERRUPT_HANDLER_LOCK}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: tc3, value: 'true'}
+        attributes: {id: tc3, value: 'false'}
   - type: Boolean
     attributes: {id: TC4_CLOCK_ENABLE}
     children:
@@ -1824,7 +1824,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: tc4, value: 'true'}
+        attributes: {id: tc4, value: 'false'}
   - type: Boolean
     attributes: {id: TC4_INTERRUPT_ENABLE_UPDATE}
     children:
@@ -1838,14 +1838,14 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: tc4, value: TC4_TimerInterruptHandler}
+        attributes: {id: tc4, value: TC4_Handler}
   - type: Boolean
     attributes: {id: TC4_INTERRUPT_HANDLER_LOCK}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: tc4, value: 'true'}
+        attributes: {id: tc4, value: 'false'}
   - type: Boolean
     attributes: {id: USB_CLOCK_ENABLE}
     children:

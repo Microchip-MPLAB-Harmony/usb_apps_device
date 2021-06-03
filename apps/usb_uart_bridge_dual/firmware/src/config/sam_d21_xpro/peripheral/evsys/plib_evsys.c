@@ -39,20 +39,21 @@
 *******************************************************************************/
 
 #include "plib_evsys.h"
+#include "interrupts.h"
 
 
 void EVSYS_Initialize( void )
 {
-	/*Event Channel User Configuration*/
-	EVSYS_REGS->EVSYS_USER = EVSYS_USER_CHANNEL(0x1) | EVSYS_USER_USER(18);
-	EVSYS_REGS->EVSYS_USER = EVSYS_USER_CHANNEL(0x2) | EVSYS_USER_USER(19);
+    /*Event Channel User Configuration*/
+    EVSYS_REGS->EVSYS_USER = EVSYS_USER_CHANNEL(0x1) | EVSYS_USER_USER(18);
+    EVSYS_REGS->EVSYS_USER = EVSYS_USER_CHANNEL(0x2) | EVSYS_USER_USER(19);
 
-	/* Event Channel 0 Configuration */
-	EVSYS_REGS->EVSYS_CHANNEL = EVSYS_CHANNEL_EVGEN(30) | EVSYS_CHANNEL_PATH(2) | EVSYS_CHANNEL_EDGSEL(1) \
-									| EVSYS_CHANNEL_CHANNEL(0);
-	/* Event Channel 1 Configuration */
-	EVSYS_REGS->EVSYS_CHANNEL = EVSYS_CHANNEL_EVGEN(31) | EVSYS_CHANNEL_PATH(2) | EVSYS_CHANNEL_EDGSEL(1) \
-									| EVSYS_CHANNEL_CHANNEL(1);
+    /* Event Channel 0 Configuration */
+    EVSYS_REGS->EVSYS_CHANNEL = EVSYS_CHANNEL_EVGEN(30) | EVSYS_CHANNEL_PATH(2) | EVSYS_CHANNEL_EDGSEL(1) \
+                                    | EVSYS_CHANNEL_CHANNEL(0);
+    /* Event Channel 1 Configuration */
+    EVSYS_REGS->EVSYS_CHANNEL = EVSYS_CHANNEL_EVGEN(31) | EVSYS_CHANNEL_PATH(2) | EVSYS_CHANNEL_EDGSEL(1) \
+                                    | EVSYS_CHANNEL_CHANNEL(1);
 
 }
 
