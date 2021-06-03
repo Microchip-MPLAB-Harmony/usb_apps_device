@@ -16,14 +16,12 @@ MEMORY
 	rom         (LRX) : ORIGIN = 0, LENGTH = 0
 }
 
-C_STACK_SIZE   = 0x800;
-IRQ_STACK_SIZE = 0x60;
-FIQ_STACK_SIZE = 0x60;
-SVC_STACK_SIZE = 0x800;
-ABT_STACK_SIZE = 0x40;
-UND_STACK_SIZE = 0x40;
-SYS_STACK_SIZE = 0x800;
-HEAP_SIZE      = 512;
+C_STACK_SIZE   = 4096;
+IRQ_STACK_SIZE = 96;
+FIQ_STACK_SIZE = 96;
+SVC_STACK_SIZE = 4096;
+ABT_STACK_SIZE = 64;
+UND_STACK_SIZE = 64;
 
 /* Section Definitions */
 SECTIONS
@@ -146,14 +144,6 @@ SECTIONS
 		. = ALIGN(32);
 	} >ram
 
-	.heap (NOLOAD) :
-	{
-		. = ALIGN(4);
-		PROVIDE(__heap_start__ = .);
-		. += HEAP_SIZE;
-		PROVIDE(__heap_end__ = .);
-	} >ram
-
 	.stacks (NOLOAD) :
 	{
 		. += IRQ_STACK_SIZE;
@@ -176,12 +166,22 @@ SECTIONS
 		. = ALIGN(8);
 		_svcstack = .;
 
-		. += SYS_STACK_SIZE;
-		. = ALIGN(8);
-		_sysstack = .;
-
 		. += C_STACK_SIZE;
 		. = ALIGN(8);
 		_cstack = .;
 	} >ram
+
+	_end = .;
+	_ramcode_lma = _end;
+	.ramcode :
+	AT ( _ramcode_lma )
+	{
+		_sramcode = .; *(.ramcode_section); _eramcode = .;
+	} > sram
+	_ramdata_lma = _end + _eramcode - _sramcode;
+	.ramdata :
+	AT ( _ramdata_lma )
+	{
+		_sramdata = .; *(.ramdata_section); _eramdata = .;
+	} > sram
 }
