@@ -1,7 +1,7 @@
 /**
  * \brief Component description for GPBR
  *
- * Copyright (c) 2020 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2020-05-19T13:57:46Z */
+/* file generated from device description version 2020-12-18T05:22:35Z */
 #ifndef _SAM9X_GPBR_COMPONENT_H_
 #define _SAM9X_GPBR_COMPONENT_H_
 
@@ -152,6 +152,14 @@
 #define GPBR_MR_REG_OFST               (0x00)              /**< (GPBR_MR) GPBR Mode Register Offset */
 #define GPBR_FCLR_REG_OFST             (0x04)              /**< (GPBR_FCLR) GPBR Full Clear Register Offset */
 #define SYS_GPBR_REG_OFST              (0x08)              /**< (SYS_GPBR) General Purpose Backup Register Offset */
+#define SYS_GPBR0_REG_OFST             (0x08)              /**< (SYS_GPBR0) General Purpose Backup Register Offset */
+#define SYS_GPBR1_REG_OFST             (0x0C)              /**< (SYS_GPBR1) General Purpose Backup Register Offset */
+#define SYS_GPBR2_REG_OFST             (0x10)              /**< (SYS_GPBR2) General Purpose Backup Register Offset */
+#define SYS_GPBR3_REG_OFST             (0x14)              /**< (SYS_GPBR3) General Purpose Backup Register Offset */
+#define SYS_GPBR4_REG_OFST             (0x18)              /**< (SYS_GPBR4) General Purpose Backup Register Offset */
+#define SYS_GPBR5_REG_OFST             (0x1C)              /**< (SYS_GPBR5) General Purpose Backup Register Offset */
+#define SYS_GPBR6_REG_OFST             (0x20)              /**< (SYS_GPBR6) General Purpose Backup Register Offset */
+#define SYS_GPBR7_REG_OFST             (0x24)              /**< (SYS_GPBR7) General Purpose Backup Register Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief GPBR register API structure */

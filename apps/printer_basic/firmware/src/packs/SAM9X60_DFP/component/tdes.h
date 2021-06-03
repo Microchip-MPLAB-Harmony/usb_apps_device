@@ -1,7 +1,7 @@
 /**
  * \brief Component description for TDES
  *
- * Copyright (c) 2020 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2020-05-19T13:57:46Z */
+/* file generated from device description version 2020-12-18T05:22:35Z */
 #ifndef _SAM9X_TDES_COMPONENT_H_
 #define _SAM9X_TDES_COMPONENT_H_
 
@@ -367,11 +367,23 @@
 #define TDES_IMR_REG_OFST              (0x18)              /**< (TDES_IMR) Interrupt Mask Register Offset */
 #define TDES_ISR_REG_OFST              (0x1C)              /**< (TDES_ISR) Interrupt Status Register Offset */
 #define TDES_KEY1WR_REG_OFST           (0x20)              /**< (TDES_KEY1WR) Key 1 Word Register Offset */
+#define TDES_KEY1WR0_REG_OFST          (0x20)              /**< (TDES_KEY1WR0) Key 1 Word Register Offset */
+#define TDES_KEY1WR1_REG_OFST          (0x24)              /**< (TDES_KEY1WR1) Key 1 Word Register Offset */
 #define TDES_KEY2WR_REG_OFST           (0x28)              /**< (TDES_KEY2WR) Key 2 Word Register Offset */
+#define TDES_KEY2WR0_REG_OFST          (0x28)              /**< (TDES_KEY2WR0) Key 2 Word Register Offset */
+#define TDES_KEY2WR1_REG_OFST          (0x2C)              /**< (TDES_KEY2WR1) Key 2 Word Register Offset */
 #define TDES_KEY3WR_REG_OFST           (0x30)              /**< (TDES_KEY3WR) Key 3 Word Register Offset */
+#define TDES_KEY3WR0_REG_OFST          (0x30)              /**< (TDES_KEY3WR0) Key 3 Word Register Offset */
+#define TDES_KEY3WR1_REG_OFST          (0x34)              /**< (TDES_KEY3WR1) Key 3 Word Register Offset */
 #define TDES_IDATAR_REG_OFST           (0x40)              /**< (TDES_IDATAR) Input Data Register Offset */
+#define TDES_IDATAR0_REG_OFST          (0x40)              /**< (TDES_IDATAR0) Input Data Register Offset */
+#define TDES_IDATAR1_REG_OFST          (0x44)              /**< (TDES_IDATAR1) Input Data Register Offset */
 #define TDES_ODATAR_REG_OFST           (0x50)              /**< (TDES_ODATAR) Output Data Register Offset */
+#define TDES_ODATAR0_REG_OFST          (0x50)              /**< (TDES_ODATAR0) Output Data Register Offset */
+#define TDES_ODATAR1_REG_OFST          (0x54)              /**< (TDES_ODATAR1) Output Data Register Offset */
 #define TDES_IVR_REG_OFST              (0x60)              /**< (TDES_IVR) Initialization Vector Register Offset */
+#define TDES_IVR0_REG_OFST             (0x60)              /**< (TDES_IVR0) Initialization Vector Register Offset */
+#define TDES_IVR1_REG_OFST             (0x64)              /**< (TDES_IVR1) Initialization Vector Register Offset */
 #define TDES_XTEA_RNDR_REG_OFST        (0x70)              /**< (TDES_XTEA_RNDR) XTEA Rounds Register Offset */
 #define TDES_WPMR_REG_OFST             (0xE4)              /**< (TDES_WPMR) Write Protection Mode Register Offset */
 #define TDES_WPSR_REG_OFST             (0xE8)              /**< (TDES_WPSR) Write Protection Status Register Offset */

@@ -70,6 +70,7 @@ bool DBGU_Write(void *buffer, const size_t size);
 
 bool DBGU_Read(void *buffer, const size_t size);
 
+
 bool DBGU_WriteIsBusy(void);
 
 bool DBGU_ReadIsBusy(void);

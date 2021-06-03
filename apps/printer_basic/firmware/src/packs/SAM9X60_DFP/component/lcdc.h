@@ -1,7 +1,7 @@
 /**
  * \brief Component description for LCDC
  *
- * Copyright (c) 2020 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2020-05-19T13:57:46Z */
+/* file generated from device description version 2020-12-18T05:22:35Z */
 #ifndef _SAM9X_LCDC_COMPONENT_H_
 #define _SAM9X_LCDC_COMPONENT_H_
 
@@ -2555,9 +2555,1033 @@
 #define LCDC_HEOCFG40_REG_OFST         (0x44C)             /**< (LCDC_HEOCFG40) High-End Overlay Configuration Register 40 Offset */
 #define LCDC_HEOCFG41_REG_OFST         (0x450)             /**< (LCDC_HEOCFG41) High-End Overlay Configuration Register 41 Offset */
 #define LCDC_BASECLUT_REG_OFST         (0x600)             /**< (LCDC_BASECLUT) Base CLUT Register Offset */
+#define LCDC_BASECLUT0_REG_OFST        (0x600)             /**< (LCDC_BASECLUT0) Base CLUT Register Offset */
+#define LCDC_BASECLUT1_REG_OFST        (0x604)             /**< (LCDC_BASECLUT1) Base CLUT Register Offset */
+#define LCDC_BASECLUT2_REG_OFST        (0x608)             /**< (LCDC_BASECLUT2) Base CLUT Register Offset */
+#define LCDC_BASECLUT3_REG_OFST        (0x60C)             /**< (LCDC_BASECLUT3) Base CLUT Register Offset */
+#define LCDC_BASECLUT4_REG_OFST        (0x610)             /**< (LCDC_BASECLUT4) Base CLUT Register Offset */
+#define LCDC_BASECLUT5_REG_OFST        (0x614)             /**< (LCDC_BASECLUT5) Base CLUT Register Offset */
+#define LCDC_BASECLUT6_REG_OFST        (0x618)             /**< (LCDC_BASECLUT6) Base CLUT Register Offset */
+#define LCDC_BASECLUT7_REG_OFST        (0x61C)             /**< (LCDC_BASECLUT7) Base CLUT Register Offset */
+#define LCDC_BASECLUT8_REG_OFST        (0x620)             /**< (LCDC_BASECLUT8) Base CLUT Register Offset */
+#define LCDC_BASECLUT9_REG_OFST        (0x624)             /**< (LCDC_BASECLUT9) Base CLUT Register Offset */
+#define LCDC_BASECLUT10_REG_OFST       (0x628)             /**< (LCDC_BASECLUT10) Base CLUT Register Offset */
+#define LCDC_BASECLUT11_REG_OFST       (0x62C)             /**< (LCDC_BASECLUT11) Base CLUT Register Offset */
+#define LCDC_BASECLUT12_REG_OFST       (0x630)             /**< (LCDC_BASECLUT12) Base CLUT Register Offset */
+#define LCDC_BASECLUT13_REG_OFST       (0x634)             /**< (LCDC_BASECLUT13) Base CLUT Register Offset */
+#define LCDC_BASECLUT14_REG_OFST       (0x638)             /**< (LCDC_BASECLUT14) Base CLUT Register Offset */
+#define LCDC_BASECLUT15_REG_OFST       (0x63C)             /**< (LCDC_BASECLUT15) Base CLUT Register Offset */
+#define LCDC_BASECLUT16_REG_OFST       (0x640)             /**< (LCDC_BASECLUT16) Base CLUT Register Offset */
+#define LCDC_BASECLUT17_REG_OFST       (0x644)             /**< (LCDC_BASECLUT17) Base CLUT Register Offset */
+#define LCDC_BASECLUT18_REG_OFST       (0x648)             /**< (LCDC_BASECLUT18) Base CLUT Register Offset */
+#define LCDC_BASECLUT19_REG_OFST       (0x64C)             /**< (LCDC_BASECLUT19) Base CLUT Register Offset */
+#define LCDC_BASECLUT20_REG_OFST       (0x650)             /**< (LCDC_BASECLUT20) Base CLUT Register Offset */
+#define LCDC_BASECLUT21_REG_OFST       (0x654)             /**< (LCDC_BASECLUT21) Base CLUT Register Offset */
+#define LCDC_BASECLUT22_REG_OFST       (0x658)             /**< (LCDC_BASECLUT22) Base CLUT Register Offset */
+#define LCDC_BASECLUT23_REG_OFST       (0x65C)             /**< (LCDC_BASECLUT23) Base CLUT Register Offset */
+#define LCDC_BASECLUT24_REG_OFST       (0x660)             /**< (LCDC_BASECLUT24) Base CLUT Register Offset */
+#define LCDC_BASECLUT25_REG_OFST       (0x664)             /**< (LCDC_BASECLUT25) Base CLUT Register Offset */
+#define LCDC_BASECLUT26_REG_OFST       (0x668)             /**< (LCDC_BASECLUT26) Base CLUT Register Offset */
+#define LCDC_BASECLUT27_REG_OFST       (0x66C)             /**< (LCDC_BASECLUT27) Base CLUT Register Offset */
+#define LCDC_BASECLUT28_REG_OFST       (0x670)             /**< (LCDC_BASECLUT28) Base CLUT Register Offset */
+#define LCDC_BASECLUT29_REG_OFST       (0x674)             /**< (LCDC_BASECLUT29) Base CLUT Register Offset */
+#define LCDC_BASECLUT30_REG_OFST       (0x678)             /**< (LCDC_BASECLUT30) Base CLUT Register Offset */
+#define LCDC_BASECLUT31_REG_OFST       (0x67C)             /**< (LCDC_BASECLUT31) Base CLUT Register Offset */
+#define LCDC_BASECLUT32_REG_OFST       (0x680)             /**< (LCDC_BASECLUT32) Base CLUT Register Offset */
+#define LCDC_BASECLUT33_REG_OFST       (0x684)             /**< (LCDC_BASECLUT33) Base CLUT Register Offset */
+#define LCDC_BASECLUT34_REG_OFST       (0x688)             /**< (LCDC_BASECLUT34) Base CLUT Register Offset */
+#define LCDC_BASECLUT35_REG_OFST       (0x68C)             /**< (LCDC_BASECLUT35) Base CLUT Register Offset */
+#define LCDC_BASECLUT36_REG_OFST       (0x690)             /**< (LCDC_BASECLUT36) Base CLUT Register Offset */
+#define LCDC_BASECLUT37_REG_OFST       (0x694)             /**< (LCDC_BASECLUT37) Base CLUT Register Offset */
+#define LCDC_BASECLUT38_REG_OFST       (0x698)             /**< (LCDC_BASECLUT38) Base CLUT Register Offset */
+#define LCDC_BASECLUT39_REG_OFST       (0x69C)             /**< (LCDC_BASECLUT39) Base CLUT Register Offset */
+#define LCDC_BASECLUT40_REG_OFST       (0x6A0)             /**< (LCDC_BASECLUT40) Base CLUT Register Offset */
+#define LCDC_BASECLUT41_REG_OFST       (0x6A4)             /**< (LCDC_BASECLUT41) Base CLUT Register Offset */
+#define LCDC_BASECLUT42_REG_OFST       (0x6A8)             /**< (LCDC_BASECLUT42) Base CLUT Register Offset */
+#define LCDC_BASECLUT43_REG_OFST       (0x6AC)             /**< (LCDC_BASECLUT43) Base CLUT Register Offset */
+#define LCDC_BASECLUT44_REG_OFST       (0x6B0)             /**< (LCDC_BASECLUT44) Base CLUT Register Offset */
+#define LCDC_BASECLUT45_REG_OFST       (0x6B4)             /**< (LCDC_BASECLUT45) Base CLUT Register Offset */
+#define LCDC_BASECLUT46_REG_OFST       (0x6B8)             /**< (LCDC_BASECLUT46) Base CLUT Register Offset */
+#define LCDC_BASECLUT47_REG_OFST       (0x6BC)             /**< (LCDC_BASECLUT47) Base CLUT Register Offset */
+#define LCDC_BASECLUT48_REG_OFST       (0x6C0)             /**< (LCDC_BASECLUT48) Base CLUT Register Offset */
+#define LCDC_BASECLUT49_REG_OFST       (0x6C4)             /**< (LCDC_BASECLUT49) Base CLUT Register Offset */
+#define LCDC_BASECLUT50_REG_OFST       (0x6C8)             /**< (LCDC_BASECLUT50) Base CLUT Register Offset */
+#define LCDC_BASECLUT51_REG_OFST       (0x6CC)             /**< (LCDC_BASECLUT51) Base CLUT Register Offset */
+#define LCDC_BASECLUT52_REG_OFST       (0x6D0)             /**< (LCDC_BASECLUT52) Base CLUT Register Offset */
+#define LCDC_BASECLUT53_REG_OFST       (0x6D4)             /**< (LCDC_BASECLUT53) Base CLUT Register Offset */
+#define LCDC_BASECLUT54_REG_OFST       (0x6D8)             /**< (LCDC_BASECLUT54) Base CLUT Register Offset */
+#define LCDC_BASECLUT55_REG_OFST       (0x6DC)             /**< (LCDC_BASECLUT55) Base CLUT Register Offset */
+#define LCDC_BASECLUT56_REG_OFST       (0x6E0)             /**< (LCDC_BASECLUT56) Base CLUT Register Offset */
+#define LCDC_BASECLUT57_REG_OFST       (0x6E4)             /**< (LCDC_BASECLUT57) Base CLUT Register Offset */
+#define LCDC_BASECLUT58_REG_OFST       (0x6E8)             /**< (LCDC_BASECLUT58) Base CLUT Register Offset */
+#define LCDC_BASECLUT59_REG_OFST       (0x6EC)             /**< (LCDC_BASECLUT59) Base CLUT Register Offset */
+#define LCDC_BASECLUT60_REG_OFST       (0x6F0)             /**< (LCDC_BASECLUT60) Base CLUT Register Offset */
+#define LCDC_BASECLUT61_REG_OFST       (0x6F4)             /**< (LCDC_BASECLUT61) Base CLUT Register Offset */
+#define LCDC_BASECLUT62_REG_OFST       (0x6F8)             /**< (LCDC_BASECLUT62) Base CLUT Register Offset */
+#define LCDC_BASECLUT63_REG_OFST       (0x6FC)             /**< (LCDC_BASECLUT63) Base CLUT Register Offset */
+#define LCDC_BASECLUT64_REG_OFST       (0x700)             /**< (LCDC_BASECLUT64) Base CLUT Register Offset */
+#define LCDC_BASECLUT65_REG_OFST       (0x704)             /**< (LCDC_BASECLUT65) Base CLUT Register Offset */
+#define LCDC_BASECLUT66_REG_OFST       (0x708)             /**< (LCDC_BASECLUT66) Base CLUT Register Offset */
+#define LCDC_BASECLUT67_REG_OFST       (0x70C)             /**< (LCDC_BASECLUT67) Base CLUT Register Offset */
+#define LCDC_BASECLUT68_REG_OFST       (0x710)             /**< (LCDC_BASECLUT68) Base CLUT Register Offset */
+#define LCDC_BASECLUT69_REG_OFST       (0x714)             /**< (LCDC_BASECLUT69) Base CLUT Register Offset */
+#define LCDC_BASECLUT70_REG_OFST       (0x718)             /**< (LCDC_BASECLUT70) Base CLUT Register Offset */
+#define LCDC_BASECLUT71_REG_OFST       (0x71C)             /**< (LCDC_BASECLUT71) Base CLUT Register Offset */
+#define LCDC_BASECLUT72_REG_OFST       (0x720)             /**< (LCDC_BASECLUT72) Base CLUT Register Offset */
+#define LCDC_BASECLUT73_REG_OFST       (0x724)             /**< (LCDC_BASECLUT73) Base CLUT Register Offset */
+#define LCDC_BASECLUT74_REG_OFST       (0x728)             /**< (LCDC_BASECLUT74) Base CLUT Register Offset */
+#define LCDC_BASECLUT75_REG_OFST       (0x72C)             /**< (LCDC_BASECLUT75) Base CLUT Register Offset */
+#define LCDC_BASECLUT76_REG_OFST       (0x730)             /**< (LCDC_BASECLUT76) Base CLUT Register Offset */
+#define LCDC_BASECLUT77_REG_OFST       (0x734)             /**< (LCDC_BASECLUT77) Base CLUT Register Offset */
+#define LCDC_BASECLUT78_REG_OFST       (0x738)             /**< (LCDC_BASECLUT78) Base CLUT Register Offset */
+#define LCDC_BASECLUT79_REG_OFST       (0x73C)             /**< (LCDC_BASECLUT79) Base CLUT Register Offset */
+#define LCDC_BASECLUT80_REG_OFST       (0x740)             /**< (LCDC_BASECLUT80) Base CLUT Register Offset */
+#define LCDC_BASECLUT81_REG_OFST       (0x744)             /**< (LCDC_BASECLUT81) Base CLUT Register Offset */
+#define LCDC_BASECLUT82_REG_OFST       (0x748)             /**< (LCDC_BASECLUT82) Base CLUT Register Offset */
+#define LCDC_BASECLUT83_REG_OFST       (0x74C)             /**< (LCDC_BASECLUT83) Base CLUT Register Offset */
+#define LCDC_BASECLUT84_REG_OFST       (0x750)             /**< (LCDC_BASECLUT84) Base CLUT Register Offset */
+#define LCDC_BASECLUT85_REG_OFST       (0x754)             /**< (LCDC_BASECLUT85) Base CLUT Register Offset */
+#define LCDC_BASECLUT86_REG_OFST       (0x758)             /**< (LCDC_BASECLUT86) Base CLUT Register Offset */
+#define LCDC_BASECLUT87_REG_OFST       (0x75C)             /**< (LCDC_BASECLUT87) Base CLUT Register Offset */
+#define LCDC_BASECLUT88_REG_OFST       (0x760)             /**< (LCDC_BASECLUT88) Base CLUT Register Offset */
+#define LCDC_BASECLUT89_REG_OFST       (0x764)             /**< (LCDC_BASECLUT89) Base CLUT Register Offset */
+#define LCDC_BASECLUT90_REG_OFST       (0x768)             /**< (LCDC_BASECLUT90) Base CLUT Register Offset */
+#define LCDC_BASECLUT91_REG_OFST       (0x76C)             /**< (LCDC_BASECLUT91) Base CLUT Register Offset */
+#define LCDC_BASECLUT92_REG_OFST       (0x770)             /**< (LCDC_BASECLUT92) Base CLUT Register Offset */
+#define LCDC_BASECLUT93_REG_OFST       (0x774)             /**< (LCDC_BASECLUT93) Base CLUT Register Offset */
+#define LCDC_BASECLUT94_REG_OFST       (0x778)             /**< (LCDC_BASECLUT94) Base CLUT Register Offset */
+#define LCDC_BASECLUT95_REG_OFST       (0x77C)             /**< (LCDC_BASECLUT95) Base CLUT Register Offset */
+#define LCDC_BASECLUT96_REG_OFST       (0x780)             /**< (LCDC_BASECLUT96) Base CLUT Register Offset */
+#define LCDC_BASECLUT97_REG_OFST       (0x784)             /**< (LCDC_BASECLUT97) Base CLUT Register Offset */
+#define LCDC_BASECLUT98_REG_OFST       (0x788)             /**< (LCDC_BASECLUT98) Base CLUT Register Offset */
+#define LCDC_BASECLUT99_REG_OFST       (0x78C)             /**< (LCDC_BASECLUT99) Base CLUT Register Offset */
+#define LCDC_BASECLUT100_REG_OFST      (0x790)             /**< (LCDC_BASECLUT100) Base CLUT Register Offset */
+#define LCDC_BASECLUT101_REG_OFST      (0x794)             /**< (LCDC_BASECLUT101) Base CLUT Register Offset */
+#define LCDC_BASECLUT102_REG_OFST      (0x798)             /**< (LCDC_BASECLUT102) Base CLUT Register Offset */
+#define LCDC_BASECLUT103_REG_OFST      (0x79C)             /**< (LCDC_BASECLUT103) Base CLUT Register Offset */
+#define LCDC_BASECLUT104_REG_OFST      (0x7A0)             /**< (LCDC_BASECLUT104) Base CLUT Register Offset */
+#define LCDC_BASECLUT105_REG_OFST      (0x7A4)             /**< (LCDC_BASECLUT105) Base CLUT Register Offset */
+#define LCDC_BASECLUT106_REG_OFST      (0x7A8)             /**< (LCDC_BASECLUT106) Base CLUT Register Offset */
+#define LCDC_BASECLUT107_REG_OFST      (0x7AC)             /**< (LCDC_BASECLUT107) Base CLUT Register Offset */
+#define LCDC_BASECLUT108_REG_OFST      (0x7B0)             /**< (LCDC_BASECLUT108) Base CLUT Register Offset */
+#define LCDC_BASECLUT109_REG_OFST      (0x7B4)             /**< (LCDC_BASECLUT109) Base CLUT Register Offset */
+#define LCDC_BASECLUT110_REG_OFST      (0x7B8)             /**< (LCDC_BASECLUT110) Base CLUT Register Offset */
+#define LCDC_BASECLUT111_REG_OFST      (0x7BC)             /**< (LCDC_BASECLUT111) Base CLUT Register Offset */
+#define LCDC_BASECLUT112_REG_OFST      (0x7C0)             /**< (LCDC_BASECLUT112) Base CLUT Register Offset */
+#define LCDC_BASECLUT113_REG_OFST      (0x7C4)             /**< (LCDC_BASECLUT113) Base CLUT Register Offset */
+#define LCDC_BASECLUT114_REG_OFST      (0x7C8)             /**< (LCDC_BASECLUT114) Base CLUT Register Offset */
+#define LCDC_BASECLUT115_REG_OFST      (0x7CC)             /**< (LCDC_BASECLUT115) Base CLUT Register Offset */
+#define LCDC_BASECLUT116_REG_OFST      (0x7D0)             /**< (LCDC_BASECLUT116) Base CLUT Register Offset */
+#define LCDC_BASECLUT117_REG_OFST      (0x7D4)             /**< (LCDC_BASECLUT117) Base CLUT Register Offset */
+#define LCDC_BASECLUT118_REG_OFST      (0x7D8)             /**< (LCDC_BASECLUT118) Base CLUT Register Offset */
+#define LCDC_BASECLUT119_REG_OFST      (0x7DC)             /**< (LCDC_BASECLUT119) Base CLUT Register Offset */
+#define LCDC_BASECLUT120_REG_OFST      (0x7E0)             /**< (LCDC_BASECLUT120) Base CLUT Register Offset */
+#define LCDC_BASECLUT121_REG_OFST      (0x7E4)             /**< (LCDC_BASECLUT121) Base CLUT Register Offset */
+#define LCDC_BASECLUT122_REG_OFST      (0x7E8)             /**< (LCDC_BASECLUT122) Base CLUT Register Offset */
+#define LCDC_BASECLUT123_REG_OFST      (0x7EC)             /**< (LCDC_BASECLUT123) Base CLUT Register Offset */
+#define LCDC_BASECLUT124_REG_OFST      (0x7F0)             /**< (LCDC_BASECLUT124) Base CLUT Register Offset */
+#define LCDC_BASECLUT125_REG_OFST      (0x7F4)             /**< (LCDC_BASECLUT125) Base CLUT Register Offset */
+#define LCDC_BASECLUT126_REG_OFST      (0x7F8)             /**< (LCDC_BASECLUT126) Base CLUT Register Offset */
+#define LCDC_BASECLUT127_REG_OFST      (0x7FC)             /**< (LCDC_BASECLUT127) Base CLUT Register Offset */
+#define LCDC_BASECLUT128_REG_OFST      (0x800)             /**< (LCDC_BASECLUT128) Base CLUT Register Offset */
+#define LCDC_BASECLUT129_REG_OFST      (0x804)             /**< (LCDC_BASECLUT129) Base CLUT Register Offset */
+#define LCDC_BASECLUT130_REG_OFST      (0x808)             /**< (LCDC_BASECLUT130) Base CLUT Register Offset */
+#define LCDC_BASECLUT131_REG_OFST      (0x80C)             /**< (LCDC_BASECLUT131) Base CLUT Register Offset */
+#define LCDC_BASECLUT132_REG_OFST      (0x810)             /**< (LCDC_BASECLUT132) Base CLUT Register Offset */
+#define LCDC_BASECLUT133_REG_OFST      (0x814)             /**< (LCDC_BASECLUT133) Base CLUT Register Offset */
+#define LCDC_BASECLUT134_REG_OFST      (0x818)             /**< (LCDC_BASECLUT134) Base CLUT Register Offset */
+#define LCDC_BASECLUT135_REG_OFST      (0x81C)             /**< (LCDC_BASECLUT135) Base CLUT Register Offset */
+#define LCDC_BASECLUT136_REG_OFST      (0x820)             /**< (LCDC_BASECLUT136) Base CLUT Register Offset */
+#define LCDC_BASECLUT137_REG_OFST      (0x824)             /**< (LCDC_BASECLUT137) Base CLUT Register Offset */
+#define LCDC_BASECLUT138_REG_OFST      (0x828)             /**< (LCDC_BASECLUT138) Base CLUT Register Offset */
+#define LCDC_BASECLUT139_REG_OFST      (0x82C)             /**< (LCDC_BASECLUT139) Base CLUT Register Offset */
+#define LCDC_BASECLUT140_REG_OFST      (0x830)             /**< (LCDC_BASECLUT140) Base CLUT Register Offset */
+#define LCDC_BASECLUT141_REG_OFST      (0x834)             /**< (LCDC_BASECLUT141) Base CLUT Register Offset */
+#define LCDC_BASECLUT142_REG_OFST      (0x838)             /**< (LCDC_BASECLUT142) Base CLUT Register Offset */
+#define LCDC_BASECLUT143_REG_OFST      (0x83C)             /**< (LCDC_BASECLUT143) Base CLUT Register Offset */
+#define LCDC_BASECLUT144_REG_OFST      (0x840)             /**< (LCDC_BASECLUT144) Base CLUT Register Offset */
+#define LCDC_BASECLUT145_REG_OFST      (0x844)             /**< (LCDC_BASECLUT145) Base CLUT Register Offset */
+#define LCDC_BASECLUT146_REG_OFST      (0x848)             /**< (LCDC_BASECLUT146) Base CLUT Register Offset */
+#define LCDC_BASECLUT147_REG_OFST      (0x84C)             /**< (LCDC_BASECLUT147) Base CLUT Register Offset */
+#define LCDC_BASECLUT148_REG_OFST      (0x850)             /**< (LCDC_BASECLUT148) Base CLUT Register Offset */
+#define LCDC_BASECLUT149_REG_OFST      (0x854)             /**< (LCDC_BASECLUT149) Base CLUT Register Offset */
+#define LCDC_BASECLUT150_REG_OFST      (0x858)             /**< (LCDC_BASECLUT150) Base CLUT Register Offset */
+#define LCDC_BASECLUT151_REG_OFST      (0x85C)             /**< (LCDC_BASECLUT151) Base CLUT Register Offset */
+#define LCDC_BASECLUT152_REG_OFST      (0x860)             /**< (LCDC_BASECLUT152) Base CLUT Register Offset */
+#define LCDC_BASECLUT153_REG_OFST      (0x864)             /**< (LCDC_BASECLUT153) Base CLUT Register Offset */
+#define LCDC_BASECLUT154_REG_OFST      (0x868)             /**< (LCDC_BASECLUT154) Base CLUT Register Offset */
+#define LCDC_BASECLUT155_REG_OFST      (0x86C)             /**< (LCDC_BASECLUT155) Base CLUT Register Offset */
+#define LCDC_BASECLUT156_REG_OFST      (0x870)             /**< (LCDC_BASECLUT156) Base CLUT Register Offset */
+#define LCDC_BASECLUT157_REG_OFST      (0x874)             /**< (LCDC_BASECLUT157) Base CLUT Register Offset */
+#define LCDC_BASECLUT158_REG_OFST      (0x878)             /**< (LCDC_BASECLUT158) Base CLUT Register Offset */
+#define LCDC_BASECLUT159_REG_OFST      (0x87C)             /**< (LCDC_BASECLUT159) Base CLUT Register Offset */
+#define LCDC_BASECLUT160_REG_OFST      (0x880)             /**< (LCDC_BASECLUT160) Base CLUT Register Offset */
+#define LCDC_BASECLUT161_REG_OFST      (0x884)             /**< (LCDC_BASECLUT161) Base CLUT Register Offset */
+#define LCDC_BASECLUT162_REG_OFST      (0x888)             /**< (LCDC_BASECLUT162) Base CLUT Register Offset */
+#define LCDC_BASECLUT163_REG_OFST      (0x88C)             /**< (LCDC_BASECLUT163) Base CLUT Register Offset */
+#define LCDC_BASECLUT164_REG_OFST      (0x890)             /**< (LCDC_BASECLUT164) Base CLUT Register Offset */
+#define LCDC_BASECLUT165_REG_OFST      (0x894)             /**< (LCDC_BASECLUT165) Base CLUT Register Offset */
+#define LCDC_BASECLUT166_REG_OFST      (0x898)             /**< (LCDC_BASECLUT166) Base CLUT Register Offset */
+#define LCDC_BASECLUT167_REG_OFST      (0x89C)             /**< (LCDC_BASECLUT167) Base CLUT Register Offset */
+#define LCDC_BASECLUT168_REG_OFST      (0x8A0)             /**< (LCDC_BASECLUT168) Base CLUT Register Offset */
+#define LCDC_BASECLUT169_REG_OFST      (0x8A4)             /**< (LCDC_BASECLUT169) Base CLUT Register Offset */
+#define LCDC_BASECLUT170_REG_OFST      (0x8A8)             /**< (LCDC_BASECLUT170) Base CLUT Register Offset */
+#define LCDC_BASECLUT171_REG_OFST      (0x8AC)             /**< (LCDC_BASECLUT171) Base CLUT Register Offset */
+#define LCDC_BASECLUT172_REG_OFST      (0x8B0)             /**< (LCDC_BASECLUT172) Base CLUT Register Offset */
+#define LCDC_BASECLUT173_REG_OFST      (0x8B4)             /**< (LCDC_BASECLUT173) Base CLUT Register Offset */
+#define LCDC_BASECLUT174_REG_OFST      (0x8B8)             /**< (LCDC_BASECLUT174) Base CLUT Register Offset */
+#define LCDC_BASECLUT175_REG_OFST      (0x8BC)             /**< (LCDC_BASECLUT175) Base CLUT Register Offset */
+#define LCDC_BASECLUT176_REG_OFST      (0x8C0)             /**< (LCDC_BASECLUT176) Base CLUT Register Offset */
+#define LCDC_BASECLUT177_REG_OFST      (0x8C4)             /**< (LCDC_BASECLUT177) Base CLUT Register Offset */
+#define LCDC_BASECLUT178_REG_OFST      (0x8C8)             /**< (LCDC_BASECLUT178) Base CLUT Register Offset */
+#define LCDC_BASECLUT179_REG_OFST      (0x8CC)             /**< (LCDC_BASECLUT179) Base CLUT Register Offset */
+#define LCDC_BASECLUT180_REG_OFST      (0x8D0)             /**< (LCDC_BASECLUT180) Base CLUT Register Offset */
+#define LCDC_BASECLUT181_REG_OFST      (0x8D4)             /**< (LCDC_BASECLUT181) Base CLUT Register Offset */
+#define LCDC_BASECLUT182_REG_OFST      (0x8D8)             /**< (LCDC_BASECLUT182) Base CLUT Register Offset */
+#define LCDC_BASECLUT183_REG_OFST      (0x8DC)             /**< (LCDC_BASECLUT183) Base CLUT Register Offset */
+#define LCDC_BASECLUT184_REG_OFST      (0x8E0)             /**< (LCDC_BASECLUT184) Base CLUT Register Offset */
+#define LCDC_BASECLUT185_REG_OFST      (0x8E4)             /**< (LCDC_BASECLUT185) Base CLUT Register Offset */
+#define LCDC_BASECLUT186_REG_OFST      (0x8E8)             /**< (LCDC_BASECLUT186) Base CLUT Register Offset */
+#define LCDC_BASECLUT187_REG_OFST      (0x8EC)             /**< (LCDC_BASECLUT187) Base CLUT Register Offset */
+#define LCDC_BASECLUT188_REG_OFST      (0x8F0)             /**< (LCDC_BASECLUT188) Base CLUT Register Offset */
+#define LCDC_BASECLUT189_REG_OFST      (0x8F4)             /**< (LCDC_BASECLUT189) Base CLUT Register Offset */
+#define LCDC_BASECLUT190_REG_OFST      (0x8F8)             /**< (LCDC_BASECLUT190) Base CLUT Register Offset */
+#define LCDC_BASECLUT191_REG_OFST      (0x8FC)             /**< (LCDC_BASECLUT191) Base CLUT Register Offset */
+#define LCDC_BASECLUT192_REG_OFST      (0x900)             /**< (LCDC_BASECLUT192) Base CLUT Register Offset */
+#define LCDC_BASECLUT193_REG_OFST      (0x904)             /**< (LCDC_BASECLUT193) Base CLUT Register Offset */
+#define LCDC_BASECLUT194_REG_OFST      (0x908)             /**< (LCDC_BASECLUT194) Base CLUT Register Offset */
+#define LCDC_BASECLUT195_REG_OFST      (0x90C)             /**< (LCDC_BASECLUT195) Base CLUT Register Offset */
+#define LCDC_BASECLUT196_REG_OFST      (0x910)             /**< (LCDC_BASECLUT196) Base CLUT Register Offset */
+#define LCDC_BASECLUT197_REG_OFST      (0x914)             /**< (LCDC_BASECLUT197) Base CLUT Register Offset */
+#define LCDC_BASECLUT198_REG_OFST      (0x918)             /**< (LCDC_BASECLUT198) Base CLUT Register Offset */
+#define LCDC_BASECLUT199_REG_OFST      (0x91C)             /**< (LCDC_BASECLUT199) Base CLUT Register Offset */
+#define LCDC_BASECLUT200_REG_OFST      (0x920)             /**< (LCDC_BASECLUT200) Base CLUT Register Offset */
+#define LCDC_BASECLUT201_REG_OFST      (0x924)             /**< (LCDC_BASECLUT201) Base CLUT Register Offset */
+#define LCDC_BASECLUT202_REG_OFST      (0x928)             /**< (LCDC_BASECLUT202) Base CLUT Register Offset */
+#define LCDC_BASECLUT203_REG_OFST      (0x92C)             /**< (LCDC_BASECLUT203) Base CLUT Register Offset */
+#define LCDC_BASECLUT204_REG_OFST      (0x930)             /**< (LCDC_BASECLUT204) Base CLUT Register Offset */
+#define LCDC_BASECLUT205_REG_OFST      (0x934)             /**< (LCDC_BASECLUT205) Base CLUT Register Offset */
+#define LCDC_BASECLUT206_REG_OFST      (0x938)             /**< (LCDC_BASECLUT206) Base CLUT Register Offset */
+#define LCDC_BASECLUT207_REG_OFST      (0x93C)             /**< (LCDC_BASECLUT207) Base CLUT Register Offset */
+#define LCDC_BASECLUT208_REG_OFST      (0x940)             /**< (LCDC_BASECLUT208) Base CLUT Register Offset */
+#define LCDC_BASECLUT209_REG_OFST      (0x944)             /**< (LCDC_BASECLUT209) Base CLUT Register Offset */
+#define LCDC_BASECLUT210_REG_OFST      (0x948)             /**< (LCDC_BASECLUT210) Base CLUT Register Offset */
+#define LCDC_BASECLUT211_REG_OFST      (0x94C)             /**< (LCDC_BASECLUT211) Base CLUT Register Offset */
+#define LCDC_BASECLUT212_REG_OFST      (0x950)             /**< (LCDC_BASECLUT212) Base CLUT Register Offset */
+#define LCDC_BASECLUT213_REG_OFST      (0x954)             /**< (LCDC_BASECLUT213) Base CLUT Register Offset */
+#define LCDC_BASECLUT214_REG_OFST      (0x958)             /**< (LCDC_BASECLUT214) Base CLUT Register Offset */
+#define LCDC_BASECLUT215_REG_OFST      (0x95C)             /**< (LCDC_BASECLUT215) Base CLUT Register Offset */
+#define LCDC_BASECLUT216_REG_OFST      (0x960)             /**< (LCDC_BASECLUT216) Base CLUT Register Offset */
+#define LCDC_BASECLUT217_REG_OFST      (0x964)             /**< (LCDC_BASECLUT217) Base CLUT Register Offset */
+#define LCDC_BASECLUT218_REG_OFST      (0x968)             /**< (LCDC_BASECLUT218) Base CLUT Register Offset */
+#define LCDC_BASECLUT219_REG_OFST      (0x96C)             /**< (LCDC_BASECLUT219) Base CLUT Register Offset */
+#define LCDC_BASECLUT220_REG_OFST      (0x970)             /**< (LCDC_BASECLUT220) Base CLUT Register Offset */
+#define LCDC_BASECLUT221_REG_OFST      (0x974)             /**< (LCDC_BASECLUT221) Base CLUT Register Offset */
+#define LCDC_BASECLUT222_REG_OFST      (0x978)             /**< (LCDC_BASECLUT222) Base CLUT Register Offset */
+#define LCDC_BASECLUT223_REG_OFST      (0x97C)             /**< (LCDC_BASECLUT223) Base CLUT Register Offset */
+#define LCDC_BASECLUT224_REG_OFST      (0x980)             /**< (LCDC_BASECLUT224) Base CLUT Register Offset */
+#define LCDC_BASECLUT225_REG_OFST      (0x984)             /**< (LCDC_BASECLUT225) Base CLUT Register Offset */
+#define LCDC_BASECLUT226_REG_OFST      (0x988)             /**< (LCDC_BASECLUT226) Base CLUT Register Offset */
+#define LCDC_BASECLUT227_REG_OFST      (0x98C)             /**< (LCDC_BASECLUT227) Base CLUT Register Offset */
+#define LCDC_BASECLUT228_REG_OFST      (0x990)             /**< (LCDC_BASECLUT228) Base CLUT Register Offset */
+#define LCDC_BASECLUT229_REG_OFST      (0x994)             /**< (LCDC_BASECLUT229) Base CLUT Register Offset */
+#define LCDC_BASECLUT230_REG_OFST      (0x998)             /**< (LCDC_BASECLUT230) Base CLUT Register Offset */
+#define LCDC_BASECLUT231_REG_OFST      (0x99C)             /**< (LCDC_BASECLUT231) Base CLUT Register Offset */
+#define LCDC_BASECLUT232_REG_OFST      (0x9A0)             /**< (LCDC_BASECLUT232) Base CLUT Register Offset */
+#define LCDC_BASECLUT233_REG_OFST      (0x9A4)             /**< (LCDC_BASECLUT233) Base CLUT Register Offset */
+#define LCDC_BASECLUT234_REG_OFST      (0x9A8)             /**< (LCDC_BASECLUT234) Base CLUT Register Offset */
+#define LCDC_BASECLUT235_REG_OFST      (0x9AC)             /**< (LCDC_BASECLUT235) Base CLUT Register Offset */
+#define LCDC_BASECLUT236_REG_OFST      (0x9B0)             /**< (LCDC_BASECLUT236) Base CLUT Register Offset */
+#define LCDC_BASECLUT237_REG_OFST      (0x9B4)             /**< (LCDC_BASECLUT237) Base CLUT Register Offset */
+#define LCDC_BASECLUT238_REG_OFST      (0x9B8)             /**< (LCDC_BASECLUT238) Base CLUT Register Offset */
+#define LCDC_BASECLUT239_REG_OFST      (0x9BC)             /**< (LCDC_BASECLUT239) Base CLUT Register Offset */
+#define LCDC_BASECLUT240_REG_OFST      (0x9C0)             /**< (LCDC_BASECLUT240) Base CLUT Register Offset */
+#define LCDC_BASECLUT241_REG_OFST      (0x9C4)             /**< (LCDC_BASECLUT241) Base CLUT Register Offset */
+#define LCDC_BASECLUT242_REG_OFST      (0x9C8)             /**< (LCDC_BASECLUT242) Base CLUT Register Offset */
+#define LCDC_BASECLUT243_REG_OFST      (0x9CC)             /**< (LCDC_BASECLUT243) Base CLUT Register Offset */
+#define LCDC_BASECLUT244_REG_OFST      (0x9D0)             /**< (LCDC_BASECLUT244) Base CLUT Register Offset */
+#define LCDC_BASECLUT245_REG_OFST      (0x9D4)             /**< (LCDC_BASECLUT245) Base CLUT Register Offset */
+#define LCDC_BASECLUT246_REG_OFST      (0x9D8)             /**< (LCDC_BASECLUT246) Base CLUT Register Offset */
+#define LCDC_BASECLUT247_REG_OFST      (0x9DC)             /**< (LCDC_BASECLUT247) Base CLUT Register Offset */
+#define LCDC_BASECLUT248_REG_OFST      (0x9E0)             /**< (LCDC_BASECLUT248) Base CLUT Register Offset */
+#define LCDC_BASECLUT249_REG_OFST      (0x9E4)             /**< (LCDC_BASECLUT249) Base CLUT Register Offset */
+#define LCDC_BASECLUT250_REG_OFST      (0x9E8)             /**< (LCDC_BASECLUT250) Base CLUT Register Offset */
+#define LCDC_BASECLUT251_REG_OFST      (0x9EC)             /**< (LCDC_BASECLUT251) Base CLUT Register Offset */
+#define LCDC_BASECLUT252_REG_OFST      (0x9F0)             /**< (LCDC_BASECLUT252) Base CLUT Register Offset */
+#define LCDC_BASECLUT253_REG_OFST      (0x9F4)             /**< (LCDC_BASECLUT253) Base CLUT Register Offset */
+#define LCDC_BASECLUT254_REG_OFST      (0x9F8)             /**< (LCDC_BASECLUT254) Base CLUT Register Offset */
+#define LCDC_BASECLUT255_REG_OFST      (0x9FC)             /**< (LCDC_BASECLUT255) Base CLUT Register Offset */
 #define LCDC_OVR1CLUT_REG_OFST         (0xA00)             /**< (LCDC_OVR1CLUT) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT0_REG_OFST        (0xA00)             /**< (LCDC_OVR1CLUT0) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT1_REG_OFST        (0xA04)             /**< (LCDC_OVR1CLUT1) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT2_REG_OFST        (0xA08)             /**< (LCDC_OVR1CLUT2) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT3_REG_OFST        (0xA0C)             /**< (LCDC_OVR1CLUT3) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT4_REG_OFST        (0xA10)             /**< (LCDC_OVR1CLUT4) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT5_REG_OFST        (0xA14)             /**< (LCDC_OVR1CLUT5) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT6_REG_OFST        (0xA18)             /**< (LCDC_OVR1CLUT6) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT7_REG_OFST        (0xA1C)             /**< (LCDC_OVR1CLUT7) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT8_REG_OFST        (0xA20)             /**< (LCDC_OVR1CLUT8) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT9_REG_OFST        (0xA24)             /**< (LCDC_OVR1CLUT9) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT10_REG_OFST       (0xA28)             /**< (LCDC_OVR1CLUT10) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT11_REG_OFST       (0xA2C)             /**< (LCDC_OVR1CLUT11) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT12_REG_OFST       (0xA30)             /**< (LCDC_OVR1CLUT12) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT13_REG_OFST       (0xA34)             /**< (LCDC_OVR1CLUT13) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT14_REG_OFST       (0xA38)             /**< (LCDC_OVR1CLUT14) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT15_REG_OFST       (0xA3C)             /**< (LCDC_OVR1CLUT15) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT16_REG_OFST       (0xA40)             /**< (LCDC_OVR1CLUT16) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT17_REG_OFST       (0xA44)             /**< (LCDC_OVR1CLUT17) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT18_REG_OFST       (0xA48)             /**< (LCDC_OVR1CLUT18) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT19_REG_OFST       (0xA4C)             /**< (LCDC_OVR1CLUT19) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT20_REG_OFST       (0xA50)             /**< (LCDC_OVR1CLUT20) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT21_REG_OFST       (0xA54)             /**< (LCDC_OVR1CLUT21) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT22_REG_OFST       (0xA58)             /**< (LCDC_OVR1CLUT22) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT23_REG_OFST       (0xA5C)             /**< (LCDC_OVR1CLUT23) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT24_REG_OFST       (0xA60)             /**< (LCDC_OVR1CLUT24) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT25_REG_OFST       (0xA64)             /**< (LCDC_OVR1CLUT25) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT26_REG_OFST       (0xA68)             /**< (LCDC_OVR1CLUT26) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT27_REG_OFST       (0xA6C)             /**< (LCDC_OVR1CLUT27) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT28_REG_OFST       (0xA70)             /**< (LCDC_OVR1CLUT28) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT29_REG_OFST       (0xA74)             /**< (LCDC_OVR1CLUT29) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT30_REG_OFST       (0xA78)             /**< (LCDC_OVR1CLUT30) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT31_REG_OFST       (0xA7C)             /**< (LCDC_OVR1CLUT31) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT32_REG_OFST       (0xA80)             /**< (LCDC_OVR1CLUT32) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT33_REG_OFST       (0xA84)             /**< (LCDC_OVR1CLUT33) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT34_REG_OFST       (0xA88)             /**< (LCDC_OVR1CLUT34) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT35_REG_OFST       (0xA8C)             /**< (LCDC_OVR1CLUT35) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT36_REG_OFST       (0xA90)             /**< (LCDC_OVR1CLUT36) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT37_REG_OFST       (0xA94)             /**< (LCDC_OVR1CLUT37) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT38_REG_OFST       (0xA98)             /**< (LCDC_OVR1CLUT38) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT39_REG_OFST       (0xA9C)             /**< (LCDC_OVR1CLUT39) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT40_REG_OFST       (0xAA0)             /**< (LCDC_OVR1CLUT40) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT41_REG_OFST       (0xAA4)             /**< (LCDC_OVR1CLUT41) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT42_REG_OFST       (0xAA8)             /**< (LCDC_OVR1CLUT42) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT43_REG_OFST       (0xAAC)             /**< (LCDC_OVR1CLUT43) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT44_REG_OFST       (0xAB0)             /**< (LCDC_OVR1CLUT44) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT45_REG_OFST       (0xAB4)             /**< (LCDC_OVR1CLUT45) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT46_REG_OFST       (0xAB8)             /**< (LCDC_OVR1CLUT46) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT47_REG_OFST       (0xABC)             /**< (LCDC_OVR1CLUT47) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT48_REG_OFST       (0xAC0)             /**< (LCDC_OVR1CLUT48) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT49_REG_OFST       (0xAC4)             /**< (LCDC_OVR1CLUT49) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT50_REG_OFST       (0xAC8)             /**< (LCDC_OVR1CLUT50) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT51_REG_OFST       (0xACC)             /**< (LCDC_OVR1CLUT51) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT52_REG_OFST       (0xAD0)             /**< (LCDC_OVR1CLUT52) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT53_REG_OFST       (0xAD4)             /**< (LCDC_OVR1CLUT53) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT54_REG_OFST       (0xAD8)             /**< (LCDC_OVR1CLUT54) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT55_REG_OFST       (0xADC)             /**< (LCDC_OVR1CLUT55) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT56_REG_OFST       (0xAE0)             /**< (LCDC_OVR1CLUT56) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT57_REG_OFST       (0xAE4)             /**< (LCDC_OVR1CLUT57) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT58_REG_OFST       (0xAE8)             /**< (LCDC_OVR1CLUT58) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT59_REG_OFST       (0xAEC)             /**< (LCDC_OVR1CLUT59) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT60_REG_OFST       (0xAF0)             /**< (LCDC_OVR1CLUT60) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT61_REG_OFST       (0xAF4)             /**< (LCDC_OVR1CLUT61) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT62_REG_OFST       (0xAF8)             /**< (LCDC_OVR1CLUT62) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT63_REG_OFST       (0xAFC)             /**< (LCDC_OVR1CLUT63) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT64_REG_OFST       (0xB00)             /**< (LCDC_OVR1CLUT64) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT65_REG_OFST       (0xB04)             /**< (LCDC_OVR1CLUT65) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT66_REG_OFST       (0xB08)             /**< (LCDC_OVR1CLUT66) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT67_REG_OFST       (0xB0C)             /**< (LCDC_OVR1CLUT67) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT68_REG_OFST       (0xB10)             /**< (LCDC_OVR1CLUT68) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT69_REG_OFST       (0xB14)             /**< (LCDC_OVR1CLUT69) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT70_REG_OFST       (0xB18)             /**< (LCDC_OVR1CLUT70) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT71_REG_OFST       (0xB1C)             /**< (LCDC_OVR1CLUT71) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT72_REG_OFST       (0xB20)             /**< (LCDC_OVR1CLUT72) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT73_REG_OFST       (0xB24)             /**< (LCDC_OVR1CLUT73) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT74_REG_OFST       (0xB28)             /**< (LCDC_OVR1CLUT74) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT75_REG_OFST       (0xB2C)             /**< (LCDC_OVR1CLUT75) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT76_REG_OFST       (0xB30)             /**< (LCDC_OVR1CLUT76) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT77_REG_OFST       (0xB34)             /**< (LCDC_OVR1CLUT77) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT78_REG_OFST       (0xB38)             /**< (LCDC_OVR1CLUT78) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT79_REG_OFST       (0xB3C)             /**< (LCDC_OVR1CLUT79) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT80_REG_OFST       (0xB40)             /**< (LCDC_OVR1CLUT80) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT81_REG_OFST       (0xB44)             /**< (LCDC_OVR1CLUT81) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT82_REG_OFST       (0xB48)             /**< (LCDC_OVR1CLUT82) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT83_REG_OFST       (0xB4C)             /**< (LCDC_OVR1CLUT83) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT84_REG_OFST       (0xB50)             /**< (LCDC_OVR1CLUT84) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT85_REG_OFST       (0xB54)             /**< (LCDC_OVR1CLUT85) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT86_REG_OFST       (0xB58)             /**< (LCDC_OVR1CLUT86) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT87_REG_OFST       (0xB5C)             /**< (LCDC_OVR1CLUT87) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT88_REG_OFST       (0xB60)             /**< (LCDC_OVR1CLUT88) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT89_REG_OFST       (0xB64)             /**< (LCDC_OVR1CLUT89) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT90_REG_OFST       (0xB68)             /**< (LCDC_OVR1CLUT90) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT91_REG_OFST       (0xB6C)             /**< (LCDC_OVR1CLUT91) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT92_REG_OFST       (0xB70)             /**< (LCDC_OVR1CLUT92) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT93_REG_OFST       (0xB74)             /**< (LCDC_OVR1CLUT93) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT94_REG_OFST       (0xB78)             /**< (LCDC_OVR1CLUT94) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT95_REG_OFST       (0xB7C)             /**< (LCDC_OVR1CLUT95) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT96_REG_OFST       (0xB80)             /**< (LCDC_OVR1CLUT96) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT97_REG_OFST       (0xB84)             /**< (LCDC_OVR1CLUT97) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT98_REG_OFST       (0xB88)             /**< (LCDC_OVR1CLUT98) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT99_REG_OFST       (0xB8C)             /**< (LCDC_OVR1CLUT99) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT100_REG_OFST      (0xB90)             /**< (LCDC_OVR1CLUT100) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT101_REG_OFST      (0xB94)             /**< (LCDC_OVR1CLUT101) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT102_REG_OFST      (0xB98)             /**< (LCDC_OVR1CLUT102) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT103_REG_OFST      (0xB9C)             /**< (LCDC_OVR1CLUT103) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT104_REG_OFST      (0xBA0)             /**< (LCDC_OVR1CLUT104) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT105_REG_OFST      (0xBA4)             /**< (LCDC_OVR1CLUT105) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT106_REG_OFST      (0xBA8)             /**< (LCDC_OVR1CLUT106) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT107_REG_OFST      (0xBAC)             /**< (LCDC_OVR1CLUT107) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT108_REG_OFST      (0xBB0)             /**< (LCDC_OVR1CLUT108) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT109_REG_OFST      (0xBB4)             /**< (LCDC_OVR1CLUT109) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT110_REG_OFST      (0xBB8)             /**< (LCDC_OVR1CLUT110) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT111_REG_OFST      (0xBBC)             /**< (LCDC_OVR1CLUT111) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT112_REG_OFST      (0xBC0)             /**< (LCDC_OVR1CLUT112) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT113_REG_OFST      (0xBC4)             /**< (LCDC_OVR1CLUT113) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT114_REG_OFST      (0xBC8)             /**< (LCDC_OVR1CLUT114) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT115_REG_OFST      (0xBCC)             /**< (LCDC_OVR1CLUT115) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT116_REG_OFST      (0xBD0)             /**< (LCDC_OVR1CLUT116) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT117_REG_OFST      (0xBD4)             /**< (LCDC_OVR1CLUT117) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT118_REG_OFST      (0xBD8)             /**< (LCDC_OVR1CLUT118) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT119_REG_OFST      (0xBDC)             /**< (LCDC_OVR1CLUT119) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT120_REG_OFST      (0xBE0)             /**< (LCDC_OVR1CLUT120) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT121_REG_OFST      (0xBE4)             /**< (LCDC_OVR1CLUT121) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT122_REG_OFST      (0xBE8)             /**< (LCDC_OVR1CLUT122) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT123_REG_OFST      (0xBEC)             /**< (LCDC_OVR1CLUT123) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT124_REG_OFST      (0xBF0)             /**< (LCDC_OVR1CLUT124) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT125_REG_OFST      (0xBF4)             /**< (LCDC_OVR1CLUT125) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT126_REG_OFST      (0xBF8)             /**< (LCDC_OVR1CLUT126) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT127_REG_OFST      (0xBFC)             /**< (LCDC_OVR1CLUT127) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT128_REG_OFST      (0xC00)             /**< (LCDC_OVR1CLUT128) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT129_REG_OFST      (0xC04)             /**< (LCDC_OVR1CLUT129) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT130_REG_OFST      (0xC08)             /**< (LCDC_OVR1CLUT130) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT131_REG_OFST      (0xC0C)             /**< (LCDC_OVR1CLUT131) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT132_REG_OFST      (0xC10)             /**< (LCDC_OVR1CLUT132) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT133_REG_OFST      (0xC14)             /**< (LCDC_OVR1CLUT133) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT134_REG_OFST      (0xC18)             /**< (LCDC_OVR1CLUT134) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT135_REG_OFST      (0xC1C)             /**< (LCDC_OVR1CLUT135) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT136_REG_OFST      (0xC20)             /**< (LCDC_OVR1CLUT136) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT137_REG_OFST      (0xC24)             /**< (LCDC_OVR1CLUT137) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT138_REG_OFST      (0xC28)             /**< (LCDC_OVR1CLUT138) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT139_REG_OFST      (0xC2C)             /**< (LCDC_OVR1CLUT139) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT140_REG_OFST      (0xC30)             /**< (LCDC_OVR1CLUT140) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT141_REG_OFST      (0xC34)             /**< (LCDC_OVR1CLUT141) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT142_REG_OFST      (0xC38)             /**< (LCDC_OVR1CLUT142) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT143_REG_OFST      (0xC3C)             /**< (LCDC_OVR1CLUT143) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT144_REG_OFST      (0xC40)             /**< (LCDC_OVR1CLUT144) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT145_REG_OFST      (0xC44)             /**< (LCDC_OVR1CLUT145) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT146_REG_OFST      (0xC48)             /**< (LCDC_OVR1CLUT146) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT147_REG_OFST      (0xC4C)             /**< (LCDC_OVR1CLUT147) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT148_REG_OFST      (0xC50)             /**< (LCDC_OVR1CLUT148) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT149_REG_OFST      (0xC54)             /**< (LCDC_OVR1CLUT149) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT150_REG_OFST      (0xC58)             /**< (LCDC_OVR1CLUT150) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT151_REG_OFST      (0xC5C)             /**< (LCDC_OVR1CLUT151) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT152_REG_OFST      (0xC60)             /**< (LCDC_OVR1CLUT152) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT153_REG_OFST      (0xC64)             /**< (LCDC_OVR1CLUT153) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT154_REG_OFST      (0xC68)             /**< (LCDC_OVR1CLUT154) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT155_REG_OFST      (0xC6C)             /**< (LCDC_OVR1CLUT155) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT156_REG_OFST      (0xC70)             /**< (LCDC_OVR1CLUT156) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT157_REG_OFST      (0xC74)             /**< (LCDC_OVR1CLUT157) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT158_REG_OFST      (0xC78)             /**< (LCDC_OVR1CLUT158) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT159_REG_OFST      (0xC7C)             /**< (LCDC_OVR1CLUT159) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT160_REG_OFST      (0xC80)             /**< (LCDC_OVR1CLUT160) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT161_REG_OFST      (0xC84)             /**< (LCDC_OVR1CLUT161) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT162_REG_OFST      (0xC88)             /**< (LCDC_OVR1CLUT162) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT163_REG_OFST      (0xC8C)             /**< (LCDC_OVR1CLUT163) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT164_REG_OFST      (0xC90)             /**< (LCDC_OVR1CLUT164) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT165_REG_OFST      (0xC94)             /**< (LCDC_OVR1CLUT165) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT166_REG_OFST      (0xC98)             /**< (LCDC_OVR1CLUT166) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT167_REG_OFST      (0xC9C)             /**< (LCDC_OVR1CLUT167) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT168_REG_OFST      (0xCA0)             /**< (LCDC_OVR1CLUT168) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT169_REG_OFST      (0xCA4)             /**< (LCDC_OVR1CLUT169) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT170_REG_OFST      (0xCA8)             /**< (LCDC_OVR1CLUT170) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT171_REG_OFST      (0xCAC)             /**< (LCDC_OVR1CLUT171) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT172_REG_OFST      (0xCB0)             /**< (LCDC_OVR1CLUT172) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT173_REG_OFST      (0xCB4)             /**< (LCDC_OVR1CLUT173) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT174_REG_OFST      (0xCB8)             /**< (LCDC_OVR1CLUT174) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT175_REG_OFST      (0xCBC)             /**< (LCDC_OVR1CLUT175) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT176_REG_OFST      (0xCC0)             /**< (LCDC_OVR1CLUT176) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT177_REG_OFST      (0xCC4)             /**< (LCDC_OVR1CLUT177) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT178_REG_OFST      (0xCC8)             /**< (LCDC_OVR1CLUT178) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT179_REG_OFST      (0xCCC)             /**< (LCDC_OVR1CLUT179) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT180_REG_OFST      (0xCD0)             /**< (LCDC_OVR1CLUT180) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT181_REG_OFST      (0xCD4)             /**< (LCDC_OVR1CLUT181) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT182_REG_OFST      (0xCD8)             /**< (LCDC_OVR1CLUT182) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT183_REG_OFST      (0xCDC)             /**< (LCDC_OVR1CLUT183) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT184_REG_OFST      (0xCE0)             /**< (LCDC_OVR1CLUT184) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT185_REG_OFST      (0xCE4)             /**< (LCDC_OVR1CLUT185) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT186_REG_OFST      (0xCE8)             /**< (LCDC_OVR1CLUT186) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT187_REG_OFST      (0xCEC)             /**< (LCDC_OVR1CLUT187) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT188_REG_OFST      (0xCF0)             /**< (LCDC_OVR1CLUT188) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT189_REG_OFST      (0xCF4)             /**< (LCDC_OVR1CLUT189) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT190_REG_OFST      (0xCF8)             /**< (LCDC_OVR1CLUT190) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT191_REG_OFST      (0xCFC)             /**< (LCDC_OVR1CLUT191) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT192_REG_OFST      (0xD00)             /**< (LCDC_OVR1CLUT192) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT193_REG_OFST      (0xD04)             /**< (LCDC_OVR1CLUT193) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT194_REG_OFST      (0xD08)             /**< (LCDC_OVR1CLUT194) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT195_REG_OFST      (0xD0C)             /**< (LCDC_OVR1CLUT195) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT196_REG_OFST      (0xD10)             /**< (LCDC_OVR1CLUT196) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT197_REG_OFST      (0xD14)             /**< (LCDC_OVR1CLUT197) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT198_REG_OFST      (0xD18)             /**< (LCDC_OVR1CLUT198) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT199_REG_OFST      (0xD1C)             /**< (LCDC_OVR1CLUT199) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT200_REG_OFST      (0xD20)             /**< (LCDC_OVR1CLUT200) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT201_REG_OFST      (0xD24)             /**< (LCDC_OVR1CLUT201) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT202_REG_OFST      (0xD28)             /**< (LCDC_OVR1CLUT202) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT203_REG_OFST      (0xD2C)             /**< (LCDC_OVR1CLUT203) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT204_REG_OFST      (0xD30)             /**< (LCDC_OVR1CLUT204) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT205_REG_OFST      (0xD34)             /**< (LCDC_OVR1CLUT205) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT206_REG_OFST      (0xD38)             /**< (LCDC_OVR1CLUT206) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT207_REG_OFST      (0xD3C)             /**< (LCDC_OVR1CLUT207) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT208_REG_OFST      (0xD40)             /**< (LCDC_OVR1CLUT208) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT209_REG_OFST      (0xD44)             /**< (LCDC_OVR1CLUT209) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT210_REG_OFST      (0xD48)             /**< (LCDC_OVR1CLUT210) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT211_REG_OFST      (0xD4C)             /**< (LCDC_OVR1CLUT211) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT212_REG_OFST      (0xD50)             /**< (LCDC_OVR1CLUT212) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT213_REG_OFST      (0xD54)             /**< (LCDC_OVR1CLUT213) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT214_REG_OFST      (0xD58)             /**< (LCDC_OVR1CLUT214) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT215_REG_OFST      (0xD5C)             /**< (LCDC_OVR1CLUT215) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT216_REG_OFST      (0xD60)             /**< (LCDC_OVR1CLUT216) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT217_REG_OFST      (0xD64)             /**< (LCDC_OVR1CLUT217) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT218_REG_OFST      (0xD68)             /**< (LCDC_OVR1CLUT218) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT219_REG_OFST      (0xD6C)             /**< (LCDC_OVR1CLUT219) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT220_REG_OFST      (0xD70)             /**< (LCDC_OVR1CLUT220) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT221_REG_OFST      (0xD74)             /**< (LCDC_OVR1CLUT221) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT222_REG_OFST      (0xD78)             /**< (LCDC_OVR1CLUT222) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT223_REG_OFST      (0xD7C)             /**< (LCDC_OVR1CLUT223) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT224_REG_OFST      (0xD80)             /**< (LCDC_OVR1CLUT224) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT225_REG_OFST      (0xD84)             /**< (LCDC_OVR1CLUT225) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT226_REG_OFST      (0xD88)             /**< (LCDC_OVR1CLUT226) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT227_REG_OFST      (0xD8C)             /**< (LCDC_OVR1CLUT227) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT228_REG_OFST      (0xD90)             /**< (LCDC_OVR1CLUT228) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT229_REG_OFST      (0xD94)             /**< (LCDC_OVR1CLUT229) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT230_REG_OFST      (0xD98)             /**< (LCDC_OVR1CLUT230) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT231_REG_OFST      (0xD9C)             /**< (LCDC_OVR1CLUT231) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT232_REG_OFST      (0xDA0)             /**< (LCDC_OVR1CLUT232) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT233_REG_OFST      (0xDA4)             /**< (LCDC_OVR1CLUT233) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT234_REG_OFST      (0xDA8)             /**< (LCDC_OVR1CLUT234) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT235_REG_OFST      (0xDAC)             /**< (LCDC_OVR1CLUT235) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT236_REG_OFST      (0xDB0)             /**< (LCDC_OVR1CLUT236) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT237_REG_OFST      (0xDB4)             /**< (LCDC_OVR1CLUT237) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT238_REG_OFST      (0xDB8)             /**< (LCDC_OVR1CLUT238) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT239_REG_OFST      (0xDBC)             /**< (LCDC_OVR1CLUT239) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT240_REG_OFST      (0xDC0)             /**< (LCDC_OVR1CLUT240) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT241_REG_OFST      (0xDC4)             /**< (LCDC_OVR1CLUT241) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT242_REG_OFST      (0xDC8)             /**< (LCDC_OVR1CLUT242) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT243_REG_OFST      (0xDCC)             /**< (LCDC_OVR1CLUT243) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT244_REG_OFST      (0xDD0)             /**< (LCDC_OVR1CLUT244) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT245_REG_OFST      (0xDD4)             /**< (LCDC_OVR1CLUT245) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT246_REG_OFST      (0xDD8)             /**< (LCDC_OVR1CLUT246) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT247_REG_OFST      (0xDDC)             /**< (LCDC_OVR1CLUT247) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT248_REG_OFST      (0xDE0)             /**< (LCDC_OVR1CLUT248) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT249_REG_OFST      (0xDE4)             /**< (LCDC_OVR1CLUT249) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT250_REG_OFST      (0xDE8)             /**< (LCDC_OVR1CLUT250) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT251_REG_OFST      (0xDEC)             /**< (LCDC_OVR1CLUT251) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT252_REG_OFST      (0xDF0)             /**< (LCDC_OVR1CLUT252) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT253_REG_OFST      (0xDF4)             /**< (LCDC_OVR1CLUT253) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT254_REG_OFST      (0xDF8)             /**< (LCDC_OVR1CLUT254) Overlay 1 CLUT Register Offset */
+#define LCDC_OVR1CLUT255_REG_OFST      (0xDFC)             /**< (LCDC_OVR1CLUT255) Overlay 1 CLUT Register Offset */
 #define LCDC_OVR2CLUT_REG_OFST         (0xE00)             /**< (LCDC_OVR2CLUT) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT0_REG_OFST        (0xE00)             /**< (LCDC_OVR2CLUT0) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT1_REG_OFST        (0xE04)             /**< (LCDC_OVR2CLUT1) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT2_REG_OFST        (0xE08)             /**< (LCDC_OVR2CLUT2) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT3_REG_OFST        (0xE0C)             /**< (LCDC_OVR2CLUT3) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT4_REG_OFST        (0xE10)             /**< (LCDC_OVR2CLUT4) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT5_REG_OFST        (0xE14)             /**< (LCDC_OVR2CLUT5) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT6_REG_OFST        (0xE18)             /**< (LCDC_OVR2CLUT6) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT7_REG_OFST        (0xE1C)             /**< (LCDC_OVR2CLUT7) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT8_REG_OFST        (0xE20)             /**< (LCDC_OVR2CLUT8) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT9_REG_OFST        (0xE24)             /**< (LCDC_OVR2CLUT9) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT10_REG_OFST       (0xE28)             /**< (LCDC_OVR2CLUT10) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT11_REG_OFST       (0xE2C)             /**< (LCDC_OVR2CLUT11) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT12_REG_OFST       (0xE30)             /**< (LCDC_OVR2CLUT12) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT13_REG_OFST       (0xE34)             /**< (LCDC_OVR2CLUT13) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT14_REG_OFST       (0xE38)             /**< (LCDC_OVR2CLUT14) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT15_REG_OFST       (0xE3C)             /**< (LCDC_OVR2CLUT15) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT16_REG_OFST       (0xE40)             /**< (LCDC_OVR2CLUT16) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT17_REG_OFST       (0xE44)             /**< (LCDC_OVR2CLUT17) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT18_REG_OFST       (0xE48)             /**< (LCDC_OVR2CLUT18) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT19_REG_OFST       (0xE4C)             /**< (LCDC_OVR2CLUT19) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT20_REG_OFST       (0xE50)             /**< (LCDC_OVR2CLUT20) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT21_REG_OFST       (0xE54)             /**< (LCDC_OVR2CLUT21) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT22_REG_OFST       (0xE58)             /**< (LCDC_OVR2CLUT22) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT23_REG_OFST       (0xE5C)             /**< (LCDC_OVR2CLUT23) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT24_REG_OFST       (0xE60)             /**< (LCDC_OVR2CLUT24) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT25_REG_OFST       (0xE64)             /**< (LCDC_OVR2CLUT25) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT26_REG_OFST       (0xE68)             /**< (LCDC_OVR2CLUT26) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT27_REG_OFST       (0xE6C)             /**< (LCDC_OVR2CLUT27) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT28_REG_OFST       (0xE70)             /**< (LCDC_OVR2CLUT28) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT29_REG_OFST       (0xE74)             /**< (LCDC_OVR2CLUT29) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT30_REG_OFST       (0xE78)             /**< (LCDC_OVR2CLUT30) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT31_REG_OFST       (0xE7C)             /**< (LCDC_OVR2CLUT31) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT32_REG_OFST       (0xE80)             /**< (LCDC_OVR2CLUT32) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT33_REG_OFST       (0xE84)             /**< (LCDC_OVR2CLUT33) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT34_REG_OFST       (0xE88)             /**< (LCDC_OVR2CLUT34) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT35_REG_OFST       (0xE8C)             /**< (LCDC_OVR2CLUT35) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT36_REG_OFST       (0xE90)             /**< (LCDC_OVR2CLUT36) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT37_REG_OFST       (0xE94)             /**< (LCDC_OVR2CLUT37) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT38_REG_OFST       (0xE98)             /**< (LCDC_OVR2CLUT38) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT39_REG_OFST       (0xE9C)             /**< (LCDC_OVR2CLUT39) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT40_REG_OFST       (0xEA0)             /**< (LCDC_OVR2CLUT40) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT41_REG_OFST       (0xEA4)             /**< (LCDC_OVR2CLUT41) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT42_REG_OFST       (0xEA8)             /**< (LCDC_OVR2CLUT42) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT43_REG_OFST       (0xEAC)             /**< (LCDC_OVR2CLUT43) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT44_REG_OFST       (0xEB0)             /**< (LCDC_OVR2CLUT44) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT45_REG_OFST       (0xEB4)             /**< (LCDC_OVR2CLUT45) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT46_REG_OFST       (0xEB8)             /**< (LCDC_OVR2CLUT46) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT47_REG_OFST       (0xEBC)             /**< (LCDC_OVR2CLUT47) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT48_REG_OFST       (0xEC0)             /**< (LCDC_OVR2CLUT48) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT49_REG_OFST       (0xEC4)             /**< (LCDC_OVR2CLUT49) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT50_REG_OFST       (0xEC8)             /**< (LCDC_OVR2CLUT50) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT51_REG_OFST       (0xECC)             /**< (LCDC_OVR2CLUT51) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT52_REG_OFST       (0xED0)             /**< (LCDC_OVR2CLUT52) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT53_REG_OFST       (0xED4)             /**< (LCDC_OVR2CLUT53) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT54_REG_OFST       (0xED8)             /**< (LCDC_OVR2CLUT54) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT55_REG_OFST       (0xEDC)             /**< (LCDC_OVR2CLUT55) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT56_REG_OFST       (0xEE0)             /**< (LCDC_OVR2CLUT56) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT57_REG_OFST       (0xEE4)             /**< (LCDC_OVR2CLUT57) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT58_REG_OFST       (0xEE8)             /**< (LCDC_OVR2CLUT58) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT59_REG_OFST       (0xEEC)             /**< (LCDC_OVR2CLUT59) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT60_REG_OFST       (0xEF0)             /**< (LCDC_OVR2CLUT60) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT61_REG_OFST       (0xEF4)             /**< (LCDC_OVR2CLUT61) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT62_REG_OFST       (0xEF8)             /**< (LCDC_OVR2CLUT62) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT63_REG_OFST       (0xEFC)             /**< (LCDC_OVR2CLUT63) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT64_REG_OFST       (0xF00)             /**< (LCDC_OVR2CLUT64) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT65_REG_OFST       (0xF04)             /**< (LCDC_OVR2CLUT65) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT66_REG_OFST       (0xF08)             /**< (LCDC_OVR2CLUT66) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT67_REG_OFST       (0xF0C)             /**< (LCDC_OVR2CLUT67) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT68_REG_OFST       (0xF10)             /**< (LCDC_OVR2CLUT68) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT69_REG_OFST       (0xF14)             /**< (LCDC_OVR2CLUT69) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT70_REG_OFST       (0xF18)             /**< (LCDC_OVR2CLUT70) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT71_REG_OFST       (0xF1C)             /**< (LCDC_OVR2CLUT71) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT72_REG_OFST       (0xF20)             /**< (LCDC_OVR2CLUT72) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT73_REG_OFST       (0xF24)             /**< (LCDC_OVR2CLUT73) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT74_REG_OFST       (0xF28)             /**< (LCDC_OVR2CLUT74) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT75_REG_OFST       (0xF2C)             /**< (LCDC_OVR2CLUT75) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT76_REG_OFST       (0xF30)             /**< (LCDC_OVR2CLUT76) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT77_REG_OFST       (0xF34)             /**< (LCDC_OVR2CLUT77) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT78_REG_OFST       (0xF38)             /**< (LCDC_OVR2CLUT78) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT79_REG_OFST       (0xF3C)             /**< (LCDC_OVR2CLUT79) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT80_REG_OFST       (0xF40)             /**< (LCDC_OVR2CLUT80) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT81_REG_OFST       (0xF44)             /**< (LCDC_OVR2CLUT81) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT82_REG_OFST       (0xF48)             /**< (LCDC_OVR2CLUT82) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT83_REG_OFST       (0xF4C)             /**< (LCDC_OVR2CLUT83) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT84_REG_OFST       (0xF50)             /**< (LCDC_OVR2CLUT84) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT85_REG_OFST       (0xF54)             /**< (LCDC_OVR2CLUT85) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT86_REG_OFST       (0xF58)             /**< (LCDC_OVR2CLUT86) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT87_REG_OFST       (0xF5C)             /**< (LCDC_OVR2CLUT87) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT88_REG_OFST       (0xF60)             /**< (LCDC_OVR2CLUT88) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT89_REG_OFST       (0xF64)             /**< (LCDC_OVR2CLUT89) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT90_REG_OFST       (0xF68)             /**< (LCDC_OVR2CLUT90) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT91_REG_OFST       (0xF6C)             /**< (LCDC_OVR2CLUT91) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT92_REG_OFST       (0xF70)             /**< (LCDC_OVR2CLUT92) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT93_REG_OFST       (0xF74)             /**< (LCDC_OVR2CLUT93) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT94_REG_OFST       (0xF78)             /**< (LCDC_OVR2CLUT94) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT95_REG_OFST       (0xF7C)             /**< (LCDC_OVR2CLUT95) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT96_REG_OFST       (0xF80)             /**< (LCDC_OVR2CLUT96) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT97_REG_OFST       (0xF84)             /**< (LCDC_OVR2CLUT97) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT98_REG_OFST       (0xF88)             /**< (LCDC_OVR2CLUT98) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT99_REG_OFST       (0xF8C)             /**< (LCDC_OVR2CLUT99) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT100_REG_OFST      (0xF90)             /**< (LCDC_OVR2CLUT100) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT101_REG_OFST      (0xF94)             /**< (LCDC_OVR2CLUT101) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT102_REG_OFST      (0xF98)             /**< (LCDC_OVR2CLUT102) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT103_REG_OFST      (0xF9C)             /**< (LCDC_OVR2CLUT103) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT104_REG_OFST      (0xFA0)             /**< (LCDC_OVR2CLUT104) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT105_REG_OFST      (0xFA4)             /**< (LCDC_OVR2CLUT105) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT106_REG_OFST      (0xFA8)             /**< (LCDC_OVR2CLUT106) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT107_REG_OFST      (0xFAC)             /**< (LCDC_OVR2CLUT107) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT108_REG_OFST      (0xFB0)             /**< (LCDC_OVR2CLUT108) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT109_REG_OFST      (0xFB4)             /**< (LCDC_OVR2CLUT109) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT110_REG_OFST      (0xFB8)             /**< (LCDC_OVR2CLUT110) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT111_REG_OFST      (0xFBC)             /**< (LCDC_OVR2CLUT111) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT112_REG_OFST      (0xFC0)             /**< (LCDC_OVR2CLUT112) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT113_REG_OFST      (0xFC4)             /**< (LCDC_OVR2CLUT113) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT114_REG_OFST      (0xFC8)             /**< (LCDC_OVR2CLUT114) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT115_REG_OFST      (0xFCC)             /**< (LCDC_OVR2CLUT115) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT116_REG_OFST      (0xFD0)             /**< (LCDC_OVR2CLUT116) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT117_REG_OFST      (0xFD4)             /**< (LCDC_OVR2CLUT117) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT118_REG_OFST      (0xFD8)             /**< (LCDC_OVR2CLUT118) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT119_REG_OFST      (0xFDC)             /**< (LCDC_OVR2CLUT119) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT120_REG_OFST      (0xFE0)             /**< (LCDC_OVR2CLUT120) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT121_REG_OFST      (0xFE4)             /**< (LCDC_OVR2CLUT121) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT122_REG_OFST      (0xFE8)             /**< (LCDC_OVR2CLUT122) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT123_REG_OFST      (0xFEC)             /**< (LCDC_OVR2CLUT123) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT124_REG_OFST      (0xFF0)             /**< (LCDC_OVR2CLUT124) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT125_REG_OFST      (0xFF4)             /**< (LCDC_OVR2CLUT125) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT126_REG_OFST      (0xFF8)             /**< (LCDC_OVR2CLUT126) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT127_REG_OFST      (0xFFC)             /**< (LCDC_OVR2CLUT127) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT128_REG_OFST      (0x1000)            /**< (LCDC_OVR2CLUT128) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT129_REG_OFST      (0x1004)            /**< (LCDC_OVR2CLUT129) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT130_REG_OFST      (0x1008)            /**< (LCDC_OVR2CLUT130) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT131_REG_OFST      (0x100C)            /**< (LCDC_OVR2CLUT131) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT132_REG_OFST      (0x1010)            /**< (LCDC_OVR2CLUT132) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT133_REG_OFST      (0x1014)            /**< (LCDC_OVR2CLUT133) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT134_REG_OFST      (0x1018)            /**< (LCDC_OVR2CLUT134) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT135_REG_OFST      (0x101C)            /**< (LCDC_OVR2CLUT135) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT136_REG_OFST      (0x1020)            /**< (LCDC_OVR2CLUT136) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT137_REG_OFST      (0x1024)            /**< (LCDC_OVR2CLUT137) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT138_REG_OFST      (0x1028)            /**< (LCDC_OVR2CLUT138) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT139_REG_OFST      (0x102C)            /**< (LCDC_OVR2CLUT139) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT140_REG_OFST      (0x1030)            /**< (LCDC_OVR2CLUT140) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT141_REG_OFST      (0x1034)            /**< (LCDC_OVR2CLUT141) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT142_REG_OFST      (0x1038)            /**< (LCDC_OVR2CLUT142) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT143_REG_OFST      (0x103C)            /**< (LCDC_OVR2CLUT143) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT144_REG_OFST      (0x1040)            /**< (LCDC_OVR2CLUT144) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT145_REG_OFST      (0x1044)            /**< (LCDC_OVR2CLUT145) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT146_REG_OFST      (0x1048)            /**< (LCDC_OVR2CLUT146) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT147_REG_OFST      (0x104C)            /**< (LCDC_OVR2CLUT147) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT148_REG_OFST      (0x1050)            /**< (LCDC_OVR2CLUT148) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT149_REG_OFST      (0x1054)            /**< (LCDC_OVR2CLUT149) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT150_REG_OFST      (0x1058)            /**< (LCDC_OVR2CLUT150) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT151_REG_OFST      (0x105C)            /**< (LCDC_OVR2CLUT151) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT152_REG_OFST      (0x1060)            /**< (LCDC_OVR2CLUT152) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT153_REG_OFST      (0x1064)            /**< (LCDC_OVR2CLUT153) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT154_REG_OFST      (0x1068)            /**< (LCDC_OVR2CLUT154) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT155_REG_OFST      (0x106C)            /**< (LCDC_OVR2CLUT155) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT156_REG_OFST      (0x1070)            /**< (LCDC_OVR2CLUT156) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT157_REG_OFST      (0x1074)            /**< (LCDC_OVR2CLUT157) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT158_REG_OFST      (0x1078)            /**< (LCDC_OVR2CLUT158) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT159_REG_OFST      (0x107C)            /**< (LCDC_OVR2CLUT159) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT160_REG_OFST      (0x1080)            /**< (LCDC_OVR2CLUT160) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT161_REG_OFST      (0x1084)            /**< (LCDC_OVR2CLUT161) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT162_REG_OFST      (0x1088)            /**< (LCDC_OVR2CLUT162) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT163_REG_OFST      (0x108C)            /**< (LCDC_OVR2CLUT163) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT164_REG_OFST      (0x1090)            /**< (LCDC_OVR2CLUT164) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT165_REG_OFST      (0x1094)            /**< (LCDC_OVR2CLUT165) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT166_REG_OFST      (0x1098)            /**< (LCDC_OVR2CLUT166) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT167_REG_OFST      (0x109C)            /**< (LCDC_OVR2CLUT167) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT168_REG_OFST      (0x10A0)            /**< (LCDC_OVR2CLUT168) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT169_REG_OFST      (0x10A4)            /**< (LCDC_OVR2CLUT169) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT170_REG_OFST      (0x10A8)            /**< (LCDC_OVR2CLUT170) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT171_REG_OFST      (0x10AC)            /**< (LCDC_OVR2CLUT171) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT172_REG_OFST      (0x10B0)            /**< (LCDC_OVR2CLUT172) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT173_REG_OFST      (0x10B4)            /**< (LCDC_OVR2CLUT173) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT174_REG_OFST      (0x10B8)            /**< (LCDC_OVR2CLUT174) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT175_REG_OFST      (0x10BC)            /**< (LCDC_OVR2CLUT175) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT176_REG_OFST      (0x10C0)            /**< (LCDC_OVR2CLUT176) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT177_REG_OFST      (0x10C4)            /**< (LCDC_OVR2CLUT177) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT178_REG_OFST      (0x10C8)            /**< (LCDC_OVR2CLUT178) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT179_REG_OFST      (0x10CC)            /**< (LCDC_OVR2CLUT179) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT180_REG_OFST      (0x10D0)            /**< (LCDC_OVR2CLUT180) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT181_REG_OFST      (0x10D4)            /**< (LCDC_OVR2CLUT181) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT182_REG_OFST      (0x10D8)            /**< (LCDC_OVR2CLUT182) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT183_REG_OFST      (0x10DC)            /**< (LCDC_OVR2CLUT183) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT184_REG_OFST      (0x10E0)            /**< (LCDC_OVR2CLUT184) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT185_REG_OFST      (0x10E4)            /**< (LCDC_OVR2CLUT185) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT186_REG_OFST      (0x10E8)            /**< (LCDC_OVR2CLUT186) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT187_REG_OFST      (0x10EC)            /**< (LCDC_OVR2CLUT187) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT188_REG_OFST      (0x10F0)            /**< (LCDC_OVR2CLUT188) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT189_REG_OFST      (0x10F4)            /**< (LCDC_OVR2CLUT189) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT190_REG_OFST      (0x10F8)            /**< (LCDC_OVR2CLUT190) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT191_REG_OFST      (0x10FC)            /**< (LCDC_OVR2CLUT191) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT192_REG_OFST      (0x1100)            /**< (LCDC_OVR2CLUT192) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT193_REG_OFST      (0x1104)            /**< (LCDC_OVR2CLUT193) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT194_REG_OFST      (0x1108)            /**< (LCDC_OVR2CLUT194) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT195_REG_OFST      (0x110C)            /**< (LCDC_OVR2CLUT195) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT196_REG_OFST      (0x1110)            /**< (LCDC_OVR2CLUT196) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT197_REG_OFST      (0x1114)            /**< (LCDC_OVR2CLUT197) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT198_REG_OFST      (0x1118)            /**< (LCDC_OVR2CLUT198) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT199_REG_OFST      (0x111C)            /**< (LCDC_OVR2CLUT199) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT200_REG_OFST      (0x1120)            /**< (LCDC_OVR2CLUT200) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT201_REG_OFST      (0x1124)            /**< (LCDC_OVR2CLUT201) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT202_REG_OFST      (0x1128)            /**< (LCDC_OVR2CLUT202) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT203_REG_OFST      (0x112C)            /**< (LCDC_OVR2CLUT203) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT204_REG_OFST      (0x1130)            /**< (LCDC_OVR2CLUT204) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT205_REG_OFST      (0x1134)            /**< (LCDC_OVR2CLUT205) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT206_REG_OFST      (0x1138)            /**< (LCDC_OVR2CLUT206) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT207_REG_OFST      (0x113C)            /**< (LCDC_OVR2CLUT207) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT208_REG_OFST      (0x1140)            /**< (LCDC_OVR2CLUT208) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT209_REG_OFST      (0x1144)            /**< (LCDC_OVR2CLUT209) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT210_REG_OFST      (0x1148)            /**< (LCDC_OVR2CLUT210) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT211_REG_OFST      (0x114C)            /**< (LCDC_OVR2CLUT211) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT212_REG_OFST      (0x1150)            /**< (LCDC_OVR2CLUT212) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT213_REG_OFST      (0x1154)            /**< (LCDC_OVR2CLUT213) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT214_REG_OFST      (0x1158)            /**< (LCDC_OVR2CLUT214) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT215_REG_OFST      (0x115C)            /**< (LCDC_OVR2CLUT215) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT216_REG_OFST      (0x1160)            /**< (LCDC_OVR2CLUT216) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT217_REG_OFST      (0x1164)            /**< (LCDC_OVR2CLUT217) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT218_REG_OFST      (0x1168)            /**< (LCDC_OVR2CLUT218) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT219_REG_OFST      (0x116C)            /**< (LCDC_OVR2CLUT219) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT220_REG_OFST      (0x1170)            /**< (LCDC_OVR2CLUT220) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT221_REG_OFST      (0x1174)            /**< (LCDC_OVR2CLUT221) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT222_REG_OFST      (0x1178)            /**< (LCDC_OVR2CLUT222) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT223_REG_OFST      (0x117C)            /**< (LCDC_OVR2CLUT223) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT224_REG_OFST      (0x1180)            /**< (LCDC_OVR2CLUT224) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT225_REG_OFST      (0x1184)            /**< (LCDC_OVR2CLUT225) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT226_REG_OFST      (0x1188)            /**< (LCDC_OVR2CLUT226) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT227_REG_OFST      (0x118C)            /**< (LCDC_OVR2CLUT227) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT228_REG_OFST      (0x1190)            /**< (LCDC_OVR2CLUT228) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT229_REG_OFST      (0x1194)            /**< (LCDC_OVR2CLUT229) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT230_REG_OFST      (0x1198)            /**< (LCDC_OVR2CLUT230) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT231_REG_OFST      (0x119C)            /**< (LCDC_OVR2CLUT231) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT232_REG_OFST      (0x11A0)            /**< (LCDC_OVR2CLUT232) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT233_REG_OFST      (0x11A4)            /**< (LCDC_OVR2CLUT233) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT234_REG_OFST      (0x11A8)            /**< (LCDC_OVR2CLUT234) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT235_REG_OFST      (0x11AC)            /**< (LCDC_OVR2CLUT235) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT236_REG_OFST      (0x11B0)            /**< (LCDC_OVR2CLUT236) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT237_REG_OFST      (0x11B4)            /**< (LCDC_OVR2CLUT237) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT238_REG_OFST      (0x11B8)            /**< (LCDC_OVR2CLUT238) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT239_REG_OFST      (0x11BC)            /**< (LCDC_OVR2CLUT239) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT240_REG_OFST      (0x11C0)            /**< (LCDC_OVR2CLUT240) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT241_REG_OFST      (0x11C4)            /**< (LCDC_OVR2CLUT241) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT242_REG_OFST      (0x11C8)            /**< (LCDC_OVR2CLUT242) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT243_REG_OFST      (0x11CC)            /**< (LCDC_OVR2CLUT243) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT244_REG_OFST      (0x11D0)            /**< (LCDC_OVR2CLUT244) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT245_REG_OFST      (0x11D4)            /**< (LCDC_OVR2CLUT245) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT246_REG_OFST      (0x11D8)            /**< (LCDC_OVR2CLUT246) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT247_REG_OFST      (0x11DC)            /**< (LCDC_OVR2CLUT247) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT248_REG_OFST      (0x11E0)            /**< (LCDC_OVR2CLUT248) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT249_REG_OFST      (0x11E4)            /**< (LCDC_OVR2CLUT249) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT250_REG_OFST      (0x11E8)            /**< (LCDC_OVR2CLUT250) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT251_REG_OFST      (0x11EC)            /**< (LCDC_OVR2CLUT251) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT252_REG_OFST      (0x11F0)            /**< (LCDC_OVR2CLUT252) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT253_REG_OFST      (0x11F4)            /**< (LCDC_OVR2CLUT253) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT254_REG_OFST      (0x11F8)            /**< (LCDC_OVR2CLUT254) Overlay 2 CLUT Register Offset */
+#define LCDC_OVR2CLUT255_REG_OFST      (0x11FC)            /**< (LCDC_OVR2CLUT255) Overlay 2 CLUT Register Offset */
 #define LCDC_HEOCLUT_REG_OFST          (0x1200)            /**< (LCDC_HEOCLUT) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT0_REG_OFST         (0x1200)            /**< (LCDC_HEOCLUT0) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT1_REG_OFST         (0x1204)            /**< (LCDC_HEOCLUT1) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT2_REG_OFST         (0x1208)            /**< (LCDC_HEOCLUT2) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT3_REG_OFST         (0x120C)            /**< (LCDC_HEOCLUT3) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT4_REG_OFST         (0x1210)            /**< (LCDC_HEOCLUT4) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT5_REG_OFST         (0x1214)            /**< (LCDC_HEOCLUT5) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT6_REG_OFST         (0x1218)            /**< (LCDC_HEOCLUT6) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT7_REG_OFST         (0x121C)            /**< (LCDC_HEOCLUT7) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT8_REG_OFST         (0x1220)            /**< (LCDC_HEOCLUT8) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT9_REG_OFST         (0x1224)            /**< (LCDC_HEOCLUT9) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT10_REG_OFST        (0x1228)            /**< (LCDC_HEOCLUT10) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT11_REG_OFST        (0x122C)            /**< (LCDC_HEOCLUT11) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT12_REG_OFST        (0x1230)            /**< (LCDC_HEOCLUT12) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT13_REG_OFST        (0x1234)            /**< (LCDC_HEOCLUT13) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT14_REG_OFST        (0x1238)            /**< (LCDC_HEOCLUT14) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT15_REG_OFST        (0x123C)            /**< (LCDC_HEOCLUT15) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT16_REG_OFST        (0x1240)            /**< (LCDC_HEOCLUT16) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT17_REG_OFST        (0x1244)            /**< (LCDC_HEOCLUT17) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT18_REG_OFST        (0x1248)            /**< (LCDC_HEOCLUT18) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT19_REG_OFST        (0x124C)            /**< (LCDC_HEOCLUT19) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT20_REG_OFST        (0x1250)            /**< (LCDC_HEOCLUT20) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT21_REG_OFST        (0x1254)            /**< (LCDC_HEOCLUT21) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT22_REG_OFST        (0x1258)            /**< (LCDC_HEOCLUT22) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT23_REG_OFST        (0x125C)            /**< (LCDC_HEOCLUT23) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT24_REG_OFST        (0x1260)            /**< (LCDC_HEOCLUT24) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT25_REG_OFST        (0x1264)            /**< (LCDC_HEOCLUT25) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT26_REG_OFST        (0x1268)            /**< (LCDC_HEOCLUT26) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT27_REG_OFST        (0x126C)            /**< (LCDC_HEOCLUT27) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT28_REG_OFST        (0x1270)            /**< (LCDC_HEOCLUT28) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT29_REG_OFST        (0x1274)            /**< (LCDC_HEOCLUT29) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT30_REG_OFST        (0x1278)            /**< (LCDC_HEOCLUT30) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT31_REG_OFST        (0x127C)            /**< (LCDC_HEOCLUT31) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT32_REG_OFST        (0x1280)            /**< (LCDC_HEOCLUT32) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT33_REG_OFST        (0x1284)            /**< (LCDC_HEOCLUT33) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT34_REG_OFST        (0x1288)            /**< (LCDC_HEOCLUT34) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT35_REG_OFST        (0x128C)            /**< (LCDC_HEOCLUT35) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT36_REG_OFST        (0x1290)            /**< (LCDC_HEOCLUT36) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT37_REG_OFST        (0x1294)            /**< (LCDC_HEOCLUT37) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT38_REG_OFST        (0x1298)            /**< (LCDC_HEOCLUT38) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT39_REG_OFST        (0x129C)            /**< (LCDC_HEOCLUT39) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT40_REG_OFST        (0x12A0)            /**< (LCDC_HEOCLUT40) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT41_REG_OFST        (0x12A4)            /**< (LCDC_HEOCLUT41) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT42_REG_OFST        (0x12A8)            /**< (LCDC_HEOCLUT42) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT43_REG_OFST        (0x12AC)            /**< (LCDC_HEOCLUT43) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT44_REG_OFST        (0x12B0)            /**< (LCDC_HEOCLUT44) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT45_REG_OFST        (0x12B4)            /**< (LCDC_HEOCLUT45) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT46_REG_OFST        (0x12B8)            /**< (LCDC_HEOCLUT46) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT47_REG_OFST        (0x12BC)            /**< (LCDC_HEOCLUT47) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT48_REG_OFST        (0x12C0)            /**< (LCDC_HEOCLUT48) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT49_REG_OFST        (0x12C4)            /**< (LCDC_HEOCLUT49) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT50_REG_OFST        (0x12C8)            /**< (LCDC_HEOCLUT50) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT51_REG_OFST        (0x12CC)            /**< (LCDC_HEOCLUT51) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT52_REG_OFST        (0x12D0)            /**< (LCDC_HEOCLUT52) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT53_REG_OFST        (0x12D4)            /**< (LCDC_HEOCLUT53) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT54_REG_OFST        (0x12D8)            /**< (LCDC_HEOCLUT54) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT55_REG_OFST        (0x12DC)            /**< (LCDC_HEOCLUT55) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT56_REG_OFST        (0x12E0)            /**< (LCDC_HEOCLUT56) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT57_REG_OFST        (0x12E4)            /**< (LCDC_HEOCLUT57) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT58_REG_OFST        (0x12E8)            /**< (LCDC_HEOCLUT58) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT59_REG_OFST        (0x12EC)            /**< (LCDC_HEOCLUT59) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT60_REG_OFST        (0x12F0)            /**< (LCDC_HEOCLUT60) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT61_REG_OFST        (0x12F4)            /**< (LCDC_HEOCLUT61) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT62_REG_OFST        (0x12F8)            /**< (LCDC_HEOCLUT62) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT63_REG_OFST        (0x12FC)            /**< (LCDC_HEOCLUT63) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT64_REG_OFST        (0x1300)            /**< (LCDC_HEOCLUT64) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT65_REG_OFST        (0x1304)            /**< (LCDC_HEOCLUT65) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT66_REG_OFST        (0x1308)            /**< (LCDC_HEOCLUT66) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT67_REG_OFST        (0x130C)            /**< (LCDC_HEOCLUT67) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT68_REG_OFST        (0x1310)            /**< (LCDC_HEOCLUT68) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT69_REG_OFST        (0x1314)            /**< (LCDC_HEOCLUT69) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT70_REG_OFST        (0x1318)            /**< (LCDC_HEOCLUT70) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT71_REG_OFST        (0x131C)            /**< (LCDC_HEOCLUT71) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT72_REG_OFST        (0x1320)            /**< (LCDC_HEOCLUT72) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT73_REG_OFST        (0x1324)            /**< (LCDC_HEOCLUT73) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT74_REG_OFST        (0x1328)            /**< (LCDC_HEOCLUT74) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT75_REG_OFST        (0x132C)            /**< (LCDC_HEOCLUT75) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT76_REG_OFST        (0x1330)            /**< (LCDC_HEOCLUT76) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT77_REG_OFST        (0x1334)            /**< (LCDC_HEOCLUT77) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT78_REG_OFST        (0x1338)            /**< (LCDC_HEOCLUT78) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT79_REG_OFST        (0x133C)            /**< (LCDC_HEOCLUT79) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT80_REG_OFST        (0x1340)            /**< (LCDC_HEOCLUT80) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT81_REG_OFST        (0x1344)            /**< (LCDC_HEOCLUT81) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT82_REG_OFST        (0x1348)            /**< (LCDC_HEOCLUT82) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT83_REG_OFST        (0x134C)            /**< (LCDC_HEOCLUT83) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT84_REG_OFST        (0x1350)            /**< (LCDC_HEOCLUT84) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT85_REG_OFST        (0x1354)            /**< (LCDC_HEOCLUT85) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT86_REG_OFST        (0x1358)            /**< (LCDC_HEOCLUT86) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT87_REG_OFST        (0x135C)            /**< (LCDC_HEOCLUT87) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT88_REG_OFST        (0x1360)            /**< (LCDC_HEOCLUT88) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT89_REG_OFST        (0x1364)            /**< (LCDC_HEOCLUT89) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT90_REG_OFST        (0x1368)            /**< (LCDC_HEOCLUT90) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT91_REG_OFST        (0x136C)            /**< (LCDC_HEOCLUT91) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT92_REG_OFST        (0x1370)            /**< (LCDC_HEOCLUT92) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT93_REG_OFST        (0x1374)            /**< (LCDC_HEOCLUT93) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT94_REG_OFST        (0x1378)            /**< (LCDC_HEOCLUT94) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT95_REG_OFST        (0x137C)            /**< (LCDC_HEOCLUT95) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT96_REG_OFST        (0x1380)            /**< (LCDC_HEOCLUT96) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT97_REG_OFST        (0x1384)            /**< (LCDC_HEOCLUT97) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT98_REG_OFST        (0x1388)            /**< (LCDC_HEOCLUT98) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT99_REG_OFST        (0x138C)            /**< (LCDC_HEOCLUT99) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT100_REG_OFST       (0x1390)            /**< (LCDC_HEOCLUT100) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT101_REG_OFST       (0x1394)            /**< (LCDC_HEOCLUT101) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT102_REG_OFST       (0x1398)            /**< (LCDC_HEOCLUT102) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT103_REG_OFST       (0x139C)            /**< (LCDC_HEOCLUT103) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT104_REG_OFST       (0x13A0)            /**< (LCDC_HEOCLUT104) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT105_REG_OFST       (0x13A4)            /**< (LCDC_HEOCLUT105) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT106_REG_OFST       (0x13A8)            /**< (LCDC_HEOCLUT106) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT107_REG_OFST       (0x13AC)            /**< (LCDC_HEOCLUT107) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT108_REG_OFST       (0x13B0)            /**< (LCDC_HEOCLUT108) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT109_REG_OFST       (0x13B4)            /**< (LCDC_HEOCLUT109) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT110_REG_OFST       (0x13B8)            /**< (LCDC_HEOCLUT110) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT111_REG_OFST       (0x13BC)            /**< (LCDC_HEOCLUT111) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT112_REG_OFST       (0x13C0)            /**< (LCDC_HEOCLUT112) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT113_REG_OFST       (0x13C4)            /**< (LCDC_HEOCLUT113) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT114_REG_OFST       (0x13C8)            /**< (LCDC_HEOCLUT114) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT115_REG_OFST       (0x13CC)            /**< (LCDC_HEOCLUT115) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT116_REG_OFST       (0x13D0)            /**< (LCDC_HEOCLUT116) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT117_REG_OFST       (0x13D4)            /**< (LCDC_HEOCLUT117) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT118_REG_OFST       (0x13D8)            /**< (LCDC_HEOCLUT118) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT119_REG_OFST       (0x13DC)            /**< (LCDC_HEOCLUT119) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT120_REG_OFST       (0x13E0)            /**< (LCDC_HEOCLUT120) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT121_REG_OFST       (0x13E4)            /**< (LCDC_HEOCLUT121) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT122_REG_OFST       (0x13E8)            /**< (LCDC_HEOCLUT122) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT123_REG_OFST       (0x13EC)            /**< (LCDC_HEOCLUT123) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT124_REG_OFST       (0x13F0)            /**< (LCDC_HEOCLUT124) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT125_REG_OFST       (0x13F4)            /**< (LCDC_HEOCLUT125) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT126_REG_OFST       (0x13F8)            /**< (LCDC_HEOCLUT126) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT127_REG_OFST       (0x13FC)            /**< (LCDC_HEOCLUT127) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT128_REG_OFST       (0x1400)            /**< (LCDC_HEOCLUT128) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT129_REG_OFST       (0x1404)            /**< (LCDC_HEOCLUT129) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT130_REG_OFST       (0x1408)            /**< (LCDC_HEOCLUT130) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT131_REG_OFST       (0x140C)            /**< (LCDC_HEOCLUT131) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT132_REG_OFST       (0x1410)            /**< (LCDC_HEOCLUT132) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT133_REG_OFST       (0x1414)            /**< (LCDC_HEOCLUT133) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT134_REG_OFST       (0x1418)            /**< (LCDC_HEOCLUT134) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT135_REG_OFST       (0x141C)            /**< (LCDC_HEOCLUT135) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT136_REG_OFST       (0x1420)            /**< (LCDC_HEOCLUT136) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT137_REG_OFST       (0x1424)            /**< (LCDC_HEOCLUT137) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT138_REG_OFST       (0x1428)            /**< (LCDC_HEOCLUT138) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT139_REG_OFST       (0x142C)            /**< (LCDC_HEOCLUT139) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT140_REG_OFST       (0x1430)            /**< (LCDC_HEOCLUT140) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT141_REG_OFST       (0x1434)            /**< (LCDC_HEOCLUT141) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT142_REG_OFST       (0x1438)            /**< (LCDC_HEOCLUT142) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT143_REG_OFST       (0x143C)            /**< (LCDC_HEOCLUT143) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT144_REG_OFST       (0x1440)            /**< (LCDC_HEOCLUT144) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT145_REG_OFST       (0x1444)            /**< (LCDC_HEOCLUT145) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT146_REG_OFST       (0x1448)            /**< (LCDC_HEOCLUT146) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT147_REG_OFST       (0x144C)            /**< (LCDC_HEOCLUT147) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT148_REG_OFST       (0x1450)            /**< (LCDC_HEOCLUT148) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT149_REG_OFST       (0x1454)            /**< (LCDC_HEOCLUT149) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT150_REG_OFST       (0x1458)            /**< (LCDC_HEOCLUT150) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT151_REG_OFST       (0x145C)            /**< (LCDC_HEOCLUT151) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT152_REG_OFST       (0x1460)            /**< (LCDC_HEOCLUT152) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT153_REG_OFST       (0x1464)            /**< (LCDC_HEOCLUT153) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT154_REG_OFST       (0x1468)            /**< (LCDC_HEOCLUT154) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT155_REG_OFST       (0x146C)            /**< (LCDC_HEOCLUT155) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT156_REG_OFST       (0x1470)            /**< (LCDC_HEOCLUT156) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT157_REG_OFST       (0x1474)            /**< (LCDC_HEOCLUT157) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT158_REG_OFST       (0x1478)            /**< (LCDC_HEOCLUT158) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT159_REG_OFST       (0x147C)            /**< (LCDC_HEOCLUT159) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT160_REG_OFST       (0x1480)            /**< (LCDC_HEOCLUT160) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT161_REG_OFST       (0x1484)            /**< (LCDC_HEOCLUT161) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT162_REG_OFST       (0x1488)            /**< (LCDC_HEOCLUT162) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT163_REG_OFST       (0x148C)            /**< (LCDC_HEOCLUT163) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT164_REG_OFST       (0x1490)            /**< (LCDC_HEOCLUT164) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT165_REG_OFST       (0x1494)            /**< (LCDC_HEOCLUT165) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT166_REG_OFST       (0x1498)            /**< (LCDC_HEOCLUT166) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT167_REG_OFST       (0x149C)            /**< (LCDC_HEOCLUT167) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT168_REG_OFST       (0x14A0)            /**< (LCDC_HEOCLUT168) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT169_REG_OFST       (0x14A4)            /**< (LCDC_HEOCLUT169) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT170_REG_OFST       (0x14A8)            /**< (LCDC_HEOCLUT170) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT171_REG_OFST       (0x14AC)            /**< (LCDC_HEOCLUT171) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT172_REG_OFST       (0x14B0)            /**< (LCDC_HEOCLUT172) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT173_REG_OFST       (0x14B4)            /**< (LCDC_HEOCLUT173) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT174_REG_OFST       (0x14B8)            /**< (LCDC_HEOCLUT174) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT175_REG_OFST       (0x14BC)            /**< (LCDC_HEOCLUT175) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT176_REG_OFST       (0x14C0)            /**< (LCDC_HEOCLUT176) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT177_REG_OFST       (0x14C4)            /**< (LCDC_HEOCLUT177) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT178_REG_OFST       (0x14C8)            /**< (LCDC_HEOCLUT178) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT179_REG_OFST       (0x14CC)            /**< (LCDC_HEOCLUT179) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT180_REG_OFST       (0x14D0)            /**< (LCDC_HEOCLUT180) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT181_REG_OFST       (0x14D4)            /**< (LCDC_HEOCLUT181) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT182_REG_OFST       (0x14D8)            /**< (LCDC_HEOCLUT182) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT183_REG_OFST       (0x14DC)            /**< (LCDC_HEOCLUT183) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT184_REG_OFST       (0x14E0)            /**< (LCDC_HEOCLUT184) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT185_REG_OFST       (0x14E4)            /**< (LCDC_HEOCLUT185) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT186_REG_OFST       (0x14E8)            /**< (LCDC_HEOCLUT186) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT187_REG_OFST       (0x14EC)            /**< (LCDC_HEOCLUT187) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT188_REG_OFST       (0x14F0)            /**< (LCDC_HEOCLUT188) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT189_REG_OFST       (0x14F4)            /**< (LCDC_HEOCLUT189) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT190_REG_OFST       (0x14F8)            /**< (LCDC_HEOCLUT190) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT191_REG_OFST       (0x14FC)            /**< (LCDC_HEOCLUT191) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT192_REG_OFST       (0x1500)            /**< (LCDC_HEOCLUT192) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT193_REG_OFST       (0x1504)            /**< (LCDC_HEOCLUT193) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT194_REG_OFST       (0x1508)            /**< (LCDC_HEOCLUT194) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT195_REG_OFST       (0x150C)            /**< (LCDC_HEOCLUT195) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT196_REG_OFST       (0x1510)            /**< (LCDC_HEOCLUT196) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT197_REG_OFST       (0x1514)            /**< (LCDC_HEOCLUT197) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT198_REG_OFST       (0x1518)            /**< (LCDC_HEOCLUT198) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT199_REG_OFST       (0x151C)            /**< (LCDC_HEOCLUT199) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT200_REG_OFST       (0x1520)            /**< (LCDC_HEOCLUT200) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT201_REG_OFST       (0x1524)            /**< (LCDC_HEOCLUT201) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT202_REG_OFST       (0x1528)            /**< (LCDC_HEOCLUT202) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT203_REG_OFST       (0x152C)            /**< (LCDC_HEOCLUT203) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT204_REG_OFST       (0x1530)            /**< (LCDC_HEOCLUT204) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT205_REG_OFST       (0x1534)            /**< (LCDC_HEOCLUT205) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT206_REG_OFST       (0x1538)            /**< (LCDC_HEOCLUT206) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT207_REG_OFST       (0x153C)            /**< (LCDC_HEOCLUT207) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT208_REG_OFST       (0x1540)            /**< (LCDC_HEOCLUT208) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT209_REG_OFST       (0x1544)            /**< (LCDC_HEOCLUT209) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT210_REG_OFST       (0x1548)            /**< (LCDC_HEOCLUT210) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT211_REG_OFST       (0x154C)            /**< (LCDC_HEOCLUT211) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT212_REG_OFST       (0x1550)            /**< (LCDC_HEOCLUT212) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT213_REG_OFST       (0x1554)            /**< (LCDC_HEOCLUT213) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT214_REG_OFST       (0x1558)            /**< (LCDC_HEOCLUT214) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT215_REG_OFST       (0x155C)            /**< (LCDC_HEOCLUT215) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT216_REG_OFST       (0x1560)            /**< (LCDC_HEOCLUT216) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT217_REG_OFST       (0x1564)            /**< (LCDC_HEOCLUT217) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT218_REG_OFST       (0x1568)            /**< (LCDC_HEOCLUT218) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT219_REG_OFST       (0x156C)            /**< (LCDC_HEOCLUT219) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT220_REG_OFST       (0x1570)            /**< (LCDC_HEOCLUT220) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT221_REG_OFST       (0x1574)            /**< (LCDC_HEOCLUT221) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT222_REG_OFST       (0x1578)            /**< (LCDC_HEOCLUT222) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT223_REG_OFST       (0x157C)            /**< (LCDC_HEOCLUT223) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT224_REG_OFST       (0x1580)            /**< (LCDC_HEOCLUT224) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT225_REG_OFST       (0x1584)            /**< (LCDC_HEOCLUT225) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT226_REG_OFST       (0x1588)            /**< (LCDC_HEOCLUT226) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT227_REG_OFST       (0x158C)            /**< (LCDC_HEOCLUT227) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT228_REG_OFST       (0x1590)            /**< (LCDC_HEOCLUT228) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT229_REG_OFST       (0x1594)            /**< (LCDC_HEOCLUT229) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT230_REG_OFST       (0x1598)            /**< (LCDC_HEOCLUT230) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT231_REG_OFST       (0x159C)            /**< (LCDC_HEOCLUT231) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT232_REG_OFST       (0x15A0)            /**< (LCDC_HEOCLUT232) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT233_REG_OFST       (0x15A4)            /**< (LCDC_HEOCLUT233) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT234_REG_OFST       (0x15A8)            /**< (LCDC_HEOCLUT234) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT235_REG_OFST       (0x15AC)            /**< (LCDC_HEOCLUT235) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT236_REG_OFST       (0x15B0)            /**< (LCDC_HEOCLUT236) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT237_REG_OFST       (0x15B4)            /**< (LCDC_HEOCLUT237) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT238_REG_OFST       (0x15B8)            /**< (LCDC_HEOCLUT238) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT239_REG_OFST       (0x15BC)            /**< (LCDC_HEOCLUT239) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT240_REG_OFST       (0x15C0)            /**< (LCDC_HEOCLUT240) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT241_REG_OFST       (0x15C4)            /**< (LCDC_HEOCLUT241) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT242_REG_OFST       (0x15C8)            /**< (LCDC_HEOCLUT242) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT243_REG_OFST       (0x15CC)            /**< (LCDC_HEOCLUT243) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT244_REG_OFST       (0x15D0)            /**< (LCDC_HEOCLUT244) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT245_REG_OFST       (0x15D4)            /**< (LCDC_HEOCLUT245) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT246_REG_OFST       (0x15D8)            /**< (LCDC_HEOCLUT246) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT247_REG_OFST       (0x15DC)            /**< (LCDC_HEOCLUT247) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT248_REG_OFST       (0x15E0)            /**< (LCDC_HEOCLUT248) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT249_REG_OFST       (0x15E4)            /**< (LCDC_HEOCLUT249) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT250_REG_OFST       (0x15E8)            /**< (LCDC_HEOCLUT250) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT251_REG_OFST       (0x15EC)            /**< (LCDC_HEOCLUT251) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT252_REG_OFST       (0x15F0)            /**< (LCDC_HEOCLUT252) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT253_REG_OFST       (0x15F4)            /**< (LCDC_HEOCLUT253) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT254_REG_OFST       (0x15F8)            /**< (LCDC_HEOCLUT254) High-End Overlay CLUT Register Offset */
+#define LCDC_HEOCLUT255_REG_OFST       (0x15FC)            /**< (LCDC_HEOCLUT255) High-End Overlay CLUT Register Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief LCDC register API structure */

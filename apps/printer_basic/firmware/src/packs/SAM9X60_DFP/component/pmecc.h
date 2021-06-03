@@ -1,7 +1,7 @@
 /**
  * \brief Component description for PMECC
  *
- * Copyright (c) 2020 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2020-05-19T13:57:46Z */
+/* file generated from device description version 2020-12-18T05:22:35Z */
 #ifndef _SAM9X_PMECC_COMPONENT_H_
 #define _SAM9X_PMECC_COMPONENT_H_
 
@@ -172,7 +172,30 @@
 
 /** \brief PMECC register offsets definitions */
 #define PMECC_ECC_REG_OFST             (0x00)              /**< (PMECC_ECC) PMECC ECC 0 Register (sec_num = 0) Offset */
+#define PMECC_ECC0_REG_OFST            (0x00)              /**< (PMECC_ECC0) PMECC ECC 0 Register (sec_num = 0) Offset */
+#define PMECC_ECC1_REG_OFST            (0x04)              /**< (PMECC_ECC1) PMECC ECC 0 Register (sec_num = 0) Offset */
+#define PMECC_ECC2_REG_OFST            (0x08)              /**< (PMECC_ECC2) PMECC ECC 0 Register (sec_num = 0) Offset */
+#define PMECC_ECC3_REG_OFST            (0x0C)              /**< (PMECC_ECC3) PMECC ECC 0 Register (sec_num = 0) Offset */
+#define PMECC_ECC4_REG_OFST            (0x10)              /**< (PMECC_ECC4) PMECC ECC 0 Register (sec_num = 0) Offset */
+#define PMECC_ECC5_REG_OFST            (0x14)              /**< (PMECC_ECC5) PMECC ECC 0 Register (sec_num = 0) Offset */
+#define PMECC_ECC6_REG_OFST            (0x18)              /**< (PMECC_ECC6) PMECC ECC 0 Register (sec_num = 0) Offset */
+#define PMECC_ECC7_REG_OFST            (0x1C)              /**< (PMECC_ECC7) PMECC ECC 0 Register (sec_num = 0) Offset */
+#define PMECC_ECC8_REG_OFST            (0x20)              /**< (PMECC_ECC8) PMECC ECC 0 Register (sec_num = 0) Offset */
+#define PMECC_ECC9_REG_OFST            (0x24)              /**< (PMECC_ECC9) PMECC ECC 0 Register (sec_num = 0) Offset */
+#define PMECC_ECC10_REG_OFST           (0x28)              /**< (PMECC_ECC10) PMECC ECC 0 Register (sec_num = 0) Offset */
 #define PMECC_REM_REG_OFST             (0x00)              /**< (PMECC_REM) PMECC REM 0 Register (sec_num = 0) Offset */
+#define PMECC_REM0_REG_OFST            (0x00)              /**< (PMECC_REM0) PMECC REM 0 Register (sec_num = 0) Offset */
+#define PMECC_REM1_REG_OFST            (0x04)              /**< (PMECC_REM1) PMECC REM 0 Register (sec_num = 0) Offset */
+#define PMECC_REM2_REG_OFST            (0x08)              /**< (PMECC_REM2) PMECC REM 0 Register (sec_num = 0) Offset */
+#define PMECC_REM3_REG_OFST            (0x0C)              /**< (PMECC_REM3) PMECC REM 0 Register (sec_num = 0) Offset */
+#define PMECC_REM4_REG_OFST            (0x10)              /**< (PMECC_REM4) PMECC REM 0 Register (sec_num = 0) Offset */
+#define PMECC_REM5_REG_OFST            (0x14)              /**< (PMECC_REM5) PMECC REM 0 Register (sec_num = 0) Offset */
+#define PMECC_REM6_REG_OFST            (0x18)              /**< (PMECC_REM6) PMECC REM 0 Register (sec_num = 0) Offset */
+#define PMECC_REM7_REG_OFST            (0x1C)              /**< (PMECC_REM7) PMECC REM 0 Register (sec_num = 0) Offset */
+#define PMECC_REM8_REG_OFST            (0x20)              /**< (PMECC_REM8) PMECC REM 0 Register (sec_num = 0) Offset */
+#define PMECC_REM9_REG_OFST            (0x24)              /**< (PMECC_REM9) PMECC REM 0 Register (sec_num = 0) Offset */
+#define PMECC_REM10_REG_OFST           (0x28)              /**< (PMECC_REM10) PMECC REM 0 Register (sec_num = 0) Offset */
+#define PMECC_REM11_REG_OFST           (0x2C)              /**< (PMECC_REM11) PMECC REM 0 Register (sec_num = 0) Offset */
 #define PMECC_CFG_REG_OFST             (0x00)              /**< (PMECC_CFG) PMECC Configuration Register Offset */
 #define PMECC_SAREA_REG_OFST           (0x04)              /**< (PMECC_SAREA) PMECC Spare Area Size Register Offset */
 #define PMECC_SADDR_REG_OFST           (0x08)              /**< (PMECC_SADDR) PMECC Start Address Register Offset */
