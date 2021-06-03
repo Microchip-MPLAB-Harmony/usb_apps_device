@@ -1,7 +1,7 @@
 /**
  * \brief Component description for ISC
  *
- * Copyright (c) 2020 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2020-05-04T06:27:45Z */
+/* file generated from device description version 2020-12-17T18:15:19Z */
 #ifndef _SAMA5D2_ISC_COMPONENT_H_
 #define _SAMA5D2_ISC_COMPONENT_H_
 
@@ -997,8 +997,200 @@
 #define ISC_CC_BB_OB_REG_OFST          (0x90)              /**< (ISC_CC_BB_OB) Color Correction BB OB Register Offset */
 #define ISC_GAM_CTRL_REG_OFST          (0x94)              /**< (ISC_GAM_CTRL) Gamma Correction Control Register Offset */
 #define ISC_GAM_BENTRY_REG_OFST        (0x98)              /**< (ISC_GAM_BENTRY) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY0_REG_OFST       (0x98)              /**< (ISC_GAM_BENTRY0) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY1_REG_OFST       (0x9C)              /**< (ISC_GAM_BENTRY1) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY2_REG_OFST       (0xA0)              /**< (ISC_GAM_BENTRY2) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY3_REG_OFST       (0xA4)              /**< (ISC_GAM_BENTRY3) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY4_REG_OFST       (0xA8)              /**< (ISC_GAM_BENTRY4) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY5_REG_OFST       (0xAC)              /**< (ISC_GAM_BENTRY5) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY6_REG_OFST       (0xB0)              /**< (ISC_GAM_BENTRY6) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY7_REG_OFST       (0xB4)              /**< (ISC_GAM_BENTRY7) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY8_REG_OFST       (0xB8)              /**< (ISC_GAM_BENTRY8) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY9_REG_OFST       (0xBC)              /**< (ISC_GAM_BENTRY9) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY10_REG_OFST      (0xC0)              /**< (ISC_GAM_BENTRY10) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY11_REG_OFST      (0xC4)              /**< (ISC_GAM_BENTRY11) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY12_REG_OFST      (0xC8)              /**< (ISC_GAM_BENTRY12) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY13_REG_OFST      (0xCC)              /**< (ISC_GAM_BENTRY13) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY14_REG_OFST      (0xD0)              /**< (ISC_GAM_BENTRY14) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY15_REG_OFST      (0xD4)              /**< (ISC_GAM_BENTRY15) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY16_REG_OFST      (0xD8)              /**< (ISC_GAM_BENTRY16) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY17_REG_OFST      (0xDC)              /**< (ISC_GAM_BENTRY17) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY18_REG_OFST      (0xE0)              /**< (ISC_GAM_BENTRY18) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY19_REG_OFST      (0xE4)              /**< (ISC_GAM_BENTRY19) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY20_REG_OFST      (0xE8)              /**< (ISC_GAM_BENTRY20) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY21_REG_OFST      (0xEC)              /**< (ISC_GAM_BENTRY21) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY22_REG_OFST      (0xF0)              /**< (ISC_GAM_BENTRY22) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY23_REG_OFST      (0xF4)              /**< (ISC_GAM_BENTRY23) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY24_REG_OFST      (0xF8)              /**< (ISC_GAM_BENTRY24) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY25_REG_OFST      (0xFC)              /**< (ISC_GAM_BENTRY25) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY26_REG_OFST      (0x100)             /**< (ISC_GAM_BENTRY26) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY27_REG_OFST      (0x104)             /**< (ISC_GAM_BENTRY27) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY28_REG_OFST      (0x108)             /**< (ISC_GAM_BENTRY28) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY29_REG_OFST      (0x10C)             /**< (ISC_GAM_BENTRY29) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY30_REG_OFST      (0x110)             /**< (ISC_GAM_BENTRY30) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY31_REG_OFST      (0x114)             /**< (ISC_GAM_BENTRY31) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY32_REG_OFST      (0x118)             /**< (ISC_GAM_BENTRY32) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY33_REG_OFST      (0x11C)             /**< (ISC_GAM_BENTRY33) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY34_REG_OFST      (0x120)             /**< (ISC_GAM_BENTRY34) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY35_REG_OFST      (0x124)             /**< (ISC_GAM_BENTRY35) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY36_REG_OFST      (0x128)             /**< (ISC_GAM_BENTRY36) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY37_REG_OFST      (0x12C)             /**< (ISC_GAM_BENTRY37) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY38_REG_OFST      (0x130)             /**< (ISC_GAM_BENTRY38) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY39_REG_OFST      (0x134)             /**< (ISC_GAM_BENTRY39) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY40_REG_OFST      (0x138)             /**< (ISC_GAM_BENTRY40) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY41_REG_OFST      (0x13C)             /**< (ISC_GAM_BENTRY41) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY42_REG_OFST      (0x140)             /**< (ISC_GAM_BENTRY42) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY43_REG_OFST      (0x144)             /**< (ISC_GAM_BENTRY43) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY44_REG_OFST      (0x148)             /**< (ISC_GAM_BENTRY44) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY45_REG_OFST      (0x14C)             /**< (ISC_GAM_BENTRY45) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY46_REG_OFST      (0x150)             /**< (ISC_GAM_BENTRY46) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY47_REG_OFST      (0x154)             /**< (ISC_GAM_BENTRY47) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY48_REG_OFST      (0x158)             /**< (ISC_GAM_BENTRY48) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY49_REG_OFST      (0x15C)             /**< (ISC_GAM_BENTRY49) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY50_REG_OFST      (0x160)             /**< (ISC_GAM_BENTRY50) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY51_REG_OFST      (0x164)             /**< (ISC_GAM_BENTRY51) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY52_REG_OFST      (0x168)             /**< (ISC_GAM_BENTRY52) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY53_REG_OFST      (0x16C)             /**< (ISC_GAM_BENTRY53) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY54_REG_OFST      (0x170)             /**< (ISC_GAM_BENTRY54) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY55_REG_OFST      (0x174)             /**< (ISC_GAM_BENTRY55) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY56_REG_OFST      (0x178)             /**< (ISC_GAM_BENTRY56) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY57_REG_OFST      (0x17C)             /**< (ISC_GAM_BENTRY57) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY58_REG_OFST      (0x180)             /**< (ISC_GAM_BENTRY58) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY59_REG_OFST      (0x184)             /**< (ISC_GAM_BENTRY59) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY60_REG_OFST      (0x188)             /**< (ISC_GAM_BENTRY60) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY61_REG_OFST      (0x18C)             /**< (ISC_GAM_BENTRY61) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY62_REG_OFST      (0x190)             /**< (ISC_GAM_BENTRY62) Gamma Correction Blue Entry Offset */
+#define ISC_GAM_BENTRY63_REG_OFST      (0x194)             /**< (ISC_GAM_BENTRY63) Gamma Correction Blue Entry Offset */
 #define ISC_GAM_GENTRY_REG_OFST        (0x198)             /**< (ISC_GAM_GENTRY) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY0_REG_OFST       (0x198)             /**< (ISC_GAM_GENTRY0) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY1_REG_OFST       (0x19C)             /**< (ISC_GAM_GENTRY1) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY2_REG_OFST       (0x1A0)             /**< (ISC_GAM_GENTRY2) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY3_REG_OFST       (0x1A4)             /**< (ISC_GAM_GENTRY3) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY4_REG_OFST       (0x1A8)             /**< (ISC_GAM_GENTRY4) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY5_REG_OFST       (0x1AC)             /**< (ISC_GAM_GENTRY5) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY6_REG_OFST       (0x1B0)             /**< (ISC_GAM_GENTRY6) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY7_REG_OFST       (0x1B4)             /**< (ISC_GAM_GENTRY7) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY8_REG_OFST       (0x1B8)             /**< (ISC_GAM_GENTRY8) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY9_REG_OFST       (0x1BC)             /**< (ISC_GAM_GENTRY9) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY10_REG_OFST      (0x1C0)             /**< (ISC_GAM_GENTRY10) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY11_REG_OFST      (0x1C4)             /**< (ISC_GAM_GENTRY11) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY12_REG_OFST      (0x1C8)             /**< (ISC_GAM_GENTRY12) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY13_REG_OFST      (0x1CC)             /**< (ISC_GAM_GENTRY13) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY14_REG_OFST      (0x1D0)             /**< (ISC_GAM_GENTRY14) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY15_REG_OFST      (0x1D4)             /**< (ISC_GAM_GENTRY15) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY16_REG_OFST      (0x1D8)             /**< (ISC_GAM_GENTRY16) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY17_REG_OFST      (0x1DC)             /**< (ISC_GAM_GENTRY17) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY18_REG_OFST      (0x1E0)             /**< (ISC_GAM_GENTRY18) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY19_REG_OFST      (0x1E4)             /**< (ISC_GAM_GENTRY19) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY20_REG_OFST      (0x1E8)             /**< (ISC_GAM_GENTRY20) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY21_REG_OFST      (0x1EC)             /**< (ISC_GAM_GENTRY21) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY22_REG_OFST      (0x1F0)             /**< (ISC_GAM_GENTRY22) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY23_REG_OFST      (0x1F4)             /**< (ISC_GAM_GENTRY23) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY24_REG_OFST      (0x1F8)             /**< (ISC_GAM_GENTRY24) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY25_REG_OFST      (0x1FC)             /**< (ISC_GAM_GENTRY25) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY26_REG_OFST      (0x200)             /**< (ISC_GAM_GENTRY26) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY27_REG_OFST      (0x204)             /**< (ISC_GAM_GENTRY27) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY28_REG_OFST      (0x208)             /**< (ISC_GAM_GENTRY28) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY29_REG_OFST      (0x20C)             /**< (ISC_GAM_GENTRY29) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY30_REG_OFST      (0x210)             /**< (ISC_GAM_GENTRY30) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY31_REG_OFST      (0x214)             /**< (ISC_GAM_GENTRY31) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY32_REG_OFST      (0x218)             /**< (ISC_GAM_GENTRY32) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY33_REG_OFST      (0x21C)             /**< (ISC_GAM_GENTRY33) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY34_REG_OFST      (0x220)             /**< (ISC_GAM_GENTRY34) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY35_REG_OFST      (0x224)             /**< (ISC_GAM_GENTRY35) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY36_REG_OFST      (0x228)             /**< (ISC_GAM_GENTRY36) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY37_REG_OFST      (0x22C)             /**< (ISC_GAM_GENTRY37) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY38_REG_OFST      (0x230)             /**< (ISC_GAM_GENTRY38) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY39_REG_OFST      (0x234)             /**< (ISC_GAM_GENTRY39) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY40_REG_OFST      (0x238)             /**< (ISC_GAM_GENTRY40) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY41_REG_OFST      (0x23C)             /**< (ISC_GAM_GENTRY41) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY42_REG_OFST      (0x240)             /**< (ISC_GAM_GENTRY42) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY43_REG_OFST      (0x244)             /**< (ISC_GAM_GENTRY43) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY44_REG_OFST      (0x248)             /**< (ISC_GAM_GENTRY44) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY45_REG_OFST      (0x24C)             /**< (ISC_GAM_GENTRY45) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY46_REG_OFST      (0x250)             /**< (ISC_GAM_GENTRY46) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY47_REG_OFST      (0x254)             /**< (ISC_GAM_GENTRY47) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY48_REG_OFST      (0x258)             /**< (ISC_GAM_GENTRY48) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY49_REG_OFST      (0x25C)             /**< (ISC_GAM_GENTRY49) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY50_REG_OFST      (0x260)             /**< (ISC_GAM_GENTRY50) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY51_REG_OFST      (0x264)             /**< (ISC_GAM_GENTRY51) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY52_REG_OFST      (0x268)             /**< (ISC_GAM_GENTRY52) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY53_REG_OFST      (0x26C)             /**< (ISC_GAM_GENTRY53) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY54_REG_OFST      (0x270)             /**< (ISC_GAM_GENTRY54) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY55_REG_OFST      (0x274)             /**< (ISC_GAM_GENTRY55) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY56_REG_OFST      (0x278)             /**< (ISC_GAM_GENTRY56) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY57_REG_OFST      (0x27C)             /**< (ISC_GAM_GENTRY57) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY58_REG_OFST      (0x280)             /**< (ISC_GAM_GENTRY58) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY59_REG_OFST      (0x284)             /**< (ISC_GAM_GENTRY59) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY60_REG_OFST      (0x288)             /**< (ISC_GAM_GENTRY60) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY61_REG_OFST      (0x28C)             /**< (ISC_GAM_GENTRY61) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY62_REG_OFST      (0x290)             /**< (ISC_GAM_GENTRY62) Gamma Correction Green Entry Offset */
+#define ISC_GAM_GENTRY63_REG_OFST      (0x294)             /**< (ISC_GAM_GENTRY63) Gamma Correction Green Entry Offset */
 #define ISC_GAM_RENTRY_REG_OFST        (0x298)             /**< (ISC_GAM_RENTRY) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY0_REG_OFST       (0x298)             /**< (ISC_GAM_RENTRY0) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY1_REG_OFST       (0x29C)             /**< (ISC_GAM_RENTRY1) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY2_REG_OFST       (0x2A0)             /**< (ISC_GAM_RENTRY2) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY3_REG_OFST       (0x2A4)             /**< (ISC_GAM_RENTRY3) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY4_REG_OFST       (0x2A8)             /**< (ISC_GAM_RENTRY4) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY5_REG_OFST       (0x2AC)             /**< (ISC_GAM_RENTRY5) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY6_REG_OFST       (0x2B0)             /**< (ISC_GAM_RENTRY6) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY7_REG_OFST       (0x2B4)             /**< (ISC_GAM_RENTRY7) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY8_REG_OFST       (0x2B8)             /**< (ISC_GAM_RENTRY8) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY9_REG_OFST       (0x2BC)             /**< (ISC_GAM_RENTRY9) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY10_REG_OFST      (0x2C0)             /**< (ISC_GAM_RENTRY10) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY11_REG_OFST      (0x2C4)             /**< (ISC_GAM_RENTRY11) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY12_REG_OFST      (0x2C8)             /**< (ISC_GAM_RENTRY12) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY13_REG_OFST      (0x2CC)             /**< (ISC_GAM_RENTRY13) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY14_REG_OFST      (0x2D0)             /**< (ISC_GAM_RENTRY14) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY15_REG_OFST      (0x2D4)             /**< (ISC_GAM_RENTRY15) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY16_REG_OFST      (0x2D8)             /**< (ISC_GAM_RENTRY16) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY17_REG_OFST      (0x2DC)             /**< (ISC_GAM_RENTRY17) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY18_REG_OFST      (0x2E0)             /**< (ISC_GAM_RENTRY18) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY19_REG_OFST      (0x2E4)             /**< (ISC_GAM_RENTRY19) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY20_REG_OFST      (0x2E8)             /**< (ISC_GAM_RENTRY20) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY21_REG_OFST      (0x2EC)             /**< (ISC_GAM_RENTRY21) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY22_REG_OFST      (0x2F0)             /**< (ISC_GAM_RENTRY22) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY23_REG_OFST      (0x2F4)             /**< (ISC_GAM_RENTRY23) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY24_REG_OFST      (0x2F8)             /**< (ISC_GAM_RENTRY24) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY25_REG_OFST      (0x2FC)             /**< (ISC_GAM_RENTRY25) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY26_REG_OFST      (0x300)             /**< (ISC_GAM_RENTRY26) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY27_REG_OFST      (0x304)             /**< (ISC_GAM_RENTRY27) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY28_REG_OFST      (0x308)             /**< (ISC_GAM_RENTRY28) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY29_REG_OFST      (0x30C)             /**< (ISC_GAM_RENTRY29) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY30_REG_OFST      (0x310)             /**< (ISC_GAM_RENTRY30) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY31_REG_OFST      (0x314)             /**< (ISC_GAM_RENTRY31) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY32_REG_OFST      (0x318)             /**< (ISC_GAM_RENTRY32) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY33_REG_OFST      (0x31C)             /**< (ISC_GAM_RENTRY33) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY34_REG_OFST      (0x320)             /**< (ISC_GAM_RENTRY34) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY35_REG_OFST      (0x324)             /**< (ISC_GAM_RENTRY35) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY36_REG_OFST      (0x328)             /**< (ISC_GAM_RENTRY36) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY37_REG_OFST      (0x32C)             /**< (ISC_GAM_RENTRY37) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY38_REG_OFST      (0x330)             /**< (ISC_GAM_RENTRY38) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY39_REG_OFST      (0x334)             /**< (ISC_GAM_RENTRY39) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY40_REG_OFST      (0x338)             /**< (ISC_GAM_RENTRY40) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY41_REG_OFST      (0x33C)             /**< (ISC_GAM_RENTRY41) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY42_REG_OFST      (0x340)             /**< (ISC_GAM_RENTRY42) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY43_REG_OFST      (0x344)             /**< (ISC_GAM_RENTRY43) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY44_REG_OFST      (0x348)             /**< (ISC_GAM_RENTRY44) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY45_REG_OFST      (0x34C)             /**< (ISC_GAM_RENTRY45) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY46_REG_OFST      (0x350)             /**< (ISC_GAM_RENTRY46) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY47_REG_OFST      (0x354)             /**< (ISC_GAM_RENTRY47) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY48_REG_OFST      (0x358)             /**< (ISC_GAM_RENTRY48) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY49_REG_OFST      (0x35C)             /**< (ISC_GAM_RENTRY49) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY50_REG_OFST      (0x360)             /**< (ISC_GAM_RENTRY50) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY51_REG_OFST      (0x364)             /**< (ISC_GAM_RENTRY51) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY52_REG_OFST      (0x368)             /**< (ISC_GAM_RENTRY52) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY53_REG_OFST      (0x36C)             /**< (ISC_GAM_RENTRY53) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY54_REG_OFST      (0x370)             /**< (ISC_GAM_RENTRY54) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY55_REG_OFST      (0x374)             /**< (ISC_GAM_RENTRY55) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY56_REG_OFST      (0x378)             /**< (ISC_GAM_RENTRY56) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY57_REG_OFST      (0x37C)             /**< (ISC_GAM_RENTRY57) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY58_REG_OFST      (0x380)             /**< (ISC_GAM_RENTRY58) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY59_REG_OFST      (0x384)             /**< (ISC_GAM_RENTRY59) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY60_REG_OFST      (0x388)             /**< (ISC_GAM_RENTRY60) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY61_REG_OFST      (0x38C)             /**< (ISC_GAM_RENTRY61) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY62_REG_OFST      (0x390)             /**< (ISC_GAM_RENTRY62) Gamma Correction Red Entry Offset */
+#define ISC_GAM_RENTRY63_REG_OFST      (0x394)             /**< (ISC_GAM_RENTRY63) Gamma Correction Red Entry Offset */
 #define ISC_CSC_CTRL_REG_OFST          (0x398)             /**< (ISC_CSC_CTRL) Color Space Conversion Control Register Offset */
 #define ISC_CSC_YR_YG_REG_OFST         (0x39C)             /**< (ISC_CSC_YR_YG) Color Space Conversion YR, YG Register Offset */
 #define ISC_CSC_YB_OY_REG_OFST         (0x3A0)             /**< (ISC_CSC_YB_OY) Color Space Conversion YB, OY Register Offset */
@@ -1020,6 +1212,518 @@
 #define ISC_DCTRL_REG_OFST             (0x3E4)             /**< (ISC_DCTRL) DMA Control Register Offset */
 #define ISC_DNDA_REG_OFST              (0x3E8)             /**< (ISC_DNDA) DMA Descriptor Address Register Offset */
 #define ISC_HIS_ENTRY_REG_OFST         (0x410)             /**< (ISC_HIS_ENTRY) Histogram Entry Offset */
+#define ISC_HIS_ENTRY0_REG_OFST        (0x410)             /**< (ISC_HIS_ENTRY0) Histogram Entry Offset */
+#define ISC_HIS_ENTRY1_REG_OFST        (0x414)             /**< (ISC_HIS_ENTRY1) Histogram Entry Offset */
+#define ISC_HIS_ENTRY2_REG_OFST        (0x418)             /**< (ISC_HIS_ENTRY2) Histogram Entry Offset */
+#define ISC_HIS_ENTRY3_REG_OFST        (0x41C)             /**< (ISC_HIS_ENTRY3) Histogram Entry Offset */
+#define ISC_HIS_ENTRY4_REG_OFST        (0x420)             /**< (ISC_HIS_ENTRY4) Histogram Entry Offset */
+#define ISC_HIS_ENTRY5_REG_OFST        (0x424)             /**< (ISC_HIS_ENTRY5) Histogram Entry Offset */
+#define ISC_HIS_ENTRY6_REG_OFST        (0x428)             /**< (ISC_HIS_ENTRY6) Histogram Entry Offset */
+#define ISC_HIS_ENTRY7_REG_OFST        (0x42C)             /**< (ISC_HIS_ENTRY7) Histogram Entry Offset */
+#define ISC_HIS_ENTRY8_REG_OFST        (0x430)             /**< (ISC_HIS_ENTRY8) Histogram Entry Offset */
+#define ISC_HIS_ENTRY9_REG_OFST        (0x434)             /**< (ISC_HIS_ENTRY9) Histogram Entry Offset */
+#define ISC_HIS_ENTRY10_REG_OFST       (0x438)             /**< (ISC_HIS_ENTRY10) Histogram Entry Offset */
+#define ISC_HIS_ENTRY11_REG_OFST       (0x43C)             /**< (ISC_HIS_ENTRY11) Histogram Entry Offset */
+#define ISC_HIS_ENTRY12_REG_OFST       (0x440)             /**< (ISC_HIS_ENTRY12) Histogram Entry Offset */
+#define ISC_HIS_ENTRY13_REG_OFST       (0x444)             /**< (ISC_HIS_ENTRY13) Histogram Entry Offset */
+#define ISC_HIS_ENTRY14_REG_OFST       (0x448)             /**< (ISC_HIS_ENTRY14) Histogram Entry Offset */
+#define ISC_HIS_ENTRY15_REG_OFST       (0x44C)             /**< (ISC_HIS_ENTRY15) Histogram Entry Offset */
+#define ISC_HIS_ENTRY16_REG_OFST       (0x450)             /**< (ISC_HIS_ENTRY16) Histogram Entry Offset */
+#define ISC_HIS_ENTRY17_REG_OFST       (0x454)             /**< (ISC_HIS_ENTRY17) Histogram Entry Offset */
+#define ISC_HIS_ENTRY18_REG_OFST       (0x458)             /**< (ISC_HIS_ENTRY18) Histogram Entry Offset */
+#define ISC_HIS_ENTRY19_REG_OFST       (0x45C)             /**< (ISC_HIS_ENTRY19) Histogram Entry Offset */
+#define ISC_HIS_ENTRY20_REG_OFST       (0x460)             /**< (ISC_HIS_ENTRY20) Histogram Entry Offset */
+#define ISC_HIS_ENTRY21_REG_OFST       (0x464)             /**< (ISC_HIS_ENTRY21) Histogram Entry Offset */
+#define ISC_HIS_ENTRY22_REG_OFST       (0x468)             /**< (ISC_HIS_ENTRY22) Histogram Entry Offset */
+#define ISC_HIS_ENTRY23_REG_OFST       (0x46C)             /**< (ISC_HIS_ENTRY23) Histogram Entry Offset */
+#define ISC_HIS_ENTRY24_REG_OFST       (0x470)             /**< (ISC_HIS_ENTRY24) Histogram Entry Offset */
+#define ISC_HIS_ENTRY25_REG_OFST       (0x474)             /**< (ISC_HIS_ENTRY25) Histogram Entry Offset */
+#define ISC_HIS_ENTRY26_REG_OFST       (0x478)             /**< (ISC_HIS_ENTRY26) Histogram Entry Offset */
+#define ISC_HIS_ENTRY27_REG_OFST       (0x47C)             /**< (ISC_HIS_ENTRY27) Histogram Entry Offset */
+#define ISC_HIS_ENTRY28_REG_OFST       (0x480)             /**< (ISC_HIS_ENTRY28) Histogram Entry Offset */
+#define ISC_HIS_ENTRY29_REG_OFST       (0x484)             /**< (ISC_HIS_ENTRY29) Histogram Entry Offset */
+#define ISC_HIS_ENTRY30_REG_OFST       (0x488)             /**< (ISC_HIS_ENTRY30) Histogram Entry Offset */
+#define ISC_HIS_ENTRY31_REG_OFST       (0x48C)             /**< (ISC_HIS_ENTRY31) Histogram Entry Offset */
+#define ISC_HIS_ENTRY32_REG_OFST       (0x490)             /**< (ISC_HIS_ENTRY32) Histogram Entry Offset */
+#define ISC_HIS_ENTRY33_REG_OFST       (0x494)             /**< (ISC_HIS_ENTRY33) Histogram Entry Offset */
+#define ISC_HIS_ENTRY34_REG_OFST       (0x498)             /**< (ISC_HIS_ENTRY34) Histogram Entry Offset */
+#define ISC_HIS_ENTRY35_REG_OFST       (0x49C)             /**< (ISC_HIS_ENTRY35) Histogram Entry Offset */
+#define ISC_HIS_ENTRY36_REG_OFST       (0x4A0)             /**< (ISC_HIS_ENTRY36) Histogram Entry Offset */
+#define ISC_HIS_ENTRY37_REG_OFST       (0x4A4)             /**< (ISC_HIS_ENTRY37) Histogram Entry Offset */
+#define ISC_HIS_ENTRY38_REG_OFST       (0x4A8)             /**< (ISC_HIS_ENTRY38) Histogram Entry Offset */
+#define ISC_HIS_ENTRY39_REG_OFST       (0x4AC)             /**< (ISC_HIS_ENTRY39) Histogram Entry Offset */
+#define ISC_HIS_ENTRY40_REG_OFST       (0x4B0)             /**< (ISC_HIS_ENTRY40) Histogram Entry Offset */
+#define ISC_HIS_ENTRY41_REG_OFST       (0x4B4)             /**< (ISC_HIS_ENTRY41) Histogram Entry Offset */
+#define ISC_HIS_ENTRY42_REG_OFST       (0x4B8)             /**< (ISC_HIS_ENTRY42) Histogram Entry Offset */
+#define ISC_HIS_ENTRY43_REG_OFST       (0x4BC)             /**< (ISC_HIS_ENTRY43) Histogram Entry Offset */
+#define ISC_HIS_ENTRY44_REG_OFST       (0x4C0)             /**< (ISC_HIS_ENTRY44) Histogram Entry Offset */
+#define ISC_HIS_ENTRY45_REG_OFST       (0x4C4)             /**< (ISC_HIS_ENTRY45) Histogram Entry Offset */
+#define ISC_HIS_ENTRY46_REG_OFST       (0x4C8)             /**< (ISC_HIS_ENTRY46) Histogram Entry Offset */
+#define ISC_HIS_ENTRY47_REG_OFST       (0x4CC)             /**< (ISC_HIS_ENTRY47) Histogram Entry Offset */
+#define ISC_HIS_ENTRY48_REG_OFST       (0x4D0)             /**< (ISC_HIS_ENTRY48) Histogram Entry Offset */
+#define ISC_HIS_ENTRY49_REG_OFST       (0x4D4)             /**< (ISC_HIS_ENTRY49) Histogram Entry Offset */
+#define ISC_HIS_ENTRY50_REG_OFST       (0x4D8)             /**< (ISC_HIS_ENTRY50) Histogram Entry Offset */
+#define ISC_HIS_ENTRY51_REG_OFST       (0x4DC)             /**< (ISC_HIS_ENTRY51) Histogram Entry Offset */
+#define ISC_HIS_ENTRY52_REG_OFST       (0x4E0)             /**< (ISC_HIS_ENTRY52) Histogram Entry Offset */
+#define ISC_HIS_ENTRY53_REG_OFST       (0x4E4)             /**< (ISC_HIS_ENTRY53) Histogram Entry Offset */
+#define ISC_HIS_ENTRY54_REG_OFST       (0x4E8)             /**< (ISC_HIS_ENTRY54) Histogram Entry Offset */
+#define ISC_HIS_ENTRY55_REG_OFST       (0x4EC)             /**< (ISC_HIS_ENTRY55) Histogram Entry Offset */
+#define ISC_HIS_ENTRY56_REG_OFST       (0x4F0)             /**< (ISC_HIS_ENTRY56) Histogram Entry Offset */
+#define ISC_HIS_ENTRY57_REG_OFST       (0x4F4)             /**< (ISC_HIS_ENTRY57) Histogram Entry Offset */
+#define ISC_HIS_ENTRY58_REG_OFST       (0x4F8)             /**< (ISC_HIS_ENTRY58) Histogram Entry Offset */
+#define ISC_HIS_ENTRY59_REG_OFST       (0x4FC)             /**< (ISC_HIS_ENTRY59) Histogram Entry Offset */
+#define ISC_HIS_ENTRY60_REG_OFST       (0x500)             /**< (ISC_HIS_ENTRY60) Histogram Entry Offset */
+#define ISC_HIS_ENTRY61_REG_OFST       (0x504)             /**< (ISC_HIS_ENTRY61) Histogram Entry Offset */
+#define ISC_HIS_ENTRY62_REG_OFST       (0x508)             /**< (ISC_HIS_ENTRY62) Histogram Entry Offset */
+#define ISC_HIS_ENTRY63_REG_OFST       (0x50C)             /**< (ISC_HIS_ENTRY63) Histogram Entry Offset */
+#define ISC_HIS_ENTRY64_REG_OFST       (0x510)             /**< (ISC_HIS_ENTRY64) Histogram Entry Offset */
+#define ISC_HIS_ENTRY65_REG_OFST       (0x514)             /**< (ISC_HIS_ENTRY65) Histogram Entry Offset */
+#define ISC_HIS_ENTRY66_REG_OFST       (0x518)             /**< (ISC_HIS_ENTRY66) Histogram Entry Offset */
+#define ISC_HIS_ENTRY67_REG_OFST       (0x51C)             /**< (ISC_HIS_ENTRY67) Histogram Entry Offset */
+#define ISC_HIS_ENTRY68_REG_OFST       (0x520)             /**< (ISC_HIS_ENTRY68) Histogram Entry Offset */
+#define ISC_HIS_ENTRY69_REG_OFST       (0x524)             /**< (ISC_HIS_ENTRY69) Histogram Entry Offset */
+#define ISC_HIS_ENTRY70_REG_OFST       (0x528)             /**< (ISC_HIS_ENTRY70) Histogram Entry Offset */
+#define ISC_HIS_ENTRY71_REG_OFST       (0x52C)             /**< (ISC_HIS_ENTRY71) Histogram Entry Offset */
+#define ISC_HIS_ENTRY72_REG_OFST       (0x530)             /**< (ISC_HIS_ENTRY72) Histogram Entry Offset */
+#define ISC_HIS_ENTRY73_REG_OFST       (0x534)             /**< (ISC_HIS_ENTRY73) Histogram Entry Offset */
+#define ISC_HIS_ENTRY74_REG_OFST       (0x538)             /**< (ISC_HIS_ENTRY74) Histogram Entry Offset */
+#define ISC_HIS_ENTRY75_REG_OFST       (0x53C)             /**< (ISC_HIS_ENTRY75) Histogram Entry Offset */
+#define ISC_HIS_ENTRY76_REG_OFST       (0x540)             /**< (ISC_HIS_ENTRY76) Histogram Entry Offset */
+#define ISC_HIS_ENTRY77_REG_OFST       (0x544)             /**< (ISC_HIS_ENTRY77) Histogram Entry Offset */
+#define ISC_HIS_ENTRY78_REG_OFST       (0x548)             /**< (ISC_HIS_ENTRY78) Histogram Entry Offset */
+#define ISC_HIS_ENTRY79_REG_OFST       (0x54C)             /**< (ISC_HIS_ENTRY79) Histogram Entry Offset */
+#define ISC_HIS_ENTRY80_REG_OFST       (0x550)             /**< (ISC_HIS_ENTRY80) Histogram Entry Offset */
+#define ISC_HIS_ENTRY81_REG_OFST       (0x554)             /**< (ISC_HIS_ENTRY81) Histogram Entry Offset */
+#define ISC_HIS_ENTRY82_REG_OFST       (0x558)             /**< (ISC_HIS_ENTRY82) Histogram Entry Offset */
+#define ISC_HIS_ENTRY83_REG_OFST       (0x55C)             /**< (ISC_HIS_ENTRY83) Histogram Entry Offset */
+#define ISC_HIS_ENTRY84_REG_OFST       (0x560)             /**< (ISC_HIS_ENTRY84) Histogram Entry Offset */
+#define ISC_HIS_ENTRY85_REG_OFST       (0x564)             /**< (ISC_HIS_ENTRY85) Histogram Entry Offset */
+#define ISC_HIS_ENTRY86_REG_OFST       (0x568)             /**< (ISC_HIS_ENTRY86) Histogram Entry Offset */
+#define ISC_HIS_ENTRY87_REG_OFST       (0x56C)             /**< (ISC_HIS_ENTRY87) Histogram Entry Offset */
+#define ISC_HIS_ENTRY88_REG_OFST       (0x570)             /**< (ISC_HIS_ENTRY88) Histogram Entry Offset */
+#define ISC_HIS_ENTRY89_REG_OFST       (0x574)             /**< (ISC_HIS_ENTRY89) Histogram Entry Offset */
+#define ISC_HIS_ENTRY90_REG_OFST       (0x578)             /**< (ISC_HIS_ENTRY90) Histogram Entry Offset */
+#define ISC_HIS_ENTRY91_REG_OFST       (0x57C)             /**< (ISC_HIS_ENTRY91) Histogram Entry Offset */
+#define ISC_HIS_ENTRY92_REG_OFST       (0x580)             /**< (ISC_HIS_ENTRY92) Histogram Entry Offset */
+#define ISC_HIS_ENTRY93_REG_OFST       (0x584)             /**< (ISC_HIS_ENTRY93) Histogram Entry Offset */
+#define ISC_HIS_ENTRY94_REG_OFST       (0x588)             /**< (ISC_HIS_ENTRY94) Histogram Entry Offset */
+#define ISC_HIS_ENTRY95_REG_OFST       (0x58C)             /**< (ISC_HIS_ENTRY95) Histogram Entry Offset */
+#define ISC_HIS_ENTRY96_REG_OFST       (0x590)             /**< (ISC_HIS_ENTRY96) Histogram Entry Offset */
+#define ISC_HIS_ENTRY97_REG_OFST       (0x594)             /**< (ISC_HIS_ENTRY97) Histogram Entry Offset */
+#define ISC_HIS_ENTRY98_REG_OFST       (0x598)             /**< (ISC_HIS_ENTRY98) Histogram Entry Offset */
+#define ISC_HIS_ENTRY99_REG_OFST       (0x59C)             /**< (ISC_HIS_ENTRY99) Histogram Entry Offset */
+#define ISC_HIS_ENTRY100_REG_OFST      (0x5A0)             /**< (ISC_HIS_ENTRY100) Histogram Entry Offset */
+#define ISC_HIS_ENTRY101_REG_OFST      (0x5A4)             /**< (ISC_HIS_ENTRY101) Histogram Entry Offset */
+#define ISC_HIS_ENTRY102_REG_OFST      (0x5A8)             /**< (ISC_HIS_ENTRY102) Histogram Entry Offset */
+#define ISC_HIS_ENTRY103_REG_OFST      (0x5AC)             /**< (ISC_HIS_ENTRY103) Histogram Entry Offset */
+#define ISC_HIS_ENTRY104_REG_OFST      (0x5B0)             /**< (ISC_HIS_ENTRY104) Histogram Entry Offset */
+#define ISC_HIS_ENTRY105_REG_OFST      (0x5B4)             /**< (ISC_HIS_ENTRY105) Histogram Entry Offset */
+#define ISC_HIS_ENTRY106_REG_OFST      (0x5B8)             /**< (ISC_HIS_ENTRY106) Histogram Entry Offset */
+#define ISC_HIS_ENTRY107_REG_OFST      (0x5BC)             /**< (ISC_HIS_ENTRY107) Histogram Entry Offset */
+#define ISC_HIS_ENTRY108_REG_OFST      (0x5C0)             /**< (ISC_HIS_ENTRY108) Histogram Entry Offset */
+#define ISC_HIS_ENTRY109_REG_OFST      (0x5C4)             /**< (ISC_HIS_ENTRY109) Histogram Entry Offset */
+#define ISC_HIS_ENTRY110_REG_OFST      (0x5C8)             /**< (ISC_HIS_ENTRY110) Histogram Entry Offset */
+#define ISC_HIS_ENTRY111_REG_OFST      (0x5CC)             /**< (ISC_HIS_ENTRY111) Histogram Entry Offset */
+#define ISC_HIS_ENTRY112_REG_OFST      (0x5D0)             /**< (ISC_HIS_ENTRY112) Histogram Entry Offset */
+#define ISC_HIS_ENTRY113_REG_OFST      (0x5D4)             /**< (ISC_HIS_ENTRY113) Histogram Entry Offset */
+#define ISC_HIS_ENTRY114_REG_OFST      (0x5D8)             /**< (ISC_HIS_ENTRY114) Histogram Entry Offset */
+#define ISC_HIS_ENTRY115_REG_OFST      (0x5DC)             /**< (ISC_HIS_ENTRY115) Histogram Entry Offset */
+#define ISC_HIS_ENTRY116_REG_OFST      (0x5E0)             /**< (ISC_HIS_ENTRY116) Histogram Entry Offset */
+#define ISC_HIS_ENTRY117_REG_OFST      (0x5E4)             /**< (ISC_HIS_ENTRY117) Histogram Entry Offset */
+#define ISC_HIS_ENTRY118_REG_OFST      (0x5E8)             /**< (ISC_HIS_ENTRY118) Histogram Entry Offset */
+#define ISC_HIS_ENTRY119_REG_OFST      (0x5EC)             /**< (ISC_HIS_ENTRY119) Histogram Entry Offset */
+#define ISC_HIS_ENTRY120_REG_OFST      (0x5F0)             /**< (ISC_HIS_ENTRY120) Histogram Entry Offset */
+#define ISC_HIS_ENTRY121_REG_OFST      (0x5F4)             /**< (ISC_HIS_ENTRY121) Histogram Entry Offset */
+#define ISC_HIS_ENTRY122_REG_OFST      (0x5F8)             /**< (ISC_HIS_ENTRY122) Histogram Entry Offset */
+#define ISC_HIS_ENTRY123_REG_OFST      (0x5FC)             /**< (ISC_HIS_ENTRY123) Histogram Entry Offset */
+#define ISC_HIS_ENTRY124_REG_OFST      (0x600)             /**< (ISC_HIS_ENTRY124) Histogram Entry Offset */
+#define ISC_HIS_ENTRY125_REG_OFST      (0x604)             /**< (ISC_HIS_ENTRY125) Histogram Entry Offset */
+#define ISC_HIS_ENTRY126_REG_OFST      (0x608)             /**< (ISC_HIS_ENTRY126) Histogram Entry Offset */
+#define ISC_HIS_ENTRY127_REG_OFST      (0x60C)             /**< (ISC_HIS_ENTRY127) Histogram Entry Offset */
+#define ISC_HIS_ENTRY128_REG_OFST      (0x610)             /**< (ISC_HIS_ENTRY128) Histogram Entry Offset */
+#define ISC_HIS_ENTRY129_REG_OFST      (0x614)             /**< (ISC_HIS_ENTRY129) Histogram Entry Offset */
+#define ISC_HIS_ENTRY130_REG_OFST      (0x618)             /**< (ISC_HIS_ENTRY130) Histogram Entry Offset */
+#define ISC_HIS_ENTRY131_REG_OFST      (0x61C)             /**< (ISC_HIS_ENTRY131) Histogram Entry Offset */
+#define ISC_HIS_ENTRY132_REG_OFST      (0x620)             /**< (ISC_HIS_ENTRY132) Histogram Entry Offset */
+#define ISC_HIS_ENTRY133_REG_OFST      (0x624)             /**< (ISC_HIS_ENTRY133) Histogram Entry Offset */
+#define ISC_HIS_ENTRY134_REG_OFST      (0x628)             /**< (ISC_HIS_ENTRY134) Histogram Entry Offset */
+#define ISC_HIS_ENTRY135_REG_OFST      (0x62C)             /**< (ISC_HIS_ENTRY135) Histogram Entry Offset */
+#define ISC_HIS_ENTRY136_REG_OFST      (0x630)             /**< (ISC_HIS_ENTRY136) Histogram Entry Offset */
+#define ISC_HIS_ENTRY137_REG_OFST      (0x634)             /**< (ISC_HIS_ENTRY137) Histogram Entry Offset */
+#define ISC_HIS_ENTRY138_REG_OFST      (0x638)             /**< (ISC_HIS_ENTRY138) Histogram Entry Offset */
+#define ISC_HIS_ENTRY139_REG_OFST      (0x63C)             /**< (ISC_HIS_ENTRY139) Histogram Entry Offset */
+#define ISC_HIS_ENTRY140_REG_OFST      (0x640)             /**< (ISC_HIS_ENTRY140) Histogram Entry Offset */
+#define ISC_HIS_ENTRY141_REG_OFST      (0x644)             /**< (ISC_HIS_ENTRY141) Histogram Entry Offset */
+#define ISC_HIS_ENTRY142_REG_OFST      (0x648)             /**< (ISC_HIS_ENTRY142) Histogram Entry Offset */
+#define ISC_HIS_ENTRY143_REG_OFST      (0x64C)             /**< (ISC_HIS_ENTRY143) Histogram Entry Offset */
+#define ISC_HIS_ENTRY144_REG_OFST      (0x650)             /**< (ISC_HIS_ENTRY144) Histogram Entry Offset */
+#define ISC_HIS_ENTRY145_REG_OFST      (0x654)             /**< (ISC_HIS_ENTRY145) Histogram Entry Offset */
+#define ISC_HIS_ENTRY146_REG_OFST      (0x658)             /**< (ISC_HIS_ENTRY146) Histogram Entry Offset */
+#define ISC_HIS_ENTRY147_REG_OFST      (0x65C)             /**< (ISC_HIS_ENTRY147) Histogram Entry Offset */
+#define ISC_HIS_ENTRY148_REG_OFST      (0x660)             /**< (ISC_HIS_ENTRY148) Histogram Entry Offset */
+#define ISC_HIS_ENTRY149_REG_OFST      (0x664)             /**< (ISC_HIS_ENTRY149) Histogram Entry Offset */
+#define ISC_HIS_ENTRY150_REG_OFST      (0x668)             /**< (ISC_HIS_ENTRY150) Histogram Entry Offset */
+#define ISC_HIS_ENTRY151_REG_OFST      (0x66C)             /**< (ISC_HIS_ENTRY151) Histogram Entry Offset */
+#define ISC_HIS_ENTRY152_REG_OFST      (0x670)             /**< (ISC_HIS_ENTRY152) Histogram Entry Offset */
+#define ISC_HIS_ENTRY153_REG_OFST      (0x674)             /**< (ISC_HIS_ENTRY153) Histogram Entry Offset */
+#define ISC_HIS_ENTRY154_REG_OFST      (0x678)             /**< (ISC_HIS_ENTRY154) Histogram Entry Offset */
+#define ISC_HIS_ENTRY155_REG_OFST      (0x67C)             /**< (ISC_HIS_ENTRY155) Histogram Entry Offset */
+#define ISC_HIS_ENTRY156_REG_OFST      (0x680)             /**< (ISC_HIS_ENTRY156) Histogram Entry Offset */
+#define ISC_HIS_ENTRY157_REG_OFST      (0x684)             /**< (ISC_HIS_ENTRY157) Histogram Entry Offset */
+#define ISC_HIS_ENTRY158_REG_OFST      (0x688)             /**< (ISC_HIS_ENTRY158) Histogram Entry Offset */
+#define ISC_HIS_ENTRY159_REG_OFST      (0x68C)             /**< (ISC_HIS_ENTRY159) Histogram Entry Offset */
+#define ISC_HIS_ENTRY160_REG_OFST      (0x690)             /**< (ISC_HIS_ENTRY160) Histogram Entry Offset */
+#define ISC_HIS_ENTRY161_REG_OFST      (0x694)             /**< (ISC_HIS_ENTRY161) Histogram Entry Offset */
+#define ISC_HIS_ENTRY162_REG_OFST      (0x698)             /**< (ISC_HIS_ENTRY162) Histogram Entry Offset */
+#define ISC_HIS_ENTRY163_REG_OFST      (0x69C)             /**< (ISC_HIS_ENTRY163) Histogram Entry Offset */
+#define ISC_HIS_ENTRY164_REG_OFST      (0x6A0)             /**< (ISC_HIS_ENTRY164) Histogram Entry Offset */
+#define ISC_HIS_ENTRY165_REG_OFST      (0x6A4)             /**< (ISC_HIS_ENTRY165) Histogram Entry Offset */
+#define ISC_HIS_ENTRY166_REG_OFST      (0x6A8)             /**< (ISC_HIS_ENTRY166) Histogram Entry Offset */
+#define ISC_HIS_ENTRY167_REG_OFST      (0x6AC)             /**< (ISC_HIS_ENTRY167) Histogram Entry Offset */
+#define ISC_HIS_ENTRY168_REG_OFST      (0x6B0)             /**< (ISC_HIS_ENTRY168) Histogram Entry Offset */
+#define ISC_HIS_ENTRY169_REG_OFST      (0x6B4)             /**< (ISC_HIS_ENTRY169) Histogram Entry Offset */
+#define ISC_HIS_ENTRY170_REG_OFST      (0x6B8)             /**< (ISC_HIS_ENTRY170) Histogram Entry Offset */
+#define ISC_HIS_ENTRY171_REG_OFST      (0x6BC)             /**< (ISC_HIS_ENTRY171) Histogram Entry Offset */
+#define ISC_HIS_ENTRY172_REG_OFST      (0x6C0)             /**< (ISC_HIS_ENTRY172) Histogram Entry Offset */
+#define ISC_HIS_ENTRY173_REG_OFST      (0x6C4)             /**< (ISC_HIS_ENTRY173) Histogram Entry Offset */
+#define ISC_HIS_ENTRY174_REG_OFST      (0x6C8)             /**< (ISC_HIS_ENTRY174) Histogram Entry Offset */
+#define ISC_HIS_ENTRY175_REG_OFST      (0x6CC)             /**< (ISC_HIS_ENTRY175) Histogram Entry Offset */
+#define ISC_HIS_ENTRY176_REG_OFST      (0x6D0)             /**< (ISC_HIS_ENTRY176) Histogram Entry Offset */
+#define ISC_HIS_ENTRY177_REG_OFST      (0x6D4)             /**< (ISC_HIS_ENTRY177) Histogram Entry Offset */
+#define ISC_HIS_ENTRY178_REG_OFST      (0x6D8)             /**< (ISC_HIS_ENTRY178) Histogram Entry Offset */
+#define ISC_HIS_ENTRY179_REG_OFST      (0x6DC)             /**< (ISC_HIS_ENTRY179) Histogram Entry Offset */
+#define ISC_HIS_ENTRY180_REG_OFST      (0x6E0)             /**< (ISC_HIS_ENTRY180) Histogram Entry Offset */
+#define ISC_HIS_ENTRY181_REG_OFST      (0x6E4)             /**< (ISC_HIS_ENTRY181) Histogram Entry Offset */
+#define ISC_HIS_ENTRY182_REG_OFST      (0x6E8)             /**< (ISC_HIS_ENTRY182) Histogram Entry Offset */
+#define ISC_HIS_ENTRY183_REG_OFST      (0x6EC)             /**< (ISC_HIS_ENTRY183) Histogram Entry Offset */
+#define ISC_HIS_ENTRY184_REG_OFST      (0x6F0)             /**< (ISC_HIS_ENTRY184) Histogram Entry Offset */
+#define ISC_HIS_ENTRY185_REG_OFST      (0x6F4)             /**< (ISC_HIS_ENTRY185) Histogram Entry Offset */
+#define ISC_HIS_ENTRY186_REG_OFST      (0x6F8)             /**< (ISC_HIS_ENTRY186) Histogram Entry Offset */
+#define ISC_HIS_ENTRY187_REG_OFST      (0x6FC)             /**< (ISC_HIS_ENTRY187) Histogram Entry Offset */
+#define ISC_HIS_ENTRY188_REG_OFST      (0x700)             /**< (ISC_HIS_ENTRY188) Histogram Entry Offset */
+#define ISC_HIS_ENTRY189_REG_OFST      (0x704)             /**< (ISC_HIS_ENTRY189) Histogram Entry Offset */
+#define ISC_HIS_ENTRY190_REG_OFST      (0x708)             /**< (ISC_HIS_ENTRY190) Histogram Entry Offset */
+#define ISC_HIS_ENTRY191_REG_OFST      (0x70C)             /**< (ISC_HIS_ENTRY191) Histogram Entry Offset */
+#define ISC_HIS_ENTRY192_REG_OFST      (0x710)             /**< (ISC_HIS_ENTRY192) Histogram Entry Offset */
+#define ISC_HIS_ENTRY193_REG_OFST      (0x714)             /**< (ISC_HIS_ENTRY193) Histogram Entry Offset */
+#define ISC_HIS_ENTRY194_REG_OFST      (0x718)             /**< (ISC_HIS_ENTRY194) Histogram Entry Offset */
+#define ISC_HIS_ENTRY195_REG_OFST      (0x71C)             /**< (ISC_HIS_ENTRY195) Histogram Entry Offset */
+#define ISC_HIS_ENTRY196_REG_OFST      (0x720)             /**< (ISC_HIS_ENTRY196) Histogram Entry Offset */
+#define ISC_HIS_ENTRY197_REG_OFST      (0x724)             /**< (ISC_HIS_ENTRY197) Histogram Entry Offset */
+#define ISC_HIS_ENTRY198_REG_OFST      (0x728)             /**< (ISC_HIS_ENTRY198) Histogram Entry Offset */
+#define ISC_HIS_ENTRY199_REG_OFST      (0x72C)             /**< (ISC_HIS_ENTRY199) Histogram Entry Offset */
+#define ISC_HIS_ENTRY200_REG_OFST      (0x730)             /**< (ISC_HIS_ENTRY200) Histogram Entry Offset */
+#define ISC_HIS_ENTRY201_REG_OFST      (0x734)             /**< (ISC_HIS_ENTRY201) Histogram Entry Offset */
+#define ISC_HIS_ENTRY202_REG_OFST      (0x738)             /**< (ISC_HIS_ENTRY202) Histogram Entry Offset */
+#define ISC_HIS_ENTRY203_REG_OFST      (0x73C)             /**< (ISC_HIS_ENTRY203) Histogram Entry Offset */
+#define ISC_HIS_ENTRY204_REG_OFST      (0x740)             /**< (ISC_HIS_ENTRY204) Histogram Entry Offset */
+#define ISC_HIS_ENTRY205_REG_OFST      (0x744)             /**< (ISC_HIS_ENTRY205) Histogram Entry Offset */
+#define ISC_HIS_ENTRY206_REG_OFST      (0x748)             /**< (ISC_HIS_ENTRY206) Histogram Entry Offset */
+#define ISC_HIS_ENTRY207_REG_OFST      (0x74C)             /**< (ISC_HIS_ENTRY207) Histogram Entry Offset */
+#define ISC_HIS_ENTRY208_REG_OFST      (0x750)             /**< (ISC_HIS_ENTRY208) Histogram Entry Offset */
+#define ISC_HIS_ENTRY209_REG_OFST      (0x754)             /**< (ISC_HIS_ENTRY209) Histogram Entry Offset */
+#define ISC_HIS_ENTRY210_REG_OFST      (0x758)             /**< (ISC_HIS_ENTRY210) Histogram Entry Offset */
+#define ISC_HIS_ENTRY211_REG_OFST      (0x75C)             /**< (ISC_HIS_ENTRY211) Histogram Entry Offset */
+#define ISC_HIS_ENTRY212_REG_OFST      (0x760)             /**< (ISC_HIS_ENTRY212) Histogram Entry Offset */
+#define ISC_HIS_ENTRY213_REG_OFST      (0x764)             /**< (ISC_HIS_ENTRY213) Histogram Entry Offset */
+#define ISC_HIS_ENTRY214_REG_OFST      (0x768)             /**< (ISC_HIS_ENTRY214) Histogram Entry Offset */
+#define ISC_HIS_ENTRY215_REG_OFST      (0x76C)             /**< (ISC_HIS_ENTRY215) Histogram Entry Offset */
+#define ISC_HIS_ENTRY216_REG_OFST      (0x770)             /**< (ISC_HIS_ENTRY216) Histogram Entry Offset */
+#define ISC_HIS_ENTRY217_REG_OFST      (0x774)             /**< (ISC_HIS_ENTRY217) Histogram Entry Offset */
+#define ISC_HIS_ENTRY218_REG_OFST      (0x778)             /**< (ISC_HIS_ENTRY218) Histogram Entry Offset */
+#define ISC_HIS_ENTRY219_REG_OFST      (0x77C)             /**< (ISC_HIS_ENTRY219) Histogram Entry Offset */
+#define ISC_HIS_ENTRY220_REG_OFST      (0x780)             /**< (ISC_HIS_ENTRY220) Histogram Entry Offset */
+#define ISC_HIS_ENTRY221_REG_OFST      (0x784)             /**< (ISC_HIS_ENTRY221) Histogram Entry Offset */
+#define ISC_HIS_ENTRY222_REG_OFST      (0x788)             /**< (ISC_HIS_ENTRY222) Histogram Entry Offset */
+#define ISC_HIS_ENTRY223_REG_OFST      (0x78C)             /**< (ISC_HIS_ENTRY223) Histogram Entry Offset */
+#define ISC_HIS_ENTRY224_REG_OFST      (0x790)             /**< (ISC_HIS_ENTRY224) Histogram Entry Offset */
+#define ISC_HIS_ENTRY225_REG_OFST      (0x794)             /**< (ISC_HIS_ENTRY225) Histogram Entry Offset */
+#define ISC_HIS_ENTRY226_REG_OFST      (0x798)             /**< (ISC_HIS_ENTRY226) Histogram Entry Offset */
+#define ISC_HIS_ENTRY227_REG_OFST      (0x79C)             /**< (ISC_HIS_ENTRY227) Histogram Entry Offset */
+#define ISC_HIS_ENTRY228_REG_OFST      (0x7A0)             /**< (ISC_HIS_ENTRY228) Histogram Entry Offset */
+#define ISC_HIS_ENTRY229_REG_OFST      (0x7A4)             /**< (ISC_HIS_ENTRY229) Histogram Entry Offset */
+#define ISC_HIS_ENTRY230_REG_OFST      (0x7A8)             /**< (ISC_HIS_ENTRY230) Histogram Entry Offset */
+#define ISC_HIS_ENTRY231_REG_OFST      (0x7AC)             /**< (ISC_HIS_ENTRY231) Histogram Entry Offset */
+#define ISC_HIS_ENTRY232_REG_OFST      (0x7B0)             /**< (ISC_HIS_ENTRY232) Histogram Entry Offset */
+#define ISC_HIS_ENTRY233_REG_OFST      (0x7B4)             /**< (ISC_HIS_ENTRY233) Histogram Entry Offset */
+#define ISC_HIS_ENTRY234_REG_OFST      (0x7B8)             /**< (ISC_HIS_ENTRY234) Histogram Entry Offset */
+#define ISC_HIS_ENTRY235_REG_OFST      (0x7BC)             /**< (ISC_HIS_ENTRY235) Histogram Entry Offset */
+#define ISC_HIS_ENTRY236_REG_OFST      (0x7C0)             /**< (ISC_HIS_ENTRY236) Histogram Entry Offset */
+#define ISC_HIS_ENTRY237_REG_OFST      (0x7C4)             /**< (ISC_HIS_ENTRY237) Histogram Entry Offset */
+#define ISC_HIS_ENTRY238_REG_OFST      (0x7C8)             /**< (ISC_HIS_ENTRY238) Histogram Entry Offset */
+#define ISC_HIS_ENTRY239_REG_OFST      (0x7CC)             /**< (ISC_HIS_ENTRY239) Histogram Entry Offset */
+#define ISC_HIS_ENTRY240_REG_OFST      (0x7D0)             /**< (ISC_HIS_ENTRY240) Histogram Entry Offset */
+#define ISC_HIS_ENTRY241_REG_OFST      (0x7D4)             /**< (ISC_HIS_ENTRY241) Histogram Entry Offset */
+#define ISC_HIS_ENTRY242_REG_OFST      (0x7D8)             /**< (ISC_HIS_ENTRY242) Histogram Entry Offset */
+#define ISC_HIS_ENTRY243_REG_OFST      (0x7DC)             /**< (ISC_HIS_ENTRY243) Histogram Entry Offset */
+#define ISC_HIS_ENTRY244_REG_OFST      (0x7E0)             /**< (ISC_HIS_ENTRY244) Histogram Entry Offset */
+#define ISC_HIS_ENTRY245_REG_OFST      (0x7E4)             /**< (ISC_HIS_ENTRY245) Histogram Entry Offset */
+#define ISC_HIS_ENTRY246_REG_OFST      (0x7E8)             /**< (ISC_HIS_ENTRY246) Histogram Entry Offset */
+#define ISC_HIS_ENTRY247_REG_OFST      (0x7EC)             /**< (ISC_HIS_ENTRY247) Histogram Entry Offset */
+#define ISC_HIS_ENTRY248_REG_OFST      (0x7F0)             /**< (ISC_HIS_ENTRY248) Histogram Entry Offset */
+#define ISC_HIS_ENTRY249_REG_OFST      (0x7F4)             /**< (ISC_HIS_ENTRY249) Histogram Entry Offset */
+#define ISC_HIS_ENTRY250_REG_OFST      (0x7F8)             /**< (ISC_HIS_ENTRY250) Histogram Entry Offset */
+#define ISC_HIS_ENTRY251_REG_OFST      (0x7FC)             /**< (ISC_HIS_ENTRY251) Histogram Entry Offset */
+#define ISC_HIS_ENTRY252_REG_OFST      (0x800)             /**< (ISC_HIS_ENTRY252) Histogram Entry Offset */
+#define ISC_HIS_ENTRY253_REG_OFST      (0x804)             /**< (ISC_HIS_ENTRY253) Histogram Entry Offset */
+#define ISC_HIS_ENTRY254_REG_OFST      (0x808)             /**< (ISC_HIS_ENTRY254) Histogram Entry Offset */
+#define ISC_HIS_ENTRY255_REG_OFST      (0x80C)             /**< (ISC_HIS_ENTRY255) Histogram Entry Offset */
+#define ISC_HIS_ENTRY256_REG_OFST      (0x810)             /**< (ISC_HIS_ENTRY256) Histogram Entry Offset */
+#define ISC_HIS_ENTRY257_REG_OFST      (0x814)             /**< (ISC_HIS_ENTRY257) Histogram Entry Offset */
+#define ISC_HIS_ENTRY258_REG_OFST      (0x818)             /**< (ISC_HIS_ENTRY258) Histogram Entry Offset */
+#define ISC_HIS_ENTRY259_REG_OFST      (0x81C)             /**< (ISC_HIS_ENTRY259) Histogram Entry Offset */
+#define ISC_HIS_ENTRY260_REG_OFST      (0x820)             /**< (ISC_HIS_ENTRY260) Histogram Entry Offset */
+#define ISC_HIS_ENTRY261_REG_OFST      (0x824)             /**< (ISC_HIS_ENTRY261) Histogram Entry Offset */
+#define ISC_HIS_ENTRY262_REG_OFST      (0x828)             /**< (ISC_HIS_ENTRY262) Histogram Entry Offset */
+#define ISC_HIS_ENTRY263_REG_OFST      (0x82C)             /**< (ISC_HIS_ENTRY263) Histogram Entry Offset */
+#define ISC_HIS_ENTRY264_REG_OFST      (0x830)             /**< (ISC_HIS_ENTRY264) Histogram Entry Offset */
+#define ISC_HIS_ENTRY265_REG_OFST      (0x834)             /**< (ISC_HIS_ENTRY265) Histogram Entry Offset */
+#define ISC_HIS_ENTRY266_REG_OFST      (0x838)             /**< (ISC_HIS_ENTRY266) Histogram Entry Offset */
+#define ISC_HIS_ENTRY267_REG_OFST      (0x83C)             /**< (ISC_HIS_ENTRY267) Histogram Entry Offset */
+#define ISC_HIS_ENTRY268_REG_OFST      (0x840)             /**< (ISC_HIS_ENTRY268) Histogram Entry Offset */
+#define ISC_HIS_ENTRY269_REG_OFST      (0x844)             /**< (ISC_HIS_ENTRY269) Histogram Entry Offset */
+#define ISC_HIS_ENTRY270_REG_OFST      (0x848)             /**< (ISC_HIS_ENTRY270) Histogram Entry Offset */
+#define ISC_HIS_ENTRY271_REG_OFST      (0x84C)             /**< (ISC_HIS_ENTRY271) Histogram Entry Offset */
+#define ISC_HIS_ENTRY272_REG_OFST      (0x850)             /**< (ISC_HIS_ENTRY272) Histogram Entry Offset */
+#define ISC_HIS_ENTRY273_REG_OFST      (0x854)             /**< (ISC_HIS_ENTRY273) Histogram Entry Offset */
+#define ISC_HIS_ENTRY274_REG_OFST      (0x858)             /**< (ISC_HIS_ENTRY274) Histogram Entry Offset */
+#define ISC_HIS_ENTRY275_REG_OFST      (0x85C)             /**< (ISC_HIS_ENTRY275) Histogram Entry Offset */
+#define ISC_HIS_ENTRY276_REG_OFST      (0x860)             /**< (ISC_HIS_ENTRY276) Histogram Entry Offset */
+#define ISC_HIS_ENTRY277_REG_OFST      (0x864)             /**< (ISC_HIS_ENTRY277) Histogram Entry Offset */
+#define ISC_HIS_ENTRY278_REG_OFST      (0x868)             /**< (ISC_HIS_ENTRY278) Histogram Entry Offset */
+#define ISC_HIS_ENTRY279_REG_OFST      (0x86C)             /**< (ISC_HIS_ENTRY279) Histogram Entry Offset */
+#define ISC_HIS_ENTRY280_REG_OFST      (0x870)             /**< (ISC_HIS_ENTRY280) Histogram Entry Offset */
+#define ISC_HIS_ENTRY281_REG_OFST      (0x874)             /**< (ISC_HIS_ENTRY281) Histogram Entry Offset */
+#define ISC_HIS_ENTRY282_REG_OFST      (0x878)             /**< (ISC_HIS_ENTRY282) Histogram Entry Offset */
+#define ISC_HIS_ENTRY283_REG_OFST      (0x87C)             /**< (ISC_HIS_ENTRY283) Histogram Entry Offset */
+#define ISC_HIS_ENTRY284_REG_OFST      (0x880)             /**< (ISC_HIS_ENTRY284) Histogram Entry Offset */
+#define ISC_HIS_ENTRY285_REG_OFST      (0x884)             /**< (ISC_HIS_ENTRY285) Histogram Entry Offset */
+#define ISC_HIS_ENTRY286_REG_OFST      (0x888)             /**< (ISC_HIS_ENTRY286) Histogram Entry Offset */
+#define ISC_HIS_ENTRY287_REG_OFST      (0x88C)             /**< (ISC_HIS_ENTRY287) Histogram Entry Offset */
+#define ISC_HIS_ENTRY288_REG_OFST      (0x890)             /**< (ISC_HIS_ENTRY288) Histogram Entry Offset */
+#define ISC_HIS_ENTRY289_REG_OFST      (0x894)             /**< (ISC_HIS_ENTRY289) Histogram Entry Offset */
+#define ISC_HIS_ENTRY290_REG_OFST      (0x898)             /**< (ISC_HIS_ENTRY290) Histogram Entry Offset */
+#define ISC_HIS_ENTRY291_REG_OFST      (0x89C)             /**< (ISC_HIS_ENTRY291) Histogram Entry Offset */
+#define ISC_HIS_ENTRY292_REG_OFST      (0x8A0)             /**< (ISC_HIS_ENTRY292) Histogram Entry Offset */
+#define ISC_HIS_ENTRY293_REG_OFST      (0x8A4)             /**< (ISC_HIS_ENTRY293) Histogram Entry Offset */
+#define ISC_HIS_ENTRY294_REG_OFST      (0x8A8)             /**< (ISC_HIS_ENTRY294) Histogram Entry Offset */
+#define ISC_HIS_ENTRY295_REG_OFST      (0x8AC)             /**< (ISC_HIS_ENTRY295) Histogram Entry Offset */
+#define ISC_HIS_ENTRY296_REG_OFST      (0x8B0)             /**< (ISC_HIS_ENTRY296) Histogram Entry Offset */
+#define ISC_HIS_ENTRY297_REG_OFST      (0x8B4)             /**< (ISC_HIS_ENTRY297) Histogram Entry Offset */
+#define ISC_HIS_ENTRY298_REG_OFST      (0x8B8)             /**< (ISC_HIS_ENTRY298) Histogram Entry Offset */
+#define ISC_HIS_ENTRY299_REG_OFST      (0x8BC)             /**< (ISC_HIS_ENTRY299) Histogram Entry Offset */
+#define ISC_HIS_ENTRY300_REG_OFST      (0x8C0)             /**< (ISC_HIS_ENTRY300) Histogram Entry Offset */
+#define ISC_HIS_ENTRY301_REG_OFST      (0x8C4)             /**< (ISC_HIS_ENTRY301) Histogram Entry Offset */
+#define ISC_HIS_ENTRY302_REG_OFST      (0x8C8)             /**< (ISC_HIS_ENTRY302) Histogram Entry Offset */
+#define ISC_HIS_ENTRY303_REG_OFST      (0x8CC)             /**< (ISC_HIS_ENTRY303) Histogram Entry Offset */
+#define ISC_HIS_ENTRY304_REG_OFST      (0x8D0)             /**< (ISC_HIS_ENTRY304) Histogram Entry Offset */
+#define ISC_HIS_ENTRY305_REG_OFST      (0x8D4)             /**< (ISC_HIS_ENTRY305) Histogram Entry Offset */
+#define ISC_HIS_ENTRY306_REG_OFST      (0x8D8)             /**< (ISC_HIS_ENTRY306) Histogram Entry Offset */
+#define ISC_HIS_ENTRY307_REG_OFST      (0x8DC)             /**< (ISC_HIS_ENTRY307) Histogram Entry Offset */
+#define ISC_HIS_ENTRY308_REG_OFST      (0x8E0)             /**< (ISC_HIS_ENTRY308) Histogram Entry Offset */
+#define ISC_HIS_ENTRY309_REG_OFST      (0x8E4)             /**< (ISC_HIS_ENTRY309) Histogram Entry Offset */
+#define ISC_HIS_ENTRY310_REG_OFST      (0x8E8)             /**< (ISC_HIS_ENTRY310) Histogram Entry Offset */
+#define ISC_HIS_ENTRY311_REG_OFST      (0x8EC)             /**< (ISC_HIS_ENTRY311) Histogram Entry Offset */
+#define ISC_HIS_ENTRY312_REG_OFST      (0x8F0)             /**< (ISC_HIS_ENTRY312) Histogram Entry Offset */
+#define ISC_HIS_ENTRY313_REG_OFST      (0x8F4)             /**< (ISC_HIS_ENTRY313) Histogram Entry Offset */
+#define ISC_HIS_ENTRY314_REG_OFST      (0x8F8)             /**< (ISC_HIS_ENTRY314) Histogram Entry Offset */
+#define ISC_HIS_ENTRY315_REG_OFST      (0x8FC)             /**< (ISC_HIS_ENTRY315) Histogram Entry Offset */
+#define ISC_HIS_ENTRY316_REG_OFST      (0x900)             /**< (ISC_HIS_ENTRY316) Histogram Entry Offset */
+#define ISC_HIS_ENTRY317_REG_OFST      (0x904)             /**< (ISC_HIS_ENTRY317) Histogram Entry Offset */
+#define ISC_HIS_ENTRY318_REG_OFST      (0x908)             /**< (ISC_HIS_ENTRY318) Histogram Entry Offset */
+#define ISC_HIS_ENTRY319_REG_OFST      (0x90C)             /**< (ISC_HIS_ENTRY319) Histogram Entry Offset */
+#define ISC_HIS_ENTRY320_REG_OFST      (0x910)             /**< (ISC_HIS_ENTRY320) Histogram Entry Offset */
+#define ISC_HIS_ENTRY321_REG_OFST      (0x914)             /**< (ISC_HIS_ENTRY321) Histogram Entry Offset */
+#define ISC_HIS_ENTRY322_REG_OFST      (0x918)             /**< (ISC_HIS_ENTRY322) Histogram Entry Offset */
+#define ISC_HIS_ENTRY323_REG_OFST      (0x91C)             /**< (ISC_HIS_ENTRY323) Histogram Entry Offset */
+#define ISC_HIS_ENTRY324_REG_OFST      (0x920)             /**< (ISC_HIS_ENTRY324) Histogram Entry Offset */
+#define ISC_HIS_ENTRY325_REG_OFST      (0x924)             /**< (ISC_HIS_ENTRY325) Histogram Entry Offset */
+#define ISC_HIS_ENTRY326_REG_OFST      (0x928)             /**< (ISC_HIS_ENTRY326) Histogram Entry Offset */
+#define ISC_HIS_ENTRY327_REG_OFST      (0x92C)             /**< (ISC_HIS_ENTRY327) Histogram Entry Offset */
+#define ISC_HIS_ENTRY328_REG_OFST      (0x930)             /**< (ISC_HIS_ENTRY328) Histogram Entry Offset */
+#define ISC_HIS_ENTRY329_REG_OFST      (0x934)             /**< (ISC_HIS_ENTRY329) Histogram Entry Offset */
+#define ISC_HIS_ENTRY330_REG_OFST      (0x938)             /**< (ISC_HIS_ENTRY330) Histogram Entry Offset */
+#define ISC_HIS_ENTRY331_REG_OFST      (0x93C)             /**< (ISC_HIS_ENTRY331) Histogram Entry Offset */
+#define ISC_HIS_ENTRY332_REG_OFST      (0x940)             /**< (ISC_HIS_ENTRY332) Histogram Entry Offset */
+#define ISC_HIS_ENTRY333_REG_OFST      (0x944)             /**< (ISC_HIS_ENTRY333) Histogram Entry Offset */
+#define ISC_HIS_ENTRY334_REG_OFST      (0x948)             /**< (ISC_HIS_ENTRY334) Histogram Entry Offset */
+#define ISC_HIS_ENTRY335_REG_OFST      (0x94C)             /**< (ISC_HIS_ENTRY335) Histogram Entry Offset */
+#define ISC_HIS_ENTRY336_REG_OFST      (0x950)             /**< (ISC_HIS_ENTRY336) Histogram Entry Offset */
+#define ISC_HIS_ENTRY337_REG_OFST      (0x954)             /**< (ISC_HIS_ENTRY337) Histogram Entry Offset */
+#define ISC_HIS_ENTRY338_REG_OFST      (0x958)             /**< (ISC_HIS_ENTRY338) Histogram Entry Offset */
+#define ISC_HIS_ENTRY339_REG_OFST      (0x95C)             /**< (ISC_HIS_ENTRY339) Histogram Entry Offset */
+#define ISC_HIS_ENTRY340_REG_OFST      (0x960)             /**< (ISC_HIS_ENTRY340) Histogram Entry Offset */
+#define ISC_HIS_ENTRY341_REG_OFST      (0x964)             /**< (ISC_HIS_ENTRY341) Histogram Entry Offset */
+#define ISC_HIS_ENTRY342_REG_OFST      (0x968)             /**< (ISC_HIS_ENTRY342) Histogram Entry Offset */
+#define ISC_HIS_ENTRY343_REG_OFST      (0x96C)             /**< (ISC_HIS_ENTRY343) Histogram Entry Offset */
+#define ISC_HIS_ENTRY344_REG_OFST      (0x970)             /**< (ISC_HIS_ENTRY344) Histogram Entry Offset */
+#define ISC_HIS_ENTRY345_REG_OFST      (0x974)             /**< (ISC_HIS_ENTRY345) Histogram Entry Offset */
+#define ISC_HIS_ENTRY346_REG_OFST      (0x978)             /**< (ISC_HIS_ENTRY346) Histogram Entry Offset */
+#define ISC_HIS_ENTRY347_REG_OFST      (0x97C)             /**< (ISC_HIS_ENTRY347) Histogram Entry Offset */
+#define ISC_HIS_ENTRY348_REG_OFST      (0x980)             /**< (ISC_HIS_ENTRY348) Histogram Entry Offset */
+#define ISC_HIS_ENTRY349_REG_OFST      (0x984)             /**< (ISC_HIS_ENTRY349) Histogram Entry Offset */
+#define ISC_HIS_ENTRY350_REG_OFST      (0x988)             /**< (ISC_HIS_ENTRY350) Histogram Entry Offset */
+#define ISC_HIS_ENTRY351_REG_OFST      (0x98C)             /**< (ISC_HIS_ENTRY351) Histogram Entry Offset */
+#define ISC_HIS_ENTRY352_REG_OFST      (0x990)             /**< (ISC_HIS_ENTRY352) Histogram Entry Offset */
+#define ISC_HIS_ENTRY353_REG_OFST      (0x994)             /**< (ISC_HIS_ENTRY353) Histogram Entry Offset */
+#define ISC_HIS_ENTRY354_REG_OFST      (0x998)             /**< (ISC_HIS_ENTRY354) Histogram Entry Offset */
+#define ISC_HIS_ENTRY355_REG_OFST      (0x99C)             /**< (ISC_HIS_ENTRY355) Histogram Entry Offset */
+#define ISC_HIS_ENTRY356_REG_OFST      (0x9A0)             /**< (ISC_HIS_ENTRY356) Histogram Entry Offset */
+#define ISC_HIS_ENTRY357_REG_OFST      (0x9A4)             /**< (ISC_HIS_ENTRY357) Histogram Entry Offset */
+#define ISC_HIS_ENTRY358_REG_OFST      (0x9A8)             /**< (ISC_HIS_ENTRY358) Histogram Entry Offset */
+#define ISC_HIS_ENTRY359_REG_OFST      (0x9AC)             /**< (ISC_HIS_ENTRY359) Histogram Entry Offset */
+#define ISC_HIS_ENTRY360_REG_OFST      (0x9B0)             /**< (ISC_HIS_ENTRY360) Histogram Entry Offset */
+#define ISC_HIS_ENTRY361_REG_OFST      (0x9B4)             /**< (ISC_HIS_ENTRY361) Histogram Entry Offset */
+#define ISC_HIS_ENTRY362_REG_OFST      (0x9B8)             /**< (ISC_HIS_ENTRY362) Histogram Entry Offset */
+#define ISC_HIS_ENTRY363_REG_OFST      (0x9BC)             /**< (ISC_HIS_ENTRY363) Histogram Entry Offset */
+#define ISC_HIS_ENTRY364_REG_OFST      (0x9C0)             /**< (ISC_HIS_ENTRY364) Histogram Entry Offset */
+#define ISC_HIS_ENTRY365_REG_OFST      (0x9C4)             /**< (ISC_HIS_ENTRY365) Histogram Entry Offset */
+#define ISC_HIS_ENTRY366_REG_OFST      (0x9C8)             /**< (ISC_HIS_ENTRY366) Histogram Entry Offset */
+#define ISC_HIS_ENTRY367_REG_OFST      (0x9CC)             /**< (ISC_HIS_ENTRY367) Histogram Entry Offset */
+#define ISC_HIS_ENTRY368_REG_OFST      (0x9D0)             /**< (ISC_HIS_ENTRY368) Histogram Entry Offset */
+#define ISC_HIS_ENTRY369_REG_OFST      (0x9D4)             /**< (ISC_HIS_ENTRY369) Histogram Entry Offset */
+#define ISC_HIS_ENTRY370_REG_OFST      (0x9D8)             /**< (ISC_HIS_ENTRY370) Histogram Entry Offset */
+#define ISC_HIS_ENTRY371_REG_OFST      (0x9DC)             /**< (ISC_HIS_ENTRY371) Histogram Entry Offset */
+#define ISC_HIS_ENTRY372_REG_OFST      (0x9E0)             /**< (ISC_HIS_ENTRY372) Histogram Entry Offset */
+#define ISC_HIS_ENTRY373_REG_OFST      (0x9E4)             /**< (ISC_HIS_ENTRY373) Histogram Entry Offset */
+#define ISC_HIS_ENTRY374_REG_OFST      (0x9E8)             /**< (ISC_HIS_ENTRY374) Histogram Entry Offset */
+#define ISC_HIS_ENTRY375_REG_OFST      (0x9EC)             /**< (ISC_HIS_ENTRY375) Histogram Entry Offset */
+#define ISC_HIS_ENTRY376_REG_OFST      (0x9F0)             /**< (ISC_HIS_ENTRY376) Histogram Entry Offset */
+#define ISC_HIS_ENTRY377_REG_OFST      (0x9F4)             /**< (ISC_HIS_ENTRY377) Histogram Entry Offset */
+#define ISC_HIS_ENTRY378_REG_OFST      (0x9F8)             /**< (ISC_HIS_ENTRY378) Histogram Entry Offset */
+#define ISC_HIS_ENTRY379_REG_OFST      (0x9FC)             /**< (ISC_HIS_ENTRY379) Histogram Entry Offset */
+#define ISC_HIS_ENTRY380_REG_OFST      (0xA00)             /**< (ISC_HIS_ENTRY380) Histogram Entry Offset */
+#define ISC_HIS_ENTRY381_REG_OFST      (0xA04)             /**< (ISC_HIS_ENTRY381) Histogram Entry Offset */
+#define ISC_HIS_ENTRY382_REG_OFST      (0xA08)             /**< (ISC_HIS_ENTRY382) Histogram Entry Offset */
+#define ISC_HIS_ENTRY383_REG_OFST      (0xA0C)             /**< (ISC_HIS_ENTRY383) Histogram Entry Offset */
+#define ISC_HIS_ENTRY384_REG_OFST      (0xA10)             /**< (ISC_HIS_ENTRY384) Histogram Entry Offset */
+#define ISC_HIS_ENTRY385_REG_OFST      (0xA14)             /**< (ISC_HIS_ENTRY385) Histogram Entry Offset */
+#define ISC_HIS_ENTRY386_REG_OFST      (0xA18)             /**< (ISC_HIS_ENTRY386) Histogram Entry Offset */
+#define ISC_HIS_ENTRY387_REG_OFST      (0xA1C)             /**< (ISC_HIS_ENTRY387) Histogram Entry Offset */
+#define ISC_HIS_ENTRY388_REG_OFST      (0xA20)             /**< (ISC_HIS_ENTRY388) Histogram Entry Offset */
+#define ISC_HIS_ENTRY389_REG_OFST      (0xA24)             /**< (ISC_HIS_ENTRY389) Histogram Entry Offset */
+#define ISC_HIS_ENTRY390_REG_OFST      (0xA28)             /**< (ISC_HIS_ENTRY390) Histogram Entry Offset */
+#define ISC_HIS_ENTRY391_REG_OFST      (0xA2C)             /**< (ISC_HIS_ENTRY391) Histogram Entry Offset */
+#define ISC_HIS_ENTRY392_REG_OFST      (0xA30)             /**< (ISC_HIS_ENTRY392) Histogram Entry Offset */
+#define ISC_HIS_ENTRY393_REG_OFST      (0xA34)             /**< (ISC_HIS_ENTRY393) Histogram Entry Offset */
+#define ISC_HIS_ENTRY394_REG_OFST      (0xA38)             /**< (ISC_HIS_ENTRY394) Histogram Entry Offset */
+#define ISC_HIS_ENTRY395_REG_OFST      (0xA3C)             /**< (ISC_HIS_ENTRY395) Histogram Entry Offset */
+#define ISC_HIS_ENTRY396_REG_OFST      (0xA40)             /**< (ISC_HIS_ENTRY396) Histogram Entry Offset */
+#define ISC_HIS_ENTRY397_REG_OFST      (0xA44)             /**< (ISC_HIS_ENTRY397) Histogram Entry Offset */
+#define ISC_HIS_ENTRY398_REG_OFST      (0xA48)             /**< (ISC_HIS_ENTRY398) Histogram Entry Offset */
+#define ISC_HIS_ENTRY399_REG_OFST      (0xA4C)             /**< (ISC_HIS_ENTRY399) Histogram Entry Offset */
+#define ISC_HIS_ENTRY400_REG_OFST      (0xA50)             /**< (ISC_HIS_ENTRY400) Histogram Entry Offset */
+#define ISC_HIS_ENTRY401_REG_OFST      (0xA54)             /**< (ISC_HIS_ENTRY401) Histogram Entry Offset */
+#define ISC_HIS_ENTRY402_REG_OFST      (0xA58)             /**< (ISC_HIS_ENTRY402) Histogram Entry Offset */
+#define ISC_HIS_ENTRY403_REG_OFST      (0xA5C)             /**< (ISC_HIS_ENTRY403) Histogram Entry Offset */
+#define ISC_HIS_ENTRY404_REG_OFST      (0xA60)             /**< (ISC_HIS_ENTRY404) Histogram Entry Offset */
+#define ISC_HIS_ENTRY405_REG_OFST      (0xA64)             /**< (ISC_HIS_ENTRY405) Histogram Entry Offset */
+#define ISC_HIS_ENTRY406_REG_OFST      (0xA68)             /**< (ISC_HIS_ENTRY406) Histogram Entry Offset */
+#define ISC_HIS_ENTRY407_REG_OFST      (0xA6C)             /**< (ISC_HIS_ENTRY407) Histogram Entry Offset */
+#define ISC_HIS_ENTRY408_REG_OFST      (0xA70)             /**< (ISC_HIS_ENTRY408) Histogram Entry Offset */
+#define ISC_HIS_ENTRY409_REG_OFST      (0xA74)             /**< (ISC_HIS_ENTRY409) Histogram Entry Offset */
+#define ISC_HIS_ENTRY410_REG_OFST      (0xA78)             /**< (ISC_HIS_ENTRY410) Histogram Entry Offset */
+#define ISC_HIS_ENTRY411_REG_OFST      (0xA7C)             /**< (ISC_HIS_ENTRY411) Histogram Entry Offset */
+#define ISC_HIS_ENTRY412_REG_OFST      (0xA80)             /**< (ISC_HIS_ENTRY412) Histogram Entry Offset */
+#define ISC_HIS_ENTRY413_REG_OFST      (0xA84)             /**< (ISC_HIS_ENTRY413) Histogram Entry Offset */
+#define ISC_HIS_ENTRY414_REG_OFST      (0xA88)             /**< (ISC_HIS_ENTRY414) Histogram Entry Offset */
+#define ISC_HIS_ENTRY415_REG_OFST      (0xA8C)             /**< (ISC_HIS_ENTRY415) Histogram Entry Offset */
+#define ISC_HIS_ENTRY416_REG_OFST      (0xA90)             /**< (ISC_HIS_ENTRY416) Histogram Entry Offset */
+#define ISC_HIS_ENTRY417_REG_OFST      (0xA94)             /**< (ISC_HIS_ENTRY417) Histogram Entry Offset */
+#define ISC_HIS_ENTRY418_REG_OFST      (0xA98)             /**< (ISC_HIS_ENTRY418) Histogram Entry Offset */
+#define ISC_HIS_ENTRY419_REG_OFST      (0xA9C)             /**< (ISC_HIS_ENTRY419) Histogram Entry Offset */
+#define ISC_HIS_ENTRY420_REG_OFST      (0xAA0)             /**< (ISC_HIS_ENTRY420) Histogram Entry Offset */
+#define ISC_HIS_ENTRY421_REG_OFST      (0xAA4)             /**< (ISC_HIS_ENTRY421) Histogram Entry Offset */
+#define ISC_HIS_ENTRY422_REG_OFST      (0xAA8)             /**< (ISC_HIS_ENTRY422) Histogram Entry Offset */
+#define ISC_HIS_ENTRY423_REG_OFST      (0xAAC)             /**< (ISC_HIS_ENTRY423) Histogram Entry Offset */
+#define ISC_HIS_ENTRY424_REG_OFST      (0xAB0)             /**< (ISC_HIS_ENTRY424) Histogram Entry Offset */
+#define ISC_HIS_ENTRY425_REG_OFST      (0xAB4)             /**< (ISC_HIS_ENTRY425) Histogram Entry Offset */
+#define ISC_HIS_ENTRY426_REG_OFST      (0xAB8)             /**< (ISC_HIS_ENTRY426) Histogram Entry Offset */
+#define ISC_HIS_ENTRY427_REG_OFST      (0xABC)             /**< (ISC_HIS_ENTRY427) Histogram Entry Offset */
+#define ISC_HIS_ENTRY428_REG_OFST      (0xAC0)             /**< (ISC_HIS_ENTRY428) Histogram Entry Offset */
+#define ISC_HIS_ENTRY429_REG_OFST      (0xAC4)             /**< (ISC_HIS_ENTRY429) Histogram Entry Offset */
+#define ISC_HIS_ENTRY430_REG_OFST      (0xAC8)             /**< (ISC_HIS_ENTRY430) Histogram Entry Offset */
+#define ISC_HIS_ENTRY431_REG_OFST      (0xACC)             /**< (ISC_HIS_ENTRY431) Histogram Entry Offset */
+#define ISC_HIS_ENTRY432_REG_OFST      (0xAD0)             /**< (ISC_HIS_ENTRY432) Histogram Entry Offset */
+#define ISC_HIS_ENTRY433_REG_OFST      (0xAD4)             /**< (ISC_HIS_ENTRY433) Histogram Entry Offset */
+#define ISC_HIS_ENTRY434_REG_OFST      (0xAD8)             /**< (ISC_HIS_ENTRY434) Histogram Entry Offset */
+#define ISC_HIS_ENTRY435_REG_OFST      (0xADC)             /**< (ISC_HIS_ENTRY435) Histogram Entry Offset */
+#define ISC_HIS_ENTRY436_REG_OFST      (0xAE0)             /**< (ISC_HIS_ENTRY436) Histogram Entry Offset */
+#define ISC_HIS_ENTRY437_REG_OFST      (0xAE4)             /**< (ISC_HIS_ENTRY437) Histogram Entry Offset */
+#define ISC_HIS_ENTRY438_REG_OFST      (0xAE8)             /**< (ISC_HIS_ENTRY438) Histogram Entry Offset */
+#define ISC_HIS_ENTRY439_REG_OFST      (0xAEC)             /**< (ISC_HIS_ENTRY439) Histogram Entry Offset */
+#define ISC_HIS_ENTRY440_REG_OFST      (0xAF0)             /**< (ISC_HIS_ENTRY440) Histogram Entry Offset */
+#define ISC_HIS_ENTRY441_REG_OFST      (0xAF4)             /**< (ISC_HIS_ENTRY441) Histogram Entry Offset */
+#define ISC_HIS_ENTRY442_REG_OFST      (0xAF8)             /**< (ISC_HIS_ENTRY442) Histogram Entry Offset */
+#define ISC_HIS_ENTRY443_REG_OFST      (0xAFC)             /**< (ISC_HIS_ENTRY443) Histogram Entry Offset */
+#define ISC_HIS_ENTRY444_REG_OFST      (0xB00)             /**< (ISC_HIS_ENTRY444) Histogram Entry Offset */
+#define ISC_HIS_ENTRY445_REG_OFST      (0xB04)             /**< (ISC_HIS_ENTRY445) Histogram Entry Offset */
+#define ISC_HIS_ENTRY446_REG_OFST      (0xB08)             /**< (ISC_HIS_ENTRY446) Histogram Entry Offset */
+#define ISC_HIS_ENTRY447_REG_OFST      (0xB0C)             /**< (ISC_HIS_ENTRY447) Histogram Entry Offset */
+#define ISC_HIS_ENTRY448_REG_OFST      (0xB10)             /**< (ISC_HIS_ENTRY448) Histogram Entry Offset */
+#define ISC_HIS_ENTRY449_REG_OFST      (0xB14)             /**< (ISC_HIS_ENTRY449) Histogram Entry Offset */
+#define ISC_HIS_ENTRY450_REG_OFST      (0xB18)             /**< (ISC_HIS_ENTRY450) Histogram Entry Offset */
+#define ISC_HIS_ENTRY451_REG_OFST      (0xB1C)             /**< (ISC_HIS_ENTRY451) Histogram Entry Offset */
+#define ISC_HIS_ENTRY452_REG_OFST      (0xB20)             /**< (ISC_HIS_ENTRY452) Histogram Entry Offset */
+#define ISC_HIS_ENTRY453_REG_OFST      (0xB24)             /**< (ISC_HIS_ENTRY453) Histogram Entry Offset */
+#define ISC_HIS_ENTRY454_REG_OFST      (0xB28)             /**< (ISC_HIS_ENTRY454) Histogram Entry Offset */
+#define ISC_HIS_ENTRY455_REG_OFST      (0xB2C)             /**< (ISC_HIS_ENTRY455) Histogram Entry Offset */
+#define ISC_HIS_ENTRY456_REG_OFST      (0xB30)             /**< (ISC_HIS_ENTRY456) Histogram Entry Offset */
+#define ISC_HIS_ENTRY457_REG_OFST      (0xB34)             /**< (ISC_HIS_ENTRY457) Histogram Entry Offset */
+#define ISC_HIS_ENTRY458_REG_OFST      (0xB38)             /**< (ISC_HIS_ENTRY458) Histogram Entry Offset */
+#define ISC_HIS_ENTRY459_REG_OFST      (0xB3C)             /**< (ISC_HIS_ENTRY459) Histogram Entry Offset */
+#define ISC_HIS_ENTRY460_REG_OFST      (0xB40)             /**< (ISC_HIS_ENTRY460) Histogram Entry Offset */
+#define ISC_HIS_ENTRY461_REG_OFST      (0xB44)             /**< (ISC_HIS_ENTRY461) Histogram Entry Offset */
+#define ISC_HIS_ENTRY462_REG_OFST      (0xB48)             /**< (ISC_HIS_ENTRY462) Histogram Entry Offset */
+#define ISC_HIS_ENTRY463_REG_OFST      (0xB4C)             /**< (ISC_HIS_ENTRY463) Histogram Entry Offset */
+#define ISC_HIS_ENTRY464_REG_OFST      (0xB50)             /**< (ISC_HIS_ENTRY464) Histogram Entry Offset */
+#define ISC_HIS_ENTRY465_REG_OFST      (0xB54)             /**< (ISC_HIS_ENTRY465) Histogram Entry Offset */
+#define ISC_HIS_ENTRY466_REG_OFST      (0xB58)             /**< (ISC_HIS_ENTRY466) Histogram Entry Offset */
+#define ISC_HIS_ENTRY467_REG_OFST      (0xB5C)             /**< (ISC_HIS_ENTRY467) Histogram Entry Offset */
+#define ISC_HIS_ENTRY468_REG_OFST      (0xB60)             /**< (ISC_HIS_ENTRY468) Histogram Entry Offset */
+#define ISC_HIS_ENTRY469_REG_OFST      (0xB64)             /**< (ISC_HIS_ENTRY469) Histogram Entry Offset */
+#define ISC_HIS_ENTRY470_REG_OFST      (0xB68)             /**< (ISC_HIS_ENTRY470) Histogram Entry Offset */
+#define ISC_HIS_ENTRY471_REG_OFST      (0xB6C)             /**< (ISC_HIS_ENTRY471) Histogram Entry Offset */
+#define ISC_HIS_ENTRY472_REG_OFST      (0xB70)             /**< (ISC_HIS_ENTRY472) Histogram Entry Offset */
+#define ISC_HIS_ENTRY473_REG_OFST      (0xB74)             /**< (ISC_HIS_ENTRY473) Histogram Entry Offset */
+#define ISC_HIS_ENTRY474_REG_OFST      (0xB78)             /**< (ISC_HIS_ENTRY474) Histogram Entry Offset */
+#define ISC_HIS_ENTRY475_REG_OFST      (0xB7C)             /**< (ISC_HIS_ENTRY475) Histogram Entry Offset */
+#define ISC_HIS_ENTRY476_REG_OFST      (0xB80)             /**< (ISC_HIS_ENTRY476) Histogram Entry Offset */
+#define ISC_HIS_ENTRY477_REG_OFST      (0xB84)             /**< (ISC_HIS_ENTRY477) Histogram Entry Offset */
+#define ISC_HIS_ENTRY478_REG_OFST      (0xB88)             /**< (ISC_HIS_ENTRY478) Histogram Entry Offset */
+#define ISC_HIS_ENTRY479_REG_OFST      (0xB8C)             /**< (ISC_HIS_ENTRY479) Histogram Entry Offset */
+#define ISC_HIS_ENTRY480_REG_OFST      (0xB90)             /**< (ISC_HIS_ENTRY480) Histogram Entry Offset */
+#define ISC_HIS_ENTRY481_REG_OFST      (0xB94)             /**< (ISC_HIS_ENTRY481) Histogram Entry Offset */
+#define ISC_HIS_ENTRY482_REG_OFST      (0xB98)             /**< (ISC_HIS_ENTRY482) Histogram Entry Offset */
+#define ISC_HIS_ENTRY483_REG_OFST      (0xB9C)             /**< (ISC_HIS_ENTRY483) Histogram Entry Offset */
+#define ISC_HIS_ENTRY484_REG_OFST      (0xBA0)             /**< (ISC_HIS_ENTRY484) Histogram Entry Offset */
+#define ISC_HIS_ENTRY485_REG_OFST      (0xBA4)             /**< (ISC_HIS_ENTRY485) Histogram Entry Offset */
+#define ISC_HIS_ENTRY486_REG_OFST      (0xBA8)             /**< (ISC_HIS_ENTRY486) Histogram Entry Offset */
+#define ISC_HIS_ENTRY487_REG_OFST      (0xBAC)             /**< (ISC_HIS_ENTRY487) Histogram Entry Offset */
+#define ISC_HIS_ENTRY488_REG_OFST      (0xBB0)             /**< (ISC_HIS_ENTRY488) Histogram Entry Offset */
+#define ISC_HIS_ENTRY489_REG_OFST      (0xBB4)             /**< (ISC_HIS_ENTRY489) Histogram Entry Offset */
+#define ISC_HIS_ENTRY490_REG_OFST      (0xBB8)             /**< (ISC_HIS_ENTRY490) Histogram Entry Offset */
+#define ISC_HIS_ENTRY491_REG_OFST      (0xBBC)             /**< (ISC_HIS_ENTRY491) Histogram Entry Offset */
+#define ISC_HIS_ENTRY492_REG_OFST      (0xBC0)             /**< (ISC_HIS_ENTRY492) Histogram Entry Offset */
+#define ISC_HIS_ENTRY493_REG_OFST      (0xBC4)             /**< (ISC_HIS_ENTRY493) Histogram Entry Offset */
+#define ISC_HIS_ENTRY494_REG_OFST      (0xBC8)             /**< (ISC_HIS_ENTRY494) Histogram Entry Offset */
+#define ISC_HIS_ENTRY495_REG_OFST      (0xBCC)             /**< (ISC_HIS_ENTRY495) Histogram Entry Offset */
+#define ISC_HIS_ENTRY496_REG_OFST      (0xBD0)             /**< (ISC_HIS_ENTRY496) Histogram Entry Offset */
+#define ISC_HIS_ENTRY497_REG_OFST      (0xBD4)             /**< (ISC_HIS_ENTRY497) Histogram Entry Offset */
+#define ISC_HIS_ENTRY498_REG_OFST      (0xBD8)             /**< (ISC_HIS_ENTRY498) Histogram Entry Offset */
+#define ISC_HIS_ENTRY499_REG_OFST      (0xBDC)             /**< (ISC_HIS_ENTRY499) Histogram Entry Offset */
+#define ISC_HIS_ENTRY500_REG_OFST      (0xBE0)             /**< (ISC_HIS_ENTRY500) Histogram Entry Offset */
+#define ISC_HIS_ENTRY501_REG_OFST      (0xBE4)             /**< (ISC_HIS_ENTRY501) Histogram Entry Offset */
+#define ISC_HIS_ENTRY502_REG_OFST      (0xBE8)             /**< (ISC_HIS_ENTRY502) Histogram Entry Offset */
+#define ISC_HIS_ENTRY503_REG_OFST      (0xBEC)             /**< (ISC_HIS_ENTRY503) Histogram Entry Offset */
+#define ISC_HIS_ENTRY504_REG_OFST      (0xBF0)             /**< (ISC_HIS_ENTRY504) Histogram Entry Offset */
+#define ISC_HIS_ENTRY505_REG_OFST      (0xBF4)             /**< (ISC_HIS_ENTRY505) Histogram Entry Offset */
+#define ISC_HIS_ENTRY506_REG_OFST      (0xBF8)             /**< (ISC_HIS_ENTRY506) Histogram Entry Offset */
+#define ISC_HIS_ENTRY507_REG_OFST      (0xBFC)             /**< (ISC_HIS_ENTRY507) Histogram Entry Offset */
+#define ISC_HIS_ENTRY508_REG_OFST      (0xC00)             /**< (ISC_HIS_ENTRY508) Histogram Entry Offset */
+#define ISC_HIS_ENTRY509_REG_OFST      (0xC04)             /**< (ISC_HIS_ENTRY509) Histogram Entry Offset */
+#define ISC_HIS_ENTRY510_REG_OFST      (0xC08)             /**< (ISC_HIS_ENTRY510) Histogram Entry Offset */
+#define ISC_HIS_ENTRY511_REG_OFST      (0xC0C)             /**< (ISC_HIS_ENTRY511) Histogram Entry Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief ISC_SUB0 register API structure */
