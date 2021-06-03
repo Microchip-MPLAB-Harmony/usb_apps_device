@@ -77,8 +77,6 @@ static void DFLL_Initialize(void)
 
     OSCCTRL_REGS->OSCCTRL_DFLLVAL = OSCCTRL_DFLLVAL_COARSE(calibCoarse) | OSCCTRL_DFLLVAL_FINE(512);
 
-    OSCCTRL_REGS->OSCCTRL_DFLLCTRL = 0 ;
-
     while((OSCCTRL_REGS->OSCCTRL_STATUS & OSCCTRL_STATUS_DFLLRDY_Msk) != OSCCTRL_STATUS_DFLLRDY_Msk)
     {
         /* Waiting for the Ready state */
