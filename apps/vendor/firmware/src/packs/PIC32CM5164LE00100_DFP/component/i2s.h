@@ -1,7 +1,7 @@
 /**
  * \brief Component description for I2S
  *
- * Copyright (c) 2020 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2020-08-25T15:51:45Z */
+/* file generated from device description version 2020-11-17T07:15:55Z */
 #ifndef _PIC32CMLE00_I2S_COMPONENT_H_
 #define _PIC32CMLE00_I2S_COMPONENT_H_
 
@@ -544,6 +544,8 @@
 /** \brief I2S register offsets definitions */
 #define I2S_CTRLA_REG_OFST             (0x00)              /**< (I2S_CTRLA) Control A Offset */
 #define I2S_CLKCTRL_REG_OFST           (0x04)              /**< (I2S_CLKCTRL) Clock Unit n Control Offset */
+#define I2S_CLKCTRL0_REG_OFST          (0x04)              /**< (I2S_CLKCTRL0) Clock Unit n Control Offset */
+#define I2S_CLKCTRL1_REG_OFST          (0x08)              /**< (I2S_CLKCTRL1) Clock Unit n Control Offset */
 #define I2S_INTENCLR_REG_OFST          (0x0C)              /**< (I2S_INTENCLR) Interrupt Enable Clear Offset */
 #define I2S_INTENSET_REG_OFST          (0x10)              /**< (I2S_INTENSET) Interrupt Enable Set Offset */
 #define I2S_INTFLAG_REG_OFST           (0x14)              /**< (I2S_INTFLAG) Interrupt Flag Status and Clear Offset */
