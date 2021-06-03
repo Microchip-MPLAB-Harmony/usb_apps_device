@@ -153,13 +153,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: BCCEF5B801FFD0CF22D0B454D2F25F1F
-- generatedChecksum: 25F4F44480641111AE123C70252B0528
+- generatedChecksum: A40DCA3705B81ABAAC49D5107947C230
   logicalPath: config/pic32mz_ef_curiosity_2_0/usb/src
   name: usb_device_cdc.c
   physicalPath: usb/src
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 25F4F44480641111AE123C70252B0528
+  userChecksum: A40DCA3705B81ABAAC49D5107947C230
 - generatedChecksum: ABA41F10EA872DBEBB285D03A009BC51
   logicalPath: config/pic32mz_ef_curiosity_2_0/usb/src
   name: usb_device_cdc_acm.c
@@ -202,13 +202,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 151729F1C9106E599EB94600618F070C
-- generatedChecksum: AF9F103F9D6C34EAF2FF6884C04D4A8D
+- generatedChecksum: 227CD257CC9876C2271757D82BA3CE8C
   logicalPath: config/pic32mz_ef_curiosity_2_0
   name: configuration.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: AF9F103F9D6C34EAF2FF6884C04D4A8D
+  userChecksum: 227CD257CC9876C2271757D82BA3CE8C
 - generatedChecksum: 4C8C8DC57DE906B421E53B9D6355C063
   logicalPath: config/pic32mz_ef_curiosity_2_0
   name: definitions.h
@@ -510,13 +510,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: EE6F55EAA31844DFFD1822493E3BE0FF
-- generatedChecksum: EF212E3430B6EC748903C7DCE3124B6A
+- generatedChecksum: A8E75B653DC44962608C0013C17A01F7
   logicalPath: config/pic32mz_ef_curiosity_2_0/usb/src
   name: usb_device_cdc_local.h
   physicalPath: usb/src
   security: NON_SECURE
   type: HEADER
-  userChecksum: EF212E3430B6EC748903C7DCE3124B6A
+  userChecksum: A8E75B653DC44962608C0013C17A01F7
 - generatedChecksum: 626BFDDD140B808E90C9DD2E4A27421E
   logicalPath: config/pic32mz_ef_curiosity_2_0/usb/src
   name: usb_device_function_driver.h
@@ -762,13 +762,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: A0803FFCE7DA932883C0B89AD48FA04C
-- generatedChecksum: 4B3C3EF8A318908A22B78500515C3288
+- generatedChecksum: null
   logicalPath: config/pic32mz_ef_curiosity_2_0
   name: user.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 4B3C3EF8A318908A22B78500515C3288
+  userChecksum: null
 - generatedChecksum: 07A482DAB7473FC475EA656561967B15
   logicalPath: config/pic32mz_ef_curiosity_2_0
   name: p32MZ2048EFM144.ld
