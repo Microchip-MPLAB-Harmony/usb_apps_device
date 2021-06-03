@@ -231,6 +231,7 @@ const DRV_USBHS_INIT drvUSBInit =
 
 void SYS_Initialize ( void* data )
 {
+
     /* Start out with interrupts disabled before configuring any modules */
     __builtin_disable_interrupts();
 
