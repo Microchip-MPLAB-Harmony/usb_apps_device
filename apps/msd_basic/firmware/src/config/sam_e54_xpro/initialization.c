@@ -231,6 +231,7 @@ const DRV_USBFSV1_INIT drvUSBInit =
 
 void SYS_Initialize ( void* data )
 {
+
     NVMCTRL_Initialize( );
 
   
