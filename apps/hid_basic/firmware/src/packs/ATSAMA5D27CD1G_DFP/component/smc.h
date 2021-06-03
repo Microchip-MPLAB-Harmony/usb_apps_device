@@ -1,7 +1,7 @@
 /**
  * \brief Component description for SMC
  *
- * Copyright (c) 2020 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2020-05-04T06:27:45Z */
+/* file generated from device description version 2020-12-17T18:15:19Z */
 #ifndef _SAMA5D2_SMC_COMPONENT_H_
 #define _SAMA5D2_SMC_COMPONENT_H_
 
@@ -1023,6 +1023,20 @@
 #define HSMC_TIMINGS_REG_OFST          (0x0C)              /**< (HSMC_TIMINGS) Timings Register Offset */
 #define HSMC_MODE_REG_OFST             (0x10)              /**< (HSMC_MODE) Mode Register Offset */
 #define HSMC_PMECC_REG_OFST            (0x00)              /**< (HSMC_PMECC) PMECC Redundancy 0 Register (sec_num = 0) Offset */
+#define HSMC_PMECC0_REG_OFST           (0x00)              /**< (HSMC_PMECC0) PMECC Redundancy 0 Register (sec_num = 0) Offset */
+#define HSMC_PMECC1_REG_OFST           (0x04)              /**< (HSMC_PMECC1) PMECC Redundancy 0 Register (sec_num = 0) Offset */
+#define HSMC_PMECC2_REG_OFST           (0x08)              /**< (HSMC_PMECC2) PMECC Redundancy 0 Register (sec_num = 0) Offset */
+#define HSMC_PMECC3_REG_OFST           (0x0C)              /**< (HSMC_PMECC3) PMECC Redundancy 0 Register (sec_num = 0) Offset */
+#define HSMC_PMECC4_REG_OFST           (0x10)              /**< (HSMC_PMECC4) PMECC Redundancy 0 Register (sec_num = 0) Offset */
+#define HSMC_PMECC5_REG_OFST           (0x14)              /**< (HSMC_PMECC5) PMECC Redundancy 0 Register (sec_num = 0) Offset */
+#define HSMC_PMECC6_REG_OFST           (0x18)              /**< (HSMC_PMECC6) PMECC Redundancy 0 Register (sec_num = 0) Offset */
+#define HSMC_PMECC7_REG_OFST           (0x1C)              /**< (HSMC_PMECC7) PMECC Redundancy 0 Register (sec_num = 0) Offset */
+#define HSMC_PMECC8_REG_OFST           (0x20)              /**< (HSMC_PMECC8) PMECC Redundancy 0 Register (sec_num = 0) Offset */
+#define HSMC_PMECC9_REG_OFST           (0x24)              /**< (HSMC_PMECC9) PMECC Redundancy 0 Register (sec_num = 0) Offset */
+#define HSMC_PMECC10_REG_OFST          (0x28)              /**< (HSMC_PMECC10) PMECC Redundancy 0 Register (sec_num = 0) Offset */
+#define HSMC_PMECC11_REG_OFST          (0x2C)              /**< (HSMC_PMECC11) PMECC Redundancy 0 Register (sec_num = 0) Offset */
+#define HSMC_PMECC12_REG_OFST          (0x30)              /**< (HSMC_PMECC12) PMECC Redundancy 0 Register (sec_num = 0) Offset */
+#define HSMC_PMECC13_REG_OFST          (0x34)              /**< (HSMC_PMECC13) PMECC Redundancy 0 Register (sec_num = 0) Offset */
 #define HSMC_REM0__REG_OFST            (0x00)              /**< (HSMC_REM0_) PMECC Remainder 0 Register (sec_num = 0) Offset */
 #define HSMC_REM1__REG_OFST            (0x04)              /**< (HSMC_REM1_) PMECC Remainder 1 Register (sec_num = 0) Offset */
 #define HSMC_REM2__REG_OFST            (0x08)              /**< (HSMC_REM2_) PMECC Remainder 2 Register (sec_num = 0) Offset */
@@ -1100,6 +1114,38 @@
 #define HSMC_SIGMA31_REG_OFST          (0x5A4)             /**< (HSMC_SIGMA31) PMECC Error Location SIGMA 31 Register Offset */
 #define HSMC_SIGMA32_REG_OFST          (0x5A8)             /**< (HSMC_SIGMA32) PMECC Error Location SIGMA 32 Register Offset */
 #define HSMC_ERRLOC_REG_OFST           (0x5AC)             /**< (HSMC_ERRLOC) PMECC Error Location 0 Register Offset */
+#define HSMC_ERRLOC0_REG_OFST          (0x5AC)             /**< (HSMC_ERRLOC0) PMECC Error Location 0 Register Offset */
+#define HSMC_ERRLOC1_REG_OFST          (0x5B0)             /**< (HSMC_ERRLOC1) PMECC Error Location 0 Register Offset */
+#define HSMC_ERRLOC2_REG_OFST          (0x5B4)             /**< (HSMC_ERRLOC2) PMECC Error Location 0 Register Offset */
+#define HSMC_ERRLOC3_REG_OFST          (0x5B8)             /**< (HSMC_ERRLOC3) PMECC Error Location 0 Register Offset */
+#define HSMC_ERRLOC4_REG_OFST          (0x5BC)             /**< (HSMC_ERRLOC4) PMECC Error Location 0 Register Offset */
+#define HSMC_ERRLOC5_REG_OFST          (0x5C0)             /**< (HSMC_ERRLOC5) PMECC Error Location 0 Register Offset */
+#define HSMC_ERRLOC6_REG_OFST          (0x5C4)             /**< (HSMC_ERRLOC6) PMECC Error Location 0 Register Offset */
+#define HSMC_ERRLOC7_REG_OFST          (0x5C8)             /**< (HSMC_ERRLOC7) PMECC Error Location 0 Register Offset */
+#define HSMC_ERRLOC8_REG_OFST          (0x5CC)             /**< (HSMC_ERRLOC8) PMECC Error Location 0 Register Offset */
+#define HSMC_ERRLOC9_REG_OFST          (0x5D0)             /**< (HSMC_ERRLOC9) PMECC Error Location 0 Register Offset */
+#define HSMC_ERRLOC10_REG_OFST         (0x5D4)             /**< (HSMC_ERRLOC10) PMECC Error Location 0 Register Offset */
+#define HSMC_ERRLOC11_REG_OFST         (0x5D8)             /**< (HSMC_ERRLOC11) PMECC Error Location 0 Register Offset */
+#define HSMC_ERRLOC12_REG_OFST         (0x5DC)             /**< (HSMC_ERRLOC12) PMECC Error Location 0 Register Offset */
+#define HSMC_ERRLOC13_REG_OFST         (0x5E0)             /**< (HSMC_ERRLOC13) PMECC Error Location 0 Register Offset */
+#define HSMC_ERRLOC14_REG_OFST         (0x5E4)             /**< (HSMC_ERRLOC14) PMECC Error Location 0 Register Offset */
+#define HSMC_ERRLOC15_REG_OFST         (0x5E8)             /**< (HSMC_ERRLOC15) PMECC Error Location 0 Register Offset */
+#define HSMC_ERRLOC16_REG_OFST         (0x5EC)             /**< (HSMC_ERRLOC16) PMECC Error Location 0 Register Offset */
+#define HSMC_ERRLOC17_REG_OFST         (0x5F0)             /**< (HSMC_ERRLOC17) PMECC Error Location 0 Register Offset */
+#define HSMC_ERRLOC18_REG_OFST         (0x5F4)             /**< (HSMC_ERRLOC18) PMECC Error Location 0 Register Offset */
+#define HSMC_ERRLOC19_REG_OFST         (0x5F8)             /**< (HSMC_ERRLOC19) PMECC Error Location 0 Register Offset */
+#define HSMC_ERRLOC20_REG_OFST         (0x5FC)             /**< (HSMC_ERRLOC20) PMECC Error Location 0 Register Offset */
+#define HSMC_ERRLOC21_REG_OFST         (0x600)             /**< (HSMC_ERRLOC21) PMECC Error Location 0 Register Offset */
+#define HSMC_ERRLOC22_REG_OFST         (0x604)             /**< (HSMC_ERRLOC22) PMECC Error Location 0 Register Offset */
+#define HSMC_ERRLOC23_REG_OFST         (0x608)             /**< (HSMC_ERRLOC23) PMECC Error Location 0 Register Offset */
+#define HSMC_ERRLOC24_REG_OFST         (0x60C)             /**< (HSMC_ERRLOC24) PMECC Error Location 0 Register Offset */
+#define HSMC_ERRLOC25_REG_OFST         (0x610)             /**< (HSMC_ERRLOC25) PMECC Error Location 0 Register Offset */
+#define HSMC_ERRLOC26_REG_OFST         (0x614)             /**< (HSMC_ERRLOC26) PMECC Error Location 0 Register Offset */
+#define HSMC_ERRLOC27_REG_OFST         (0x618)             /**< (HSMC_ERRLOC27) PMECC Error Location 0 Register Offset */
+#define HSMC_ERRLOC28_REG_OFST         (0x61C)             /**< (HSMC_ERRLOC28) PMECC Error Location 0 Register Offset */
+#define HSMC_ERRLOC29_REG_OFST         (0x620)             /**< (HSMC_ERRLOC29) PMECC Error Location 0 Register Offset */
+#define HSMC_ERRLOC30_REG_OFST         (0x624)             /**< (HSMC_ERRLOC30) PMECC Error Location 0 Register Offset */
+#define HSMC_ERRLOC31_REG_OFST         (0x628)             /**< (HSMC_ERRLOC31) PMECC Error Location 0 Register Offset */
 #define HSMC_OCMS_REG_OFST             (0x7A0)             /**< (HSMC_OCMS) Off Chip Memory Scrambling Register Offset */
 #define HSMC_KEY1_REG_OFST             (0x7A4)             /**< (HSMC_KEY1) Off Chip Memory Scrambling KEY1 Register Offset */
 #define HSMC_KEY2_REG_OFST             (0x7A8)             /**< (HSMC_KEY2) Off Chip Memory Scrambling KEY2 Register Offset */

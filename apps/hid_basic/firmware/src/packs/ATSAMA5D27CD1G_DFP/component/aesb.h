@@ -1,7 +1,7 @@
 /**
  * \brief Component description for AESB
  *
- * Copyright (c) 2020 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2020-05-04T06:27:45Z */
+/* file generated from device description version 2020-12-17T18:15:19Z */
 #ifndef _SAMA5D2_AESB_COMPONENT_H_
 #define _SAMA5D2_AESB_COMPONENT_H_
 
@@ -175,9 +175,25 @@
 #define AESB_IMR_REG_OFST              (0x18)              /**< (AESB_IMR) Interrupt Mask Register Offset */
 #define AESB_ISR_REG_OFST              (0x1C)              /**< (AESB_ISR) Interrupt Status Register Offset */
 #define AESB_KEYWR_REG_OFST            (0x20)              /**< (AESB_KEYWR) Key Word Register Offset */
+#define AESB_KEYWR0_REG_OFST           (0x20)              /**< (AESB_KEYWR0) Key Word Register Offset */
+#define AESB_KEYWR1_REG_OFST           (0x24)              /**< (AESB_KEYWR1) Key Word Register Offset */
+#define AESB_KEYWR2_REG_OFST           (0x28)              /**< (AESB_KEYWR2) Key Word Register Offset */
+#define AESB_KEYWR3_REG_OFST           (0x2C)              /**< (AESB_KEYWR3) Key Word Register Offset */
 #define AESB_IDATAR_REG_OFST           (0x40)              /**< (AESB_IDATAR) Input Data Register Offset */
+#define AESB_IDATAR0_REG_OFST          (0x40)              /**< (AESB_IDATAR0) Input Data Register Offset */
+#define AESB_IDATAR1_REG_OFST          (0x44)              /**< (AESB_IDATAR1) Input Data Register Offset */
+#define AESB_IDATAR2_REG_OFST          (0x48)              /**< (AESB_IDATAR2) Input Data Register Offset */
+#define AESB_IDATAR3_REG_OFST          (0x4C)              /**< (AESB_IDATAR3) Input Data Register Offset */
 #define AESB_ODATAR_REG_OFST           (0x50)              /**< (AESB_ODATAR) Output Data Register Offset */
+#define AESB_ODATAR0_REG_OFST          (0x50)              /**< (AESB_ODATAR0) Output Data Register Offset */
+#define AESB_ODATAR1_REG_OFST          (0x54)              /**< (AESB_ODATAR1) Output Data Register Offset */
+#define AESB_ODATAR2_REG_OFST          (0x58)              /**< (AESB_ODATAR2) Output Data Register Offset */
+#define AESB_ODATAR3_REG_OFST          (0x5C)              /**< (AESB_ODATAR3) Output Data Register Offset */
 #define AESB_IVR_REG_OFST              (0x60)              /**< (AESB_IVR) Initialization Vector Register Offset */
+#define AESB_IVR0_REG_OFST             (0x60)              /**< (AESB_IVR0) Initialization Vector Register Offset */
+#define AESB_IVR1_REG_OFST             (0x64)              /**< (AESB_IVR1) Initialization Vector Register Offset */
+#define AESB_IVR2_REG_OFST             (0x68)              /**< (AESB_IVR2) Initialization Vector Register Offset */
+#define AESB_IVR3_REG_OFST             (0x6C)              /**< (AESB_IVR3) Initialization Vector Register Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief AESB register API structure */
