@@ -660,7 +660,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '0x1d4bc'}
+        attributes: {id: core, value: '0x1D4BC'}
   - type: Float
     attributes: {id: SYSTICK_PERIOD_MS}
     children:

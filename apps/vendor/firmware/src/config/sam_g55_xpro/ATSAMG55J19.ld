@@ -1,7 +1,7 @@
 /*--------------------------------------------------------------------------
  * MPLAB XC32 Compiler -  ATSAMG55J19 linker script
  * 
- * Copyright (c) 2020, Microchip Technology Inc. and its subsidiaries ("Microchip")
+ * Copyright (c) 2021, Microchip Technology Inc. and its subsidiaries ("Microchip")
  * All rights reserved.
  * 
  * This software is developed by Microchip Technology Inc. and its
@@ -89,8 +89,8 @@ MEMORY
   rom (LRX) : ORIGIN = ROM_ORIGIN, LENGTH = ROM_LENGTH
   ram (WX!R) : ORIGIN = RAM_ORIGIN, LENGTH = RAM_LENGTH
   config_D0000000 : ORIGIN = 0xD0000000, LENGTH = 0x4
-  config_D0000004 : ORIGIN = 0xD0000004, LENGTH = 0x4
   config_D0000008 : ORIGIN = 0xD0000008, LENGTH = 0x4
+  config_D0000004 : ORIGIN = 0xD0000004, LENGTH = 0x4
 
 }
 
@@ -130,12 +130,12 @@ SECTIONS
     .config_D0000000 : {
       KEEP(*(.config_D0000000))
     } > config_D0000000
-    .config_D0000004 : {
-      KEEP(*(.config_D0000004))
-    } > config_D0000004
     .config_D0000008 : {
       KEEP(*(.config_D0000008))
     } > config_D0000008
+    .config_D0000004 : {
+      KEEP(*(.config_D0000004))
+    } > config_D0000004
 
     /*
      * The linker moves the .vectors section into itcm when itcm is

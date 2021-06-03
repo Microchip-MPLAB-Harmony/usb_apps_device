@@ -145,6 +145,7 @@ const DRV_USBDP_INIT drvUSBInit =
 void SYS_Initialize ( void* data )
 {
 
+
     EFC_Initialize();
   
 	PIO_Initialize();
