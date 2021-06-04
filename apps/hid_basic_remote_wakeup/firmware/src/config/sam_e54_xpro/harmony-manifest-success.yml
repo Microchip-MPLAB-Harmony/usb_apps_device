@@ -16,6 +16,6 @@ modules:
     - {name: "csp", version: "v3.9.1"}
     - {name: "core", version: "v3.9.1"}
     - {name: "dev_packs", version: "v3.9.0"}
-    - {name: "usb", version: "unknown"}
+    - {name: "usb", version: "v3.8.0"}
     - {name: "bsp", version: "v3.9.0"}
 
