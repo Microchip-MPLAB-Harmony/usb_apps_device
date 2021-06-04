@@ -371,7 +371,7 @@
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="SAM9X6_DFP" vendor="Microchip" version="1.4.45"/>
+        <pack name="SAM9X6_DFP" vendor="Microchip" version="1.5.50"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>

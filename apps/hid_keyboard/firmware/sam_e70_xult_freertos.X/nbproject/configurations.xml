@@ -372,7 +372,7 @@
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="SAME70_DFP" vendor="Microchip" version="4.4.78"/>
+        <pack name="SAME70_DFP" vendor="Microchip" version="4.5.86"/>
         <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
       </packs>
       <ScriptingSettings>

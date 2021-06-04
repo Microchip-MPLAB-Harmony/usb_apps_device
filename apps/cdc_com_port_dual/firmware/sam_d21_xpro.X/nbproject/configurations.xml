@@ -280,7 +280,7 @@
       </toolsSet>
       <packs>
         <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
-        <pack name="SAMD21_DFP" vendor="Microchip" version="3.3.98"/>
+        <pack name="SAMD21_DFP" vendor="Microchip" version="3.4.116"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>

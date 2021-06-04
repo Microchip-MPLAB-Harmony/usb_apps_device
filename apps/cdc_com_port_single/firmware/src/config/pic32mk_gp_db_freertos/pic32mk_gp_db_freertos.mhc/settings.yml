@@ -10,4 +10,4 @@ settings:
   GENERATE_BACKUP: 'true'
   CMSISPath: .\dev_packs\arm\CMSIS\5.7.0
   MERGE_STRATEGY: USER_ALL
-  DFPPath: .\dev_packs\Microchip\PIC32MK-GP_DFP\1.4.117\atdf\PIC32MK1024GPE100.atdf
+  DFPPath: .\dev_packs\Microchip\PIC32MK-GP_DFP\1.5.130\atdf\PIC32MK1024GPE100.atdf

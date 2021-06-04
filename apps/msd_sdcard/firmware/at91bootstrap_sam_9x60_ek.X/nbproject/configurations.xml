@@ -525,7 +525,7 @@
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="SAM9X6_DFP" vendor="Microchip" version="1.3.36"/>
+        <pack name="SAM9X6_DFP" vendor="Microchip" version="1.5.50"/>
       </packs>
       <ScriptingSettings>
         <ScriptingSetting key="x.bootstrap.load" value=""/>

@@ -305,7 +305,7 @@
       </toolsSet>
       <packs>
         <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
-        <pack name="SAMG_DFP" vendor="Microchip" version="3.3.42"/>
+        <pack name="SAMG_DFP" vendor="Microchip" version="3.4.57"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>

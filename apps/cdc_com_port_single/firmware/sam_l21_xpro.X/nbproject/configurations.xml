@@ -296,7 +296,7 @@
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="SAML21_DFP" vendor="Microchip" version="3.4.82"/>
+        <pack name="SAML21_DFP" vendor="Microchip" version="3.5.87"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
