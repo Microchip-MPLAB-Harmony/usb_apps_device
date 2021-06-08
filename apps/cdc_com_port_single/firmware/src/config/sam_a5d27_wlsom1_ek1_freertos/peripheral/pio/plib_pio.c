@@ -85,6 +85,10 @@ void PIO_Initialize ( void )
 	PIOB_REGS->PIO_MSKR = 0x4U;
 	PIOB_REGS->PIO_CFGR = 0x0U;
 	
+ /* Port B Pin 2 configuration */
+	PIOB_REGS->PIO_MSKR = 0x4U;
+	PIOB_REGS->PIO_CFGR = (PIOB_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x200U;
+	
 
 
 

@@ -97,13 +97,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 374D02049DC2B0A7263766BB8E4DA141
-- generatedChecksum: EB6C566967C5CD96948FA4F7778A9C9E
+- generatedChecksum: 5389120F7504A1723EC3BD4B4F16FB68
   logicalPath: config/sam_a5d27_som1_ek/peripheral/pio
   name: plib_pio.c
   physicalPath: peripheral/pio
   security: NON_SECURE
   type: SOURCE
-  userChecksum: EB6C566967C5CD96948FA4F7778A9C9E
+  userChecksum: 5389120F7504A1723EC3BD4B4F16FB68
 - generatedChecksum: 2F5115B2D6D7C90C614944885A585AD2
   logicalPath: config/sam_a5d27_som1_ek/peripheral/sdmmc
   name: plib_sdmmc0.c

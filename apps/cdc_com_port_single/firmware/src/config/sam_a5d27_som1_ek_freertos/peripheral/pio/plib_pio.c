@@ -64,6 +64,10 @@ void PIO_Initialize ( void )
 	PIOA_REGS->PIO_MSKR = 0x400U;
 	PIOA_REGS->PIO_CFGR = (PIOA_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x100U;
 	
+ /* Port A Pin 29 configuration */
+	PIOA_REGS->PIO_MSKR = 0x20000000U;
+	PIOA_REGS->PIO_CFGR = (PIOA_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x200U;
+	
  /* Port A Pin 31 configuration */
 	PIOA_REGS->PIO_MSKR = 0x80000000LU;
 	PIOA_REGS->PIO_CFGR = (PIOA_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x100U;

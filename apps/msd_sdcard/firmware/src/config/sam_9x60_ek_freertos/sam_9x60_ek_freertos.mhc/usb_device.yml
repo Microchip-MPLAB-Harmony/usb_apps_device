@@ -18,6 +18,13 @@ children:
       children:
       - type: Dynamic
         attributes: {id: usb_device, value: '2'}
+  - type: Boolean
+    attributes: {id: CONFIG_USB_DEVICE_EVENT_ENABLE_SOF}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: 'true'}
   - type: Integer
     attributes: {id: CONFIG_USB_DEVICE_FUNCTIONS_NUMBER}
     children:
@@ -60,6 +67,26 @@ children:
       children:
       - type: Dynamic
         attributes: {id: usb_device, value: Simple MSD Device Demo}
+  - type: String
+    attributes: {id: CONFIG_USB_DEVICE_SERIAL_NUMBER_STRING_DESCRIPTOR}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'true'}
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: '1234567890123'}
+  - type: Boolean
+    attributes: {id: CONFIG_USB_DEVICE_SERIAL_NUMBER_STRING_ENABLE}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: 'true'}
   - type: Boolean
     attributes: {id: CONFIG_USB_DEVICE_USE_MSD}
     children:

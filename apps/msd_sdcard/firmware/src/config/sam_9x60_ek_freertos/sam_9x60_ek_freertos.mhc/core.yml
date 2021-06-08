@@ -158,6 +158,13 @@ children:
       children:
       - type: User
         attributes: {value: '4'}
+  - type: Integer
+    attributes: {id: CLK_SDMMC0_GCLKDIV}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: '5'}
   - type: Boolean
     attributes: {id: CLK_SDMMC0_GCLKEN}
     children:
@@ -1307,7 +1314,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '300000000'}
+        attributes: {id: core, value: '50000000'}
   - type: Boolean
     attributes: {id: SDMMC0_CLOCK_ENABLE}
     children:
@@ -1328,7 +1335,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '600000000'}
+        attributes: {id: core, value: '100000000'}
   - type: Boolean
     attributes: {id: SDMMC0_INTERRUPT_ENABLE}
     children:
@@ -1370,7 +1377,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '600000000'}
+        attributes: {id: core, value: '100000000'}
   - type: Integer
     attributes: {id: SDMMC1_BASECLK_FREQUENCY}
     children:

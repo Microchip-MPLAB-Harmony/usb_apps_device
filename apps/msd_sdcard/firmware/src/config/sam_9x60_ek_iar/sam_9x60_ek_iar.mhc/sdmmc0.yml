@@ -35,7 +35,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: sdmmc0, value: '300000000'}
+        attributes: {id: sdmmc0, value: '50000000'}
   - type: Comment
     attributes: {id: SDMMC_BASE_CLOCK_SOURCE_COMMENT}
     children:
@@ -58,7 +58,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: sdmmc0, value: '600000000'}
+        attributes: {id: sdmmc0, value: '100000000'}
   - type: Comment
     attributes: {id: SDMMC_MULT_CLOCK_SOURCE_COMMENT}
     children:

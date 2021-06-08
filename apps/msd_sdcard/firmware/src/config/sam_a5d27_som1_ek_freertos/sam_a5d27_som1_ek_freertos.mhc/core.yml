@@ -798,6 +798,48 @@ children:
       - type: User
         attributes: {value: Debounce Filter}
   - type: String
+    attributes: {id: PIN_211_FUNCTION_TYPE}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: SDMMC0_CMD}
+  - type: String
+    attributes: {id: PIN_211_PERIPHERAL_FUNCTION}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: A}
+  - type: String
+    attributes: {id: PIN_221_FUNCTION_TYPE}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: SDMMC0_WP}
+  - type: String
+    attributes: {id: PIN_221_PERIPHERAL_FUNCTION}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: A}
+  - type: String
+    attributes: {id: PIN_229_FUNCTION_TYPE}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: SDMMC0_DAT7}
+  - type: String
+    attributes: {id: PIN_229_PERIPHERAL_FUNCTION}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: A}
+  - type: String
     attributes: {id: PIN_234_LAT}
     children:
     - type: Values
@@ -826,6 +868,34 @@ children:
       - type: User
         attributes: {value: ''}
   - type: String
+    attributes: {id: PIN_237_FUNCTION_TYPE}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: SDMMC0_CD}
+  - type: String
+    attributes: {id: PIN_237_PERIPHERAL_FUNCTION}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: A}
+  - type: String
+    attributes: {id: PIN_247_FUNCTION_TYPE}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: SDMMC0_DAT6}
+  - type: String
+    attributes: {id: PIN_247_PERIPHERAL_FUNCTION}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: A}
+  - type: String
     attributes: {id: PIN_248_LAT}
     children:
     - type: Values
@@ -839,6 +909,104 @@ children:
       children:
       - type: User
         attributes: {value: LED_AH}
+  - type: String
+    attributes: {id: PIN_249_FUNCTION_TYPE}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: SDMMC0_DAT5}
+  - type: String
+    attributes: {id: PIN_249_PERIPHERAL_FUNCTION}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: A}
+  - type: String
+    attributes: {id: PIN_268_FUNCTION_TYPE}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: SDMMC0_DAT1}
+  - type: String
+    attributes: {id: PIN_268_PERIPHERAL_FUNCTION}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: A}
+  - type: String
+    attributes: {id: PIN_285_FUNCTION_TYPE}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: SDMMC0_CK}
+  - type: String
+    attributes: {id: PIN_285_PERIPHERAL_FUNCTION}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: A}
+  - type: String
+    attributes: {id: PIN_286_FUNCTION_TYPE}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: SDMMC0_DAT0}
+  - type: String
+    attributes: {id: PIN_286_PERIPHERAL_FUNCTION}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: A}
+  - type: String
+    attributes: {id: PIN_287_FUNCTION_TYPE}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: SDMMC0_DAT2}
+  - type: String
+    attributes: {id: PIN_287_PERIPHERAL_FUNCTION}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: A}
+  - type: String
+    attributes: {id: PIN_288_FUNCTION_TYPE}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: SDMMC0_DAT3}
+  - type: String
+    attributes: {id: PIN_288_PERIPHERAL_FUNCTION}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: A}
+  - type: String
+    attributes: {id: PIN_289_FUNCTION_TYPE}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: SDMMC0_DAT4}
+  - type: String
+    attributes: {id: PIN_289_PERIPHERAL_FUNCTION}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: A}
   - type: String
     attributes: {id: PIN_42_FUNCTION_NAME}
     children:
@@ -1242,7 +1410,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: 0x0L}
+        attributes: {id: core, value: 0x33ffL}
   - type: String
     attributes: {id: PORT_A_MSKR_ValueB}
     children:

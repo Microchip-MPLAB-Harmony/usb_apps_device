@@ -118,13 +118,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 05D2595DE4789D177533BF449A0A8FF1
-- generatedChecksum: BAFDF76D3DD4C43AB810E7BCE992AF8A
+- generatedChecksum: E53A1CFD0E8F7C805BD23CCC77A6E12B
   logicalPath: config/sam_9x60_ek_freertos/peripheral/clk
   name: plib_clk.c
   physicalPath: peripheral/clk
   security: NON_SECURE
   type: SOURCE
-  userChecksum: BAFDF76D3DD4C43AB810E7BCE992AF8A
+  userChecksum: E53A1CFD0E8F7C805BD23CCC77A6E12B
 - generatedChecksum: 99A28DC2A2D39E2B47E46E62E0C710D6
   logicalPath: config/sam_9x60_ek_freertos/peripheral/mmu
   name: plib_mmu.c

@@ -1062,6 +1062,13 @@ children:
       - type: User
         attributes: {value: SWITCH}
   - type: String
+    attributes: {id: PIN_4_PD}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: ''}
+  - type: String
     attributes: {id: PIN_4_PERIPHERAL_FUNCTION}
     children:
     - type: Values
