@@ -4,12 +4,12 @@
 
 
 project: cdc_com_port_single
-creation_date: 2021-06-03T16:39:05.978+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+creation_date: 2021-06-08T11:51:58.256+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
 operating_system: Windows 10
 mhc_mode: IDE            # [IDE|Standalone|Headless]
 mhc_version: v3.7.2
-mplabx_version: NA        # if MPLAB X plugin only
-plugin_version: NA        # if MPLAB X plugin only
+mplabx_version: v5.50        # if MPLAB X plugin only
+plugin_version: v3.6.4        # if MPLAB X plugin only
 compiler: XC32 (3.00)
 
 modules:

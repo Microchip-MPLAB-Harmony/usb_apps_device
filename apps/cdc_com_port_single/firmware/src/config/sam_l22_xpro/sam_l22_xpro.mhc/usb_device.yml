@@ -68,4 +68,4 @@ children:
       - type: Dynamic
         attributes: {id: usb_device, value: Simple CDC Device Demo}
 - type: ElementPosition
-  attributes: {x: '153', y: '272', id: usb_device}
+  attributes: {x: '164', y: '198', id: usb_device}
