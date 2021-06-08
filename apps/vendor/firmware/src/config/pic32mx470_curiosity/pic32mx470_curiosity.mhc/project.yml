@@ -6,13 +6,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: null
-- generatedChecksum: 8FDE1C474958E71FB5EC6CEC8A1D5E9B
+- generatedChecksum: 9CFF5464891BB859FB24EC68F8B4788A
   logicalPath: config/pic32mx470_curiosity/bsp
   name: bsp.c
   physicalPath: bsp
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 8FDE1C474958E71FB5EC6CEC8A1D5E9B
+  userChecksum: 9CFF5464891BB859FB24EC68F8B4788A
 - generatedChecksum: E8A25523C8CDDC97F3FD108E97BF4A9F
   logicalPath: config/pic32mx470_curiosity/driver/usb/usbfs/src
   name: drv_usbfs.c
@@ -125,13 +125,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: null
-- generatedChecksum: 422E1C8A22D0D55EE2FF73295DFF965E
+- generatedChecksum: C31603F0C14D7E46866D12BF986A6BD0
   logicalPath: config/pic32mx470_curiosity/bsp
   name: bsp.h
   physicalPath: bsp
   security: NON_SECURE
   type: HEADER
-  userChecksum: 422E1C8A22D0D55EE2FF73295DFF965E
+  userChecksum: C31603F0C14D7E46866D12BF986A6BD0
 - generatedChecksum: 67E9B621352B8D73C65E54CE9DCFF455
   logicalPath: config/pic32mx470_curiosity
   name: configuration.h

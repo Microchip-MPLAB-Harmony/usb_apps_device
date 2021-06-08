@@ -341,7 +341,7 @@
       </makeCustomizationType>
       <AtmelIceTool>
         <property key="AutoSelectMemRanges" value="auto"/>
-        <property key="communication.interface" value="swd"/>
+        <property key="communication.interface" value="4wire"/>
         <property key="communication.speed" value="4.000"/>
         <property key="memories.aux" value="false"/>
         <property key="memories.bootflash" value="true"/>

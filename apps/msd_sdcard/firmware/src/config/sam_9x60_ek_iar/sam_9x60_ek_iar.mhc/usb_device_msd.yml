@@ -37,5 +37,14 @@ children:
           children:
           - type: User
             attributes: {value: MEDIA_TYPE_SD_CARD_MMC}
+    - type: Attachments
+      children:
+      - type: MultiCapability
+        attributes: {id: usb_device_msd_media_dependency}
+        children:
+        - type: TargetAttachments
+          children:
+          - type: TargetAttachment
+            attributes: {targetComponentID: drv_sdmmc_0, targetAttachmentID: drv_media}
 - type: ElementPosition
   attributes: {x: '321', y: '244', id: usb_device_msd}

@@ -497,14 +497,14 @@ children:
     - type: Values
       children:
       - type: User
-        attributes: {value: 'false'}
+        attributes: {value: 'true'}
   - type: Integer
     attributes: {id: GCLK_ID_0_FREQ}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '0'}
+        attributes: {id: core, value: '1024'}
   - type: KeyValueSet
     attributes: {id: GCLK_ID_0_GENSEL}
     children:

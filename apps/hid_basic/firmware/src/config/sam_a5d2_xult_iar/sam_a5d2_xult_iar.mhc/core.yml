@@ -834,6 +834,22 @@ children:
       children:
       - type: Dynamic
         attributes: {id: core, value: '0'}
+  - type: Integer
+    attributes: {id: PMC_CKGR_UCKR_UPLLCOUNT}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: readOnly}
+        children:
+        - {type: Value, value: 'false'}
+  - type: Boolean
+    attributes: {id: PMC_CKGR_UCKR_UPLLEN}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: 'true'}
   - type: Hex
     attributes: {id: PMC_PCER0}
     children:

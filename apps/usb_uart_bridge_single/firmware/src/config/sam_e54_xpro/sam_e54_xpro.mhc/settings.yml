@@ -10,5 +10,5 @@ settings:
   GENERATE_BACKUP: 'true'
   TRUSTZONE: 'false'
   CMSISPath: .\dev_packs\arm\CMSIS\5.7.0
-  MERGE_STRATEGY: ALL
+  MERGE_STRATEGY: USER_ALL
   DFPPath: .\dev_packs\Microchip\SAME54_DFP\3.5.87\atdf\ATSAME54P20A.atdf

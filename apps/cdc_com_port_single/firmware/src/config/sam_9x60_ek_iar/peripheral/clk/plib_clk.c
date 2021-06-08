@@ -143,18 +143,6 @@ static void initPeriphClk(void)
 }
 
 /*********************************************************************************
-Initialize USB OHCI clocks 
-*********************************************************************************/
-static void initUSBClk ( void )
-{    	
-    /* Configure USB OHCI clock source and divider */
-	PMC_REGS->PMC_USB = PMC_USB_USBDIV(9) | PMC_USB_USBS_UPLL;
-	
-	/* Enable UHP48M and UHP12M OHCI clocks */
-    PMC_REGS->PMC_SCER |= PMC_SCER_UHP_Msk;
-}
-
-/*********************************************************************************
 Initialize QSPI Clock
 *********************************************************************************/
 static void initQSPIClk(void)
@@ -180,8 +168,5 @@ void CLK_Initialize( void )
 
     /* Initialize QSPI Clock */
     initQSPIClk();
-
-    /* Initialize USB Clock */
-    initUSBClk();
  
 }

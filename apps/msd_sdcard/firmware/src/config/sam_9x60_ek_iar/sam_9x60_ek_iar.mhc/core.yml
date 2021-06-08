@@ -171,7 +171,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '48000000'}
+        attributes: {id: core, value: '0'}
   - type: Boolean
     attributes: {id: CLK_UPLL_EN}
     children:
@@ -192,7 +192,7 @@ children:
     - type: Values
       children:
       - type: User
-        attributes: {value: 'true'}
+        attributes: {value: 'false'}
   - type: Integer
     attributes: {id: CLK_USB_USBDIV}
     children:

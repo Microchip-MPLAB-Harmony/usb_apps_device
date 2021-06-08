@@ -3,4 +3,4 @@ type: UniqueComponent
 attributes: {id: drv_usbfs_v1}
 children:
 - type: ElementPosition
-  attributes: {x: '19', y: '163', id: drv_usbfs_v1}
+  attributes: {x: '3', y: '136', id: drv_usbfs_v1}

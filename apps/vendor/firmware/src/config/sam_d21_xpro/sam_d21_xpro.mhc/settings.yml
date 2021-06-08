@@ -5,7 +5,7 @@ frameworkPath: ../../..
 processor: ATSAMD21J18A
 projectName: vendor_sam_d21_xpro
 settings:
-  PackageFilter: bsp;core;core_apps_sam_d21_da1;core_apps_sam_d5x_e5x;core_apps_sam_e70_s70_v70_v71;csp;csp_apps_pic32mx;csp_apps_sam_d21_da1;csp_apps_sam_d5x_e5x;csp_apps_sam_e70_s70_v70_v71;quick_docs;usb;validation;
+  PackageFilter: bsp;core;core_apps_sam_9x60;core_apps_sam_a5d2;csp;csp_apps_pic32cm_le00_ls00;csp_apps_sam_9x60;csp_apps_sam_a5d2;quick_docs;usb;usb_apps_device;usb_apps_dual_role;usb_apps_host;usb_apps_multi_controller
   FORCE_OPTIMIZATION: 'false'
   GENERATE_BACKUP: 'true'
   CMSISPath: .\dev_packs\arm\CMSIS\5.7.0

@@ -3,4 +3,4 @@ type: UniqueComponent
 attributes: {id: BSP_PIC32MX470_Curiosity_Development_Board, bsp: 'true'}
 children:
 - type: ElementPosition
-  attributes: {x: '320', y: '20', id: BSP_PIC32MX470_Curiosity_Development_Board}
+  attributes: {x: '143', y: '70', id: BSP_PIC32MX470_Curiosity_Development_Board}

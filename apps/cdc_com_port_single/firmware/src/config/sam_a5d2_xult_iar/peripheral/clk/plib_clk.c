@@ -26,6 +26,22 @@
 
 
 
+/*********************************************************************************
+Initialize UTMI PLL  (UPLLCK)
+*********************************************************************************/
+
+static void CLK_UTMIPLLInitialize(void)
+{
+    /* Set the UTMI reference clock */
+    uint32_t sfr_utmiclktrim_val = SFR_REGS->SFR_UTMICKTRIM & ~SFR_UTMICKTRIM_FREQ_Msk;
+	SFR_REGS->SFR_UTMICKTRIM = sfr_utmiclktrim_val | SFR_UTMICKTRIM_FREQ_12;
+
+	/* Enable UPLL and configure UPLL lock time */
+	PMC_REGS->CKGR_UCKR = CKGR_UCKR_UPLLEN_Msk | CKGR_UCKR_UPLLCOUNT(15);
+
+	/* Wait until PLL Lock occurs */
+    while ((PMC_REGS->PMC_SR & PMC_SR_LOCKU_Msk) != PMC_SR_LOCKU_Msk);
+}
 
 
 
@@ -61,6 +77,9 @@ Clock Initialize
 
 void CLK_Initialize( void )
 {
+	/* Initialize UTMI PLL */
+	CLK_UTMIPLLInitialize();
+
 	/* Initialize Generic Clock */
 	CLK_GenericClockInitialize();
 
