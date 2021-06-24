@@ -15,7 +15,7 @@ files:
   userChecksum: 0B3388A92D95470EBA477BD0D5874CEE
 - generatedChecksum: null
   logicalPath: ''
-  name: app.c
+  name: app_freertos.c
   physicalPath: ../..
   security: NON_SECURE
   type: SOURCE
@@ -41,20 +41,20 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 6CFB74F8AE8DA0CC399E987CA6FE0CE1
-- generatedChecksum: 7ADA05C7B4650795B00297B726046CFE
+- generatedChecksum: 4740529CC4BA6462ECF3D3B8DE3254BD
   logicalPath: config/sam_a5d27_som1_ek_freertos/driver/usb/udphs/src
   name: drv_usb_udphs.c
   physicalPath: driver/usb/udphs/src
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 7ADA05C7B4650795B00297B726046CFE
-- generatedChecksum: 884D7D7134194C37F1F8B0270C744CC5
+  userChecksum: 4740529CC4BA6462ECF3D3B8DE3254BD
+- generatedChecksum: 1529A7A55CE61D07307F4B56B9B58598
   logicalPath: config/sam_a5d27_som1_ek_freertos/driver/usb/udphs/src
   name: drv_usb_udphs_device.c
   physicalPath: driver/usb/udphs/src
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 884D7D7134194C37F1F8B0270C744CC5
+  userChecksum: 1529A7A55CE61D07307F4B56B9B58598
 - generatedChecksum: B3B5445B14BD9B6A35F1C5B995C9BBF7
   logicalPath: FreeRTOS/Source
   name: event_groups.c
@@ -83,13 +83,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 972E955D94A63BA89BF6ABD6AADB1023
-- generatedChecksum: AAF237564D22DD37146C2C4EC823034E
+- generatedChecksum: 701B930EA6F784B2AA825D8D20638F9A
   logicalPath: config/sam_a5d27_som1_ek_freertos
   name: initialization.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: AAF237564D22DD37146C2C4EC823034E
+  userChecksum: 701B930EA6F784B2AA825D8D20638F9A
 - generatedChecksum: 019EB67F2C23B07DADAFD72E3853FE7F
   logicalPath: config/sam_a5d27_som1_ek_freertos
   name: interrupts.c
@@ -146,13 +146,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 374D02049DC2B0A7263766BB8E4DA141
-- generatedChecksum: 68AE0964A992E6577135FB9B92A48F24
+- generatedChecksum: C38B8F449F7251B5530C0253B428D108
   logicalPath: config/sam_a5d27_som1_ek_freertos/peripheral/pio
   name: plib_pio.c
   physicalPath: peripheral/pio
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 68AE0964A992E6577135FB9B92A48F24
+  userChecksum: C38B8F449F7251B5530C0253B428D108
 - generatedChecksum: DB31C1512C91E6829D86AC97D11247B6
   logicalPath: config/sam_a5d27_som1_ek_freertos/peripheral/pit
   name: plib_pit.c
@@ -202,13 +202,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 6584F211FCF6DC4D3D40F56DB5D336CB
-- generatedChecksum: 6447DC2A179A191B7744142B7D785618
+- generatedChecksum: 09081311919B94D15C3C44105F66253B
   logicalPath: config/sam_a5d27_som1_ek_freertos
   name: tasks.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 6447DC2A179A191B7744142B7D785618
+  userChecksum: 09081311919B94D15C3C44105F66253B
 - generatedChecksum: F1B86F6E1527FD59A8713B67564F2898
   logicalPath: FreeRTOS/Source
   name: timers.c
@@ -337,7 +337,7 @@ files:
   userChecksum: DFA06B577ACEF17DFE117F0BFBAB4330
 - generatedChecksum: null
   logicalPath: ''
-  name: app.h
+  name: app_freertos.h
   physicalPath: ../..
   security: NON_SECURE
   type: HEADER
@@ -440,13 +440,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 48B661D8C967C6BC397001F10FB43D1D
-- generatedChecksum: 98EAE3C7F6C0BE5AB7242A6D14913785
+- generatedChecksum: 1F13286D246799B86FBCC538FF2FD752
   logicalPath: config/sam_a5d27_som1_ek_freertos
   name: definitions.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 98EAE3C7F6C0BE5AB7242A6D14913785
+  userChecksum: 1F13286D246799B86FBCC538FF2FD752
 - generatedChecksum: 1EA4EDD5EA90F43EC407DE32441159A9
   logicalPath: FreeRTOS/Source/include
   name: deprecated_definitions.h
