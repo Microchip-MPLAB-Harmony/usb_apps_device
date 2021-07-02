@@ -93,8 +93,8 @@ children:
         - type: TargetAttachments
           children:
           - type: TargetAttachment
-            attributes: {targetComponentID: drv_memory_0, targetAttachmentID: drv_media}
-          - type: TargetAttachment
             attributes: {targetComponentID: drv_sdspi_0, targetAttachmentID: drv_media}
+          - type: TargetAttachment
+            attributes: {targetComponentID: drv_memory_0, targetAttachmentID: drv_media}
 - type: ElementPosition
   attributes: {x: '381', y: '162', id: usb_device_msd}

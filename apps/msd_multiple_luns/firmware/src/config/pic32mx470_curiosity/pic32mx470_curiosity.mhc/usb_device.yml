@@ -45,7 +45,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: usb_device, value: 'true'}
+        attributes: {id: usb_device, value: 'false'}
   - type: String
     attributes: {id: CONFIG_USB_DEVICE_PRODUCT_ID_IDX0}
     children:
@@ -98,6 +98,6 @@ children:
       - type: Boolean
         attributes: {id: enabled}
         children:
-        - {type: Value, value: 'true'}
+        - {type: Value, value: 'false'}
 - type: ElementPosition
   attributes: {x: '177', y: '195', id: usb_device}
