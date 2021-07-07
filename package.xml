@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Package name="usb_apps_device">
     <Dependencies>
-        <Dependency name="usb" version="v3.7.1"/>
+        <Dependency name="usb" version="v3.8.0"/>
     </Dependencies>
 </Package>

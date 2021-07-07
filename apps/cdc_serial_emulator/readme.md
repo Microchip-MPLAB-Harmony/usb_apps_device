@@ -31,7 +31,7 @@ Following table gives the details of project configurations, target device used,
 | sam_e54_xpro.X          | MPLABX | ATSAME54P20A    | [SAME54 Xplained Pro board](#config_3)        |
 | sam_e70_xult.X          | MPLABX | ATSAME70Q21B    | [SAME70 Xplained Ultra board](#config_4)      |
 | sam_e70_xult_freertos.X | MPLABX | ATSAME70Q21B    | [SAME70 Xplained Ultra board](#config_4)      |
-| pic32mz_ef_curiosity_20.X        | MPLABX | PIC32MZ2048EFM144   | [Curiosity PIC32MZ EF 2.0 Development Board](#config_15)                   |
+| pic32mz_ef_curiosity_2_0.X        | MPLABX | PIC32MZ2048EFM144   | [Curiosity PIC32MZ EF 2.0 Development Board](#config_15)                   |
 
 ## <a name="config_title"></a> Configuring the Hardware
 
