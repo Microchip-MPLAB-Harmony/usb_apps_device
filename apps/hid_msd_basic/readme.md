@@ -29,30 +29,39 @@ Following table gives the details of project configurations, target device used,
 | Project Name                    | IDE    | Target Device       | Hardware / Configuration                                                   |
 | ------------------------------- | ------ | ------------------- | -------------------------------------------------------------------------- |
 | pic32mz_ef_curiosity_2_0.X      | MPLABX | PIC32MZ2048EFM144   | [Curiosity PIC32MZ EF 2.0 Development Board](#config_15)                   |
-| sam_d21_xpro.X                  | MPLABX | ATSAMD21J18A        | [SAM D21 Xplained Pro Board](#config_2)                                    |
-| sam_e70_xult.X                  | MPLABX | ATSAME70Q21B        | [SAM E70 Xplained Ultra Board](#config_4)                                  |
+| pic32mx470_curiosity.X          | MPLABX | PIC32MX470F512H     | [PIC32MX Curiosity Development Board](#config_13)                          |
+| sam_d21_xpro.X                  | MPLABX | ATSAMD21J18A        | [SAMD21 Xplained Pro Board](#config_2)                                    |
+| sam_e70_xult.X                  | MPLABX | ATSAME70Q21B        | [SAME70 Xplained Ultra Board](#config_4)                                  |
 
 ## <a name="config_title"></a> Configuring the Hardware
 
 ### <a name="config_15"></a> [Curiosity PIC32MZ EF 2.0 Development Board](https://www.microchip.com/Developmenttools/ProductDetails/DM320209)
 
 - Use the USB micro-B port J201 to connect the USB Device to the USB Host PC.
-- LED2 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
+- LED2 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host). 
 - Pressing the LED Toggle button on the USB Host PC Utility toggles LED0.
 - The USB Host PC utility monitors the switch SW1 switch press on the board.
 
-### <a name="config_2"></a> [SAM D21 Xplained Pro Board](https://www.microchip.com/developmenttools/ProductDetails/atsamd21-xpro)
+### <a name="config_13"></a> [Curiosity PIC32MX470 Development Board](https://www.microchip.com/Developmenttools/ProductDetails/dm320103)
+
+- Use the USB micro-B port J12 to connect the USB Device to the USB Host PC.
+- LED1 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
+- Pressing the LED Toggle button on the USB Host PC Utility toggles the LED.
+- Press the switch S1 to trigger communication from the USB Device to the USB Host.
+
+### <a name="config_2"></a> [SAMD21 Xplained Pro Board](https://www.microchip.com/developmenttools/ProductDetails/atsamd21-xpro)
 
 - Use TARGET USB connector on the board to connect the USB Device to the USB Host PC.
 - LED0 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
 - Pressing the LED Toggle button on the USB Host PC Utility toggles LED0.
 - The USB Host PC utility monitors the switch SW0 switch press on the board.
 
-### <a name="config_4"></a> [SAM E70 Xplained Ultra Board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)
+### <a name="config_4"></a> [SAME70 Xplained Ultra Board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)
 
 - Jumper J203 must be shorted between PB08 and VBUS (positions 2 and 3).
 - Use TARGET USB J200 connector on the board to connect the USB Device to the USB Host PC.
-- LED3 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).Pressing the LED Toggle button on the USB Host PC Utility toggles LED3.
+- LED3 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
+- Pressing the LED Toggle button on the USB Host PC Utility toggles LED3.
 - The USB Host PC utility monitors SW1 switch press on the board.
 
 

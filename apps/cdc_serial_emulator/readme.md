@@ -26,11 +26,12 @@ Following table gives the details of project configurations, target device used,
 
 | Project Name            | IDE    | Target Device   | Hardware / Configuration                       |
 | ----------------------- | ------ | --------------- | ---------------------------------------------- |
-| sam_d11_xpro.X          | MPLABX | ATSAMD11D14A    | [SAM D11 Xplained Pro board](#config_1)        |
-| sam_d21_xpro.X          | MPLABX | ATSAMD21J18A    | [SAM D21 Xplained Pro board](#config_2)        |
-| sam_e54_xpro.X          | MPLABX | ATSAME54P20A    | [SAM E54 Xplained Pro board](#config_3)        |
-| sam_e70_xult.X          | MPLABX | ATSAME70Q21B    | [SAM E70 Xplained Ultra board](#config_4)      |
-| sam_e70_xult_freertos.X | MPLABX | ATSAME70Q21B    | [SAM E70 Xplained Ultra board](#config_4)      |
+| sam_d11_xpro.X          | MPLABX | ATSAMD11D14A    | [SAMD11 Xplained Pro board](#config_1)        |
+| sam_d21_xpro.X          | MPLABX | ATSAMD21J18A    | [SAMD21 Xplained Pro board](#config_2)        |
+| sam_e54_xpro.X          | MPLABX | ATSAME54P20A    | [SAME54 Xplained Pro board](#config_3)        |
+| sam_e70_xult.X          | MPLABX | ATSAME70Q21B    | [SAME70 Xplained Ultra board](#config_4)      |
+| sam_e70_xult_freertos.X | MPLABX | ATSAME70Q21B    | [SAME70 Xplained Ultra board](#config_4)      |
+| pic32mz_ef_curiosity_20.X        | MPLABX | PIC32MZ2048EFM144   | [Curiosity PIC32MZ EF 2.0 Development Board](#config_15)                   |
 
 ## <a name="config_title"></a> Configuring the Hardware
 
@@ -40,24 +41,30 @@ Following table gives the details of project configurations, target device used,
 - LED0 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host). 
 - The CDC USB (UART to USB) interface on this board is served by the EDBG connector (DEBUG_USB). Connecting this to the PC will create a COM port on the PC Host. 
 
-### <a name="config_2"></a> [SAM D21 Xplained Pro board](https://www.microchip.com/developmenttools/ProductDetails/atsamd21-xpro)
+### <a name="config_2"></a> [SAMD21 Xplained Pro board](https://www.microchip.com/developmenttools/ProductDetails/atsamd21-xpro)
 
 - Use TARGET USB connector on the board to connect the USB Device to the USB Host PC.
 - LED0 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
 - The CDC USB (UART to USB) interface on this board is served by the EDBG connector (DEBUG_USB). Connecting this to the PC will create a COM port on the PC Host.
 
-### <a name="config_3"></a> [SAM E54 Xplained Pro board](https://www.microchip.com/developmenttools/productdetails/atsame54-xpro)
+### <a name="config_3"></a> [SAME54 Xplained Pro board](https://www.microchip.com/developmenttools/productdetails/atsame54-xpro)
 
 - Use TARGET USB connector on the board to connect the USB Device to the USB Host PC.
 - LED0 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
 - The CDC USB (UART to USB) interface on this board is served by the EDBG connector (DEBUG_USB). Connecting this to the PC will create a COM port on the PC Host.
 
-### <a name="config_4"></a> [SAM E70 Xplained Ultra board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)
+### <a name="config_4"></a> [SAME70 Xplained Ultra board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)
 
 - Jumper J203 must be shorted between PB08 and VBUS (positions 2 and 3).
 - Use TARGET USB connector on the board to connect the USB Device to the USB Host PC.
 - LED3 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
 - The CDC USB (UART to USB) interface on this board is served by the EDBG connector J300. Connecting this to the PC will create a COM port on the PC Host.
+
+### <a name="config_15"></a> [Curiosity PIC32MZ EF 2.0 Development Board](https://www.microchip.com/Developmenttools/ProductDetails/DM320209)
+
+- Use the USB micro-B port J201 to connect the USB Device to the USB Host PC.
+- LED1 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
+- The CDC USB (UART to USB) interface on this board is served by the DEBUG_USB connector J700. Connecting this to the PC will create a COM port on the PC Host.
 
 ## Running the Application
 

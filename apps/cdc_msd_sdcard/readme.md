@@ -26,23 +26,48 @@ Following table gives the details of project configurations, target device used,
 
 | Project Name                    | IDE    | Target Device       | Hardware / Configuration                                                   |
 | ------------------------------- | ------ | ------------------- | -------------------------------------------------------------------------- |
-| sam_9x60_ek_iar.IAR             | IAR    | SAM9X60             | [SAM9X60-EK Evaluation Board](#config_9)                                   |
+| pic32mx470_curiosity.X          | MPLABX | PIC32MX470F512H     | [PIC32MX Curiosity Development Board](#config_13)                          |
+| pic32mz_ef_curiosity_2.X        | MPLABX | PIC32MZ2048EFM144   | [Curiosity PIC32MZ EF 2.0 Development Board](#config_15)                   |
+| sam_9x60_ek_iar.IAR             | IAR    | SAM9X60             | [SAM9X60-EK Evaluation Board](#config_9)                                   | 
+
 
 ## <a name="config_title"></a> Configuring the Hardware
+### <a name="config_13"></a> [Curiosity PIC32MX470 Development Board](https://www.microchip.com/Developmenttools/ProductDetails/dm320103)
+
+- To run the demo, the following additional hardware is required:
+    - [micro-sd Click](https://www.mikroe.com/microsd-click) board
+    - micro-sd card
+- Insert the micro-sd click board into the Mikro BUS 1 connector on the Curiosity PIC32MX470 Development Board. 
+- Insert the micro-SD card into the micro-SD Card slot of the micro-sd click board. 
+- USB micro-B port J12 to connect the USB device to the USB Host PC.
+- LED1 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
+- Press the switch S1 to trigger communication from the USB Device to the USB Host.
+
+### <a name="config_15"></a> [Curiosity PIC32MZ EF 2.0 Development Board](https://www.microchip.com/Developmenttools/ProductDetails/DM320209)
+
+- To run the demo, the following additional hardware is required:
+    - [micro-sd Click](https://www.mikroe.com/microsd-click) board
+    - micro-sd card
+- Insert the micro-sd click board into the Mikro BUS 1 connector on the Curiosity PIC32MZ EF 2.0 Development Board. 
+- Insert the micro-SD card into the micro-SD Card slot of the micro-sd click board. 
+- Use the USB micro-B port J201 to connect the USB Device to the USB Host PC.
+- LED1 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
+- Press the switch SW1 to trigger communication from the USB Device to the USB Host.
+
 
 ### <a name="config_9"></a> [SAM9X60-EK Evaluation Board](https://www.microchip.com/developmenttools/ProductDetails/DT100126)
 
-- Setup the SD card
-    - Download harmony MPU bootstrap loader from this [location](https://github.com/Microchip-MPLAB-Harmony/at91bootstrap/blob/sam9x60ek/boot.bin)
-    - Copy the downloaded boot loader binary (boot.bin) and generated application binary (harmony.bin)into the SD card
-    - Insert the SD card into the SDMMC connector J4 on the board
-- Connect the USB port J22 on board to the computer using a micro USB cable (to enable debug com port)
-- Jumpers J20, J21 and J13 must be open.
+- Setup the SD card 
+    - Download harmony MPU bootstrap loader from this [location](firmware/at91bootstrap_sam_9x60_ek.X/binaries/boot.bin).
+    - Copy the downloaded boot loader binary (boot.bin) and generated application binary (harmony.bin) into the SD card.
+    - Insert the SD card into the SDMMC connector J4 on the board.
+    - Reset the board by pressing the Push Button SW3. 
+- Jumpers J20, J21, and J13 must be open.
 - Jumper J2 and J3 must be shorted.
-- Use USB Micro B connector (J7) on the board to connect the USB Device to the USB Host PC.
-- LED D1 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
+- Connect the USB Micro-B port J22 on board to the computer using a micro USB cable (to enable the debug com port).
+- Connect the USB Micro-B Connector (J7) on the board to the computer using a micro USB cable. 
+- LED D1 indicates USB Device Configuration Set Complete event (The USB device functionality has been activated by the USB Host).
 - Press the switch SW1 to trigger communication from the USB Device to the USB Host.
-
     ![SAM9X60-EK Evaluation Board](images/sam9x60_evk.png)
 
     **Note: Reset push button on SAM9X60 EK is labeled as SW3**

@@ -28,7 +28,7 @@ Following table gives the details of project configurations, target device used,
 | ------------------------------- | ------ | ------------------- | -------------------------------------------------------------------------- |
 | pic32mz_ef_curiosity_2_0.X      | MPLABX | PIC32MZ2048EFM144   | [Curiosity PIC32MZ EF 2.0 Development Board](#config_15)                   |
 | sam_9x60_ek_iar.IAR             | IAR    | SAM9X60             | [SAM9X60-EK Evaluation Board](#config_9)                                   |
-| sam_e54_xpro.X                  | MPLABX | ATSAME54P20A        | [SAM E54 Xplained Pro Board](#config_3)                                    |
+| sam_e54_xpro.X                  | MPLABX | ATSAME54P20A        | [SAME54 Xplained Pro Board](#config_3)                                    |
 
 ## <a name="config_title"></a> Configuring the Hardware
 
@@ -36,26 +36,27 @@ Following table gives the details of project configurations, target device used,
 
 - Use the USB micro-B port J201 to connect the USB Device to the USB Host PC.
 - LED2 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
+- The CDC USB (UART to USB) interface on this board is served by the DEBUG_USB connector J700. Connecting this to the PC will create a COM port on the PC Host.
 
 ### <a name="config_9"></a> [SAM9X60-EK Evaluation Board](https://www.microchip.com/developmenttools/ProductDetails/DT100126)
 
-- Setup the SD card
-    - Download harmony MPU bootstrap loader from this [location](https://github.com/Microchip-MPLAB-Harmony/at91bootstrap/blob/sam9x60ek/boot.bin)
-    - Copy the downloaded boot loader binary (boot.bin) and generated application binary (harmony.bin)into the SD card
-    - Insert the SD card into the SDMMC connector J4 on the board
-- Connect the USB port J22 on board to the computer using a micro USB cable (to enable debug com port)
-- Jumpers J20, J21 and J13 must be open.
+- Setup the SD card 
+    - Download harmony MPU bootstrap loader from this [location](firmware/at91bootstrap_sam_9x60_ek.X/binaries/boot.bin).
+    - Copy the downloaded boot loader binary (boot.bin) and generated application binary (harmony.bin) into the SD card.
+    - Insert the SD card into the SDMMC connector J4 on the board.
+    - Reset the board by pressing the Push Button SW3. 
+- Jumpers J20, J21, and J13 must be open.
 - Jumper J2 and J3 must be shorted.
-- Use USB Micro B connector (J7) on the board to connect the USB Device to the USB Host PC.
-- LED D1 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
-
+- Connect the USB Micro-B port J22 on board to the computer using a micro USB cable (to enable the debug com port). The USB COM port interface on this port is used to transfer demonstration application messages to a PC. 
+- Connect the USB Micro-B Connector (J7) on the board to the computer using a micro USB cable.
+- LED D1 indicates USB Device Configuration Set Complete event (The USB device functionality has been activated by the USB Host).
     ![SAM9X60-EK Evaluation Board](images/sam9x60_evk.png)
 
-    **Note:** Reset push button on SAM9X60 EK is labeled as SW3
 
-### <a name="config_3"></a> [SAM E54 Xplained Pro Board](https://www.microchip.com/developmenttools/productdetails/atsame54-xpro)
+### <a name="config_3"></a> [SAME54 Xplained Pro Board](https://www.microchip.com/developmenttools/productdetails/atsame54-xpro)
 
 - Use TARGET USB connector on the board to connect the USB Device to the USB Host PC.
+- The CDC USB (UART to USB) interface on this board is served by the EDBG connector (DEBUG_USB). Connecting this to the PC will create a COM port on the PC Host.
 - LED0 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
 
 

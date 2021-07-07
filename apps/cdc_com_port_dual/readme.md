@@ -26,40 +26,41 @@ Following table gives the details of project configurations, target device used,
 
 | Project Name                    | IDE    | Target Device       | Hardware / Configuration                                                   |
 | ------------------------------- | ------ | ------------------- | -------------------------------------------------------------------------- |
-| sam_d11_xpro.X                  | MPLABX | ATSAMD11D14A        | [SAM D11 Xplained Pro board](#config_1)                                    |
-| sam_d21_xpro.X                  | MPLABX | ATSAMD21J18A        | [SAM D21 Xplained Pro board](#config_2)                                    |
-| sam_e54_xpro.X                  | MPLABX | ATSAME54P20A        | [SAM E54 Xplained Pro board](#config_3)                                    |
-| sam_e54_xpro_freertos.X         | MPLABX | ATSAME54P20A        | [SAM E54 Xplained Pro board](#config_3)                                    |
-| sam_e70_xult.X                  | MPLABX | ATSAME70Q21B        | [SAM E70 Xplained Ultra board](#config_4)                                  |
-| sam_e70_xult_freertos.X         | MPLABX | ATSAME70Q21B        | [SAM E70 Xplained Ultra board](#config_4)                                  |
-| sam_v71_xult.X                  | MPLABX | ATSAMV71Q21B        | [SAM V71 Xplained Ultra board](config_5)                                   |
-| sam_v71_xult_freertos.X         | MPLABX | ATSAMV71Q21B        | [SAM V71 Xplained Ultra board](config_5)                                   |
+| sam_d11_xpro.X                  | MPLABX | ATSAMD11D14A        | [SAMD11 Xplained Pro board](#config_1)                                    |
+| sam_d21_xpro.X                  | MPLABX | ATSAMD21J18A        | [SAMD21 Xplained Pro board](#config_2)                                    |
+| sam_e54_xpro.X                  | MPLABX | ATSAME54P20A        | [SAME54 Xplained Pro board](#config_3)                                    |
+| sam_e54_xpro_freertos.X         | MPLABX | ATSAME54P20A        | [SAME54 Xplained Pro board](#config_3)                                    |
+| sam_e70_xult.X                  | MPLABX | ATSAME70Q21B        | [SAME70 Xplained Ultra board](#config_4)                                  |
+| sam_e70_xult_freertos.X         | MPLABX | ATSAME70Q21B        | [SAME70 Xplained Ultra board](#config_4)                                  |
+| sam_v71_xult.X                  | MPLABX | ATSAMV71Q21B        | [SAMV71 Xplained Ultra board](config_5)                                   |
+| sam_v71_xult_freertos.X         | MPLABX | ATSAMV71Q21B        | [SAMV71 Xplained Ultra board](config_5)                                   |
 | pic32mz_ef_curiosity_2_0.X         | MPLABX | PIC32MZ2048EFM144        | [Curiosity PIC32MZ EF 2.0 Development Board](config_6)                                   |
+| pic32mx470_curiosity.X          | MPLABX | PIC32MX470F512H     | [PIC32MX Curiosity Development Board](#config_13)                          |
 
 ## <a name="config_title"></a> Configuring the Hardware
 
-### <a name="config_1"></a> [SAM D11 Xplained Pro board](https://www.microchip.com/developmenttools/ProductDetails/atsamd11-xpro)
+### <a name="config_1"></a> [SAMD11 Xplained Pro board](https://www.microchip.com/developmenttools/ProductDetails/atsamd11-xpro)
 
 - Use TARGET USB connector on the board to connect the USB Device to the USB Host PC.
 - LED0 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
 
-### <a name="config_2"></a> [SAM D21 Xplained Pro board](https://www.microchip.com/developmenttools/ProductDetails/atsamd21-xpro)
+### <a name="config_2"></a> [SAMD21 Xplained Pro board](https://www.microchip.com/developmenttools/ProductDetails/atsamd21-xpro)
 
 - Use TARGET USB connector on the board to connect the USB Device to the USB Host PC.
 - LED0 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
 
-### <a name="config_3"></a> [SAM E54 Xplained Pro board](https://www.microchip.com/developmenttools/productdetails/atsame54-xpro)
+### <a name="config_3"></a> [SAME54 Xplained Pro board](https://www.microchip.com/developmenttools/productdetails/atsame54-xpro)
 
 - Use TARGET USB connector on the board to connect the USB Device to the USB Host PC.
 - LED0 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
 
-### <a name="config_4"></a> [SAM E70 Xplained Ultra board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)
+### <a name="config_4"></a> [SAME70 Xplained Ultra board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)
 
 - Jumper J203 must be shorted between PB08 and VBUS (positions 2 and 3).
 - Use TARGET USB J200 connector on the board to connect the USB Device to the USB Host PC.
 - LED3 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
 
-### <a name="config_5"></a> [SAM V71 Xplained Ultra board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/ATSAMV71-XULT)
+### <a name="config_5"></a> [SAMV71 Xplained Ultra board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/ATSAMV71-XULT)
 
 - Jumper titled "USB VBUS" must be shorted between PC09 and VBUS (positions 2 and 3)
 - Use TARGET USB connector on the board to connect the USB Device to the USB Host PC.
@@ -68,6 +69,11 @@ Following table gives the details of project configurations, target device used,
 ### <a name="config_6"></a> [Curiosity PIC32MZ EF 2.0 Development Board](https://www.microchip.com/developmenttools/ProductDetails/DM320209)
 
 - Use the USB micro-B port J201 to connect the USB Device to the USB Host PC.
+- LED1 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
+
+### <a name="config_13"></a> [Curiosity PIC32MX470 Development Board](https://www.microchip.com/Developmenttools/ProductDetails/dm320103)
+
+- Use the USB micro-B port J12 to connect the USB Device to the USB Host PC.
 - LED1 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
 
 ## Running the Application

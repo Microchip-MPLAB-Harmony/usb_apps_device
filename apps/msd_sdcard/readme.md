@@ -26,32 +26,99 @@ Following table gives the details of project configurations, target device used,
 
 | Project Name                    | IDE    | Target Device       | Hardware / Configuration                                                   |
 | ------------------------------- | ------ | ------------------- | -------------------------------------------------------------------------- |
+| pic32mx470_curiosity.X          | MPLABX | PIC32MX470F512H     | [PIC32MX Curiosity Development Board](#config_13)                          |
+| pic32mz_ef_curiosity_20.X        | MPLABX | PIC32MZ2048EFM144   | [Curiosity PIC32MZ EF 2.0 Development Board](#config_15)                   |
+| sam_9x60_ek.X                   | MPLABX | SAM9X60             | [SAM9X60-EK Evaluation Board](#config_9)                                   |
 | sam_9x60_ek_iar.IAR             | IAR    | SAM9X60             | [SAM9X60-EK Evaluation Board](#config_9)                                   |
-| sam_e70_xult.X                  | MPLABX | ATSAME70Q21B        | [SAM E70 Xplained Ultra Board](#config_4)                                  |
+| sam_a5d2_xult.X           | MPLABX    | ATSAMA5D27C         | [SAMA5D2 Xplained Ultra Board](#config_10)                                |
+| sam_a5d27_som1_ek.X           | MPLABX    | ATSAMA5D27C         | [SAMA5D27 SOM1 Kit1](#config_18)                                |
+| sam_a5d27_wlsom1_ek1.X           | MPLABX    | ATSAMA5D27C         | [ATSAMA5D27 WLSOM1 EK1](#config_19)                                |
+| sam_e70_xult.X                  | MPLABX | ATSAME70Q21B        | [SAME70 Xplained Ultra Board](#config_4)                                  |
 
 ## <a name="config_title"></a> Configuring the Hardware
 
-### <a name="config_9"></a> [SAM9X60-EK Evaluation Board](https://www.microchip.com/developmenttools/ProductDetails/DT100126)
+### <a name="config_15"></a> [Curiosity PIC32MZ EF 2.0 Development Board](https://www.microchip.com/Developmenttools/ProductDetails/DM320209)
 
-- Setup the SD card
-    - Download harmony MPU bootstrap loader from this [location](https://github.com/Microchip-MPLAB-Harmony/at91bootstrap/blob/sam9x60ek/boot.bin)
-    - Copy the downloaded boot loader binary (boot.bin) and generated application binary (harmony.bin)into the SD card
-    - Insert the SD card into the SDMMC connector J4 on the board
-- Connect the USB port J22 on board to the computer using a micro USB cable (to enable debug com port)
-- Jumpers J20, J21 and J13 must be open.
-- Jumper J2 and J3 must be shorted.
-- Use USB Micro B connector (J7) on the board to connect the USB Device to the USB Host PC.
-- LED D1 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
+- To run the demo, the following additional hardware is required:
+    - [micro-sd Click](https://www.mikroe.com/microsd-click) board
+    - micro-sd card
+- Insert the micro-sd click board into the Mikro BUS 1 connector on the Curiosity PIC32MZ EF 2.0 Development Board. 
+- Insert the micro-SD card into the micro-SD Card slot of the micro-sd click board. 
+- Use the USB micro-B port J201 to connect the USB Device to the USB Host PC.
+- LED1 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
 
-    ![SAM9X60-EK Evaluation Board](images/sam9x60_evk.png)
+### <a name="config_13"></a> [Curiosity PIC32MX470 Development Board](https://www.microchip.com/Developmenttools/ProductDetails/dm320103)
 
-    **Note:** Reset push button on SAM9X60 EK is labeled as SW3
+- To run the demo, the following additional hardware is required:
+    - [micro-sd Click](https://www.mikroe.com/microsd-click) board
+    - micro-sd card
+- Insert the micro-sd click board into the Mikro BUS 1 connector on the Curiosity PIC32MX470 Development Board. 
+- Insert the micro-SD card into the micro-SD Card slot of the micro-sd click board. 
+- USB micro-B port J12 to connect the USB device to the USB Host PC.
+- LED1 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
 
-### <a name="config_4"></a> [SAM E70 Xplained Ultra Board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)
+
+### <a name="config_4"></a> [SAME70 Xplained Ultra Board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)
 
 - Jumper J203 must be shorted between PB08 and VBUS (positions 2 and 3).
+- Insert the micro-SD card into the micro-SD Card slot (J700). 
 - Use TARGET USB J200 connector on the board to connect the USB Device to the USB Host PC.
 - LED3 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
+
+### <a name="config_9"></a> [SAM9X60-EK Evaluation Board](https://www.microchip.com/developmenttools/ProductDetails/DT100126)
+
+- Setup the SD card 
+    - Download harmony MPU bootstrap loader from this [location](firmware/at91bootstrap_sam_9x60_ek.X/binaries/boot.bin).
+    - Copy the downloaded boot loader binary (boot.bin) and generated application binary (harmony.bin) into the SD card.
+    - Insert the SD card into the SDMMC connector J4 on the board.
+    - Reset the board by pressing the Push Button SW3. 
+- Jumpers J20, J21, and J13 must be open.
+- Jumper J2 and J3 must be shorted.
+- Connect the USB Micro-B port J22 on board to the computer using a micro USB cable (to enable the debug com port).
+- Connect the USB Micro-B Connector (J7) on the board to the computer using a micro USB cable. 
+- LED D1 indicates USB Device Configuration Set Complete event (The USB device functionality has been activated by the USB Host).
+    ![SAM9X60-EK Evaluation Board](images/sam9x60_evk.png)
+
+    **Note: Reset push button on SAM9X60 EK is labeled as SW3**
+
+### <a name="config_10"></a> [SAMA5D2 Xplained Ultra Board](https://www.microchip.com/Developmenttools/ProductDetails/ATSAMA5D2C-XULT)
+- Setup the SD card 
+    - Download harmony MPU bootstrap loader from this [location](firmware/at91bootstrap_sam_a5d2_xult.X/binaries/boot.bin).
+    - Copy the downloaded boot loader binary (boot.bin) and generated application binary (harmony.bin) into the SD card.
+    - Insert the SD card into the SDMMC1 slot on the board.
+    - Reset the board by pressing the Push Button BP3. 
+- Short jumper JP2(DEBUG_DIS).
+- Connect the EDBG USB Micro-B port J14 on the board to the computer using a micro USB cable.
+- Use the "A5-USB-A" connector (J23 - Micro A/B connector) on the board to connect the USB device to the USB Host.
+- RGB LED turning to Green indicates USB Device Configuration Set Complete event (The USB device functionality has been activated by the USB Host).
+
+### <a name="config_18"></a> [SAMA5D27 SOM1 Kit1](https://www.microchip.com/developmenttools/ProductDetails/atsama5d27-som1-ek1)
+
+- Setup the SD card 
+    - Download harmony MPU bootstrap loader from this [location](firmware/at91bootstrap_sam_a5d27_som1_ek.X/binaries/boot.bin).
+    - Copy the downloaded boot loader binary (boot.bin) and generated application binary (harmony.bin) into the SD card.
+    - Insert the SD card into the SDMMC0 slot (J12) on the board.
+    - Reset the board by pressing the Push Button PB1. 
+- Connect the Debug USB port (J10) on the board to the computer using a micro USB cable.
+- Connect the USB Micro-B Connector (J17) on the board to the computer using a micro USB cable. 
+- RGB LED turning to Green indicates USB Device Configuration Set Complete event (The USB device functionality has been activated by the USB Host).
+  ![SAM9X60-EK Evaluation Board](images/SAMA5D2_SOM1_EK_USB.png)
+
+
+### <a name="config_19"></a> [ATSAMA5D27-WLSOM1 Evaluation Kit ](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320117)
+
+- Setup the SD card 
+    - Download harmony MPU bootstrap loader from this [location](firmware/at91bootstrap_sam_a5d27_wlsom1_ek1.X/binaries/boot.bin).
+    - Copy the downloaded boot loader binary (boot.bin) and generated application binary (harmony.bin) into the SD card.
+    - Insert the SD card into the SDMMC0 Card Connector (J9) on the board.
+    - Reset the board by pressing the Reset Button (SW2) 
+- Connect the USB-A MicroAB connector (J10) on the board to the computer using a micro USB cable.
+- Press the "START_SOM" button to activate board start-up.  
+- RGB LED turning to Green indicates USB Device Configuration Set Complete event (The USB device functionality has been activated by the USB Host).
+  ![SAM9X60-EK Evaluation Board](images/SAMA5D2_WLSOM1_EK_USB.png)
+
+
+
 
 ## Running the Application
 
@@ -59,4 +126,4 @@ This demonstration uses the selected hardware platform as a logical drive on the
 
 Connect the hardware platform to a computer through a USB cable. The device should appear as a new drive on the computer named "Drive Name". The drive can used to store files. The LEDs on the demonstration board will indicate the USB state of the device. Refer to the [Configuring the Hardware](#config_title) section for the selected target hardware. 
 
-**Note:** The user should ensure that the Host is not currently writing data to the media before detaching the device. On a Windows computer before removing the device click on "Safely Remove Hardware" and click on "Eject Media". 
+Please note that the user should ensure that the Host is not currently writing data to the media before detaching the device. On a Windows computer before removing the device click on "Safely Remove Hardware" and click on "Eject Media". 

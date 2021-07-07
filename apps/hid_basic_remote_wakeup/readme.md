@@ -26,35 +26,19 @@ Following table gives the details of project configurations, target device used,
 
 | Project Name                    | IDE    | Target Device       | Hardware / Configuration                                                   |
 | ------------------------------- | ------ | ------------------- | -------------------------------------------------------------------------- |
-| sam_d21_xpro.X                  | MPLABX | ATSAMD21J18A        | [SAM D21 Xplained Pro Board](#config_2)                                    |
 | sam_e54_xpro.X                  | MPLABX | ATSAME54P20A        | [SAM E54 Xplained Pro Board](#config_3)                                    |
-| sam_l21_xpro.X                  | MPLABX | ATSAML21J18B        | [SAM L21 Xplained Pro Board](#config_7)                                    |
+
 
 ## <a name="config_title"></a> Configuring the Hardware
 
-### <a name="config_2"></a> [SAM D21 Xplained Pro Board](https://www.microchip.com/developmenttools/ProductDetails/atsamd21-xpro)
+### <a name="config_3"></a> [SAME54 Xplained Pro Board](https://www.microchip.com/developmenttools/productdetails/atsame54-xpro)
 
 - Use TARGET USB connector on the board to connect the USB Device to the USB Host PC.
 - LED0 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
 - Press the switch SW0 to trigger communication from the USB Device to the USB Host.
 - When the device is in Standby sleep, SW0 acts as wakeup source and brings the device to active mode. The device sends Remote wakeup to PC host and then goes back to Standby sleep mode to let the PC host drive the resume.
-- To measure current consumed by the device in different Sleep modes, refer to Section **Current Measurement Header** in [SAM D21 Xplained Pro Hardware User Guide](https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-42220-SAMD21-Xplained-Pro_User-Guide.pdf). Refer to **Virtual COM Port** section to know more on using EDBG to send runtime messages.
+- To measure current consumed by the device in different Sleep modes, refer to Section **Current Measurement Header** in [SAME54 Xplained Pro Hardware User Guide](https://ww1.microchip.com/downloads/en/DeviceDoc/70005321A.pdf). Refer to **Virtual COM Port** section to know more on using EDBG to send runtime messages.
 
-### <a name="config_3"></a> [SAM E54 Xplained Pro Board](https://www.microchip.com/developmenttools/productdetails/atsame54-xpro)
-
-- Use TARGET USB connector on the board to connect the USB Device to the USB Host PC.
-- LED0 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
-- Press the switch SW0 to trigger communication from the USB Device to the USB Host.
-- When the device is in Standby sleep, SW0 acts as wakeup source and brings the device to active mode. The device sends Remote wakeup to PC host and then goes back to Standby sleep mode to let the PC host drive the resume.
-- To measure current consumed by the device in different Sleep modes, refer to Section **Current Measurement Header** in [SAM E54 Xplained Pro Hardware User Guide](https://ww1.microchip.com/downloads/en/DeviceDoc/70005321A.pdf). Refer to **Virtual COM Port** section to know more on using EDBG to send runtime messages.
-
-### <a name="config_7"></a> [SAM L21 Xplained Pro Board](https://www.microchip.com/developmenttools/ProductDetails/PartNO/ATSAML21-XPRO-B)
-
-- Use TARGET USB connector on the board to connect the USB Device to the USB Host PC.
-- LED0 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
-- Press the switch SW0 to trigger communication from the USB Device to the USB Host.
-- When the device is in Standby sleep, SW0 acts as wakeup source and brings the device to active mode. The device sends Remote wakeup to PC host and then goes back to Standby sleep mode to let the PC host drive the resume.
-- To measure current consumed by the device in different Sleep modes, refer to Section **Current Measurement Header** in [SAM L21 Xplained Pro Hardware User Guide](https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-42405-SAML21-Xplained-Pro_User-Guide.pdf). Refer to **Virtual COM Port** section to know more on using EDBG to send runtime messages.
 
 ## Running the Application
 
