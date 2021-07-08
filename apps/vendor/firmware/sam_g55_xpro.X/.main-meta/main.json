@@ -4,27 +4,27 @@
 	"content": {
 		"metaDataVersion": "1.1.0",
 		"name": "com.microchip.mcu32.mplabx.project.usb_apps_device_vendor_sam_g55_xpro",
-		"version": "3.0.0",
+		"version": "3.1.0",
 		"displayName": "Vendor Example (vendor) Example for SAM G5x Family",
 		"projectName": "vendor_sam_g55_xpro",
 		"shortDescription": "This application creates a USB CDC Device that enumerates as a custom vendor USB device on the USB host PC. The device uses USB Device Layer Endpoint functions and demonstrates the PC host's ability to control the LEDs on the board and query the status of a switch through PC utility.",
 		"ide": {
 			"name": "MPLABX",
-			"semverRange": ">=5.45.0"
+			"semverRange": ">=5.50.0"
 		},
 		"compiler": [
 			{
 				"name": "XC32",
-				"semverRange": ">=2.50.0"
+				"semverRange": ">=3.00.0"
 			}
 		],
 		"dfp": {
 			"name": "SAMG_DFP",
-			"semverRange": "^3.3.42"
+			"semverRange": "^3.4.57"
 		},
 		"configurator": {
 			"name": "MHC",
-			"semverRange": ">=3.6.1"
+			"semverRange": ">=3.6.4"
 		},
 		"device": {
 			"metaDataVersion": "1.0.0",

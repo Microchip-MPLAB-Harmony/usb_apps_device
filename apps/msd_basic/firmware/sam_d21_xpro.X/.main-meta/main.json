@@ -4,27 +4,27 @@
 	"content": {
 		"metaDataVersion": "1.1.0",
 		"name": "com.microchip.mcu32.mplabx.project.usb_apps_device_msd_basic_sam_d21_xpro",
-		"version": "3.0.0",
+		"version": "3.1.0",
 		"displayName": "MSD Basic Example (msd_basic) Example for SAM D21/DA1 Family",
 		"projectName": "msd_basic_sam_d21_xpro",
 		"shortDescription": "This application creates a USB MSD Device that enumerates as a Flash Drive on the USB host PC. The application allows read / write / modify / delete data from a PC host like any normal Flash drive.",
 		"ide": {
 			"name": "MPLABX",
-			"semverRange": ">=5.45.0"
+			"semverRange": ">=5.50.0"
 		},
 		"compiler": [
 			{
 				"name": "XC32",
-				"semverRange": ">=2.50.0"
+				"semverRange": ">=3.00.0"
 			}
 		],
 		"dfp": {
 			"name": "SAMD21_DFP",
-			"semverRange": "^3.3.98"
+			"semverRange": "^3.4.116"
 		},
 		"configurator": {
 			"name": "MHC",
-			"semverRange": ">=3.6.1"
+			"semverRange": ">=3.6.4"
 		},
 		"device": {
 			"metaDataVersion": "1.0.0",

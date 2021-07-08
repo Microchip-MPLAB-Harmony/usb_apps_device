@@ -4,27 +4,27 @@
 	"content": {
 		"metaDataVersion": "1.1.0",
 		"name": "com.microchip.mcu32.mplabx.project.usb_apps_device_cdc_com_port_single_pic32mk_gp_db_freertos",
-		"version": "3.0.0",
+		"version": "3.1.0",
 		"displayName": "CDC COM Port Single Example (cdc_com_port_single) Example for PIC32MK Family",
 		"projectName": "cdc_com_port_single_pic32mk_gp_db_freertos",
 		"shortDescription": "This application creates a USB CDC Device that enumerates as a single COM port on the USB host PC. The COM port can be opened using any of the terminal applications. To demonstrate two-way communication, when a character is typed on the terminal window, it is echoed back by the USB device.",
 		"ide": {
 			"name": "MPLABX",
-			"semverRange": ">=5.45.0"
+			"semverRange": ">=5.50.0"
 		},
 		"compiler": [
 			{
 				"name": "XC32",
-				"semverRange": ">=2.50.0"
+				"semverRange": ">=3.00.0"
 			}
 		],
 		"dfp": {
 			"name": "PIC32MK-GP_DFP",
-			"semverRange": "^1.4.117"
+			"semverRange": "^1.5.130"
 		},
 		"configurator": {
 			"name": "MHC",
-			"semverRange": ">=3.6.1"
+			"semverRange": ">=3.6.4"
 		},
 		"device": {
 			"metaDataVersion": "1.0.0",
