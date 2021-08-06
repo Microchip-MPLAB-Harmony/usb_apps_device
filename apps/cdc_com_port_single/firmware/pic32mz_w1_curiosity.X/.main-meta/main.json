@@ -4,7 +4,7 @@
 	"content": {
 		"metaDataVersion": "1.1.0",
 		"name": "com.microchip.mcu32.mplabx.project.usb_apps_device_cdc_com_port_single_pic32mz_w1_curiosity",
-		"version": "3.1.0",
+		"version": "3.1.1",
 		"displayName": "CDC COM Port Single Example (cdc_com_port_single) Example for PIC32MZ W1 Family",
 		"projectName": "pic32mz_w1_curiosity_cdc_com_port_single",
 		"shortDescription": "This application creates a USB CDC Device that enumerates as a single COM port on the USB host PC. The COM port can be opened using any of the terminal applications. To demonstrate two-way communication, when a character is typed on the terminal window, it is echoed back by the USB device.",
@@ -15,7 +15,7 @@
 		"compiler": [
 			{
 				"name": "XC32",
-				"semverRange": ">=3.00.0"
+				"semverRange": ">=3.0.0"
 			}
 		],
 		"dfp": {

@@ -4,7 +4,7 @@
 	"content": {
 		"metaDataVersion": "1.1.0",
 		"name": "com.microchip.mcu32.mplabx.project.usb_apps_device_printer_basic_pic32mz_ef_curiosity_2",
-		"version": "3.1.0",
+		"version": "3.1.1",
 		"displayName": "Printer Example (printer) Example for PIC32MZ EF Family",
 		"projectName": "printer_basic_pic32mz_ef_curiosity_2",
 		"shortDescription": "This demo uses PC running Windows 7 as a USB Host. The demo board programmed with the demo application, enumerates as "USB Printing Support" device when connected to the USB Host. This demo allows the user to print the text from Notepad or similar application in Windows using built in **Generic/Text Only** print driver.",
@@ -15,7 +15,7 @@
 		"compiler": [
 			{
 				"name": "XC32",
-				"semverRange": ">=3.00.0"
+				"semverRange": ">=3.0.0"
 			}
 		],
 		"dfp": {

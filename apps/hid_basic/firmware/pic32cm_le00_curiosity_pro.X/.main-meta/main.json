@@ -4,7 +4,7 @@
 	"content": {
 		"metaDataVersion": "1.1.0",
 		"name": "com.microchip.mcu32.mplabx.project.usb_apps_device_hid_basic_pic32cm_le00_curiosity_pro",
-		"version": "3.1.0",
+		"version": "3.1.1",
 		"displayName": "HID Basic Example (hid_basic) Example for PIC32CM LE00/LS00/LS60 Family",
 		"projectName": "hid_basic_pic32cm_le00_curiosity_pro",
 		"shortDescription": "This application creates a USB HID Device that enumerates as a custom USB HID device on the USB host PC. The device allows the USB Host utility to control the LEDs on the board and query the status of a switch.",
@@ -15,7 +15,7 @@
 		"compiler": [
 			{
 				"name": "XC32",
-				"semverRange": ">=3.00.0"
+				"semverRange": ">=3.0.0"
 			}
 		],
 		"dfp": {

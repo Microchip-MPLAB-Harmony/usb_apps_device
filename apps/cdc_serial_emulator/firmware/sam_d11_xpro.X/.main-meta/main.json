@@ -4,7 +4,7 @@
 	"content": {
 		"metaDataVersion": "1.1.0",
 		"name": "com.microchip.mcu32.mplabx.project.usb_apps_device_cdc_serial_emulator_sam_d11_xpro",
-		"version": "3.1.0",
+		"version": "3.1.1",
 		"displayName": "CDC Serial Emulator Example (cdc_serial_emulator) Example for SAM D09/D10/D11 Family",
 		"projectName": "cdc_serial_emulator_sam_d11_xpro",
 		"shortDescription": "This application demonstrates the use of the CDC device class to implement a USB-to-Serial Converter. TThe application enumerates a COM port on the personal computer. Data received through the CDC USB interface is forwarded to a UART. Data received on the UART is forwarded to the CDC USB interface on the target board. The interface between the UART and the CDC USB Interface on the board demonstrates the USB to UART capability.",
@@ -15,7 +15,7 @@
 		"compiler": [
 			{
 				"name": "XC32",
-				"semverRange": ">=3.00.0"
+				"semverRange": ">=3.0.0"
 			}
 		],
 		"dfp": {
