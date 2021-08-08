@@ -8,6 +8,22 @@ nav_order: 99
 
 # Microchip MPLAB® Harmony 3 Release Notes
 
+## Harmony 3 USB Device application examples v3.1.1
+### Bug fixes
+-   [MPLAB® Discover portal](https://mplab-discover.microchip.com/) metadata for all demonstration application configurations have been updated. 
+
+### New Features and Enhancements
+
+- None
+
+### Known Issues
+
+- None 
+
+### Development Tools
+
+- Same as v3.1.0 
+
 ## Harmony 3 USB Device application examples v3.1.0
 
 ### Development kit and demo application support
@@ -44,7 +60,7 @@ Following table provides number of USB Device examples available for different d
     - USB-UART Bridge Single Channel Example (usb_uart_bridge_single)
     - MSD Multiple LUN Example (msd_multiple_luns)
     - CDC Serial Emulator MSD Example (cdc_serial_emulator_msd)
-- MPLABX USB Device demonstration application configurations has been added for following development boards.
+- MPLAB® X IDE USB Device demonstration application configurations has been added for following development boards.
     - [Curiosity PIC32MZ EF 2.0 Development Board](https://www.microchip.com/Developmenttools/ProductDetails/DM320209)
     - [Curiosity PIC32MX470 Development Board](https://www.microchip.com/Developmenttools/ProductDetails/dm320103)
     - [SAM9X60-EK Evaluation Board](https://www.microchip.com/developmenttools/ProductDetails/DT100126)  
@@ -63,7 +79,7 @@ Following table provides number of USB Device examples available for different d
 
 ### Development Tools
 
--    [MPLAB® X IDE v5.45](https://www.microchip.com/mplab/mplab-x-ide)
+-    [MPLAB® X IDE v5.50](https://www.microchip.com/mplab/mplab-x-ide)
 -    [MPLAB® XC32 C/C++ Compiler v3.00](https://www.microchip.com/mplab/compilers)
 -    [IAR Embedded Workbench® for ARM® v8.5](https://www.iar.com/iar-embedded-workbench/#!?architecture=Arm)
 -   MPLAB® X IDE plug-ins:- MPLAB® Harmony 3 Launcher v3.6.4 or above
