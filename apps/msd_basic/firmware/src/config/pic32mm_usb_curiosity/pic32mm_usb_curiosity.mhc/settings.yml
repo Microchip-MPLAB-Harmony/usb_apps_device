@@ -1,0 +1,14 @@
+configName: pic32mm_usb_curiosity
+folderName: pic32mm_usb_curiosity
+format_version: v1.0
+frameworkPath: ..\..\..
+processor: PIC32MM0256GPM064
+projectName: msd_basic_pic32mm_usb_curiosity
+settings:
+  PackageFilter: bootloader;bootloader_apps_usb;bsp;core;csp;csp_apps_pic32mm;net;usb;usb_apps_device;usb_apps_device_org;usb_apps_dual_role;usb_apps_host;usb_apps_multi_controller
+  FORCE_OPTIMIZATION: 'false'
+  GENERATE_BACKUP: 'true'
+  TRUSTZONE: 'false'
+  CMSISPath: .\dev_packs\arm\CMSIS\5.8.0
+  MERGE_STRATEGY: USER_ALL
+  DFPPath: .\dev_packs\Microchip\PIC32MM_GPM_DFP\1.3.45\atdf\PIC32MM0256GPM064.atdf
