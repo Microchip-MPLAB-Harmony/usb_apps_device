@@ -1,0 +1,6 @@
+format_version: v1.0
+type: UniqueComponent
+attributes: {id: BSP_SAM_A7G5_Evaluation_Kit, bsp: 'true'}
+children:
+- type: ElementPosition
+  attributes: {x: '154', y: '72', id: BSP_SAM_A7G5_Evaluation_Kit}

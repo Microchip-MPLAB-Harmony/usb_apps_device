@@ -34,6 +34,7 @@ Following table gives the details of project configurations, target device used,
 | sam_9x60_ek.X                   | MPLABX | SAM9X60             | [SAM9X60-EK Evaluation Board](#config_9)                                   |
 | sam_9x60_ek_freertos.X                   | MPLABX | SAM9X60             | [SAM9X60-EK Evaluation Board](#config_9)                                   |
 | sam_a5d2_xult_iar.IAR           | IAR    | ATSAMA5D27C         | [SAMA5D2 Xplained Ultra Board](#config_10)                                |
+| sam_a7g5_ek.X                   | MPLABX | SAMA7G54            | [SAMA7G5 EK Board](#config_21)                                    |
 | sam_d21_xpro.X                  | MPLABX | ATSAMD21J18A        | [SAMD21 Xplained Pro Board](#config_2)                                    |
 | sam_e54_xpro.X                  | MPLABX | ATSAME54P20A        | [SAME54 Xplained Pro Board](#config_3)                                    |
 | sam_e54_xpro_freertos.X         | MPLABX | ATSAME54P20A        | [SAME54 Xplained Pro Board](#config_3)                                    |
@@ -97,6 +98,19 @@ Following table gives the details of project configurations, target device used,
 - Use "A5-USB-A" connector(J23 - Micro A/B connector) on the board to connect the USB Device to the USB Host.
 - RGB LED turning to Green indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
 - Press PB_USER Switch to trigger communication from the USB Device to the USB Host
+
+### <a name="config_21"></a> [SAMA7G5-EK Evaluation Kit](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/TOBEADDED)
+
+- Powered the board with an external power supply (J1) or power supply the board by connecting J7 to the computer using a micro USB cable.
+- Setup the SD card 
+    - Download harmony MPU bootstrap loader from this [location](firmware/at91bootstrap_sam_a7g5_ek.X/build/binaries/boot.bin).
+    - Copy the downloaded boot loader binary (boot.bin) and generated application binary (harmony.bin) into the SD card.
+    - Insert the SD card into the SD Card Connector (J4) on the board.
+    - Reset the board by pressing the Reset Button (nRST) 
+- Press the "nSTART" button to activate board start-up.  
+- Connect the USB MicroAB connector (J7) to the computer using an USB cable.
+- RGB LED turning to Green indicates USB Device Configuration Set Complete event (The USB device functionality has been activated by the USB Host).
+- Press the USER BUTTON SW1 to trigger communication from the USB Device to the USB Host.
 
 ### <a name="config_2"></a> [SAMD21 Xplained Pro Board](https://www.microchip.com/developmenttools/ProductDetails/atsamd21-xpro)
 
