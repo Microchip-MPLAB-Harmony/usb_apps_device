@@ -26,6 +26,7 @@ Following table gives the details of project configurations, target device used,
 
 | Project Name                    | IDE    | Target Device       | Hardware / Configuration                                                   |
 | ------------------------------- | ------ | ------------------- | -------------------------------------------------------------------------- |
+| pic32mm_usb_curiosity.X                | MPLABX | PIC32MM0256GPM064   | [PIC32MM USB Curiosity Development Board](#config_20)               |
 | pic32mk_gp_db.X                 | MPLABX | PIC32MK1024GPE100   | [PIC32MK General Purpose (GP) Development Board](#config_12)               |
 | pic32mk_gp_db_freertos.X        | MPLABX | PIC32MK1024GPE100   | [PIC32MK General Purpose (GP) Development Board](#config_12)               |
 | pic32mx470_curiosity.X          | MPLABX | PIC32MX470F512H     | [PIC32MX Curiosity Development Board](#config_13)                          |
@@ -95,6 +96,13 @@ Following table gives the details of project configurations, target device used,
 - Use the micro-A/B port J4 (which is located on the bottom side of the board) to connect the USB Device to the USB Host PC.
 - LED1 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
 - Press the switch SW1 to trigger communication from the USB Device to the USB Host.
+
+### <a name="config_20"></a> [PIC32MM USB Curiosity Development Board](https://www.microchip.com/en-us/development-tool/dm320107)
+
+- Use the micro-B USB connector USB2 on the board to connect the USB Device to the USB Host PC.
+- LED1 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
+- Press the switch S1 to trigger communication from the USB Device to the USB Host.
+
 
 ### <a name="config_17"></a> [Curiosity PIC32MZ W1 Development Board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320104)
 

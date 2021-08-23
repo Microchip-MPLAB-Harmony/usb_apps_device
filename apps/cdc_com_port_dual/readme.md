@@ -36,6 +36,7 @@ Following table gives the details of project configurations, target device used,
 | sam_v71_xult_freertos.X         | MPLABX | ATSAMV71Q21B        | [SAMV71 Xplained Ultra board](config_5)                                   |
 | pic32mz_ef_curiosity_2_0.X         | MPLABX | PIC32MZ2048EFM144        | [Curiosity PIC32MZ EF 2.0 Development Board](config_6)                                   |
 | pic32mx470_curiosity.X          | MPLABX | PIC32MX470F512H     | [PIC32MX Curiosity Development Board](#config_13)                          |
+| pic32mm_usb_curiosity.X                | MPLABX | PIC32MM0256GPM064   | [PIC32MM USB Curiosity Development Board](#config_20)               |
 
 ## <a name="config_title"></a> Configuring the Hardware
 
@@ -74,6 +75,11 @@ Following table gives the details of project configurations, target device used,
 ### <a name="config_13"></a> [Curiosity PIC32MX470 Development Board](https://www.microchip.com/Developmenttools/ProductDetails/dm320103)
 
 - Use the USB micro-B port J12 to connect the USB Device to the USB Host PC.
+- LED1 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
+
+### <a name="config_20"></a> [PIC32MM USB Curiosity Development Board](https://www.microchip.com/en-us/development-tool/dm320107)
+
+- Use the micro-B USB connector USB2 on the board to connect the USB Device to the USB Host PC.
 - LED1 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
 
 ## Running the Application

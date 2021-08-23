@@ -47,6 +47,7 @@ Following table gives the details of project configurations, target device used,
 | sam_g55_xpro.X                  | MPLABX | ATSAMG55J19         | [SAMG55 Xplained Pro Board](#config_6)                                    |
 | pic32mz_ef_curiosity_2_0.X                  | MPLABX | PIC32MZ2048EFM144         | [Curiosity PIC32MZ EF 2.0 Development Board](#config_7)                                    |
 | pic32mx470_curiosity.X          | MPLABX | PIC32MX470F512H     | [PIC32MX Curiosity Development Board](#config_13)                          |
+| pic32mm_usb_curiosity.X                | MPLABX | PIC32MM0256GPM064   | [PIC32MM USB Curiosity Development Board](#config_20)               |
 
 ## <a name="config_title"></a> Configuring the Hardware
 
@@ -55,6 +56,12 @@ Following table gives the details of project configurations, target device used,
 - Use the micro-A/B port J4 (which is located on the bottom side of the board) to connect the USB Device to the USB Host PC.
 - LED1 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host). The LED is turned off when the Bus is suspended. 
 - Press the switch SW1 to trigger communication from the USB Device to the USB Host.
+
+### <a name="config_20"></a> [PIC32MM USB Curiosity Development Board](https://www.microchip.com/en-us/development-tool/dm320107)
+
+- Use the micro-B USB connector USB2 on the board to connect the USB Device to the USB Host PC.
+- LED1 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
+- Press the switch S1 to trigger communication from the USB Device to the USB Host.
 
 ### <a name="config_9"></a> [SAM9X60-EK Evaluation Board](https://www.microchip.com/developmenttools/ProductDetails/DT100126)
 
