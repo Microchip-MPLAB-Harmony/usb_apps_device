@@ -479,17 +479,34 @@ void APP_Tasks (void )
         case APP_STATE_MCU_ON_STANDBY:
             
             /* Ensure that the SYS Console has transmitted all the bytes in queue */
-            while(SYS_CONSOLE_WriteCountGet(SYS_CONSOLE_HandleGet(SYS_CONSOLE_INDEX_0)) != 0);            
+            if( SYS_CONSOLE_HandleGet(SYS_CONSOLE_INDEX_0) != SYS_CONSOLE_HANDLE_INVALID )
+            {
+                while(SYS_CONSOLE_WriteCountGet(SYS_CONSOLE_HandleGet(SYS_CONSOLE_INDEX_0)) != 0);            
+            }
 
             /* Disable the system interrupt before going to Standby Mode */
             appData.interruptStatus = NVIC_INT_Disable();
-            
+
+            SERCOM2_REGS->USART_INT.SERCOM_INTENCLR = SERCOM_USART_INT_INTENCLR_RXC_Msk;
+            SERCOM2_REGS->USART_INT.SERCOM_INTENCLR = SERCOM_USART_INT_INTENCLR_DRE_Msk;
+            SERCOM2_REGS->USART_INT.SERCOM_INTENCLR = (uint8_t)SERCOM_USART_INT_INTENCLR_ERROR_Msk;
+            SERCOM2_REGS->USART_INT.SERCOM_INTENCLR = (uint8_t)SERCOM_USART_INT_INTENCLR_RXC_Msk;            
+
+            SYSTICK_TimerInterruptDisable();            
+
             /* Enter Standby Mode */
             PM_StandbyModeEnter();
-            
+
             /* Restore the system interrupt state when exiting the Standby Mode */
             NVIC_INT_Restore(appData.interruptStatus);
-            
+
+            SYSTICK_TimerInterruptEnable();            
+
+            SERCOM2_REGS->USART_INT.SERCOM_INTENSET = SERCOM_USART_INT_INTENSET_RXC_Msk;
+            SERCOM2_REGS->USART_INT.SERCOM_INTENSET = SERCOM_USART_INT_INTENSET_DRE_Msk;
+            SERCOM2_REGS->USART_INT.SERCOM_INTENSET = (uint8_t)SERCOM_USART_INT_INTENSET_ERROR_Msk;
+            SERCOM2_REGS->USART_INT.SERCOM_INTENSET = (uint8_t)SERCOM_USART_INT_INTENSET_RXC_Msk;
+
             /* There could be only two wakeup sources. USB activity by Host
              * or User Switch Press */
             if(appData.IsSuspended == false)
