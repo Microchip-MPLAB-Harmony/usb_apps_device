@@ -494,63 +494,84 @@ void APP_Tasks (void )
 
             SYSTICK_TimerInterruptDisable();            
 
-            /* Enter Standby Mode */
-            PM_StandbyModeEnter();
-
-            /* Restore the system interrupt state when exiting the Standby Mode */
-            NVIC_INT_Restore(appData.interruptStatus);
-
-            SYSTICK_TimerInterruptEnable();            
-
-            SERCOM2_REGS->USART_INT.SERCOM_INTENSET = SERCOM_USART_INT_INTENSET_RXC_Msk;
-            SERCOM2_REGS->USART_INT.SERCOM_INTENSET = SERCOM_USART_INT_INTENSET_DRE_Msk;
-            SERCOM2_REGS->USART_INT.SERCOM_INTENSET = (uint8_t)SERCOM_USART_INT_INTENSET_ERROR_Msk;
-            SERCOM2_REGS->USART_INT.SERCOM_INTENSET = (uint8_t)SERCOM_USART_INT_INTENSET_RXC_Msk;
-
-            /* There could be only two wakeup sources. USB activity by Host
-             * or User Switch Press */
+            /* We must ensure that no wake up interrupt is coming before entering in standby */
             if(appData.IsSuspended == false)
             {
                 /* USB activity is seen on the bus */
                 SYS_CONSOLE_MESSAGE("USB Device Resumed\r\n");
 
-                /* Go back to executing Main HID tasks */
-                appData.state = APP_STATE_HID_TASK;                 
-            }
-            else if(( SWITCH_Get() == SWITCH_STATE_PRESSED ) && (appData.tmrExpired == true))
-            {
-                /* User has pressed the Switch. This is to wake up the USB Host */
-                if(USB_DEVICE_RemoteWakeupStatusGet(appData.usbDevHandle) == USB_DEVICE_REMOTE_WAKEUP_ENABLED)
-                {
-                    /* PC host has enabled Remote Wakeup by USB Device, so, 
-                     * initiate a Remote Wakeup Start and go back to Standby 
-                     * Sleep Mode and wait for PC host to drive USB device 
-                     * resume. */
-                    USB_DEVICE_RemoteWakeupStart(appData.usbDevHandle);
+                /* Restore the system interrupt state when exiting the Standby Mode */
+                NVIC_INT_Restore(appData.interruptStatus);
 
-                    SYS_CONSOLE_MESSAGE("Remote Wakeup Start Sent\r\n");  
-                }
-                else
-                {
-                    /* PC host has not enabled Remote Wakeup by USB Device. 
-                     * This has to be changed by modifying the sleep settings 
-                     * of PC host. Just display the message and go to Standby
-                     * Sleep mode. */
-                    SYS_CONSOLE_MESSAGE("Remote wakeup not enabled by PC host. Check PC Sleep mode settings\r\n");  
-                }
+                SYSTICK_TimerInterruptEnable();            
+
+                SERCOM2_REGS->USART_INT.SERCOM_INTENSET = SERCOM_USART_INT_INTENSET_RXC_Msk;
+                SERCOM2_REGS->USART_INT.SERCOM_INTENSET = SERCOM_USART_INT_INTENSET_DRE_Msk;
+                SERCOM2_REGS->USART_INT.SERCOM_INTENSET = (uint8_t)SERCOM_USART_INT_INTENSET_ERROR_Msk;
+                SERCOM2_REGS->USART_INT.SERCOM_INTENSET = (uint8_t)SERCOM_USART_INT_INTENSET_RXC_Msk;
+
+                /* Go back to executing Main HID tasks */
+                appData.state = APP_STATE_HID_TASK;
             }
-            else if (appData.IsAttached == false)
+            else
             {
-                /* This means USB device is detached from the bus. */
-                SYS_CONSOLE_MESSAGE("USB Device detached\r\n");
-                
-                /* Update the configuration flag. */
-                appData.deviceConfigured = false;
-                
-                /* Device is detached. Change the Application State */
-                appData.state = APP_STATE_WAIT_FOR_CONFIGURATION;  
-            }
-                    
+                /* Enter Standby Mode */
+                PM_StandbyModeEnter();
+
+                /* Restore the system interrupt state when exiting the Standby Mode */
+                NVIC_INT_Restore(appData.interruptStatus);
+
+                SYSTICK_TimerInterruptEnable();            
+
+                SERCOM2_REGS->USART_INT.SERCOM_INTENSET = SERCOM_USART_INT_INTENSET_RXC_Msk;
+                SERCOM2_REGS->USART_INT.SERCOM_INTENSET = SERCOM_USART_INT_INTENSET_DRE_Msk;
+                SERCOM2_REGS->USART_INT.SERCOM_INTENSET = (uint8_t)SERCOM_USART_INT_INTENSET_ERROR_Msk;
+                SERCOM2_REGS->USART_INT.SERCOM_INTENSET = (uint8_t)SERCOM_USART_INT_INTENSET_RXC_Msk;
+
+                /* There could be only two wakeup sources. USB activity by Host
+                 * or User Switch Press */
+                if(appData.IsSuspended == false)
+                {
+                    /* USB activity is seen on the bus */
+                    SYS_CONSOLE_MESSAGE("USB Device Resumed\r\n");
+
+                    /* Go back to executing Main HID tasks */
+                    appData.state = APP_STATE_HID_TASK;                 
+                }
+                else if(( SWITCH_Get() == SWITCH_STATE_PRESSED ) && (appData.tmrExpired == true))
+                {
+                    /* User has pressed the Switch. This is to wake up the USB Host */
+                    if(USB_DEVICE_RemoteWakeupStatusGet(appData.usbDevHandle) == USB_DEVICE_REMOTE_WAKEUP_ENABLED)
+                    {
+                        /* PC host has enabled Remote Wakeup by USB Device, so, 
+                         * initiate a Remote Wakeup Start and go back to Standby 
+                         * Sleep Mode and wait for PC host to drive USB device 
+                         * resume. */
+                        USB_DEVICE_RemoteWakeupStart(appData.usbDevHandle);
+
+                        SYS_CONSOLE_MESSAGE("Remote Wakeup Start Sent\r\n");  
+                    }
+                    else
+                    {
+                        /* PC host has not enabled Remote Wakeup by USB Device. 
+                         * This has to be changed by modifying the sleep settings 
+                         * of PC host. Just display the message and go to Standby
+                         * Sleep mode. */
+                        SYS_CONSOLE_MESSAGE("Remote wakeup not enabled by PC host. Check PC Sleep mode settings\r\n");  
+                    }
+                }
+                else if (appData.IsAttached == false)
+                {
+                    /* This means USB device is detached from the bus. */
+                    SYS_CONSOLE_MESSAGE("USB Device detached\r\n");
+
+                    /* Update the configuration flag. */
+                    appData.deviceConfigured = false;
+
+                    /* Device is detached. Change the Application State */
+                    appData.state = APP_STATE_WAIT_FOR_CONFIGURATION;  
+                }
+            }                    
             break;            
             
         case APP_STATE_ERROR:
