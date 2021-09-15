@@ -74,10 +74,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
     #endif 
 #else
     #define APP_READ_BUFFER_SIZE                                512
-#endif 
-
-/* Macro defines USB internal DMA Buffer criteria*/
-#define APP_MAKE_BUFFER_DMA_READY                           __attribute__((aligned(16)))    
+#endif    
 
 // *****************************************************************************
 // *****************************************************************************

@@ -80,15 +80,15 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 APP_DATA appData;
 
 /* Read Data Buffer */
-uint8_t com1ReadBuffer[APP_READ_BUFFER_SIZE] APP_MAKE_BUFFER_DMA_READY;
+uint8_t com1ReadBuffer[APP_READ_BUFFER_SIZE] USB_ALIGN;
 
 /* Write Data Buffer. Size is same as read buffer size */
-uint8_t com1WriteBuffer[APP_READ_BUFFER_SIZE] APP_MAKE_BUFFER_DMA_READY;
+uint8_t com1WriteBuffer[APP_READ_BUFFER_SIZE] USB_ALIGN;
 
 /* Read Data Buffer */
-uint8_t com2ReadBuffer[APP_READ_BUFFER_SIZE] APP_MAKE_BUFFER_DMA_READY;
+uint8_t com2ReadBuffer[APP_READ_BUFFER_SIZE] USB_ALIGN;
 
-uint8_t com2WriteBuffer[APP_READ_BUFFER_SIZE] APP_MAKE_BUFFER_DMA_READY;
+uint8_t com2WriteBuffer[APP_READ_BUFFER_SIZE] USB_ALIGN;
 
 
 // *****************************************************************************
