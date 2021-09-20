@@ -251,20 +251,20 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: D0226D294D437AF5854104B8AD97C8CE
-- generatedChecksum: 3224466D03D8DDF1B5307028B2E5583F
+- generatedChecksum: 7AFFC4178335897ED9D5804CAB531BCF
   logicalPath: config/pic32mm_usb_curiosity/driver/usb/usbfs/src
   name: plib_usbfs.h
   physicalPath: driver/usb/usbfs/src
   security: NON_SECURE
   type: HEADER
-  userChecksum: 3224466D03D8DDF1B5307028B2E5583F
-- generatedChecksum: 3822D4C43CB11882404ECB2B28DD61EA
+  userChecksum: 7AFFC4178335897ED9D5804CAB531BCF
+- generatedChecksum: 9B4B2B2E7722D50697564E6D6E4F9E04
   logicalPath: config/pic32mm_usb_curiosity/driver/usb/usbfs/src
   name: plib_usbfs_header.h
   physicalPath: driver/usb/usbfs/src
   security: NON_SECURE
   type: HEADER
-  userChecksum: 3822D4C43CB11882404ECB2B28DD61EA
+  userChecksum: 9B4B2B2E7722D50697564E6D6E4F9E04
 - generatedChecksum: 6972608768DDBE6E37A2D81B83DF490B
   logicalPath: config/pic32mm_usb_curiosity/system/debug
   name: sys_debug.h
@@ -307,13 +307,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 1C75A8A6B60598A2FD0D533F57839B72
-- generatedChecksum: 2C8543317B3F067432097AB9BD3E8672
+- generatedChecksum: 7DC91D6D376C98802C9C2990432DE9B7
   logicalPath: config/pic32mm_usb_curiosity
   name: toolchain_specifics.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 2C8543317B3F067432097AB9BD3E8672
+  userChecksum: 7DC91D6D376C98802C9C2990432DE9B7
 - generatedChecksum: 7614490532C606BCAFEC5F729FDBEDAD
   logicalPath: config/pic32mm_usb_curiosity/driver/usb/usbfs/src/templates
   name: usb_ALL_Interrupt_Default.h
@@ -1196,13 +1196,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: null
-- generatedChecksum: 172478F528FD7939FB50ABE76CF666AB
+- generatedChecksum: F4CEC9D0F29F2CB4DE8356E25430A58F
   logicalPath: config/pic32mm_usb_curiosity
   name: p32MM0256GPM064.ld
   physicalPath: ''
   security: NON_SECURE
   type: LINKER
-  userChecksum: 172478F528FD7939FB50ABE76CF666AB
+  userChecksum: F4CEC9D0F29F2CB4DE8356E25430A58F
 format_version: v1.0
 libraries: []
 settings:
