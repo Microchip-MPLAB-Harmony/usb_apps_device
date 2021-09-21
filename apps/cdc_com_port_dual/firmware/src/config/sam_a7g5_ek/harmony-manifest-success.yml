@@ -15,7 +15,7 @@ compiler: XC32 (3.01)
 modules:
     - {name: "csp", version: "v3.10.0"}
     - {name: "core", version: "v3.10.0"}
-    - {name: "usb", version: "unknown"}
+    - {name: "usb", version: "v3.8.1"}
     - {name: "dev_packs", version: "v3.10.0"}
     - {name: "bsp", version: "v3.10.0"}
 
