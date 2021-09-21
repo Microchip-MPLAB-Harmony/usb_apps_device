@@ -1021,13 +1021,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: A10FC01AC9135B1D5545DC3EEF3C7BCB
-- generatedChecksum: 20E829A99B86C2889E4E2E536161C27A
+- generatedChecksum: 5A6CE947CB477E5554790DE371B7FBAB
   logicalPath: config/sam_l21_xpro
   name: toolchain_specifics.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 20E829A99B86C2889E4E2E536161C27A
+  userChecksum: 5A6CE947CB477E5554790DE371B7FBAB
 - generatedChecksum: 407DFFDDA4621EEE6BDE8C9CC0F092DF
   logicalPath: packs/ATSAML21J18B_DFP/component
   name: trng.h
@@ -1154,13 +1154,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 3E3CC6BC9128194CB4D19F29C57E312B
-- generatedChecksum: null
+- generatedChecksum: 4B3C3EF8A318908A22B78500515C3288
   logicalPath: config/sam_l21_xpro
   name: user.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: null
+  userChecksum: 4B3C3EF8A318908A22B78500515C3288
 - generatedChecksum: 55E573926C69F1ADFE3CB68B03DC5352
   logicalPath: packs/ATSAML21J18B_DFP/component
   name: wdt.h
