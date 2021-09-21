@@ -1,5 +1,5 @@
-/**
- * \brief Component description for SERCOM
+/*
+ * Component description for SERCOM
  *
  * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2020-11-17T07:15:55Z */
+/* file generated from device description version 2021-06-28T10:08:20Z */
 #ifndef _PIC32CMLE00_SERCOM_COMPONENT_H_
 #define _PIC32CMLE00_SERCOM_COMPONENT_H_
 
@@ -158,9 +158,7 @@
 #define SERCOM_SPIM_CTRLA_MODE_Pos            _U_(2)                                               /**< (SERCOM_SPIM_CTRLA) Operating Mode Position */
 #define SERCOM_SPIM_CTRLA_MODE_Msk            (_U_(0x7) << SERCOM_SPIM_CTRLA_MODE_Pos)             /**< (SERCOM_SPIM_CTRLA) Operating Mode Mask */
 #define SERCOM_SPIM_CTRLA_MODE(value)         (SERCOM_SPIM_CTRLA_MODE_Msk & ((value) << SERCOM_SPIM_CTRLA_MODE_Pos))
-#define   SERCOM_SPIM_CTRLA_MODE_SPI_SLAVE_Val _U_(0x2)                                             /**< (SERCOM_SPIM_CTRLA) SPI in slave operation  */
 #define   SERCOM_SPIM_CTRLA_MODE_SPI_MASTER_Val _U_(0x3)                                             /**< (SERCOM_SPIM_CTRLA) SPI in master operation  */
-#define SERCOM_SPIM_CTRLA_MODE_SPI_SLAVE      (SERCOM_SPIM_CTRLA_MODE_SPI_SLAVE_Val << SERCOM_SPIM_CTRLA_MODE_Pos) /**< (SERCOM_SPIM_CTRLA) SPI in slave operation Position  */
 #define SERCOM_SPIM_CTRLA_MODE_SPI_MASTER     (SERCOM_SPIM_CTRLA_MODE_SPI_MASTER_Val << SERCOM_SPIM_CTRLA_MODE_Pos) /**< (SERCOM_SPIM_CTRLA) SPI in master operation Position  */
 #define SERCOM_SPIM_CTRLA_RUNSTDBY_Pos        _U_(7)                                               /**< (SERCOM_SPIM_CTRLA) Run during Standby Position */
 #define SERCOM_SPIM_CTRLA_RUNSTDBY_Msk        (_U_(0x1) << SERCOM_SPIM_CTRLA_RUNSTDBY_Pos)         /**< (SERCOM_SPIM_CTRLA) Run during Standby Mask */
@@ -168,6 +166,10 @@
 #define SERCOM_SPIM_CTRLA_IBON_Pos            _U_(8)                                               /**< (SERCOM_SPIM_CTRLA) Immediate Buffer Overflow Notification Position */
 #define SERCOM_SPIM_CTRLA_IBON_Msk            (_U_(0x1) << SERCOM_SPIM_CTRLA_IBON_Pos)             /**< (SERCOM_SPIM_CTRLA) Immediate Buffer Overflow Notification Mask */
 #define SERCOM_SPIM_CTRLA_IBON(value)         (SERCOM_SPIM_CTRLA_IBON_Msk & ((value) << SERCOM_SPIM_CTRLA_IBON_Pos))
+#define   SERCOM_SPIM_CTRLA_IBON_0x0_Val      _U_(0x0)                                             /**< (SERCOM_SPIM_CTRLA) STATUS.BUFOVF is set when it occurs in the data stream  */
+#define   SERCOM_SPIM_CTRLA_IBON_0x1_Val      _U_(0x1)                                             /**< (SERCOM_SPIM_CTRLA) STATUS.BUFOVF is set immediately upon buffer overflow  */
+#define SERCOM_SPIM_CTRLA_IBON_0x0            (SERCOM_SPIM_CTRLA_IBON_0x0_Val << SERCOM_SPIM_CTRLA_IBON_Pos) /**< (SERCOM_SPIM_CTRLA) STATUS.BUFOVF is set when it occurs in the data stream Position  */
+#define SERCOM_SPIM_CTRLA_IBON_0x1            (SERCOM_SPIM_CTRLA_IBON_0x1_Val << SERCOM_SPIM_CTRLA_IBON_Pos) /**< (SERCOM_SPIM_CTRLA) STATUS.BUFOVF is set immediately upon buffer overflow Position  */
 #define SERCOM_SPIM_CTRLA_DOPO_Pos            _U_(16)                                              /**< (SERCOM_SPIM_CTRLA) Data Out Pinout Position */
 #define SERCOM_SPIM_CTRLA_DOPO_Msk            (_U_(0x3) << SERCOM_SPIM_CTRLA_DOPO_Pos)             /**< (SERCOM_SPIM_CTRLA) Data Out Pinout Mask */
 #define SERCOM_SPIM_CTRLA_DOPO(value)         (SERCOM_SPIM_CTRLA_DOPO_Msk & ((value) << SERCOM_SPIM_CTRLA_DOPO_Pos))
@@ -230,9 +232,7 @@
 #define SERCOM_SPIS_CTRLA_MODE_Msk            (_U_(0x7) << SERCOM_SPIS_CTRLA_MODE_Pos)             /**< (SERCOM_SPIS_CTRLA) Operating Mode Mask */
 #define SERCOM_SPIS_CTRLA_MODE(value)         (SERCOM_SPIS_CTRLA_MODE_Msk & ((value) << SERCOM_SPIS_CTRLA_MODE_Pos))
 #define   SERCOM_SPIS_CTRLA_MODE_SPI_SLAVE_Val _U_(0x2)                                             /**< (SERCOM_SPIS_CTRLA) SPI in slave operation  */
-#define   SERCOM_SPIS_CTRLA_MODE_SPI_MASTER_Val _U_(0x3)                                             /**< (SERCOM_SPIS_CTRLA) SPI in master operation  */
 #define SERCOM_SPIS_CTRLA_MODE_SPI_SLAVE      (SERCOM_SPIS_CTRLA_MODE_SPI_SLAVE_Val << SERCOM_SPIS_CTRLA_MODE_Pos) /**< (SERCOM_SPIS_CTRLA) SPI in slave operation Position  */
-#define SERCOM_SPIS_CTRLA_MODE_SPI_MASTER     (SERCOM_SPIS_CTRLA_MODE_SPI_MASTER_Val << SERCOM_SPIS_CTRLA_MODE_Pos) /**< (SERCOM_SPIS_CTRLA) SPI in master operation Position  */
 #define SERCOM_SPIS_CTRLA_RUNSTDBY_Pos        _U_(7)                                               /**< (SERCOM_SPIS_CTRLA) Run during Standby Position */
 #define SERCOM_SPIS_CTRLA_RUNSTDBY_Msk        (_U_(0x1) << SERCOM_SPIS_CTRLA_RUNSTDBY_Pos)         /**< (SERCOM_SPIS_CTRLA) Run during Standby Mask */
 #define SERCOM_SPIS_CTRLA_RUNSTDBY(value)     (SERCOM_SPIS_CTRLA_RUNSTDBY_Msk & ((value) << SERCOM_SPIS_CTRLA_RUNSTDBY_Pos))

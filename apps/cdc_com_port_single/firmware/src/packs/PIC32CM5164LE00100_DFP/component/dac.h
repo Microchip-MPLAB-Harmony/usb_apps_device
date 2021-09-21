@@ -1,5 +1,5 @@
-/**
- * \brief Component description for DAC
+/*
+ * Component description for DAC
  *
  * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2020-11-17T07:15:55Z */
+/* file generated from device description version 2021-06-28T10:08:20Z */
 #ifndef _PIC32CMLE00_DAC_COMPONENT_H_
 #define _PIC32CMLE00_DAC_COMPONENT_H_
 
@@ -50,11 +50,11 @@
 #define DAC_CTRLB_REFSEL_Msk                  (_U_(0x3) << DAC_CTRLB_REFSEL_Pos)                   /**< (DAC_CTRLB) Reference Selection for DAC0/1 Mask */
 #define DAC_CTRLB_REFSEL(value)               (DAC_CTRLB_REFSEL_Msk & ((value) << DAC_CTRLB_REFSEL_Pos))
 #define   DAC_CTRLB_REFSEL_VREFAU_Val         _U_(0x0)                                             /**< (DAC_CTRLB) Unbuffered External Voltage Reference (not buffered in DAC, direct connection)  */
-#define   DAC_CTRLB_REFSEL_VDDANA_Val         _U_(0x1)                                             /**< (DAC_CTRLB) Analog Voltage Supply  */
+#define   DAC_CTRLB_REFSEL_AVDD_Val           _U_(0x1)                                             /**< (DAC_CTRLB) Analog Voltage Supply  */
 #define   DAC_CTRLB_REFSEL_VREFAB_Val         _U_(0x2)                                             /**< (DAC_CTRLB) Buffered External Voltage Reference (buffered in DAC)  */
 #define   DAC_CTRLB_REFSEL_INTREF_Val         _U_(0x3)                                             /**< (DAC_CTRLB) Internal Voltage Reference  */
 #define DAC_CTRLB_REFSEL_VREFAU               (DAC_CTRLB_REFSEL_VREFAU_Val << DAC_CTRLB_REFSEL_Pos) /**< (DAC_CTRLB) Unbuffered External Voltage Reference (not buffered in DAC, direct connection) Position  */
-#define DAC_CTRLB_REFSEL_VDDANA               (DAC_CTRLB_REFSEL_VDDANA_Val << DAC_CTRLB_REFSEL_Pos) /**< (DAC_CTRLB) Analog Voltage Supply Position  */
+#define DAC_CTRLB_REFSEL_AVDD                 (DAC_CTRLB_REFSEL_AVDD_Val << DAC_CTRLB_REFSEL_Pos)  /**< (DAC_CTRLB) Analog Voltage Supply Position  */
 #define DAC_CTRLB_REFSEL_VREFAB               (DAC_CTRLB_REFSEL_VREFAB_Val << DAC_CTRLB_REFSEL_Pos) /**< (DAC_CTRLB) Buffered External Voltage Reference (buffered in DAC) Position  */
 #define DAC_CTRLB_REFSEL_INTREF               (DAC_CTRLB_REFSEL_INTREF_Val << DAC_CTRLB_REFSEL_Pos) /**< (DAC_CTRLB) Internal Voltage Reference Position  */
 #define DAC_CTRLB_Msk                         _U_(0x07)                                            /**< (DAC_CTRLB) Register Mask  */

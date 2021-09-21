@@ -1,5 +1,5 @@
-/**
- * \brief Header file for PIC32CM5164LE00100
+/*
+ * Header file for PIC32CM5164LE00100
  *
  * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *
@@ -20,24 +20,23 @@
  *
  */
 
-/* file generated from device description version 2020-11-17T07:15:55Z */
+/* File generated from device description version 2021-06-28T10:08:20Z */
 #ifndef _PIC32CM5164LE00100_H_
 #define _PIC32CM5164LE00100_H_
 
-// Header version uses Semantic Versioning 2.0.0 (https://semver.org/)
+/* Header version uses Semantic Versioning 2.0.0 (https://semver.org/) */
 #define HEADER_FORMAT_VERSION "2.0.0"
 
 #define HEADER_FORMAT_VERSION_MAJOR (2)
 #define HEADER_FORMAT_VERSION_MINOR (0)
 
-/** \addtogroup PIC32CM5164LE00100_definitions PIC32CM5164LE00100 definitions
+/* PIC32CM5164LE00100 definitions
   This file defines all structures and symbols for PIC32CM5164LE00100:
     - registers and bitfields
     - peripheral base address
     - peripheral ID
     - PIO definitions
- *  @{
- */
+*/
 
 #ifdef __cplusplus
  extern "C" {
@@ -54,109 +53,109 @@
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /* Macros that deal with adding suffixes to integer literal constants for C/C++ */
-#  define _U_(x) (x ## U)    /**< C code: Unsigned integer literal constant value */
-#  define _L_(x) (x ## L)    /**< C code: Long integer literal constant value */
-#  define _UL_(x) (x ## UL)  /**< C code: Unsigned Long integer literal constant value */
+#  define _U_(x) (x ## U)    /* C code: Unsigned integer literal constant value */
+#  define _L_(x) (x ## L)    /* C code: Long integer literal constant value */
+#  define _UL_(x) (x ## UL)  /* C code: Unsigned Long integer literal constant value */
 
 #else /* Assembler */
 
-#  define _U_(x) x    /**< Assembler: Unsigned integer literal constant value */
-#  define _L_(x) x    /**< Assembler: Long integer literal constant value */
-#  define _UL_(x) x   /**< Assembler: Unsigned Long integer literal constant value */
+#  define _U_(x) x    /* Assembler: Unsigned integer literal constant value */
+#  define _L_(x) x    /* Assembler: Long integer literal constant value */
+#  define _UL_(x) x   /* Assembler: Unsigned Long integer literal constant value */
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 #endif /* SKIP_INTEGER_LITERALS */
-/** @}  end of Atmel Global Defines */
 
 /* ************************************************************************** */
-/*   CMSIS DEFINITIONS FOR PIC32CM5164LE00100                                 */
+/* CMSIS DEFINITIONS FOR PIC32CM5164LE00100                                 */
 /* ************************************************************************** */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
-/** Interrupt Number Definition */
+/* Interrupt Number Definition */
 typedef enum IRQn
 {
 /******  CORTEX-M23 Processor Exceptions Numbers ******************************/
-  Reset_IRQn                = -15, /**< -15 Reset Vector, invoked on Power up and warm reset */
-  NonMaskableInt_IRQn       = -14, /**< -14 Non maskable Interrupt, cannot be stopped or preempted */
-  HardFault_IRQn            = -13, /**< -13 Hard Fault, all classes of Fault    */
-  SVCall_IRQn               =  -5, /**< -5  System Service Call via SVC instruction */
-  PendSV_IRQn               =  -2, /**< -2  Pendable request for system service */
-  SysTick_IRQn              =  -1, /**< -1  System Tick Timer                   */
-/******  PIC32CM5164LE00100 specific Interrupt Numbers ***********************************/
-  OSC32KCTRL_IRQn           =   0, /**< 0   Shared between MCLK OSCCTRL OSC32KCTRL PM SUPC (OSC32KCTRL) */
-  OSCCTRL_IRQn              =   0, /**< 0   Shared between MCLK OSCCTRL OSC32KCTRL PM SUPC (OSCCTRL) */
-  SUPC_IRQn                 =   0, /**< 0   Shared between MCLK OSCCTRL OSC32KCTRL PM SUPC (SUPC) */
-  MCLK_IRQn                 =   0, /**< 0   Shared between MCLK OSCCTRL OSC32KCTRL PM SUPC (MCLK) */
-  PM_IRQn                   =   0, /**< 0   Shared between MCLK OSCCTRL OSC32KCTRL PM SUPC (PM) */
-  WDT_IRQn                  =   1, /**< 1   Watchdog Timer (WDT)                */
-  RTC_IRQn                  =   2, /**< 2   Real-Time Counter (RTC)             */
-  EIC_EXTINT_0_IRQn         =   3, /**< 3   External Interrupt Controller (EIC) */
-  EIC_EXTINT_1_IRQn         =   4, /**< 4   External Interrupt Controller (EIC) */
-  EIC_EXTINT_2_IRQn         =   5, /**< 5   External Interrupt Controller (EIC) */
-  EIC_EXTINT_3_IRQn         =   6, /**< 6   External Interrupt Controller (EIC) */
-  EIC_EXTINT_4_IRQn         =   7, /**< 7   External Interrupt Controller (EIC) */
-  EIC_EXTINT_5_IRQn         =   8, /**< 8   External Interrupt Controller (EIC) */
-  EIC_EXTINT_6_IRQn         =   9, /**< 9   External Interrupt Controller (EIC) */
-  EIC_EXTINT_7_IRQn         =  10, /**< 10  External Interrupt Controller (EIC) */
-  EIC_OTHER_IRQn            =  11, /**< 11  External Interrupt Controller (EIC) */
-  FREQM_IRQn                =  12, /**< 12  Frequency Meter (FREQM)             */
-  NVMCTRL_IRQn              =  13, /**< 13  Non-Volatile Memory Controller (NVMCTRL) */
-  DMAC_0_IRQn               =  15, /**< 15  Direct Memory Access Controller (DMAC) */
-  DMAC_1_IRQn               =  16, /**< 16  Direct Memory Access Controller (DMAC) */
-  DMAC_2_IRQn               =  17, /**< 17  Direct Memory Access Controller (DMAC) */
-  DMAC_3_IRQn               =  18, /**< 18  Direct Memory Access Controller (DMAC) */
-  DMAC_OTHER_IRQn           =  19, /**< 19  Direct Memory Access Controller (DMAC) */
-  USB_IRQn                  =  20, /**< 20  Universal Serial Bus (USB)          */
-  EVSYS_0_IRQn              =  21, /**< 21  Event System Interface (EVSYS)      */
-  EVSYS_1_IRQn              =  22, /**< 22  Event System Interface (EVSYS)      */
-  EVSYS_2_IRQn              =  23, /**< 23  Event System Interface (EVSYS)      */
-  EVSYS_3_IRQn              =  24, /**< 24  Event System Interface (EVSYS)      */
-  EVSYS_4_IRQn              =  25, /**< 25  Event System Interface (EVSYS)      */
-  EVSYS_5_IRQn              =  26, /**< 26  Event System Interface (EVSYS)      */
-  EVSYS_6_IRQn              =  27, /**< 27  Event System Interface (EVSYS)      */
-  EVSYS_7_IRQn              =  28, /**< 28  Event System Interface (EVSYS)      */
-  PAC_IRQn                  =  30, /**< 30  Peripheral Access Controller (PAC)  */
-  SERCOM0_0_IRQn            =  31, /**< 31  Serial Communication Interface (SERCOM0) */
-  SERCOM0_1_IRQn            =  32, /**< 32  Serial Communication Interface (SERCOM0) */
-  SERCOM0_2_IRQn            =  33, /**< 33  Serial Communication Interface (SERCOM0) */
-  SERCOM0_OTHER_IRQn        =  34, /**< 34  Serial Communication Interface (SERCOM0) */
-  SERCOM1_0_IRQn            =  35, /**< 35  Serial Communication Interface (SERCOM1) */
-  SERCOM1_1_IRQn            =  36, /**< 36  Serial Communication Interface (SERCOM1) */
-  SERCOM1_2_IRQn            =  37, /**< 37  Serial Communication Interface (SERCOM1) */
-  SERCOM1_OTHER_IRQn        =  38, /**< 38  Serial Communication Interface (SERCOM1) */
-  SERCOM2_0_IRQn            =  39, /**< 39  Serial Communication Interface (SERCOM2) */
-  SERCOM2_1_IRQn            =  40, /**< 40  Serial Communication Interface (SERCOM2) */
-  SERCOM2_2_IRQn            =  41, /**< 41  Serial Communication Interface (SERCOM2) */
-  SERCOM2_OTHER_IRQn        =  42, /**< 42  Serial Communication Interface (SERCOM2) */
-  SERCOM3_0_IRQn            =  43, /**< 43  Serial Communication Interface (SERCOM3) */
-  SERCOM3_1_IRQn            =  44, /**< 44  Serial Communication Interface (SERCOM3) */
-  SERCOM3_2_IRQn            =  45, /**< 45  Serial Communication Interface (SERCOM3) */
-  SERCOM3_OTHER_IRQn        =  46, /**< 46  Serial Communication Interface (SERCOM3) */
-  SERCOM4_0_IRQn            =  47, /**< 47  Serial Communication Interface (SERCOM4) */
-  SERCOM4_1_IRQn            =  48, /**< 48  Serial Communication Interface (SERCOM4) */
-  SERCOM4_2_IRQn            =  49, /**< 49  Serial Communication Interface (SERCOM4) */
-  SERCOM4_OTHER_IRQn        =  50, /**< 50  Serial Communication Interface (SERCOM4) */
-  SERCOM5_0_IRQn            =  51, /**< 51  Serial Communication Interface (SERCOM5) */
-  SERCOM5_1_IRQn            =  52, /**< 52  Serial Communication Interface (SERCOM5) */
-  SERCOM5_2_IRQn            =  53, /**< 53  Serial Communication Interface (SERCOM5) */
-  SERCOM5_OTHER_IRQn        =  54, /**< 54  Serial Communication Interface (SERCOM5) */
-  TC0_IRQn                  =  55, /**< 55  Basic Timer Counter (TC0)           */
-  TC1_IRQn                  =  56, /**< 56  Basic Timer Counter (TC1)           */
-  TC2_IRQn                  =  57, /**< 57  Basic Timer Counter (TC2)           */
-  TCC0_IRQn                 =  58, /**< 58  Timer Counter for Control Applications (TCC0) */
-  TCC1_IRQn                 =  59, /**< 59  Timer Counter for Control Applications (TCC1) */
-  TCC2_IRQn                 =  60, /**< 60  Timer Counter for Control Applications (TCC2) */
-  TCC3_IRQn                 =  61, /**< 61  Timer Counter for Control Applications (TCC3) */
-  ADC_OTHER_IRQn            =  62, /**< 62  Analog Digital Converter (ADC)      */
-  ADC_RESRDY_IRQn           =  63, /**< 63  Analog Digital Converter (ADC)      */
-  AC_IRQn                   =  64, /**< 64  Analog Comparators (AC)             */
-  DAC_UNDERRUN_IRQn         =  65, /**< 65  Digital-to-Analog Converter (DAC)   */
-  DAC_EMPTY_IRQn            =  66, /**< 66  Digital-to-Analog Converter (DAC)   */
-  PTC_IRQn                  =  67, /**< 67  Peripheral Touch Controller (PTC)   */
-  TRNG_IRQn                 =  68, /**< 68  True Random Generator (TRNG)        */
-  I2S_IRQn                  =  69, /**< 69  Inter-IC Sound Interface (I2S)      */
-  TRAM_IRQn                 =  70, /**< 70  TrustRAM (TRAM)                     */
+  Reset_IRQn                = -15, /* -15 Reset Vector, invoked on Power up and warm reset */
+  NonMaskableInt_IRQn       = -14, /* -14 Non maskable Interrupt, cannot be stopped or preempted */
+  HardFault_IRQn            = -13, /* -13 Hard Fault, all classes of Fault    */
+  SVCall_IRQn               =  -5, /* -5  System Service Call via SVC instruction */
+  PendSV_IRQn               =  -2, /* -2  Pendable request for system service */
+  SysTick_IRQn              =  -1, /* -1  System Tick Timer                   */
 
-  PERIPH_MAX_IRQn           =  70  /**< Max peripheral ID */
+/******  PIC32CM5164LE00100 specific Interrupt Numbers ***********************************/
+  SUPC_IRQn                 =   0, /* 0   Shared between MCLK OSCCTRL OSC32KCTRL PM SUPC (SUPC) */
+  MCLK_IRQn                 =   0, /* 0   Shared between MCLK OSCCTRL OSC32KCTRL PM SUPC (MCLK) */
+  PM_IRQn                   =   0, /* 0   Shared between MCLK OSCCTRL OSC32KCTRL PM SUPC (PM) */
+  OSCCTRL_IRQn              =   0, /* 0   Shared between MCLK OSCCTRL OSC32KCTRL PM SUPC (OSCCTRL) */
+  OSC32KCTRL_IRQn           =   0, /* 0   Shared between MCLK OSCCTRL OSC32KCTRL PM SUPC (OSC32KCTRL) */
+  WDT_IRQn                  =   1, /* 1   Watchdog Timer (WDT)                */
+  RTC_IRQn                  =   2, /* 2   Real-Time Counter (RTC)             */
+  EIC_EXTINT_0_IRQn         =   3, /* 3   External Interrupt Controller (EIC) */
+  EIC_EXTINT_1_IRQn         =   4, /* 4   External Interrupt Controller (EIC) */
+  EIC_EXTINT_2_IRQn         =   5, /* 5   External Interrupt Controller (EIC) */
+  EIC_EXTINT_3_IRQn         =   6, /* 6   External Interrupt Controller (EIC) */
+  EIC_EXTINT_4_IRQn         =   7, /* 7   External Interrupt Controller (EIC) */
+  EIC_EXTINT_5_IRQn         =   8, /* 8   External Interrupt Controller (EIC) */
+  EIC_EXTINT_6_IRQn         =   9, /* 9   External Interrupt Controller (EIC) */
+  EIC_EXTINT_7_IRQn         =  10, /* 10  External Interrupt Controller (EIC) */
+  EIC_OTHER_IRQn            =  11, /* 11  External Interrupt Controller (EIC) */
+  FREQM_IRQn                =  12, /* 12  Frequency Meter (FREQM)             */
+  NVMCTRL_IRQn              =  13, /* 13  Non-Volatile Memory Controller (NVMCTRL) */
+  DMAC_0_IRQn               =  15, /* 15  Direct Memory Access Controller (DMAC) */
+  DMAC_1_IRQn               =  16, /* 16  Direct Memory Access Controller (DMAC) */
+  DMAC_2_IRQn               =  17, /* 17  Direct Memory Access Controller (DMAC) */
+  DMAC_3_IRQn               =  18, /* 18  Direct Memory Access Controller (DMAC) */
+  DMAC_OTHER_IRQn           =  19, /* 19  Direct Memory Access Controller (DMAC) */
+  USB_IRQn                  =  20, /* 20  Universal Serial Bus (USB)          */
+  EVSYS_0_IRQn              =  21, /* 21  Event System Interface (EVSYS)      */
+  EVSYS_1_IRQn              =  22, /* 22  Event System Interface (EVSYS)      */
+  EVSYS_2_IRQn              =  23, /* 23  Event System Interface (EVSYS)      */
+  EVSYS_3_IRQn              =  24, /* 24  Event System Interface (EVSYS)      */
+  EVSYS_4_IRQn              =  25, /* 25  Event System Interface (EVSYS)      */
+  EVSYS_5_IRQn              =  26, /* 26  Event System Interface (EVSYS)      */
+  EVSYS_6_IRQn              =  27, /* 27  Event System Interface (EVSYS)      */
+  EVSYS_7_IRQn              =  28, /* 28  Event System Interface (EVSYS)      */
+  PAC_IRQn                  =  30, /* 30  Peripheral Access Controller (PAC)  */
+  SERCOM0_0_IRQn            =  31, /* 31  Serial Communication Interface (SERCOM0) */
+  SERCOM0_1_IRQn            =  32, /* 32  Serial Communication Interface (SERCOM0) */
+  SERCOM0_2_IRQn            =  33, /* 33  Serial Communication Interface (SERCOM0) */
+  SERCOM0_OTHER_IRQn        =  34, /* 34  Serial Communication Interface (SERCOM0) */
+  SERCOM1_0_IRQn            =  35, /* 35  Serial Communication Interface (SERCOM1) */
+  SERCOM1_1_IRQn            =  36, /* 36  Serial Communication Interface (SERCOM1) */
+  SERCOM1_2_IRQn            =  37, /* 37  Serial Communication Interface (SERCOM1) */
+  SERCOM1_OTHER_IRQn        =  38, /* 38  Serial Communication Interface (SERCOM1) */
+  SERCOM2_0_IRQn            =  39, /* 39  Serial Communication Interface (SERCOM2) */
+  SERCOM2_1_IRQn            =  40, /* 40  Serial Communication Interface (SERCOM2) */
+  SERCOM2_2_IRQn            =  41, /* 41  Serial Communication Interface (SERCOM2) */
+  SERCOM2_OTHER_IRQn        =  42, /* 42  Serial Communication Interface (SERCOM2) */
+  SERCOM3_0_IRQn            =  43, /* 43  Serial Communication Interface (SERCOM3) */
+  SERCOM3_1_IRQn            =  44, /* 44  Serial Communication Interface (SERCOM3) */
+  SERCOM3_2_IRQn            =  45, /* 45  Serial Communication Interface (SERCOM3) */
+  SERCOM3_OTHER_IRQn        =  46, /* 46  Serial Communication Interface (SERCOM3) */
+  SERCOM4_0_IRQn            =  47, /* 47  Serial Communication Interface (SERCOM4) */
+  SERCOM4_1_IRQn            =  48, /* 48  Serial Communication Interface (SERCOM4) */
+  SERCOM4_2_IRQn            =  49, /* 49  Serial Communication Interface (SERCOM4) */
+  SERCOM4_OTHER_IRQn        =  50, /* 50  Serial Communication Interface (SERCOM4) */
+  SERCOM5_0_IRQn            =  51, /* 51  Serial Communication Interface (SERCOM5) */
+  SERCOM5_1_IRQn            =  52, /* 52  Serial Communication Interface (SERCOM5) */
+  SERCOM5_2_IRQn            =  53, /* 53  Serial Communication Interface (SERCOM5) */
+  SERCOM5_OTHER_IRQn        =  54, /* 54  Serial Communication Interface (SERCOM5) */
+  TC0_IRQn                  =  55, /* 55  Basic Timer Counter (TC0)           */
+  TC1_IRQn                  =  56, /* 56  Basic Timer Counter (TC1)           */
+  TC2_IRQn                  =  57, /* 57  Basic Timer Counter (TC2)           */
+  TCC0_IRQn                 =  58, /* 58  Timer Counter for Control Applications (TCC0) */
+  TCC1_IRQn                 =  59, /* 59  Timer Counter for Control Applications (TCC1) */
+  TCC2_IRQn                 =  60, /* 60  Timer Counter for Control Applications (TCC2) */
+  TCC3_IRQn                 =  61, /* 61  Timer Counter for Control Applications (TCC3) */
+  ADC_OTHER_IRQn            =  62, /* 62  Analog Digital Converter (ADC)      */
+  ADC_RESRDY_IRQn           =  63, /* 63  Analog Digital Converter (ADC)      */
+  AC_IRQn                   =  64, /* 64  Analog Comparators (AC)             */
+  DAC_UNDERRUN_IRQn         =  65, /* 65  Digital-to-Analog Converter (DAC)   */
+  DAC_EMPTY_IRQn            =  66, /* 66  Digital-to-Analog Converter (DAC)   */
+  PTC_IRQn                  =  67, /* 67  Peripheral Touch Controller (PTC)   */
+  TRNG_IRQn                 =  68, /* 68  True Random Generator (TRNG)        */
+  I2S_IRQn                  =  69, /* 69  Inter-IC Sound Interface (I2S)      */
+  TRAM_IRQn                 =  70, /* 70  TrustRAM (TRAM)                     */
+
+  PERIPH_MAX_IRQn           =  70  /* Max peripheral ID */
 } IRQn_Type;
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
@@ -343,29 +342,23 @@ void TRAM_Handler                  ( void );
 #endif /* DONT_USE_PREDEFINED_PERIPHERALS_HANDLERS */
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
-/** \brief Configuration of the CORTEX-M23 Processor and Core Peripherals */
-#define __FPU_PRESENT                  0 /**< FPU present or not                                                        */
-#define __MPU_PRESENT                  1 /**< MPU present or not                                                        */
-#define __NVIC_PRIO_BITS               2 /**< Number of NVIC Priority bits                                              */
-#define __VTOR_PRESENT                 1 /**< Vector Table Offset Register present or not                               */
-#define __Vendor_SysTickConfig         0 /**< Set to 1 if different SysTick Config is used                              */
-#define __ARCH_ARM                     1
-#define __ARCH_ARM_CORTEX_M            1
+/* Configuration of the CORTEX-M23 Processor and Core Peripherals */
+#define __FPU_PRESENT                      0 /* FPU present or not                                                        */
+#define __MPU_PRESENT                      1 /* MPU present or not                                                        */
+#define __NVIC_PRIO_BITS                   2 /* Number of NVIC Priority bits                                              */
+#define __VTOR_PRESENT                     1 /* Vector Table Offset Register present or not                               */
+#define __Vendor_SysTickConfig             0 /* Set to 1 if different SysTick Config is used                              */
+#define __ARCH_ARM                         1
+#define __ARCH_ARM_CORTEX_M                1
 
-/*
- * \brief CMSIS includes
- */
+/* CMSIS includes */
 #include "core_cm23.h"
 #if defined USE_CMSIS_INIT
 #include "system_pic32cmle00.h"
 #endif /* USE_CMSIS_INIT */
 
-/** \defgroup PIC32CM5164LE00100_api Peripheral Software API
- *  @{
- */
-
 /* ************************************************************************** */
-/**  SOFTWARE PERIPHERAL API DEFINITION FOR PIC32CM5164LE00100                */
+/*   SOFTWARE PERIPHERAL API DEFINITION FOR PIC32CM5164LE00100                */
 /* ************************************************************************** */
 #include "component/ac.h"
 #include "component/adc.h"
@@ -376,6 +369,7 @@ void TRAM_Handler                  ( void );
 #include "component/eic.h"
 #include "component/evsys.h"
 #include "component/freqm.h"
+#include "component/fuses.h"
 #include "component/gclk.h"
 #include "component/i2s.h"
 #include "component/mclk.h"
@@ -397,7 +391,6 @@ void TRAM_Handler                  ( void );
 #include "component/trng.h"
 #include "component/usb.h"
 #include "component/wdt.h"
-/** @}  end of Peripheral Software API */
 
 /* ************************************************************************** */
 /*   INSTANCE DEFINITIONS FOR PIC32CM5164LE00100 */
@@ -411,6 +404,7 @@ void TRAM_Handler                  ( void );
 #include "instance/eic.h"
 #include "instance/evsys.h"
 #include "instance/freqm.h"
+#include "instance/fuses.h"
 #include "instance/gclk.h"
 #include "instance/i2s.h"
 #include "instance/mclk.h"
@@ -443,113 +437,104 @@ void TRAM_Handler                  ( void );
 #include "instance/usb.h"
 #include "instance/wdt.h"
 
-/** \addtogroup PIC32CM5164LE00100_id Peripheral Ids Definitions
- *  @{
- */
-
 /* ************************************************************************** */
 /*  PERIPHERAL ID DEFINITIONS FOR PIC32CM5164LE00100                          */
 /* ************************************************************************** */
-#define ID_PAC           (  0) /**< \brief Instance index for PAC (PAC) */
-#define ID_PM            (  1) /**< \brief Instance index for PM (PM) */
-#define ID_MCLK          (  2) /**< \brief Instance index for MCLK (MCLK) */
-#define ID_RSTC          (  3) /**< \brief Instance index for RSTC (RSTC) */
-#define ID_OSCCTRL       (  4) /**< \brief Instance index for OSCCTRL (OSCCTRL) */
-#define ID_OSC32KCTRL    (  5) /**< \brief Instance index for OSC32KCTRL (OSC32KCTRL) */
-#define ID_SUPC          (  6) /**< \brief Instance index for SUPC (SUPC) */
-#define ID_GCLK          (  7) /**< \brief Instance index for GCLK (GCLK) */
-#define ID_WDT           (  8) /**< \brief Instance index for WDT (WDT) */
-#define ID_RTC           (  9) /**< \brief Instance index for RTC (RTC) */
-#define ID_EIC           ( 10) /**< \brief Instance index for EIC (EIC) */
-#define ID_FREQM         ( 11) /**< \brief Instance index for FREQM (FREQM) */
-#define ID_PORT          ( 12) /**< \brief Instance index for PORT (PORT) */
-#define ID_AC            ( 13) /**< \brief Instance index for AC (AC) */
-#define ID_DSU           ( 33) /**< \brief Instance index for DSU (DSU) */
-#define ID_NVMCTRL       ( 34) /**< \brief Instance index for NVMCTRL (NVMCTRL) */
-#define ID_DMAC          ( 35) /**< \brief Instance index for DMAC (DMAC) */
-#define ID_USB           ( 37) /**< \brief Instance index for USB (USB) */
-#define ID_EVSYS         ( 64) /**< \brief Instance index for EVSYS (EVSYS) */
-#define ID_SERCOM0       ( 65) /**< \brief Instance index for SERCOM0 (SERCOM0) */
-#define ID_SERCOM1       ( 66) /**< \brief Instance index for SERCOM1 (SERCOM1) */
-#define ID_SERCOM2       ( 67) /**< \brief Instance index for SERCOM2 (SERCOM2) */
-#define ID_SERCOM3       ( 68) /**< \brief Instance index for SERCOM3 (SERCOM3) */
-#define ID_SERCOM4       ( 69) /**< \brief Instance index for SERCOM4 (SERCOM4) */
-#define ID_SERCOM5       ( 70) /**< \brief Instance index for SERCOM5 (SERCOM5) */
-#define ID_TC0           ( 71) /**< \brief Instance index for TC0 (TC0) */
-#define ID_TC1           ( 72) /**< \brief Instance index for TC1 (TC1) */
-#define ID_TC2           ( 73) /**< \brief Instance index for TC2 (TC2) */
-#define ID_TCC0          ( 74) /**< \brief Instance index for TCC0 (TCC0) */
-#define ID_TCC1          ( 75) /**< \brief Instance index for TCC1 (TCC1) */
-#define ID_TCC2          ( 76) /**< \brief Instance index for TCC2 (TCC2) */
-#define ID_TCC3          ( 77) /**< \brief Instance index for TCC3 (TCC3) */
-#define ID_ADC           ( 78) /**< \brief Instance index for ADC (ADC) */
-#define ID_DAC           ( 79) /**< \brief Instance index for DAC (DAC) */
-#define ID_PTC           ( 80) /**< \brief Instance index for PTC (PTC) */
-#define ID_TRNG          ( 81) /**< \brief Instance index for TRNG (TRNG) */
-#define ID_CCL           ( 82) /**< \brief Instance index for CCL (CCL) */
-#define ID_I2S           ( 83) /**< \brief Instance index for I2S (I2S) */
-#define ID_OPAMP         ( 84) /**< \brief Instance index for OPAMP (OPAMP) */
-#define ID_TRAM          ( 85) /**< \brief Instance index for TRAM (TRAM) */
+#define ID_PAC           (  0) /* Instance index for PAC (PAC) */
+#define ID_PM            (  1) /* Instance index for PM (PM) */
+#define ID_MCLK          (  2) /* Instance index for MCLK (MCLK) */
+#define ID_RSTC          (  3) /* Instance index for RSTC (RSTC) */
+#define ID_OSCCTRL       (  4) /* Instance index for OSCCTRL (OSCCTRL) */
+#define ID_OSC32KCTRL    (  5) /* Instance index for OSC32KCTRL (OSC32KCTRL) */
+#define ID_SUPC          (  6) /* Instance index for SUPC (SUPC) */
+#define ID_GCLK          (  7) /* Instance index for GCLK (GCLK) */
+#define ID_WDT           (  8) /* Instance index for WDT (WDT) */
+#define ID_RTC           (  9) /* Instance index for RTC (RTC) */
+#define ID_EIC           ( 10) /* Instance index for EIC (EIC) */
+#define ID_FREQM         ( 11) /* Instance index for FREQM (FREQM) */
+#define ID_PORT          ( 12) /* Instance index for PORT (PORT) */
+#define ID_AC            ( 13) /* Instance index for AC (AC) */
+#define ID_DSU           ( 33) /* Instance index for DSU (DSU) */
+#define ID_NVMCTRL       ( 34) /* Instance index for NVMCTRL (NVMCTRL) */
+#define ID_DMAC          ( 35) /* Instance index for DMAC (DMAC) */
+#define ID_USB           ( 37) /* Instance index for USB (USB) */
+#define ID_EVSYS         ( 64) /* Instance index for EVSYS (EVSYS) */
+#define ID_SERCOM0       ( 65) /* Instance index for SERCOM0 (SERCOM0) */
+#define ID_SERCOM1       ( 66) /* Instance index for SERCOM1 (SERCOM1) */
+#define ID_SERCOM2       ( 67) /* Instance index for SERCOM2 (SERCOM2) */
+#define ID_SERCOM3       ( 68) /* Instance index for SERCOM3 (SERCOM3) */
+#define ID_SERCOM4       ( 69) /* Instance index for SERCOM4 (SERCOM4) */
+#define ID_SERCOM5       ( 70) /* Instance index for SERCOM5 (SERCOM5) */
+#define ID_TC0           ( 71) /* Instance index for TC0 (TC0) */
+#define ID_TC1           ( 72) /* Instance index for TC1 (TC1) */
+#define ID_TC2           ( 73) /* Instance index for TC2 (TC2) */
+#define ID_TCC0          ( 74) /* Instance index for TCC0 (TCC0) */
+#define ID_TCC1          ( 75) /* Instance index for TCC1 (TCC1) */
+#define ID_TCC2          ( 76) /* Instance index for TCC2 (TCC2) */
+#define ID_TCC3          ( 77) /* Instance index for TCC3 (TCC3) */
+#define ID_ADC           ( 78) /* Instance index for ADC (ADC) */
+#define ID_DAC           ( 79) /* Instance index for DAC (DAC) */
+#define ID_PTC           ( 80) /* Instance index for PTC (PTC) */
+#define ID_TRNG          ( 81) /* Instance index for TRNG (TRNG) */
+#define ID_CCL           ( 82) /* Instance index for CCL (CCL) */
+#define ID_I2S           ( 83) /* Instance index for I2S (I2S) */
+#define ID_OPAMP         ( 84) /* Instance index for OPAMP (OPAMP) */
+#define ID_TRAM          ( 85) /* Instance index for TRAM (TRAM) */
 
-#define ID_PERIPH_MAX    ( 85) /**< \brief Number of peripheral IDs */
-/** @}  end of Peripheral Ids Definitions */
-
-/** \addtogroup PIC32CM5164LE00100_base Peripheral Base Address Definitions
- *  @{
- */
+#define ID_PERIPH_MAX    ( 85) /* Number of peripheral IDs */
 
 /* ************************************************************************** */
 /*   REGISTER STRUCTURE ADDRESS DEFINITIONS FOR PIC32CM5164LE00100            */
 /* ************************************************************************** */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
-#define AC_REGS                          ((ac_registers_t*)0x40003400)                 /**< \brief AC Registers Address         */
-#define ADC_REGS                         ((adc_registers_t*)0x42003800)                /**< \brief ADC Registers Address        */
-#define CCL_REGS                         ((ccl_registers_t*)0x42004800)                /**< \brief CCL Registers Address        */
-#define DAC_REGS                         ((dac_registers_t*)0x42003c00)                /**< \brief DAC Registers Address        */
-#define DMAC_REGS                        ((dmac_registers_t*)0x41006000)               /**< \brief DMAC Registers Address       */
-#define DSU_REGS                         ((dsu_registers_t*)0x41002000)                /**< \brief DSU Registers Address        */
-#define DSU_EXT_REGS                     ((dsu_registers_t*)0x41002100)                /**< \brief DSU Registers Address        */
-#define EIC_REGS                         ((eic_registers_t*)0x40002800)                /**< \brief EIC Registers Address        */
-#define EVSYS_REGS                       ((evsys_registers_t*)0x42000000)              /**< \brief EVSYS Registers Address      */
-#define FREQM_REGS                       ((freqm_registers_t*)0x40002c00)              /**< \brief FREQM Registers Address      */
-#define GCLK_REGS                        ((gclk_registers_t*)0x40001c00)               /**< \brief GCLK Registers Address       */
-#define I2S_REGS                         ((i2s_registers_t*)0x42004c00)                /**< \brief I2S Registers Address        */
-#define MCLK_REGS                        ((mclk_registers_t*)0x40000800)               /**< \brief MCLK Registers Address       */
-#define NVMCTRL_REGS                     ((nvmctrl_registers_t*)0x41004000)            /**< \brief NVMCTRL Registers Address    */
-#define OPAMP_REGS                       ((opamp_registers_t*)0x42005000)              /**< \brief OPAMP Registers Address      */
-#define OSC32KCTRL_REGS                  ((osc32kctrl_registers_t*)0x40001400)         /**< \brief OSC32KCTRL Registers Address */
-#define OSCCTRL_REGS                     ((oscctrl_registers_t*)0x40001000)            /**< \brief OSCCTRL Registers Address    */
-#define PAC_REGS                         ((pac_registers_t*)0x40000000)                /**< \brief PAC Registers Address        */
-#define PM_REGS                          ((pm_registers_t*)0x40000400)                 /**< \brief PM Registers Address         */
-#define PORT_REGS                        ((port_registers_t*)0x40003000)               /**< \brief PORT Registers Address       */
-#define PORT_IOBUS_REGS                  ((port_registers_t*)0x60000000)               /**< \brief PORT Registers Address       */
-#define PTC_REGS                         ((ptc_registers_t*)0x42004000)                /**< \brief PTC Registers Address        */
-#define RSTC_REGS                        ((rstc_registers_t*)0x40000c00)               /**< \brief RSTC Registers Address       */
-#define RTC_REGS                         ((rtc_registers_t*)0x40002400)                /**< \brief RTC Registers Address        */
-#define SERCOM0_REGS                     ((sercom_registers_t*)0x42000400)             /**< \brief SERCOM0 Registers Address    */
-#define SERCOM1_REGS                     ((sercom_registers_t*)0x42000800)             /**< \brief SERCOM1 Registers Address    */
-#define SERCOM2_REGS                     ((sercom_registers_t*)0x42000c00)             /**< \brief SERCOM2 Registers Address    */
-#define SERCOM3_REGS                     ((sercom_registers_t*)0x42001000)             /**< \brief SERCOM3 Registers Address    */
-#define SERCOM4_REGS                     ((sercom_registers_t*)0x42001400)             /**< \brief SERCOM4 Registers Address    */
-#define SERCOM5_REGS                     ((sercom_registers_t*)0x42001800)             /**< \brief SERCOM5 Registers Address    */
-#define SUPC_REGS                        ((supc_registers_t*)0x40001800)               /**< \brief SUPC Registers Address       */
-#define TC0_REGS                         ((tc_registers_t*)0x42001c00)                 /**< \brief TC0 Registers Address        */
-#define TC1_REGS                         ((tc_registers_t*)0x42002000)                 /**< \brief TC1 Registers Address        */
-#define TC2_REGS                         ((tc_registers_t*)0x42002400)                 /**< \brief TC2 Registers Address        */
-#define TCC0_REGS                        ((tcc_registers_t*)0x42002800)                /**< \brief TCC0 Registers Address       */
-#define TCC1_REGS                        ((tcc_registers_t*)0x42002c00)                /**< \brief TCC1 Registers Address       */
-#define TCC2_REGS                        ((tcc_registers_t*)0x42003000)                /**< \brief TCC2 Registers Address       */
-#define TCC3_REGS                        ((tcc_registers_t*)0x42003400)                /**< \brief TCC3 Registers Address       */
-#define TRAM_REGS                        ((tram_registers_t*)0x42005400)               /**< \brief TRAM Registers Address       */
-#define TRNG_REGS                        ((trng_registers_t*)0x42004400)               /**< \brief TRNG Registers Address       */
-#define USB_REGS                         ((usb_registers_t*)0x4100a000)                /**< \brief USB Registers Address        */
-#define WDT_REGS                         ((wdt_registers_t*)0x40002000)                /**< \brief WDT Registers Address        */
+#define AC_REGS                          ((ac_registers_t*)0x40003400)                 /* AC Registers Address         */
+#define ADC_REGS                         ((adc_registers_t*)0x42003800)                /* ADC Registers Address        */
+#define CCL_REGS                         ((ccl_registers_t*)0x42004800)                /* CCL Registers Address        */
+#define DAC_REGS                         ((dac_registers_t*)0x42003c00)                /* DAC Registers Address        */
+#define DMAC_REGS                        ((dmac_registers_t*)0x41006000)               /* DMAC Registers Address       */
+#define DSU_REGS                         ((dsu_registers_t*)0x41002000)                /* DSU Registers Address        */
+#define DSU_EXT_REGS                     ((dsu_registers_t*)0x41002100)                /* DSU Registers Address        */
+#define EIC_REGS                         ((eic_registers_t*)0x40002800)                /* EIC Registers Address        */
+#define EVSYS_REGS                       ((evsys_registers_t*)0x42000000)              /* EVSYS Registers Address      */
+#define FREQM_REGS                       ((freqm_registers_t*)0x40002c00)              /* FREQM Registers Address      */
+#define GCLK_REGS                        ((gclk_registers_t*)0x40001c00)               /* GCLK Registers Address       */
+#define I2S_REGS                         ((i2s_registers_t*)0x42004c00)                /* I2S Registers Address        */
+#define MCLK_REGS                        ((mclk_registers_t*)0x40000800)               /* MCLK Registers Address       */
+#define NVMCTRL_REGS                     ((nvmctrl_registers_t*)0x41004000)            /* NVMCTRL Registers Address    */
+#define BOCOR_FUSES_REGS                 ((fuses_bocor_fuses_registers_t*)0x0080c000)  /* FUSES Registers Address      */
+#define OTP1_FUSES_REGS                  ((fuses_otp1_fuses_registers_t*)0x00806000)   /* FUSES Registers Address      */
+#define OTP2_FUSES_REGS                  ((fuses_otp2_fuses_registers_t*)0x00806008)   /* FUSES Registers Address      */
+#define SW_CALIB_FUSES_REGS              ((fuses_sw_calib_fuses_registers_t*)0x00806020) /* FUSES Registers Address      */
+#define USER_FUSES_REGS                  ((fuses_user_fuses_registers_t*)0x00804000)   /* FUSES Registers Address      */
+#define OPAMP_REGS                       ((opamp_registers_t*)0x42005000)              /* OPAMP Registers Address      */
+#define OSC32KCTRL_REGS                  ((osc32kctrl_registers_t*)0x40001400)         /* OSC32KCTRL Registers Address */
+#define OSCCTRL_REGS                     ((oscctrl_registers_t*)0x40001000)            /* OSCCTRL Registers Address    */
+#define PAC_REGS                         ((pac_registers_t*)0x40000000)                /* PAC Registers Address        */
+#define PM_REGS                          ((pm_registers_t*)0x40000400)                 /* PM Registers Address         */
+#define PORT_REGS                        ((port_registers_t*)0x40003000)               /* PORT Registers Address       */
+#define PORT_IOBUS_REGS                  ((port_registers_t*)0x60000000)               /* PORT Registers Address       */
+#define PTC_REGS                         ((ptc_registers_t*)0x42004000)                /* PTC Registers Address        */
+#define RSTC_REGS                        ((rstc_registers_t*)0x40000c00)               /* RSTC Registers Address       */
+#define RTC_REGS                         ((rtc_registers_t*)0x40002400)                /* RTC Registers Address        */
+#define SERCOM0_REGS                     ((sercom_registers_t*)0x42000400)             /* SERCOM0 Registers Address    */
+#define SERCOM1_REGS                     ((sercom_registers_t*)0x42000800)             /* SERCOM1 Registers Address    */
+#define SERCOM2_REGS                     ((sercom_registers_t*)0x42000c00)             /* SERCOM2 Registers Address    */
+#define SERCOM3_REGS                     ((sercom_registers_t*)0x42001000)             /* SERCOM3 Registers Address    */
+#define SERCOM4_REGS                     ((sercom_registers_t*)0x42001400)             /* SERCOM4 Registers Address    */
+#define SERCOM5_REGS                     ((sercom_registers_t*)0x42001800)             /* SERCOM5 Registers Address    */
+#define SUPC_REGS                        ((supc_registers_t*)0x40001800)               /* SUPC Registers Address       */
+#define TC0_REGS                         ((tc_registers_t*)0x42001c00)                 /* TC0 Registers Address        */
+#define TC1_REGS                         ((tc_registers_t*)0x42002000)                 /* TC1 Registers Address        */
+#define TC2_REGS                         ((tc_registers_t*)0x42002400)                 /* TC2 Registers Address        */
+#define TCC0_REGS                        ((tcc_registers_t*)0x42002800)                /* TCC0 Registers Address       */
+#define TCC1_REGS                        ((tcc_registers_t*)0x42002c00)                /* TCC1 Registers Address       */
+#define TCC2_REGS                        ((tcc_registers_t*)0x42003000)                /* TCC2 Registers Address       */
+#define TCC3_REGS                        ((tcc_registers_t*)0x42003400)                /* TCC3 Registers Address       */
+#define TRAM_REGS                        ((tram_registers_t*)0x42005400)               /* TRAM Registers Address       */
+#define TRNG_REGS                        ((trng_registers_t*)0x42004400)               /* TRNG Registers Address       */
+#define USB_REGS                         ((usb_registers_t*)0x4100a000)                /* USB Registers Address        */
+#define WDT_REGS                         ((wdt_registers_t*)0x40002000)                /* WDT Registers Address        */
 #endif /* (defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
-/** @}  end of Peripheral Base Address Definitions */
-
-/** \addtogroup PIC32CM5164LE00100_base Peripheral Base Address Definitions
- *  @{
- */
 
 /* ************************************************************************** */
 /*   BASE ADDRESS DEFINITIONS FOR PIC32CM5164LE00100                          */
@@ -568,6 +553,11 @@ void TRAM_Handler                  ( void );
 #define I2S_BASE_ADDRESS                 _UL_(0x42004c00)                              /* I2S Base Address */
 #define MCLK_BASE_ADDRESS                _UL_(0x40000800)                              /* MCLK Base Address */
 #define NVMCTRL_BASE_ADDRESS             _UL_(0x41004000)                              /* NVMCTRL Base Address */
+#define BOCOR_FUSES_BASE_ADDRESS         _UL_(0x0080c000)                              /* FUSES Base Address */
+#define OTP1_FUSES_BASE_ADDRESS          _UL_(0x00806000)                              /* FUSES Base Address */
+#define OTP2_FUSES_BASE_ADDRESS          _UL_(0x00806008)                              /* FUSES Base Address */
+#define SW_CALIB_FUSES_BASE_ADDRESS      _UL_(0x00806020)                              /* FUSES Base Address */
+#define USER_FUSES_BASE_ADDRESS          _UL_(0x00804000)                              /* FUSES Base Address */
 #define OPAMP_BASE_ADDRESS               _UL_(0x42005000)                              /* OPAMP Base Address */
 #define OSC32KCTRL_BASE_ADDRESS          _UL_(0x40001400)                              /* OSC32KCTRL Base Address */
 #define OSCCTRL_BASE_ADDRESS             _UL_(0x40001000)                              /* OSCCTRL Base Address */
@@ -596,17 +586,11 @@ void TRAM_Handler                  ( void );
 #define TRNG_BASE_ADDRESS                _UL_(0x42004400)                              /* TRNG Base Address */
 #define USB_BASE_ADDRESS                 _UL_(0x4100a000)                              /* USB Base Address */
 #define WDT_BASE_ADDRESS                 _UL_(0x40002000)                              /* WDT Base Address */
-/** @}  end of Peripheral Base Address Definitions */
-
-/** \addtogroup PIC32CM5164LE00100_pio Peripheral Pio Definitions
- *  @{
- */
 
 /* ************************************************************************** */
 /*   PIO DEFINITIONS FOR PIC32CM5164LE00100                                   */
 /* ************************************************************************** */
 #include "pio/pic32cm5164le00100.h"
-/** @}  end of Peripheral Pio Definitions */
 
 /* ************************************************************************** */
 /*   MEMORY MAPPING DEFINITIONS FOR PIC32CM5164LE00100                        */
@@ -675,199 +659,196 @@ void TRAM_Handler                  ( void );
 #define APBC_SIZE                      _UL_(0x00006000)    /*   24kB Memory segment type: io */
 #define PPB_SIZE                       _UL_(0x00100000)    /* 1024kB Memory segment type: io */
 
-#define FLASH_ADDR                     _UL_(0x00000000)    /**< FLASH base address (type: flash)*/
-#define AUX0_ADDR                      _UL_(0x00804000)    /**< AUX0 base address (type: fuses)*/
-#define AUX1_ADDR                      _UL_(0x00806000)    /**< AUX1 base address (type: fuses)*/
-#define AUX2_ADDR                      _UL_(0x00808000)    /**< AUX2 base address (type: fuses)*/
-#define AUX3_ADDR                      _UL_(0x0080a000)    /**< AUX3 base address (type: fuses)*/
-#define AUX4_ADDR                      _UL_(0x0080c000)    /**< AUX4 base address (type: fuses)*/
-#define AUX5_ADDR                      _UL_(0x0080e000)    /**< AUX5 base address (type: fuses)*/
-#define BOCOR_ADDR                     _UL_(0x0080c000)    /**< BOCOR base address (type: fuses)*/
-#define BOCOR1_ADDR                    _UL_(0x0080c008)    /**< BOCOR1 base address (type: fuses)*/
-#define CAL_ADDR                       _UL_(0x00800000)    /**< CAL base address (type: fuses)*/
-#define DATAFLASH_ADDR                 _UL_(0x00400000)    /**< DATAFLASH base address (type: flash)*/
-#define LOCKROW_ADDR                   _UL_(0x00802000)    /**< LOCKROW base address (type: fuses)*/
-#define OTP1_ADDR                      _UL_(0x00806000)    /**< OTP1 base address (type: fuses)*/
-#define OTP2_ADDR                      _UL_(0x00806008)    /**< OTP2 base address (type: fuses)*/
-#define OTP3_ADDR                      _UL_(0x00806010)    /**< OTP3 base address (type: fuses)*/
-#define OTP4_ADDR                      _UL_(0x00806018)    /**< OTP4 base address (type: fuses)*/
-#define ROM_ADDR                       _UL_(0x00830000)    /**< ROM base address (type: fuses)*/
-#define SHADOW_ADDR                    _UL_(0x00820000)    /**< SHADOW base address (type: fuses)*/
-#define SW_CALIB_ADDR                  _UL_(0x00806020)    /**< SW_CALIB base address (type: fuses)*/
-#define TLATCH_ADDR                    _UL_(0x00810000)    /**< TLATCH base address (type: fuses)*/
-#define USER_PAGE_ADDR                 _UL_(0x00804000)    /**< USER_PAGE base address (type: user_page)*/
-#define HSRAM_ADDR                     _UL_(0x20000000)    /**< HSRAM base address (type: ram)*/
-#define APBA_ADDR                      _UL_(0x40000000)    /**< APBA base address (type: io)*/
-#define APBB_ADDR                      _UL_(0x41000000)    /**< APBB base address (type: io)*/
-#define APBC_ADDR                      _UL_(0x42000000)    /**< APBC base address (type: io)*/
-#define PPB_ADDR                       _UL_(0xe0000000)    /**< PPB base address (type: io)*/
+#define FLASH_ADDR                     _UL_(0x00000000)    /* FLASH base address (type: flash)*/
+#define AUX0_ADDR                      _UL_(0x00804000)    /* AUX0 base address (type: fuses)*/
+#define AUX1_ADDR                      _UL_(0x00806000)    /* AUX1 base address (type: fuses)*/
+#define AUX2_ADDR                      _UL_(0x00808000)    /* AUX2 base address (type: fuses)*/
+#define AUX3_ADDR                      _UL_(0x0080a000)    /* AUX3 base address (type: fuses)*/
+#define AUX4_ADDR                      _UL_(0x0080c000)    /* AUX4 base address (type: fuses)*/
+#define AUX5_ADDR                      _UL_(0x0080e000)    /* AUX5 base address (type: fuses)*/
+#define BOCOR_ADDR                     _UL_(0x0080c000)    /* BOCOR base address (type: fuses)*/
+#define BOCOR1_ADDR                    _UL_(0x0080c008)    /* BOCOR1 base address (type: fuses)*/
+#define CAL_ADDR                       _UL_(0x00800000)    /* CAL base address (type: fuses)*/
+#define DATAFLASH_ADDR                 _UL_(0x00400000)    /* DATAFLASH base address (type: flash)*/
+#define LOCKROW_ADDR                   _UL_(0x00802000)    /* LOCKROW base address (type: fuses)*/
+#define OTP1_ADDR                      _UL_(0x00806000)    /* OTP1 base address (type: fuses)*/
+#define OTP2_ADDR                      _UL_(0x00806008)    /* OTP2 base address (type: fuses)*/
+#define OTP3_ADDR                      _UL_(0x00806010)    /* OTP3 base address (type: fuses)*/
+#define OTP4_ADDR                      _UL_(0x00806018)    /* OTP4 base address (type: fuses)*/
+#define ROM_ADDR                       _UL_(0x00830000)    /* ROM base address (type: fuses)*/
+#define SHADOW_ADDR                    _UL_(0x00820000)    /* SHADOW base address (type: fuses)*/
+#define SW_CALIB_ADDR                  _UL_(0x00806020)    /* SW_CALIB base address (type: fuses)*/
+#define TLATCH_ADDR                    _UL_(0x00810000)    /* TLATCH base address (type: fuses)*/
+#define USER_PAGE_ADDR                 _UL_(0x00804000)    /* USER_PAGE base address (type: user_page)*/
+#define HSRAM_ADDR                     _UL_(0x20000000)    /* HSRAM base address (type: ram)*/
+#define APBA_ADDR                      _UL_(0x40000000)    /* APBA base address (type: io)*/
+#define APBB_ADDR                      _UL_(0x41000000)    /* APBB base address (type: io)*/
+#define APBC_ADDR                      _UL_(0x42000000)    /* APBC base address (type: io)*/
+#define PPB_ADDR                       _UL_(0xe0000000)    /* PPB base address (type: io)*/
 
 /* ************************************************************************** */
-/**  DEVICE SIGNATURES FOR PIC32CM5164LE00100                                 */
+/*   DEVICE SIGNATURES FOR PIC32CM5164LE00100                                 */
 /* ************************************************************************** */
 #define CHIP_DSU_DID                   _UL_(0X20850000)
 
 /* ************************************************************************** */
-/**  ELECTRICAL DEFINITIONS FOR PIC32CM5164LE00100                            */
+/*   ELECTRICAL DEFINITIONS FOR PIC32CM5164LE00100                            */
 /* ************************************************************************** */
 
 /* ************************************************************************** */
-/** Event Generator IDs for C32CM5164LE00100 */
+/* Event Generator IDs for C32CM5164LE00100 */
 /* ************************************************************************** */
-#define EVENT_ID_GEN_OSCCTRL_XOSC_FAIL                    1 /**< ID for OSCCTRL event generator XOSC_FAIL */
-#define EVENT_ID_GEN_OSC32KCTRL_XOSC32K_FAIL              2 /**< ID for OSC32KCTRL event generator XOSC32K_FAIL */
-#define EVENT_ID_GEN_SUPC_BOD33DET                        3 /**< ID for SUPC event generator BOD33DET */
-#define EVENT_ID_GEN_RTC_PER_0                            4 /**< ID for RTC event generator PER_0 */
-#define EVENT_ID_GEN_RTC_PER_1                            5 /**< ID for RTC event generator PER_1 */
-#define EVENT_ID_GEN_RTC_PER_2                            6 /**< ID for RTC event generator PER_2 */
-#define EVENT_ID_GEN_RTC_PER_3                            7 /**< ID for RTC event generator PER_3 */
-#define EVENT_ID_GEN_RTC_PER_4                            8 /**< ID for RTC event generator PER_4 */
-#define EVENT_ID_GEN_RTC_PER_5                            9 /**< ID for RTC event generator PER_5 */
-#define EVENT_ID_GEN_RTC_PER_6                           10 /**< ID for RTC event generator PER_6 */
-#define EVENT_ID_GEN_RTC_PER_7                           11 /**< ID for RTC event generator PER_7 */
-#define EVENT_ID_GEN_RTC_CMP_0                           12 /**< ID for RTC event generator CMP_0 */
-#define EVENT_ID_GEN_RTC_CMP_1                           13 /**< ID for RTC event generator CMP_1 */
-#define EVENT_ID_GEN_RTC_TAMPER                          14 /**< ID for RTC event generator TAMPER */
-#define EVENT_ID_GEN_RTC_OVF                             15 /**< ID for RTC event generator OVF */
-#define EVENT_ID_GEN_RTC_PERD                            16 /**< ID for RTC event generator PERD */
-#define EVENT_ID_GEN_EIC_EXTINT_0                        17 /**< ID for EIC event generator EXTINT_0 */
-#define EVENT_ID_GEN_EIC_EXTINT_1                        18 /**< ID for EIC event generator EXTINT_1 */
-#define EVENT_ID_GEN_EIC_EXTINT_2                        19 /**< ID for EIC event generator EXTINT_2 */
-#define EVENT_ID_GEN_EIC_EXTINT_3                        20 /**< ID for EIC event generator EXTINT_3 */
-#define EVENT_ID_GEN_EIC_EXTINT_4                        21 /**< ID for EIC event generator EXTINT_4 */
-#define EVENT_ID_GEN_EIC_EXTINT_5                        22 /**< ID for EIC event generator EXTINT_5 */
-#define EVENT_ID_GEN_EIC_EXTINT_6                        23 /**< ID for EIC event generator EXTINT_6 */
-#define EVENT_ID_GEN_EIC_EXTINT_7                        24 /**< ID for EIC event generator EXTINT_7 */
-#define EVENT_ID_GEN_EIC_EXTINT_8                        25 /**< ID for EIC event generator EXTINT_8 */
-#define EVENT_ID_GEN_EIC_EXTINT_9                        26 /**< ID for EIC event generator EXTINT_9 */
-#define EVENT_ID_GEN_EIC_EXTINT_10                       27 /**< ID for EIC event generator EXTINT_10 */
-#define EVENT_ID_GEN_EIC_EXTINT_11                       28 /**< ID for EIC event generator EXTINT_11 */
-#define EVENT_ID_GEN_EIC_EXTINT_12                       29 /**< ID for EIC event generator EXTINT_12 */
-#define EVENT_ID_GEN_EIC_EXTINT_13                       30 /**< ID for EIC event generator EXTINT_13 */
-#define EVENT_ID_GEN_EIC_EXTINT_14                       31 /**< ID for EIC event generator EXTINT_14 */
-#define EVENT_ID_GEN_EIC_EXTINT_15                       32 /**< ID for EIC event generator EXTINT_15 */
-#define EVENT_ID_GEN_DMAC_CH_0                           33 /**< ID for DMAC event generator CH_0 */
-#define EVENT_ID_GEN_DMAC_CH_1                           34 /**< ID for DMAC event generator CH_1 */
-#define EVENT_ID_GEN_DMAC_CH_2                           35 /**< ID for DMAC event generator CH_2 */
-#define EVENT_ID_GEN_DMAC_CH_3                           36 /**< ID for DMAC event generator CH_3 */
-#define EVENT_ID_GEN_DMAC_CH_4                           37 /**< ID for DMAC event generator CH_4 */
-#define EVENT_ID_GEN_DMAC_CH_5                           38 /**< ID for DMAC event generator CH_5 */
-#define EVENT_ID_GEN_DMAC_CH_6                           39 /**< ID for DMAC event generator CH_6 */
-#define EVENT_ID_GEN_DMAC_CH_7                           40 /**< ID for DMAC event generator CH_7 */
-#define EVENT_ID_GEN_TC0_OVF                             41 /**< ID for TC0 event generator OVF */
-#define EVENT_ID_GEN_TC0_MC_0                            42 /**< ID for TC0 event generator MC_0 */
-#define EVENT_ID_GEN_TC0_MC_1                            43 /**< ID for TC0 event generator MC_1 */
-#define EVENT_ID_GEN_TC1_OVF                             44 /**< ID for TC1 event generator OVF */
-#define EVENT_ID_GEN_TC1_MC_0                            45 /**< ID for TC1 event generator MC_0 */
-#define EVENT_ID_GEN_TC1_MC_1                            46 /**< ID for TC1 event generator MC_1 */
-#define EVENT_ID_GEN_TC2_OVF                             47 /**< ID for TC2 event generator OVF */
-#define EVENT_ID_GEN_TC2_MC_0                            48 /**< ID for TC2 event generator MC_0 */
-#define EVENT_ID_GEN_TC2_MC_1                            49 /**< ID for TC2 event generator MC_1 */
-#define EVENT_ID_GEN_TCC0_TRG                            50 /**< ID for TCC0 event generator TRG */
-#define EVENT_ID_GEN_TCC0_CNT                            51 /**< ID for TCC0 event generator CNT */
-#define EVENT_ID_GEN_TCC0_MC_0                           52 /**< ID for TCC0 event generator MC_0 */
-#define EVENT_ID_GEN_TCC0_MC_1                           53 /**< ID for TCC0 event generator MC_1 */
-#define EVENT_ID_GEN_TCC0_MC_2                           54 /**< ID for TCC0 event generator MC_2 */
-#define EVENT_ID_GEN_TCC0_MC_3                           55 /**< ID for TCC0 event generator MC_3 */
-#define EVENT_ID_GEN_TCC0_OVF                            56 /**< ID for TCC0 event generator OVF */
-#define EVENT_ID_GEN_TCC1_TRG                            57 /**< ID for TCC1 event generator TRG */
-#define EVENT_ID_GEN_TCC1_CNT                            58 /**< ID for TCC1 event generator CNT */
-#define EVENT_ID_GEN_TCC1_MC_0                           59 /**< ID for TCC1 event generator MC_0 */
-#define EVENT_ID_GEN_TCC1_MC_1                           60 /**< ID for TCC1 event generator MC_1 */
-#define EVENT_ID_GEN_TCC1_OVF                            61 /**< ID for TCC1 event generator OVF */
-#define EVENT_ID_GEN_TCC2_TRG                            62 /**< ID for TCC2 event generator TRG */
-#define EVENT_ID_GEN_TCC2_CNT                            63 /**< ID for TCC2 event generator CNT */
-#define EVENT_ID_GEN_TCC2_MC_0                           64 /**< ID for TCC2 event generator MC_0 */
-#define EVENT_ID_GEN_TCC2_MC_1                           65 /**< ID for TCC2 event generator MC_1 */
-#define EVENT_ID_GEN_TCC2_OVF                            66 /**< ID for TCC2 event generator OVF */
-#define EVENT_ID_GEN_TCC3_TRG                            67 /**< ID for TCC3 event generator TRG */
-#define EVENT_ID_GEN_TCC3_CNT                            68 /**< ID for TCC3 event generator CNT */
-#define EVENT_ID_GEN_TCC3_MC_0                           69 /**< ID for TCC3 event generator MC_0 */
-#define EVENT_ID_GEN_TCC3_MC_1                           70 /**< ID for TCC3 event generator MC_1 */
-#define EVENT_ID_GEN_TCC3_MC_2                           71 /**< ID for TCC3 event generator MC_2 */
-#define EVENT_ID_GEN_TCC3_MC_3                           72 /**< ID for TCC3 event generator MC_3 */
-#define EVENT_ID_GEN_TCC3_OVF                            73 /**< ID for TCC3 event generator OVF */
-#define EVENT_ID_GEN_ADC_RESRDY                          74 /**< ID for ADC event generator RESRDY */
-#define EVENT_ID_GEN_ADC_WINMON                          75 /**< ID for ADC event generator WINMON */
-#define EVENT_ID_GEN_AC_COMP_0                           76 /**< ID for AC event generator COMP_0 */
-#define EVENT_ID_GEN_AC_COMP_1                           77 /**< ID for AC event generator COMP_1 */
-#define EVENT_ID_GEN_AC_COMP_2                           78 /**< ID for AC event generator COMP_2 */
-#define EVENT_ID_GEN_AC_COMP_3                           79 /**< ID for AC event generator COMP_3 */
-#define EVENT_ID_GEN_AC_WIN_0                            80 /**< ID for AC event generator WIN_0 */
-#define EVENT_ID_GEN_AC_WIN_1                            81 /**< ID for AC event generator WIN_1 */
-#define EVENT_ID_GEN_DAC_EMPTY_0                         82 /**< ID for DAC event generator EMPTY_0 */
-#define EVENT_ID_GEN_DAC_EMPTY_1                         83 /**< ID for DAC event generator EMPTY_1 */
-#define EVENT_ID_GEN_PTC_EOC                             84 /**< ID for PTC event generator EOC */
-#define EVENT_ID_GEN_PTC_WCOMP                           85 /**< ID for PTC event generator WCOMP */
-#define EVENT_ID_GEN_TRNG_READY                          86 /**< ID for TRNG event generator READY */
-#define EVENT_ID_GEN_CCL_LUTOUT_0                        87 /**< ID for CCL event generator LUTOUT_0 */
-#define EVENT_ID_GEN_CCL_LUTOUT_1                        88 /**< ID for CCL event generator LUTOUT_1 */
-#define EVENT_ID_GEN_CCL_LUTOUT_2                        89 /**< ID for CCL event generator LUTOUT_2 */
-#define EVENT_ID_GEN_CCL_LUTOUT_3                        90 /**< ID for CCL event generator LUTOUT_3 */
-#define EVENT_ID_GEN_PAC_ACCERR                          91 /**< ID for PAC event generator ACCERR */
+#define EVENT_ID_GEN_OSCCTRL_XOSC_FAIL                    1 /* ID for OSCCTRL event generator XOSC_FAIL */
+#define EVENT_ID_GEN_OSC32KCTRL_XOSC32K_FAIL              2 /* ID for OSC32KCTRL event generator XOSC32K_FAIL */
+#define EVENT_ID_GEN_SUPC_BOD33DET                        3 /* ID for SUPC event generator BOD33DET */
+#define EVENT_ID_GEN_RTC_PER_0                            4 /* ID for RTC event generator PER_0 */
+#define EVENT_ID_GEN_RTC_PER_1                            5 /* ID for RTC event generator PER_1 */
+#define EVENT_ID_GEN_RTC_PER_2                            6 /* ID for RTC event generator PER_2 */
+#define EVENT_ID_GEN_RTC_PER_3                            7 /* ID for RTC event generator PER_3 */
+#define EVENT_ID_GEN_RTC_PER_4                            8 /* ID for RTC event generator PER_4 */
+#define EVENT_ID_GEN_RTC_PER_5                            9 /* ID for RTC event generator PER_5 */
+#define EVENT_ID_GEN_RTC_PER_6                           10 /* ID for RTC event generator PER_6 */
+#define EVENT_ID_GEN_RTC_PER_7                           11 /* ID for RTC event generator PER_7 */
+#define EVENT_ID_GEN_RTC_CMP_0                           12 /* ID for RTC event generator CMP_0 */
+#define EVENT_ID_GEN_RTC_CMP_1                           13 /* ID for RTC event generator CMP_1 */
+#define EVENT_ID_GEN_RTC_TAMPER                          14 /* ID for RTC event generator TAMPER */
+#define EVENT_ID_GEN_RTC_OVF                             15 /* ID for RTC event generator OVF */
+#define EVENT_ID_GEN_RTC_PERD                            16 /* ID for RTC event generator PERD */
+#define EVENT_ID_GEN_EIC_EXTINT_0                        17 /* ID for EIC event generator EXTINT_0 */
+#define EVENT_ID_GEN_EIC_EXTINT_1                        18 /* ID for EIC event generator EXTINT_1 */
+#define EVENT_ID_GEN_EIC_EXTINT_2                        19 /* ID for EIC event generator EXTINT_2 */
+#define EVENT_ID_GEN_EIC_EXTINT_3                        20 /* ID for EIC event generator EXTINT_3 */
+#define EVENT_ID_GEN_EIC_EXTINT_4                        21 /* ID for EIC event generator EXTINT_4 */
+#define EVENT_ID_GEN_EIC_EXTINT_5                        22 /* ID for EIC event generator EXTINT_5 */
+#define EVENT_ID_GEN_EIC_EXTINT_6                        23 /* ID for EIC event generator EXTINT_6 */
+#define EVENT_ID_GEN_EIC_EXTINT_7                        24 /* ID for EIC event generator EXTINT_7 */
+#define EVENT_ID_GEN_EIC_EXTINT_8                        25 /* ID for EIC event generator EXTINT_8 */
+#define EVENT_ID_GEN_EIC_EXTINT_9                        26 /* ID for EIC event generator EXTINT_9 */
+#define EVENT_ID_GEN_EIC_EXTINT_10                       27 /* ID for EIC event generator EXTINT_10 */
+#define EVENT_ID_GEN_EIC_EXTINT_11                       28 /* ID for EIC event generator EXTINT_11 */
+#define EVENT_ID_GEN_EIC_EXTINT_12                       29 /* ID for EIC event generator EXTINT_12 */
+#define EVENT_ID_GEN_EIC_EXTINT_13                       30 /* ID for EIC event generator EXTINT_13 */
+#define EVENT_ID_GEN_EIC_EXTINT_14                       31 /* ID for EIC event generator EXTINT_14 */
+#define EVENT_ID_GEN_EIC_EXTINT_15                       32 /* ID for EIC event generator EXTINT_15 */
+#define EVENT_ID_GEN_DMAC_CH_0                           33 /* ID for DMAC event generator CH_0 */
+#define EVENT_ID_GEN_DMAC_CH_1                           34 /* ID for DMAC event generator CH_1 */
+#define EVENT_ID_GEN_DMAC_CH_2                           35 /* ID for DMAC event generator CH_2 */
+#define EVENT_ID_GEN_DMAC_CH_3                           36 /* ID for DMAC event generator CH_3 */
+#define EVENT_ID_GEN_DMAC_CH_4                           37 /* ID for DMAC event generator CH_4 */
+#define EVENT_ID_GEN_DMAC_CH_5                           38 /* ID for DMAC event generator CH_5 */
+#define EVENT_ID_GEN_DMAC_CH_6                           39 /* ID for DMAC event generator CH_6 */
+#define EVENT_ID_GEN_DMAC_CH_7                           40 /* ID for DMAC event generator CH_7 */
+#define EVENT_ID_GEN_TC0_OVF                             41 /* ID for TC0 event generator OVF */
+#define EVENT_ID_GEN_TC0_MC_0                            42 /* ID for TC0 event generator MC_0 */
+#define EVENT_ID_GEN_TC0_MC_1                            43 /* ID for TC0 event generator MC_1 */
+#define EVENT_ID_GEN_TC1_OVF                             44 /* ID for TC1 event generator OVF */
+#define EVENT_ID_GEN_TC1_MC_0                            45 /* ID for TC1 event generator MC_0 */
+#define EVENT_ID_GEN_TC1_MC_1                            46 /* ID for TC1 event generator MC_1 */
+#define EVENT_ID_GEN_TC2_OVF                             47 /* ID for TC2 event generator OVF */
+#define EVENT_ID_GEN_TC2_MC_0                            48 /* ID for TC2 event generator MC_0 */
+#define EVENT_ID_GEN_TC2_MC_1                            49 /* ID for TC2 event generator MC_1 */
+#define EVENT_ID_GEN_TCC0_TRG                            50 /* ID for TCC0 event generator TRG */
+#define EVENT_ID_GEN_TCC0_CNT                            51 /* ID for TCC0 event generator CNT */
+#define EVENT_ID_GEN_TCC0_MC_0                           52 /* ID for TCC0 event generator MC_0 */
+#define EVENT_ID_GEN_TCC0_MC_1                           53 /* ID for TCC0 event generator MC_1 */
+#define EVENT_ID_GEN_TCC0_MC_2                           54 /* ID for TCC0 event generator MC_2 */
+#define EVENT_ID_GEN_TCC0_MC_3                           55 /* ID for TCC0 event generator MC_3 */
+#define EVENT_ID_GEN_TCC0_OVF                            56 /* ID for TCC0 event generator OVF */
+#define EVENT_ID_GEN_TCC1_TRG                            57 /* ID for TCC1 event generator TRG */
+#define EVENT_ID_GEN_TCC1_CNT                            58 /* ID for TCC1 event generator CNT */
+#define EVENT_ID_GEN_TCC1_MC_0                           59 /* ID for TCC1 event generator MC_0 */
+#define EVENT_ID_GEN_TCC1_MC_1                           60 /* ID for TCC1 event generator MC_1 */
+#define EVENT_ID_GEN_TCC1_OVF                            61 /* ID for TCC1 event generator OVF */
+#define EVENT_ID_GEN_TCC2_TRG                            62 /* ID for TCC2 event generator TRG */
+#define EVENT_ID_GEN_TCC2_CNT                            63 /* ID for TCC2 event generator CNT */
+#define EVENT_ID_GEN_TCC2_MC_0                           64 /* ID for TCC2 event generator MC_0 */
+#define EVENT_ID_GEN_TCC2_MC_1                           65 /* ID for TCC2 event generator MC_1 */
+#define EVENT_ID_GEN_TCC2_OVF                            66 /* ID for TCC2 event generator OVF */
+#define EVENT_ID_GEN_TCC3_TRG                            67 /* ID for TCC3 event generator TRG */
+#define EVENT_ID_GEN_TCC3_CNT                            68 /* ID for TCC3 event generator CNT */
+#define EVENT_ID_GEN_TCC3_MC_0                           69 /* ID for TCC3 event generator MC_0 */
+#define EVENT_ID_GEN_TCC3_MC_1                           70 /* ID for TCC3 event generator MC_1 */
+#define EVENT_ID_GEN_TCC3_MC_2                           71 /* ID for TCC3 event generator MC_2 */
+#define EVENT_ID_GEN_TCC3_MC_3                           72 /* ID for TCC3 event generator MC_3 */
+#define EVENT_ID_GEN_TCC3_OVF                            73 /* ID for TCC3 event generator OVF */
+#define EVENT_ID_GEN_ADC_RESRDY                          74 /* ID for ADC event generator RESRDY */
+#define EVENT_ID_GEN_ADC_WINMON                          75 /* ID for ADC event generator WINMON */
+#define EVENT_ID_GEN_AC_COMP_0                           76 /* ID for AC event generator COMP_0 */
+#define EVENT_ID_GEN_AC_COMP_1                           77 /* ID for AC event generator COMP_1 */
+#define EVENT_ID_GEN_AC_COMP_2                           78 /* ID for AC event generator COMP_2 */
+#define EVENT_ID_GEN_AC_COMP_3                           79 /* ID for AC event generator COMP_3 */
+#define EVENT_ID_GEN_AC_WIN_0                            80 /* ID for AC event generator WIN_0 */
+#define EVENT_ID_GEN_AC_WIN_1                            81 /* ID for AC event generator WIN_1 */
+#define EVENT_ID_GEN_DAC_EMPTY_0                         82 /* ID for DAC event generator EMPTY_0 */
+#define EVENT_ID_GEN_DAC_EMPTY_1                         83 /* ID for DAC event generator EMPTY_1 */
+#define EVENT_ID_GEN_PTC_EOC                             84 /* ID for PTC event generator EOC */
+#define EVENT_ID_GEN_PTC_WCOMP                           85 /* ID for PTC event generator WCOMP */
+#define EVENT_ID_GEN_TRNG_READY                          86 /* ID for TRNG event generator READY */
+#define EVENT_ID_GEN_CCL_LUTOUT_0                        87 /* ID for CCL event generator LUTOUT_0 */
+#define EVENT_ID_GEN_CCL_LUTOUT_1                        88 /* ID for CCL event generator LUTOUT_1 */
+#define EVENT_ID_GEN_CCL_LUTOUT_2                        89 /* ID for CCL event generator LUTOUT_2 */
+#define EVENT_ID_GEN_CCL_LUTOUT_3                        90 /* ID for CCL event generator LUTOUT_3 */
+#define EVENT_ID_GEN_PAC_ACCERR                          91 /* ID for PAC event generator ACCERR */
 
 /* ************************************************************************** */
-/** Event User IDs for C32CM5164LE00100 */
+/*  Event User IDs for C32CM5164LE00100 */
 /* ************************************************************************** */
-#define EVENT_ID_USER_OSCCTRL_TUNE                        0 /**< ID for OSCCTRL event user TUNE */
-#define EVENT_ID_USER_RTC_TAMPER                          1 /**< ID for RTC event user TAMPER */
-#define EVENT_ID_USER_NVMCTRL_PAGEW                       2 /**< ID for NVMCTRL event user PAGEW */
-#define EVENT_ID_USER_PORT_EV_0                           3 /**< ID for PORT event user EV_0 */
-#define EVENT_ID_USER_PORT_EV_1                           4 /**< ID for PORT event user EV_1 */
-#define EVENT_ID_USER_PORT_EV_2                           5 /**< ID for PORT event user EV_2 */
-#define EVENT_ID_USER_PORT_EV_3                           6 /**< ID for PORT event user EV_3 */
-#define EVENT_ID_USER_DMAC_CH_0                           7 /**< ID for DMAC event user CH_0 */
-#define EVENT_ID_USER_DMAC_CH_1                           8 /**< ID for DMAC event user CH_1 */
-#define EVENT_ID_USER_DMAC_CH_2                           9 /**< ID for DMAC event user CH_2 */
-#define EVENT_ID_USER_DMAC_CH_3                          10 /**< ID for DMAC event user CH_3 */
-#define EVENT_ID_USER_DMAC_CH_4                          11 /**< ID for DMAC event user CH_4 */
-#define EVENT_ID_USER_DMAC_CH_5                          12 /**< ID for DMAC event user CH_5 */
-#define EVENT_ID_USER_DMAC_CH_6                          13 /**< ID for DMAC event user CH_6 */
-#define EVENT_ID_USER_DMAC_CH_7                          14 /**< ID for DMAC event user CH_7 */
-#define EVENT_ID_USER_TC0_EVU                            15 /**< ID for TC0 event user EVU */
-#define EVENT_ID_USER_TC1_EVU                            16 /**< ID for TC1 event user EVU */
-#define EVENT_ID_USER_TC2_EVU                            17 /**< ID for TC2 event user EVU */
-#define EVENT_ID_USER_TCC0_EV_0                          18 /**< ID for TCC0 event user EV_0 */
-#define EVENT_ID_USER_TCC0_EV_1                          19 /**< ID for TCC0 event user EV_1 */
-#define EVENT_ID_USER_TCC0_MC_0                          20 /**< ID for TCC0 event user MC_0 */
-#define EVENT_ID_USER_TCC0_MC_1                          21 /**< ID for TCC0 event user MC_1 */
-#define EVENT_ID_USER_TCC0_MC_2                          22 /**< ID for TCC0 event user MC_2 */
-#define EVENT_ID_USER_TCC0_MC_3                          23 /**< ID for TCC0 event user MC_3 */
-#define EVENT_ID_USER_TCC1_EV_0                          24 /**< ID for TCC1 event user EV_0 */
-#define EVENT_ID_USER_TCC1_EV_1                          25 /**< ID for TCC1 event user EV_1 */
-#define EVENT_ID_USER_TCC1_MC_0                          26 /**< ID for TCC1 event user MC_0 */
-#define EVENT_ID_USER_TCC1_MC_1                          27 /**< ID for TCC1 event user MC_1 */
-#define EVENT_ID_USER_TCC2_EV_0                          28 /**< ID for TCC2 event user EV_0 */
-#define EVENT_ID_USER_TCC2_EV_1                          29 /**< ID for TCC2 event user EV_1 */
-#define EVENT_ID_USER_TCC2_MC_0                          30 /**< ID for TCC2 event user MC_0 */
-#define EVENT_ID_USER_TCC2_MC_1                          31 /**< ID for TCC2 event user MC_1 */
-#define EVENT_ID_USER_TCC3_EV_0                          32 /**< ID for TCC3 event user EV_0 */
-#define EVENT_ID_USER_TCC3_EV_1                          33 /**< ID for TCC3 event user EV_1 */
-#define EVENT_ID_USER_TCC3_MC_0                          34 /**< ID for TCC3 event user MC_0 */
-#define EVENT_ID_USER_TCC3_MC_1                          35 /**< ID for TCC3 event user MC_1 */
-#define EVENT_ID_USER_TCC3_MC_2                          36 /**< ID for TCC3 event user MC_2 */
-#define EVENT_ID_USER_TCC3_MC_3                          37 /**< ID for TCC3 event user MC_3 */
-#define EVENT_ID_USER_ADC_START                          38 /**< ID for ADC event user START */
-#define EVENT_ID_USER_ADC_SYNC                           39 /**< ID for ADC event user SYNC */
-#define EVENT_ID_USER_AC_SOC_0                           40 /**< ID for AC event user SOC_0 */
-#define EVENT_ID_USER_AC_SOC_1                           41 /**< ID for AC event user SOC_1 */
-#define EVENT_ID_USER_AC_SOC_2                           42 /**< ID for AC event user SOC_2 */
-#define EVENT_ID_USER_AC_SOC_3                           43 /**< ID for AC event user SOC_3 */
-#define EVENT_ID_USER_DAC_START_0                        44 /**< ID for DAC event user START_0 */
-#define EVENT_ID_USER_DAC_START_1                        45 /**< ID for DAC event user START_1 */
-#define EVENT_ID_USER_PTC_STCONV                         46 /**< ID for PTC event user STCONV */
-#define EVENT_ID_USER_PTC_DSEQR                          47 /**< ID for PTC event user DSEQR */
-#define EVENT_ID_USER_CCL_LUTIN_0                        48 /**< ID for CCL event user LUTIN_0 */
-#define EVENT_ID_USER_CCL_LUTIN_1                        49 /**< ID for CCL event user LUTIN_1 */
-#define EVENT_ID_USER_CCL_LUTIN_2                        50 /**< ID for CCL event user LUTIN_2 */
-#define EVENT_ID_USER_CCL_LUTIN_3                        51 /**< ID for CCL event user LUTIN_3 */
+#define EVENT_ID_USER_OSCCTRL_TUNE                        0 /* ID for OSCCTRL event user TUNE */
+#define EVENT_ID_USER_RTC_TAMPER                          1 /* ID for RTC event user TAMPER */
+#define EVENT_ID_USER_NVMCTRL_PAGEW                       2 /* ID for NVMCTRL event user PAGEW */
+#define EVENT_ID_USER_PORT_EV_0                           3 /* ID for PORT event user EV_0 */
+#define EVENT_ID_USER_PORT_EV_1                           4 /* ID for PORT event user EV_1 */
+#define EVENT_ID_USER_PORT_EV_2                           5 /* ID for PORT event user EV_2 */
+#define EVENT_ID_USER_PORT_EV_3                           6 /* ID for PORT event user EV_3 */
+#define EVENT_ID_USER_DMAC_CH_0                           7 /* ID for DMAC event user CH_0 */
+#define EVENT_ID_USER_DMAC_CH_1                           8 /* ID for DMAC event user CH_1 */
+#define EVENT_ID_USER_DMAC_CH_2                           9 /* ID for DMAC event user CH_2 */
+#define EVENT_ID_USER_DMAC_CH_3                          10 /* ID for DMAC event user CH_3 */
+#define EVENT_ID_USER_DMAC_CH_4                          11 /* ID for DMAC event user CH_4 */
+#define EVENT_ID_USER_DMAC_CH_5                          12 /* ID for DMAC event user CH_5 */
+#define EVENT_ID_USER_DMAC_CH_6                          13 /* ID for DMAC event user CH_6 */
+#define EVENT_ID_USER_DMAC_CH_7                          14 /* ID for DMAC event user CH_7 */
+#define EVENT_ID_USER_TC0_EVU                            15 /* ID for TC0 event user EVU */
+#define EVENT_ID_USER_TC1_EVU                            16 /* ID for TC1 event user EVU */
+#define EVENT_ID_USER_TC2_EVU                            17 /* ID for TC2 event user EVU */
+#define EVENT_ID_USER_TCC0_EV_0                          18 /* ID for TCC0 event user EV_0 */
+#define EVENT_ID_USER_TCC0_EV_1                          19 /* ID for TCC0 event user EV_1 */
+#define EVENT_ID_USER_TCC0_MC_0                          20 /* ID for TCC0 event user MC_0 */
+#define EVENT_ID_USER_TCC0_MC_1                          21 /* ID for TCC0 event user MC_1 */
+#define EVENT_ID_USER_TCC0_MC_2                          22 /* ID for TCC0 event user MC_2 */
+#define EVENT_ID_USER_TCC0_MC_3                          23 /* ID for TCC0 event user MC_3 */
+#define EVENT_ID_USER_TCC1_EV_0                          24 /* ID for TCC1 event user EV_0 */
+#define EVENT_ID_USER_TCC1_EV_1                          25 /* ID for TCC1 event user EV_1 */
+#define EVENT_ID_USER_TCC1_MC_0                          26 /* ID for TCC1 event user MC_0 */
+#define EVENT_ID_USER_TCC1_MC_1                          27 /* ID for TCC1 event user MC_1 */
+#define EVENT_ID_USER_TCC2_EV_0                          28 /* ID for TCC2 event user EV_0 */
+#define EVENT_ID_USER_TCC2_EV_1                          29 /* ID for TCC2 event user EV_1 */
+#define EVENT_ID_USER_TCC2_MC_0                          30 /* ID for TCC2 event user MC_0 */
+#define EVENT_ID_USER_TCC2_MC_1                          31 /* ID for TCC2 event user MC_1 */
+#define EVENT_ID_USER_TCC3_EV_0                          32 /* ID for TCC3 event user EV_0 */
+#define EVENT_ID_USER_TCC3_EV_1                          33 /* ID for TCC3 event user EV_1 */
+#define EVENT_ID_USER_TCC3_MC_0                          34 /* ID for TCC3 event user MC_0 */
+#define EVENT_ID_USER_TCC3_MC_1                          35 /* ID for TCC3 event user MC_1 */
+#define EVENT_ID_USER_TCC3_MC_2                          36 /* ID for TCC3 event user MC_2 */
+#define EVENT_ID_USER_TCC3_MC_3                          37 /* ID for TCC3 event user MC_3 */
+#define EVENT_ID_USER_ADC_START                          38 /* ID for ADC event user START */
+#define EVENT_ID_USER_ADC_SYNC                           39 /* ID for ADC event user SYNC */
+#define EVENT_ID_USER_AC_SOC_0                           40 /* ID for AC event user SOC_0 */
+#define EVENT_ID_USER_AC_SOC_1                           41 /* ID for AC event user SOC_1 */
+#define EVENT_ID_USER_AC_SOC_2                           42 /* ID for AC event user SOC_2 */
+#define EVENT_ID_USER_AC_SOC_3                           43 /* ID for AC event user SOC_3 */
+#define EVENT_ID_USER_DAC_START_0                        44 /* ID for DAC event user START_0 */
+#define EVENT_ID_USER_DAC_START_1                        45 /* ID for DAC event user START_1 */
+#define EVENT_ID_USER_PTC_STCONV                         46 /* ID for PTC event user STCONV */
+#define EVENT_ID_USER_PTC_DSEQR                          47 /* ID for PTC event user DSEQR */
+#define EVENT_ID_USER_CCL_LUTIN_0                        48 /* ID for CCL event user LUTIN_0 */
+#define EVENT_ID_USER_CCL_LUTIN_1                        49 /* ID for CCL event user LUTIN_1 */
+#define EVENT_ID_USER_CCL_LUTIN_2                        50 /* ID for CCL event user LUTIN_2 */
+#define EVENT_ID_USER_CCL_LUTIN_3                        51 /* ID for CCL event user LUTIN_3 */
 
 #ifdef __cplusplus
 }
 #endif
-
-/** @}  end of PIC32CM5164LE00100 definitions */
-
 
 #endif /* _PIC32CM5164LE00100_H_ */
 

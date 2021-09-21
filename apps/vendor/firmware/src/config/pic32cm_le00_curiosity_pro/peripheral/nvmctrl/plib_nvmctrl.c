@@ -60,7 +60,7 @@
 
 void NVMCTRL_Initialize(void)
 {
-    NVMCTRL_REGS->NVMCTRL_CTRLB = NVMCTRL_CTRLB_READMODE_NO_MISS_PENALTY | NVMCTRL_CTRLB_SLEEPPRM_WAKEONACCESS | NVMCTRL_CTRLB_RWS(2) ;
+    NVMCTRL_REGS->NVMCTRL_CTRLB = NVMCTRL_CTRLB_READMODE_NO_MISS_PENALTY | NVMCTRL_CTRLB_SLEEPPRM_WAKEONACCESS | NVMCTRL_CTRLB_RWS(3) ;
     NVMCTRL_REGS->NVMCTRL_CTRLC = NVMCTRL_CTRLC_MANW_Msk;
 }
 
@@ -114,6 +114,41 @@ bool NVMCTRL_RowErase( uint32_t address )
     return true;
 }
 
+bool NVMCTRL_PageBufferWrite( uint32_t *data, const uint32_t address)
+{
+    uint32_t i = 0;
+    uint32_t * paddress = (uint32_t *)address;
+
+    if (!(NVMCTRL_REGS->NVMCTRL_STATUS & NVMCTRL_STATUS_LOAD_Msk))
+    {
+        NVMCTRL_REGS->NVMCTRL_ADDR = 0;
+
+        if((address & DATAFLASH_ADDR) == DATAFLASH_ADDR)
+        {
+            NVMCTRL_REGS->NVMCTRL_ADDR = NVMCTRL_ADDR_ARRAY_DATAFLASH;
+        }
+    }
+
+    /* writing 32-bit data into the given address */
+    for (i = 0; i < (NVMCTRL_FLASH_PAGESIZE/4); i++)
+    {
+        *paddress++ = data[i];
+    }
+
+    return true;
+}
+
+bool NVMCTRL_PageBufferCommit( const uint32_t address)
+{
+     /* Set address and command */
+    NVMCTRL_REGS->NVMCTRL_ADDR |= address;
+
+    NVMCTRL_REGS->NVMCTRL_CTRLA = NVMCTRL_CTRLA_CMD_WP_Val | NVMCTRL_CTRLA_CMDEX_KEY;
+
+
+    return true;
+}
+
 NVMCTRL_ERROR NVMCTRL_ErrorGet( void )
 {
     volatile uint32_t nvm_error = 0;
@@ -141,3 +176,4 @@ void NVMCTRL_RegionUnlock(NVMCTRL_MEMORY_REGION region)
 {
     NVMCTRL_REGS->NVMCTRL_NSULCK |= NVMCTRL_NSULCK_NSLKEY_KEY | region;
 }
+

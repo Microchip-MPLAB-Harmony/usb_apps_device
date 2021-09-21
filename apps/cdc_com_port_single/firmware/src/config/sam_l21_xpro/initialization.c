@@ -129,6 +129,8 @@ static DRV_USB_VBUS_LEVEL DRV_USBFSV1_VBUS_Comparator(void)
 
 const DRV_USBFSV1_INIT drvUSBInit =
 {
+    /* Interrupt Source for USB module */ 
+    .interruptSource = USB_IRQn,
 
     /* System module initialization */
     .moduleInit = {0},
@@ -185,7 +187,7 @@ const DRV_USBFSV1_INIT drvUSBInit =
 void SYS_Initialize ( void* data )
 {
 
-    NVMCTRL_REGS->NVMCTRL_CTRLB = NVMCTRL_CTRLB_RWS(3);
+    NVMCTRL_REGS->NVMCTRL_CTRLB = NVMCTRL_CTRLB_RWS(3UL);
 
     PM_Initialize();
 

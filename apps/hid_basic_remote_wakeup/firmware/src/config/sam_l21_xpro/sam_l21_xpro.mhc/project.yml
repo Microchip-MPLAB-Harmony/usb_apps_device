@@ -34,13 +34,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 0D18A719A1E40A8875895284967F66D0
-- generatedChecksum: 09A9B7DD35417497896BA98546C25DFB
+- generatedChecksum: 2AA984125C94003C773E28AEDEF7B11B
   logicalPath: config/sam_l21_xpro
   name: initialization.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 09A9B7DD35417497896BA98546C25DFB
+  userChecksum: 2AA984125C94003C773E28AEDEF7B11B
 - generatedChecksum: 8509FBA69CEB636791375AA313489BCF
   logicalPath: config/sam_l21_xpro
   name: interrupts.c
@@ -1154,13 +1154,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 3E3CC6BC9128194CB4D19F29C57E312B
-- generatedChecksum: 4B3C3EF8A318908A22B78500515C3288
+- generatedChecksum: null
   logicalPath: config/sam_l21_xpro
   name: user.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 4B3C3EF8A318908A22B78500515C3288
+  userChecksum: null
 - generatedChecksum: 55E573926C69F1ADFE3CB68B03DC5352
   logicalPath: packs/ATSAML21J18B_DFP/component
   name: wdt.h

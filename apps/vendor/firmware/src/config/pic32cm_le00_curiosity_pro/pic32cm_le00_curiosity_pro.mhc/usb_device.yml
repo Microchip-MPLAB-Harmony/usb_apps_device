@@ -82,4 +82,4 @@ children:
       - type: Dynamic
         attributes: {id: usb_device, value: Simple WinUSB Device Demo}
 - type: ElementPosition
-  attributes: {x: '193', y: '211', id: usb_device}
+  attributes: {x: '191', y: '252', id: usb_device}

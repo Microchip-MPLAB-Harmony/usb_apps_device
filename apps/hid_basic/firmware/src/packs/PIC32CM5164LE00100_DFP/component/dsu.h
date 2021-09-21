@@ -1,5 +1,5 @@
-/**
- * \brief Component description for DSU
+/*
+ * Component description for DSU
  *
  * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2020-11-17T07:15:55Z */
+/* file generated from device description version 2021-06-28T10:08:20Z */
 #ifndef _PIC32CMLE00_DSU_COMPONENT_H_
 #define _PIC32CMLE00_DSU_COMPONENT_H_
 
@@ -153,18 +153,12 @@
 #define   DSU_DID_DEVSEL_256KB_32KB_100PIN_Val _U_(0x4)                                             /**< (DSU_DID) 256 KB Flash / 32 KB SRAM / 100-pin  */
 #define   DSU_DID_DEVSEL_256KB_32KB_64PIN_Val _U_(0x5)                                             /**< (DSU_DID) 256 KB Flash / 32 KB SRAM / 64-pin  */
 #define   DSU_DID_DEVSEL_256KB_32KB_48PIN_Val _U_(0x6)                                             /**< (DSU_DID) 256 KB Flash / 32 KB SRAM / 48-pin  */
-#define   DSU_DID_DEVSEL_128KB_16KB_100PIN_Val _U_(0x8)                                             /**< (DSU_DID) 128 KB Flash / 16 KB SRAM / 100-pin  */
-#define   DSU_DID_DEVSEL_128KB_16KB_64PIN_Val _U_(0x9)                                             /**< (DSU_DID) 128 KB Flash / 16 KB SRAM / 64-pin  */
-#define   DSU_DID_DEVSEL_128KB_16KB_48PIN_Val _U_(0xA)                                             /**< (DSU_DID) 128 KB Flash / 16 KB SRAM / 48-pin  */
 #define DSU_DID_DEVSEL_512KB_64KB_100PIN      (DSU_DID_DEVSEL_512KB_64KB_100PIN_Val << DSU_DID_DEVSEL_Pos) /**< (DSU_DID) 512 KB Flash / 64 KB SRAM / 100-pin Position  */
 #define DSU_DID_DEVSEL_512KB_64KB_64PIN       (DSU_DID_DEVSEL_512KB_64KB_64PIN_Val << DSU_DID_DEVSEL_Pos) /**< (DSU_DID) 512 KB Flash / 64 KB SRAM / 64-pin Position  */
 #define DSU_DID_DEVSEL_512KB_64KB_48PIN       (DSU_DID_DEVSEL_512KB_64KB_48PIN_Val << DSU_DID_DEVSEL_Pos) /**< (DSU_DID) 512 KB Flash / 64 KB SRAM / 48-pin Position  */
 #define DSU_DID_DEVSEL_256KB_32KB_100PIN      (DSU_DID_DEVSEL_256KB_32KB_100PIN_Val << DSU_DID_DEVSEL_Pos) /**< (DSU_DID) 256 KB Flash / 32 KB SRAM / 100-pin Position  */
 #define DSU_DID_DEVSEL_256KB_32KB_64PIN       (DSU_DID_DEVSEL_256KB_32KB_64PIN_Val << DSU_DID_DEVSEL_Pos) /**< (DSU_DID) 256 KB Flash / 32 KB SRAM / 64-pin Position  */
 #define DSU_DID_DEVSEL_256KB_32KB_48PIN       (DSU_DID_DEVSEL_256KB_32KB_48PIN_Val << DSU_DID_DEVSEL_Pos) /**< (DSU_DID) 256 KB Flash / 32 KB SRAM / 48-pin Position  */
-#define DSU_DID_DEVSEL_128KB_16KB_100PIN      (DSU_DID_DEVSEL_128KB_16KB_100PIN_Val << DSU_DID_DEVSEL_Pos) /**< (DSU_DID) 128 KB Flash / 16 KB SRAM / 100-pin Position  */
-#define DSU_DID_DEVSEL_128KB_16KB_64PIN       (DSU_DID_DEVSEL_128KB_16KB_64PIN_Val << DSU_DID_DEVSEL_Pos) /**< (DSU_DID) 128 KB Flash / 16 KB SRAM / 64-pin Position  */
-#define DSU_DID_DEVSEL_128KB_16KB_48PIN       (DSU_DID_DEVSEL_128KB_16KB_48PIN_Val << DSU_DID_DEVSEL_Pos) /**< (DSU_DID) 128 KB Flash / 16 KB SRAM / 48-pin Position  */
 #define DSU_DID_REVISION_Pos                  _U_(8)                                               /**< (DSU_DID) Revision Number Position */
 #define DSU_DID_REVISION_Msk                  (_U_(0xF) << DSU_DID_REVISION_Pos)                   /**< (DSU_DID) Revision Number Mask */
 #define DSU_DID_REVISION(value)               (DSU_DID_REVISION_Msk & ((value) << DSU_DID_REVISION_Pos))

@@ -5,9 +5,9 @@ frameworkPath: ../../..
 processor: ATSAML21J18B
 projectName: ''
 settings:
-  PackageFilter: bsp;core;core_apps_sam_d21_da1;core_apps_sam_d5x_e5x;core_apps_sam_e70_s70_v70_v71;csp;csp_apps_pic32mx;csp_apps_sam_d21_da1;csp_apps_sam_d5x_e5x;csp_apps_sam_e70_s70_v70_v71;quick_docs;usb;validation;
+  PackageFilter: audio;bootloader;bootloader_apps_usb;bsp;core;core_apps_pic32mx;core_apps_pic32mz_w1;csp;csp_apps_sam_d21_da1;quick_docs;reference_apps;usb;usb_apps_device;usb_apps_dual_role;usb_apps_host;usb_apps_multi_controller
   FORCE_OPTIMIZATION: 'false'
   GENERATE_BACKUP: 'true'
-  CMSISPath: .\dev_packs\arm\CMSIS\5.7.0
+  CMSISPath: .\dev_packs\arm\CMSIS\5.8.0
   MERGE_STRATEGY: USER_ALL
   DFPPath: .\dev_packs\Microchip\SAML21_DFP\3.5.87\saml21b\atdf\ATSAML21J18B.atdf

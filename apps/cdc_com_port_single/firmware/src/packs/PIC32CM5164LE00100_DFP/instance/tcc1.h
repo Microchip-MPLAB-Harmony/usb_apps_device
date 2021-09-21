@@ -1,5 +1,5 @@
-/**
- * \brief Instance header file for PIC32CM5164LE00100
+/*
+ * Instance header file for PIC32CM5164LE00100
  *
  * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2020-11-17T07:15:55Z */
+/* file generated from device description version 2021-06-28T10:08:20Z */
 #ifndef _PIC32CMLE00_TCC1_INSTANCE_
 #define _PIC32CMLE00_TCC1_INSTANCE_
 
@@ -29,6 +29,8 @@
 #define TCC1_CC_NUM                              _UL_(2)    /* Number of Compare/Capture units */
 #define TCC1_DITHERING                           _UL_(1)    /* Dithering feature implemented */
 #define TCC1_DMAC_ID_OVF                         _UL_(30)   /* DMA overflow/underflow/retrigger trigger */
+#define TCC1_DMAC_ID_MC0                         _UL_(31)   /* Indexes of DMA Match/Compare 0 trigger */
+#define TCC1_DMAC_ID_MC1                         _UL_(32)   /* Indexes of DMA Match/Compare 1 trigger */
 #define TCC1_DTI                                 _UL_(0)    /* Dead-Time-Insertion feature implemented */
 #define TCC1_GCLK_ID                             _UL_(25)   /* Index of Generic Clock */
 #define TCC1_MASTER_SLAVE_MODE                   _UL_(2)    /* TCC type 0 : NA, 1 : Master, 2 : Slave */

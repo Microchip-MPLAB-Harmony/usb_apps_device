@@ -1,5 +1,5 @@
-/**
- * \brief Component description for ADC
+/*
+ * Component description for ADC
  *
  * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2020-11-17T07:15:55Z */
+/* file generated from device description version 2021-06-28T10:08:20Z */
 #ifndef _PIC32CMLE00_ADC_COMPONENT_H_
 #define _PIC32CMLE00_ADC_COMPONENT_H_
 
@@ -78,17 +78,17 @@
 #define ADC_REFCTRL_REFSEL_Msk                (_U_(0xF) << ADC_REFCTRL_REFSEL_Pos)                 /**< (ADC_REFCTRL) Reference Selection Mask */
 #define ADC_REFCTRL_REFSEL(value)             (ADC_REFCTRL_REFSEL_Msk & ((value) << ADC_REFCTRL_REFSEL_Pos))
 #define   ADC_REFCTRL_REFSEL_INTREF_Val       _U_(0x0)                                             /**< (ADC_REFCTRL) Internal Voltage Reference  */
-#define   ADC_REFCTRL_REFSEL_INTVCC0_Val      _U_(0x1)                                             /**< (ADC_REFCTRL) 1/1.6 VDDANA  */
-#define   ADC_REFCTRL_REFSEL_INTVCC1_Val      _U_(0x2)                                             /**< (ADC_REFCTRL) 1/2 VDDANA  */
+#define   ADC_REFCTRL_REFSEL_INTVCC0_Val      _U_(0x1)                                             /**< (ADC_REFCTRL) 1/1.6 AVDD  */
+#define   ADC_REFCTRL_REFSEL_INTVCC1_Val      _U_(0x2)                                             /**< (ADC_REFCTRL) 1/2 AVDD  */
 #define   ADC_REFCTRL_REFSEL_VREFA_Val        _U_(0x3)                                             /**< (ADC_REFCTRL) External Voltage Reference A (shared with DAC)  */
 #define   ADC_REFCTRL_REFSEL_VREFB_Val        _U_(0x4)                                             /**< (ADC_REFCTRL) External Voltage Reference B  */
-#define   ADC_REFCTRL_REFSEL_INTVCC2_Val      _U_(0x5)                                             /**< (ADC_REFCTRL) VDDANA  */
+#define   ADC_REFCTRL_REFSEL_INTVCC2_Val      _U_(0x5)                                             /**< (ADC_REFCTRL) AVDD  */
 #define ADC_REFCTRL_REFSEL_INTREF             (ADC_REFCTRL_REFSEL_INTREF_Val << ADC_REFCTRL_REFSEL_Pos) /**< (ADC_REFCTRL) Internal Voltage Reference Position  */
-#define ADC_REFCTRL_REFSEL_INTVCC0            (ADC_REFCTRL_REFSEL_INTVCC0_Val << ADC_REFCTRL_REFSEL_Pos) /**< (ADC_REFCTRL) 1/1.6 VDDANA Position  */
-#define ADC_REFCTRL_REFSEL_INTVCC1            (ADC_REFCTRL_REFSEL_INTVCC1_Val << ADC_REFCTRL_REFSEL_Pos) /**< (ADC_REFCTRL) 1/2 VDDANA Position  */
+#define ADC_REFCTRL_REFSEL_INTVCC0            (ADC_REFCTRL_REFSEL_INTVCC0_Val << ADC_REFCTRL_REFSEL_Pos) /**< (ADC_REFCTRL) 1/1.6 AVDD Position  */
+#define ADC_REFCTRL_REFSEL_INTVCC1            (ADC_REFCTRL_REFSEL_INTVCC1_Val << ADC_REFCTRL_REFSEL_Pos) /**< (ADC_REFCTRL) 1/2 AVDD Position  */
 #define ADC_REFCTRL_REFSEL_VREFA              (ADC_REFCTRL_REFSEL_VREFA_Val << ADC_REFCTRL_REFSEL_Pos) /**< (ADC_REFCTRL) External Voltage Reference A (shared with DAC) Position  */
 #define ADC_REFCTRL_REFSEL_VREFB              (ADC_REFCTRL_REFSEL_VREFB_Val << ADC_REFCTRL_REFSEL_Pos) /**< (ADC_REFCTRL) External Voltage Reference B Position  */
-#define ADC_REFCTRL_REFSEL_INTVCC2            (ADC_REFCTRL_REFSEL_INTVCC2_Val << ADC_REFCTRL_REFSEL_Pos) /**< (ADC_REFCTRL) VDDANA Position  */
+#define ADC_REFCTRL_REFSEL_INTVCC2            (ADC_REFCTRL_REFSEL_INTVCC2_Val << ADC_REFCTRL_REFSEL_Pos) /**< (ADC_REFCTRL) AVDD Position  */
 #define ADC_REFCTRL_REFCOMP_Pos               _U_(7)                                               /**< (ADC_REFCTRL) Reference Buffer Offset Compensation Enable Position */
 #define ADC_REFCTRL_REFCOMP_Msk               (_U_(0x1) << ADC_REFCTRL_REFCOMP_Pos)                /**< (ADC_REFCTRL) Reference Buffer Offset Compensation Enable Mask */
 #define ADC_REFCTRL_REFCOMP(value)            (ADC_REFCTRL_REFCOMP_Msk & ((value) << ADC_REFCTRL_REFCOMP_Pos))
@@ -208,7 +208,7 @@
 #define   ADC_INPUTCTRL_MUXPOS_AIN23_Val      _U_(0x17)                                            /**< (ADC_INPUTCTRL) ADC AIN23 Pin  */
 #define   ADC_INPUTCTRL_MUXPOS_BANDGAP_Val    _U_(0x19)                                            /**< (ADC_INPUTCTRL) Internal Bandgap Voltage  */
 #define   ADC_INPUTCTRL_MUXPOS_SCALEDVDDCORE_Val _U_(0x1A)                                            /**< (ADC_INPUTCTRL) 1/4 Scaled VDDCORE Supply  */
-#define   ADC_INPUTCTRL_MUXPOS_SCALEDVDDANA_Val _U_(0x1B)                                            /**< (ADC_INPUTCTRL) 1/4 Scaled VDDANA Supply  */
+#define   ADC_INPUTCTRL_MUXPOS_SCALEDAVDD_Val _U_(0x1B)                                            /**< (ADC_INPUTCTRL) 1/4 Scaled AVDD Supply  */
 #define   ADC_INPUTCTRL_MUXPOS_DAC_Val        _U_(0x1C)                                            /**< (ADC_INPUTCTRL) DAC VOUT0 Output  */
 #define   ADC_INPUTCTRL_MUXPOS_SCALEDVDDIO_Val _U_(0x1D)                                            /**< (ADC_INPUTCTRL) 1/4 Scaled VDDIO Supply  */
 #define   ADC_INPUTCTRL_MUXPOS_OPAMP01_Val    _U_(0x1E)                                            /**< (ADC_INPUTCTRL) OPAMP0 or OPAMP1 output  */
@@ -239,7 +239,7 @@
 #define ADC_INPUTCTRL_MUXPOS_AIN23            (ADC_INPUTCTRL_MUXPOS_AIN23_Val << ADC_INPUTCTRL_MUXPOS_Pos) /**< (ADC_INPUTCTRL) ADC AIN23 Pin Position  */
 #define ADC_INPUTCTRL_MUXPOS_BANDGAP          (ADC_INPUTCTRL_MUXPOS_BANDGAP_Val << ADC_INPUTCTRL_MUXPOS_Pos) /**< (ADC_INPUTCTRL) Internal Bandgap Voltage Position  */
 #define ADC_INPUTCTRL_MUXPOS_SCALEDVDDCORE    (ADC_INPUTCTRL_MUXPOS_SCALEDVDDCORE_Val << ADC_INPUTCTRL_MUXPOS_Pos) /**< (ADC_INPUTCTRL) 1/4 Scaled VDDCORE Supply Position  */
-#define ADC_INPUTCTRL_MUXPOS_SCALEDVDDANA     (ADC_INPUTCTRL_MUXPOS_SCALEDVDDANA_Val << ADC_INPUTCTRL_MUXPOS_Pos) /**< (ADC_INPUTCTRL) 1/4 Scaled VDDANA Supply Position  */
+#define ADC_INPUTCTRL_MUXPOS_SCALEDAVDD       (ADC_INPUTCTRL_MUXPOS_SCALEDAVDD_Val << ADC_INPUTCTRL_MUXPOS_Pos) /**< (ADC_INPUTCTRL) 1/4 Scaled AVDD Supply Position  */
 #define ADC_INPUTCTRL_MUXPOS_DAC              (ADC_INPUTCTRL_MUXPOS_DAC_Val << ADC_INPUTCTRL_MUXPOS_Pos) /**< (ADC_INPUTCTRL) DAC VOUT0 Output Position  */
 #define ADC_INPUTCTRL_MUXPOS_SCALEDVDDIO      (ADC_INPUTCTRL_MUXPOS_SCALEDVDDIO_Val << ADC_INPUTCTRL_MUXPOS_Pos) /**< (ADC_INPUTCTRL) 1/4 Scaled VDDIO Supply Position  */
 #define ADC_INPUTCTRL_MUXPOS_OPAMP01          (ADC_INPUTCTRL_MUXPOS_OPAMP01_Val << ADC_INPUTCTRL_MUXPOS_Pos) /**< (ADC_INPUTCTRL) OPAMP0 or OPAMP1 output Position  */

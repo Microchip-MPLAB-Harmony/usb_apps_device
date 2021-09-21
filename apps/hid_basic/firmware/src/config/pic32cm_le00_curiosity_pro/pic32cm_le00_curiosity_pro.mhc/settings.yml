@@ -5,10 +5,10 @@ frameworkPath: ../../..
 processor: PIC32CM5164LE00100
 projectName: ''
 settings:
-  PackageFilter: audio;bootloader;bootloader_apps_usb;bsp;core;core_apps_pic32mx;core_apps_pic32mz_w1;csp;quick_docs;reference_apps;usb;usb_apps_device;usb_apps_dual_role;usb_apps_host;usb_apps_multi_controller
+  PackageFilter: audio;bootloader;bootloader_apps_usb;bsp;core;core_apps_pic32mx;core_apps_pic32mz_w1;csp;csp_apps_sam_d21_da1;quick_docs;reference_apps;usb;usb_apps_device;usb_apps_dual_role;usb_apps_host;usb_apps_multi_controller
   FORCE_OPTIMIZATION: 'false'
   GENERATE_BACKUP: 'true'
   TRUSTZONE: 'false'
-  CMSISPath: .\dev_packs\arm\CMSIS\5.7.0
+  CMSISPath: .\dev_packs\arm\CMSIS\5.8.0
   MERGE_STRATEGY: USER_ALL
-  DFPPath: .\dev_packs\Microchip\PIC32CM-LE_DFP\1.0.110\atdf\PIC32CM5164LE00100.atdf
+  DFPPath: .\dev_packs\Microchip\PIC32CM-LE_DFP\1.0.134\atdf\PIC32CM5164LE00100.atdf

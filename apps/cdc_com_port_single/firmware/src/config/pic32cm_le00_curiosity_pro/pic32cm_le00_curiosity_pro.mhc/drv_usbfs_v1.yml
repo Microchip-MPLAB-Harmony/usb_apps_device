@@ -12,4 +12,4 @@ children:
       - type: User
         attributes: {value: USB_VBUS_SENSE}
 - type: ElementPosition
-  attributes: {x: '17', y: '271', id: drv_usbfs_v1}
+  attributes: {x: '13', y: '321', id: drv_usbfs_v1}

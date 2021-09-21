@@ -10,6 +10,6 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: nvmctrl, value: '2'}
+        attributes: {id: nvmctrl, value: '3'}
 - type: ElementPosition
   attributes: {x: '20', y: '20', id: nvmctrl}

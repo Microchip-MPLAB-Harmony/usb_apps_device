@@ -129,6 +129,8 @@ static DRV_USB_VBUS_LEVEL DRV_USBFSV1_VBUS_Comparator(void)
 
 const DRV_USBFSV1_INIT drvUSBInit =
 {
+    /* Interrupt Source for USB module */ 
+    .interruptSource = USB_IRQn,
 
     /* System module initialization */
     .moduleInit = {0},

@@ -1,5 +1,5 @@
-/**
- * \brief Peripheral I/O description for PIC32CM5164LE00100
+/*
+ * Peripheral I/O description for PIC32CM5164LE00100
  *
  * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2020-11-17T07:15:55Z */
+/* file generated from device description version 2021-06-28T10:08:20Z */
 #ifndef _PIC32CM5164LE00100_GPIO_H_
 #define _PIC32CM5164LE00100_GPIO_H_
 
