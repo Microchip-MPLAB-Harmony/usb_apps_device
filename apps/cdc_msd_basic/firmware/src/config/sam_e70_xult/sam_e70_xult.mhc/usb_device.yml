@@ -96,7 +96,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: drv_usbhs_v1, value: High Speed}
+        attributes: {id: usb_device, value: High Speed}
   - type: Boolean
     attributes: {id: CONFIG_USB_DEVICE_USE_MSD}
     children:

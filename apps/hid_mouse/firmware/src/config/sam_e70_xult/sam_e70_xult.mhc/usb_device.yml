@@ -73,6 +73,6 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: drv_usbhs_v1, value: High Speed}
+        attributes: {id: usb_device, value: High Speed}
 - type: ElementPosition
   attributes: {x: '158', y: '243', id: usb_device}

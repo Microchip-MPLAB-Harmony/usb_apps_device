@@ -73,7 +73,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: drv_usbhs_v1, value: High Speed}
+        attributes: {id: usb_device, value: High Speed}
   - type: Integer
     attributes: {id: USB_DEVICE_RTOS_DELAY}
     children:
