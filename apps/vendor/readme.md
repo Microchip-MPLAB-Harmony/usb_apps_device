@@ -90,7 +90,7 @@ Following table gives the details of project configurations, target device used,
 ### <a name="config_10"></a> [SAMA5D2 Xplained Ultra Board](https://www.microchip.com/Developmenttools/ProductDetails/ATSAMA5D2C-XULT)
 
 - Setup the SD card
-    - Download harmony MPU bootstrap loader from this [location](https://github.com/Microchip-MPLAB-Harmony/at91bootstrap/blob/master/boot.bin)
+    - Download harmony MPU bootstrap loader from this [location](firmware/at91bootstrap_sam_a5d2_xult.X/binaries/boot.bin)
     - Copy the downloaded boot loader binary( boot.bin) and generated application binary (harmony.bin)into the SD card
     - Insert the SD card into the SDMMC1 slot on the board
 - Short jumper JP2(DEBUG_DIS)
