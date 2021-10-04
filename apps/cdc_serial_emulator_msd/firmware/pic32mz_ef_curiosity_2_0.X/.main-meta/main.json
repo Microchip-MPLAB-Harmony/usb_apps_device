@@ -4,7 +4,7 @@
 	"content": {
 		"metaDataVersion": "1.1.0",
 		"name": "com.microchip.mcu32.mplabx.project.usb_apps_device_cdc_serial_emulator_msd_pic32mz_ef_curiosity_2",
-		"version": "3.1.1",
+		"version": "3.2.0",
 		"displayName": "CDC Serial Emulator + MSD Example (cdc_serial_emulator) Example for PIC32MZ EF Family",
 		"projectName": "cdc_serial_emulator_msd_pic32mz_ef_curiosity_2",
 		"shortDescription": "This application demonstrates the use of the CDC device and MSD class to implement a USB-to-Serial Converter and MSD device. TThe application enumerates a COM port on the personal computer. Data received through the CDC USB interface is forwarded to a UART. Data received on the UART is forwarded to the CDC USB interface on the target board. The interface between the UART and the CDC USB Interface on the board demonstrates the USB to UART capability.",
@@ -15,7 +15,7 @@
 		"compiler": [
 			{
 				"name": "XC32",
-				"semverRange": ">=3.0.0"
+				"semverRange": ">=3.1.0"
 			}
 		],
 		"dfp": {
@@ -42,10 +42,10 @@
 				"Development Kit", "Curiosity PIC32MZ EF 2.0 Development Board"
 			],
 			[
-				"Harmony", "Middleware", "USB", "CDC_SERIAL_EMULATOR_MSD"
+				"Harmony", "Middleware", "USB", "DEVICE_CDC_SERIAL_EMULATOR_MSD"
 			],
 			[
-				"Middleware", "USB", "CDC_SERIAL_EMULATOR_MSD"
+				"Middleware", "USB", "DEVICE_CDC_SERIAL_EMULATOR_MSD"
 			]
 		],
 		"peripherals": [

@@ -4,7 +4,7 @@
 	"content": {
 		"metaDataVersion": "1.1.0",
 		"name": "com.microchip.mcu32.mplabx.project.usb_apps_device_msd_multiple_luns_pic32mx470_curiosity",
-		"version": "3.1.1",
+		"version": "3.2.0",
 		"displayName": "USB MSD with Multiple Drives Application Example for PIC32MX Family",
 		"projectName": "msd_multiple_luns_pic32mx470_curiosity",
 		"shortDescription": "This application demonstrates the creation of a USB device with multiple drives or logical units (LUN)",
@@ -15,7 +15,7 @@
 		"compiler": [
 			{
 				"name": "XC32",
-				"semverRange": ">=3.0.0"
+				"semverRange": ">=3.1.0"
 			}
 		],
 		"dfp": {
@@ -42,10 +42,10 @@
 				"Development Kit", "Curiosity PIC32MX470 Development Board"
 			],
 			[
-				"Harmony", "Middleware", "USB", "MSD_MULTIPLE_LUNS"
+				"Harmony", "Middleware", "USB", "DEVICE_MSD_MULTIPLE_LUNS"
 			],
 			[
-				"Middleware", "USB", "MSD_MULTIPLE_LUNS"
+				"Middleware", "USB", "DEVICE_MSD_MULTIPLE_LUNS"
 			]
 		],
 		"peripherals": [

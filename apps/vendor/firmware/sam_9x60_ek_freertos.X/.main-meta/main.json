@@ -4,7 +4,7 @@
 	"content": {
 		"metaDataVersion": "1.1.0",
 		"name": "com.microchip.mcu32.mplabx.project.usb_apps_device_vendor_sam_9x60_ek_freertos",
-		"version": "3.1.1",
+		"version": "3.2.0",
 		"displayName": "Vendor Example (vendor)  Example for SAM 9x60 Family",
 		"projectName": "vendor_sam_9x60_ek_freertos",
 		"shortDescription": "This application creates a USB CDC Device that enumerates as a custom vendor USB device on the USB host PC. The device uses USB Device Layer Endpoint functions and demonstrates the PC host's ability to control the LEDs on the board and query the status of a switch through PC utility.",
@@ -15,7 +15,7 @@
 		"compiler": [
 			{
 				"name": "XC32",
-				"semverRange": ">=3.0.0"
+				"semverRange": ">=3.1.0"
 			}
 		],
 		"dfp": {
@@ -42,10 +42,10 @@
 				"Development Kit", "SAM9X60-EK Evaluation Kit"
 			],
 			[
-				"Harmony", "Middleware", "USB", "VENDOR"
+				"Harmony", "Middleware", "USB", "DEVICE_VENDOR"
 			],
 			[
-				"Middleware", "USB", "VENDOR"
+				"Middleware", "USB", "DEVICE_VENDOR"
 			]
 		],
 		"peripherals": [

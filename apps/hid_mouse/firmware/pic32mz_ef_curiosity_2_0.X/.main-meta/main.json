@@ -4,7 +4,7 @@
 	"content": {
 		"metaDataVersion": "1.1.0",
 		"name": "com.microchip.mcu32.mplabx.project.usb_apps_device_hid_mouse_pic32mz_ef_curiosity_2",
-		"version": "3.1.1",
+		"version": "3.2.0",
 		"displayName": HID Mouse Example (hid_mouse) Example for PIC32MZ EF Family",
 		"projectName": "hid_mouse_pic32mz_ef_curiosity_2",
 		"shortDescription": "This demonstration application creates a USB HID based two-button mouse device. When connected, the device emulates mouse operation by moving the cursor in a circular pattern. When the button in USB device is pressed the movement of cursor is Stopped/Started again .",
@@ -15,7 +15,7 @@
 		"compiler": [
 			{
 				"name": "XC32",
-				"semverRange": ">=3.0.0"
+				"semverRange": ">=3.1.0"
 			}
 		],
 		"dfp": {
@@ -42,10 +42,10 @@
 				"Development Kit", "Curiosity PIC32MZ EF 2.0 Development Board"
 			],
 			[
-				"Harmony", "Middleware", "USB", "HID_MOUSE"
+				"Harmony", "Middleware", "USB", "DEVICE_HID_MOUSE"
 			],
 			[
-				"Middleware", "USB", "HID_MOUSE"
+				"Middleware", "USB", "DEVICE_HID_MOUSE"
 			]
 		],
 		"peripherals": [

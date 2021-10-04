@@ -4,7 +4,7 @@
 	"content": {
 		"metaDataVersion": "1.1.0",
 		"name": "com.microchip.mcu32.mplabx.project.usb_apps_device_msd_sdcard_sam_e70_xult",
-		"version": "3.1.1",
+		"version": "3.2.0",
 		"displayName": "MSD SD Card Example (msd_sdcard) Example for SAM E70/S70/V70/V71 Family",
 		"projectName": "msd_sdcard_sam_e70_xult",
 		"shortDescription": "This application creates a USB MSD Device that enumerates as a Flash Drive on the USB host PC. The application allows read / write / modify / delete data from a PC host like any normal Flash drive.",
@@ -15,7 +15,7 @@
 		"compiler": [
 			{
 				"name": "XC32",
-				"semverRange": ">=3.0.0"
+				"semverRange": ">=3.1.0"
 			}
 		],
 		"dfp": {
@@ -42,10 +42,10 @@
 				"Development Kit", "SAM E70 Xplained Ultra Evaluation Kit"
 			],
 			[
-				"Harmony", "Middleware", "USB", "MSD_SDCARD"
+				"Harmony", "Middleware", "USB", "DEVICE_MSD_SDCARD"
 			],
 			[
-				"Middleware", "USB", "MSD_SDCARD"
+				"Middleware", "USB", "DEVICE_MSD_SDCARD"
 			]
 		],
 		"peripherals": [

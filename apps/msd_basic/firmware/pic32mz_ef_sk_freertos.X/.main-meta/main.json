@@ -4,7 +4,7 @@
 	"content": {
 		"metaDataVersion": "1.1.0",
 		"name": "com.microchip.mcu32.mplabx.project.usb_apps_device_msd_basic_pic32mz_ef_sk_freertos",
-		"version": "3.1.1",
+		"version": "3.2.0",
 		"displayName": "MSD Basic Example (msd_basic) Example for PIC32MZ EF Family",
 		"projectName": "msd_basic_pic32mz_ef_sk_freertos",
 		"shortDescription": "This application creates a USB MSD Device that enumerates as a Flash Drive on the USB host PC. The application allows read / write / modify / delete data from a PC host like any normal Flash drive.",
@@ -15,7 +15,7 @@
 		"compiler": [
 			{
 				"name": "XC32",
-				"semverRange": ">=3.0.0"
+				"semverRange": ">=3.1.0"
 			}
 		],
 		"dfp": {
@@ -42,10 +42,10 @@
 				"Development Kit", "PIC32MZ Embedded Connectivity with FPU (EF) Starter Kit"
 			],
 			[
-				"Harmony", "Middleware", "USB", "MSD_BASIC"
+				"Harmony", "Middleware", "USB", "DEVICE_MSD_BASIC"
 			],
 			[
-				"Middleware", "USB", "MSD_BASIC"
+				"Middleware", "USB", "DEVICE_MSD_BASIC"
 			]
 		],
 		"peripherals": [

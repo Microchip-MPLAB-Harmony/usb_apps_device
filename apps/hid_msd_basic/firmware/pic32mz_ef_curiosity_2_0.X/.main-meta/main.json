@@ -4,7 +4,7 @@
 	"content": {
 		"metaDataVersion": "1.1.0",
 		"name": "com.microchip.mcu32.mplabx.project.usb_apps_device_hid_msd_basic_pic32mz_ef_curiosity_2",
-		"version": "3.1.1",
+		"version": "3.2.0",
 		"displayName": "HID MSD Basic Example (hid_msd_basic) Example for PIC32MZ EF Family",
 		"projectName": "hid_msd_basic_pic32mz_ef_curiosity_2",
 		"shortDescription": "This demonstration application creates a USB Device that combines the functionality of the hid_basic and msd_basic demonstration applications. ",
@@ -15,7 +15,7 @@
 		"compiler": [
 			{
 				"name": "XC32",
-				"semverRange": ">=3.0.0"
+				"semverRange": ">=3.1.0"
 			}
 		],
 		"dfp": {
@@ -42,10 +42,10 @@
 				"Development Kit", "Curiosity PIC32MZ EF 2.0 Development Board"
 			],
 			[
-				"Harmony", "Middleware", "USB", "HID_MSD_BASIC"
+				"Harmony", "Middleware", "USB", "DEVICE_HID_MSD_BASIC"
 			],
 			[
-				"Middleware", "USB", "HID_MSD_BASIC"
+				"Middleware", "USB", "DEVICE_HID_MSD_BASIC"
 			]
 		],
 		"peripherals": [

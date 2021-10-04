@@ -3,11 +3,11 @@
 	"category": "com.microchip.ide.project",
 	"content": {
 		"metaDataVersion": "1.1.0",
-		"name": "com.microchip.mcu32.mplabx.project.usb_apps_device_vendor_sam_a5d2_iar",
-		"version": "3.1.1",
-		"displayName": "endor Example (vendor) Example for SAM A5D2 Family",
-		"projectName": "vendor_sam_a5d2_xult_iar",
-		"shortDescription":  "This application creates a USB CDC Device that enumerates as a custom vendor USB device on the USB host PC. The device uses USB Device Layer Endpoint functions and demonstrates the PC host's ability to control the LEDs on the board and query the status of a switch through PC utility.",
+		"name": "com.microchip.mcu32.mplabx.project.usb_apps_device_hid_basic_remote_wakeup_sam_l21_xpro",
+		"version": "3.2.0",
+		"displayName": "HID Basic Remote basic Example (hid_basic) Example for SAM L21/L22 Family",
+		"projectName": "hid_basic_remote_wakeup_sam_l21_xpro",
+		"shortDescription": "This application creates a USB HID Device that enumerates as a custom USB HID device on the USB host PC. The device allows the status of a device and having a remote wakeup feature.",
 		"ide": {
 			"name": "MPLABX",
 			"semverRange": ">=5.50.0"
@@ -15,12 +15,12 @@
 		"compiler": [
 			{
 				"name": "XC32",
-				"semverRange": ">=3.0.0"
+				"semverRange": ">=3.1.0"
 			}
 		],
 		"dfp": {
-			"name": "SAMA5D2_DFP",
-			"semverRange": "^1.5.53"
+			"name": "SAML21_DFP",
+			"semverRange": "^3.5.87"
 		},
 		"configurator": {
 			"name": "MHC",
@@ -32,20 +32,20 @@
 			"content": {
 				"metaDataVersion": "1.0.0",
 				"category": "com.microchip.device",
-				"name": "SAMA5D2",
+				"name": "ATSAML21J18B",
 				"versionRange": "*"
 			}
 		},
 		"author": "Microchip",
 		"subcategories": [
 			[
-				"Development Kit", "SAMA5D2-XULT Evaluation Kit"
+				"Development Kit", "SAM L21 Xplained Pro Evaluation Kit"
 			],
 			[
-				"Harmony", "Middleware", "USB", "VENDOR"
+				"Harmony", "Middleware", "USB", "DEVICE_HID_BASIC_REMOTE_WAKEUP"
 			],
 			[
-				"Middleware", "USB", "VENDOR"
+				"Middleware", "USB", "DEVICE_HID_BASIC_REMOTE_WAKEUP"
 			]
 		],
 		"peripherals": [
@@ -56,8 +56,8 @@
 			"Harmony",
 			"Middleware",
 			"USB",
-			"SAMA5D2",
-			"SAM A5D2 Family",
+			"ATSAML21J18B",
+			"SAM L21/L22 Family",
 			"USB"
 		],
 		"additionalData": {
