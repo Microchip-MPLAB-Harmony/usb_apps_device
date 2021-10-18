@@ -240,6 +240,14 @@ static void SYSC_Disable( void )
     rstc_mr = rstc_mr & (~RSTC_MR_URSTIEN_Msk);
     RSTC_REGS->RSTC_MR = RSTC_MR_KEY_PASSWD | rstc_mr;
 
+    /* ----------------------------   PIT  -------------------------------*/
+    //Disable Timer and interrupt
+    uint32_t pit_mr = PIT_REGS->PIT_MR & PIT_MR_PIV_Msk;
+    PIT_REGS->PIT_MR = pit_mr & ~(PIT_MR_PITEN_Msk | PIT_MR_PITIEN_Msk);
+
+    //Clear status
+    PIT_REGS->PIT_SR;
+
    //Context restore SYSC write protect registers
    SYSCWP_REGS->SYSCWP_SYSC_WPMR = (SYSCWP_SYSC_WPMR_WPKEY_PASSWD | sysc_wpmr);
 }
@@ -270,8 +278,6 @@ void SYS_Initialize ( void* data )
 
 
 	BSP_Initialize();
-	PIT_TimerInitialize();
-
     MMU_Initialize();
 
     AIC_INT_Initialize();

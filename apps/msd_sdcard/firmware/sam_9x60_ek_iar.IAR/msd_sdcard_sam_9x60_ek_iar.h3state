@@ -16,8 +16,7 @@
             "..\\src", 
             "..\\src\\config\\sam_9x60_ek_iar", 
             "..\\src\\packs\\SAM9X60_DFP", 
-            "..\\src\\packs\\CMSIS\\CMSIS\\Core\\Include", 
-            "..\\src\\packs\\CMSIS"
+            "."
         ]
     }
 }

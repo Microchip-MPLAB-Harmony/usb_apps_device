@@ -1260,20 +1260,6 @@ children:
       children:
       - type: Dynamic
         attributes: {id: core, value: '200000000'}
-  - type: Boolean
-    attributes: {id: PIT_INTERRUPT_ENABLE}
-    children:
-    - type: Values
-      children:
-      - type: Dynamic
-        attributes: {id: pit, value: 'true'}
-  - type: String
-    attributes: {id: PIT_INTERRUPT_HANDLER}
-    children:
-    - type: Values
-      children:
-      - type: Dynamic
-        attributes: {id: pit, value: PIT_InterruptHandler}
   - type: Integer
     attributes: {id: PWM_CLOCK_FREQUENCY}
     children:
@@ -1504,7 +1490,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: 'true'}
+        attributes: {id: core, value: 'false'}
   - type: String
     attributes: {id: SYSC_INTERRUPT_HANDLER}
     children:
