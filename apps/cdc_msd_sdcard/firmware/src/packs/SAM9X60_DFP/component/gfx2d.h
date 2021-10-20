@@ -1,5 +1,5 @@
-/**
- * \brief Component description for GFX2D
+/*
+ * Component description for GFX2D
  *
  * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2020-12-18T05:22:35Z */
+/* file generated from device description version 2021-05-04T16:22:14Z */
 #ifndef _SAM9X_GFX2D_COMPONENT_H_
 #define _SAM9X_GFX2D_COMPONENT_H_
 

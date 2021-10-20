@@ -564,13 +564,13 @@ USB_DEVICE_CONFIGURATION_DESCRIPTORS_TABLE fullSpeedConfigDescSet[1] =
     {
         uint8_t bLength;                                    // Size of this descriptor in bytes
         uint8_t bDscType;                                   // STRING descriptor type
-        uint16_t string[11];                                // String
+        uint16_t string[12];                                // String
     }
     serialNumberStringDescriptor =
     {
         sizeof(serialNumberStringDescriptor),
         USB_DESCRIPTOR_STRING,
-        {'1','2','3','4','5','6','7','8','9','9','9'}
+        {'1','2','3','4','5','6','7','8','9','0','1','2'}
 		
     };
 

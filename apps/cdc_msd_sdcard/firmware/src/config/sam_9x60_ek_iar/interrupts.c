@@ -145,12 +145,10 @@ void SMC_Handler( void )                 __attribute__((weak, alias("DefaultInte
 void SDMMC0_InterruptHandler(            void );
 void TC0_InterruptHandler(               void );
 void DRV_USB_UDPHS_Handler(              void );
-void PIT_InterruptHandler(               void );
 
 /* Handlers for vectors that are shared by multiple interrupts */
 void SYSC_SharedHandler( void )
 {
-    PIT_InterruptHandler();
 }
 void ECC_SharedHandler( void )
 {
@@ -161,7 +159,6 @@ void MC_SharedHandler( void )
 
 /* data for irq register initialization */
 IrqData irqData[] = {
-    { 1,   (uint32_t) AIC_REGS,    SYSC_SharedHandler,         AIC_SMR_SRCTYPE_INT_LEVEL_SENSITIVE_Val,  0x0 },
     { 12,  (uint32_t) AIC_REGS,    SDMMC0_InterruptHandler,    AIC_SMR_SRCTYPE_INT_LEVEL_SENSITIVE_Val,  0x0 },
     { 17,  (uint32_t) AIC_REGS,    TC0_InterruptHandler,       AIC_SMR_SRCTYPE_INT_LEVEL_SENSITIVE_Val,  0x0 },
     { 23,  (uint32_t) AIC_REGS,    DRV_USB_UDPHS_Handler,      AIC_SMR_SRCTYPE_INT_LEVEL_SENSITIVE_Val,  0x0 },

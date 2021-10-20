@@ -347,8 +347,7 @@
                     <state>$PROJ_DIR$\..\src</state>
                     <state>$PROJ_DIR$\..\src\config\sam_9x60_ek_iar</state>
                     <state>$PROJ_DIR$\..\src\packs\SAM9X60_DFP</state>
-                    <state>$PROJ_DIR$\..\src\packs\CMSIS\CMSIS\Core\Include</state>
-                    <state>$PROJ_DIR$\..\src\packs\CMSIS</state>
+                    <state>$PROJ_DIR$\.</state>
                     <state>$PROJ_DIR$\..\..\firmware\src</state>
                     <state>$PROJ_DIR$\..\..\firmware\src\config\sam_9x60_ek_iar</state>
                     <state>$PROJ_DIR$\..\..\firmware\src\packs\SAM9X60_DFP</state>
@@ -1416,8 +1415,7 @@
                     <state>$PROJ_DIR$\..\src</state>
                     <state>$PROJ_DIR$\..\src\config\sam_9x60_ek_iar</state>
                     <state>$PROJ_DIR$\..\src\packs\SAM9X60_DFP</state>
-                    <state>$PROJ_DIR$\..\src\packs\CMSIS\CMSIS\Core\Include</state>
-                    <state>$PROJ_DIR$\..\src\packs\CMSIS</state>
+                    <state>$PROJ_DIR$\.</state>
                     <state>$PROJ_DIR$\..\..\firmware\src</state>
                     <state>$PROJ_DIR$\..\..\firmware\src\config\sam_9x60_ek_iar</state>
                     <state>$PROJ_DIR$\..\..\firmware\src\packs\SAM9X60_DFP</state>
@@ -2254,14 +2252,20 @@
                             <name>$PROJ_DIR$\..\src\config\sam_9x60_ek_iar\bsp\bsp.h</name>
                         </file>
                     </group>
+                    <file>
+                        <name>$PROJ_DIR$\..\src\config\sam_9x60_ek_iar\device_cache.h</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\src\config\sam_9x60_ek_iar\toolchain_specifics.h</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\src\config\sam_9x60_ek_iar\definitions.h</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\src\config\sam_9x60_ek_iar\interrupts.h</name>
+                    </file>
                     <group>
                         <name>peripheral</name>
-                        <group>
-                            <name>pit</name>
-                            <file>
-                                <name>$PROJ_DIR$\..\src\config\sam_9x60_ek_iar\peripheral\pit\plib_pit.h</name>
-                            </file>
-                        </group>
                         <group>
                             <name>mmu</name>
                             <file>
@@ -2308,18 +2312,6 @@
                             </file>
                         </group>
                     </group>
-                    <file>
-                        <name>$PROJ_DIR$\..\src\config\sam_9x60_ek_iar\device_cache.h</name>
-                    </file>
-                    <file>
-                        <name>$PROJ_DIR$\..\src\config\sam_9x60_ek_iar\toolchain_specifics.h</name>
-                    </file>
-                    <file>
-                        <name>$PROJ_DIR$\..\src\config\sam_9x60_ek_iar\definitions.h</name>
-                    </file>
-                    <file>
-                        <name>$PROJ_DIR$\..\src\config\sam_9x60_ek_iar\interrupts.h</name>
-                    </file>
                     <group>
                         <name>system</name>
                         <group>
@@ -2797,14 +2789,20 @@
                             </file>
                         </group>
                     </group>
+                    <file>
+                        <name>$PROJ_DIR$\..\src\config\sam_9x60_ek_iar\initialization.c</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\src\config\sam_9x60_ek_iar\interrupts.c</name>
+                    </file>
+                    <group>
+                        <name>stdio</name>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\config\sam_9x60_ek_iar\stdio\iar_monitor.c</name>
+                        </file>
+                    </group>
                     <group>
                         <name>peripheral</name>
-                        <group>
-                            <name>pit</name>
-                            <file>
-                                <name>$PROJ_DIR$\..\src\config\sam_9x60_ek_iar\peripheral\pit\plib_pit.c</name>
-                            </file>
-                        </group>
                         <group>
                             <name>mmu</name>
                             <file>
@@ -2841,18 +2839,6 @@
                                 <name>$PROJ_DIR$\..\src\config\sam_9x60_ek_iar\peripheral\sdmmc\plib_sdmmc0.c</name>
                             </file>
                         </group>
-                    </group>
-                    <file>
-                        <name>$PROJ_DIR$\..\src\config\sam_9x60_ek_iar\initialization.c</name>
-                    </file>
-                    <file>
-                        <name>$PROJ_DIR$\..\src\config\sam_9x60_ek_iar\interrupts.c</name>
-                    </file>
-                    <group>
-                        <name>stdio</name>
-                        <file>
-                            <name>$PROJ_DIR$\..\src\config\sam_9x60_ek_iar\stdio\iar_monitor.c</name>
-                        </file>
                     </group>
                     <file>
                         <name>$PROJ_DIR$\..\src\config\sam_9x60_ek_iar\cstartup.s</name>

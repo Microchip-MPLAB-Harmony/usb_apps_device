@@ -53,7 +53,6 @@
 #include "usb/usb_device_msd.h"
 #include "usb/usb_msd.h"
 #include "driver/sdmmc/drv_sdmmc.h"
-#include "peripheral/pit/plib_pit.h"
 #include "peripheral/mmu/plib_mmu.h"
 #include "peripheral/clk/plib_clk.h"
 #include "peripheral/pio/plib_pio.h"
