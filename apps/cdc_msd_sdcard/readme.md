@@ -33,6 +33,8 @@ Following table gives the details of project configurations, target device used,
 | sam_9x60_ek_iar.IAR             | IAR    | SAM9X60             | [SAM9X60-EK Evaluation Board](#config_9)                                   | 
 | sam_a5d2_xult.X                 | MPLABX | ATSAMA5D27C         | [SAMA5D2 Xplained Ultra Board](#config_10)                                 |
 | sam_a5d27_som1_ek.X             | MPLABX | ATSAMA5D27C         | [SAMA5D27 SOM1 Kit1](#config_18)                                           |
+| sam_a5d27_wlsom1_ek1.X          | MPLABX | ATSAMA5D27C         | [ATSAMA5D27 WLSOM1 EK1](#config_19)                                        |
+
 
 ## <a name="config_title"></a> Configuring the Hardware
 
@@ -99,6 +101,19 @@ Following table gives the details of project configurations, target device used,
 - RGB LED turning to Green indicates USB Device Configuration Set Complete event (The USB device functionality has been activated by the USB Host).
 - Press the pushbutton PB4 to trigger communication from the USB Device to the USB Host.
   ![SAMA5D2-SOM1-EK Evaluation Board](images/SAMA5D2_SOM1_EK_USB.png)
+
+### <a name="config_19"></a> [ATSAMA5D27-WLSOM1 Evaluation Kit](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320117)
+
+- Setup the SD card 
+    - Download harmony MPU bootstrap loader from this [location](firmware/at91bootstrap_sam_a5d27_wlsom1_ek1.X/binaries/boot.bin).
+    - Copy the downloaded boot loader binary (boot.bin) and generated application binary (harmony.bin) into the SD card.
+    - Insert the SD card into the SDMMC0 Card Connector (J9) on the board.
+    - Reset the board by pressing the Reset Button (SW2) 
+- Connect the USB-A MicroAB connector (J10) on the board to the computer using a micro USB cable.
+- Press the "START_SOM" button to activate board start-up.  
+- RGB LED turning to Green indicates USB Device Configuration Set Complete event (The USB device functionality has been activated by the USB Host).
+- Press the pushbutton SW4 to trigger communication from the USB Device to the USB Host.
+  ![SAMA5D2-WLSOM1-EK Evaluation Board](images/SAMA5D2_WLSOM1_EK_USB.png)
 
 ## Running the Application
 
