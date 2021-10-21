@@ -31,6 +31,7 @@ Following table gives the details of project configurations, target device used,
 | sam_9x60_ek.X                   | MPLABX | SAM9X60             | [SAM9X60-EK Evaluation Board](#config_9)                                   |
 | sam_9x60_ek.X                   | IAR    | SAM9X60             | [SAM9X60-EK Evaluation Board](#config_9)                                   | 
 | sam_9x60_ek_iar.IAR             | IAR    | SAM9X60             | [SAM9X60-EK Evaluation Board](#config_9)                                   | 
+| sam_a5d2_xult.X                 | MPLABX | ATSAMA5D27C         | [SAMA5D2 Xplained Ultra Board](#config_10)                                 |
 
 ## <a name="config_title"></a> Configuring the Hardware
 
@@ -50,6 +51,18 @@ Following table gives the details of project configurations, target device used,
     ![SAM9X60-EK Evaluation Board](images/sam9x60_evk.png)
 
     **Note: Reset push button on SAM9X60 EK is labeled as SW3**
+
+### <a name="config_10"></a> [SAMA5D2 Xplained Ultra Board](https://www.microchip.com/Developmenttools/ProductDetails/ATSAMA5D2C-XULT)
+- Setup the SD card 
+    - Download harmony MPU bootstrap loader from this [location](firmware/at91bootstrap_sam_a5d2_xult.X/binaries/boot.bin).
+    - Copy the downloaded boot loader binary (boot.bin) and generated application binary (harmony.bin) into the SD card.
+    - Insert the SD card into the SDMMC1 slot on the board.
+    - Reset the board by pressing the Push Button BP3. 
+- Short jumper JP2(DEBUG_DIS).
+- Connect the EDBG USB Micro-B port J14 on the board to the computer using a micro USB cable.
+- Use the "A5-USB-A" connector (J23 - Micro A/B connector) on the board to connect the USB device to the USB Host.
+- RGB LED turning to Green indicates USB Device Configuration Set Complete event (The USB device functionality has been activated by the USB Host).
+- Press PB_USER Switch to trigger communication from the USB Device to the USB Host.
 
 ### <a name="config_13"></a> [Curiosity PIC32MX470 Development Board](https://www.microchip.com/Developmenttools/ProductDetails/dm320103)
 
