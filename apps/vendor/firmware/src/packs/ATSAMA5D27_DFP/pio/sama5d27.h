@@ -1,5 +1,5 @@
-/**
- * \brief Peripheral I/O description for SAMA5D27
+/*
+ * Peripheral I/O description for SAMA5D27
  *
  * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2020-12-17T18:14:58Z */
+/* file generated from device description version 2021-06-28T08:59:38Z */
 #ifndef _SAMA5D27_GPIO_H_
 #define _SAMA5D27_GPIO_H_
 
