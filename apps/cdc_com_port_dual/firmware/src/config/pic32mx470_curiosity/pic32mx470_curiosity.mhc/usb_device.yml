@@ -39,5 +39,53 @@ children:
       children:
       - type: Dynamic
         attributes: {id: usb_device, value: '4'}
+  - type: Boolean
+    attributes: {id: CONFIG_USB_DEVICE_MSD_DISK_IMAGE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: usb_device, value: 'false'}
+  - type: String
+    attributes: {id: CONFIG_USB_DEVICE_PRODUCT_ID_IDX0}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: usb_device, value: '0x0208'}
+  - type: Combo
+    attributes: {id: CONFIG_USB_DEVICE_PRODUCT_ID_SELECTION_IDX0}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: cdc_com_port_dual_demo}
+  - type: String
+    attributes: {id: CONFIG_USB_DEVICE_PRODUCT_STRING_DESCRIPTOR}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: usb_device, value: CDC Dual COM Port Demo}
+  - type: String
+    attributes: {id: CONFIG_USB_DEVICE_SERIAL_NUMBER_STRING_DESCRIPTOR}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'true'}
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: '123456789012'}
+  - type: Boolean
+    attributes: {id: CONFIG_USB_DEVICE_SERIAL_NUMBER_STRING_ENABLE}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: 'true'}
 - type: ElementPosition
-  attributes: {x: '191', y: '170', id: usb_device}
+  attributes: {x: '178', y: '119', id: usb_device}

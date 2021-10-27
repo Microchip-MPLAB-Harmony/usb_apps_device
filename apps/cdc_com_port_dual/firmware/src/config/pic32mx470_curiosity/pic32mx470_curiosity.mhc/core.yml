@@ -747,4 +747,4 @@ children:
       - type: Dynamic
         attributes: {id: core, value: '48000000'}
 - type: ElementPosition
-  attributes: {x: '220', y: '20', id: core}
+  attributes: {x: '168', y: '45', id: core}
