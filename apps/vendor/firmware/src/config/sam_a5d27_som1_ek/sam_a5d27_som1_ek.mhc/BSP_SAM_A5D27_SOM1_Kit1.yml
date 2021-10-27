@@ -1,0 +1,6 @@
+format_version: v1.0
+type: UniqueComponent
+attributes: {id: BSP_SAM_A5D27_SOM1_Kit1, bsp: 'true'}
+children:
+- type: ElementPosition
+  attributes: {x: '167', y: '50', id: BSP_SAM_A5D27_SOM1_Kit1}
