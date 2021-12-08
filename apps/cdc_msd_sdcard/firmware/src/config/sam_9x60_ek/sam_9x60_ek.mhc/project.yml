@@ -286,13 +286,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 4F7F6528785108C34F8D52C9602EC610
-- generatedChecksum: 039014C02BCBB36E94124F52AFD635F3
+- generatedChecksum: 91A64CC85189854F29929A2A632CB9CE
   logicalPath: config/sam_9x60_ek
   name: configuration.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 039014C02BCBB36E94124F52AFD635F3
+  userChecksum: 91A64CC85189854F29929A2A632CB9CE
 - generatedChecksum: 8B35997040E0D61B0C62411FF7C4E9C1
   logicalPath: config/sam_9x60_ek/peripheral/mmu
   name: cp15.h

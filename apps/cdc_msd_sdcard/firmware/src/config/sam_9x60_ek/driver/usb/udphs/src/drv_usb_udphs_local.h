@@ -230,6 +230,7 @@ typedef struct
 
 	/* This gives the Endpoint Direction */
 	USB_DATA_DIRECTION endpointDirection;
+	
 
 }
 DRV_USB_UDPHS_DEVICE_ENDPOINT_OBJ;
