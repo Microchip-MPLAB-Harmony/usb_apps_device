@@ -451,7 +451,7 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/sam_a5d2_xult;../src/packs/ATSAMA5D27_DFP;../src/packs/CMSIS/CMSIS/Core_A/Include;../src/packs/CMSIS/;"/>
+                  value="../src;../src/config/sam_a5d2_xult;../src/packs/ATSAMA5D27_DFP;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core_A/Include"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -529,7 +529,7 @@
         <property key="no-startup-files" value="false"/>
         <property key="oXC32ld-extra-opts" value=""/>
         <property key="optimization-level" value=""/>
-        <property key="preprocessor-macros" value=";"/>
+        <property key="preprocessor-macros" value=""/>
         <property key="remove-unused-sections" value="true"/>
         <property key="report-memory-usage" value="false"/>
         <property key="serial-length" value=""/>
@@ -552,7 +552,7 @@
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/sam_a5d2_xult;../src/packs/ATSAMA5D27_DFP;../src/packs/CMSIS/CMSIS/Core_A/Include;../src/packs/CMSIS/;"/>
+                  value="../src;../src/config/sam_a5d2_xult;../src/packs/ATSAMA5D27_DFP;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core_A/Include"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -619,7 +619,7 @@
         <property key="memories.rww" value="true"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programmerToGoFilePath"
-                  value="C:/harmony/usb_apps_device/apps/cdc_msd_sdcard/firmware/sam_a5d2_xult.X/debug/sam_a5d2_xult/sam_a5d2_xult_ptg"/>
+                  value="D:/v3_working_folder/usb_apps_device/apps/cdc_msd_sdcard/firmware/sam_a5d2_xult.X/debug/sam_a5d2_xult/sam_a5d2_xult_ptg"/>
         <property key="programoptions.eraseb4program" value="false"/>
         <property key="programoptions.preservedataflash" value="false"/>
         <property key="programoptions.preservedataflash.ranges"

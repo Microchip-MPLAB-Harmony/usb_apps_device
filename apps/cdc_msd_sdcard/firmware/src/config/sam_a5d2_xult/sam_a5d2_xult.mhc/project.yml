@@ -342,13 +342,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: ACE577277E146F49B92285A8CD8E2D1D
-- generatedChecksum: B0B362FA9BA4E67F5A2E52C33618311A
+- generatedChecksum: 637B3BEE46BB680373466EB22F7DA71E
   logicalPath: config/sam_a5d2_xult
   name: configuration.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: B0B362FA9BA4E67F5A2E52C33618311A
+  userChecksum: 637B3BEE46BB680373466EB22F7DA71E
 - generatedChecksum: 32D6F5036C919DE32EFC951936B81657
   logicalPath: packs/CMSIS/CMSIS/Core_A/Include
   name: core_ca.h
