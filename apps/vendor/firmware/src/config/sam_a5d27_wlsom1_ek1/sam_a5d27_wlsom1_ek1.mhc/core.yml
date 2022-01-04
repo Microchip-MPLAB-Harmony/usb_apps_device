@@ -165,6 +165,15 @@ children:
       children:
       - type: Dynamic
         attributes: {id: core, value: '0'}
+  - type: Menu
+    attributes: {id: CoreIARMenu}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'false'}
   - type: Integer
     attributes: {id: DDR_CLK_FREQUENCY}
     children:
@@ -2128,4 +2137,4 @@ children:
       - type: Dynamic
         attributes: {id: core, value: '0'}
 - type: ElementPosition
-  attributes: {x: '152', y: '14', id: core}
+  attributes: {x: '220', y: '20', id: core}

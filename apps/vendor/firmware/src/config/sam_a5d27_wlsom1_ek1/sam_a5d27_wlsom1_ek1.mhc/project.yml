@@ -7,49 +7,49 @@ files:
   type: SOURCE
   userChecksum: null
 - generatedChecksum: 4B1BBEBD155AA355D734B7AF6452A58C
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1/bsp
+  logicalPath: config/sam_a5d27_wlsom1_ek1/bsp
   name: bsp.c
   physicalPath: bsp
   security: NON_SECURE
   type: SOURCE
   userChecksum: 4B1BBEBD155AA355D734B7AF6452A58C
 - generatedChecksum: 9B352802BE043FA5260F35291C50E3C8
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1
+  logicalPath: config/sam_a5d27_wlsom1_ek1
   name: cstartup.S
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
   userChecksum: 9B352802BE043FA5260F35291C50E3C8
 - generatedChecksum: 4740529CC4BA6462ECF3D3B8DE3254BD
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1/driver/usb/udphs/src
+  logicalPath: config/sam_a5d27_wlsom1_ek1/driver/usb/udphs/src
   name: drv_usb_udphs.c
   physicalPath: driver/usb/udphs/src
   security: NON_SECURE
   type: SOURCE
   userChecksum: 4740529CC4BA6462ECF3D3B8DE3254BD
 - generatedChecksum: BE98F5DC10CB47F3EEE725591C03033C
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1/driver/usb/udphs/src
+  logicalPath: config/sam_a5d27_wlsom1_ek1/driver/usb/udphs/src
   name: drv_usb_udphs_device.c
   physicalPath: driver/usb/udphs/src
   security: NON_SECURE
   type: SOURCE
   userChecksum: BE98F5DC10CB47F3EEE725591C03033C
 - generatedChecksum: A4A82BF95281026C9591A9D6C9BB0D35
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1
+  logicalPath: config/sam_a5d27_wlsom1_ek1
   name: fault_handlers.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
   userChecksum: A4A82BF95281026C9591A9D6C9BB0D35
 - generatedChecksum: B4CEFDBF3DDF1323DA8111F56B3E3043
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1
+  logicalPath: config/sam_a5d27_wlsom1_ek1
   name: initialization.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
   userChecksum: B4CEFDBF3DDF1323DA8111F56B3E3043
 - generatedChecksum: A239BCAB620390F2B38EBE90E20611EF
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1
+  logicalPath: config/sam_a5d27_wlsom1_ek1
   name: interrupts.c
   physicalPath: ''
   security: NON_SECURE
@@ -63,84 +63,84 @@ files:
   type: SOURCE
   userChecksum: null
 - generatedChecksum: 4693B8CC018C492E1D08F256AB131D67
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1/peripheral/aic
+  logicalPath: config/sam_a5d27_wlsom1_ek1/peripheral/aic
   name: plib_aic.c
   physicalPath: peripheral/aic
   security: NON_SECURE
   type: SOURCE
   userChecksum: 4693B8CC018C492E1D08F256AB131D67
 - generatedChecksum: 4F8B7251FDB4AAC79B52DA8A8BD9251B
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1/peripheral/clk
+  logicalPath: config/sam_a5d27_wlsom1_ek1/peripheral/clk
   name: plib_clk.c
   physicalPath: peripheral/clk
   security: NON_SECURE
   type: SOURCE
   userChecksum: 4F8B7251FDB4AAC79B52DA8A8BD9251B
 - generatedChecksum: A1D44A4F1F0E0FFA06D8BF524BA8088D
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1/peripheral/matrix
+  logicalPath: config/sam_a5d27_wlsom1_ek1/peripheral/matrix
   name: plib_matrix.c
   physicalPath: peripheral/matrix
   security: NON_SECURE
   type: SOURCE
   userChecksum: A1D44A4F1F0E0FFA06D8BF524BA8088D
 - generatedChecksum: 66C29BF10C493605E62AE3381C728726
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1/peripheral/mmu
+  logicalPath: config/sam_a5d27_wlsom1_ek1/peripheral/mmu
   name: plib_mmu.c
   physicalPath: peripheral/mmu
   security: NON_SECURE
   type: SOURCE
   userChecksum: 66C29BF10C493605E62AE3381C728726
 - generatedChecksum: 40D34D88BFC95F4A895429BE73268ECB
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1/peripheral/pio
+  logicalPath: config/sam_a5d27_wlsom1_ek1/peripheral/pio
   name: plib_pio.c
   physicalPath: peripheral/pio
   security: NON_SECURE
   type: SOURCE
   userChecksum: 40D34D88BFC95F4A895429BE73268ECB
 - generatedChecksum: 2B6EF5AAF13176F5A5E93B547721DB50
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1/system/cache
+  logicalPath: config/sam_a5d27_wlsom1_ek1/system/cache
   name: sys_cache.c
   physicalPath: system/cache
   security: NON_SECURE
   type: SOURCE
   userChecksum: 2B6EF5AAF13176F5A5E93B547721DB50
 - generatedChecksum: 6584F211FCF6DC4D3D40F56DB5D336CB
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1/system/int
+  logicalPath: config/sam_a5d27_wlsom1_ek1/system/int
   name: sys_int.c
   physicalPath: system/int/src
   security: NON_SECURE
   type: SOURCE
   userChecksum: 6584F211FCF6DC4D3D40F56DB5D336CB
 - generatedChecksum: 42414DDB70F3D3A8D5FDF93A4EEC3146
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1
+  logicalPath: config/sam_a5d27_wlsom1_ek1
   name: tasks.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
   userChecksum: 42414DDB70F3D3A8D5FDF93A4EEC3146
 - generatedChecksum: BCCEF5B801FFD0CF22D0B454D2F25F1F
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1/usb/src
+  logicalPath: config/sam_a5d27_wlsom1_ek1/usb/src
   name: usb_device.c
   physicalPath: usb/src
   security: NON_SECURE
   type: SOURCE
   userChecksum: BCCEF5B801FFD0CF22D0B454D2F25F1F
 - generatedChecksum: E81965F9AF1D7FBAC5D322A8A15C0E85
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1/usb/src
+  logicalPath: config/sam_a5d27_wlsom1_ek1/usb/src
   name: usb_device_endpoint_functions.c
   physicalPath: usb/src
   security: NON_SECURE
   type: SOURCE
   userChecksum: E81965F9AF1D7FBAC5D322A8A15C0E85
 - generatedChecksum: 59C66269CD05E0EEE0F799514F05F721
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1
+  logicalPath: config/sam_a5d27_wlsom1_ek1
   name: usb_device_init_data.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
   userChecksum: 59C66269CD05E0EEE0F799514F05F721
 - generatedChecksum: 7806B30ECAE0D18D08CD583D8775530D
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1/stdio
+  logicalPath: config/sam_a5d27_wlsom1_ek1/stdio
   name: xc32_monitor.c
   physicalPath: stdio
   security: NON_SECURE
@@ -238,7 +238,7 @@ files:
   type: HEADER
   userChecksum: FF71F32B66A344EE52D19CD3C2BD81D1
 - generatedChecksum: 3CFB5E80FD37429FD65F90EAA3285C63
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1/bsp
+  logicalPath: config/sam_a5d27_wlsom1_ek1/bsp
   name: bsp.h
   physicalPath: bsp
   security: NON_SECURE
@@ -301,7 +301,7 @@ files:
   type: HEADER
   userChecksum: ACE577277E146F49B92285A8CD8E2D1D
 - generatedChecksum: 24582CAA6DF065A222917D1EAA6A2296
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1
+  logicalPath: config/sam_a5d27_wlsom1_ek1
   name: configuration.h
   physicalPath: ''
   security: NON_SECURE
@@ -315,63 +315,63 @@ files:
   type: HEADER
   userChecksum: 32D6F5036C919DE32EFC951936B81657
 - generatedChecksum: 9942BB0ECC2A410BC1C4D2A24AC0448C
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1
+  logicalPath: config/sam_a5d27_wlsom1_ek1
   name: definitions.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
   userChecksum: 9942BB0ECC2A410BC1C4D2A24AC0448C
 - generatedChecksum: 9D3D4849DDA177D24378B12C2E5B04E1
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1
+  logicalPath: config/sam_a5d27_wlsom1_ek1
   name: device.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
   userChecksum: 9D3D4849DDA177D24378B12C2E5B04E1
 - generatedChecksum: F7578CEAF371C128F2878E86F5C092C0
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1
+  logicalPath: config/sam_a5d27_wlsom1_ek1
   name: device_cache.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
   userChecksum: F7578CEAF371C128F2878E86F5C092C0
 - generatedChecksum: 1D2094DFA60F847FFD4E8153B6E78027
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1/driver
+  logicalPath: config/sam_a5d27_wlsom1_ek1/driver
   name: driver.h
   physicalPath: driver
   security: NON_SECURE
   type: HEADER
   userChecksum: 1D2094DFA60F847FFD4E8153B6E78027
 - generatedChecksum: CC7DFCC51CD25171A3E400E18969354F
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1/driver
+  logicalPath: config/sam_a5d27_wlsom1_ek1/driver
   name: driver_common.h
   physicalPath: driver
   security: NON_SECURE
   type: HEADER
   userChecksum: CC7DFCC51CD25171A3E400E18969354F
 - generatedChecksum: DF147276AE56CA76E3E9BEB8447620AB
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1/driver/usb
+  logicalPath: config/sam_a5d27_wlsom1_ek1/driver/usb
   name: drv_usb.h
   physicalPath: driver/usb
   security: NON_SECURE
   type: HEADER
   userChecksum: DF147276AE56CA76E3E9BEB8447620AB
 - generatedChecksum: 46F14370EEA6E84C19CF07CF6E4E7306
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1/driver/usb/udphs
+  logicalPath: config/sam_a5d27_wlsom1_ek1/driver/usb/udphs
   name: drv_usb_udphs.h
   physicalPath: driver/usb/udphs
   security: NON_SECURE
   type: HEADER
   userChecksum: 46F14370EEA6E84C19CF07CF6E4E7306
 - generatedChecksum: 51C82FF439A1AC4F100FF2E1A671A226
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1/driver/usb/udphs/src
+  logicalPath: config/sam_a5d27_wlsom1_ek1/driver/usb/udphs/src
   name: drv_usb_udphs_local.h
   physicalPath: driver/usb/udphs/src
   security: NON_SECURE
   type: HEADER
   userChecksum: 51C82FF439A1AC4F100FF2E1A671A226
 - generatedChecksum: 2800E21D1F85584B318760489575F1D2
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1/driver/usb/udphs/src
+  logicalPath: config/sam_a5d27_wlsom1_ek1/driver/usb/udphs/src
   name: drv_usb_udphs_variant_mapping.h
   physicalPath: driver/usb/udphs/src
   security: NON_SECURE
@@ -469,7 +469,7 @@ files:
   type: HEADER
   userChecksum: 5F8DA35D60EF5F65FAEB619967A2F323
 - generatedChecksum: 4CF4A86296482D5331331BA301C20BB2
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1
+  logicalPath: config/sam_a5d27_wlsom1_ek1
   name: interrupts.h
   physicalPath: ''
   security: NON_SECURE
@@ -574,21 +574,21 @@ files:
   type: HEADER
   userChecksum: 0CAF6F45070ECA67DD1D32832D7E3CCA
 - generatedChecksum: F0AD88762263B7CB89B02AB4F5876059
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1/osal
+  logicalPath: config/sam_a5d27_wlsom1_ek1/osal
   name: osal.h
   physicalPath: osal
   security: NON_SECURE
   type: HEADER
   userChecksum: F0AD88762263B7CB89B02AB4F5876059
 - generatedChecksum: 0AC88C49E4585B606FD5AC6804F0C340
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1/osal
+  logicalPath: config/sam_a5d27_wlsom1_ek1/osal
   name: osal_definitions.h
   physicalPath: osal
   security: NON_SECURE
   type: HEADER
   userChecksum: 0AC88C49E4585B606FD5AC6804F0C340
 - generatedChecksum: B040122CCA94A0636810D6F15F13B751
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1/osal
+  logicalPath: config/sam_a5d27_wlsom1_ek1/osal
   name: osal_impl_basic.h
   physicalPath: osal
   security: NON_SECURE
@@ -637,35 +637,35 @@ files:
   type: HEADER
   userChecksum: 43FF75D379ADD4A0EC4E87E84B019D0B
 - generatedChecksum: 9C00DC189B706ECF854F34A404F89118
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1/peripheral/aic
+  logicalPath: config/sam_a5d27_wlsom1_ek1/peripheral/aic
   name: plib_aic.h
   physicalPath: peripheral/aic
   security: NON_SECURE
   type: HEADER
   userChecksum: 9C00DC189B706ECF854F34A404F89118
 - generatedChecksum: 115B0136EFE9ED871D67D3B10CBEBDC8
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1/peripheral/clk
+  logicalPath: config/sam_a5d27_wlsom1_ek1/peripheral/clk
   name: plib_clk.h
   physicalPath: peripheral/clk
   security: NON_SECURE
   type: HEADER
   userChecksum: 115B0136EFE9ED871D67D3B10CBEBDC8
 - generatedChecksum: E8167D30D019275C8F2EEA14CD0EBC42
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1/peripheral/matrix
+  logicalPath: config/sam_a5d27_wlsom1_ek1/peripheral/matrix
   name: plib_matrix.h
   physicalPath: peripheral/matrix
   security: NON_SECURE
   type: HEADER
   userChecksum: E8167D30D019275C8F2EEA14CD0EBC42
 - generatedChecksum: 8187CF043E15265A5292B4AB63AB26CA
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1/peripheral/mmu
+  logicalPath: config/sam_a5d27_wlsom1_ek1/peripheral/mmu
   name: plib_mmu.h
   physicalPath: peripheral/mmu
   security: NON_SECURE
   type: HEADER
   userChecksum: 8187CF043E15265A5292B4AB63AB26CA
 - generatedChecksum: 5656E9BD4450E14933CB9D32A92FBDB6
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1/peripheral/pio
+  logicalPath: config/sam_a5d27_wlsom1_ek1/peripheral/pio
   name: plib_pio.h
   physicalPath: peripheral/pio
   security: NON_SECURE
@@ -973,49 +973,49 @@ files:
   type: HEADER
   userChecksum: 653B93E735A2DAC67EC88F5A71AA9C6A
 - generatedChecksum: AFAAF7D896D57569CA4CF73BB3339481
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1/system/cache
+  logicalPath: config/sam_a5d27_wlsom1_ek1/system/cache
   name: sys_cache.h
   physicalPath: system/cache
   security: NON_SECURE
   type: HEADER
   userChecksum: AFAAF7D896D57569CA4CF73BB3339481
 - generatedChecksum: 6BB6C54C5CD963A5A940CF7BB28F4E10
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1/system/debug
+  logicalPath: config/sam_a5d27_wlsom1_ek1/system/debug
   name: sys_debug.h
   physicalPath: system/debug
   security: NON_SECURE
   type: HEADER
   userChecksum: 6BB6C54C5CD963A5A940CF7BB28F4E10
 - generatedChecksum: 1329D2DEB6E5AC9515AD4D165C60DC74
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1/system/int
+  logicalPath: config/sam_a5d27_wlsom1_ek1/system/int
   name: sys_int.h
   physicalPath: system/int
   security: NON_SECURE
   type: HEADER
   userChecksum: 1329D2DEB6E5AC9515AD4D165C60DC74
 - generatedChecksum: D5F3C8B8016B12FF575690A3CC761BFD
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1/system/int
+  logicalPath: config/sam_a5d27_wlsom1_ek1/system/int
   name: sys_int_mapping.h
   physicalPath: system/int
   security: NON_SECURE
   type: HEADER
   userChecksum: D5F3C8B8016B12FF575690A3CC761BFD
 - generatedChecksum: BE95B4F134C5C929787B9DA6FDBF3501
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1/system
+  logicalPath: config/sam_a5d27_wlsom1_ek1/system
   name: system.h
   physicalPath: system
   security: NON_SECURE
   type: HEADER
   userChecksum: BE95B4F134C5C929787B9DA6FDBF3501
 - generatedChecksum: C3F5136D520DAC4416512EBFCCA023C3
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1/system
+  logicalPath: config/sam_a5d27_wlsom1_ek1/system
   name: system_common.h
   physicalPath: system
   security: NON_SECURE
   type: HEADER
   userChecksum: C3F5136D520DAC4416512EBFCCA023C3
 - generatedChecksum: 1C75A8A6B60598A2FD0D533F57839B72
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1/system
+  logicalPath: config/sam_a5d27_wlsom1_ek1/system
   name: system_module.h
   physicalPath: system
   security: NON_SECURE
@@ -1057,7 +1057,7 @@ files:
   type: HEADER
   userChecksum: D49484DCC734B9B8F97F068426764FCA
 - generatedChecksum: E7B1CC92ABE4830B5244251AB8FA4FB0
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1
+  logicalPath: config/sam_a5d27_wlsom1_ek1
   name: toolchain_specifics.h
   physicalPath: ''
   security: NON_SECURE
@@ -1162,89 +1162,89 @@ files:
   type: HEADER
   userChecksum: B05640924FC7E948A0B59089C5C993A3
 - generatedChecksum: 39659CDE2CC726544BD68544FB7EF4B2
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1/usb
+  logicalPath: config/sam_a5d27_wlsom1_ek1/usb
   name: usb_chapter_9.h
   physicalPath: usb
   security: NON_SECURE
   type: HEADER
   userChecksum: 39659CDE2CC726544BD68544FB7EF4B2
 - generatedChecksum: E7B6EAD8687A8EBC0355E0CE413B6A87
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1/usb
+  logicalPath: config/sam_a5d27_wlsom1_ek1/usb
   name: usb_common.h
   physicalPath: usb
   security: NON_SECURE
   type: HEADER
   userChecksum: E7B6EAD8687A8EBC0355E0CE413B6A87
 - generatedChecksum: 68F7DBD311EDCAF1098CDF2FD15B8C73
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1/usb
+  logicalPath: config/sam_a5d27_wlsom1_ek1/usb
   name: usb_device.h
   physicalPath: usb
   security: NON_SECURE
   type: HEADER
   userChecksum: 68F7DBD311EDCAF1098CDF2FD15B8C73
 - generatedChecksum: 626BFDDD140B808E90C9DD2E4A27421E
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1/usb/src
+  logicalPath: config/sam_a5d27_wlsom1_ek1/usb/src
   name: usb_device_function_driver.h
   physicalPath: usb/src
   security: NON_SECURE
   type: HEADER
   userChecksum: 626BFDDD140B808E90C9DD2E4A27421E
 - generatedChecksum: 9B727D396CAEBD5FCB12F1F8264C4FD9
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1/usb/src
+  logicalPath: config/sam_a5d27_wlsom1_ek1/usb/src
   name: usb_device_local.h
   physicalPath: usb/src
   security: NON_SECURE
   type: HEADER
   userChecksum: 9B727D396CAEBD5FCB12F1F8264C4FD9
 - generatedChecksum: C8D4A1D9092FD842506F565CE9B8C265
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1/usb/src
+  logicalPath: config/sam_a5d27_wlsom1_ek1/usb/src
   name: usb_device_mapping.h
   physicalPath: usb/src
   security: NON_SECURE
   type: HEADER
   userChecksum: C8D4A1D9092FD842506F565CE9B8C265
 - generatedChecksum: 6C4A6859DB16EA8C046F995C6B6C1C6F
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1/usb/src
+  logicalPath: config/sam_a5d27_wlsom1_ek1/usb/src
   name: usb_external_dependencies.h
   physicalPath: usb/src
   security: NON_SECURE
   type: HEADER
   userChecksum: 6C4A6859DB16EA8C046F995C6B6C1C6F
 - generatedChecksum: F127C67A3E33E5788C0F057F648EE57C
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1/usb
+  logicalPath: config/sam_a5d27_wlsom1_ek1/usb
   name: usb_host.h
   physicalPath: usb
   security: NON_SECURE
   type: HEADER
   userChecksum: F127C67A3E33E5788C0F057F648EE57C
 - generatedChecksum: 6EBC5E4D06FC96A02ADF3B7416957DD6
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1/usb
+  logicalPath: config/sam_a5d27_wlsom1_ek1/usb
   name: usb_host_client_driver.h
   physicalPath: usb
   security: NON_SECURE
   type: HEADER
   userChecksum: 6EBC5E4D06FC96A02ADF3B7416957DD6
 - generatedChecksum: 757C8484C955543C893361992D11FD4C
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1/usb
+  logicalPath: config/sam_a5d27_wlsom1_ek1/usb
   name: usb_host_hub_interface.h
   physicalPath: usb
   security: NON_SECURE
   type: HEADER
   userChecksum: 757C8484C955543C893361992D11FD4C
 - generatedChecksum: 3E3CC6BC9128194CB4D19F29C57E312B
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1/usb
+  logicalPath: config/sam_a5d27_wlsom1_ek1/usb
   name: usb_hub.h
   physicalPath: usb
   security: NON_SECURE
   type: HEADER
   userChecksum: 3E3CC6BC9128194CB4D19F29C57E312B
-- generatedChecksum: null
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1
+- generatedChecksum: 4B3C3EF8A318908A22B78500515C3288
+  logicalPath: config/sam_a5d27_wlsom1_ek1
   name: user.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: null
+  userChecksum: 4B3C3EF8A318908A22B78500515C3288
 - generatedChecksum: 3A486FEE8A27C7AA261D076A30A56576
   logicalPath: packs/ATSAMA5D27CLD2G_DFP/component
   name: wdt.h
@@ -1281,7 +1281,7 @@ files:
   type: HEADER
   userChecksum: B1E8E28D664DB95931C7772C9B9098C9
 - generatedChecksum: B54C95F40D37C9D12A9C2D618142CF6D
-  logicalPath: config/vendor_sam_a5d27_wlsom1_ek1
+  logicalPath: config/sam_a5d27_wlsom1_ek1
   name: ddr.ld
   physicalPath: ''
   security: NON_SECURE
@@ -1295,7 +1295,7 @@ settings:
   delimiter: ;
   key: extra-include-directories
   security: NON_SECURE
-  value: ../src;../src/config/vendor_sam_a5d27_wlsom1_ek1;../src/packs/ATSAMA5D27CLD2G_DFP;../src/packs/CMSIS/CMSIS/Core_A/Include;../src/packs/CMSIS/
+  value: ../src;../src/config/sam_a5d27_wlsom1_ek1;../src/packs/ATSAMA5D27CLD2G_DFP;../src/packs/CMSIS/CMSIS/Core_A/Include;../src/packs/CMSIS/
 - append: false
   category: C32-LD
   delimiter: ''
@@ -1319,5 +1319,5 @@ settings:
   delimiter: ;
   key: extra-include-directories
   security: NON_SECURE
-  value: ../src;../src/config/vendor_sam_a5d27_wlsom1_ek1;../src/packs/ATSAMA5D27CLD2G_DFP;../src/packs/CMSIS/CMSIS/Core_A/Include;../src/packs/CMSIS/
+  value: ../src;../src/config/sam_a5d27_wlsom1_ek1;../src/packs/ATSAMA5D27CLD2G_DFP;../src/packs/CMSIS/CMSIS/Core_A/Include;../src/packs/CMSIS/
 sourcePaths: []

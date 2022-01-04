@@ -5,85 +5,83 @@
                    displayName="Header Files"
                    projectFiles="true">
       <logicalFolder name="f1" displayName="config" projectFiles="true">
-        <logicalFolder name="f1"
-                       displayName="vendor_sam_a5d27_wlsom1_ek1"
-                       projectFiles="true">
+        <logicalFolder name="f1" displayName="sam_a5d27_wlsom1_ek1" projectFiles="true">
           <logicalFolder name="f3" displayName="bsp" projectFiles="true">
-            <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/bsp/bsp.h</itemPath>
+            <itemPath>../src/config/sam_a5d27_wlsom1_ek1/bsp/bsp.h</itemPath>
           </logicalFolder>
           <logicalFolder name="f1" displayName="driver" projectFiles="true">
             <logicalFolder name="f1" displayName="usb" projectFiles="true">
               <logicalFolder name="f1" displayName="udphs" projectFiles="true">
                 <logicalFolder name="f1" displayName="src" projectFiles="true">
-                  <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/driver/usb/udphs/src/drv_usb_udphs_variant_mapping.h</itemPath>
-                  <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/driver/usb/udphs/src/drv_usb_udphs_local.h</itemPath>
+                  <itemPath>../src/config/sam_a5d27_wlsom1_ek1/driver/usb/udphs/src/drv_usb_udphs_variant_mapping.h</itemPath>
+                  <itemPath>../src/config/sam_a5d27_wlsom1_ek1/driver/usb/udphs/src/drv_usb_udphs_local.h</itemPath>
                 </logicalFolder>
-                <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/driver/usb/udphs/drv_usb_udphs.h</itemPath>
+                <itemPath>../src/config/sam_a5d27_wlsom1_ek1/driver/usb/udphs/drv_usb_udphs.h</itemPath>
               </logicalFolder>
-              <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/driver/usb/drv_usb.h</itemPath>
+              <itemPath>../src/config/sam_a5d27_wlsom1_ek1/driver/usb/drv_usb.h</itemPath>
             </logicalFolder>
-            <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/driver/driver.h</itemPath>
-            <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/driver/driver_common.h</itemPath>
+            <itemPath>../src/config/sam_a5d27_wlsom1_ek1/driver/driver.h</itemPath>
+            <itemPath>../src/config/sam_a5d27_wlsom1_ek1/driver/driver_common.h</itemPath>
           </logicalFolder>
           <logicalFolder name="f6" displayName="osal" projectFiles="true">
-            <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/osal/osal.h</itemPath>
-            <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/osal/osal_definitions.h</itemPath>
-            <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/osal/osal_impl_basic.h</itemPath>
+            <itemPath>../src/config/sam_a5d27_wlsom1_ek1/osal/osal.h</itemPath>
+            <itemPath>../src/config/sam_a5d27_wlsom1_ek1/osal/osal_definitions.h</itemPath>
+            <itemPath>../src/config/sam_a5d27_wlsom1_ek1/osal/osal_impl_basic.h</itemPath>
           </logicalFolder>
           <logicalFolder name="f4" displayName="peripheral" projectFiles="true">
             <logicalFolder name="f5" displayName="aic" projectFiles="true">
-              <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/peripheral/aic/plib_aic.h</itemPath>
+              <itemPath>../src/config/sam_a5d27_wlsom1_ek1/peripheral/aic/plib_aic.h</itemPath>
             </logicalFolder>
             <logicalFolder name="f3" displayName="clk" projectFiles="true">
-              <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/peripheral/clk/plib_clk.h</itemPath>
+              <itemPath>../src/config/sam_a5d27_wlsom1_ek1/peripheral/clk/plib_clk.h</itemPath>
             </logicalFolder>
             <logicalFolder name="f2" displayName="matrix" projectFiles="true">
-              <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/peripheral/matrix/plib_matrix.h</itemPath>
+              <itemPath>../src/config/sam_a5d27_wlsom1_ek1/peripheral/matrix/plib_matrix.h</itemPath>
             </logicalFolder>
             <logicalFolder name="f1" displayName="mmu" projectFiles="true">
-              <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/peripheral/mmu/plib_mmu.h</itemPath>
+              <itemPath>../src/config/sam_a5d27_wlsom1_ek1/peripheral/mmu/plib_mmu.h</itemPath>
             </logicalFolder>
             <logicalFolder name="f4" displayName="pio" projectFiles="true">
-              <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/peripheral/pio/plib_pio.h</itemPath>
+              <itemPath>../src/config/sam_a5d27_wlsom1_ek1/peripheral/pio/plib_pio.h</itemPath>
             </logicalFolder>
           </logicalFolder>
           <logicalFolder name="f5" displayName="system" projectFiles="true">
             <logicalFolder name="f2" displayName="cache" projectFiles="true">
-              <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/system/cache/sys_cache.h</itemPath>
+              <itemPath>../src/config/sam_a5d27_wlsom1_ek1/system/cache/sys_cache.h</itemPath>
             </logicalFolder>
             <logicalFolder name="f3" displayName="debug" projectFiles="true">
-              <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/system/debug/sys_debug.h</itemPath>
+              <itemPath>../src/config/sam_a5d27_wlsom1_ek1/system/debug/sys_debug.h</itemPath>
             </logicalFolder>
             <logicalFolder name="f1" displayName="int" projectFiles="true">
-              <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/system/int/sys_int.h</itemPath>
-              <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/system/int/sys_int_mapping.h</itemPath>
+              <itemPath>../src/config/sam_a5d27_wlsom1_ek1/system/int/sys_int.h</itemPath>
+              <itemPath>../src/config/sam_a5d27_wlsom1_ek1/system/int/sys_int_mapping.h</itemPath>
             </logicalFolder>
-            <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/system/system.h</itemPath>
-            <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/system/system_common.h</itemPath>
-            <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/system/system_module.h</itemPath>
+            <itemPath>../src/config/sam_a5d27_wlsom1_ek1/system/system.h</itemPath>
+            <itemPath>../src/config/sam_a5d27_wlsom1_ek1/system/system_common.h</itemPath>
+            <itemPath>../src/config/sam_a5d27_wlsom1_ek1/system/system_module.h</itemPath>
           </logicalFolder>
           <logicalFolder name="f2" displayName="usb" projectFiles="true">
             <logicalFolder name="f1" displayName="src" projectFiles="true">
-              <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/usb/src/usb_device_local.h</itemPath>
-              <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/usb/src/usb_device_mapping.h</itemPath>
-              <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/usb/src/usb_device_function_driver.h</itemPath>
-              <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/usb/src/usb_external_dependencies.h</itemPath>
+              <itemPath>../src/config/sam_a5d27_wlsom1_ek1/usb/src/usb_device_local.h</itemPath>
+              <itemPath>../src/config/sam_a5d27_wlsom1_ek1/usb/src/usb_device_mapping.h</itemPath>
+              <itemPath>../src/config/sam_a5d27_wlsom1_ek1/usb/src/usb_device_function_driver.h</itemPath>
+              <itemPath>../src/config/sam_a5d27_wlsom1_ek1/usb/src/usb_external_dependencies.h</itemPath>
             </logicalFolder>
-            <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/usb/usb_host_client_driver.h</itemPath>
-            <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/usb/usb_host_hub_interface.h</itemPath>
-            <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/usb/usb_host.h</itemPath>
-            <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/usb/usb_hub.h</itemPath>
-            <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/usb/usb_device.h</itemPath>
-            <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/usb/usb_common.h</itemPath>
-            <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/usb/usb_chapter_9.h</itemPath>
+            <itemPath>../src/config/sam_a5d27_wlsom1_ek1/usb/usb_host_client_driver.h</itemPath>
+            <itemPath>../src/config/sam_a5d27_wlsom1_ek1/usb/usb_host_hub_interface.h</itemPath>
+            <itemPath>../src/config/sam_a5d27_wlsom1_ek1/usb/usb_host.h</itemPath>
+            <itemPath>../src/config/sam_a5d27_wlsom1_ek1/usb/usb_hub.h</itemPath>
+            <itemPath>../src/config/sam_a5d27_wlsom1_ek1/usb/usb_device.h</itemPath>
+            <itemPath>../src/config/sam_a5d27_wlsom1_ek1/usb/usb_common.h</itemPath>
+            <itemPath>../src/config/sam_a5d27_wlsom1_ek1/usb/usb_chapter_9.h</itemPath>
           </logicalFolder>
-          <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/device.h</itemPath>
-          <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/device_cache.h</itemPath>
-          <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/toolchain_specifics.h</itemPath>
-          <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/definitions.h</itemPath>
-          <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/interrupts.h</itemPath>
-          <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/user.h</itemPath>
-          <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/configuration.h</itemPath>
+          <itemPath>../src/config/sam_a5d27_wlsom1_ek1/device.h</itemPath>
+          <itemPath>../src/config/sam_a5d27_wlsom1_ek1/device_cache.h</itemPath>
+          <itemPath>../src/config/sam_a5d27_wlsom1_ek1/toolchain_specifics.h</itemPath>
+          <itemPath>../src/config/sam_a5d27_wlsom1_ek1/definitions.h</itemPath>
+          <itemPath>../src/config/sam_a5d27_wlsom1_ek1/interrupts.h</itemPath>
+          <itemPath>../src/config/sam_a5d27_wlsom1_ek1/user.h</itemPath>
+          <itemPath>../src/config/sam_a5d27_wlsom1_ek1/configuration.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="f2" displayName="packs" projectFiles="true">
@@ -231,10 +229,8 @@
                    displayName="Linker Files"
                    projectFiles="true">
       <logicalFolder name="f1" displayName="config" projectFiles="true">
-        <logicalFolder name="f1"
-                       displayName="vendor_sam_a5d27_wlsom1_ek1"
-                       projectFiles="true">
-          <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/ddr.ld</itemPath>
+        <logicalFolder name="f1" displayName="sam_a5d27_wlsom1_ek1" projectFiles="true">
+          <itemPath>../src/config/sam_a5d27_wlsom1_ek1/ddr.ld</itemPath>
         </logicalFolder>
       </logicalFolder>
     </logicalFolder>
@@ -242,62 +238,60 @@
                    displayName="Source Files"
                    projectFiles="true">
       <logicalFolder name="f1" displayName="config" projectFiles="true">
-        <logicalFolder name="f1"
-                       displayName="vendor_sam_a5d27_wlsom1_ek1"
-                       projectFiles="true">
+        <logicalFolder name="f1" displayName="sam_a5d27_wlsom1_ek1" projectFiles="true">
           <logicalFolder name="f3" displayName="bsp" projectFiles="true">
-            <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/bsp/bsp.c</itemPath>
+            <itemPath>../src/config/sam_a5d27_wlsom1_ek1/bsp/bsp.c</itemPath>
           </logicalFolder>
           <logicalFolder name="f1" displayName="driver" projectFiles="true">
             <logicalFolder name="f1" displayName="usb" projectFiles="true">
               <logicalFolder name="f1" displayName="udphs" projectFiles="true">
                 <logicalFolder name="f1" displayName="src" projectFiles="true">
-                  <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/driver/usb/udphs/src/drv_usb_udphs.c</itemPath>
-                  <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/driver/usb/udphs/src/drv_usb_udphs_device.c</itemPath>
+                  <itemPath>../src/config/sam_a5d27_wlsom1_ek1/driver/usb/udphs/src/drv_usb_udphs.c</itemPath>
+                  <itemPath>../src/config/sam_a5d27_wlsom1_ek1/driver/usb/udphs/src/drv_usb_udphs_device.c</itemPath>
                 </logicalFolder>
               </logicalFolder>
             </logicalFolder>
           </logicalFolder>
           <logicalFolder name="f5" displayName="peripheral" projectFiles="true">
             <logicalFolder name="f5" displayName="aic" projectFiles="true">
-              <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/peripheral/aic/plib_aic.c</itemPath>
+              <itemPath>../src/config/sam_a5d27_wlsom1_ek1/peripheral/aic/plib_aic.c</itemPath>
             </logicalFolder>
             <logicalFolder name="f3" displayName="clk" projectFiles="true">
-              <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/peripheral/clk/plib_clk.c</itemPath>
+              <itemPath>../src/config/sam_a5d27_wlsom1_ek1/peripheral/clk/plib_clk.c</itemPath>
             </logicalFolder>
             <logicalFolder name="f2" displayName="matrix" projectFiles="true">
-              <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/peripheral/matrix/plib_matrix.c</itemPath>
+              <itemPath>../src/config/sam_a5d27_wlsom1_ek1/peripheral/matrix/plib_matrix.c</itemPath>
             </logicalFolder>
             <logicalFolder name="f1" displayName="mmu" projectFiles="true">
-              <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/peripheral/mmu/plib_mmu.c</itemPath>
+              <itemPath>../src/config/sam_a5d27_wlsom1_ek1/peripheral/mmu/plib_mmu.c</itemPath>
             </logicalFolder>
             <logicalFolder name="f4" displayName="pio" projectFiles="true">
-              <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/peripheral/pio/plib_pio.c</itemPath>
+              <itemPath>../src/config/sam_a5d27_wlsom1_ek1/peripheral/pio/plib_pio.c</itemPath>
             </logicalFolder>
           </logicalFolder>
           <logicalFolder name="f4" displayName="stdio" projectFiles="true">
-            <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/stdio/xc32_monitor.c</itemPath>
+            <itemPath>../src/config/sam_a5d27_wlsom1_ek1/stdio/xc32_monitor.c</itemPath>
           </logicalFolder>
           <logicalFolder name="f6" displayName="system" projectFiles="true">
             <logicalFolder name="f2" displayName="cache" projectFiles="true">
-              <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/system/cache/sys_cache.c</itemPath>
+              <itemPath>../src/config/sam_a5d27_wlsom1_ek1/system/cache/sys_cache.c</itemPath>
             </logicalFolder>
             <logicalFolder name="f1" displayName="int" projectFiles="true">
-              <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/system/int/src/sys_int.c</itemPath>
+              <itemPath>../src/config/sam_a5d27_wlsom1_ek1/system/int/src/sys_int.c</itemPath>
             </logicalFolder>
           </logicalFolder>
           <logicalFolder name="f2" displayName="usb" projectFiles="true">
             <logicalFolder name="f1" displayName="src" projectFiles="true">
-              <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/usb/src/usb_device_endpoint_functions.c</itemPath>
-              <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/usb/src/usb_device.c</itemPath>
+              <itemPath>../src/config/sam_a5d27_wlsom1_ek1/usb/src/usb_device_endpoint_functions.c</itemPath>
+              <itemPath>../src/config/sam_a5d27_wlsom1_ek1/usb/src/usb_device.c</itemPath>
             </logicalFolder>
           </logicalFolder>
-          <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/initialization.c</itemPath>
-          <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/interrupts.c</itemPath>
-          <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/cstartup.S</itemPath>
-          <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/fault_handlers.c</itemPath>
-          <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/usb_device_init_data.c</itemPath>
-          <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/tasks.c</itemPath>
+          <itemPath>../src/config/sam_a5d27_wlsom1_ek1/initialization.c</itemPath>
+          <itemPath>../src/config/sam_a5d27_wlsom1_ek1/interrupts.c</itemPath>
+          <itemPath>../src/config/sam_a5d27_wlsom1_ek1/cstartup.S</itemPath>
+          <itemPath>../src/config/sam_a5d27_wlsom1_ek1/fault_handlers.c</itemPath>
+          <itemPath>../src/config/sam_a5d27_wlsom1_ek1/usb_device_init_data.c</itemPath>
+          <itemPath>../src/config/sam_a5d27_wlsom1_ek1/tasks.c</itemPath>
         </logicalFolder>
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
@@ -307,23 +301,22 @@
                    displayName="Important Files"
                    projectFiles="false">
       <logicalFolder name="f1"
-                     displayName="vendor_sam_a5d27_wlsom1_ek1.mhc"
+                     displayName="sam_a5d27_wlsom1_ek1.mhc"
                      projectFiles="true">
-        <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/vendor_sam_a5d27_wlsom1_ek1.mhc/BSP_SAM_A5D27_WLSOM1_Kit1.yml</itemPath>
-        <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/vendor_sam_a5d27_wlsom1_ek1.mhc/cmsis.yml</itemPath>
-        <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/vendor_sam_a5d27_wlsom1_ek1.mhc/core.yml</itemPath>
-        <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/vendor_sam_a5d27_wlsom1_ek1.mhc/dfp.yml</itemPath>
-        <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/vendor_sam_a5d27_wlsom1_ek1.mhc/drv_usb_udphs.yml</itemPath>
-        <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/vendor_sam_a5d27_wlsom1_ek1.mhc/GraphSettings.yml</itemPath>
-        <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/vendor_sam_a5d27_wlsom1_ek1.mhc/HarmonyCore.yml</itemPath>
-        <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/vendor_sam_a5d27_wlsom1_ek1.mhc/project.yml</itemPath>
-        <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/vendor_sam_a5d27_wlsom1_ek1.mhc/settings.yml</itemPath>
-        <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/vendor_sam_a5d27_wlsom1_ek1.mhc/usb_device.yml</itemPath>
-        <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/vendor_sam_a5d27_wlsom1_ek1.mhc/usb_device_vendor.yml</itemPath>
+        <itemPath>../src/config/sam_a5d27_wlsom1_ek1/sam_a5d27_wlsom1_ek1.mhc/BSP_SAM_A5D27_WLSOM1_Kit1.yml</itemPath>
+        <itemPath>../src/config/sam_a5d27_wlsom1_ek1/sam_a5d27_wlsom1_ek1.mhc/cmsis.yml</itemPath>
+        <itemPath>../src/config/sam_a5d27_wlsom1_ek1/sam_a5d27_wlsom1_ek1.mhc/core.yml</itemPath>
+        <itemPath>../src/config/sam_a5d27_wlsom1_ek1/sam_a5d27_wlsom1_ek1.mhc/dfp.yml</itemPath>
+        <itemPath>../src/config/sam_a5d27_wlsom1_ek1/sam_a5d27_wlsom1_ek1.mhc/drv_usb_udphs.yml</itemPath>
+        <itemPath>../src/config/sam_a5d27_wlsom1_ek1/sam_a5d27_wlsom1_ek1.mhc/GraphSettings.yml</itemPath>
+        <itemPath>../src/config/sam_a5d27_wlsom1_ek1/sam_a5d27_wlsom1_ek1.mhc/HarmonyCore.yml</itemPath>
+        <itemPath>../src/config/sam_a5d27_wlsom1_ek1/sam_a5d27_wlsom1_ek1.mhc/project.yml</itemPath>
+        <itemPath>../src/config/sam_a5d27_wlsom1_ek1/sam_a5d27_wlsom1_ek1.mhc/settings.yml</itemPath>
+        <itemPath>../src/config/sam_a5d27_wlsom1_ek1/sam_a5d27_wlsom1_ek1.mhc/usb_device.yml</itemPath>
+        <itemPath>../src/config/sam_a5d27_wlsom1_ek1/sam_a5d27_wlsom1_ek1.mhc/usb_device_vendor.yml</itemPath>
       </logicalFolder>
       <itemPath>Makefile</itemPath>
-      <itemPath>../src/config/vendor_sam_a5d27_wlsom1_ek1/harmony-manifest-success.yml</itemPath>
-      <itemPath>vendor_sam_a5d27_wlsom1_ek1.mc3</itemPath>
+      <itemPath>../src/config/sam_a5d27_wlsom1_ek1/harmony-manifest-success.yml</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -331,28 +324,22 @@
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
-    <conf name="vendor_sam_a5d27_wlsom1_ek1" type="2">
+    <conf name="sam_a5d27_wlsom1_ek1" type="2">
       <toolsSet>
         <developmentServer>localhost</developmentServer>
         <targetDevice>ATSAMA5D27CLD2G</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>samice</platformTool>
+        <platformTool>noID</platformTool>
         <languageToolchain>XC32</languageToolchain>
         <languageToolchainVersion>3.01</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="SAMA5D2_DFP" vendor="Microchip" version="1.6.69"/>
         <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
+        <pack name="SAMA5D2_DFP" vendor="Microchip" version="1.6.69"/>
       </packs>
       <ScriptingSettings>
-        <ScriptingSetting key="boot.load_adr" value=""/>
-        <ScriptingSetting key="boot.use" value="true"/>
-        <ScriptingSetting key="boot.entry_adr" value=""/>
-        <ScriptingSetting key="boot.path"
-                          value="${ProjectDir}\..\at91bootstrap_sam_a5d27_wlsom1_ek1.X\binaries\at91bootstrap.elf"/>
-        <ScriptingSetting key="boot.prj" value=""/>
       </ScriptingSettings>
       <compileType>
         <linkerTool>
@@ -374,7 +361,7 @@
         <makeUseCleanTarget>false</makeUseCleanTarget>
         <makeCustomizationPreStep></makeCustomizationPreStep>
         <makeCustomizationPostStepEnabled>true</makeCustomizationPostStepEnabled>
-        <makeCustomizationPostStep>${MP_CC_DIR}/xc32-objcopy -O binary ${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.elf ${DISTDIR}/harmony.bin </makeCustomizationPostStep>
+        <makeCustomizationPostStep>${MP_CC_DIR}/xc32-objcopy -O binary ${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.elf ${DISTDIR}/harmony.bin</makeCustomizationPostStep>
         <makeCustomizationPutChecksumInUserID>false</makeCustomizationPutChecksumInUserID>
         <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
@@ -406,15 +393,13 @@
       <C32>
         <property key="additional-warnings" value="true"/>
         <property key="addresss-attribute-use" value="false"/>
-        <property key="appendMe"
-                  value="-Wundef -Wshadow -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wno-deprecated-declarations -Wredundant-decls -Wnested-externs -Wlong-long -Wunreachable-code -Wmissing-noreturn "/>
         <property key="enable-app-io" value="false"/>
         <property key="enable-omit-frame-pointer" value="false"/>
         <property key="enable-symbols" value="true"/>
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/vendor_sam_a5d27_wlsom1_ek1;../src/packs/ATSAMA5D27CLD2G_DFP;../src/packs/CMSIS/CMSIS/Core_A/Include;../src/packs/CMSIS/;"/>
+                  value="../src;../src/config/sam_a5d27_wlsom1_ek1;../src/packs/ATSAMA5D27CLD2G_DFP;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core_A/Include"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -432,7 +417,7 @@
         <property key="use-cci" value="false"/>
         <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
-        <appendMe value="-Wundef -Wshadow -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wno-deprecated-declarations -Wredundant-decls -Wnested-externs -Wlong-long -Wunreachable-code -Wmissing-noreturn "/>
+        <appendMe value="-Wundef -Wshadow -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wno-deprecated-declarations -Wredundant-decls -Wnested-externs -Wlong-long -Wunreachable-code -Wmissing-noreturn"/>
       </C32>
       <C32-AR>
         <property key="additional-options-chop-files" value="false"/>
@@ -465,7 +450,6 @@
         <property key="additional-options-use-response-files" value="false"/>
         <property key="additional-options-write-sla" value="false"/>
         <property key="allocate-dinit" value="false"/>
-        <property key="appendMe" value=""/>
         <property key="code-dinit" value="false"/>
         <property key="ebase-addr" value=""/>
         <property key="enable-check-sections" value="false"/>
@@ -492,7 +476,7 @@
         <property key="no-startup-files" value="false"/>
         <property key="oXC32ld-extra-opts" value=""/>
         <property key="optimization-level" value=""/>
-        <property key="preprocessor-macros" value=";"/>
+        <property key="preprocessor-macros" value=""/>
         <property key="remove-unused-sections" value="true"/>
         <property key="report-memory-usage" value="false"/>
         <property key="serial-length" value=""/>
@@ -505,7 +489,6 @@
       <C32CPP>
         <property key="additional-warnings" value="false"/>
         <property key="addresss-attribute-use" value="false"/>
-        <property key="appendMe" value=""/>
         <property key="check-new" value="false"/>
         <property key="eh-specs" value="true"/>
         <property key="enable-app-io" value="false"/>
@@ -515,7 +498,7 @@
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/vendor_sam_a5d27_wlsom1_ek1;../src/packs/ATSAMA5D27CLD2G_DFP;../src/packs/CMSIS/CMSIS/Core_A/Include;../src/packs/CMSIS/;"/>
+                  value="../src;../src/config/sam_a5d27_wlsom1_ek1;../src/packs/ATSAMA5D27CLD2G_DFP;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core_A/Include"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -1068,25 +1051,9 @@
         <property key="warningmessagebreakoptions.warningmessages" value="holdstate"/>
       </Simulator>
       <Tool>
-        <property key="AutoSelectMemRanges" value="auto"/>
         <property key="codecoverage.enabled" value="Disable"/>
         <property key="codecoverage.enableoutputtofile" value="false"/>
         <property key="codecoverage.outputfile" value=""/>
-        <property key="communication.autoselectspeed" value="true"/>
-        <property key="communication.interface" value="swd"/>
-        <property key="communication.speed" value="4"/>
-        <property key="memories.bootflash" value="true"/>
-        <property key="memories.configurationmemory" value="true"/>
-        <property key="memories.eeprom" value="true"/>
-        <property key="memories.id" value="true"/>
-        <property key="memories.instruction.ram" value="true"/>
-        <property key="memories.instruction.ram.end"
-                  value="${memories.instruction.ram.end.value}"/>
-        <property key="memories.instruction.ram.start"
-                  value="${memories.instruction.ram.start.value}"/>
-        <property key="memories.programmemory" value="true"/>
-        <property key="memories.programmemory.end" value="0x23ffff"/>
-        <property key="memories.programmemory.start" value="0x200000"/>
         <property key="oscillator.auxfrequency" value="120"/>
         <property key="oscillator.auxfrequencyunit" value="Mega"/>
         <property key="oscillator.frequency" value="1"/>
@@ -1105,12 +1072,6 @@
         <property key="periphComp4.gte" value="gt"/>
         <property key="periphComp5.gte" value="gt"/>
         <property key="periphComp6.gte" value="gt"/>
-        <property key="programoptions.eraseb4program" value="false"/>
-        <property key="programoptions.preservebootflash" value="false"/>
-        <property key="programoptions.preserveprogramrange" value="false"/>
-        <property key="programoptions.preserveprogramrange.end" value="0x23ffff"/>
-        <property key="programoptions.preserveprogramrange.start" value="0x200000"/>
-        <property key="programoptions.resetafterprogram" value="true"/>
         <property key="reset.scl" value="false"/>
         <property key="reset.type" value="MCLR"/>
         <property key="toolpack.updateoptions"
@@ -1549,36 +1510,6 @@
                   value=""/>
         <property key="warningmessagebreakoptions.warningmessages" value="holdstate"/>
       </Tool>
-      <samice>
-        <property key="AutoSelectMemRanges" value="auto"/>
-        <property key="boot.entry_adr" value=""/>
-        <property key="boot.load_adr" value=""/>
-        <property key="boot.path"
-                  value="${ProjectDir}\..\at91bootstrap_sam_a5d27_wlsom1_ek1.X\binaries\at91bootstrap.elf"/>
-        <property key="boot.prj" value=""/>
-        <property key="boot.use" value="true"/>
-        <property key="communication.autoselectspeed" value="true"/>
-        <property key="communication.interface" value="swd"/>
-        <property key="communication.speed" value="4"/>
-        <property key="memories.bootflash" value="true"/>
-        <property key="memories.configurationmemory" value="true"/>
-        <property key="memories.eeprom" value="true"/>
-        <property key="memories.id" value="true"/>
-        <property key="memories.instruction.ram" value="true"/>
-        <property key="memories.instruction.ram.end"
-                  value="${memories.instruction.ram.end.value}"/>
-        <property key="memories.instruction.ram.start"
-                  value="${memories.instruction.ram.start.value}"/>
-        <property key="memories.programmemory" value="true"/>
-        <property key="memories.programmemory.end" value="0x23ffff"/>
-        <property key="memories.programmemory.start" value="0x200000"/>
-        <property key="programoptions.eraseb4program" value="false"/>
-        <property key="programoptions.preservebootflash" value="false"/>
-        <property key="programoptions.preserveprogramrange" value="false"/>
-        <property key="programoptions.preserveprogramrange.end" value="0x23ffff"/>
-        <property key="programoptions.preserveprogramrange.start" value="0x200000"/>
-        <property key="programoptions.resetafterprogram" value="true"/>
-      </samice>
     </conf>
   </confs>
 </configurationDescriptor>

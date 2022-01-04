@@ -3,4 +3,4 @@ type: UniqueComponent
 attributes: {id: BSP_SAM_A5D27_WLSOM1_Kit1, bsp: 'true'}
 children:
 - type: ElementPosition
-  attributes: {x: '149', y: '65', id: BSP_SAM_A5D27_WLSOM1_Kit1}
+  attributes: {x: '16', y: '60', id: BSP_SAM_A5D27_WLSOM1_Kit1}
