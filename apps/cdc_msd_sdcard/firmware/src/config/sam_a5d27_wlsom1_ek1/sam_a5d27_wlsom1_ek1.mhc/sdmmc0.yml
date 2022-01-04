@@ -25,6 +25,24 @@ children:
       children:
       - type: Dynamic
         attributes: {id: drv_sdmmc_0, value: 'false'}
+  - type: Comment
+    attributes: {id: SDMMC0_CLK_ENABLE_COMMENT}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'true'}
+  - type: Comment
+    attributes: {id: SDMMC0_INTERRUPT_ENABLE_COMMENT}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'true'}
   - type: Integer
     attributes: {id: SDMMC_BASECLK_FREQ}
     children:

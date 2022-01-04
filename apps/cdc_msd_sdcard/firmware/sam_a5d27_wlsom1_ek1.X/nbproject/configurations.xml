@@ -453,7 +453,7 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/sam_a5d27_wlsom1_ek1;../src/packs/ATSAMA5D27CLD2G_DFP;../src/packs/CMSIS/CMSIS/Core_A/Include;../src/packs/CMSIS/;"/>
+                  value="../src;../src/config/sam_a5d27_wlsom1_ek1;../src/packs/ATSAMA5D27CLD2G_DFP;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core_A/Include"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -531,7 +531,7 @@
         <property key="no-startup-files" value="false"/>
         <property key="oXC32ld-extra-opts" value=""/>
         <property key="optimization-level" value=""/>
-        <property key="preprocessor-macros" value=";"/>
+        <property key="preprocessor-macros" value=""/>
         <property key="remove-unused-sections" value="true"/>
         <property key="report-memory-usage" value="false"/>
         <property key="serial-length" value=""/>
@@ -554,7 +554,7 @@
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/sam_a5d27_wlsom1_ek1;../src/packs/ATSAMA5D27CLD2G_DFP;../src/packs/CMSIS/CMSIS/Core_A/Include;../src/packs/CMSIS/;"/>
+                  value="../src;../src/config/sam_a5d27_wlsom1_ek1;../src/packs/ATSAMA5D27CLD2G_DFP;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core_A/Include"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>

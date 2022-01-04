@@ -342,13 +342,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: ACE577277E146F49B92285A8CD8E2D1D
-- generatedChecksum: 36781B03FE5999320644F5DDB0928E19
+- generatedChecksum: F30074168AF5006569C44271AB2B7072
   logicalPath: config/sam_a5d27_wlsom1_ek1
   name: configuration.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 36781B03FE5999320644F5DDB0928E19
+  userChecksum: F30074168AF5006569C44271AB2B7072
 - generatedChecksum: 32D6F5036C919DE32EFC951936B81657
   logicalPath: packs/CMSIS/CMSIS/Core_A/Include
   name: core_ca.h
@@ -1406,13 +1406,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 8AF03E090F2D85FDF03C40E013D06615
-- generatedChecksum: 4B3C3EF8A318908A22B78500515C3288
+- generatedChecksum: null
   logicalPath: config/sam_a5d27_wlsom1_ek1
   name: user.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 4B3C3EF8A318908A22B78500515C3288
+  userChecksum: null
 - generatedChecksum: 3A486FEE8A27C7AA261D076A30A56576
   logicalPath: packs/ATSAMA5D27CLD2G_DFP/component
   name: wdt.h
