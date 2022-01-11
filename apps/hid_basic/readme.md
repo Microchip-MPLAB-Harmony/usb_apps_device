@@ -83,11 +83,36 @@ Following table gives the details of project configurations, target device used,
 - LED0 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host). The LED is turned off when the Bus is suspended.
 - Press the switch SW0 to trigger communication from the USB Device to the USB Host.
 
+### <a name="config_22"></a> [Curiosity Pro PIC32CM LE00 Development Board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/TOBEADDED)
+
+- Use the USB micro-A/B "TARGET USB" connector (D200) to connect the USB Device to the USB Host PC.
+- LED0 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
+- Press the switch SW0 to trigger communication from the USB Device to the USB Host.
+
 ### <a name="config_7"></a> [Curiosity PIC32MZ EF 2.0 Development Board](https://www.microchip.com/Developmenttools/ProductDetails/DM320209)
 
 - Use the USB micro-B port J201 to connect the USB Device to the USB Host PC.
 - LED1 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host). The LED is turned off when the Bus is suspended.
 - Press the switch SW1 to trigger communication from the USB Device to the USB Host.
+
+
+### <a name="config_13"></a> [Curiosity PIC32MX470 Development Board](https://www.microchip.com/Developmenttools/ProductDetails/dm320103)
+
+- Use the USB micro-B port J12 to connect the USB Device to the USB Host PC.
+- LED1 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
+- Press the switch S1 to trigger communication from the USB Device to the USB Host.
+
+### <a name="config_16"></a> [PIC32MZ Embedded Connectivity with FPU (EF) Starter Kit](https://www.microchip.com/Developmenttools/ProductDetails/DM320007)
+
+- Use the micro-A/B port J4 (which is located on the bottom side of the board) to connect the USB Device to the USB Host PC.
+- LED1 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host). The LED is turned off when the Bus is suspended. 
+- Press the switch SW1 to trigger communication from the USB Device to the USB Host.
+
+### <a name="config_20"></a> [PIC32MM USB Curiosity Development Board](https://www.microchip.com/en-us/development-tool/dm320107)
+
+- Use the micro-B USB connector USB2 on the board to connect the USB Device to the USB Host PC.
+- LED1 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
+- Press the switch S1 to trigger communication from the USB Device to the USB Host.
 
 ### <a name="config_9"></a> [SAM9X60-EK Evaluation Board](https://www.microchip.com/developmenttools/ProductDetails/DT100126)
 
@@ -118,18 +143,6 @@ Following table gives the details of project configurations, target device used,
 - RGB LED turning to Green indicates USB Device Configuration Set Complete event (The USB device functionality has been activated by the USB Host). The LED is turned off when the Bus is suspended. 
 - Press PB_USER Switch to trigger communication from the USB Device to the USB Host.
 
-### <a name="config_13"></a> [Curiosity PIC32MX470 Development Board](https://www.microchip.com/Developmenttools/ProductDetails/dm320103)
-
-- Use the USB micro-B port J12 to connect the USB Device to the USB Host PC.
-- LED1 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
-- Press the switch S1 to trigger communication from the USB Device to the USB Host.
-
-### <a name="config_16"></a> [PIC32MZ Embedded Connectivity with FPU (EF) Starter Kit](https://www.microchip.com/Developmenttools/ProductDetails/DM320007)
-
-- Use the micro-A/B port J4 (which is located on the bottom side of the board) to connect the USB Device to the USB Host PC.
-- LED1 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host). The LED is turned off when the Bus is suspended. 
-- Press the switch SW1 to trigger communication from the USB Device to the USB Host.
-
 ### <a name="config_18"></a> [SAMA5D27 SOM1 Kit1](https://www.microchip.com/developmenttools/ProductDetails/atsama5d27-som1-ek1)
 
 - Setup the SD card 
@@ -156,12 +169,6 @@ Following table gives the details of project configurations, target device used,
 - Press the pushbutton SW4 to trigger communication from the USB Device to the USB Host.
   ![SAM9X60-EK Evaluation Board](images/SAMA5D2_WLSOM1_EK_USB.png)
 
-### <a name="config_20"></a> [PIC32MM USB Curiosity Development Board](https://www.microchip.com/en-us/development-tool/dm320107)
-
-- Use the micro-B USB connector USB2 on the board to connect the USB Device to the USB Host PC.
-- LED1 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
-- Press the switch S1 to trigger communication from the USB Device to the USB Host.
-
 ### <a name="config_21"></a> [SAMA7G5-EK Evaluation Kit](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/TOBEADDED)
 
 - Powered the board with an external power supply (J1) or power supply the board by connecting J7 to the computer using a micro USB cable.
@@ -174,12 +181,6 @@ Following table gives the details of project configurations, target device used,
 - Connect the USB MicroAB connector (J7) to the computer using an USB cable.
 - RGB LED turning to Green indicates USB Device Configuration Set Complete event (The USB device functionality has been activated by the USB Host). The LED is turned off when the Bus is suspended. 
 - Press the USER BUTTON SW1 to trigger communication from the USB Device to the USB Host.
-
-### <a name="config_22"></a> [Curiosity Pro PIC32CM LE00 Development Board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/TOBEADDED)
-
-- Use the USB micro-A/B "TARGET USB" connector (D200) to connect the USB Device to the USB Host PC.
-- LED0 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
-- Press the switch SW0 to trigger communication from the USB Device to the USB Host.
 
 ## Running the Application
 

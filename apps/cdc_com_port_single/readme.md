@@ -108,38 +108,16 @@ Following table gives the details of project configurations, target device used,
 - LED0 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
 - Press the switch SW0 to trigger communication from the USB Device to the USB Host.
 
-### <a name="config_9"></a> [SAM9X60-EK Evaluation Board](https://www.microchip.com/developmenttools/ProductDetails/DT100126)
-
-- Setup the SD card 
-    - Download harmony MPU bootstrap loader from this [location](firmware/at91bootstrap_sam_9x60_ek.X/binaries/boot.bin).
-    - Copy the downloaded boot loader binary (boot.bin) and generated application binary (harmony.bin) into the SD card.
-    - Insert the SD card into the SDMMC connector J4 on the board.
-    - Reset the board by pressing the Push Button SW3. 
-- Jumpers J20, J21, and J13 must be open.
-- Jumper J2 and J3 must be shorted.
-- Connect the USB Micro-B port J22 on board to the computer using a micro USB cable (to enable the debug com port).
-- Connect the USB Micro-B Connector (J7) on the board to the computer using a micro USB cable. 
-- LED D1 indicates USB Device Configuration Set Complete event (The USB device functionality has been activated by the USB Host).
-- Press the switch SW1 to trigger communication from the USB Device to the USB Host.
-    ![SAM9X60-EK Evaluation Board](images/sam9x60_evk.png)
-
-    **Note: Reset push button on SAM9X60 EK is labeled as SW3**
-
-### <a name="config_10"></a> [SAMA5D2 Xplained Ultra Board](https://www.microchip.com/Developmenttools/ProductDetails/ATSAMA5D2C-XULT)
-- Setup the SD card 
-    - Download harmony MPU bootstrap loader from this [location](firmware/at91bootstrap_sam_a5d2_xult.X/binaries/boot.bin).
-    - Copy the downloaded boot loader binary (boot.bin) and generated application binary (harmony.bin) into the SD card.
-    - Insert the SD card into the SDMMC1 slot on the board.
-    - Reset the board by pressing the Push Button BP3. 
-- Short jumper JP2(DEBUG_DIS).
-- Connect the EDBG USB Micro-B port J14 on the board to the computer using a micro USB cable.
-- Use the "A5-USB-A" connector (J23 - Micro A/B connector) on the board to connect the USB device to the USB Host.
-- RGB LED turning to Green indicates USB Device Configuration Set Complete event (The USB device functionality has been activated by the USB Host).
-- Press PB_USER Switch to trigger communication from the USB Device to the USB Host.
 
 ### <a name="config_11"></a> [SAMDA1 Xplained Pro Board](https://www.microchip.com/developmenttools/ProductDetails/PartNO/ATSAMDA1-XPRO)
 
 - Use TARGET USB connector on the board to connect the USB Device to the USB Host PC.
+- LED0 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
+- Press the switch SW0 to trigger communication from the USB Device to the USB Host.
+
+### <a name="config_22"></a> [Curiosity Pro PIC32CM LE00 Development Board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/TOBEADDED)
+
+- Use the USB micro-A/B "TARGET USB" connector (D200) to connect the USB Device to the USB Host PC.
 - LED0 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
 - Press the switch SW0 to trigger communication from the USB Device to the USB Host.
 
@@ -180,6 +158,42 @@ Following table gives the details of project configurations, target device used,
 - The LED D202 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
 - Press the switch SW200 to trigger communication from the USB Device to the USB Host.
 
+
+### <a name="config_20"></a> [PIC32MM USB Curiosity Development Board](https://www.microchip.com/en-us/development-tool/dm320107)
+
+- Use the micro-B USB connector USB2 on the board to connect the USB Device to the USB Host PC.
+- LED1 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
+- Press the switch S1 to trigger communication from the USB Device to the USB Host.
+
+### <a name="config_9"></a> [SAM9X60-EK Evaluation Board](https://www.microchip.com/developmenttools/ProductDetails/DT100126)
+
+- Setup the SD card 
+    - Download harmony MPU bootstrap loader from this [location](firmware/at91bootstrap_sam_9x60_ek.X/binaries/boot.bin).
+    - Copy the downloaded boot loader binary (boot.bin) and generated application binary (harmony.bin) into the SD card.
+    - Insert the SD card into the SDMMC connector J4 on the board.
+    - Reset the board by pressing the Push Button SW3. 
+- Jumpers J20, J21, and J13 must be open.
+- Jumper J2 and J3 must be shorted.
+- Connect the USB Micro-B port J22 on board to the computer using a micro USB cable (to enable the debug com port).
+- Connect the USB Micro-B Connector (J7) on the board to the computer using a micro USB cable. 
+- LED D1 indicates USB Device Configuration Set Complete event (The USB device functionality has been activated by the USB Host).
+- Press the switch SW1 to trigger communication from the USB Device to the USB Host.
+    ![SAM9X60-EK Evaluation Board](images/sam9x60_evk.png)
+
+    **Note: Reset push button on SAM9X60 EK is labeled as SW3**
+
+### <a name="config_10"></a> [SAMA5D2 Xplained Ultra Board](https://www.microchip.com/Developmenttools/ProductDetails/ATSAMA5D2C-XULT)
+- Setup the SD card 
+    - Download harmony MPU bootstrap loader from this [location](firmware/at91bootstrap_sam_a5d2_xult.X/binaries/boot.bin).
+    - Copy the downloaded boot loader binary (boot.bin) and generated application binary (harmony.bin) into the SD card.
+    - Insert the SD card into the SDMMC1 slot on the board.
+    - Reset the board by pressing the Push Button BP3. 
+- Short jumper JP2(DEBUG_DIS).
+- Connect the EDBG USB Micro-B port J14 on the board to the computer using a micro USB cable.
+- Use the "A5-USB-A" connector (J23 - Micro A/B connector) on the board to connect the USB device to the USB Host.
+- RGB LED turning to Green indicates USB Device Configuration Set Complete event (The USB device functionality has been activated by the USB Host).
+- Press PB_USER Switch to trigger communication from the USB Device to the USB Host.
+
 ### <a name="config_18"></a> [SAMA5D27 SOM1 Kit1](https://www.microchip.com/developmenttools/ProductDetails/atsama5d27-som1-ek1)
 
 - Setup the SD card 
@@ -206,12 +220,6 @@ Following table gives the details of project configurations, target device used,
 - Press the pushbutton SW4 to trigger communication from the USB Device to the USB Host.
   ![SAM9X60-EK Evaluation Board](images/SAMA5D2_WLSOM1_EK_USB.png)
 
-### <a name="config_20"></a> [PIC32MM USB Curiosity Development Board](https://www.microchip.com/en-us/development-tool/dm320107)
-
-- Use the micro-B USB connector USB2 on the board to connect the USB Device to the USB Host PC.
-- LED1 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
-- Press the switch S1 to trigger communication from the USB Device to the USB Host.
-
 ### <a name="config_21"></a> [SAMA7G5-EK Evaluation Kit](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/TOBEADDED)
 
 - Powered the board with an external power supply (J1) or power supply the board by connecting J7 to the computer using a micro USB cable.
@@ -224,12 +232,6 @@ Following table gives the details of project configurations, target device used,
 - Connect the USB MicroAB connector (J7) to the computer using an USB cable.
 - RGB LED turning to Green indicates USB Device Configuration Set Complete event (The USB device functionality has been activated by the USB Host).
 - Press the USER BUTTON SW1 to trigger communication from the USB Device to the USB Host.
-
-### <a name="config_22"></a> [Curiosity Pro PIC32CM LE00 Development Board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/TOBEADDED)
-
-- Use the USB micro-A/B "TARGET USB" connector (D200) to connect the USB Device to the USB Host PC.
-- LED0 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
-- Press the switch SW0 to trigger communication from the USB Device to the USB Host.
 
 ## Running the Application
 
