@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2019-12-16T02:54:59Z */
+/* file generated from device description version 2021-05-17T12:40:13Z */
 #ifndef _SAMG55J19_H_
 #define _SAMG55J19_H_
 
@@ -253,14 +253,14 @@ void CRCCU_Handler                 ( void );
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 /** \brief Configuration of the CORTEX-M4 Processor and Core Peripherals */
-#define __CM4_REV                 0x0001 /**< CM4 Core Revision                                                         */
-#define __NVIC_PRIO_BITS               4 /**< Number of Bits used for Priority Levels                                   */
-#define __Vendor_SysTickConfig         0 /**< Set to 1 if different SysTick Config is used                              */
-#define __MPU_PRESENT                  1 /**< MPU present or not                                                        */
-#define __VTOR_PRESENT                 1 /**< Vector Table Offset Register present or not                               */
-#define __FPU_PRESENT                  1 /**< FPU present or not                                                        */
-#define __ARCH_ARM                     1
-#define __ARCH_ARM_CORTEX_M            1
+#define __CM4_REV                     0x0001 /**< CM4 Core Revision                                                         */
+#define __NVIC_PRIO_BITS                   4 /**< Number of Bits used for Priority Levels                                   */
+#define __Vendor_SysTickConfig             0 /**< Set to 1 if different SysTick Config is used                              */
+#define __MPU_PRESENT                      1 /**< MPU present or not                                                        */
+#define __VTOR_PRESENT                     1 /**< Vector Table Offset Register present or not                               */
+#define __FPU_PRESENT                      1 /**< FPU present or not                                                        */
+#define __ARCH_ARM                         1
+#define __ARCH_ARM_CORTEX_M                1
 
 /*
  * \brief CMSIS includes
@@ -283,6 +283,7 @@ void CRCCU_Handler                 ( void );
 #include "component/crccu.h"
 #include "component/efc.h"
 #include "component/flexcom.h"
+#include "component/fuses.h"
 #include "component/gpbr.h"
 #include "component/i2sc.h"
 #include "component/matrix.h"
@@ -320,6 +321,7 @@ void CRCCU_Handler                 ( void );
 #include "instance/flexcom5.h"
 #include "instance/flexcom6.h"
 #include "instance/flexcom7.h"
+#include "instance/fuses.h"
 #include "instance/gpbr.h"
 #include "instance/i2sc0.h"
 #include "instance/i2sc1.h"
@@ -461,7 +463,7 @@ void CRCCU_Handler                 ( void );
 #define TWI6_REGS                        ((twi_registers_t*)0x40040600)                /**< \brief TWI6 Registers Address       */
 #define TWI7_REGS                        ((twi_registers_t*)0x40034600)                /**< \brief TWI7 Registers Address       */
 #define UDP_REGS                         ((udp_registers_t*)0x40044000)                /**< \brief UDP Registers Address        */
-#define UHP_REGS                         ((uhp_registers_t*)0x4004c000)                /**< \brief UHP Registers Address        */
+#define UHP_REGS                         ((uhp_registers_t*)0x20400000)                /**< \brief UHP Registers Address        */
 #define USART0_REGS                      ((usart_registers_t*)0x4000c200)              /**< \brief USART0 Registers Address     */
 #define USART1_REGS                      ((usart_registers_t*)0x40020200)              /**< \brief USART1 Registers Address     */
 #define USART2_REGS                      ((usart_registers_t*)0x40024200)              /**< \brief USART2 Registers Address     */
@@ -471,6 +473,7 @@ void CRCCU_Handler                 ( void );
 #define USART6_REGS                      ((usart_registers_t*)0x40040200)              /**< \brief USART6 Registers Address     */
 #define USART7_REGS                      ((usart_registers_t*)0x40034200)              /**< \brief USART7 Registers Address     */
 #define WDT_REGS                         ((wdt_registers_t*)0x400e1450)                /**< \brief WDT Registers Address        */
+#define GPNVMBITS_REGS                   ((fuses_gpnvmbits_registers_t*)0x00000000)    /**< \brief FUSES Registers Address      */
 #endif /* (defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 /** @}  end of Peripheral Base Address Definitions */
 
@@ -527,7 +530,7 @@ void CRCCU_Handler                 ( void );
 #define TWI6_BASE_ADDRESS                _UL_(0x40040600)                              /* TWI6 Base Address */
 #define TWI7_BASE_ADDRESS                _UL_(0x40034600)                              /* TWI7 Base Address */
 #define UDP_BASE_ADDRESS                 _UL_(0x40044000)                              /* UDP Base Address */
-#define UHP_BASE_ADDRESS                 _UL_(0x4004c000)                              /* UHP Base Address */
+#define UHP_BASE_ADDRESS                 _UL_(0x20400000)                              /* UHP Base Address */
 #define USART0_BASE_ADDRESS              _UL_(0x4000c200)                              /* USART0 Base Address */
 #define USART1_BASE_ADDRESS              _UL_(0x40020200)                              /* USART1 Base Address */
 #define USART2_BASE_ADDRESS              _UL_(0x40024200)                              /* USART2 Base Address */
@@ -537,6 +540,7 @@ void CRCCU_Handler                 ( void );
 #define USART6_BASE_ADDRESS              _UL_(0x40040200)                              /* USART6 Base Address */
 #define USART7_BASE_ADDRESS              _UL_(0x40034200)                              /* USART7 Base Address */
 #define WDT_BASE_ADDRESS                 _UL_(0x400e1450)                              /* WDT Base Address */
+#define GPNVMBITS_BASE_ADDRESS           _UL_(0x00000000)                              /* FUSES Base Address */
 /** @}  end of Peripheral Base Address Definitions */
 
 /** \addtogroup SAMG55J19_pio Peripheral Pio Definitions

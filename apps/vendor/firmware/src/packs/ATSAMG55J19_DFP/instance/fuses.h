@@ -21,7 +21,7 @@
  */
 
 /* file generated from device description version 2021-05-17T12:40:13Z */
-#ifndef _SAMG55_CHIPID_INSTANCE_
-#define _SAMG55_CHIPID_INSTANCE_
+#ifndef _SAMG55_FUSES_INSTANCE_
+#define _SAMG55_FUSES_INSTANCE_
 
-#endif /* _SAMG55_CHIPID_INSTANCE_ */
+#endif /* _SAMG55_FUSES_INSTANCE_ */

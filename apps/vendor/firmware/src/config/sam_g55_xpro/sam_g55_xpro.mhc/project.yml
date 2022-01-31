@@ -69,13 +69,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 08455A8B76479102F310CC00F3BCD2E9
-- generatedChecksum: 8974F8056362B223EEC3FD4C15C54414
+- generatedChecksum: 21D66E57F9D4FC9EDB4DC67A1A6637B3
   logicalPath: config/sam_g55_xpro/peripheral/efc
   name: plib_efc.c
   physicalPath: peripheral/efc
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 8974F8056362B223EEC3FD4C15C54414
+  userChecksum: 21D66E57F9D4FC9EDB4DC67A1A6637B3
 - generatedChecksum: 551575D9CF2493F73FC939CC3F632454
   logicalPath: config/sam_g55_xpro/peripheral/nvic
   name: plib_nvic.c
@@ -146,20 +146,20 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 7806B30ECAE0D18D08CD583D8775530D
-- generatedChecksum: 27E673A60E4646407335CFE51527DD9B
+- generatedChecksum: 71BC7A9439ED5286B058DA012111A082
   logicalPath: packs/ATSAMG55J19_DFP/component
   name: adc.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 27E673A60E4646407335CFE51527DD9B
-- generatedChecksum: 5969A7D05E70D6EF0676C7EF800CE8FC
+  userChecksum: 71BC7A9439ED5286B058DA012111A082
+- generatedChecksum: 45D745B7AA6371959ACE231AD23A99F7
   logicalPath: packs/ATSAMG55J19_DFP/instance
   name: adc.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 5969A7D05E70D6EF0676C7EF800CE8FC
+  userChecksum: 45D745B7AA6371959ACE231AD23A99F7
 - generatedChecksum: null
   logicalPath: ''
   name: app.h
@@ -174,62 +174,62 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: E9CACBE5EF46CAD93973FFB3ABF06E57
-- generatedChecksum: 01B82424BC59A54620F7E9E0DB808EBB
+- generatedChecksum: 14F1AD56D242EFD0AF76849C6ADFECC4
   logicalPath: packs/CMSIS/CMSIS/Core/Include
   name: cachel1_armv7.h
   physicalPath: ../../packs/CMSIS/CMSIS/Core/Include
   security: NON_SECURE
   type: HEADER
-  userChecksum: 01B82424BC59A54620F7E9E0DB808EBB
-- generatedChecksum: 6E5447DB7B7307FE1C008657A2BB8060
+  userChecksum: 14F1AD56D242EFD0AF76849C6ADFECC4
+- generatedChecksum: 4BAC1BD9DF3EAAE9FCF0CCA8DCC0D1B3
   logicalPath: packs/ATSAMG55J19_DFP/component
   name: chipid.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 6E5447DB7B7307FE1C008657A2BB8060
-- generatedChecksum: 159F3F453E4F972C2B12B581AD4939A4
+  userChecksum: 4BAC1BD9DF3EAAE9FCF0CCA8DCC0D1B3
+- generatedChecksum: 3F5A46BCCB2E66F5549F9839DE381ECE
   logicalPath: packs/ATSAMG55J19_DFP/instance
   name: chipid.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 159F3F453E4F972C2B12B581AD4939A4
-- generatedChecksum: 80807A7E214C0E6EB0B5153C50026745
+  userChecksum: 3F5A46BCCB2E66F5549F9839DE381ECE
+- generatedChecksum: AD78ED3D9ADCE8A810F3ADFF636CD5FD
   logicalPath: packs/ATSAMG55J19_DFP/component
   name: cmcc.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 80807A7E214C0E6EB0B5153C50026745
-- generatedChecksum: F9A26A09FE68530C47BFB70BC82168E9
+  userChecksum: AD78ED3D9ADCE8A810F3ADFF636CD5FD
+- generatedChecksum: 6A25141C154BEACBC3FA063A7482F81D
   logicalPath: packs/ATSAMG55J19_DFP/instance
   name: cmcc.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: F9A26A09FE68530C47BFB70BC82168E9
-- generatedChecksum: 00A88E28C299A373117BC4D5B9E80C80
+  userChecksum: 6A25141C154BEACBC3FA063A7482F81D
+- generatedChecksum: B79C08E0901948AD04D944B4BCE1B60D
   logicalPath: packs/CMSIS/CMSIS/Core/Include
   name: cmsis_armcc.h
   physicalPath: ../../packs/CMSIS/CMSIS/Core/Include
   security: NON_SECURE
   type: HEADER
-  userChecksum: 00A88E28C299A373117BC4D5B9E80C80
-- generatedChecksum: 734DF6998F09B2D22A4D9FE1D544FDFC
+  userChecksum: B79C08E0901948AD04D944B4BCE1B60D
+- generatedChecksum: 6B4E2EBA8708D9E04E6136F29460ACB9
   logicalPath: packs/CMSIS/CMSIS/Core/Include
   name: cmsis_armclang.h
   physicalPath: ../../packs/CMSIS/CMSIS/Core/Include
   security: NON_SECURE
   type: HEADER
-  userChecksum: 734DF6998F09B2D22A4D9FE1D544FDFC
-- generatedChecksum: 5D653BEFE5E6B1D00AB3682CE5D24C11
+  userChecksum: 6B4E2EBA8708D9E04E6136F29460ACB9
+- generatedChecksum: 415E22EBE7A3BACE87240A7F16492C46
   logicalPath: packs/CMSIS/CMSIS/Core/Include
   name: cmsis_armclang_ltm.h
   physicalPath: ../../packs/CMSIS/CMSIS/Core/Include
   security: NON_SECURE
   type: HEADER
-  userChecksum: 5D653BEFE5E6B1D00AB3682CE5D24C11
+  userChecksum: 415E22EBE7A3BACE87240A7F16492C46
 - generatedChecksum: 60385A5C6C9882B5D30709A1F6EAEC35
   logicalPath: packs/CMSIS/CMSIS/Core/Include
   name: cmsis_compiler.h
@@ -237,20 +237,20 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 60385A5C6C9882B5D30709A1F6EAEC35
-- generatedChecksum: 42E8B722917508A3A9373D13AD827ED6
+- generatedChecksum: 4DC978B079559EB044AFD32A57768238
   logicalPath: packs/CMSIS/CMSIS/Core/Include
   name: cmsis_gcc.h
   physicalPath: ../../packs/CMSIS/CMSIS/Core/Include
   security: NON_SECURE
   type: HEADER
-  userChecksum: 42E8B722917508A3A9373D13AD827ED6
-- generatedChecksum: 376D5C7FD29CAA507ACB1AAB8746B1AD
+  userChecksum: 4DC978B079559EB044AFD32A57768238
+- generatedChecksum: 11521476050CAC6C1F3A91A5BB5DBB9A
   logicalPath: packs/CMSIS/CMSIS/Core/Include
   name: cmsis_iccarm.h
   physicalPath: ../../packs/CMSIS/CMSIS/Core/Include
   security: NON_SECURE
   type: HEADER
-  userChecksum: 376D5C7FD29CAA507ACB1AAB8746B1AD
+  userChecksum: 11521476050CAC6C1F3A91A5BB5DBB9A
 - generatedChecksum: 52F91AC0727F2311EDA0E3BAA7719A9F
   logicalPath: packs/CMSIS/CMSIS/Core/Include
   name: cmsis_version.h
@@ -258,34 +258,34 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 52F91AC0727F2311EDA0E3BAA7719A9F
-- generatedChecksum: 9480D637AD64278BD59A2B11E222F693
+- generatedChecksum: 08BC8E3E2F229F8998E3136CE7E2EE67
   logicalPath: config/sam_g55_xpro
   name: configuration.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 9480D637AD64278BD59A2B11E222F693
-- generatedChecksum: 624A16D50759D7A491C523D747764B49
+  userChecksum: 08BC8E3E2F229F8998E3136CE7E2EE67
+- generatedChecksum: 7EF1FAD7778FEEAC9467270306D7F7C0
   logicalPath: packs/CMSIS/CMSIS/Core/Include
   name: core_cm4.h
   physicalPath: ../../packs/CMSIS/CMSIS/Core/Include
   security: NON_SECURE
   type: HEADER
-  userChecksum: 624A16D50759D7A491C523D747764B49
-- generatedChecksum: 7ADA786CD575BF1915B5E224A459B035
+  userChecksum: 7EF1FAD7778FEEAC9467270306D7F7C0
+- generatedChecksum: D682CB19B0B4D14B5C595185E8E61BA8
   logicalPath: packs/ATSAMG55J19_DFP/component
   name: crccu.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 7ADA786CD575BF1915B5E224A459B035
-- generatedChecksum: 4B7AC2119D5B078A4BDA313FC87D67EE
+  userChecksum: D682CB19B0B4D14B5C595185E8E61BA8
+- generatedChecksum: 468146180FBA71A4DA27CDAE338241F1
   logicalPath: packs/ATSAMG55J19_DFP/instance
   name: crccu.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 4B7AC2119D5B078A4BDA313FC87D67EE
+  userChecksum: 468146180FBA71A4DA27CDAE338241F1
 - generatedChecksum: 8CFA57914C73C88DAC5299C684B87469
   logicalPath: config/sam_g55_xpro
   name: definitions.h
@@ -356,118 +356,132 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 02CBE18DD79146C139E0B6BFCB932DFA
-- generatedChecksum: 5C47BDD55EC8385D5C58145FBA66DC78
+- generatedChecksum: BAD9253DB73DB395A8C02668F100AF2D
   logicalPath: packs/ATSAMG55J19_DFP/component
   name: efc.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 5C47BDD55EC8385D5C58145FBA66DC78
-- generatedChecksum: 7B3AD779539B7F2F34ED0ACB207DC445
+  userChecksum: BAD9253DB73DB395A8C02668F100AF2D
+- generatedChecksum: 5D8F26D80C30FB6B55D15E9E054ED425
   logicalPath: packs/ATSAMG55J19_DFP/instance
   name: efc.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 7B3AD779539B7F2F34ED0ACB207DC445
-- generatedChecksum: 328A301FDA02734BE332972E82831DC1
+  userChecksum: 5D8F26D80C30FB6B55D15E9E054ED425
+- generatedChecksum: 10E6A1C5EDE5B50713ED89FAE125F850
   logicalPath: packs/ATSAMG55J19_DFP/component
   name: flexcom.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 328A301FDA02734BE332972E82831DC1
-- generatedChecksum: C5AF045CE6D65F022FA13D5BFAD65C4A
+  userChecksum: 10E6A1C5EDE5B50713ED89FAE125F850
+- generatedChecksum: 7F4BD56633702ADDBABD1AC3FCA3077D
   logicalPath: packs/ATSAMG55J19_DFP/instance
   name: flexcom0.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: C5AF045CE6D65F022FA13D5BFAD65C4A
-- generatedChecksum: 1E21707AEFAF0ECB61ED058B5E9FCD4E
+  userChecksum: 7F4BD56633702ADDBABD1AC3FCA3077D
+- generatedChecksum: BD16C82C048AB6DE9ECA96FA3EAEB09A
   logicalPath: packs/ATSAMG55J19_DFP/instance
   name: flexcom1.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 1E21707AEFAF0ECB61ED058B5E9FCD4E
-- generatedChecksum: E16A1F10298C6798BE25BB8DDABB92A5
+  userChecksum: BD16C82C048AB6DE9ECA96FA3EAEB09A
+- generatedChecksum: B86D2B106A19068585DCF58ACF454F90
   logicalPath: packs/ATSAMG55J19_DFP/instance
   name: flexcom2.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: E16A1F10298C6798BE25BB8DDABB92A5
-- generatedChecksum: 1C9079B79F874D8D370FA189384E8ECD
+  userChecksum: B86D2B106A19068585DCF58ACF454F90
+- generatedChecksum: FC85CD6F76AE718627FBF6157629DE3E
   logicalPath: packs/ATSAMG55J19_DFP/instance
   name: flexcom3.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 1C9079B79F874D8D370FA189384E8ECD
-- generatedChecksum: 818CA060EB834966678A3FBAAF3E95A2
+  userChecksum: FC85CD6F76AE718627FBF6157629DE3E
+- generatedChecksum: 92E2018A62AF70583D837F810A4CCDD1
   logicalPath: packs/ATSAMG55J19_DFP/instance
   name: flexcom4.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 818CA060EB834966678A3FBAAF3E95A2
-- generatedChecksum: F54DC772D0748E3724D5D9C710FE574F
+  userChecksum: 92E2018A62AF70583D837F810A4CCDD1
+- generatedChecksum: D6D6E9E78A638351A6E40EFEEF175D5D
   logicalPath: packs/ATSAMG55J19_DFP/instance
   name: flexcom5.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: F54DC772D0748E3724D5D9C710FE574F
-- generatedChecksum: 5EE912807AEDD1D88B373BE92B10DE50
+  userChecksum: D6D6E9E78A638351A6E40EFEEF175D5D
+- generatedChecksum: 50F22F49016C16E43A55CB709A5E32F6
   logicalPath: packs/ATSAMG55J19_DFP/instance
   name: flexcom6.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 5EE912807AEDD1D88B373BE92B10DE50
-- generatedChecksum: 07D5A0C989597FCD418BAC17F7827C80
+  userChecksum: 50F22F49016C16E43A55CB709A5E32F6
+- generatedChecksum: C4E7E17529CBED05E16B840B33130227
   logicalPath: packs/ATSAMG55J19_DFP/instance
   name: flexcom7.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 07D5A0C989597FCD418BAC17F7827C80
-- generatedChecksum: 6044BE2D6EC8D3D192212467FFDD238A
+  userChecksum: C4E7E17529CBED05E16B840B33130227
+- generatedChecksum: 98756FD3EF4BC4C88FB46ABA29DA6A56
+  logicalPath: packs/ATSAMG55J19_DFP/component
+  name: fuses.h
+  physicalPath: ../../packs/ATSAMG55J19_DFP/component
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: 98756FD3EF4BC4C88FB46ABA29DA6A56
+- generatedChecksum: 96D6584B80544CD67BE3CDA08280349F
+  logicalPath: packs/ATSAMG55J19_DFP/instance
+  name: fuses.h
+  physicalPath: ../../packs/ATSAMG55J19_DFP/instance
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: 96D6584B80544CD67BE3CDA08280349F
+- generatedChecksum: EE3AAD3B7450B6AD560DBB506B87AE21
   logicalPath: packs/ATSAMG55J19_DFP/component
   name: gpbr.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 6044BE2D6EC8D3D192212467FFDD238A
-- generatedChecksum: B130CCDCAB51595EF30478C7EE781694
+  userChecksum: EE3AAD3B7450B6AD560DBB506B87AE21
+- generatedChecksum: D7AC9346C3D056D9B44580B66905C6FC
   logicalPath: packs/ATSAMG55J19_DFP/instance
   name: gpbr.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: B130CCDCAB51595EF30478C7EE781694
-- generatedChecksum: 1F4A188FD021CC0F8DE16547726946BE
+  userChecksum: D7AC9346C3D056D9B44580B66905C6FC
+- generatedChecksum: 9DB1FD438E354479272313557AC17A6C
   logicalPath: packs/ATSAMG55J19_DFP/component
   name: i2sc.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 1F4A188FD021CC0F8DE16547726946BE
-- generatedChecksum: C60F5591A7829B19FAD031F36386E929
+  userChecksum: 9DB1FD438E354479272313557AC17A6C
+- generatedChecksum: 8BF821DDBCCDE00C047CE5E2482334A5
   logicalPath: packs/ATSAMG55J19_DFP/instance
   name: i2sc0.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: C60F5591A7829B19FAD031F36386E929
-- generatedChecksum: 0DB0DE3B829CD30A911DCC752A60DC4E
+  userChecksum: 8BF821DDBCCDE00C047CE5E2482334A5
+- generatedChecksum: 26130422D3A33B446D0CDCBE622D60D2
   logicalPath: packs/ATSAMG55J19_DFP/instance
   name: i2sc1.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 0DB0DE3B829CD30A911DCC752A60DC4E
+  userChecksum: 26130422D3A33B446D0CDCBE622D60D2
 - generatedChecksum: E5D10FE48449578A684E23699BEE53E1
   logicalPath: config/sam_g55_xpro
   name: interrupts.h
@@ -475,41 +489,41 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: E5D10FE48449578A684E23699BEE53E1
-- generatedChecksum: F63360A02CE32E33ACDA835E94CE6DC6
+- generatedChecksum: 4BBC7BDBED294C1A35138ED661A03106
   logicalPath: packs/ATSAMG55J19_DFP/component
   name: matrix.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: F63360A02CE32E33ACDA835E94CE6DC6
-- generatedChecksum: FB96E80107A2E25F5D438F18B9D4FA9F
+  userChecksum: 4BBC7BDBED294C1A35138ED661A03106
+- generatedChecksum: 842891FAB335C86C13D8A450D6CEFE1E
   logicalPath: packs/ATSAMG55J19_DFP/instance
   name: matrix.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: FB96E80107A2E25F5D438F18B9D4FA9F
-- generatedChecksum: 3974198A7A66B2F87624D60732DAA0C3
+  userChecksum: 842891FAB335C86C13D8A450D6CEFE1E
+- generatedChecksum: BF64D6B68BA7149075CED3379C2E29FF
   logicalPath: packs/ATSAMG55J19_DFP/component
   name: mem2mem.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 3974198A7A66B2F87624D60732DAA0C3
-- generatedChecksum: F032945976136321A9F8196A40BDFA41
+  userChecksum: BF64D6B68BA7149075CED3379C2E29FF
+- generatedChecksum: 569162CE11E823D695FCF0B83BAF3B29
   logicalPath: packs/ATSAMG55J19_DFP/instance
   name: mem2mem.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: F032945976136321A9F8196A40BDFA41
-- generatedChecksum: B96ADDA2C111E73B26EBA5E7B4498912
+  userChecksum: 569162CE11E823D695FCF0B83BAF3B29
+- generatedChecksum: 47E760D36E42A7B436306A9CB4E72A0E
   logicalPath: packs/CMSIS/CMSIS/Core/Include
   name: mpu_armv7.h
   physicalPath: ../../packs/CMSIS/CMSIS/Core/Include
   security: NON_SECURE
   type: HEADER
-  userChecksum: B96ADDA2C111E73B26EBA5E7B4498912
+  userChecksum: 47E760D36E42A7B436306A9CB4E72A0E
 - generatedChecksum: F0AD88762263B7CB89B02AB4F5876059
   logicalPath: config/sam_g55_xpro/osal
   name: osal.h
@@ -531,55 +545,55 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: B040122CCA94A0636810D6F15F13B751
-- generatedChecksum: 02C213BE2B2CD3CEFCF0FE4BF50565E6
+- generatedChecksum: 584B904C2D42C65837F1EFDF4503DF90
   logicalPath: packs/ATSAMG55J19_DFP/component
   name: pdc.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 02C213BE2B2CD3CEFCF0FE4BF50565E6
-- generatedChecksum: 52506FBE50F116917CFAA05E09D88DCF
+  userChecksum: 584B904C2D42C65837F1EFDF4503DF90
+- generatedChecksum: 1071C4C3D04CCEC3C91FD4564F42F6A1
   logicalPath: packs/ATSAMG55J19_DFP/component
   name: pdmic.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 52506FBE50F116917CFAA05E09D88DCF
-- generatedChecksum: 124BEB6509FB3E70E8A7046A294B3343
+  userChecksum: 1071C4C3D04CCEC3C91FD4564F42F6A1
+- generatedChecksum: 89929CB60ED448FEC36F0393B9DD4A50
   logicalPath: packs/ATSAMG55J19_DFP/instance
   name: pdmic0.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 124BEB6509FB3E70E8A7046A294B3343
-- generatedChecksum: E7C0057B848F8346EB1E41663AA40CAB
+  userChecksum: 89929CB60ED448FEC36F0393B9DD4A50
+- generatedChecksum: 1EFC4DFD8AFA76D8DBD1D3167596F66C
   logicalPath: packs/ATSAMG55J19_DFP/instance
   name: pdmic1.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: E7C0057B848F8346EB1E41663AA40CAB
-- generatedChecksum: F797639E6E794CA7CAD35334482A19D6
+  userChecksum: 1EFC4DFD8AFA76D8DBD1D3167596F66C
+- generatedChecksum: D92F8BE544232786C6CCF5D30469ECF3
   logicalPath: packs/ATSAMG55J19_DFP/component
   name: pio.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: F797639E6E794CA7CAD35334482A19D6
-- generatedChecksum: 241DE46419F5A3C903C82C846D3EA788
+  userChecksum: D92F8BE544232786C6CCF5D30469ECF3
+- generatedChecksum: 3D27B0DE24AF0B213E58DCC653C5E161
   logicalPath: packs/ATSAMG55J19_DFP/instance
   name: pioa.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 241DE46419F5A3C903C82C846D3EA788
-- generatedChecksum: CB5F0ED7377444135DAA382BDCE4C6B7
+  userChecksum: 3D27B0DE24AF0B213E58DCC653C5E161
+- generatedChecksum: D1A1EA1761A1DCDE04BA1557FCDCB97E
   logicalPath: packs/ATSAMG55J19_DFP/instance
   name: piob.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: CB5F0ED7377444135DAA382BDCE4C6B7
+  userChecksum: D1A1EA1761A1DCDE04BA1557FCDCB97E
 - generatedChecksum: 78387EA60F98EE9F5602C2EB8CFEA8B3
   logicalPath: config/sam_g55_xpro/peripheral/clock
   name: plib_clock.h
@@ -594,13 +608,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 95A89CFFC2B67EA718036EF9B8805872
-- generatedChecksum: FB046CED42CA3B2AE1895C186571EF71
+- generatedChecksum: 0ABDA5C4051B45BB0C8746712B766240
   logicalPath: config/sam_g55_xpro/peripheral/efc
   name: plib_efc.h
   physicalPath: peripheral/efc
   security: NON_SECURE
   type: HEADER
-  userChecksum: FB046CED42CA3B2AE1895C186571EF71
+  userChecksum: 0ABDA5C4051B45BB0C8746712B766240
 - generatedChecksum: 55ECCC7FA71BD15B46EF80DC0515ED7A
   logicalPath: config/sam_g55_xpro/peripheral/nvic
   name: plib_nvic.h
@@ -615,153 +629,153 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: B5DDE6CFD41CD19F1E2BBB59637C3510
-- generatedChecksum: EEE5D29DEFA9E4B90029AEDBC818483F
+- generatedChecksum: F4FBE11D03BDE9390C759A7B295129FB
   logicalPath: packs/ATSAMG55J19_DFP/component
   name: pmc.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: EEE5D29DEFA9E4B90029AEDBC818483F
-- generatedChecksum: 8D377A811E21ACA1FCE04B9461729048
+  userChecksum: F4FBE11D03BDE9390C759A7B295129FB
+- generatedChecksum: 2903A87F2E2CCF4DF0F2BA0F928352D7
   logicalPath: packs/ATSAMG55J19_DFP/instance
   name: pmc.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 8D377A811E21ACA1FCE04B9461729048
-- generatedChecksum: 4C8BDCDFD37CC9518B533CF98FE34128
+  userChecksum: 2903A87F2E2CCF4DF0F2BA0F928352D7
+- generatedChecksum: 128414BC32A0C9254DCA4C48EE12C172
   logicalPath: packs/ATSAMG55J19_DFP/component
   name: rstc.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 4C8BDCDFD37CC9518B533CF98FE34128
-- generatedChecksum: A65ADFB1EB8230434FE2AAE9141A8537
+  userChecksum: 128414BC32A0C9254DCA4C48EE12C172
+- generatedChecksum: 5A783B76B80E81B81592181C402360A5
   logicalPath: packs/ATSAMG55J19_DFP/instance
   name: rstc.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: A65ADFB1EB8230434FE2AAE9141A8537
-- generatedChecksum: 9E39556ECB5039DE59686F049E68B556
+  userChecksum: 5A783B76B80E81B81592181C402360A5
+- generatedChecksum: CD519167D4C6FA3C3596CDE915CB4A29
   logicalPath: packs/ATSAMG55J19_DFP/component
   name: rtc.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 9E39556ECB5039DE59686F049E68B556
-- generatedChecksum: 7831D58363D9946CC8503DD16F06F3C9
+  userChecksum: CD519167D4C6FA3C3596CDE915CB4A29
+- generatedChecksum: 6E3F8BDD740878535717B4C6B1ECAA59
   logicalPath: packs/ATSAMG55J19_DFP/instance
   name: rtc.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 7831D58363D9946CC8503DD16F06F3C9
-- generatedChecksum: B12FDA1CD5C62C82AF004907548157E9
+  userChecksum: 6E3F8BDD740878535717B4C6B1ECAA59
+- generatedChecksum: 21AFC55C5716AEE8B5BFCF7AD5AB6516
   logicalPath: packs/ATSAMG55J19_DFP/component
   name: rtt.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: B12FDA1CD5C62C82AF004907548157E9
-- generatedChecksum: 83291DC7530FBFB7EAE5B47DC438968E
+  userChecksum: 21AFC55C5716AEE8B5BFCF7AD5AB6516
+- generatedChecksum: ED7A32BE6A1511B96B39D67B78ECE757
   logicalPath: packs/ATSAMG55J19_DFP/instance
   name: rtt.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 83291DC7530FBFB7EAE5B47DC438968E
-- generatedChecksum: 6650B02925FA385E0AABEAE509563283
+  userChecksum: ED7A32BE6A1511B96B39D67B78ECE757
+- generatedChecksum: 04EA4BB318E8F8059522402C6A4FF607
   logicalPath: packs/ATSAMG55J19_DFP
   name: samg55j19.h
   physicalPath: ../../packs/ATSAMG55J19_DFP
   security: NON_SECURE
   type: HEADER
-  userChecksum: 6650B02925FA385E0AABEAE509563283
-- generatedChecksum: DC7F52FA54DB4A5066F1BDFD7E2224D4
+  userChecksum: 04EA4BB318E8F8059522402C6A4FF607
+- generatedChecksum: 20C369B0D8AB27456608258539F604D3
   logicalPath: packs/ATSAMG55J19_DFP/pio
   name: samg55j19.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/pio
   security: NON_SECURE
   type: HEADER
-  userChecksum: DC7F52FA54DB4A5066F1BDFD7E2224D4
-- generatedChecksum: 42C273F6BD5677D1AC41AB4B5452D26B
+  userChecksum: 20C369B0D8AB27456608258539F604D3
+- generatedChecksum: 38A8811686108C4917CB658B3482C639
   logicalPath: packs/ATSAMG55J19_DFP/component
   name: spi.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 42C273F6BD5677D1AC41AB4B5452D26B
-- generatedChecksum: D55F505D4E6638FD344BD5D2A55288C8
+  userChecksum: 38A8811686108C4917CB658B3482C639
+- generatedChecksum: D2EAC2E2BE9622D816474C4BA8DC6F82
   logicalPath: packs/ATSAMG55J19_DFP/instance
   name: spi0.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: D55F505D4E6638FD344BD5D2A55288C8
-- generatedChecksum: 01C91270F7D94E39BF736CB16DFB51D1
+  userChecksum: D2EAC2E2BE9622D816474C4BA8DC6F82
+- generatedChecksum: FBC600337E6D5015788EBC6719C230A0
   logicalPath: packs/ATSAMG55J19_DFP/instance
   name: spi1.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 01C91270F7D94E39BF736CB16DFB51D1
-- generatedChecksum: 5521F57B0B1BD6BCE4830274448DFB55
+  userChecksum: FBC600337E6D5015788EBC6719C230A0
+- generatedChecksum: 458C270FA5B892A0DCFB62CCAD3BB150
   logicalPath: packs/ATSAMG55J19_DFP/instance
   name: spi2.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 5521F57B0B1BD6BCE4830274448DFB55
-- generatedChecksum: 4296A3144B9BE3F757914B445951C7CD
+  userChecksum: 458C270FA5B892A0DCFB62CCAD3BB150
+- generatedChecksum: 390C3B08F4CB677FECD961458CD8AFB0
   logicalPath: packs/ATSAMG55J19_DFP/instance
   name: spi3.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 4296A3144B9BE3F757914B445951C7CD
-- generatedChecksum: 5D50445D7A16830748C964A85A202A3E
+  userChecksum: 390C3B08F4CB677FECD961458CD8AFB0
+- generatedChecksum: 643911246F373559A578A275932035FB
   logicalPath: packs/ATSAMG55J19_DFP/instance
   name: spi4.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 5D50445D7A16830748C964A85A202A3E
-- generatedChecksum: F55BD81F0F08A239258BE39B96D0E2E8
+  userChecksum: 643911246F373559A578A275932035FB
+- generatedChecksum: 31A8ED659A653DE74755B084701754F2
   logicalPath: packs/ATSAMG55J19_DFP/instance
   name: spi5.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: F55BD81F0F08A239258BE39B96D0E2E8
-- generatedChecksum: C070D904C60FADD2517DCBE8BC568676
+  userChecksum: 31A8ED659A653DE74755B084701754F2
+- generatedChecksum: 708B43952980627062ED480F4F817441
   logicalPath: packs/ATSAMG55J19_DFP/instance
   name: spi6.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: C070D904C60FADD2517DCBE8BC568676
-- generatedChecksum: 33653A068135ACC127FD6C31DA215FBE
+  userChecksum: 708B43952980627062ED480F4F817441
+- generatedChecksum: 537C63D01CA9B8B80607902E1C0C67A1
   logicalPath: packs/ATSAMG55J19_DFP/instance
   name: spi7.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 33653A068135ACC127FD6C31DA215FBE
-- generatedChecksum: B6C746DBA398F65AC14146FB66895ADC
+  userChecksum: 537C63D01CA9B8B80607902E1C0C67A1
+- generatedChecksum: 0714BBDF2A045ED4B3466C1C622A2DAC
   logicalPath: packs/ATSAMG55J19_DFP/component
   name: supc.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: B6C746DBA398F65AC14146FB66895ADC
-- generatedChecksum: 95DEE59306E165FDED74CCF2325A52F7
+  userChecksum: 0714BBDF2A045ED4B3466C1C622A2DAC
+- generatedChecksum: 776D0F3B33550B6F4AC8013EDC575608
   logicalPath: packs/ATSAMG55J19_DFP/instance
   name: supc.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 95DEE59306E165FDED74CCF2325A52F7
+  userChecksum: 776D0F3B33550B6F4AC8013EDC575608
 - generatedChecksum: AFAAF7D896D57569CA4CF73BB3339481
   logicalPath: config/sam_g55_xpro/system/cache
   name: sys_cache.h
@@ -811,188 +825,188 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 1C75A8A6B60598A2FD0D533F57839B72
-- generatedChecksum: 70EFD9E91C14C09C751D4AE7A13CDF88
+- generatedChecksum: 9359E515093EF373823F1F52B5AC6929
   logicalPath: packs/ATSAMG55J19_DFP/component
   name: tc.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 70EFD9E91C14C09C751D4AE7A13CDF88
-- generatedChecksum: 3D07496C87DF2469F6D855A43C2BAAEF
+  userChecksum: 9359E515093EF373823F1F52B5AC6929
+- generatedChecksum: 0C9E83275BE63B5B1FBEBBCF5B110E1E
   logicalPath: packs/ATSAMG55J19_DFP/instance
   name: tc0.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 3D07496C87DF2469F6D855A43C2BAAEF
-- generatedChecksum: 0461C08AB0E85C0B16BEDDABB3E90BE1
+  userChecksum: 0C9E83275BE63B5B1FBEBBCF5B110E1E
+- generatedChecksum: 08740D1CEE89BD30D749028D3247E147
   logicalPath: packs/ATSAMG55J19_DFP/instance
   name: tc1.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 0461C08AB0E85C0B16BEDDABB3E90BE1
-- generatedChecksum: 3448B62FDF48416310C7CED2A0A37D1C
+  userChecksum: 08740D1CEE89BD30D749028D3247E147
+- generatedChecksum: 267E11FBC03D0FD88E7330DDB79B19FC
   logicalPath: config/sam_g55_xpro
   name: toolchain_specifics.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 3448B62FDF48416310C7CED2A0A37D1C
-- generatedChecksum: 57C72AA325ECC9BFE08F1887DC88C163
+  userChecksum: 267E11FBC03D0FD88E7330DDB79B19FC
+- generatedChecksum: FF7EA830E15974ABB344CA3E04C9A3DD
   logicalPath: packs/ATSAMG55J19_DFP/component
   name: twi.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 57C72AA325ECC9BFE08F1887DC88C163
-- generatedChecksum: 1C069DDC0BA4AED3442C9C7EF55D3964
+  userChecksum: FF7EA830E15974ABB344CA3E04C9A3DD
+- generatedChecksum: 89D1F3C43096CC7510C5AE8A6DAD7029
   logicalPath: packs/ATSAMG55J19_DFP/instance
   name: twi0.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 1C069DDC0BA4AED3442C9C7EF55D3964
-- generatedChecksum: C9475B8E1EA0373F00034F13DD60B2FD
+  userChecksum: 89D1F3C43096CC7510C5AE8A6DAD7029
+- generatedChecksum: 610F3301CC94EE13EA35F5B1E1C03694
   logicalPath: packs/ATSAMG55J19_DFP/instance
   name: twi1.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: C9475B8E1EA0373F00034F13DD60B2FD
-- generatedChecksum: 36720FFD41949176F11E0FB9E416456E
+  userChecksum: 610F3301CC94EE13EA35F5B1E1C03694
+- generatedChecksum: 268BEED23838042D4F71EC0FA33B2BD4
   logicalPath: packs/ATSAMG55J19_DFP/instance
   name: twi2.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 36720FFD41949176F11E0FB9E416456E
-- generatedChecksum: 2A78A027E7B543A81FCECFE71F2ADE36
+  userChecksum: 268BEED23838042D4F71EC0FA33B2BD4
+- generatedChecksum: 06C86FDE9F242EB539473727C59EE0AE
   logicalPath: packs/ATSAMG55J19_DFP/instance
   name: twi3.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 2A78A027E7B543A81FCECFE71F2ADE36
-- generatedChecksum: 472CB229D84489202E4492CF045B5E70
+  userChecksum: 06C86FDE9F242EB539473727C59EE0AE
+- generatedChecksum: F9D473409AE8D9B378BCC4366CA5DE0C
   logicalPath: packs/ATSAMG55J19_DFP/instance
   name: twi4.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 472CB229D84489202E4492CF045B5E70
-- generatedChecksum: C322582534F5C8B301C862BF48AD396C
+  userChecksum: F9D473409AE8D9B378BCC4366CA5DE0C
+- generatedChecksum: 829EACF1A64F7C3E347717109C77A700
   logicalPath: packs/ATSAMG55J19_DFP/instance
   name: twi5.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: C322582534F5C8B301C862BF48AD396C
-- generatedChecksum: CE22FBC4E620FED274B603D52243BD16
+  userChecksum: 829EACF1A64F7C3E347717109C77A700
+- generatedChecksum: A60FE6F730486BF369337A398E60C9A7
   logicalPath: packs/ATSAMG55J19_DFP/instance
   name: twi6.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: CE22FBC4E620FED274B603D52243BD16
-- generatedChecksum: F7784DD02E4F9EE8C3FC29E99668F381
+  userChecksum: A60FE6F730486BF369337A398E60C9A7
+- generatedChecksum: B69E53B1AF6EEEAB5170688C437B7634
   logicalPath: packs/ATSAMG55J19_DFP/instance
   name: twi7.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: F7784DD02E4F9EE8C3FC29E99668F381
-- generatedChecksum: B6971CB85931EC3B018A7ABFFA29CEC9
+  userChecksum: B69E53B1AF6EEEAB5170688C437B7634
+- generatedChecksum: E79834E6E5BFA815628CC0BCA66FB817
   logicalPath: packs/ATSAMG55J19_DFP/component
   name: udp.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: B6971CB85931EC3B018A7ABFFA29CEC9
-- generatedChecksum: A5D3248DF86D897597C518218226D872
+  userChecksum: E79834E6E5BFA815628CC0BCA66FB817
+- generatedChecksum: 73E6C3B6FA3EBC7DF21607BC84B350E7
   logicalPath: packs/ATSAMG55J19_DFP/instance
   name: udp.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: A5D3248DF86D897597C518218226D872
-- generatedChecksum: C4A59BFCADB7D9B25FC4DDBFB6E40D55
+  userChecksum: 73E6C3B6FA3EBC7DF21607BC84B350E7
+- generatedChecksum: DF77C5A2C123814A94B15867941FD892
   logicalPath: packs/ATSAMG55J19_DFP/component
   name: uhp.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: C4A59BFCADB7D9B25FC4DDBFB6E40D55
-- generatedChecksum: 0D201E29CB5931803F22435D1C90C13C
+  userChecksum: DF77C5A2C123814A94B15867941FD892
+- generatedChecksum: 390F5ACDF1BA0D43E11358C5898B085F
   logicalPath: packs/ATSAMG55J19_DFP/instance
   name: uhp.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 0D201E29CB5931803F22435D1C90C13C
-- generatedChecksum: BD0492143E7F941268AA4D8E40B6CA31
+  userChecksum: 390F5ACDF1BA0D43E11358C5898B085F
+- generatedChecksum: 421B96039D1708E6849D1B1C956B28A7
   logicalPath: packs/ATSAMG55J19_DFP/component
   name: usart.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: BD0492143E7F941268AA4D8E40B6CA31
-- generatedChecksum: D12E4544E2E36150D78533576FDBDD82
+  userChecksum: 421B96039D1708E6849D1B1C956B28A7
+- generatedChecksum: 12717A3B0B0BDB3F999356720780E717
   logicalPath: packs/ATSAMG55J19_DFP/instance
   name: usart0.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: D12E4544E2E36150D78533576FDBDD82
-- generatedChecksum: 73323ED3139931FCEF9729849A5C43E8
+  userChecksum: 12717A3B0B0BDB3F999356720780E717
+- generatedChecksum: CCBE4838DDCB54424FDB44E0BBBBEBA7
   logicalPath: packs/ATSAMG55J19_DFP/instance
   name: usart1.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 73323ED3139931FCEF9729849A5C43E8
-- generatedChecksum: 4CF3F707F262668FF2A889C83A75645C
+  userChecksum: CCBE4838DDCB54424FDB44E0BBBBEBA7
+- generatedChecksum: 257E8AAABFDF0880AB9567026DF67244
   logicalPath: packs/ATSAMG55J19_DFP/instance
   name: usart2.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 4CF3F707F262668FF2A889C83A75645C
-- generatedChecksum: F9CA227B89B98CAA0EB8F99D3D85ED70
+  userChecksum: 257E8AAABFDF0880AB9567026DF67244
+- generatedChecksum: 9FC57DD292D105525DC059BED97EAD37
   logicalPath: packs/ATSAMG55J19_DFP/instance
   name: usart3.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: F9CA227B89B98CAA0EB8F99D3D85ED70
-- generatedChecksum: C0A181B739C5FE2390FFBCB3D3DED01F
+  userChecksum: 9FC57DD292D105525DC059BED97EAD37
+- generatedChecksum: 83E410B8E9875C2C0F010E2418E3E29C
   logicalPath: packs/ATSAMG55J19_DFP/instance
   name: usart4.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: C0A181B739C5FE2390FFBCB3D3DED01F
-- generatedChecksum: 526F378A4B6728805D5285E40755A6D1
+  userChecksum: 83E410B8E9875C2C0F010E2418E3E29C
+- generatedChecksum: 14B3D6DC6CD171B744F29C9F8AE0C55A
   logicalPath: packs/ATSAMG55J19_DFP/instance
   name: usart5.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 526F378A4B6728805D5285E40755A6D1
-- generatedChecksum: E27729E3DBC6A42A1163BD40663335D1
+  userChecksum: 14B3D6DC6CD171B744F29C9F8AE0C55A
+- generatedChecksum: EC32654FE61CEB10F69D0FD9DD0D5FD2
   logicalPath: packs/ATSAMG55J19_DFP/instance
   name: usart6.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: E27729E3DBC6A42A1163BD40663335D1
-- generatedChecksum: 767764F6F0AF9F37BA53CE575F4AE58F
+  userChecksum: EC32654FE61CEB10F69D0FD9DD0D5FD2
+- generatedChecksum: 255474B4F1E7AD7AF9DB59078CB4C5DA
   logicalPath: packs/ATSAMG55J19_DFP/instance
   name: usart7.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 767764F6F0AF9F37BA53CE575F4AE58F
+  userChecksum: 255474B4F1E7AD7AF9DB59078CB4C5DA
 - generatedChecksum: 39659CDE2CC726544BD68544FB7EF4B2
   logicalPath: config/sam_g55_xpro/usb
   name: usb_chapter_9.h
@@ -1042,13 +1056,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 6C4A6859DB16EA8C046F995C6B6C1C6F
-- generatedChecksum: F127C67A3E33E5788C0F057F648EE57C
+- generatedChecksum: 6EB8F9F4A43B9BC2C7A58585AC679650
   logicalPath: config/sam_g55_xpro/usb
   name: usb_host.h
   physicalPath: usb
   security: NON_SECURE
   type: HEADER
-  userChecksum: F127C67A3E33E5788C0F057F648EE57C
+  userChecksum: 6EB8F9F4A43B9BC2C7A58585AC679650
 - generatedChecksum: 6EBC5E4D06FC96A02ADF3B7416957DD6
   logicalPath: config/sam_g55_xpro/usb
   name: usb_host_client_driver.h
@@ -1077,20 +1091,20 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: null
-- generatedChecksum: 640BD24B20AD641944BC45DB09D1298F
+- generatedChecksum: B9F80C02572301661862F82FBB4825A1
   logicalPath: packs/ATSAMG55J19_DFP/component
   name: wdt.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 640BD24B20AD641944BC45DB09D1298F
-- generatedChecksum: 39388FCEA153E65B6E6C01FC8D79C9F1
+  userChecksum: B9F80C02572301661862F82FBB4825A1
+- generatedChecksum: 17831FB47110836CCD0F9D9CF379216D
   logicalPath: packs/ATSAMG55J19_DFP/instance
   name: wdt.h
   physicalPath: ../../packs/ATSAMG55J19_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 39388FCEA153E65B6E6C01FC8D79C9F1
+  userChecksum: 17831FB47110836CCD0F9D9CF379216D
 - generatedChecksum: 978CBDCC85398D9B603FF6B4CADF9E6F
   logicalPath: config/sam_g55_xpro
   name: ATSAMG55J19.ld
