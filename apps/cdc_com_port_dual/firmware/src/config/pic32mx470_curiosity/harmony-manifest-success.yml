@@ -4,18 +4,18 @@
 
 
 project: cdc_com_port_dual
-creation_date: 2021-10-27T14:44:42.681+02:00[Europe/Paris]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+creation_date: 2022-01-31T08:25:18.746+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
 operating_system: Windows 10
-mhc_mode: Standalone            # [IDE|Standalone|Headless]
-mhc_version: v3.8.1
-mplabx_version: NA        # if MPLAB X plugin only
-plugin_version: NA        # if MPLAB X plugin only
-compiler: xc32
+mhc_mode: IDE            # [IDE|Standalone|Headless]
+mhc_version: v3.8.2
+mplabx_version: v6.00        # if MPLAB X plugin only
+plugin_version: v3.6.4        # if MPLAB X plugin only
+compiler: xc32 (4.00)
 
 modules:
     - {name: "csp", version: "v3.10.0"}
     - {name: "core", version: "v3.10.0"}
-    - {name: "usb", version: "v3.8.1"}
+    - {name: "usb", version: "v3.8.2"}
     - {name: "dev_packs", version: "v3.10.0"}
     - {name: "bsp", version: "v3.10.0"}
 
