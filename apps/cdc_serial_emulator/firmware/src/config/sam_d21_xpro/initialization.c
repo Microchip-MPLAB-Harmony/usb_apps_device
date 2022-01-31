@@ -125,10 +125,6 @@ const DRV_USART_INIT drvUsart0InitData =
     /* USART Client Objects Pool */
     .clientObjPool = (uintptr_t)&drvUSART0ClientObjPool[0],
 
-    .dmaChannelTransmit = SYS_DMA_CHANNEL_NONE,
-
-    .dmaChannelReceive = SYS_DMA_CHANNEL_NONE,
-
     /* Combined size of transmit and receive buffer objects */
     .bufferObjPoolSize = DRV_USART_QUEUE_SIZE_IDX0,
 
@@ -202,7 +198,7 @@ static DRV_USB_VBUS_LEVEL DRV_USBFSV1_VBUS_Comparator(void)
 
 const DRV_USBFSV1_INIT drvUSBInit =
 {
-    /* Interrupt Source for USB module */
+    /* Interrupt Source for USB module */ 
     .interruptSource = USB_IRQn,
 
     /* System module initialization */
@@ -260,7 +256,7 @@ const DRV_USBFSV1_INIT drvUSBInit =
 void SYS_Initialize ( void* data )
 {
 
-    NVMCTRL_REGS->NVMCTRL_CTRLB = NVMCTRL_CTRLB_RWS(3);
+    NVMCTRL_REGS->NVMCTRL_CTRLB = NVMCTRL_CTRLB_RWS(3UL);
 
   
     PORT_Initialize();
