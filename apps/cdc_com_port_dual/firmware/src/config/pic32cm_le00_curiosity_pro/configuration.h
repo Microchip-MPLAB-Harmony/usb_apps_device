@@ -106,10 +106,6 @@ extern "C" {
 #define USB_DEVICE_EP0_BUFFER_SIZE                          64
 
 
-
-
-
-
 /* Maximum instances of CDC function driver */
 #define USB_DEVICE_CDC_INSTANCES_NUMBER                     2
 
