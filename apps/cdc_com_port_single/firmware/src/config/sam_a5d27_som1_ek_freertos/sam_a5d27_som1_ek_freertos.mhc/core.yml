@@ -181,6 +181,15 @@ children:
       children:
       - type: Dynamic
         attributes: {id: core, value: '164000000'}
+  - type: String
+    attributes: {id: DRAM_APP_START_ADDRESS}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'true'}
   - type: Integer
     attributes: {id: FLEXCOM0_GENERIC_CLOCK_FREQUENCY}
     children:
