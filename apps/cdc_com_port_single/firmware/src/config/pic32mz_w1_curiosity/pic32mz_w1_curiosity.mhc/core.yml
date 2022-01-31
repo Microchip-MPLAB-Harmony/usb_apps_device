@@ -416,7 +416,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '1'}
+        attributes: {id: core, value: '3'}
   - type: String
     attributes: {id: CONFIG_SYS_CLK_PBCLK1_FREQ}
     children:
@@ -1059,6 +1059,8 @@ children:
     children:
     - type: Values
       children:
+      - type: Dynamic
+        attributes: {id: drv_usbfs_v1, value: 'true'}
       - type: User
         attributes: {value: 'true'}
   - type: Boolean

@@ -138,6 +138,10 @@
 #pragma config SOSCEN =    OFF
 
 
+/*** FCPN0 ***/
+#pragma config CP =    OFF
+
+
 
 
 // *****************************************************************************
@@ -171,6 +175,7 @@ const DRV_USBFS_INIT drvUSBFSInit =
 {
 	 /* Assign the endpoint table */
     .endpointTable= endPointTable1,
+
 
 
 
@@ -234,11 +239,11 @@ void SYS_Initialize ( void* data )
     __builtin_disable_interrupts();
 
   
-    CLK_Initialize();
-	SYS_PMU_MLDO_TRIM();
+    PMU_Initialize();
+	CLK_Initialize();
 
     /* Configure Wait States */
-    PRECONbits.PFMWS = 1;
+    PRECONbits.PFMWS = 3;
 
 
 

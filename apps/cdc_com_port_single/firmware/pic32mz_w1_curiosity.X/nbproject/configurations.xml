@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <configurationDescriptor version="65">
   <logicalFolder displayName="root" name="root" projectFiles="true">
     <logicalFolder displayName="Header Files" name="HeaderFiles" projectFiles="true">
@@ -261,9 +261,9 @@
           <itemPath>../src/config/pic32mz_w1_curiosity/initialization.c</itemPath>
           <itemPath>../src/config/pic32mz_w1_curiosity/interrupts.c</itemPath>
           <itemPath>../src/config/pic32mz_w1_curiosity/exceptions.c</itemPath>
-          <itemPath>../src/config/pic32mz_w1_curiosity/system_pmu_mldo_trim.c</itemPath>
           <itemPath>../src/config/pic32mz_w1_curiosity/usb_device_init_data.c</itemPath>
           <itemPath>../src/config/pic32mz_w1_curiosity/tasks.c</itemPath>
+          <itemPath>../src/config/pic32mz_w1_curiosity/pmu_init.c</itemPath>
         </logicalFolder>
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
@@ -287,7 +287,7 @@
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="PIC32MZ-W_DFP" vendor="Microchip" version="1.4.193"/>
+        <pack name="PIC32MZ-W_DFP" vendor="Microchip" version="1.5.203"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -324,7 +324,7 @@
         <property key="enable-symbols" value="true"/>
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
-        <property key="extra-include-directories" value="../src;../src/config/pic32mz_w1_curiosity;../src/packs/PIC32MZ1025W104132_DFP"/>
+        <property key="extra-include-directories" value="../src;../src/config/pic32mz_w1_curiosity"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -420,7 +420,7 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
-        <property key="extra-include-directories" value="../src;../src/config/pic32mz_w1_curiosity;../src/packs/PIC32MZ1025W104132_DFP"/>
+        <property key="extra-include-directories" value="../src;../src/config/pic32mz_w1_curiosity"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>

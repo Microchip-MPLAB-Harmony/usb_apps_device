@@ -1,6 +1,6 @@
 /*--------------------------------------------------------------------------
  * MPLAB XC Compiler -  PIC32MZ1025W104132 linker script
- * Build date : Feb 02 2021
+ * Build date : Sep 06 2021
  * 
  * Copyright (c) 2021, Microchip Technology Inc. and its subsidiaries ("Microchip")
  * All rights reserved.
@@ -132,12 +132,14 @@ MEMORY
   config_BFC55F98             : ORIGIN = 0xBFC55F98, LENGTH = 0x4
   config_BFC55F9C             : ORIGIN = 0xBFC55F9C, LENGTH = 0x4
   config_BFC55FBC             : ORIGIN = 0xBFC55FBC, LENGTH = 0x4
+  config_BFC55FDC             : ORIGIN = 0xBFC55FDC, LENGTH = 0x4
   kseg0_data_mem       (w!x)  : ORIGIN = 0x80000000, LENGTH = 0x40000
   sfrs                        : ORIGIN = 0xBF800000, LENGTH = 0x100000
   configsfrs_BFC55E88         : ORIGIN = 0xBFC55E88, LENGTH = 0x18
   configsfrs_BFC55EBC         : ORIGIN = 0xBFC55EBC, LENGTH = 0x4
   configsfrs_BFC55F88         : ORIGIN = 0xBFC55F88, LENGTH = 0x18
   configsfrs_BFC55FBC         : ORIGIN = 0xBFC55FBC, LENGTH = 0x4
+  configsfrs_BFC55FDC         : ORIGIN = 0xBFC55FDC, LENGTH = 0x4
 }
 
 /*************************************************************************
@@ -188,6 +190,9 @@ SECTIONS
   .config_BFC55FBC : {
     KEEP(*(.config_BFC55FBC))
   } > config_BFC55FBC
+  .config_BFC55FDC : {
+    KEEP(*(.config_BFC55FDC))
+  } > config_BFC55FDC
 }
 SECTIONS
 {
