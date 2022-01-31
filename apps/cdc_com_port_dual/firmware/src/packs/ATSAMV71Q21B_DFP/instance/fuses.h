@@ -21,12 +21,7 @@
  */
 
 /* file generated from device description version 2020-11-26T11:15:04Z */
-#ifndef _SAMV71_PIOE_INSTANCE_
-#define _SAMV71_PIOE_INSTANCE_
+#ifndef _SAMV71_FUSES_INSTANCE_
+#define _SAMV71_FUSES_INSTANCE_
 
-
-/* ========== Instance Parameter definitions for PIOE peripheral ========== */
-#define PIOE_INSTANCE_ID                         _UL_(17)   
-#define PIOE_CLOCK_ID                            _UL_(17)   
-
-#endif /* _SAMV71_PIOE_INSTANCE_ */
+#endif /* _SAMV71_FUSES_INSTANCE_ */
