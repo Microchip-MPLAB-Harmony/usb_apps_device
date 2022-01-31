@@ -133,9 +133,6 @@ extern "C" {
 #define USB_DEVICE_SOF_EVENT_ENABLE
 
 
-
-
-
 /* Maximum instances of HID function driver */
 #define USB_DEVICE_HID_INSTANCES_NUMBER     1 
 
