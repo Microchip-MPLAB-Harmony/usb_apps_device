@@ -85,8 +85,6 @@ DRV_MEMORY_Tasks(sysObj.drvMemory0);
     	/* USB Device layer tasks routine */ 
     USB_DEVICE_Tasks(sysObj.usbDevObject0);
 
-    /* USB FS Driver Task Routine */ 
-    DRV_USBFS_Tasks(sysObj.drvUSBFSObject);
 
 
 
