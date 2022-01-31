@@ -131,11 +131,6 @@ static void _DRV_USART_DisableInterrupts(DRV_USART_OBJ* dObj)
         /* Disable USART interrupt */
         dObj->usartInterruptStatus = SYS_INT_SourceDisable((INT_SOURCE)intInfo->intSources.usartInterrupt);
 
-        /* Disable DMA interrupt */
-        if((dObj->txDMAChannel != SYS_DMA_CHANNEL_NONE) || (dObj->rxDMAChannel != SYS_DMA_CHANNEL_NONE))
-        {
-            dObj->dmaInterruptStatus = SYS_INT_SourceDisable((INT_SOURCE)intInfo->intSources.dmaInterrupt);
-        }
     }
     else
     {
@@ -160,16 +155,6 @@ static void _DRV_USART_DisableInterrupts(DRV_USART_OBJ* dObj)
             dObj->usartErrorIntStatus = SYS_INT_SourceDisable((INT_SOURCE)multiVector->usartErrorInt);
         }
 
-        /* Disable DMA interrupt sources */
-        if(dObj->txDMAChannel != SYS_DMA_CHANNEL_NONE)
-        {
-            dObj->dmaTxChannelIntStatus = SYS_INT_SourceDisable((INT_SOURCE)multiVector->dmaTxChannelInt);
-        }
-
-        if(dObj->rxDMAChannel != SYS_DMA_CHANNEL_NONE)
-        {
-            dObj->dmaRxChannelIntStatus = SYS_INT_SourceDisable((INT_SOURCE)multiVector->dmaRxChannelInt);
-        }
     }
 
     SYS_INT_Restore(interruptStatus);
@@ -188,11 +173,6 @@ static void _DRV_USART_EnableInterrupts(DRV_USART_OBJ* dObj)
         /* Enable USART interrupt */
         SYS_INT_SourceRestore((INT_SOURCE)intInfo->intSources.usartInterrupt, dObj->usartInterruptStatus);
 
-        /* Enable DMA interrupt */
-        if((dObj->txDMAChannel != SYS_DMA_CHANNEL_NONE) || (dObj->rxDMAChannel != SYS_DMA_CHANNEL_NONE))
-        {
-            SYS_INT_SourceRestore((INT_SOURCE)intInfo->intSources.dmaInterrupt, dObj->dmaInterruptStatus);
-        }
     }
     else
     {
@@ -217,16 +197,6 @@ static void _DRV_USART_EnableInterrupts(DRV_USART_OBJ* dObj)
             SYS_INT_SourceRestore((INT_SOURCE)multiVector->usartErrorInt, dObj->usartErrorIntStatus);
         }
 
-        /* Enable DMA interrupt sources */
-        if(dObj->txDMAChannel != SYS_DMA_CHANNEL_NONE)
-        {
-            SYS_INT_SourceRestore((INT_SOURCE)multiVector->dmaTxChannelInt, dObj->dmaTxChannelIntStatus);
-        }
-
-        if(dObj->rxDMAChannel != SYS_DMA_CHANNEL_NONE)
-        {
-            SYS_INT_SourceRestore((INT_SOURCE)multiVector->dmaRxChannelInt, dObj->dmaRxChannelIntStatus);
-        }
     }
 
     SYS_INT_Restore(interruptStatus);
@@ -522,15 +492,7 @@ static void _DRV_USART_ReadAbort(DRV_USART_OBJ* dObj, DRV_USART_CLIENT_OBJ* clie
     if ((bufferObj->clientHandle == clientObj->clientHandle) && (bufferObj->currentState == DRV_USART_BUFFER_IS_PROCESSING))
     {
 
-        if(dObj->rxDMAChannel != SYS_DMA_CHANNEL_NONE)
-        {
-            /* Abort DMA operation by disabling the RX channel */
-            SYS_DMA_ChannelDisable(dObj->rxDMAChannel);
-        }
-        else
-        {
-            dObj->usartPlib->readAbort();
-        }
+        dObj->usartPlib->readAbort();
 
         /* Free the buffer at the top of the list */
         _DRV_USART_RemoveTransferObjFromList(dObj, DRV_USART_DIRECTION_RX);
@@ -589,40 +551,11 @@ static void _DRV_USART_WriteSubmit( DRV_USART_OBJ* dObj )
 
     bufferObj->currentState = DRV_USART_BUFFER_IS_PROCESSING;
 
-    if(dObj->txDMAChannel != SYS_DMA_CHANNEL_NONE)
-    {
-        if (dObj->dataWidth > DRV_USART_DATA_8_BIT)
-        {
-            SYS_DMA_DataWidthSetup(dObj->txDMAChannel, SYS_DMA_WIDTH_16_BIT);
-
-            SYS_DMA_ChannelTransfer(
-                dObj->txDMAChannel,
-                (const void *)bufferObj->buffer,
-                (const void *)dObj->txAddress,
-                (bufferObj->size << 1)
-            );
-        }
-        else
-        {
-            SYS_DMA_DataWidthSetup(dObj->txDMAChannel, SYS_DMA_WIDTH_8_BIT);
-
-            SYS_DMA_ChannelTransfer(
-                dObj->txDMAChannel,
-                (const void *)bufferObj->buffer,
-                (const void *)dObj->txAddress,
-                bufferObj->size
-            );
-        }
-    }
-    else
-    {
-        dObj->usartPlib->write(bufferObj->buffer, bufferObj->size);
-    }
+    dObj->usartPlib->write(bufferObj->buffer, bufferObj->size);
 }
 
 static void _DRV_USART_ReadSubmit( DRV_USART_OBJ* dObj )
 {
-    uint32_t errorMask;
     // Get the buffer object at the top of the list
     DRV_USART_BUFFER_OBJ* bufferObj = _DRV_USART_TransferObjListGet(dObj, DRV_USART_DIRECTION_RX);
 
@@ -639,39 +572,7 @@ static void _DRV_USART_ReadSubmit( DRV_USART_OBJ* dObj )
 
     bufferObj->currentState = DRV_USART_BUFFER_IS_PROCESSING;
 
-    if(dObj->rxDMAChannel != SYS_DMA_CHANNEL_NONE)
-    {
-        /* UART errors (if any) must be cleared before initiating a new DMA request */
-        errorMask = dObj->usartPlib->errorGet();
-        (void)errorMask;
-
-        if (dObj->dataWidth > DRV_USART_DATA_8_BIT)
-        {
-            SYS_DMA_DataWidthSetup(dObj->rxDMAChannel, SYS_DMA_WIDTH_16_BIT);
-
-            SYS_DMA_ChannelTransfer(
-                dObj->rxDMAChannel,
-                (const void *)dObj->rxAddress,
-                (const void *)bufferObj->buffer,
-                (bufferObj->size << 1)
-            );
-        }
-        else
-        {
-            SYS_DMA_DataWidthSetup(dObj->rxDMAChannel, SYS_DMA_WIDTH_8_BIT);
-
-            SYS_DMA_ChannelTransfer(
-                dObj->rxDMAChannel,
-                (const void *)dObj->rxAddress,
-                (const void *)bufferObj->buffer,
-                bufferObj->size
-            );
-        }
-    }
-    else
-    {
-        dObj->usartPlib->read(bufferObj->buffer, bufferObj->size);
-    }
+    dObj->usartPlib->read(bufferObj->buffer, bufferObj->size);
 }
 
 static void _DRV_USART_BufferQueueTask(
@@ -710,21 +611,11 @@ static void _DRV_USART_BufferQueueTask(
 
         if(bufferObj->status == DRV_USART_BUFFER_EVENT_ERROR)
         {
-            if( (dObj->rxDMAChannel != SYS_DMA_CHANNEL_NONE))
-            {
-                /* DMA mode doesn't return number of bytes completed in case of error
-                 * Setting the completed bytes count to 0
-                 */
-                bufferObj->nCount = 0;
-            }
-            else
-            {
-                // Save the error in buffer object. This will be valid until it is
-                // read by the application or the buffer object is assigned to a new request,
-                // whichever happens first.
-                bufferObj->errors = _DRV_USART_GetErrorType(dObj->remapError, plibErrorMask);
-                bufferObj->nCount = dObj->usartPlib->readCountGet();
-            }
+            // Save the error in buffer object. This will be valid until it is
+            // read by the application or the buffer object is assigned to a new request,
+            // whichever happens first.
+            bufferObj->errors = _DRV_USART_GetErrorType(dObj->remapError, plibErrorMask);
+            bufferObj->nCount = dObj->usartPlib->readCountGet();
         }
         else
         {
@@ -797,41 +688,6 @@ static void _DRV_USART_RX_PLIB_CallbackHandler( uintptr_t context )
     return;
 }
 
-static void _DRV_USART_TX_DMA_CallbackHandler(
-    SYS_DMA_TRANSFER_EVENT event,
-    uintptr_t context
-)
-{
-    DRV_USART_OBJ* dObj = (DRV_USART_OBJ* )context;
-    uint32_t errorMask = (uint32_t) DRV_USART_ERROR_NONE;
-
-    if(event == SYS_DMA_TRANSFER_COMPLETE)
-    {
-        _DRV_USART_BufferQueueTask(dObj, DRV_USART_DIRECTION_TX, DRV_USART_BUFFER_EVENT_COMPLETE, errorMask);
-    }
-    else if(event == SYS_DMA_TRANSFER_ERROR)
-    {
-        _DRV_USART_BufferQueueTask(dObj, DRV_USART_DIRECTION_TX, DRV_USART_BUFFER_EVENT_ERROR, errorMask);
-    }
-}
-
-static void _DRV_USART_RX_DMA_CallbackHandler(
-    SYS_DMA_TRANSFER_EVENT event,
-    uintptr_t context
-)
-{
-    DRV_USART_OBJ* dObj = (DRV_USART_OBJ* )context;
-    uint32_t errorMask = (uint32_t) DRV_USART_ERROR_NONE;
-
-    if(event == SYS_DMA_TRANSFER_COMPLETE)
-    {
-        _DRV_USART_BufferQueueTask(dObj, DRV_USART_DIRECTION_RX, DRV_USART_BUFFER_EVENT_COMPLETE, errorMask);
-    }
-    else if(event == SYS_DMA_TRANSFER_ERROR)
-    {
-        _DRV_USART_BufferQueueTask(dObj, DRV_USART_DIRECTION_RX, DRV_USART_BUFFER_EVENT_ERROR, errorMask);
-    }
-}
 
 // *****************************************************************************
 // *****************************************************************************
@@ -886,10 +742,6 @@ SYS_MODULE_OBJ DRV_USART_Initialize(
     dObj->receiveObjList        = (DRV_USART_BUFFER_OBJ*)NULL;
     dObj->interruptNestingCount = 0;
     dObj->interruptSources      = usartInit->interruptSources;
-    dObj->txDMAChannel          = usartInit->dmaChannelTransmit;
-    dObj->rxDMAChannel          = usartInit->dmaChannelReceive;
-    dObj->txAddress             = usartInit->usartTransmitAddress;
-    dObj->rxAddress             = usartInit->usartReceiveAddress;
     dObj->remapDataWidth        = usartInit->remapDataWidth;
     dObj->remapParity           = usartInit->remapParity;
     dObj->remapStopBits         = usartInit->remapStopBits;
@@ -899,39 +751,9 @@ SYS_MODULE_OBJ DRV_USART_Initialize(
     /* Register a callback with either DMA or USART PLIB based on configuration.
      * dObj is used as a context parameter, that will be used to distinguish the
      * events for different driver instances. */
-    if(dObj->txDMAChannel != SYS_DMA_CHANNEL_NONE)
-    {
-        SYS_DMA_AddressingModeSetup(
-            dObj->txDMAChannel,
-            SYS_DMA_SOURCE_ADDRESSING_MODE_INCREMENTED,
-            SYS_DMA_DESTINATION_ADDRESSING_MODE_FIXED
-        );
+    dObj->usartPlib->writeCallbackRegister(_DRV_USART_TX_PLIB_CallbackHandler, (uintptr_t)dObj);
 
-        SYS_DMA_DataWidthSetup(dObj->txDMAChannel, SYS_DMA_WIDTH_8_BIT);
-        SYS_DMA_ChannelCallbackRegister(dObj->txDMAChannel, _DRV_USART_TX_DMA_CallbackHandler, (uintptr_t)dObj);
-    }
-    else
-    {
-        dObj->usartPlib->writeCallbackRegister(_DRV_USART_TX_PLIB_CallbackHandler, (uintptr_t)dObj);
-        (void)_DRV_USART_TX_DMA_CallbackHandler;
-    }
-
-    if(dObj->rxDMAChannel != SYS_DMA_CHANNEL_NONE)
-    {
-        SYS_DMA_AddressingModeSetup(
-            dObj->rxDMAChannel,
-            SYS_DMA_SOURCE_ADDRESSING_MODE_FIXED,
-            SYS_DMA_DESTINATION_ADDRESSING_MODE_INCREMENTED
-        );
-
-        SYS_DMA_DataWidthSetup(dObj->rxDMAChannel, SYS_DMA_WIDTH_8_BIT);
-        SYS_DMA_ChannelCallbackRegister(dObj->rxDMAChannel, _DRV_USART_RX_DMA_CallbackHandler, (uintptr_t)dObj);
-    }
-    else
-    {
-        dObj->usartPlib->readCallbackRegister(_DRV_USART_RX_PLIB_CallbackHandler, (uintptr_t)dObj);
-        (void)_DRV_USART_RX_DMA_CallbackHandler;
-    }
+    dObj->usartPlib->readCallbackRegister(_DRV_USART_RX_PLIB_CallbackHandler, (uintptr_t)dObj);
 
     /* Update the status */
     dObj->status = SYS_STATUS_READY;
