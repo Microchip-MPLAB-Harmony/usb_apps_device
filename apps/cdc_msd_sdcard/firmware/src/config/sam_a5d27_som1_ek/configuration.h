@@ -126,6 +126,10 @@ extern "C" {
 #define USB_ALIGN __ALIGNED(4096)
 #endif 
 
+/* Set maximum size for a DMA transfer, multiple of 64KB */
+#define DRV_USB_UDPHS_DMA_MAX_TRANSFER_SIZE                 2
+
+
 /* Number of Endpoints used */
 #define DRV_USB_UDPHS_ENDPOINTS_NUMBER                    6
 
@@ -137,10 +141,6 @@ extern "C" {
 
 /* EP0 size in bytes */
 #define USB_DEVICE_EP0_BUFFER_SIZE                          64
-
-
-
-
 
 
 /* Maximum instances of CDC function driver */

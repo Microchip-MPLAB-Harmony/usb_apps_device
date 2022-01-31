@@ -386,6 +386,15 @@ children:
       children:
       - type: Dynamic
         attributes: {id: tc0, value: 'false'}
+  - type: Comment
+    attributes: {id: TC3_Resolution}
+    children:
+    - type: Attributes
+      children:
+      - type: String
+        attributes: {id: text}
+        children:
+        - {type: Value, value: '****Clock resolution is 12.1951219512 nS****'}
   - type: Boolean
     attributes: {id: TC_COMMON_INTERRUPT_STATUS}
     children:
@@ -393,6 +402,15 @@ children:
       children:
       - type: Dynamic
         attributes: {id: tc0, value: 'true'}
+  - type: Comment
+    attributes: {id: TC_QEI_PERIOD_COMMENT}
+    children:
+    - type: Attributes
+      children:
+      - type: String
+        attributes: {id: text}
+        children:
+        - {type: Value, value: '****Time Base is 183.109756097 uS****'}
   - type: String
     attributes: {id: TIMER_START_API_NAME}
     children:

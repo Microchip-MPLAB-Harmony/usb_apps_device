@@ -87,5 +87,12 @@ children:
       children:
       - type: User
         attributes: {value: 'true'}
+  - type: Boolean
+    attributes: {id: CONFIG_USB_DEVICE_USE_MSD}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: usb_device, value: 'true'}
 - type: ElementPosition
   attributes: {x: '179', y: '211', id: usb_device}
