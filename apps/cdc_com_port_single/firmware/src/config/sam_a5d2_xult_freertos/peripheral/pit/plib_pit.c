@@ -47,6 +47,8 @@
 #include "plib_pit.h"
 #include "device.h"
 
+#define PIT_COUNTER_FREQUENCY       (83000000U / 16U)
+
 
 // *****************************************************************************
 // *****************************************************************************
@@ -71,14 +73,15 @@ static PIT_OBJECT pit;
 void PIT_TimerInitialize(void)
 {
     PIT_REGS->PIT_PIVR;
-    PIT_REGS->PIT_MR = PIT_MR_PIV(5187-1) | PIT_MR_PITEN(1) | PIT_MR_PITIEN(1);
+    PIT_REGS->PIT_MR = PIT_MR_PIV(5186U) | PIT_MR_PITEN_Msk | PIT_MR_PITIEN_Msk;
 }
 
 void PIT_TimerRestart(void)
 {
     PIT_REGS->PIT_MR &= ~PIT_MR_PITEN_Msk;
-    while((PIT_REGS->PIT_PIIR & PIT_PIIR_CPIV_Msk) != 0) {
-        ;
+    while((PIT_REGS->PIT_PIIR & PIT_PIIR_CPIV_Msk) != 0U)
+    {
+        //do nothing
     }
     PIT_REGS->PIT_MR |= PIT_MR_PITEN_Msk;
 }
@@ -91,8 +94,9 @@ void PIT_TimerStart(void)
 void PIT_TimerStop(void)
 {
     PIT_REGS->PIT_MR &= ~PIT_MR_PITEN_Msk;
-    while ((PIT_REGS->PIT_PIIR & PIT_PIIR_CPIV_Msk) != 0) {
-        ;
+    while ((PIT_REGS->PIT_PIIR & PIT_PIIR_CPIV_Msk) != 0U)
+    {
+        //do nothing
     }
 }
 
@@ -121,22 +125,43 @@ void PIT_TimerCompareSet( uint16_t compare )
 
 uint32_t PIT_TimerFrequencyGet(void)
 {
-    return 83000000 / 16;
+    return PIT_COUNTER_FREQUENCY;
 }
 
-void PIT_DelayMs(uint32_t delay)
+void PIT_DelayMs(uint32_t delay_ms)
 {
-    uint32_t tickStart, delayTicks;
-    uint32_t periodVal = (PIT_REGS->PIT_MR & PIT_MR_PIV_Msk) + 1;
-    uint32_t timerFreq = 83000000 / 16;
+    uint32_t period = (PIT_REGS->PIT_MR & PIT_MR_PIV_Msk) + 1U;
+    uint32_t delayCount = (PIT_COUNTER_FREQUENCY / 1000U) * delay_ms;
+    uint32_t oldCount = PIT_REGS->PIT_PIIR & PIT_PIIR_CPIV_Msk;
+    uint32_t newCount = 0U, deltaCount = 0U, elapsedCount = 0U;
 
-    if((PIT_REGS->PIT_MR & (PIT_MR_PITEN_Msk | PIT_MR_PITIEN_Msk)) == (PIT_MR_PITEN_Msk | PIT_MR_PITIEN_Msk))
+    if((PIT_REGS->PIT_MR & PIT_MR_PITEN_Msk) != 0U)
     {
-        tickStart=pit.tickCounter;
-        delayTicks = ((timerFreq / periodVal) * delay ) / 1000;
+        while(elapsedCount < delayCount)
+        {
+            newCount = PIT_REGS->PIT_PIIR & PIT_PIIR_CPIV_Msk;
+            deltaCount = (newCount > oldCount) ? (newCount - oldCount) : (period - oldCount + newCount);
+            elapsedCount += deltaCount;
+            oldCount = newCount;
+        }
+    }
+}
 
-        while( (pit.tickCounter-tickStart) < delayTicks ) {
-            ;
+void PIT_DelayUs(uint32_t delay_us)
+{
+    uint32_t period = (PIT_REGS->PIT_MR & PIT_MR_PIV_Msk) + 1U;
+    uint32_t delayCount = (PIT_COUNTER_FREQUENCY / 1000000U) * delay_us;
+    uint32_t oldCount = PIT_REGS->PIT_PIIR & PIT_PIIR_CPIV_Msk;
+    uint32_t newCount = 0U, deltaCount = 0U, elapsedCount = 0U;
+
+    if((PIT_REGS->PIT_MR & PIT_MR_PITEN_Msk) != 0U)
+    {
+        while(elapsedCount < delayCount)
+        {
+            newCount = PIT_REGS->PIT_PIIR & PIT_PIIR_CPIV_Msk;
+            deltaCount = (newCount > oldCount) ? (newCount - oldCount) : (period - oldCount + newCount);
+            elapsedCount += deltaCount;
+            oldCount = newCount;
         }
     }
 }
@@ -154,7 +179,8 @@ void PIT_InterruptHandler(void)
         volatile uint32_t reg = PIT_REGS->PIT_PIVR;
         (void)reg;
         pit.tickCounter++;
-        if(pit.callback) {
+        if(pit.callback)
+        {
             pit.callback(pit.context);
         }
     }
