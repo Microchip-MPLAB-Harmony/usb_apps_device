@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <configurationDescriptor version="65">
   <logicalFolder displayName="root" name="root" projectFiles="true">
     <logicalFolder displayName="Header Files" name="HeaderFiles" projectFiles="true">
@@ -164,6 +164,7 @@
             <itemPath>../src/packs/ATSAME54P20A_DFP/component/trng.h</itemPath>
             <itemPath>../src/packs/ATSAME54P20A_DFP/component/usb.h</itemPath>
             <itemPath>../src/packs/ATSAME54P20A_DFP/component/wdt.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/component/fuses.h</itemPath>
           </logicalFolder>
           <logicalFolder displayName="pio" name="f2" projectFiles="true">
             <itemPath>../src/packs/ATSAME54P20A_DFP/pio/same54p20a.h</itemPath>
@@ -228,6 +229,7 @@
             <itemPath>../src/packs/ATSAME54P20A_DFP/instance/trng.h</itemPath>
             <itemPath>../src/packs/ATSAME54P20A_DFP/instance/usb.h</itemPath>
             <itemPath>../src/packs/ATSAME54P20A_DFP/instance/wdt.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/fuses.h</itemPath>
           </logicalFolder>
           <itemPath>../src/packs/ATSAME54P20A_DFP/same54p20a.h</itemPath>
         </logicalFolder>
@@ -391,7 +393,7 @@
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="SAME54_DFP" vendor="Microchip" version="3.5.87"/>
+        <pack name="SAME54_DFP" vendor="Microchip" version="3.6.95"/>
         <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
       </packs>
       <ScriptingSettings>
