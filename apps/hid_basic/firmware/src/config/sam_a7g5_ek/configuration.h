@@ -102,6 +102,10 @@ extern "C" {
 #define USB_ALIGN __ALIGNED(4096)
 #endif 
 
+/* Set maximum size for a DMA transfer, multiple of 64KB */
+#define DRV_USB_UDPHS_DMA_MAX_TRANSFER_SIZE                 2
+
+
 /* Maximum instances of HID function driver */
 #define USB_DEVICE_HID_INSTANCES_NUMBER     1 
 
@@ -121,10 +125,6 @@ extern "C" {
 
 /* EP0 size in bytes */
 #define USB_DEVICE_EP0_BUFFER_SIZE                          64
-
-
-
-
 
 
 
