@@ -20,13 +20,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: DC797D8719875948452BA69E3CA29A20
-- generatedChecksum: E65E55268349D2945F1AC4144D0327CC
+- generatedChecksum: 77A61E825804B2CA96FC95734161DDE6
   logicalPath: config/pic32mk_gp_db/driver/usb/usbfs/src
   name: drv_usbfs_device.c
   physicalPath: driver/usb/usbfs/src
   security: NON_SECURE
   type: SOURCE
-  userChecksum: E65E55268349D2945F1AC4144D0327CC
+  userChecksum: 77A61E825804B2CA96FC95734161DDE6
 - generatedChecksum: 4BBDE3B7B0DAEE2CA5A8F519001D5BFF
   logicalPath: config/pic32mk_gp_db
   name: exceptions.c
@@ -55,13 +55,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: null
-- generatedChecksum: 55F1062F7A808490C3DE51A2289B7EFD
+- generatedChecksum: A78AE6E6BE59867CB186BAA4C5FFFFD3
   logicalPath: config/pic32mk_gp_db/peripheral/clk
   name: plib_clk.c
   physicalPath: peripheral/clk
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 55F1062F7A808490C3DE51A2289B7EFD
+  userChecksum: A78AE6E6BE59867CB186BAA4C5FFFFD3
 - generatedChecksum: 8E89B5B4BCFC306B3B2D656BA3FD1E63
   logicalPath: config/pic32mk_gp_db/peripheral/evic
   name: plib_evic.c
@@ -146,13 +146,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: F988612652E7AB27446C60B39EC539DC
-- generatedChecksum: D0931A6B79A6626EDBB4F85C02A78181
+- generatedChecksum: FD30A619E67C804B2B1233B6D106CF61
   logicalPath: config/pic32mk_gp_db
   name: configuration.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: D0931A6B79A6626EDBB4F85C02A78181
+  userChecksum: FD30A619E67C804B2B1233B6D106CF61
 - generatedChecksum: 404674B6D3801F77069833C96AA787F8
   logicalPath: config/pic32mk_gp_db
   name: definitions.h
@@ -258,20 +258,20 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: F666CF132ECA91F43C2A25389BA2AC28
-- generatedChecksum: 0D9A237E654AC0456092675C1A8A922A
+- generatedChecksum: 704876088AD9ADA5D4849817C06EED04
   logicalPath: config/pic32mk_gp_db/peripheral/gpio
   name: plib_gpio.h
   physicalPath: peripheral/gpio
   security: NON_SECURE
   type: HEADER
-  userChecksum: 0D9A237E654AC0456092675C1A8A922A
-- generatedChecksum: 3224466D03D8DDF1B5307028B2E5583F
+  userChecksum: 704876088AD9ADA5D4849817C06EED04
+- generatedChecksum: 7AFFC4178335897ED9D5804CAB531BCF
   logicalPath: config/pic32mk_gp_db/driver/usb/usbfs/src
   name: plib_usbfs.h
   physicalPath: driver/usb/usbfs/src
   security: NON_SECURE
   type: HEADER
-  userChecksum: 3224466D03D8DDF1B5307028B2E5583F
+  userChecksum: 7AFFC4178335897ED9D5804CAB531BCF
 - generatedChecksum: 6972608768DDBE6E37A2D81B83DF490B
   logicalPath: config/pic32mk_gp_db/system/debug
   name: sys_debug.h
@@ -314,13 +314,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 1C75A8A6B60598A2FD0D533F57839B72
-- generatedChecksum: 2C8543317B3F067432097AB9BD3E8672
+- generatedChecksum: 7DC91D6D376C98802C9C2990432DE9B7
   logicalPath: config/pic32mk_gp_db
   name: toolchain_specifics.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 2C8543317B3F067432097AB9BD3E8672
+  userChecksum: 7DC91D6D376C98802C9C2990432DE9B7
 - generatedChecksum: 7614490532C606BCAFEC5F729FDBEDAD
   logicalPath: config/pic32mk_gp_db/driver/usb/usbfs/src/templates
   name: usb_ALL_Interrupt_Default.h
@@ -1154,13 +1154,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 6C4A6859DB16EA8C046F995C6B6C1C6F
-- generatedChecksum: F127C67A3E33E5788C0F057F648EE57C
+- generatedChecksum: 6EB8F9F4A43B9BC2C7A58585AC679650
   logicalPath: config/pic32mk_gp_db/usb
   name: usb_host.h
   physicalPath: usb
   security: NON_SECURE
   type: HEADER
-  userChecksum: F127C67A3E33E5788C0F057F648EE57C
+  userChecksum: 6EB8F9F4A43B9BC2C7A58585AC679650
 - generatedChecksum: 6EBC5E4D06FC96A02ADF3B7416957DD6
   logicalPath: config/pic32mk_gp_db/usb
   name: usb_host_client_driver.h
@@ -1203,13 +1203,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: null
-- generatedChecksum: 42590D4A591FA36D2E5451D9D5BCEAC6
+- generatedChecksum: 78F979907C866EDD174CB31208FC172B
   logicalPath: config/pic32mk_gp_db
   name: p32MK1024GPE100.ld
   physicalPath: ''
   security: NON_SECURE
   type: LINKER
-  userChecksum: 42590D4A591FA36D2E5451D9D5BCEAC6
+  userChecksum: 78F979907C866EDD174CB31208FC172B
 format_version: v1.0
 libraries: []
 settings:
@@ -1218,7 +1218,7 @@ settings:
   delimiter: ;
   key: extra-include-directories
   security: NON_SECURE
-  value: ../src;../src/config/pic32mk_gp_db;../src/packs/PIC32MK1024GPE100_DFP;
+  value: ../src;../src/config/pic32mk_gp_db;
 - append: false
   category: C32
   delimiter: ''
@@ -1248,7 +1248,7 @@ settings:
   delimiter: ;
   key: extra-include-directories
   security: NON_SECURE
-  value: ../src;../src/config/pic32mk_gp_db;../src/packs/PIC32MK1024GPE100_DFP;
+  value: ../src;../src/config/pic32mk_gp_db;
 - append: false
   category: C32CPP
   delimiter: ''
