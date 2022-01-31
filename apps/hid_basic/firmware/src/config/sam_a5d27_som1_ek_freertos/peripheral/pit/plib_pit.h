@@ -278,7 +278,7 @@ uint32_t PIT_TimerFrequencyGet(void);
 
 // *****************************************************************************
 /* Function:
-    void PIT_DelayMs(uint32_t ms);
+    void PIT_DelayMs(uint32_t delay_ms)
 
   Summary:
     Delays processing for x milliseconds.
@@ -291,12 +291,34 @@ uint32_t PIT_TimerFrequencyGet(void);
     PIT is configured and enabled.  The PIT interrupt is also enabled.
 
   Parameters:
-    ms      - number of milliseconds to delay
+    delay_ms - number of milliseconds to delay
   
   Returns:
     None.
 */
-void PIT_DelayMs(uint32_t ms);
+void PIT_DelayMs(uint32_t delay_ms);
+
+// *****************************************************************************
+/* Function:
+    void PIT_DelayUs(uint32_t delay_us)
+
+  Summary:
+    Delays processing for x microseconds.
+
+  Description:
+    Delays execution by using  the PIT timer to determine when given number of
+    microseconds has expired.  
+
+  Precondition:
+    PIT is configured and enabled.  The PIT interrupt is also enabled.
+
+  Parameters:
+    delay_us - number of microseconds to delay
+  
+  Returns:
+    None.
+*/
+void PIT_DelayUs(uint32_t delay_us);
 
 // *****************************************************************************
 /* Function:
