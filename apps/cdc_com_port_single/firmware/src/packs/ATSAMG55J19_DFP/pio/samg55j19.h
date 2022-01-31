@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2019-12-16T02:54:59Z */
+/* file generated from device description version 2021-05-17T12:40:13Z */
 #ifndef _SAMG55J19_GPIO_H_
 #define _SAMG55J19_GPIO_H_
 
