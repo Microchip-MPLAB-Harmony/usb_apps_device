@@ -34,13 +34,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 4740529CC4BA6462ECF3D3B8DE3254BD
-- generatedChecksum: BE98F5DC10CB47F3EEE725591C03033C
+- generatedChecksum: 2E7594BDE586B09F7BADC25554791C83
   logicalPath: config/sam_9x60_ek/driver/usb/udphs/src
   name: drv_usb_udphs_device.c
   physicalPath: driver/usb/udphs/src
   security: NON_SECURE
   type: SOURCE
-  userChecksum: BE98F5DC10CB47F3EEE725591C03033C
+  userChecksum: 2E7594BDE586B09F7BADC25554791C83
 - generatedChecksum: 3B8EC3C54C8265DA1920203C5546EDBE
   logicalPath: config/sam_9x60_ek
   name: initialization.c
@@ -286,13 +286,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 4F7F6528785108C34F8D52C9602EC610
-- generatedChecksum: 91A64CC85189854F29929A2A632CB9CE
+- generatedChecksum: 4CD933BBA3CD646220C3C5E97BF48C09
   logicalPath: config/sam_9x60_ek
   name: configuration.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 91A64CC85189854F29929A2A632CB9CE
+  userChecksum: 4CD933BBA3CD646220C3C5E97BF48C09
 - generatedChecksum: 8B35997040E0D61B0C62411FF7C4E9C1
   logicalPath: config/sam_9x60_ek/peripheral/mmu
   name: cp15.h
@@ -384,13 +384,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 46F14370EEA6E84C19CF07CF6E4E7306
-- generatedChecksum: 51C82FF439A1AC4F100FF2E1A671A226
+- generatedChecksum: 8E414F1F131AAB2CA5695A22AD2E0127
   logicalPath: config/sam_9x60_ek/driver/usb/udphs/src
   name: drv_usb_udphs_local.h
   physicalPath: driver/usb/udphs/src
   security: NON_SECURE
   type: HEADER
-  userChecksum: 51C82FF439A1AC4F100FF2E1A671A226
+  userChecksum: 8E414F1F131AAB2CA5695A22AD2E0127
 - generatedChecksum: 2800E21D1F85584B318760489575F1D2
   logicalPath: config/sam_9x60_ek/driver/usb/udphs/src
   name: drv_usb_udphs_variant_mapping.h
@@ -1301,13 +1301,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 6C4A6859DB16EA8C046F995C6B6C1C6F
-- generatedChecksum: F127C67A3E33E5788C0F057F648EE57C
+- generatedChecksum: 6EB8F9F4A43B9BC2C7A58585AC679650
   logicalPath: config/sam_9x60_ek/usb
   name: usb_host.h
   physicalPath: usb
   security: NON_SECURE
   type: HEADER
-  userChecksum: F127C67A3E33E5788C0F057F648EE57C
+  userChecksum: 6EB8F9F4A43B9BC2C7A58585AC679650
 - generatedChecksum: 6EBC5E4D06FC96A02ADF3B7416957DD6
   logicalPath: config/sam_9x60_ek/usb
   name: usb_host_client_driver.h
