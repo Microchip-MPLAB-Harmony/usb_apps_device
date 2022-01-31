@@ -156,7 +156,7 @@ const uint8_t highSpeedConfigurationDescriptor[]=
     USB_DESCRIPTOR_ENDPOINT,                                // Endpoint Descriptor
     1 | USB_EP_DIRECTION_OUT,                               // EndpointAddress ( EP1 OUT )
     USB_TRANSFER_TYPE_BULK,                                 // Attributes type of EP (BULK)
-    0x40, 0x00,                                             // Max packet size of this EP
+    0x00, 0x02,                                             // Max packet size of this EP
     0x00,                                                   // Interval (in ms)
 
 

@@ -1,5 +1,5 @@
-/**
- * \brief Component description for MPDDRC
+/*
+ * Component description for MPDDRC
  *
  * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2020-12-18T05:22:35Z */
+/* file generated from device description version 2021-05-04T16:22:14Z */
 #ifndef _SAM9X_MPDDRC_COMPONENT_H_
 #define _SAM9X_MPDDRC_COMPONENT_H_
 

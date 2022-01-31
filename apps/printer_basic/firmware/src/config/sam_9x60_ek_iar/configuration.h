@@ -56,7 +56,7 @@
 */
 
 #include "user.h"
-#include "toolchain_specifics.h"
+#include "device.h"
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
@@ -109,6 +109,10 @@ extern "C" {
 #define USB_ALIGN __ALIGNED(4096)
 #endif 
 
+/* Set maximum size for a DMA transfer, multiple of 64KB */
+#define DRV_USB_UDPHS_DMA_MAX_TRANSFER_SIZE                 2
+
+
 /* Maximum instances of Printer function driver */
 #define USB_DEVICE_PRINTER_INSTANCES_NUMBER          1 
 
@@ -137,9 +141,6 @@ extern "C" {
 
 /* Enable SOF Events */
 #define USB_DEVICE_SOF_EVENT_ENABLE
-
-
-
 
 
 

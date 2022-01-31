@@ -347,8 +347,7 @@
                     <state>$PROJ_DIR$\..\src</state>
                     <state>$PROJ_DIR$\..\src\config\sam_9x60_ek_iar</state>
                     <state>$PROJ_DIR$\..\src\packs\SAM9X60_DFP</state>
-                    <state>$PROJ_DIR$\..\src\packs\CMSIS\CMSIS\Core\Include</state>
-                    <state>$PROJ_DIR$\..\src\packs\CMSIS</state>
+                    <state>$PROJ_DIR$\.</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -1409,8 +1408,7 @@
                     <state>$PROJ_DIR$\..\src</state>
                     <state>$PROJ_DIR$\..\src\config\sam_9x60_ek_iar</state>
                     <state>$PROJ_DIR$\..\src\packs\SAM9X60_DFP</state>
-                    <state>$PROJ_DIR$\..\src\packs\CMSIS\CMSIS\Core\Include</state>
-                    <state>$PROJ_DIR$\..\src\packs\CMSIS</state>
+                    <state>$PROJ_DIR$\.</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
