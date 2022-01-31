@@ -56,7 +56,7 @@
 */
 
 #include "user.h"
-#include "toolchain_specifics.h"
+#include "device.h"
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
@@ -95,6 +95,7 @@ extern "C" {
 #define DRV_MEMORY_BUFFER_QUEUE_SIZE_IDX0    1
 #define DRV_MEMORY_DEVICE_START_ADDRESS      0x9d040000
 #define DRV_MEMORY_DEVICE_MEDIA_SIZE         32UL
+#define DRV_MEMORY_DEVICE_MEDIA_SIZE_BYTES   (DRV_MEMORY_DEVICE_MEDIA_SIZE * 1024)
 #define DRV_MEMORY_DEVICE_PROGRAM_SIZE       512
 #define DRV_MEMORY_DEVICE_ERASE_SIZE         4096
 
@@ -120,9 +121,6 @@ extern "C" {
 
 /* Enable SOF Events */
 #define USB_DEVICE_SOF_EVENT_ENABLE
-
-
-
 
 
 /* Maximum instances of CDC function driver */
