@@ -167,10 +167,6 @@ const DRV_USART_INIT drvUsart0InitData =
     /* USART Client Objects Pool */
     .clientObjPool = (uintptr_t)&drvUSART0ClientObjPool[0],
 
-    .dmaChannelTransmit = SYS_DMA_CHANNEL_NONE,
-
-    .dmaChannelReceive = SYS_DMA_CHANNEL_NONE,
-
     /* Combined size of transmit and receive buffer objects */
     .bufferObjPoolSize = DRV_USART_QUEUE_SIZE_IDX0,
 
@@ -275,7 +271,6 @@ void SYS_Initialize ( void* data )
 
   
     CLK_Initialize();
-    
     /* Configure Prefetch, Wait States and ECC */
     PRECONbits.PREFEN = 3;
     PRECONbits.PFMWS = 3;

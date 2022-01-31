@@ -236,17 +236,6 @@ typedef struct
     /* To identify if we are running from interrupt context or not */
     uint8_t                                 interruptNestingCount;
 
-    /* TX DMA Channel */
-    volatile SYS_DMA_CHANNEL                txDMAChannel;
-
-    /* RX DMA Channel */
-    volatile SYS_DMA_CHANNEL                rxDMAChannel;
-
-    /* This is the USART transmit register address. Used for DMA operation. */
-    void*                                   txAddress;
-
-    /* This is the USART receive register address. Used for DMA operation. */
-    void*                                   rxAddress;
 
     /* Mutex to protect access to the client objects */
     OSAL_MUTEX_DECLARE(mutexClientObjects);
