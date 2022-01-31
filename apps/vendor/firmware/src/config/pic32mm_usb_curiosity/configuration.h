@@ -129,9 +129,6 @@ extern "C" {
 #define USB_DEVICE_SOF_EVENT_ENABLE
 
 
-
-
-
 /* Endpoint Transfer Queue Size for both read and
    write. Applicable to all instances of the
    function driver */
