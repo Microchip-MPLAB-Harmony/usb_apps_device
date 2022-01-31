@@ -93,6 +93,7 @@
 
 /* Interrupt nesting behaviour configuration. */
 
+
 /* Optional functions - most linkers will remove unused functions anyway. */
 #define INCLUDE_vTaskPrioritySet                1
 #define INCLUDE_uxTaskPriorityGet               1
