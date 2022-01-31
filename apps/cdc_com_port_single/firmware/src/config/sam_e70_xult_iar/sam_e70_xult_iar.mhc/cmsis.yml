@@ -20,6 +20,6 @@ children:
       - type: String
         attributes: {id: source}
         children:
-        - {type: Value, value: ../../dev_packs/arm/CMSIS/5.7.0/CMSIS/DSP/Lib/IAR/iar_cortexM7lf_math.a}
+        - {type: Value, value: ../../dev_packs/arm/CMSIS/5.8.0/CMSIS/DSP/Lib/IAR/iar_cortexM7lf_math.a}
 - type: ElementPosition
   attributes: {x: '151', y: '67', id: cmsis}
