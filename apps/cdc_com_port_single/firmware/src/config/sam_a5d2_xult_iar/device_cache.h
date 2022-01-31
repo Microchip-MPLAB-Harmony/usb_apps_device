@@ -54,7 +54,6 @@
 /*  This section Includes other configuration headers necessary to completely
     define this configuration.
 */
-
 #include <stdint.h>
 #include "peripheral/l2cc/plib_l2cc.h"
 #include "peripheral/mmu/plib_mmu.h"
@@ -75,8 +74,9 @@ extern "C" {
 #define L1_ICACHE_IN_USE                               true
 #define L1_ICACHE_ENABLE()                             icache_Enable()
 #define L1_ICACHE_DISABLE()                            icache_Disable()
-#define L1_ICACHE_INVALIDATE_ALL()                     icache_InvalidateAll()
+#define L1_ICACHE_INVALIDATE_ALL()                     L1C_InvalidateICacheAll()
 
+ 
 #define L1_DCACHE_IN_USE                               true
 #define L1_DCACHE_ENABLE()                             dcache_Enable()
 #define L1_DCACHE_DISABLE()                            dcache_Disable()
@@ -101,7 +101,8 @@ extern "C" {
 #define DCACHE_CLEAN_INVALIDATE_ALL()                  dcache_CleanInvalidateAll();\
                                                        PLIB_L2CC_CleanInvalidateCache()
 //
-#define DATA_CACHE_ENABLED                             true
+ 
+#define DATA_CACHE_ENABLED                             true   
 
 //DOM-IGNORE-BEGIN
 #ifdef __cplusplus

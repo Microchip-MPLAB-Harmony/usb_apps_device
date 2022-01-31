@@ -79,6 +79,7 @@ void icache_Disable(void);
 void dcache_InvalidateAll(void);
 void dcache_CleanAll(void);
 void dcache_CleanInvalidateAll(void);
+
 void dcache_InvalidateByAddr (uint32_t *addr, uint32_t size);
 void dcache_CleanByAddr (uint32_t *addr, uint32_t size);
 void dcache_CleanInvalidateByAddr (uint32_t *addr, uint32_t size);
