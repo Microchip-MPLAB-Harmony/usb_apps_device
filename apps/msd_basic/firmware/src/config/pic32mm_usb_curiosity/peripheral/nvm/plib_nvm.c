@@ -280,7 +280,7 @@ void NVM_BootFlashWriteProtectDisable( NVM_BOOT_FLASH_WRITE_PROTECT writeProtect
     __builtin_mtc0(12, 0, processorStatus);
 }
 
-void NVM_BootFlashWriteProtectLock( void )
+void NVM_BootFlashWriteProtectLock(void)
 {
     volatile uint32_t processorStatus;
 

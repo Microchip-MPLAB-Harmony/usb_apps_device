@@ -121,7 +121,7 @@ void NVM_BootFlashWriteProtectEnable( NVM_BOOT_FLASH_WRITE_PROTECT writeProtectP
 
 void NVM_BootFlashWriteProtectDisable( NVM_BOOT_FLASH_WRITE_PROTECT writeProtectPage );
 
-void NVM_BootFlashWriteProtectLock( void );
+void NVM_BootFlashWriteProtectLock(void);
 
 void NVM_CallbackRegister( NVM_CALLBACK callback, uintptr_t context );
 
