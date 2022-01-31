@@ -314,13 +314,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 1D8A9F346A582CE788A77212FF68DCDD
-- generatedChecksum: CAFB3CE4462A14293C7C168463CCB876
+- generatedChecksum: 47777A934270C2BB088F9456DEB50DF2
   logicalPath: config/pic32cm_le00_curiosity_pro
   name: definitions.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: CAFB3CE4462A14293C7C168463CCB876
+  userChecksum: 47777A934270C2BB088F9456DEB50DF2
 - generatedChecksum: DD41033E924C532126343C2BF7C10E79
   logicalPath: config/pic32cm_le00_curiosity_pro
   name: device.h
@@ -1077,13 +1077,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 6C4A6859DB16EA8C046F995C6B6C1C6F
-- generatedChecksum: F127C67A3E33E5788C0F057F648EE57C
+- generatedChecksum: 6EB8F9F4A43B9BC2C7A58585AC679650
   logicalPath: config/pic32cm_le00_curiosity_pro/usb
   name: usb_host.h
   physicalPath: usb
   security: NON_SECURE
   type: HEADER
-  userChecksum: F127C67A3E33E5788C0F057F648EE57C
+  userChecksum: 6EB8F9F4A43B9BC2C7A58585AC679650
 - generatedChecksum: 6EBC5E4D06FC96A02ADF3B7416957DD6
   logicalPath: config/pic32cm_le00_curiosity_pro/usb
   name: usb_host_client_driver.h
