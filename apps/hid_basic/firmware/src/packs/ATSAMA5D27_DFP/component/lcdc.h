@@ -1,5 +1,5 @@
-/**
- * \brief Component description for LCDC
+/*
+ * Component description for LCDC
  *
  * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2020-12-17T18:15:19Z */
+/* file generated from device description version 2021-06-28T09:00:02Z */
 #ifndef _SAMA5D2_LCDC_COMPONENT_H_
 #define _SAMA5D2_LCDC_COMPONENT_H_
 
