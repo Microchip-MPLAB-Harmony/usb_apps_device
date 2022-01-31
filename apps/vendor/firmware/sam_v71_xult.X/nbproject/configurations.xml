@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <configurationDescriptor version="65">
   <logicalFolder displayName="root" name="root" projectFiles="true">
     <logicalFolder displayName="Header Files" name="HeaderFiles" projectFiles="true">
@@ -121,6 +121,7 @@
             <itemPath>../src/packs/ATSAMV71Q21B_DFP/component/utmi.h</itemPath>
             <itemPath>../src/packs/ATSAMV71Q21B_DFP/component/wdt.h</itemPath>
             <itemPath>../src/packs/ATSAMV71Q21B_DFP/component/xdmac.h</itemPath>
+            <itemPath>../src/packs/ATSAMV71Q21B_DFP/component/fuses.h</itemPath>
           </logicalFolder>
           <logicalFolder displayName="pio" name="f2" projectFiles="true">
             <itemPath>../src/packs/ATSAMV71Q21B_DFP/pio/samv71q21b.h</itemPath>
@@ -183,6 +184,7 @@
             <itemPath>../src/packs/ATSAMV71Q21B_DFP/instance/utmi.h</itemPath>
             <itemPath>../src/packs/ATSAMV71Q21B_DFP/instance/wdt.h</itemPath>
             <itemPath>../src/packs/ATSAMV71Q21B_DFP/instance/xdmac.h</itemPath>
+            <itemPath>../src/packs/ATSAMV71Q21B_DFP/instance/fuses.h</itemPath>
           </logicalFolder>
           <itemPath>../src/packs/ATSAMV71Q21B_DFP/samv71q21b.h</itemPath>
         </logicalFolder>
@@ -309,7 +311,7 @@
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="SAMV71_DFP" vendor="Microchip" version="4.5.82"/>
+        <pack name="SAMV71_DFP" vendor="Microchip" version="4.6.90"/>
         <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
       </packs>
       <ScriptingSettings>
