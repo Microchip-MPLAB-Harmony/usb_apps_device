@@ -55,13 +55,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: null
-- generatedChecksum: DC56120333D3B0CEEB6A6B9697B3EF87
+- generatedChecksum: 04730EC47CC48B3A42703CDFFE52EB87
   logicalPath: config/pic32mz_ef_sk/peripheral/clk
   name: plib_clk.c
   physicalPath: peripheral/clk
   security: NON_SECURE
   type: SOURCE
-  userChecksum: DC56120333D3B0CEEB6A6B9697B3EF87
+  userChecksum: 04730EC47CC48B3A42703CDFFE52EB87
 - generatedChecksum: CE5C781E061C3ACA9D50557DE49DBE90
   logicalPath: config/pic32mz_ef_sk/peripheral/evic
   name: plib_evic.c
@@ -132,13 +132,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: DBB1CA73E964F26D2DBEE952A61652ED
-- generatedChecksum: D8FC8E29D55BCC821FCFB68EAE10A129
+- generatedChecksum: 692370E287A541DF6D1AB8EAA00E0BCC
   logicalPath: config/pic32mz_ef_sk
   name: configuration.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: D8FC8E29D55BCC821FCFB68EAE10A129
+  userChecksum: 692370E287A541DF6D1AB8EAA00E0BCC
 - generatedChecksum: 406E3374EF0C62B22468F675A4F3F3C4
   logicalPath: config/pic32mz_ef_sk
   name: definitions.h
@@ -244,13 +244,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 3C465EE2268CD765C11300F75C6560CC
-- generatedChecksum: 4C6C4A7B7E33767128AA763FFAE2E394
+- generatedChecksum: 4C730E56D028FBC00572DDBD3E67C7C7
   logicalPath: config/pic32mz_ef_sk/peripheral/gpio
   name: plib_gpio.h
   physicalPath: peripheral/gpio
   security: NON_SECURE
   type: HEADER
-  userChecksum: 4C6C4A7B7E33767128AA763FFAE2E394
+  userChecksum: 4C730E56D028FBC00572DDBD3E67C7C7
 - generatedChecksum: F7512D94687ACDF1178ABC3B80CEFFC0
   logicalPath: config/pic32mz_ef_sk/driver/usb/usbhs/src
   name: plib_usbhs.h
@@ -307,13 +307,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 1C75A8A6B60598A2FD0D533F57839B72
-- generatedChecksum: FA212DEAE39D4E86EF4E6CB440610FE9
+- generatedChecksum: CAC44960D20AEC03CF4B325A1CD2877C
   logicalPath: config/pic32mz_ef_sk
   name: toolchain_specifics.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: FA212DEAE39D4E86EF4E6CB440610FE9
+  userChecksum: CAC44960D20AEC03CF4B325A1CD2877C
 - generatedChecksum: 39659CDE2CC726544BD68544FB7EF4B2
   logicalPath: config/pic32mz_ef_sk/usb
   name: usb_chapter_9.h
@@ -384,13 +384,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: F258661D72F9E844BF936D43BF859BE7
-- generatedChecksum: F127C67A3E33E5788C0F057F648EE57C
+- generatedChecksum: 6EB8F9F4A43B9BC2C7A58585AC679650
   logicalPath: config/pic32mz_ef_sk/usb
   name: usb_host.h
   physicalPath: usb
   security: NON_SECURE
   type: HEADER
-  userChecksum: F127C67A3E33E5788C0F057F648EE57C
+  userChecksum: 6EB8F9F4A43B9BC2C7A58585AC679650
 - generatedChecksum: 6EBC5E4D06FC96A02ADF3B7416957DD6
   logicalPath: config/pic32mz_ef_sk/usb
   name: usb_host_client_driver.h
@@ -602,7 +602,7 @@ settings:
   delimiter: ;
   key: extra-include-directories
   security: NON_SECURE
-  value: ../src;../src/config/pic32mz_ef_sk;../src/packs/PIC32MZ2048EFH144_DFP;
+  value: ../src;../src/config/pic32mz_ef_sk;
 - append: false
   category: C32
   delimiter: ''
@@ -632,7 +632,7 @@ settings:
   delimiter: ;
   key: extra-include-directories
   security: NON_SECURE
-  value: ../src;../src/config/pic32mz_ef_sk;../src/packs/PIC32MZ2048EFH144_DFP;
+  value: ../src;../src/config/pic32mz_ef_sk;
 - append: false
   category: C32CPP
   delimiter: ''
