@@ -122,7 +122,7 @@ const DRV_SDSPI_PLIB_INTERFACE drvSDSPI0PlibAPI = {
     .read = (DRV_SDSPI_PLIB_READ)SPI1_Read,
 
     /* SPI PLIB Transfer Status function */
-    .isBusy = (DRV_SDSPI_PLIB_IS_BUSY)SPI1_IsBusy,
+    .isTransmitterBusy = (DRV_SPI_PLIB_TRANSMITTER_IS_BUSY)SPI1_IsTransmitterBusy,
 
     .transferSetup = (DRV_SDSPI_PLIB_SETUP)SPI1_TransferSetup,
 
@@ -214,6 +214,7 @@ const DRV_USBFS_INIT drvUSBFSInit =
 
 	/* Interrupt Source for USB module */
 	.interruptSource = INT_SOURCE_USB,
+
 
     
     /* USB Controller to operate as USB Device */
