@@ -69,16 +69,6 @@ void _USB_DEVICE_Tasks(  void *pvParameters  )
     }
 }
 
-void _DRV_USBFS_Tasks_0(  void *pvParameters  )
-{
-    while(1)
-    {
-        /* USB FS Driver Task Routine */
-        DRV_USBFS_Tasks(sysObj.drvUSBFSObject0);
-        vTaskDelay(10 / portTICK_PERIOD_MS);
-    }
-}
-
 /* Handle for the APP_FREERTOS_Tasks. */
 TaskHandle_t xAPP_FREERTOS_Tasks;
 

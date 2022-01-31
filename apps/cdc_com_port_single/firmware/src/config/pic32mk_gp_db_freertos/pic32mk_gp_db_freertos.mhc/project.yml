@@ -34,13 +34,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: DC797D8719875948452BA69E3CA29A20
-- generatedChecksum: E65E55268349D2945F1AC4144D0327CC
+- generatedChecksum: 77A61E825804B2CA96FC95734161DDE6
   logicalPath: config/pic32mk_gp_db_freertos/driver/usb/usbfs/src
   name: drv_usbfs_device.c
   physicalPath: driver/usb/usbfs/src
   security: NON_SECURE
   type: SOURCE
-  userChecksum: E65E55268349D2945F1AC4144D0327CC
+  userChecksum: 77A61E825804B2CA96FC95734161DDE6
 - generatedChecksum: B3B5445B14BD9B6A35F1C5B995C9BBF7
   logicalPath: FreeRTOS/Source
   name: event_groups.c
@@ -111,13 +111,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 8FDD6248506F28B32C4F5FD9AA0D9C6F
-- generatedChecksum: 0DDCBD6940EF944F81591673A38B732A
+- generatedChecksum: 12E1AD1F795D79B993528BEF52B4670D
   logicalPath: config/pic32mk_gp_db_freertos/peripheral/clk
   name: plib_clk.c
   physicalPath: peripheral/clk
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 0DDCBD6940EF944F81591673A38B732A
+  userChecksum: 12E1AD1F795D79B993528BEF52B4670D
 - generatedChecksum: 8ED5A3FA0D4FFEB20ABC6A20A595782D
   logicalPath: config/pic32mk_gp_db_freertos/peripheral/evic
   name: plib_evic.c
@@ -174,13 +174,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: C95CE0ABB86E6B11CF77E8891D294510
-- generatedChecksum: 7455A659B72C0FE14100963C349B17A5
+- generatedChecksum: 84782EDE2C5DFCAE9DEF9966B3C27826
   logicalPath: config/pic32mk_gp_db_freertos
   name: tasks.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 7455A659B72C0FE14100963C349B17A5
+  userChecksum: 84782EDE2C5DFCAE9DEF9966B3C27826
 - generatedChecksum: F1B86F6E1527FD59A8713B67564F2898
   logicalPath: FreeRTOS/Source
   name: timers.c
@@ -230,13 +230,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: AF3A8D8AA610E7DFD3E38DDAC5E42074
-- generatedChecksum: EDF958E647725466141DA4B27DBEDA52
+- generatedChecksum: F0109AE554E31A855B9F27FAB53ACA68
   logicalPath: config/pic32mk_gp_db_freertos
   name: FreeRTOSConfig.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: EDF958E647725466141DA4B27DBEDA52
+  userChecksum: F0109AE554E31A855B9F27FAB53ACA68
 - generatedChecksum: 774011E09B9B257B4F572704E6AB9713
   logicalPath: FreeRTOS/Source/portable/MPLAB/PIC32MK
   name: ISR_Support.h
@@ -258,13 +258,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: F988612652E7AB27446C60B39EC539DC
-- generatedChecksum: D0931A6B79A6626EDBB4F85C02A78181
+- generatedChecksum: FD30A619E67C804B2B1233B6D106CF61
   logicalPath: config/pic32mk_gp_db_freertos
   name: configuration.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: D0931A6B79A6626EDBB4F85C02A78181
+  userChecksum: FD30A619E67C804B2B1233B6D106CF61
 - generatedChecksum: 48B661D8C967C6BC397001F10FB43D1D
   logicalPath: FreeRTOS/Source/include
   name: croutine.h
@@ -419,20 +419,20 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: F666CF132ECA91F43C2A25389BA2AC28
-- generatedChecksum: 0D9A237E654AC0456092675C1A8A922A
+- generatedChecksum: 704876088AD9ADA5D4849817C06EED04
   logicalPath: config/pic32mk_gp_db_freertos/peripheral/gpio
   name: plib_gpio.h
   physicalPath: peripheral/gpio
   security: NON_SECURE
   type: HEADER
-  userChecksum: 0D9A237E654AC0456092675C1A8A922A
-- generatedChecksum: 3224466D03D8DDF1B5307028B2E5583F
+  userChecksum: 704876088AD9ADA5D4849817C06EED04
+- generatedChecksum: 7AFFC4178335897ED9D5804CAB531BCF
   logicalPath: config/pic32mk_gp_db_freertos/driver/usb/usbfs/src
   name: plib_usbfs.h
   physicalPath: driver/usb/usbfs/src
   security: NON_SECURE
   type: HEADER
-  userChecksum: 3224466D03D8DDF1B5307028B2E5583F
+  userChecksum: 7AFFC4178335897ED9D5804CAB531BCF
 - generatedChecksum: 5A686FF678CBFBB4A1FEB86B66DCEC98
   logicalPath: FreeRTOS/Source/include
   name: portable.h
@@ -538,13 +538,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: C8BB70E2423A57902E9FDC0C9EC81F8D
-- generatedChecksum: 2C8543317B3F067432097AB9BD3E8672
+- generatedChecksum: 7DC91D6D376C98802C9C2990432DE9B7
   logicalPath: config/pic32mk_gp_db_freertos
   name: toolchain_specifics.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 2C8543317B3F067432097AB9BD3E8672
+  userChecksum: 7DC91D6D376C98802C9C2990432DE9B7
 - generatedChecksum: 7614490532C606BCAFEC5F729FDBEDAD
   logicalPath: config/pic32mk_gp_db_freertos/driver/usb/usbfs/src/templates
   name: usb_ALL_Interrupt_Default.h
@@ -1378,13 +1378,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 6C4A6859DB16EA8C046F995C6B6C1C6F
-- generatedChecksum: F127C67A3E33E5788C0F057F648EE57C
+- generatedChecksum: 6EB8F9F4A43B9BC2C7A58585AC679650
   logicalPath: config/pic32mk_gp_db_freertos/usb
   name: usb_host.h
   physicalPath: usb
   security: NON_SECURE
   type: HEADER
-  userChecksum: F127C67A3E33E5788C0F057F648EE57C
+  userChecksum: 6EB8F9F4A43B9BC2C7A58585AC679650
 - generatedChecksum: 6EBC5E4D06FC96A02ADF3B7416957DD6
   logicalPath: config/pic32mk_gp_db_freertos/usb
   name: usb_host_client_driver.h
@@ -1427,13 +1427,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: null
-- generatedChecksum: 42590D4A591FA36D2E5451D9D5BCEAC6
+- generatedChecksum: 78F979907C866EDD174CB31208FC172B
   logicalPath: config/pic32mk_gp_db_freertos
   name: p32MK1024GPE100.ld
   physicalPath: ''
   security: NON_SECURE
   type: LINKER
-  userChecksum: 42590D4A591FA36D2E5451D9D5BCEAC6
+  userChecksum: 78F979907C866EDD174CB31208FC172B
 format_version: v1.0
 libraries: []
 settings:
@@ -1448,7 +1448,7 @@ settings:
   delimiter: ;
   key: extra-include-directories
   security: NON_SECURE
-  value: ../src;../src/config/pic32mk_gp_db_freertos;../src/packs/PIC32MK1024GPE100_DFP;
+  value: ../src;../src/config/pic32mk_gp_db_freertos;
 - append: false
   category: C32
   delimiter: ''
@@ -1496,7 +1496,7 @@ settings:
   delimiter: ;
   key: extra-include-directories
   security: NON_SECURE
-  value: ../src;../src/config/pic32mk_gp_db_freertos;../src/packs/PIC32MK1024GPE100_DFP;
+  value: ../src;../src/config/pic32mk_gp_db_freertos;
 - append: false
   category: C32CPP
   delimiter: ''
