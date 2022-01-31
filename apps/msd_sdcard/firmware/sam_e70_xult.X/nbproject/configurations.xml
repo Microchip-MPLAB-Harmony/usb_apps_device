@@ -147,6 +147,7 @@
             <itemPath>../src/packs/ATSAME70Q21B_DFP/component/utmi.h</itemPath>
             <itemPath>../src/packs/ATSAME70Q21B_DFP/component/wdt.h</itemPath>
             <itemPath>../src/packs/ATSAME70Q21B_DFP/component/xdmac.h</itemPath>
+            <itemPath>../src/packs/ATSAME70Q21B_DFP/component/fuses.h</itemPath>
           </logicalFolder>
           <logicalFolder displayName="pio" name="f2" projectFiles="true">
             <itemPath>../src/packs/ATSAME70Q21B_DFP/pio/same70q21b.h</itemPath>
@@ -208,6 +209,7 @@
             <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/utmi.h</itemPath>
             <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/wdt.h</itemPath>
             <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/xdmac.h</itemPath>
+            <itemPath>../src/packs/ATSAME70Q21B_DFP/instance/fuses.h</itemPath>
           </logicalFolder>
           <itemPath>../src/packs/ATSAME70Q21B_DFP/same70q21b.h</itemPath>
         </logicalFolder>
