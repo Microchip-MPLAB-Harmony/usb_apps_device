@@ -34,13 +34,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 4740529CC4BA6462ECF3D3B8DE3254BD
-- generatedChecksum: BE98F5DC10CB47F3EEE725591C03033C
+- generatedChecksum: 2E7594BDE586B09F7BADC25554791C83
   logicalPath: config/sam_a5d2_xult/driver/usb/udphs/src
   name: drv_usb_udphs_device.c
   physicalPath: driver/usb/udphs/src
   security: NON_SECURE
   type: SOURCE
-  userChecksum: BE98F5DC10CB47F3EEE725591C03033C
+  userChecksum: 2E7594BDE586B09F7BADC25554791C83
 - generatedChecksum: A4A82BF95281026C9591A9D6C9BB0D35
   logicalPath: config/sam_a5d2_xult
   name: fault_handlers.c
@@ -342,13 +342,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: ACE577277E146F49B92285A8CD8E2D1D
-- generatedChecksum: 637B3BEE46BB680373466EB22F7DA71E
+- generatedChecksum: D62D61D833E4B117ECBD8465FE373BAE
   logicalPath: config/sam_a5d2_xult
   name: configuration.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 637B3BEE46BB680373466EB22F7DA71E
+  userChecksum: D62D61D833E4B117ECBD8465FE373BAE
 - generatedChecksum: 32D6F5036C919DE32EFC951936B81657
   logicalPath: packs/CMSIS/CMSIS/Core_A/Include
   name: core_ca.h
@@ -426,13 +426,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 46F14370EEA6E84C19CF07CF6E4E7306
-- generatedChecksum: 51C82FF439A1AC4F100FF2E1A671A226
+- generatedChecksum: 8E414F1F131AAB2CA5695A22AD2E0127
   logicalPath: config/sam_a5d2_xult/driver/usb/udphs/src
   name: drv_usb_udphs_local.h
   physicalPath: driver/usb/udphs/src
   security: NON_SECURE
   type: HEADER
-  userChecksum: 51C82FF439A1AC4F100FF2E1A671A226
+  userChecksum: 8E414F1F131AAB2CA5695A22AD2E0127
 - generatedChecksum: 2800E21D1F85584B318760489575F1D2
   logicalPath: config/sam_a5d2_xult/driver/usb/udphs/src
   name: drv_usb_udphs_variant_mapping.h
@@ -1371,13 +1371,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 6C4A6859DB16EA8C046F995C6B6C1C6F
-- generatedChecksum: F127C67A3E33E5788C0F057F648EE57C
+- generatedChecksum: 6EB8F9F4A43B9BC2C7A58585AC679650
   logicalPath: config/sam_a5d2_xult/usb
   name: usb_host.h
   physicalPath: usb
   security: NON_SECURE
   type: HEADER
-  userChecksum: F127C67A3E33E5788C0F057F648EE57C
+  userChecksum: 6EB8F9F4A43B9BC2C7A58585AC679650
 - generatedChecksum: 6EBC5E4D06FC96A02ADF3B7416957DD6
   logicalPath: config/sam_a5d2_xult/usb
   name: usb_host_client_driver.h
