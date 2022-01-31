@@ -27,13 +27,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 257ACC61A57EA8DE78BA7E1F78DB85A3
-- generatedChecksum: 4BE02A35124B31EF3F0845F2147B44B1
+- generatedChecksum: DC6BF3BD3BE8D60070E6CFAD73ECC6EF
   logicalPath: config/pic32mz_ef_curiosity_2_0/driver/memory
   name: drv_memory_nvm.c
   physicalPath: driver/memory/src
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 4BE02A35124B31EF3F0845F2147B44B1
+  userChecksum: DC6BF3BD3BE8D60070E6CFAD73ECC6EF
 - generatedChecksum: 8048089AA9DA0663AE185F78DF90D645
   logicalPath: config/pic32mz_ef_curiosity_2_0/driver/usb/usbhs/src
   name: drv_usbhs.c
@@ -76,13 +76,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: null
-- generatedChecksum: 283DF3113B63A68D1DDA854ECCA7F4AF
+- generatedChecksum: C1189B73851C7083C4AAD1D2D7138DEA
   logicalPath: config/pic32mz_ef_curiosity_2_0/peripheral/clk
   name: plib_clk.c
   physicalPath: peripheral/clk
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 283DF3113B63A68D1DDA854ECCA7F4AF
+  userChecksum: C1189B73851C7083C4AAD1D2D7138DEA
 - generatedChecksum: 7595BE0421DAFB015C0F11C6B6CF034C
   logicalPath: config/pic32mz_ef_curiosity_2_0/peripheral/evic
   name: plib_evic.c
@@ -160,13 +160,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 151729F1C9106E599EB94600618F070C
-- generatedChecksum: B482F62D6C4A832788EA0657A0771229
+- generatedChecksum: DA7540091D1887A42C23154FDA682A94
   logicalPath: config/pic32mz_ef_curiosity_2_0
   name: configuration.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: B482F62D6C4A832788EA0657A0771229
+  userChecksum: DA7540091D1887A42C23154FDA682A94
 - generatedChecksum: EAC90090EABFF0D0F14905D2D031BF3E
   logicalPath: config/pic32mz_ef_curiosity_2_0
   name: definitions.h
@@ -300,13 +300,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 815CCB981B6CB758464D89480121DC08
-- generatedChecksum: 4C6C4A7B7E33767128AA763FFAE2E394
+- generatedChecksum: 4C730E56D028FBC00572DDBD3E67C7C7
   logicalPath: config/pic32mz_ef_curiosity_2_0/peripheral/gpio
   name: plib_gpio.h
   physicalPath: peripheral/gpio
   security: NON_SECURE
   type: HEADER
-  userChecksum: 4C6C4A7B7E33767128AA763FFAE2E394
+  userChecksum: 4C730E56D028FBC00572DDBD3E67C7C7
 - generatedChecksum: D56C272B20A77F07A4DAF8D2AD351F4B
   logicalPath: config/pic32mz_ef_curiosity_2_0/peripheral/nvm
   name: plib_nvm.h
@@ -384,13 +384,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 1C75A8A6B60598A2FD0D533F57839B72
-- generatedChecksum: FA212DEAE39D4E86EF4E6CB440610FE9
+- generatedChecksum: CAC44960D20AEC03CF4B325A1CD2877C
   logicalPath: config/pic32mz_ef_curiosity_2_0
   name: toolchain_specifics.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: FA212DEAE39D4E86EF4E6CB440610FE9
+  userChecksum: CAC44960D20AEC03CF4B325A1CD2877C
 - generatedChecksum: 39659CDE2CC726544BD68544FB7EF4B2
   logicalPath: config/pic32mz_ef_curiosity_2_0/usb
   name: usb_chapter_9.h
@@ -454,13 +454,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 6C4A6859DB16EA8C046F995C6B6C1C6F
-- generatedChecksum: F127C67A3E33E5788C0F057F648EE57C
+- generatedChecksum: 6EB8F9F4A43B9BC2C7A58585AC679650
   logicalPath: config/pic32mz_ef_curiosity_2_0/usb
   name: usb_host.h
   physicalPath: usb
   security: NON_SECURE
   type: HEADER
-  userChecksum: F127C67A3E33E5788C0F057F648EE57C
+  userChecksum: 6EB8F9F4A43B9BC2C7A58585AC679650
 - generatedChecksum: 6EBC5E4D06FC96A02ADF3B7416957DD6
   logicalPath: config/pic32mz_ef_curiosity_2_0/usb
   name: usb_host_client_driver.h
@@ -679,7 +679,7 @@ settings:
   delimiter: ;
   key: extra-include-directories
   security: NON_SECURE
-  value: ../src;../src/config/pic32mz_ef_curiosity_2_0;../src/packs/PIC32MZ2048EFM144_DFP;
+  value: ../src;../src/config/pic32mz_ef_curiosity_2_0;
 - append: false
   category: C32
   delimiter: ''
@@ -709,7 +709,7 @@ settings:
   delimiter: ;
   key: extra-include-directories
   security: NON_SECURE
-  value: ../src;../src/config/pic32mz_ef_curiosity_2_0;../src/packs/PIC32MZ2048EFM144_DFP;
+  value: ../src;../src/config/pic32mz_ef_curiosity_2_0;
 - append: false
   category: C32CPP
   delimiter: ''
