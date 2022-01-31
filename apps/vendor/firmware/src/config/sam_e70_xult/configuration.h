@@ -56,7 +56,7 @@
 */
 
 #include "user.h"
-#include "toolchain_specifics.h"
+#include "device.h"
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
@@ -124,9 +124,6 @@ extern "C" {
 
 /* Enable SOF Events */
 #define USB_DEVICE_SOF_EVENT_ENABLE
-
-
-
 
 
 /* Endpoint Transfer Queue Size for both read and
