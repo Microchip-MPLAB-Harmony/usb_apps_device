@@ -1,5 +1,5 @@
-/**
- * \brief Component description for PDMIC
+/*
+ * Component description for PDMIC
  *
  * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2021-05-17T12:40:13Z */
+/* file generated from device description version 2021-07-26T14:35:51Z */
 #ifndef _SAMG55_PDMIC_COMPONENT_H_
 #define _SAMG55_PDMIC_COMPONENT_H_
 

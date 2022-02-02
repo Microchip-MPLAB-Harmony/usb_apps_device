@@ -1,4 +1,4 @@
-<config configName="sam_a5d27_som1_ek" projectName="cdc_msd_sdcard_sam_a5d27_som1_ek" configVersion="1.1" device="ATSAMA5D27CD1G" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.3.3">
+<config configName="sam_a5d27_som1_ek" projectName="cdc_msd_sdcard_sam_a5d27_som1_ek" configVersion="1.1" device="ATSAMA5D27CD1G" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.4.1">
    <usedPackages class="java.util.ArrayList"/>
    <usedClasses class="java.util.TreeMap">
       <entry>
@@ -67,7 +67,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.0.3"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.0.8"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -6056,7 +6056,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\configuration.h</file>
-         <hash>e13b39fb8891a00a0d5094d6105b441bc7726a92bc775c271449f9338a34f59c</hash>
+         <hash>b7efeb7d7e4b71046a07b7afb67e9b3640a7dd92349ac183c0691c1d7bb2fbc3</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMA5D27CD1G_DFP\instance\twihs1.h</file>
@@ -6320,7 +6320,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\driver\usb\udphs\src\drv_usb_udphs_device.c</file>
-         <hash>715347a2e440a0e75df8e42f515aad51d60363da249332d02dfe30a5d38b4836</hash>
+         <hash>61da1602d7be3babff14cf25591ae0510085dcb0e6b7d282e19425579a017aab</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMA5D27CD1G_DFP\instance\uart3.h</file>
@@ -6328,7 +6328,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\driver\usb\udphs\src\drv_usb_udphs_local.h</file>
-         <hash>f44eac4668ce8412992d595eedcef146212582c476f4dc192f45898ea2a50a9e</hash>
+         <hash>49c46a7ee7e6f2e75877ac58f037e478c840fde86b138392aa2a97f5761a53b2</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\usb\src\usb_device_cdc_local.h</file>
