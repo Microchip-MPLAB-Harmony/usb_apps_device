@@ -1,5 +1,5 @@
-/**
- * \brief Component description for I2SC
+/*
+ * Component description for I2SC
  *
  * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2021-05-17T12:40:13Z */
+/* file generated from device description version 2021-07-26T14:35:51Z */
 #ifndef _SAMG55_I2SC_COMPONENT_H_
 #define _SAMG55_I2SC_COMPONENT_H_
 
@@ -307,63 +307,63 @@
 #define I2SC_THR_Msk                          _U_(0xFFFFFFFF)                                      /**< (I2SC_THR) Register Mask  */
 
 
-/* -------- I2SC_RPR : (I2SC Offset: 0x100) (R/W 32) Receive Pointer Register -------- */
+/* -------- I2SC_RPR : (I2SC Offset: 0x100) (R/W 32) Receive Pointer Register - Left side -------- */
 #define I2SC_RPR_RXPTR_Pos                    _U_(0)                                               /**< (I2SC_RPR) Receive Pointer Register Position */
 #define I2SC_RPR_RXPTR_Msk                    (_U_(0xFFFFFFFF) << I2SC_RPR_RXPTR_Pos)              /**< (I2SC_RPR) Receive Pointer Register Mask */
 #define I2SC_RPR_RXPTR(value)                 (I2SC_RPR_RXPTR_Msk & ((value) << I2SC_RPR_RXPTR_Pos))
 #define I2SC_RPR_Msk                          _U_(0xFFFFFFFF)                                      /**< (I2SC_RPR) Register Mask  */
 
 
-/* -------- I2SC_RCR : (I2SC Offset: 0x104) (R/W 32) Receive Counter Register -------- */
+/* -------- I2SC_RCR : (I2SC Offset: 0x104) (R/W 32) Receive Counter Register - Left side -------- */
 #define I2SC_RCR_RXCTR_Pos                    _U_(0)                                               /**< (I2SC_RCR) Receive Counter Register Position */
 #define I2SC_RCR_RXCTR_Msk                    (_U_(0xFFFF) << I2SC_RCR_RXCTR_Pos)                  /**< (I2SC_RCR) Receive Counter Register Mask */
 #define I2SC_RCR_RXCTR(value)                 (I2SC_RCR_RXCTR_Msk & ((value) << I2SC_RCR_RXCTR_Pos))
 #define I2SC_RCR_Msk                          _U_(0x0000FFFF)                                      /**< (I2SC_RCR) Register Mask  */
 
 
-/* -------- I2SC_TPR : (I2SC Offset: 0x108) (R/W 32) Transmit Pointer Register -------- */
+/* -------- I2SC_TPR : (I2SC Offset: 0x108) (R/W 32) Transmit Pointer Register - Left side -------- */
 #define I2SC_TPR_TXPTR_Pos                    _U_(0)                                               /**< (I2SC_TPR) Transmit Counter Register Position */
 #define I2SC_TPR_TXPTR_Msk                    (_U_(0xFFFFFFFF) << I2SC_TPR_TXPTR_Pos)              /**< (I2SC_TPR) Transmit Counter Register Mask */
 #define I2SC_TPR_TXPTR(value)                 (I2SC_TPR_TXPTR_Msk & ((value) << I2SC_TPR_TXPTR_Pos))
 #define I2SC_TPR_Msk                          _U_(0xFFFFFFFF)                                      /**< (I2SC_TPR) Register Mask  */
 
 
-/* -------- I2SC_TCR : (I2SC Offset: 0x10C) (R/W 32) Transmit Counter Register -------- */
+/* -------- I2SC_TCR : (I2SC Offset: 0x10C) (R/W 32) Transmit Counter Register - Left side -------- */
 #define I2SC_TCR_TXCTR_Pos                    _U_(0)                                               /**< (I2SC_TCR) Transmit Counter Register Position */
 #define I2SC_TCR_TXCTR_Msk                    (_U_(0xFFFF) << I2SC_TCR_TXCTR_Pos)                  /**< (I2SC_TCR) Transmit Counter Register Mask */
 #define I2SC_TCR_TXCTR(value)                 (I2SC_TCR_TXCTR_Msk & ((value) << I2SC_TCR_TXCTR_Pos))
 #define I2SC_TCR_Msk                          _U_(0x0000FFFF)                                      /**< (I2SC_TCR) Register Mask  */
 
 
-/* -------- I2SC_RNPR : (I2SC Offset: 0x110) (R/W 32) Receive Next Pointer Register -------- */
+/* -------- I2SC_RNPR : (I2SC Offset: 0x110) (R/W 32) Receive Next Pointer Register - Left side -------- */
 #define I2SC_RNPR_RXNPTR_Pos                  _U_(0)                                               /**< (I2SC_RNPR) Receive Next Pointer Position */
 #define I2SC_RNPR_RXNPTR_Msk                  (_U_(0xFFFFFFFF) << I2SC_RNPR_RXNPTR_Pos)            /**< (I2SC_RNPR) Receive Next Pointer Mask */
 #define I2SC_RNPR_RXNPTR(value)               (I2SC_RNPR_RXNPTR_Msk & ((value) << I2SC_RNPR_RXNPTR_Pos))
 #define I2SC_RNPR_Msk                         _U_(0xFFFFFFFF)                                      /**< (I2SC_RNPR) Register Mask  */
 
 
-/* -------- I2SC_RNCR : (I2SC Offset: 0x114) (R/W 32) Receive Next Counter Register -------- */
+/* -------- I2SC_RNCR : (I2SC Offset: 0x114) (R/W 32) Receive Next Counter Register - Left side -------- */
 #define I2SC_RNCR_RXNCTR_Pos                  _U_(0)                                               /**< (I2SC_RNCR) Receive Next Counter Position */
 #define I2SC_RNCR_RXNCTR_Msk                  (_U_(0xFFFF) << I2SC_RNCR_RXNCTR_Pos)                /**< (I2SC_RNCR) Receive Next Counter Mask */
 #define I2SC_RNCR_RXNCTR(value)               (I2SC_RNCR_RXNCTR_Msk & ((value) << I2SC_RNCR_RXNCTR_Pos))
 #define I2SC_RNCR_Msk                         _U_(0x0000FFFF)                                      /**< (I2SC_RNCR) Register Mask  */
 
 
-/* -------- I2SC_TNPR : (I2SC Offset: 0x118) (R/W 32) Transmit Next Pointer Register -------- */
+/* -------- I2SC_TNPR : (I2SC Offset: 0x118) (R/W 32) Transmit Next Pointer Register - Left side -------- */
 #define I2SC_TNPR_TXNPTR_Pos                  _U_(0)                                               /**< (I2SC_TNPR) Transmit Next Pointer Position */
 #define I2SC_TNPR_TXNPTR_Msk                  (_U_(0xFFFFFFFF) << I2SC_TNPR_TXNPTR_Pos)            /**< (I2SC_TNPR) Transmit Next Pointer Mask */
 #define I2SC_TNPR_TXNPTR(value)               (I2SC_TNPR_TXNPTR_Msk & ((value) << I2SC_TNPR_TXNPTR_Pos))
 #define I2SC_TNPR_Msk                         _U_(0xFFFFFFFF)                                      /**< (I2SC_TNPR) Register Mask  */
 
 
-/* -------- I2SC_TNCR : (I2SC Offset: 0x11C) (R/W 32) Transmit Next Counter Register -------- */
+/* -------- I2SC_TNCR : (I2SC Offset: 0x11C) (R/W 32) Transmit Next Counter Register - Left side -------- */
 #define I2SC_TNCR_TXNCTR_Pos                  _U_(0)                                               /**< (I2SC_TNCR) Transmit Counter Next Position */
 #define I2SC_TNCR_TXNCTR_Msk                  (_U_(0xFFFF) << I2SC_TNCR_TXNCTR_Pos)                /**< (I2SC_TNCR) Transmit Counter Next Mask */
 #define I2SC_TNCR_TXNCTR(value)               (I2SC_TNCR_TXNCTR_Msk & ((value) << I2SC_TNCR_TXNCTR_Pos))
 #define I2SC_TNCR_Msk                         _U_(0x0000FFFF)                                      /**< (I2SC_TNCR) Register Mask  */
 
 
-/* -------- I2SC_PTCR : (I2SC Offset: 0x120) ( /W 32) Transfer Control Register -------- */
+/* -------- I2SC_PTCR : (I2SC Offset: 0x120) ( /W 32) Transfer Control Register - Left side -------- */
 #define I2SC_PTCR_RXTEN_Pos                   _U_(0)                                               /**< (I2SC_PTCR) Receiver Transfer Enable Position */
 #define I2SC_PTCR_RXTEN_Msk                   (_U_(0x1) << I2SC_PTCR_RXTEN_Pos)                    /**< (I2SC_PTCR) Receiver Transfer Enable Mask */
 #define I2SC_PTCR_RXTEN(value)                (I2SC_PTCR_RXTEN_Msk & ((value) << I2SC_PTCR_RXTEN_Pos))
@@ -394,7 +394,7 @@
 #define I2SC_PTCR_Msk                         _U_(0x010F0303)                                      /**< (I2SC_PTCR) Register Mask  */
 
 
-/* -------- I2SC_PTSR : (I2SC Offset: 0x124) ( R/ 32) Transfer Status Register -------- */
+/* -------- I2SC_PTSR : (I2SC Offset: 0x124) ( R/ 32) Transfer Status Register - Left side -------- */
 #define I2SC_PTSR_RXTEN_Pos                   _U_(0)                                               /**< (I2SC_PTSR) Receiver Transfer Enable Position */
 #define I2SC_PTSR_RXTEN_Msk                   (_U_(0x1) << I2SC_PTSR_RXTEN_Pos)                    /**< (I2SC_PTSR) Receiver Transfer Enable Mask */
 #define I2SC_PTSR_RXTEN(value)                (I2SC_PTSR_RXTEN_Msk & ((value) << I2SC_PTSR_RXTEN_Pos))
@@ -413,6 +413,112 @@
 #define I2SC_PTSR_Msk                         _U_(0x01050101)                                      /**< (I2SC_PTSR) Register Mask  */
 
 
+/* -------- I2SC_RPR_RIGHT : (I2SC Offset: 0x200) (R/W 32) Receive Pointer Register - Right side -------- */
+#define I2SC_RPR_RIGHT_RXPTR_Pos              _U_(0)                                               /**< (I2SC_RPR_RIGHT) Receive Pointer Register Position */
+#define I2SC_RPR_RIGHT_RXPTR_Msk              (_U_(0xFFFFFFFF) << I2SC_RPR_RIGHT_RXPTR_Pos)        /**< (I2SC_RPR_RIGHT) Receive Pointer Register Mask */
+#define I2SC_RPR_RIGHT_RXPTR(value)           (I2SC_RPR_RIGHT_RXPTR_Msk & ((value) << I2SC_RPR_RIGHT_RXPTR_Pos))
+#define I2SC_RPR_RIGHT_Msk                    _U_(0xFFFFFFFF)                                      /**< (I2SC_RPR_RIGHT) Register Mask  */
+
+
+/* -------- I2SC_RCR_RIGHT : (I2SC Offset: 0x204) (R/W 32) Receive Counter Register - Right side -------- */
+#define I2SC_RCR_RIGHT_RXCTR_Pos              _U_(0)                                               /**< (I2SC_RCR_RIGHT) Receive Counter Register Position */
+#define I2SC_RCR_RIGHT_RXCTR_Msk              (_U_(0xFFFF) << I2SC_RCR_RIGHT_RXCTR_Pos)            /**< (I2SC_RCR_RIGHT) Receive Counter Register Mask */
+#define I2SC_RCR_RIGHT_RXCTR(value)           (I2SC_RCR_RIGHT_RXCTR_Msk & ((value) << I2SC_RCR_RIGHT_RXCTR_Pos))
+#define I2SC_RCR_RIGHT_Msk                    _U_(0x0000FFFF)                                      /**< (I2SC_RCR_RIGHT) Register Mask  */
+
+
+/* -------- I2SC_TPR_RIGHT : (I2SC Offset: 0x208) (R/W 32) Transmit Pointer Register - Right side -------- */
+#define I2SC_TPR_RIGHT_TXPTR_Pos              _U_(0)                                               /**< (I2SC_TPR_RIGHT) Transmit Counter Register Position */
+#define I2SC_TPR_RIGHT_TXPTR_Msk              (_U_(0xFFFFFFFF) << I2SC_TPR_RIGHT_TXPTR_Pos)        /**< (I2SC_TPR_RIGHT) Transmit Counter Register Mask */
+#define I2SC_TPR_RIGHT_TXPTR(value)           (I2SC_TPR_RIGHT_TXPTR_Msk & ((value) << I2SC_TPR_RIGHT_TXPTR_Pos))
+#define I2SC_TPR_RIGHT_Msk                    _U_(0xFFFFFFFF)                                      /**< (I2SC_TPR_RIGHT) Register Mask  */
+
+
+/* -------- I2SC_TCR_RIGHT : (I2SC Offset: 0x20C) (R/W 32) Transmit Counter Register - Right side -------- */
+#define I2SC_TCR_RIGHT_TXCTR_Pos              _U_(0)                                               /**< (I2SC_TCR_RIGHT) Transmit Counter Register Position */
+#define I2SC_TCR_RIGHT_TXCTR_Msk              (_U_(0xFFFF) << I2SC_TCR_RIGHT_TXCTR_Pos)            /**< (I2SC_TCR_RIGHT) Transmit Counter Register Mask */
+#define I2SC_TCR_RIGHT_TXCTR(value)           (I2SC_TCR_RIGHT_TXCTR_Msk & ((value) << I2SC_TCR_RIGHT_TXCTR_Pos))
+#define I2SC_TCR_RIGHT_Msk                    _U_(0x0000FFFF)                                      /**< (I2SC_TCR_RIGHT) Register Mask  */
+
+
+/* -------- I2SC_RNPR_RIGHT : (I2SC Offset: 0x210) (R/W 32) Receive Next Pointer Register - Right side -------- */
+#define I2SC_RNPR_RIGHT_RXNPTR_Pos            _U_(0)                                               /**< (I2SC_RNPR_RIGHT) Receive Next Pointer Position */
+#define I2SC_RNPR_RIGHT_RXNPTR_Msk            (_U_(0xFFFFFFFF) << I2SC_RNPR_RIGHT_RXNPTR_Pos)      /**< (I2SC_RNPR_RIGHT) Receive Next Pointer Mask */
+#define I2SC_RNPR_RIGHT_RXNPTR(value)         (I2SC_RNPR_RIGHT_RXNPTR_Msk & ((value) << I2SC_RNPR_RIGHT_RXNPTR_Pos))
+#define I2SC_RNPR_RIGHT_Msk                   _U_(0xFFFFFFFF)                                      /**< (I2SC_RNPR_RIGHT) Register Mask  */
+
+
+/* -------- I2SC_RNCR_RIGHT : (I2SC Offset: 0x214) (R/W 32) Receive Next Counter Register - Right side -------- */
+#define I2SC_RNCR_RIGHT_RXNCTR_Pos            _U_(0)                                               /**< (I2SC_RNCR_RIGHT) Receive Next Counter Position */
+#define I2SC_RNCR_RIGHT_RXNCTR_Msk            (_U_(0xFFFF) << I2SC_RNCR_RIGHT_RXNCTR_Pos)          /**< (I2SC_RNCR_RIGHT) Receive Next Counter Mask */
+#define I2SC_RNCR_RIGHT_RXNCTR(value)         (I2SC_RNCR_RIGHT_RXNCTR_Msk & ((value) << I2SC_RNCR_RIGHT_RXNCTR_Pos))
+#define I2SC_RNCR_RIGHT_Msk                   _U_(0x0000FFFF)                                      /**< (I2SC_RNCR_RIGHT) Register Mask  */
+
+
+/* -------- I2SC_TNPR_RIGHT : (I2SC Offset: 0x218) (R/W 32) Transmit Next Pointer Register - Right side -------- */
+#define I2SC_TNPR_RIGHT_TXNPTR_Pos            _U_(0)                                               /**< (I2SC_TNPR_RIGHT) Transmit Next Pointer Position */
+#define I2SC_TNPR_RIGHT_TXNPTR_Msk            (_U_(0xFFFFFFFF) << I2SC_TNPR_RIGHT_TXNPTR_Pos)      /**< (I2SC_TNPR_RIGHT) Transmit Next Pointer Mask */
+#define I2SC_TNPR_RIGHT_TXNPTR(value)         (I2SC_TNPR_RIGHT_TXNPTR_Msk & ((value) << I2SC_TNPR_RIGHT_TXNPTR_Pos))
+#define I2SC_TNPR_RIGHT_Msk                   _U_(0xFFFFFFFF)                                      /**< (I2SC_TNPR_RIGHT) Register Mask  */
+
+
+/* -------- I2SC_TNCR_RIGHT : (I2SC Offset: 0x21C) (R/W 32) Transmit Next Counter Register - Right side -------- */
+#define I2SC_TNCR_RIGHT_TXNCTR_Pos            _U_(0)                                               /**< (I2SC_TNCR_RIGHT) Transmit Counter Next Position */
+#define I2SC_TNCR_RIGHT_TXNCTR_Msk            (_U_(0xFFFF) << I2SC_TNCR_RIGHT_TXNCTR_Pos)          /**< (I2SC_TNCR_RIGHT) Transmit Counter Next Mask */
+#define I2SC_TNCR_RIGHT_TXNCTR(value)         (I2SC_TNCR_RIGHT_TXNCTR_Msk & ((value) << I2SC_TNCR_RIGHT_TXNCTR_Pos))
+#define I2SC_TNCR_RIGHT_Msk                   _U_(0x0000FFFF)                                      /**< (I2SC_TNCR_RIGHT) Register Mask  */
+
+
+/* -------- I2SC_PTCR_RIGHT : (I2SC Offset: 0x220) ( /W 32) Transfer Control Register - Right side -------- */
+#define I2SC_PTCR_RIGHT_RXTEN_Pos             _U_(0)                                               /**< (I2SC_PTCR_RIGHT) Receiver Transfer Enable Position */
+#define I2SC_PTCR_RIGHT_RXTEN_Msk             (_U_(0x1) << I2SC_PTCR_RIGHT_RXTEN_Pos)              /**< (I2SC_PTCR_RIGHT) Receiver Transfer Enable Mask */
+#define I2SC_PTCR_RIGHT_RXTEN(value)          (I2SC_PTCR_RIGHT_RXTEN_Msk & ((value) << I2SC_PTCR_RIGHT_RXTEN_Pos))
+#define I2SC_PTCR_RIGHT_RXTDIS_Pos            _U_(1)                                               /**< (I2SC_PTCR_RIGHT) Receiver Transfer Disable Position */
+#define I2SC_PTCR_RIGHT_RXTDIS_Msk            (_U_(0x1) << I2SC_PTCR_RIGHT_RXTDIS_Pos)             /**< (I2SC_PTCR_RIGHT) Receiver Transfer Disable Mask */
+#define I2SC_PTCR_RIGHT_RXTDIS(value)         (I2SC_PTCR_RIGHT_RXTDIS_Msk & ((value) << I2SC_PTCR_RIGHT_RXTDIS_Pos))
+#define I2SC_PTCR_RIGHT_TXTEN_Pos             _U_(8)                                               /**< (I2SC_PTCR_RIGHT) Transmitter Transfer Enable Position */
+#define I2SC_PTCR_RIGHT_TXTEN_Msk             (_U_(0x1) << I2SC_PTCR_RIGHT_TXTEN_Pos)              /**< (I2SC_PTCR_RIGHT) Transmitter Transfer Enable Mask */
+#define I2SC_PTCR_RIGHT_TXTEN(value)          (I2SC_PTCR_RIGHT_TXTEN_Msk & ((value) << I2SC_PTCR_RIGHT_TXTEN_Pos))
+#define I2SC_PTCR_RIGHT_TXTDIS_Pos            _U_(9)                                               /**< (I2SC_PTCR_RIGHT) Transmitter Transfer Disable Position */
+#define I2SC_PTCR_RIGHT_TXTDIS_Msk            (_U_(0x1) << I2SC_PTCR_RIGHT_TXTDIS_Pos)             /**< (I2SC_PTCR_RIGHT) Transmitter Transfer Disable Mask */
+#define I2SC_PTCR_RIGHT_TXTDIS(value)         (I2SC_PTCR_RIGHT_TXTDIS_Msk & ((value) << I2SC_PTCR_RIGHT_TXTDIS_Pos))
+#define I2SC_PTCR_RIGHT_RXCBEN_Pos            _U_(16)                                              /**< (I2SC_PTCR_RIGHT) Receiver Circular Buffer Enable Position */
+#define I2SC_PTCR_RIGHT_RXCBEN_Msk            (_U_(0x1) << I2SC_PTCR_RIGHT_RXCBEN_Pos)             /**< (I2SC_PTCR_RIGHT) Receiver Circular Buffer Enable Mask */
+#define I2SC_PTCR_RIGHT_RXCBEN(value)         (I2SC_PTCR_RIGHT_RXCBEN_Msk & ((value) << I2SC_PTCR_RIGHT_RXCBEN_Pos))
+#define I2SC_PTCR_RIGHT_RXCBDIS_Pos           _U_(17)                                              /**< (I2SC_PTCR_RIGHT) Receiver Circular Buffer Disable Position */
+#define I2SC_PTCR_RIGHT_RXCBDIS_Msk           (_U_(0x1) << I2SC_PTCR_RIGHT_RXCBDIS_Pos)            /**< (I2SC_PTCR_RIGHT) Receiver Circular Buffer Disable Mask */
+#define I2SC_PTCR_RIGHT_RXCBDIS(value)        (I2SC_PTCR_RIGHT_RXCBDIS_Msk & ((value) << I2SC_PTCR_RIGHT_RXCBDIS_Pos))
+#define I2SC_PTCR_RIGHT_TXCBEN_Pos            _U_(18)                                              /**< (I2SC_PTCR_RIGHT) Transmitter Circular Buffer Enable Position */
+#define I2SC_PTCR_RIGHT_TXCBEN_Msk            (_U_(0x1) << I2SC_PTCR_RIGHT_TXCBEN_Pos)             /**< (I2SC_PTCR_RIGHT) Transmitter Circular Buffer Enable Mask */
+#define I2SC_PTCR_RIGHT_TXCBEN(value)         (I2SC_PTCR_RIGHT_TXCBEN_Msk & ((value) << I2SC_PTCR_RIGHT_TXCBEN_Pos))
+#define I2SC_PTCR_RIGHT_TXCBDIS_Pos           _U_(19)                                              /**< (I2SC_PTCR_RIGHT) Transmitter Circular Buffer Disable Position */
+#define I2SC_PTCR_RIGHT_TXCBDIS_Msk           (_U_(0x1) << I2SC_PTCR_RIGHT_TXCBDIS_Pos)            /**< (I2SC_PTCR_RIGHT) Transmitter Circular Buffer Disable Mask */
+#define I2SC_PTCR_RIGHT_TXCBDIS(value)        (I2SC_PTCR_RIGHT_TXCBDIS_Msk & ((value) << I2SC_PTCR_RIGHT_TXCBDIS_Pos))
+#define I2SC_PTCR_RIGHT_ERRCLR_Pos            _U_(24)                                              /**< (I2SC_PTCR_RIGHT) Transfer Bus Error Clear Position */
+#define I2SC_PTCR_RIGHT_ERRCLR_Msk            (_U_(0x1) << I2SC_PTCR_RIGHT_ERRCLR_Pos)             /**< (I2SC_PTCR_RIGHT) Transfer Bus Error Clear Mask */
+#define I2SC_PTCR_RIGHT_ERRCLR(value)         (I2SC_PTCR_RIGHT_ERRCLR_Msk & ((value) << I2SC_PTCR_RIGHT_ERRCLR_Pos))
+#define I2SC_PTCR_RIGHT_Msk                   _U_(0x010F0303)                                      /**< (I2SC_PTCR_RIGHT) Register Mask  */
+
+
+/* -------- I2SC_PTSR_RIGHT : (I2SC Offset: 0x224) ( R/ 32) Transfer Status Register - Right side -------- */
+#define I2SC_PTSR_RIGHT_RXTEN_Pos             _U_(0)                                               /**< (I2SC_PTSR_RIGHT) Receiver Transfer Enable Position */
+#define I2SC_PTSR_RIGHT_RXTEN_Msk             (_U_(0x1) << I2SC_PTSR_RIGHT_RXTEN_Pos)              /**< (I2SC_PTSR_RIGHT) Receiver Transfer Enable Mask */
+#define I2SC_PTSR_RIGHT_RXTEN(value)          (I2SC_PTSR_RIGHT_RXTEN_Msk & ((value) << I2SC_PTSR_RIGHT_RXTEN_Pos))
+#define I2SC_PTSR_RIGHT_TXTEN_Pos             _U_(8)                                               /**< (I2SC_PTSR_RIGHT) Transmitter Transfer Enable Position */
+#define I2SC_PTSR_RIGHT_TXTEN_Msk             (_U_(0x1) << I2SC_PTSR_RIGHT_TXTEN_Pos)              /**< (I2SC_PTSR_RIGHT) Transmitter Transfer Enable Mask */
+#define I2SC_PTSR_RIGHT_TXTEN(value)          (I2SC_PTSR_RIGHT_TXTEN_Msk & ((value) << I2SC_PTSR_RIGHT_TXTEN_Pos))
+#define I2SC_PTSR_RIGHT_RXCBEN_Pos            _U_(16)                                              /**< (I2SC_PTSR_RIGHT) Receiver Circular Buffer Enable Position */
+#define I2SC_PTSR_RIGHT_RXCBEN_Msk            (_U_(0x1) << I2SC_PTSR_RIGHT_RXCBEN_Pos)             /**< (I2SC_PTSR_RIGHT) Receiver Circular Buffer Enable Mask */
+#define I2SC_PTSR_RIGHT_RXCBEN(value)         (I2SC_PTSR_RIGHT_RXCBEN_Msk & ((value) << I2SC_PTSR_RIGHT_RXCBEN_Pos))
+#define I2SC_PTSR_RIGHT_TXCBEN_Pos            _U_(18)                                              /**< (I2SC_PTSR_RIGHT) Transmitter Circular Buffer Enable Position */
+#define I2SC_PTSR_RIGHT_TXCBEN_Msk            (_U_(0x1) << I2SC_PTSR_RIGHT_TXCBEN_Pos)             /**< (I2SC_PTSR_RIGHT) Transmitter Circular Buffer Enable Mask */
+#define I2SC_PTSR_RIGHT_TXCBEN(value)         (I2SC_PTSR_RIGHT_TXCBEN_Msk & ((value) << I2SC_PTSR_RIGHT_TXCBEN_Pos))
+#define I2SC_PTSR_RIGHT_ERR_Pos               _U_(24)                                              /**< (I2SC_PTSR_RIGHT) Transfer Bus Error Position */
+#define I2SC_PTSR_RIGHT_ERR_Msk               (_U_(0x1) << I2SC_PTSR_RIGHT_ERR_Pos)                /**< (I2SC_PTSR_RIGHT) Transfer Bus Error Mask */
+#define I2SC_PTSR_RIGHT_ERR(value)            (I2SC_PTSR_RIGHT_ERR_Msk & ((value) << I2SC_PTSR_RIGHT_ERR_Pos))
+#define I2SC_PTSR_RIGHT_Msk                   _U_(0x01050101)                                      /**< (I2SC_PTSR_RIGHT) Register Mask  */
+
+
 /** \brief I2SC register offsets definitions */
 #define I2SC_CR_REG_OFST               (0x00)              /**< (I2SC_CR) Control Register Offset */
 #define I2SC_MR_REG_OFST               (0x04)              /**< (I2SC_MR) Mode Register Offset */
@@ -424,16 +530,26 @@
 #define I2SC_IMR_REG_OFST              (0x1C)              /**< (I2SC_IMR) Interrupt Mask Register Offset */
 #define I2SC_RHR_REG_OFST              (0x20)              /**< (I2SC_RHR) Receiver Holding Register Offset */
 #define I2SC_THR_REG_OFST              (0x24)              /**< (I2SC_THR) Transmitter Holding Register Offset */
-#define I2SC_RPR_REG_OFST              (0x100)             /**< (I2SC_RPR) Receive Pointer Register Offset */
-#define I2SC_RCR_REG_OFST              (0x104)             /**< (I2SC_RCR) Receive Counter Register Offset */
-#define I2SC_TPR_REG_OFST              (0x108)             /**< (I2SC_TPR) Transmit Pointer Register Offset */
-#define I2SC_TCR_REG_OFST              (0x10C)             /**< (I2SC_TCR) Transmit Counter Register Offset */
-#define I2SC_RNPR_REG_OFST             (0x110)             /**< (I2SC_RNPR) Receive Next Pointer Register Offset */
-#define I2SC_RNCR_REG_OFST             (0x114)             /**< (I2SC_RNCR) Receive Next Counter Register Offset */
-#define I2SC_TNPR_REG_OFST             (0x118)             /**< (I2SC_TNPR) Transmit Next Pointer Register Offset */
-#define I2SC_TNCR_REG_OFST             (0x11C)             /**< (I2SC_TNCR) Transmit Next Counter Register Offset */
-#define I2SC_PTCR_REG_OFST             (0x120)             /**< (I2SC_PTCR) Transfer Control Register Offset */
-#define I2SC_PTSR_REG_OFST             (0x124)             /**< (I2SC_PTSR) Transfer Status Register Offset */
+#define I2SC_RPR_REG_OFST              (0x100)             /**< (I2SC_RPR) Receive Pointer Register - Left side Offset */
+#define I2SC_RCR_REG_OFST              (0x104)             /**< (I2SC_RCR) Receive Counter Register - Left side Offset */
+#define I2SC_TPR_REG_OFST              (0x108)             /**< (I2SC_TPR) Transmit Pointer Register - Left side Offset */
+#define I2SC_TCR_REG_OFST              (0x10C)             /**< (I2SC_TCR) Transmit Counter Register - Left side Offset */
+#define I2SC_RNPR_REG_OFST             (0x110)             /**< (I2SC_RNPR) Receive Next Pointer Register - Left side Offset */
+#define I2SC_RNCR_REG_OFST             (0x114)             /**< (I2SC_RNCR) Receive Next Counter Register - Left side Offset */
+#define I2SC_TNPR_REG_OFST             (0x118)             /**< (I2SC_TNPR) Transmit Next Pointer Register - Left side Offset */
+#define I2SC_TNCR_REG_OFST             (0x11C)             /**< (I2SC_TNCR) Transmit Next Counter Register - Left side Offset */
+#define I2SC_PTCR_REG_OFST             (0x120)             /**< (I2SC_PTCR) Transfer Control Register - Left side Offset */
+#define I2SC_PTSR_REG_OFST             (0x124)             /**< (I2SC_PTSR) Transfer Status Register - Left side Offset */
+#define I2SC_RPR_RIGHT_REG_OFST        (0x200)             /**< (I2SC_RPR_RIGHT) Receive Pointer Register - Right side Offset */
+#define I2SC_RCR_RIGHT_REG_OFST        (0x204)             /**< (I2SC_RCR_RIGHT) Receive Counter Register - Right side Offset */
+#define I2SC_TPR_RIGHT_REG_OFST        (0x208)             /**< (I2SC_TPR_RIGHT) Transmit Pointer Register - Right side Offset */
+#define I2SC_TCR_RIGHT_REG_OFST        (0x20C)             /**< (I2SC_TCR_RIGHT) Transmit Counter Register - Right side Offset */
+#define I2SC_RNPR_RIGHT_REG_OFST       (0x210)             /**< (I2SC_RNPR_RIGHT) Receive Next Pointer Register - Right side Offset */
+#define I2SC_RNCR_RIGHT_REG_OFST       (0x214)             /**< (I2SC_RNCR_RIGHT) Receive Next Counter Register - Right side Offset */
+#define I2SC_TNPR_RIGHT_REG_OFST       (0x218)             /**< (I2SC_TNPR_RIGHT) Transmit Next Pointer Register - Right side Offset */
+#define I2SC_TNCR_RIGHT_REG_OFST       (0x21C)             /**< (I2SC_TNCR_RIGHT) Transmit Next Counter Register - Right side Offset */
+#define I2SC_PTCR_RIGHT_REG_OFST       (0x220)             /**< (I2SC_PTCR_RIGHT) Transfer Control Register - Right side Offset */
+#define I2SC_PTSR_RIGHT_REG_OFST       (0x224)             /**< (I2SC_PTSR_RIGHT) Transfer Status Register - Right side Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief I2SC register API structure */
@@ -450,16 +566,27 @@ typedef struct
   __I   uint32_t                       I2SC_RHR;           /**< Offset: 0x20 (R/   32) Receiver Holding Register */
   __O   uint32_t                       I2SC_THR;           /**< Offset: 0x24 ( /W  32) Transmitter Holding Register */
   __I   uint8_t                        Reserved1[0xD8];
-  __IO  uint32_t                       I2SC_RPR;           /**< Offset: 0x100 (R/W  32) Receive Pointer Register */
-  __IO  uint32_t                       I2SC_RCR;           /**< Offset: 0x104 (R/W  32) Receive Counter Register */
-  __IO  uint32_t                       I2SC_TPR;           /**< Offset: 0x108 (R/W  32) Transmit Pointer Register */
-  __IO  uint32_t                       I2SC_TCR;           /**< Offset: 0x10C (R/W  32) Transmit Counter Register */
-  __IO  uint32_t                       I2SC_RNPR;          /**< Offset: 0x110 (R/W  32) Receive Next Pointer Register */
-  __IO  uint32_t                       I2SC_RNCR;          /**< Offset: 0x114 (R/W  32) Receive Next Counter Register */
-  __IO  uint32_t                       I2SC_TNPR;          /**< Offset: 0x118 (R/W  32) Transmit Next Pointer Register */
-  __IO  uint32_t                       I2SC_TNCR;          /**< Offset: 0x11C (R/W  32) Transmit Next Counter Register */
-  __O   uint32_t                       I2SC_PTCR;          /**< Offset: 0x120 ( /W  32) Transfer Control Register */
-  __I   uint32_t                       I2SC_PTSR;          /**< Offset: 0x124 (R/   32) Transfer Status Register */
+  __IO  uint32_t                       I2SC_RPR;           /**< Offset: 0x100 (R/W  32) Receive Pointer Register - Left side */
+  __IO  uint32_t                       I2SC_RCR;           /**< Offset: 0x104 (R/W  32) Receive Counter Register - Left side */
+  __IO  uint32_t                       I2SC_TPR;           /**< Offset: 0x108 (R/W  32) Transmit Pointer Register - Left side */
+  __IO  uint32_t                       I2SC_TCR;           /**< Offset: 0x10C (R/W  32) Transmit Counter Register - Left side */
+  __IO  uint32_t                       I2SC_RNPR;          /**< Offset: 0x110 (R/W  32) Receive Next Pointer Register - Left side */
+  __IO  uint32_t                       I2SC_RNCR;          /**< Offset: 0x114 (R/W  32) Receive Next Counter Register - Left side */
+  __IO  uint32_t                       I2SC_TNPR;          /**< Offset: 0x118 (R/W  32) Transmit Next Pointer Register - Left side */
+  __IO  uint32_t                       I2SC_TNCR;          /**< Offset: 0x11C (R/W  32) Transmit Next Counter Register - Left side */
+  __O   uint32_t                       I2SC_PTCR;          /**< Offset: 0x120 ( /W  32) Transfer Control Register - Left side */
+  __I   uint32_t                       I2SC_PTSR;          /**< Offset: 0x124 (R/   32) Transfer Status Register - Left side */
+  __I   uint8_t                        Reserved2[0xD8];
+  __IO  uint32_t                       I2SC_RPR_RIGHT;     /**< Offset: 0x200 (R/W  32) Receive Pointer Register - Right side */
+  __IO  uint32_t                       I2SC_RCR_RIGHT;     /**< Offset: 0x204 (R/W  32) Receive Counter Register - Right side */
+  __IO  uint32_t                       I2SC_TPR_RIGHT;     /**< Offset: 0x208 (R/W  32) Transmit Pointer Register - Right side */
+  __IO  uint32_t                       I2SC_TCR_RIGHT;     /**< Offset: 0x20C (R/W  32) Transmit Counter Register - Right side */
+  __IO  uint32_t                       I2SC_RNPR_RIGHT;    /**< Offset: 0x210 (R/W  32) Receive Next Pointer Register - Right side */
+  __IO  uint32_t                       I2SC_RNCR_RIGHT;    /**< Offset: 0x214 (R/W  32) Receive Next Counter Register - Right side */
+  __IO  uint32_t                       I2SC_TNPR_RIGHT;    /**< Offset: 0x218 (R/W  32) Transmit Next Pointer Register - Right side */
+  __IO  uint32_t                       I2SC_TNCR_RIGHT;    /**< Offset: 0x21C (R/W  32) Transmit Next Counter Register - Right side */
+  __O   uint32_t                       I2SC_PTCR_RIGHT;    /**< Offset: 0x220 ( /W  32) Transfer Control Register - Right side */
+  __I   uint32_t                       I2SC_PTSR_RIGHT;    /**< Offset: 0x224 (R/   32) Transfer Status Register - Right side */
 } i2sc_registers_t;
 
 

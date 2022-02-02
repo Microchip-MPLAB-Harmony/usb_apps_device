@@ -1,0 +1,14 @@
+format_version: v1.0
+configName: default
+folderName: at91bootstrap_sam_a5d27_wlsom1_ek1
+frameworkPath: D:\USBR3.82
+processor: ATSAMA5D27
+projectName: at91bootstrap_sam_a5d27_wlsom1_ek1
+settings:
+  PackageFilter: ''
+  FORCE_OPTIMIZATION: 'false'
+  GENERATE_BACKUP: 'true'
+  TRUSTZONE: 'false'
+  CMSISPath: dev_packs\arm\CMSIS\5.8.0
+  MERGE_STRATEGY: USER_ALL
+  DFPPath: dev_packs\Microchip\SAMA5D2_DFP\1.6.69\atdf\ATSAMA5D27.atdf
