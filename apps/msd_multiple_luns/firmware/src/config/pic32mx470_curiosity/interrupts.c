@@ -67,6 +67,7 @@ void DRV_USBFS_USB_Handler( void );
 void SPI_1_InterruptHandler( void );
 void DMA_0_InterruptHandler( void );
 void DMA_1_InterruptHandler( void );
+void DMA_2_InterruptHandler( void );
 
 
 
@@ -99,6 +100,11 @@ void __ISR(_DMA_0_VECTOR, ipl1SOFT) DMA_0_Handler (void)
 void __ISR(_DMA_1_VECTOR, ipl1SOFT) DMA_1_Handler (void)
 {
     DMA_1_InterruptHandler();
+}
+
+void __ISR(_DMA_2_VECTOR, ipl1SOFT) DMA_2_Handler (void)
+{
+    DMA_2_InterruptHandler();
 }
 
 

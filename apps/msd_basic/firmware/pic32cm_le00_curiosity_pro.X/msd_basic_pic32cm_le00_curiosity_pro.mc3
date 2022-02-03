@@ -1,4 +1,4 @@
-<config configName="pic32cm_le00_curiosity_pro" projectName="msd_basic_pic32cm_le00_curiosity_pro" configVersion="1.1" device="PIC32CM5164LE00100" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.3.3">
+<config configName="pic32cm_le00_curiosity_pro" projectName="msd_basic_pic32cm_le00_curiosity_pro" configVersion="1.1" device="PIC32CM5164LE00100" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.4.1">
    <usedPackages class="java.util.ArrayList"/>
    <usedClasses class="java.util.TreeMap">
       <entry>
@@ -59,7 +59,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.0.3"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.0.8"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -496,8 +496,7 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="!@#harmonyUserData"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;UserData&gt;
   &lt;UserData dnOrder=&quot;0&quot;&gt;
-    &lt;GraphSettings canvasHeight=&quot;433&quot; canvasWidth=&quot;352&quot; dnOrder=&quot;0&quot;/&gt;
-    &lt;ComponentGraph dnOrder=&quot;1&quot; id=&quot;__ROOTVIEW&quot;&gt;
+    &lt;ComponentGraph dnOrder=&quot;0&quot; id=&quot;__ROOTVIEW&quot;&gt;
       &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
         &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;BSP_PIC32CM_LE00_Curiosity_Pro&quot; x=&quot;161&quot; y=&quot;65&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;HarmonyCore&quot; x=&quot;8&quot; y=&quot;9&quot;/&gt;
@@ -513,6 +512,7 @@
         &lt;ElementPosition dnOrder=&quot;11&quot; id=&quot;usb_device_msd&quot; x=&quot;309&quot; y=&quot;182&quot;/&gt;
       &lt;/ElementPositions&gt;
     &lt;/ComponentGraph&gt;
+    &lt;GraphSettings canvasHeight=&quot;433&quot; canvasWidth=&quot;352&quot; dnOrder=&quot;1&quot;/&gt;
   &lt;/UserData&gt;
 &lt;/UserData&gt;
 </value>
@@ -2350,7 +2350,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cm_le00_curiosity_pro\definitions.h</file>
-         <hash>0b4520023fec9db83a72c0bf76ba9dc169cf85f93e167931d5b4e111d291b959</hash>
+         <hash>ff02db0f4644b9478604e22762e1ba4431763dec9708ecefa6e0ac2b8dbfe9b8</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164LE00100_DFP\component\supc.h</file>
@@ -2397,12 +2397,12 @@
          <hash>c17a266d85e3ed1dd692a96184193c0ebfea1099f6698ca073f82418d92d8b53</hash>
       </entry>
       <entry>
-         <file>..\src\packs\PIC32CM5164LE00100_DFP\component\port.h</file>
-         <hash>0efa4e78434b1ad3fbf500d90c2b6b0ab368fc82c9f5d91fc27de6f87cbfba3e</hash>
-      </entry>
-      <entry>
          <file>..\src\config\pic32cm_le00_curiosity_pro\driver\usb\usbfsv1\src\drv_usbfsv1.c</file>
          <hash>15b6c2889e31b5e0916416a9ff18b54c4de13c36279f867e9d8280cfbddb7f5e</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CM5164LE00100_DFP\component\port.h</file>
+         <hash>0efa4e78434b1ad3fbf500d90c2b6b0ab368fc82c9f5d91fc27de6f87cbfba3e</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164LE00100_DFP\component\trng.h</file>
@@ -2461,20 +2461,20 @@
          <hash>f07eb653a11355424adb96ff0fec6796f6b95c8924ac93fb9207f888d130bc7d</hash>
       </entry>
       <entry>
-         <file>..\src\packs\PIC32CM5164LE00100_DFP\component\oscctrl.h</file>
-         <hash>80df629a840d0cd86f3576d79711ae1833ebf11004b61dfe954978d78dbfedb2</hash>
-      </entry>
-      <entry>
          <file>..\src\config\pic32cm_le00_curiosity_pro\usb\usb_host_hub_interface.h</file>
          <hash>9db9028cdb085f4ed90d06c8d0013e5b9d300be9b49f0933094c373552193645</hash>
       </entry>
       <entry>
-         <file>..\src\packs\PIC32CM5164LE00100_DFP\component\evsys.h</file>
-         <hash>7169344fd83ee7d792e099308fb9ffb88370e950c5edc30ef25a6a764f948909</hash>
+         <file>..\src\packs\PIC32CM5164LE00100_DFP\component\oscctrl.h</file>
+         <hash>80df629a840d0cd86f3576d79711ae1833ebf11004b61dfe954978d78dbfedb2</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cm_le00_curiosity_pro\driver\usb\usbfsv1\drv_usbfsv1.h</file>
          <hash>2d9aa642868b27b40d65ea28f19e7247cf28dda1f1430f0de2720558e154f2c0</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CM5164LE00100_DFP\component\evsys.h</file>
+         <hash>7169344fd83ee7d792e099308fb9ffb88370e950c5edc30ef25a6a764f948909</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cm_le00_curiosity_pro\usb\usb_device.h</file>
@@ -2822,15 +2822,15 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cm_le00_curiosity_pro\configuration.h</file>
-         <hash>ec789d62416b34489147be1bd27aa7113022842e2d63eb4ae1ca1e8e6ef75aa5</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\PIC32CM5164LE00100_DFP\instance\tram.h</file>
-         <hash>bd9744feb764d0808b76c526fcf2cf442472a7733fd79352d52623a4e8a6bbfb</hash>
+         <hash>059cd4aaabff4481e0ee5ff65ecf5e47afb6f80ddd4c4fa17ad11f5aaa8f6547</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cm_le00_curiosity_pro\driver\usb\drv_usb_external_dependencies.h</file>
          <hash>9c425976fc28dee4877b6dc97e3d85c69d99a3bbacf7813ea324948a6c9e8431</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CM5164LE00100_DFP\instance\tram.h</file>
+         <hash>bd9744feb764d0808b76c526fcf2cf442472a7733fd79352d52623a4e8a6bbfb</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164LE00100_DFP\component\freqm.h</file>
@@ -2894,7 +2894,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cm_le00_curiosity_pro\peripheral\port\plib_port.c</file>
-         <hash>aa838585a3696db793b2b02f963d85218351f56e3248fd77d17b5eb6a64b9ec2</hash>
+         <hash>1d3d983f4dc307728985e338507617f21f8c1835931f68ea40dc5a11aac2446f</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cm_le00_curiosity_pro\driver\usb\usbfsv1\src\drv_usbfsv1_local.h</file>
