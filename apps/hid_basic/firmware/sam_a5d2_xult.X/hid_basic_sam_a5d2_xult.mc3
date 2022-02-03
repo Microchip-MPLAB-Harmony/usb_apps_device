@@ -467,7 +467,8 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="!@#harmonyUserData"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;UserData&gt;
   &lt;UserData dnOrder=&quot;0&quot;&gt;
-    &lt;ComponentGraph dnOrder=&quot;0&quot; id=&quot;__ROOTVIEW&quot;&gt;
+    &lt;GraphSettings canvasHeight=&quot;235&quot; canvasWidth=&quot;377&quot; dnOrder=&quot;0&quot;/&gt;
+    &lt;ComponentGraph dnOrder=&quot;1&quot; id=&quot;__ROOTVIEW&quot;&gt;
       &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
         &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;BSP_SAM_A5D2_Xplained_Ultra&quot; x=&quot;154&quot; y=&quot;67&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;HarmonyCore&quot; x=&quot;4&quot; y=&quot;10&quot;/&gt;
@@ -479,7 +480,6 @@
         &lt;ElementPosition dnOrder=&quot;7&quot; id=&quot;usb_device_hid&quot; x=&quot;327&quot; y=&quot;118&quot;/&gt;
       &lt;/ElementPositions&gt;
     &lt;/ComponentGraph&gt;
-    &lt;GraphSettings canvasHeight=&quot;235&quot; canvasWidth=&quot;377&quot; dnOrder=&quot;1&quot;/&gt;
   &lt;/UserData&gt;
 &lt;/UserData&gt;
 </value>
@@ -4086,12 +4086,12 @@
          <hash>597d729e239f101fd2cb1b77ef736b0c3e4dd8874f7788e99ba5495a28b032f6</hash>
       </entry>
       <entry>
-         <file>..\src\packs\ATSAMA5D27_DFP\component\rtc.h</file>
-         <hash>4abc53be42801b9e0716c346b41ecd5b7968fa22a2364cfa49865f3f707249fc</hash>
-      </entry>
-      <entry>
          <file>..\src\config\sam_a5d2_xult\usb_device_init_data.c</file>
          <hash>4b451963d7282670e4fdd1dfdb1c274f598aef6ce357181c8f301ad32fc742bb</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\ATSAMA5D27_DFP\component\rtc.h</file>
+         <hash>4abc53be42801b9e0716c346b41ecd5b7968fa22a2364cfa49865f3f707249fc</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core_A\Include\cmsis_gcc.h</file>
@@ -4271,7 +4271,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult\usb\usb_host.h</file>
-         <hash>8fe091b3db430b897da28d7f7effb6fffbb882d025c878a54cc5e627909a8cc2</hash>
+         <hash>4ec16dee42ae6b1bad8a7199b44750ccf0c5fa3aee5e44766e7b6dffc9979e83</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMA5D27_DFP\instance\icm.h</file>
@@ -4567,7 +4567,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult\driver\usb\udphs\src\drv_usb_udphs_local.h</file>
-         <hash>49c46a7ee7e6f2e75877ac58f037e478c840fde86b138392aa2a97f5761a53b2</hash>
+         <hash>799fc9a1e7388804cfbc9d5e5cac60edda2b6ffd9082f75bb7f4c8c95dd57e34</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMA5D27_DFP\component\pdmic.h</file>
