@@ -4523,7 +4523,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\usb\usb_host.h</file>
-         <hash>8fe091b3db430b897da28d7f7effb6fffbb882d025c878a54cc5e627909a8cc2</hash>
+         <hash>4ec16dee42ae6b1bad8a7199b44750ccf0c5fa3aee5e44766e7b6dffc9979e83</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core_A\Include\cmsis_compiler.h</file>
@@ -4647,7 +4647,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\driver\usb\udphs\src\drv_usb_udphs_local.h</file>
-         <hash>49c46a7ee7e6f2e75877ac58f037e478c840fde86b138392aa2a97f5761a53b2</hash>
+         <hash>799fc9a1e7388804cfbc9d5e5cac60edda2b6ffd9082f75bb7f4c8c95dd57e34</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMA5D27CD1G_DFP\component\udphs.h</file>
