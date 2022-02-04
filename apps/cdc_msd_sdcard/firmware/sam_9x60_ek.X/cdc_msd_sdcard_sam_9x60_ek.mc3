@@ -1,4 +1,4 @@
-<config configName="sam_9x60_ek" projectName="cdc_msd_sdcard_sam_9x60_ek" configVersion="1.1" device="SAM9X60" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.3.3">
+<config configName="sam_9x60_ek" projectName="cdc_msd_sdcard_sam_9x60_ek" configVersion="1.1" device="SAM9X60" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.4.1">
    <usedPackages class="java.util.ArrayList"/>
    <usedClasses class="java.util.TreeMap">
       <entry>
@@ -63,7 +63,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.0.3"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.0.8"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -535,7 +535,8 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="!@#harmonyUserData"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;UserData&gt;
   &lt;UserData dnOrder=&quot;0&quot;&gt;
-    &lt;ComponentGraph dnOrder=&quot;0&quot; id=&quot;__ROOTVIEW&quot;&gt;
+    &lt;GraphSettings canvasHeight=&quot;516&quot; canvasWidth=&quot;507&quot; dnOrder=&quot;0&quot;/&gt;
+    &lt;ComponentGraph dnOrder=&quot;1&quot; id=&quot;__ROOTVIEW&quot;&gt;
       &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
         &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;BSP_SAM_9X60_Evaluation_Kit&quot; x=&quot;147&quot; y=&quot;40&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;HarmonyCore&quot; x=&quot;3&quot; y=&quot;10&quot;/&gt;
@@ -551,7 +552,6 @@
         &lt;ElementPosition dnOrder=&quot;11&quot; id=&quot;usb_device_msd&quot; x=&quot;331&quot; y=&quot;302&quot;/&gt;
       &lt;/ElementPositions&gt;
     &lt;/ComponentGraph&gt;
-    &lt;GraphSettings canvasHeight=&quot;516&quot; canvasWidth=&quot;507&quot; dnOrder=&quot;1&quot;/&gt;
   &lt;/UserData&gt;
 &lt;/UserData&gt;
 </value>
@@ -4390,6 +4390,17 @@
 </value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="usb_device" name="CONFIG_USB_DEVICE_EVENT_ENABLE_SOF"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;usb_device&gt;
+  &lt;usb_device dnOrder=&quot;0&quot; id=&quot;CONFIG_USB_DEVICE_EVENT_ENABLE_SOF&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/usb_device&gt;
+&lt;/usb_device&gt;
+</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="usb_device" name="CONFIG_USB_DEVICE_FUNCTIONS_NUMBER"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;usb_device&gt;
   &lt;usb_device dnOrder=&quot;0&quot; id=&quot;CONFIG_USB_DEVICE_FUNCTIONS_NUMBER&quot;&gt;
@@ -4744,7 +4755,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\driver\usb\udphs\src\drv_usb_udphs_device.c</file>
-         <hash>715347a2e440a0e75df8e42f515aad51d60363da249332d02dfe30a5d38b4836</hash>
+         <hash>61da1602d7be3babff14cf25591ae0510085dcb0e6b7d282e19425579a017aab</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\bsp\bsp.c</file>
@@ -5068,11 +5079,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\usb\usb_host.h</file>
-         <hash>8fe091b3db430b897da28d7f7effb6fffbb882d025c878a54cc5e627909a8cc2</hash>
+         <hash>4ec16dee42ae6b1bad8a7199b44750ccf0c5fa3aee5e44766e7b6dffc9979e83</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\driver\usb\udphs\src\drv_usb_udphs_local.h</file>
-         <hash>f44eac4668ce8412992d595eedcef146212582c476f4dc192f45898ea2a50a9e</hash>
+         <hash>799fc9a1e7388804cfbc9d5e5cac60edda2b6ffd9082f75bb7f4c8c95dd57e34</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\component\pmecc.h</file>
@@ -5196,7 +5207,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\definitions.h</file>
-         <hash>c0c1545a79007a7ca8859b8eb838f7a0f9fd68ce4a4348156d8cea78bc3da5f0</hash>
+         <hash>53e52191461bce53702df30981fe8e3294fde9b98dec441cdb022c9fd6f442be</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\system\time\src\sys_time_local.h</file>
@@ -5336,7 +5347,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\configuration.h</file>
-         <hash>214dd85c2a35d2075628288a17a27f24753b4743bfcc496c3002115385164c05</hash>
+         <hash>5a6466362f3aeacaadeeb003b25886853770d03597a18774f107329866f6a562</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\driver\usb\udphs\src\drv_usb_udphs_variant_mapping.h</file>
