@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <project>
     <fileVersion>3</fileVersion>
     <configuration>
@@ -190,11 +190,11 @@
                 </option>
                 <option>
                     <name>GenLocaleTags</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>GenLocaleDisplayOnly</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>DSPExtension</name>
@@ -220,6 +220,7 @@
                 <debug>1</debug>
                 <option>
                     <name>CCDefines</name>
+                    <state></state>
                 </option>
                 <option>
                     <name>CCPreprocFile</name>
@@ -259,19 +260,19 @@
                 </option>
                 <option>
                     <name>CCDiagSuppress</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>CCDiagRemark</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>CCDiagWarning</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>CCDiagError</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>CCObjPrefix</name>
@@ -300,7 +301,7 @@
                 </option>
                 <option>
                     <name>IExtraOptions</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>CCLangConformance</name>
@@ -336,7 +337,7 @@
                 </option>
                 <option>
                     <name>PreInclude</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>CompilerMisraOverride</name>
@@ -510,15 +511,15 @@
                 </option>
                 <option>
                     <name>AWarnOne</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>AWarnRange1</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>AWarnRange2</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>ADebug</name>
@@ -530,6 +531,7 @@
                 </option>
                 <option>
                     <name>ADefines</name>
+                    <state></state>
                 </option>
                 <option>
                     <name>AList</name>
@@ -605,7 +607,7 @@
                 </option>
                 <option>
                     <name>AOutputFile</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>ALimitErrorsCheck</name>
@@ -621,6 +623,7 @@
                 </option>
                 <option>
                     <name>AUserIncludes</name>
+                    <state></state>
                 </option>
                 <option>
                     <name>AExtraOptionsCheckV2</name>
@@ -628,7 +631,7 @@
                 </option>
                 <option>
                     <name>AExtraOptionsV2</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>AsmNoLiteralPool</name>
@@ -654,7 +657,7 @@
                 </option>
                 <option>
                     <name>OOCOutputFile</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>OOCCommandLineProducer</name>
@@ -670,8 +673,8 @@
             <name>CUSTOM</name>
             <archiveVersion>3</archiveVersion>
             <data>
-                <extensions />
-                <cmdline />
+                <extensions></extensions>
+                <cmdline></cmdline>
                 <hasPrio>0</hasPrio>
             </data>
         </settings>
@@ -684,8 +687,8 @@
             <name>BUILDACTION</name>
             <archiveVersion>1</archiveVersion>
             <data>
-                <prebuild />
-                <postbuild />
+                <prebuild></prebuild>
+                <postbuild></postbuild>
             </data>
         </settings>
         <settings>
@@ -717,31 +720,31 @@
                 </option>
                 <option>
                     <name>IlinkKeepSymbols</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>IlinkRawBinaryFile</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>IlinkRawBinarySymbol</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>IlinkRawBinarySegment</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>IlinkRawBinaryAlign</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>IlinkDefines</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>IlinkConfigDefines</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>IlinkMapFile</name>
@@ -777,7 +780,7 @@
                 </option>
                 <option>
                     <name>IlinkIcfFileSlave</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>IlinkEnableRemarks</name>
@@ -785,19 +788,19 @@
                 </option>
                 <option>
                     <name>IlinkSuppressDiags</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>IlinkTreatAsRem</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>IlinkTreatAsWarn</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>IlinkTreatAsErr</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>IlinkWarningsAreErrors</name>
@@ -809,7 +812,7 @@
                 </option>
                 <option>
                     <name>IlinkExtraOptions</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>IlinkLowLevelInterfaceSlave</name>
@@ -821,7 +824,7 @@
                 </option>
                 <option>
                     <name>IlinkAdditionalLibs</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>IlinkOverrideProgramEntryLabel</name>
@@ -956,11 +959,11 @@
                 </option>
                 <option>
                     <name>IlinkStackControlFile</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>IlinkStackCallGraphFile</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>CrcAlgorithm</name>
@@ -982,7 +985,7 @@
                 </option>
                 <option>
                     <name>IlinkIcfFile_AltDefault</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>IlinkEncInput</name>
@@ -1014,19 +1017,19 @@
                 </option>
                 <option>
                     <name>IlinkRawBinaryFile2</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>IlinkRawBinarySymbol2</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>IlinkRawBinarySegment2</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>IlinkRawBinaryAlign2</name>
-                    <state />
+                    <state></state>
                 </option>
             </data>
         </settings>
@@ -1039,7 +1042,7 @@
                 <debug>1</debug>
                 <option>
                     <name>IarchiveInputs</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>IarchiveOverride</name>
@@ -1127,7 +1130,7 @@
                 </option>
                 <option>
                     <name>OGLastSavedByProductVersion</name>
-                    <state>8.40.1.21529</state>
+                    <state>8.50.4.26131</state>
                 </option>
                 <option>
                     <name>GeneralEnableMisra</name>
@@ -1251,11 +1254,11 @@
                 </option>
                 <option>
                     <name>GenLocaleTags</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>GenLocaleDisplayOnly</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>DSPExtension</name>
@@ -1321,19 +1324,19 @@
                 </option>
                 <option>
                     <name>CCDiagSuppress</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>CCDiagRemark</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>CCDiagWarning</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>CCDiagError</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>CCObjPrefix</name>
@@ -1342,7 +1345,7 @@
                 <option>
                     <name>CCAllowList</name>
                     <version>1</version>
-                    <state>11111110</state>
+                    <state>00000000</state>
                 </option>
                 <option>
                     <name>CCDebugInfo</name>
@@ -1362,7 +1365,7 @@
                 </option>
                 <option>
                     <name>IExtraOptions</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>CCLangConformance</name>
@@ -1398,7 +1401,7 @@
                 </option>
                 <option>
                     <name>PreInclude</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>CompilerMisraOverride</name>
@@ -1426,7 +1429,7 @@
                 </option>
                 <option>
                     <name>CCOptLevel</name>
-                    <state>3</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>CCOptStrategy</name>
@@ -1435,7 +1438,7 @@
                 </option>
                 <option>
                     <name>CCOptLevelSlave</name>
-                    <state>3</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>CompilerMisraRules98</name>
@@ -1572,15 +1575,15 @@
                 </option>
                 <option>
                     <name>AWarnOne</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>AWarnRange1</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>AWarnRange2</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>ADebug</name>
@@ -1592,6 +1595,7 @@
                 </option>
                 <option>
                     <name>ADefines</name>
+                    <state></state>
                 </option>
                 <option>
                     <name>AList</name>
@@ -1667,7 +1671,7 @@
                 </option>
                 <option>
                     <name>AOutputFile</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>ALimitErrorsCheck</name>
@@ -1683,6 +1687,7 @@
                 </option>
                 <option>
                     <name>AUserIncludes</name>
+                    <state></state>
                 </option>
                 <option>
                     <name>AExtraOptionsCheckV2</name>
@@ -1690,7 +1695,7 @@
                 </option>
                 <option>
                     <name>AExtraOptionsV2</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>AsmNoLiteralPool</name>
@@ -1716,7 +1721,7 @@
                 </option>
                 <option>
                     <name>OOCOutputFile</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>OOCCommandLineProducer</name>
@@ -1732,8 +1737,8 @@
             <name>CUSTOM</name>
             <archiveVersion>3</archiveVersion>
             <data>
-                <extensions />
-                <cmdline />
+                <extensions></extensions>
+                <cmdline></cmdline>
                 <hasPrio>0</hasPrio>
             </data>
         </settings>
@@ -1746,8 +1751,8 @@
             <name>BUILDACTION</name>
             <archiveVersion>1</archiveVersion>
             <data>
-                <prebuild />
-                <postbuild />
+                <prebuild></prebuild>
+                <postbuild></postbuild>
             </data>
         </settings>
         <settings>
@@ -1779,31 +1784,31 @@
                 </option>
                 <option>
                     <name>IlinkKeepSymbols</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>IlinkRawBinaryFile</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>IlinkRawBinarySymbol</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>IlinkRawBinarySegment</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>IlinkRawBinaryAlign</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>IlinkDefines</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>IlinkConfigDefines</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>IlinkMapFile</name>
@@ -1839,7 +1844,7 @@
                 </option>
                 <option>
                     <name>IlinkIcfFileSlave</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>IlinkEnableRemarks</name>
@@ -1847,19 +1852,19 @@
                 </option>
                 <option>
                     <name>IlinkSuppressDiags</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>IlinkTreatAsRem</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>IlinkTreatAsWarn</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>IlinkTreatAsErr</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>IlinkWarningsAreErrors</name>
@@ -1871,7 +1876,7 @@
                 </option>
                 <option>
                     <name>IlinkExtraOptions</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>IlinkLowLevelInterfaceSlave</name>
@@ -1883,7 +1888,7 @@
                 </option>
                 <option>
                     <name>IlinkAdditionalLibs</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>IlinkOverrideProgramEntryLabel</name>
@@ -2018,11 +2023,11 @@
                 </option>
                 <option>
                     <name>IlinkStackControlFile</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>IlinkStackCallGraphFile</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>CrcAlgorithm</name>
@@ -2044,7 +2049,7 @@
                 </option>
                 <option>
                     <name>IlinkIcfFile_AltDefault</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>IlinkEncInput</name>
@@ -2076,19 +2081,19 @@
                 </option>
                 <option>
                     <name>IlinkRawBinaryFile2</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>IlinkRawBinarySymbol2</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>IlinkRawBinarySegment2</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>IlinkRawBinaryAlign2</name>
-                    <state />
+                    <state></state>
                 </option>
             </data>
         </settings>
@@ -2101,7 +2106,7 @@
                 <debug>0</debug>
                 <option>
                     <name>IarchiveInputs</name>
-                    <state />
+                    <state></state>
                 </option>
                 <option>
                     <name>IarchiveOverride</name>
@@ -2133,93 +2138,36 @@
                 <group>
                     <name>sam_e54_xpro_iar</name>
                     <group>
-                        <name>peripheral</name>
-                        <group>
-                            <name>nvmctrl</name>
-                            <file>
-                                <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\peripheral\nvmctrl\plib_nvmctrl.h</name>
-                            </file>
-                        </group>
-                        <group>
-                            <name>evsys</name>
-                            <file>
-                                <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\peripheral\evsys\plib_evsys.h</name>
-                            </file>
-                        </group>
-                        <group>
-                            <name>port</name>
-                            <file>
-                                <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\peripheral\port\plib_port.h</name>
-                            </file>
-                        </group>
-                        <group>
-                            <name>clock</name>
-                            <file>
-                                <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\peripheral\clock\plib_clock.h</name>
-                            </file>
-                        </group>
-                        <group>
-                            <name>nvic</name>
-                            <file>
-                                <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\peripheral\nvic\plib_nvic.h</name>
-                            </file>
-                        </group>
-                        <group>
-                            <name>cmcc</name>
-                            <file>
-                                <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\peripheral\cmcc\plib_cmcc.h</name>
-                            </file>
-                        </group>
-                    </group>
-                    <group>
                         <name>bsp</name>
                         <file>
                             <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\bsp\bsp.h</name>
                         </file>
                     </group>
-                    <file>
-                        <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\device.h</name>
-                    </file>
-                    <file>
-                        <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\device_cache.h</name>
-                    </file>
-                    <file>
-                        <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\toolchain_specifics.h</name>
-                    </file>
-                    <file>
-                        <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\definitions.h</name>
-                    </file>
-                    <file>
-                        <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\interrupts.h</name>
-                    </file>
-                    <file>
-                        <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\device_vectors.h</name>
-                    </file>
                     <group>
                         <name>driver</name>
                         <group>
                             <name>usb</name>
+                            <group>
+                                <name>usbfsv1</name>
+                                <group>
+                                    <name>src</name>
+                                    <file>
+                                        <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\driver\usb\usbfsv1\src\drv_usbfsv1_local.h</name>
+                                    </file>
+                                    <file>
+                                        <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\driver\usb\usbfsv1\src\drv_usbfsv1_variant_mapping.h</name>
+                                    </file>
+                                </group>
+                                <file>
+                                    <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\driver\usb\usbfsv1\drv_usbfsv1.h</name>
+                                </file>
+                            </group>
                             <file>
                                 <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\driver\usb\drv_usb.h</name>
                             </file>
                             <file>
                                 <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\driver\usb\drv_usb_external_dependencies.h</name>
                             </file>
-                            <group>
-                                <name>usbfsv1</name>
-                                <file>
-                                    <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\driver\usb\usbfsv1\drv_usbfsv1.h</name>
-                                </file>
-                                <group>
-                                    <name>src</name>
-                                    <file>
-                                        <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\driver\usb\usbfsv1\src\drv_usbfsv1_variant_mapping.h</name>
-                                    </file>
-                                    <file>
-                                        <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\driver\usb\usbfsv1\src\drv_usbfsv1_local.h</name>
-                                    </file>
-                                </group>
-                            </group>
                         </group>
                         <file>
                             <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\driver\driver.h</name>
@@ -2227,87 +2175,6 @@
                         <file>
                             <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\driver\driver_common.h</name>
                         </file>
-                    </group>
-                    <group>
-                        <name>usb</name>
-                        <file>
-                            <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\usb\usb_host_client_driver.h</name>
-                        </file>
-                        <file>
-                            <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\usb\usb_host_hub_interface.h</name>
-                        </file>
-                        <file>
-                            <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\usb\usb_host.h</name>
-                        </file>
-                        <file>
-                            <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\usb\usb_hub.h</name>
-                        </file>
-                        <file>
-                            <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\usb\usb_device.h</name>
-                        </file>
-                        <file>
-                            <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\usb\usb_common.h</name>
-                        </file>
-                        <file>
-                            <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\usb\usb_chapter_9.h</name>
-                        </file>
-                        <group>
-                            <name>src</name>
-                            <file>
-                                <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\usb\src\usb_device_local.h</name>
-                            </file>
-                            <file>
-                                <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\usb\src\usb_device_mapping.h</name>
-                            </file>
-                            <file>
-                                <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\usb\src\usb_device_function_driver.h</name>
-                            </file>
-                            <file>
-                                <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\usb\src\usb_external_dependencies.h</name>
-                            </file>
-                            <file>
-                                <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\usb\src\usb_device_cdc_local.h</name>
-                            </file>
-                        </group>
-                        <file>
-                            <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\usb\usb_device_cdc.h</name>
-                        </file>
-                        <file>
-                            <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\usb\usb_cdc.h</name>
-                        </file>
-                    </group>
-                    <group>
-                        <name>system</name>
-                        <file>
-                            <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\system\system.h</name>
-                        </file>
-                        <file>
-                            <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\system\system_common.h</name>
-                        </file>
-                        <file>
-                            <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\system\system_module.h</name>
-                        </file>
-                        <group>
-                            <name>int</name>
-                            <file>
-                                <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\system\int\sys_int.h</name>
-                            </file>
-                            <file>
-                                <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\system\int\sys_int_mapping.h</name>
-                            </file>
-                        </group>
-                        <group>
-                            <name>cache</name>
-                            <file>
-                                <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\system\cache\sys_cache.h</name>
-                            </file>
-                        </group>
-                        <group>
-                            <name>debug</name>
-                            <file>
-                                <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\system\debug\sys_debug.h</name>
-                            </file>
-                        </group>
                     </group>
                     <group>
                         <name>osal</name>
@@ -2321,11 +2188,149 @@
                             <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\osal\osal_impl_basic.h</name>
                         </file>
                     </group>
-                    <file>
-                        <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\user.h</name>
-                    </file>
+                    <group>
+                        <name>peripheral</name>
+                        <group>
+                            <name>clock</name>
+                            <file>
+                                <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\peripheral\clock\plib_clock.h</name>
+                            </file>
+                        </group>
+                        <group>
+                            <name>cmcc</name>
+                            <file>
+                                <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\peripheral\cmcc\plib_cmcc.h</name>
+                            </file>
+                        </group>
+                        <group>
+                            <name>evsys</name>
+                            <file>
+                                <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\peripheral\evsys\plib_evsys.h</name>
+                            </file>
+                        </group>
+                        <group>
+                            <name>nvic</name>
+                            <file>
+                                <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\peripheral\nvic\plib_nvic.h</name>
+                            </file>
+                        </group>
+                        <group>
+                            <name>nvmctrl</name>
+                            <file>
+                                <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\peripheral\nvmctrl\plib_nvmctrl.h</name>
+                            </file>
+                        </group>
+                        <group>
+                            <name>port</name>
+                            <file>
+                                <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\peripheral\port\plib_port.h</name>
+                            </file>
+                        </group>
+                    </group>
+                    <group>
+                        <name>system</name>
+                        <group>
+                            <name>cache</name>
+                            <file>
+                                <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\system\cache\sys_cache.h</name>
+                            </file>
+                        </group>
+                        <group>
+                            <name>debug</name>
+                            <file>
+                                <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\system\debug\sys_debug.h</name>
+                            </file>
+                        </group>
+                        <group>
+                            <name>int</name>
+                            <file>
+                                <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\system\int\sys_int.h</name>
+                            </file>
+                            <file>
+                                <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\system\int\sys_int_mapping.h</name>
+                            </file>
+                        </group>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\system\system.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\system\system_common.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\system\system_module.h</name>
+                        </file>
+                    </group>
+                    <group>
+                        <name>usb</name>
+                        <group>
+                            <name>src</name>
+                            <file>
+                                <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\usb\src\usb_device_cdc_local.h</name>
+                            </file>
+                            <file>
+                                <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\usb\src\usb_device_function_driver.h</name>
+                            </file>
+                            <file>
+                                <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\usb\src\usb_device_local.h</name>
+                            </file>
+                            <file>
+                                <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\usb\src\usb_device_mapping.h</name>
+                            </file>
+                            <file>
+                                <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\usb\src\usb_external_dependencies.h</name>
+                            </file>
+                        </group>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\usb\usb_cdc.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\usb\usb_chapter_9.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\usb\usb_common.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\usb\usb_device.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\usb\usb_device_cdc.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\usb\usb_host.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\usb\usb_host_client_driver.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\usb\usb_host_hub_interface.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\usb\usb_hub.h</name>
+                        </file>
+                    </group>
                     <file>
                         <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\configuration.h</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\definitions.h</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\device.h</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\device_cache.h</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\device_vectors.h</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\interrupts.h</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\toolchain_specifics.h</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\user.h</name>
                     </file>
                 </group>
             </group>
@@ -2639,15 +2644,15 @@
                             <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\instance\wdt.h</name>
                         </file>
                     </group>
-                    <file>
-                        <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\same54p20a.h</name>
-                    </file>
                     <group>
                         <name>pio</name>
                         <file>
                             <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\pio\same54p20a.h</name>
                         </file>
                     </group>
+                    <file>
+                        <name>$PROJ_DIR$\..\src\packs\ATSAME54P20A_DFP\same54p20a.h</name>
+                    </file>
                 </group>
                 <group>
                     <name>CMSIS</name>
@@ -2658,16 +2663,7 @@
                             <group>
                                 <name>Include</name>
                                 <file>
-                                    <name>$PROJ_DIR$\..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_version.h</name>
-                                </file>
-                                <file>
-                                    <name>$PROJ_DIR$\..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_compiler.h</name>
-                                </file>
-                                <file>
-                                    <name>$PROJ_DIR$\..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_iccarm.h</name>
-                                </file>
-                                <file>
-                                    <name>$PROJ_DIR$\..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_gcc.h</name>
+                                    <name>$PROJ_DIR$\..\src\packs\CMSIS\CMSIS\Core\Include\cachel1_armv7.h</name>
                                 </file>
                                 <file>
                                     <name>$PROJ_DIR$\..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_armcc.h</name>
@@ -2679,13 +2675,22 @@
                                     <name>$PROJ_DIR$\..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_armclang_ltm.h</name>
                                 </file>
                                 <file>
+                                    <name>$PROJ_DIR$\..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_compiler.h</name>
+                                </file>
+                                <file>
+                                    <name>$PROJ_DIR$\..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_gcc.h</name>
+                                </file>
+                                <file>
+                                    <name>$PROJ_DIR$\..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_iccarm.h</name>
+                                </file>
+                                <file>
+                                    <name>$PROJ_DIR$\..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_version.h</name>
+                                </file>
+                                <file>
                                     <name>$PROJ_DIR$\..\src\packs\CMSIS\CMSIS\Core\Include\core_cm4.h</name>
                                 </file>
                                 <file>
                                     <name>$PROJ_DIR$\..\src\packs\CMSIS\CMSIS\Core\Include\mpu_armv7.h</name>
-                                </file>
-                                <file>
-                                    <name>$PROJ_DIR$\..\src\packs\CMSIS\CMSIS\Core\Include\cachel1_armv7.h</name>
                                 </file>
                             </group>
                         </group>
@@ -2697,74 +2702,23 @@
             </file>
         </group>
         <group>
+            <name>Linker File</name>
+            <file>
+                <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\flash.icf</name>
+            </file>
+        </group>
+        <group>
             <name>Source Files</name>
             <group>
                 <name>config</name>
                 <group>
                     <name>sam_e54_xpro_iar</name>
                     <group>
-                        <name>peripheral</name>
-                        <group>
-                            <name>nvmctrl</name>
-                            <file>
-                                <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\peripheral\nvmctrl\plib_nvmctrl.c</name>
-                            </file>
-                        </group>
-                        <group>
-                            <name>evsys</name>
-                            <file>
-                                <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\peripheral\evsys\plib_evsys.c</name>
-                            </file>
-                        </group>
-                        <group>
-                            <name>port</name>
-                            <file>
-                                <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\peripheral\port\plib_port.c</name>
-                            </file>
-                        </group>
-                        <group>
-                            <name>clock</name>
-                            <file>
-                                <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\peripheral\clock\plib_clock.c</name>
-                            </file>
-                        </group>
-                        <group>
-                            <name>nvic</name>
-                            <file>
-                                <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\peripheral\nvic\plib_nvic.c</name>
-                            </file>
-                        </group>
-                        <group>
-                            <name>cmcc</name>
-                            <file>
-                                <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\peripheral\cmcc\plib_cmcc.c</name>
-                            </file>
-                        </group>
-                    </group>
-                    <group>
                         <name>bsp</name>
                         <file>
                             <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\bsp\bsp.c</name>
                         </file>
                     </group>
-                    <file>
-                        <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\initialization.c</name>
-                    </file>
-                    <file>
-                        <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\interrupts.c</name>
-                    </file>
-                    <file>
-                        <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\exceptions.c</name>
-                    </file>
-                    <group>
-                        <name>stdio</name>
-                        <file>
-                            <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\stdio\iar_monitor.c</name>
-                        </file>
-                    </group>
-                    <file>
-                        <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\startup_iar.c</name>
-                    </file>
                     <group>
                         <name>driver</name>
                         <group>
@@ -2783,9 +2737,66 @@
                             </group>
                         </group>
                     </group>
-                    <file>
-                        <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\usb_device_init_data.c</name>
-                    </file>
+                    <group>
+                        <name>peripheral</name>
+                        <group>
+                            <name>clock</name>
+                            <file>
+                                <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\peripheral\clock\plib_clock.c</name>
+                            </file>
+                        </group>
+                        <group>
+                            <name>cmcc</name>
+                            <file>
+                                <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\peripheral\cmcc\plib_cmcc.c</name>
+                            </file>
+                        </group>
+                        <group>
+                            <name>evsys</name>
+                            <file>
+                                <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\peripheral\evsys\plib_evsys.c</name>
+                            </file>
+                        </group>
+                        <group>
+                            <name>nvic</name>
+                            <file>
+                                <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\peripheral\nvic\plib_nvic.c</name>
+                            </file>
+                        </group>
+                        <group>
+                            <name>nvmctrl</name>
+                            <file>
+                                <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\peripheral\nvmctrl\plib_nvmctrl.c</name>
+                            </file>
+                        </group>
+                        <group>
+                            <name>port</name>
+                            <file>
+                                <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\peripheral\port\plib_port.c</name>
+                            </file>
+                        </group>
+                    </group>
+                    <group>
+                        <name>stdio</name>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\stdio\iar_monitor.c</name>
+                        </file>
+                    </group>
+                    <group>
+                        <name>system</name>
+                        <group>
+                            <name>cache</name>
+                            <file>
+                                <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\system\cache\sys_cache.c</name>
+                            </file>
+                        </group>
+                        <group>
+                            <name>int</name>
+                            <file>
+                                <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\system\int\src\sys_int.c</name>
+                            </file>
+                        </group>
+                    </group>
                     <group>
                         <name>usb</name>
                         <group>
@@ -2801,38 +2812,32 @@
                             </file>
                         </group>
                     </group>
-                    <group>
-                        <name>system</name>
-                        <group>
-                            <name>int</name>
-                            <file>
-                                <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\system\int\src\sys_int.c</name>
-                            </file>
-                        </group>
-                        <group>
-                            <name>cache</name>
-                            <file>
-                                <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\system\cache\sys_cache.c</name>
-                            </file>
-                        </group>
-                    </group>
+                    <file>
+                        <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\exceptions.c</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\initialization.c</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\interrupts.c</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\startup_iar.c</name>
+                    </file>
                     <file>
                         <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\tasks.c</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\usb_device_init_data.c</name>
                     </file>
                 </group>
             </group>
             <file>
-                <name>$PROJ_DIR$\..\src\main.c</name>
-            </file>
-            <file>
                 <name>$PROJ_DIR$\..\src\app.c</name>
             </file>
-        </group>
-        <group>
-            <name>Linker File</name>
             <file>
-                <name>$PROJ_DIR$\..\src\config\sam_e54_xpro_iar\flash.icf</name>
+                <name>$PROJ_DIR$\..\src\main.c</name>
             </file>
         </group>
     </group>
-    </project>
+</project>
