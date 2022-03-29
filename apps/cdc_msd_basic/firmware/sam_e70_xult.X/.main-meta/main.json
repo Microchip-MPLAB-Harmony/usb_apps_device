@@ -4,27 +4,27 @@
 	"content": {
 		"metaDataVersion": "1.1.0",
 		"name": "com.microchip.mcu32.mplabx.project.usb_apps_device_cdc_msd_basic_sam_e70_xult",
-		"version": "3.2.0",
+		"version": "3.3.0",
 		"displayName": "CDC MSD Basic Example (cdc_msd_basic) Example for SAM E70/S70/V70/V71 Family",
 		"projectName": "cdc_msd_basic_sam_e70_xult",
 		"shortDescription": "This application creates a USB CDC Device that enumerates as a COM port and Flash Drive simultaneously. The COM port can be opened using any of the terminal applications and to demonstrate two-way communication, a character typed on the terminal window is echoed back by the USB device. Flash drive acts similar to any Mass Storage Class device where the NVM is used as storage media.",
 		"ide": {
 			"name": "MPLABX",
-			"semverRange": ">=5.50.0"
+			"semverRange": ">=6.00.0"
 		},
 		"compiler": [
 			{
 				"name": "XC32",
-				"semverRange": ">=3.1.0"
+				"semverRange": ">=4.0.0"
 			}
 		],
 		"dfp": {
 			"name": "SAME70_DFP",
-			"semverRange": "^4.5.86"
+			"semverRange": "^4.6.98"
 		},
 		"configurator": {
-			"name": "MHC",
-			"semverRange": ">=3.6.4"
+			"name": "MCC",
+			"semverRange": ">=5.1.1"
 		},
 		"device": {
 			"metaDataVersion": "1.0.0",
