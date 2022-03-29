@@ -1,7 +1,7 @@
 /*
  * Instance header file for PIC32CM5164LE00100
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,32 +20,32 @@
  *
  */
 
-/* file generated from device description version 2021-06-28T10:08:20Z */
+/* file generated from device description version 2022-01-28T10:04:11Z */
 #ifndef _PIC32CMLE00_EVSYS_INSTANCE_
 #define _PIC32CMLE00_EVSYS_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for EVSYS peripheral ========== */
-#define EVSYS_ASYNCHRONOUS_CHANNELS              _UL_(0x00000F00) /* Mask of Only Asynchronous Channels */
-#define EVSYS_CHANNELS                           _UL_(12)   /* Total Number of Channels */
-#define EVSYS_CHANNELS_BITS                      _UL_(4)    /* Number of bits to select Channel */
-#define EVSYS_GCLK_ID_0                          _UL_(8)    /* Index of Generic Clock 0 */
-#define EVSYS_GCLK_ID_1                          _UL_(9)    /* Index of Generic Clock 1 */
-#define EVSYS_GCLK_ID_2                          _UL_(10)   /* Index of Generic Clock 2 */
-#define EVSYS_GCLK_ID_3                          _UL_(11)   /* Index of Generic Clock 3 */
-#define EVSYS_GCLK_ID_4                          _UL_(12)   /* Index of Generic Clock 4 */
-#define EVSYS_GCLK_ID_5                          _UL_(13)   /* Index of Generic Clock 5 */
-#define EVSYS_GCLK_ID_6                          _UL_(14)   /* Index of Generic Clock 6 */
-#define EVSYS_GCLK_ID_7                          _UL_(15)   /* Index of Generic Clock 7 */
-#define EVSYS_GENERATORS                         _UL_(91)   /* Total Number of Event Generators */
-#define EVSYS_GENERATORS_BITS                    _UL_(7)    /* Number of bits to select Event Generator */
-#define EVSYS_SECURE_IMPLEMENTED                 _UL_(1)    /* Security Configuration implemented? */
-#define EVSYS_SYNCH_NUM                          _UL_(8)    /* Number of Synchronous Channels */
-#define EVSYS_SYNCH_NUM_BITS                     _UL_(3)    /* Number of bits to select Synchronous Channels */
-#define EVSYS_USERS                              _UL_(52)   /* Total Number of Event Users */
-#define EVSYS_USERS_BITS                         _UL_(6)    /* Number of bits to select Event User */
-#define EVSYS_USERS_GROUPS                       _UL_(2)    /* Number of 32-user Groups */
-#define EVSYS_USER_CHN_BITS                      _UL_(4)    /* Number of bits to select Channel in USER register */
-#define EVSYS_INSTANCE_ID                        _UL_(64)   /* Instance index for EVSYS */
+#define EVSYS_ASYNCHRONOUS_CHANNELS              (0x00000F00) /* Mask of Only Asynchronous Channels */
+#define EVSYS_CHANNELS                           (12)       /* Total Number of Channels */
+#define EVSYS_CHANNELS_BITS                      (4)        /* Number of bits to select Channel */
+#define EVSYS_GCLK_ID_0                          (8)        /* Index of Generic Clock 0 */
+#define EVSYS_GCLK_ID_1                          (9)        /* Index of Generic Clock 1 */
+#define EVSYS_GCLK_ID_2                          (10)       /* Index of Generic Clock 2 */
+#define EVSYS_GCLK_ID_3                          (11)       /* Index of Generic Clock 3 */
+#define EVSYS_GCLK_ID_4                          (12)       /* Index of Generic Clock 4 */
+#define EVSYS_GCLK_ID_5                          (13)       /* Index of Generic Clock 5 */
+#define EVSYS_GCLK_ID_6                          (14)       /* Index of Generic Clock 6 */
+#define EVSYS_GCLK_ID_7                          (15)       /* Index of Generic Clock 7 */
+#define EVSYS_GENERATORS                         (91)       /* Total Number of Event Generators */
+#define EVSYS_GENERATORS_BITS                    (7)        /* Number of bits to select Event Generator */
+#define EVSYS_SECURE_IMPLEMENTED                 (1)        /* Security Configuration implemented? */
+#define EVSYS_SYNCH_NUM                          (8)        /* Number of Synchronous Channels */
+#define EVSYS_SYNCH_NUM_BITS                     (3)        /* Number of bits to select Synchronous Channels */
+#define EVSYS_USERS                              (52)       /* Total Number of Event Users */
+#define EVSYS_USERS_BITS                         (6)        /* Number of bits to select Event User */
+#define EVSYS_USERS_GROUPS                       (2)        /* Number of 32-user Groups */
+#define EVSYS_USER_CHN_BITS                      (4)        /* Number of bits to select Channel in USER register */
+#define EVSYS_INSTANCE_ID                        (64)       /* Instance index for EVSYS */
 
 #endif /* _PIC32CMLE00_EVSYS_INSTANCE_ */

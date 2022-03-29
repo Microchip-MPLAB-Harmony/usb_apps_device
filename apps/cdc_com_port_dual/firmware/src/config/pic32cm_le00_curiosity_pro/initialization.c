@@ -66,7 +66,6 @@
 #pragma config WDT_EWOFFSET = 0xb
 #pragma config WDT_WEN = CLEAR
 #pragma config BOD33_HYST = CLEAR
-#pragma config NVMCTRL_URWEN = SET
 
 
 

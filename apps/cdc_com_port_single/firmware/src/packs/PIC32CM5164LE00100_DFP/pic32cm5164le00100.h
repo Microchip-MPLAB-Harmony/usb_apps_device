@@ -1,7 +1,7 @@
 /*
  * Header file for PIC32CM5164LE00100
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,15 +20,16 @@
  *
  */
 
-/* File generated from device description version 2021-06-28T10:08:20Z */
+/* File generated from device description version 2022-01-28T10:04:11Z */
 #ifndef _PIC32CM5164LE00100_H_
 #define _PIC32CM5164LE00100_H_
 
 /* Header version uses Semantic Versioning 2.0.0 (https://semver.org/) */
-#define HEADER_FORMAT_VERSION "2.0.0"
+#define HEADER_FORMAT_VERSION "2.1.0"
 
 #define HEADER_FORMAT_VERSION_MAJOR (2)
-#define HEADER_FORMAT_VERSION_MINOR (0)
+#define HEADER_FORMAT_VERSION_MINOR (1)
+#define HEADER_FORMAT_VERSION_PATCH (0)
 
 /* PIC32CM5164LE00100 definitions
   This file defines all structures and symbols for PIC32CM5164LE00100:
@@ -47,21 +48,21 @@
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #if !defined(SKIP_INTEGER_LITERALS)
-#  if defined(_U_) || defined(_L_) || defined(_UL_)
-#    error "Integer Literals macros already defined elsewhere"
+#  if defined(_UINT8_) || defined(_UINT16_) || defined(_UINT32_)
+#    error "Integer constant value macros already defined elsewhere"
 #  endif
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
-/* Macros that deal with adding suffixes to integer literal constants for C/C++ */
-#  define _U_(x) (x ## U)    /* C code: Unsigned integer literal constant value */
-#  define _L_(x) (x ## L)    /* C code: Long integer literal constant value */
-#  define _UL_(x) (x ## UL)  /* C code: Unsigned Long integer literal constant value */
+/* Macros that deal with sizes of integer constants for C/C++ */
+#  define _UINT8_(x)   ((uint8_t)(x))    /* C code: 8-bits unsigned integer constant value */
+#  define _UINT16_(x)  ((uint16_t)(x))   /* C code: 16-bits unsigned integer constant value */
+#  define _UINT32_(x)  ((uint32_t)(x))   /* C code: 32-bits unsigned integer constant value */
 
 #else /* Assembler */
 
-#  define _U_(x) x    /* Assembler: Unsigned integer literal constant value */
-#  define _L_(x) x    /* Assembler: Long integer literal constant value */
-#  define _UL_(x) x   /* Assembler: Unsigned Long integer literal constant value */
+#  define _UINT8_(x) x    /* Assembler: 8-bits unsigned integer constant value */
+#  define _UINT16_(x) x   /* Assembler: 16-bits unsigned integer constant value */
+#  define _UINT32_(x) x   /* Assembler: 32-bits unsigned integer constant value */
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 #endif /* SKIP_INTEGER_LITERALS */
 
@@ -82,10 +83,10 @@ typedef enum IRQn
 
 /******  PIC32CM5164LE00100 specific Interrupt Numbers ***********************************/
   SUPC_IRQn                 =   0, /* 0   Shared between MCLK OSCCTRL OSC32KCTRL PM SUPC (SUPC) */
-  MCLK_IRQn                 =   0, /* 0   Shared between MCLK OSCCTRL OSC32KCTRL PM SUPC (MCLK) */
+  OSC32KCTRL_IRQn           =   0, /* 0   Shared between MCLK OSCCTRL OSC32KCTRL PM SUPC (OSC32KCTRL) */
   PM_IRQn                   =   0, /* 0   Shared between MCLK OSCCTRL OSC32KCTRL PM SUPC (PM) */
   OSCCTRL_IRQn              =   0, /* 0   Shared between MCLK OSCCTRL OSC32KCTRL PM SUPC (OSCCTRL) */
-  OSC32KCTRL_IRQn           =   0, /* 0   Shared between MCLK OSCCTRL OSC32KCTRL PM SUPC (OSC32KCTRL) */
+  MCLK_IRQn                 =   0, /* 0   Shared between MCLK OSCCTRL OSC32KCTRL PM SUPC (MCLK) */
   WDT_IRQn                  =   1, /* 1   Watchdog Timer (WDT)                */
   RTC_IRQn                  =   2, /* 2   Real-Time Counter (RTC)             */
   EIC_EXTINT_0_IRQn         =   3, /* 3   External Interrupt Controller (EIC) */
@@ -539,53 +540,53 @@ void TRAM_Handler                  ( void );
 /* ************************************************************************** */
 /*   BASE ADDRESS DEFINITIONS FOR PIC32CM5164LE00100                          */
 /* ************************************************************************** */
-#define AC_BASE_ADDRESS                  _UL_(0x40003400)                              /* AC Base Address */
-#define ADC_BASE_ADDRESS                 _UL_(0x42003800)                              /* ADC Base Address */
-#define CCL_BASE_ADDRESS                 _UL_(0x42004800)                              /* CCL Base Address */
-#define DAC_BASE_ADDRESS                 _UL_(0x42003c00)                              /* DAC Base Address */
-#define DMAC_BASE_ADDRESS                _UL_(0x41006000)                              /* DMAC Base Address */
-#define DSU_BASE_ADDRESS                 _UL_(0x41002000)                              /* DSU Base Address */
-#define DSU_EXT_BASE_ADDRESS             _UL_(0x41002100)                              /* DSU Base Address */
-#define EIC_BASE_ADDRESS                 _UL_(0x40002800)                              /* EIC Base Address */
-#define EVSYS_BASE_ADDRESS               _UL_(0x42000000)                              /* EVSYS Base Address */
-#define FREQM_BASE_ADDRESS               _UL_(0x40002c00)                              /* FREQM Base Address */
-#define GCLK_BASE_ADDRESS                _UL_(0x40001c00)                              /* GCLK Base Address */
-#define I2S_BASE_ADDRESS                 _UL_(0x42004c00)                              /* I2S Base Address */
-#define MCLK_BASE_ADDRESS                _UL_(0x40000800)                              /* MCLK Base Address */
-#define NVMCTRL_BASE_ADDRESS             _UL_(0x41004000)                              /* NVMCTRL Base Address */
-#define BOCOR_FUSES_BASE_ADDRESS         _UL_(0x0080c000)                              /* FUSES Base Address */
-#define OTP1_FUSES_BASE_ADDRESS          _UL_(0x00806000)                              /* FUSES Base Address */
-#define OTP2_FUSES_BASE_ADDRESS          _UL_(0x00806008)                              /* FUSES Base Address */
-#define SW_CALIB_FUSES_BASE_ADDRESS      _UL_(0x00806020)                              /* FUSES Base Address */
-#define USER_FUSES_BASE_ADDRESS          _UL_(0x00804000)                              /* FUSES Base Address */
-#define OPAMP_BASE_ADDRESS               _UL_(0x42005000)                              /* OPAMP Base Address */
-#define OSC32KCTRL_BASE_ADDRESS          _UL_(0x40001400)                              /* OSC32KCTRL Base Address */
-#define OSCCTRL_BASE_ADDRESS             _UL_(0x40001000)                              /* OSCCTRL Base Address */
-#define PAC_BASE_ADDRESS                 _UL_(0x40000000)                              /* PAC Base Address */
-#define PM_BASE_ADDRESS                  _UL_(0x40000400)                              /* PM Base Address */
-#define PORT_BASE_ADDRESS                _UL_(0x40003000)                              /* PORT Base Address */
-#define PORT_IOBUS_BASE_ADDRESS          _UL_(0x60000000)                              /* PORT Base Address */
-#define PTC_BASE_ADDRESS                 _UL_(0x42004000)                              /* PTC Base Address */
-#define RSTC_BASE_ADDRESS                _UL_(0x40000c00)                              /* RSTC Base Address */
-#define RTC_BASE_ADDRESS                 _UL_(0x40002400)                              /* RTC Base Address */
-#define SERCOM0_BASE_ADDRESS             _UL_(0x42000400)                              /* SERCOM0 Base Address */
-#define SERCOM1_BASE_ADDRESS             _UL_(0x42000800)                              /* SERCOM1 Base Address */
-#define SERCOM2_BASE_ADDRESS             _UL_(0x42000c00)                              /* SERCOM2 Base Address */
-#define SERCOM3_BASE_ADDRESS             _UL_(0x42001000)                              /* SERCOM3 Base Address */
-#define SERCOM4_BASE_ADDRESS             _UL_(0x42001400)                              /* SERCOM4 Base Address */
-#define SERCOM5_BASE_ADDRESS             _UL_(0x42001800)                              /* SERCOM5 Base Address */
-#define SUPC_BASE_ADDRESS                _UL_(0x40001800)                              /* SUPC Base Address */
-#define TC0_BASE_ADDRESS                 _UL_(0x42001c00)                              /* TC0 Base Address */
-#define TC1_BASE_ADDRESS                 _UL_(0x42002000)                              /* TC1 Base Address */
-#define TC2_BASE_ADDRESS                 _UL_(0x42002400)                              /* TC2 Base Address */
-#define TCC0_BASE_ADDRESS                _UL_(0x42002800)                              /* TCC0 Base Address */
-#define TCC1_BASE_ADDRESS                _UL_(0x42002c00)                              /* TCC1 Base Address */
-#define TCC2_BASE_ADDRESS                _UL_(0x42003000)                              /* TCC2 Base Address */
-#define TCC3_BASE_ADDRESS                _UL_(0x42003400)                              /* TCC3 Base Address */
-#define TRAM_BASE_ADDRESS                _UL_(0x42005400)                              /* TRAM Base Address */
-#define TRNG_BASE_ADDRESS                _UL_(0x42004400)                              /* TRNG Base Address */
-#define USB_BASE_ADDRESS                 _UL_(0x4100a000)                              /* USB Base Address */
-#define WDT_BASE_ADDRESS                 _UL_(0x40002000)                              /* WDT Base Address */
+#define AC_BASE_ADDRESS                  _UINT32_(0x40003400)                          /* AC Base Address */
+#define ADC_BASE_ADDRESS                 _UINT32_(0x42003800)                          /* ADC Base Address */
+#define CCL_BASE_ADDRESS                 _UINT32_(0x42004800)                          /* CCL Base Address */
+#define DAC_BASE_ADDRESS                 _UINT32_(0x42003c00)                          /* DAC Base Address */
+#define DMAC_BASE_ADDRESS                _UINT32_(0x41006000)                          /* DMAC Base Address */
+#define DSU_BASE_ADDRESS                 _UINT32_(0x41002000)                          /* DSU Base Address */
+#define DSU_EXT_BASE_ADDRESS             _UINT32_(0x41002100)                          /* DSU Base Address */
+#define EIC_BASE_ADDRESS                 _UINT32_(0x40002800)                          /* EIC Base Address */
+#define EVSYS_BASE_ADDRESS               _UINT32_(0x42000000)                          /* EVSYS Base Address */
+#define FREQM_BASE_ADDRESS               _UINT32_(0x40002c00)                          /* FREQM Base Address */
+#define GCLK_BASE_ADDRESS                _UINT32_(0x40001c00)                          /* GCLK Base Address */
+#define I2S_BASE_ADDRESS                 _UINT32_(0x42004c00)                          /* I2S Base Address */
+#define MCLK_BASE_ADDRESS                _UINT32_(0x40000800)                          /* MCLK Base Address */
+#define NVMCTRL_BASE_ADDRESS             _UINT32_(0x41004000)                          /* NVMCTRL Base Address */
+#define BOCOR_FUSES_BASE_ADDRESS         _UINT32_(0x0080c000)                          /* FUSES Base Address */
+#define OTP1_FUSES_BASE_ADDRESS          _UINT32_(0x00806000)                          /* FUSES Base Address */
+#define OTP2_FUSES_BASE_ADDRESS          _UINT32_(0x00806008)                          /* FUSES Base Address */
+#define SW_CALIB_FUSES_BASE_ADDRESS      _UINT32_(0x00806020)                          /* FUSES Base Address */
+#define USER_FUSES_BASE_ADDRESS          _UINT32_(0x00804000)                          /* FUSES Base Address */
+#define OPAMP_BASE_ADDRESS               _UINT32_(0x42005000)                          /* OPAMP Base Address */
+#define OSC32KCTRL_BASE_ADDRESS          _UINT32_(0x40001400)                          /* OSC32KCTRL Base Address */
+#define OSCCTRL_BASE_ADDRESS             _UINT32_(0x40001000)                          /* OSCCTRL Base Address */
+#define PAC_BASE_ADDRESS                 _UINT32_(0x40000000)                          /* PAC Base Address */
+#define PM_BASE_ADDRESS                  _UINT32_(0x40000400)                          /* PM Base Address */
+#define PORT_BASE_ADDRESS                _UINT32_(0x40003000)                          /* PORT Base Address */
+#define PORT_IOBUS_BASE_ADDRESS          _UINT32_(0x60000000)                          /* PORT Base Address */
+#define PTC_BASE_ADDRESS                 _UINT32_(0x42004000)                          /* PTC Base Address */
+#define RSTC_BASE_ADDRESS                _UINT32_(0x40000c00)                          /* RSTC Base Address */
+#define RTC_BASE_ADDRESS                 _UINT32_(0x40002400)                          /* RTC Base Address */
+#define SERCOM0_BASE_ADDRESS             _UINT32_(0x42000400)                          /* SERCOM0 Base Address */
+#define SERCOM1_BASE_ADDRESS             _UINT32_(0x42000800)                          /* SERCOM1 Base Address */
+#define SERCOM2_BASE_ADDRESS             _UINT32_(0x42000c00)                          /* SERCOM2 Base Address */
+#define SERCOM3_BASE_ADDRESS             _UINT32_(0x42001000)                          /* SERCOM3 Base Address */
+#define SERCOM4_BASE_ADDRESS             _UINT32_(0x42001400)                          /* SERCOM4 Base Address */
+#define SERCOM5_BASE_ADDRESS             _UINT32_(0x42001800)                          /* SERCOM5 Base Address */
+#define SUPC_BASE_ADDRESS                _UINT32_(0x40001800)                          /* SUPC Base Address */
+#define TC0_BASE_ADDRESS                 _UINT32_(0x42001c00)                          /* TC0 Base Address */
+#define TC1_BASE_ADDRESS                 _UINT32_(0x42002000)                          /* TC1 Base Address */
+#define TC2_BASE_ADDRESS                 _UINT32_(0x42002400)                          /* TC2 Base Address */
+#define TCC0_BASE_ADDRESS                _UINT32_(0x42002800)                          /* TCC0 Base Address */
+#define TCC1_BASE_ADDRESS                _UINT32_(0x42002c00)                          /* TCC1 Base Address */
+#define TCC2_BASE_ADDRESS                _UINT32_(0x42003000)                          /* TCC2 Base Address */
+#define TCC3_BASE_ADDRESS                _UINT32_(0x42003400)                          /* TCC3 Base Address */
+#define TRAM_BASE_ADDRESS                _UINT32_(0x42005400)                          /* TRAM Base Address */
+#define TRNG_BASE_ADDRESS                _UINT32_(0x42004400)                          /* TRNG Base Address */
+#define USB_BASE_ADDRESS                 _UINT32_(0x4100a000)                          /* USB Base Address */
+#define WDT_BASE_ADDRESS                 _UINT32_(0x40002000)                          /* WDT Base Address */
 
 /* ************************************************************************** */
 /*   PIO DEFINITIONS FOR PIC32CM5164LE00100                                   */
@@ -595,101 +596,100 @@ void TRAM_Handler                  ( void );
 /* ************************************************************************** */
 /*   MEMORY MAPPING DEFINITIONS FOR PIC32CM5164LE00100                        */
 /* ************************************************************************** */
+#define FLASH_SIZE                     _UINT32_(0x00080000)    /*  512kB Memory segment type: flash */
+#define FLASH_PAGE_SIZE                _UINT32_(        64)
+#define FLASH_NB_OF_PAGES              _UINT32_(      8192)
 
-#define FLASH_SIZE                     _UL_(0x00080000)    /*  512kB Memory segment type: flash */
-#define FLASH_PAGE_SIZE                _UL_(        64)
-#define FLASH_NB_OF_PAGES              _UL_(      8192)
+#define AUX0_SIZE                      _UINT32_(0x00000100)    /*    0kB Memory segment type: fuses */
+#define AUX0_PAGE_SIZE                 _UINT32_(        64)
+#define AUX0_NB_OF_PAGES               _UINT32_(         4)
 
-#define AUX0_SIZE                      _UL_(0x00000100)    /*    0kB Memory segment type: fuses */
-#define AUX0_PAGE_SIZE                 _UL_(        64)
-#define AUX0_NB_OF_PAGES               _UL_(         4)
+#define AUX1_SIZE                      _UINT32_(0x00000100)    /*    0kB Memory segment type: fuses */
+#define AUX1_PAGE_SIZE                 _UINT32_(        64)
+#define AUX1_NB_OF_PAGES               _UINT32_(         4)
 
-#define AUX1_SIZE                      _UL_(0x00000100)    /*    0kB Memory segment type: fuses */
-#define AUX1_PAGE_SIZE                 _UL_(        64)
-#define AUX1_NB_OF_PAGES               _UL_(         4)
+#define AUX2_SIZE                      _UINT32_(0x00000100)    /*    0kB Memory segment type: fuses */
+#define AUX2_PAGE_SIZE                 _UINT32_(        64)
+#define AUX2_NB_OF_PAGES               _UINT32_(         4)
 
-#define AUX2_SIZE                      _UL_(0x00000100)    /*    0kB Memory segment type: fuses */
-#define AUX2_PAGE_SIZE                 _UL_(        64)
-#define AUX2_NB_OF_PAGES               _UL_(         4)
+#define AUX3_SIZE                      _UINT32_(0x00000100)    /*    0kB Memory segment type: fuses */
+#define AUX3_PAGE_SIZE                 _UINT32_(        64)
+#define AUX3_NB_OF_PAGES               _UINT32_(         4)
 
-#define AUX3_SIZE                      _UL_(0x00000100)    /*    0kB Memory segment type: fuses */
-#define AUX3_PAGE_SIZE                 _UL_(        64)
-#define AUX3_NB_OF_PAGES               _UL_(         4)
+#define AUX4_SIZE                      _UINT32_(0x00000100)    /*    0kB Memory segment type: fuses */
+#define AUX4_PAGE_SIZE                 _UINT32_(        64)
+#define AUX4_NB_OF_PAGES               _UINT32_(         4)
 
-#define AUX4_SIZE                      _UL_(0x00000100)    /*    0kB Memory segment type: fuses */
-#define AUX4_PAGE_SIZE                 _UL_(        64)
-#define AUX4_NB_OF_PAGES               _UL_(         4)
+#define AUX5_SIZE                      _UINT32_(0x00000100)    /*    0kB Memory segment type: fuses */
+#define AUX5_PAGE_SIZE                 _UINT32_(        64)
+#define AUX5_NB_OF_PAGES               _UINT32_(         4)
 
-#define AUX5_SIZE                      _UL_(0x00000100)    /*    0kB Memory segment type: fuses */
-#define AUX5_PAGE_SIZE                 _UL_(        64)
-#define AUX5_NB_OF_PAGES               _UL_(         4)
+#define BOCOR_SIZE                     _UINT32_(0x00000100)    /*    0kB Memory segment type: fuses */
+#define BOCOR_PAGE_SIZE                _UINT32_(        64)
+#define BOCOR_NB_OF_PAGES              _UINT32_(         4)
 
-#define BOCOR_SIZE                     _UL_(0x00000100)    /*    0kB Memory segment type: fuses */
-#define BOCOR_PAGE_SIZE                _UL_(        64)
-#define BOCOR_NB_OF_PAGES              _UL_(         4)
+#define BOCOR1_SIZE                    _UINT32_(0x00000008)    /*    0kB Memory segment type: fuses */
+#define CAL_SIZE                       _UINT32_(0x00000008)    /*    0kB Memory segment type: fuses */
+#define DATAFLASH_SIZE                 _UINT32_(0x00004000)    /*   16kB Memory segment type: flash */
+#define DATAFLASH_PAGE_SIZE            _UINT32_(        64)
+#define DATAFLASH_NB_OF_PAGES          _UINT32_(       256)
 
-#define BOCOR1_SIZE                    _UL_(0x00000008)    /*    0kB Memory segment type: fuses */
-#define CAL_SIZE                       _UL_(0x00000008)    /*    0kB Memory segment type: fuses */
-#define DATAFLASH_SIZE                 _UL_(0x00004000)    /*   16kB Memory segment type: flash */
-#define DATAFLASH_PAGE_SIZE            _UL_(        64)
-#define DATAFLASH_NB_OF_PAGES          _UL_(       256)
+#define LOCKROW_SIZE                   _UINT32_(0x00000004)    /*    0kB Memory segment type: fuses */
+#define OTP1_SIZE                      _UINT32_(0x00000008)    /*    0kB Memory segment type: fuses */
+#define OTP2_SIZE                      _UINT32_(0x00000008)    /*    0kB Memory segment type: fuses */
+#define OTP3_SIZE                      _UINT32_(0x00000008)    /*    0kB Memory segment type: fuses */
+#define OTP4_SIZE                      _UINT32_(0x00000008)    /*    0kB Memory segment type: fuses */
+#define ROM_SIZE                       _UINT32_(0x00010000)    /*   64kB Memory segment type: fuses */
+#define ROM_PAGE_SIZE                  _UINT32_(        64)
+#define ROM_NB_OF_PAGES                _UINT32_(      1024)
 
-#define LOCKROW_SIZE                   _UL_(0x00000004)    /*    0kB Memory segment type: fuses */
-#define OTP1_SIZE                      _UL_(0x00000008)    /*    0kB Memory segment type: fuses */
-#define OTP2_SIZE                      _UL_(0x00000008)    /*    0kB Memory segment type: fuses */
-#define OTP3_SIZE                      _UL_(0x00000008)    /*    0kB Memory segment type: fuses */
-#define OTP4_SIZE                      _UL_(0x00000008)    /*    0kB Memory segment type: fuses */
-#define ROM_SIZE                       _UL_(0x00010000)    /*   64kB Memory segment type: fuses */
-#define ROM_PAGE_SIZE                  _UL_(        64)
-#define ROM_NB_OF_PAGES                _UL_(      1024)
+#define SHADOW_SIZE                    _UINT32_(0x00000008)    /*    0kB Memory segment type: fuses */
+#define SW_CALIB_SIZE                  _UINT32_(0x00000004)    /*    0kB Memory segment type: fuses */
+#define TLATCH_SIZE                    _UINT32_(0x00010000)    /*   64kB Memory segment type: fuses */
+#define TLATCH_PAGE_SIZE               _UINT32_(        64)
+#define TLATCH_NB_OF_PAGES             _UINT32_(      1024)
 
-#define SHADOW_SIZE                    _UL_(0x00000008)    /*    0kB Memory segment type: fuses */
-#define SW_CALIB_SIZE                  _UL_(0x00000008)    /*    0kB Memory segment type: fuses */
-#define TLATCH_SIZE                    _UL_(0x00010000)    /*   64kB Memory segment type: fuses */
-#define TLATCH_PAGE_SIZE               _UL_(        64)
-#define TLATCH_NB_OF_PAGES             _UL_(      1024)
+#define USER_PAGE_SIZE                 _UINT32_(0x00000100)    /*    0kB Memory segment type: user_page */
+#define USER_PAGE_PAGE_SIZE            _UINT32_(        64)
+#define USER_PAGE_NB_OF_PAGES          _UINT32_(         4)
 
-#define USER_PAGE_SIZE                 _UL_(0x00000100)    /*    0kB Memory segment type: user_page */
-#define USER_PAGE_PAGE_SIZE            _UL_(        64)
-#define USER_PAGE_NB_OF_PAGES          _UL_(         4)
+#define HSRAM_SIZE                     _UINT32_(0x00010000)    /*   64kB Memory segment type: ram */
+#define APBA_SIZE                      _UINT32_(0x00008000)    /*   32kB Memory segment type: io */
+#define APBB_SIZE                      _UINT32_(0x00010000)    /*   64kB Memory segment type: io */
+#define APBC_SIZE                      _UINT32_(0x00006000)    /*   24kB Memory segment type: io */
+#define PPB_SIZE                       _UINT32_(0x00100000)    /* 1024kB Memory segment type: io */
 
-#define HSRAM_SIZE                     _UL_(0x00010000)    /*   64kB Memory segment type: ram */
-#define APBA_SIZE                      _UL_(0x00008000)    /*   32kB Memory segment type: io */
-#define APBB_SIZE                      _UL_(0x00010000)    /*   64kB Memory segment type: io */
-#define APBC_SIZE                      _UL_(0x00006000)    /*   24kB Memory segment type: io */
-#define PPB_SIZE                       _UL_(0x00100000)    /* 1024kB Memory segment type: io */
-
-#define FLASH_ADDR                     _UL_(0x00000000)    /* FLASH base address (type: flash)*/
-#define AUX0_ADDR                      _UL_(0x00804000)    /* AUX0 base address (type: fuses)*/
-#define AUX1_ADDR                      _UL_(0x00806000)    /* AUX1 base address (type: fuses)*/
-#define AUX2_ADDR                      _UL_(0x00808000)    /* AUX2 base address (type: fuses)*/
-#define AUX3_ADDR                      _UL_(0x0080a000)    /* AUX3 base address (type: fuses)*/
-#define AUX4_ADDR                      _UL_(0x0080c000)    /* AUX4 base address (type: fuses)*/
-#define AUX5_ADDR                      _UL_(0x0080e000)    /* AUX5 base address (type: fuses)*/
-#define BOCOR_ADDR                     _UL_(0x0080c000)    /* BOCOR base address (type: fuses)*/
-#define BOCOR1_ADDR                    _UL_(0x0080c008)    /* BOCOR1 base address (type: fuses)*/
-#define CAL_ADDR                       _UL_(0x00800000)    /* CAL base address (type: fuses)*/
-#define DATAFLASH_ADDR                 _UL_(0x00400000)    /* DATAFLASH base address (type: flash)*/
-#define LOCKROW_ADDR                   _UL_(0x00802000)    /* LOCKROW base address (type: fuses)*/
-#define OTP1_ADDR                      _UL_(0x00806000)    /* OTP1 base address (type: fuses)*/
-#define OTP2_ADDR                      _UL_(0x00806008)    /* OTP2 base address (type: fuses)*/
-#define OTP3_ADDR                      _UL_(0x00806010)    /* OTP3 base address (type: fuses)*/
-#define OTP4_ADDR                      _UL_(0x00806018)    /* OTP4 base address (type: fuses)*/
-#define ROM_ADDR                       _UL_(0x00830000)    /* ROM base address (type: fuses)*/
-#define SHADOW_ADDR                    _UL_(0x00820000)    /* SHADOW base address (type: fuses)*/
-#define SW_CALIB_ADDR                  _UL_(0x00806020)    /* SW_CALIB base address (type: fuses)*/
-#define TLATCH_ADDR                    _UL_(0x00810000)    /* TLATCH base address (type: fuses)*/
-#define USER_PAGE_ADDR                 _UL_(0x00804000)    /* USER_PAGE base address (type: user_page)*/
-#define HSRAM_ADDR                     _UL_(0x20000000)    /* HSRAM base address (type: ram)*/
-#define APBA_ADDR                      _UL_(0x40000000)    /* APBA base address (type: io)*/
-#define APBB_ADDR                      _UL_(0x41000000)    /* APBB base address (type: io)*/
-#define APBC_ADDR                      _UL_(0x42000000)    /* APBC base address (type: io)*/
-#define PPB_ADDR                       _UL_(0xe0000000)    /* PPB base address (type: io)*/
+#define FLASH_ADDR                     _UINT32_(0x00000000)    /* FLASH base address (type: flash)*/
+#define AUX0_ADDR                      _UINT32_(0x00804000)    /* AUX0 base address (type: fuses)*/
+#define AUX1_ADDR                      _UINT32_(0x00806000)    /* AUX1 base address (type: fuses)*/
+#define AUX2_ADDR                      _UINT32_(0x00808000)    /* AUX2 base address (type: fuses)*/
+#define AUX3_ADDR                      _UINT32_(0x0080a000)    /* AUX3 base address (type: fuses)*/
+#define AUX4_ADDR                      _UINT32_(0x0080c000)    /* AUX4 base address (type: fuses)*/
+#define AUX5_ADDR                      _UINT32_(0x0080e000)    /* AUX5 base address (type: fuses)*/
+#define BOCOR_ADDR                     _UINT32_(0x0080c000)    /* BOCOR base address (type: fuses)*/
+#define BOCOR1_ADDR                    _UINT32_(0x0080c008)    /* BOCOR1 base address (type: fuses)*/
+#define CAL_ADDR                       _UINT32_(0x00800000)    /* CAL base address (type: fuses)*/
+#define DATAFLASH_ADDR                 _UINT32_(0x00400000)    /* DATAFLASH base address (type: flash)*/
+#define LOCKROW_ADDR                   _UINT32_(0x00802000)    /* LOCKROW base address (type: fuses)*/
+#define OTP1_ADDR                      _UINT32_(0x00806000)    /* OTP1 base address (type: fuses)*/
+#define OTP2_ADDR                      _UINT32_(0x00806008)    /* OTP2 base address (type: fuses)*/
+#define OTP3_ADDR                      _UINT32_(0x00806010)    /* OTP3 base address (type: fuses)*/
+#define OTP4_ADDR                      _UINT32_(0x00806018)    /* OTP4 base address (type: fuses)*/
+#define ROM_ADDR                       _UINT32_(0x00830000)    /* ROM base address (type: fuses)*/
+#define SHADOW_ADDR                    _UINT32_(0x00820000)    /* SHADOW base address (type: fuses)*/
+#define SW_CALIB_ADDR                  _UINT32_(0x00806020)    /* SW_CALIB base address (type: fuses)*/
+#define TLATCH_ADDR                    _UINT32_(0x00810000)    /* TLATCH base address (type: fuses)*/
+#define USER_PAGE_ADDR                 _UINT32_(0x00804000)    /* USER_PAGE base address (type: user_page)*/
+#define HSRAM_ADDR                     _UINT32_(0x20000000)    /* HSRAM base address (type: ram)*/
+#define APBA_ADDR                      _UINT32_(0x40000000)    /* APBA base address (type: io)*/
+#define APBB_ADDR                      _UINT32_(0x41000000)    /* APBB base address (type: io)*/
+#define APBC_ADDR                      _UINT32_(0x42000000)    /* APBC base address (type: io)*/
+#define PPB_ADDR                       _UINT32_(0xe0000000)    /* PPB base address (type: io)*/
 
 /* ************************************************************************** */
 /*   DEVICE SIGNATURES FOR PIC32CM5164LE00100                                 */
 /* ************************************************************************** */
-#define CHIP_DSU_DID                   _UL_(0X20850000)
+#define CHIP_DSU_DID                   _UINT32_(0X20850000)
 
 /* ************************************************************************** */
 /*   ELECTRICAL DEFINITIONS FOR PIC32CM5164LE00100                            */

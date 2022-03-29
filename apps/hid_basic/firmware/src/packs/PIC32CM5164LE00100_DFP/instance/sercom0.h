@@ -1,7 +1,7 @@
 /*
  * Instance header file for PIC32CM5164LE00100
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,46 +20,46 @@
  *
  */
 
-/* file generated from device description version 2021-06-28T10:08:20Z */
+/* file generated from device description version 2022-01-28T10:04:11Z */
 #ifndef _PIC32CMLE00_SERCOM0_INSTANCE_
 #define _PIC32CMLE00_SERCOM0_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for SERCOM0 peripheral ========== */
-#define SERCOM0_CLK_REDUCTION                    _UL_(1)    /* Reduce clock options to pin 1 for SPI and USART */
-#define SERCOM0_DMA                              _UL_(1)    /* DMA support implemented? */
-#define SERCOM0_DMAC_ID_RX                       _UL_(4)    /* Index of DMA RX trigger */
-#define SERCOM0_DMAC_ID_TX                       _UL_(5)    /* Index of DMA TX trigger */
-#define SERCOM0_FIFO_IMPLEMENTED                 _UL_(1)    /* FIFO Rx/Tx implemented? */
-#define SERCOM0_FIFO_SIZE                        _UL_(8)    /* Rx-Tx FIFO size in bytes */
-#define SERCOM0_FSYNC_IMPLEMENTED                _UL_(0)    /* SPI Frame Synch mode implemented? */
-#define SERCOM0_GCLK_ID_CORE                     _UL_(17)   
-#define SERCOM0_GCLK_ID_SLOW                     _UL_(16)   
-#define SERCOM0_INT_MSB                          _UL_(6)    
-#define SERCOM0_PMSB                             _UL_(3)    
-#define SERCOM0_SPI                              _UL_(1)    /* SPI mode implemented? */
-#define SERCOM0_TWIM                             _UL_(1)    /* TWI Master mode implemented? */
-#define SERCOM0_TWIS                             _UL_(1)    /* TWI Slave mode implemented? */
-#define SERCOM0_TWI_HSMODE                       _UL_(1)    /* TWI HighSpeed mode implemented? */
-#define SERCOM0_ULTRA_IMPLEMENTATION             _UL_(1)    /* ULTRA platform compatibility? */
-#define SERCOM0_USART                            _UL_(1)    /* USART mode implemented? */
-#define SERCOM0_USART_AUTOBAUD                   _UL_(1)    /* USART autobaud implemented? */
-#define SERCOM0_USART_IRDA                       _UL_(1)    /* USART IrDA implemented? */
-#define SERCOM0_USART_ISO7816                    _UL_(1)    /* USART ISO7816 mode implemented? */
-#define SERCOM0_USART_LIN_MASTER                 _UL_(1)    /* USART LIN Master mode implemented? */
-#define SERCOM0_USART_RS485                      _UL_(1)    /* USART RS485 mode implemented? */
-#define SERCOM0_INSTANCE_ID                      _UL_(65)   /* Instance index for SERCOM0 */
-#define SERCOM0_SPI_TX_READY_INT_SRC             _UL_(31)   /* SPI TX READY Interrupt */
-#define SERCOM0_SPI_TX_COMPLETE_INT_SRC          _UL_(32)   /* SPI TX COMPLETE Interrupt */
-#define SERCOM0_SPI_RX_INT_SRC                   _UL_(33)   /* SPI RX Interrupt */
-#define SERCOM0_SPI_ERROR_INT_SRC                _UL_(34)   /* SPI ERROR Interrupt */
-#define SERCOM0_I2C_0_INT_SRC                    _UL_(31)   /* I2C 0 Interrupt */
-#define SERCOM0_I2C_1_INT_SRC                    _UL_(32)   /* I2C 1 Interrupt */
-#define SERCOM0_I2C_2_INT_SRC                    _UL_(33)   /* I2C 2 Interrupt */
-#define SERCOM0_I2C_3_INT_SRC                    _UL_(34)   /* I2C 3 Interrupt */
-#define SERCOM0_USART_TX_READY_INT_SRC           _UL_(31)   /* USART TX READY Interrupt */
-#define SERCOM0_USART_TX_COMPLETE_INT_SRC        _UL_(32)   /* USART TX COMPLETE Interrupt */
-#define SERCOM0_USART_RX_INT_SRC                 _UL_(33)   /* USART RX Interrupt */
-#define SERCOM0_USART_ERROR_INT_SRC              _UL_(34)   /* USART ERROR Interrupt */
+#define SERCOM0_CLK_REDUCTION                    (1)        /* Reduce clock options to pin 1 for SPI and USART */
+#define SERCOM0_DMA                              (1)        /* DMA support implemented? */
+#define SERCOM0_DMAC_ID_RX                       (4)        /* Index of DMA RX trigger */
+#define SERCOM0_DMAC_ID_TX                       (5)        /* Index of DMA TX trigger */
+#define SERCOM0_FIFO_IMPLEMENTED                 (1)        /* FIFO Rx/Tx implemented? */
+#define SERCOM0_FIFO_SIZE                        (8)        /* Rx-Tx FIFO size in bytes */
+#define SERCOM0_FSYNC_IMPLEMENTED                (0)        /* SPI Frame Synch mode implemented? */
+#define SERCOM0_GCLK_ID_CORE                     (17)       
+#define SERCOM0_GCLK_ID_SLOW                     (16)       
+#define SERCOM0_INT_MSB                          (6)        
+#define SERCOM0_PMSB                             (3)        
+#define SERCOM0_SPI                              (1)        /* SPI mode implemented? */
+#define SERCOM0_TWIM                             (1)        /* TWI Master mode implemented? */
+#define SERCOM0_TWIS                             (1)        /* TWI Slave mode implemented? */
+#define SERCOM0_TWI_HSMODE                       (1)        /* TWI HighSpeed mode implemented? */
+#define SERCOM0_ULTRA_IMPLEMENTATION             (1)        /* ULTRA platform compatibility? */
+#define SERCOM0_USART                            (1)        /* USART mode implemented? */
+#define SERCOM0_USART_AUTOBAUD                   (1)        /* USART autobaud implemented? */
+#define SERCOM0_USART_IRDA                       (1)        /* USART IrDA implemented? */
+#define SERCOM0_USART_ISO7816                    (1)        /* USART ISO7816 mode implemented? */
+#define SERCOM0_USART_LIN_MASTER                 (1)        /* USART LIN Master mode implemented? */
+#define SERCOM0_USART_RS485                      (1)        /* USART RS485 mode implemented? */
+#define SERCOM0_INSTANCE_ID                      (65)       /* Instance index for SERCOM0 */
+#define SERCOM0_SPI_TX_READY_INT_SRC             (31)       /* SPI TX READY Interrupt */
+#define SERCOM0_SPI_TX_COMPLETE_INT_SRC          (32)       /* SPI TX COMPLETE Interrupt */
+#define SERCOM0_SPI_RX_INT_SRC                   (33)       /* SPI RX Interrupt */
+#define SERCOM0_SPI_ERROR_INT_SRC                (34)       /* SPI ERROR Interrupt */
+#define SERCOM0_I2C_0_INT_SRC                    (31)       /* I2C 0 Interrupt */
+#define SERCOM0_I2C_1_INT_SRC                    (32)       /* I2C 1 Interrupt */
+#define SERCOM0_I2C_2_INT_SRC                    (33)       /* I2C 2 Interrupt */
+#define SERCOM0_I2C_3_INT_SRC                    (34)       /* I2C 3 Interrupt */
+#define SERCOM0_USART_TX_READY_INT_SRC           (31)       /* USART TX READY Interrupt */
+#define SERCOM0_USART_TX_COMPLETE_INT_SRC        (32)       /* USART TX COMPLETE Interrupt */
+#define SERCOM0_USART_RX_INT_SRC                 (33)       /* USART RX Interrupt */
+#define SERCOM0_USART_ERROR_INT_SRC              (34)       /* USART ERROR Interrupt */
 
 #endif /* _PIC32CMLE00_SERCOM0_INSTANCE_ */

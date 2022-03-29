@@ -1,7 +1,7 @@
 /*
  * Instance header file for PIC32CM5164LE00100
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,19 +20,19 @@
  *
  */
 
-/* file generated from device description version 2021-06-28T10:08:20Z */
+/* file generated from device description version 2022-01-28T10:04:11Z */
 #ifndef _PIC32CMLE00_SUPC_INSTANCE_
 #define _PIC32CMLE00_SUPC_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for SUPC peripheral ========== */
-#define SUPC_BOD12_CALIB_MSB                     _UL_(5)    
-#define SUPC_BOD33_CALIB_MSB                     _UL_(5)    
-#define SUPC_HAS_STDBYPL0_BIT                    _UL_(1)    /* STDBYPL0 bit is present */
-#define SUPC_HAS_LPEFF_BIT                       _UL_(1)    /* LPEFF bit is present */
-#define SUPC_HAS_SEL_BIT                         _UL_(1)    /* SEL bit is present */
-#define SUPC_HAS_BOD33_REG_NAME                  _UL_(1)    /* Name of BOD register is BOD33 */
-#define SUPC_HAS_VREFSEL_BIT                     _UL_(1)    /* VREFSEL bit is present */
-#define SUPC_INSTANCE_ID                         _UL_(6)    /* Instance index for SUPC */
+#define SUPC_BOD12_CALIB_MSB                     (5)        
+#define SUPC_BOD33_CALIB_MSB                     (5)        
+#define SUPC_HAS_STDBYPL0_BIT                    (1)        /* STDBYPL0 bit is present */
+#define SUPC_HAS_LPEFF_BIT                       (1)        /* LPEFF bit is present */
+#define SUPC_HAS_SEL_BIT                         (1)        /* SEL bit is present */
+#define SUPC_HAS_BOD33_REG_NAME                  (1)        /* Name of BOD register is BOD33 */
+#define SUPC_HAS_VREFSEL_BIT                     (1)        /* VREFSEL bit is present */
+#define SUPC_INSTANCE_ID                         (6)        /* Instance index for SUPC */
 
 #endif /* _PIC32CMLE00_SUPC_INSTANCE_ */

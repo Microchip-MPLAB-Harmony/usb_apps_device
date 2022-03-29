@@ -1,7 +1,7 @@
 /*--------------------------------------------------------------------------
  * MPLAB XC32 Compiler -  PIC32CM5164LE00100 linker script
  * 
- * Copyright (c) 2021, Microchip Technology Inc. and its subsidiaries ("Microchip")
+ * Copyright (c) 2022, Microchip Technology Inc. and its subsidiaries ("Microchip")
  * All rights reserved.
  * 
  * This software is developed by Microchip Technology Inc. and its
@@ -77,7 +77,7 @@ ENTRY(__XC32_RESET_HANDLER_NAME)
 #elif (RAM_LENGTH > 0x10000)
 #  error RAM_LENGTH is greater than the max size of 0x10000
 #endif
-  
+
 
 /*************************************************************************
  * Memory-Region Definitions
@@ -93,16 +93,14 @@ MEMORY
   config_D0804004 : ORIGIN = 0xD0804004, LENGTH = 0x4
   config_D0806020 : ORIGIN = 0xD0806020, LENGTH = 0x4
   config_D080C040 : ORIGIN = 0xD080C040, LENGTH = 0x4
-  config_D080600C : ORIGIN = 0xD080600C, LENGTH = 0x4
-  config_D080400C : ORIGIN = 0xD080400C, LENGTH = 0x4
   config_D080C04C : ORIGIN = 0xD080C04C, LENGTH = 0x4
+  config_D080600C : ORIGIN = 0xD080600C, LENGTH = 0x4
   config_D080C044 : ORIGIN = 0xD080C044, LENGTH = 0x4
   config_D080C048 : ORIGIN = 0xD080C048, LENGTH = 0x4
   config_D0806004 : ORIGIN = 0xD0806004, LENGTH = 0x4
   config_D080C004 : ORIGIN = 0xD080C004, LENGTH = 0x4
 
 }
-
 /*************************************************************************
  * Output region definitions.
  * CODE_REGION defines the output region for .text/.rodata.
@@ -151,15 +149,12 @@ SECTIONS
     .config_D080C040 : {
       KEEP(*(.config_D080C040))
     } > config_D080C040
-    .config_D080600C : {
-      KEEP(*(.config_D080600C))
-    } > config_D080600C
-    .config_D080400C : {
-      KEEP(*(.config_D080400C))
-    } > config_D080400C
     .config_D080C04C : {
       KEEP(*(.config_D080C04C))
     } > config_D080C04C
+    .config_D080600C : {
+      KEEP(*(.config_D080600C))
+    } > config_D080600C
     .config_D080C044 : {
       KEEP(*(.config_D080C044))
     } > config_D080C044
@@ -250,6 +245,7 @@ SECTIONS
 
     . = ALIGN(4);
     _etext = .;
+
 
     /*
      *  Align here to ensure that the .bss section occupies space up to

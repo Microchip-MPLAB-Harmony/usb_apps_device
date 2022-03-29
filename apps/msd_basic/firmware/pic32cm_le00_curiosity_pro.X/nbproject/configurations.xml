@@ -326,14 +326,14 @@
         <targetDevice>PIC32CM5164LE00100</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>noID</platformTool>
+        <platformTool>EdbgTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
         <languageToolchainVersion>4.00</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
+        <pack name="PIC32CM-LE_DFP" vendor="Microchip" version="1.0.153"/>
         <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
-        <pack name="PIC32CM-LE_DFP" vendor="Microchip" version="1.0.88"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -546,6 +546,7 @@
         <property key="firmware.update.action" value="firmware.update.use.latest"/>
         <property key="freeze.timers" value="false"/>
         <property key="lastid" value=""/>
+        <property key="loader.board_file" value="${ProjectDir}/board.xboard"/>
         <property key="memories.aux" value="false"/>
         <property key="memories.bootflash" value="true"/>
         <property key="memories.configurationmemory" value="true"/>
@@ -560,6 +561,8 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-7ffff"/>
         <property key="poweroptions.powerenable" value="false"/>
+        <property key="programmerToGoFilePath"
+                  value="D:/USBR3.90_testing/usb_apps_device/apps/msd_basic/firmware/pic32cm_le00_curiosity_pro.X/debug/pic32cm_le00_curiosity_pro/pic32cm_le00_curiosity_pro_ptg"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.preservedataflash" value="false"/>
         <property key="programoptions.preservedataflash.ranges"
@@ -570,6 +573,7 @@
         <property key="programoptions.preserveprogramrange" value="false"/>
         <property key="programoptions.preserveuserid" value="false"/>
         <property key="programoptions.programuserotp" value="false"/>
+        <property key="script.has_reset" value="true"/>
         <property key="script.log_level" value="0"/>
         <property key="script.reset_delay" value="0"/>
         <property key="script.show_output" value="false"/>
@@ -1128,6 +1132,7 @@
         <property key="firmware.update.action" value="firmware.update.use.latest"/>
         <property key="freeze.timers" value="false"/>
         <property key="lastid" value=""/>
+        <property key="loader.board_file" value="${ProjectDir}/board.xboard"/>
         <property key="memories.aux" value="false"/>
         <property key="memories.bootflash" value="true"/>
         <property key="memories.configurationmemory" value="true"/>
@@ -1175,6 +1180,7 @@
         <property key="programoptions.programuserotp" value="false"/>
         <property key="reset.scl" value="false"/>
         <property key="reset.type" value="MCLR"/>
+        <property key="script.has_reset" value="true"/>
         <property key="script.log_level" value="0"/>
         <property key="script.reset_delay" value="0"/>
         <property key="script.show_output" value="false"/>

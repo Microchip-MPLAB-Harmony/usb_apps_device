@@ -1,7 +1,7 @@
 /*
  * Instance header file for PIC32CM5164LE00100
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,18 +20,18 @@
  *
  */
 
-/* file generated from device description version 2021-06-28T10:08:20Z */
+/* file generated from device description version 2022-01-28T10:04:11Z */
 #ifndef _PIC32CMLE00_PTC_INSTANCE_
 #define _PIC32CMLE00_PTC_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for PTC peripheral ========== */
-#define PTC_DMAC_ID_EOC                          _UL_(44)   /* Index of DMA EOC trigger */
-#define PTC_DMAC_ID_SEQ                          _UL_(45)   /* Index of DMA SEQ trigger */
-#define PTC_DMAC_ID_WCOMP                        _UL_(46)   /* Index of DMA WCOMP trigger */
-#define PTC_GCLK_ID                              _UL_(31)   /* Index of Generic Clock */
-#define PTC_LINES_MSB                            _UL_(31)   
-#define PTC_LINES_NUM                            _UL_(32)   /* Number of PTC lines */
-#define PTC_INSTANCE_ID                          _UL_(80)   /* Instance index for PTC */
+#define PTC_DMAC_ID_EOC                          (44)       /* Index of DMA EOC trigger */
+#define PTC_DMAC_ID_SEQ                          (45)       /* Index of DMA SEQ trigger */
+#define PTC_DMAC_ID_WCOMP                        (46)       /* Index of DMA WCOMP trigger */
+#define PTC_GCLK_ID                              (31)       /* Index of Generic Clock */
+#define PTC_LINES_MSB                            (31)       
+#define PTC_LINES_NUM                            (32)       /* Number of PTC lines */
+#define PTC_INSTANCE_ID                          (80)       /* Instance index for PTC */
 
 #endif /* _PIC32CMLE00_PTC_INSTANCE_ */

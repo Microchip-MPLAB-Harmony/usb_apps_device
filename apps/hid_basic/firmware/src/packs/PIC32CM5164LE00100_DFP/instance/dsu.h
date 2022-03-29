@@ -1,7 +1,7 @@
 /*
  * Instance header file for PIC32CM5164LE00100
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,14 +20,14 @@
  *
  */
 
-/* file generated from device description version 2021-06-28T10:08:20Z */
+/* file generated from device description version 2022-01-28T10:04:11Z */
 #ifndef _PIC32CMLE00_DSU_INSTANCE_
 #define _PIC32CMLE00_DSU_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for DSU peripheral ========== */
-#define DSU_DMAC_ID_DCC0                         _UL_(2)    /* DMAC ID for DCC0 register */
-#define DSU_DMAC_ID_DCC1                         _UL_(3)    /* DMAC ID for DCC1 register */
-#define DSU_INSTANCE_ID                          _UL_(33)   /* Instance index for DSU */
+#define DSU_DMAC_ID_DCC0                         (2)        /* DMAC ID for DCC0 register */
+#define DSU_DMAC_ID_DCC1                         (3)        /* DMAC ID for DCC1 register */
+#define DSU_INSTANCE_ID                          (33)       /* Instance index for DSU */
 
 #endif /* _PIC32CMLE00_DSU_INSTANCE_ */

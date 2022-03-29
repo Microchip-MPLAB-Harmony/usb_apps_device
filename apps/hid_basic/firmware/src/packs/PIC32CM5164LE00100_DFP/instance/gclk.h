@@ -1,7 +1,7 @@
 /*
  * Instance header file for PIC32CM5164LE00100
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,20 +20,20 @@
  *
  */
 
-/* file generated from device description version 2021-06-28T10:08:20Z */
+/* file generated from device description version 2022-01-28T10:04:11Z */
 #ifndef _PIC32CMLE00_GCLK_INSTANCE_
 #define _PIC32CMLE00_GCLK_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for GCLK peripheral ========== */
-#define GCLK_GENDIV_BITS                         _UL_(16)   
-#define GCLK_GEN_BITS                            _UL_(3)    
-#define GCLK_GEN_NUM                             _UL_(8)    /* Number of Generic Clock Generators */
-#define GCLK_GEN_NUM_MSB                         _UL_(7)    /* Number of Generic Clock Generators - 1 */
-#define GCLK_GEN_SOURCE_NUM_MSB                  _UL_(8)    /* Number of Generic Clock Sources - 1 */
-#define GCLK_NUM                                 _UL_(35)   /* Number of Generic Clock Users */
-#define GCLK_SOURCE_BITS                         _UL_(4)    
-#define GCLK_SOURCE_NUM                          _UL_(9)    /* Number of Generic Clock Sources */
-#define GCLK_INSTANCE_ID                         _UL_(7)    /* Instance index for GCLK */
+#define GCLK_GENDIV_BITS                         (16)       
+#define GCLK_GEN_BITS                            (3)        
+#define GCLK_GEN_NUM                             (8)        /* Number of Generic Clock Generators */
+#define GCLK_GEN_NUM_MSB                         (7)        /* Number of Generic Clock Generators - 1 */
+#define GCLK_GEN_SOURCE_NUM_MSB                  (8)        /* Number of Generic Clock Sources - 1 */
+#define GCLK_NUM                                 (35)       /* Number of Generic Clock Users */
+#define GCLK_SOURCE_BITS                         (4)        
+#define GCLK_SOURCE_NUM                          (9)        /* Number of Generic Clock Sources */
+#define GCLK_INSTANCE_ID                         (7)        /* Instance index for GCLK */
 
 #endif /* _PIC32CMLE00_GCLK_INSTANCE_ */

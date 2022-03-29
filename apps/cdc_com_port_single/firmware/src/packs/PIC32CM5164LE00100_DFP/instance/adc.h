@@ -1,7 +1,7 @@
 /*
  * Instance header file for PIC32CM5164LE00100
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,18 +20,18 @@
  *
  */
 
-/* file generated from device description version 2021-06-28T10:08:20Z */
+/* file generated from device description version 2022-01-28T10:04:11Z */
 #ifndef _PIC32CMLE00_ADC_INSTANCE_
 #define _PIC32CMLE00_ADC_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for ADC peripheral ========== */
-#define ADC_DMAC_ID_RESRDY                       _UL_(41)   /* index of DMA RESRDY trigger */
-#define ADC_EXTCHANNEL_MSB                       _UL_(23)   /* Number of external channels */
-#define ADC_GCLK_ID                              _UL_(28)   /* Index of Generic Clock */
-#define ADC_INT_CH30                             _UL_(1)    /* Select OPAMP or CTAT on Channel 30 */
-#define ADC_MASTER_SLAVE_MODE                    _UL_(0)    /* ADC Master/Slave Mode */
-#define ADC_INSTANCE_ID                          _UL_(78)   /* Instance index for ADC */
-#define ADC_LOAD_CALIB                           _UL_(1)    /* CALIB register to be loaded from NVM */
+#define ADC_DMAC_ID_RESRDY                       (41)       /* index of DMA RESRDY trigger */
+#define ADC_EXTCHANNEL_MSB                       (23)       /* Number of external channels */
+#define ADC_GCLK_ID                              (28)       /* Index of Generic Clock */
+#define ADC_INT_CH30                             (1)        /* Select OPAMP or CTAT on Channel 30 */
+#define ADC_MASTER_SLAVE_MODE                    (0)        /* ADC Master/Slave Mode */
+#define ADC_INSTANCE_ID                          (78)       /* Instance index for ADC */
+#define ADC_LOAD_CALIB                           (1)        /* CALIB register to be loaded from NVM */
 
 #endif /* _PIC32CMLE00_ADC_INSTANCE_ */
