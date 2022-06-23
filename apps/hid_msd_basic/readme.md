@@ -32,6 +32,7 @@ Following table gives the details of project configurations, target device used,
 | pic32mx470_curiosity.X          | MPLABX | PIC32MX470F512H     | [PIC32MX Curiosity Development Board](#config_13)                          |
 | sam_d21_xpro.X                  | MPLABX | ATSAMD21J18A        | [SAMD21 Xplained Pro Board](#config_2)                                    |
 | sam_e70_xult.X                  | MPLABX | ATSAME70Q21B        | [SAME70 Xplained Ultra Board](#config_4)                                  |
+| sam_e54_xpro.X                  | MPLABX | ATSAME54P20A        | [SAME54 Xplained Pro Board](#config_3)                          |
 
 ## <a name="config_title"></a> Configuring the Hardware
 
@@ -55,6 +56,12 @@ Following table gives the details of project configurations, target device used,
 - LED0 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
 - Pressing the LED Toggle button on the USB Host PC Utility toggles LED0.
 - The USB Host PC utility monitors the switch SW0 switch press on the board.
+
+### <a name="config_3"></a> [SAME54 Xplained Pro Board](https://www.microchip.com/developmenttools/productdetails/atsame54-xpro)
+
+- Use TARGET USB connector on the board to connect the USB Device to the USB Host PC.
+- LED0 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host). The LED is turned off when the Bus is suspended.
+- Press the switch SW0 to trigger communication from the USB Device to the USB Host.
 
 ### <a name="config_4"></a> [SAME70 Xplained Ultra Board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)
 
