@@ -1,29 +1,7 @@
-/* ----------------------------------------------------------------------------
- *         Microchip Technology AT91Bootstrap project
- * ----------------------------------------------------------------------------
- * Copyright (c) 2020, Microchip Technology Inc. and its subsidiaries
+/*
+ * Copyright (C) 2020 Microchip Technology Inc. and its subsidiaries
  *
- * All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions are met:
- *
- * - Redistributions of source code must retain the above copyright notice,
- * this list of conditions and the disclaimer below.
- *
- * Microchip's name may not be used to endorse or promote products derived from
- * this software without specific prior written permission.
- *
- * DISCLAIMER: THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR
- * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT ARE
- * DISCLAIMED. IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIRECT,
- * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
- * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA,
- * OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
- * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
- * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ * SPDX-License-Identifier: MIT
  */
 
 #ifndef __DRAM_HELPERS_H__
@@ -86,6 +64,7 @@ struct dram_timings
 #if defined(CONFIG_LPDDR2) || defined(CONFIG_LPDDR3)
 	unsigned long	tDQSCK_MIN;
 	unsigned long	tDQSCK_MAX;
+	unsigned long	tTSI;		/* Temperature Sensor Interval, ms */
 #endif
 	unsigned long	CL;		/* CAS Latency, Clock cycles */
 	unsigned long	CWL;		/* CAS Write Latency, Clock cycles */
@@ -104,7 +83,7 @@ struct dram_timings
 #if defined(CONFIG_LPDDR3) || defined(CONFIG_DDR3)
 #define TRTP		MAX(4, PS_TO_CYCLES_UP(7500UL))		/* Read to Precharge, Clock Cycles */
 #endif
-#if defined(CONFIG_LPDDR2) || defined(CONFIG_DDR2) 
+#if defined(CONFIG_LPDDR2) || defined(CONFIG_DDR2)
 #define TRTP		MAX(2, PS_TO_CYCLES_UP(7500UL))		/* Read to Precharge, Clock Cycles */
 #endif
 
@@ -112,14 +91,14 @@ struct dram_timings
 #define TRP			PS_TO_CYCLES_UP(tRP_ps)				/* Row Precharge delay, Clock Cycles */
 #define TRCD		PS_TO_CYCLES_UP(tRCD_ps)			/* Row to Column delay, Clock Cycles */
 #define TRAS		NS_TO_CYCLES_UP(tRAS)				/* Row Active Strobe, Clock Cycles */
-#if defined(CONFIG_DDR2) 
+#if defined(CONFIG_DDR2)
 	#if defined(CONFIG_DDR_256_MBIT)
 		#define TRRD		PS_TO_CYCLES_UP(7500UL)			/* Row to Row Delay, Clock Cycles */
-	#elif defined(CONFIG_DDR_512_MBIT) || defined(CONFIG_DDR_1_GBIT)\
+	#elif defined(CONFIG_DDR_512_MBIT) || defined(CONFIG_DDR_1_GBIT) \
 		|| defined(CONFIG_DDR_2_GBIT) || defined(CONFIG_DDR_4_GBIT)
 		#define TRRD		NS_TO_CYCLES_UP(10UL)			/* Row to Row Delay, Clock Cycles */
 	#endif
-#elif defined(CONFIG_DDR3) 
+#elif defined(CONFIG_DDR3)
 	#define TRRD		MAX(4, NS_TO_CYCLES_UP(10UL))		/* Row to Row Delay, Clock Cycles */
 #elif defined(CONFIG_LPDDR2) || defined(CONFIG_LPDDR3)
 	#define TRRD		MAX(2, NS_TO_CYCLES_UP(10UL))		/* Row to Row Delay, Clock Cycles */
@@ -145,7 +124,7 @@ struct dram_timings
 
 #if defined(CONFIG_DDR2)
 	#define TCKE		MAX(3, PS_TO_CYCLES_UP(7500UL))		/* CKE minimum width, Clock Cycles */
-	#define TXP			2							/* Power down exit Delay, Clock Cycles */
+	#define TXP		2					/* Power down exit Delay, Clock Cycles */
 	#define TCKSRX		1
 	#define TCKSRE		1
 	#define TCKESR		TCKE
@@ -166,7 +145,7 @@ struct dram_timings
 		#endif
 	#endif
 	#define TXPR		MAX(5, NS_TO_CYCLES_UP(tRFC + 10))	/* Reset Clock exit time, Clock Cycles */
-	#define TXP			MAX(3, PS_TO_CYCLES_UP(7500UL))		/* Power down exit Delay, Clock Cycles */
+	#define TXP		MAX(3, PS_TO_CYCLES_UP(7500UL))		/* Power down exit Delay, Clock Cycles */
 	#define TXPDLL		MAX(10, NS_TO_CYCLES_UP(24UL))
 	#define TCKSRX		MAX(5, NS_TO_CYCLES_UP(10UL))
 	#define TCKSRE		MAX(5, NS_TO_CYCLES_UP(10UL))
@@ -175,7 +154,7 @@ struct dram_timings
 
 #if defined(CONFIG_LPDDR2)
 	#define TCKE		MAX(3, NS_TO_CYCLES_UP(15UL))		/* CKE minimum width, Clock Cycles */
-	#define TXP			MAX(2, PS_TO_CYCLES_UP(7500UL))		/* Power down exit Delay, Clock Cycles */
+	#define TXP		MAX(2, PS_TO_CYCLES_UP(7500UL))		/* Power down exit Delay, Clock Cycles */
 	#define TCKSRX		2
 	#define TCKSRE		2
 	#define TCKESR		MAX(3, PS_TO_CYCLES_UP(15000UL))	/* CKE minimum width, Clock Cycles */
@@ -188,7 +167,7 @@ struct dram_timings
 
 #if defined(CONFIG_LPDDR3)
 	#define TCKE		MAX(3, PS_TO_CYCLES_UP(7500UL))		/* CKE minimum width, Clock Cycles */
-	#define TXP			MAX(3, PS_TO_CYCLES_UP(7500UL))		/* Power down exit Delay, Clock Cycles */
+	#define TXP		MAX(3, PS_TO_CYCLES_UP(7500UL))		/* Power down exit Delay, Clock Cycles */
 	#define TCKSRX		2
 	#define TCKSRE		2
 	#define TCKESR		MAX(3, PS_TO_CYCLES_UP(15000UL))	/* CKE minimum width, Clock Cycles */
@@ -221,7 +200,7 @@ struct dram_timings
 #endif
 #if defined(CONFIG_LPDDR2) || defined(CONFIG_LPDDR3)
 #define TINIT1		NS_TO_CYCLES_UP(100UL)			/* Clock Cycles */
-#define TINIT2		5UL								/* Clock Cycles */
+#define TINIT2		5UL					/* Clock Cycles */
 #define TINIT4		NS_TO_CYCLES_UP(1000UL)			/* Clock Cycles */
 #define TINIT5		NS_TO_CYCLES_UP(10000UL)		/* Clock Cycles */
 #define TZQINIT		PS_TO_CYCLES_UP(1000000UL)		/* Clock Cycles */

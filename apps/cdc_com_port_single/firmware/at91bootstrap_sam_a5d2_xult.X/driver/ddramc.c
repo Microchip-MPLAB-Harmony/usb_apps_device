@@ -1,40 +1,682 @@
-/* ----------------------------------------------------------------------------
- *         ATMEL Microcontroller Software Support
- * ----------------------------------------------------------------------------
- * Copyright (c) 2007, Stelian Pop <stelian.pop@leadtechdesign.com>
- * Copyright (c) 2007 Lead Tech Design <www.leadtechdesign.com>
- *
- * All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions are met:
- *
- * - Redistributions of source code must retain the above copyright notice,
- * this list of conditions and the disclaimer below.
- *
- * Atmel's name may not be used to endorse or promote products derived from
- * this software without specific prior written permission.
- *
- * DISCLAIMER: THIS SOFTWARE IS PROVIDED BY ATMEL "AS IS" AND ANY EXPRESS OR
- * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT ARE
- * DISCLAIMED. IN NO EVENT SHALL ATMEL BE LIABLE FOR ANY DIRECT, INDIRECT,
- * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
- * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA,
- * OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
- * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
- * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
+// Copyright (C) 2006 Microchip Technology Inc. and its subsidiaries
+// Copyright (C) 2007 Lead Tech Design <www.leadtechdesign.com>
+// Copyright (C) 2007 Stelian Pop <stelian.pop@leadtechdesign.com>
+//
+// SPDX-License-Identifier: MIT
+
 #include "hardware.h"
 #include "arch/at91_ddrsdrc.h"
+#include "arch/at91_pmc/pmc.h"
 #include "arch/at91_sfr.h"
 #include "arch/at91_sfrbu.h"
 #include "backup.h"
 #include "debug.h"
+#include "pmc.h"
 #include "ddramc.h"
 #include "timer.h"
 #include "usart.h"
+
+#if defined(CONFIG_DDR_SET_BY_JEDEC)
+#include "ddr_jedec.h"
+#elif defined(CONFIG_DDR_SET_BY_DEVICE)
+#include "ddr_device.h"
+#endif
+
+static void ddram_reg_config(struct ddramc_register *ddramc_config)
+{
+	unsigned int type, dbw, col, row, cas, bank;
+
+#if defined(CONFIG_DDR_SET_BY_JEDEC) || defined(CONFIG_DDR_SET_BY_TIMING)
+	unsigned int mck;
+#endif
+
+#if defined(CONFIG_DDR_SET_BY_DEVICE)
+#if defined(CONFIG_DDR_MT41K128M16_D2)
+/* Two DDR3L(MT41H128M16JT-125-K = 16 Mbit x 16 x 8 banks), total 4Gbit on SAMA5D2 Xplained Ultra Evaluation Kit*/
+	type = AT91C_DDRC2_MD_DDR3_SDRAM;
+	dbw = AT91C_DDRC2_DBW_32_BITS;
+	col = AT91C_DDRC2_NC_DDR10_SDR9;
+	row = AT91C_DDRC2_NR_14;
+	cas = AT91C_DDRC2_CAS_5;
+	bank = AT91C_DDRC2_NB_BANKS_8;
+#if defined(CONFIG_BUS_SPEED_116MHZ)
+	/* Refresh Timer is (64ms / 8k) * 116MHz = 907(0x38b) */
+	ddramc_config->rtr = 0x38b;
+#elif defined(CONFIG_BUS_SPEED_166MHZ)
+/* Refresh Timer is (64ms / 8k) * 166MHz = 1297(0x511) */
+	ddramc_config->rtr = 0x511;
+#else
+	#error "No CLK setting defined"
+#endif
+	/*
+	 * According to the sama5d2 datasheet and the following values:
+	 * T Sens = 0.75%/C, V Sens = 0.2%/mV, T driftrate = 1C/sec and V driftrate = 15 mV/s
+	 * Warning: note that the values T driftrate and V driftrate are dependent on
+	 * the application environment.
+	 * ZQCS period is 1.5 / ((0.75 x 1) + (0.2 x 15)) = 0.4s
+	 * If tref is 7.8us, we have: 400000 / 7.8 = 51282(0xC852)
+	 * */
+	ddramc_config->cal_mr4r = AT91C_DDRC2_COUNT_CAL(0xC852);
+	ddramc_config->tim_calr = AT91C_DDRC2_ZQCS(64);
+#elif defined(CONFIG_DDR_W632GU6MB)
+/* Two DDR3L(W632GU6MB-12 = 16 Mbit x 16 x 8 banks), total 4 Gbit on SAMA5D2 ICP*/
+	type = AT91C_DDRC2_MD_DDR3_SDRAM;
+	dbw = AT91C_DDRC2_DBW_32_BITS;
+	col = AT91C_DDRC2_NC_DDR10_SDR9;
+	row = AT91C_DDRC2_NR_14;
+	cas = AT91C_DDRC2_CAS_5;
+	bank = AT91C_DDRC2_NB_BANKS_8;
+#if defined(CONFIG_BUS_SPEED_166MHZ)
+	ddramc_config->rtr = 0x298;
+#else
+	#error "No CLK setting defined"
+#endif
+	ddramc_config->cal_mr4r = AT91C_DDRC2_COUNT_CAL(0x5355);
+#elif defined(CONFIG_DDR_W972GG6KB_D2)
+/* Two DDR2 (W972GG6KB-25-2 Gbits = 16 Mbits x 16 x 8 banks), total 4 Gbits on the SAMA5D2-PTC-EK */
+	type = AT91C_DDRC2_MD_DDR2_SDRAM;
+	dbw = AT91C_DDRC2_DBW_32_BITS;
+	col = AT91C_DDRC2_NC_DDR10_SDR9;
+	row = AT91C_DDRC2_NR_14;
+	cas = AT91C_DDRC2_CAS_3;
+	bank = AT91C_DDRC2_NB_BANKS_8;
+	ddramc_config->rtr = 0x500;
+#elif defined(CONFIG_DDR_W972GG6KB_9X60)
+/* One DDR2 (W972GG6KB-25-2 Gbits = 16 Mbits x 16 x 8 banks), total 2 Gbits on the SAM9X60-EK */
+	type = AT91C_DDRC2_MD_DDR2_SDRAM;
+	dbw = AT91C_DDRC2_DBW_16_BITS;
+	col = AT91C_DDRC2_NC_DDR10_SDR9;
+	row = AT91C_DDRC2_NR_14;
+	cas = AT91C_DDRC2_CAS_3;
+	bank = AT91C_DDRC2_NB_BANKS_8;
+	ddramc_config->rtr = 0x30e;
+#elif defined(CONFIG_DDR_W971GG6SB_D2)
+/* DDR2 (W971GG6SB = 8 Mwords x 8 Banks x 16 bits), total 1 Gbit in SiP on the SAMA5D2-SOM-EK */
+	type = AT91C_DDRC2_MD_DDR2_SDRAM;
+	dbw = AT91C_DDRC2_DBW_16_BITS;
+	col = AT91C_DDRC2_NC_DDR10_SDR9;
+	row = AT91C_DDRC2_NR_13;
+	cas = AT91C_DDRC2_CAS_3;
+	bank = AT91C_DDRC2_NB_BANKS_8;
+	ddramc_config->rtr = 0x4FF;
+#elif defined(CONFIG_DDR_W9712G6KB25I)
+/* 2 Mwords x 4 Banks x 16 bits DDR2 SDRAM (128 Mbit) in SAMA5D2 Sip */
+	type = AT91C_DDRC2_MD_DDR2_SDRAM;
+	dbw = AT91C_DDRC2_DBW_16_BITS;
+	col = AT91C_DDRC2_NC_DDR9_SDR8;
+	row = AT91C_DDRC2_NR_12;
+	cas = AT91C_DDRC2_CAS_3;
+	bank = AT91C_DDRC2_NB_BANKS_4;
+	ddramc_config->rtr = 0x4FF;
+#elif defined(CONFIG_DDR_W9751G6KB) || defined(CONFIG_DDR_W971GG6SB)
+	type = AT91C_DDRC2_MD_DDR2_SDRAM;
+	dbw = AT91C_DDRC2_DBW_16_BITS;
+	col = AT91C_DDRC2_NC_DDR10_SDR9;
+	row = AT91C_DDRC2_NR_13;
+	cas = AT91C_DDRC2_CAS_3;
+#if defined(CONFIG_DDR_W9751G6KB)
+/* DDR2 (W9751G6KB = 8 Mwords x 4 Banks x 16 bits), total 512 Mbit in SAM9X60D5M and ATSAMA5D27C-D5M SiP */
+	bank = AT91C_DDRC2_NB_BANKS_4;
+#else // defined(CONFIG_DDR_W971GG6SB)
+/* DDR2 (W971GG6SB = 8 Mwords x 8 Banks x 16 bits), total 1 Gbit in SAM9X60D1G and ATSAMA5D27C-D1G SiP */
+	bank = AT91C_DDRC2_NB_BANKS_8;
+#endif
+#if defined(CONFIG_DDR_EXT_TEMP_RANGE)
+#if defined(CONFIG_BUS_SPEED_166MHZ)
+	ddramc_config->rtr = 0x2A5;
+#elif defined(CONFIG_BUS_SPEED_200MHZ)
+	ddramc_config->rtr = 0x30c;
+#else
+	#error "No CLK setting defined"
+#endif
+#else
+#if defined(CONFIG_BUS_SPEED_166MHZ)
+	ddramc_config->rtr = 0x50E;
+#elif defined(CONFIG_BUS_SPEED_200MHZ)
+	ddramc_config->rtr = 0x618;
+#else
+	#error "No CLK setting defined"
+#endif
+#endif
+#elif defined(CONFIG_DDR_AD220032D)
+/* LPDDR2 (AD220032D = 8 Mwords x 8 Banks x 32 bits), total 2 Gbit in SiP on SAMA5D27-WLSOM1-EK */
+	type = AT91C_DDRC2_MD_LPDDR2_SDRAM;
+	dbw = AT91C_DDRC2_DBW_32_BITS;
+	col = AT91C_DDRC2_NC_DDR9_SDR8;
+	row = AT91C_DDRC2_NR_14;
+	cas = AT91C_DDRC2_CAS_3;
+	bank = AT91C_DDRC2_NB_BANKS_8;
+	ddramc_config->rtr = AT91C_DDRC2_ENABLE_ADJ_REF | 0x27f;
+	ddramc_config->cal_mr4r = AT91C_DDRC2_COUNT_CAL(0xFFFE) |
+				   AT91C_DDRC2_MR4R(0xFFFE);
+	ddramc_config->tim_calr = AT91C_DDRC2_ZQCS(15);
+	ddramc_config->lpddr2_lpr = AT91C_LPDDRC2_DS(0x03);
+#elif defined(CONFIG_DDR_AD210032F)
+/* 4 Mwords x 8 Banks x 32 bits LPDDR2-SDRAM (1 Gbit) on the SAMA5D2 SiP */
+	type = AT91C_DDRC2_MD_LPDDR2_SDRAM;
+	dbw = AT91C_DDRC2_DBW_32_BITS;
+	col = AT91C_DDRC2_NC_DDR9_SDR8;
+	row = AT91C_DDRC2_NR_13;
+	cas = AT91C_DDRC2_CAS_3;
+	bank = AT91C_DDRC2_NB_BANKS_8;
+	ddramc_config->rtr = AT91C_DDRC2_ENABLE_ADJ_REF | 0x27f;
+	ddramc_config->cal_mr4r = AT91C_DDRC2_COUNT_CAL(0xFFFE) |
+				   AT91C_DDRC2_MR4R(0xFFFE);
+	ddramc_config->tim_calr = AT91C_DDRC2_ZQCS(15);
+	ddramc_config->lpddr2_lpr = AT91C_LPDDRC2_DS(0x03);
+#elif defined(CONFIG_DDR_MT47H128M16)
+/* DDR2 (MT47H128M16 = 8 Mwords x 8 Banks x 32 bits), total 2 Gbit on the SAMA5D3-EK */
+	type = AT91C_DDRC2_MD_DDR2_SDRAM;
+	dbw = AT91C_DDRC2_DBW_32_BITS;
+	col = AT91C_DDRC2_NC_DDR10_SDR9;
+	row = AT91C_DDRC2_NR_14;
+	cas = AT91C_DDRC2_CAS_3;
+	bank = AT91C_DDRC2_NB_BANKS_8;
+#if defined(CONFIG_DDR_EXT_TEMP_RANGE)
+/* The refresh period is 64ms (commercial) or 32ms (industrial and automotive). */
+#if defined(CONFIG_BUS_SPEED_133MHZ)
+	ddramc_config->rtr = 0x207;
+#elif defined(CONFIG_BUS_SPEED_148MHZ)
+	ddramc_config->rtr = 0x242;
+#elif defined(CONFIG_BUS_SPEED_166MHZ)
+	ddramc_config->rtr = 0x288;
+#elif defined(CONFIG_BUS_SPEED_170MHZ)
+	ddramc_config->rtr = 0x298;
+#elif defined(CONFIG_BUS_SPEED_176MHZ)
+	ddramc_config->rtr = 0x2b0;
+#elif defined(CONFIG_BUS_SPEED_200MHZ)
+	ddramc_config->rtr = 0x30e;
+#else
+	#error "No CLK setting defined"
+#endif
+#else
+#if defined(CONFIG_BUS_SPEED_133MHZ)
+	ddramc_config->rtr = 0x40e;
+#elif defined(CONFIG_BUS_SPEED_148MHZ)
+	ddramc_config->rtr = 0x484;
+#elif defined(CONFIG_BUS_SPEED_166MHZ)
+	ddramc_config->rtr = 0x510;
+#elif defined(CONFIG_BUS_SPEED_170MHZ)
+	ddramc_config->rtr = 0x530;
+#elif defined(CONFIG_BUS_SPEED_176MHZ)
+	ddramc_config->rtr = 0x55f;
+#elif defined(CONFIG_BUS_SPEED_200MHZ)
+	ddramc_config->rtr = 0x61a;
+#else
+	#error "No CLK setting defined"
+#endif
+#endif
+#elif defined(CONFIG_DDR_MT47H64M16)
+/* DDR2 (MT47H64M16 x 2 = 8 Mwords x 8 Banks x 16 bits x 2), total 2 Gbit on the SAMA5D3-Xplained */
+	type = AT91C_DDRC2_MD_DDR2_SDRAM;
+	dbw = AT91C_DDRC2_DBW_32_BITS;
+	col = AT91C_DDRC2_NC_DDR10_SDR9;
+	row = AT91C_DDRC2_NR_13;
+	cas = AT91C_DDRC2_CAS_3;
+	bank = AT91C_DDRC2_NB_BANKS_8;
+#if defined(CONFIG_BUS_SPEED_133MHZ)
+	ddramc_config->rtr = 0x40F;
+#elif defined(CONFIG_BUS_SPEED_166MHZ)
+	ddramc_config->rtr = 0x510;
+#else
+	#error "No CLK setting defined"
+#endif
+#elif defined(CONFIG_DDR_MT47H128M8)
+/* DDR2 (MT47H128M8 x 2 = 8 Mwords x 8 Banks x 16 bits x 2), total 2 Gbit on the SAMA5D4-EK */
+	type = AT91C_DDRC2_MD_DDR2_SDRAM;
+	dbw = AT91C_DDRC2_DBW_32_BITS;
+	col = AT91C_DDRC2_NC_DDR10_SDR9;
+	row = AT91C_DDRC2_NR_14;
+	cas = AT91C_DDRC2_CAS_3;
+	bank = AT91C_DDRC2_NB_BANKS_8;
+#if defined(CONFIG_BUS_SPEED_148MHZ)
+	ddramc_config->rtr = 0x243;
+#elif defined(CONFIG_BUS_SPEED_170MHZ)
+	ddramc_config->rtr = 0x229;
+#elif defined(CONFIG_BUS_SPEED_176MHZ)
+	ddramc_config->rtr = 0x2b0;
+#elif defined(CONFIG_BUS_SPEED_200MHZ)
+	ddramc_config->rtr = 0x30e;
+#else
+	#error "No CLK setting defined"
+#endif
+#else
+#error "DDR-SDRAM device is not supportted!"
+#endif
+
+#else
+
+/* Configure the type of memory used. */
+#if defined(CONFIG_LPDDR1)
+	type = AT91C_DDRC2_MD_LP_DDR_SDRAM;
+#elif defined(CONFIG_DDR2)
+	type = AT91C_DDRC2_MD_DDR2_SDRAM;
+#elif defined(CONFIG_LPDDR2)
+	type = AT91C_DDRC2_MD_LPDDR2_SDRAM;
+#elif defined(CONFIG_DDR3)
+	type = AT91C_DDRC2_MD_DDR3_SDRAM;
+#elif defined(CONFIG_LPDDR3)
+	type = AT91C_DDRC2_MD_LPDDR3_SDRAM;
+#endif
+
+/* Configure the data Bus Width */
+#if defined(CONFIG_DBW_32)
+	dbw = AT91C_DDRC2_DBW_32_BITS;
+#else
+	dbw = AT91C_DDRC2_DBW_16_BITS;
+#endif
+
+/* Configure the number of column bits */
+#if defined(CONFIG_LPDDR1)
+	bank = AT91C_DDRC2_NB_BANKS_4;
+
+#if defined (CONFIG_DDR_64_MBIT)
+#if defined (CONFIG_DBW_16)
+	row = AT91C_DDRC2_NR_12;
+	col = AT91C_DDRC2_NC_DDR9_SDR8;
+#else
+	row = AT91C_DDRC2_NR_11;
+	col = AT91C_DDRC2_NC_DDR9_SDR8;
+#endif
+	
+#elif defined (CONFIG_DDR_128_MBIT)
+#if defined (CONFIG_DBW_16)
+	row = AT91C_DDRC2_NR_12;
+	col = AT91C_DDRC2_NC_DDR10_SDR9;
+	#else
+	row = AT91C_DDRC2_NR_12;
+	col = AT91C_DDRC2_NC_DDR9_SDR8;
+#endif
+
+#elif defined (CONFIG_DDR_256_MBIT)
+#if defined (CONFIG_DBW_16)
+	row = AT91C_DDRC2_NR_13;
+	col = AT91C_DDRC2_NC_DDR10_SDR9;
+#else
+	row = AT91C_DDRC2_NR_12;
+	col = AT91C_DDRC2_NC_DDR10_SDR9;
+#endif
+
+#elif defined (CONFIG_DDR_512_MBIT)
+#if defined (CONFIG_DBW_16)
+	row = AT91C_DDRC2_NR_13;
+	col = AT91C_DDRC2_NC_DDR11_SDR10;
+#else
+	row = AT91C_DDRC2_NR_13;
+	col = AT91C_DDRC2_NC_DDR10_SDR9;
+#endif
+
+#elif defined (CONFIG_DDR_1_GBIT)
+#if defined (CONFIG_DBW_16)
+	row = AT91C_DDRC2_NR_14;
+	col = AT91C_DDRC2_NC_DDR11_SDR10;
+#else
+#if defined (CONFIG_R14_C10)
+	row = AT91C_DDRC2_NR_14;
+	col = AT91C_DDRC2_NC_DDR10_SDR9;
+#elif defined(CONFIG_R13_C11)
+	row = AT91C_DDRC2_NR_13;
+	col = AT91C_DDRC2_NC_DDR11_SDR10;
+#endif /* Endif CONFIG_R14_C10 */
+#endif /* Endif CONFIG_DBW_16 */
+
+#elif defined (CONFIG_DDR_2_GBIT)
+#if defined (CONFIG_DBW_16)
+	row = AT91C_DDRC2_NR_14;
+	col = AT91C_DDRC2_NC_DDR12_SDR11;
+#else
+	row = AT91C_DDRC2_NR_14;
+	col = AT91C_DDRC2_NC_DDR11_SDR10;
+#endif /* Endif CONFIG_DBW_16 */
+#endif /* Endif CONFIG_DDR_2_GBIT */
+#endif /* Endif LPDDR1 */
+
+#if defined(CONFIG_DDR2)
+#if defined (CONFIG_DDR_128_MBIT)
+	bank = AT91C_DDRC2_NB_BANKS_4;
+	row = AT91C_DDRC2_NR_12;
+	col = AT91C_DDRC2_NC_DDR9_SDR8;
+#elif defined (CONFIG_DDR_256_MBIT)
+	bank = AT91C_DDRC2_NB_BANKS_4;
+	row = AT91C_DDRC2_NR_13;
+	col = AT91C_DDRC2_NC_DDR9_SDR8;
+#elif defined (CONFIG_DDR_512_MBIT) 
+	bank = AT91C_DDRC2_NB_BANKS_4;
+	row = AT91C_DDRC2_NR_13;
+	col = AT91C_DDRC2_NC_DDR10_SDR9;
+#elif defined (CONFIG_DDR_1_GBIT)
+	bank = AT91C_DDRC2_NB_BANKS_8;
+	row = AT91C_DDRC2_NR_13;
+	col = AT91C_DDRC2_NC_DDR10_SDR9;
+#elif defined (CONFIG_DDR_2_GBIT)
+	bank = AT91C_DDRC2_NB_BANKS_8;
+	row = AT91C_DDRC2_NR_14;
+	col = AT91C_DDRC2_NC_DDR10_SDR9;
+#endif /* Endif of CONFIG_DDR_128_MBIT */
+#endif /* Endif of DDR2 */
+
+#if defined(CONFIG_LPDDR2)
+#if defined (CONFIG_DDR_128_MBIT)
+	bank = AT91C_DDRC2_NB_BANKS_4;
+#if defined (CONFIG_DBW_16)
+	row = AT91C_DDRC2_NR_12;
+	col = AT91C_DDRC2_NC_DDR9_SDR8;
+#else
+#error "128Mbit 32bit width LPDDR2 not supported"
+#endif /* endif of CONFIG_DBW_16 */
+
+#elif defined (CONFIG_DDR_256_MBIT)
+	bank = AT91C_DDRC2_NB_BANKS_4;
+#if defined (CONFIG_DBW_16)
+	row = AT91C_DDRC2_NR_13;
+	col = AT91C_DDRC2_NC_DDR9_SDR8;
+#else
+#error "256Mbit 32bit width LPDDR2 not supported"
+#endif /* endif of CONFIG_DBW_16 */
+#elif defined (CONFIG_DDR_512_MBIT)
+	bank = AT91C_DDRC2_NB_BANKS_4;
+#if defined (CONFIG_DBW_16)
+	row = AT91C_DDRC2_NR_13;
+	col = AT91C_DDRC2_NC_DDR10_SDR9;
+#else
+	row = AT91C_DDRC2_NR_13;
+	col = AT91C_DDRC2_NC_DDR9_SDR8;
+#endif /* endif of CONFIG_DBW_16 */
+#elif defined (CONFIG_DDR_1_GBIT)
+#if defined (CONFIG_DBW_16)
+	/* 16 bit bus width */
+#if defined CONFIG_LPDDR2_S2
+	bank = AT91C_DDRC2_NB_BANKS_4;
+	row = AT91C_DDRC2_NR_14;
+	col = AT91C_DDRC2_NC_DDR10_SDR9;
+#else
+	bank = AT91C_DDRC2_NB_BANKS_8;
+	row = AT91C_DDRC2_NR_13;
+	col = AT91C_DDRC2_NC_DDR10_SDR9;
+#endif /* endif of LPDDR2_S2 */
+#else
+	/* 32bit bus width */
+#if defined CONFIG_LPDDR2_S2
+	bank = AT91C_DDRC2_NB_BANKS_4;
+	row = AT91C_DDRC2_NR_14;
+	col = AT91C_DDRC2_NC_DDR9_SDR8;
+#else
+	bank = AT91C_DDRC2_NB_BANKS_8;
+	row = AT91C_DDRC2_NR_13;
+	col = AT91C_DDRC2_NC_DDR9_SDR8;
+#endif /* endif of CONFIG_DBW_16 */
+#endif
+#elif defined (CONFIG_DDR_2_GBIT)
+#if defined (CONFIG_DBW_16)
+	/* 16 bit bus width */
+#if defined CONFIG_LPDDR2_S4
+	bank = AT91C_DDRC2_NB_BANKS_8;
+	row = AT91C_DDRC2_NR_14;
+	col = AT91C_DDRC2_NC_DDR10_SDR9;
+#else
+#error "LPDDR2 2Gb 16bit width with 4 banks is not supported!"
+#endif
+#else
+	/* 32bit bus width */
+#if defined CONFIG_LPDDR2_S4
+	bank = AT91C_DDRC2_NB_BANKS_8;
+	row = AT91C_DDRC2_NR_14;
+	col = AT91C_DDRC2_NC_DDR9_SDR8;
+#else
+#error "LPDDR2 2Gb 32bit width with 4 banks is not supported!"
+#endif /* endif of CONFIG_LPDDR2_S4 */
+#endif /* endif of CONFIG_DBW_16 */
+#endif /* endif of CONFIG_DDR_128_MBIT */
+#endif /* endif LPDDR2 */
+
+#if defined(CONFIG_DDR3)
+	bank = AT91C_DDRC2_NB_BANKS_8;
+#if defined (CONFIG_DDR_512_MBIT)
+	row = AT91C_DDRC2_NR_12;
+	col = AT91C_DDRC2_NC_DDR10_SDR9;
+#elif defined (CONFIG_DDR_1_GBIT)
+	row = AT91C_DDRC2_NR_13;
+	col = AT91C_DDRC2_NC_DDR10_SDR9;
+#elif defined (CONFIG_DDR_2_GBIT)
+	row = AT91C_DDRC2_NR_14;
+	col = AT91C_DDRC2_NC_DDR10_SDR9;
+#endif /* endif of CONFIG_DDR_512_MBIT */
+#endif /* Endif DDR3 */
+
+#if defined(CONFIG_CAS_2)
+	cas = AT91C_DDRC2_CAS_2;
+#elif defined(CONFIG_CAS_3)
+	cas = AT91C_DDRC2_CAS_3;
+#elif defined(CONFIG_CAS_4)
+	cas = AT91C_DDRC2_CAS_4;
+#elif defined(CONFIG_CAS_5)
+	cas = AT91C_DDRC2_CAS_5;
+#elif defined(CONFIG_CAS_6)
+	cas = AT91C_DDRC2_CAS_6;
+#endif
+
+#endif
+	ddramc_config->mdr = type | dbw;
+	ddramc_config->cr = (col |
+						 row |
+						 bank |
+						 cas |
+#if defined(CONFIG_NOT_DQS_DISABLED)
+						 AT91C_DDRC2_NDQS_DISABLED |
+#endif
+#if defined(CONFIG_LPDDR2)
+						AT91C_DDRC2_ZQ_SHORT |
+#endif
+						AT91C_DDRC2_DECOD_INTERLEAVED |
+#if defined(CONFIG_DDR3)
+						AT91C_DDRC2_DISABLE_DLL |
+						AT91C_DDRC2_WEAK_STRENGTH_RZQ7 |
+#endif
+						AT91C_DDRC2_DECOD_INTERLEAVED |
+						AT91C_DDRC2_UNAL_SUPPORTED
+						);
+#if defined(CONFIG_LPDDR1)
+	ddramc_config->lpr = 0;
+#endif
+
+#if defined(CONFIG_DDR_SET_BY_JEDEC)
+#ifdef CONFIG_BUS_SPEED_116MHZ
+	mck = 116;
+#elif CONFIG_BUS_SPEED_133MHZ
+	mck = 133;
+#elif CONFIG_BUS_SPEED_148MHZ
+	mck = 148;
+#elif CONFIG_BUS_SPEED_166MHZ
+	mck = 166;
+#elif CONFIG_BUS_SPEED_164MHZ
+	mck = 164;
+#elif CONFIG_BUS_SPEED_170MHZ
+	mck = 170;
+#elif CONFIG_BUS_SPEED_176MHZ
+	mck = 176;
+#elif CONFIG_BUS_SPEED_200MHZ
+	mck = 200;
+#endif
+	/* Refresh Timer is (refresh_window / refresh_cycles) * master_clock */
+	ddramc_config->rtr = CONFIG_REF_WIN * mck * 1000 / CONFIG_REF_CYCLE;
+	ddramc_config->t0pr = ( AT91C_DDRC2_TRAS_(NS2CYCLES(ddr_ddram_timings.tras, mck)) |
+							AT91C_DDRC2_TRCD_(NS2CYCLES(ddr_ddram_timings.trcd, mck)) |
+							AT91C_DDRC2_TWR_(NS2CYCLES(ddr_ddram_timings.twr, mck)) |
+							AT91C_DDRC2_TRC_(NS2CYCLES(ddr_ddram_timings.trc, mck)) |
+							AT91C_DDRC2_TRP_(NS2CYCLES(ddr_ddram_timings.trp, mck)) |
+							AT91C_DDRC2_TRRD_(NS2CYCLES(ddr_ddram_timings.trrd, mck))|
+							AT91C_DDRC2_TWTR_(ddr_ddram_timings.twtr) |
+							AT91C_DDRC2_TMRD_(ddr_ddram_timings.tmrd)
+						  );
+	ddramc_config->t1pr = ( AT91C_DDRC2_TRFC_(NS2CYCLES(ddr_ddram_timings.trfc, mck)) |
+							AT91C_DDRC2_TXSNR_(NS2CYCLES(ddr_ddram_timings.txsnr, mck)) |
+							AT91C_DDRC2_TXSRD_(NS2CYCLES(ddr_ddram_timings.txsrd, mck)) |
+#if defined(CONFIG_LPDDR1)
+							AT91C_DDRC2_TXP_(NS2CYCLES(ddr_ddram_timings.txp, mck))
+#else
+							AT91C_DDRC2_TXP_(ddr_ddram_timings.txp)
+#endif
+						  );
+#if !defined(CONFIG_DDR2)
+	ddramc_config->t2pr = ( AT91C_DDRC2_TXARD_(0) |
+							AT91C_DDRC2_TXARDS_(0) |
+#else
+/* This field is found only in the DDR2-SDRAM devices */
+	ddramc_config->t2pr = ( AT91C_DDRC2_TXARD_(ddr_ddram_timings.txard) |
+							AT91C_DDRC2_TXARDS_(ddr_ddram_timings.txards) |
+#endif
+							AT91C_DDRC2_TRPA_(NS2CYCLES(ddr_ddram_timings.trpa, mck)) |
+							AT91C_DDRC2_TRTP_(NS2CYCLES(ddr_ddram_timings.trtp, mck)) |
+							AT91C_DDRC2_TFAW_(NS2CYCLES(ddr_ddram_timings.tfaw,mck))
+						  );
+
+#elif defined(CONFIG_DDR_SET_BY_DEVICE)
+	ddramc_config->t0pr = ( AT91C_DDRC2_TRAS_(ddr_ddram_timings.tras) |
+							AT91C_DDRC2_TRCD_(ddr_ddram_timings.trcd) |
+							AT91C_DDRC2_TWR_(ddr_ddram_timings.twr) |
+							AT91C_DDRC2_TRC_(ddr_ddram_timings.trc) |
+							AT91C_DDRC2_TRP_(ddr_ddram_timings.trp) |
+							AT91C_DDRC2_TRRD_(ddr_ddram_timings.trrd)|
+							AT91C_DDRC2_TWTR_(ddr_ddram_timings.twtr) |
+							AT91C_DDRC2_TMRD_(ddr_ddram_timings.tmrd)
+						  );
+	ddramc_config->t1pr = ( AT91C_DDRC2_TRFC_(ddr_ddram_timings.trfc) |
+							AT91C_DDRC2_TXSNR_(ddr_ddram_timings.txsnr) |
+							AT91C_DDRC2_TXSRD_(ddr_ddram_timings.txsrd) |
+							AT91C_DDRC2_TXP_(ddr_ddram_timings.txp)
+						  );
+/* This field is found only in the DDR2-SDRAM devices */
+	ddramc_config->t2pr = ( AT91C_DDRC2_TXARD_(ddr_ddram_timings.txard) |
+							AT91C_DDRC2_TXARDS_(ddr_ddram_timings.txards) |
+							AT91C_DDRC2_TRPA_(ddr_ddram_timings.trpa) |
+							AT91C_DDRC2_TRTP_(ddr_ddram_timings.trtp) |
+							AT91C_DDRC2_TFAW_(ddr_ddram_timings.tfaw)
+						  );
+
+#elif defined(CONFIG_DDR_SET_BY_TIMING)
+	/* Refresh Timer is (refresh_window / refresh_cycles) * master_clock */
+	ddramc_config->rtr = CONFIG_DDR_RTC;
+/* Assume the ddram_timings for 6ns min clock period */
+	ddramc_config->t0pr = ( AT91C_DDRC2_TRAS_(CONFIG_DDR_TRSA) |
+							AT91C_DDRC2_TRCD_(CONFIG_DDR_TRCD) |
+							AT91C_DDRC2_TWR_(CONFIG_DDR_TWR) |
+							AT91C_DDRC2_TRC_(CONFIG_DDR_TRC) |
+							AT91C_DDRC2_TRP_(CONFIG_DDR_TRP) |
+							AT91C_DDRC2_TRRD_(CONFIG_DDR_TRRD)|
+							AT91C_DDRC2_TWTR_(CONFIG_DDR_TWTR) |
+							AT91C_DDRC2_TMRD_(CONFIG_DDR_TMRD)
+						  );
+	ddramc_config->t1pr = ( AT91C_DDRC2_TRFC_(CONFIG_DDR_TRFC) |
+							AT91C_DDRC2_TXSNR_(CONFIG_DDR_TXSNR) |
+							AT91C_DDRC2_TXSRD_(CONFIG_DDR_TXSRD) |
+							AT91C_DDRC2_TXP_(CONFIG_DDR_TXP)
+						  );
+#if !defined(CONFIG_DDR2)
+	ddramc_config->t2pr = ( AT91C_DDRC2_TXARD_(0) |
+							AT91C_DDRC2_TXARDS_(0) |
+#else
+/* This field is found only in the DDR2-SDRAM devices */
+	ddramc_config->t2pr = ( AT91C_DDRC2_TXARD_(CONFIG_DDR_TXARD) |
+							AT91C_DDRC2_TXARDS_(CONFIG_DDR_TXARDS) |
+#endif
+							AT91C_DDRC2_TRPA_(CONFIG_DDR_TRPA) |
+							AT91C_DDRC2_TRTP_(CONFIG_DDR_TRTP) |
+							AT91C_DDRC2_TFAW_(CONFIG_DDR_TFAW)
+						  );
+#endif
+}
+
+unsigned int get_ddram_size(void)
+{
+#if defined(CONFIG_DDR_8_GBIT)
+	return 0x40000000;
+#elif defined(CONFIG_DDR_4_GBIT)
+	return 0x20000000;
+#elif defined(CONFIG_DDR_2_GBIT)
+	return 0x10000000;
+#elif defined(CONFIG_DDR_1_GBIT)
+	return 0x8000000;
+#elif defined(CONFIG_DDR_512_MBIT)
+	return 0x4000000;
+#elif defined(CONFIG_DDR_256_MBIT)
+	return 0x2000000;
+#elif defined(CONFIG_DDR_128_MBIT)
+	return 0x1000000;
+#elif defined(CONFIG_DDR_64_MBIT)
+	return 0x800000;
+#endif
+}
+
+void ddram_init(void)
+{
+	struct ddramc_register ddramc_reg;
+	unsigned int reg;
+
+	ddram_reg_config(&ddramc_reg);
+
+	pmc_enable_periph_clock(AT91C_ID_MPDDRC, PMC_PERIPH_CLK_DIVIDER_NA);
+	pmc_enable_system_clock(AT91C_PMC_DDR);
+
+#if defined(CONFIG_LPDDR1)
+	/*
+	 * Before starting the initialization sequence, the user must force
+	 * the DDR_DQ and DDR_DQS input buffers to always on by setting
+	 * the FDQIEN and FDQSIEN bits in the SFR_DDRCFG register.
+	 */
+	pmc_enable_periph_clock(AT91C_ID_SFR, PMC_PERIPH_CLK_DIVIDER_NA);
+	reg = readl(AT91C_BASE_SFR + SFR_DDRCFG);
+	reg |= AT91C_DDRCFG_FDQIEN;
+	reg |= AT91C_DDRCFG_FDQSIEN;
+	writel(reg, AT91C_BASE_SFR + SFR_DDRCFG);
+#endif
+
+	/* MPDDRC I/O Calibration Register */
+	reg = readl(AT91C_BASE_MPDDRC + MPDDRC_IO_CALIBR);
+	reg &= ~AT91C_MPDDRC_RDIV;
+	reg |= AT91C_MPDDRC_RDIV_DDR2_RZQ_50;
+	reg &= ~AT91C_MPDDRC_TZQIO;
+	/* TZQIO field must be set to 600ns */
+#ifdef CONFIG_BUS_SPEED_116MHZ
+	reg |= AT91C_MPDDRC_TZQIO_(70);
+#elif CONFIG_BUS_SPEED_166MHZ
+	reg |= AT91C_MPDDRC_TZQIO_(100);
+#elif CONFIG_BUS_SPEED_164MHZ
+	reg |= AT91C_MPDDRC_TZQIO_(101);
+#else
+	reg |= AT91C_MPDDRC_TZQIO_(100);
+#endif
+	writel(reg, AT91C_BASE_MPDDRC + MPDDRC_IO_CALIBR);
+
+
+#if defined(CONFIG_DDR3)
+	writel(AT91C_MPDDRC_RD_DATA_PATH_TWO_CYCLES,
+			(AT91C_BASE_MPDDRC + MPDDRC_RD_DATA_PATH));
+#else
+	writel(AT91C_MPDDRC_RD_DATA_PATH_ONE_CYCLES,
+			AT91C_BASE_MPDDRC + MPDDRC_RD_DATA_PATH);
+#endif
+#if defined(CONFIG_LPDDR1)
+	lpddr1_sdram_initialize(AT91C_BASE_MPDDRC,
+							AT91C_BASE_DDRCS, &ddramc_reg);
+#elif defined(CONFIG_DDR2)
+	
+	writel(reg, (AT91C_BASE_MPDDRC + MPDDRC_IO_CALIBR));
+
+
+	ddr2_sdram_initialize(AT91C_BASE_MPDDRC,
+							AT91C_BASE_DDRCS, &ddramc_reg);
+#elif defined(CONFIG_LPDDR2)
+	lpddr2_sdram_initialize(AT91C_BASE_MPDDRC,
+							AT91C_BASE_DDRCS, &ddramc_reg);
+#elif defined(CONFIG_DDR3)
+	ddr3_sdram_initialize(AT91C_BASE_MPDDRC,
+							AT91C_BASE_DDRCS, &ddramc_reg);
+#else
+#error "No DDRAM setting defined"
+#endif
+	ddramc_dump_regs(AT91C_BASE_MPDDRC);
+}
+
 
 /* write DDRC register */
 static void write_ddramc(unsigned int address,
@@ -51,7 +693,7 @@ static unsigned int read_ddramc(unsigned int address, unsigned int offset)
 }
 
 #if defined(CONFIG_DDR3) || \
-    (defined(CONFIG_SAMA5D2_LPDDR2) && defined(CONFIG_LPDDR2))
+    (defined(CONFIG_SAMA5D2) && defined(CONFIG_LPDDR2))
 #undef DEBUG_BKP_SR_INIT
 
 void ddr3_lpddr2_sdram_bkp_init(unsigned int base_address,
@@ -115,7 +757,7 @@ void ddr3_lpddr2_sdram_bkp_init(unsigned int base_address,
 #endif
 
 	/* re-connect DDR Pads to the CPU domain (VCCCORE) */
-	writel(0, AT91C_BASE_SFRBU + SFRBU_DDRBUMCR);
+	sfrbu_set_ddr_power_mode(1);
 	asm volatile ("dmb");
 
 #if defined(DEBUG_BKP_SR_INIT)
@@ -135,13 +777,12 @@ void ddr3_lpddr2_sdram_bkp_init(unsigned int base_address,
 	/* make sure to actually perform an access to the DDR chip */
 	*((unsigned volatile int *)ram_address) = 0;
 }
-#endif /* CONFIG_DDR3 || (CONFIG_LPDDR2 && CONFIG_SAMA5D2_LPDDR2) */
+#endif /* CONFIG_DDR3 || (CONFIG_LPDDR2 && CONFIG_SAMA5D2) */
 
 #ifdef CONFIG_DDR2
 static int ddramc_decodtype_is_seq(unsigned int ddramc_cr)
 {
-#if defined(CONFIG_AT91SAM9X5) || defined(CONFIG_AT91SAM9N12) \
-	|| defined(CONFIG_SAMA5D3X) || defined(CONFIG_SAMA5D4) \
+#if defined(CONFIG_SAMA5D3X) || defined(CONFIG_SAMA5D4) \
 	|| defined(CONFIG_SAMA5D2) || defined(CONFIG_SAM9X60)
 	if (ddramc_cr & AT91C_DDRC2_DECOD_INTERLEAVED)
 		return 0;
@@ -149,7 +790,7 @@ static int ddramc_decodtype_is_seq(unsigned int ddramc_cr)
 	return 1;
 }
 
-int ddram_initialize(unsigned int base_address,
+int ddr2_sdram_initialize(unsigned int base_address,
 			unsigned int ram_address,
 			struct ddramc_register *ddramc_config)
 {
@@ -380,7 +1021,7 @@ int ddram_initialize(unsigned int base_address,
  * This is the sama5d2-compatible initialization sequence for LP-DDR2
  * Check after the #else for sama5d3 and sama5d4 LP-DDR2 initialization sequence
  */
-#if defined(CONFIG_SAMA5D2_LPDDR2)
+#if defined(CONFIG_SAMA5D2) || defined(CONFIG_SAM9X60)
 
 int lpddr2_sdram_initialize(unsigned int base_address,
 			    unsigned int ram_address,

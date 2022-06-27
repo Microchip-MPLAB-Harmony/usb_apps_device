@@ -1,30 +1,7 @@
-/* ----------------------------------------------------------------------------
- *         ATMEL Microcontroller Software Support
- * ----------------------------------------------------------------------------
- * Copyright (c) 2012, Atmel Corporation
- *
- * All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions are met:
- *
- * - Redistributions of source code must retain the above copyright notice,
- * this list of conditions and the disclaimer below.
- *
- * Atmel's name may not be used to endorse or promote products derived from
- * this software without specific prior written permission.
- *
- * DISCLAIMER: THIS SOFTWARE IS PROVIDED BY ATMEL "AS IS" AND ANY EXPRESS OR
- * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT ARE
- * DISCLAIMED. IN NO EVENT SHALL ATMEL BE LIABLE FOR ANY DIRECT, INDIRECT,
- * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
- * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA,
- * OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
- * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
- * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
+// Copyright (C) 2012 Microchip Technology Inc. and its subsidiaries
+//
+// SPDX-License-Identifier: MIT
+
 #include "common.h"
 #include "hardware.h"
 #include "pmc.h"
@@ -50,6 +27,10 @@
 #include "matrix.h"
 #include "act8865.h"
 #include "twi.h"
+
+#ifdef CONFIG_MMU
+#include "mmu_cp15.h"
+#endif
 
 __attribute__((weak)) void SiI9022_hw_reset(void);
 
@@ -97,7 +78,7 @@ static void initialize_dbgu(void)
 }
 
 #if defined(CONFIG_MATRIX)
-static int matrix_configure_slave(void)
+static void matrix_configure_slave(void)
 {
 	unsigned int ddr_port;
 	unsigned int ssr_setting, sasplit_setting, srtop_setting;
@@ -257,7 +238,6 @@ static int matrix_configure_slave(void)
 					srtop_setting,
 					sasplit_setting,
 					ssr_setting);
-	return 0;
 }
 
 static unsigned int security_ps_peri_id[] = {
@@ -290,35 +270,15 @@ static unsigned int security_ps_peri_id[] = {
 	AT91C_ID_SSC1,
 };
 
-static int matrix_config_peripheral(void)
-{
-	unsigned int *peri_id = security_ps_peri_id;
-	unsigned int array_size = sizeof(security_ps_peri_id) / sizeof(unsigned int);
-	int ret;
-
-	ret = matrix_configure_peri_security(peri_id, array_size);
-	if (ret)
-		return -1;
-
-	return 0;
-}
-
 static int matrix_init(void)
 {
-	int ret;
-
 	matrix_write_protect_disable(AT91C_BASE_MATRIX64);
 	matrix_write_protect_disable(AT91C_BASE_MATRIX32);
 
-	ret = matrix_configure_slave();
-	if (ret)
-		return -1;
+	matrix_configure_slave();
 
-	ret = matrix_config_peripheral();
-	if (ret)
-		return -1;
-
-	return 0;
+	return matrix_configure_peri_security(security_ps_peri_id,
+					      ARRAY_SIZE(security_ps_peri_id));
 }
 #endif	/* #if defined(CONFIG_MATRIX) */
 
@@ -473,8 +433,10 @@ void hw_init(void)
 	initialize_dbgu();
 
 #if defined(CONFIG_MATRIX)
-	matrix_read_slave_security();
-	matrix_read_peripheral_security();
+	matrix_read_slave_security(AT91C_BASE_MATRIX64, H64MX_SLAVE_MAX);
+	matrix_read_slave_security(AT91C_BASE_MATRIX32, H32MX_SLAVE_MAX);
+	matrix_read_peripheral_security(AT91C_BASE_MATRIX64);
+	matrix_read_peripheral_security(AT91C_BASE_MATRIX32);
 #endif
 
 	/* Init timer */
@@ -519,7 +481,7 @@ void at91_spi0_hw_init(void)
 #ifdef CONFIG_OF_LIBFDT
 void at91_board_set_dtb_name(char *of_name)
 {
-	strcpy(of_name, "sama5d4ek.dtb");
+	strcpy(of_name, CONFIG_DEVICENAME ".dtb");
 }
 #endif
 
@@ -659,3 +621,141 @@ void twi_init()
 #endif
 }
 #endif
+
+#ifdef CONFIG_MMU
+void mmu_tlb_init(unsigned int *tlb)
+{
+	unsigned int addr;
+
+	/* Reset table entries */
+	for (addr = 0; addr < 4096; addr++)
+		tlb[addr] = 0;
+
+	/* 0x00000000: ROM */
+	tlb[0x000] = TTB_SECT_ADDR(0x00000000)
+	           | TTB_SECT_AP_READ_ONLY
+	           | TTB_SECT_DOMAIN(0xf)
+	           | TTB_SECT_EXEC
+	           | TTB_SECT_CACHEABLE_WB
+	           | TTB_TYPE_SECT;
+
+	/* 0x00100000: NFC SRAM */
+	tlb[0x001] = TTB_SECT_ADDR(0x00100000)
+	           | TTB_SECT_AP_FULL_ACCESS
+	           | TTB_SECT_DOMAIN(0xf)
+	           | TTB_SECT_EXEC
+	           | TTB_SECT_SHAREABLE_DEVICE
+	           | TTB_TYPE_SECT;
+
+	/* 0x00200000: SRAM */
+	tlb[0x002] = TTB_SECT_ADDR(0x00200000)
+	           | TTB_SECT_AP_FULL_ACCESS
+	           | TTB_SECT_DOMAIN(0xf)
+	           | TTB_SECT_EXEC
+	           | TTB_SECT_SHAREABLE_DEVICE
+	           | TTB_TYPE_SECT;
+
+	/* 0x00700000: AXI Matrix */
+	tlb[0x007] = TTB_SECT_ADDR(0x00700000)
+	           | TTB_SECT_AP_FULL_ACCESS
+	           | TTB_SECT_DOMAIN(0xf)
+	           | TTB_SECT_EXEC_NEVER
+	           | TTB_SECT_SHAREABLE_DEVICE
+	           | TTB_TYPE_SECT;
+
+	/* 0x00800000: DAP */
+	tlb[0x008] = TTB_SECT_ADDR(0x00800000)
+	           | TTB_SECT_AP_FULL_ACCESS
+	           | TTB_SECT_DOMAIN(0xf)
+	           | TTB_SECT_EXEC_NEVER
+	           | TTB_SECT_SHAREABLE_DEVICE
+	           | TTB_TYPE_SECT;
+
+	/* 0x10000000: EBI Chip Select 0 */
+	for (addr = 0x100; addr < 0x200; addr++)
+		tlb[addr] = TTB_SECT_ADDR(addr << 20)
+	                  | TTB_SECT_AP_FULL_ACCESS
+	                  | TTB_SECT_DOMAIN(0xf)
+	                  | TTB_SECT_EXEC_NEVER
+	                  | TTB_SECT_STRONGLY_ORDERED
+	                  | TTB_TYPE_SECT;
+
+	/* 0x20000000: DDR CS */
+	for (addr = 0x200; addr < 0x400; addr++)
+		tlb[addr] = TTB_SECT_ADDR(addr << 20)
+	                  | TTB_SECT_AP_FULL_ACCESS
+	                  | TTB_SECT_DOMAIN(0xf)
+	                  | TTB_SECT_EXEC
+	                  | TTB_SECT_CACHEABLE_WB
+	                  | TTB_TYPE_SECT;
+
+	/* 0x40000000: DDR CS/AES */
+	for (addr = 0x400; addr < 0x600; addr++)
+		tlb[addr] = TTB_SECT_ADDR(addr << 20)
+	                  | TTB_SECT_AP_FULL_ACCESS
+	                  | TTB_SECT_DOMAIN(0xf)
+	                  | TTB_SECT_EXEC
+	                  | TTB_SECT_CACHEABLE_WB
+	                  | TTB_TYPE_SECT;
+
+	/* 0x60000000: EBI Chip Select 1 */
+	for (addr = 0x600; addr < 0x700; addr++)
+		tlb[addr] = TTB_SECT_ADDR(addr << 20)
+	                  | TTB_SECT_AP_FULL_ACCESS
+	                  | TTB_SECT_DOMAIN(0xf)
+	                  | TTB_SECT_EXEC_NEVER
+	                  | TTB_SECT_STRONGLY_ORDERED
+	                  | TTB_TYPE_SECT;
+
+	/* 0x70000000: EBI Chip Select 2 */
+	for (addr = 0x700; addr < 0x800; addr++)
+		tlb[addr] = TTB_SECT_ADDR(addr << 20)
+	                  | TTB_SECT_AP_FULL_ACCESS
+	                  | TTB_SECT_DOMAIN(0xf)
+	                  | TTB_SECT_EXEC_NEVER
+	                  | TTB_SECT_STRONGLY_ORDERED
+	                  | TTB_TYPE_SECT;
+
+	/* 0x80000000: EBI Chip Select 3 */
+	for (addr = 0x800; addr < 0x880; addr++)
+		tlb[addr] = TTB_SECT_ADDR(addr << 20)
+	                  | TTB_SECT_AP_FULL_ACCESS
+	                  | TTB_SECT_DOMAIN(0xf)
+	                  | TTB_SECT_EXEC_NEVER
+	                  | TTB_SECT_STRONGLY_ORDERED
+	                  | TTB_TYPE_SECT;
+
+	/* 0x90000000: NFC Command Registers */
+	for (addr = 0x900; addr < 0xa00; addr++)
+		tlb[addr] = TTB_SECT_ADDR(addr << 20)
+	                  | TTB_SECT_AP_FULL_ACCESS
+	                  | TTB_SECT_DOMAIN(0xf)
+	                  | TTB_SECT_EXEC
+	                  | TTB_SECT_STRONGLY_ORDERED
+	                  | TTB_TYPE_SECT;
+
+	/* 0xf0000000: Internal Peripherals */
+	tlb[0xf00] = TTB_SECT_ADDR(0xf0000000)
+	           | TTB_SECT_AP_FULL_ACCESS
+	           | TTB_SECT_DOMAIN(0xf)
+	           | TTB_SECT_EXEC
+	           | TTB_SECT_STRONGLY_ORDERED
+	           | TTB_TYPE_SECT;
+
+	/* 0xf8000000: Internal Peripherals */
+	tlb[0xf80] = TTB_SECT_ADDR(0xf8000000)
+	           | TTB_SECT_AP_FULL_ACCESS
+	           | TTB_SECT_DOMAIN(0xf)
+	           | TTB_SECT_EXEC
+	           | TTB_SECT_STRONGLY_ORDERED
+	           | TTB_TYPE_SECT;
+
+	/* 0xfc000000: Internal Peripherals */
+	tlb[0xfc0] = TTB_SECT_ADDR(0xfc000000)
+	           | TTB_SECT_AP_FULL_ACCESS
+	           | TTB_SECT_DOMAIN(0xf)
+	           | TTB_SECT_EXEC
+	           | TTB_SECT_STRONGLY_ORDERED
+	           | TTB_TYPE_SECT;
+}
+#endif /* #ifdef CONFIG_MMU */

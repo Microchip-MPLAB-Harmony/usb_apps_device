@@ -1,30 +1,9 @@
-/* ----------------------------------------------------------------------------
- *         ATMEL Microcontroller Software Support
- * ----------------------------------------------------------------------------
- * Copyright (c) 2020, Atmel Corporation
+/*
+ * Copyright (C) 2020 Microchip Technology Inc. and its subsidiaries
  *
- * All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions are met:
- *
- * - Redistributions of source code must retain the above copyright notice,
- * this list of conditions and the disclaimer below.
- *
- * Atmel's name may not be used to endorse or promote products derived from
- * this software without specific prior written permission.
- *
- * DISCLAIMER: THIS SOFTWARE IS PROVIDED BY ATMEL "AS IS" AND ANY EXPRESS OR
- * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT ARE
- * DISCLAIMED. IN NO EVENT SHALL ATMEL BE LIABLE FOR ANY DIRECT, INDIRECT,
- * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
- * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA,
- * OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
- * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
- * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ * SPDX-License-Identifier: MIT
  */
+
 #ifndef __UMCTL2_DEVICE_H__
 #define __UMCTL2_DEVICE_H__
 
@@ -42,6 +21,29 @@
 #define _tRASMAX	70000UL		/* RAS max, ns */
 #define _tRC_ps		50625UL		/* Row Cycle, ps */
 #define _tFAW		50UL		/* Four Activation Window, ns */
+#define _tPRECKE	500000UL
+#define _tPOSTCKE	0UL		/* Unused with DDR3 */
+#define _CL		7UL		/* CAS Latency, Clock cycles */
+#define _CWL		6UL		/* CAS Write Latency, Clock cycles */
+#define _AL		0UL		/* Additive Latency, Clock cycles */
+#define _TZQOPER	256UL		/* TZQ Long Calibration, Clock cycles */
+#define _TZQCS		64UL		/* TZQ Short Calibration, Clock cycles */
+#define _MRD		4UL		/* Mode Register Delay, Clock cycles */
+#endif
+
+#if defined(CONFIG_DDR_AS4C256M16D3LC_12BCNTR)
+#define _tRFC		260UL		/* Refresh to Refresh, ns */
+#define _tREFI		7800UL		/* Refresh Intervals, ns */
+#define _tWR		15UL		/* Write Recovery, ns */
+#define _tRP		14UL		/* Row Precharge command, ns */
+#define _tRP_ps		13750UL		/* Row Precharge command, ps */
+#define _tRCD		14UL		/* Row to Column delay, ns */
+#define _tRCD_ps	13750UL		/* Row to Column delay, ps */
+#define _tCCD		4UL		/* Column to Column delay, ns */
+#define _tRAS		35UL		/* Row Active Strobe, ns */
+#define _tRASMAX	70200UL		/* RAS max, ns */
+#define _tRC_ps		48750UL		/* Row Cycle, ps */
+#define _tFAW		40UL		/* Four Activation Window, ns */
 #define _tPRECKE	500000UL
 #define _tPOSTCKE	0UL		/* Unused with DDR3 */
 #define _CL		7UL		/* CAS Latency, Clock cycles */
@@ -97,6 +99,7 @@
 #define _MRD		0UL		/* Mode Register Delay, Clock cycles , unused in LPDDR2*/
 #define _tDQSCK_MIN	2500UL
 #define _tDQSCK_MAX	5500UL
+#define _tTSI_ms	16UL		/* Temperature Sensor interval, ms */
 #endif
 
 #ifdef CONFIG_DDR_MT52L256M32D1PF_107
@@ -123,6 +126,34 @@
 #define _MRD		MAX(NS_TO_CYCLES_UP(14UL), 10UL)		/* Mode Register Delay, Clock cycles */
 #define _tDQSCK_MIN	2500UL
 #define _tDQSCK_MAX	5500UL
+#define _tTSI_ms	32UL		/* Temperature Sensor interval, ms */
+#endif
+
+#ifdef CONFIG_DDR_EDB5432BEBH_1DAAT_F_D
+#define _tRFC		90UL		/* Refresh to Refresh, ns */
+#define _tREFI		7800UL		/* Refresh Intervals, ns */
+#define _tWR		15UL		/* Write Recovery, ns */
+#define _tRP		21UL		/* Row Precharge command, ns */
+#define _tRP_ps		21000UL		/* Row Precharge command, ps */
+#define _tRCD		18UL		/* Row to Column delay, ns */
+#define _tRCD_ps	18000UL		/* Row to Column delay, ps */
+#define _tCCD		2UL		/* Column to Column delay, ns */
+#define _tRAS		42UL		/* Row Active Strobe, ns */
+#define _tRASMAX	70000UL		/* RAS max, ns */
+#define _tRC_ps		((_tRAS + _tRP)*1000)		/* Row Cycle, ps */
+#define _tFAW		50UL		/* Four Activation Window, ns */
+#define _tPOSTCKE	200000UL	/* Post CKE, ns */
+#define _CL		0UL		/* CAS Latency, Clock cycles, unused in LPDDR2 */
+#define _CWL		0UL		/* CAS Write Latency, Clock cycles, unused in LPDDR2 */
+#define _AL		0UL		/* Additive Latency, Clock cycles */
+#define _RL		8UL		/* For LPDDR2, Read Latency, Clock cycles */
+#define _WL		4UL		/* For LPDDR2, Write Latency, Clock cycles */
+#define _TZQOPER	NS_TO_CYCLES_UP(360UL)		/* TZQ Long Calibration, Clock cycles */
+#define _TZQCS		NS_TO_CYCLES_UP(90UL)		/* TZQ Short Calibration, Clock cycles */
+#define _MRD		0UL		/* Mode Register Delay, Clock cycles , unused in LPDDR2*/
+#define _tDQSCK_MIN	2500UL
+#define _tDQSCK_MAX	5620UL
+#define _tTSI_ms	32UL		/* Temperature Sensor interval, ms */
 #endif
 
 #endif

@@ -1,33 +1,11 @@
-/* ----------------------------------------------------------------------------
- *         Microchip Technology AT91Bootstrap project
- * ----------------------------------------------------------------------------
- * Copyright (c) 2018, Microchip Technology Inc. and its subsidiaries
- *
- * All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions are met:
- *
- * - Redistributions of source code must retain the above copyright notice,
- * this list of conditions and the disclaimer below.
- *
- * Microchip's name may not be used to endorse or promote products derived from
- * this software without specific prior written permission.
- *
- * DISCLAIMER: THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR
- * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT ARE
- * DISCLAIMED. IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIRECT,
- * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
- * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA,
- * OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
- * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
- * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
+// Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries
+//
+// SPDX-License-Identifier: MIT
 
+#include "backup.h"
 #include "common.h"
 #include "flexcom.h"
+#include "twi.h"
 #include "usart.h"
 #include "hardware.h"
 #include "arch/at91_pio.h"
@@ -36,17 +14,24 @@
 #include "debug.h"
 #include "umctl2.h"
 #include "gpio.h"
-#include "mcp16502.h"
 #include "pmc.h"
 #include "arch/at91_pmc/pmc.h"
+#include "arch/at91_sfrbu.h"
 #include "publ.h"
+#include "shdwc.h"
 #include "umctl2.h"
 #include "watchdog.h"
 #include "timer.h"
 #include "sdhc_cal.h"
 #include "led.h"
+#include "arch/tz_matrix.h"
+#include "matrix.h"
+#include "arch/at91_sfr.h"
+#include "arch/sama5_smc.h"
 
 #include "sama7g5_board.h"
+
+__attribute__((weak)) void at91_can_stdby_dis(void);
 
 static void ca7_enable_smp()
 {
@@ -57,6 +42,18 @@ static void ca7_enable_smp()
 		"MCR p15, 0, R1, c1, c0, 1;"
 	);
 }
+
+static void axi2ahb_config_outstanding()
+{
+	/*
+	 * AXI2AHB bridge must be limited to 1 outstanding per ID.
+	 * More outstanding can lead to corrupted data transfer.
+	 * Source: sama7g5 Errata
+	 *
+	 */
+	writel(0x3, AT91C_BASE_NICGPV + 0x2008 + (0x1000 * 6));
+	writel(0x3, AT91C_BASE_NICGPV + 0x2008 + (0x1000 * 13));
+};
 
 #if CONFIG_CONSOLE_INDEX <= 3
 	#define FLEXCOM_USART_INDEX 0
@@ -409,6 +406,49 @@ static void at91_dbgu_hw_init(void)
 	flexcom_init(FLEXCOM_USART_INDEX);
 }
 
+#if defined(CONFIG_MATRIX)
+static void matrix_configure_slave(void)
+{
+	unsigned int ssr_setting, sasplit_setting, srtop_setting;
+
+	/* 0: QSPI0 */
+	srtop_setting = MATRIX_SRTOP(0, MATRIX_SRTOP_VALUE_128M) |
+			MATRIX_SRTOP(1, MATRIX_SRTOP_VALUE_128M);
+	sasplit_setting = MATRIX_SASPLIT(0, MATRIX_SASPLIT_VALUE_128M) |
+			  MATRIX_SASPLIT(1, MATRIX_SASPLIT_VALUE_128M);
+	ssr_setting = MATRIX_LANSECH_NS(0) | MATRIX_LANSECH_NS(1);
+
+	matrix_configure_slave_security(AT91C_BASE_MATRIX, MATRIX_SLAVE_QSPI0,
+					srtop_setting, sasplit_setting,
+					ssr_setting);
+	/* 1: QSPI1 */
+	matrix_configure_slave_security(AT91C_BASE_MATRIX, MATRIX_SLAVE_QSPI1,
+					srtop_setting, sasplit_setting,
+					ssr_setting);
+	/* SMC EBI CS3 */
+	srtop_setting = MATRIX_SRTOP(3, MATRIX_SRTOP_VALUE_128M);
+	sasplit_setting = MATRIX_SASPLIT(3, MATRIX_SASPLIT_VALUE_128M);
+	ssr_setting = MATRIX_LANSECH_NS(3);
+	matrix_configure_slave_security(AT91C_BASE_MATRIX, MATRIX_SLAVE_EBI,
+					srtop_setting, sasplit_setting,
+					ssr_setting);
+	/* NFC RAM */
+	srtop_setting = MATRIX_SRTOP(0, MATRIX_SRTOP_VALUE_16K);
+	sasplit_setting = MATRIX_SASPLIT(0, MATRIX_SASPLIT_VALUE_16K);
+	ssr_setting = MATRIX_LANSECH_NS(0);
+	matrix_configure_slave_security(AT91C_BASE_MATRIX, MATRIX_SLAVE_NFCRAM,
+					srtop_setting, sasplit_setting,
+					ssr_setting);
+}
+
+static void matrix_init(void)
+{
+	matrix_write_protect_disable(AT91C_BASE_MATRIX);
+
+	matrix_configure_slave();
+}
+#endif
+
 static void initialize_serial(void)
 {
 	unsigned int baudrate = 115200;
@@ -516,13 +556,102 @@ static void umctl2_config_state_init()
 	umctl2_config.phy_idone = &publ_idone;
 	umctl2_config.phy_start = &publ_start;
 	umctl2_config.phy_train = &publ_train;
+#ifdef CONFIG_BACKUP_MODE
+	umctl2_config.phy_bypass_zq_calibration = &publ_bypass_zq_calibration;
+	umctl2_config.phy_override_zq_calibration = &publ_override_zq_calibration;
+	umctl2_config.phy_prepare_train_corrupted_data_restore = &publ_prepare_train_corrupted_data_restore;
+	umctl2_config.phy_zq_recalibrate = &publ_zq_recalibrate;
+	umctl2_config.phy_train_corrupted_data_restore = &publ_train_corrupted_data_restore;
+#endif
 }
+
+#ifdef CONFIG_DATAFLASH
+#if defined(CONFIG_QSPI)
+void at91_qspi_hw_init(void)
+{
+#if CONFIG_QSPI_BUS == 1
+	const struct pio_desc qspi_pins[] = {
+		{"QSPI1_IO0", AT91C_PIN_PB(25), 0, PIO_DRVSTR_HI, PIO_PERIPH_A},
+		{"QSPI1_IO1", AT91C_PIN_PB(24), 0, PIO_DRVSTR_HI, PIO_PERIPH_A},
+		{"QSPI1_IO2", AT91C_PIN_PB(23), 0, PIO_DRVSTR_HI, PIO_PERIPH_A},
+		{"QSPI1_IO3", AT91C_PIN_PB(22), 0, PIO_DRVSTR_HI, PIO_PERIPH_A},
+		{"QSPI1_CS", AT91C_PIN_PB(26), 0, PIO_DRVSTR_HI, PIO_PERIPH_A},
+		{"QSPI1_SCK", AT91C_PIN_PB(27), 0, PIO_DRVSTR_HI, PIO_PERIPH_A},
+		{(char *)0, 0, 0, PIO_DEFAULT, PIO_PERIPH_A},
+	};
+#else
+	const struct pio_desc qspi_pins[] = {
+		{"QSPI0_IO0", AT91C_PIN_PB(12), 0, PIO_DRVSTR_HI, PIO_PERIPH_A},
+		{"QSPI0_IO1", AT91C_PIN_PB(11), 0, PIO_DRVSTR_HI, PIO_PERIPH_A},
+		{"QSPI0_IO2", AT91C_PIN_PB(10), 0, PIO_DRVSTR_HI, PIO_PERIPH_A},
+		{"QSPI0_IO3", AT91C_PIN_PB(9), 0, PIO_DRVSTR_HI, PIO_PERIPH_A},
+		{"QSPI0_IO4", AT91C_PIN_PB(16), 0, PIO_DRVSTR_HI, PIO_PERIPH_A},
+		{"QSPI0_IO5", AT91C_PIN_PB(17), 0, PIO_DRVSTR_HI, PIO_PERIPH_A},
+		{"QSPI0_IO6", AT91C_PIN_PB(18), 0, PIO_DRVSTR_HI, PIO_PERIPH_A},
+		{"QSPI0_IO7", AT91C_PIN_PB(19), 0, PIO_DRVSTR_HI, PIO_PERIPH_A},
+		{"QSPI0_CS", AT91C_PIN_PB(13), 0, PIO_DRVSTR_HI, PIO_PERIPH_A},
+		{"QSPI0_SCK", AT91C_PIN_PB(14), 0, PIO_DRVSTR_HI, PIO_PERIPH_A},
+		{"QSPI0_SCKN", AT91C_PIN_PB(15), 0, PIO_DRVSTR_HI, PIO_PERIPH_A},
+		{"QSPI0_DQS", AT91C_PIN_PB(20), 0, PIO_DRVSTR_HI, PIO_PERIPH_A},
+		{"QSPI0_INT", AT91C_PIN_PB(21), 0, PIO_DRVSTR_HI, PIO_PERIPH_A},
+		{(char *)0, 0, 0, PIO_DEFAULT, PIO_PERIPH_A},
+	};
+#endif
+	pio_configure(qspi_pins);
+}
+
+#endif
+#endif /* CONFIG_DATAFLASH */
+
+#ifdef CONFIG_NANDFLASH
+void nandflash_hw_init(void)
+{
+	const struct pio_desc nand_pins[] = {
+		{"NANDOE", CONFIG_SYS_NAND_OE_PIN, 0, PIO_DEFAULT, PIO_PERIPH_D},
+		{"NANDWE", CONFIG_SYS_NAND_WE_PIN, 0, PIO_DEFAULT, PIO_PERIPH_D},
+		{"NANDALE", CONFIG_SYS_NAND_ALE_PIN, 0, PIO_DEFAULT, PIO_PERIPH_D},
+		{"NANDCLE", CONFIG_SYS_NAND_CLE_PIN, 0, PIO_DEFAULT, PIO_PERIPH_D},
+		{"NANDCS", CONFIG_SYS_NAND_ENABLE_PIN, 0, PIO_DEFAULT, PIO_PERIPH_D},
+		{"D0", AT91C_PIN_PD(9), 0, PIO_DEFAULT, PIO_PERIPH_D},
+		{"D1", AT91C_PIN_PD(10), 0, PIO_DEFAULT, PIO_PERIPH_D},
+		{"D2", AT91C_PIN_PD(11), 0, PIO_DEFAULT, PIO_PERIPH_D},
+		{"D3", AT91C_PIN_PC(21), 0, PIO_DEFAULT, PIO_PERIPH_D},
+		{"D4", AT91C_PIN_PC(22), 0, PIO_DEFAULT, PIO_PERIPH_D},
+		{"D5", AT91C_PIN_PC(23), 0, PIO_DEFAULT, PIO_PERIPH_D},
+		{"D6", AT91C_PIN_PC(24), 0, PIO_DEFAULT, PIO_PERIPH_D},
+		{"D7", AT91C_PIN_PD(2), 0, PIO_DEFAULT, PIO_PERIPH_D},
+		{(char *)0, 0, 0, PIO_DEFAULT, PIO_PERIPH_A},
+	};
+
+	pio_configure(nand_pins);
+	pmc_enable_periph_clock(AT91C_ID_HSMC, PMC_PERIPH_CLK_DIVIDER_NA);
+
+	/* Configure SMC CS3 for NAND */
+	writel(AT91C_SMC_SETUP_NWE(4), ATMEL_BASE_SMC + SMC_SETUP3);
+
+	writel(AT91C_SMC_PULSE_NWE(10) | AT91C_SMC_PULSE_NCS_WR(20) |
+	       AT91C_SMC_PULSE_NRD(10) | AT91C_SMC_PULSE_NCS_RD(20),
+	       ATMEL_BASE_SMC + SMC_PULSE3);
+
+	writel(AT91C_SMC_CYCLE_NWE(20) | AT91C_SMC_CYCLE_NRD(20),
+	       (ATMEL_BASE_SMC + SMC_CYCLE3));
+
+	writel(AT91C_SMC_TIMINGS_TCLR(4) | AT91C_SMC_TIMINGS_TADL(15) |
+	       AT91C_SMC_TIMINGS_TAR(5) | AT91C_SMC_TIMINGS_TRR(8) |
+	       AT91C_SMC_TIMINGS_TWB(8) | AT91C_SMC_TIMINGS_NFSEL,
+	       ATMEL_BASE_SMC + SMC_TIMINGS3);
+
+	writel(AT91C_SMC_MODE_READMODE_NRD_CTRL |
+	       AT91C_SMC_MODE_WRITEMODE_NWE_CTRL | AT91C_SMC_MODE_TDF_MODE |
+	       AT91C_SMC_MODE_TDF_CYCLES(15), ATMEL_BASE_SMC + SMC_MODE3);
+}
+#endif /* CONFIG_NANDFLASH */
 
 #if defined(CONFIG_SDCARD)
 #if defined(CONFIG_OF_LIBFDT)
 void at91_board_set_dtb_name(char *of_name)
 {
-	strcpy(of_name, "at91-sama7g5ek.dtb");
+	strcpy(of_name, CONFIG_DEVICENAME ".dtb");
 }
 #endif
 
@@ -534,37 +663,36 @@ void at91_sdhc_hw_init(void)
 #if defined(CONFIG_SDHC1)
 	const struct pio_desc sdmmc_pins[] = {
 		{"SDMMC1_CK",   AT91C_PIN_PB(30), 0, PIO_DEFAULT, PIO_PERIPH_A},
-		{"SDMMC1_CMD",  AT91C_PIN_PB(29), 0, PIO_DEFAULT, PIO_PERIPH_A},
-		{"SDMMC1_DAT0", AT91C_PIN_PB(31), 0, PIO_DEFAULT, PIO_PERIPH_A},
-		{"SDMMC1_DAT1", AT91C_PIN_PC(0), 0, PIO_DEFAULT, PIO_PERIPH_A},
-		{"SDMMC1_DAT2", AT91C_PIN_PC(1), 0, PIO_DEFAULT, PIO_PERIPH_A},
-		{"SDMMC1_DAT3", AT91C_PIN_PC(2), 0, PIO_DEFAULT, PIO_PERIPH_A},
+		{"SDMMC1_CMD",  AT91C_PIN_PB(29), 0, PIO_PULLUP, PIO_PERIPH_A},
+		{"SDMMC1_DAT0", AT91C_PIN_PB(31), 0, PIO_PULLUP, PIO_PERIPH_A},
+		{"SDMMC1_DAT1", AT91C_PIN_PC(0), 0, PIO_PULLUP, PIO_PERIPH_A},
+		{"SDMMC1_DAT2", AT91C_PIN_PC(1), 0, PIO_PULLUP, PIO_PERIPH_A},
+		{"SDMMC1_DAT3", AT91C_PIN_PC(2), 0, PIO_PULLUP, PIO_PERIPH_A},
 		{"SDMMC1_VDDSEL", AT91C_PIN_PC(5), 0, PIO_DEFAULT, PIO_PERIPH_A},
-		{"SDMMC1_WP",   AT91C_PIN_PC(3), 1, PIO_DEFAULT, PIO_PERIPH_A},
-		{"SDMMC1_CD",   AT91C_PIN_PC(4), 0, PIO_DEFAULT, PIO_PERIPH_A},
-		{"SDMMC1_RST",  AT91C_PIN_PB(22), 0, PIO_DEFAULT, PIO_OUTPUT},
+		{"SDMMC1_WP",   AT91C_PIN_PC(3), 1, PIO_PULLUP, PIO_PERIPH_A},
+		{"SDMMC1_CD",   AT91C_PIN_PC(4), 0, PIO_PULLUP, PIO_PERIPH_A},
+		{"SDMMC1_RST",  AT91C_PIN_PB(28), 0, PIO_DEFAULT, PIO_OUTPUT},
 		{(char *)0, 0, 0, PIO_DEFAULT, PIO_PERIPH_A},
 	};
 	const struct pio_desc sdmmc_pins_reset[] = {
-		{"SDMMC1_RST",  AT91C_PIN_PB(22), 1, PIO_DEFAULT, PIO_OUTPUT},
+		{"SDMMC1_RST",  AT91C_PIN_PB(28), 1, PIO_DEFAULT, PIO_OUTPUT},
 		{(char *)0, 0, 0, PIO_DEFAULT, PIO_PERIPH_A},
 	};
 #endif
 #if defined(CONFIG_SDHC0)
 	const struct pio_desc sdmmc_pins[] = {
 		{"SDMMC0_CK",   AT91C_PIN_PA(0), 0, PIO_DEFAULT, PIO_PERIPH_A},
-		{"SDMMC0_CMD",  AT91C_PIN_PA(1), 0, PIO_DEFAULT, PIO_PERIPH_A},
+		{"SDMMC0_CMD",  AT91C_PIN_PA(1), 0, PIO_PULLUP, PIO_PERIPH_A},
 		{"SDMMC0_RST",  AT91C_PIN_PA(2), 0, PIO_DEFAULT, PIO_PERIPH_A},
-		{"SDMMC0_DAT0", AT91C_PIN_PA(3), 0, PIO_DEFAULT, PIO_PERIPH_A},
-		{"SDMMC0_DAT1", AT91C_PIN_PA(4), 0, PIO_DEFAULT, PIO_PERIPH_A},
-		{"SDMMC0_DAT2", AT91C_PIN_PA(5), 0, PIO_DEFAULT, PIO_PERIPH_A},
-		{"SDMMC0_DAT3", AT91C_PIN_PA(6), 0, PIO_DEFAULT, PIO_PERIPH_A},
-		{"SDMMC0_DAT4", AT91C_PIN_PA(7), 0, PIO_DEFAULT, PIO_PERIPH_A},
-		{"SDMMC0_DAT5", AT91C_PIN_PA(8), 0, PIO_DEFAULT, PIO_PERIPH_A},
-		{"SDMMC0_DAT6", AT91C_PIN_PA(9), 0, PIO_DEFAULT, PIO_PERIPH_A},
-		{"SDMMC0_DAT7", AT91C_PIN_PA(10), 0, PIO_DEFAULT, PIO_PERIPH_A},
-		{"SDMMC0_WP",   AT91C_PIN_PA(12), 0, PIO_DEFAULT, PIO_PERIPH_A},
-		{"SDMMC0_CD",  AT91C_PIN_PA(14), 0, PIO_DEFAULT, PIO_PERIPH_A},
+		{"SDMMC0_DAT0", AT91C_PIN_PA(3), 0, PIO_PULLUP, PIO_PERIPH_A},
+		{"SDMMC0_DAT1", AT91C_PIN_PA(4), 0, PIO_PULLUP, PIO_PERIPH_A},
+		{"SDMMC0_DAT2", AT91C_PIN_PA(5), 0, PIO_PULLUP, PIO_PERIPH_A},
+		{"SDMMC0_DAT3", AT91C_PIN_PA(6), 0, PIO_PULLUP, PIO_PERIPH_A},
+		{"SDMMC0_DAT4", AT91C_PIN_PA(7), 0, PIO_PULLUP, PIO_PERIPH_A},
+		{"SDMMC0_DAT5", AT91C_PIN_PA(8), 0, PIO_PULLUP, PIO_PERIPH_A},
+		{"SDMMC0_DAT6", AT91C_PIN_PA(9), 0, PIO_PULLUP, PIO_PERIPH_A},
+		{"SDMMC0_DAT7", AT91C_PIN_PA(10), 0, PIO_PULLUP, PIO_PERIPH_A},
+		{"SDMMC0_CD",  AT91C_PIN_PA(14), 0, PIO_PULLUP, PIO_PERIPH_A},
 		{(char *)0, 0, 0, PIO_DEFAULT, PIO_PERIPH_A},
 	};
 #endif
@@ -590,6 +718,27 @@ void at91_sdhc_hw_init(void)
 		;
 }
 #endif
+
+/**
+ * The MSBs [bits 31:16] of the CAN Message RAM for CAN0, CAN1 and CAN2 controllers
+ * are configured in First half of internal SRAM, and CAN3, CAN4, CAN5 controllers are
+ * configured in Second half of internal SRAM.
+ */
+#define CAN_MESSAGE_RAM_SEL	0x38
+
+void at91_init_can_message_ram(void)
+{
+	writel(CAN_MESSAGE_RAM_SEL,
+	       (AT91C_BASE_SFR + SFR_CAN_SRAM));
+}
+
+#define EHCIOHCI_PHYCLK_UTMI0	1
+
+void usb_utmi_clk_fix(void)
+{
+	writel(EHCIOHCI_PHYCLK_UTMI0,
+	       (AT91C_BASE_SFR + SFR_EHCIOCHI));
+}
 
 #ifdef CONFIG_TWI
 
@@ -904,68 +1053,15 @@ void twi_init()
 }
 #endif /* CONFIG_TWI */
 
-void cpu_voltage_select(void)
+void hw_preinit(void)
 {
-#ifdef CONFIG_MCP16502
-	const struct mcp16502_cfg regulators_cfg[] = {
-		{ .regulator = MCP16502_BUCK4,
-#ifdef CONFIG_CPU_CLK_600MHZ
-		 .uV = 1100000,
-#endif
-#ifdef CONFIG_CPU_CLK_800MHZ
-		 .uV = 1200000,
-#endif
-#ifdef CONFIG_CPU_CLK_1000MHZ
-		 .uV = 1250000,
-#endif
-		 .enable = 1, },
-	};
-
 	/*
-	 * SAMA7G5's SHDWC keeps LPM pin low by default, so there is no need
-	 * to pass pin descriptor to mcp16502_init() for switching to active
-	 * state.
+	 * We don't call here backup_resume() as this is using BSS data which is
+	 * not initialized at the moment hw_preinit() is called. The functionality
+	 * will not be affected if executing this code all the time at both boot
+	 * and BSR exit.
 	 */
-	if (mcp16502_init(CONFIG_PMIC_ON_TWI, 0x5b, NULL, regulators_cfg,
-				ARRAY_SIZE(regulators_cfg)))
-		dbg_printf("MCP16502: init failure");
-	else
-		dbg_printf("MCP16502: CPU VDD @ %umV\n", regulators_cfg[0].uV / 1000);
-#endif /* CONFIG_MCP16502 */
-}
-
-void hw_init(void)
-{
-	struct pmc_pll_cfg plla_config;
-	struct pmc_pll_cfg ddrpll_config;
-	struct pmc_pll_cfg syspll_config;
-	struct pmc_pll_cfg imgpll_config;
-	unsigned int mck0_prescaler;
-
-	/* Watchdog might be enabled out of reset. Let's make sure it's off */
-	at91_disable_wdt();
-#ifdef CONFIG_WDTS
-	at91_disable_wdts();
-#endif
-	/* SMP is needed for L2 cache in cortex A7 */
-	ca7_enable_smp();
-
-	/* We need timers in the following steps */
-	timer_init();
-
-	/* Configure & Enable CPU PLL at a safe speed of 600 Mhz*/
-	plla_config.mul = 24; /* 25 * 24 = 600 */
-	plla_config.div = 0;
-	plla_config.count = 0x3f;
-	plla_config.fracr = 0;
-	plla_config.acr = 0x1b040010;
-
-	mck0_prescaler = BOARD_PRESCALER_CPUPLL | AT91C_PMC_MDIV_3;
-
-	pmc_sam9x60_cfg_pll(PLL_ID_CPUPLL, &plla_config);
-
-	pmc_mck_cfg_set(0, mck0_prescaler,
-			AT91C_PMC_PRES | AT91C_PMC_MDIV | AT91C_PMC_CSS);
+	shdwc_disable_lpm();
 
 	/*
 	 * Out of Romcode, MCK1 & MCK4 are already configured with SYSPLL
@@ -985,13 +1081,52 @@ void hw_init(void)
 	 * We are done here cleaning up MCK1 & MCK4, so we can configure
 	 * SYSPLL at cruise speed
 	 */
+}
+
+void hw_init(void)
+{
+	struct pmc_pll_cfg plla_config;
+	struct pmc_pll_cfg ddrpll_config;
+	struct pmc_pll_cfg syspll_config;
+	struct pmc_pll_cfg imgpll_config;
+	unsigned int mck0_prescaler;
+
+	/* Switch backup area to VDDIN33. */
+	sfrbu_select_ba_power_source(true);
+
+	/* Watchdog might be enabled out of reset. Let's make sure it's off */
+	at91_disable_wdt();
+#ifdef CONFIG_WDTS
+	at91_disable_wdts();
+#endif
+	/* SMP is needed for L2 cache in cortex A7 */
+	ca7_enable_smp();
+
+	axi2ahb_config_outstanding();
+#if defined(CONFIG_MATRIX)
+	matrix_configure_default_qos();
+#endif
+
+	/* Configure & Enable CPU PLL at a safe speed of 600 Mhz*/
+	plla_config.mul = 24; /* 25 * 24 = 600 */
+	plla_config.div = 0;
+	plla_config.count = 0x3f;
+	plla_config.fracr = 0;
+	plla_config.acr = 0x00070010;
+
+	mck0_prescaler = BOARD_PRESCALER_CPUPLL | AT91C_PMC_MDIV_3;
+
+	pmc_sam9x60_cfg_pll(PLL_ID_CPUPLL, &plla_config);
+
+	pmc_mck_cfg_set(0, mck0_prescaler,
+			AT91C_PMC_PRES | AT91C_PMC_MDIV | AT91C_PMC_CSS);
 
 	/* Configure & Enable SYS PLL */
 	syspll_config.mul = 49; /* (49 + 1) * 24 = 1200 */
 	syspll_config.div = 2; /* Feed to PMC 1200/3 = 400 Mhz */
 	syspll_config.count = 0x3f;
 	syspll_config.fracr = 0;
-	syspll_config.acr = 0x1b040010;
+	syspll_config.acr = 0x00070010;
 	/* SYSPLL @ 1200 MHz */
 	pmc_sam9x60_cfg_pll(PLL_ID_SYSPLL, &syspll_config);
 
@@ -1008,10 +1143,20 @@ void hw_init(void)
 	at91_leds_init();
 #endif
 
+#if defined(CONFIG_MATRIX)
+	matrix_init();
+#endif
+
 	initialize_serial();
+
+	/* We need timers in the following steps */
+	timer_init();
 
 #ifdef CONFIG_TWI
 	twi_init();
+#endif
+#if defined(CONFIG_MATRIX)
+	matrix_read_slave_security(AT91C_BASE_MATRIX, MATRIX_SLAVE_MAX);
 #endif
 
 	dbg_very_loud("CA7 early uart\n");
@@ -1023,17 +1168,17 @@ void hw_init(void)
 	ddrpll_config.divio = 100;
 	ddrpll_config.count = 0x3f;
 	ddrpll_config.fracr = 0x1aaaab; /* (10/24) * 2^22 to get extra 10 MHz */
-	ddrpll_config.acr = 0x00020033;
+	ddrpll_config.acr = 0x00070010;
 	/* DDRPLL @ 1066 MHz */
 #endif
 #if CONFIG_MEM_CLOCK == 400
-	ddrpll_config.mul = 32; /* (33 + 1) * 24 =  792*/
-	ddrpll_config.div = 1;
+	ddrpll_config.mul = 49; /* (49 + 1) * 24 =  1200 MHz */
+	ddrpll_config.div = 2;  /* 1200 / 3 = 400 MHz */
 	ddrpll_config.divio = 100;
 	ddrpll_config.count = 0x3f;
-	ddrpll_config.fracr = 0x155556; /* 2^22 / 3 */
-	ddrpll_config.acr = 0x00020033;
-	/* DDRPLL @ 800 MHz */
+	ddrpll_config.fracr = 0;
+	ddrpll_config.acr = 0x00070010;
+	/* DDRPLL @ 1200 MHz */
 #endif
 	pmc_sam9x60_cfg_pll(PLL_ID_DDRPLL, &ddrpll_config);
 
@@ -1047,7 +1192,7 @@ void hw_init(void)
 	imgpll_config.divio = 3;
 	imgpll_config.count = 0x3f;
 	imgpll_config.fracr = 0x155555; /* (8/24) * 2^22 to get extra 8 MHz */
-	imgpll_config.acr = 0x1b040010;
+	imgpll_config.acr = 0x00070010;
 	/* IMGPLL @ 1064 MHz */
 	pmc_sam9x60_cfg_pll(PLL_ID_IMGPLL, &imgpll_config);
 
@@ -1055,7 +1200,8 @@ void hw_init(void)
 	pmc_mck_cfg_set(3, BOARD_PRESCALER_MCK3,
 			AT91C_MCR_DIV | AT91C_MCR_CSS | AT91C_MCR_EN);
 
-	dbg_printf("MCK: mck domains initialization complete.\n");
+	if (!backup_resume())
+		dbg_printf("MCK: mck domains initialization complete.\n");
 
 	tzc400_init();
 
@@ -1065,18 +1211,35 @@ void hw_init(void)
 	umctl2_config_state_init();
 	if (umctl2_init(&umctl2_config)) {
 		console_printf("UMCTL2: Error initializing.\n");
-	} else {
+	} else if (!backup_resume()) {
 		console_printf("UMCTL2: Initialization complete.\n");
 	}
 
-	cpu_voltage_select();
+	at91_init_can_message_ram();
+
+#ifdef CONFIG_BOARD_QUIRK_SAMA7G5_EK
+	at91_can_stdby_dis();
+#endif
+
+	usb_utmi_clk_fix();
+}
+
+void hw_postinit(void)
+{
+	struct pmc_pll_cfg plla_config;
+	unsigned int mck0_prescaler;
+
+	/*  In order to run at 1000MHz CPU clock the board's PMIC
+	 *  must be able to raise the VDDCPU voltage to 1250mV
+	 *  as it is recommended in the datasheet.
+	 */
 
 #ifdef CONFIG_CPU_CLK_800MHZ
 	plla_config.mul = 32; /* 33 * 24 = 792 */
 	plla_config.div = 0;
 	plla_config.count = 0x3f;
 	plla_config.fracr = 0x155556; /* 2^22 / 3 */
-	plla_config.acr = 0x1b040010;
+	plla_config.acr = 0x00070010;
 
 	mck0_prescaler = BOARD_PRESCALER_CPUPLL | AT91C_PMC_MDIV_4;
 #endif
@@ -1085,7 +1248,7 @@ void hw_init(void)
 	plla_config.div = 0;
 	plla_config.count = 0x3f;
 	plla_config.fracr = 0x2AAAAB; /* 2^22  * 2 / 3 */
-	plla_config.acr = 0x1b040010;
+	plla_config.acr = 0x00070010;
 
 	mck0_prescaler = BOARD_PRESCALER_CPUPLL | AT91C_PMC_MDIV_5;
 #endif

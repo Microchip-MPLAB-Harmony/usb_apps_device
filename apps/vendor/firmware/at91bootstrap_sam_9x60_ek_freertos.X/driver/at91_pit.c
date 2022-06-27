@@ -1,30 +1,7 @@
-/* ----------------------------------------------------------------------------
- *         ATMEL Microcontroller Software Support
- * ----------------------------------------------------------------------------
- * Copyright (c) 2012, Atmel Corporation
- *
- * All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions are met:
- *
- * - Redistributions of source code must retain the above copyright notice,
- * this list of conditions and the disclaimer below.
- *
- * Atmel's name may not be used to endorse or promote products derived from
- * this software without specific prior written permission.
- *
- * DISCLAIMER: THIS SOFTWARE IS PROVIDED BY ATMEL "AS IS" AND ANY EXPRESS OR
- * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT ARE
- * DISCLAIMED. IN NO EVENT SHALL ATMEL BE LIABLE FOR ANY DIRECT, INDIRECT,
- * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
- * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA,
- * OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
- * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
- * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
+// Copyright (C) 2012 Microchip Technology Inc. and its subsidiaries
+//
+// SPDX-License-Identifier: MIT
+
 #include "hardware.h"
 #include "board.h"
 #include "debug.h"
@@ -51,14 +28,16 @@ static inline void pit_writel(unsigned int value, unsigned reg)
  */
 int timer_init(void)
 {
-	pit_writel((MAX_PIV | AT91C_PIT_PITEN), PIT_MR);
 
 	/* Enable PITC Clock */
 #ifdef AT91C_ID_PIT
-	pmc_enable_periph_clock(AT91C_ID_PIT);
+	pmc_enable_periph_clock(AT91C_ID_PIT, PMC_PERIPH_CLK_DIVIDER_NA);
 #else
-	pmc_enable_periph_clock(AT91C_ID_SYS);
+	pmc_enable_periph_clock(AT91C_ID_SYS, PMC_PERIPH_CLK_DIVIDER_NA);
 #endif
+
+	pit_writel((MAX_PIV | AT91C_PIT_PITEN), PIT_MR);
+
 	return 0;
 }
 
@@ -88,7 +67,7 @@ void udelay(unsigned int usec)
 	 * but it is acceptable.
 	 * ((MASTER_CLOCK / 1024) * usec) / (16 * 1024)
 	 */
-	if (pmc_check_mck_h32mxdiv())
+	if (pmc_mck_check_h32mxdiv())
 		delay = (((MASTER_CLOCK / 2) >> 10) * usec) >> 14;
 	else
 		delay = ((MASTER_CLOCK >> 10) * usec) >> 14;
@@ -105,7 +84,7 @@ void mdelay(unsigned int msec)
 	unsigned int delay;
 	unsigned int current;
 
-	if (pmc_check_mck_h32mxdiv())
+	if (pmc_mck_check_h32mxdiv())
 		delay = (((MASTER_CLOCK / 2) / 1000) * msec) / 16;
 	else
 		delay = ((MASTER_CLOCK / 1000) * msec) / 16;
@@ -138,7 +117,7 @@ int wait_interval_timer(unsigned int msec)
 	unsigned int delay;
 	unsigned int current;
 
-	if (pmc_check_mck_h32mxdiv())
+	if (pmc_mck_check_h32mxdiv())
 		delay = (((MASTER_CLOCK / 2) / 1000) * msec) / 16;
 	else
 		delay = ((MASTER_CLOCK / 1000) * msec) / 16;

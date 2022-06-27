@@ -1,39 +1,10 @@
-/* ----------------------------------------------------------------------------
- *         Microchip Technology AT91Bootstrap project
- * ----------------------------------------------------------------------------
- *
- * This represents a driver for the Synopsys PHY Utility Block Lite (PUBL)
- * which is a external RAM memory PHY.
- *
- * It provides access to the register map and holds a configuration inside
- * a structure of parameters.
- *
- * Copyright (c) 2020, Microchip Technology Inc. and its subsidiaries
- *
- * All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions are met:
- *
- * - Redistributions of source code must retain the above copyright notice,
- * this list of conditions and the disclaimer below.
- *
- * Microchip's name may not be used to endorse or promote products derived from
- * this software without specific prior written permission.
- *
- * DISCLAIMER: THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR
- * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT ARE
- * DISCLAIMED. IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIRECT,
- * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
- * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA,
- * OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
- * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
- * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
+// Copyright (C) 2020 Microchip Technology Inc. and its subsidiaries
+//
+// SPDX-License-Identifier: MIT
 
+#include "backup.h"
 #include "board.h"
+#include "common.h"
 #include "debug.h"
 #include "hardware.h"
 #include "timer.h"
@@ -185,10 +156,18 @@ void publ_init(void * config_data)
 	dbg_very_loud("PUBL_MR1 %x\n", PUBL->PUBL_MR1);
 
 #ifdef CONFIG_DDR3
-	PUBL->PUBL_MR2 = PUBL_MR2_CWL(CWL - 5);
+	PUBL->PUBL_MR2 = PUBL_MR2_CWL(CWL - 5)
+#ifdef CONFIG_DDR_EXT_TEMP_RANGE
+			| PUBL_MR2_ASR | PUBL_MR2_SRT
+#endif
+	;
 #endif
 #ifdef CONFIG_DDR2
-	PUBL->PUBL_MR2 = 0;
+	PUBL->PUBL_MR2 = 0
+#ifdef CONFIG_DDR_EXT_TEMP_RANGE
+			|  PUBL_MR2_SRT
+#endif
+	;
 #endif
 #if defined(CONFIG_LPDDR2) || defined(CONFIG_LPDDR3)
 	if (RL == 4 && WL == 2)
@@ -284,8 +263,7 @@ void publ_init(void * config_data)
 	dbg_very_loud("PUBL_DTPR2 %x\n", PUBL->PUBL_DTPR2);
 
 	PUBL->PUBL_DSGCR = PUBL_DSGCR_PUREN | PUBL_DSGCR_BDISEN |
-			PUBL_DSGCR_ZUEN | PUBL_DSGCR_LPIOPD |
-			PUBL_DSGCR_LPDLLPD
+			PUBL_DSGCR_ZUEN
 #if defined(CONFIG_LPDDR2)
 			| PUBL_DSGCR_DQSGX(MAX(1, NS_TO_CYCLES_UP(tDQSCK_MAX - tDQSCK_MIN)))
 			| PUBL_DSGCR_DQSGE(MAX(1, NS_TO_CYCLES_UP(tDQSCK_MAX - tDQSCK_MIN)))
@@ -310,15 +288,10 @@ void publ_init(void * config_data)
 #endif
 	dbg_very_loud("PUBL_DXCCR %x\n", PUBL->PUBL_DXCCR);
 
-#if defined(CONFIG_DDR2) || defined(CONFIG_DDR3)
-	PUBL->PUBL_ZQ0CR1 = PUBL_ZQ0CR1_ZPROG_OID(11) |
-			PUBL_ZQ0CR1_ZPROG_ODT(1);
-#endif
-#if defined(CONFIG_LPDDR2) || defined(CONFIG_LPDDR3)
-	/* 48 OHM */
+	/* Impedance must match the PCB. 9 means 48 Ohms */
 	PUBL->PUBL_ZQ0CR1 = PUBL_ZQ0CR1_ZPROG_OID(9) |
 			PUBL_ZQ0CR1_ZPROG_ODT(1);
-#endif
+
 	dbg_very_loud("PUBL_ZQ0CR1 %x\n", PUBL->PUBL_ZQ0CR1);
 
 	dbg_very_loud("PUBL_ACIOCR %x\n", PUBL->PUBL_ACIOCR);
@@ -338,8 +311,6 @@ int publ_start()
 {
 	PUBL->PUBL_PIR = PUBL_PIR_INIT | PUBL_PIR_CTLDINIT;
 
-	publ_idone();
-
 	return publ_idone();
 }
 
@@ -348,7 +319,7 @@ int publ_train()
 	PUBL->PUBL_PGCR = (PUBL->PUBL_PGCR & ~PUBL_PGCR_RANKEN_MASK) |
 			 PUBL_PGCR_RANKEN(1);
 
-	PUBL->PUBL_DTAR = (0x7F0UL << 0) | (0x1FFFUL << 12) | (0x1UL << 28);
+	PUBL->PUBL_DTAR = 0;
 
 	PUBL->PUBL_PIR = PUBL_PIR_INIT | PUBL_PIR_QSTRN | PUBL_PIR_RVTRN;
 
@@ -361,9 +332,117 @@ int publ_train()
 		PUBL_PGSR_RVERR | PUBL_PGSR_RVEIRR)) {
 		dbg_info("PUBL: Error Training PHY : PGSR = %x\n", PUBL->PUBL_PGSR);
 		return -1;
-	} else {
+	} else if (!backup_resume()) {
 		dbg_info("PUBL: Training complete.\n");
 	}
+
+	return 0;
+}
+
+int publ_bypass_zq_calibration(void)
+{
+	if (!backup_resume())
+		return -1;
+
+	PUBL->PUBL_PIR |= PUBL_PIR_ZCALBYP;
+
+	return 0;
+}
+
+int publ_override_zq_calibration(void)
+{
+	unsigned int data[9];
+
+	if (!backup_resume())
+		return -1;
+
+	backup_get_calibration_data(data, ARRAY_SIZE(data));
+	PUBL->PUBL_ZQ0CR0 = PUBL_ZQ0CR0_ZDEN | PUBL_ZQ0CR0_ZDATA(data[0]);
+
+	return 0;
+}
+
+int publ_zq_recalibrate(void)
+{
+	/*
+	 * Back to ZDATA defaut value = 0x14A due to PHY not behaving correctly
+	 * for all calibration codes.
+	 */
+	PUBL->PUBL_ZQ0CR0 = PUBL_ZQ0CR0_ZDEN | PUBL_ZQ0CR0_ZDATA(0x14A);
+	PUBL->PUBL_ZQ0CR0 &= ~PUBL_ZQ0CR0_ZDEN;
+	PUBL->PUBL_PIR = PUBL_PIR_INIT | PUBL_PIR_ZCAL;
+
+	publ_idone();
+
+	if (PUBL->PUBL_ZQ0SR0 & PUBL_ZQ0SR0_ZERR)
+		dbg_very_loud("ZQ calibrate error\n");
+
+	return 0;
+}
+
+static void publ_wr_dcu_cmd_cache(unsigned int data, unsigned int address,
+				  unsigned int bank, unsigned int cmd,
+				  unsigned int dtp, unsigned int repeat)
+{
+	PUBL->PUBL_DCUDR = data;
+	PUBL->PUBL_DCUDR = (address <<  4) |
+			   (bank << 20) |
+			   (cmd << 23) |
+			   ((dtp & 0x07) << 29);
+
+	PUBL->PUBL_DCUDR = (((dtp & 0x18) >> 3) <<  0) | (repeat << 2);
+}
+
+int publ_prepare_train_corrupted_data_restore(unsigned int bl)
+{
+	unsigned int address = 0, bank = 0;
+	unsigned int data[9] = {0};
+
+	backup_get_calibration_data(data, ARRAY_SIZE(data));
+
+	/* Use pointer auto-incrementation */
+	PUBL->PUBL_DCUAR = PUBL_DCUAR_CWADDR(0x0) |
+			   PUBL_DCUAR_CSADDR(0x0) |
+			   PUBL_DCUAR_CSEL(0x0) |
+			   PUBL_DCUAR_INCA | PUBL_DCUAR_ATYPE;
+
+	/* CMD = ACT 6 / DTP = ACT2RW 21 */
+	publ_wr_dcu_cmd_cache(0, address, bank, 6, 21, 0);
+
+	/* CMD = WR 8 / DTP = WR2PRE 23 */
+	publ_wr_dcu_cmd_cache(data[1], address, 0, 8, 23, 0);
+	publ_wr_dcu_cmd_cache(data[2], address, 0, 8, 23, 0);
+
+	address = (bl == 8) ? 0 : 4;
+	publ_wr_dcu_cmd_cache(data[3], address, 0, 8, 23, 0);
+	publ_wr_dcu_cmd_cache(data[4], address, 0, 8, 23, 0);
+
+	address = 8;
+	publ_wr_dcu_cmd_cache(data[5], address, 0, 8, 23, 0);
+	publ_wr_dcu_cmd_cache(data[6], address, 0, 8, 23, 0);
+
+	address = (bl == 8) ? 8 : 12;
+	publ_wr_dcu_cmd_cache(data[7], address, 0, 8, 23, 0);
+	publ_wr_dcu_cmd_cache(data[8], address, 0, 8, 23, 0);
+
+	/* CMD = PRECHARGE ALL 5 / DTP = NONE 0 */
+	publ_wr_dcu_cmd_cache(0, 0, 0, 5, 0, 0);
+
+	return 0;
+}
+
+int publ_train_corrupted_data_restore(void)
+{
+#if defined(CONFIG_DDR3) || defined(CONFIG_DDR2)
+	PUBL->PUBL_DCURR = PUBL_DCURR_SADDR(0) | PUBL_DCURR_EADDR(9) |
+			   PUBL_DCURR_DINST(1);
+#endif
+#if defined(CONFIG_LPDDR2) || defined(CONFIG_LPDDR3)
+	PUBL->PUBL_DCURR = PUBL_DCURR_SADDR(0) | PUBL_DCURR_EADDR(10) |
+			   PUBL_DCURR_DINST(1);
+#endif
+
+	WAIT_WHILE_COND(!(PUBL->PUBL_DCUSR0 & PUBL_DCUSR0_RDONE), 50000);
 
 	return 0;
 }

@@ -1,30 +1,7 @@
-/* ----------------------------------------------------------------------------
- *         ATMEL Microcontroller Software Support
- * ----------------------------------------------------------------------------
- * Copyright (c) 2006, Atmel Corporation
- *
- * All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions are met:
- *
- * - Redistributions of source code must retain the above copyright notice,
- * this list of conditions and the disclaimer below.
- *
- * Atmel's name may not be used to endorse or promote products derived from
- * this software without specific prior written permission.
- *
- * DISCLAIMER: THIS SOFTWARE IS PROVIDED BY ATMEL "AS IS" AND ANY EXPRESS OR
- * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT ARE
- * DISCLAIMED. IN NO EVENT SHALL ATMEL BE LIABLE FOR ANY DIRECT, INDIRECT,
- * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
- * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA,
- * OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
- * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
- * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
+// Copyright (C) 2006 Microchip Technology Inc. and its subsidiaries
+//
+// SPDX-License-Identifier: MIT
+
 #include "common.h"
 #include "hardware.h"
 #include "board.h"
@@ -34,6 +11,7 @@
 #include "dataflash.h"
 #include "ddramc.h"
 #include "nandflash.h"
+#include "optee.h"
 #include "flash.h"
 #include "sdcard.h"
 #include "sdramc.h"
@@ -52,16 +30,18 @@ static char *bootargs;
 
 static int setup_dt_blob(void *blob)
 {
+	int ret;
+#if !defined(CONFIG_LOAD_OPTEE)
 	unsigned int mem_bank = AT91C_BASE_DDRCS;
 	unsigned int mem_bank2 = 0;
 	unsigned int mem_size = 0;
-	int ret;
 #if defined(CONFIG_SDRAM)
 	mem_size = get_sdram_size();
 #elif defined(CONFIG_DDRC) || defined(CONFIG_UMCTL2)
 	mem_size = get_ddram_size();
 #else
 #error "No DRAM type specified!"
+#endif
 #endif
 
 	if (check_dt_blob_valid(blob)) {
@@ -88,9 +68,18 @@ static int setup_dt_blob(void *blob)
 			return ret;
 	}
 
+/*
+ * When using OP-TEE the memory node should match the configuration of the DDR
+ * that has been secured. Since this can't easily be inferred from
+ * at91bootstrap, do not modify the memory node and let the user provide a
+ * correct device tree. Moreover, the memory node in newer device tree is often
+ * already correctly configured.
+ */
+#if !defined(CONFIG_LOAD_OPTEE)
 	ret = fixup_memory_node(blob, &mem_bank, &mem_bank2, &mem_size);
 	if (ret)
 		return ret;
+#endif
 
 	return 0;
 }
@@ -344,18 +333,9 @@ static int boot_image_setup(unsigned char *addr, unsigned int *entry)
 static int load_kernel_image(struct image_info *image)
 {
 	int ret;
+	load_function load_func = get_image_load_func();
 
-#if defined(CONFIG_DATAFLASH)
-	ret = load_dataflash(image);
-#elif defined(CONFIG_FLASH)
-	ret = load_norflash(image);
-#elif defined(CONFIG_NANDFLASH)
-	ret = load_nandflash(image);
-#elif defined(CONFIG_SDCARD)
-	ret = load_sdcard(image);
-#else
-#error "No booting media specified!"
-#endif
+	ret = load_func(image);
 	if (ret)
 		return ret;
 
@@ -485,6 +465,8 @@ int load_kernel(struct image_info *image)
 					(unsigned int)kernel_entry);
 
 	enter_normal_world();
+#elif defined(CONFIG_LOAD_OPTEE)
+	optee_init_nw_params(kernel_entry, 0, mach_type, r2);
 #else
 	kernel_entry(0, mach_type, r2);
 #endif

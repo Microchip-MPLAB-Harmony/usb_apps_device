@@ -1,30 +1,9 @@
-/* ----------------------------------------------------------------------------
- *         ATMEL Microcontroller Software Support
- * ----------------------------------------------------------------------------
- * Copyright (c) 2013, Atmel Corporation
-
- * All rights reserved.
+/*
+ * Copyright (C) 2013 Microchip Technology Inc. and its subsidiaries
  *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions are met:
- *
- * - Redistributions of source code must retain the above copyright notice,
- * this list of conditions and the disclaimer below.
- *
- * Atmel's name may not be used to endorse or promote products derived from
- * this software without specific prior written permission.
- *
- * DISCLAIMER: THIS SOFTWARE IS PROVIDED BY ATMEL "AS IS" AND ANY EXPRESS OR
- * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT ARE
- * DISCLAIMED. IN NO EVENT SHALL ATMEL BE LIABLE FOR ANY DIRECT, INDIRECT,
- * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
- * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA,
- * OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
- * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
- * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ * SPDX-License-Identifier: MIT
  */
+
 #ifndef __SAMA5D4_H__
 #define __SAMA5D4_H__
 
@@ -248,6 +227,7 @@
 #define	H64MX_SLAVE_DDR2_PORT_7		10	/* DDR2 Port7 */
 #define	H64MX_SLAVE_INTERNAL_SRAM	11	/* Internal SRAM 128K */
 #define	H64MX_SLAVE_BRIDGE_TO_H32MX	12	/* Bridge from H64MX to H32MX */
+#define	H64MX_SLAVE_MAX			13	/* Number of slaves on H64MX */
 
 /* MATRIX1(H32MX) Matrix Slaves */
 #define	H32MX_BRIDGE_TO_H64MX		0	/* Bridge from H32MX to H64MX */
@@ -262,6 +242,7 @@
  */
 #define	H32MX_USB			5
 #define	H32MX_SMD			6	/* Soft Modem(SMD) */
+#define	H32MX_SLAVE_MAX			7	/* Number of slaves on H32MX */
 
 /*
  * SoC specific defines

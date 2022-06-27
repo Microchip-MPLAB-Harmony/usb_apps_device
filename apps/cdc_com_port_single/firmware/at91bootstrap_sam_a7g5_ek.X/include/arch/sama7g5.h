@@ -1,29 +1,7 @@
-/* ----------------------------------------------------------------------------
- *         Microchip Technology AT91Bootstrap project
- * ----------------------------------------------------------------------------
- * Copyright (c) 2018, Microchip Technology Inc. and its subsidiaries
+/*
+ * Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries
  *
- * All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions are met:
- *
- * - Redistributions of source code must retain the above copyright notice,
- * this list of conditions and the disclaimer below.
- *
- * Microchip's name may not be used to endorse or promote products derived from
- * this software without specific prior written permission.
- *
- * DISCLAIMER: THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR
- * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT ARE
- * DISCLAIMED. IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIRECT,
- * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
- * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA,
- * OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
- * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
- * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ * SPDX-License-Identifier: MIT
  */
 
 #ifndef __SAMA7G5_H__
@@ -38,6 +16,7 @@
 #define AT91C_ID_PIOD		14	/* Parallel I/O Controller D */
 #define AT91C_ID_PIOE		15	/* Parallel I/O Controller E */
 
+#define AT91C_ID_HSMC		21
 #define AT91C_ID_FLEXCOM0	38
 #define AT91C_ID_FLEXCOM1	39
 #define AT91C_ID_FLEXCOM2	40
@@ -51,8 +30,11 @@
 #define AT91C_ID_FLEXCOM10	48
 #define AT91C_ID_FLEXCOM11	49
 
+#define AT91C_ID_QSPI0		78
+#define AT91C_ID_QSPI1		79
 #define AT91C_ID_SDMMC0		80
 #define AT91C_ID_SDMMC1		81
+#define AT91C_ID_SDMMC2		82
 
 #define AT91C_ID_PIT64B0	70
 #define AT91C_ID_PIT64B		AT91C_ID_PIT64B0
@@ -60,6 +42,9 @@
 /*
  * User Peripherals physical base addresses.
  */
+#define AT91C_BASE_SECURAM	0xe0000000
+#define AT91C_BASE_SECUMOD	0xe0004000
+#define AT91C_BASE_SFRBU	0xe0008000
 #define AT91C_BASE_PIOA		0xe0014000
 #define AT91C_BASE_PIOB		(AT91C_BASE_PIOA + 0x40)
 #define AT91C_BASE_PIOC		(AT91C_BASE_PIOB + 0x40)
@@ -70,11 +55,20 @@
 
 #define AT91C_BASE_WDT		0xe001c000
 #define AT91C_BASE_RSTC		0xe001d000
+#define AT91C_BASE_SHDWC	0xe001d010
 #define AT91C_BASE_WDTS		0xe001d180
 #define AT91C_BASE_SCKCR	0xe001d050
 
+#define AT91C_BASE_MATRIX	0xe0804000
+#define AT91C_BASE_HSMC		0xe0808000
+#define AT91C_BASE_QSPI0	0xe080c000
+#define AT91C_BASE_QSPI1	0xe0810000
+
 #define AT91C_BASE_SDMMC0	0xe1204000
 #define AT91C_BASE_SDMMC1	0xe1208000
+#define AT91C_BASE_SDMMC2	0xe120c000
+
+#define AT91C_BASE_SFR		0xe1624000
 
 #define AT91C_BASE_PIT64B0	0xe1800000
 
@@ -97,9 +91,47 @@
 #define AT91C_BASE_UMCTL2_MP	0xe38003f8
 #define AT91C_BASE_PUBL		0xe3804000
 
+#define AT91C_BASE_NICGPV	0xe8b00000
+
+#define ATMEL_BASE_SMC		(AT91C_BASE_HSMC + 0x700)
+#define AT91C_BASE_PMECC        (AT91C_BASE_HSMC + 0x70)
+#define AT91C_BASE_PMERRLOC     (AT91C_BASE_HSMC + 0x500)
+
 #define AT91C_NUM_FLEXCOM	12
 #define AT91C_NUM_PIO		5
 
 #define AT91C_BASE_PIT64BC	AT91C_BASE_PIT64B0
+
+#define AT91C_BASE_ROM		0x00000000
+#define AT91C_BASE_QSPI0_MEM	0x20000000
+#define AT91C_BASE_QSPI1_MEM	0x30000000
+#define AT91C_BASE_CS0		0x40000000
+#define AT91C_BASE_CS1		0x48000000
+#define AT91C_BASE_CS2		0x50000000
+#define AT91C_BASE_CS3		0x58000000
+
 #define AT91C_BASE_DDRCS	0x60000000
+
+#define	AT91C_QSPI0_MEM_SIZE	0x10000000
+#define	AT91C_QSPI1_MEM_SIZE	0x10000000
+
+/* Internal ROM PMECC Galois Field Tables offsets */
+#define PMECC_GF_TABLE_512_ALPHA_OFFSET		0x24000
+#define PMECC_GF_TABLE_512_INDEX_OFFSET		0x20000
+#define PMECC_GF_TABLE_1024_ALPHA_OFFSET	0x30000
+#define PMECC_GF_TABLE_1024_INDEX_OFFSET	0x28000
+
+/* Matrix Slaves ID */
+#define MATRIX_SLAVE_QSPI0	0
+#define MATRIX_SLAVE_QSPI1	1
+#define MATRIX_SLAVE_AESB	2
+#define MATRIX_SLAVE_UDDRC	3
+#define MATRIX_SLAVE_APB_HSS	4
+#define MATRIX_SLAVE_FLEXRAM0	5
+#define MATRIX_SLAVE_FLEXRAM1	6
+#define MATRIX_SLAVE_EBI	7
+#define MATRIX_SLAVE_NFCRAM	8
+#define MATRIX_SLAVE_USB	9
+#define MATRIX_SLAVE_MAX	10	/* Number of slaves on Matrix */
+
 #endif /* #ifndef __SAMA7G5_H__ */

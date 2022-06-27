@@ -1,30 +1,7 @@
-/* ----------------------------------------------------------------------------
- *         ATMEL Microcontroller Software Support
- * ----------------------------------------------------------------------------
- * Copyright (c) 2012, Atmel Corporation
- *
- * All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions are met:
- *
- * - Redistributions of source code must retain the above copyright notice,
- * this list of conditions and the disclaimer below.
- *
- * Atmel's name may not be used to endorse or promote products derived from
- * this software without specific prior written permission.
- *
- * DISCLAIMER: THIS SOFTWARE IS PROVIDED BY ATMEL "AS IS" AND ANY EXPRESS OR
- * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT ARE
- * DISCLAIMED. IN NO EVENT SHALL ATMEL BE LIABLE FOR ANY DIRECT, INDIRECT,
- * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
- * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA,
- * OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
- * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
- * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
+// Copyright (C) 2012 Microchip Technology Inc. and its subsidiaries
+//
+// SPDX-License-Identifier: MIT
+
 #include "hardware.h"
 #include "arch/at91_slowclk.h"
 #include "timer.h"
@@ -63,7 +40,7 @@ static void slowclk_wait_osc32_stable(void)
 }
 
 #if !defined(CONFIG_SAMA5D4) && !defined(CONFIG_SAMA5D2) \
-	&& !defined(CONFIG_SAM9X60)
+	&& !defined(CONFIG_SAM9X60) && !defined(CONFIG_SAMA7G5)
 static void slowclk_disable_rc32(void)
 {
 	unsigned int reg;
@@ -75,7 +52,9 @@ static void slowclk_disable_rc32(void)
 	reg &= ~AT91C_SLCKSEL_RCEN;
 	writel(reg, AT91C_BASE_SCKCR);
 }
-#endif
+#endif /* #if !defined(CONFIG_SAMA5D4) && !defined(CONFIG_SAMA5D2) \
+	&& !defined(CONFIG_SAM9X60) && !defined(CONFIG_SAMA7G5)
+	*/
 
 static int slowclk_select_osc32(void)
 {
@@ -110,7 +89,7 @@ int slowclk_switch_osc32(void)
 	slowclk_select_osc32();
 
 #if !defined(CONFIG_SAMA5D4) && !defined(CONFIG_SAMA5D2) \
-	&& !defined(CONFIG_SAM9X60)
+	&& !defined(CONFIG_SAM9X60) && !defined(CONFIG_SAMA7G5)
 	slowclk_disable_rc32();
 #endif
 
@@ -123,7 +102,7 @@ int slowclk_switch_rc32(void)
 	unsigned int reg;
 
 #if !defined(CONFIG_SAMA5D4) && !defined(CONFIG_SAMA5D2) \
-	&& !defined(CONFIG_SAM9X60)
+	&& !defined(CONFIG_SAM9X60) && !defined(CONFIG_SAMA7G5)
 	/* Enable the internal 32 kHz RC oscillator for low power by writing a 1 to the RCEN bit. */
 	reg = readl(AT91C_BASE_SCKCR);
 	reg |= AT91C_SLCKSEL_RCEN;
@@ -182,12 +161,15 @@ static int slowclk_osc32_bypass(void)
 	 */
 	udelay(153);
 
+#if !defined(CONFIG_SAMA5D4) && !defined(CONFIG_SAMA5D2) \
+	&& !defined(CONFIG_SAM9X60) && !defined(CONFIG_SAMA7G5)
+
 	/*
 	 * Disable the 32kHz RC oscillator by setting the bit RCEN to 0
 	 */
-	reg = readl(AT91C_BASE_SCKCR);
-	reg &= ~AT91C_SLCKSEL_RCEN;
-	writel(reg, AT91C_BASE_SCKCR);
+	slowclk_disable_rc32();
+#endif /* #if !defined(CONFIG_SAMA5D4) && !defined(CONFIG_SAMA5D2) \
+	&& !defined(CONFIG_SAM9X60) && !defined(CONFIG_SAMA7G5) */
 
 	return 0;
 }

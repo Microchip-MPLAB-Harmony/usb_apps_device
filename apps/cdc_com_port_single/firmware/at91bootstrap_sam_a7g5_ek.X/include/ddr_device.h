@@ -1,30 +1,9 @@
-/* ----------------------------------------------------------------------------
- *         ATMEL Microcontroller Software Support
- * ----------------------------------------------------------------------------
- * Copyright (c) 2020, Atmel Corporation
+/*
+ * Copyright (C) 2020 Microchip Technology Inc. and its subsidiaries
  *
- * All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions are met:
- *
- * - Redistributions of source code must retain the above copyright notice,
- * this list of conditions and the disclaimer below.
- *
- * Atmel's name may not be used to endorse or promote products derived from
- * this software without specific prior written permission.
- *
- * DISCLAIMER: THIS SOFTWARE IS PROVIDED BY ATMEL "AS IS" AND ANY EXPRESS OR
- * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT ARE
- * DISCLAIMED. IN NO EVENT SHALL ATMEL BE LIABLE FOR ANY DIRECT, INDIRECT,
- * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
- * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA,
- * OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
- * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
- * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ * SPDX-License-Identifier: MIT
  */
+
 #ifndef __DDR_DEVICE_H__
 #define __DDR_DEVICE_H__
 
@@ -197,6 +176,25 @@ static const struct ddram_timings ddr_ddram_timings = {
 	.trpa = 4,
 	.trtp = 2,
 	.tfaw = 8,
+#elif defined(CONFIG_DDR_W9712G6KB25I)
+/* 2 Mwords x 4 Banks x 16 bits DDR2 SDRAM (128 Mbit) in SAMA5D2 Sip */
+	.tras = 8,
+	.trcd = 3,
+	.twr = 3,
+	.trc = 10,
+	.trp = 3,
+	.trrd = 2,
+	.twtr = 2,
+	.tmrd = 2,
+	.trfc = 18,
+	.txsnr = 19,
+	.txsrd = 200,
+	.txp = 2,
+	.txard = 2,
+	.txards = 7,
+	.trpa = 3,
+	.trtp = 2,
+	.tfaw = 7,
 #elif defined(CONFIG_DDR_AD220032D)
 /* LPDDR2 (AD220032D = 8 Mwords x 8 Banks x 32 bits), total 2 Gbit in SiP on SAMA5D27-WLSOM-EK */
 	.tras = 7,
@@ -208,8 +206,27 @@ static const struct ddram_timings ddr_ddram_timings = {
 	.twtr = 2,
 	.tmrd = 5,
 	.trfc = 21,
-	.txsnr = 0,
-	.txsrd = 23,
+	.txsnr = 23,
+	.txsrd = 0,
+	.txp = 2,
+	.txard = 0,
+	.txards = 0,
+	.trpa = 4,
+	.trtp = 2,
+	.tfaw = 10,
+#elif defined(CONFIG_DDR_AD210032F)
+/* 4 Mwords x 8 Banks x 32 bits LPDDR2-SDRAM (1 Gbit) on the SAMA5D2 SiP */
+	.tras = 7,
+	.trcd = 3,
+	.twr = 3,
+	.trc = 11,
+	.trp = 4,
+	.trrd = 2,
+	.twtr = 2,
+	.tmrd = 5,
+	.trfc = 22,
+	.txsnr = 23,
+	.txsrd = 0,
 	.txp = 2,
 	.txard = 0,
 	.txards = 0,
@@ -272,6 +289,60 @@ static const struct ddram_timings ddr_ddram_timings = {
 	.trpa = 3,
 	.trtp = 2,
 	.tfaw = 8,
+#elif defined(CONFIG_BUS_SPEED_170MHZ)
+	.tras = 7,
+	.trcd = 3,
+	.twr = 3,
+	.trc = 10,
+	.trp = 3,
+	.trrd = 3,
+	.twtr = 2,
+	.tmrd = 2,
+	.trfc = 34,
+	.txsnr = 35,
+	.txsrd = 200,
+	.txp = 2,
+	.txard = 8,
+	.txards = 2,
+	.trpa = 3,
+	.trtp = 2,
+	.tfaw = 6,
+#elif defined(CONFIG_BUS_SPEED_176MHZ)
+	.tras = 8,
+	.trcd = 3,
+	.twr = 3,
+	.trc = 10,
+	.trp = 3,
+	.trrd = 3,
+	.twtr = 2,
+	.tmrd = 2,
+	.trfc = 35,
+	.txsnr = 36,
+	.txsrd = 200,
+	.txp = 2,
+	.txard = 8,
+	.txards = 2,
+	.trpa = 3,
+	.trtp = 2,
+	.tfaw = 8,
+#elif defined(CONFIG_BUS_SPEED_200MHZ)
+	.tras = 8,
+	.trcd = 3,
+	.twr = 3,
+	.trc = 11,
+	.trp = 3,
+	.trrd = 3,
+	.twtr = 2,
+	.tmrd = 2,
+	.trfc = 40,
+	.txsnr = 42,
+	.txsrd = 200,
+	.txp = 2,
+	.txard = 8,
+	.txards = 2,
+	.trpa = 3,
+	.trtp = 2,
+	.tfaw = 9,
 #else
 	#error "No CLK setting defined"
 #endif

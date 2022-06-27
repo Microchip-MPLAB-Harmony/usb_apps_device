@@ -1,35 +1,14 @@
-/* ----------------------------------------------------------------------------
- *         ATMEL Microcontroller Software Support
- * ----------------------------------------------------------------------------
- * Copyright (c) 2015, Atmel Corporation
- *
- * All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions are met:
- *
- * - Redistributions of source code must retain the above copyright notice,
- * this list of conditions and the disclaimer below.
- *
- * Atmel's name may not be used to endorse or promote products derived from
- * this software without specific prior written permission.
- *
- * DISCLAIMER: THIS SOFTWARE IS PROVIDED BY ATMEL "AS IS" AND ANY EXPRESS OR
- * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT ARE
- * DISCLAIMED. IN NO EVENT SHALL ATMEL BE LIABLE FOR ANY DIRECT, INDIRECT,
- * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
- * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA,
- * OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
- * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
- * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
+// Copyright (C) 2015 Microchip Technology Inc. and its subsidiaries
+//
+// SPDX-License-Identifier: MIT
+
 #include "common.h"
 #include "secure.h"
 #include "aes.h"
 #include "debug.h"
 #include "string.h"
+#include "hardware.h"
+#include "arch/at91_ddrsdrc.h"
 #include "autoconf.h"
 
 static unsigned int cipher_key[8] = {
@@ -68,6 +47,27 @@ static unsigned int iv[AT91_AES_IV_SIZE_WORD] = {
 	CONFIG_AES_IV_WORD2,
 	CONFIG_AES_IV_WORD3,
 };
+
+#if defined(CONFIG_OCMS_STATIC)
+
+static unsigned int OCMS_KEYS[2] = {
+	CONFIG_OCMS_KEY1,
+	CONFIG_OCMS_KEY2,
+};
+
+void ocms_init_keys(void)
+{
+	writel(OCMS_KEYS[0], (AT91C_BASE_MPDDRC + MPDDRC_OCMS_KEY1));
+	writel(OCMS_KEYS[1], (AT91C_BASE_MPDDRC + MPDDRC_OCMS_KEY2));
+	memset(OCMS_KEYS, 0, sizeof(OCMS_KEYS));
+}
+
+void ocms_enable(void)
+{
+	writel(AT91C_MPDDRC_OCMS_ENABLE, (AT91C_BASE_MPDDRC + MPDDRC_OCMS));
+}
+
+#endif /* #if defined(CONFIG_OCMS_STATIC) */
 
 static int secure_decrypt(void *data, unsigned int data_length, int is_signed)
 {
@@ -117,7 +117,7 @@ exit:
 	return rc;
 }
 
-static void wipe_keys()
+static void __attribute__((optimize("O0"))) wipe_keys()
 {
 	/* Reset keys */
 	memset(cmac_key, 0, sizeof(cmac_key));

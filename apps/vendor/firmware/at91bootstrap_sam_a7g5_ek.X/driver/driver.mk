@@ -1,3 +1,7 @@
+# Copyright (C) 2006 Microchip Technology Inc. and its subsidiaries
+#
+# SPDX-License-Identifier: MIT
+
 # Makefile for AT91-Bootstrap drivers directory
 # DIRS				+= drivers
 
@@ -24,6 +28,7 @@ COBJS-$(CONFIG_WDT)		+= $(DRIVERS_SRC)/at91_wdt.o
 COBJS-$(CONFIG_WDT2)		+= $(DRIVERS_SRC)/at91_wdt2.o
 COBJS-y				+= $(DRIVERS_SRC)/at91_usart.o
 COBJS-y				+= $(DRIVERS_SRC)/at91_rstc.o
+COBJS-y				+= $(DRIVERS_SRC)/shdwc.o
 
 COBJS-$(CONFIG_CPU_HAS_L2CC)	+= $(DRIVERS_SRC)/lp310_l2cc.o
 
@@ -50,7 +55,14 @@ COBJS-$(CONFIG_SPI_FLASH)	+= $(DRIVERS_SRC)/spi_flash/spi_nor_ids.o
 
 COBJS-$(CONFIG_SPI)		+= $(DRIVERS_SRC)/at91_spi.o
 COBJS-$(CONFIG_SPI)		+= $(DRIVERS_SRC)/spi_flash.o
-COBJS-$(CONFIG_QSPI)		+= $(DRIVERS_SRC)/at91_qspi.o
+ifeq ($(CONFIG_QSPI), y)
+COBJS-y				+= $(DRIVERS_SRC)/at91-qspi/qspi-common.o
+ifeq ($(CONFIG_SAMA7G5), y)
+COBJS-y				+= $(DRIVERS_SRC)/at91-qspi/qspi-sama7g5.o
+else
+COBJS-y				+= $(DRIVERS_SRC)/at91-qspi/qspi.o
+endif
+endif
 COBJS-$(CONFIG_DATAFLASH)	+= $(DRIVERS_SRC)/dataflash.o
 
 COBJS-$(CONFIG_FLASH)		+= $(DRIVERS_SRC)/flash.o
@@ -74,6 +86,9 @@ COBJS-$(CONFIG_ENTER_NWD)	+= $(DRIVERS_SRC)/monitor/mon_init.o
 COBJS-$(CONFIG_ENTER_NWD)	+= $(DRIVERS_SRC)/monitor/mon_switch.o
 COBJS-$(CONFIG_ENTER_NWD)	+= $(DRIVERS_SRC)/monitor/mon_vectors.o
 
+COBJS-$(CONFIG_LOAD_OPTEE)	+= $(DRIVERS_SRC)/optee/optee_switch.o
+COBJS-$(CONFIG_LOAD_OPTEE)	+= $(DRIVERS_SRC)/optee/optee.o
+
 COBJS-$(CONFIG_PM)	+= $(DRIVERS_SRC)/pm.o
 COBJS-$(CONFIG_TWI)	+= $(DRIVERS_SRC)/at91_twi.o
 COBJS-$(CONFIG_ACT8865)	+= $(DRIVERS_SRC)/act8865.o
@@ -91,3 +106,8 @@ COBJS-$(CONFIG_BACKUP_MODE)	+= $(DRIVERS_SRC)/backup.o
 
 COBJS-$(CONFIG_REDIRECT_ALL_INTS_AIC)	+= $(DRIVERS_SRC)/at91_aicredir.o
 COBJS-$(CONFIG_FLEXCOM)     += $(DRIVERS_SRC)/at91_flexcom.o
+
+COBJS-$(CONFIG_SFRBU)		+= $(DRIVERS_SRC)/sfrbu.o
+
+COBJS-$(CONFIG_CACHES)		+= $(DRIVERS_SRC)/l1cache.o
+COBJS-$(CONFIG_MMU)		+= $(DRIVERS_SRC)/mmu.o

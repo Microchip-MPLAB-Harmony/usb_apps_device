@@ -1,31 +1,9 @@
-/* ----------------------------------------------------------------------------
- *         ATMEL Microcontroller Software Support
- * ----------------------------------------------------------------------------
- * Copyright (c) 2007, Stelian Pop <stelian.pop@leadtechdesign.com>
- * Copyright (c) 2007 Lead Tech Design <www.leadtechdesign.com>
- *
- * All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions are met:
- *
- * - Redistributions of source code must retain the above copyright notice,
- * this list of conditions and the disclaimer below.
- *
- * Atmel's name may not be used to endorse or promote products derived from
- * this software without specific prior written permission.
- *
- * DISCLAIMER: THIS SOFTWARE IS PROVIDED BY ATMEL "AS IS" AND ANY EXPRESS OR
- * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT ARE
- * DISCLAIMED. IN NO EVENT SHALL ATMEL BE LIABLE FOR ANY DIRECT, INDIRECT,
- * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
- * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA,
- * OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
- * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
- * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
+// Copyright (C) 2006 Microchip Technology Inc. and its subsidiaries
+// Copyright (C) 2007 Lead Tech Design <www.leadtechdesign.com>
+// Copyright (C) 2007 Stelian Pop <stelian.pop@leadtechdesign.com>
+//
+// SPDX-License-Identifier: MIT
+
 #include "hardware.h"
 #include "arch/at91_ddrsdrc.h"
 #include "arch/at91_pmc/pmc.h"
@@ -79,6 +57,7 @@ static void ddram_reg_config(struct ddramc_register *ddramc_config)
 	 * If tref is 7.8us, we have: 400000 / 7.8 = 51282(0xC852)
 	 * */
 	ddramc_config->cal_mr4r = AT91C_DDRC2_COUNT_CAL(0xC852);
+	ddramc_config->tim_calr = AT91C_DDRC2_ZQCS(64);
 #elif defined(CONFIG_DDR_W632GU6MB)
 /* Two DDR3L(W632GU6MB-12 = 16 Mbit x 16 x 8 banks), total 4 Gbit on SAMA5D2 ICP*/
 	type = AT91C_DDRC2_MD_DDR3_SDRAM;
@@ -120,6 +99,15 @@ static void ddram_reg_config(struct ddramc_register *ddramc_config)
 	cas = AT91C_DDRC2_CAS_3;
 	bank = AT91C_DDRC2_NB_BANKS_8;
 	ddramc_config->rtr = 0x4FF;
+#elif defined(CONFIG_DDR_W9712G6KB25I)
+/* 2 Mwords x 4 Banks x 16 bits DDR2 SDRAM (128 Mbit) in SAMA5D2 Sip */
+	type = AT91C_DDRC2_MD_DDR2_SDRAM;
+	dbw = AT91C_DDRC2_DBW_16_BITS;
+	col = AT91C_DDRC2_NC_DDR9_SDR8;
+	row = AT91C_DDRC2_NR_12;
+	cas = AT91C_DDRC2_CAS_3;
+	bank = AT91C_DDRC2_NB_BANKS_4;
+	ddramc_config->rtr = 0x4FF;
 #elif defined(CONFIG_DDR_W9751G6KB) || defined(CONFIG_DDR_W971GG6SB)
 	type = AT91C_DDRC2_MD_DDR2_SDRAM;
 	dbw = AT91C_DDRC2_DBW_16_BITS;
@@ -127,22 +115,28 @@ static void ddram_reg_config(struct ddramc_register *ddramc_config)
 	row = AT91C_DDRC2_NR_13;
 	cas = AT91C_DDRC2_CAS_3;
 #if defined(CONFIG_DDR_W9751G6KB)
-/* DDR2 (W9751G6KB = 8 Mwords x 4 Banks x 16 bits), total 512 Mbit in SAM9X60D5M SiP */
+/* DDR2 (W9751G6KB = 8 Mwords x 4 Banks x 16 bits), total 512 Mbit in SAM9X60D5M and ATSAMA5D27C-D5M SiP */
 	bank = AT91C_DDRC2_NB_BANKS_4;
 #else // defined(CONFIG_DDR_W971GG6SB)
-/* DDR2 (W971GG6SB = 8 Mwords x 8 Banks x 16 bits), total 1 Gbit in SAM9X60D1G SiP */
+/* DDR2 (W971GG6SB = 8 Mwords x 8 Banks x 16 bits), total 1 Gbit in SAM9X60D1G and ATSAMA5D27C-D1G SiP */
 	bank = AT91C_DDRC2_NB_BANKS_8;
 #endif
-#if defined(CONFIG_BUS_SPEED_200MHZ)
-	/*
-	 * This value is set for normal operating conditions.
-	 * Change this to :
-	 * ddramc_config->rtr = 0x30c (3900 ns / 5 ns);
-	 * for temperatures > 85C (at 200 MHz bus speed)
-	 */
+#if defined(CONFIG_DDR_EXT_TEMP_RANGE)
+#if defined(CONFIG_BUS_SPEED_166MHZ)
+	ddramc_config->rtr = 0x2A5;
+#elif defined(CONFIG_BUS_SPEED_200MHZ)
+	ddramc_config->rtr = 0x30c;
+#else
+	#error "No CLK setting defined"
+#endif
+#else
+#if defined(CONFIG_BUS_SPEED_166MHZ)
+	ddramc_config->rtr = 0x50E;
+#elif defined(CONFIG_BUS_SPEED_200MHZ)
 	ddramc_config->rtr = 0x618;
 #else
 	#error "No CLK setting defined"
+#endif
 #endif
 #elif defined(CONFIG_DDR_AD220032D)
 /* LPDDR2 (AD220032D = 8 Mwords x 8 Banks x 32 bits), total 2 Gbit in SiP on SAMA5D27-WLSOM1-EK */
@@ -153,6 +147,23 @@ static void ddram_reg_config(struct ddramc_register *ddramc_config)
 	cas = AT91C_DDRC2_CAS_3;
 	bank = AT91C_DDRC2_NB_BANKS_8;
 	ddramc_config->rtr = AT91C_DDRC2_ENABLE_ADJ_REF | 0x27f;
+	ddramc_config->cal_mr4r = AT91C_DDRC2_COUNT_CAL(0xFFFE) |
+				   AT91C_DDRC2_MR4R(0xFFFE);
+	ddramc_config->tim_calr = AT91C_DDRC2_ZQCS(15);
+	ddramc_config->lpddr2_lpr = AT91C_LPDDRC2_DS(0x03);
+#elif defined(CONFIG_DDR_AD210032F)
+/* 4 Mwords x 8 Banks x 32 bits LPDDR2-SDRAM (1 Gbit) on the SAMA5D2 SiP */
+	type = AT91C_DDRC2_MD_LPDDR2_SDRAM;
+	dbw = AT91C_DDRC2_DBW_32_BITS;
+	col = AT91C_DDRC2_NC_DDR9_SDR8;
+	row = AT91C_DDRC2_NR_13;
+	cas = AT91C_DDRC2_CAS_3;
+	bank = AT91C_DDRC2_NB_BANKS_8;
+	ddramc_config->rtr = AT91C_DDRC2_ENABLE_ADJ_REF | 0x27f;
+	ddramc_config->cal_mr4r = AT91C_DDRC2_COUNT_CAL(0xFFFE) |
+				   AT91C_DDRC2_MR4R(0xFFFE);
+	ddramc_config->tim_calr = AT91C_DDRC2_ZQCS(15);
+	ddramc_config->lpddr2_lpr = AT91C_LPDDRC2_DS(0x03);
 #elif defined(CONFIG_DDR_MT47H128M16)
 /* DDR2 (MT47H128M16 = 8 Mwords x 8 Banks x 32 bits), total 2 Gbit on the SAMA5D3-EK */
 	type = AT91C_DDRC2_MD_DDR2_SDRAM;
@@ -161,14 +172,39 @@ static void ddram_reg_config(struct ddramc_register *ddramc_config)
 	row = AT91C_DDRC2_NR_14;
 	cas = AT91C_DDRC2_CAS_3;
 	bank = AT91C_DDRC2_NB_BANKS_8;
+#if defined(CONFIG_DDR_EXT_TEMP_RANGE)
+/* The refresh period is 64ms (commercial) or 32ms (industrial and automotive). */
 #if defined(CONFIG_BUS_SPEED_133MHZ)
-	ddramc_config->rtr = 0x411;
+	ddramc_config->rtr = 0x207;
 #elif defined(CONFIG_BUS_SPEED_148MHZ)
-	ddramc_config->rtr = 0x486;
+	ddramc_config->rtr = 0x242;
 #elif defined(CONFIG_BUS_SPEED_166MHZ)
-	ddramc_config->rtr = 0x500;
+	ddramc_config->rtr = 0x288;
+#elif defined(CONFIG_BUS_SPEED_170MHZ)
+	ddramc_config->rtr = 0x298;
+#elif defined(CONFIG_BUS_SPEED_176MHZ)
+	ddramc_config->rtr = 0x2b0;
+#elif defined(CONFIG_BUS_SPEED_200MHZ)
+	ddramc_config->rtr = 0x30e;
 #else
 	#error "No CLK setting defined"
+#endif
+#else
+#if defined(CONFIG_BUS_SPEED_133MHZ)
+	ddramc_config->rtr = 0x40e;
+#elif defined(CONFIG_BUS_SPEED_148MHZ)
+	ddramc_config->rtr = 0x484;
+#elif defined(CONFIG_BUS_SPEED_166MHZ)
+	ddramc_config->rtr = 0x510;
+#elif defined(CONFIG_BUS_SPEED_170MHZ)
+	ddramc_config->rtr = 0x530;
+#elif defined(CONFIG_BUS_SPEED_176MHZ)
+	ddramc_config->rtr = 0x55f;
+#elif defined(CONFIG_BUS_SPEED_200MHZ)
+	ddramc_config->rtr = 0x61a;
+#else
+	#error "No CLK setting defined"
+#endif
 #endif
 #elif defined(CONFIG_DDR_MT47H64M16)
 /* DDR2 (MT47H64M16 x 2 = 8 Mwords x 8 Banks x 16 bits x 2), total 2 Gbit on the SAMA5D3-Xplained */
@@ -721,7 +757,7 @@ void ddr3_lpddr2_sdram_bkp_init(unsigned int base_address,
 #endif
 
 	/* re-connect DDR Pads to the CPU domain (VCCCORE) */
-	writel(0, AT91C_BASE_SFRBU + SFRBU_DDRBUMCR);
+	sfrbu_set_ddr_power_mode(1);
 	asm volatile ("dmb");
 
 #if defined(DEBUG_BKP_SR_INIT)

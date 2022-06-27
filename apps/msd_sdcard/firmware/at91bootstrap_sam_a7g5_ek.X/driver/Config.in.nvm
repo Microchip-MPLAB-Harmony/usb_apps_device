@@ -1,3 +1,7 @@
+# Copyright (C) 2006 Microchip Technology Inc. and its subsidiaries
+#
+# SPDX-License-Identifier: MIT
+
 menu "Flash Memory"
 	depends on LOAD_SW
 
@@ -63,7 +67,7 @@ endchoice
 
 config SDHC
 	bool
-	depends on CPU_HAS_SDHC0 || CPU_HAS_SDHC1
+	depends on CPU_HAS_SDHC0 || CPU_HAS_SDHC1 || CPU_HAS_SDHC2
 	default y
 
 choice
@@ -81,6 +85,10 @@ config SDHC1
 	bool "On SDHC1"
 	depends on CPU_HAS_SDHC1
 
+config SDHC2
+	bool "On SDHC2"
+	depends on CPU_HAS_SDHC2
+
 endchoice
 
 config SDHC_NODMA
@@ -89,6 +97,19 @@ config SDHC_NODMA
 	default n
 	help
 	  Disable SDHC DMA mode, use PIO mode only
+
+config SDHC_8BIT_SUPPORT
+	bool "Use the full 8 bit bus width for this SDHC"
+	depends on SAMA5D2
+	depends on SDHC0
+	default y
+	help
+	  This SDHC block supports 8 bit bus width. However, if this block
+	  is connected to an SD-Card, the SD-Card can only make use of 4 bits,
+	  thus the other 4 bits can be reused for something else.
+	  In such case, deselect this option such that AT91Bootstrap
+	  will not configure SDHC lines 4-7 in SDHC mode, and they can be
+	  used for another interface.
 
 config FATFS
 	bool
@@ -109,5 +130,6 @@ endmenu
 
 config BOOTSTRAP_MAXSIZE
 	string
-	default "65536"	if SAMA5D3X || SAMA5D4 || SAMA5D2 || SAM9X60 || SAMA7G5
+	default "65536"	if SAMA5D3X || SAMA5D4 || SAMA5D2 || SAMA7G5
+	default "32768" if SAM9X60
 	default "23000"

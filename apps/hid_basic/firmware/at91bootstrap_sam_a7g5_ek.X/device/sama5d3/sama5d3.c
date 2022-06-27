@@ -1,30 +1,7 @@
-/* ----------------------------------------------------------------------------
- *         ATMEL Microcontroller Software Support
- * ----------------------------------------------------------------------------
- * Copyright (c) 2012, Atmel Corporation
- *
- * All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions are met:
- *
- * - Redistributions of source code must retain the above copyright notice,
- * this list of conditions and the disclaimer below.
- *
- * Atmel's name may not be used to endorse or promote products derived from
- * this software without specific prior written permission.
- *
- * DISCLAIMER: THIS SOFTWARE IS PROVIDED BY ATMEL "AS IS" AND ANY EXPRESS OR
- * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT ARE
- * DISCLAIMED. IN NO EVENT SHALL ATMEL BE LIABLE FOR ANY DIRECT, INDIRECT,
- * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
- * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA,
- * OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
- * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
- * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
+// Copyright (C) 2012 Microchip Technology Inc. and its subsidiaries
+//
+// SPDX-License-Identifier: MIT
+
 #include "common.h"
 #include "hardware.h"
 #include "pmc.h"
@@ -37,7 +14,7 @@
 #include "watchdog.h"
 #include "string.h"
 #include "board_hw_info.h"
-
+#include "led.h"
 #include "arch/at91_pmc/pmc.h"
 #include "arch/at91_rstc.h"
 #include "arch/sama5_smc.h"
@@ -45,6 +22,10 @@
 #include "arch/at91_ddrsdrc.h"
 #include "sama5d3_board.h"
 #include "twi.h"
+
+#ifdef CONFIG_MMU
+#include "mmu_cp15.h"
+#endif
 
 __attribute__((weak)) void HDMI_Qt1070_workaround(void);
 
@@ -252,6 +233,10 @@ void hw_init(void)
 	/* Disable watchdog */
 	at91_disable_wdt();
 
+#ifdef CONFIG_LED_ON_BOARD
+	at91_leds_init();
+#endif
+
 	/*
 	 * At this stage the main oscillator
 	 * is supposed to be enabled PCK = MCK = MOSC
@@ -301,20 +286,6 @@ void hw_init(void)
 #endif
 }
 
-char *board_override_cmd_line(void)
-{
-	char *cmdline = NULL;
-
-#if defined(CONFIG_LOAD_ANDROID)
-	/* Setup Android command-line */
-	if (get_dm_sn() == BOARD_ID_PDA_DM)
-		cmdline = CMDLINE " androidboot.hardware=sama5d3x-pda";
-	else
-		cmdline = CMDLINE " androidboot.hardware=sama5d3x-ek";
-#endif
-	return cmdline;
-}
-
 #ifdef CONFIG_DATAFLASH
 void at91_spi0_hw_init(void)
 {
@@ -340,6 +311,7 @@ void at91_spi0_hw_init(void)
 #ifdef CONFIG_OF_LIBFDT
 void at91_board_set_dtb_name(char *of_name)
 {
+#ifdef CONFIG_LOAD_HW_INFO
 	/* CPU TYPE*/
 	switch (get_cm_sn()) {
 	case BOARD_ID_SAMA5D31_CM:
@@ -373,6 +345,9 @@ void at91_board_set_dtb_name(char *of_name)
 		strcat(of_name, "_pda7");
 
 	strcat(of_name, ".dtb");
+#else
+	strcpy(of_name, CONFIG_DEVICENAME ".dtb");
+#endif
 }
 #endif
 #if defined(CONFIG_AT91_MCI0)
@@ -568,3 +543,140 @@ void nandflash_hw_init(void)
 		(ATMEL_BASE_SMC + SMC_MODE3));
 }
 #endif /* #ifdef CONFIG_NANDFLASH */
+
+#ifdef CONFIG_MMU
+void mmu_tlb_init(unsigned int *tlb)
+{
+	unsigned int addr;
+
+	/* Reset table entries */
+	for (addr = 0; addr < 4096; addr++)
+		tlb[addr] = 0;
+
+	/* 0x00000000: BOOT MEMORY */
+	tlb[0x000] = TTB_SECT_ADDR(0x00000000)
+	           | TTB_SECT_AP_READ_ONLY
+	           | TTB_SECT_DOMAIN(0xf)
+	           | TTB_SECT_EXEC
+	           | TTB_SECT_CACHEABLE_WB
+	           | TTB_TYPE_SECT;
+
+	/* 0x00100000: ROM */
+	tlb[0x001] = TTB_SECT_ADDR(0x00100000)
+	           | TTB_SECT_AP_READ_ONLY
+	           | TTB_SECT_DOMAIN(0xf)
+	           | TTB_SECT_EXEC
+	           | TTB_SECT_CACHEABLE_WB
+	           | TTB_TYPE_SECT;
+
+	/* 0x00200000: NFC SRAM */
+	tlb[0x002] = TTB_SECT_ADDR(0x00200000)
+	           | TTB_SECT_AP_FULL_ACCESS
+	           | TTB_SECT_DOMAIN(0xf)
+	           | TTB_SECT_EXEC
+	           | TTB_SECT_SHAREABLE_DEVICE
+	           | TTB_TYPE_SECT;
+
+	/* 0x00300000: SRAM0 - SRAM1 */
+	tlb[0x003] = TTB_SECT_ADDR(0x00300000)
+	           | TTB_SECT_AP_FULL_ACCESS
+	           | TTB_SECT_DOMAIN(0xf)
+	           | TTB_SECT_EXEC
+	           | TTB_SECT_SHAREABLE_DEVICE
+	           | TTB_TYPE_SECT;
+
+	/* 0x00800000: AXI Matrix */
+	tlb[0x008] = TTB_SECT_ADDR(0x00800000)
+	           | TTB_SECT_AP_FULL_ACCESS
+	           | TTB_SECT_DOMAIN(0xf)
+	           | TTB_SECT_EXEC_NEVER
+	           | TTB_SECT_SHAREABLE_DEVICE
+	           | TTB_TYPE_SECT;
+
+	/* 0x00900000: DAP */
+	tlb[0x009] = TTB_SECT_ADDR(0x00900000)
+	           | TTB_SECT_AP_FULL_ACCESS
+	           | TTB_SECT_DOMAIN(0xf)
+	           | TTB_SECT_EXEC_NEVER
+	           | TTB_SECT_SHAREABLE_DEVICE
+	           | TTB_TYPE_SECT;
+
+	/* 0x10000000: EBI Chip Select 0 */
+	for (addr = 0x100; addr < 0x200; addr++)
+		tlb[addr] = TTB_SECT_ADDR(addr << 20)
+	                  | TTB_SECT_AP_FULL_ACCESS
+	                  | TTB_SECT_DOMAIN(0xf)
+	                  | TTB_SECT_EXEC_NEVER
+	                  | TTB_SECT_STRONGLY_ORDERED
+	                  | TTB_TYPE_SECT;
+
+	/* 0x20000000: DDR CS */
+	for (addr = 0x200; addr < 0x400; addr++)
+		tlb[addr] = TTB_SECT_ADDR(addr << 20)
+	                  | TTB_SECT_AP_FULL_ACCESS
+	                  | TTB_SECT_DOMAIN(0xf)
+	                  | TTB_SECT_EXEC
+	                  | TTB_SECT_CACHEABLE_WB
+	                  | TTB_TYPE_SECT;
+
+	/* 0x40000000: EBI Chip Select 1 */
+	for (addr = 0x400; addr < 0x500; addr++)
+		tlb[addr] = TTB_SECT_ADDR(addr << 20)
+	                  | TTB_SECT_AP_FULL_ACCESS
+	                  | TTB_SECT_DOMAIN(0xf)
+	                  | TTB_SECT_EXEC_NEVER
+	                  | TTB_SECT_STRONGLY_ORDERED
+	                  | TTB_TYPE_SECT;
+
+	/* 0x50000000: EBI Chip Select 2 */
+	for (addr = 0x500; addr < 0x600; addr++)
+		tlb[addr] = TTB_SECT_ADDR(addr << 20)
+	                  | TTB_SECT_AP_FULL_ACCESS
+	                  | TTB_SECT_DOMAIN(0xf)
+	                  | TTB_SECT_EXEC_NEVER
+	                  | TTB_SECT_STRONGLY_ORDERED
+	                  | TTB_TYPE_SECT;
+
+	/* 0x60000000: EBI Chip Select 3 */
+	for (addr = 0x600; addr < 0x700; addr++)
+		tlb[addr] = TTB_SECT_ADDR(addr << 20)
+	                  | TTB_SECT_AP_FULL_ACCESS
+	                  | TTB_SECT_DOMAIN(0xf)
+	                  | TTB_SECT_EXEC_NEVER
+	                  | TTB_SECT_STRONGLY_ORDERED
+	                  | TTB_TYPE_SECT;
+
+	/* 0x90000000: NFC Command Registers */
+	for (addr = 0x700; addr < 0x800; addr++)
+		tlb[addr] = TTB_SECT_ADDR(addr << 20)
+	                  | TTB_SECT_AP_FULL_ACCESS
+	                  | TTB_SECT_DOMAIN(0xf)
+	                  | TTB_SECT_EXEC
+	                  | TTB_SECT_STRONGLY_ORDERED
+	                  | TTB_TYPE_SECT;
+
+	/* 0xf0000000: Internal Peripherals */
+	tlb[0xf00] = TTB_SECT_ADDR(0xf0000000)
+	           | TTB_SECT_AP_FULL_ACCESS
+	           | TTB_SECT_DOMAIN(0xf)
+	           | TTB_SECT_EXEC
+	           | TTB_SECT_STRONGLY_ORDERED
+	           | TTB_TYPE_SECT;
+
+	/* 0xf8000000: Internal Peripherals */
+	tlb[0xf80] = TTB_SECT_ADDR(0xf8000000)
+	           | TTB_SECT_AP_FULL_ACCESS
+	           | TTB_SECT_DOMAIN(0xf)
+	           | TTB_SECT_EXEC
+	           | TTB_SECT_STRONGLY_ORDERED
+	           | TTB_TYPE_SECT;
+
+	/* 0xfff00000: Internal Peripherals */
+	tlb[0xfff] = TTB_SECT_ADDR(0xfff00000)
+	           | TTB_SECT_AP_FULL_ACCESS
+	           | TTB_SECT_DOMAIN(0xf)
+	           | TTB_SECT_EXEC
+	           | TTB_SECT_STRONGLY_ORDERED
+	           | TTB_TYPE_SECT;
+}
+#endif /* #ifdef CONFIG_MMU */

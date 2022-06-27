@@ -1,30 +1,6 @@
-/* ----------------------------------------------------------------------------
- *         ATMEL Microcontroller Software Support
- * ----------------------------------------------------------------------------
- * Copyright (c) 2017, Atmel Corporation
- *
- * All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions are met:
- *
- * - Redistributions of source code must retain the above copyright notice,
- * this list of conditions and the disclaimer below.
- *
- * Atmel's name may not be used to endorse or promote products derived from
- * this software without specific prior written permission.
- *
- * DISCLAIMER: THIS SOFTWARE IS PROVIDED BY ATMEL "AS IS" AND ANY EXPRESS OR
- * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT ARE
- * DISCLAIMED. IN NO EVENT SHALL ATMEL BE LIABLE FOR ANY DIRECT, INDIRECT,
- * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
- * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA,
- * OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
- * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
- * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
+// Copyright (C) 2017 Microchip Technology Inc. and its subsidiaries
+//
+// SPDX-License-Identifier: MIT
 
 #include "spi_flash/spi_nor.h"
 
@@ -62,10 +38,26 @@
         .page_size = 256,                       \
         .flags = SNOR_SECT_4K | SNOR_NO_4BAIS
 
+#define MX66(_name, _jedec_id, _n_sectors)      \
+	.name = _name,                          \
+	ID5(_jedec_id, 0),                      \
+	.sector_size = 65536U,                  \
+	.n_sectors = (_n_sectors),              \
+	.page_size = 256,                       \
+	.flags = SNOR_SECT_4K
+
+#define W25Q(_name, _jedec_id, _n_sectors)	\
+	.name = _name,				\
+	ID5(_jedec_id, 0),                      \
+	.sector_size = 65536U,                  \
+	.n_sectors = (_n_sectors),              \
+	.page_size = 256,                       \
+	.flags = SNOR_SECT_4K
 
 const struct spi_nor_info spi_nor_ids[] = {
 	/* Macronix */
 	{ MX25("mx25l25635f", 0xc22019,  512), },
+	{ MX66("mx66lm1g45g", 0xc2853b, 2048), },
 
 	/* Micron */
 	{ N25Q("n25q032ax1", 0x20bb16,   64), },
@@ -87,6 +79,8 @@ const struct spi_nor_info spi_nor_ids[] = {
 	{ SST26("sst26vf064b", 0xbf2643, 2048), },
 	{ SST26("sst26wf040b", 0xbf2654,  128), },
 	{ SST26("sst26wf080b", 0xbf2658,  256), },
+
+	{ W25Q("w25q256", 0xef4019, 512), },
 
 	{}	/* Sentinel */
 };

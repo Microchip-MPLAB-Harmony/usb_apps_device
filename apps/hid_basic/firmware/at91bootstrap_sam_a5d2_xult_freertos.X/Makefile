@@ -1,5 +1,9 @@
+# Copyright (C) 2006 Microchip Technology Inc. and its subsidiaries
 #
-# Default config file is in board/$(BOARD_NAME)/*_defconfig
+# SPDX-License-Identifier: MIT
+
+#
+# Default config file is in configs/$(DEVICE_NAME)*_defconfig
 # First, run xxx_defconfig
 # Then, `make menuconfig' if needed
 #
@@ -30,7 +34,8 @@ $(error GNU Bash is needed to build Kconfig host tools!)
 endif
 endif
 
-BINDIR:=binaries
+BUILDDIR ?= ./build
+BINDIR:=$(BUILDDIR)/binaries
 SYMLINK ?= at91bootstrap.bin
 SYMLINK_BOOT ?= boot.bin
 SYMLINK_ELF ?= at91bootstrap.elf
@@ -49,7 +54,7 @@ else
 	BUILD_DATE := $(shell $(DATE) "$(DATE_FMT)")
 endif
 endif
-VERSION := 3.9.3
+VERSION := 4.0.3
 REVISION :=
 ifdef NIX_SHELL
 SCMINFO := $(shell (host-utilities/setlocalversion))
@@ -155,14 +160,11 @@ BOOTSTRAP_MAXSIZE := $(strip $(subst ",,$(CONFIG_BOOTSTRAP_MAXSIZE)))
 MEMORY := $(strip $(subst ",,$(CONFIG_MEMORY)))
 IMAGE_NAME:= $(strip $(subst ",,$(CONFIG_IMAGE_NAME)))
 CARD_SUFFIX := $(strip $(subst ",,$(CONFIG_CARD_SUFFIX)))
-MEM_BANK := $(strip $(subst ",,$(CONFIG_MEM_BANK)))
-MEM_BANK2 := $(strip $(subst ",,$(CONFIG_MEM_BANK2)))
-MEM_SIZE := $(strip $(subst ",,$(CONFIG_MEM_SIZE)))
 LINUX_KERNEL_ARG_STRING := $(strip $(subst ",,$(CONFIG_LINUX_KERNEL_ARG_STRING)))
 LINUX_KERNEL_ARG_STRING_FILE := $(strip $(subst ",,$(CONFIG_LINUX_KERNEL_ARG_STRING_FILE)))
 
-# Board definitions
-BOARDNAME:=$(strip $(subst ",,$(CONFIG_BOARDNAME)))
+# Device definitions
+DEVICENAME:=$(strip $(subst ",,$(CONFIG_DEVICENAME)))
 
 ifeq ($(CONFIG_OVERRIDE_MACH_TYPE), y)
 MACH_TYPE:=$(strip $(subst ",,$(CONFIG_CUSTOM_MACH_TYPE)))
@@ -171,11 +173,14 @@ MACH_TYPE:=$(strip $(subst ",,$(CONFIG_MACH_TYPE)))
 endif
 
 LINK_ADDR:=$(strip $(subst ",,$(CONFIG_LINK_ADDR)))
-DATA_SECTION_ADDR:=$(strip $(subst ",,$(CONFIG_DATA_SECTION_ADDR)))
 TOP_OF_MEMORY:=$(strip $(subst ",,$(CONFIG_TOP_OF_MEMORY)))
 
 # CRYSTAL is UNUSED
 CRYSTAL:=$(strip $(subst ",,$(CONFIG_CRYSTAL)))
+
+ifeq ($(CONFIG_MMU), y)
+MMU_TABLE_BASE_ADDR := $(strip $(subst ",,$(CONFIG_MMU_TABLE_BASE_ADDR)))
+endif
 
 # driver definitions
 SPI_CLK:=$(strip $(subst ",,$(CONFIG_SPI_CLK)))
@@ -195,36 +200,24 @@ endif
 
 ifeq ($(CONFIG_LOAD_LINUX), y)
 TARGET_NAME:=linux-$(or $(subst I,i,$(IMAGE_NAME)),image)
-endif
-
-ifeq ($(CONFIG_LOAD_ANDROID), y)
+else ifeq ($(CONFIG_LOAD_ANDROID), y)
 TARGET_NAME:=android-$(or $(subst I,i,$(IMAGE_NAME)),image)
-endif
-
-ifeq ($(CONFIG_LOAD_UBOOT), y)
+else ifeq ($(CONFIG_LOAD_UBOOT), y)
 TARGET_NAME:=$(or $(subst -,,$(basename $(IMAGE_NAME))),uboot)
-endif
-
-ifeq ($(CONFIG_LOAD_64KB), y)
+else ifeq ($(CONFIG_LOAD_64KB), y)
 TARGET_NAME:=$(or $(basename $(IMAGE_NAME)),softpack)
-endif
-
-ifeq ($(CONFIG_LOAD_1MB), y)
+else ifeq ($(CONFIG_LOAD_1MB), y)
 TARGET_NAME:=$(or $(basename $(IMAGE_NAME)),softpack)
-endif
-
-ifeq ($(CONFIG_LOAD_4MB), y)
+else ifeq ($(CONFIG_LOAD_4MB), y)
 TARGET_NAME:=$(or $(basename $(IMAGE_NAME)),softpack)
-endif
-
-ifeq ($(CONFIG_LOAD_NONE), y)
+else
 TARGET_NAME:=$(or $(basename $(IMAGE_NAME)),none)
 endif
 
 ifneq ($(TARGET_NAME), none)
-BOOT_NAME=$(BOARDNAME)-$(PROJECT)$(CARD_SUFFIX)boot-$(TARGET_NAME)$(BLOB)-$(VERSION)$(REV)
+BOOT_NAME=$(DEVICENAME)-$(PROJECT)$(CARD_SUFFIX)boot-$(TARGET_NAME)$(BLOB)-$(VERSION)$(REV)
 else
-BOOT_NAME=$(BOARDNAME)-boot-$(TARGET_NAME)$(BLOB)-$(VERSION)$(REV)
+BOOT_NAME=$(DEVICENAME)-boot-$(TARGET_NAME)$(BLOB)-$(VERSION)$(REV)
 endif
 AT91BOOTSTRAP:=$(BINDIR)/$(BOOT_NAME).bin
 
@@ -235,50 +228,41 @@ endif
 COBJS-y:= main.o
 SOBJS-y:= crt0_gnu.o
 
-# Verify that BOARDNAME is the name of a subdirectory of board/
-BOARD_LOCATE=$(if $(wildcard board/$(BOARDNAME)/.),board/$(BOARDNAME))
-ifeq ("$(realpath $(BOARD_LOCATE))", "")
-# List all vendor subdirectories found under contrib/board/
-CONTRIB_VENDORS=$(foreach file,$(wildcard contrib/board/*),$(if $(wildcard $(addsuffix /.,$(file))),$(file)))
-BOARD_LOCATE=$(firstword $(wildcard $(addsuffix /$(BOARDNAME),$(CONTRIB_VENDORS))))
-ifeq ("$(realpath $(BOARD_LOCATE))", "")
-$(error ERROR: *** $(BOARDNAME) board not found!)
-endif
+# Verify that DEVICENAME is the name of a subdirectory of device/
+DEVICE_LOCATE=$(if $(wildcard device/$(DEVICENAME)/.),device/$(DEVICENAME))
+ifeq ("$(realpath $(DEVICE_LOCATE))", "")
+$(error ERROR: *** device not found!)
 endif
 
-COBJS-y += $(BOARD_LOCATE)/$(BOARDNAME).o
-INCL = $(BOARD_LOCATE)
+COBJS-y += $(DEVICE_LOCATE)/$(DEVICENAME).o
+INCL = $(DEVICE_LOCATE)
 
 include	lib/lib.mk
 include	driver/driver.mk
-include	contrib/driver/driver.mk
 include	fs/src/fat.mk
 
 GC_SECTIONS=--gc-sections
 
-NOSTDINC_FLAGS := -nostdinc -isystem "$(shell "$(CC)" -print-file-name=include)"
+# $(EXTRA_CC_ARGS) can be used to pass extra CC parameters to toolchain
+# For example, Yocto Project can pass the sysroot
+NOSTDINC_FLAGS := -nostdinc -isystem "$(shell "$(CC)" $(EXTRA_CC_ARGS) -print-file-name=include)"
 
-CPPFLAGS=$(NOSTDINC_FLAGS) -ffunction-sections -g -Os -Wall \
+CPPFLAGS=$(EXTRA_CC_ARGS) $(NOSTDINC_FLAGS) -ffunction-sections -g -Os -Wall \
 	-mno-unaligned-access \
 	-fno-stack-protector -fno-common -fno-builtin -fno-jump-tables -fno-pie \
-	-I$(INCL) -Icontrib/include -Iinclude -Ifs/include \
+	-I$(INCL) -Iinclude -Ifs/include \
 	-I$(CONFIG)/at91bootstrap-config \
+	-include $(CONFIG)/at91bootstrap-config/autoconf.h \
 	-DAT91BOOTSTRAP_VERSION=\"$(VERSION)$(REV)$(SCMINFO)\" -DCOMPILE_TIME="\"$(BUILD_DATE)\""
 
-ASFLAGS=-g -Os -Wall -I$(INCL) -Iinclude -Icontrib/include
+ASFLAGS=$(EXTRA_CC_ARGS) -g -Os -Wall -I$(INCL) -Iinclude -include $(CONFIG)/at91bootstrap-config/autoconf.h
 
 include	toplevel_cpp.mk
-include	board/board_cpp.mk
-
-ifneq ("$(wildcard $(BOARD_LOCATE)/board.mk)", "")
-include $(BOARD_LOCATE)/board.mk
-else
-$(warning WARNING: *** file: $(BOARD_LOCATE)/board.mk are not found!)
-endif
+include	device/device_cpp.mk
 
 include	driver/driver_cpp.mk
 
-OBJS:= $(SOBJS-y) $(COBJS-y)
+OBJS := $(addprefix $(BUILDDIR)/,$(SOBJS-y) $(COBJS-y))
 
 ifeq ($(CONFIG_ENTER_NWD), y)
 link_script:=elf32-littlearm-tz.lds
@@ -292,12 +276,8 @@ endif
 #    --cref:    add cross reference to map file
 #  -lc 	   : 	tells the linker to tie in newlib
 #  -lgcc   : 	tells the linker to tie in newlib
-LDFLAGS=-nostartfiles -Map=$(BINDIR)/$(BOOT_NAME).map --cref -static
+LDFLAGS=$(EXTRA_CC_ARGS) -Map=$(BINDIR)/$(BOOT_NAME).map --cref -static
 LDFLAGS+=-T $(link_script) $(GC_SECTIONS) -Ttext $(LINK_ADDR)
-
-ifneq ($(DATA_SECTION_ADDR),)
-LDFLAGS+=-Tdata $(DATA_SECTION_ADDR)
-endif
 
 REMOVE_SECTIONS=-R .note -R .comment -R .note.gnu.build-id
 
@@ -347,10 +327,10 @@ PrintFlags:
 	$(info )
 
 $(AT91BOOTSTRAP): $(OBJS) | $(BINDIR)
+	$(Q)$(MKDIR) -p $(dir $@)
 	@echo "  LD        "$(BOOT_NAME).elf
 	$(Q)"$(LD)" $(LDFLAGS) -n -o $(BINDIR)/$(BOOT_NAME).elf $(OBJS)
-	@"$(OBJCOPY)" --strip-all $(REMOVE_SECTIONS) $(BINDIR)/$(BOOT_NAME).elf -O binary $@
-# TODO: Compile a stripped ELF i.e. without the '-g' compiler option
+	$(Q)"$(OBJCOPY)" --strip-all $(REMOVE_SECTIONS) $(BINDIR)/$(BOOT_NAME).elf -O binary $@
 ifdef NIX_SHELL
 	@ln -sf $(BOOT_NAME).elf ${BINDIR}/${SYMLINK_ELF}
 	@ln -sf $(BOOT_NAME).elf ${BINDIR}/${SYMLINK_ELF_STRIPPED}
@@ -363,16 +343,20 @@ else
 	@cp -l ${BINDIR}/$(BOOT_NAME).bin ${BINDIR}/${SYMLINK_BOOT}
 endif
 
-%.o : %.c .config
+$(BUILDDIR)/%.o : %.c .config
+	$(Q)$(MKDIR) -p $(dir $@)
 	@echo "  CC        "$<
-	@"$(CC)" $(CPPFLAGS) -c -o $@ $<
+	$(Q)"$(CC)" $(CPPFLAGS) -c -o $@ $<
 
-%.o : %.S .config
+$(BUILDDIR)/%.o : %.S .config
+	$(Q)$(MKDIR) -p $(dir $@)
 	@echo "  AS        "$<
-	@"$(AS)" $(ASFLAGS) -c -o $@ $<
+	$(Q)"$(AS)" $(ASFLAGS) -c -o $@ $<
 
 $(AT91BOOTSTRAP).pmecc: $(BINDIR)/pmecc.tmp $(AT91BOOTSTRAP)
-	$(Q)cat $(BINDIR)/pmecc.tmp $(AT91BOOTSTRAP) > $@
+	$(Q)if [ -f $(BINDIR)/pmecc.tmp ]; then \
+		cat $(BINDIR)/pmecc.tmp $(AT91BOOTSTRAP) > $@; \
+	fi
 
 $(BINDIR)/pmecc.tmp: .config | $(BINDIR)
 ifdef NIX_SHELL
@@ -393,14 +377,15 @@ ChkFileSize: $(AT91BOOTSTRAP)
 	  fi ; \
 	  echo "Size of $(BOOT_NAME).bin is $$fsize bytes"; \
 	  if [ "$$fsize" -gt "$(BOOTSTRAP_MAXSIZE)" ] ; then \
-		echo "[Failed***] It's too big to fit into SRAM area. the support maxium size is $(BOOTSTRAP_MAXSIZE)"; \
+		echo "[Failed***] It's too big to fit into SRAM area. the supported maximum size is $(BOOTSTRAP_MAXSIZE)"; \
 		rm $(BINDIR)/$(BOOT_NAME).bin ;\
 		rm ${BINDIR}/${SYMLINK}; \
 		rm ${BINDIR}/${SYMLINK_BOOT}; \
 		exit 2;\
 	  else \
 	  	echo "[Succeeded] It's OK to fit into SRAM area"; \
-		stack_space=`expr $(BOOTSTRAP_MAXSIZE) - $$fsize`; \
+		sram_size=`expr $(BOOTSTRAP_MAXSIZE) \* 2`; \
+		stack_space=`expr $$sram_size - $$fsize`; \
 		echo "[Attention] The space left for stack is $$stack_space bytes"; \
 	  fi )
 endif  # CONFIG_HAVE_DOT_CONFIG
@@ -443,7 +428,7 @@ $(CONFIG)/at91bootstrap-config $(BINDIR):
 	@$(MAKE) defconfig
 
 update:
-	cp .config $(BOARD_LOCATE)/$(BOARDNAME)_defconfig
+	cp .config configs/$(DEVICENAME)_defconfig
 
 no-cross-compiler:
 	@echo
@@ -476,7 +461,7 @@ config-clean:
 clean:
 	@echo "  CLEAN        "obj and misc files!
 	$(Q)rm -f $(CONFIG)/.depend
-	$(Q)rm -f $(call rwildcard,.,*.o *.srec *~)
+	$(Q)rm -f $(call rwildcard,$(BUILDDIR),*.o *.srec *~)
 
 distclean: clean config-clean
 #	rm -fr $(BINDIR)
@@ -501,12 +486,12 @@ distclean: clean config-clean
 
 mplabclean: clean
 	@echo "  CLEAN        "binary files!
-	$(Q)rm -fr $(BINDIR)
+	$(Q)rm -fr $(BUILDDIR)
 	$(Q)rm -fr log
 
 mrproper: distclean
 	@echo "  CLEAN        "binary files!
-	$(Q)rm -fr $(BINDIR)
+	$(Q)rm -fr $(BUILDDIR)
 	$(Q)rm -fr log
 
 PHONY+=distrib config-clean clean distclean mrproper

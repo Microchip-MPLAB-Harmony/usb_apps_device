@@ -1,3 +1,7 @@
+# Copyright (C) 2006 Microchip Technology Inc. and its subsidiaries
+#
+# SPDX-License-Identifier: MIT
+
 menu "Kernel Image Storage Setup"
 	depends on LINUX_IMAGE
 
@@ -12,26 +16,54 @@ if OVERRIDE_CMDLINE
 config LINUX_KERNEL_ARG_STRING
 	depends on LOAD_LINUX
 	string "Linux kernel command-line"
-source "board/at91sam9261ek/Config.in.linux_arg"
-source "board/at91sam9263ek/Config.in.linux_arg"
-source "board/at91sam9g10ek/Config.in.linux_arg"
-source "board/at91sam9g20ek/Config.in.linux_arg"
-source "board/at91sam9rlek/Config.in.linux_arg"
-source "board/at91sam9xeek/Config.in.linux_arg"
-source "board/at91sam9m10g45ek/Config.in.linux_arg"
-source "board/at91sam9x5ek/Config.in.linux_arg"
-source "board/at91sam9n12ek/Config.in.linux_arg"
-source "board/sama5d3xek/Config.in.linux_arg"
-source "board/sama5d3_xplained/Config.in.linux_arg"
-source "board/sama5d3x_cmp/Config.in.linux_arg"
-source "board/sama5d4ek/Config.in.linux_arg"
-source "board/sama5d4_xplained/Config.in.linux_arg"
-source "board/sama5d2_ptc_ek/Config.in.linux_arg"
-source "board/sama5d2_xplained/Config.in.linux_arg"
-source "board/sama5d2_icp/Config.in.linux_arg"
-source "board/sama5d27_som1_ek/Config.in.linux_arg"
-source "board/sama5d27_wlsom1_ek/Config.in.linux_arg"
-source "contrib/board/Config.in.linux_arg"
+	default "CONFIG_ARG_CONSOLE CONFIG_ARG_MTD CONFIG_ARG_ROOT CONFIG_ARG_ROOTFSTYPE CONFIG_ARG_DELAY CONFIG_ARG_CMA CONFIG_ARG_RW CONFIG_ARG_ROOTWAIT"
+
+config ARG_CMA
+	string "Linux bootparam: Contiguous Memory Area support"
+	default " cma=192m" if SAMA7G5
+	default ""
+
+config ARG_CONSOLE
+	string "Linux bootparam: the serial port after boot"
+	default "console=ttyS0,115200"
+
+config ARG_DELAY
+	string "Linux bootparam: option to delay before attempting to mount the root fs"
+	default " rootdelay=2"
+
+config ARG_MEMTEST
+	string "Linux bootparam: option to enable memory test"
+	default " memtest=16"
+
+config ARG_MTD
+	string "Linux bootparam: option about MTD parts"
+	default " mtdparts=atmel_nand:12M(bootstrap/kernel)ro,-(rootfs)" if SDCARD
+	default " mtdparts=atmel_nand:8M(bootstrap/kernel)ro,-(rootfs)" if SDCARD
+	default ""
+
+config ARG_PRINTK
+	string "Linux bootparam: option to use earlyprintk"
+	default " earlyprintk"
+
+config ARG_ROOT
+	string "Linux bootparam: the device to be used as the rootfs while booting"
+	default " root=ubi0:rootfs" if !(SDCARD || QSPI)
+	default " root=/dev/mmcblk0p2" if QSPI
+	default " root=/dev/mmcblk1p2" if SDHC1
+	default " root=/dev/mmcblk0p2"
+
+config ARG_ROOTFSTYPE
+	string "Linux bootparam: the type of the filesystem to load the rootfs"
+	default " rootfstype=ubifs ubi.mtd=1"
+	default " rootfstype=ext4" if SAMA7G5
+
+config ARG_ROOTWAIT
+	string "Linux bootparam: option to wait for root device to show up"
+	default " rootwait"
+
+config ARG_RW
+	string "Linux bootparam: mount the rootfs with specified attribute like read-only, read/write, ..."
+	default " rw"
 
 endif
 
@@ -53,11 +85,6 @@ config LINUX_KERNEL_ARG_STRING_FILE
 
 endif
 
-config LINUX_KERNEL_ARG_STRING
-	depends on LOAD_ANDROID
-	string "Android kernel command-line"
-source "board/sama5d3xek/Config.in.android_arg"
-
 config IMG_ADDRESS
 	depends on DATAFLASH || FLASH || NANDFLASH
 	string "Flash Offset for Linux Kernel Image"
@@ -69,7 +96,7 @@ config IMG_ADDRESS
 
 config JUMP_ADDR
 	string "The External Ram Address to Load Kernel Image"
-	default "0x72000000" if AT91SAM9G45 && !BOARD_HAS_2_BANKS
+	default "0x62000000" if SAMA7G5
 	default "0x22000000"
 	help
 	  The entry point to which the bootstrap will pass control.
@@ -81,7 +108,7 @@ config OF_LIBFDT
 	default y
 
 config OF_OVERRIDE_DTB_NAME
-	string "Override Flattended Device Tree Blob filename"
+	string "Override Flattened Device Tree Blob filename"
 	depends on OF_LIBFDT && SDCARD
 
 config OF_OFFSET
@@ -95,7 +122,7 @@ config OF_OFFSET
 config OF_ADDRESS
 	string "The External Ram Address to Load Device Tree Blob"
 	depends on OF_LIBFDT
-	default "0x71000000" if AT91SAM9G45 && !BOARD_HAS_2_BANKS
+	default "0x61000000" if SAMA7G5
 	default "0x21000000"
 
 

@@ -1,29 +1,7 @@
-/* ----------------------------------------------------------------------------
- *         Microchip Technology AT91Bootstrap project
- * ----------------------------------------------------------------------------
- * Copyright (c) 2018, Microchip Technology Inc. and its subsidiaries
+/*
+ * Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries
  *
- * All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions are met:
- *
- * - Redistributions of source code must retain the above copyright notice,
- * this list of conditions and the disclaimer below.
- *
- * Microchip's name may not be used to endorse or promote products derived from
- * this software without specific prior written permission.
- *
- * DISCLAIMER: THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR
- * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT ARE
- * DISCLAIMED. IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIRECT,
- * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
- * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA,
- * OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
- * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
- * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ * SPDX-License-Identifier: MIT
  */
 
 #ifndef __UMCTL2_H__
@@ -40,7 +18,16 @@ struct umctl2_config_state
 	int (*phy_start)(void);
 		/* Pointer to PHY training function */
 	int (*phy_train)(void);
-
+		/* Pointer to ZQ calibration bypass function */
+	int (*phy_bypass_zq_calibration)(void);
+		/* Pointer to ZQ calibration override function */
+	int (*phy_override_zq_calibration)(void);
+		/* Pointer to restore phy training corrupted data prepare function.  */
+	int (*phy_prepare_train_corrupted_data_restore)(unsigned int bl);
+		/* Pointer to ZQ recalibration function. */
+	int (*phy_zq_recalibrate)(void);
+		/* Pointer to phy traning corrupted data restore function. */
+	int (*phy_train_corrupted_data_restore)(void);
 	/* Policies configuration */
 		/* pageclose mechanism: precharge banks only after pageclose_timer
 		expires, after there are no more page hit transactions in CAM.

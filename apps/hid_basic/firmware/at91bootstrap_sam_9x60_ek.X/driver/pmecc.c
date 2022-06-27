@@ -1,30 +1,7 @@
-/* ----------------------------------------------------------------------------
- *         ATMEL Microcontroller Software Support
- * ----------------------------------------------------------------------------
- * Copyright (c) 2013, Atmel Corporation
- *
- * All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions are met:
- *
- * - Redistributions of source code must retain the above copyright notice,
- * this list of conditions and the disclaimer below.
- *
- * Atmel's name may not be used to endorse or promote products derived from
- * this software without specific prior written permission.
- *
- * DISCLAIMER: THIS SOFTWARE IS PROVIDED BY ATMEL "AS IS" AND ANY EXPRESS OR
- * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT ARE
- * DISCLAIMED. IN NO EVENT SHALL ATMEL BE LIABLE FOR ANY DIRECT, INDIRECT,
- * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
- * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA,
- * OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
- * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
- * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
+// Copyright (C) 2013 Microchip Technology Inc. and its subsidiaries
+//
+// SPDX-License-Identifier: MIT
+
 #include "common.h"
 #include "hardware.h"
 #include "board.h"
@@ -303,15 +280,15 @@ static int init_pmecc_descripter(struct _PMECC_paramDesc_struct *pmecc_params,
 #else
 
 		if (sector_size == 512) {
-			pmecc_params->alpha_to = (short *)(AT91C_BASE_ROM
-					+ CONFIG_LOOKUP_TABLE_ALPHA_OFFSET);
-			pmecc_params->index_of = (short *)(AT91C_BASE_ROM
-					+ CONFIG_LOOKUP_TABLE_INDEX_OFFSET);
+			pmecc_params->alpha_to = (short *)(AT91C_BASE_ROM +
+					PMECC_GF_TABLE_512_ALPHA_OFFSET);
+			pmecc_params->index_of = (short *)(AT91C_BASE_ROM +
+					PMECC_GF_TABLE_512_INDEX_OFFSET);
 		} else {
-			pmecc_params->alpha_to = (short *)(AT91C_BASE_ROM
-				+ CONFIG_LOOKUP_TABLE_ALPHA_OFFSET_1024);
-			pmecc_params->index_of = (short *)(AT91C_BASE_ROM
-				+ CONFIG_LOOKUP_TABLE_INDEX_OFFSET_1024);
+			pmecc_params->alpha_to = (short *)(AT91C_BASE_ROM +
+					PMECC_GF_TABLE_1024_ALPHA_OFFSET);
+			pmecc_params->index_of = (short *)(AT91C_BASE_ROM +
+					PMECC_GF_TABLE_1024_INDEX_OFFSET);
 		}
 #endif
 		/* Error Correct Capability */

@@ -1,3 +1,7 @@
+# Copyright (C) 2006 Microchip Technology Inc. and its subsidiaries
+#
+# SPDX-License-Identifier: MIT
+
 config CPU_HAS_PIO3
 	bool
 	default n
@@ -15,22 +19,6 @@ config HAS_HW_INFO
 	default n
 
 config TWI
-	bool
-	default n
-
-config TWI0
-	bool
-	default n
-
-config TWI1
-	bool
-	default n
-
-config TWI2
-	bool
-	default n
-
-config TWI3
 	bool
 	default n
 
@@ -72,9 +60,57 @@ config CPU_HAS_PIO4
 
 config FLEXCOM
 	bool
+	default y if CPU_HAS_FLEXCOM0
+
+config CPU_HAS_FLEXCOM0
+	bool
 	default n
 
-config CPU_HAS_FLEXCOM
+config CPU_HAS_FLEXCOM1
+	bool
+	default n
+
+config CPU_HAS_FLEXCOM2
+	bool
+	default n
+
+config CPU_HAS_FLEXCOM3
+	bool
+	default n
+
+config CPU_HAS_FLEXCOM4
+	bool
+	default n
+
+config CPU_HAS_FLEXCOM5
+	bool
+	default n
+
+config CPU_HAS_FLEXCOM6
+	bool
+	default n
+
+config CPU_HAS_FLEXCOM7
+	bool
+	default n
+
+config CPU_HAS_FLEXCOM8
+	bool
+	default n
+
+config CPU_HAS_FLEXCOM9
+	bool
+	default n
+
+config CPU_HAS_FLEXCOM10
+	bool
+	default n
+
+config CPU_HAS_FLEXCOM11
+	bool
+	default n
+
+config CPU_HAS_FLEXCOM12
 	bool
 	default n
 
@@ -82,9 +118,25 @@ config CPU_HAS_WDT2
 	bool
 	default n
 
-config CPU_HAS_QSPI_RICR_WICR
+config CPU_HAS_DWDT
 	bool
 	default n
 
 source "driver/Config.in.memory"
-source "contrib/driver/Config.in.driver"
+
+config MMU
+	bool "Load software with MMU enabled"
+	depends on LOAD_SW && (SAM9X60 || SAMA5D2 || SAMA5D3X || SAMA5D4)
+	default n
+
+config MMU_TABLE_BASE_ADDR
+	string "Base address (16KB aligned) for MMU Translation Table, occupies 16K bytes memory"
+	depends on MMU
+	default "0x20000000"
+
+config CACHES
+	bool "Load software with caches enabled"
+	depends on MMU
+	default n
+
+source "driver/Config.in.nvm"

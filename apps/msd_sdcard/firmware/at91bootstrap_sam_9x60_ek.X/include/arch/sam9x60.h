@@ -1,28 +1,9 @@
-/* ----------------------------------------------------------------------------
- *         Microchip Microprocessor (MPU) Software Team
- * ----------------------------------------------------------------------------
+/*
  * Copyright (C) 2019 Microchip Technology Inc. and its subsidiaries
  *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions are met:
- *
- * - Redistributions of source code must retain the above copyright notice,
- * this list of conditions and the disclaimer below.
- *
- * Microchip's name may not be used to endorse or promote products derived from
- * this software without specific prior written permission.
- *
- * DISCLAIMER: THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR
- * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT ARE
- * DISCLAIMED. IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIRECT,
- * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
- * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA,
- * OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
- * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
- * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ * SPDX-License-Identifier: MIT
  */
+
 #ifndef __SAM9X60_H__
 #define __SAM9X60_H__
 
@@ -158,9 +139,16 @@
 #define AT91C_BASE_UHPHS_OHCI	0x00600000      /* UHPHS_OHCI Base address*/
 #define AT91C_BASE_UHPHS_EHCI	0x00700000      /* UHPHS_EHCI Base address*/
 
+/* Internal ROM PMECC Galois Field Tables offsets */
+#define PMECC_GF_TABLE_512_ALPHA_OFFSET		0x4000
+#define PMECC_GF_TABLE_512_INDEX_OFFSET		0x0000
+#define PMECC_GF_TABLE_1024_ALPHA_OFFSET	0x10000
+#define PMECC_GF_TABLE_1024_INDEX_OFFSET	0x8000
+
 /*
  * External memory
  */
+#define AT91C_BASE_DDRCS        0x20000000
 #define AT91C_BASE_CS0          0x10000000      /* typically NOR */
 #define AT91C_BASE_CS1          0x20000000      /* MPDDRC / SDRAMC */
 #define AT91C_BASE_CS2          0x30000000
@@ -171,12 +159,11 @@
 #define AT91C_BASE_SDHC0        0x80000000
 #define AT91C_BASE_SDHC1        0x90000000
 
+#define AT91C_QSPI0_MEM_SIZE	0x10000000
+
 #define AT91C_NUM_PIO		4
 #define AT91C_NUM_TWI		0
 #define	AT91C_NUM_FLEXCOM	13
-
-#define PLL_ID_PLLA 0
-#define PLL_ID_UPLL 1
 
 /*
  * SoC specific defines

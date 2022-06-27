@@ -1,10 +1,10 @@
+# Copyright (C) 2006 Microchip Technology Inc. and its subsidiaries
+#
+# SPDX-License-Identifier: MIT
+
 config SPI_FLASH
 	bool
 	default n
-
-config ALLOW_DATAFLASH_RECOVERY
-	bool
-	default	n
 
 config	SPI_CLK
 	int "SPI clock speed"
@@ -14,8 +14,7 @@ config	SPI_CLK
 
 config DATAFLASH_RECOVERY
 	bool "Support Dataflash recovery by pressing a button"
-	default y
-	depends on ALLOW_DATAFLASH_RECOVERY
+	default n
 	help
 	  Let bootstrap disassemble the first 7 double words
 	  and check that all, except the reserved vector
@@ -27,12 +26,12 @@ choice
 
 config SPI
 	bool "Standard SPI Interface"
-	depends on CPU_HAS_SPI0 || CPU_HAS_SPI1 || CPU_HAS_SPI1
+	depends on CPU_HAS_SPI
 
 config QSPI
 	select SPI_FLASH
 	bool "Quad SPI Interface"
-	depends on CPU_HAS_QSPI0 || CPU_HAS_QSPI1
+	depends on CPU_HAS_QSPI
 
 endchoice
 
@@ -47,65 +46,19 @@ config SMALL_DATAFLASH
 	  at the expense of flexibility in selecting memory sizes.
 
 # ------- SPI boot source -----------------------------------------------------
-choice
-	prompt "SPI Bus Select"
-	default SPI_BUS0
 
+if SPI_BUS_MAX != 0
+config SPI_BUS
+	int "SPI Bus Used for Dataflash"
+	range 0 SPI_BUS_MAX
+	default 0
+endif
 
-config SPI_BUS0
-	bool "SPI Bus 0"
-	depends on CPU_HAS_SPI0
-
-config SPI_BUS1
-	bool "SPI Bus 1"
-	depends on CPU_HAS_SPI1
-
-config SPI_BUS2
-	bool "SPI Bus 2"
-	depends on CPU_HAS_SPI2
-
-endchoice
-
-menu  "SPI IOSET Select"
-	depends on CPU_HAS_PIO4
-
-choice
-	prompt "SPI0 IOSET"
-	depends on SPI_BUS0
-	default	SPI0_IOSET_1
-
-
-config SPI0_IOSET_1
-	depends on CPU_HAS_SPI0_IOSET1
-	bool "SPI0 IOSET 1"
-
-config SPI0_IOSET_2
-	depends on CPU_HAS_SPI0_IOSET2
-	bool "SPI0 IOSET 2"
-
-endchoice
-
-choice
-	prompt "SPI1 IOSET"
-	depends on SPI_BUS1
-	default	SPI1_IOSET_1
-
-
-config SPI1_IOSET_1
-	depends on CPU_HAS_SPI1_IOSET1
-	bool "SPI1 IOSET 1"
-
-config SPI1_IOSET_2
-	depends on CPU_HAS_SPI1_IOSET2
-	bool "SPI1 IOSET 2"
-
-config SPI1_IOSET_3
-	depends on CPU_HAS_SPI1_IOSET3
-	bool "SPI1 IOSET 3"
-
-endchoice
-
-endmenu
+config SPI_IOSET
+	int "SPI IOSET Used for Dataflash"
+	depends on CPU_HAS_SPI_IOSET
+	range 1 SPI_IOSET_MAX
+	default 1
 
 choice
 	prompt "Chip Select"
@@ -130,6 +83,22 @@ config	SPI_BOOT_CS3
 	depends on ALLOW_BOOT_FROM_DATAFLASH_CS3
 
 endchoice
+
+config  ALLOW_BOOT_FROM_DATAFLASH_CS0
+	bool
+	default n
+
+config  ALLOW_BOOT_FROM_DATAFLASH_CS1
+	bool
+	default n
+
+config  ALLOW_BOOT_FROM_DATAFLASH_CS2
+	bool
+	default n
+
+config  ALLOW_BOOT_FROM_DATAFLASH_CS3
+	bool
+	default n
 
 config DATAFLASHCARD_ON_CS0
 	bool
@@ -172,65 +141,25 @@ endmenu
 menu "QSPI Configuration"
 	depends on QSPI
 
-choice
-	prompt "QSPI Bus Select"
-	default QSPI_BUS0
+if QSPI_BUS_MAX != 0
+config QSPI_BUS
+	int "QSPI Bus Used for Dataflash"
+	range 0 QSPI_BUS_MAX
+	default 0
+endif
 
+config QSPI_IOSET
+	int "QSPI IOSET Used for Dataflash"
+	depends on CPU_HAS_QSPI_IOSET
+	range 1 QSPI_IOSET_MAX
+	default 1
 
-config QSPI_BUS0
-	bool "QSPI Bus 0"
-	depends on CPU_HAS_QSPI0
-
-config QSPI_BUS1
-	bool "QSPI Bus 1"
-	depends on CPU_HAS_QSPI1
-
-endchoice
-
-menu  "QSPI IOSET Select"
-	depends on CPU_HAS_PIO4
-
-choice
-	prompt "QSPI0 IOSET"
-	depends on QSPI_BUS0
-	default	QSPI0_IOSET_1
-
-
-config QSPI0_IOSET_1
-	depends on CPU_HAS_QSPI0_IOSET1
-	bool "QSPI0 IOSET 1"
-
-config QSPI0_IOSET_2
-	depends on CPU_HAS_QSPI0_IOSET2
-	bool "QSPI0 IOSET 2"
-
-config QSPI0_IOSET_3
-	depends on CPU_HAS_QSPI0_IOSET3
-	bool "QSPI0 IOSET 3"
-
-endchoice
-
-choice
-	prompt "QSPI1 IOSET"
-	depends on QSPI_BUS1
-	default	QSPI1_IOSET_1
-
-
-config QSPI1_IOSET_1
-	depends on CPU_HAS_QSPI1_IOSET1
-	bool "QSPI1 IOSET 1"
-
-config QSPI1_IOSET_2
-	depends on CPU_HAS_QSPI1_IOSET2
-	bool "QSPI1 IOSET 2"
-
-config QSPI1_IOSET_3
-	depends on CPU_HAS_QSPI1_IOSET3
-	bool "QSPI1 IOSET 3"
-
-endchoice
-
-endmenu
+config AT91_QSPI_OCTAL
+	bool "AT91 QSPI instance with Octal Serial Peripheral Interface"
+	depends on SAMA7G5
+	default n
+	help
+	  Should be selected by SAMA7G5 QSPI0
 
 config QSPI_4B_OPCODES
 	bool "Quad SPI NOR flash memory is >16MiB (>128Mib)"

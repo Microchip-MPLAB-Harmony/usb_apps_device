@@ -1,3 +1,7 @@
+# Copyright (C) 2006 Microchip Technology Inc. and its subsidiaries
+#
+# SPDX-License-Identifier: MIT
+
 config SAMA7G5
 	select CORE_CORTEX_A7
 	select CPU_HAS_PIO4
@@ -7,8 +11,12 @@ config SAMA7G5
 	select CPU_HAS_TRUSTZONE
 	select CPU_HAS_WDT2
 	select CPU_HAS_DWDT
+	select CPU_HAS_QSPI
+	select CPU_HAS_QSPI_IOSET
+	select CPU_HAS_PMECC
 	select CPU_HAS_SDHC0
 	select CPU_HAS_SDHC1
+	select CPU_HAS_SDHC2
 	select CPU_V7
 	select CPU_HAS_UMCTL2
 	select PUBL

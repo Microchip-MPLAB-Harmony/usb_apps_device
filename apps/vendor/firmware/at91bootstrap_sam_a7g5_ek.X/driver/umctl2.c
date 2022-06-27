@@ -1,38 +1,8 @@
-/* ----------------------------------------------------------------------------
- *         Microchip Technology AT91Bootstrap project
- * ----------------------------------------------------------------------------
- *
- * This represents a driver for the Synopsys Universal Memory Controller 2
- * which is a external RAM memory controller.
- *
- * It provides access to the register map and holds a configuration inside
- * a structure of parameters.
- *
- * Copyright (c) 2018, Microchip Technology Inc. and its subsidiaries
- *
- * All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions are met:
- *
- * - Redistributions of source code must retain the above copyright notice,
- * this list of conditions and the disclaimer below.
- *
- * Microchip's name may not be used to endorse or promote products derived from
- * this software without specific prior written permission.
- *
- * DISCLAIMER: THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR
- * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT ARE
- * DISCLAIMED. IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIRECT,
- * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
- * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA,
- * OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
- * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
- * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
+// Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries
+//
+// SPDX-License-Identifier: MIT
 
+#include "backup.h"
 #include "board.h"
 #include "debug.h"
 #include "hardware.h"
@@ -55,6 +25,8 @@
 #include "umctl2_device.h"
 #endif
 #include "dram_helpers.h"
+
+#include "arch/at91_sfrbu.h"
 
 #define MP_AXI_PORT_ENABLE(x) (1 << (x))
 
@@ -82,6 +54,7 @@ unsigned long tPOSTCKE;
 #if defined(CONFIG_LPDDR2) || defined(CONFIG_LPDDR3)
 unsigned long tDQSCK_MIN;
 unsigned long tDQSCK_MAX;
+unsigned long tTSI;
 #endif
 unsigned long CL;
 unsigned long CWL;
@@ -106,6 +79,7 @@ struct dram_timings timings = {
 	_tPOSTCKE,
 #if defined(CONFIG_LPDDR2) || defined(CONFIG_LPDDR3)
 	_tDQSCK_MIN, _tDQSCK_MAX,
+	_tTSI_ms,
 #endif
 	_CL, _CWL, _AL,
 #if defined(CONFIG_LPDDR2) || defined(CONFIG_LPDDR3)
@@ -526,6 +500,33 @@ inline static void uddrc_mstr()
 	dbg_very_loud("UMCTL2 MSTR %x\n", UDDRC_REGS->UDDRC_MSTR);
 }
 
+inline static void uddrc_derate()
+{
+#ifdef CONFIG_DDR_EXT_TEMP_RANGE
+#if defined(CONFIG_LPDDR2) || defined(CONFIG_LPDDR3)
+	/* Compute the MR4 read interval, according to below formula: */
+	/* 10C/sec * (ReadInterval + t_tsi + 1 ms) <= 2C */
+	/* <=> ReadInterval + t_tsi + SysRespDelay <= 200 ms */
+	/* <=> ReadInterval <= 200ms - t_tsi - SysRespDelay*/
+
+	unsigned long t_sysrespdelay = 1UL;
+	/* tTSI is in ms */
+	/* Use NS_TO_CYCLES and then multiply by 10^6, to avoid overflow */
+	unsigned long t_readinterval =
+		DIV_ROUND_UP(NS_TO_CYCLES_UP(200 - tTSI - t_sysrespdelay), 2);
+
+	t_readinterval *= 1000000; /* t_readinterval is ms, need to have it ns */
+
+	UDDRC_REGS->UDDRC_DERATEEN = UDDRC_DERATEEN_derate_enable |
+					UDDRC_DERATEEN_derate_value(0) |
+					UDDRC_DERATEEN_derate_byte(0);
+
+	UDDRC_REGS->UDDRC_DERATEINT =
+		UDDRC_DERATEINT_mr4_read_interval(t_readinterval);
+#endif
+#endif
+}
+
 inline static void uddrc_init0()
 {
 #if defined(CONFIG_DDR3) || defined(CONFIG_DDR2)
@@ -650,10 +651,23 @@ inline static void uddrc_init4()
 	/* DRAM init register 4 */
 	UDDRC_REGS->UDDRC_INIT4	=
 #ifdef CONFIG_DDR3
-				 UDDRC_INIT4_emr2(((CWL - 5) << 3))
+				 UDDRC_INIT4_emr2(((CWL - 5) << 3)
+	#ifdef CONFIG_DDR_EXT_TEMP_RANGE
+	/* enable SRT bit (2x refresh rate for extended temperature range ) */
+				| (1 << 7)
+	/* enable ASR optional bit for auto self refresh */
+				| (1 << 6)
+	#endif
+
+				)
 #endif
 #ifdef CONFIG_DDR2
+	#ifdef CONFIG_DDR_EXT_TEMP_RANGE
+	/* enable SRT bit (2x refresh rate for extended temperature range ) */
+				UDDRC_INIT4_emr2(1 << 7)
+	#else
 				UDDRC_INIT4_emr2(0)
+	#endif
 #endif
 #if defined(CONFIG_LPDDR2) || defined(CONFIG_LPDDR3)
 				UDDRC_INIT4_emr2(3)
@@ -1478,7 +1492,9 @@ inline static void uddrc_config_dfi()
 	/* clocks to drive on dfi_lp_wakeup when enter power down - 16 cycles should be 0x3 or 0x0 ? */
 			UDDRC_DFILPCFG0_dfi_lp_wakeup_pd(0x7) |
 	/* Enables DFI Low Power interface handshaking during Power Down Entry/Exit */
-			UDDRC_DFILPCFG0_dfi_lp_en_pd;
+			UDDRC_DFILPCFG0_dfi_lp_en_pd |
+			UDDRC_DFILPCFG0_dfi_lp_wakeup_dpd(0x7) |
+			UDDRC_DFILPCFG0_dfi_lp_en_dpd;
 
 	/* enable automatic generation of dfi_ctrlupd_req */
 	UDDRC_REGS->UDDRC_DFIUPD0 =
@@ -1560,6 +1576,15 @@ int umctl2_init (struct umctl2_config_state *state)
 #endif
 	MRD = timings.MRD;
 
+	/* Make sure IOs are not in retention mode. */
+	if (!backup_resume()) {
+		sfrbu_set_ddr_power_mode(1);
+		while (!sfrbu_ddr_is_powered()) ;
+	}
+
+	rstc_ddr_assert();
+	udelay(100);
+
 #ifdef CONFIG_RSTC
 	/*
 	 * STEP 0: Deassert reset signal DDR PHY. This ensures that the
@@ -1584,6 +1609,8 @@ int umctl2_init (struct umctl2_config_state *state)
 	/* configure master register MSTR - type of DDR, burst length*/
 	uddrc_mstr();
 
+	/* configure automatic temperature derating */
+	uddrc_derate();
 	/* enable hardware low power features */
 	uddrc_ena_hw_lowpwr();
 	/* configure refresh-related parameters */
@@ -1627,6 +1654,13 @@ int umctl2_init (struct umctl2_config_state *state)
 	/* multi-port register settings (urgent bit are not connected in the DESIGN) */
 	uddrc_mp_setup();
 
+	if (backup_resume()) {
+		/* Skip SDRAM init while keeping the controller in self-refresh. */
+		UDDRC_REGS->UDDRC_INIT0 |= UDDRC_INIT0_skip_dram_init(3);
+		UDDRC_REGS->UDDRC_PWRCTL |= UDDRC_PWRCTL_selfref_sw;
+		UDDRC_REGS->UDDRC_DFIMISC &= ~UDDRC_DFIMISC_dfi_init_complete_en;
+	}
+
 #ifdef CONFIG_RSTC
 	/* STEP 2
 	 * Deassert reset signal core_ddrc_rstn ! (mandatory)
@@ -1637,10 +1671,12 @@ int umctl2_init (struct umctl2_config_state *state)
 #endif
 
 #if defined POWER_CYCLE_ON_PHY_INIT
-	UDDRC_REGS->UDDRC_DBG1 = 0;
-	/* power down and power up ? */
-	UDDRC_REGS->UDDRC_PWRCTL &= UDDRC_PWRCTL_powerdown_en;
-	UDDRC_REGS->UDDRC_PWRCTL = 0;
+	if (!backup_resume()) {
+		UDDRC_REGS->UDDRC_DBG1 = 0;
+		/* power down and power up ? */
+		UDDRC_REGS->UDDRC_PWRCTL &= UDDRC_PWRCTL_powerdown_en;
+		UDDRC_REGS->UDDRC_PWRCTL = 0;
+	}
 #endif
 
 #if defined(CONFIG_DDR2) || defined(CONFIG_DDR3) || defined(CONFIG_LPDDR2)
@@ -1655,11 +1691,31 @@ int umctl2_init (struct umctl2_config_state *state)
 #else
 	state->phy_init(NULL);
 #endif
+
+	if (backup_resume()) {
+		if (state->phy_bypass_zq_calibration)
+			state->phy_bypass_zq_calibration();
+		else
+			dbg_very_loud("UMCTL2: phy_bypass_zq_calibration() required for backup mode!");
+	}
+
 	/* STEP 4
 	 * Wait PHY init
 	 */
 	if (state->phy_idone())
 		return -1;
+
+	if (backup_resume()) {
+		if (state->phy_override_zq_calibration)
+			state->phy_override_zq_calibration();
+		else
+			dbg_printf("UMCTL2: phy_override_zq_calibration() required for backup mode!");
+
+		if (state->phy_prepare_train_corrupted_data_restore)
+			state->phy_prepare_train_corrupted_data_restore(BL);
+		else
+			dbg_printf("UMCTL2: phy_prepare_train_corrupted_data_restore() required for backup mode!");
+	}
 
 	/* STEP 5
 	 * Enable uMCTL2 dfi init start signal
@@ -1667,6 +1723,17 @@ int umctl2_init (struct umctl2_config_state *state)
 	 */
 	if (state->phy_start())
 		return -1;
+
+	if (backup_resume()) {
+		/* Remove IOs from retention mode. */
+		sfrbu_set_ddr_power_mode(1);
+		while (!sfrbu_ddr_is_powered()) ;
+
+		if (state->phy_zq_recalibrate)
+			state->phy_zq_recalibrate();
+		else
+			dbg_very_loud("UMCTL2: phy_sr_exit_phase1() required for backup mode!");
+	}
 
 	/* STEP 6
 	 * Set SWCTL.sw_done to 0 : to enable programming of
@@ -1691,6 +1758,14 @@ int umctl2_init (struct umctl2_config_state *state)
 	 * ONLY AFTER UDDRC_SWCTL_sw_done
 	 */
 	WAIT_WHILE_COND((UDDRC_REGS->UDDRC_SWSTAT != UDDRC_SWSTAT_sw_done_ack), 0xA6);
+
+	if (backup_resume()) {
+		/* Triger self-refresh exit. */
+		UDDRC_REGS->UDDRC_PWRCTL &= ~UDDRC_PWRCTL_selfref_sw;
+
+		WAIT_WHILE_COND (((UDDRC_REGS->UDDRC_STAT & UDDRC_STAT_operating_mode_Msk) !=
+			UDDRC_STAT_operating_mode_Normal), 10000);
+	}
 
 	/* STEP 10
 	 * Check for uMCTL2 in normal mode
@@ -1719,6 +1794,13 @@ int umctl2_init (struct umctl2_config_state *state)
 	ret = state->phy_train();
 	if (ret)
 		return ret;
+
+	if (backup_resume()) {
+		if (state->phy_train_corrupted_data_restore)
+			state->phy_train_corrupted_data_restore();
+		else
+			dbg_very_loud("UMCTL2: phy_train_corrupted_data_restore() required for backup mode!");
+	}
 
 	/* STEP 13
 	 * Revert steps 11 and 11a

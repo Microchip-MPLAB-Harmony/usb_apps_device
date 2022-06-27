@@ -1,3 +1,7 @@
+# Copyright (C) 2006 Microchip Technology Inc. and its subsidiaries
+#
+# SPDX-License-Identifier: MIT
+
 config DDR_SEL_ADDR
 	bool
 	default n
@@ -9,7 +13,7 @@ config BANK_8
 	bool
 	default n
 
-choice 
+choice
 	prompt "Configuration method"
 	depends on DDRC || UMCTL2
 	default DDR_SET_BY_JEDEC
@@ -25,76 +29,113 @@ config DDR_SET_BY_TIMING
 	bool "Customized timings"
 endchoice
 
-choice 
+choice
 	prompt "DRAM parts"
 	depends on DDR_SET_BY_DEVICE
 config DDR_MT41K128M16_D2
 	bool "DDR3 MT41K128M16(SAMA5D2 Xplained)"
 	depends on DDRC
-	comment "Two MT41K128M16 4Gbit"
+	help
+		Two MT41K128M16 4Gbit
 config DDR_W632GU6MB
 	bool "DDR3L SDRAM W632GU6MB (SAMA5D2 ICP)"
 	depends on DDRC
-	comment "DDR3L SDRAM W632GU6MB 2 Gbit x 2"
+	help
+		DDR3L SDRAM W632GU6MB 2 Gbit x 2
 config DDR_W972GG6KB_9X60
 	bool "DDR2 DDR_W972GG6KB(SAM9X60-EK)"
 	depends on DDRC
-	comment "W972GG6KB 2 Gbits"
+	help
+		W972GG6KB 2 Gbits
 config DDR_W972GG6KB_D2
 	bool "DDR2 W972GG6KB(SAMA5D2-PTC-EK)"
 	depends on DDRC
-	comment "Two W972GG6KB 4 Gbits"
+	help
+		Two W972GG6KB 4 Gbits
 config DDR_W971GG6SB_D2
 	bool "DDR2 W971GG6SB (SAMA5D2-SOM-EK)"
 	depends on DDRC
-	comment "DDR2 W971GG6SB 1 Gbit"
+	help
+		DDR2 W971GG6SB 1 Gbit
+config DDR_W9712G6KB25I
+	bool "DDR2 W9712G6KB25I (SAMA5D2-SiP)"
+	depends on DDRC
+	help
+		DDR2 W9712G6KB25I 128 Mbit
+config DDR_AD210032F
+	bool "LPDDR2 AD210032F (SAMA5D2-SiP)"
+	depends on DDRC
+	help
+		LPDDR2 AD210032F-I-AB 1 Gbit
 config DDR_W9751G6KB
-	bool "DDR2 W971GG6SB (SAM9X60D5M SiP)"
-	comment "DDR2 W9751G6KB 512 Mbit"
+	bool "DDR2 W9751G6KB (SAMA5D2 | SAM9X60D5M SiP)"
+	help
+		DDR2 W9751G6KB 512 Mbit
 config DDR_W971GG6SB
 	bool "DDR2 W971GG6SB (SAM9X60D1G SiP)"
-	comment "DDR2 W971GG6SB 1 Gbit"
+	help
+		DDR2 W971GG6SB 1 Gbit
 config DDR_AD220032D
 	bool "LPDDR2 AD220032D(SAMA5D2-WLSOM-EK)"
 	depends on DDRC
-	comment "LPDDR2 AD220032D 2 Gbit"
+	help
+		LPDDR2 AD220032D 2 Gbit
 config DDR_MT47H128M16
 	bool "DDR2 MT47H128M16(SAMA5D3-EK)"
 	depends on DDRC
-	comment "DDR2 MT47H128M16 2 Gbit"
+	help
+		DDR2 MT47H128M16 2 Gbit
 config DDR_MT47H64M16
 	bool "DDR2 MT47H64M16 x 2(SAMA5D3-Xplained)"
 	depends on DDRC
-	comment "DDR2 MT47H64M16 1 Gbit x 2"
+	help
+		DDR2 MT47H64M16 1 Gbit x 2
 config DDR_MT47H128M8
 	bool "DDR2 MT47H128M8 x 2(SAMA5D4-EK)"
 	depends on DDRC
-	comment "DDR2 MT47H128M8 1 Gbit x 2"
+	help
+		DDR2 MT47H128M8 1 Gbit x 2
 config DDR_MT41K256M16TW_107
-	bool "DDR3L MT41K256M16TW-107(SAMA7G5-EK)"
+	bool "DDR3L MT41K256M16TW-107"
 	depends on UMCTL2
 	select CONFIG_DDR_SPEED_1066
-	comment "MT41K256M16 DDR3 32 Meg x 16 x 8 DDR3-1066"
+	help
+		MT41K256M16 DDR3 32 Meg x 16 x 8 DDR3-1066
 config DDR_MT41K512M16HA_125
-	bool "DDR3L MT41K512M16HA_125(SAMA7G5-EK)"
+	bool "DDR3L MT41K512M16HA_125(SAMA7G5-DDR3_EB)"
 	depends on UMCTL2
 	select CONFIG_DDR_SPEED_1066
-	comment "MT41K512M16HA_125 DDR3L 64 Meg x 8 x 8 DDR3-1066"
+	help
+		MT41K512M16HA_125 DDR3L 64 Meg x 8 x 8 DDR3-1066
+config DDR_AS4C256M16D3LC_12BCNTR
+	bool "DDR3L AS4C256M16D3LC_12BCNTR(SAMA7G5-EK)"
+	depends on UMCTL2
+	help
+		DDR3L AS4C256M16D3LC_12BCNTR 32 Meg x 16 x 8 DDR3-1066
 config DDR_MT47H128M16RT_25E_C
 	bool "DDR2 MT47H128M16RT-25E:C(SAMA7G5_DDR2_EB)"
 	depends on UMCTL2
 	select CONFIG_DDR_SPEED_800
-	comment "DDR2 MT47H128M16RT-25E:C 16 Meg x 16 x 8  DDR2-800"
+	help
+		DDR2 MT47H128M16RT-25E:C 16 Meg x 16 x 8  DDR2-800
 config DDR_IS43LD16128B_25BLI
 	bool "LPDDR2 IS43LD16128B-25BLI(SAMA7G5-LPDDR2_EB)"
 	depends on UMCTL2
 	select CONFIG_DDR_SPEED_800
-	comment "LPDDR2 IS43LD16128B-25BLI 16M x 16 x 8"
+	help
+		LPDDR2 IS43LD16128B-25BLI 16M x 16 x 8
 config DDR_MT52L256M32D1PF_107
 	bool "LPDDR3 MT52L256M32D1PF_107(SAMA7G5_LPDDR3_EB)"
 	depends on UMCTL2
 	select CONFIG_DDR_SPEED_1066
-	comment "LPDDR3 MT52L256M32D1PF 256 Meg x 32"
+	help
+		LPDDR3 MT52L256M32D1PF 256 Meg x 32
+config DDR_EDB5432BEBH_1DAAT_F_D
+	bool "LPDDR2 EDB5432BEBH-1DAAT-F-D"
+	depends on UMCTL2
+	select CONFIG_DDR_SPEED_1066
+	help
+		LPDDR2 EDB5432BEBH-1DAAT-F-D 4M x 32 x 4
 endchoice
 
 choice
@@ -142,54 +183,54 @@ endchoice
 
 
 choice
-	prompt "Density for one peice"
+	prompt "Density for one piece"
 	depends on DDR_SET_BY_JEDEC || DDR_SET_BY_TIMING
 config DDR_64_MBIT
-	bool "64M bits"
+	bool "64 Mbits"
 	depends on LPDDR1
 	help
-	  64Mb 
+	  64Mb
 
 config DDR_128_MBIT
-	bool "128M bits"
-	depends on DDRC &&(LPDDR1 || DDR2 || LPDDR2)
+	bool "128 Mbits"
+	depends on DDRC && (LPDDR1 || DDR2 || LPDDR2)
 	help
 	  128Mb
 
 config DDR_256_MBIT
-	bool "256M bits"
+	bool "256 Mbits"
 	depends on LPDDR1 || DDR2 || LPDDR2
 	help
 	  256Mb
 
 config DDR_512_MBIT
-	bool "512M bits"
+	bool "512 Mbits"
 	depends on LPDDR1 || DDR2 || LPDDR2 || DDR3
 	help
 	  512Mb
 
 config DDR_1_GBIT
-	bool "1G bits"
+	bool "1 Gbit"
 	depends on LPDDR1 || DDR2 || LPDDR2 || DDR3
 	select DDR_SEL_ADDR if (LPDDR1 && DBW_32)
 	help
 	  1Gb
-	  
+
 config DDR_2_GBIT
-	bool "2G bits"
+	bool "2 Gbits"
 	depends on LPDDR1 || DDR2 || LPDDR2 || DDR3
 	help
 	  2Gb
-	  
+
 config DDR_4_GBIT
-	bool "4G bits"
-	depends on DDR2 || DDR3 || LPDDR2 || LPDDR3 
+	bool "4 Gbits"
+	depends on DDR2 || DDR3 || LPDDR2 || LPDDR3
 	help
 	  4Gb
 
 config DDR_8_GBIT
-	bool "8G bits"
-	depends on DDR3 || LPDDR2 || LPDDR3 
+	bool "8 Gbits"
+	depends on DDR3 || LPDDR2 || LPDDR3
 	help
 	  8Gb
 endchoice
@@ -197,7 +238,7 @@ endchoice
 choice
 	prompt "LPDDR1 Rows and columns"
 	depends on DDR_SEL_ADDR
-	
+
 config R14_C10
 	bool "14 bits row, 9 bits column"
 	help
@@ -222,19 +263,18 @@ config LPDDR2_S4
 	  LPDDR2-S4
 endchoice
 
-
 choice
 	prompt "CAS Latency"
 	depends on DDR_SET_BY_JEDEC || DDR_SET_BY_TIMING
 config CAS_2
 	bool "CAS 2"
-	depends on LPDDR1
+	depends on (LPDDR1 && DDRC)
 	help
 	  LPDDR1 CAS Latency 2
 
 config CAS_3
 	bool "CAS 3"
-	depends on (DDR2 && UMCTL2) || ((DDR2 || LPDDR1 || LPDDR2 || LPDDR3) && DDRC)
+	depends on (DDR2 && (DDR_SPEED_400 || DDR_SPEED_533 ) && UMCTL2) || ((DDR2 || LPDDR1 || LPDDR2 || LPDDR3) && DDRC)
 	help
 	  LPDDR3/DDR2/LPDDR2/LPDDR1 CAS Latency 3
 
@@ -246,25 +286,25 @@ config CAS_4
 
 config CAS_5
 	bool "CAS 5"
-	depends on DDRC || (DDR3 && DDR_SPEED_800 && UMCTL2) || (DDR2 && UMCTL2 )
+	depends on (DDR3 && DDRC) || (DDR3 && DDR_SPEED_800 && UMCTL2) || (DDR2 && (DDR_SPEED_667 || DDR_SPEED_800 ) && UMCTL2 )
 	help
 	  DDR3 CAS Latency 5
 
 config CAS_6
 	bool "CAS 6"
-	depends on ((DDR3 || LPDDR3)&& DDRC) || (DDR2 && UMCTL2) || (DDR3 && UMCTL2)
+	depends on ((DDR3 || LPDDR3) && DDRC) || (DDR2 && DDR_SPEED_800 && UMCTL2) || (DDR3 && UMCTL2)
 	help
 	  CAS Latency 6
 
 config CAS_7
 	bool "CAS 7"
-	depends on DDR3 && UMCTL2
+	depends on (DDR3 && (DDR_SPEED_1066 || DDR_SPEED_1333) && UMCTL2)
 	help
 	  CAS Latency 7
 
 config CAS_8
 	bool "CAS 8"
-	depends on DDR3 && UMCTL2
+	depends on (DDR3 && (DDR_SPEED_1066 || DDR_SPEED_1333) && UMCTL2)
 	help
 	  CAS Latency 8
 endchoice
@@ -278,37 +318,37 @@ choice
 	depends on DDR_SET_BY_JEDEC
 config DDR_SPEED_200
 	depends on LPDDR1
-	bool "DDR-200 (clock rate 100MHz)"
+	bool "DDR-200 (clock 100MHz, data 200MT/s)"
 config DDR_SPEED_266
 	depends on LPDDR1
-	bool "DDR-266 (clock rate 133MHz)"
+	bool "DDR-266 (clock 133MHz, data 266MT/s)"
 config DDR_SPEED_333
 	depends on (LPDDR1 || LPDDR2)
-	bool "DDR-333 (clock rate 166MHz)"
+	bool "DDR-333 (clock 166MHz, data 333MT/s)"
 config DDR_SPEED_370
 	depends on LPDDR1
-	bool "DDR-370 (clock rate 185MHz)"
+	bool "DDR-370 (clock 185MHz, data 370MT/s)"
 config DDR_SPEED_400
 	depends on LPDDR1 || DDR2 || LPDDR2
-	bool "DDR-400 (clock rate 200MHz)"
+	bool "DDR-400 (clock 200MHz, data 400MT/s)"
 config DDR_SPEED_533
 	depends on DDR2 || LPDDR2
-	bool "DDR_533 (133MHz, I/O 266MHz, data 533MT/s)"
+	bool "DDR_533 (clock 266MHz, data 533MT/s)"
 config DDR_SPEED_667
 	depends on DDR2 || LPDDR2
-	bool "DDR_667 (167MHz, I/O 333MHz, data 677MT/s)"
+	bool "DDR_667 (clock 333MHz, data 677MT/s)"
 config DDR_SPEED_800
 	depends on DDR2 || DDR3 || LPDDR2 || LPDDR3
-	bool "DDR_800 (100|200MHz, I/O 400MHz, data 800MT/s)"
+	bool "DDR_800 (clock 400MHz, data 800MT/s)"
 config DDR_SPEED_933
 	depends on  LPDDR2 && UMCTL2
-	bool "DDR_933 (233MHz, I/O 466MHz, data 933MT/s)"
+	bool "DDR_933 (clock 466MHz, data 933MT/s)"
 config DDR_SPEED_1066
-	depends on DDR3 || LPDDR2 || LPDDR3 
-	bool "DDR_1066 (133|266MHz, I/O 533MHz, data 1066MT/s)"
+	depends on DDR3 || LPDDR2 || LPDDR3
+	bool "DDR_1066 (clock 533MHz, data 1066MT/s)"
 config DDR_SPEED_1333
 	depends on (DDR3 || LPDDR3 ) && DDRC
-	bool "DDR3_1333 (166MHz, I/O 667MHz, data 1333MT/s)"
+	bool "DDR3_1333 (clock 667MHz, data 1333MT/s)"
 endchoice
 
 choice
@@ -450,7 +490,7 @@ config UMCTL2_TRP
 	int "tRP - Row Precharge command (ns)"
 	range 0 30
 	default 15
-	
+
 config UMCTL2_TRP_PS
 	depends on DDR_SET_BY_TIMING && UMCTL2
 	int "tRP - Row Precharge command (ps)"
@@ -461,7 +501,7 @@ config UMCTL2_TRCD
 	depends on DDR_SET_BY_TIMING && UMCTL2
 	int "tRCD - Row to Column delay (ns)"
 	range 0 100
-	default 15 
+	default 15
 
 config UMCTL2_TRCD_PS
 	depends on DDR_SET_BY_TIMING && UMCTL2
@@ -523,25 +563,25 @@ config UMCTL2_RL
 	depends on DDR_SET_BY_TIMING && UMCTL2 && (LPDDR2 || LPDDR3)
 	int "RL - Read Latency, Clock cycles (ns)"
 	range 0 20
-	default 8 
+	default 8
 
 config UMCTL2_WL
 	depends on DDR_SET_BY_TIMING && UMCTL2 && (LPDDR2 || LPDDR3)
 	int "WL - Write Latency, Clock cycles (ns)"
 	range 0 20
-	default 4 
+	default 4
 
 config UMCTL2_TZQOPER
 	depends on DDR_SET_BY_TIMING && UMCTL2 && (DDR3 || LPDDR2 || LPDDR3)
 	int "tZQOPER or tZQCL - TZQ Long Calibration Clock cycles (ns)"
 	range 0 1000
-	default 360 
-	
+	default 360
+
 config UMCTL2_TZQCS
 	depends on DDR_SET_BY_TIMING && UMCTL2 && (DDR3 || LPDDR2 || LPDDR3)
 	int "tZQCS - TZQ Short Calibration Clock cycles (ns)"
 	range 0 200
-	default 90 
+	default 90
 
 config UMCTL2_TMRD
 	depends on DDR_SET_BY_TIMING && UMCTL2

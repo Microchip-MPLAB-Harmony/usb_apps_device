@@ -1,30 +1,7 @@
-/* ----------------------------------------------------------------------------
- *         ATMEL Microcontroller Software Support
- * ----------------------------------------------------------------------------
- * Copyright (c) 2013, Atmel Corporation
- *
- * All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions are met:
- *
- * - Redistributions of source code must retain the above copyright notice,
- * this list of conditions and the disclaimer below.
- *
- * Atmel's name may not be used to endorse or promote products derived from
- * this software without specific prior written permission.
- *
- * DISCLAIMER: THIS SOFTWARE IS PROVIDED BY ATMEL "AS IS" AND ANY EXPRESS OR
- * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT ARE
- * DISCLAIMED. IN NO EVENT SHALL ATMEL BE LIABLE FOR ANY DIRECT, INDIRECT,
- * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
- * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA,
- * OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
- * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
- * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
+// Copyright (C) 2013 Microchip Technology Inc. and its subsidiaries
+//
+// SPDX-License-Identifier: MIT
+
 #include "common.h"
 #include "hardware.h"
 #include "board.h"
@@ -39,23 +16,7 @@
 
 static unsigned int act8865_get_twi_bus(void)
 {
-	unsigned int bus = 0;
-
-	if (act8865_twi_bus != 0xff) {
-		bus = act8865_twi_bus;
-	} else {
-#if defined(CONFIG_PMIC_ON_TWI0)
-		bus = 0;
-#elif defined(CONFIG_PMIC_ON_TWI1)
-		bus = 1;
-#elif defined(CONFIG_PMIC_ON_TWI2)
-		bus = 2;
-#elif defined(CONFIG_PMIC_ON_TWI3)
-		bus = 3;
-#endif
-	}
-
-	return bus;
+	return CONFIG_PMIC_ON_TWI;
 }
 
 static int act8865_read(unsigned char reg_addr, unsigned char *data)
@@ -151,7 +112,7 @@ int act8865_check_i2c_disabled(void)
 	return act8865_read(SYS_0, &data);
 }
 
-#ifdef CONFIG_PM_PMIC
+#ifdef CONFIG_ACT8865_POWER_SAVING
 static int act8865_set_reg_mode(unsigned char mode_reg, unsigned mode)
 {
 	unsigned char value;
@@ -353,5 +314,67 @@ int act8945a_suspend_charger(void)
 int act8945a_suspend_charger(void)
 {
 	return 0;
+}
+#endif
+
+#if defined(CONFIG_ACT8865_SET_VOLTAGE)
+struct act8865_tbl {
+	unsigned char reg;
+	unsigned int voltage;
+};
+static const struct act8865_tbl act8865_vol[] = {
+	{0x14, 1100}, {0x18, 1200}, {0x19, 1250}, {0x1a, 1300}, {0x1b, 1350},
+	{0x24, 1800}, {0x31, 2500}, {0x39, 3300},
+};
+
+#if CONFIG_ACT8865_VSEL == 0
+static const struct act8865_tbl act8865_outs[] = {
+	{REG1_0, CONFIG_VOLTAGE_OUT1},
+	{REG2_0, CONFIG_VOLTAGE_OUT2},
+	{REG3_0, CONFIG_VOLTAGE_OUT3},
+	{REG4_0, CONFIG_VOLTAGE_OUT4},
+	{REG5_0, CONFIG_VOLTAGE_OUT5},
+	{REG6_0, CONFIG_VOLTAGE_OUT6},
+	{REG7_0, CONFIG_VOLTAGE_OUT7},
+};
+#endif
+
+#if CONFIG_ACT8865_VSEL == 1
+static const struct act8865_tbl act8865_outs[] = {
+	{REG1_1, CONFIG_VOLTAGE_OUT1},
+	{REG2_1, CONFIG_VOLTAGE_OUT2},
+	{REG3_1, CONFIG_VOLTAGE_OUT3},
+	{REG4_0, CONFIG_VOLTAGE_OUT4},
+	{REG5_0, CONFIG_VOLTAGE_OUT5},
+	{REG6_0, CONFIG_VOLTAGE_OUT6},
+	{REG7_0, CONFIG_VOLTAGE_OUT7},
+};
+#endif
+
+int at91_board_act8865_set_reg_voltage(void)
+{
+	int i, j;
+	int ret = 0;
+
+	/* Check ACT8865 I2C interface */
+	if (act8865_check_i2c_disabled())
+		return 0;
+
+	for (i = ARRAY_SIZE(act8865_outs) - 1; i >= 0; i--) {
+		if (act8865_outs[i].voltage == 0)
+			continue;
+
+		ret = -1;
+		for (j = 0; j < ARRAY_SIZE(act8865_vol); j++) {
+			if (act8865_vol[j].voltage == act8865_outs[i].voltage) {
+				ret = act8865_set_reg_voltage(act8865_outs[i].reg, act8865_vol[j].reg);
+				break;
+			}
+		}
+		if (ret)
+			console_printf("ACT8865: Failed to make REG%d output %dmV\n", i + 1, act8865_outs[i].voltage);
+	}
+
+	return ret;
 }
 #endif

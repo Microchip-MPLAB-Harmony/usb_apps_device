@@ -1,34 +1,15 @@
-/* ----------------------------------------------------------------------------
- *         Microchip Microprocessor (MPU) Software Team
- * ----------------------------------------------------------------------------
- * Copyright (C) 2019 Microchip Technology Inc. and its subsidiaries
- *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions are met:
- *
- * - Redistributions of source code must retain the above copyright notice,
- * this list of conditions and the disclaimer below.
- *
- * Microchip's name may not be used to endorse or promote products derived from
- * this software without specific prior written permission.
- *
- * DISCLAIMER: THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR
- * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT ARE
- * DISCLAIMED. IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIRECT,
- * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
- * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA,
- * OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
- * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
- * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
+// Copyright (C) 2019 Microchip Technology Inc. and its subsidiaries
+//
+// SPDX-License-Identifier: MIT
+
 #include "board.h"
+#include "backup.h"
 #include "common.h"
 #include "debug.h"
 #include "hardware.h"
 #include "mcp16502.h"
 #include "twi.h"
+#include "div.h"
 
 #define MCP16502_BASE(_i)		(((_i) + 1) << 4)
 #define MCP16502_LOW_SEL		(0x0D)
@@ -57,6 +38,30 @@ static struct regulator {
 };
 
 /**
+ * mcp16502_regulator_id_to_name()	- set regulator voltage
+ *
+ * @regid:	regulator identifier
+ *
+ * Returns:	regulator's name on success, NULL in case of failure
+ */
+const char * const mcp16502_regulator_id_to_name(unsigned int regid)
+{
+	static const char * const names[] = {
+		[MCP16502_BUCK1] = "OUT1",
+		[MCP16502_BUCK2] = "OUT2",
+		[MCP16502_BUCK3] = "OUT3",
+		[MCP16502_BUCK4] = "OUT4",
+		[MCP16502_LDO1] = "LDO1",
+		[MCP16502_LDO2] = "LDO2",
+	};
+
+	if (regid < MCP16502_MIN || regid > MCP16502_MAX)
+		return NULL;
+
+	return names[regid];
+}
+
+/**
  * mcp16502_regulator_set_voltage()	- set regulator voltage
  *
  * @regid:	regulator identifier
@@ -78,7 +83,7 @@ int mcp16502_regulator_set_voltage(unsigned int regid, unsigned int uV)
 	if (ret)
 		return ret;
 
-	steps = (uV - regulators[regid].min_uV) / regulators[regid].step_uV;
+	steps = div((uV - regulators[regid].min_uV), regulators[regid].step_uV);
 	selector = (MCP16502_LOW_SEL + steps) & MCP16502_VSEL;
 	val &= ~MCP16502_VSEL;
 	val |= selector;
@@ -206,6 +211,9 @@ int mcp16502_init(int busid, int addr, const struct pio_desc *lpm_desc,
 
 	/* Setup regulators. */
 	for (i = 0; i < cfgs_no && cfgs; i++) {
+		if (!cfgs[i].uV)
+			continue;
+
 		ret = mcp16502_regulator_set_voltage(cfgs[i].regulator,
 						     cfgs[i].uV);
 		if (ret) {
@@ -225,3 +233,38 @@ int mcp16502_init(int busid, int addr, const struct pio_desc *lpm_desc,
 
 	return 0;
 }
+#if defined(CONFIG_MCP16502_SET_VOLTAGE)
+void mcp16502_voltage_select(void)
+{
+	const struct mcp16502_cfg regulators_cfg[] = {
+		{.regulator = MCP16502_BUCK1, .uV = CONFIG_VOLTAGE_OUT1 * 1000, .enable = 1, },
+		{.regulator = MCP16502_BUCK2, .uV = CONFIG_VOLTAGE_OUT2 * 1000, .enable = 1, },
+		{.regulator = MCP16502_BUCK3, .uV = CONFIG_VOLTAGE_OUT3 * 1000, .enable = 1, },
+		{.regulator = MCP16502_BUCK4, .uV = CONFIG_VOLTAGE_OUT4 * 1000, .enable = 1, },
+		{.regulator = MCP16502_LDO1, .uV = CONFIG_VOLTAGE_LDO1 * 1000, .enable = 1, },
+		{.regulator = MCP16502_LDO2, .uV = CONFIG_VOLTAGE_LDO2 * 1000, .enable = 1, },
+	};
+
+	int i;
+	/*
+	 * SAMA7G5's SHDWC keeps LPM pin low by default, so there is no need
+	 * to pass pin descriptor to mcp16502_init() for switching to active
+	 * state.
+	 */
+	if (mcp16502_init(CONFIG_PMIC_ON_TWI, 0x5b, NULL, regulators_cfg,
+				ARRAY_SIZE(regulators_cfg))) {
+		dbg_printf("MCP16502: init failure");
+		return;
+	}
+
+	for (i = 0; i < ARRAY_SIZE(regulators_cfg); i++) {
+		if (!regulators_cfg[i].uV)
+			continue;
+		dbg_very_loud("MCP16502: %s = %umV\n",
+			      mcp16502_regulator_id_to_name(regulators_cfg[i].regulator),
+			      regulators_cfg[i].uV / 1000);
+	}
+
+	dbg_very_loud("\n");
+}
+#endif /* CONFIG_MCP16502_SET_VOLTAGE */

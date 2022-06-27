@@ -1,30 +1,7 @@
-/* ----------------------------------------------------------------------------
- *         ATMEL Microcontroller Software Support
- * ----------------------------------------------------------------------------
- * Copyright (c) 2012, Atmel Corporation
- *
- * All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions are met:
- *
- * - Redistributions of source code must retain the above copyright notice,
- * this list of conditions and the disclaimer below.
- *
- * Atmel's name may not be used to endorse or promote products derived from
- * this software without specific prior written permission.
- *
- * DISCLAIMER: THIS SOFTWARE IS PROVIDED BY ATMEL "AS IS" AND ANY EXPRESS OR
- * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT ARE
- * DISCLAIMED. IN NO EVENT SHALL ATMEL BE LIABLE FOR ANY DIRECT, INDIRECT,
- * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
- * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA,
- * OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
- * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
- * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
+// Copyright (C) 2012 Microchip Technology Inc. and its subsidiaries
+//
+// SPDX-License-Identifier: MIT
+
 #include "common.h"
 #include "string.h"
 #include "mci_media.h"
@@ -70,7 +47,7 @@ static int sd_cmd_send_if_cond(struct sd_card *sdcard)
 	command->resp_type = SD_RESP_TYPE_R1;
 	command->argu = CHECK_PATTERN;
 	command->argu |= (host->caps_voltages
-				&& OCR_VOLTAGE_27_36_MASK) ? (0x01 << 8) : 0;
+				& OCR_VOLTAGE_27_36_MASK) ? (0x01 << 8) : 0;
 
 	ret = host->ops->send_command(command, 0);
 	if (ret)
@@ -780,13 +757,15 @@ static int mmc_bus_width_select(struct sd_card *sdcard, unsigned int buswidth,
 				int ddr)
 {
 	struct sd_host *host = sdcard->host;
-	unsigned char busw;
+	unsigned char busw = MMC_BUS_WIDTH_1;
 	int ret;
 
-	if (!ddr)
-		busw = (buswidth == 8) ? MMC_BUS_WIDTH_8 : MMC_BUS_WIDTH_4;
-	else
-		busw = (buswidth == 8) ? MMC_BUS_WIDTH_8_DDR : MMC_BUS_WIDTH_4_DDR;
+	if (buswidth == 8 || buswidth == 4) {
+		if (!ddr)
+			busw = (buswidth == 8) ? MMC_BUS_WIDTH_8 : MMC_BUS_WIDTH_4;
+		else
+			busw = (buswidth == 8) ? MMC_BUS_WIDTH_8_DDR : MMC_BUS_WIDTH_4_DDR;
+	}
 
 	ret = mmc_cmd_switch_fun(sdcard,
 			MMC_EXT_CSD_ACCESS_WRITE_BYTE,
@@ -855,8 +834,10 @@ static int mmc_detect_buswidth(struct sd_card *sdcard)
 
 	}
 
-	if (!busw && !len)
+	if (!busw && !len) {
 		dbg_info("MMC: falling back to 1 bit bus width\n");
+		mmc_bus_width_select(sdcard, 1, 0);
+	}
 
 	return 0;
 
@@ -1085,12 +1066,8 @@ static int mmc_initialization(struct sd_card *sdcard)
 		}
 	}
 
-	if (host->ops->set_clock) {
-		if (sdcard->highspeed_card)
-			host->ops->set_clock(sdcard, 52000000);
-		else
-			host->ops->set_clock(sdcard, 26000000);
-	}
+	/* Bustest does not work below 26 Mhz */
+	host->ops->set_clock(sdcard, 26000000);
 
 	if (sdcard->sd_spec_version >= MMC_VERSION_4) {
 		ret = mmc_detect_buswidth(sdcard);
@@ -1100,8 +1077,18 @@ static int mmc_initialization(struct sd_card *sdcard)
 		}
 	}
 
+	/* Now we can go to cruise speed */
+	if (host->ops->set_clock) {
+		if (sdcard->highspeed_card) {
+			host->ops->set_clock(sdcard, 52000000);
+		}
+		else
+			host->ops->set_clock(sdcard, 26000000);
+	}
+
 	/* we enable here DDR if supported */
-	if (sdcard->ddr_support && sdcard->host->caps_ddr) {
+	if (sdcard->configured_bus_w != 1 && sdcard->ddr_support &&
+	    sdcard->host->caps_ddr) {
 		ret = mmc_bus_width_select(sdcard, sdcard->configured_bus_w, 1);
 		if (ret)
 			console_printf("MMC: DDR mode could not be enabled: %d\n", ret);

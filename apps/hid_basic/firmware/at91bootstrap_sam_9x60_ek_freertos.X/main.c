@@ -1,30 +1,7 @@
-/* ----------------------------------------------------------------------------
- *         ATMEL Microcontroller Software Support
- * ----------------------------------------------------------------------------
- * Copyright (c) 2006, Atmel Corporation
- *
- * All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions are met:
- *
- * - Redistributions of source code must retain the above copyright notice,
- * this list of conditions and the disclaimer below.
- *
- * Atmel's name may not be used to endorse or promote products derived from
- * this software without specific prior written permission.
- *
- * DISCLAIMER: THIS SOFTWARE IS PROVIDED BY ATMEL "AS IS" AND ANY EXPRESS OR
- * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT ARE
- * DISCLAIMED. IN NO EVENT SHALL ATMEL BE LIABLE FOR ANY DIRECT, INDIRECT,
- * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
- * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA,
- * OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
- * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
- * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
+// Copyright (C) 2006 Microchip Technology Inc. and its subsidiaries
+//
+// SPDX-License-Identifier: MIT
+
 #include "common.h"
 #include "board.h"
 #include "usart.h"
@@ -33,9 +10,21 @@
 #include "tz_utils.h"
 #include "pm.h"
 #include "act8865.h"
+#include "mcp16502.h"
 #include "backup.h"
 #include "secure.h"
+#include "autoconf.h"
+#include "optee.h"
 #include "sfr_aicredir.h"
+
+#ifdef CONFIG_CACHES
+#include "l1cache.h"
+#endif
+
+#ifdef CONFIG_MMU
+#include "mmu.h"
+static unsigned int *tlb = (unsigned int *)MMU_TABLE_BASE_ADDR;
+#endif
 
 #ifdef CONFIG_HW_DISPLAY_BANNER
 static void display_banner (void)
@@ -46,13 +35,16 @@ static void display_banner (void)
 
 int main(void)
 {
-#if !defined(CONFIG_LOAD_NONE)
+#ifdef CONFIG_LOAD_SW
 	struct image_info image;
 #endif
 	int ret = 0;
 
-#ifdef CONFIG_HW_INIT
 	hw_init();
+
+#ifdef CONFIG_OCMS_STATIC
+	ocms_init_keys();
+	ocms_enable();
 #endif
 
 #if defined(CONFIG_SCLK)
@@ -100,14 +92,38 @@ int main(void)
 	act8945a_suspend_charger();
 #endif
 
-#if !defined(CONFIG_LOAD_NONE) && !defined(CONFIG_SKIP_COPY_IMAGE)
+#ifdef CONFIG_MCP16502_SET_VOLTAGE
+	mcp16502_voltage_select();
+#endif
+
+#ifdef CONFIG_SAMA7G5
+	hw_postinit();
+#endif
+
+#ifdef CONFIG_LOAD_SW
 	init_load_image(&image);
 
 #if defined(CONFIG_SECURE)
 	image.dest -= sizeof(at91_secure_header_t);
 #endif
 
+#ifdef CONFIG_MMU
+	mmu_tlb_init(tlb);
+	mmu_configure(tlb);
+	mmu_enable();
+#endif
+#ifdef CONFIG_CACHES
+	icache_enable();
+	dcache_enable();
+#endif
 	ret = (*load_image)(&image);
+#ifdef CONFIG_CACHES
+	icache_disable();
+	dcache_disable();
+#endif
+#ifdef CONFIG_MMU
+	mmu_disable();
+#endif
 
 #if defined(CONFIG_SECURE)
 	if (!ret)
@@ -126,13 +142,18 @@ int main(void)
 #endif
 #endif
 
+#if defined(CONFIG_LOAD_OPTEE)
+	/* Will never return since we will jump to OP-TEE in secure mode */
+	optee_load();
+#endif
+
 #if defined(CONFIG_ENTER_NWD)
 	switch_normal_world();
 
 	/* point never reached with TZ support */
 #endif
 
-#if !defined(CONFIG_LOAD_NONE)
+#ifdef CONFIG_JUMP_TO_SW
 	return JUMP_ADDR;
 #else
 	return 0;

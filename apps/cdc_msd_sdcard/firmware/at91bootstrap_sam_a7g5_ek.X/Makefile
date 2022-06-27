@@ -1,3 +1,7 @@
+# Copyright (C) 2006 Microchip Technology Inc. and its subsidiaries
+#
+# SPDX-License-Identifier: MIT
+
 #
 # Default config file is in configs/$(DEVICE_NAME)*_defconfig
 # First, run xxx_defconfig
@@ -50,7 +54,7 @@ else
 	BUILD_DATE := $(shell $(DATE) "$(DATE_FMT)")
 endif
 endif
-VERSION := 3.10.2
+VERSION := 4.0.3
 REVISION :=
 ifdef NIX_SHELL
 SCMINFO := $(shell (host-utilities/setlocalversion))
@@ -174,6 +178,10 @@ TOP_OF_MEMORY:=$(strip $(subst ",,$(CONFIG_TOP_OF_MEMORY)))
 # CRYSTAL is UNUSED
 CRYSTAL:=$(strip $(subst ",,$(CONFIG_CRYSTAL)))
 
+ifeq ($(CONFIG_MMU), y)
+MMU_TABLE_BASE_ADDR := $(strip $(subst ",,$(CONFIG_MMU_TABLE_BASE_ADDR)))
+endif
+
 # driver definitions
 SPI_CLK:=$(strip $(subst ",,$(CONFIG_SPI_CLK)))
 SPI_BOOT:=$(strip $(subst ",,$(CONFIG_SPI_BOOT)))
@@ -235,9 +243,11 @@ include	fs/src/fat.mk
 
 GC_SECTIONS=--gc-sections
 
-NOSTDINC_FLAGS := -nostdinc -isystem "$(shell "$(CC)" -print-file-name=include)"
+# $(EXTRA_CC_ARGS) can be used to pass extra CC parameters to toolchain
+# For example, Yocto Project can pass the sysroot
+NOSTDINC_FLAGS := -nostdinc -isystem "$(shell "$(CC)" $(EXTRA_CC_ARGS) -print-file-name=include)"
 
-CPPFLAGS=$(NOSTDINC_FLAGS) -ffunction-sections -g -Os -Wall \
+CPPFLAGS=$(EXTRA_CC_ARGS) $(NOSTDINC_FLAGS) -ffunction-sections -g -Os -Wall \
 	-mno-unaligned-access \
 	-fno-stack-protector -fno-common -fno-builtin -fno-jump-tables -fno-pie \
 	-I$(INCL) -Iinclude -Ifs/include \
@@ -245,7 +255,7 @@ CPPFLAGS=$(NOSTDINC_FLAGS) -ffunction-sections -g -Os -Wall \
 	-include $(CONFIG)/at91bootstrap-config/autoconf.h \
 	-DAT91BOOTSTRAP_VERSION=\"$(VERSION)$(REV)$(SCMINFO)\" -DCOMPILE_TIME="\"$(BUILD_DATE)\""
 
-ASFLAGS=-g -Os -Wall -I$(INCL) -Iinclude -include $(CONFIG)/at91bootstrap-config/autoconf.h 
+ASFLAGS=$(EXTRA_CC_ARGS) -g -Os -Wall -I$(INCL) -Iinclude -include $(CONFIG)/at91bootstrap-config/autoconf.h
 
 include	toplevel_cpp.mk
 include	device/device_cpp.mk
@@ -266,7 +276,7 @@ endif
 #    --cref:    add cross reference to map file
 #  -lc 	   : 	tells the linker to tie in newlib
 #  -lgcc   : 	tells the linker to tie in newlib
-LDFLAGS=-nostartfiles -Map=$(BINDIR)/$(BOOT_NAME).map --cref -static
+LDFLAGS=$(EXTRA_CC_ARGS) -Map=$(BINDIR)/$(BOOT_NAME).map --cref -static
 LDFLAGS+=-T $(link_script) $(GC_SECTIONS) -Ttext $(LINK_ADDR)
 
 REMOVE_SECTIONS=-R .note -R .comment -R .note.gnu.build-id
@@ -320,7 +330,7 @@ $(AT91BOOTSTRAP): $(OBJS) | $(BINDIR)
 	$(Q)$(MKDIR) -p $(dir $@)
 	@echo "  LD        "$(BOOT_NAME).elf
 	$(Q)"$(LD)" $(LDFLAGS) -n -o $(BINDIR)/$(BOOT_NAME).elf $(OBJS)
-	@"$(OBJCOPY)" --strip-all $(REMOVE_SECTIONS) $(BINDIR)/$(BOOT_NAME).elf -O binary $@
+	$(Q)"$(OBJCOPY)" --strip-all $(REMOVE_SECTIONS) $(BINDIR)/$(BOOT_NAME).elf -O binary $@
 ifdef NIX_SHELL
 	@ln -sf $(BOOT_NAME).elf ${BINDIR}/${SYMLINK_ELF}
 	@ln -sf $(BOOT_NAME).elf ${BINDIR}/${SYMLINK_ELF_STRIPPED}
@@ -336,15 +346,17 @@ endif
 $(BUILDDIR)/%.o : %.c .config
 	$(Q)$(MKDIR) -p $(dir $@)
 	@echo "  CC        "$<
-	@"$(CC)" $(CPPFLAGS) -c -o $@ $<
+	$(Q)"$(CC)" $(CPPFLAGS) -c -o $@ $<
 
 $(BUILDDIR)/%.o : %.S .config
 	$(Q)$(MKDIR) -p $(dir $@)
 	@echo "  AS        "$<
-	@"$(AS)" $(ASFLAGS) -c -o $@ $<
+	$(Q)"$(AS)" $(ASFLAGS) -c -o $@ $<
 
 $(AT91BOOTSTRAP).pmecc: $(BINDIR)/pmecc.tmp $(AT91BOOTSTRAP)
-	$(Q)cat $(BINDIR)/pmecc.tmp $(AT91BOOTSTRAP) > $@
+	$(Q)if [ -f $(BINDIR)/pmecc.tmp ]; then \
+		cat $(BINDIR)/pmecc.tmp $(AT91BOOTSTRAP) > $@; \
+	fi
 
 $(BINDIR)/pmecc.tmp: .config | $(BINDIR)
 ifdef NIX_SHELL
@@ -365,14 +377,15 @@ ChkFileSize: $(AT91BOOTSTRAP)
 	  fi ; \
 	  echo "Size of $(BOOT_NAME).bin is $$fsize bytes"; \
 	  if [ "$$fsize" -gt "$(BOOTSTRAP_MAXSIZE)" ] ; then \
-		echo "[Failed***] It's too big to fit into SRAM area. the support maxium size is $(BOOTSTRAP_MAXSIZE)"; \
+		echo "[Failed***] It's too big to fit into SRAM area. the supported maximum size is $(BOOTSTRAP_MAXSIZE)"; \
 		rm $(BINDIR)/$(BOOT_NAME).bin ;\
 		rm ${BINDIR}/${SYMLINK}; \
 		rm ${BINDIR}/${SYMLINK_BOOT}; \
 		exit 2;\
 	  else \
 	  	echo "[Succeeded] It's OK to fit into SRAM area"; \
-		stack_space=`expr $(BOOTSTRAP_MAXSIZE) - $$fsize`; \
+		sram_size=`expr $(BOOTSTRAP_MAXSIZE) \* 2`; \
+		stack_space=`expr $$sram_size - $$fsize`; \
 		echo "[Attention] The space left for stack is $$stack_space bytes"; \
 	  fi )
 endif  # CONFIG_HAVE_DOT_CONFIG

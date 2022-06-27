@@ -1,137 +1,48 @@
-/* ----------------------------------------------------------------------------
- *         ATMEL Microcontroller Software Support
- * ----------------------------------------------------------------------------
- * Copyright (c) 2006, Atmel Corporation
+/*
+ * Copyright (C) 2006 Microchip Technology Inc. and its subsidiaries
  *
- * All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions are met:
- *
- * - Redistributions of source code must retain the above copyright notice,
- * this list of conditions and the disclaimer below.
- *
- * Atmel's name may not be used to endorse or promote products derived from
- * this software without specific prior written permission.
- *
- * DISCLAIMER: THIS SOFTWARE IS PROVIDED BY ATMEL "AS IS" AND ANY EXPRESS OR
- * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT ARE
- * DISCLAIMED. IN NO EVENT SHALL ATMEL BE LIABLE FOR ANY DIRECT, INDIRECT,
- * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
- * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA,
- * OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
- * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
- * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ * SPDX-License-Identifier: MIT
  */
+
 #ifndef __BOARD_H__
 #define __BOARD_H__
 
-#ifdef CONFIG_AT91SAM9260EK
-#include "at91sam9260ek.h"
+#ifdef CONFIG_SAM9X60
+#include "sam9x60_board.h"
 #endif
 
-#ifdef CONFIG_AT91SAM9XEEK
-#include "at91sam9xeek.h"
+#ifdef CONFIG_SAMA5D2
+#include "sama5d2_board.h"
 #endif
 
-#ifdef CONFIG_AT91SAM9G10EK
-#include "at91sam9g10ek.h"
+#ifdef CONFIG_SAMA5D3X
+#include "sama5d3_board.h"
 #endif
 
-#ifdef CONFIG_AT91SAM9G20EK
-#include "at91sam9g20ek.h"
+#ifdef CONFIG_SAMA5D4
+#include "sama5d4_board.h"
 #endif
 
-#ifdef CONFIG_AT91SAM9M10G45EK
-#include "at91sam9m10g45ek.h"
+#ifdef CONFIG_SAMA7G5
+#include "sama7g5_board.h"
 #endif
-
-#ifdef CONFIG_AT91SAM9261EK
-#include "at91sam9261ek.h"
-#endif
-
-#ifdef CONFIG_AT91SAM9263EK
-#include "at91sam9263ek.h"
-#endif
-
-#ifdef CONFIG_AT91SAM9RLEK
-#include "at91sam9rlek.h"
-#endif
-
-#ifdef CONFIG_AT91SAM9X5EK
-#include "at91sam9x5ek.h"
-#endif
-
-#ifdef CONFIG_AT91SAM9N12EK
-#include "at91sam9n12ek.h"
-#endif
-
-#ifdef CONFIG_SAM9X60EK
-#include "sam9x60ek.h"
-#endif
-
-#ifdef CONFIG_SAM9X60_DDR2_SIP_EB
-#include "sam9x60_ddr2_sip_eb.h"
-#endif
-
-#ifdef CONFIG_SAM9X60_SDR_SIP_EB
-#include "sam9x60_sdr_sip_eb.h"
-#endif
-
-#ifdef CONFIG_SAMA5D3XEK
-#include "sama5d3xek.h"
-#endif
-
-#ifdef CONFIG_SAMA5D3_XPLAINED
-#include "sama5d3_xplained.h"
-#endif
-
-#ifdef CONFIG_SAMA5D3X_CMP
-#include "sama5d3x_cmp.h"
-#endif
-
-#ifdef CONFIG_SAMA5D4EK
-#include "sama5d4ek.h"
-#endif
-
-#ifdef CONFIG_SAMA5D4_XPLAINED
-#include "sama5d4_xplained.h"
-#endif
-
-#ifdef CONFIG_SAMA5D2_PTC_EK
-#include "sama5d2_ptc_ek.h"
-#endif
-
-#ifdef CONFIG_SAMA5D2_XPLAINED
-#include "sama5d2_xplained.h"
-#endif
-
-#ifdef CONFIG_SAMA5D27_SOM1_EK
-#include "sama5d27_som1_ek.h"
-#endif
-
-#ifdef CONFIG_SAMA5D27_WLSOM1_EK
-#include "sama5d27_wlsom1_ek.h"
-#endif
-
-#ifdef CONFIG_SAMA5D2_LPDDR2SIP_VB
-#include "sama5d2_lpddr2sip_vb.h"
-#endif
-
-#ifdef CONFIG_SAMA5D2_ICP
-#include "sama5d2_icp.h"
-#endif
-
-#include "contrib_board.h"
 
 /*
  * Functions Prototype
  */
 extern void hw_init(void);
 
+/* Some platforms require a preinit very early in the boot process,
+   or a postinit after the PMIC voltage selection.
+*/
+
+#ifdef CONFIG_SAMA7G5
+extern void hw_preinit(void);
+extern void hw_postinit(void);
+#endif
+
 extern void nandflash_hw_init(void);
+extern void nandflash_set_smc_timing(unsigned int mode);
 
 extern void at91_spi0_hw_init(void);
 

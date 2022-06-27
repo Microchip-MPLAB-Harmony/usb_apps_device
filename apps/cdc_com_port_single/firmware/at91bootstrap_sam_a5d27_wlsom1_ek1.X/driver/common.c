@@ -1,30 +1,7 @@
-/* ----------------------------------------------------------------------------
- *         ATMEL Microcontroller Software Support
- * ----------------------------------------------------------------------------
- * Copyright (c) 2015, Atmel Corporation
- *
- * All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions are met:
- *
- * - Redistributions of source code must retain the above copyright notice,
- * this list of conditions and the disclaimer below.
- *
- * Atmel's name may not be used to endorse or promote products derived from
- * this software without specific prior written permission.
- *
- * DISCLAIMER: THIS SOFTWARE IS PROVIDED BY ATMEL "AS IS" AND ANY EXPRESS OR
- * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT ARE
- * DISCLAIMED. IN NO EVENT SHALL ATMEL BE LIABLE FOR ANY DIRECT, INDIRECT,
- * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
- * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA,
- * OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
- * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
- * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
+// Copyright (C) 2015 Microchip Technology Inc. and its subsidiaries
+//
+// SPDX-License-Identifier: MIT
+
 #include "common.h"
 #include "dataflash.h"
 #include "nandflash.h"
@@ -33,7 +10,9 @@
 #include "string.h"
 #include "usart.h"
 
+#ifdef CONFIG_LOAD_SW
 load_function load_image;
+#endif
 
 #ifdef CONFIG_SDCARD
 char filename[FILENAME_BUF_LEN];
@@ -46,7 +25,36 @@ char cmdline_args[CMDLINE_BUF_LEN];
 #endif
 #endif
 
-#if !defined(CONFIG_LOAD_NONE)
+#ifdef CONFIG_LOAD_SW
+
+load_function get_image_load_func(void)
+{
+#if defined(CONFIG_DATAFLASH)
+	return &load_dataflash;
+#elif defined(CONFIG_FLASH)
+	return &load_norflash;
+#elif defined(CONFIG_NANDFLASH)
+	return &load_nandflash;
+#elif defined(CONFIG_SDCARD)
+	return &load_sdcard;
+#else
+#error "No booting media_str specified!"
+#endif
+}
+
+#if defined(CONFIG_DATAFLASH) || defined(CONFIG_NANDFLASH) || defined(CONFIG_FLASH)
+unsigned int get_image_load_offset(unsigned int addr)
+{
+#ifdef CONFIG_FLASH
+	return (addr | 0x10000000);
+#endif
+
+#if defined(CONFIG_NANDFLASH) || defined(CONFIG_DATAFLASH)
+	return addr;
+#endif
+}
+#endif
+
 void init_load_image(struct image_info *image)
 {
 	memset(image,		0, sizeof(*image));
@@ -57,39 +65,22 @@ void init_load_image(struct image_info *image)
 #endif
 #endif
 
+#if defined(CONFIG_DATAFLASH) || defined(CONFIG_NANDFLASH) || defined(CONFIG_FLASH)
+
+#if !defined(CONFIG_LOAD_LINUX) && !defined(CONFIG_LOAD_ANDROID)
+	image->length = IMG_SIZE;
+#endif
+
+	image->offset = get_image_load_offset(IMG_ADDRESS);
+#ifdef CONFIG_OF_LIBFDT
+	image->of_offset = get_image_load_offset(OF_OFFSET);
+#endif
+
+#endif
+
 	image->dest = (unsigned char *)JUMP_ADDR;
 #ifdef CONFIG_OF_LIBFDT
 	image->of_dest = (unsigned char *)OF_ADDRESS;
-#endif
-
-#ifdef CONFIG_FLASH
-	image->offset = IMG_ADDRESS | 0x10000000;
-#if !defined(CONFIG_LOAD_LINUX) && !defined(CONFIG_LOAD_ANDROID)
-	image->length = IMG_SIZE;
-#endif
-#ifdef CONFIG_OF_LIBFDT
-	image->of_offset = OF_OFFSET | 0x10000000;
-#endif
-#endif
-
-#ifdef CONFIG_NANDFLASH
-	image->offset = IMG_ADDRESS;
-#if !defined(CONFIG_LOAD_LINUX) && !defined(CONFIG_LOAD_ANDROID)
-	image->length = IMG_SIZE;
-#endif
-#ifdef CONFIG_OF_LIBFDT
-	image->of_offset = OF_OFFSET;
-#endif
-#endif
-
-#ifdef CONFIG_DATAFLASH
-	image->offset = IMG_ADDRESS;
-#if !defined(CONFIG_LOAD_LINUX) && !defined(CONFIG_LOAD_ANDROID)
-	image->length = IMG_SIZE;
-#endif
-#ifdef CONFIG_OF_LIBFDT
-	image->of_offset = OF_OFFSET;
-#endif
 #endif
 
 #ifdef CONFIG_SDCARD
@@ -108,26 +99,16 @@ void init_load_image(struct image_info *image)
 #if defined(CONFIG_LOAD_LINUX) || defined(CONFIG_LOAD_ANDROID)
 	load_image = &load_kernel;
 #else
-#if defined(CONFIG_DATAFLASH)
-	load_image = &load_dataflash;
-#elif defined(CONFIG_FLASH)
-	load_image = &load_norflash;
-#elif defined(CONFIG_NANDFLASH)
-	load_image = &load_nandflash;
-#elif defined(CONFIG_SDCARD)
-	load_image = &load_sdcard;
-#else
-#error "No booting media_str specified!"
-#endif
+	load_image = get_image_load_func();
 #endif
 }
-#endif
+#endif /* CONFIG_LOAD_SW */
 
 void load_image_done(int retval)
 {
 	char *media;
 
-#if defined(CONFIG_LOAD_NONE)
+#ifndef CONFIG_LOAD_SW
 	media = "NONE: ";
 #elif defined(CONFIG_FLASH)
 	media = "FLASH: ";
@@ -145,7 +126,7 @@ void load_image_done(int retval)
 		usart_puts(media);
 
 	if (retval == 0) {
-#if defined(CONFIG_LOAD_NONE)
+#ifndef CONFIG_LOAD_SW
 		usart_puts("AT91Bootstrap completed. Can load application via JTAG and jump.\n");
 #else
 		usart_puts("Done to load image\n");

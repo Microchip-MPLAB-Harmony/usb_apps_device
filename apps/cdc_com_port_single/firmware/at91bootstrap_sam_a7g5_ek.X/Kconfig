@@ -1,3 +1,7 @@
+# Copyright (C) 2006 Microchip Technology Inc. and its subsidiaries
+#
+# SPDX-License-Identifier: MIT
+
 mainmenu "AT91 Bootstrap configuration"
 
 config HAVE_DOT_CONFIG
@@ -140,6 +144,7 @@ config LOAD_LINUX
 	  No further bootloader required.
 
 config LOAD_ANDROID
+	depends on !LOAD_OPTEE
 	select LINUX_IMAGE
 	bool "Android"
 	---help---
@@ -147,18 +152,21 @@ config LOAD_ANDROID
 	  No further bootloader required.
 
 config LOAD_1MB
+	depends on !LOAD_OPTEE
 	bool "Load 1 MB into start of SDRAM"
 	---help---
 	  Use this mode to load an embedded application
 	  which can have a size of up to 1 MByte
 
 config LOAD_4MB
+	depends on !LOAD_OPTEE
 	bool "Load 4 MB into start of SDRAM"
 	---help---
 	  Use this mode to load an embedded application
 	  which can have a size of up to 4 MByte
 
 config LOAD_64KB
+	depends on !LOAD_OPTEE
 	bool "Load 64 kB into the start of SDRAM"
 	---help---
 	  Use this mode to load an embedded application
@@ -221,7 +229,10 @@ config MATRIX
 	  This interface let you to configure the MATRIX0(H64MX) and
 	  MATRIX1(H32MX) slave security  and to select the APB slave security startup.
 
+source "Config.in.optee"
+
 config ENTER_NWD
+	depends on !LOAD_OPTEE
 	select MATRIX
 	bool "Enable Enter the Normal World before Jumping"
 	default n
@@ -230,6 +241,7 @@ config ENTER_NWD
 	  to the Non-Secure World before the jumping.
 
 config REDIRECT_ALL_INTS_AIC
+	depends on !LOAD_OPTEE
 	bool "Redirect All Peripherals Interrupts to AIC"
 	default y
 	help
@@ -380,6 +392,15 @@ config BOARD_QUIRK_SAM9X60_EK
 
 config BOARD_QUIRK_SAM9X60_EB
 	bool "Quirks for SAM9X60-SDR-SIP-EB / SAM9X60-DDR2-SIP-EB board"
+
+config BOARD_QUIRK_SAMA7G5_EK
+	bool "Quirks for SAMA7G5-EK board"
+	help
+	  On SAMA7G5 EK board, pin PC15/16 are connected to STBY of the CAN transceivers,
+	  enabling this quirk will put the transceivers to normal mode.
+
+config BOARD_QUIRK_SAM9X60_CURIOSITY
+        bool "Quirks for SAM9X60_CURIOSITY board"
 
 endchoice
 
@@ -707,6 +728,13 @@ config ACT8865_SET_VOLTAGE
 	help
 	  This interface let you to set the ACT8865 initial output value
 
+config ACT8865_VSEL
+	int "VSEL pin for Step-Down DC/DCs Output Voltage Selection"
+	depends on ACT8865
+	default 0
+	help
+	  This interface lets you choose the ACT8865 VSEL pin input value
+
 config DISABLE_ACT8865_I2C
 	bool "Disable the ACT8865 I2C interface"
 	depends on ACT8865
@@ -727,8 +755,15 @@ config SUSPEND_ACT8945A_CHARGER
 
 config MCP16502
 	bool "PMIC (MCP16502) Support"
-	select TWI
 	default n
+	select TWI
+
+config MCP16502_SET_VOLTAGE
+	bool "Set MCP16502 Initial Output Voltage"
+	depends on MCP16502
+	default n
+	help
+	  This interface let you to set the MCP16502 initial output value
 
 config PMIC_ON_TWI
 	int "PMIC on TWI bus (configured in menu \"TWI BUS setting\")"
@@ -740,63 +775,63 @@ config PMIC_ON_TWI
 config VOLTAGE_OUT1
 	int "Voltage(mV) on PMIC's OUT1"
 	default 0
-	depends on ACT8865_SET_VOLTAGE || MCP16502 
+	depends on ACT8865_SET_VOLTAGE || MCP16502_SET_VOLTAGE
 	help
-	  The voltage on PMIC's OUT1, valid values: 0, 1100, 1200, 1250, 1350, 1800, 2500, 3300
+	  The voltage on PMIC's OUT1, valid values: 0, 1100, 1200, 1250, 1300, 1350, 1800, 2500, 3300
 
 config VOLTAGE_OUT2
 	int "Voltage(mV) on PMIC's OUT2"
 	default 0
-	depends on ACT8865_SET_VOLTAGE || MCP16502 
+	depends on ACT8865_SET_VOLTAGE || MCP16502_SET_VOLTAGE
 	help
-	  The voltage on PMIC's OUT2, valid values: 0, 1100, 1200, 1250, 1350, 1800, 2500, 3300
+	  The voltage on PMIC's OUT2, valid values: 0, 1100, 1200, 1250, 1300, 1350, 1800, 2500, 3300
 
 config VOLTAGE_OUT3
 	int "Voltage(mV) on PMIC's OUT3"
 	default 0
-	depends on ACT8865_SET_VOLTAGE || MCP16502 
+	depends on ACT8865_SET_VOLTAGE || MCP16502_SET_VOLTAGE
 	help
-	  The voltage on PMIC's OUT3, valid values: 0, 1100, 1200, 1250, 1350, 1800, 2500, 3300
+	  The voltage on PMIC's OUT3, valid values: 0, 1100, 1200, 1250, 1300, 1350, 1800, 2500, 3300
 
 config VOLTAGE_OUT4
 	int "Voltage(mV) on PMIC's OUT4"
 	default 0
-	depends on ACT8865_SET_VOLTAGE || MCP16502 
+	depends on ACT8865_SET_VOLTAGE || MCP16502_SET_VOLTAGE
 	help
-	  The voltage on PMIC's OUT4, valid values: 0, 1100, 1200, 1250, 1350, 1800, 2500, 3300
+	  The voltage on PMIC's OUT4, valid values: 0, 1100, 1200, 1250, 1300, 1350, 1800, 2500, 3300
 
 config VOLTAGE_OUT5
 	int "Voltage(mV) on PMIC's OUT5"
 	default 0
 	depends on ACT8865_SET_VOLTAGE
 	help
-	  The voltage on PMIC's OUT5, valid values: 0, 1100, 1200, 1250, 1350, 1800, 2500, 3300
+	  The voltage on PMIC's OUT5, valid values: 0, 1100, 1200, 1250, 1300, 1350, 1800, 2500, 3300
 
 config VOLTAGE_OUT6
 	int "Voltage(mV) on PMIC's OUT6"
 	default 0
 	depends on ACT8865_SET_VOLTAGE
 	help
-	  The voltage on PMIC's OUT6, valid values: 0, 1100, 1200, 1250, 1350, 1800, 2500, 3300
+	  The voltage on PMIC's OUT6, valid values: 0, 1100, 1200, 1250, 1300, 1350, 1800, 2500, 3300
 
 config VOLTAGE_OUT7
 	int "Voltage(mV) on PMIC's OUT7"
 	default 0
 	depends on ACT8865_SET_VOLTAGE
 	help
-	  The voltage on PMIC's OUT7, valid values: 0, 1100, 1200, 1250, 1350, 1800, 2500, 3300
+	  The voltage on PMIC's OUT7, valid values: 0, 1100, 1200, 1250, 1300, 1350, 1800, 2500, 3300
 
 config VOLTAGE_LDO1
 	int "Voltage(mV) on PMIC's LDO1"
 	default 0
-	depends on MCP16502
+	depends on MCP16502_SET_VOLTAGE
 	help
 	  The voltage on PMIC's LDO1, valid values: 0, 1100, 1200, 1250, 1350, 1800, 2500, 3300
 
 config VOLTAGE_LDO2
 	int "Voltage(mV) on PMIC's LDO2"
 	default 0
-	depends on MCP16502
+	depends on MCP16502_SET_VOLTAGE
 	help
 	  The voltage on PMIC's LDO2, valid values: 0, 1100, 1200, 1250, 1350, 1800, 2500, 3300
 
@@ -1015,5 +1050,18 @@ config PMC_MCK_CLK_SAMA7G5
 	default y
 	help
 	  Enable PMC master clock support for SAMA7G5 SoCs
+
+config SHDWC
+	bool "Shutdown controller support"
+	default n
+	help
+	  Shutdown controller support
+
+config SFRBU
+	bool "SFRBU support"
+	depends on SAMA5D2 || SAMA7G5
+	default y
+	help
+	  SFRBU support
 endmenu
 

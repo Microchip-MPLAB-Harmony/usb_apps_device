@@ -1,6 +1,11 @@
+# Copyright (C) 2006 Microchip Technology Inc. and its subsidiaries
+#
+# SPDX-License-Identifier: MIT
+
 CPPFLAGS += \
 	-DIMG_ADDRESS=$(IMG_ADDRESS)	\
 	-DIMG_SIZE=$(IMG_SIZE)		\
+	-DMMU_TABLE_BASE_ADDR=$(MMU_TABLE_BASE_ADDR)	\
 	-DJUMP_ADDR=$(JUMP_ADDR)	\
 	-DOF_OFFSET=$(OF_OFFSET)	\
 	-DOF_ADDRESS=$(OF_ADDRESS)	\
@@ -22,6 +27,10 @@ ASFLAGS += -DLINK_ADDR=$(CONFIG_LINK_ADDR)
 
 ifneq ($(IMAGE_NAME),)
 CPPFLAGS += -DIMAGE_NAME="\"$(IMAGE_NAME)\""
+endif
+
+ifeq ($(CONFIG_OCMS_STATIC), y)
+CPPFLAGS += -DCONFIG_OCMS_STATIC
 endif
 
 ifeq ($(CONFIG_DEBUG),y)

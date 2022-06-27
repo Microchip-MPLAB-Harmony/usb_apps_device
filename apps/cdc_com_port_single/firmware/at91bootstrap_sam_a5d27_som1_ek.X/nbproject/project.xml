@@ -6,9 +6,9 @@
             <name>at91bootstrap</name>
             <creation-uuid>900548c1-573c-4a13-9417-9666cfe49fb1</creation-uuid>
             <make-project-type>0</make-project-type>
-            <c-extensions>c</c-extensions>
-            <cpp-extensions>cc</cpp-extensions>
-            <header-extensions>h</header-extensions>
+            <c-extensions/>
+            <cpp-extensions/>
+            <header-extensions/>
             <asminc-extensions/>
             <sourceEncoding>ISO-8859-1</sourceEncoding>
             <make-dep-projects/>

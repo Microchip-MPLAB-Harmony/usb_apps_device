@@ -1,30 +1,7 @@
-/* ----------------------------------------------------------------------------
- *         ATMEL Microcontroller Software Support
- * ----------------------------------------------------------------------------
- * Copyright (c) 2006, Atmel Corporation
- *
- * All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions are met:
- *
- * - Redistributions of source code must retain the above copyright notice,
- * this list of conditions and the disclaimer below.
- *
- * Atmel's name may not be used to endorse or promote products derived from
- * this software without specific prior written permission.
- *
- * DISCLAIMER: THIS SOFTWARE IS PROVIDED BY ATMEL "AS IS" AND ANY EXPRESS OR
- * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT ARE
- * DISCLAIMED. IN NO EVENT SHALL ATMEL BE LIABLE FOR ANY DIRECT, INDIRECT,
- * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
- * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA,
- * OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
- * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
- * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
+// Copyright (C) 2006 Microchip Technology Inc. and its subsidiaries
+//
+// SPDX-License-Identifier: MIT
+
 #include "common.h"
 #include "hardware.h"
 #include "board.h"
@@ -32,9 +9,12 @@
 #include "string.h"
 #include "slowclk.h"
 #include "dataflash.h"
+#include "ddramc.h"
 #include "nandflash.h"
+#include "optee.h"
 #include "flash.h"
 #include "sdcard.h"
+#include "sdramc.h"
 #include "fdt.h"
 #include "board_hw_info.h"
 #include "mon.h"
@@ -43,27 +23,33 @@
 
 #include "debug.h"
 
+static char cmdline_buf[256];
 static char *bootargs;
 
 #ifdef CONFIG_OF_LIBFDT
 
 static int setup_dt_blob(void *blob)
 {
-	unsigned int mem_bank = MEM_BANK;
-#ifdef MEM_BANK2
-	unsigned int mem_bank2 = MEM_BANK2;
-#else
-	unsigned int mem_bank2 = 0;
-#endif
-	unsigned int mem_size = MEM_SIZE;
 	int ret;
+#if !defined(CONFIG_LOAD_OPTEE)
+	unsigned int mem_bank = AT91C_BASE_DDRCS;
+	unsigned int mem_bank2 = 0;
+	unsigned int mem_size = 0;
+#if defined(CONFIG_SDRAM)
+	mem_size = get_sdram_size();
+#elif defined(CONFIG_DDRC) || defined(CONFIG_UMCTL2)
+	mem_size = get_ddram_size();
+#else
+#error "No DRAM type specified!"
+#endif
+#endif
 
 	if (check_dt_blob_valid(blob)) {
 		dbg_info("DT: the blob is not a valid fdt\n");
 		return -1;
 	}
 
-	dbg_info("\nUsing device tree in place at %x\n",
+	dbg_info("DT: Using device tree in place at %x\n",
 						(unsigned int)blob);
 
 	/* no point in fixing if we do not have configured bootargs */
@@ -82,9 +68,18 @@ static int setup_dt_blob(void *blob)
 			return ret;
 	}
 
+/*
+ * When using OP-TEE the memory node should match the configuration of the DDR
+ * that has been secured. Since this can't easily be inferred from
+ * at91bootstrap, do not modify the memory node and let the user provide a
+ * correct device tree. Moreover, the memory node in newer device tree is often
+ * already correctly configured.
+ */
+#if !defined(CONFIG_LOAD_OPTEE)
 	ret = fixup_memory_node(blob, &mem_bank, &mem_bank2, &mem_size);
 	if (ret)
 		return ret;
+#endif
 
 	return 0;
 }
@@ -162,7 +157,7 @@ static void setup_commandline_tag(struct tag_cmdline *params,
 
 static void setup_boot_params(void)
 {
-	unsigned int *params = (unsigned int *)(MEM_BANK + 0x100);
+	unsigned int *params = (unsigned int *)(AT91C_BASE_DDRCS + 0x100);
 
 	struct tag_core *coreparam = (struct tag_core *)params;
 	coreparam->header.tag = TAG_FLAG_CORE;
@@ -178,8 +173,15 @@ static void setup_boot_params(void)
 	memparam->header.tag = TAG_FLAG_MEM;
 	memparam->header.size = TAG_SIZE_MEM32;
 
-	memparam->start = MEM_BANK;
-	memparam->size = MEM_SIZE;
+	memparam->start = AT91C_BASE_DDRCS;
+
+#if defined(CONFIG_SDRAM)
+	memparam->size = get_sdram_size();
+#elif defined(CONFIG_DDRC)
+	memparam->size = get_ddram_size();
+#else
+#error "No DRAM type specified!"
+#endif
 
 	params = (unsigned int *)params + TAG_SIZE_MEM32;
 
@@ -288,20 +290,20 @@ static int boot_image_setup(unsigned char *addr, unsigned int *entry)
 	unsigned int size;
 	unsigned int magic;
 
-	dbg_loud("try zImage magic: %x is found\n", zimage_header->magic);
+	dbg_loud("KERNEL: try as zImage: magic=%x\n", zimage_header->magic);
 	if (zimage_header->magic == LINUX_ZIMAGE_MAGIC) {
 		*entry = ((unsigned int)addr + zimage_header->start);
-		dbg_info("\nBooting zImage ......\n");
+		dbg_info("\nKERNEL: Booting zImage ...\n");
 		return 0;
 	}
 
 	magic = swap_uint32(uimage_header->magic);
-	dbg_loud("try uImage magic: %x is found\n", magic);
+	dbg_loud("KERNEL: try as uImage: magic=%x\n", magic);
 	if (magic == LINUX_UIMAGE_MAGIC) {
-		dbg_info("\nBooting uImage ......\n");
+		dbg_info("\nKERNEL: Booting uImage ...\n");
 
 		if (uimage_header->comp_type != 0) {
-			dbg_info("The uImage compress type not supported\n");
+			dbg_info("KERNEL: No uImage compression is supported!\n");
 			return -1;
 		}
 
@@ -310,17 +312,18 @@ static int boot_image_setup(unsigned char *addr, unsigned int *entry)
 		src = (unsigned int)addr + sizeof(struct linux_uimage_header);
 		*entry = swap_uint32(uimage_header->entry_point);
 
-		dbg_info("Relocating kernel image, dest: %x, src: %x\n",
-				dest, src);
+		dbg_info("KERNEL: Relocating image dest=%x, src=%x\n", dest, src);
 
 		memcpy((void *)dest, (void *)src, size);
 
-		dbg_info(" ...... %x bytes data transferred\n", size);
+		dbg_info("KERNEL: %x bytes relocated\n", size);
 
 		return 0;
 	}
 
-	dbg_info("** Bad uImage magic: %x, zImage magic: %x\n",
+	dbg_info("KERNEL: Got unsupported magic!\n"
+			"\tas uImage magic: %x\n"
+			"\tas zImage magic: %x\n",
 			magic, zimage_header->magic);
 	return -1;
 }
@@ -330,18 +333,9 @@ static int boot_image_setup(unsigned char *addr, unsigned int *entry)
 static int load_kernel_image(struct image_info *image)
 {
 	int ret;
+	load_function load_func = get_image_load_func();
 
-#if defined(CONFIG_DATAFLASH)
-	ret = load_dataflash(image);
-#elif defined(CONFIG_FLASH)
-	ret = load_norflash(image);
-#elif defined(CONFIG_NANDFLASH)
-	ret = load_nandflash(image);
-#elif defined(CONFIG_SDCARD)
-	ret = load_sdcard(image);
-#else
-#error "No booting media specified!"
-#endif
+	ret = load_func(image);
 	if (ret)
 		return ret;
 
@@ -367,10 +361,57 @@ int load_kernel(struct image_info *image)
 	unsigned int r2;
 	unsigned int mach_type;
 	int ret;
+	unsigned int mem_size;
+
+#if defined(CONFIG_SDRAM)
+	mem_size = get_sdram_size();
+#elif defined(CONFIG_DDRC) || defined(CONFIG_UMCTL2)
+	mem_size = get_ddram_size();
+#else
+#error "No DRAM type specified!"
+#endif
 
 	void (*kernel_entry)(int zero, int arch, unsigned int params);
 
 	bootargs = board_override_cmd_line();
+	if (sizeof(cmdline_buf) < 10 + strlen(bootargs)){
+		dbg_very_loud("\nKERNEL: buffer for bootargs is too small\n\n");
+		return -1;
+	}
+	switch(mem_size){
+		case 0x800000:
+			memcpy(cmdline_buf, "mem=8M ", 7);
+			memcpy(&cmdline_buf[7], bootargs, strlen(bootargs));
+			break;
+		case 0x1000000:
+			memcpy(cmdline_buf, "mem=16M ", 8);
+			memcpy(&cmdline_buf[8], bootargs, strlen(bootargs));
+			break;
+		case 0x2000000:
+			memcpy(cmdline_buf, "mem=32M ", 8);
+			memcpy(&cmdline_buf[8], bootargs, strlen(bootargs));
+			break;
+		case 0x4000000:
+			memcpy(cmdline_buf, "mem=64M ", 8);
+			memcpy(&cmdline_buf[8], bootargs, strlen(bootargs));
+			break;
+		case 0x8000000:
+			memcpy(cmdline_buf, "mem=128M ", 9);
+			memcpy(&cmdline_buf[9], bootargs, strlen(bootargs));
+			break;
+		case 0x10000000:
+			memcpy(cmdline_buf, "mem=256M ", 9);
+			memcpy(&cmdline_buf[9], bootargs, strlen(bootargs));
+			break;
+		case 0x20000000:
+			memcpy(cmdline_buf, "mem=512M ", 9);
+			memcpy(&cmdline_buf[9], bootargs, strlen(bootargs));
+			break;
+		default:
+			dbg_very_loud("\nKERNEL: bootargs incorrect due to the memory size is not a multiple of MB\n\n");
+			break;
+	}
+	bootargs = cmdline_buf;
 
 	ret = load_kernel_image(image);
 	if (ret)
@@ -410,20 +451,22 @@ int load_kernel(struct image_info *image)
 	setup_boot_params();
 
 	mach_type = MACH_TYPE;
-	r2 = (unsigned int)(MEM_BANK + 0x100);
+	r2 = (unsigned int)(AT91C_BASE_DDRCS + 0x100);
 #endif
 
-	dbg_info("\nStarting linux kernel ..., machid: %x\n\n",
+	dbg_info("\nKERNEL: Starting linux kernel ..., machid: %x\n\n",
 							mach_type);
 #if defined(CONFIG_ENTER_NWD)
 	monitor_init();
 
 	init_loadkernel_args(0, mach_type, r2, (unsigned int)kernel_entry);
 
-	dbg_info("Enter Normal World, Run Kernel at %x\n",
+	dbg_info("KERNEL: Enter Normal World, Run Kernel at %x\n",
 					(unsigned int)kernel_entry);
 
 	enter_normal_world();
+#elif defined(CONFIG_LOAD_OPTEE)
+	optee_init_nw_params(kernel_entry, 0, mach_type, r2);
 #else
 	kernel_entry(0, mach_type, r2);
 #endif

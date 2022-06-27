@@ -1,30 +1,7 @@
-/* ----------------------------------------------------------------------------
- *         ATMEL Microcontroller Software Support
- * ----------------------------------------------------------------------------
- * Copyright (c) 2014, Atmel Corporation
- *
- * All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions are met:
- *
- * - Redistributions of source code must retain the above copyright notice,
- * this list of conditions and the disclaimer below.
- *
- * Atmel's name may not be used to endorse or promote products derived from
- * this software without specific prior written permission.
- *
- * DISCLAIMER: THIS SOFTWARE IS PROVIDED BY ATMEL "AS IS" AND ANY EXPRESS OR
- * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT ARE
- * DISCLAIMED. IN NO EVENT SHALL ATMEL BE LIABLE FOR ANY DIRECT, INDIRECT,
- * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
- * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA,
- * OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
- * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
- * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
+// Copyright (C) 2014 Microchip Technology Inc. and its subsidiaries
+//
+// SPDX-License-Identifier: MIT
+
 #include "common.h"
 #include "hardware.h"
 #include "string.h"
@@ -120,7 +97,8 @@ static struct {
 	{"SAMA5D2-XULT",BOARD_TYPE_EK,	BOARD_ID_SAMA5D2_XULT},
 	{"SAMA5D2-ICP", BOARD_TYPE_EK,	BOARD_ID_SAMA5D2_ICP},
 	{"SAM9X60-EK",	BOARD_TYPE_EK,	BOARD_ID_SAM9X60_EK},
-	{0,		0,		0},
+	{"SAM9X60-CURIOSITY",  BOARD_TYPE_EK,  BOARD_ID_SAM9X60_CURIOSITY},
+        {0,		0,		0},
 };
 
 static struct {
@@ -443,21 +421,7 @@ static unsigned int set_default_sn(void)
 	unsigned int vendor_dm = 0;
 	unsigned int vendor_ek = 0;
 
-#if defined(CONFIG_AT91SAM9X5EK)
-	/* at91sam9x5ek
-	 * CPU Module: SAM9X25-CM, EMBEST
-	 * Display Module: SAM9x5-DM, FLEX
-	 * EK Module: SAM9x5-EK, FLEX
-	 */
-	board_id_cm = BOARD_ID_SAM9X25_CM;
-	board_id_dm = BOARD_ID_SAM9x5_DM;
-	board_id_ek = BOARD_ID_SAM9X5_EK;
-	vendor_cm = VENDOR_EMBEST;
-	vendor_dm = VENDOR_FLEX;
-	vendor_ek = VENDOR_FLEX;
-
-#elif defined(CONFIG_SAMA5D3XEK) || defined(CONFIG_SAMA5D3X_CMP)
-
+#if defined(CONFIG_BOARD_QUIRK_SAMA5D3)
 	/* sama5d3xek
 	 * CPU Module: SAMA5D31-CM, EMBEST
 	 * Display Module: SAMA5D3x-DM, FLEX
@@ -469,7 +433,7 @@ static unsigned int set_default_sn(void)
 	vendor_cm = VENDOR_EMBEST;
 	vendor_dm = VENDOR_FLEX;
 	vendor_ek = VENDOR_FLEX;
-#elif defined(CONFIG_SAMA5D4EK) || defined(CONFIG_SAMA5D4_XPLAINED)
+#elif defined(CONFIG_BOARD_QUIRK_SAMA5D4)
 	/*
 	 * SAMA5D4-EK
 	 * Display Module: SAMA5D3x-DM, FLEX
@@ -479,17 +443,23 @@ static unsigned int set_default_sn(void)
 	board_id_ek = BOARD_ID_SAMA5D4_MB;
 	vendor_cm = VENDOR_EMBEST;
 	vendor_dm = VENDOR_FLEX;
-#elif defined(CONFIG_SAMA5D2_XPLAINED)
+#elif defined(CONFIG_BOARD_QUIRK_SAMA5D2_XULT)
 	board_id_ek = BOARD_ID_SAMA5D2_XULT;
 	vendor_ek = VENDOR_ATMEL_RFO;
-#elif defined(CONFIG_SAMA5D2_ICP)
+#elif defined(CONFIG_BOARD_QUIRK_SAMA5D2_ICP)
 	board_id_ek = BOARD_ID_SAMA5D2_ICP;
 	vendor_ek = VENDOR_MCHIP_RFO;
-#elif defined(CONFIG_SAM9X60EK) || defined(CONFIG_SAM9X60_DDR2_SIP_EB) || defined(CONFIG_SAM9X60_SDR_SIP_EB)
+#elif defined(CONFIG_BOARD_QUIRK_SAM9X60_EK) || \
+	  defined(CONFIG_BOARD_QUIRK_SAM9X60_EB)
 	/* sam9x60ek ; sam9x60 ddr2 sip eb and sam9x60 sdr sip eb
 	 */
 	board_id_ek = BOARD_ID_SAM9X60_EK;
 	vendor_ek = VENDOR_MCHIP_RDC;
+#elif defined(CONFIG_BOARD_QUIRK_SAM9X60_CURIOSITY)
+        /* sam9x60_curiosity ; with display module
+         */
+        board_id_ek = BOARD_ID_SAM9X60_CURIOSITY;
+        vendor_ek = VENDOR_MCHIP_RDC;
 #else
 #error "OneWire: No defined board"
 #endif
@@ -511,21 +481,7 @@ static unsigned int set_default_rev(void)
 	unsigned int rev_id_dm;
 	unsigned int rev_id_ek;
 
-#if defined(CONFIG_AT91SAM9X5EK)
-	/* at91sam9x5ek
-	 * CPU Module: 'B', '1'
-	 * Display Module: 'B', '0'
-	 * EK Module: 'B','0'
-	 */
-	rev_cm = 'B';
-	rev_dm = 'B';
-	rev_ek = 'B';
-	rev_id_cm = '1';
-	rev_id_dm = '0';
-	rev_id_ek = '0';
-
-#elif defined(CONFIG_SAMA5D3XEK) || defined(CONFIG_SAMA5D3X_CMP)
-
+#if defined(CONFIG_BOARD_QUIRK_SAMA5D3)
 	/* sama5d3xek
 	 * CPU Module: 'D', '4'
 	 * Display Module: 'B', '2'
@@ -537,7 +493,7 @@ static unsigned int set_default_rev(void)
 	rev_id_cm = '4';
 	rev_id_dm = '2';
 	rev_id_ek = '3';
-#elif defined(CONFIG_SAMA5D4EK) || defined(CONFIG_SAMA5D4_XPLAINED)
+#elif defined(CONFIG_BOARD_QUIRK_SAMA5D4)
 	/*
 	 * SAMA5D4-EK
 	 * Display Module: 'B', '2'
@@ -550,36 +506,17 @@ static unsigned int set_default_rev(void)
 	rev_id_dm = '2';
 	rev_id_ek = '3';
 
-#elif defined(CONFIG_SAMA5D2_XPLAINED)
+#elif defined(CONFIG_BOARD_QUIRK_SAMA5D2_XULT) || \
+	  defined(CONFIG_BOARD_QUIRK_SAMA5D2_ICP)
 	rev_cm = 'A';
 	rev_dm = 'A';
 	rev_ek = 'A';
 	rev_id_cm = '1';
 	rev_id_dm = '1';
 	rev_id_ek = '1';
-
-#elif defined(CONFIG_SAMA5D2_ICP)
-	rev_cm = 'A';
-	rev_dm = 'A';
-	rev_ek = 'A';
-	rev_id_cm = '1';
-	rev_id_dm = '1';
-	rev_id_ek = '1';
-#elif defined(CONFIG_SAM9X60EK)
-	rev_cm = 'A';
-	rev_dm = 'A';
-	rev_ek = 'A';
-	rev_id_cm = '0';
-	rev_id_dm = '0';
-	rev_id_ek = '0';
-#elif defined(CONFIG_SAM9X60_DDR2_SIP_EB)
-	rev_cm = 'A';
-	rev_dm = 'A';
-	rev_ek = 'A';
-	rev_id_cm = '0';
-	rev_id_dm = '0';
-	rev_id_ek = '0';
-#elif defined(CONFIG_SAM9X60_SDR_SIP_EB)
+#elif defined(CONFIG_BOARD_QUIRK_SAM9X60_EK) || \
+	  defined(CONFIG_BOARD_QUIRK_SAM9X60_EB) || \
+            defined(CONFIG_BOARD_QUIRK_SAM9X60_CURIOSITY)
 	rev_cm = 'A';
 	rev_dm = 'A';
 	rev_ek = 'A';

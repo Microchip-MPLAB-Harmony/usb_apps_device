@@ -1,30 +1,6 @@
-/* ----------------------------------------------------------------------------
- *         Microchip Technology AT91Bootstrap project
- * ----------------------------------------------------------------------------
- * Copyright (c) 2018, Microchip Technology Inc. and its subsidiaries
- *
- * All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions are met:
- *
- * - Redistributions of source code must retain the above copyright notice,
- * this list of conditions and the disclaimer below.
- *
- * Microchip's name may not be used to endorse or promote products derived from
- * this software without specific prior written permission.
- *
- * DISCLAIMER: THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR
- * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT ARE
- * DISCLAIMED. IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIRECT,
- * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
- * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA,
- * OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
- * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
- * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
+// Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries
+//
+// SPDX-License-Identifier: MIT
 
 #include "arch/at91_pio.h"
 #include "gpio.h"
@@ -164,5 +140,39 @@ void wilc_pwrseq()
 	pio_configure(wilc_powerup_pins);
 	udelay(5000);
 	pio_configure(wilc_en_pins);
+}
+#endif
+
+#ifdef CONFIG_BOARD_QUIRK_SAMA7G5_EK
+/*
+ * Must set PC15 and PC16 to LOW to enable the can transceivers.
+ * This needs to be replaced later with Linux control over these GPIOs
+ */
+void at91_can_stdby_dis(void)
+{
+	const struct pio_desc can_pins[] = {
+		{"CAN_STDBY", AT91C_PIN_PC(15), 0, PIO_DEFAULT, PIO_OUTPUT},
+		{"CAN_STDBY", AT91C_PIN_PC(16), 0, PIO_DEFAULT, PIO_OUTPUT},
+		{(char *)0, 0, 0, PIO_DEFAULT, PIO_PERIPH_B},
+	};
+
+	pio_configure(can_pins);
+}
+#endif
+
+#ifdef CONFIG_BOARD_QUIRK_SAM9X60_CURIOSITY
+/*
+ * Must set PA4 & PB17 to LOW to enable the can transceivers.
+ * This needs to be replaced later with Linux control over this GPIOs
+ */
+void at91_can_stdby_dis(void)
+{
+        const struct pio_desc can_pins[] = {
+                {"CAN_STDBY", AT91C_PIN_PA(4), 0, PIO_DEFAULT, PIO_OUTPUT},
+                {"CAN_STDBY", AT91C_PIN_PB(17), 0, PIO_DEFAULT, PIO_OUTPUT},
+                {(char *)0, 0, 0, PIO_DEFAULT, PIO_PERIPH_B},
+        };
+
+        pio_configure(can_pins);
 }
 #endif

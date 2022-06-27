@@ -1,3 +1,7 @@
+# Copyright (C) 2006 Microchip Technology Inc. and its subsidiaries
+#
+# SPDX-License-Identifier: MIT
+
 menu "DRAM"
 
 choice
@@ -38,11 +42,7 @@ config	ALLOW_PSRAM
 	bool
 	default n
 
-config	ALLOW_SDRAM_16BIT
-	bool
-	default n
-
-source "driver/Config.in.dram" 
+source "driver/Config.in.dram"
 
 menu "Extra parameters"
 
@@ -62,16 +62,21 @@ config MEM_CLOCK_533
 
 endchoice
 
+config DDR_EXT_TEMP_RANGE
+	bool "Enable extended temperature range (85C - 105C)"
+	depends on UMCTL2 || (DDRC && DDR_SET_BY_DEVICE)
+	default n
+	help
+	  Enables the temperature, voltage and current derating
+	  that allows the memory to operate in the Extended Temperature Range
+	  which is above 85C and below 105C (module dependent)
+
 endmenu
 
 config SAMA5D2_LPDDR2
 	bool
 	default y if LPDDR2 && SAMA5D2
 	default n
-
-config	SDRAM_16BIT
-	bool "Use 16 bit SDRAM"
-	depends on ALLOW_SDRAM_16BIT
 
 config	PSRAM
 	bool "Enable PSRAM on EBI1"

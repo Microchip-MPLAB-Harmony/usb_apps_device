@@ -1,30 +1,9 @@
-/* ----------------------------------------------------------------------------
- *         ATMEL Microcontroller Software Support
- * ----------------------------------------------------------------------------
- * Copyright (c) 2006, Atmel Corporation
+/*
+ * Copyright (C) 2006 Microchip Technology Inc. and its subsidiaries
  *
- * All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions are met:
- *
- * - Redistributions of source code must retain the above copyright notice,
- * this list of conditions and the disclaimer below.
- *
- * Atmel's name may not be used to endorse or promote products derived from
- * this software without specific prior written permission.
- *
- * DISCLAIMER: THIS SOFTWARE IS PROVIDED BY ATMEL "AS IS" AND ANY EXPRESS OR
- * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT ARE
- * DISCLAIMED. IN NO EVENT SHALL ATMEL BE LIABLE FOR ANY DIRECT, INDIRECT,
- * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
- * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA,
- * OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
- * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
- * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ * SPDX-License-Identifier: MIT
  */
+
 #ifndef __AT91_NAND_ECC_H__
 #define __AT91_NAND_ECC_H__
 
@@ -118,7 +97,7 @@
 #define PMERRLOC_ELISR		0x020	/* Error Location Interrupt Status Register */
 /* -------- PMERRLOC_ELISR: (Offset: 0x20) Error Location Interrupt Status Register --------*/
 #define PMERRLOC_ELISR_DONE		(0x1)
-#ifdef CONFIG_SAMA5D2
+#if defined(CONFIG_SAMA5D2) || defined(CONFIG_SAMA7G5)
 #define PMERRLOC_ELISR_ERR_CNT		(0x3f << 8)
 #else
 #define PMERRLOC_ELISR_ERR_CNT		(0x1f << 8)
@@ -127,7 +106,7 @@
 /* 0x24 reserved */
 #define PMERRLOC_SIGMA0		0x028	/* PMECC Error Location SIGMA0 Register */
 
-#ifdef CONFIG_SAMA5D2
+#if defined(CONFIG_SAMA5D2) || defined(CONFIG_SAMA7G5)
 #define PMERRLOC_EL0		0x0AC	/* PMECC Error Location 0 Register */
 #else
 #define PMERRLOC_EL0		0x08C	/* PMECC Error Location 0 Register */
@@ -136,7 +115,6 @@
 #define	PMERRLOC_VERSION	0x1FC	/* PMECC Version Register */
 #define		AT91C_PMECC_VERSION_SAMA5D4	0x113
 #define		AT91C_PMECC_VERSION_SAMA5D3	0x112
-#define		AT91C_PMECC_VERSION_AT91SAM9N12	0x102
 #define		AT91C_PMECC_VERSION_AT91SAM9X5	0x101
 
 #endif /* #ifndef __AT91_NAND_ECC_H__  */

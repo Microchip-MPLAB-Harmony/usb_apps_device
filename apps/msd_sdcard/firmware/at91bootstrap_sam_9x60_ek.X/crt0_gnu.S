@@ -1,29 +1,7 @@
-/* ----------------------------------------------------------------------------
- *         ATMEL Microcontroller Software Support
- * ----------------------------------------------------------------------------
- * Copyright (c) 2006, Atmel Corporation
-
- * All rights reserved.
- * 
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions are met:
- * 
- * - Redistributions of source code must retain the above copyright notice,
- * this list of conditions and the disclaimer below.
- * 
- * Atmel's name may not be used to endorse or promote products derived from
- * this software without specific prior written permission. 
- * 
- * DISCLAIMER: THIS SOFTWARE IS PROVIDED BY ATMEL "AS IS" AND ANY EXPRESS OR
- * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT ARE
- * DISCLAIMED. IN NO EVENT SHALL ATMEL BE LIABLE FOR ANY DIRECT, INDIRECT,
- * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
- * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA,
- * OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
- * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
- * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+/*
+ * Copyright (C) 2006 Microchip Technology Inc. and its subsidiaries
+ *
+ * SPDX-License-Identifier: MIT
  */
 
 #include <hardware.h>
@@ -188,7 +166,7 @@ _go:
 /* we endless loop here and not jump to any application
  * if we are configured to not load anything
  */
-#if defined(CONFIG_ENTER_NWD) || defined(CONFIG_LOAD_NONE)
+#if defined(CONFIG_ENTER_NWD) || !defined(CONFIG_JUMP_TO_SW)
 loop:
 #ifdef CONFIG_BKPT_NOTIFY_DONE
 	bkpt
@@ -266,4 +244,54 @@ _lp_mon:
         .word _emon_dummy
 	.word _smon_text
 	.word _emon_text
+#endif
+#if defined(CONFIG_MMU)
+	.arm
+	.global cp15_read_sctlr
+	.type	cp15_read_sctlr, %function
+cp15_read_sctlr:
+	mrc	p15, 0, r0, c1, c0, 0
+	bx	lr
+
+	.global cp15_write_sctlr
+	.type	cp15_write_sctlr, %function
+cp15_write_sctlr:
+	mcr	p15, 0, r0, c1, c0, 0
+	bx	lr
+
+	.global cp15_write_ttbr0
+	.type	cp15_write_ttbr0, %function
+cp15_write_ttbr0:
+	mcr	p15, 0, r0, c2, c0, 0
+	bx	lr
+
+	.global cp15_write_dacr
+	.type	cp15_write_dacr, %function
+cp15_write_dacr:
+	mcr	p15, 0, r0, c3, c0, 0
+	bx	lr
+
+	.global cp15_icache_invalidate
+	.type	cp15_icache_invalidate, %function
+cp15_icache_invalidate:
+	mcr	p15, 0, r0, c7, c5, 0
+	bx	lr
+
+	.global cp15_dcache_invalidate_setway
+	.type	cp15_dcache_invalidate_setway, %function
+cp15_dcache_invalidate_setway:
+	mcr	p15, 0, r0, c7, c6, 2
+	bx	lr
+
+	.global cp15_dcache_clean_setway
+	.type	cp15_dcache_clean_setway, %function
+cp15_dcache_clean_setway:
+	mcr	p15, 0, r0, c7, c10, 2
+	bx	lr
+
+	.global dsb
+	.type	dsb, %function
+dsb:
+	mcr	p15, 0, r0, c7, c10, 4
+	bx	lr
 #endif

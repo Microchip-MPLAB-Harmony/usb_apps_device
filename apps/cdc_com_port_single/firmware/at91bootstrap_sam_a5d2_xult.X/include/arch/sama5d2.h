@@ -1,30 +1,9 @@
-/* ----------------------------------------------------------------------------
- *         ATMEL Microcontroller Software Support
- * ----------------------------------------------------------------------------
- * Copyright (c) 2015, Atmel Corporation
+/*
+ * Copyright (C) 2015 Microchip Technology Inc. and its subsidiaries
  *
- * All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions are met:
- *
- * - Redistributions of source code must retain the above copyright notice,
- * this list of conditions and the disclaimer below.
- *
- * Atmel's name may not be used to endorse or promote products derived from
- * this software without specific prior written permission.
- *
- * DISCLAIMER: THIS SOFTWARE IS PROVIDED BY ATMEL "AS IS" AND ANY EXPRESS OR
- * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT ARE
- * DISCLAIMED. IN NO EVENT SHALL ATMEL BE LIABLE FOR ANY DIRECT, INDIRECT,
- * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
- * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA,
- * OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
- * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
- * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ * SPDX-License-Identifier: MIT
  */
+
 #ifndef __SAMA5D2_H__
 #define __SAMA5D2_H__
 
@@ -198,6 +177,9 @@
 #define	AT91C_BASE_QSPI1_MEM		0xd8000000
 #define	AT91C_BASE_PERIPH		0xf0000000
 
+#define AT91C_QSPI0_MEM_SIZE		0x8000000
+#define AT91C_QSPI1_MEM_SIZE		0x8000000
+
 /*
  * Internal Memories
  */
@@ -213,6 +195,12 @@
 #define	AT91C_BASE_DAP		0x00700000	/* DAP */
 #define	AT91C_BASE_PTC		0x00800000	/* PTC */
 #define	AT91C_BASE_L2CC		0x00A00000	/* L2CC */
+
+/* Internal ROM PMECC Galois Field Tables offsets */
+#define PMECC_GF_TABLE_512_ALPHA_OFFSET		0x44000
+#define PMECC_GF_TABLE_512_INDEX_OFFSET		0x40000
+#define PMECC_GF_TABLE_1024_ALPHA_OFFSET	0x50000
+#define PMECC_GF_TABLE_1024_INDEX_OFFSET	0x48000
 
 /*
  * Chip Identifier (CHIPID)
@@ -237,6 +225,7 @@
 #define SAMA5D28C_LD2G_EXID	0x00000072
 #define SAMA5D28CU_EXID		0x00000010
 #define SAMA5D28CN_EXID		0x00000020
+#define SAMA5D29CN_EXID		0x00000023
 
 /*
  * Other misc defines
@@ -263,6 +252,7 @@
 
 #define	AT91C_NUM_PIO		4
 #define	AT91C_NUM_TWI		2
+#define	AT91C_NUM_FLEXCOM	5
 
 /* AICREDIR Unlock Key */
 #define	AICREDIR_KEY		0xB6D81C4D
@@ -287,6 +277,7 @@
 #define	H64MX_SLAVE_QSPI0		12	/* QSPI0 */
 #define	H64MX_SLAVE_QSPI1		13	/* QSPI1 */
 #define	H64MX_SLAVE_AESB		14	/* AESB */
+#define	H64MX_SLAVE_MAX			15	/* Number of slaves on H64MX */
 
 /* MATRIX1(H32MX) Matrix Slaves */
 #define	H32MX_BRIDGE_TO_H64MX		0	/* Bridge from H32MX to H64MX */
@@ -296,5 +287,6 @@
 #define	H32MX_NFC_CMD_REG		3	/* NFC command Register */
 #define	H32MX_NFC_SRAM			4	/* NFC SRAM */
 #define	H32MX_USB			5
+#define	H32MX_SLAVE_MAX			6	/* Number of slaves on H32MX */
 
 #endif /* #ifndef __SAMA5D2_H__ */
