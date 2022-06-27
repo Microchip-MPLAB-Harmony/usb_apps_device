@@ -348,7 +348,7 @@
         <ScriptingSetting key="boot.use" value="true"/>
         <ScriptingSetting key="boot.entry_adr" value=""/>
         <ScriptingSetting key="boot.path"
-                          value="${ProjectDir}\..\at91bootstrap_sam_a5d27_som1_ek.X\binaries\at91bootstrap.elf "/>
+                          value="${ProjectDir}\..\at91bootstrap_sam_a5d27_som1_ek.X\build\binaries\at91bootstrap.elf "/>
         <ScriptingSetting key="boot.prj" value=""/>
       </ScriptingSettings>
       <compileType>
@@ -1069,7 +1069,7 @@
         <property key="boot.entry_adr" value=""/>
         <property key="boot.load_adr" value=""/>
         <property key="boot.path"
-                  value="${ProjectDir}\..\at91bootstrap_sam_a5d27_som1_ek.X\binaries\at91bootstrap.elf "/>
+                  value="${ProjectDir}\..\at91bootstrap_sam_a5d27_som1_ek.X\build\binaries\at91bootstrap.elf "/>
         <property key="boot.prj" value=""/>
         <property key="boot.use" value="true"/>
         <property key="communication.autoselectspeed" value="true"/>
