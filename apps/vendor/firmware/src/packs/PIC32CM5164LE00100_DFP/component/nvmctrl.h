@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2022-01-28T10:04:11Z */
+/* file generated from device description version 2022-03-31T12:21:24Z */
 #ifndef _PIC32CMLE00_NVMCTRL_COMPONENT_H_
 #define _PIC32CMLE00_NVMCTRL_COMPONENT_H_
 
@@ -213,12 +213,24 @@
 #define NVMCTRL_ADDR_Msk                      _UINT32_(0x00C0FFFF)                                 /* (NVMCTRL_ADDR) Register Mask  */
 
 
+/* -------- NVMCTRL_SULCK : (NVMCTRL Offset: 0x20) (R/W 16) Secure Unlock Register -------- */
+#define NVMCTRL_SULCK_BS_Pos                  _UINT16_(0)                                          /* (NVMCTRL_SULCK) Flash (BOOTPROT/BS Region) Position */
+#define NVMCTRL_SULCK_BS_Msk                  (_UINT16_(0x1) << NVMCTRL_SULCK_BS_Pos)              /* (NVMCTRL_SULCK) Flash (BOOTPROT/BS Region) Mask */
+#define NVMCTRL_SULCK_BS(value)               (NVMCTRL_SULCK_BS_Msk & (_UINT16_(value) << NVMCTRL_SULCK_BS_Pos)) /* Assigment of value for BS in the NVMCTRL_SULCK register */
+#define NVMCTRL_SULCK_SLKEY_Pos               _UINT16_(8)                                          /* (NVMCTRL_SULCK) Write Key Position */
+#define NVMCTRL_SULCK_SLKEY_Msk               (_UINT16_(0xFF) << NVMCTRL_SULCK_SLKEY_Pos)          /* (NVMCTRL_SULCK) Write Key Mask */
+#define NVMCTRL_SULCK_SLKEY(value)            (NVMCTRL_SULCK_SLKEY_Msk & (_UINT16_(value) << NVMCTRL_SULCK_SLKEY_Pos)) /* Assigment of value for SLKEY in the NVMCTRL_SULCK register */
+#define   NVMCTRL_SULCK_SLKEY_KEY_Val         _UINT16_(0xA5)                                       /* (NVMCTRL_SULCK) Write Key  */
+#define NVMCTRL_SULCK_SLKEY_KEY               (NVMCTRL_SULCK_SLKEY_KEY_Val << NVMCTRL_SULCK_SLKEY_Pos) /* (NVMCTRL_SULCK) Write Key Position  */
+#define NVMCTRL_SULCK_Msk                     _UINT16_(0xFF01)                                     /* (NVMCTRL_SULCK) Register Mask  */
+
+
 /* -------- NVMCTRL_NSULCK : (NVMCTRL Offset: 0x22) (R/W 16) Non-Secure Unlock Register -------- */
-#define NVMCTRL_NSULCK_ANS_Pos                _UINT16_(1)                                          /* (NVMCTRL_NSULCK) Non-Secure Application Region Position */
-#define NVMCTRL_NSULCK_ANS_Msk                (_UINT16_(0x1) << NVMCTRL_NSULCK_ANS_Pos)            /* (NVMCTRL_NSULCK) Non-Secure Application Region Mask */
+#define NVMCTRL_NSULCK_ANS_Pos                _UINT16_(1)                                          /* (NVMCTRL_NSULCK) Flash (ANS Region) Position */
+#define NVMCTRL_NSULCK_ANS_Msk                (_UINT16_(0x1) << NVMCTRL_NSULCK_ANS_Pos)            /* (NVMCTRL_NSULCK) Flash (ANS Region) Mask */
 #define NVMCTRL_NSULCK_ANS(value)             (NVMCTRL_NSULCK_ANS_Msk & (_UINT16_(value) << NVMCTRL_NSULCK_ANS_Pos)) /* Assigment of value for ANS in the NVMCTRL_NSULCK register */
-#define NVMCTRL_NSULCK_DNS_Pos                _UINT16_(2)                                          /* (NVMCTRL_NSULCK) Non-Secure Data Region Position */
-#define NVMCTRL_NSULCK_DNS_Msk                (_UINT16_(0x1) << NVMCTRL_NSULCK_DNS_Pos)            /* (NVMCTRL_NSULCK) Non-Secure Data Region Mask */
+#define NVMCTRL_NSULCK_DNS_Pos                _UINT16_(2)                                          /* (NVMCTRL_NSULCK) Data Flash (DNS Region) Position */
+#define NVMCTRL_NSULCK_DNS_Msk                (_UINT16_(0x1) << NVMCTRL_NSULCK_DNS_Pos)            /* (NVMCTRL_NSULCK) Data Flash (DNS Region) Mask */
 #define NVMCTRL_NSULCK_DNS(value)             (NVMCTRL_NSULCK_DNS_Msk & (_UINT16_(value) << NVMCTRL_NSULCK_DNS_Pos)) /* Assigment of value for DNS in the NVMCTRL_NSULCK register */
 #define NVMCTRL_NSULCK_NSLKEY_Pos             _UINT16_(8)                                          /* (NVMCTRL_NSULCK) Write Key Position */
 #define NVMCTRL_NSULCK_NSLKEY_Msk             (_UINT16_(0xFF) << NVMCTRL_NSULCK_NSLKEY_Pos)        /* (NVMCTRL_NSULCK) Write Key Mask */
@@ -310,6 +322,7 @@
 #define NVMCTRL_INTFLAG_REG_OFST       _UINT32_(0x14)      /* (NVMCTRL_INTFLAG) Interrupt Flag Status and Clear Offset */
 #define NVMCTRL_STATUS_REG_OFST        _UINT32_(0x18)      /* (NVMCTRL_STATUS) Status Offset */
 #define NVMCTRL_ADDR_REG_OFST          _UINT32_(0x1C)      /* (NVMCTRL_ADDR) Address Offset */
+#define NVMCTRL_SULCK_REG_OFST         _UINT32_(0x20)      /* (NVMCTRL_SULCK) Secure Unlock Register Offset */
 #define NVMCTRL_NSULCK_REG_OFST        _UINT32_(0x22)      /* (NVMCTRL_NSULCK) Non-Secure Unlock Register Offset */
 #define NVMCTRL_PARAM_REG_OFST         _UINT32_(0x24)      /* (NVMCTRL_PARAM) NVM Parameter Offset */
 #define NVMCTRL_SECCTRL_REG_OFST       _UINT32_(0x34)      /* (NVMCTRL_SECCTRL) Security Control Offset */
@@ -336,10 +349,10 @@ typedef struct
   __I   uint16_t                       NVMCTRL_STATUS;     /**< Offset: 0x18 (R/   16) Status */
   __I   uint8_t                        Reserved7[0x02];
   __IO  uint32_t                       NVMCTRL_ADDR;       /**< Offset: 0x1C (R/W  32) Address */
-  __I   uint8_t                        Reserved8[0x02];
+  __IO  uint16_t                       NVMCTRL_SULCK;      /**< Offset: 0x20 (R/W  16) Secure Unlock Register */
   __IO  uint16_t                       NVMCTRL_NSULCK;     /**< Offset: 0x22 (R/W  16) Non-Secure Unlock Register */
   __IO  uint32_t                       NVMCTRL_PARAM;      /**< Offset: 0x24 (R/W  32) NVM Parameter */
-  __I   uint8_t                        Reserved9[0x0C];
+  __I   uint8_t                        Reserved8[0x0C];
   __IO  uint32_t                       NVMCTRL_SECCTRL;    /**< Offset: 0x34 (R/W  32) Security Control */
   __IO  uint32_t                       NVMCTRL_SCFGB;      /**< Offset: 0x38 (R/W  32) Secure Boot Configuration */
   __IO  uint32_t                       NVMCTRL_SCFGAD;     /**< Offset: 0x3C (R/W  32) Secure Application and Data Configuration */

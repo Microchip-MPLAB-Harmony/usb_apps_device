@@ -299,6 +299,7 @@
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
       <itemPath>../src/app.c</itemPath>
+      <itemPath>../src/config/pic32cm_le00_curiosity_pro/pin_configurations.csv</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -312,14 +313,14 @@
         <targetDevice>PIC32CM5164LE00100</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>EdbgTool</platformTool>
+        <platformTool>noID</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.00</languageToolchainVersion>
+        <languageToolchainVersion>4.10</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
         <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
-        <pack name="PIC32CM-LE_DFP" vendor="Microchip" version="1.0.153"/>
+        <pack name="PIC32CM-LE_DFP" vendor="Microchip" version="1.1.162"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -383,7 +384,7 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/pic32cm_le00_curiosity_pro;../src/packs/PIC32CM5164LE00100_DFP;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/CMSIS/;"/>
+                  value="../src;../src/config/pic32cm_le00_curiosity_pro;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/PIC32CM5164LE00100_DFP"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -461,7 +462,7 @@
         <property key="no-startup-files" value="false"/>
         <property key="oXC32ld-extra-opts" value=""/>
         <property key="optimization-level" value=""/>
-        <property key="preprocessor-macros" value=";"/>
+        <property key="preprocessor-macros" value=""/>
         <property key="remove-unused-sections" value="true"/>
         <property key="report-memory-usage" value="false"/>
         <property key="serial-length" value=""/>
@@ -484,7 +485,7 @@
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/pic32cm_le00_curiosity_pro;../src/packs/PIC32CM5164LE00100_DFP;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/CMSIS/;"/>
+                  value="../src;../src/config/pic32cm_le00_curiosity_pro;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/PIC32CM5164LE00100_DFP"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -547,8 +548,6 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-7ffff"/>
         <property key="poweroptions.powerenable" value="false"/>
-        <property key="programmerToGoFilePath"
-                  value="D:/USBR3.90_testing/usb_apps_device/apps/hid_basic/firmware/pic32cm_le00_curiosity_pro.X/debug/pic32cm_le00_curiosity_pro/pic32cm_le00_curiosity_pro_ptg"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.preservedataflash" value="false"/>
         <property key="programoptions.preservedataflash.ranges"
@@ -1131,6 +1130,8 @@
         <property key="memories.programmemory.ranges" value="0-7ffff"/>
         <property key="memories.rww" value="true"/>
         <property key="poweroptions.powerenable" value="false"/>
+        <property key="programmerToGoFilePath"
+                  value="D:/USBR3.90_testing/usb_apps_device/apps/hid_basic/firmware/pic32cm_le00_curiosity_pro.X/debug/pic32cm_le00_curiosity_pro/pic32cm_le00_curiosity_pro_ptg"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.preservedataflash" value="false"/>
         <property key="programoptions.preservedataflash.ranges"
