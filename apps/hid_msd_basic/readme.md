@@ -22,7 +22,7 @@ This demonstration application creates a USB Device that combines the functional
 To clone or download this application from Github, go to the [main page of this repository](https://github.com/Microchip-MPLAB-Harmony/usb_apps_device) and then click **Clone** button to clone this repository or download as zip file.
 This content can also be downloaded using content manager by following these [instructions](https://github.com/Microchip-MPLAB-Harmony/contentmanager/wiki).
 
-Path of the application within the repository is [usb_apps_device/apps/hid_msd_basic](https://github.com/Microchip-MPLAB-Harmony/usb_apps_device/apps/hid_msd_basic).
+Path of the application within the repository is [usb_apps_device/apps/hid_msd_basic](https://github.com/Microchip-MPLAB-Harmony/usb_apps_device/tree/master/apps/hid_msd_basic).
 
 Following table gives the details of project configurations, target device used, hardware and its IDE. Open the project using the respective IDE and build it. 
 
@@ -73,10 +73,10 @@ Open the project with appropriate IDE. Compile the project and program the targe
 
 ### Running the HID Device
 
-The HID Device application is same as *hid_basic* demo. Refer to local documentation from [usb_apps_device/apps/hid_basic](..\..\apps\hid_basic\readme.md). The documentation is also available in the github path [usb_apps_device/apps/hid_basic](https://github.com/Microchip-MPLAB-Harmony/usb_apps_device/apps/hid_basic).
+The HID Device application is same as *hid_basic* demo. Refer to local documentation from [usb_apps_device/apps/hid_basic](..\..\apps\hid_basic\readme.md). The documentation is also available in the github path [usb_apps_device/apps/hid_basic](https://github.com/Microchip-MPLAB-Harmony/usb_apps_device/tree/master/apps/hid_basic).
 
 **Note:** The PC application needed for controlling the HID function should be used from [usb_apps_device/apps/hid_msd_basic\bin\GenericHIDSimpleDemo_Composite_HID+MSD_Demo_only_PID_0x0054.exe](..\..\apps\hid_msd_basic\bin\GenericHIDSimpleDemo_Composite_HID+MSD_Demo_only_PID_0x0054.exe). To launch the application, double click the executable *GenericHIDSimpleDemo_Composite_HID+MSD_Demo_only_PID_0x0054.exe*.
 
 ### Running the MSD Basic Device
 
-The MSD Basic Device application is same as *msd_basic* demo. Refer to local documentation from [usb_apps_device/apps/msd_basic](..\..\apps\msd_basic\readme.md). The documentation is also available in the github path [usb_apps_device/apps/msd_basic](https://github.com/Microchip-MPLAB-Harmony/usb_apps_device/apps/msd_basic).
+The MSD Basic Device application is same as *msd_basic* demo. Refer to local documentation from [usb_apps_device/apps/msd_basic](..\..\apps\msd_basic\readme.md). The documentation is also available in the github path [usb_apps_device/apps/msd_basic](https://github.com/Microchip-MPLAB-Harmony/usb_apps_device/tree/master/apps/msd_basic).

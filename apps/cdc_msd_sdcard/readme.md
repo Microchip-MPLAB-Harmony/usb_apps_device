@@ -20,7 +20,7 @@ This application creates a USB CDC Device that enumerates as a COM port and Flas
 To clone or download this application from Github, go to the [main page of this repository](https://github.com/Microchip-MPLAB-Harmony/usb_apps_device) and then click **Clone** button to clone this repository or download as zip file.
 This content can also be downloaded using content manager by following these [instructions](https://github.com/Microchip-MPLAB-Harmony/contentmanager/wiki).
 
-Path of the application within the repository is [usb_apps_device/apps/cdc_msd_sdcard](https://github.com/Microchip-MPLAB-Harmony/usb_apps_device/apps/cdc_msd_sdcard).
+Path of the application within the repository is [usb_apps_device/apps/cdc_msd_sdcard](https://github.com/Microchip-MPLAB-Harmony/usb_apps_device/tree/master/apps/cdc_msd_sdcard).
 
 Following table gives the details of project configurations, target device used, hardware and its IDE. Open the project using the respective IDE and build it. 
 
@@ -138,9 +138,9 @@ Open the project with appropriate IDE. Compile the project and program the targe
 
 ### Running the CDC Device
 
-The CDC Device application is same as *cdc_com_port_single* demo. Refer to local documentation from [usb_apps_device/apps/cdc_com_port_single](..\..\apps\cdc_com_port_single\readme.md). The documentation is also available in the github path [usb_apps_device/apps/cdc_com_port_single](https://github.com/Microchip-MPLAB-Harmony/usb_apps_device/apps/cdc_com_port_single).
+The CDC Device application is same as *cdc_com_port_single* demo. Refer to local documentation from [usb_apps_device/apps/cdc_com_port_single](..\..\apps\cdc_com_port_single\readme.md). The documentation is also available in the github path [usb_apps_device/apps/cdc_com_port_single](https://github.com/Microchip-MPLAB-Harmony/usb_apps_device/tree/master/apps/cdc_com_port_single).
 
 
 ### Running the MSD SD Card Device
 
-The MSD Basic Device application is same as *msd_sdcard* demo. Refer to local documentation from [usb_apps_device/apps/msd_sdcard](..\..\apps\msd_sdcard\readme.md). The documentation is also available in the github path [usb_apps_device/apps/msd_sdcard](https://github.com/Microchip-MPLAB-Harmony/usb_apps_device/apps/msd_sdcard).
+The MSD Basic Device application is same as *msd_sdcard* demo. Refer to local documentation from [usb_apps_device/apps/msd_sdcard](..\..\apps\msd_sdcard\readme.md). The documentation is also available in the github path [usb_apps_device/apps/msd_sdcard](https://github.com/Microchip-MPLAB-Harmony/usb_apps_device/tree/master/apps/msd_sdcard).

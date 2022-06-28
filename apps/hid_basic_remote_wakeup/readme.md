@@ -67,7 +67,7 @@ Runtime messages are sent through UART, which is received by EDBG and sent to PC
     ![Starting Message](images/hid_basic_remote_wakeup_2.png)
 
 ### HID Basic operation
-The HID Basic operation is same as *hid_basic* demo. Refer to local documentation from [usb_apps_device/apps/hid_basic](..\..\apps\hid_basic\readme.md). The documentation is also available in the github path [usb_apps_device/apps/hid_basic](https://github.com/Microchip-MPLAB-Harmony/usb_apps_device/apps/hid_basic).
+The HID Basic operation is same as *hid_basic* demo. Refer to local documentation from [usb_apps_device/apps/hid_basic](..\..\apps\hid_basic\readme.md). The documentation is also available in the github path [usb_apps_device/apps/hid_basic](https://github.com/Microchip-MPLAB-Harmony/usb_apps_device/tree/master/apps/hid_basic).
 
 ### Remote Wakeup, Suspend and Resume operation
 1. To demonstrate the Remote wakeup capabilities along with the debug messages, the Upstream ports of target USB and debug USB should be connected to two different PC Hosts. This is shown below.
