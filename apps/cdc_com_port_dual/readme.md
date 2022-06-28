@@ -83,7 +83,7 @@ Following table gives the details of project configurations, target device used,
 - Use the micro-B USB connector USB2 on the board to connect the USB Device to the USB Host PC.
 - LED1 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
 
-### <a name="config_21"></a> [SAMA7G5-EK Evaluation Kit](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/TOBEADDED)
+### <a name="config_21"></a> [SAMA7G5-EK Evaluation Kit](https://www.microchip.com/en-us/development-tool/EV21H18A)
 
 - Powered the board with an external power supply (J1) or power supply the board by connecting J7 to the computer using a micro USB cable.
 - Setup the SD card 

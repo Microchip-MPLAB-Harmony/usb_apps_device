@@ -41,7 +41,7 @@ Following table gives the details of project configurations, target device used,
 ### <a name="config_9"></a> [SAM9X60-EK Evaluation Board](https://www.microchip.com/developmenttools/ProductDetails/DT100126)
 
 - Setup the SD card 
-    - Download harmony MPU bootstrap loader from this [location](firmware/at91bootstrap_sam_9x60_ek.X/binaries/boot.bin).
+    - Download harmony MPU bootstrap loader from this [location](firmware/at91bootstrap_sam_9x60_ek.X/build/binaries/boot.bin).
     - Copy the downloaded boot loader binary (boot.bin) and generated application binary (harmony.bin) into the SD card.
     - Insert the SD card into the SDMMC connector J4 on the board.
     - Reset the board by pressing the Push Button SW3. 

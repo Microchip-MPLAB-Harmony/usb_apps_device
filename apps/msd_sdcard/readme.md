@@ -49,7 +49,7 @@ Following table gives the details of project configurations, target device used,
 ### <a name="config_9"></a> [SAM9X60-EK Evaluation Board](https://www.microchip.com/developmenttools/ProductDetails/DT100126)
 
 - Setup the SD card 
-    - Download harmony MPU bootstrap loader from this [location](firmware/at91bootstrap_sam_9x60_ek.X/binaries/boot.bin).
+    - Download harmony MPU bootstrap loader from this [location](firmware/at91bootstrap_sam_9x60_ek.X/build/binaries/boot.bin).
     - Copy the downloaded boot loader binary (boot.bin) and generated application binary (harmony.bin) into the SD card.
     - Insert the SD card into the SDMMC connector J4 on the board.
     - Reset the board by pressing the Push Button SW3. 
@@ -64,7 +64,7 @@ Following table gives the details of project configurations, target device used,
 
 ### <a name="config_10"></a> [SAMA5D2 Xplained Ultra Board](https://www.microchip.com/Developmenttools/ProductDetails/ATSAMA5D2C-XULT)
 - Setup the SD card 
-    - Download harmony MPU bootstrap loader from this [location](firmware/at91bootstrap_sam_a5d2_xult.X/binaries/boot.bin).
+    - Download harmony MPU bootstrap loader from this [location](firmware/at91bootstrap_sam_a5d2_xult.X/build/binaries/boot.bin).
     - Copy the downloaded boot loader binary (boot.bin) and generated application binary (harmony.bin) into the SD card.
     - Insert the SD card into the SDMMC1 slot on the board.
     - Reset the board by pressing the Push Button BP3. 
@@ -97,7 +97,7 @@ Following table gives the details of project configurations, target device used,
 ### <a name="config_18"></a> [SAMA5D27 SOM1 Kit1](https://www.microchip.com/developmenttools/ProductDetails/atsama5d27-som1-ek1)
 
 - Setup the SD card 
-    - Download harmony MPU bootstrap loader from this [location](firmware/at91bootstrap_sam_a5d27_som1_ek.X/binaries/boot.bin).
+    - Download harmony MPU bootstrap loader from this [location](firmware/at91bootstrap_sam_a5d27_som1_ek.X/build/binaries/boot.bin).
     - Copy the downloaded boot loader binary (boot.bin) and generated application binary (harmony.bin) into the SD card.
     - Insert the SD card into the SDMMC0 slot (J12) on the board.
     - Reset the board by pressing the Push Button PB1. 
@@ -109,7 +109,7 @@ Following table gives the details of project configurations, target device used,
 ### <a name="config_19"></a> [ATSAMA5D27-WLSOM1 Evaluation Kit ](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320117)
 
 - Setup the SD card 
-    - Download harmony MPU bootstrap loader from this [location](firmware/at91bootstrap_sam_a5d27_wlsom1_ek1.X/binaries/boot.bin).
+    - Download harmony MPU bootstrap loader from this [location](firmware/at91bootstrap_sam_a5d27_wlsom1_ek1.X/build/binaries/boot.bin).
     - Copy the downloaded boot loader binary (boot.bin) and generated application binary (harmony.bin) into the SD card.
     - Insert the SD card into the SDMMC0 Card Connector (J9) on the board.
     - Reset the board by pressing the Reset Button (SW2) 
@@ -118,7 +118,7 @@ Following table gives the details of project configurations, target device used,
 - RGB LED turning to Green indicates USB Device Configuration Set Complete event (The USB device functionality has been activated by the USB Host).
   ![SAMA5D2-WLSOM1-EK Evaluation Board](images/SAMA5D2_WLSOM1_EK_USB.png)
 
-### <a name="config_21"></a> [SAMA7G5-EK Evaluation Kit](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/TOBEADDED)
+### <a name="config_21"></a> [SAMA7G5-EK Evaluation Kit](https://www.microchip.com/en-us/development-tool/EV21H18A)
 
 - Powered the board with an external power supply (J1) or power supply the board by connecting J7 to the computer using a micro USB cable.
 - Setup the SD card 
