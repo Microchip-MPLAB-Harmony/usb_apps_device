@@ -80,7 +80,7 @@ void SYS_Tasks ( void )
 
 
     /* Maintain Middleware & Other Libraries */
-    	/* USB Device layer tasks routine */ 
+        /* USB Device layer tasks routine */ 
     USB_DEVICE_Tasks(sysObj.usbDevObject0);
 
     /* USB FS Driver Task Routine */ 

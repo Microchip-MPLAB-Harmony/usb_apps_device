@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2022-01-28T10:04:11Z */
+/* file generated from device description version 2022-03-31T12:21:24Z */
 #ifndef _PIC32CMLE00_FUSES_COMPONENT_H_
 #define _PIC32CMLE00_FUSES_COMPONENT_H_
 
@@ -125,6 +125,9 @@
 /* -------- FUSES_USER_WORD_0 : (FUSES Offset: 0x00) (R/W 32) USER Page Word 0 -------- */
 #define FUSES_USER_WORD_0_RESETVALUE          _UINT32_(0xB08F4377)                                 /*  (FUSES_USER_WORD_0) USER Page Word 0  Reset Value */
 
+#define FUSES_USER_WORD_0_NVMCTRL_SULCK_Pos   _UINT32_(0)                                          /* (FUSES_USER_WORD_0) NVM Secure Region Locks Position */
+#define FUSES_USER_WORD_0_NVMCTRL_SULCK_Msk   (_UINT32_(0x7) << FUSES_USER_WORD_0_NVMCTRL_SULCK_Pos) /* (FUSES_USER_WORD_0) NVM Secure Region Locks Mask */
+#define FUSES_USER_WORD_0_NVMCTRL_SULCK(value) (FUSES_USER_WORD_0_NVMCTRL_SULCK_Msk & (_UINT32_(value) << FUSES_USER_WORD_0_NVMCTRL_SULCK_Pos)) /* Assigment of value for NVMCTRL_SULCK in the FUSES_USER_WORD_0 register */
 #define FUSES_USER_WORD_0_NVMCTRL_NSULCK_Pos  _UINT32_(3)                                          /* (FUSES_USER_WORD_0) NVM Non-Secure Region Locks Position */
 #define FUSES_USER_WORD_0_NVMCTRL_NSULCK_Msk  (_UINT32_(0x7) << FUSES_USER_WORD_0_NVMCTRL_NSULCK_Pos) /* (FUSES_USER_WORD_0) NVM Non-Secure Region Locks Mask */
 #define FUSES_USER_WORD_0_NVMCTRL_NSULCK(value) (FUSES_USER_WORD_0_NVMCTRL_NSULCK_Msk & (_UINT32_(value) << FUSES_USER_WORD_0_NVMCTRL_NSULCK_Pos)) /* Assigment of value for NVMCTRL_NSULCK in the FUSES_USER_WORD_0 register */
@@ -149,7 +152,7 @@
 #define FUSES_USER_WORD_0_WDT_PER_Pos         _UINT32_(28)                                         /* (FUSES_USER_WORD_0) WDT Period Position */
 #define FUSES_USER_WORD_0_WDT_PER_Msk         (_UINT32_(0xF) << FUSES_USER_WORD_0_WDT_PER_Pos)     /* (FUSES_USER_WORD_0) WDT Period Mask */
 #define FUSES_USER_WORD_0_WDT_PER(value)      (FUSES_USER_WORD_0_WDT_PER_Msk & (_UINT32_(value) << FUSES_USER_WORD_0_WDT_PER_Pos)) /* Assigment of value for WDT_PER in the FUSES_USER_WORD_0 register */
-#define FUSES_USER_WORD_0_Msk                 _UINT32_(0xFE00FFB8)                                 /* (FUSES_USER_WORD_0) Register Mask  */
+#define FUSES_USER_WORD_0_Msk                 _UINT32_(0xFE00FFBF)                                 /* (FUSES_USER_WORD_0) Register Mask  */
 
 
 /* -------- FUSES_USER_WORD_1 : (FUSES Offset: 0x04) (R/W 32) USER Page Word 1 -------- */
