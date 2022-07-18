@@ -4,7 +4,7 @@
 	"content": {
 		"metaDataVersion": "1.1.0",
 		"name": "com.microchip.mcu32.mplabx.project.usb_apps_device_hid_mouse_pic32mx470_curiosity",
-		"version": "3.3.0",
+		"version": "3.4.0",
 		"displayName": "HID Mouse Example (hid_mouse) Example for PIC32MX Family",
 		"projectName": "hid_mouse_pic32mx470_curiosity",
 		"shortDescription": "This demonstration application creates a USB HID based two-button mouse device. When connected, the device emulates mouse operation by moving the cursor in a circular pattern. When the button in USB device is pressed the movement of cursor is Stopped/Started again .",
@@ -15,7 +15,7 @@
 		"compiler": [
 			{
 				"name": "XC32",
-				"semverRange": ">=4.0.0"
+				"semverRange": ">=4.1.0"
 			}
 		],
 		"dfp": {

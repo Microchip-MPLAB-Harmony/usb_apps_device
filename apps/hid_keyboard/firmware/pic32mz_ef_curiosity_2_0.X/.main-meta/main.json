@@ -4,7 +4,7 @@
 	"content": {
 		"metaDataVersion": "1.1.0",
 		"name": "com.microchip.mcu32.mplabx.project.usb_apps_device_hid_keyboard_pic32mz_ef_curiosity_2",
-		"version": "3.3.0",
+		"version": "3.4.0",
 		"displayName": "HID Keyboard Example (hid_keyboard) Example for PIC32MZ EF Family",
 		"projectName": "hid_keyboard_pic32mz_ef_curiosity_2",
 		"shortDescription": "This demonstration application creates a Generic HID keyboard. Pressing a switch on the target board emulates a keyboard key press.",
@@ -15,7 +15,7 @@
 		"compiler": [
 			{
 				"name": "XC32",
-				"semverRange": ">=4.0.0"
+				"semverRange": ">=4.1.0"
 			}
 		],
 		"dfp": {

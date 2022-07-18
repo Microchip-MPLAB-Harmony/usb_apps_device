@@ -4,7 +4,7 @@
 	"content": {
 		"metaDataVersion": "1.1.0",
 		"name": "com.microchip.mcu32.mplabx.project.usb_apps_device_msd_sdcard_sam_a5d2_xult",
-		"version": "3.3.0",
+		"version": "3.4.0",
 		"displayName": "MSD SD Card Example (msd_sdcard) Example for SAM A5D2 Family",
 		"projectName": "msd_sdcard_sam_a5d2_xult",
 		"shortDescription": "This application creates a USB MSD Device that enumerates as a Flash Drive on the USB host PC. The application allows read / write / modify / delete data from a PC host like any normal Flash drive.",
@@ -15,7 +15,7 @@
 		"compiler": [
 			{
 				"name": "XC32",
-				"semverRange": ">=4.0.0"
+				"semverRange": ">=4.1.0"
 			}
 		],
 		"dfp": {

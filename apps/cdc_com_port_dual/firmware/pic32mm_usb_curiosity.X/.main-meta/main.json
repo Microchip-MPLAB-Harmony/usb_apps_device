@@ -4,7 +4,7 @@
 	"content": {
 		"metaDataVersion": "1.1.0",
 		"name": "com.microchip.mcu32.mplabx.project.usb_apps_device_cdc_com_port_dual_pic32mm_usb_curiosity",
-		"version": "3.3.0",
+		"version": "3.4.0",
 		"displayName": "CDC COM Port Dual Example (cdc_com_port_dual) Example for PIC32MM Family",
 		"projectName": "cdc_com_port_dual_pic32mm_usb_curiosity",
 		"shortDescription":  "This application is example of a USB CDC Device that enumerates as a dual COM port on the USB host PC. The COM port can be opened using any of the terminal applications. To demonstrate communication between the two COM ports, a character typed in one of the COM port is displayed on the other and vice versa.",
@@ -15,7 +15,7 @@
 		"compiler": [
 			{
 				"name": "XC32",
-				"semverRange": ">=4.0.0"
+				"semverRange": ">=4.1.0"
 			}
 		],
 		"dfp": {

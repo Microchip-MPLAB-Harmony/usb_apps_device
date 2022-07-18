@@ -4,10 +4,10 @@
 	"content": {
 		"metaDataVersion": "1.1.0",
 		"name": "com.microchip.mcu32.mplabx.project.usb_apps_device_vendor_sam_e70_xult",
-		"version": "3.3.0",
+		"version": "3.4.0",
 		"displayName": "Vendor Example (vendor) Example for SAM E70/S70/V70/V71 Family",
 		"projectName": "vendor_sam_e70_xult",
-		"shortDescription": "This application creates a USB CDC Device that enumerates as a custom vendor USB device on the USB host PC. The device uses USB Device Layer Endpoint functions and demonstrates the PC host's ability to control the LEDs on the board and query the status of a switch through PC utility.",
+		"shortDescription": "This application creates a USB Device that enumerates as a custom vendor USB device on the USB host PC. The device uses USB Device Layer Endpoint functions and demonstrates the PC host's ability to control the LEDs on the board and query the status of a switch through PC utility.",
 		"ide": {
 			"name": "MPLABX",
 			"semverRange": ">=6.00.0"
@@ -15,7 +15,7 @@
 		"compiler": [
 			{
 				"name": "XC32",
-				"semverRange": ">=4.0.0"
+				"semverRange": ">=4.1.0"
 			}
 		],
 		"dfp": {

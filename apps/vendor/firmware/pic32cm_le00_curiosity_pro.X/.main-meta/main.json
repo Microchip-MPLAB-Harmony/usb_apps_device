@@ -1,0 +1,75 @@
+{
+	"metaDataVersion": "1.0.0",
+	"category": "com.microchip.ide.project",
+	"content": {
+		"metaDataVersion": "1.1.0",
+		"name": "com.microchip.mcu32.mplabx.project.usb_apps_device_vendor_pic32mm_usb_curiosity",
+		"version": "3.4.0",
+		"displayName": "Vendor Example (vendor) Example for PIC32CM LE Family",
+		"projectName": "vendor_pic32mm_usb_curiosity",
+		"shortDescription": "This application creates a USB Device that enumerates as a custom vendor USB device on the USB host PC. The device uses USB Device Layer Endpoint functions and demonstrates the PC host's ability to control the LEDs on the board and query the status of a switch through PC utility.",
+		"ide": {
+			"name": "MPLABX",
+			"semverRange": ">=6.00.0"
+		},
+		"compiler": [
+			{
+				"name": "XC32",
+				"semverRange": ">=4.1.0"
+			}
+		],
+		"dfp": {
+			"name": "PIC32MM_DFP",
+			"semverRange": "^1.3.50"
+		},
+		"configurator": {
+			"name": "MCC",
+			"semverRange": ">=5.1.1"
+		},
+		"device": {
+			"metaDataVersion": "1.0.0",
+			"category": "com.microchip.portal.contentRef",
+			"content": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.device",
+				"name": "PIC32MM0256GPM064",
+				"versionRange": "*"
+			}
+		},
+		"author": "Microchip",
+		"subcategories": [
+			[
+				"Development Kit", "PIC32MM USB Curiosity Development Board"
+			],
+			[
+				"Harmony", "Middleware", "USB", "DEVICE_VENDOR"
+			],
+			[
+				"Middleware", "USB", "DEVICE_VENDOR"
+			]
+		],
+		"peripherals": [
+			"USB"
+		],
+		"keywords": [
+			"MHC",
+			"Harmony",
+			"Middleware",
+			"USB",
+			"PIC32MM0256GPM064",
+			"PIC32MM Family",
+			"USB"
+		],
+		"additionalData": {
+			"longDescription": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.portal.fileRef",
+				"content": {
+					"metaDataVersion": "1.0.0",
+					"fileName": "./../../readme.md",
+					"mimeType": "text/markdown"
+				}
+			}
+		}
+	}
+}

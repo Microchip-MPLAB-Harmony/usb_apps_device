@@ -4,7 +4,7 @@
 	"content": {
 		"metaDataVersion": "1.1.0",
 		"name": "com.microchip.mcu32.mplabx.project.usb_apps_device_hid_basic_sam_e70_xult",
-		"version": "3.3.0",
+		"version": "3.4.0",
 		"displayName": "HID Basic Example (hid_basic) Example for SAM E70/S70/V70/V71 Family",
 		"projectName": "hid_basic_sam_e70_xult",
 		"shortDescription": "This application creates a USB HID Device that enumerates as a custom USB HID device on the USB host PC. The device allows the USB Host utility to control the LEDs on the board and query the status of a switch.",
@@ -15,7 +15,7 @@
 		"compiler": [
 			{
 				"name": "XC32",
-				"semverRange": ">=4.0.0"
+				"semverRange": ">=4.1.0"
 			}
 		],
 		"dfp": {

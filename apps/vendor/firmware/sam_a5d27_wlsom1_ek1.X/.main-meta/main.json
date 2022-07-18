@@ -1,0 +1,75 @@
+{
+	"metaDataVersion": "1.0.0",
+	"category": "com.microchip.ide.project",
+	"content": {
+		"metaDataVersion": "1.1.0",
+		"name": "com.microchip.mcu32.mplabx.project.usb_apps_device_vendor_sam_a5d2_wlsom1_ek1",
+		"version": "3.4.0",
+		"displayName": "Vendor Example (vendor) Example for SAM A5D2 Family",
+		"projectName": "vendor_sam_a5d2_wlsom1_ek1",
+		"shortDescription": "This application creates a USB Device that enumerates as a custom vendor USB device on the USB host PC. The device uses USB Device Layer Endpoint functions and demonstrates the PC host's ability to control the LEDs on the board and query the status of a switch through PC utility.",
+		"ide": {
+			"name": "MPLABX",
+			"semverRange": ">=6.00.0"
+		},
+		"compiler": [
+			{
+				"name": "XC32",
+				"semverRange": ">=4.1.0"
+			}
+		],
+		"dfp": {
+			"name": "SAMA5D2_DFP",
+			"semverRange": "^1.6.69"
+		},
+		"configurator": {
+			"name": "MCC",
+			"semverRange": ">=5.1.1"
+		},
+		"device": {
+			"metaDataVersion": "1.0.0",
+			"category": "com.microchip.portal.contentRef",
+			"content": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.device",
+				"name": "SAMA5D2",
+				"versionRange": "*"
+			}
+		},
+		"author": "Microchip",
+		"subcategories": [
+			[
+				"Development Kit", "SAMA5D2-XULT Evaluation Kit"
+			],
+			[
+				"Harmony", "Middleware", "USB", "DEVICE_VENDOR"
+			],
+			[
+				"Middleware", "USB", "DEVICE_VENDOR"
+			]
+		],
+		"peripherals": [
+			"USB"
+		],
+		"keywords": [
+			"MHC",
+			"Harmony",
+			"Middleware",
+			"USB",
+			"SAMA5D2",
+			"SAM A5D2 Family",
+			"USB"
+		],
+		"additionalData": {
+			"longDescription": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.portal.fileRef",
+				"content": {
+					"metaDataVersion": "1.0.0",
+					"fileName": "./../../readme.md",
+					"mimeType": "text/markdown"
+				}
+			}
+		}
+	}
+}

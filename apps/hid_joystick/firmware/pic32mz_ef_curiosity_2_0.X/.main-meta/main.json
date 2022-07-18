@@ -4,7 +4,7 @@
 	"content": {
 		"metaDataVersion": "1.1.0",
 		"name": "com.microchip.mcu32.mplabx.project.usb_apps_device_hid_joystick_pic32mz_ef_curiosity_2",
-		"version": "3.3.0",
+		"version": "3.4.0",
 		"displayName": "HID Joystick Example (hid_joystick) Example for PIC32MZ EF Family",
 		"projectName": "hid_joystick_pic32mz_ef_curiosity_2",
 		"shortDescription": "This demonstration application creates a custom HID joystick. This application is only intended to demonstrate creation of Joystick HID Report descriptors and may not be a definite end solution. The end application requirements may need the report descriptor to be modified.",
@@ -15,7 +15,7 @@
 		"compiler": [
 			{
 				"name": "XC32",
-				"semverRange": ">=4.0.0"
+				"semverRange": ">=4.1.0"
 			}
 		],
 		"dfp": {
