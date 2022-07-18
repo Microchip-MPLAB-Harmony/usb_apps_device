@@ -8,6 +8,30 @@ nav_order: 99
 
 # Microchip MPLAB® Harmony 3 Release Notes
 
+## Harmony 3 USB Device application examples v3.4.0
+
+### Development kit and demo application support
+- Same as the v3.3.0 release. 
+
+### New Features and Enhancements
+- Updated Bootstrap projects for all MPU demo configurations.  
+
+### Bug fixes
+- Updated USB Device mode driver for MPUs (UDPHS) to correct the STALL handling.
+- Resolved broken links in the Readme MD files.   
+              
+### Known Issues
+- None
+
+### Development Tools
+
+-    [MPLAB® X IDE v6.00](https://www.microchip.com/mplab/mplab-x-ide)
+-    [MPLAB® XC32 C/C++ Compiler v4.10](https://www.microchip.com/mplab/compilers)
+-    [IAR Embedded Workbench® for ARM® v8.5](https://www.iar.com/iar-embedded-workbench/#!?architecture=Arm)
+-   MPLAB® X IDE plug-ins:- MPLAB® Code Configurator (MCC) v5.1.1 or above.
+
+
+
 ## Harmony 3 USB Device application examples v3.3.0
 
 ### Development kit and demo application support
