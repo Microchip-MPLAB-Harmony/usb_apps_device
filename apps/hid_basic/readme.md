@@ -140,7 +140,7 @@ Following table gives the details of project configurations, target device used,
     - Copy the downloaded boot loader binary (boot.bin) and generated application binary (harmony.bin) into the SD card.
     - Insert the SD card into the SDMMC connector (SDMMC0) on the board.
     - Reset the board by pressing the Push Button RESET, then START. 
-- Connect a ftdi cable to DBGU0 (to enable debug com port).
+- Connect USB to serial cable to DBGU0 (to enable debug com port).
 - Connect the USB Micro-AB Connector on the board to the computer using a micro USB cable. 
 - LED near VDDCORE inscription on the board indicates USB Device Configuration Set Complete event (The USB device functionality has been activated by the USB Host). The LED is turned off when the Bus is suspended. 
 - Press the switch USER to trigger communication from the USB Device to the USB Host.
