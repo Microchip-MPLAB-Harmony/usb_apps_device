@@ -1,5 +1,21 @@
 <config configName="sam_e54_xpro" projectName="sam_e54_xpro" configVersion="1.1" device="ATSAME54P20A" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.4.4">
-   <usedPackages class="java.util.ArrayList"/>
+   <usedPackages class="java.util.ArrayList">
+      <package packageName="bsp" version="3.13.0" contentType="HARMONY">
+         <modules class="java.util.ArrayList"/>
+      </package>
+      <package packageName="core" version="3.11.0" contentType="HARMONY">
+         <modules class="java.util.ArrayList"/>
+      </package>
+      <package packageName="csp" version="" contentType="HARMONY">
+         <modules class="java.util.ArrayList"/>
+      </package>
+      <package packageName="dev_packs" version="3.13.0" contentType="HARMONY">
+         <modules class="java.util.ArrayList"/>
+      </package>
+      <package packageName="usb" version="3.10.0" contentType="HARMONY">
+         <modules class="java.util.ArrayList"/>
+      </package>
+   </usedPackages>
    <usedClasses class="java.util.TreeMap">
       <entry>
          <string>BSP_SAM_E54_Xplained_Pro</string>
@@ -63,7 +79,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.0.8"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.1.3"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -2394,7 +2410,7 @@
    <generatedFileHashHistoryMap class="java.util.HashMap">
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\gmac.h</file>
-         <hash>ae091520f122cd484774107d35e17bf0e53c6b30fededbf39a94e38dd7217975</hash>
+         <hash>94efa3650d2abab35c8ebdde28dd10c2e6d91662dad092dbe3ffda0de08aa11b</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_gcc.h</file>
@@ -2402,27 +2418,31 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\tcc3.h</file>
-         <hash>7e673ab564f7fa7e0dbdb448421cf78d45bb501ac1f2dccc6f2e4f66140c6c54</hash>
+         <hash>7a4406dfa7eb718eee60217e7836e2a70d929d7ee4bac6f4495149b9f20ee2c8</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_e54_xpro\pin_configurations.csv</file>
+         <hash>1e393afd5a197dd7e5ba87a670a6c461fa49a006a08e7dc5bbd0aedaad2d19e9</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\pdec.h</file>
-         <hash>f23dcd3f095246b19f3fb3abb8db9771a31b74f56640700347610facf5f3e634</hash>
+         <hash>acbe65ae334a0fc7f7ff94042e6ec87b296cbd0e48aa2e11a2e008ecf317efb5</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\pac.h</file>
-         <hash>76fca352c9c26cc746ae966726daf347c3e069dd4ff934c5d30cc87cb8928f4a</hash>
+         <hash>5d6641d83f661de2ef7b4170b8fbfb313c17dbb7ce10a995a24021ead24839bd</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\pukcc.h</file>
-         <hash>aad19fde901f14472896ba53b1bed64a04ebe156eccbfdf0cca7f3780ca2c5ae</hash>
+         <hash>df2df1cb0faf292fb7aafcc25ac062bdef941eaddd10e9cf1a0e70250b262c46</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\can1.h</file>
-         <hash>c615bbfba0692f4d2b02c465687b8960be2f70d73758f8130a4f384d81fee5f2</hash>
+         <hash>56667e55cd303da255ce88cc14f04bca72ea2f1dd2c440cd4bfc74d335d6f52d</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\device_vectors.h</file>
-         <hash>c119e2624973964efb9b0e62bbc213fc7beb0fea306538d94ad80f057372c6f8</hash>
+         <hash>2ca6c5e4f11c88f714464908b2a390e9ca48457311f7e72f6f6679dea2b43b86</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\usb\usb_device_msd.h</file>
@@ -2434,7 +2454,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\tc0.h</file>
-         <hash>7c1bd6780a1fbcc40c75067995025ce73a93ec7eed4231ee16afd4e99d8d0b9a</hash>
+         <hash>b791f87f272e2b821b62776957439be96511ec4644da1e1e111b4b044b044831</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\usb\scsi.h</file>
@@ -2446,19 +2466,19 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\rtc.h</file>
-         <hash>de023e96a1640f6318a0dbfe2f49155e59ce870250c3c4610e220d9ddf9d771f</hash>
+         <hash>1e2e3e0282040e074fe932b7a6835c025377050ead505b432b5ccc31f8248552</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\usb.h</file>
-         <hash>93915ec37587d35362eeeb0fc3fa2322fb456b3c0d1d11e611df182aaea4cb9e</hash>
+         <hash>3bc3730edcc123e89557c8e54bd3b2f84bc57567d6b7fc54e1df27cbc0738e99</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\osc32kctrl.h</file>
-         <hash>883fc09543652fd863e9111e16084e31cb7dbad35cbff5af72270e33fbe07130</hash>
+         <hash>624324adc97b0c810648375fe8621a64d255a6231fe42c24d2bb2b01653e4c70</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\sercom.h</file>
-         <hash>eae7caf2de3979c62d0e1c5fed18dd3b0b2f0eb3dc7b42ed63c4f4bb9280e2ee</hash>
+         <hash>7962b585227a8dccadbf1827cf3acb709c7551dd50bb0caa7989ae5bdfa256d9</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\driver\memory\src\drv_memory.c</file>
@@ -2466,11 +2486,11 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\qspi.h</file>
-         <hash>fe75e66581ef99bdb520569387d5abf77fc8b3b2acc944bd034e6909a86fad8d</hash>
+         <hash>e7402c5ce991b3594b699915d53ea2b43fb862171c32ce71948cf80cc41239f6</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\sercom1.h</file>
-         <hash>42aa5cf4cdd14f3d9d966328d944902d8346c00712e012c2ff809cd86d3698ac</hash>
+         <hash>aa2bdc8321bd2bbc2b22c2f128dfeb347df622da1f3c8a7e3999f289deb5811d</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\usb\usb_host_client_driver.h</file>
@@ -2486,7 +2506,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\fuses.h</file>
-         <hash>9f6f4d5f26e8ec216a92b4b1435463cecc8f93b3a9de74f3a372bb32cf6bfb75</hash>
+         <hash>ac7d722ecfe4276c9d237ccf9895a03769cdbc34c5daf5cab07371be63bd2fda</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\bsp\bsp.c</file>
@@ -2494,7 +2514,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\peripheral\evsys\plib_evsys.c</file>
-         <hash>171913270aa095f1e8ff9192995129ff7bab22e5c793c4223f9046802e69d1e6</hash>
+         <hash>b2e1a8004049e687fc5544133f3346f743ced50cdaf860c8e3c7f58df3cc163f</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\mpu_armv7.h</file>
@@ -2502,7 +2522,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\tcc4.h</file>
-         <hash>a21b7edc06e798c212590003e6e8de194c58217fab9669cc5af29ae5703bd6d5</hash>
+         <hash>9af9725307faef9d111bbae1690210fead4a87688d2958d4a06e045c49c8ad32</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_armcc.h</file>
@@ -2518,11 +2538,11 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\pm.h</file>
-         <hash>ab73313f3760d63aa12a03b580c76d62922cde31c863ca0affb859777e3c2036</hash>
+         <hash>924ef846b3e6bc3dadd2559f7271f497069737e5be34d3effc7ec7538c464e03</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\tc1.h</file>
-         <hash>efbe26115a6951604fcd20763aa0e0e0f94a0491736223c3483251d4873250ff</hash>
+         <hash>eec97cfa4892f7e854bd005faf8764283fc231a0d89015bb43a7f59e6cfc6920</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_armclang.h</file>
@@ -2530,23 +2550,23 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\dsu.h</file>
-         <hash>8f1e896afd49a662fc7d948aff2d59da68f8cdc5bc29610f1fca50d76ce7c83d</hash>
+         <hash>487382470657aa7cfadf6233d6a14d97decfa8cf91a4e343a39c685e4fa2def0</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\ATSAME54P20A.ld</file>
-         <hash>50fef922a36e934b5480ec39fe162016797fa6dab586b4b4ed6cefb304dce5c9</hash>
+         <hash>5376ca76ffc77cfc847cf381be187aee4ec4bbc9bf8269ee8c54019750744638</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\tc.h</file>
-         <hash>c4da9ce90cc583c827d1796d7dff1da2d06113c43ba1261bcbb2e2deccd9b96c</hash>
+         <hash>28d5f9bee9d48ec44365e09c31de981901bfff7644a1311b597de6ad25b61fe8</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\supc.h</file>
-         <hash>4e59bd63e5265f01d166a7d9d8a6f1941c842279caf0990daac04d517bb3d99c</hash>
+         <hash>4f24cfd1a56abae06b37a33b380d1fcf0289defd42ef4158efa35718ce549ae7</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\cmcc.h</file>
-         <hash>88204afaecf2b110df4c2268b94f6dd1a21d8684534efd52527211a2725c3711</hash>
+         <hash>dcafc77117791e50e2e8cfcb4ec261d26221bea154c06640fb6ba048ece602d5</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\usb\usb_device_cdc.h</file>
@@ -2554,51 +2574,51 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\icm.h</file>
-         <hash>af316cd27e972972400556972c74c88b8b42b5b2652f6e6e73d14430de831913</hash>
+         <hash>56756a50078cee562852e453d9644fe7b02e37ce29ca29032bedb5a6c686e46c</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\ac.h</file>
-         <hash>fc66e24696d5520af080c749efe402a3dd90732c1e818b71e78268fa98098ec9</hash>
+         <hash>ed90a2587bd19ba867bf619be0172cdd8a79b283954e1c16f9406d3da4a9ec88</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\sdhc.h</file>
-         <hash>94b7d37af0db6463cf64b82cd807baacc341d2a8ff8b725190da97bf7e2d2510</hash>
+         <hash>dc193677fada7c80e6668978c9d7b0e02858dd55a848ea627850e14726a66f9d</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\mclk.h</file>
-         <hash>20c22bc974031aa0e91f751cd6df9548b8eac10a98179238a9b41558c00e1ad6</hash>
+         <hash>59a795ce0072896839b864efc833f6ecb71cf9034c2dc7a09ef2c67a6565bf26</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\interrupts.c</file>
-         <hash>9ab9fbde59568427c255edb103323ed526f9d31c659d80e251f7f7eca06ca2b7</hash>
+         <hash>df074d6eed2009c20f1cb6fc9df7d4d872a66c882bf94e022984f403af458e15</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\peripheral\nvmctrl\plib_nvmctrl.c</file>
-         <hash>03ff23191dabf3871d70216d69851b5339c42cc2f719e0f1d4bf9b74055fd225</hash>
+         <hash>47d11de9cd641091a877f388429489353c47b8fe1c8be23b45a90db5ba2fcbfa</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\peripheral\nvmctrl\plib_nvmctrl.h</file>
-         <hash>5b2c1d23d1350b7e881749ebac915913a90da999912af2d5a1b24d0fee568188</hash>
+         <hash>8c8877c560c5ae6ad49d6ae87f9ca3beb437a1bcefb592cd0dbc9bc463d73994</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\driver\memory\drv_memory_definitions.h</file>
-         <hash>0a6982cc40ad87e187538900792db47b1da85ebd461c95fbfdbd998f28eeece3</hash>
+         <hash>1e3d2eb7fd3cbaf473c3ad343f80e9da31f41f856d08c2dc268eb0c1001a2aee</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\interrupts.h</file>
-         <hash>263a93627ef397c8ccd36d7bec6da2f8b2a4011c728752960e9fc3d34540a7ef</hash>
+         <hash>b5c0b41d37855ac12fd3801af00a2d440d6bff803df9b0899f3f3f0500308977</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\oscctrl.h</file>
-         <hash>bb99b225ef227789e33b3fafc06400f6c55af0a47ba888c6fbab88b7587efbc2</hash>
+         <hash>4a8cd26588085dd798c86a20597c7a063c1182a3c6021c45150263b623fb4681</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\rstc.h</file>
-         <hash>8856387f7d6221ef5b0f5e4b08700da466ef03c8e0350877ad083bda04687632</hash>
+         <hash>bec7acd432ab4742f4b19035e1013197954665683011881ceb181b6304d5e6ee</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\sercom0.h</file>
-         <hash>d03fe7e654571f01422e17b1ef108c0209b25426766470eac09494225f96f676</hash>
+         <hash>ea7ac34c84bbe5a09fcb23a6592b006e78740b4608c9f8376630f83a864d410b</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\usb\src\usb_device_cdc_local.h</file>
@@ -2606,7 +2626,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\ccl.h</file>
-         <hash>514b4c3c93ea30ec6c8d8df52f4eea59d29ee17c7ca6c089b659f654af434599</hash>
+         <hash>a9aa5e1eef743d9b44cedab5ef673265dd76edd1ea52991b67d71e4bd4eac7ce</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\usb\usb_msd.h</file>
@@ -2614,7 +2634,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\tcc.h</file>
-         <hash>24bae1827188517d2a015fd4aee7a149799ff45afe06f3b1f0dbaf55ada74e15</hash>
+         <hash>1a67838d862982f07d3f57b1053319a230c7e0db3fd12760afdc98f11a389a99</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\driver\usb\usbfsv1\src\drv_usbfsv1_local.h</file>
@@ -2622,11 +2642,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\initialization.c</file>
-         <hash>fc87b8f671a12fca751774fc6bbe54c6a8437f06da4df6cf24819f1c7f186ff5</hash>
+         <hash>e61bd8bb9c0ee6379f6083ed3aee9be43e0a8c4c70f171efcdf19d7827f87735</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\dac.h</file>
-         <hash>8f3e1e98d298a332a917dc7c7dcfc60ad59164e0c6dc3e4dddc8d3e4711fd119</hash>
+         <hash>3362476e395241fb0105f18359c57ee3f5798752ac708fd42ec1fb308d3bdb40</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\usb\src\usb_device_msd.c</file>
@@ -2638,7 +2658,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\libc_syscalls.c</file>
-         <hash>ff03e955db4f7bb775c7989bc2254553698f3d921e9885caac347ccd118e55d7</hash>
+         <hash>88bb2e34c939601b5b7ad076556e3ee0fcedf388436b8cddb6d6fd3e9d07472f</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_version.h</file>
@@ -2654,23 +2674,23 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\tc6.h</file>
-         <hash>83155d58fe552b3cad653df8ad382b968697c6347626b4ccfc767e5b5b35954f</hash>
+         <hash>454812f8e2a149ef8c5a1ea5533bece468e4b8db938ed9a42de06d8348df21cc</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\aes.h</file>
-         <hash>dbe3eb8730dda5cb57366d47c82eaa840d4ef22a624fad59a0068c51bcd91f3d</hash>
+         <hash>bf7b8eca815a4408576711759191a5c5d3492849fc5a7d3bc0ff06b7c66d67a8</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\i2s.h</file>
-         <hash>bf8091ffefce2cd728a6ba201a63a846819d631f73365c653b582f59f4361e18</hash>
+         <hash>0957768f19000713bf75692cc4d440fac6cc1d71f20c21273a2b73adb366d51f</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\sercom3.h</file>
-         <hash>d2a2661fc52b8d8ff01a7aefbe29169d6be5ebe6e24223a42454832e6bd9a2ec</hash>
+         <hash>37c6aa3f45977919a3e32df82a77be4e6a9db0e3f88eda524401fcb8e2aa5cfa</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\pcc.h</file>
-         <hash>6adf66f31e5285e3539adddbf3e6c720b1e8025bbc2372ec0bc32597947f5ff3</hash>
+         <hash>8080608194a68281c5401da728d47c346cb41c5e210182c1d47a2e89b0add62f</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\system\int\sys_int_mapping.h</file>
@@ -2678,7 +2698,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\port.h</file>
-         <hash>117fec2328ab3b6eca845f8aba39aa31c72002366599e4f5a075c5cc43728087</hash>
+         <hash>f7d57f3fec22d69b2bfd372d6921a340f6684974503c1fae9d485960443fa527</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\driver\memory\drv_memory_nvmctrl.h</file>
@@ -2698,7 +2718,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\trng.h</file>
-         <hash>99d8a0263ac9bd0236f812dfcfc18ad472b0df57345b87f118eec985f7ae743e</hash>
+         <hash>b9f5b514a803299ecde17fd1846aef899a8e2bb43d1c43df2f346da17eccad60</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\usb\src\usb_device.c</file>
@@ -2706,11 +2726,11 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\pac.h</file>
-         <hash>a417d1ca2087049de2388583f770684bdf1ac35fa127fe4979df319d900acfca</hash>
+         <hash>28020fb497d05bb49280f1c04f5f8b6c86e534bd53a0492bbfd57d82c9714793</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\eic.h</file>
-         <hash>9c767ae807adc441263e6915e070cb2a7ab1dea06c3a044ebbfe3c55918538cf</hash>
+         <hash>b0e3f093b3b682edd3e89d425dae3830e46689c35eb8c0f995992c0f4c4d1758</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\definitions.h</file>
@@ -2722,39 +2742,39 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\pdec.h</file>
-         <hash>cd39a136a27dbe2cac33e570270a27b7b2362a8a8cf4f449ac4f171275966593</hash>
+         <hash>a4858778c5bac2a29dbbe3347c94e4cc8171f602436361b82e5789f41ee62c0e</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\tc7.h</file>
-         <hash>6538e1803b468eb7acf930635c46cdebe2c09332935a303db6d76c8a45210541</hash>
+         <hash>e9309c807bb8e0187278345ea5e0e4219a04608ed6cf4b1826eb69e8fc3baa0c</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\wdt.h</file>
-         <hash>90a3a4dac9e13fd4097b343706db578fbdbfa834a022ddeb61ea4f632296e744</hash>
+         <hash>baee082baff1f74e66735b0245582338d5aaabf72a21a2c870a72f45397014f3</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\sercom2.h</file>
-         <hash>8151496324941b4cc732e0f47d468dd043ee49d7e3a1db7f8312f83f27939d6d</hash>
+         <hash>c3b5c376a04f2b0779f2dbb0208dfa1451805c65c292e59cbb1b92ac2b3dd592</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\gclk.h</file>
-         <hash>2296e16df3631fb3f4b8bbed7c96ce8902c27004d31ea48d2b7718b659726180</hash>
+         <hash>9cfbdbf41c3db7df4e704494b98ea35c5fd8d1f824053729c97d30876471e55f</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\nvmctrl.h</file>
-         <hash>4f444a273ac24752c15fb6d3ba2110d8c9984821116120531299ba1fa85246b3</hash>
+         <hash>ffe3448c20db8bb1a15e03c025e8ab10356c6ab7c2c9760cf17e7d566697a1cd</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\peripheral\cmcc\plib_cmcc.h</file>
-         <hash>543ede3f86dcfb1c4a339a2e0ddcc31cadbf22cc1565dd92618aaa7eb432b80a</hash>
+         <hash>89b940242bfa0ecdba3ac53666c5996e25fab712227d37d2d6881c8a86b5f497</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\can.h</file>
-         <hash>f63bce9c7b1475e65dc3bfbe994a15ec140a55ad6fbc52fb332efb593209df3e</hash>
+         <hash>f24296dc3f77e540e7822722e5150ced89f8778257cc49bf0c64ca6f6bb71dc2</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\rstc.h</file>
-         <hash>6cee87d4869618630beea72ab9d23c946f084600b7f62ecf4ecb6c80f9a38f2b</hash>
+         <hash>c3820c23846c758a727a9c31cf08f875cf15698f27b434ccf2bfe81c4daffe1f</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\peripheral\cmcc\plib_cmcc.c</file>
@@ -2762,11 +2782,11 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\gmac.h</file>
-         <hash>38ac6d5e361dcd3ad092ac98ca8fecf655f49de1b30b22ffabe4bdcf2a075637</hash>
+         <hash>c4e83282e98bd9fa139fc5112ec6b14829fb3903c897ed70e65e71306cd598e1</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\supc.h</file>
-         <hash>2fd716d664158b80dc799ef6255fa642eae6eb40e6cfc46344421540d40e24b6</hash>
+         <hash>83e4cd9043a8bb90c15f6a20aeacee430a033fe128242bf2fe724d44cf90cd8e</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\driver\driver.h</file>
@@ -2774,7 +2794,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\mclk.h</file>
-         <hash>6eacfac3e8c11d64b3423d372be0a4102969853c1ab2b44540eec0e800782f49</hash>
+         <hash>fc16c918b9563ed2fd62b5df9f7d13124380141cf232d055e61d77f1a0dc517f</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\user.h</file>
@@ -2786,7 +2806,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\freqm.h</file>
-         <hash>207374b1420a702324c61f8218db4e5917e587fdcc44a6d9a53c645f34890536</hash>
+         <hash>0533078470a6d558a021051a793e7a6c5dd307bb45a5d56ecac03d73359981a1</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\cachel1_armv7.h</file>
@@ -2794,7 +2814,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\wdt.h</file>
-         <hash>249a056c2d011ea83cb9338c126bfd18df8f57b09acec1e8b2f62b72b7aad92c</hash>
+         <hash>fef17ee4febd3b280a68fe0a0517370fbc82e6b9b0d2342507f109098beef24e</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\usb\src\usb_device_cdc_acm.c</file>
@@ -2802,11 +2822,11 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\icm.h</file>
-         <hash>d305345e3840c68d0e17e6af2103a7bd20a6ac9bc68d8e11f1629fba3548bb5b</hash>
+         <hash>eb1224fe0df6acd2ffca2c29d88e7b635ac0e01c5e68035921c94c3112739b6d</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\usb.h</file>
-         <hash>dc3b95f7e2a072536e77c433bb0660a04df7d258e06603b377894f7e88d4b174</hash>
+         <hash>b4f09538ae20e0e58e8c2a1ce2462322c648e5211b0dc8afeb85849536a1d5ca</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\driver\memory\src\drv_memory_local.h</file>
@@ -2818,43 +2838,43 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\gclk.h</file>
-         <hash>7ada448634d8700b4b5eef65bc319bff354229531c00e8aa10c7b534f10ba31e</hash>
+         <hash>4ee5b14477d2d3b386c883c28440fb6383f68c6da3dd32d3e852f78f500c9fba</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\trng.h</file>
-         <hash>0c8092501d5c3954460ebd9056e12cbfb8c64528bf6b81fd7c7cacd3a96f3832</hash>
+         <hash>0677211e0f140cce9806eb3611122a91a3c8c9e9954ac7f2e40b6d75478f72c4</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\cmcc.h</file>
-         <hash>bf891431e0c56c3cc829ea39e92b873d0a952772e62a6b5c2bb40375f7db9a7f</hash>
+         <hash>2195f531dd5af8ea3bb5b496205abae4b862644e6616cc5f4bd3f32c3942bb05</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\fuses.h</file>
-         <hash>228f1e941c4a02a5bee4155b9d57feaa18d951df091aba919a01b467974f26fc</hash>
+         <hash>c2067e1d6147f250854ab29d5de09ec7b74b3f6cc3c5aac0ccedaa5c946763b8</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\eic.h</file>
-         <hash>12d558e9e19b34fcb458b11d50b2a9084143ed416d668b856c0c70a8e71a739d</hash>
+         <hash>e7f0427325d472a6dec3e6085a674e268e1ebc1b226ef83c4dd432f8c122a415</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\peripheral\port\plib_port.c</file>
-         <hash>03df5396cf720bc3fd7b7cd7e2833a584f63a1ed5d68ef20d066ca4b2f3decdb</hash>
+         <hash>640bdc6722c7bf70c8647b39ef7dcbf7810c27730566e3b049a59bd74c95c5a7</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\tc4.h</file>
-         <hash>6b2b9e6ef85915a897aae98f2f9e08fa5addc08060278a443a84610b4c44a1a6</hash>
+         <hash>4b2f8226672f6d53b5d76bba759758640206835fd0a159e5350dd25f6f070d62</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\sercom5.h</file>
-         <hash>ce800478cccbf7d32dd235d1956ac1ce6eb32b7b2e3ef77801688c99f044711d</hash>
+         <hash>00da252e1cdbd227ca47252e0c82e0476082fd6decddf2b029da7f4a1f422419</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\sdhc1.h</file>
-         <hash>c2590980951ba0eba417b4d272a70795309f1c94fc7542f9a2d23b89d65ad983</hash>
+         <hash>b2c4cf6e0edd8ee9a24c5c5ab2c799ed7d02c33e4d9b7d6cb90b3cd17f78d3ab</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\ramecc.h</file>
-         <hash>4830f72672df19f323f8cafd5904eaa04eb96493ce6238aee433c1eac0bf7615</hash>
+         <hash>76772b012a260102a2ad28d3c93028e8dcd71d9efe22fbc52d1923a1b92e0884</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\peripheral\nvic\plib_nvic.h</file>
@@ -2862,11 +2882,11 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\osc32kctrl.h</file>
-         <hash>014749d94e3c42696529bb3eac53e66d1cb8377bec25d19e642e9f4a5c767ce4</hash>
+         <hash>8d0d13d6027df1f1e2299933b3b56fdddb98f2721ff282a0df4745bb4af402e5</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\peripheral\nvic\plib_nvic.c</file>
-         <hash>242f7565efe21cd6fc0972ea49f91ce0e7c921991460adfc23e1ebe759789de1</hash>
+         <hash>51a122b87d51466a279ddc47f6293eeff42b45f47b1d01c54a7f2d1408df646e</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\configuration.h</file>
@@ -2894,19 +2914,19 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\rtc.h</file>
-         <hash>cca9ecde250e7156cd0de6016e6e5a21522d75467b3df0760ecc06d4b166ed0c</hash>
+         <hash>cd984dc4e6d77d9d6d6c9dc9280a3920439f0c13cbb092950b2e07c697a57ec8</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\port.h</file>
-         <hash>de1105304d3693578b62a9112a9bfdc085f80428f994a93bf7c01d8ef4a57d96</hash>
+         <hash>b10e90934dac26e4be23ceedd6aab8ee2eb889c6cdfce5ccf68fbbbf41608d09</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\tcc0.h</file>
-         <hash>d42f9a50c6d89fcc1d966962245819fe93d77dda89e847691d1b93f2a3b1d30a</hash>
+         <hash>e715c19eeed340888ffae621420306c68c0b5d3f7a2e4201c2a157cfde210c2a</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\stdio\xc32_monitor.c</file>
-         <hash>26e5749db654ed433fd94f6c732ef8600d0cbf5196493374cf111877c02b694e</hash>
+         <hash>858f8710d4287200a5ee7f3b3ad7c24f505aed9c05c16956ab0ff9f7bb162a6a</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\usb\src\usb_device_cdc.c</file>
@@ -2914,23 +2934,23 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\system\debug\sys_debug.h</file>
-         <hash>c17a266d85e3ed1dd692a96184193c0ebfea1099f6698ca073f82418d92d8b53</hash>
+         <hash>222cdc284bd651e83188b9641cc57c133cf86563dbeb5d5523766d4a36087165</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\dsu.h</file>
-         <hash>7e7c1fcc3d0e3f5de34071b85eb59f0227e6ff3d2aab27aa2a5bb27da12bfa70</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\ATSAME54P20A_DFP\instance\tc5.h</file>
-         <hash>eff1e6f24c35076ccb6b2b9cd920f8e387e2eb0ba31546355091782013666e66</hash>
+         <hash>fbebab10b4f28e6ee432568942b26cdd34abf7f419cdeeb73713c2c51fe1c4ea</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\driver\usb\usbfsv1\src\drv_usbfsv1.c</file>
          <hash>15b6c2889e31b5e0916416a9ff18b54c4de13c36279f867e9d8280cfbddb7f5e</hash>
       </entry>
       <entry>
+         <file>..\src\packs\ATSAME54P20A_DFP\instance\tc5.h</file>
+         <hash>89aafad0edc1599ec9e28352f5660ea7e956d37ab3f1e6fee402406ad934732c</hash>
+      </entry>
+      <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\same54p20a.h</file>
-         <hash>d1141475d45696b24b8a1c82c79108aeab1d01a8a206c73cf084e602686fbfec</hash>
+         <hash>545f399235831d509f116ce7f09777842a926ef0bc4b8c59dd95306ae01c7c25</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\system\cache\sys_cache.h</file>
@@ -2938,7 +2958,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\sercom4.h</file>
-         <hash>8464dfe73e6f848633666b6b83101e139eb17a3f93311902818ce9d7a7c41d21</hash>
+         <hash>ca75e8b4411a88f70c75e19383a87bfff923253ba7d61cb2207a6e9d664f2634</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_compiler.h</file>
@@ -2946,27 +2966,27 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\driver\memory\drv_memory.h</file>
-         <hash>8a37413091eaaf1a11a93990e31e61a438677cad0c1319eab2d6cb348bafcc39</hash>
+         <hash>23efb46974c19b12bca3a289f273f20c6993da56604044d7ba6cc581f333ce3c</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\oscctrl.h</file>
-         <hash>ef4820f7a664092a8bd0ac69fd61b6159d7e5001c038ed62875ddd3c310b145c</hash>
+         <hash>45106e859c0345f1b1ff2e2e0b685f065cfbae5cd52bb3555b1f8339f30965a7</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\freqm.h</file>
-         <hash>5d2619208c78de7372a64a53b6b70538da1cadb74d352a91bf0914ca99363949</hash>
+         <hash>70ca09126aef424be83d6521acbd4ae1a38017f1a70b6238f1113bdd84dfca66</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\sdhc0.h</file>
-         <hash>f0db037d01527f2bd947d7ed6df38995a48be9c6268c37168353d615faa484ad</hash>
+         <hash>306fbaf8bc442ae7e35de841d05b64c1fd8596028ecf0088b560946493ab73c2</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\peripheral\port\plib_port.h</file>
-         <hash>9a045dd70b0c7e46a8556545d093c96fd39034316f1f54614d5c891db00d234f</hash>
+         <hash>bb4d65a1170af0e9ce54a850baa7af755a8649c9d5b72bc7104432a614b2ac22</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\ac.h</file>
-         <hash>07959fb89a30087a186cb5c87c729677b643c09eb3be55d431c8826fc72700a2</hash>
+         <hash>7e142048188375d903cdd54914149058479c6a6c688bbd9968fde9cbe441fc80</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\system\cache\sys_cache.c</file>
@@ -2978,11 +2998,11 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\evsys.h</file>
-         <hash>3d6481277a1bbb7b75fb49cb233388c6c7c6b9fb09de849cbd90cd98ced4f799</hash>
+         <hash>53d452b1a0ecf684cb32b78fbff42d4dc3fda75303d2f32a7a868371b89393b4</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\dmac.h</file>
-         <hash>b6b23197419ba8f989cc010ee55a4c4b8d42c3e064fa7d8c98f1deab083e60b6</hash>
+         <hash>bb8092e89fc62bb3768112e46505e3aa17016ecc9a374d4ac5b9fa9766f2a5cd</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\core_cm4.h</file>
@@ -2998,7 +3018,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\adc1.h</file>
-         <hash>3f5fce5056d96771fe2ffd3ae270c86e2bb947e3e3798fd989d5690da331445e</hash>
+         <hash>ea4d8d72628305086bef3d9e37ed0891f9dc551434a2b7f962aa79456ed97c07</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\driver\usb\drv_usb_external_dependencies.h</file>
@@ -3010,23 +3030,23 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\i2s.h</file>
-         <hash>bd936b22a1de76a2a27225ec0cb76875e760bd8979f423351dde3d891682464e</hash>
+         <hash>fb8e53631fceb08cf85d98c4944af862c0c575a596da8dabd822808e85f8a31a</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\tcc1.h</file>
-         <hash>cb27732f6aa1c0eb35841d37b086935cdc5dda7fec28e24443558e08d6de4d0c</hash>
+         <hash>c25acf8c27fb5165542be44216b91804c586b481a652ef3c6897110f01ca1a2d</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\pcc.h</file>
-         <hash>2d15658f1b778885eded294e0edbedbd905e1e843a288e60de8c76175775e362</hash>
+         <hash>1c2fd58711fc401db09965e8a48cb09884f90d0775493eec529d02731c641799</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\peripheral\clock\plib_clock.c</file>
-         <hash>e9aff76b9ba863163648461a5163d12c8a5890bf2bcf046f83427f7b6ed34ca3</hash>
+         <hash>fa673b3cb43925c136603996f9137f3ac727cc0e300faa317a2a90a0cd9b3f80</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\dac.h</file>
-         <hash>e92b8ddb69155309a2bd9ee94e20f0cfa62c60b8e04d7ef5633bb7baaebc075d</hash>
+         <hash>de20eef37aba02dcbb9030914fff4b6d97fa8e5ef28a5e805bab7c754ff82c60</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\driver\usb\usbfsv1\src\drv_usbfsv1_variant_mapping.h</file>
@@ -3038,7 +3058,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\tc2.h</file>
-         <hash>be74d0b80ce3b98acc80661f6bca0a9ad3bb11b333fb90be09263f7e3b60b2e9</hash>
+         <hash>005f104724a67df67777f098ab413eaa54a3c8c2b017a234972c79d124cdb651</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\usb\usb_host_hub_interface.h</file>
@@ -3054,31 +3074,31 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\sercom7.h</file>
-         <hash>258d690f9c39cb3ce866201571022ed27e6bcb9e8ccdb046f880349686df0fed</hash>
+         <hash>cde51d90ee89ca0c59572a5c24f1c157ace1c156a0f0a2db51cb94fe6a657843</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\pio\same54p20a.h</file>
-         <hash>6e9dd9a6a3222ff90b84a6ca73a5d23002c2b26a550dc95abcfeb5be2c96fe7e</hash>
+         <hash>621937ef00579bc65a507ae3f380751399ec465963415917a7ce4e0dbddc3eb4</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\ccl.h</file>
-         <hash>b944c3303a4dac6e5bfe46317a0d77ef5f4c9466621cef69f8d68f54ba6f0e03</hash>
+         <hash>913da7b52f88394117572bf85629149862e719a21dd20f219940637ea0c26441</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\hmatrixb.h</file>
-         <hash>e6f70272a27aa81202b535fbaade45b4931492e748e8e6d86165fa7632566b39</hash>
+         <hash>516f5f33d5606616e64dba3940d754ff251c670e2c065d68f89284c4cb40b897</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\exceptions.c</file>
-         <hash>8373b825c302768f52e3568c20241f4eb49c1fbb3614139e8e65ba694066141e</hash>
+         <hash>b268111879b5fa0ab2eaf79fc5d4bd1aa046c54d97805246ce08964100a70bfb</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\adc.h</file>
-         <hash>7cca0111b5938de7baf9463ff6092e407e399e6e1271c194ac000de0d6f389a4</hash>
+         <hash>5a241246876ccce46808a9069ff2ac8091c2d02180f37606775028821e0b3573</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\pm.h</file>
-         <hash>d8f305eb1364d35d0f87c1d86b89a1561cd1766338dd288978ab5674950985dd</hash>
+         <hash>0770c6947000ab1ed87796051eda463dab42dd3d91490df1b91c1a54d57d0e90</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\usb\usb_chapter_9.h</file>
@@ -3094,23 +3114,23 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\aes.h</file>
-         <hash>e9e78d8ad36856a7d5df96451729740f51ecc92ebaa346fbb3f56580e8d6404a</hash>
+         <hash>cd772b0c69e234690731091c6165f65a183c033cda444982249e1e1214cb9fc7</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\ramecc.h</file>
-         <hash>a5e8f1725f0a0e6d069679138e3a9dc9f8f1205a78cd2b5766c0a7763528a61b</hash>
+         <hash>16961b1a9384916412757215a9921539c7628612858ea805af4bbe9d309d61b5</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\adc0.h</file>
-         <hash>4b559bb26f6af6d56312b401583b8d6bbbd54787e2e2ff2f8bb0fedee169c26f</hash>
+         <hash>82539a752b7c918fcf2719074477c2388b84f35ca0abff7730c542e90133ff86</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\qspi.h</file>
-         <hash>e327b5f371a5ecd1f186c1bdb2b97a39c94fde52c79605f4bc408617bf5fd75e</hash>
+         <hash>2ff27da95ed31d43cc72b85564b187c03b222477c1f0d853eac2255b0a122116</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\tcc2.h</file>
-         <hash>65a61bfd363b21c064a4b9bb4adc2326e945a5e4dc39b1711ed29ba78b0ee65d</hash>
+         <hash>fc181665af5fdd3ea4a4d3647c7e355de483bf3c761c4f73a7a02a99fa58c9dd</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\usb\usb_host.h</file>
@@ -3118,7 +3138,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\can0.h</file>
-         <hash>a7bed179ef6e03d2c4fff50b3f2e91e17b024f92aeb59644fd89971a77d2e0d8</hash>
+         <hash>5e54c238136765f6f7b588e00eee3d377b4df1dfee50641ca762df33b5e4191d</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\system\system_media.h</file>
@@ -3126,7 +3146,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\tc3.h</file>
-         <hash>b4df28e8d47dc0f3ed75c197dec763f03432a8fc6be8d21d42a7a987036e64b3</hash>
+         <hash>8efdc1c1596804c975c2bb3498327623c25644a8225f17c979808ff953e2adc2</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\system\int\src\sys_int.c</file>
@@ -3142,11 +3162,11 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\hmatrix.h</file>
-         <hash>d221b32c6ac1eeaf96d66f9519dd5f47eb1fe85a08c53fe13463c6ec689ae775</hash>
+         <hash>362eb1e9cabbc4e4cb1e0c2788c83f8a491a1814015ae8085396117b9448fcd6</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\sercom6.h</file>
-         <hash>048dc232b81667fa40f6ee614e418bb152c3187c898a0877fe181a3e7c3ec5e6</hash>
+         <hash>e87daf37c648191e0bfeeb38c46fe98f812184ceba157fe3203389decacb6234</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\usb\src\usb_device_function_driver.h</file>
@@ -3158,11 +3178,11 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\dmac.h</file>
-         <hash>cdf093c2d71c1c49c6ae46eef03c4da626ca7da6040465a37dcbdcfdfc8ead4b</hash>
+         <hash>75d483c942661a7c27425bbcf069bbe4d51fc5cd414d2e6773827f560d40a3f5</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\startup_xc32.c</file>
-         <hash>0ce43e39c5752474cfa7c61b1a269565c9c7d75f2c5d6d70a0ae2eca6e40ee93</hash>
+         <hash>5fa956deadc84b3c95c31673a48d5567320f5a2e5e789e6a98efea5673645c51</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\tasks.c</file>
@@ -3170,11 +3190,11 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\nvmctrl.h</file>
-         <hash>15ae533d872f1a9731ff60b5353d942c846ba7ee6ace54be1ab1784d1cdba93b</hash>
+         <hash>e1a95a83ba3b00e6057a6f85d6d30b23348dab47bda67b3f0ca6cd8d6ad43f55</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\evsys.h</file>
-         <hash>fa32ece008c81f305665e311fb1822114a8360a450de79ac6d1d6a8a8f954d82</hash>
+         <hash>66e57717318f12ccee0365559bbc9dd9048a44640468849567acd947c896a3dc</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\osal\osal_impl_basic.h</file>
