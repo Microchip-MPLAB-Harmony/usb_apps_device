@@ -2,9 +2,9 @@
 	"metaDataVersion": "1.0.0",
 	"category": "com.microchip.ide.project",
 	"content": {
-		"metaDataVersion": "1.1.0",
+		"metaDataVersion": "1.3.0",
 		"name": "com.microchip.mcu32.mplabx.project.usb_apps_device_vendor_sam_e54_xpro_freertos",
-		"version": "3.4.0",
+		"version": "3.4.1",
 		"displayName": "Vendor Example (vendor) Example for SAM D5x/E5x Family",
 		"projectName": "vendor_sam_e54_xpro_freertos",
 		"shortDescription": "This application creates a USB Device that enumerates as a custom vendor USB device on the USB host PC. The device uses USB Device Layer Endpoint functions and demonstrates the PC host's ability to control the LEDs on the board and query the status of a switch through PC utility.",
@@ -37,28 +37,14 @@
 			}
 		},
 		"author": "Microchip",
-		"subcategories": [
-			[
-				"Development Kit", "SAM E54 Xplained Pro Evaluation Kit"
-			],
-			[
-				"Harmony", "Middleware", "USB", "DEVICE_VENDOR"
-			],
-			[
-				"Middleware", "USB", "DEVICE_VENDOR"
-			]
-		],
 		"peripherals": [
 			"USB"
 		],
 		"keywords": [
-			"MHC",
 			"Harmony",
 			"Middleware",
 			"USB",
-			"ATSAME54P20A",
-			"SAM D5x/E5x Family",
-			"USB"
+			"USB Device Class"
 		],
 		"additionalData": {
 			"longDescription": {

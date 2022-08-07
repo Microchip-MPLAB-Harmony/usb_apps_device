@@ -8,6 +8,20 @@ nav_order: 99
 
 # Microchip MPLAB® Harmony 3 Release Notes
 
+## Harmony 3 USB Device application examples v3.4.1
+
+### New Features
+- N/A
+
+### Bug fixes
+- updated discover.microchip.com metadata
+
+### Known Issues
+- Same as v3.4.0
+
+### Development Tools
+- Same as v3.4.0
+
 ## Harmony 3 USB Device application examples v3.4.0
 
 ### Development kit and demo application support

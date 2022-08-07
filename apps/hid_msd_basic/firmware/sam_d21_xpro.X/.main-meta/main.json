@@ -2,9 +2,9 @@
 	"metaDataVersion": "1.0.0",
 	"category": "com.microchip.ide.project",
 	"content": {
-		"metaDataVersion": "1.1.0",
+		"metaDataVersion": "1.3.0",
 		"name": "com.microchip.mcu32.mplabx.project.usb_apps_device_hid_msd_basic_sam_d21_xpro",
-		"version": "3.4.0",
+		"version": "3.4.1",
 		"displayName": "HID MSD Basic Example (hid_msd_basic) Example for SAM D21/DA1 Family",
 		"projectName": "hid_msd_basic_sam_d21_xpro",
 		"shortDescription": "This demonstration application creates a USB Device that combines the functionality of the hid_basic and msd_basic demonstration applications. ",
@@ -37,28 +37,16 @@
 			}
 		},
 		"author": "Microchip",
-		"subcategories": [
-			[
-				"Development Kit", "SAM D21 Xplained Pro Evaluation Kit"
-			],
-			[
-				"Harmony", "Middleware", "USB", "DEVICE_HID_MSD_BASIC"
-			],
-			[
-				"Middleware", "USB", "DEVICE_HID_MSD_BASIC"
-			]
-		],
 		"peripherals": [
 			"USB"
 		],
 		"keywords": [
-			"MHC",
 			"Harmony",
 			"Middleware",
 			"USB",
-			"ATSAMD21J18A",
-			"SAM D21/DA1 Family",
-			"USB"
+			"USB Device Class",
+			"HID",
+			"MSD"
 		],
 		"additionalData": {
 			"longDescription": {
