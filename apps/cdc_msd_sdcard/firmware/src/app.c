@@ -278,6 +278,11 @@ void APP_USBDeviceEventHandler
             break;
 
         case USB_DEVICE_EVENT_RESUMED:
+            if(appData.isConfigured == true)
+            {
+                LED_On();
+            }
+            break;
         case USB_DEVICE_EVENT_ERROR:
         default:
             

@@ -172,6 +172,9 @@ typedef struct
 
     /* Switch debounce timer count */
     unsigned int debounceCount;
+	
+    /* Device configured state */
+    bool isConfigured;	
     
 } APP_DATA;
 

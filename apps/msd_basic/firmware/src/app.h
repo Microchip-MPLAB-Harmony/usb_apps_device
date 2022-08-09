@@ -110,6 +110,9 @@ typedef struct
 
     /* USB Device Handle */
     USB_DEVICE_HANDLE usbDeviceHandle;
+    
+    /* Device configured state */
+    bool isConfigured;
 
 } APP_DATA;
 

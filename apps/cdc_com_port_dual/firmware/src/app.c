@@ -275,6 +275,12 @@ void APP_USBDeviceEventHandler(USB_DEVICE_EVENT event, void * pData, uintptr_t c
 
         /* These events are not used in this demo */
         case USB_DEVICE_EVENT_RESUMED:
+            if(appData.isConfigured == true)
+            {
+                LED_On();
+            }
+            break;
+          
         case USB_DEVICE_EVENT_ERROR:
         default:
             break;

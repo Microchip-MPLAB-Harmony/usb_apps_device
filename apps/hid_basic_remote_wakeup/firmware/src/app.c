@@ -232,7 +232,10 @@ void APP_USBDeviceEventHandler(USB_DEVICE_EVENT event, void * eventData, uintptr
             break;
 
         case USB_DEVICE_EVENT_RESUMED:
-            
+            if(appData.deviceConfigured == true)
+            {
+                LED_On();
+            }
             /* Device is resumed. */
             appData.IsSuspended = false;
             

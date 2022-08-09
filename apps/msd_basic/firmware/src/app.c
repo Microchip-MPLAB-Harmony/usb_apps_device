@@ -109,20 +109,20 @@ void APP_USBDeviceEventHandler( USB_DEVICE_EVENT event, void * pEventData, uintp
     {
         case USB_DEVICE_EVENT_RESET:
         case USB_DEVICE_EVENT_DECONFIGURED:
-
+            appData.isConfigured = false;
             /* Device was reset or de-configured. Update LED status */
             LED_Off();
             break;
 
         case USB_DEVICE_EVENT_CONFIGURED:
-
+            appData.isConfigured = true;
             /* Device is configured. Update LED status */
             LED_On();
             break;
 
         case USB_DEVICE_EVENT_SUSPENDED:
-		
-			LED_Off();
+            
+            LED_Off();
             break;
 
         case USB_DEVICE_EVENT_POWER_DETECTED:
@@ -132,7 +132,7 @@ void APP_USBDeviceEventHandler( USB_DEVICE_EVENT event, void * pEventData, uintp
             break;
 
         case USB_DEVICE_EVENT_POWER_REMOVED:
-
+            appData.isConfigured = false;
             /* VBUS is not detected. Detach the device */
             USB_DEVICE_Detach(appDataObject->usbDeviceHandle);
             LED_Off();
@@ -140,6 +140,11 @@ void APP_USBDeviceEventHandler( USB_DEVICE_EVENT event, void * pEventData, uintp
 
         /* These events are not used in this demo */
         case USB_DEVICE_EVENT_RESUMED:
+            if(appData.isConfigured == true)
+            {
+                LED_On();
+            }
+            break;
         case USB_DEVICE_EVENT_ERROR:
         case USB_DEVICE_EVENT_SOF:
         default:
@@ -178,6 +183,8 @@ void APP_Initialize ( void )
     
     /* Set device layer handle as invalid */
     appData.usbDeviceHandle = USB_DEVICE_HANDLE_INVALID;
+    
+    appData.isConfigured = false;
 }
 
 

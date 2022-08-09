@@ -108,16 +108,19 @@ void APP_USBDeviceEventHandler(USB_DEVICE_EVENT event, void * pData,
     switch( event )
     {
         case USB_DEVICE_EVENT_POWER_REMOVED:
+            appData.isConfigured = false;
             /* Attach the device */
             USB_DEVICE_Detach (appData.deviceHandle);
             LED_Off(); 
             break;
         case USB_DEVICE_EVENT_RESET:
         case USB_DEVICE_EVENT_DECONFIGURED:
+            appData.isConfigured = false;
             LED_Off(); 
             break;
 
         case USB_DEVICE_EVENT_CONFIGURED:
+            appData.isConfigured = true;
             LED_On(); 
             /* pData will point to the configuration. Check the configuration */
             configurationValue = ((USB_DEVICE_EVENT_DATA_CONFIGURED *)pData)->configurationValue;
@@ -158,6 +161,12 @@ void APP_USBDeviceEventHandler(USB_DEVICE_EVENT event, void * pData,
             break;
 
         case USB_DEVICE_EVENT_RESUMED:
+            if(appData.isConfigured == true)
+            {
+                LED_On();
+            }
+            break;		
+		
             break;
         case USB_DEVICE_EVENT_POWER_DETECTED:
             /*let processing USB Task know USB is powered..*/
@@ -507,6 +516,7 @@ void APP_FREERTOS_Initialize ( void )
     appData.ignoreSwitchPress = false;
     appData.switchDebounceTimer = 0;
     appData.debounceCount = 0;
+    appData.isConfigured = false;
 }
 
 

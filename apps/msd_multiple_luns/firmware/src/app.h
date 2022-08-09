@@ -116,6 +116,9 @@ typedef struct
     APP_STATES state;
     
     USB_DEVICE_HANDLE   usbDevHandle;
+    
+    /* Device configured state */
+    bool isConfigured;
 
     /* TODO: Define any additional data used by the application. */
 
