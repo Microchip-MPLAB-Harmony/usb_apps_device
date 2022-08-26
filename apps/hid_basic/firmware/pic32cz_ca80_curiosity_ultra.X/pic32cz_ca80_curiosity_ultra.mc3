@@ -1,0 +1,1640 @@
+<config configName="pic32cz_ca80_curiosity_ultra" projectName="pic32cz_ca80_curiosity_ultra" configVersion="1.1" device="PIC32CZ8110CA90208" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.4.4">
+   <usedPackages class="java.util.ArrayList">
+      <package packageName="bsp" version="3.13.0" contentType="HARMONY">
+         <modules class="java.util.ArrayList"/>
+      </package>
+      <package packageName="core" version="3.11.0" contentType="HARMONY">
+         <modules class="java.util.ArrayList"/>
+      </package>
+      <package packageName="csp" version="" contentType="HARMONY">
+         <modules class="java.util.ArrayList"/>
+      </package>
+      <package packageName="dev_packs" version="3.13.0" contentType="HARMONY">
+         <modules class="java.util.ArrayList"/>
+      </package>
+      <package packageName="usb" version="" contentType="HARMONY">
+         <modules class="java.util.ArrayList"/>
+      </package>
+   </usedPackages>
+   <usedClasses class="java.util.TreeMap">
+      <entry>
+         <string>BSP_PIC32Z_CA90_Curiosity_Ultra</string>
+         <string>class com.microchip.mcc.harmony.HarmonyModule</string>
+      </entry>
+      <entry>
+         <string>HarmonyCore</string>
+         <string>class com.microchip.mcc.harmony.HarmonyModule</string>
+      </entry>
+      <entry>
+         <string>cmsis</string>
+         <string>class com.microchip.mcc.harmony.HarmonyModule</string>
+      </entry>
+      <entry>
+         <string>core</string>
+         <string>class com.microchip.mcc.harmony.HarmonyModule</string>
+      </entry>
+      <entry>
+         <string>dfp</string>
+         <string>class com.microchip.mcc.harmony.HarmonyModule</string>
+      </entry>
+      <entry>
+         <string>drv_usbhs_index</string>
+         <string>class com.microchip.mcc.harmony.HarmonyModule</string>
+      </entry>
+      <entry>
+         <string>drv_usbhs_index_0</string>
+         <string>class com.microchip.mcc.harmony.HarmonyModule</string>
+      </entry>
+      <entry>
+         <string>evsys</string>
+         <string>class com.microchip.mcc.harmony.HarmonyModule</string>
+      </entry>
+      <entry>
+         <string>peripheral_usb_0</string>
+         <string>class com.microchip.mcc.harmony.HarmonyModule</string>
+      </entry>
+      <entry>
+         <string>usb_device</string>
+         <string>class com.microchip.mcc.harmony.HarmonyModule</string>
+      </entry>
+      <entry>
+         <string>usb_device_0</string>
+         <string>class com.microchip.mcc.harmony.HarmonyModule</string>
+      </entry>
+      <entry>
+         <string>usb_device_hid</string>
+         <string>class com.microchip.mcc.harmony.HarmonyModule</string>
+      </entry>
+      <entry>
+         <string>usb_device_hid_0</string>
+         <string>class com.microchip.mcc.harmony.HarmonyModule</string>
+      </entry>
+   </usedClasses>
+   <usedLibraries class="java.util.ArrayList">
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.1.3"/>
+   </usedLibraries>
+   <tokenMap class="java.util.TreeMap">
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32Z_CA90_Curiosity_Ultra" name="#&amp;__MCC_Group_Parrent_id"/>
+         <value>__ROOTVIEW</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="HarmonyCore" name="#&amp;__MCC_Group_Parrent_id"/>
+         <value>__ROOTVIEW</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="HarmonyCore" name="ENABLE_APP_FILE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;HarmonyCore&gt;
+  &lt;HarmonyCore dnOrder=&quot;0&quot; id=&quot;ENABLE_APP_FILE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;HarmonyCore&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/HarmonyCore&gt;
+&lt;/HarmonyCore&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="HarmonyCore" name="ENABLE_DRV_COMMON"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;HarmonyCore&gt;
+  &lt;HarmonyCore dnOrder=&quot;0&quot; id=&quot;ENABLE_DRV_COMMON&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;readOnly&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;HarmonyCore&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/HarmonyCore&gt;
+&lt;/HarmonyCore&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="HarmonyCore" name="ENABLE_OSAL"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;HarmonyCore&gt;
+  &lt;HarmonyCore dnOrder=&quot;0&quot; id=&quot;ENABLE_OSAL&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;HarmonyCore&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/HarmonyCore&gt;
+&lt;/HarmonyCore&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="HarmonyCore" name="ENABLE_SYS_CACHE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;HarmonyCore&gt;
+  &lt;HarmonyCore dnOrder=&quot;0&quot; id=&quot;ENABLE_SYS_CACHE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;HarmonyCore&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/HarmonyCore&gt;
+&lt;/HarmonyCore&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="HarmonyCore" name="ENABLE_SYS_COMMON"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;HarmonyCore&gt;
+  &lt;HarmonyCore dnOrder=&quot;0&quot; id=&quot;ENABLE_SYS_COMMON&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;readOnly&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;HarmonyCore&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/HarmonyCore&gt;
+&lt;/HarmonyCore&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="HarmonyCore" name="ENABLE_SYS_INT"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;HarmonyCore&gt;
+  &lt;HarmonyCore dnOrder=&quot;0&quot; id=&quot;ENABLE_SYS_INT&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;HarmonyCore&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/HarmonyCore&gt;
+&lt;/HarmonyCore&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="cmsis" name="#&amp;__MCC_Group_Parrent_id"/>
+         <value>__ROOTVIEW</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="!@#harmonyUserData"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;UserData&gt;
+  &lt;UserData dnOrder=&quot;0&quot;&gt;
+    &lt;ComponentGraph dnOrder=&quot;0&quot; id=&quot;__ROOTVIEW&quot;&gt;
+      &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
+        &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;BSP_PIC32Z_CA90_Curiosity_Ultra&quot; x=&quot;17&quot; y=&quot;103&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;HarmonyCore&quot; x=&quot;548&quot; y=&quot;90&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;2&quot; id=&quot;cmsis&quot; x=&quot;500&quot; y=&quot;20&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;3&quot; id=&quot;core&quot; x=&quot;400&quot; y=&quot;20&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;4&quot; id=&quot;dfp&quot; x=&quot;180&quot; y=&quot;20&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;5&quot; id=&quot;drv_usbhs_index&quot; x=&quot;135&quot; y=&quot;220&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;6&quot; id=&quot;evsys&quot; x=&quot;20&quot; y=&quot;20&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;7&quot; id=&quot;peripheral_usb_0&quot; x=&quot;9&quot; y=&quot;263&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;8&quot; id=&quot;usb_device&quot; x=&quot;362&quot; y=&quot;230&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;9&quot; id=&quot;usb_device_hid&quot; x=&quot;520&quot; y=&quot;229&quot;/&gt;
+      &lt;/ElementPositions&gt;
+    &lt;/ComponentGraph&gt;
+    &lt;GraphSettings canvasHeight=&quot;391&quot; canvasWidth=&quot;691&quot; dnOrder=&quot;1&quot;/&gt;
+  &lt;/UserData&gt;
+&lt;/UserData&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="#&amp;__MCC_Group_Parrent_id"/>
+         <value>__ROOTVIEW</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="NVIC_213_0_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;NVIC_213_0_ENABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="NVIC_213_0_HANDLER"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;NVIC_213_0_HANDLER&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;DRV_USBHS0_Handler&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="NVIC_213_0_HANDLER_LOCK"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;NVIC_213_0_HANDLER_LOCK&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_66_FUNCTION_NAME"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_66_FUNCTION_NAME&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;LED&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_66_INEN"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_66_INEN&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_66_PERIPHERAL_FUNCTION"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_66_PERIPHERAL_FUNCTION&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;LED_AL&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_66_PULLEN"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_66_PULLEN&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_68_INEN"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_68_INEN&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_68_PERIPHERAL_FUNCTION"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_68_PERIPHERAL_FUNCTION&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;LED_AL&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_68_PULLEN"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_68_PULLEN&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_93_DIR"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_93_DIR&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_93_PERIPHERAL_FUNCTION"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_93_PERIPHERAL_FUNCTION&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;SWITCH_AL&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PORT_GROUP_1_DIR"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PORT_GROUP_1_DIR&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;0x600000&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PORT_GROUP_1_OUT"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PORT_GROUP_1_OUT&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;0x1600000&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PORT_GROUP_1_PAD_21"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PORT_GROUP_1_PAD_21&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;PB21&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PORT_GROUP_1_PAD_22"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PORT_GROUP_1_PAD_22&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;PB22&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PORT_GROUP_1_PAD_24"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PORT_GROUP_1_PAD_24&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;PB24&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PORT_GROUP_1_PINCFG21"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PORT_GROUP_1_PINCFG21&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;0x0&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PORT_GROUP_1_PINCFG22"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PORT_GROUP_1_PINCFG22&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;0x0&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PORT_GROUP_1_PINCFG24"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PORT_GROUP_1_PINCFG24&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;0x6&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PORT_GROUP_1_PIN_21_USED"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PORT_GROUP_1_PIN_21_USED&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PORT_GROUP_1_PIN_22_USED"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PORT_GROUP_1_PIN_22_USED&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PORT_GROUP_1_PIN_24_USED"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PORT_GROUP_1_PIN_24_USED&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PORT_GROUP_1_PMUX10"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PORT_GROUP_1_PMUX10&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;0x0&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PORT_GROUP_1_PMUX11"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PORT_GROUP_1_PMUX11&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;0x0&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PORT_GROUP_1_PMUX12"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PORT_GROUP_1_PMUX12&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;0x0&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="USBHS0_INTERRUPT_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;USBHS0_INTERRUPT_ENABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;drv_usbhs_index_0&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="USBHS0_INTERRUPT_ENABLE_UPDATE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;USBHS0_INTERRUPT_ENABLE_UPDATE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;false&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="USBHS0_INTERRUPT_HANDLER"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;USBHS0_INTERRUPT_HANDLER&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;drv_usbhs_index_0&quot; value=&quot;DRV_USBHS0_Handler&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="USBHS0_INTERRUPT_HANDLER_LOCK"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;USBHS0_INTERRUPT_HANDLER_LOCK&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;drv_usbhs_index_0&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="dfp" name="#&amp;__MCC_Group_Parrent_id"/>
+         <value>__ROOTVIEW</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="drv_usbhs_index" name="#&amp;__MCC_Group_Parrent_id"/>
+         <value>__ROOTVIEW</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="drv_usbhs_index_0" name="!@#harmonyAttachmentState"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;drv_usbhs_index_0&gt;
+  &lt;drv_usbhs_index_0 dnOrder=&quot;0&quot;&gt;
+    &lt;Attachments dnOrder=&quot;0&quot;&gt;
+      &lt;DirectCapability dnOrder=&quot;0&quot; id=&quot;DRV_USB&quot;&gt;
+        &lt;Attributes dnOrder=&quot;0&quot;&gt;
+          &lt;String dnOrder=&quot;0&quot; id=&quot;targetComponentID&quot;&gt;
+            &lt;Value dnOrder=&quot;0&quot;&gt;usb_device_0&lt;/Value&gt;
+          &lt;/String&gt;
+          &lt;String dnOrder=&quot;1&quot; id=&quot;targetAttachmentID&quot;&gt;
+            &lt;Value dnOrder=&quot;0&quot;&gt;usb_driver_dependency&lt;/Value&gt;
+          &lt;/String&gt;
+        &lt;/Attributes&gt;
+      &lt;/DirectCapability&gt;
+      &lt;DirectDependency dnOrder=&quot;1&quot; id=&quot;usb_peripheral_dependency&quot;&gt;
+        &lt;Attributes dnOrder=&quot;0&quot;&gt;
+          &lt;String dnOrder=&quot;0&quot; id=&quot;targetComponentID&quot;&gt;
+            &lt;Value dnOrder=&quot;0&quot;&gt;peripheral_usb_0&lt;/Value&gt;
+          &lt;/String&gt;
+          &lt;String dnOrder=&quot;1&quot; id=&quot;targetAttachmentID&quot;&gt;
+            &lt;Value dnOrder=&quot;0&quot;&gt;USBHS0&lt;/Value&gt;
+          &lt;/String&gt;
+        &lt;/Attributes&gt;
+      &lt;/DirectDependency&gt;
+    &lt;/Attachments&gt;
+  &lt;/drv_usbhs_index_0&gt;
+&lt;/drv_usbhs_index_0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="drv_usbhs_index_0" name="#&amp;__MCC_Group_Parrent_id"/>
+         <value>drv_usbhs_index</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="drv_usbhs_index_0" name="DRV_USB_PLIB"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;drv_usbhs_index_0&gt;
+  &lt;drv_usbhs_index_0 dnOrder=&quot;0&quot; id=&quot;DRV_USB_PLIB&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;drv_usbhs_index_0&quot; value=&quot;PERIPHERAL_USB_0&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/drv_usbhs_index_0&gt;
+&lt;/drv_usbhs_index_0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="evsys" name="#&amp;__MCC_Group_Parrent_id"/>
+         <value>__ROOTVIEW</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="peripheral_usb_0" name="!@#harmonyAttachmentState"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;peripheral_usb_0&gt;
+  &lt;peripheral_usb_0 dnOrder=&quot;0&quot;&gt;
+    &lt;Attachments dnOrder=&quot;0&quot;&gt;
+      &lt;DirectCapability dnOrder=&quot;0&quot; id=&quot;USBHS0&quot;&gt;
+        &lt;Attributes dnOrder=&quot;0&quot;&gt;
+          &lt;String dnOrder=&quot;0&quot; id=&quot;targetComponentID&quot;&gt;
+            &lt;Value dnOrder=&quot;0&quot;&gt;drv_usbhs_index_0&lt;/Value&gt;
+          &lt;/String&gt;
+          &lt;String dnOrder=&quot;1&quot; id=&quot;targetAttachmentID&quot;&gt;
+            &lt;Value dnOrder=&quot;0&quot;&gt;usb_peripheral_dependency&lt;/Value&gt;
+          &lt;/String&gt;
+        &lt;/Attributes&gt;
+      &lt;/DirectCapability&gt;
+    &lt;/Attachments&gt;
+  &lt;/peripheral_usb_0&gt;
+&lt;/peripheral_usb_0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="peripheral_usb_0" name="#&amp;__MCC_Group_Parrent_id"/>
+         <value>__ROOTVIEW</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="usb_device" name="#&amp;__MCC_Group_Parrent_id"/>
+         <value>__ROOTVIEW</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="usb_device_0" name="!@#harmonyAttachmentState"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;usb_device_0&gt;
+  &lt;usb_device_0 dnOrder=&quot;0&quot;&gt;
+    &lt;Attachments dnOrder=&quot;0&quot;&gt;
+      &lt;DirectCapability dnOrder=&quot;0&quot; id=&quot;USB Device&quot;&gt;
+        &lt;Attributes dnOrder=&quot;0&quot;&gt;
+          &lt;String dnOrder=&quot;0&quot; id=&quot;targetComponentID&quot;&gt;
+            &lt;Value dnOrder=&quot;0&quot;&gt;usb_device_hid_0&lt;/Value&gt;
+          &lt;/String&gt;
+          &lt;String dnOrder=&quot;1&quot; id=&quot;targetAttachmentID&quot;&gt;
+            &lt;Value dnOrder=&quot;0&quot;&gt;usb_device_dependency&lt;/Value&gt;
+          &lt;/String&gt;
+        &lt;/Attributes&gt;
+      &lt;/DirectCapability&gt;
+      &lt;DirectDependency dnOrder=&quot;1&quot; id=&quot;usb_driver_dependency&quot;&gt;
+        &lt;Attributes dnOrder=&quot;0&quot;&gt;
+          &lt;String dnOrder=&quot;0&quot; id=&quot;targetComponentID&quot;&gt;
+            &lt;Value dnOrder=&quot;0&quot;&gt;drv_usbhs_index_0&lt;/Value&gt;
+          &lt;/String&gt;
+          &lt;String dnOrder=&quot;1&quot; id=&quot;targetAttachmentID&quot;&gt;
+            &lt;Value dnOrder=&quot;0&quot;&gt;DRV_USB&lt;/Value&gt;
+          &lt;/String&gt;
+        &lt;/Attributes&gt;
+      &lt;/DirectDependency&gt;
+    &lt;/Attachments&gt;
+  &lt;/usb_device_0&gt;
+&lt;/usb_device_0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="usb_device_0" name="#&amp;__MCC_Group_Parrent_id"/>
+         <value>usb_device</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="usb_device_0" name="CONFIG_USB_DEVICE_MSD_DISK_IMAGE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;usb_device_0&gt;
+  &lt;usb_device_0 dnOrder=&quot;0&quot; id=&quot;CONFIG_USB_DEVICE_MSD_DISK_IMAGE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;usb_device_0&quot; value=&quot;false&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/usb_device_0&gt;
+&lt;/usb_device_0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="usb_device_0" name="CONFIG_USB_DEVICE_PRODUCT_ID_IDX0"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;usb_device_0&gt;
+  &lt;usb_device_0 dnOrder=&quot;0&quot; id=&quot;CONFIG_USB_DEVICE_PRODUCT_ID_IDX0&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;usb_device_0&quot; value=&quot;0x003F&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/usb_device_0&gt;
+&lt;/usb_device_0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="usb_device_0" name="CONFIG_USB_DEVICE_PRODUCT_ID_SELECTION_IDX0"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;usb_device_0&gt;
+  &lt;usb_device_0 dnOrder=&quot;0&quot; id=&quot;CONFIG_USB_DEVICE_PRODUCT_ID_SELECTION_IDX0&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;hid_basic_demo&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/usb_device_0&gt;
+&lt;/usb_device_0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="usb_device_0" name="CONFIG_USB_DEVICE_PRODUCT_STRING_DESCRIPTOR"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;usb_device_0&gt;
+  &lt;usb_device_0 dnOrder=&quot;0&quot; id=&quot;CONFIG_USB_DEVICE_PRODUCT_STRING_DESCRIPTOR&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;usb_device_0&quot; value=&quot;Simple HID Device Demo&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/usb_device_0&gt;
+&lt;/usb_device_0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="usb_device_0" name="CONFIG_USB_DEVICE_SPEED"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;usb_device_0&gt;
+  &lt;usb_device_0 dnOrder=&quot;0&quot; id=&quot;CONFIG_USB_DEVICE_SPEED&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;usb_device_0&quot; value=&quot;High Speed&quot;/&gt;
+      &lt;User dnOrder=&quot;1&quot; value=&quot;High Speed&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/usb_device_0&gt;
+&lt;/usb_device_0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="usb_device_0" name="USB_DEVICE_INDEX"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;usb_device_0&gt;
+  &lt;usb_device_0 dnOrder=&quot;0&quot; id=&quot;USB_DEVICE_INDEX&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;usb_device_0&quot; value=&quot;DRV_USBHS_INDEX_0&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/usb_device_0&gt;
+&lt;/usb_device_0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="usb_device_hid" name="#&amp;__MCC_Group_Parrent_id"/>
+         <value>__ROOTVIEW</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="usb_device_hid_0" name="!@#harmonyAttachmentState"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;usb_device_hid_0&gt;
+  &lt;usb_device_hid_0 dnOrder=&quot;0&quot;&gt;
+    &lt;Attachments dnOrder=&quot;0&quot;&gt;
+      &lt;DirectDependency dnOrder=&quot;0&quot; id=&quot;usb_device_dependency&quot;&gt;
+        &lt;Attributes dnOrder=&quot;0&quot;&gt;
+          &lt;String dnOrder=&quot;0&quot; id=&quot;targetComponentID&quot;&gt;
+            &lt;Value dnOrder=&quot;0&quot;&gt;usb_device_0&lt;/Value&gt;
+          &lt;/String&gt;
+          &lt;String dnOrder=&quot;1&quot; id=&quot;targetAttachmentID&quot;&gt;
+            &lt;Value dnOrder=&quot;0&quot;&gt;USB&amp;amp;#160;Device&lt;/Value&gt;
+          &lt;/String&gt;
+        &lt;/Attributes&gt;
+      &lt;/DirectDependency&gt;
+    &lt;/Attachments&gt;
+  &lt;/usb_device_hid_0&gt;
+&lt;/usb_device_hid_0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="usb_device_hid_0" name="#&amp;__MCC_Group_Parrent_id"/>
+         <value>usb_device_hid</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="usb_device_hid_0" name="USB_DEVICE_HID_DESCRIPTOR_CLAS_CODE_FILE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;usb_device_hid_0&gt;
+  &lt;usb_device_hid_0 dnOrder=&quot;0&quot; id=&quot;USB_DEVICE_HID_DESCRIPTOR_CLAS_CODE_FILE&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;String dnOrder=&quot;0&quot; id=&quot;name&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;usb_device_0.LIST_USB_DEVICE_DESCRIPTOR_CLASS_CODE_ENTRY&lt;/Value&gt;
+      &lt;/String&gt;
+    &lt;/Attributes&gt;
+  &lt;/usb_device_hid_0&gt;
+&lt;/usb_device_hid_0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="usb_device_hid_0" name="USB_DEVICE_HID_DESCRIPTOR_FILE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;usb_device_hid_0&gt;
+  &lt;usb_device_hid_0 dnOrder=&quot;0&quot; id=&quot;USB_DEVICE_HID_DESCRIPTOR_FILE&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;String dnOrder=&quot;0&quot; id=&quot;name&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;usb_device_0.LIST_USB_DEVICE_FUNCTION_DESCRIPTOR_HS_ENTRY&lt;/Value&gt;
+      &lt;/String&gt;
+    &lt;/Attributes&gt;
+  &lt;/usb_device_hid_0&gt;
+&lt;/usb_device_hid_0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="usb_device_hid_0" name="USB_DEVICE_HID_DESCRIPTOR_FS_FILE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;usb_device_hid_0&gt;
+  &lt;usb_device_hid_0 dnOrder=&quot;0&quot; id=&quot;USB_DEVICE_HID_DESCRIPTOR_FS_FILE&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;String dnOrder=&quot;0&quot; id=&quot;name&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;usb_device_0.LIST_USB_DEVICE_FUNCTION_DESCRIPTOR_FS_ENTRY&lt;/Value&gt;
+      &lt;/String&gt;
+    &lt;/Attributes&gt;
+  &lt;/usb_device_hid_0&gt;
+&lt;/usb_device_hid_0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="usb_device_hid_0" name="USB_DEVICE_HID_FUN_INIT_FILE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;usb_device_hid_0&gt;
+  &lt;usb_device_hid_0 dnOrder=&quot;0&quot; id=&quot;USB_DEVICE_HID_FUN_INIT_FILE&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;String dnOrder=&quot;0&quot; id=&quot;name&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;usb_device_0.LIST_USB_DEVICE_FUNCTION_INIT_ENTRY&lt;/Value&gt;
+      &lt;/String&gt;
+    &lt;/Attributes&gt;
+  &lt;/usb_device_hid_0&gt;
+&lt;/usb_device_hid_0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="usb_device_hid_0" name="USB_DEVICE_HID_FUN_REG_TABLE_FILE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;usb_device_hid_0&gt;
+  &lt;usb_device_hid_0 dnOrder=&quot;0&quot; id=&quot;USB_DEVICE_HID_FUN_REG_TABLE_FILE&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;String dnOrder=&quot;0&quot; id=&quot;name&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;usb_device_0.LIST_USB_DEVICE_FUNCTION_ENTRY&lt;/Value&gt;
+      &lt;/String&gt;
+    &lt;/Attributes&gt;
+  &lt;/usb_device_hid_0&gt;
+&lt;/usb_device_hid_0&gt;
+</value>
+      </entry>
+   </tokenMap>
+   <generatedFileHashHistoryMap class="java.util.HashMap">
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\usb\src\usb_device.c</file>
+         <hash>b530b020cfa777eed5e76731e125a07d285ad49f2014ccf93858db1581a40d96</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\drv_usbhs.c</file>
+         <hash>2691dd2b891dc3688bd5c59a30a9061182076df995f4eb8712a9a100ef2753a4</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\sqi1.h</file>
+         <hash>51aeec8f1bfaeb71ee518ebccddbe3c75ce8cb497974adcfb568c69e67ddfe95</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_gcc.h</file>
+         <hash>3d4e265d0aa42f888385ccf073666e6ebb5ec9f834760b9da27c474e177f708d</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\component\supc.h</file>
+         <hash>90c9dce97f479981c3749fd8eb6a80a08ce0314e9d500021444e8b24189d3789</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\can1.h</file>
+         <hash>25809a3f783e1fdc7f61678ae80413b96ff10901463793ae58bb1beb0da7348c</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\sercom2.h</file>
+         <hash>186599a763d45134e07a35855e6362f3eaacf24f153446d9c64b7ed7df6b53a6</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\component\pac.h</file>
+         <hash>cb0eb89a646ded75ea8f4a367c0eca8f36816046aa9edf08fb7398229d89db71</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\device_vectors.h</file>
+         <hash>43b76ff4c76cd3820879ae62ff4d5d98f0cc9e44e121fe075be8997f0ecd00ff</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\system\int\sys_int.h</file>
+         <hash>71e36331ee689ae305b3d8ec49948e3dde0324b65f51bf38f4472b900a421ed6</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\fcw.h</file>
+         <hash>ea798d0f001d47bd551720d3bbded314d81c78b7e5cb7141e4d29a76f513502b</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\dma.h</file>
+         <hash>95a3ea19d7f34a102f30f43823d323348e9ba11a45a7f9c77943524d447482e5</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\driver_common.h</file>
+         <hash>5217965f6720b4fdf717e99ce9df4f2c9fbd82bbbc9655847166d1eefa806fee</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\peripheral\nvic\plib_nvic.c</file>
+         <hash>4e0fc6673f07436334257c0f1c2fa2454df551a4f7576ca4b21fb47e6deab42c</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\adc.h</file>
+         <hash>77df10c168372a09d8e7b39bb7fb2a2f80e4782f187028151f34de59fa01925b</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_Interrupts_Unsupported.h</file>
+         <hash>459e7a0f62ebdd884d482aa004f482c7086f5c5bfffa40919998866d515e7207</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\supc.h</file>
+         <hash>e693faff122b3275e084b4efa3b5082e44cc9fbc9f3cee7577d9ea96e8eafe84</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\drv_usbhs_device.c</file>
+         <hash>96beebe96f0a71392fe9f6346a78a4d48e8c71abf1c66193ccf24420212e26b7</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\tcc2.h</file>
+         <hash>a946e8bff70849f6fea948f0fc764b9200bd18a1a7f8bd2eda11c96e27e81a3c</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\peripheral\nvic\plib_nvic.h</file>
+         <hash>81e813a093101d546799e00723cbf7245e2d18471fa51c8d130c5809cecca03e</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\component\eth.h</file>
+         <hash>ad7e7a881232db19016c249b2cc0da27a3b95cc89b28d73bbcaf0d11e622c1ed</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\can0.h</file>
+         <hash>88c38ae6a8c6708dbeb4387086f6160d262d7137ff4df0a3a57529c8c0518627</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\usb\usb_device.h</file>
+         <hash>06a4f4c06b4b32ab90474b522ddbfc4922fbad93ccf6975240148f1ce4b71b46</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\freqm.h</file>
+         <hash>82546ab069fdeddde9f93b2965732012eb7fd257e0bef36605e3e187f41b927d</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\sercom9.h</file>
+         <hash>b56836501f0b1557b0e6290c7daed6869724e3f09943d9c2e47c05a08a6b74f4</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\CMSIS\CMSIS\Core\Include\mpu_armv7.h</file>
+         <hash>de1b5eb9ed566527b66dc06f4ecb6a43ab6800f7dac47e87c9cb42984dca41bb</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\rstc.h</file>
+         <hash>0ba5f5837edbb879a1becc4bb9d2d105aead6db1aeae0230692627e19f48b296</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_armcc.h</file>
+         <hash>d074534d7106cec83474b3b0a897bd2553e1a8895ecbd54f4f4fb25928066eee</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\sercom1.h</file>
+         <hash>ebf453aea34d6f3009b7e06a80eaf32533ca5628a32c004314a07dd9bcad4c91</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_ModuleControl_Unsupported.h</file>
+         <hash>6ea34df2d4e0dde4c5434f96479f64020dd0d218f4c3fa2ba05a10dc31f14663</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\usb\usb_host.h</file>
+         <hash>4ec16dee42ae6b1bad8a7199b44750ccf0c5fa3aee5e44766e7b6dffc9979e83</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\startup_xc32.c</file>
+         <hash>b7a7917d9909c0c4f0235e25c190a04ce36a5111443fe2a74586f909716aaf78</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_armclang.h</file>
+         <hash>11b39b96ddc1125124762b3423a77b90dd40ea5b4582a3513830245046b24311</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\usb\src\usb_device_hid_local.h</file>
+         <hash>27ade42539241c6c5bcfaf02200801a891ab2ced10a00a8f3a8a465f75392a99</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\usb\src\usb_device_mapping.h</file>
+         <hash>3a5eee6b064c49fd7a495f574736eaec5838e63f7de457ff688d70aa80432ce6</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\mcramc.h</file>
+         <hash>b5cd8ed9d22c00de5b2abf9bca1f47e9122f3d4caedcba439745fe9e29adb0e7</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\component\mlb.h</file>
+         <hash>8fd95d30997447297ebffbc825ff410cab7da6abd396de5d4e153b0a2e5005c1</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\system\system.h</file>
+         <hash>2b75f8e370e5cb2c54f70da7351ee149f0d5a7673e700f39b373099716b31b55</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\bsp\bsp.c</file>
+         <hash>fb55cd7570d14fff54fe8ea1e59db21b798157094ced3903342aa6d6f031206f</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\component\ac.h</file>
+         <hash>6205d27e1f51eecc636750c8a6d669d04a5e6ebd71bfdaaf4ab47a7092aa2911</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\usbhs0.h</file>
+         <hash>b5969daa344399081c0cf7f37c2fcb187cffaa433e85846ce73e42c3cea2df17</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\bsp\bsp.h</file>
+         <hash>863a70c5e59e62b0eb89ff8e14efb94dbd919be8c4d424703eddacb40136b7a0</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_EndpointFIFO_Default.h</file>
+         <hash>4fb2b07be872bbc9586ef139dd07928b69f64af920aea6c0c383d3c8cf4c5ee1</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\usbhs_registers.h</file>
+         <hash>207c8f185d0c45e59283a0fc3d2683b68447a9507db16a41fbf985184d6ad011</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\system\debug\sys_debug.h</file>
+         <hash>222cdc284bd651e83188b9641cc57c133cf86563dbeb5d5523766d4a36087165</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\tcc3.h</file>
+         <hash>06909d6e55e339b79021e2db0079ce406d712c303fd742aae696b0da1d2512d9</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\usb\usb_device_hid.h</file>
+         <hash>6233f5dbbfcada759111c6c9c5db54e381c7c26ebdb7e31aa7a8d7e71f4f5c67</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\sdmmc1.h</file>
+         <hash>fd6755ae97c3fb0919035fa5e0951d50d58daab814dd6f89337bb19cbe7bc661</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\peripheral\clock\plib_clock.c</file>
+         <hash>3f28341abfff22de6fc3f9f20a6db5f0b626fa9c24f4df32ee916f0622221ea9</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\tasks.c</file>
+         <hash>550af77950138580236381f6605c4fd506bfe5e59c488cbef986ddf1f48f1271</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\component\fcr.h</file>
+         <hash>03c0e122a19554a10fb38e045aaf29b0c5bf029ae13bfa7e7a078706b8fab41b</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\can3.h</file>
+         <hash>1c5fb8e7fa440f5333e98d8acb9197b648a9f67e3ecaf408f16836067de6b39b</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\sercom8.h</file>
+         <hash>f5d7f861b9603db34bcc12d6be202ade3d8da121c7c028bdb1cbf23ee27b1dc4</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\system\system_module.h</file>
+         <hash>981fac23277aa77f682e7a9a28d436f892006cd5b4c7f23f50941b6d9a30e740</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\peripheral\clock\plib_clock.h</file>
+         <hash>ef92e6c864f589939b7fe47a0b7f63ba43196ec34753fe221f85cd633fa19786</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_ModuleControl_Default.h</file>
+         <hash>1c53c47e7c3264e021097ca51fe06be4b299c81861412e09a91d1b280b16a0fc</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\ebi.h</file>
+         <hash>e84330d74192c26ddf71a11e6c50d6aba5cf0cc3b83df72f6b58a51ba18f6d7c</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\pac.h</file>
+         <hash>116668dfb31f3c5985c9e1f9e60b8ff771b9d4513a0527074f49b6f7adf16620</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\gclk.h</file>
+         <hash>c229c0e1704fd63ca99167e9e19f2376bf08cbabf3dbcebf5851c5ad4b2b7125</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\sercom0.h</file>
+         <hash>291472bbe2a097f95766d38eed3070f1c523caca6b1b824c95038c71de469910</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\component\freqm.h</file>
+         <hash>03b30679c82be78e87e767dfb32e5b8ed143fd48db0b2a0c536ce14c8f6ef9cf</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\component\pm.h</file>
+         <hash>3fb29e70561d63b4220575135826fcf2cb134fe9fadcc4e00686940ec5c0eaa1</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\usb\usb_hid.h</file>
+         <hash>7bf5db6ff39b841993597cb91717a4b22d187f437863ae4c5da83b983217f249</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\eic.h</file>
+         <hash>e365d4f4d32a7b999d48970a8886526dc478a4e0ae2160c8884e260110a98215</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\component\tcc.h</file>
+         <hash>77a4257b093e00036c192b1b1316e8264a20780543f28caecd53b229bf0bf4b5</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_version.h</file>
+         <hash>2de01ae2556a38eb82c389de23c701805ec63308cfbcf3f84cb12141589b0858</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_SoftReset_Unsupported.h</file>
+         <hash>4071bd8c4700bbd730272263d4bf6298c69d437ebdb8d15a7db883319c7220c8</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\dsu.h</file>
+         <hash>4a0dda74708b7c32f9d1622b12c92eb0f70cf1490bbaa7065342292afee77bd8</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\initialization.c</file>
+         <hash>c7bacf2f9a50a4791b2dfd074a3b37c7322924445c97a7acf2e0b72101b6612c</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\usbhs1.h</file>
+         <hash>d4d6b2b0c4db651d0dbc5d3ee42f207ac30af8d1604d98ecc28eb83d0a851acd</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\usb\src\usb_device_local.h</file>
+         <hash>7ef3cbc9e2060d1d2800fb7a5d6d5597bb008b3da58bf475fc09219dd40c2244</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\component\rstc.h</file>
+         <hash>7a3c1f99bd3ffd665f98770af529c30112e1b7cb090eb94ffbe1cf7cdb5eeb9b</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\libc_syscalls.c</file>
+         <hash>88bb2e34c939601b5b7ad076556e3ee0fcedf388436b8cddb6d6fd3e9d07472f</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\usb\usb_common.h</file>
+         <hash>fc9f44df7ab465084d1522901685e5bfad10548e44563a7460d7e089e6276ded</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\ac.h</file>
+         <hash>a27deaaa3db796b8ff524d20d113131a50b820a093b2927bbc20df0e1ba5b382</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_USBIDControl_Unsupported.h</file>
+         <hash>27fd34573475b9f328b10116ef3a88149c696165f67508325a493a985d7ee142</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\component\tram.h</file>
+         <hash>922ce4317da300fad3dba0cb56d0ba1bf63a41809812dd8054cf836b59ee3263</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\mlb.h</file>
+         <hash>714e6c4017225ee85399749291cc7da10d9ae1e922426be8892355d0f2ff2dbf</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\rtc.h</file>
+         <hash>43043f97c5831ee6542ad38dc941bb558e9592d33a9b89d2b128b643161da0ff</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\tcc4.h</file>
+         <hash>fffd515e95949493fcef3ca924bc9f6b5feb63f486988f21b8e5b85ee6e39089</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_armclang_ltm.h</file>
+         <hash>8621969ea669a1b230ff2125a760ef66d575c48cb45e9e457f768909abcbda46</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\sdmmc0.h</file>
+         <hash>9f246e7078c96d2a284399b299e30de922250659be544fb44d8ccd7f472dfae1</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\pic32cz8110ca90208.h</file>
+         <hash>cc883ed9b91d512f18166394cfff85b2f889673f18d7795ae6cc957fe574a506</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\can2.h</file>
+         <hash>9d2912ca2669e7634418f8ac4ea05edfdb0ef5a3edd318e409f5ecf62785926a</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\sercom7.h</file>
+         <hash>c5b165b5004a71b6d45b1a06d99636dfc33fccba26af420c89f6da63fdff52d9</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\component\mcramc.h</file>
+         <hash>7a9a00c0aede7c331b391368a6dd9aedda25e865c04009213be5c9bd4e288b5a</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_ClockResetControl_Default.h</file>
+         <hash>783e05ee6dfbb346b950152b954190acd49ef2b007998e0377810ad9ff7c510b</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\drv_usbhs_variant_mapping.h</file>
+         <hash>f98f282a75aebe13394779dd861129c5830103a7f78c17dd00d1e812838710a1</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\peripheral\evsys\plib_evsys.h</file>
+         <hash>f7d08eb8162f271ce1db384c082586a6624e506aa7f502c64c4ab5a1aadac47d</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\pio\pic32cz8110ca90208.h</file>
+         <hash>495dac342dddd544621e96e5232cd0f467e9e25f3a4d19aac5c37c20e08d4afe</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\peripheral\evsys\plib_evsys.c</file>
+         <hash>b2e1a8004049e687fc5544133f3346f743ced50cdaf860c8e3c7f58df3cc163f</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\toolchain_specifics.h</file>
+         <hash>2559d185e92918f61c308a62200cb0cda72726c63111561524dd53afcc635a18</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\component\sercom.h</file>
+         <hash>a81607f7f2e6809287dceef8acc911765c87874812a72c97d311f745c058d9d1</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\CMSIS\CMSIS\Core\Include\core_cm7.h</file>
+         <hash>a361f5ff7b053831cdbbc068eae9609cd6681414c9a95c26df582d686a2378b8</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\oscctrl.h</file>
+         <hash>1af35f058218afe7bd9df6b7831ba6a72ee3bb32046cde7ba0779d49a1523361</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\prm.h</file>
+         <hash>68a7d6132d7aaea71e137e567b51a5d2b6ea03d591d339d85830983c59c05aa6</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\wdt.h</file>
+         <hash>700f0278e0470cdf475d0fe2a51a9988c1a4d9128a4e8c9eb60f7952ce303fd3</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\interrupts.h</file>
+         <hash>6c7c602909d38f9b7287d6f5c7934002719d493ecc4e76e950186cdb423ffafb</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\component\can.h</file>
+         <hash>a4c37b909435a8087b73b5821a0210a64a202367c2e05a7ec805a04e0ede6399</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\component\trng.h</file>
+         <hash>a6dfd6294139f07fadbef924b83040834ac0dd9ab22579384241a4c8a6d6da75</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\interrupts.c</file>
+         <hash>1c2612350b8e66d60b823caee60509850440f8d9dc4d453d7f7b7c48c7d0e903</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\drv_usbhs_local.h</file>
+         <hash>5c885a480c066676c67358712baa36212fcc8ac458dc96f63393bec79262b99f</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\component\sqi.h</file>
+         <hash>ceee0250840674f7c8cab7a70104ad42de9193829481cb880e6bcd0efed14e49</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\component\ptc.h</file>
+         <hash>eb1c5628600503cda008a7e4bb7933ae817cbbef824a698383e954d7c0705a4b</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\tcc5.h</file>
+         <hash>544551bd59f0f6b95c382f40e207b3aaf75f134f1d1ddd74de584638beef23a7</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\system\int\src\sys_int.c</file>
+         <hash>23e798871ce6f7b4b0e0dbd5cb2cad7b43bd2dd1f38152f28d14f5a5b7a2938b</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_Interrupts_Default.h</file>
+         <hash>a00915e8685ce5de59700f25943ec56ddd51d32405969d156f3a81431ede17a8</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\usb\usb_chapter_9.h</file>
+         <hash>86a258d763c7f0f563122ccd4ec0bbef422fd4e2f523402bb89be10568cecf3f</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\CMSIS\CMSIS\Core\Include\cachel1_armv7.h</file>
+         <hash>6cdb5b324f2fd1bb5b2f47298ba6e6777e735d7cad3bb8d942cd36e2c6e65328</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\component\wdt.h</file>
+         <hash>df147cf7797eee3fe18ef39fd8d75bbc2c751b207d60c33286641aadcb22c832</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_EndpointFIFO_Unsupported.h</file>
+         <hash>545b4ebac3065af9372fa2f59d92c72cabe15b0db7192eca384a12cfcb114871</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_RxEPStatus_Default.h</file>
+         <hash>0cf76a2c2a5840007529f64ab6311e0b3ac59ede14e4c894ca2ba2792bebb864</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\component\mclk.h</file>
+         <hash>23a5ccc91b4eaa8e2622662a3097e6c59a47581d13a9d3c50113330d38db3649</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\can5.h</file>
+         <hash>233d172ba9b1e3c0d7460c3992062569fed23ccd40e70e22b652aefbf3b7cb45</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\sercom6.h</file>
+         <hash>0cc8861626a94fe8116783623ce2150920cba9cf2cbe48316559ccf1eebc4f9f</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\spi_ixs1.h</file>
+         <hash>fd2f4c3d09b3d42f74bfd4d9aad24885ad6f18edd69ad913fcf4dfe411ea41da</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\osc32kctrl.h</file>
+         <hash>fd491e5ef5b17a0d258e2d76708c2245d3710328b7fa658e029fb511e0bac527</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_SoftReset_Default.h</file>
+         <hash>013cd79bbc2823cdca509ae88e7f2ff034c9174d23353676e02190364a41312a</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\driver.h</file>
+         <hash>042fdd289460dbddb8e805850af7e3ac9aea95468e37414959781ebc5b2f454d</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\osal\osal_definitions.h</file>
+         <hash>0a5ca28c4812bb37babfebc1fe30a90b13583504d81910ad159feb746a5b002c</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\usb_device_init_data_0.c</file>
+         <hash>8cb04b01301a6c69ee9aca715ce8dcda0b5361531164fd98089dd668ad4fb0a6</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\drv_usb.h</file>
+         <hash>dce0fe53973e23d87ee16fec7ef65f171b537ac80e14eaa2ca43962156f1c6e7</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\user.h</file>
+         <hash>451e0878e9fcf6cf9fab046c1452ea662757988346c7f39e6bc98478ca25f995</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\hsm.h</file>
+         <hash>54072fe15aa947fca5440cef7bb845f281d1d29edded2c7945277a3d32d88a46</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\trng.h</file>
+         <hash>663631f03f5830ec424fbb26e3555f2dd9ad471864eb178bd7563491ae4bf855</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\usb\src\usb_device_hid.c</file>
+         <hash>03c05393f61bfed316ca2ead2c2291b2dd8643829d44b8fec193e0f2a0a57716</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\component\eic.h</file>
+         <hash>d8bc5699d71fec63fec210573da8e74cdc91431c2f51a3fc43494ffdd15a8156</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\mclk.h</file>
+         <hash>15eee7a44ee759aefd3d7d10668d79738682e742866d93c2ee89e2f7ee80e313</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\device.h</file>
+         <hash>49c6cce0f634950ca6da96799258e8f902be9d7f49720ae2e42acbb34b836991</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\tcc6.h</file>
+         <hash>bf9bf6080ced3c9098f7a81e3c3a8e1e0e5055a284b37f03197dfb19a5bc8ba9</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\usb\src\usb_external_dependencies.h</file>
+         <hash>5110f718908d8f79253ce5b4b44172288cc179ff61d18e387f9e90ae9afbb1b6</hash>
+      </entry>
+      <entry>
+         <file>..\src\app.h</file>
+         <hash>8e35d8509552a4d1d6e6f123ad75694cf784a707f7dac592ed33b55121aa8e28</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\component\osc32kctrl.h</file>
+         <hash>18d0b6ad1ffdcb785fb853617361c1d67553923769b348877cf72b73f73f7844</hash>
+      </entry>
+      <entry>
+         <file>..\src\app.c</file>
+         <hash>632c78c323cb9f8c6359f20337440c08f8461eb4b0304552b6a3cfd5c4052620</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_RxEPStatus_Unsupported.h</file>
+         <hash>8c3fdd84e875ffa69e696d90f44ab26e8817b018a6e7eee04e06e4a5d9139bfd</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_EP0Status_Default.h</file>
+         <hash>0104fe26087236bc8e0e83018fde361ceff15d090016d5ddb3337b38103ff2c1</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\definitions.h</file>
+         <hash>c050078ebb7acb3ccc4a7cd3df9b9c11d31b65ba99f59adff4cef860dbc5c05f</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\can4.h</file>
+         <hash>2d4f10c87e00b9fbeaa1efec5f4b74efe8603f286f83d1df6f272b4e4b53b079</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_EP0Status_Unsupported.h</file>
+         <hash>fcfd976cc74bd542eabe3a4a6db141e536ae2f30c0806c4cb703d82f6723c5a8</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\sercom5.h</file>
+         <hash>4a6b294f3f68f7d7a8049ab35fe30c3880cf345e6af7dc395f872ac95c0550b8</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\plib_usbhs.h</file>
+         <hash>b61043760e34adffa2eba2f8cf7d55b6eef4587e8bf3d9878576e8fa6ed20cd5</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\component\dsu.h</file>
+         <hash>7e76270a5005af2df0c95072a07728dc00088b7c506a8461d3d6585859136274</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\osal\osal_impl_basic.h</file>
+         <hash>0c388837ef1d4e207a028ed31bfe07f1aac7ea8b0505caff58f737667ccbeaee</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\component\adc.h</file>
+         <hash>a299c3e0fa2641e4209bda1183cbb4d9179ce9933b8518d713bdcec7fd3c3768</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\pm.h</file>
+         <hash>926ed87ce17ba6dd4bfb01ea9056b86f860e37fc27c13aff9bc0e2cbba5c94bf</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\device_cache.h</file>
+         <hash>90ab2a7320a2a8c1123fb5d297dfaa0f56e3cb28c3ad1ea2ab5633988c1ef252</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\system\cache\sys_cache.h</file>
+         <hash>3407ecac4da455d4b8ba70043f10c20b10e1304e92402db824ca5efa6a2f8402</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\component\ebi.h</file>
+         <hash>d00bb218b3b7d0069c21fc17bd150890f36868397348f95cabed620737e7649c</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_compiler.h</file>
+         <hash>869640702d811c4c63abb52206715c891a93fd03be954df5ad40d378355af3d6</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\usb\src\usb_device_function_driver.h</file>
+         <hash>5d7b7287898c95485fbfc37840b9bb3e6ace46ef7333413493137d0e40e50bec</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\PIC32CZ8110CA90208.ld</file>
+         <hash>984bfaa0704723502585f9576268d2157e544f03c30154a7aef637df5ce90914</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\component\port.h</file>
+         <hash>08da22479ab481d64858a41bdc09283a1d9ffa9bbd8c1e88bf726a6001703dd8</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\system\cache\sys_cache.c</file>
+         <hash>7266793f96d0991d1cff7006720bff2a3f6974ca34aa53e488763b2a9f307ab9</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\fcr.h</file>
+         <hash>915ad44e624d43f13ddefbb407fe373e6d37a76f2b52303fc62c9416c533b48b</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\drv_usbhs.h</file>
+         <hash>b34450057b5eaa0390d5a4d6960f136a70d3fe2e3f8d1b0d788ffcadb85d0c46</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\system\system_common.h</file>
+         <hash>0dbf2f60b29c97426e70187bc59c652ab5a355f51cfbe3f195ff1c8c6c0b1602</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\exceptions.c</file>
+         <hash>b268111879b5fa0ab2eaf79fc5d4bd1aa046c54d97805246ce08964100a70bfb</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\port.h</file>
+         <hash>80ee036afb83a79e017b1a4c2dcda5003032fc6c2853af74cf06b40ab3674889</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\fuses.h</file>
+         <hash>7ff3a8eb9f537c11bacfec2479dc87c05094b2be8b737fd309ce99115fbb03de</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\tcc7.h</file>
+         <hash>e7875cb187e70cc2931bac182a6eb9d52e4f391a20d5ba674bd42bed3bcf9f97</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\pin_configurations.csv</file>
+         <hash>f7a8e9da6ca90d85cd65cf233259652768cce36d6f92c522dcbdbe792ebe245a</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_TxEPStatus_Unsupported.h</file>
+         <hash>190c0d3c025a1dd4dc421a37b5918bb0f0bad8ab491f74bc79b9a4aadc50a65d</hash>
+      </entry>
+      <entry>
+         <file>..\src\main.c</file>
+         <hash>d3c233d419e6304bfacbafc18cc68c0f5c26e365f23b20ea40ccfac458f664c5</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\component\hsm.h</file>
+         <hash>9914a9d486b1fd271e04aa437943dc9945ab8d27445372da579c1774c0c0841e</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\system\int\sys_int_mapping.h</file>
+         <hash>660e7081f93de17660144721849acf269925988a4f6510028d25903aaa866ea1</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\component\evsys.h</file>
+         <hash>d95460d572f94ef36e09487ea90da363780fb57b249f9214e57442925a8871c0</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\component\gclk.h</file>
+         <hash>498841eff53d10a99f1cf777bf5e4101db8b565429b6fb64656e9e84fbfe5e86</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\drv_usb_external_dependencies.h</file>
+         <hash>9c425976fc28dee4877b6dc97e3d85c69d99a3bbacf7813ea324948a6c9e8431</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_HighSpeedSupport_Default.h</file>
+         <hash>40ab27592ad01a86087fbe878d21f93ae0e5bb76592420fbd8c1062077184f47</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\sercom4.h</file>
+         <hash>d36d051bd61005c4249ba834aae6c7ecfd19bf5c1cc340ec5e78d4e6bae43706</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_HighSpeedSupport_Unsupported.h</file>
+         <hash>d6f93c01f6da02b0f02f63f8a5d3dbe068bc0b0775981543304f6ec1085736e3</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\stdio\xc32_monitor.c</file>
+         <hash>858f8710d4287200a5ee7f3b3ad7c24f505aed9c05c16956ab0ff9f7bb162a6a</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_TxEPStatus_Default.h</file>
+         <hash>bbba41c7672b890e0cd37c53c578b2174a54d9696693f3f26c1fef3022ef4a7e</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\ptc.h</file>
+         <hash>948c96777917a6ace8c54f2fb3ed3f98981330620c2af76a063e2874a090fc92</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_registers.h</file>
+         <hash>2b332717d57d24fe2ec762dea108e03ab1677b97f0282c1dc76bb3e0186b5ced</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\usb\usb_hub.h</file>
+         <hash>f07eb653a11355424adb96ff0fec6796f6b95c8924ac93fb9207f888d130bc7d</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_iccarm.h</file>
+         <hash>f28119adbc81fb0e3c957c9aebe8fb423ad93634e76ead3caa2b0818d2e123ae</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\usb\usb_host_hub_interface.h</file>
+         <hash>9db9028cdb085f4ed90d06c8d0013e5b9d300be9b49f0933094c373552193645</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\component\dma.h</file>
+         <hash>61af93a587aa4b71041ce9d1c59bfdeaa04fc405a91e5e330d9b74751b132ac2</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\osal\osal.h</file>
+         <hash>d42702188d00d3e1d7219d7eef030485896bf8b5ebe55318656e82f0fbb89788</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\usb\usb_host_client_driver.h</file>
+         <hash>d11085e6a64f6b4551b1dc19aaee5b8a2555b7df649057bdb2ce8549c296a87d</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\tcc8.h</file>
+         <hash>189ad25fb9c118ec87f2694b631957f6d3c0de481fcea6969edef8df15cd096e</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\eth.h</file>
+         <hash>f0c23e0d5054d4ff53cedc7c9ded91538f7da04d3a0f67a5cc5cc3e3e4d48d8f</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\component\usbhs.h</file>
+         <hash>095ac9a317abc270199c02f1a9f900610da385fbee4cd974f63ab2692e4b995d</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_USBIDControl_Default.h</file>
+         <hash>f9449bfc299f77ca224880e00d3444a26eeeeaecca69e1a8bac131395171be31</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\component\drmtcm.h</file>
+         <hash>acf5d5723c205c86f5ea32f2db67c4aa820bd58a856fbf3cdfd1978128e97f9c</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\component\prm.h</file>
+         <hash>314ce8e766ebf66f0e570f86b5ab38f8b08c0dcce4078250089fb591c51deb37</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\tcc0.h</file>
+         <hash>bca0de6a1bd639667dffe7e9d1e7a9da6fa3296fa5a5496caba59317bcd42e2a</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_ClockResetControl_Unsupported.h</file>
+         <hash>7f730c6c41b514de2749611994540fb992d6743adf0ce5db8ed9252667baab1b</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\sqi0.h</file>
+         <hash>272ef678f919894b7da4827a346f1065594e9d2529257cdc0dbcf251421d1a62</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\component\fcw.h</file>
+         <hash>3d9f74660e95898bcd5d78b0a64e1f38c7b81e57c12d1890297e2214db1894d5</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\peripheral\port\plib_port.c</file>
+         <hash>d3ccb4df9a523fef35dfc603e324af3ffeb6b3dbdef7244aa175919b4e91313b</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_EndpointOperations_Default.h</file>
+         <hash>cff97eae86f994e9cc769d175a4b8253fa97eef6ec302df3a24a862b86844ec2</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\evsys.h</file>
+         <hash>b16bd569d3c4ebde5a1172e7a94a865f36a34e19f7d43a6c6d9369e59003e050</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_EndpointOperations_Unsupported.h</file>
+         <hash>4ea465abe207f4b69caea2725e147e482f5e7114f92e639a8a7a2836ce90d28b</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\peripheral\port\plib_port.h</file>
+         <hash>54eac218e3ecef8314c11a94e1bc3ff9ae3528b85712ef4eba1a77ee55850b65</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\configuration.h</file>
+         <hash>402b8e6ff6cf8301e2b6a227185ca6651a79ba90086e1458d7feff65856ddfd9</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\sercom3.h</file>
+         <hash>ac428e95d46aac5a18fcdab388d36d594434c1e2da4e4777c2b431fcddf8fb9c</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\spi_ixs0.h</file>
+         <hash>7a41b00ec04190ce371a34abdcbc71c96bc744b52896b6249eb7eb9e1672fe77</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\tram.h</file>
+         <hash>2589c4514d1a8d8ad4c40b6ab444fa952595cec31e9cd536bc20f88ed2e474a3</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\component\spi_ixs.h</file>
+         <hash>dff20c37ac93fb0aaf721369fe5b0d656b362d050eb8399ca9cac31d7cb873d5</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\component\oscctrl.h</file>
+         <hash>2cea1af46a4cbdb01750f89a88957b575ecead494459215d264ee662f9a2d603</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\component\rtc.h</file>
+         <hash>5be637d117c4540ff8f595605e835a8f848c9acbe61cca348c6ae1b21958b300</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\component\fuses.h</file>
+         <hash>7d5ecf01254de08f35056c3be5cdb2d42c15e50188a106a59f1ec345b6986978</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\tcc9.h</file>
+         <hash>aa40e8e08c82c931f68ae75930a1d9494c9c8c7fea51679f6c476fc9b32b34d7</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\component\sdmmc.h</file>
+         <hash>b275409d1a1f26e43da6f6abdfcc70d8aa8444ddd53af3755d0fc770b1c025c9</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\drmtcm.h</file>
+         <hash>ca0b7f20793534804f300b6837f663f4a8aed8e772048355801050ef9ed1a711</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32CZ8110CA90208_DFP\instance\tcc1.h</file>
+         <hash>e8114ceb7f00f84daae8d206e5b4155ab3bbaa77f264ee75f3eeec1574609fad</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\plib_usbhs_header.h</file>
+         <hash>ee55232d4a86c9144321da6a7088bf6881c2cc81e7057560c4755fd9870fc49d</hash>
+      </entry>
+   </generatedFileHashHistoryMap>
+</config>
