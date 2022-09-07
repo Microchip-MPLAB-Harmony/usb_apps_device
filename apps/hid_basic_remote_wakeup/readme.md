@@ -28,9 +28,15 @@ Following table gives the details of project configurations, target device used,
 | ------------------------------- | ------ | ------------------- | -------------------------------------------------------------------------- |
 | sam_e54_xpro.X                  | MPLABX | ATSAME54P20A        | [SAM E54 Xplained Pro Board](#config_3)                                    |
 | sam_l21_xpro.X                  | MPLABX | ATSAML21J18B        | [SAML21 Xplained Pro Board](#config_7)                                    |
-
+| pic32cz_ca80_curiosity_ultra.X  | MPLABX | PIC32CZ8110CA80208  | [PIC32CZ Curiosity Development Board](#config_23)           |
 
 ## <a name="config_title"></a> Configuring the Hardware
+
+### <a name="config_23"></a> PIC32CZ CA80 Curiosity Development Board
+- Connect the USB device to the micro-B connector (J102) using a USB Type-A Female to micro-B male cable  (This cable is not included in the kit). 
+- LED0 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
+- Press the switch SW0 to trigger communication from the USB Device to the USB Host.
+- When the device is in Standby sleep, SW0 acts as wakeup source and brings the device to active mode. The device sends Remote wakeup to PC host and then goes back to Standby sleep mode to let the PC host drive the resume.
 
 ### <a name="config_3"></a> [SAME54 Xplained Pro Board](https://www.microchip.com/developmenttools/productdetails/atsame54-xpro)
 
@@ -78,12 +84,53 @@ The HID Basic operation is same as *hid_basic* demo. Refer to local documentatio
 1. The suspend due to closure of PC utility will not enable the Remote Wakeup of USB device. Hence the message ***USB host Suspend device or Remote wakeup is not enabled*** would be seen. The device will be put to Standby Sleep mode. 
 1. A resume from PC host can wake up the device and continue with HID operation. This is when ***USB Device Resumed*** message is shown.
 1. Put the PC host connected to Target USB port to sleep to test Remote wakeup. If the device is allowed to wake up PC host, then the Remote Wakeup will be enabled in the USB device by PC host before suspending the bus. This is shown through ***USB host in Sleep mode - Remote wakeup enabled. Press Button to wakeup Host.*** message.
-1. If the message ***USB host Suspend device or Remote wakeup is not enabled*** is seen when PC host is put to sleep, it means the USB device is not allowed to do Remote Wakeup. Go to the power settings of the USB device in PC host and enable Remote wakeup feature. This can be done in a Windows machine through device manager or command prompt. Below are the commands and their usage.
-   - **powercfg -devicequery wake_from_any** - Displays all devices that are connected to the PC.
-   - **powercfg -devicequery wake_armed** - Devices that can wake up PC from its sleep state.
-   - **powercfg -deviceenablewake** - To enable Remote wakeup privilege for any of the connected Devices
-        - eg:-  powercfg -deviceenablewake "HID-compliant vendor-defined device (002)"
-   - **powercfg -devicedisablewake** - To disable Remote wakeup privilege for any of the connected Devices.
-1. If the Remote Wakeup is enabled and the device is put to sleep, press the switch to initiate a **Remote Wakeup**. The PC host will respond back with a resume and device will continue with its HID operation. The screenshot showing suspend, resume and remote wakeup operations are shown below.
+1. If the message ***USB host Suspend device or Remote wakeup is not enabled*** is seen when PC host is put to sleep, it means the USB device is not allowed to do Remote Wakeup. Go to the power settings of the USB device in PC host and enable Remote wakeup feature. This can be done in a Windows machine through device manager or command prompt. 
+
+<code>
+*** USB Device Remote Wakeup Demonstration ***<br><br>
+Device Configured<br>
+USB Device Suspended<br>
+USB host Suspend device or Remote wakeup is not enabled<br>
+MCU on Standby Sleep mode<br>
+</code>
+
+- On "PC Host 2", <br>
+        - launch in a command console with administrator privilege:
+          powercfg -devicequery wake_from_any<br> 
+        - Displays all devices that are connected to the PC.
+        - search in the answer the ligne "HID-compliant vendor-defined device"<br>
+        - launch: powercfg -deviceenablewake "HID-compliant vendor-defined device (002)"<br>
+          It can be different.
+        - Then
+        - powercfg -devicequery wake_armed
+        - will return : "HID-compliant vendor-defined device (002)"
+        
+- Put the "PC Host 2" on sleep
+
+<code>
+USB Device Resumed<br>
+USB Device Suspended<br>
+USB host in Sleep mode - Remote wakeup enabled. Press Button to wakeup Host.<br>
+MCU on Standby Sleep mode<br>
+</code>
+
+- Press SW0
+
+<code>
+Remote Wakeup Start Sent<br>
+USB Device Resumed<br>
+USB Device Suspended<br>
+USB host Suspend device or Remote wakeup is not enabled<br>
+MCU on Standby Sleep mode<br>
+USB Device Resumed<br>
+USB Device Suspended<br>
+USB host Suspend device or Remote wakeup is not enabled<br>
+MCU on Standby Sleep mode<br>
+</code>
+
+- The "PC Host 2" is resumed.
+
+8. If the Remote Wakeup is enabled and the device is put to sleep, press the switch to initiate a **Remote Wakeup**. The PC host will respond back with a resume and device will continue with its HID operation. The screenshot showing suspend, resume and remote wakeup operations are shown below.
 
     ![COM port settings](images/hid_basic_remote_wakeup_4.png)
+

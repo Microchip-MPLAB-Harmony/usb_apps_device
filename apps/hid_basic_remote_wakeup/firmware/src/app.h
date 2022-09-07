@@ -75,8 +75,10 @@ extern "C" {
 // Section: Type Definitions
 // *****************************************************************************
 // *****************************************************************************
+#ifndef SWITCH_STATE_PRESSED
 /* Defines the Switch Press condition */
 #define SWITCH_STATE_PRESSED            false
+#endif
 
 /* Defines minimum suspend duration before which Remote Wakeup cannot occur */
 #define USB_SUSPEND_DURATION_5MS        5
@@ -107,6 +109,18 @@ extern "C" {
         SERCOM2_REGS->USART_INT.SERCOM_INTENSET = SERCOM_USART_INT_INTENSET_DRE_Msk; \
         SERCOM2_REGS->USART_INT.SERCOM_INTENSET = (uint8_t)SERCOM_USART_INT_INTENSET_ERROR_Msk; \
         SERCOM2_REGS->USART_INT.SERCOM_INTENSET = (uint8_t)SERCOM_USART_INT_INTENSET_RXC_Msk;
+#elif defined (_PIC32CZ8110CA80208_H_)
+    #define DISABLE_SERCOM_INTERRUPT() \
+        SERCOM1_REGS->USART_INT.SERCOM_INTENCLR = SERCOM_USART_INT_INTENCLR_RXC_Msk; \
+        SERCOM1_REGS->USART_INT.SERCOM_INTENCLR = SERCOM_USART_INT_INTENCLR_DRE_Msk; \
+        SERCOM1_REGS->USART_INT.SERCOM_INTENCLR = (uint8_t)SERCOM_USART_INT_INTENCLR_ERROR_Msk; \
+        SERCOM1_REGS->USART_INT.SERCOM_INTENCLR = (uint8_t)SERCOM_USART_INT_INTENCLR_RXC_Msk;
+
+    #define ENABLE_SERCOM_INTERRUPT() \
+        SERCOM1_REGS->USART_INT.SERCOM_INTENSET = SERCOM_USART_INT_INTENSET_RXC_Msk; \
+        SERCOM1_REGS->USART_INT.SERCOM_INTENSET = SERCOM_USART_INT_INTENSET_DRE_Msk; \
+        SERCOM1_REGS->USART_INT.SERCOM_INTENSET = (uint8_t)SERCOM_USART_INT_INTENSET_ERROR_Msk; \
+        SERCOM1_REGS->USART_INT.SERCOM_INTENSET = (uint8_t)SERCOM_USART_INT_INTENSET_RXC_Msk;
 #else
     #error "ENABLE_SERCOM_INTERRUPT and DISABLE_SERCOM_INTERRUPT must be define"
 #endif

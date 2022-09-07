@@ -181,14 +181,14 @@ void APP_USBDeviceEventHandler(USB_DEVICE_EVENT event, void * eventData, uintptr
              * opened previously. */
 
             LED_Off();
-            
+
             /* Clear the flag indicating device is not configured. */
             appData.deviceConfigured = false;
-            
+            appData.state = APP_STATE_WAIT_FOR_CONFIGURATION;
             break;
 
         case USB_DEVICE_EVENT_CONFIGURED:
-            
+
             LED_On(); 
             /* Set the flag indicating device is configured. */
             appData.deviceConfigured = true;
@@ -201,6 +201,13 @@ void APP_USBDeviceEventHandler(USB_DEVICE_EVENT event, void * eventData, uintptr
 
             break;
 
+        case USB_DEVICE_EVENT_SUSPENDED:
+
+            LED_Off();
+            /* Device is suspended. */ 
+            appData.IsSuspended = true;
+            break;
+
         case USB_DEVICE_EVENT_POWER_DETECTED:
 
             /* VBUS was detected. We can attach the device */
@@ -208,7 +215,6 @@ void APP_USBDeviceEventHandler(USB_DEVICE_EVENT event, void * eventData, uintptr
             
             /* Device is attached. */
             appData.IsAttached = true;   
-            
             break;
 
         case USB_DEVICE_EVENT_POWER_REMOVED:
@@ -220,15 +226,6 @@ void APP_USBDeviceEventHandler(USB_DEVICE_EVENT event, void * eventData, uintptr
             
             /* Device is detached. */
             appData.IsAttached = false;   
-            
-            break;
-
-        case USB_DEVICE_EVENT_SUSPENDED:
-
-            LED_Off();
-            /* Device is suspended. */ 
-            appData.IsSuspended = true;
-            
             break;
 
         case USB_DEVICE_EVENT_RESUMED:
@@ -238,14 +235,12 @@ void APP_USBDeviceEventHandler(USB_DEVICE_EVENT event, void * eventData, uintptr
             }
             /* Device is resumed. */
             appData.IsSuspended = false;
-            
             break;
-            
+
         case USB_DEVICE_EVENT_ERROR:
             
             /* Received an error condition. Update the flag. */
             appData.IsErrorState = true;
-            
             break;
             
         default:
@@ -289,20 +284,18 @@ void APP_Initialize ( void )
     
     /* Initialize all the application variables. */
     appData.tmrExpired = false;
-    appData.IsAttached = false;    
-    appData.hidDataReceived = false;
-    appData.deviceConfigured = false;
-    appData.hidDataTransmitted = true;  
+    appData.IsAttached = false; 
+    appData.IsSuspended = false;   
     appData.usbDevHandle = USB_DEVICE_HANDLE_INVALID;
+    appData.deviceConfigured = false;
     appData.txTransferHandle = USB_DEVICE_HID_TRANSFER_HANDLE_INVALID;
     appData.rxTransferHandle = USB_DEVICE_HID_TRANSFER_HANDLE_INVALID;
+    appData.hidDataReceived = false;
+    appData.hidDataTransmitted = true;  
     appData.receiveDataBuffer = &receiveDataBuffer[0];
     appData.transmitDataBuffer = &transmitDataBuffer[0];  
     
     LED_Off();
-    
-    /* Application start message. */
-    SYS_CONSOLE_MESSAGE("\n\r*** USB Device Remote Wakeup Demonstration ***\r\n");
 }
 
 
@@ -333,7 +326,8 @@ void APP_Tasks (void )
             {
                 /* Register a callback with device layer to get event notification (for end point 0) */
                 USB_DEVICE_EventHandlerSet(appData.usbDevHandle, APP_USBDeviceEventHandler, 0);
-            
+                /* Application start message. */
+                SYS_CONSOLE_MESSAGE("\n\r*** USB Device Remote Wakeup Demonstration ***\r\n");
                 appData.state = APP_STATE_WAIT_FOR_CONFIGURATION;
             }
             else
@@ -350,7 +344,6 @@ void APP_Tasks (void )
             if(appData.deviceConfigured == true)
             {
                 SYS_CONSOLE_MESSAGE("\n\rDevice Configured\r\n");
-                
                 /* USB Device is ready to run the main task */
                 appData.hidDataReceived = false;
                 appData.hidDataTransmitted = true;
@@ -369,14 +362,7 @@ void APP_Tasks (void )
                 /* USB Device is not configured */
                 appData.state = APP_STATE_WAIT_FOR_CONFIGURATION;
             }
-            else if (appData.IsSuspended == true)
-            {
-                /* USB Device is suspended. */
-                appData.state = APP_STATE_USB_SUSPENDED;
-                
-                SYS_CONSOLE_MESSAGE("USB Device Suspended\r\n");
-            }
-            else if( appData.hidDataReceived )
+            else if( appData.hidDataReceived == true )
             {
                 /* Look at the data the host sent, to see what kind of 
                  * application specific command it sent. */
@@ -385,7 +371,7 @@ void APP_Tasks (void )
                     case 0x80:
 
                         /* Toggle on board LED. */
-                        LED_Toggle(  );
+                        LED_Toggle();
 
                         /* Clear the HID data received status. */
                         appData.hidDataReceived = false;
@@ -443,6 +429,13 @@ void APP_Tasks (void )
                         break;
                 }
             }
+//            else if (appData.IsSuspended == true)
+//            {
+//                /* USB Device is suspended. */
+//                appData.state = APP_STATE_USB_SUSPENDED;
+//                
+//                SYS_CONSOLE_MESSAGE("USB Device Suspended\r\n");
+//            }
             break;
 
         case APP_STATE_USB_SUSPENDED:
@@ -573,9 +566,7 @@ void APP_Tasks (void )
             break;            
             
         case APP_STATE_ERROR:
-                        
             /* Do Nothing */
-            
             break;
             
         default:
