@@ -4,7 +4,7 @@
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
             <name>hid_basic_pic32cz_ca80_curiosity_ultra</name>
-            <creation-uuid>50870077-72a5-4c91-ab9b-7dddabc28b84</creation-uuid>
+            <creation-uuid>0a0063ed-af03-4253-b1c1-af479bd23ce1</creation-uuid>
             <make-project-type>0</make-project-type>
             <c-extensions>c</c-extensions>
             <cpp-extensions/>
@@ -12,9 +12,7 @@
             <asminc-extensions/>
             <sourceEncoding>ISO-8859-1</sourceEncoding>
             <make-dep-projects/>
-            <sourceRootList>
-                <sourceRootElem>../src/config/pic32cz_ca80_curiosity_ultra/bsp</sourceRootElem>
-            </sourceRootList>
+            <sourceRootList/>
             <confList>
                 <confElem>
                     <name>pic32cz_ca80_curiosity_ultra</name>

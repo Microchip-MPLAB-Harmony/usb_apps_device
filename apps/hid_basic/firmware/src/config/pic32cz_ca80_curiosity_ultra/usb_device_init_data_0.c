@@ -141,7 +141,7 @@ const USB_DEVICE_QUALIFIER deviceQualifierDescriptor0 =
     0x0A,                                                   // Size of this descriptor in bytes
     USB_DESCRIPTOR_DEVICE_QUALIFIER,                        // Device Qualifier Type
     0x0200,                                                 // USB Specification Release number
-	    0x00,         // Class Code
+        0x00,         // Class Code
     0x00,         // Subclass code
     0x00,         // Protocol code
 
@@ -156,7 +156,7 @@ const USB_DEVICE_QUALIFIER deviceQualifierDescriptor0 =
  *******************************************/
 const uint8_t highSpeedConfigurationDescriptor0[]=
 {
-	/* Configuration Descriptor */
+    /* Configuration Descriptor */
 
     0x09,                                                   // Size of this descriptor in bytes
     USB_DESCRIPTOR_CONFIGURATION,                           // Descriptor Type
@@ -166,7 +166,7 @@ const uint8_t highSpeedConfigurationDescriptor0[]=
     0x00,                                               // Configuration string index
     USB_ATTRIBUTE_DEFAULT | USB_ATTRIBUTE_SELF_POWERED, // Attributes
     50,                                                 // Maximum power consumption (mA) /2
-	
+    
 
 	/* Interface Descriptor */
 

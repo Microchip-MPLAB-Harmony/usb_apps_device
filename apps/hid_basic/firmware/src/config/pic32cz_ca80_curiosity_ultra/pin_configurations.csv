@@ -96,7 +96,7 @@
 116,PC22,,Available,,,,,,NORMAL
 117,PC07,,Available,,,,,,NORMAL
 118,PC08,,Available,,,,,,NORMAL
-119,PC23,,Available,,,,,,NORMAL
+119,PC23,SWITCH1,SWITCH_AL,Digital,In,n/a,Yes,No,NORMAL
 120,PC24,,Available,,,,,,NORMAL
 121,PC09,,Available,,,,,,NORMAL
 122,PC25,,Available,,,,,,NORMAL

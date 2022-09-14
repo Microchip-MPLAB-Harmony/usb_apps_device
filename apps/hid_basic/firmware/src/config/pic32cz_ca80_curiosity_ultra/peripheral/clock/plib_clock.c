@@ -46,7 +46,7 @@ static void OSCCTRL_Initialize(void)
     /****************** XOSC Initialization ********************************/
 
     /* Configure External Oscillator */
-    OSCCTRL_REGS->OSCCTRL_XOSCCTRLA = OSCCTRL_XOSCCTRLA_STARTUP(14U) | OSCCTRL_XOSCCTRLA_USBHSDIV(0x1U) | OSCCTRL_XOSCCTRLA_XTALEN_Msk | OSCCTRL_XOSCCTRLA_ENABLE_Msk;
+    OSCCTRL_REGS->OSCCTRL_XOSCCTRLA = OSCCTRL_XOSCCTRLA_STARTUP(14U) | OSCCTRL_XOSCCTRLA_USBHSDIV(0x1U) | OSCCTRL_XOSCCTRLA_ENABLE_Msk;
     while((OSCCTRL_REGS->OSCCTRL_STATUS & OSCCTRL_STATUS_XOSCRDY_Msk) != OSCCTRL_STATUS_XOSCRDY_Msk)
     {
         /* Waiting for the XOSC Ready state */
@@ -72,7 +72,7 @@ static void PLL0_Initialize(void)
     /****************** PLL0 Initialization  *********************************/
 
     /* Configure PLL0 */
-    OSCCTRL_REGS->OSCCTRL_PLL0REFDIV = OSCCTRL_PLL0REFDIV_REFDIV(12U);
+    OSCCTRL_REGS->OSCCTRL_PLL0REFDIV = OSCCTRL_PLL0REFDIV_REFDIV(3U);
     OSCCTRL_REGS->OSCCTRL_PLL0FBDIV = OSCCTRL_PLL0FBDIV_FBDIV(225U);
 
     OSCCTRL_REGS->OSCCTRL_FRACDIV0 = OSCCTRL_FRACDIV0_REMDIV(0U) | OSCCTRL_FRACDIV0_INTDIV(0U);
@@ -83,7 +83,7 @@ static void PLL0_Initialize(void)
 
     OSCCTRL_REGS->OSCCTRL_PLL0POSTDIVA = OSCCTRL_PLL0POSTDIVA_OUTEN0_Msk | OSCCTRL_PLL0POSTDIVA_POSTDIV0(3U);
 
-    OSCCTRL_REGS->OSCCTRL_PLL0CTRL |= OSCCTRL_PLL0CTRL_BWSEL(0x1U) | OSCCTRL_PLL0CTRL_REFSEL(2U) | OSCCTRL_PLL0CTRL_ENABLE_Msk;
+    OSCCTRL_REGS->OSCCTRL_PLL0CTRL |= OSCCTRL_PLL0CTRL_BWSEL(0x1U) | OSCCTRL_PLL0CTRL_REFSEL(1U) | OSCCTRL_PLL0CTRL_ENABLE_Msk;
 
     while((OSCCTRL_REGS->OSCCTRL_STATUS & OSCCTRL_STATUS_PLL0LOCK_Msk) != OSCCTRL_STATUS_PLL0LOCK_Msk)
     {
@@ -94,8 +94,7 @@ static void PLL0_Initialize(void)
 
 static void DFLL_Initialize(void)
 {
-    OSCCTRL_REGS->OSCCTRL_DFLLCTRLA = OSCCTRL_DFLLCTRLA_ENABLE_Msk ;
-    }
+}
 
 
 static void GCLK0_Initialize(void)
@@ -116,26 +115,6 @@ static void GCLK0_Initialize(void)
     }
 }
 
-static void GCLK1_Initialize(void)
-{
-    GCLK_REGS->GCLK_GENCTRL[1] = GCLK_GENCTRL_DIV(2U) | GCLK_GENCTRL_SRC(6U) | GCLK_GENCTRL_GENEN_Msk;
-
-    while((GCLK_REGS->GCLK_SYNCBUSY & GCLK_SYNCBUSY_GENCTRL1_Msk) == GCLK_SYNCBUSY_GENCTRL1_Msk)
-    {
-        /* Wait for the Generator 1 synchronization */
-    }
-}
-
-static void GCLK2_Initialize(void)
-{
-    GCLK_REGS->GCLK_GENCTRL[2] = GCLK_GENCTRL_DIV(1U) | GCLK_GENCTRL_SRC(0U) | GCLK_GENCTRL_GENEN_Msk;
-
-    while((GCLK_REGS->GCLK_SYNCBUSY & GCLK_SYNCBUSY_GENCTRL2_Msk) == GCLK_SYNCBUSY_GENCTRL2_Msk)
-    {
-        /* Wait for the Generator 2 synchronization */
-    }
-}
-
 void CLOCK_Initialize (void)
 {
     /* Function to Initialize the Oscillators */
@@ -147,9 +126,14 @@ void CLOCK_Initialize (void)
     PLL0_Initialize();
     DFLL_Initialize();
     GCLK0_Initialize();
-    GCLK1_Initialize();
-    GCLK2_Initialize();
 
 
 
+
+    /* Disable DFLL */
+    OSCCTRL_REGS->OSCCTRL_DFLLCTRLA &= ~(OSCCTRL_DFLLCTRLA_ENABLE_Msk);
+    while((OSCCTRL_REGS->OSCCTRL_SYNCBUSY & OSCCTRL_SYNCBUSY_DFLLENABLE_Msk) == OSCCTRL_SYNCBUSY_DFLLENABLE_Msk)
+    {
+        /* Waiting for the DFLL48M enable synchronization */
     }
+}

@@ -899,17 +899,17 @@ void DRV_USBHS_ClientEventCallBackSet
 
   Summary:
     USBHS Peripheral 0 Interrupt Handler 
-	
+
   Description:
     USBHS Peripheral 0 Interrupt Handler 
 
   Remarks:
-	None 
+None 
 */
 
 void DRV_USBHS0_Handler(void)
 {
-	DRV_USBHS_Tasks_ISR(sysObj.drvUSBHSObject0); 
+    DRV_USBHS_Tasks_ISR(sysObj.drvUSBHSObject0); 
 }
 
 

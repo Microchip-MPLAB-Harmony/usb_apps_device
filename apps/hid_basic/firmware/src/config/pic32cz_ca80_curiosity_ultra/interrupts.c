@@ -79,7 +79,7 @@ void __attribute__((optimize("-O1"),section(".text.Dummy_Handler"),long_call, no
 }
 
 /* MISRAC 2012 deviation block start */
-/* MISRA C-2012 Rule 8.6 deviated 222 times.  Deviation record ID -  H3_MISRAC_2012_R_8_6_DR_1 */
+/* MISRA C-2012 Rule 8.6 deviated 219 times.  Deviation record ID -  H3_MISRAC_2012_R_8_6_DR_1 */
 /* Device vectors list dummy definition*/
 extern void SVCall_Handler             ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void PendSV_Handler             ( void ) __attribute__((weak, alias("Dummy_Handler")));
@@ -296,9 +296,6 @@ extern void TRNG_Handler               ( void ) __attribute__((weak, alias("Dumm
 extern void SDMMC0_Handler             ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void SDMMC1_Handler             ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void USBHS1_Handler             ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void HSM_TAMPER_Handler         ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void HSM_TXINT_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void HSM_RXINT_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void MLB_GENERAL_Handler        ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void MLB_BUSREQ_Handler         ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void CM7H_CTIIRQ_0_Handler      ( void ) __attribute__((weak, alias("Dummy_Handler")));
@@ -540,9 +537,6 @@ const H3DeviceVectors exception_table=
     .pfnSDMMC1_Handler             = SDMMC1_Handler,
     .pfnUSBHS0_Handler             = DRV_USBHS0_Handler,
     .pfnUSBHS1_Handler             = USBHS1_Handler,
-    .pfnHSM_TAMPER_Handler         = HSM_TAMPER_Handler,
-    .pfnHSM_TXINT_Handler          = HSM_TXINT_Handler,
-    .pfnHSM_RXINT_Handler          = HSM_RXINT_Handler,
     .pfnMLB_GENERAL_Handler        = MLB_GENERAL_Handler,
     .pfnMLB_BUSREQ_Handler         = MLB_BUSREQ_Handler,
     .pfnCM7H_CTIIRQ_0_Handler      = CM7H_CTIIRQ_0_Handler,

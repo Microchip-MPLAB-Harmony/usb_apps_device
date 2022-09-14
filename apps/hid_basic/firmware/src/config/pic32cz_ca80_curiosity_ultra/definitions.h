@@ -57,11 +57,11 @@
 #include "usb/usb_device_hid.h"
 #include "usb/usb_hid.h"
 #include "driver/usb/usbhs/drv_usbhs.h"
+#include "bsp/bsp.h"
 #include "system/int/sys_int.h"
 #include "system/cache/sys_cache.h"
 #include "osal/osal.h"
 #include "system/debug/sys_debug.h"
-#include "bsp/bsp.h"
 #include "app.h"
 
 
@@ -190,7 +190,7 @@ typedef struct
     SYS_MODULE_OBJ  usbDevObject0;
 
 
-	SYS_MODULE_OBJ  drvUSBHSObject0;
+    SYS_MODULE_OBJ  drvUSBHSObject0;
 
 
 
