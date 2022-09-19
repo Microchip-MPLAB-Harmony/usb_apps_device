@@ -46,6 +46,8 @@ Following table gives the details of project configurations, target device used,
 | sam_e70_xult_freertos.X         | MPLABX | ATSAME70Q21B        | [SAME70 Xplained Ultra Board](#config_4)                                   |
 | sam_g55_xpro.X                  | MPLABX | ATSAMG55J19         | [SAMG55 Xplained Pro Board](#config_6)                                     |
 | sam_v71_xult.X                  | MPLABX | ATSAMV71Q21B        | [SAMV71 Xplained Ultra board](config_5)                                    |
+| pic32cz_ca80_curiosity_ultra.X  | MPLABX | PIC32CZ8110CA80208  | [PIC32CZ Curiosity Development Board](#config_23)                                     |
+
 
 ## <a name="config_title"></a> Configuring the Hardware
 
@@ -73,6 +75,13 @@ Following table gives the details of project configurations, target device used,
 - Jumper titled "USB VBUS" must be shorted between PC09 and VBUS (positions 2 and 3)
 - Use TARGET USB connector on the board to connect the USB Device to the USB Host PC.
 - LED0 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
+
+### <a name="config_23"></a> PIC32CZ Curiosity Development Board
+
+- Use the USB micro-B "USB DEVICE" connector (J102) to connect the USB Device to the USB Host PC.
+- LED0 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
+- Press the switch SW0 to trigger communication from the USB Device to the USB Host.
+
 
 ### <a name="config_6"></a> [SAMG55 Xplained Pro Board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/ATSAMG55-XPRO)
 
