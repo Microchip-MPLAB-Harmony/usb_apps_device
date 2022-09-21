@@ -29,7 +29,7 @@ Following table gives the details of project configurations, target device used,
 | pic32mz_ef_curiosity_2_0.X      | MPLABX | PIC32MZ2048EFM144   | [Curiosity PIC32MZ EF 2.0 Development Board](#config_15)                   |
 | sam_9x60_ek_iar.IAR             | IAR    | SAM9X60             | [SAM9X60-EK Evaluation Board](#config_9)                                   |
 | sam_e54_xpro.X                  | MPLABX | ATSAME54P20A        | [SAME54 Xplained Pro Board](#config_3)                                    |
-
+pic32cz_ca80_curiosity_ultra.X    | MPLABX | PIC32CZ8110CA80208  | [PIC32CZ Curiosity Development Board](#config_23)      
 ## <a name="config_title"></a> Configuring the Hardware
 
 ### <a name="config_15"></a> [Curiosity PIC32MZ EF 2.0 Development Board](https://www.microchip.com/Developmenttools/ProductDetails/DM320209)
@@ -60,6 +60,14 @@ Following table gives the details of project configurations, target device used,
 - LED0 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
 
 
+### <a name="config_23"></a> PIC32CZ Curiosity Development Board
+
+- Use the USB micro-B "USB DEVICE" connector (J102) to connect the USB Device to the USB Host PC.
+- The CDC USB (UART to USB) interface on this board is served by the PKOB connector (DEBUG_USB). Connecting this to the PC will create a COM port on the PC Host.
+- LED0 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
+
+
+
 ## Running the Application
 
 Generic / Text Only driver simply outputs the data to the connected USB printer in raw format without performing any translation on the data to be printed. 
@@ -85,7 +93,7 @@ The demo board attached to the host PC enumerates as *USB Printing Support* in D
 
 At this point, a new device by the name *Generic Text Printer Demo* should be available under Control Panel -> Devices and Printers as shown below. 
 
-    ![Control Panel](images/printer_figure_3.png)
+![Control Panel](images/printer_figure_3.png)
 
 Follow the below steps to add *Generic/Text Only* printer and link it to the attached USB printer. 
  
@@ -93,31 +101,31 @@ Follow the below steps to add *Generic/Text Only* printer and link it to the att
 
 2. In the Add Printer wizard, click *Add a local printer*. 
 
-    ![Control Panel](images/printer_figure_4.png)
+![Control Panel](images/printer_figure_4.png)
 
 3. In the printer port selection option, choose *Use an existing port* and from the drop-down list, select *USB00x (Virtual printer port for USB)*. 
 
-    ![Control Panel](images/printer_figure_5.png)
+![Control Panel](images/printer_figure_5.png)
 
 4. In the printer driver selection, select *Generic* from the Manufacturer list and *Generic / Text Only* from the Printers list. 
 
-    ![Control Panel](images/printer_figure_6.png)
+![Control Panel](images/printer_figure_6.png)
 
 5. Use the default option in driver version select window and click Next. 
 
-    ![Control Panel](images/printer_figure_7.png)
+![Control Panel](images/printer_figure_7.png)
 
 6. In the printer name window, use the default name *Generic / Text Only* or provide any other name and click Next. 
 
-    ![Control Panel](images/printer_figure_8.png)
+![Control Panel](images/printer_figure_8.png)
 
 7. Click Finish to complete the Add printer wizard. 
 
-    ![Control Panel](images/printer_figure_9.png)
+![Control Panel](images/printer_figure_9.png)
 
 8. At this point, a new printer icon with the name provided in step #6 should be visible under Devices and Printers window as shown below. 
 
-    ![Control Panel](images/printer_figure_10.png)
+![Control Panel](images/printer_figure_10.png)
 
 # Print test page
 
