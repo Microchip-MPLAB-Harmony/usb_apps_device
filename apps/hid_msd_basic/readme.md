@@ -33,7 +33,8 @@ Following table gives the details of project configurations, target device used,
 | sam_d21_xpro.X                  | MPLABX | ATSAMD21J18A        | [SAMD21 Xplained Pro Board](#config_2)                                    |
 | sam_e70_xult.X                  | MPLABX | ATSAME70Q21B        | [SAME70 Xplained Ultra Board](#config_4)                                  |
 | sam_e54_xpro.X                  | MPLABX | ATSAME54P20A        | [SAME54 Xplained Pro Board](#config_3)                          |
-
+| pic32cz_ca80_curiosity_ultra.X  | MPLABX | PIC32CZ8110CA80208  | [PIC32CZ Curiosity Development 
+Board](#config_23)                         |
 ## <a name="config_title"></a> Configuring the Hardware
 
 ### <a name="config_15"></a> [Curiosity PIC32MZ EF 2.0 Development Board](https://www.microchip.com/Developmenttools/ProductDetails/DM320209)
@@ -71,6 +72,12 @@ Following table gives the details of project configurations, target device used,
 - Pressing the LED Toggle button on the USB Host PC Utility toggles LED3.
 - The USB Host PC utility monitors SW1 switch press on the board.
 
+### <a name="config_23"></a> PIC32CZ Curiosity Development Board
+
+- Use TARGET USB connector J102 on the board to connect the USB Device to the USB Host PC.
+- LED1 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
+- Pressing the LED Toggle button on the USB Host PC Utility toggles LED1.
+- The USB Host PC utility monitors the switch SW0 switch press on the board
 
 ## Running the HID Application
 
