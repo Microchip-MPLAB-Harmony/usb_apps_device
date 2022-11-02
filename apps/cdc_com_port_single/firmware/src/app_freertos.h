@@ -5,7 +5,7 @@
     Microchip Technology Inc.
 
   File Name:
-    app.h
+    app_freertos.h
 
   Summary:
     This header file provides prototypes and definitions for the application.
