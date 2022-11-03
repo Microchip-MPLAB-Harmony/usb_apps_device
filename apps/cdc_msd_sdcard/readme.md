@@ -35,6 +35,7 @@ Following table gives the details of project configurations, target device used,
 | sam_a5d27_som1_ek.X             | MPLABX | ATSAMA5D27C         | [SAMA5D27 SOM1 Kit1](#config_18)                                           |
 | sam_a5d27_wlsom1_ek1.X          | MPLABX | ATSAMA5D27C         | [ATSAMA5D27 WLSOM1 EK1](#config_19)                                        |
 | sam_a7g5_ek.X                   | MPLABX | SAMA7G54            | [SAMA7G5 EK Board](#config_21)                                             |
+| pic32cz_ca80_curiosity_ultra.X  | MPLABX | PIC32CZ8110CA80208  | [PIC32CZ Curiosity Development Board](#config_23)                                              |
 
 
 ## <a name="config_title"></a> Configuring the Hardware
@@ -128,6 +129,16 @@ Following table gives the details of project configurations, target device used,
 - Connect the USB MicroAB connector (J7) to the computer using an USB cable.
 - RGB LED turning to Green indicates USB Device Configuration Set Complete event (The USB device functionality has been activated by the USB Host).
 - Press the USER BUTTON SW1 to trigger communication from the USB Device to the USB Host.
+
+
+### <a name="config_23"></a> PIC32CZ Curiosity Development Board
+
+- To run the demo, the following additional hardware is required:
+    - micro-sd card 
+- Insert the SD card into the SD Card Connector (J600) on the board.
+- Use the USB micro-B port J102 to connect the USB Device to the USB Host PC.
+- LED0 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
+- Press the switch SW0 to trigger communication from the USB Device to the USB Host.
 
 
 ## Running the Application
