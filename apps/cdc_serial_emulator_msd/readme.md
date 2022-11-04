@@ -28,6 +28,8 @@ Following table gives the details of project configurations, target device used,
 | Project Name            | IDE    | Target Device   | Hardware / Configuration                       |
 | ----------------------- | ------ | --------------- | ---------------------------------------------- |
 | pic32mz_ef_curiosity_2_0.X        | MPLABX | PIC32MZ2048EFM144   | [Curiosity PIC32MZ EF 2.0 Development Board](#config_15)                   |
+| pic32cz_ca80_curiosity_ultra.X     | MPLABX | PIC32CZ8110CA80208  | [PIC32CZ Curiosity Development
+ Board](#config_23)                  |
 
 ## <a name="config_title"></a> Configuring the Hardware
 
@@ -36,6 +38,13 @@ Following table gives the details of project configurations, target device used,
 - Use the USB micro-B port J201 to connect the USB Device to the USB Host PC.
 - LED1 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
 - The CDC USB (UART to USB) interface on this board is served by the DEBUG_USB connector J700. Connecting this to the PC will create a COM port on the PC Host.
+
+
+### <a name="config_23"></a> PIC32CZ Curiosity Development Board
+
+- Use the USB micro-B port J102 to connect the USB Device to the USB Host PC.
+- LED0 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
+- The CDC USB (UART to USB) interface on this board is served by the DEBUG_USB connector J200. Connecting this to the PC will create a COM port on the PC Host.
 
 ## Running the Application
 
