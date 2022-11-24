@@ -272,6 +272,7 @@
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
       <itemPath>../src/app.c</itemPath>
+      <itemPath>../src/config/pic32mz_ef_curiosity_2_0/diskImage.c</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>

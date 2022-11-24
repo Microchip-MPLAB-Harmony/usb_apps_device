@@ -353,6 +353,7 @@
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
       <itemPath>../src/app.c</itemPath>
+      <itemPath>../src/config/pic32mx470_curiosity/diskImage.c</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
