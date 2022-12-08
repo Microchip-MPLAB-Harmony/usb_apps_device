@@ -1,0 +1,14 @@
+format_version: v1.0
+configName: pic32ck_gc01_curiosity_ultra
+folderName: pic32ck_gc01_curiosity_ultra
+frameworkPath: D:\Harmony3
+processor: PIC32CK2051GC01144
+projectName: pic32ck_gc01_curiosity_ultra
+settings:
+  PackageFilter: ''
+  FORCE_OPTIMIZATION: 'false'
+  GENERATE_BACKUP: 'true'
+  TRUSTZONE: 'false'
+  CMSISPath: dev_packs\arm\CMSIS\5.8.0
+  MERGE_STRATEGY: USER_ALL
+  DFPPath: dev_packs\Microchip\PIC32CK-GC_DFP\1.0.5\PIC32CK-GC01\atdf\PIC32CK2051GC01144.atdf
