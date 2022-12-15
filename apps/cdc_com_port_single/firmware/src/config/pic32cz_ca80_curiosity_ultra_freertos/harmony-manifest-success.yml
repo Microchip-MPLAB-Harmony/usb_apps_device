@@ -4,19 +4,19 @@
 
 
 project: cdc_com_port_single
-creation_date: 2022-11-03T21:27:39.647+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+creation_date: 2022-12-14T23:12:55.580+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
 operating_system: Windows 10
 mhc_mode: Standalone            # [IDE|Standalone|Headless]
-mhc_version: v3.8.5
+mhc_version: NA
 mplabx_version: NA        # if MPLAB X plugin only
 plugin_version: NA        # if MPLAB X plugin only
 compiler: xc32
 
 modules:
-    - {name: "csp", version: "v3.13.1"}
+    - {name: "csp", version: "v3.15.0-E1"}
     - {name: "core", version: "v3.11.1"}
-    - {name: "dev_packs", version: "unknown"}
-    - {name: "usb", version: "unknown"}
-    - {name: "bsp", version: "unknown"}
+    - {name: "dev_packs", version: "v3.15.0-E1"}
+    - {name: "usb", version: "v3.11.0-E1"}
+    - {name: "bsp", version: "v3.15.0-E1"}
     - {name: "CMSIS-FreeRTOS", version: "v10.4.6"}
 
