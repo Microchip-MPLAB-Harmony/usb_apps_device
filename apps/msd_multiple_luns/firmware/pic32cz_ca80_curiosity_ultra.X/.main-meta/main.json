@@ -1,0 +1,77 @@
+{
+	"metaDataVersion": "1.0.0",
+	"category": "com.microchip.ide.project",
+	"content": {
+		"metaDataVersion": "1.3.0",
+		"name": "com.microchip.mcu32.mplabx.project.usb_apps_device_msd_multiple_luns_pic32cz_ca80_curiosity_ultra",
+		"version": "3.5.0-E1",
+		"displayName": "USB MSD with Multiple Drives Application Example for PIC32CZ_CA Family",
+		"projectName": "msd_multiple_luns_pic32cz_ca80_curiosity_ultra",
+		"shortDescription":  "This application demonstrates the creation of a USB device with multiple drives or logical units (LUN)",
+		"ide": {
+			"name": "MPLABX",
+			"semverRange": ">=6.05.0"
+		},
+		"compiler": [
+			{
+				"name": "XC32",
+				"semverRange": ">=4.2.0"
+			}
+		],
+		"dfp": {
+			"name": "PIC32CZ-CA80_DFP",
+			"semverRange": "^1.0.17"
+		},
+		"configurator": {
+			"name": "MCC",
+			"semverRange": ">=5.2.2"
+		},
+		"device": {
+			"metaDataVersion": "1.0.0",
+			"category": "com.microchip.portal.contentRef",
+			"content": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.device",
+				"name": "PIC32CZ8110CA80208",
+				"versionRange": "*"
+			}
+		},
+		"author": "Microchip",
+		"subcategories": [
+			[
+				"Development Kit",
+				"PIC32CZ-CA80 Curiosity Ultra board"
+			],
+			[
+				"Harmony",
+				"Middleware",
+				"USB"
+			],
+			[
+				"Peripherals",
+				"USB"
+			]
+		],
+		"peripherals": [
+			"USB"
+		],
+		"keywords": [
+			"Harmony",
+			"Middleware",
+			"USB",
+			"USB Device Class",
+			"MSD"
+		],
+		"additionalData": {
+			"longDescription": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.portal.fileRef",
+				"content": {
+					"metaDataVersion": "1.0.0",
+					"fileName": "./../../readme.md",
+					"mimeType": "text/markdown"
+				}
+			}
+		}
+	}
+}
