@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2022-03-14T05:06:26Z */
+/* file generated from device description version 2022-07-07T22:59:24Z */
 #ifndef _PIC32CZCA80_SDMMC_COMPONENT_H_
 #define _PIC32CZCA80_SDMMC_COMPONENT_H_
 
