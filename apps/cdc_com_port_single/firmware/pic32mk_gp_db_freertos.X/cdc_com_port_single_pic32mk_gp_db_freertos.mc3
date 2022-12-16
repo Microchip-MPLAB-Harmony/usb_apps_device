@@ -1,5 +1,24 @@
-<config configName="pic32mk_gp_db_freertos" projectName="cdc_com_port_single_pic32mk_gp_db_freertos" configVersion="1.1" device="PIC32MK1024GPE100" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.4.1">
-   <usedPackages class="java.util.ArrayList"/>
+<config configName="pic32mk_gp_db_freertos" projectName="cdc_com_port_single_pic32mk_gp_db_freertos" configVersion="1.1" device="PIC32MK1024GPE100" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.4.14">
+   <usedPackages class="java.util.ArrayList">
+      <package packageName="CMSIS-FreeRTOS" version="10.4.6" contentType="HARMONY">
+         <modules class="java.util.ArrayList"/>
+      </package>
+      <package packageName="bsp" version="3.15.0-E1" contentType="HARMONY">
+         <modules class="java.util.ArrayList"/>
+      </package>
+      <package packageName="core" version="3.11.1" contentType="HARMONY">
+         <modules class="java.util.ArrayList"/>
+      </package>
+      <package packageName="csp" version="3.15.0-E1" contentType="HARMONY">
+         <modules class="java.util.ArrayList"/>
+      </package>
+      <package packageName="dev_packs" version="3.15.0-E1" contentType="HARMONY">
+         <modules class="java.util.ArrayList"/>
+      </package>
+      <package packageName="usb" version="" contentType="HARMONY">
+         <modules class="java.util.ArrayList"/>
+      </package>
+   </usedPackages>
    <usedClasses class="java.util.TreeMap">
       <entry>
          <string>BSP_PIC32MK_GP_Development_Kit</string>
@@ -801,7 +820,8 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="!@#harmonyUserData"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;UserData&gt;
   &lt;UserData dnOrder=&quot;0&quot;&gt;
-    &lt;ComponentGraph dnOrder=&quot;0&quot; id=&quot;__ROOTVIEW&quot;&gt;
+    &lt;GraphSettings canvasHeight=&quot;361&quot; canvasWidth=&quot;560&quot; dnOrder=&quot;0&quot;/&gt;
+    &lt;ComponentGraph dnOrder=&quot;1&quot; id=&quot;__ROOTVIEW&quot;&gt;
       &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
         &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;BSP_PIC32MK_GP_Development_Kit&quot; x=&quot;30&quot; y=&quot;60&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;FreeRTOS&quot; x=&quot;187&quot; y=&quot;114&quot;/&gt;
@@ -811,10 +831,9 @@
         &lt;ElementPosition dnOrder=&quot;5&quot; id=&quot;drv_usbfs_index&quot; x=&quot;72&quot; y=&quot;209&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;6&quot; id=&quot;peripheral_usb_1&quot; x=&quot;3&quot; y=&quot;250&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;7&quot; id=&quot;usb_device&quot; x=&quot;232&quot; y=&quot;210&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;8&quot; id=&quot;usb_device_cdc&quot; x=&quot;368&quot; y=&quot;210&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;8&quot; id=&quot;usb_device_cdc&quot; x=&quot;387&quot; y=&quot;199&quot;/&gt;
       &lt;/ElementPositions&gt;
     &lt;/ComponentGraph&gt;
-    &lt;GraphSettings canvasHeight=&quot;400&quot; canvasWidth=&quot;400&quot; dnOrder=&quot;1&quot;/&gt;
   &lt;/UserData&gt;
 &lt;/UserData&gt;
 </value>
@@ -3036,17 +3055,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;usb_device_0&gt;
   &lt;usb_device_0 dnOrder=&quot;0&quot;&gt;
     &lt;Attachments dnOrder=&quot;0&quot;&gt;
-      &lt;DirectCapability dnOrder=&quot;0&quot; id=&quot;USB Device&quot;&gt;
-        &lt;Attributes dnOrder=&quot;0&quot;&gt;
-          &lt;String dnOrder=&quot;0&quot; id=&quot;targetComponentID&quot;&gt;
-            &lt;Value dnOrder=&quot;0&quot;&gt;usb_device_cdc_0&lt;/Value&gt;
-          &lt;/String&gt;
-          &lt;String dnOrder=&quot;1&quot; id=&quot;targetAttachmentID&quot;&gt;
-            &lt;Value dnOrder=&quot;0&quot;&gt;usb_device_dependency&lt;/Value&gt;
-          &lt;/String&gt;
-        &lt;/Attributes&gt;
-      &lt;/DirectCapability&gt;
-      &lt;DirectDependency dnOrder=&quot;1&quot; id=&quot;usb_driver_dependency&quot;&gt;
+      &lt;DirectDependency dnOrder=&quot;0&quot; id=&quot;usb_driver_dependency&quot;&gt;
         &lt;Attributes dnOrder=&quot;0&quot;&gt;
           &lt;String dnOrder=&quot;0&quot; id=&quot;targetComponentID&quot;&gt;
             &lt;Value dnOrder=&quot;0&quot;&gt;drv_usbfs_index_0&lt;/Value&gt;
@@ -3071,6 +3080,17 @@
   &lt;usb_device_0 dnOrder=&quot;0&quot; id=&quot;CONFIG_USB_DEVICE_CONFIG_DESCRPTR_SIZE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
       &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;usb_device_0&quot; value=&quot;67&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/usb_device_0&gt;
+&lt;/usb_device_0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="usb_device_0" name="CONFIG_USB_DEVICE_DESCRIPTOR_IAD_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;usb_device_0&gt;
+  &lt;usb_device_0 dnOrder=&quot;0&quot; id=&quot;CONFIG_USB_DEVICE_DESCRIPTOR_IAD_ENABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;usb_device_0&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
   &lt;/usb_device_0&gt;
 &lt;/usb_device_0&gt;
@@ -3186,7 +3206,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;usb_device_cdc&gt;
   &lt;usb_device_cdc dnOrder=&quot;0&quot; id=&quot;CONFIG_USB_DEVICE_CDC_QUEUE_DEPTH_COMBINED&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;usb_device_cdc&quot; value=&quot;6&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;usb_device_cdc&quot; value=&quot;9&quot;/&gt;
     &lt;/Values&gt;
   &lt;/usb_device_cdc&gt;
 &lt;/usb_device_cdc&gt;
@@ -3203,7 +3223,7 @@
             &lt;Value dnOrder=&quot;0&quot;&gt;usb_device_0&lt;/Value&gt;
           &lt;/String&gt;
           &lt;String dnOrder=&quot;1&quot; id=&quot;targetAttachmentID&quot;&gt;
-            &lt;Value dnOrder=&quot;0&quot;&gt;USB&amp;amp;#160;Device&lt;/Value&gt;
+            &lt;Value dnOrder=&quot;0&quot;&gt;usb_device&lt;/Value&gt;
           &lt;/String&gt;
         &lt;/Attributes&gt;
       &lt;/DirectDependency&gt;
@@ -3341,7 +3361,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\task.h</file>
-         <hash>2bdfb8e3c1a76a5ccacb1b7815ca9acb63d1ba1f1bd29e5a75757d5e186c5056</hash>
+         <hash>85a11a834d04120402087ac61190566f893480e9d6c8fe903218330dc4ea7d30</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db_freertos\driver\usb\usbfs\src\templates\usb_SOFThreshold_Default.h</file>
@@ -3349,7 +3369,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\timers.c</file>
-         <hash>0d16405e621a2c4b003b5f0324b9713cd4865364133df6f742f482a6b2dbc773</hash>
+         <hash>dae8ab1093eed0eebd86eef7f4e777e3d249d98b75528ff3841d41ce1c8f3fa6</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db_freertos\driver\usb\usbfs\src\templates\usb_AutomaticSuspend_Default.h</file>
@@ -3365,7 +3385,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\stream_buffer.h</file>
-         <hash>0607fcca1927ba782a29a3814481d69db3569e6e53a68ebf2c01f5598a3af2b8</hash>
+         <hash>43bd2a4bf5d6495e04c8409187d8f31dfaee58d8f94d7e3a4fd9830e5d7e68dc</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db_freertos\driver\usb\usbfs\src\drv_usbfs.c</file>
@@ -3373,7 +3393,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\portable\MPLAB\PIC32MK\portmacro.h</file>
-         <hash>e484807545c5ec6f97941ab2795ac8ed021ee200c9f45a3629326d8de966fdc7</hash>
+         <hash>61455c4b2289f373a8988c000df2478cc81f9d7d202869505392a75ade185d81</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db_freertos\usb\usb_cdc.h</file>
@@ -3385,11 +3405,11 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\list.h</file>
-         <hash>f9b239f168976f7b167e054fa72616826f55ae4d74d76b87c9e70b2df079363f</hash>
+         <hash>f288a68b8559a1913dd663136711f7adcaf8b3430627d7102978be4d808a02eb</hash>
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\croutine.h</file>
-         <hash>8df4c5eec7eb30262f09b7c47fc2eb0534a27721293b0d260a3398846494f9ac</hash>
+         <hash>b6da8ad0cb09303c87eb634679b97f56001c14f45acd1378103504699a95cad4</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db_freertos\osal\osal.h</file>
@@ -3405,7 +3425,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db_freertos\usb\src\usb_device.c</file>
-         <hash>b530b020cfa777eed5e76731e125a07d285ad49f2014ccf93858db1581a40d96</hash>
+         <hash>e2299e7132aaf91acd6857a827520f8bd5ecdc40d8ba2e6c4018b8441064a6cb</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db_freertos\driver\usb\usbfs\src\templates\usb_StopInIdle_Unsupported.h</file>
@@ -3433,7 +3453,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\mpu_prototypes.h</file>
-         <hash>3fafd21399ef619a55b2f8112750d750685c8ae1cb458363d21ee37a105ac6e7</hash>
+         <hash>783d9a41c90817eec55d9317475cc2663a785fc9a955c06d3207fcee6e0ec080</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db_freertos\driver\usb\usbfs\src\templates\usb_EPnHandshake_Default.h</file>
@@ -3441,7 +3461,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\FreeRTOS.h</file>
-         <hash>b7a81501c3f4ff9537df5c9a5e0231f37638cdc8324965ae10064128fded840f</hash>
+         <hash>c8d9b7a52d092f37b4c3b821806bd6e8a30dbcc600960f9aed2b2f10f965c09f</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db_freertos\driver\usb\usbfs\src\templates\usb_Suspend_Default.h</file>
@@ -3497,7 +3517,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\deprecated_definitions.h</file>
-         <hash>382f8a7a0e00240fb69911dff8d8515248beb9dadfe77c22c4e5544f49cc76eb</hash>
+         <hash>1947473678873963f3193497280d907f59a5936f92df6395327f7ca684cb1aa6</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db_freertos\osal\osal_freertos.c</file>
@@ -3545,7 +3565,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db_freertos\definitions.h</file>
-         <hash>abf1468a99074c4220280a7aa1fbf26daf4cee4eea2045ca414e96e48c6ecb87</hash>
+         <hash>0babf6ce6fc5c99f7e3c12a7bf59bfbdf4747ac2c55a2a95182fa5c632bb6305</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db_freertos\system\int\src\sys_int.c</file>
@@ -3557,7 +3577,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\timers.h</file>
-         <hash>cfd11f78d92b398e8347f2b55dc1e79dffce83f63f7e570c6fc821334681ad12</hash>
+         <hash>2bf5b5f5d83684c1e6d90e5bd17da9de41d38ed61ec0410f94595ff343f89174</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db_freertos\osal\osal_freertos.h</file>
@@ -3605,7 +3625,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\portable\MemMang\heap_1.c</file>
-         <hash>6d8eb84e5171bce4d5cde80abc575ebd7d81ac007b7733f34d5032bac93f1748</hash>
+         <hash>d03a08079e678cc6e6a1e2105684ab0082d190bbb731f6807d75e1aca260e98f</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db_freertos\driver\usb\usbfs\src\usbfs_registers.h</file>
@@ -3617,7 +3637,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\stack_macros.h</file>
-         <hash>7d1d30b6c9ae34bebb26b14402f78a59a35ae826f460a1ad28534c9590b32151</hash>
+         <hash>06b5b66a9b98ad4998c82d353c0108b9db1a846951b8865cbdeeef90c5bbe2fe</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db_freertos\driver\usb\usbfs\src\templates\usb_ALL_Interrupt_Default.h</file>
@@ -3673,7 +3693,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\queue.c</file>
-         <hash>06a153c1ce111213af32dfc8797bd2e5c7819e264dfa338b4049f058dc1edb11</hash>
+         <hash>4452e3b0e6446b74c7d010d308072ba0a35c1f92bcf3882a54bf3796a72517aa</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db_freertos\driver\usb\usbfs\src\templates\usb_BufferFreeze_Unsupported.h</file>
@@ -3717,7 +3737,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db_freertos\usb_device_init_data_0.c</file>
-         <hash>d7131083333c272e19e709b36694723a840a24d5d4e33b0db335429bac8cfc75</hash>
+         <hash>55123356269644f557f585c8d0b93818c0c351748712d0d524e716ceae374b46</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db_freertos\driver\usb\usbfs\src\templates\usb_ModulePower_32Bit16Bit.h</file>
@@ -3725,7 +3745,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\portable\MPLAB\PIC32MK\ISR_Support.h</file>
-         <hash>ba52c27166e58f802aa46cfbce9bfcd9819a389574140ef78d5a88cf75529070</hash>
+         <hash>a04e11a03f2ebaaeba9f537ac0429e0655cd79f066d0c1253fc03e947b19e3b1</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db_freertos\driver\usb\usbfs\src\templates\usb_LiveSingleEndedZero_Unsupported.h</file>
@@ -3745,7 +3765,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db_freertos\system\debug\sys_debug.h</file>
-         <hash>970de73fb9806906b5429168c66ab403309d8a9cad46febab875a5e6d071525e</hash>
+         <hash>16fbc4bbf026e4713e9b835b1511411e053aaf92ab7d6a000638630576fe92b3</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db_freertos\driver\usb\usbfs\src\templates\usb_ResumeSignaling_Unsupported.h</file>
@@ -3753,7 +3773,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db_freertos\tasks.c</file>
-         <hash>26d43cdc00b1f54ee8f90d4770ef07c1a6044e3bbd7b965100e6e2a5980d8c96</hash>
+         <hash>c3d027ade97b5590b7db42df15f642e0909785bcc6eaa09fad0c71bbc75a0d55</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db_freertos\driver\usb\usbfs\src\drv_usbfs_variant_mapping.h</file>
@@ -3765,19 +3785,19 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\croutine.c</file>
-         <hash>e31cd1c9c280c919a92edc28885e9bebce589d4cfab71cefab832a73683200fb</hash>
+         <hash>4566d5abfceea128a553ecf2bbb22b9d7c9c8a1d3c1f02f9091182b5290d02fc</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db_freertos\peripheral\gpio\plib_gpio.c</file>
-         <hash>3f8e1ef99b1b2d5e7ab2c4f619859312960781d17ebdd3337c9dd608519a0c6d</hash>
+         <hash>b710e4d5de07c26bbd6cb3049516eea2697dded000dabdcdf8b23191650daf85</hash>
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\portable.h</file>
-         <hash>39795c8dded505f24f53646ecd8192251851c74f366d2a5b0aae3fbfa68c191b</hash>
+         <hash>c95eb0d549ff1c20edebfec41d73584b5a20d21df20a724084200954b9e8d252</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db_freertos\peripheral\gpio\plib_gpio.h</file>
-         <hash>15ea2461d7edacbf05de987115b0bd248d509a235df348d6a93c9feee725bcde</hash>
+         <hash>0e32805aa6433f463487977d8d301136f6ad0149dacd6c5d5fd8afe65276f0a2</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db_freertos\driver\usb\usbfs\src\templates\usb_OTG_Interrupt_Default.h</file>
@@ -3785,7 +3805,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\list.c</file>
-         <hash>e735517f308fad5dd77d03b6858c16bdbc937bb9d0754735849fc7799ebe2b59</hash>
+         <hash>21fe8dd565f9610e1ff4a6bf7bebbd16842af13d3d2294f1dc67ad279fb01d22</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db_freertos\driver\usb\usbfs\src\templates\usb_EPnTxRx_Unsupported.h</file>
@@ -3813,7 +3833,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\portable\MPLAB\PIC32MK\port_asm.S</file>
-         <hash>94ca9b503e1ffe21571e4be92cbf2811fee80e2e8cfa8112b5a6cd25aa9e6607</hash>
+         <hash>3a1162683a7695754db9cfbdaaed8fdcdea323e2d2e2a231276b1ad0b433cdf7</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db_freertos\driver\driver.h</file>
@@ -3841,7 +3861,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db_freertos\driver\usb\usbfs\src\drv_usbfs_device.c</file>
-         <hash>19a9b3d3ecbfac6a202374935180dcfdfbdf572e65ae22cfdb5111a6ec512101</hash>
+         <hash>04ed761e97236d51a52fa1cfcd5c29f8db2e7a8598d2992c88f7a75060c7ea45</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db_freertos\driver\usb\usbfs\src\templates\usb_OTG_InterruptStatus_Default.h</file>
@@ -3849,11 +3869,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db_freertos\FreeRTOSConfig.h</file>
-         <hash>5537c0b57185acba1c28108e9618a3a8496d848114e3bdb2bf0a81acc3a8304b</hash>
+         <hash>ed3e291f8c5a56de9f7c063e57c7c515e7a5d248ce1d39349209c48c2dad8862</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db_freertos\freertos_hooks.c</file>
-         <hash>9ad70cf61f23e435987222ef070cf0b4b099d56f1e8b13fcf9d69723c064bd16</hash>
+         <hash>1c31f7febed38afbcb09d11b002c5dddda98c7ed7aba9ff8f8e32b8c5f288a47</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db_freertos\driver\usb\usbfs\src\templates\usb_OTG_SessionValid_Default.h</file>
@@ -3861,7 +3881,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\queue.h</file>
-         <hash>39d58a203f1b67fdb1099293914a2af9722d223586cfc5ff06e230e047919dea</hash>
+         <hash>ff7a2139380ad0e2695bbc0d068db7a3b7e54ec41387b4c77acbe1aaa2921b7c</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db_freertos\driver\usb\usbfs\src\templates\usb_SOFThreshold_Unsupported.h</file>
@@ -3921,7 +3941,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\semphr.h</file>
-         <hash>b9b2ff28a0c80fa21443690bb28de64c8b9451cccd57e484de0bcf02fc367575</hash>
+         <hash>6bc571df5182f06bcafe5280fdf762bbba2bf1dbb7867ae3721ce2d7e3e51dae</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db_freertos\driver\usb\usbfs\src\templates\usb_ActivityPending_Unsupported.h</file>
@@ -3929,11 +3949,11 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\FreeRTOS_tasks.c</file>
-         <hash>8cb1eabe18f130b2b8980e880847f773fb12a4071c763d26c51624223b32a3a4</hash>
+         <hash>f97f4e54a7511e5aea34f583061c628bf718b1024af6ec4cff55cb50365305da</hash>
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\event_groups.c</file>
-         <hash>a72063c3977fad098a87a5430e04e9fc5b892d703e01fbe09ea907f67aacf20e</hash>
+         <hash>82542c835466f2abd0eeb2988a0bcecf3d6a14c9dd87ad4a7ca325b15afbce95</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db_freertos\toolchain_specifics.h</file>
@@ -3945,7 +3965,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db_freertos\initialization.c</file>
-         <hash>0b85c2d66e372ceeb031ce3699129c6a2ae71cf3340b28f7912b35346dbd757c</hash>
+         <hash>bd8bd776634bde8043a39d89f0d230b5be03bad5eefa5f507e5a1d04f2e396bf</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db_freertos\system\int\sys_int_mapping.h</file>
@@ -4021,7 +4041,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\projdefs.h</file>
-         <hash>399814721d9735e91d74ca07be3974edb20639acb46a6792230ff9f61f67b353</hash>
+         <hash>292c78c91dbf63a6aa028f381b1dd548d549949f4fb9fcfd97f949569e013d76</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db_freertos\driver\usb\usbfs\src\templates\usb_LiveJState_Default.h</file>
@@ -4033,7 +4053,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\message_buffer.h</file>
-         <hash>504a77558f13b66fd1eec5adf4d81e274f0b54c12880424833c24f577be0800a</hash>
+         <hash>0f5a90e8303d9aa2a9c897d6b90da50df21776c6bde7bf8c792cacffa3048c8d</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db_freertos\interrupts_a.S</file>
@@ -4053,7 +4073,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db_freertos\bsp\bsp.h</file>
-         <hash>01d3a07ac52a6e8994956d87090bb809d0b2eb30d662fdb050c61311669c7c74</hash>
+         <hash>1699e4bb40bfa03c800bdf1a16a273a54004c06df0cbaf616464cb09708783e3</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db_freertos\usb\usb_device_cdc.h</file>
@@ -4061,7 +4081,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\event_groups.h</file>
-         <hash>3b9cbd64db721c4317544700fff4e42ac68d989f71b7d610b31087bb19175839</hash>
+         <hash>a73c0b319370116d5981d5dacbabad3a775f85ae540ef70b4ced1c99c9ac6cd5</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db_freertos\bsp\bsp.c</file>
@@ -4069,7 +4089,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db_freertos\usb\usb_host.h</file>
-         <hash>8fe091b3db430b897da28d7f7effb6fffbb882d025c878a54cc5e627909a8cc2</hash>
+         <hash>4ec16dee42ae6b1bad8a7199b44750ccf0c5fa3aee5e44766e7b6dffc9979e83</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db_freertos\driver\usb\usbfs\src\templates\usb_OpModeSelect_Default.h</file>
@@ -4101,7 +4121,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\mpu_wrappers.h</file>
-         <hash>c1fc47acdb79efb0fb8a0fb8a169ae4423fdc3a6d820b2f81d49e8e077c1ed48</hash>
+         <hash>0f7a750669b24c41af51482eb76c867a1ed11c14dd4877d07433db3953d9a792</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db_freertos\driver\usb\usbfs\src\templates\usb_LiveJState_Unsupported.h</file>
@@ -4113,7 +4133,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db_freertos\stdio\xc32_monitor.c</file>
-         <hash>26e5749db654ed433fd94f6c732ef8600d0cbf5196493374cf111877c02b694e</hash>
+         <hash>858f8710d4287200a5ee7f3b3ad7c24f505aed9c05c16956ab0ff9f7bb162a6a</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db_freertos\driver\usb\usbfs\src\templates\usb_TokenEP_Unsupported.h</file>
@@ -4141,7 +4161,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\stream_buffer.c</file>
-         <hash>4376714fecad0f72dc4c8b45236591a7e0ffe24dd018382f56e8b0dfc2230b28</hash>
+         <hash>a62731cd211dd9caf70958b229d4a3a607ef12e6fbfec573a0d089f21c45f34f</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db_freertos\driver\usb\usbfs\src\templates\usb_OTG_Interrupt_Unsupported.h</file>

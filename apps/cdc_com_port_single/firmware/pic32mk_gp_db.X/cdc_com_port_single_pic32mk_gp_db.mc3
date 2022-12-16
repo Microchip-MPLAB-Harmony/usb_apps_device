@@ -1,5 +1,21 @@
-<config configName="pic32mk_gp_db" projectName="cdc_com_port_single_pic32mk_gp_db" configVersion="1.1" device="PIC32MK1024GPE100" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.4.1">
-   <usedPackages class="java.util.ArrayList"/>
+<config configName="pic32mk_gp_db" projectName="cdc_com_port_single_pic32mk_gp_db" configVersion="1.1" device="PIC32MK1024GPE100" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.4.14">
+   <usedPackages class="java.util.ArrayList">
+      <package packageName="bsp" version="3.15.0-E1" contentType="HARMONY">
+         <modules class="java.util.ArrayList"/>
+      </package>
+      <package packageName="core" version="3.11.1" contentType="HARMONY">
+         <modules class="java.util.ArrayList"/>
+      </package>
+      <package packageName="csp" version="3.15.0-E1" contentType="HARMONY">
+         <modules class="java.util.ArrayList"/>
+      </package>
+      <package packageName="dev_packs" version="3.15.0-E1" contentType="HARMONY">
+         <modules class="java.util.ArrayList"/>
+      </package>
+      <package packageName="usb" version="" contentType="HARMONY">
+         <modules class="java.util.ArrayList"/>
+      </package>
+   </usedPackages>
    <usedClasses class="java.util.TreeMap">
       <entry>
          <string>BSP_PIC32MK_GP_Development_Kit</string>
@@ -2600,17 +2616,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;usb_device_0&gt;
   &lt;usb_device_0 dnOrder=&quot;0&quot;&gt;
     &lt;Attachments dnOrder=&quot;0&quot;&gt;
-      &lt;DirectCapability dnOrder=&quot;0&quot; id=&quot;USB Device&quot;&gt;
-        &lt;Attributes dnOrder=&quot;0&quot;&gt;
-          &lt;String dnOrder=&quot;0&quot; id=&quot;targetComponentID&quot;&gt;
-            &lt;Value dnOrder=&quot;0&quot;&gt;usb_device_cdc_0&lt;/Value&gt;
-          &lt;/String&gt;
-          &lt;String dnOrder=&quot;1&quot; id=&quot;targetAttachmentID&quot;&gt;
-            &lt;Value dnOrder=&quot;0&quot;&gt;usb_device_dependency&lt;/Value&gt;
-          &lt;/String&gt;
-        &lt;/Attributes&gt;
-      &lt;/DirectCapability&gt;
-      &lt;DirectDependency dnOrder=&quot;1&quot; id=&quot;usb_driver_dependency&quot;&gt;
+      &lt;DirectDependency dnOrder=&quot;0&quot; id=&quot;usb_driver_dependency&quot;&gt;
         &lt;Attributes dnOrder=&quot;0&quot;&gt;
           &lt;String dnOrder=&quot;0&quot; id=&quot;targetComponentID&quot;&gt;
             &lt;Value dnOrder=&quot;0&quot;&gt;drv_usbfs_index_0&lt;/Value&gt;
@@ -2635,6 +2641,17 @@
   &lt;usb_device_0 dnOrder=&quot;0&quot; id=&quot;CONFIG_USB_DEVICE_CONFIG_DESCRPTR_SIZE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
       &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;usb_device_0&quot; value=&quot;67&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/usb_device_0&gt;
+&lt;/usb_device_0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="usb_device_0" name="CONFIG_USB_DEVICE_DESCRIPTOR_IAD_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;usb_device_0&gt;
+  &lt;usb_device_0 dnOrder=&quot;0&quot; id=&quot;CONFIG_USB_DEVICE_DESCRIPTOR_IAD_ENABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;usb_device_0&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
   &lt;/usb_device_0&gt;
 &lt;/usb_device_0&gt;
@@ -2750,7 +2767,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;usb_device_cdc&gt;
   &lt;usb_device_cdc dnOrder=&quot;0&quot; id=&quot;CONFIG_USB_DEVICE_CDC_QUEUE_DEPTH_COMBINED&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;usb_device_cdc&quot; value=&quot;6&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;usb_device_cdc&quot; value=&quot;9&quot;/&gt;
     &lt;/Values&gt;
   &lt;/usb_device_cdc&gt;
 &lt;/usb_device_cdc&gt;
@@ -2767,7 +2784,7 @@
             &lt;Value dnOrder=&quot;0&quot;&gt;usb_device_0&lt;/Value&gt;
           &lt;/String&gt;
           &lt;String dnOrder=&quot;1&quot; id=&quot;targetAttachmentID&quot;&gt;
-            &lt;Value dnOrder=&quot;0&quot;&gt;USB&amp;amp;#160;Device&lt;/Value&gt;
+            &lt;Value dnOrder=&quot;0&quot;&gt;usb_device&lt;/Value&gt;
           &lt;/String&gt;
         &lt;/Attributes&gt;
       &lt;/DirectDependency&gt;
@@ -2969,7 +2986,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\usb_device_init_data_0.c</file>
-         <hash>d7131083333c272e19e709b36694723a840a24d5d4e33b0db335429bac8cfc75</hash>
+         <hash>55123356269644f557f585c8d0b93818c0c351748712d0d524e716ceae374b46</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\driver\usb\usbfs\src\templates\usb_EPnTxRx_Unsupported.h</file>
@@ -3045,7 +3062,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\usb\usb_host.h</file>
-         <hash>8fe091b3db430b897da28d7f7effb6fffbb882d025c878a54cc5e627909a8cc2</hash>
+         <hash>4ec16dee42ae6b1bad8a7199b44750ccf0c5fa3aee5e44766e7b6dffc9979e83</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\driver\usb\usbfs\src\templates\usb_OTG_InterruptStatus_Default.h</file>
@@ -3069,7 +3086,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\peripheral\gpio\plib_gpio.c</file>
-         <hash>3f8e1ef99b1b2d5e7ab2c4f619859312960781d17ebdd3337c9dd608519a0c6d</hash>
+         <hash>b710e4d5de07c26bbd6cb3049516eea2697dded000dabdcdf8b23191650daf85</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\driver\usb\usbfs\src\templates\usb_OTG_Interrupt_Default.h</file>
@@ -3137,7 +3154,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\driver\usb\usbfs\src\drv_usbfs_device.c</file>
-         <hash>19a9b3d3ecbfac6a202374935180dcfdfbdf572e65ae22cfdb5111a6ec512101</hash>
+         <hash>04ed761e97236d51a52fa1cfcd5c29f8db2e7a8598d2992c88f7a75060c7ea45</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\driver\usb\usbfs\src\templates\usb_EP0NAKRetry_Unsupported.h</file>
@@ -3321,7 +3338,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\initialization.c</file>
-         <hash>012d1d32ba6f7113d6eeedd81202181d56f98ab12901cbf46c00311ecb3d6d37</hash>
+         <hash>750a89ce53b3dd2c8e7c112c8ef10a4bb85ceb3ec6061a04073c923564eb946b</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\system\system.h</file>
@@ -3385,7 +3402,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\peripheral\gpio\plib_gpio.h</file>
-         <hash>15ea2461d7edacbf05de987115b0bd248d509a235df348d6a93c9feee725bcde</hash>
+         <hash>0e32805aa6433f463487977d8d301136f6ad0149dacd6c5d5fd8afe65276f0a2</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\driver\usb\usbfs\src\templates\usb_ResumeSignaling_Default.h</file>
@@ -3393,7 +3410,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\system\debug\sys_debug.h</file>
-         <hash>970de73fb9806906b5429168c66ab403309d8a9cad46febab875a5e6d071525e</hash>
+         <hash>16fbc4bbf026e4713e9b835b1511411e053aaf92ab7d6a000638630576fe92b3</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\driver\usb\usbfs\src\templates\usb_StartOfFrames_Unsupported.h</file>
@@ -3401,7 +3418,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\usb\src\usb_device.c</file>
-         <hash>b530b020cfa777eed5e76731e125a07d285ad49f2014ccf93858db1581a40d96</hash>
+         <hash>e2299e7132aaf91acd6857a827520f8bd5ecdc40d8ba2e6c4018b8441064a6cb</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\driver\usb\usbfs\src\templates\usb_EPnHandshake_Unsupported.h</file>
@@ -3445,7 +3462,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\definitions.h</file>
-         <hash>0810ec7e3792546ad39fef21e8eb9efd01cec7460ae333605d2ef05a82e126e5</hash>
+         <hash>a8712c7f03e6cb3618f2c45590438a342b969340664559b31f6939395cc9d44b</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\driver\usb\usbfs\src\templates\usb_LastDirection_Unsupported.h</file>
@@ -3465,7 +3482,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\stdio\xc32_monitor.c</file>
-         <hash>26e5749db654ed433fd94f6c732ef8600d0cbf5196493374cf111877c02b694e</hash>
+         <hash>858f8710d4287200a5ee7f3b3ad7c24f505aed9c05c16956ab0ff9f7bb162a6a</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\driver\usb\usbfs\src\templates\usb_ModuleBusy_Default.h</file>
@@ -3529,7 +3546,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\peripheral\evic\plib_evic.c</file>
-         <hash>30f0b3c837d9eda3af5c66ea6fd4981be36140327c972db2767654f0488131c2</hash>
+         <hash>f92ee75050bc290d14d268b368e23b874f70f15eb1f9f1db0c5fff39ed41e11d</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\bsp\bsp.c</file>
@@ -3541,11 +3558,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\tasks.c</file>
-         <hash>8d8d6d2d7715b3111b7db4b020f0ce9717ef6c173921976e0626b08265910acf</hash>
+         <hash>2aa581486b826e7ae102cd10d4074d499bd16778297d7486769efa40be665ae7</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\bsp\bsp.h</file>
-         <hash>01d3a07ac52a6e8994956d87090bb809d0b2eb30d662fdb050c61311669c7c74</hash>
+         <hash>1699e4bb40bfa03c800bdf1a16a273a54004c06df0cbaf616464cb09708783e3</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\exceptions.c</file>

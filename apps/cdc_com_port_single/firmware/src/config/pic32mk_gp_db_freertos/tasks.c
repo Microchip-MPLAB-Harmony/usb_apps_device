@@ -59,11 +59,11 @@
 // Section: RTOS "Tasks" Routine
 // *****************************************************************************
 // *****************************************************************************
-void _USB_DEVICE_Tasks(  void *pvParameters  )
+void _USB_DEVICE_Tasks_0(  void *pvParameters  )
 {
     while(1)
     {
-				 /* USB Device layer tasks routine */
+                 /* USB Device layer tasks routine */
         USB_DEVICE_Tasks(sysObj.usbDevObject0);
         vTaskDelay(10 / portTICK_PERIOD_MS);
     }
@@ -107,8 +107,8 @@ void SYS_Tasks ( void )
 
     /* Maintain Middleware & Other Libraries */
         /* Create OS Thread for USB_DEVICE_Tasks. */
-    xTaskCreate( _USB_DEVICE_Tasks,
-        "USB_DEVICE_TASKS",
+    xTaskCreate( _USB_DEVICE_Tasks_0,
+        "USB_DEVICE_TASKS_0",
         1024,
         (void*)NULL,
         1,
