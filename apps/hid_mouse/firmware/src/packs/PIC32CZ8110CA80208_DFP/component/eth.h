@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2022-03-14T05:06:26Z */
+/* file generated from device description version 2022-07-07T22:59:24Z */
 #ifndef _PIC32CZCA80_ETH_COMPONENT_H_
 #define _PIC32CZCA80_ETH_COMPONENT_H_
 
@@ -1534,7 +1534,7 @@
 #define ETH_TLPITI_Msk                        _UINT32_(0x00FFFFFF)                                 /* (ETH_TLPITI) Register Mask  */
 
 
-/* -------- ETH_ISRQ : (ETH Offset: 0x1400) ( R/ 32) Interrupt Status Register Queues -------- */
+/* -------- ETH_ISRQ : (ETH Offset: 0x1400) (R/W 32) Interrupt Status Register Queues -------- */
 #define ETH_ISRQ_RESETVALUE                   _UINT32_(0x00)                                       /*  (ETH_ISRQ) Interrupt Status Register Queues  Reset Value */
 
 #define ETH_ISRQ_RCOMP_Pos                    _UINT32_(1)                                          /* (ETH_ISRQ) Receive Complete Position */
@@ -2041,7 +2041,7 @@ typedef struct
   __I   uint32_t                       ETH_TLPITR;         /**< Offset: 0x1278 (R/   32) Receive LPI transition Register */
   __I   uint32_t                       ETH_TLPITI;         /**< Offset: 0x127C (R/   32) Receive LPI Time Register */
   __I   uint8_t                        Reserved10[0x180];
-  __I   uint32_t                       ETH_ISRQ[5];        /**< Offset: 0x1400 (R/   32) Interrupt Status Register Queues */
+  __IO  uint32_t                       ETH_ISRQ[5];        /**< Offset: 0x1400 (R/W  32) Interrupt Status Register Queues */
   __I   uint8_t                        Reserved11[0x2C];
   __IO  uint32_t                       ETH_TBPQB[5];       /**< Offset: 0x1440 (R/W  32) Transmit Priority Queue Buffer Base Address */
   __I   uint8_t                        Reserved12[0x2C];

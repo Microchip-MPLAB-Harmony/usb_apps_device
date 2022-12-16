@@ -121,7 +121,7 @@
 145,PC12,,Available,,,,,,NORMAL
 146,PC13,,Available,,,,,,NORMAL
 147,PC29,,Available,,,,,,NORMAL
-148,PC14,,Available,,,,,,NORMAL
+148,PC14,GPIO_PC14,GPIO,Digital,In/Out,Low,,,NORMAL
 149,PC15,,Available,,,,,,NORMAL
 153,PC17,,Available,,,,,,NORMAL
 154,PC18,,Available,,,,,,NORMAL

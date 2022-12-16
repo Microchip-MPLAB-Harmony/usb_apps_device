@@ -20,7 +20,7 @@
  *
  */
 
-/* File generated from device description version 2022-03-14T05:06:26Z */
+/* File generated from device description version 2022-07-07T22:59:24Z */
 #ifndef _PIC32CZ8110CA80208_H_
 #define _PIC32CZ8110CA80208_H_
 
@@ -1392,6 +1392,8 @@ void MLB_BUSREQ_Handler            ( void );
 #define EVENT_ID_GEN_AC_COMP_0                          132 /* ID for AC event generator COMP_0 */
 #define EVENT_ID_GEN_AC_COMP_1                          133 /* ID for AC event generator COMP_1 */
 #define EVENT_ID_GEN_AC_WIN_0                           134 /* ID for AC event generator WIN_0 */
+#define EVENT_ID_GEN_PTC_EOC                            135 /* ID for PTC event generator EOC */
+#define EVENT_ID_GEN_PTC_WCOMP                          136 /* ID for PTC event generator WCOMP */
 #define EVENT_ID_GEN_ETH_TSU_CMP                        137 /* ID for ETH event generator TSU_CMP */
 #define EVENT_ID_GEN_TRNG_READY                         138 /* ID for TRNG event generator READY */
 
@@ -1509,6 +1511,12 @@ void MLB_BUSREQ_Handler            ( void );
 #define EVENT_ID_USER_ADC_TRIGGERS_10                   108 /* ID for ADC event user TRIGGERS_10 */
 #define EVENT_ID_USER_AC_SOC_0                          109 /* ID for AC event user SOC_0 */
 #define EVENT_ID_USER_AC_SOC_1                          110 /* ID for AC event user SOC_1 */
+#define EVENT_ID_USER_PTC_DSEQR                         111 /* ID for PTC event user DSEQR */
+#define EVENT_ID_USER_PTC_STCONV                        112 /* ID for PTC event user STCONV */
+#define EVENT_ID_USER_HSM_TAMPER_0                      113 /* ID for HSM event user TAMPER_0 */
+#define EVENT_ID_USER_HSM_TAMPER_1                      114 /* ID for HSM event user TAMPER_1 */
+#define EVENT_ID_USER_HSM_TAMPER_2                      115 /* ID for HSM event user TAMPER_2 */
+#define EVENT_ID_USER_HSM_TAMPER_3                      116 /* ID for HSM event user TAMPER_3 */
 
 #ifdef __cplusplus
 }

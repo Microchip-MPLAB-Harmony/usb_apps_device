@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2022-03-14T05:06:26Z */
+/* file generated from device description version 2022-07-07T22:59:24Z */
 #ifndef _PIC32CZCA80_FUSES_COMPONENT_H_
 #define _PIC32CZCA80_FUSES_COMPONENT_H_
 
@@ -483,17 +483,14 @@
 /* -------- FUSES_FUCFG9 : (FUSES Offset: 0x64) (R/W 32) User Configuration 9 (RAM BISR and ECC Configuraiton) -------- */
 #define FUSES_FUCFG9_RESETVALUE               _UINT32_(0x202)                                      /*  (FUSES_FUCFG9) User Configuration 9 (RAM BISR and ECC Configuraiton)  Reset Value */
 
-#define FUSES_FUCFG9_RAM_ECC_EN0_Pos          _UINT32_(1)                                          /* (FUSES_FUCFG9) Enable RAM ECC Control at Reset Position */
-#define FUSES_FUCFG9_RAM_ECC_EN0_Msk          (_UINT32_(0x1) << FUSES_FUCFG9_RAM_ECC_EN0_Pos)      /* (FUSES_FUCFG9) Enable RAM ECC Control at Reset Mask */
-#define FUSES_FUCFG9_RAM_ECC_EN0(value)       (FUSES_FUCFG9_RAM_ECC_EN0_Msk & (_UINT32_(value) << FUSES_FUCFG9_RAM_ECC_EN0_Pos)) /* Assigment of value for RAM_ECC_EN0 in the FUSES_FUCFG9 register */
+#define FUSES_FUCFG9_RAM_INIT_ENB_Pos         _UINT32_(1)                                          /* (FUSES_FUCFG9) Enable RAM ECC Init at Reset Position */
+#define FUSES_FUCFG9_RAM_INIT_ENB_Msk         (_UINT32_(0x1) << FUSES_FUCFG9_RAM_INIT_ENB_Pos)     /* (FUSES_FUCFG9) Enable RAM ECC Init at Reset Mask */
+#define FUSES_FUCFG9_RAM_INIT_ENB(value)      (FUSES_FUCFG9_RAM_INIT_ENB_Msk & (_UINT32_(value) << FUSES_FUCFG9_RAM_INIT_ENB_Pos)) /* Assigment of value for RAM_INIT_ENB in the FUSES_FUCFG9 register */
 #define FUSES_FUCFG9_BISR_RST_EN0_Pos         _UINT32_(9)                                          /* (FUSES_FUCFG9) Enable RAM Built-In Self Repair at Reset Position */
 #define FUSES_FUCFG9_BISR_RST_EN0_Msk         (_UINT32_(0x1) << FUSES_FUCFG9_BISR_RST_EN0_Pos)     /* (FUSES_FUCFG9) Enable RAM Built-In Self Repair at Reset Mask */
 #define FUSES_FUCFG9_BISR_RST_EN0(value)      (FUSES_FUCFG9_BISR_RST_EN0_Msk & (_UINT32_(value) << FUSES_FUCFG9_BISR_RST_EN0_Pos)) /* Assigment of value for BISR_RST_EN0 in the FUSES_FUCFG9 register */
 #define FUSES_FUCFG9_Msk                      _UINT32_(0x00000202)                                 /* (FUSES_FUCFG9) Register Mask  */
 
-#define FUSES_FUCFG9_RAM_ECC_EN_Pos           _UINT32_(1)                                          /* (FUSES_FUCFG9 Position) Enable RAM ECC Control at Reset */
-#define FUSES_FUCFG9_RAM_ECC_EN_Msk           (_UINT32_(0x1) << FUSES_FUCFG9_RAM_ECC_EN_Pos)       /* (FUSES_FUCFG9 Mask) RAM_ECC_EN */
-#define FUSES_FUCFG9_RAM_ECC_EN(value)        (FUSES_FUCFG9_RAM_ECC_EN_Msk & (_UINT32_(value) << FUSES_FUCFG9_RAM_ECC_EN_Pos)) 
 #define FUSES_FUCFG9_BISR_RST_EN_Pos          _UINT32_(9)                                          /* (FUSES_FUCFG9 Position) Enable RAM Built-In Self Repair at Reset */
 #define FUSES_FUCFG9_BISR_RST_EN_Msk          (_UINT32_(0x1) << FUSES_FUCFG9_BISR_RST_EN_Pos)      /* (FUSES_FUCFG9 Mask) BISR_RST_EN */
 #define FUSES_FUCFG9_BISR_RST_EN(value)       (FUSES_FUCFG9_BISR_RST_EN_Msk & (_UINT32_(value) << FUSES_FUCFG9_BISR_RST_EN_Pos)) 
