@@ -66,6 +66,7 @@ Following table gives the details of project configurations, target device used,
 | pic32cz_ca80_curiosity_ultra.X         | MPLABX | PIC32CZ8110CA80208   | [PIC32CZ Curiosity Development Board](#config_23)           |
 | pic32cz_ca80_curiosity_ultra_freertos.X         | MPLABX | PIC32CZ8110CA80208   | [PIC32CZ Curiosity Development Board](#config_23)           |
 | pic32ck_gc01_curiosity_ultra.X         | MPLABX | PIC32CK2051GC01144   | [PIC32CK Curiosity Ultra Development Board](#config_24)           |
+| pic32ck_gc01_curiosity_ultra_freertos.X         | MPLABX | PIC32CK2051GC01144   | [PIC32CK Curiosity Ultra Development Board](#config_24)           |
 
 ## <a name="config_title"></a> Configuring the Hardware
 

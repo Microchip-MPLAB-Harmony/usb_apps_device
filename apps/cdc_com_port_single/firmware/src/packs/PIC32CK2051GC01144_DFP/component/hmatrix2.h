@@ -1,7 +1,7 @@
 /*
  * Component description for HMATRIX2
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2022-11-28T06:54:19Z */
+/* file generated from device description version 2023-02-20T18:48:06Z */
 #ifndef _PIC32CKGC01_HMATRIX2_COMPONENT_H_
 #define _PIC32CKGC01_HMATRIX2_COMPONENT_H_
 
@@ -155,229 +155,26 @@
 #define HMATRIX2_MCFG_Msk                     _UINT32_(0x00000007)                                 /* (HMATRIX2_MCFG) Register Mask  */
 
 
-/* -------- HMATRIX2_MEAR : (HMATRIX2 Offset: 0x160) ( R/ 32) Master Error Address -------- */
-#define HMATRIX2_MEAR_Msk                     _UINT32_(0x00000000)                                 /* (HMATRIX2_MEAR) Register Mask  */
+/* -------- HMATRIX2_SCFG : (HMATRIX2 Offset: 0x40) (R/W 32) Slave Configuration -------- */
+#define HMATRIX2_SCFG_RESETVALUE              _UINT32_(0x10)                                       /*  (HMATRIX2_SCFG) Slave Configuration  Reset Value */
 
+#define HMATRIX2_SCFG_SLOT_CYCLE_Pos          _UINT32_(0)                                          /* (HMATRIX2_SCFG) Maximum Number of Allowed Cycles for a Burst Position */
+#define HMATRIX2_SCFG_SLOT_CYCLE_Msk          (_UINT32_(0x1FF) << HMATRIX2_SCFG_SLOT_CYCLE_Pos)    /* (HMATRIX2_SCFG) Maximum Number of Allowed Cycles for a Burst Mask */
+#define HMATRIX2_SCFG_SLOT_CYCLE(value)       (HMATRIX2_SCFG_SLOT_CYCLE_Msk & (_UINT32_(value) << HMATRIX2_SCFG_SLOT_CYCLE_Pos)) /* Assigment of value for SLOT_CYCLE in the HMATRIX2_SCFG register */
+#define HMATRIX2_SCFG_DEFMSTR_TYPE_Pos        _UINT32_(16)                                         /* (HMATRIX2_SCFG) Default Master Type Position */
+#define HMATRIX2_SCFG_DEFMSTR_TYPE_Msk        (_UINT32_(0x3) << HMATRIX2_SCFG_DEFMSTR_TYPE_Pos)    /* (HMATRIX2_SCFG) Default Master Type Mask */
+#define HMATRIX2_SCFG_DEFMSTR_TYPE(value)     (HMATRIX2_SCFG_DEFMSTR_TYPE_Msk & (_UINT32_(value) << HMATRIX2_SCFG_DEFMSTR_TYPE_Pos)) /* Assigment of value for DEFMSTR_TYPE in the HMATRIX2_SCFG register */
+#define   HMATRIX2_SCFG_DEFMSTR_TYPE_NO_DEFAULT_Val _UINT32_(0x0)                                        /* (HMATRIX2_SCFG) No Default Master. At the end of current slave access, if no other master request is pending, the slave is deconnected from all masters. This resusts in having a one cycle latency for the first transfer of a burst.  */
+#define   HMATRIX2_SCFG_DEFMSTR_TYPE_LAST_DEFAULT_Val _UINT32_(0x1)                                        /* (HMATRIX2_SCFG) Last Default Master At the end of current slave access, if no other master request is pending, the slave stay connected with the last master havingaccessed it.This resusts in not having the one cycle latency when the last master re-trying access on the slave.  */
+#define   HMATRIX2_SCFG_DEFMSTR_TYPE_FIXED_DEFAULT_Val _UINT32_(0x2)                                        /* (HMATRIX2_SCFG) Fixed Default Master At the end of current slave access, if no other master request is pending, the slave connects with fixed master which numberis in FIXED_DEFMSTR register.This resusts in not having the one cycle latency when the fixed master re-trying access on the slave.  */
+#define HMATRIX2_SCFG_DEFMSTR_TYPE_NO_DEFAULT (HMATRIX2_SCFG_DEFMSTR_TYPE_NO_DEFAULT_Val << HMATRIX2_SCFG_DEFMSTR_TYPE_Pos) /* (HMATRIX2_SCFG) No Default Master. At the end of current slave access, if no other master request is pending, the slave is deconnected from all masters. This resusts in having a one cycle latency for the first transfer of a burst. Position  */
+#define HMATRIX2_SCFG_DEFMSTR_TYPE_LAST_DEFAULT (HMATRIX2_SCFG_DEFMSTR_TYPE_LAST_DEFAULT_Val << HMATRIX2_SCFG_DEFMSTR_TYPE_Pos) /* (HMATRIX2_SCFG) Last Default Master At the end of current slave access, if no other master request is pending, the slave stay connected with the last master havingaccessed it.This resusts in not having the one cycle latency when the last master re-trying access on the slave. Position  */
+#define HMATRIX2_SCFG_DEFMSTR_TYPE_FIXED_DEFAULT (HMATRIX2_SCFG_DEFMSTR_TYPE_FIXED_DEFAULT_Val << HMATRIX2_SCFG_DEFMSTR_TYPE_Pos) /* (HMATRIX2_SCFG) Fixed Default Master At the end of current slave access, if no other master request is pending, the slave connects with fixed master which numberis in FIXED_DEFMSTR register.This resusts in not having the one cycle latency when the fixed master re-trying access on the slave. Position  */
+#define HMATRIX2_SCFG_FIXED_DEFMSTR_Pos       _UINT32_(18)                                         /* (HMATRIX2_SCFG) Fixed Index of Default Master Position */
+#define HMATRIX2_SCFG_FIXED_DEFMSTR_Msk       (_UINT32_(0xF) << HMATRIX2_SCFG_FIXED_DEFMSTR_Pos)   /* (HMATRIX2_SCFG) Fixed Index of Default Master Mask */
+#define HMATRIX2_SCFG_FIXED_DEFMSTR(value)    (HMATRIX2_SCFG_FIXED_DEFMSTR_Msk & (_UINT32_(value) << HMATRIX2_SCFG_FIXED_DEFMSTR_Pos)) /* Assigment of value for FIXED_DEFMSTR in the HMATRIX2_SCFG register */
+#define HMATRIX2_SCFG_Msk                     _UINT32_(0x003F01FF)                                 /* (HMATRIX2_SCFG) Register Mask  */
 
-/* -------- HMATRIX2_MEIDR : (HMATRIX2 Offset: 0x154) ( /W 32) Master Error Interrupt Disable -------- */
-#define HMATRIX2_MEIDR_MERR0_Pos              _UINT32_(0)                                          /* (HMATRIX2_MEIDR) Master 0 Access Error Position */
-#define HMATRIX2_MEIDR_MERR0_Msk              (_UINT32_(0x1) << HMATRIX2_MEIDR_MERR0_Pos)          /* (HMATRIX2_MEIDR) Master 0 Access Error Mask */
-#define HMATRIX2_MEIDR_MERR0(value)           (HMATRIX2_MEIDR_MERR0_Msk & (_UINT32_(value) << HMATRIX2_MEIDR_MERR0_Pos)) /* Assigment of value for MERR0 in the HMATRIX2_MEIDR register */
-#define HMATRIX2_MEIDR_MERR1_Pos              _UINT32_(1)                                          /* (HMATRIX2_MEIDR) Master 1 Access Error Position */
-#define HMATRIX2_MEIDR_MERR1_Msk              (_UINT32_(0x1) << HMATRIX2_MEIDR_MERR1_Pos)          /* (HMATRIX2_MEIDR) Master 1 Access Error Mask */
-#define HMATRIX2_MEIDR_MERR1(value)           (HMATRIX2_MEIDR_MERR1_Msk & (_UINT32_(value) << HMATRIX2_MEIDR_MERR1_Pos)) /* Assigment of value for MERR1 in the HMATRIX2_MEIDR register */
-#define HMATRIX2_MEIDR_MERR2_Pos              _UINT32_(2)                                          /* (HMATRIX2_MEIDR) Master 2 Access Error Position */
-#define HMATRIX2_MEIDR_MERR2_Msk              (_UINT32_(0x1) << HMATRIX2_MEIDR_MERR2_Pos)          /* (HMATRIX2_MEIDR) Master 2 Access Error Mask */
-#define HMATRIX2_MEIDR_MERR2(value)           (HMATRIX2_MEIDR_MERR2_Msk & (_UINT32_(value) << HMATRIX2_MEIDR_MERR2_Pos)) /* Assigment of value for MERR2 in the HMATRIX2_MEIDR register */
-#define HMATRIX2_MEIDR_MERR3_Pos              _UINT32_(3)                                          /* (HMATRIX2_MEIDR) Master 3 Access Error Position */
-#define HMATRIX2_MEIDR_MERR3_Msk              (_UINT32_(0x1) << HMATRIX2_MEIDR_MERR3_Pos)          /* (HMATRIX2_MEIDR) Master 3 Access Error Mask */
-#define HMATRIX2_MEIDR_MERR3(value)           (HMATRIX2_MEIDR_MERR3_Msk & (_UINT32_(value) << HMATRIX2_MEIDR_MERR3_Pos)) /* Assigment of value for MERR3 in the HMATRIX2_MEIDR register */
-#define HMATRIX2_MEIDR_MERR4_Pos              _UINT32_(4)                                          /* (HMATRIX2_MEIDR) Master 4 Access Error Position */
-#define HMATRIX2_MEIDR_MERR4_Msk              (_UINT32_(0x1) << HMATRIX2_MEIDR_MERR4_Pos)          /* (HMATRIX2_MEIDR) Master 4 Access Error Mask */
-#define HMATRIX2_MEIDR_MERR4(value)           (HMATRIX2_MEIDR_MERR4_Msk & (_UINT32_(value) << HMATRIX2_MEIDR_MERR4_Pos)) /* Assigment of value for MERR4 in the HMATRIX2_MEIDR register */
-#define HMATRIX2_MEIDR_MERR5_Pos              _UINT32_(5)                                          /* (HMATRIX2_MEIDR) Master 5 Access Error Position */
-#define HMATRIX2_MEIDR_MERR5_Msk              (_UINT32_(0x1) << HMATRIX2_MEIDR_MERR5_Pos)          /* (HMATRIX2_MEIDR) Master 5 Access Error Mask */
-#define HMATRIX2_MEIDR_MERR5(value)           (HMATRIX2_MEIDR_MERR5_Msk & (_UINT32_(value) << HMATRIX2_MEIDR_MERR5_Pos)) /* Assigment of value for MERR5 in the HMATRIX2_MEIDR register */
-#define HMATRIX2_MEIDR_MERR6_Pos              _UINT32_(6)                                          /* (HMATRIX2_MEIDR) Master 6 Access Error Position */
-#define HMATRIX2_MEIDR_MERR6_Msk              (_UINT32_(0x1) << HMATRIX2_MEIDR_MERR6_Pos)          /* (HMATRIX2_MEIDR) Master 6 Access Error Mask */
-#define HMATRIX2_MEIDR_MERR6(value)           (HMATRIX2_MEIDR_MERR6_Msk & (_UINT32_(value) << HMATRIX2_MEIDR_MERR6_Pos)) /* Assigment of value for MERR6 in the HMATRIX2_MEIDR register */
-#define HMATRIX2_MEIDR_MERR7_Pos              _UINT32_(7)                                          /* (HMATRIX2_MEIDR) Master 7 Access Error Position */
-#define HMATRIX2_MEIDR_MERR7_Msk              (_UINT32_(0x1) << HMATRIX2_MEIDR_MERR7_Pos)          /* (HMATRIX2_MEIDR) Master 7 Access Error Mask */
-#define HMATRIX2_MEIDR_MERR7(value)           (HMATRIX2_MEIDR_MERR7_Msk & (_UINT32_(value) << HMATRIX2_MEIDR_MERR7_Pos)) /* Assigment of value for MERR7 in the HMATRIX2_MEIDR register */
-#define HMATRIX2_MEIDR_MERR8_Pos              _UINT32_(8)                                          /* (HMATRIX2_MEIDR) Master 8 Access Error Position */
-#define HMATRIX2_MEIDR_MERR8_Msk              (_UINT32_(0x1) << HMATRIX2_MEIDR_MERR8_Pos)          /* (HMATRIX2_MEIDR) Master 8 Access Error Mask */
-#define HMATRIX2_MEIDR_MERR8(value)           (HMATRIX2_MEIDR_MERR8_Msk & (_UINT32_(value) << HMATRIX2_MEIDR_MERR8_Pos)) /* Assigment of value for MERR8 in the HMATRIX2_MEIDR register */
-#define HMATRIX2_MEIDR_MERR9_Pos              _UINT32_(9)                                          /* (HMATRIX2_MEIDR) Master 9 Access Error Position */
-#define HMATRIX2_MEIDR_MERR9_Msk              (_UINT32_(0x1) << HMATRIX2_MEIDR_MERR9_Pos)          /* (HMATRIX2_MEIDR) Master 9 Access Error Mask */
-#define HMATRIX2_MEIDR_MERR9(value)           (HMATRIX2_MEIDR_MERR9_Msk & (_UINT32_(value) << HMATRIX2_MEIDR_MERR9_Pos)) /* Assigment of value for MERR9 in the HMATRIX2_MEIDR register */
-#define HMATRIX2_MEIDR_MERR10_Pos             _UINT32_(10)                                         /* (HMATRIX2_MEIDR) Master 10 Access Error Position */
-#define HMATRIX2_MEIDR_MERR10_Msk             (_UINT32_(0x1) << HMATRIX2_MEIDR_MERR10_Pos)         /* (HMATRIX2_MEIDR) Master 10 Access Error Mask */
-#define HMATRIX2_MEIDR_MERR10(value)          (HMATRIX2_MEIDR_MERR10_Msk & (_UINT32_(value) << HMATRIX2_MEIDR_MERR10_Pos)) /* Assigment of value for MERR10 in the HMATRIX2_MEIDR register */
-#define HMATRIX2_MEIDR_MERR11_Pos             _UINT32_(11)                                         /* (HMATRIX2_MEIDR) Master 11 Access Error Position */
-#define HMATRIX2_MEIDR_MERR11_Msk             (_UINT32_(0x1) << HMATRIX2_MEIDR_MERR11_Pos)         /* (HMATRIX2_MEIDR) Master 11 Access Error Mask */
-#define HMATRIX2_MEIDR_MERR11(value)          (HMATRIX2_MEIDR_MERR11_Msk & (_UINT32_(value) << HMATRIX2_MEIDR_MERR11_Pos)) /* Assigment of value for MERR11 in the HMATRIX2_MEIDR register */
-#define HMATRIX2_MEIDR_MERR12_Pos             _UINT32_(12)                                         /* (HMATRIX2_MEIDR) Master 12 Access Error Position */
-#define HMATRIX2_MEIDR_MERR12_Msk             (_UINT32_(0x1) << HMATRIX2_MEIDR_MERR12_Pos)         /* (HMATRIX2_MEIDR) Master 12 Access Error Mask */
-#define HMATRIX2_MEIDR_MERR12(value)          (HMATRIX2_MEIDR_MERR12_Msk & (_UINT32_(value) << HMATRIX2_MEIDR_MERR12_Pos)) /* Assigment of value for MERR12 in the HMATRIX2_MEIDR register */
-#define HMATRIX2_MEIDR_MERR13_Pos             _UINT32_(13)                                         /* (HMATRIX2_MEIDR) Master 13 Access Error Position */
-#define HMATRIX2_MEIDR_MERR13_Msk             (_UINT32_(0x1) << HMATRIX2_MEIDR_MERR13_Pos)         /* (HMATRIX2_MEIDR) Master 13 Access Error Mask */
-#define HMATRIX2_MEIDR_MERR13(value)          (HMATRIX2_MEIDR_MERR13_Msk & (_UINT32_(value) << HMATRIX2_MEIDR_MERR13_Pos)) /* Assigment of value for MERR13 in the HMATRIX2_MEIDR register */
-#define HMATRIX2_MEIDR_MERR14_Pos             _UINT32_(14)                                         /* (HMATRIX2_MEIDR) Master 14 Access Error Position */
-#define HMATRIX2_MEIDR_MERR14_Msk             (_UINT32_(0x1) << HMATRIX2_MEIDR_MERR14_Pos)         /* (HMATRIX2_MEIDR) Master 14 Access Error Mask */
-#define HMATRIX2_MEIDR_MERR14(value)          (HMATRIX2_MEIDR_MERR14_Msk & (_UINT32_(value) << HMATRIX2_MEIDR_MERR14_Pos)) /* Assigment of value for MERR14 in the HMATRIX2_MEIDR register */
-#define HMATRIX2_MEIDR_MERR15_Pos             _UINT32_(15)                                         /* (HMATRIX2_MEIDR) Master 15 Access Error Position */
-#define HMATRIX2_MEIDR_MERR15_Msk             (_UINT32_(0x1) << HMATRIX2_MEIDR_MERR15_Pos)         /* (HMATRIX2_MEIDR) Master 15 Access Error Mask */
-#define HMATRIX2_MEIDR_MERR15(value)          (HMATRIX2_MEIDR_MERR15_Msk & (_UINT32_(value) << HMATRIX2_MEIDR_MERR15_Pos)) /* Assigment of value for MERR15 in the HMATRIX2_MEIDR register */
-#define HMATRIX2_MEIDR_Msk                    _UINT32_(0x0000FFFF)                                 /* (HMATRIX2_MEIDR) Register Mask  */
-
-#define HMATRIX2_MEIDR_MERR_Pos               _UINT32_(0)                                          /* (HMATRIX2_MEIDR Position) Master x5 Access Error */
-#define HMATRIX2_MEIDR_MERR_Msk               (_UINT32_(0xFFFF) << HMATRIX2_MEIDR_MERR_Pos)        /* (HMATRIX2_MEIDR Mask) MERR */
-#define HMATRIX2_MEIDR_MERR(value)            (HMATRIX2_MEIDR_MERR_Msk & (_UINT32_(value) << HMATRIX2_MEIDR_MERR_Pos)) 
-
-/* -------- HMATRIX2_MEIER : (HMATRIX2 Offset: 0x150) ( /W 32) Master Error Interrupt Enable -------- */
-#define HMATRIX2_MEIER_MERR0_Pos              _UINT32_(0)                                          /* (HMATRIX2_MEIER) Master 0 Access Error Position */
-#define HMATRIX2_MEIER_MERR0_Msk              (_UINT32_(0x1) << HMATRIX2_MEIER_MERR0_Pos)          /* (HMATRIX2_MEIER) Master 0 Access Error Mask */
-#define HMATRIX2_MEIER_MERR0(value)           (HMATRIX2_MEIER_MERR0_Msk & (_UINT32_(value) << HMATRIX2_MEIER_MERR0_Pos)) /* Assigment of value for MERR0 in the HMATRIX2_MEIER register */
-#define HMATRIX2_MEIER_MERR1_Pos              _UINT32_(1)                                          /* (HMATRIX2_MEIER) Master 1 Access Error Position */
-#define HMATRIX2_MEIER_MERR1_Msk              (_UINT32_(0x1) << HMATRIX2_MEIER_MERR1_Pos)          /* (HMATRIX2_MEIER) Master 1 Access Error Mask */
-#define HMATRIX2_MEIER_MERR1(value)           (HMATRIX2_MEIER_MERR1_Msk & (_UINT32_(value) << HMATRIX2_MEIER_MERR1_Pos)) /* Assigment of value for MERR1 in the HMATRIX2_MEIER register */
-#define HMATRIX2_MEIER_MERR2_Pos              _UINT32_(2)                                          /* (HMATRIX2_MEIER) Master 2 Access Error Position */
-#define HMATRIX2_MEIER_MERR2_Msk              (_UINT32_(0x1) << HMATRIX2_MEIER_MERR2_Pos)          /* (HMATRIX2_MEIER) Master 2 Access Error Mask */
-#define HMATRIX2_MEIER_MERR2(value)           (HMATRIX2_MEIER_MERR2_Msk & (_UINT32_(value) << HMATRIX2_MEIER_MERR2_Pos)) /* Assigment of value for MERR2 in the HMATRIX2_MEIER register */
-#define HMATRIX2_MEIER_MERR3_Pos              _UINT32_(3)                                          /* (HMATRIX2_MEIER) Master 3 Access Error Position */
-#define HMATRIX2_MEIER_MERR3_Msk              (_UINT32_(0x1) << HMATRIX2_MEIER_MERR3_Pos)          /* (HMATRIX2_MEIER) Master 3 Access Error Mask */
-#define HMATRIX2_MEIER_MERR3(value)           (HMATRIX2_MEIER_MERR3_Msk & (_UINT32_(value) << HMATRIX2_MEIER_MERR3_Pos)) /* Assigment of value for MERR3 in the HMATRIX2_MEIER register */
-#define HMATRIX2_MEIER_MERR4_Pos              _UINT32_(4)                                          /* (HMATRIX2_MEIER) Master 4 Access Error Position */
-#define HMATRIX2_MEIER_MERR4_Msk              (_UINT32_(0x1) << HMATRIX2_MEIER_MERR4_Pos)          /* (HMATRIX2_MEIER) Master 4 Access Error Mask */
-#define HMATRIX2_MEIER_MERR4(value)           (HMATRIX2_MEIER_MERR4_Msk & (_UINT32_(value) << HMATRIX2_MEIER_MERR4_Pos)) /* Assigment of value for MERR4 in the HMATRIX2_MEIER register */
-#define HMATRIX2_MEIER_MERR5_Pos              _UINT32_(5)                                          /* (HMATRIX2_MEIER) Master 5 Access Error Position */
-#define HMATRIX2_MEIER_MERR5_Msk              (_UINT32_(0x1) << HMATRIX2_MEIER_MERR5_Pos)          /* (HMATRIX2_MEIER) Master 5 Access Error Mask */
-#define HMATRIX2_MEIER_MERR5(value)           (HMATRIX2_MEIER_MERR5_Msk & (_UINT32_(value) << HMATRIX2_MEIER_MERR5_Pos)) /* Assigment of value for MERR5 in the HMATRIX2_MEIER register */
-#define HMATRIX2_MEIER_MERR6_Pos              _UINT32_(6)                                          /* (HMATRIX2_MEIER) Master 6 Access Error Position */
-#define HMATRIX2_MEIER_MERR6_Msk              (_UINT32_(0x1) << HMATRIX2_MEIER_MERR6_Pos)          /* (HMATRIX2_MEIER) Master 6 Access Error Mask */
-#define HMATRIX2_MEIER_MERR6(value)           (HMATRIX2_MEIER_MERR6_Msk & (_UINT32_(value) << HMATRIX2_MEIER_MERR6_Pos)) /* Assigment of value for MERR6 in the HMATRIX2_MEIER register */
-#define HMATRIX2_MEIER_MERR7_Pos              _UINT32_(7)                                          /* (HMATRIX2_MEIER) Master 7 Access Error Position */
-#define HMATRIX2_MEIER_MERR7_Msk              (_UINT32_(0x1) << HMATRIX2_MEIER_MERR7_Pos)          /* (HMATRIX2_MEIER) Master 7 Access Error Mask */
-#define HMATRIX2_MEIER_MERR7(value)           (HMATRIX2_MEIER_MERR7_Msk & (_UINT32_(value) << HMATRIX2_MEIER_MERR7_Pos)) /* Assigment of value for MERR7 in the HMATRIX2_MEIER register */
-#define HMATRIX2_MEIER_MERR8_Pos              _UINT32_(8)                                          /* (HMATRIX2_MEIER) Master 8 Access Error Position */
-#define HMATRIX2_MEIER_MERR8_Msk              (_UINT32_(0x1) << HMATRIX2_MEIER_MERR8_Pos)          /* (HMATRIX2_MEIER) Master 8 Access Error Mask */
-#define HMATRIX2_MEIER_MERR8(value)           (HMATRIX2_MEIER_MERR8_Msk & (_UINT32_(value) << HMATRIX2_MEIER_MERR8_Pos)) /* Assigment of value for MERR8 in the HMATRIX2_MEIER register */
-#define HMATRIX2_MEIER_MERR9_Pos              _UINT32_(9)                                          /* (HMATRIX2_MEIER) Master 9 Access Error Position */
-#define HMATRIX2_MEIER_MERR9_Msk              (_UINT32_(0x1) << HMATRIX2_MEIER_MERR9_Pos)          /* (HMATRIX2_MEIER) Master 9 Access Error Mask */
-#define HMATRIX2_MEIER_MERR9(value)           (HMATRIX2_MEIER_MERR9_Msk & (_UINT32_(value) << HMATRIX2_MEIER_MERR9_Pos)) /* Assigment of value for MERR9 in the HMATRIX2_MEIER register */
-#define HMATRIX2_MEIER_MERR10_Pos             _UINT32_(10)                                         /* (HMATRIX2_MEIER) Master 10 Access Error Position */
-#define HMATRIX2_MEIER_MERR10_Msk             (_UINT32_(0x1) << HMATRIX2_MEIER_MERR10_Pos)         /* (HMATRIX2_MEIER) Master 10 Access Error Mask */
-#define HMATRIX2_MEIER_MERR10(value)          (HMATRIX2_MEIER_MERR10_Msk & (_UINT32_(value) << HMATRIX2_MEIER_MERR10_Pos)) /* Assigment of value for MERR10 in the HMATRIX2_MEIER register */
-#define HMATRIX2_MEIER_MERR11_Pos             _UINT32_(11)                                         /* (HMATRIX2_MEIER) Master 11 Access Error Position */
-#define HMATRIX2_MEIER_MERR11_Msk             (_UINT32_(0x1) << HMATRIX2_MEIER_MERR11_Pos)         /* (HMATRIX2_MEIER) Master 11 Access Error Mask */
-#define HMATRIX2_MEIER_MERR11(value)          (HMATRIX2_MEIER_MERR11_Msk & (_UINT32_(value) << HMATRIX2_MEIER_MERR11_Pos)) /* Assigment of value for MERR11 in the HMATRIX2_MEIER register */
-#define HMATRIX2_MEIER_MERR12_Pos             _UINT32_(12)                                         /* (HMATRIX2_MEIER) Master 12 Access Error Position */
-#define HMATRIX2_MEIER_MERR12_Msk             (_UINT32_(0x1) << HMATRIX2_MEIER_MERR12_Pos)         /* (HMATRIX2_MEIER) Master 12 Access Error Mask */
-#define HMATRIX2_MEIER_MERR12(value)          (HMATRIX2_MEIER_MERR12_Msk & (_UINT32_(value) << HMATRIX2_MEIER_MERR12_Pos)) /* Assigment of value for MERR12 in the HMATRIX2_MEIER register */
-#define HMATRIX2_MEIER_MERR13_Pos             _UINT32_(13)                                         /* (HMATRIX2_MEIER) Master 13 Access Error Position */
-#define HMATRIX2_MEIER_MERR13_Msk             (_UINT32_(0x1) << HMATRIX2_MEIER_MERR13_Pos)         /* (HMATRIX2_MEIER) Master 13 Access Error Mask */
-#define HMATRIX2_MEIER_MERR13(value)          (HMATRIX2_MEIER_MERR13_Msk & (_UINT32_(value) << HMATRIX2_MEIER_MERR13_Pos)) /* Assigment of value for MERR13 in the HMATRIX2_MEIER register */
-#define HMATRIX2_MEIER_MERR14_Pos             _UINT32_(14)                                         /* (HMATRIX2_MEIER) Master 14 Access Error Position */
-#define HMATRIX2_MEIER_MERR14_Msk             (_UINT32_(0x1) << HMATRIX2_MEIER_MERR14_Pos)         /* (HMATRIX2_MEIER) Master 14 Access Error Mask */
-#define HMATRIX2_MEIER_MERR14(value)          (HMATRIX2_MEIER_MERR14_Msk & (_UINT32_(value) << HMATRIX2_MEIER_MERR14_Pos)) /* Assigment of value for MERR14 in the HMATRIX2_MEIER register */
-#define HMATRIX2_MEIER_MERR15_Pos             _UINT32_(15)                                         /* (HMATRIX2_MEIER) Master 15 Access Error Position */
-#define HMATRIX2_MEIER_MERR15_Msk             (_UINT32_(0x1) << HMATRIX2_MEIER_MERR15_Pos)         /* (HMATRIX2_MEIER) Master 15 Access Error Mask */
-#define HMATRIX2_MEIER_MERR15(value)          (HMATRIX2_MEIER_MERR15_Msk & (_UINT32_(value) << HMATRIX2_MEIER_MERR15_Pos)) /* Assigment of value for MERR15 in the HMATRIX2_MEIER register */
-#define HMATRIX2_MEIER_Msk                    _UINT32_(0x0000FFFF)                                 /* (HMATRIX2_MEIER) Register Mask  */
-
-#define HMATRIX2_MEIER_MERR_Pos               _UINT32_(0)                                          /* (HMATRIX2_MEIER Position) Master x5 Access Error */
-#define HMATRIX2_MEIER_MERR_Msk               (_UINT32_(0xFFFF) << HMATRIX2_MEIER_MERR_Pos)        /* (HMATRIX2_MEIER Mask) MERR */
-#define HMATRIX2_MEIER_MERR(value)            (HMATRIX2_MEIER_MERR_Msk & (_UINT32_(value) << HMATRIX2_MEIER_MERR_Pos)) 
-
-/* -------- HMATRIX2_MEIMR : (HMATRIX2 Offset: 0x158) ( R/ 32) Master Error Interrupt Mask -------- */
-#define HMATRIX2_MEIMR_MERR0_Pos              _UINT32_(0)                                          /* (HMATRIX2_MEIMR) Master 0 Access Error Position */
-#define HMATRIX2_MEIMR_MERR0_Msk              (_UINT32_(0x1) << HMATRIX2_MEIMR_MERR0_Pos)          /* (HMATRIX2_MEIMR) Master 0 Access Error Mask */
-#define HMATRIX2_MEIMR_MERR0(value)           (HMATRIX2_MEIMR_MERR0_Msk & (_UINT32_(value) << HMATRIX2_MEIMR_MERR0_Pos)) /* Assigment of value for MERR0 in the HMATRIX2_MEIMR register */
-#define HMATRIX2_MEIMR_MERR1_Pos              _UINT32_(1)                                          /* (HMATRIX2_MEIMR) Master 1 Access Error Position */
-#define HMATRIX2_MEIMR_MERR1_Msk              (_UINT32_(0x1) << HMATRIX2_MEIMR_MERR1_Pos)          /* (HMATRIX2_MEIMR) Master 1 Access Error Mask */
-#define HMATRIX2_MEIMR_MERR1(value)           (HMATRIX2_MEIMR_MERR1_Msk & (_UINT32_(value) << HMATRIX2_MEIMR_MERR1_Pos)) /* Assigment of value for MERR1 in the HMATRIX2_MEIMR register */
-#define HMATRIX2_MEIMR_MERR2_Pos              _UINT32_(2)                                          /* (HMATRIX2_MEIMR) Master 2 Access Error Position */
-#define HMATRIX2_MEIMR_MERR2_Msk              (_UINT32_(0x1) << HMATRIX2_MEIMR_MERR2_Pos)          /* (HMATRIX2_MEIMR) Master 2 Access Error Mask */
-#define HMATRIX2_MEIMR_MERR2(value)           (HMATRIX2_MEIMR_MERR2_Msk & (_UINT32_(value) << HMATRIX2_MEIMR_MERR2_Pos)) /* Assigment of value for MERR2 in the HMATRIX2_MEIMR register */
-#define HMATRIX2_MEIMR_MERR3_Pos              _UINT32_(3)                                          /* (HMATRIX2_MEIMR) Master 3 Access Error Position */
-#define HMATRIX2_MEIMR_MERR3_Msk              (_UINT32_(0x1) << HMATRIX2_MEIMR_MERR3_Pos)          /* (HMATRIX2_MEIMR) Master 3 Access Error Mask */
-#define HMATRIX2_MEIMR_MERR3(value)           (HMATRIX2_MEIMR_MERR3_Msk & (_UINT32_(value) << HMATRIX2_MEIMR_MERR3_Pos)) /* Assigment of value for MERR3 in the HMATRIX2_MEIMR register */
-#define HMATRIX2_MEIMR_MERR4_Pos              _UINT32_(4)                                          /* (HMATRIX2_MEIMR) Master 4 Access Error Position */
-#define HMATRIX2_MEIMR_MERR4_Msk              (_UINT32_(0x1) << HMATRIX2_MEIMR_MERR4_Pos)          /* (HMATRIX2_MEIMR) Master 4 Access Error Mask */
-#define HMATRIX2_MEIMR_MERR4(value)           (HMATRIX2_MEIMR_MERR4_Msk & (_UINT32_(value) << HMATRIX2_MEIMR_MERR4_Pos)) /* Assigment of value for MERR4 in the HMATRIX2_MEIMR register */
-#define HMATRIX2_MEIMR_MERR5_Pos              _UINT32_(5)                                          /* (HMATRIX2_MEIMR) Master 5 Access Error Position */
-#define HMATRIX2_MEIMR_MERR5_Msk              (_UINT32_(0x1) << HMATRIX2_MEIMR_MERR5_Pos)          /* (HMATRIX2_MEIMR) Master 5 Access Error Mask */
-#define HMATRIX2_MEIMR_MERR5(value)           (HMATRIX2_MEIMR_MERR5_Msk & (_UINT32_(value) << HMATRIX2_MEIMR_MERR5_Pos)) /* Assigment of value for MERR5 in the HMATRIX2_MEIMR register */
-#define HMATRIX2_MEIMR_MERR6_Pos              _UINT32_(6)                                          /* (HMATRIX2_MEIMR) Master 6 Access Error Position */
-#define HMATRIX2_MEIMR_MERR6_Msk              (_UINT32_(0x1) << HMATRIX2_MEIMR_MERR6_Pos)          /* (HMATRIX2_MEIMR) Master 6 Access Error Mask */
-#define HMATRIX2_MEIMR_MERR6(value)           (HMATRIX2_MEIMR_MERR6_Msk & (_UINT32_(value) << HMATRIX2_MEIMR_MERR6_Pos)) /* Assigment of value for MERR6 in the HMATRIX2_MEIMR register */
-#define HMATRIX2_MEIMR_MERR7_Pos              _UINT32_(7)                                          /* (HMATRIX2_MEIMR) Master 7 Access Error Position */
-#define HMATRIX2_MEIMR_MERR7_Msk              (_UINT32_(0x1) << HMATRIX2_MEIMR_MERR7_Pos)          /* (HMATRIX2_MEIMR) Master 7 Access Error Mask */
-#define HMATRIX2_MEIMR_MERR7(value)           (HMATRIX2_MEIMR_MERR7_Msk & (_UINT32_(value) << HMATRIX2_MEIMR_MERR7_Pos)) /* Assigment of value for MERR7 in the HMATRIX2_MEIMR register */
-#define HMATRIX2_MEIMR_MERR8_Pos              _UINT32_(8)                                          /* (HMATRIX2_MEIMR) Master 8 Access Error Position */
-#define HMATRIX2_MEIMR_MERR8_Msk              (_UINT32_(0x1) << HMATRIX2_MEIMR_MERR8_Pos)          /* (HMATRIX2_MEIMR) Master 8 Access Error Mask */
-#define HMATRIX2_MEIMR_MERR8(value)           (HMATRIX2_MEIMR_MERR8_Msk & (_UINT32_(value) << HMATRIX2_MEIMR_MERR8_Pos)) /* Assigment of value for MERR8 in the HMATRIX2_MEIMR register */
-#define HMATRIX2_MEIMR_MERR9_Pos              _UINT32_(9)                                          /* (HMATRIX2_MEIMR) Master 9 Access Error Position */
-#define HMATRIX2_MEIMR_MERR9_Msk              (_UINT32_(0x1) << HMATRIX2_MEIMR_MERR9_Pos)          /* (HMATRIX2_MEIMR) Master 9 Access Error Mask */
-#define HMATRIX2_MEIMR_MERR9(value)           (HMATRIX2_MEIMR_MERR9_Msk & (_UINT32_(value) << HMATRIX2_MEIMR_MERR9_Pos)) /* Assigment of value for MERR9 in the HMATRIX2_MEIMR register */
-#define HMATRIX2_MEIMR_MERR10_Pos             _UINT32_(10)                                         /* (HMATRIX2_MEIMR) Master 10 Access Error Position */
-#define HMATRIX2_MEIMR_MERR10_Msk             (_UINT32_(0x1) << HMATRIX2_MEIMR_MERR10_Pos)         /* (HMATRIX2_MEIMR) Master 10 Access Error Mask */
-#define HMATRIX2_MEIMR_MERR10(value)          (HMATRIX2_MEIMR_MERR10_Msk & (_UINT32_(value) << HMATRIX2_MEIMR_MERR10_Pos)) /* Assigment of value for MERR10 in the HMATRIX2_MEIMR register */
-#define HMATRIX2_MEIMR_MERR11_Pos             _UINT32_(11)                                         /* (HMATRIX2_MEIMR) Master 11 Access Error Position */
-#define HMATRIX2_MEIMR_MERR11_Msk             (_UINT32_(0x1) << HMATRIX2_MEIMR_MERR11_Pos)         /* (HMATRIX2_MEIMR) Master 11 Access Error Mask */
-#define HMATRIX2_MEIMR_MERR11(value)          (HMATRIX2_MEIMR_MERR11_Msk & (_UINT32_(value) << HMATRIX2_MEIMR_MERR11_Pos)) /* Assigment of value for MERR11 in the HMATRIX2_MEIMR register */
-#define HMATRIX2_MEIMR_MERR12_Pos             _UINT32_(12)                                         /* (HMATRIX2_MEIMR) Master 12 Access Error Position */
-#define HMATRIX2_MEIMR_MERR12_Msk             (_UINT32_(0x1) << HMATRIX2_MEIMR_MERR12_Pos)         /* (HMATRIX2_MEIMR) Master 12 Access Error Mask */
-#define HMATRIX2_MEIMR_MERR12(value)          (HMATRIX2_MEIMR_MERR12_Msk & (_UINT32_(value) << HMATRIX2_MEIMR_MERR12_Pos)) /* Assigment of value for MERR12 in the HMATRIX2_MEIMR register */
-#define HMATRIX2_MEIMR_MERR13_Pos             _UINT32_(13)                                         /* (HMATRIX2_MEIMR) Master 13 Access Error Position */
-#define HMATRIX2_MEIMR_MERR13_Msk             (_UINT32_(0x1) << HMATRIX2_MEIMR_MERR13_Pos)         /* (HMATRIX2_MEIMR) Master 13 Access Error Mask */
-#define HMATRIX2_MEIMR_MERR13(value)          (HMATRIX2_MEIMR_MERR13_Msk & (_UINT32_(value) << HMATRIX2_MEIMR_MERR13_Pos)) /* Assigment of value for MERR13 in the HMATRIX2_MEIMR register */
-#define HMATRIX2_MEIMR_MERR14_Pos             _UINT32_(14)                                         /* (HMATRIX2_MEIMR) Master 14 Access Error Position */
-#define HMATRIX2_MEIMR_MERR14_Msk             (_UINT32_(0x1) << HMATRIX2_MEIMR_MERR14_Pos)         /* (HMATRIX2_MEIMR) Master 14 Access Error Mask */
-#define HMATRIX2_MEIMR_MERR14(value)          (HMATRIX2_MEIMR_MERR14_Msk & (_UINT32_(value) << HMATRIX2_MEIMR_MERR14_Pos)) /* Assigment of value for MERR14 in the HMATRIX2_MEIMR register */
-#define HMATRIX2_MEIMR_MERR15_Pos             _UINT32_(15)                                         /* (HMATRIX2_MEIMR) Master 15 Access Error Position */
-#define HMATRIX2_MEIMR_MERR15_Msk             (_UINT32_(0x1) << HMATRIX2_MEIMR_MERR15_Pos)         /* (HMATRIX2_MEIMR) Master 15 Access Error Mask */
-#define HMATRIX2_MEIMR_MERR15(value)          (HMATRIX2_MEIMR_MERR15_Msk & (_UINT32_(value) << HMATRIX2_MEIMR_MERR15_Pos)) /* Assigment of value for MERR15 in the HMATRIX2_MEIMR register */
-#define HMATRIX2_MEIMR_Msk                    _UINT32_(0x0000FFFF)                                 /* (HMATRIX2_MEIMR) Register Mask  */
-
-#define HMATRIX2_MEIMR_MERR_Pos               _UINT32_(0)                                          /* (HMATRIX2_MEIMR Position) Master x5 Access Error */
-#define HMATRIX2_MEIMR_MERR_Msk               (_UINT32_(0xFFFF) << HMATRIX2_MEIMR_MERR_Pos)        /* (HMATRIX2_MEIMR Mask) MERR */
-#define HMATRIX2_MEIMR_MERR(value)            (HMATRIX2_MEIMR_MERR_Msk & (_UINT32_(value) << HMATRIX2_MEIMR_MERR_Pos)) 
-
-/* -------- HMATRIX2_MESR : (HMATRIX2 Offset: 0x15C) ( R/ 32) Master Error Status -------- */
-#define HMATRIX2_MESR_MERR0_Pos               _UINT32_(0)                                          /* (HMATRIX2_MESR) Master 0 Access Error Position */
-#define HMATRIX2_MESR_MERR0_Msk               (_UINT32_(0x1) << HMATRIX2_MESR_MERR0_Pos)           /* (HMATRIX2_MESR) Master 0 Access Error Mask */
-#define HMATRIX2_MESR_MERR0(value)            (HMATRIX2_MESR_MERR0_Msk & (_UINT32_(value) << HMATRIX2_MESR_MERR0_Pos)) /* Assigment of value for MERR0 in the HMATRIX2_MESR register */
-#define HMATRIX2_MESR_MERR1_Pos               _UINT32_(1)                                          /* (HMATRIX2_MESR) Master 1 Access Error Position */
-#define HMATRIX2_MESR_MERR1_Msk               (_UINT32_(0x1) << HMATRIX2_MESR_MERR1_Pos)           /* (HMATRIX2_MESR) Master 1 Access Error Mask */
-#define HMATRIX2_MESR_MERR1(value)            (HMATRIX2_MESR_MERR1_Msk & (_UINT32_(value) << HMATRIX2_MESR_MERR1_Pos)) /* Assigment of value for MERR1 in the HMATRIX2_MESR register */
-#define HMATRIX2_MESR_MERR2_Pos               _UINT32_(2)                                          /* (HMATRIX2_MESR) Master 2 Access Error Position */
-#define HMATRIX2_MESR_MERR2_Msk               (_UINT32_(0x1) << HMATRIX2_MESR_MERR2_Pos)           /* (HMATRIX2_MESR) Master 2 Access Error Mask */
-#define HMATRIX2_MESR_MERR2(value)            (HMATRIX2_MESR_MERR2_Msk & (_UINT32_(value) << HMATRIX2_MESR_MERR2_Pos)) /* Assigment of value for MERR2 in the HMATRIX2_MESR register */
-#define HMATRIX2_MESR_MERR3_Pos               _UINT32_(3)                                          /* (HMATRIX2_MESR) Master 3 Access Error Position */
-#define HMATRIX2_MESR_MERR3_Msk               (_UINT32_(0x1) << HMATRIX2_MESR_MERR3_Pos)           /* (HMATRIX2_MESR) Master 3 Access Error Mask */
-#define HMATRIX2_MESR_MERR3(value)            (HMATRIX2_MESR_MERR3_Msk & (_UINT32_(value) << HMATRIX2_MESR_MERR3_Pos)) /* Assigment of value for MERR3 in the HMATRIX2_MESR register */
-#define HMATRIX2_MESR_MERR4_Pos               _UINT32_(4)                                          /* (HMATRIX2_MESR) Master 4 Access Error Position */
-#define HMATRIX2_MESR_MERR4_Msk               (_UINT32_(0x1) << HMATRIX2_MESR_MERR4_Pos)           /* (HMATRIX2_MESR) Master 4 Access Error Mask */
-#define HMATRIX2_MESR_MERR4(value)            (HMATRIX2_MESR_MERR4_Msk & (_UINT32_(value) << HMATRIX2_MESR_MERR4_Pos)) /* Assigment of value for MERR4 in the HMATRIX2_MESR register */
-#define HMATRIX2_MESR_MERR5_Pos               _UINT32_(5)                                          /* (HMATRIX2_MESR) Master 5 Access Error Position */
-#define HMATRIX2_MESR_MERR5_Msk               (_UINT32_(0x1) << HMATRIX2_MESR_MERR5_Pos)           /* (HMATRIX2_MESR) Master 5 Access Error Mask */
-#define HMATRIX2_MESR_MERR5(value)            (HMATRIX2_MESR_MERR5_Msk & (_UINT32_(value) << HMATRIX2_MESR_MERR5_Pos)) /* Assigment of value for MERR5 in the HMATRIX2_MESR register */
-#define HMATRIX2_MESR_MERR6_Pos               _UINT32_(6)                                          /* (HMATRIX2_MESR) Master 6 Access Error Position */
-#define HMATRIX2_MESR_MERR6_Msk               (_UINT32_(0x1) << HMATRIX2_MESR_MERR6_Pos)           /* (HMATRIX2_MESR) Master 6 Access Error Mask */
-#define HMATRIX2_MESR_MERR6(value)            (HMATRIX2_MESR_MERR6_Msk & (_UINT32_(value) << HMATRIX2_MESR_MERR6_Pos)) /* Assigment of value for MERR6 in the HMATRIX2_MESR register */
-#define HMATRIX2_MESR_MERR7_Pos               _UINT32_(7)                                          /* (HMATRIX2_MESR) Master 7 Access Error Position */
-#define HMATRIX2_MESR_MERR7_Msk               (_UINT32_(0x1) << HMATRIX2_MESR_MERR7_Pos)           /* (HMATRIX2_MESR) Master 7 Access Error Mask */
-#define HMATRIX2_MESR_MERR7(value)            (HMATRIX2_MESR_MERR7_Msk & (_UINT32_(value) << HMATRIX2_MESR_MERR7_Pos)) /* Assigment of value for MERR7 in the HMATRIX2_MESR register */
-#define HMATRIX2_MESR_MERR8_Pos               _UINT32_(8)                                          /* (HMATRIX2_MESR) Master 8 Access Error Position */
-#define HMATRIX2_MESR_MERR8_Msk               (_UINT32_(0x1) << HMATRIX2_MESR_MERR8_Pos)           /* (HMATRIX2_MESR) Master 8 Access Error Mask */
-#define HMATRIX2_MESR_MERR8(value)            (HMATRIX2_MESR_MERR8_Msk & (_UINT32_(value) << HMATRIX2_MESR_MERR8_Pos)) /* Assigment of value for MERR8 in the HMATRIX2_MESR register */
-#define HMATRIX2_MESR_MERR9_Pos               _UINT32_(9)                                          /* (HMATRIX2_MESR) Master 9 Access Error Position */
-#define HMATRIX2_MESR_MERR9_Msk               (_UINT32_(0x1) << HMATRIX2_MESR_MERR9_Pos)           /* (HMATRIX2_MESR) Master 9 Access Error Mask */
-#define HMATRIX2_MESR_MERR9(value)            (HMATRIX2_MESR_MERR9_Msk & (_UINT32_(value) << HMATRIX2_MESR_MERR9_Pos)) /* Assigment of value for MERR9 in the HMATRIX2_MESR register */
-#define HMATRIX2_MESR_MERR10_Pos              _UINT32_(10)                                         /* (HMATRIX2_MESR) Master 10 Access Error Position */
-#define HMATRIX2_MESR_MERR10_Msk              (_UINT32_(0x1) << HMATRIX2_MESR_MERR10_Pos)          /* (HMATRIX2_MESR) Master 10 Access Error Mask */
-#define HMATRIX2_MESR_MERR10(value)           (HMATRIX2_MESR_MERR10_Msk & (_UINT32_(value) << HMATRIX2_MESR_MERR10_Pos)) /* Assigment of value for MERR10 in the HMATRIX2_MESR register */
-#define HMATRIX2_MESR_MERR11_Pos              _UINT32_(11)                                         /* (HMATRIX2_MESR) Master 11 Access Error Position */
-#define HMATRIX2_MESR_MERR11_Msk              (_UINT32_(0x1) << HMATRIX2_MESR_MERR11_Pos)          /* (HMATRIX2_MESR) Master 11 Access Error Mask */
-#define HMATRIX2_MESR_MERR11(value)           (HMATRIX2_MESR_MERR11_Msk & (_UINT32_(value) << HMATRIX2_MESR_MERR11_Pos)) /* Assigment of value for MERR11 in the HMATRIX2_MESR register */
-#define HMATRIX2_MESR_MERR12_Pos              _UINT32_(12)                                         /* (HMATRIX2_MESR) Master 12 Access Error Position */
-#define HMATRIX2_MESR_MERR12_Msk              (_UINT32_(0x1) << HMATRIX2_MESR_MERR12_Pos)          /* (HMATRIX2_MESR) Master 12 Access Error Mask */
-#define HMATRIX2_MESR_MERR12(value)           (HMATRIX2_MESR_MERR12_Msk & (_UINT32_(value) << HMATRIX2_MESR_MERR12_Pos)) /* Assigment of value for MERR12 in the HMATRIX2_MESR register */
-#define HMATRIX2_MESR_MERR13_Pos              _UINT32_(13)                                         /* (HMATRIX2_MESR) Master 13 Access Error Position */
-#define HMATRIX2_MESR_MERR13_Msk              (_UINT32_(0x1) << HMATRIX2_MESR_MERR13_Pos)          /* (HMATRIX2_MESR) Master 13 Access Error Mask */
-#define HMATRIX2_MESR_MERR13(value)           (HMATRIX2_MESR_MERR13_Msk & (_UINT32_(value) << HMATRIX2_MESR_MERR13_Pos)) /* Assigment of value for MERR13 in the HMATRIX2_MESR register */
-#define HMATRIX2_MESR_MERR14_Pos              _UINT32_(14)                                         /* (HMATRIX2_MESR) Master 14 Access Error Position */
-#define HMATRIX2_MESR_MERR14_Msk              (_UINT32_(0x1) << HMATRIX2_MESR_MERR14_Pos)          /* (HMATRIX2_MESR) Master 14 Access Error Mask */
-#define HMATRIX2_MESR_MERR14(value)           (HMATRIX2_MESR_MERR14_Msk & (_UINT32_(value) << HMATRIX2_MESR_MERR14_Pos)) /* Assigment of value for MERR14 in the HMATRIX2_MESR register */
-#define HMATRIX2_MESR_MERR15_Pos              _UINT32_(15)                                         /* (HMATRIX2_MESR) Master 15 Access Error Position */
-#define HMATRIX2_MESR_MERR15_Msk              (_UINT32_(0x1) << HMATRIX2_MESR_MERR15_Pos)          /* (HMATRIX2_MESR) Master 15 Access Error Mask */
-#define HMATRIX2_MESR_MERR15(value)           (HMATRIX2_MESR_MERR15_Msk & (_UINT32_(value) << HMATRIX2_MESR_MERR15_Pos)) /* Assigment of value for MERR15 in the HMATRIX2_MESR register */
-#define HMATRIX2_MESR_Msk                     _UINT32_(0x0000FFFF)                                 /* (HMATRIX2_MESR) Register Mask  */
-
-#define HMATRIX2_MESR_MERR_Pos                _UINT32_(0)                                          /* (HMATRIX2_MESR Position) Master x5 Access Error */
-#define HMATRIX2_MESR_MERR_Msk                (_UINT32_(0xFFFF) << HMATRIX2_MESR_MERR_Pos)         /* (HMATRIX2_MESR Mask) MERR */
-#define HMATRIX2_MESR_MERR(value)             (HMATRIX2_MESR_MERR_Msk & (_UINT32_(value) << HMATRIX2_MESR_MERR_Pos)) 
 
 /* -------- HMATRIX2_MRCR : (HMATRIX2 Offset: 0x100) (R/W 32) Master Remap Control -------- */
 #define HMATRIX2_MRCR_RESETVALUE              _UINT32_(0x00)                                       /*  (HMATRIX2_MRCR) Master Remap Control  Reset Value */
@@ -500,27 +297,6 @@
 #define HMATRIX2_MRCR_RCB_Msk                 (_UINT32_(0xFFFF) << HMATRIX2_MRCR_RCB_Pos)          /* (HMATRIX2_MRCR Mask) RCB */
 #define HMATRIX2_MRCR_RCB(value)              (HMATRIX2_MRCR_RCB_Msk & (_UINT32_(value) << HMATRIX2_MRCR_RCB_Pos)) 
 
-/* -------- HMATRIX2_SCFG : (HMATRIX2 Offset: 0x40) (R/W 32) Slave Configuration -------- */
-#define HMATRIX2_SCFG_RESETVALUE              _UINT32_(0x10)                                       /*  (HMATRIX2_SCFG) Slave Configuration  Reset Value */
-
-#define HMATRIX2_SCFG_SLOT_CYCLE_Pos          _UINT32_(0)                                          /* (HMATRIX2_SCFG) Maximum Number of Allowed Cycles for a Burst Position */
-#define HMATRIX2_SCFG_SLOT_CYCLE_Msk          (_UINT32_(0x1FF) << HMATRIX2_SCFG_SLOT_CYCLE_Pos)    /* (HMATRIX2_SCFG) Maximum Number of Allowed Cycles for a Burst Mask */
-#define HMATRIX2_SCFG_SLOT_CYCLE(value)       (HMATRIX2_SCFG_SLOT_CYCLE_Msk & (_UINT32_(value) << HMATRIX2_SCFG_SLOT_CYCLE_Pos)) /* Assigment of value for SLOT_CYCLE in the HMATRIX2_SCFG register */
-#define HMATRIX2_SCFG_DEFMSTR_TYPE_Pos        _UINT32_(16)                                         /* (HMATRIX2_SCFG) Default Master Type Position */
-#define HMATRIX2_SCFG_DEFMSTR_TYPE_Msk        (_UINT32_(0x3) << HMATRIX2_SCFG_DEFMSTR_TYPE_Pos)    /* (HMATRIX2_SCFG) Default Master Type Mask */
-#define HMATRIX2_SCFG_DEFMSTR_TYPE(value)     (HMATRIX2_SCFG_DEFMSTR_TYPE_Msk & (_UINT32_(value) << HMATRIX2_SCFG_DEFMSTR_TYPE_Pos)) /* Assigment of value for DEFMSTR_TYPE in the HMATRIX2_SCFG register */
-#define   HMATRIX2_SCFG_DEFMSTR_TYPE_NO_DEFAULT_Val _UINT32_(0x0)                                        /* (HMATRIX2_SCFG) No Default Master. At the end of current slave access, if no other master request is pending, the slave is deconnected from all masters. This resusts in having a one cycle latency for the first transfer of a burst.  */
-#define   HMATRIX2_SCFG_DEFMSTR_TYPE_LAST_DEFAULT_Val _UINT32_(0x1)                                        /* (HMATRIX2_SCFG) Last Default Master At the end of current slave access, if no other master request is pending, the slave stay connected with the last master havingaccessed it.This resusts in not having the one cycle latency when the last master re-trying access on the slave.  */
-#define   HMATRIX2_SCFG_DEFMSTR_TYPE_FIXED_DEFAULT_Val _UINT32_(0x2)                                        /* (HMATRIX2_SCFG) Fixed Default Master At the end of current slave access, if no other master request is pending, the slave connects with fixed master which numberis in FIXED_DEFMSTR register.This resusts in not having the one cycle latency when the fixed master re-trying access on the slave.  */
-#define HMATRIX2_SCFG_DEFMSTR_TYPE_NO_DEFAULT (HMATRIX2_SCFG_DEFMSTR_TYPE_NO_DEFAULT_Val << HMATRIX2_SCFG_DEFMSTR_TYPE_Pos) /* (HMATRIX2_SCFG) No Default Master. At the end of current slave access, if no other master request is pending, the slave is deconnected from all masters. This resusts in having a one cycle latency for the first transfer of a burst. Position  */
-#define HMATRIX2_SCFG_DEFMSTR_TYPE_LAST_DEFAULT (HMATRIX2_SCFG_DEFMSTR_TYPE_LAST_DEFAULT_Val << HMATRIX2_SCFG_DEFMSTR_TYPE_Pos) /* (HMATRIX2_SCFG) Last Default Master At the end of current slave access, if no other master request is pending, the slave stay connected with the last master havingaccessed it.This resusts in not having the one cycle latency when the last master re-trying access on the slave. Position  */
-#define HMATRIX2_SCFG_DEFMSTR_TYPE_FIXED_DEFAULT (HMATRIX2_SCFG_DEFMSTR_TYPE_FIXED_DEFAULT_Val << HMATRIX2_SCFG_DEFMSTR_TYPE_Pos) /* (HMATRIX2_SCFG) Fixed Default Master At the end of current slave access, if no other master request is pending, the slave connects with fixed master which numberis in FIXED_DEFMSTR register.This resusts in not having the one cycle latency when the fixed master re-trying access on the slave. Position  */
-#define HMATRIX2_SCFG_FIXED_DEFMSTR_Pos       _UINT32_(18)                                         /* (HMATRIX2_SCFG) Fixed Index of Default Master Position */
-#define HMATRIX2_SCFG_FIXED_DEFMSTR_Msk       (_UINT32_(0xF) << HMATRIX2_SCFG_FIXED_DEFMSTR_Pos)   /* (HMATRIX2_SCFG) Fixed Index of Default Master Mask */
-#define HMATRIX2_SCFG_FIXED_DEFMSTR(value)    (HMATRIX2_SCFG_FIXED_DEFMSTR_Msk & (_UINT32_(value) << HMATRIX2_SCFG_FIXED_DEFMSTR_Pos)) /* Assigment of value for FIXED_DEFMSTR in the HMATRIX2_SCFG register */
-#define HMATRIX2_SCFG_Msk                     _UINT32_(0x003F01FF)                                 /* (HMATRIX2_SCFG) Register Mask  */
-
-
 /* -------- HMATRIX2_SFR : (HMATRIX2 Offset: 0x110) (R/W 32) Special Function -------- */
 #define HMATRIX2_SFR_RESETVALUE               _UINT32_(0x00)                                       /*  (HMATRIX2_SFR) Special Function  Reset Value */
 
@@ -528,6 +304,230 @@
 #define HMATRIX2_SFR_SFR_Msk                  (_UINT32_(0xFFFFFFFF) << HMATRIX2_SFR_SFR_Pos)       /* (HMATRIX2_SFR) Special Function Register Mask */
 #define HMATRIX2_SFR_SFR(value)               (HMATRIX2_SFR_SFR_Msk & (_UINT32_(value) << HMATRIX2_SFR_SFR_Pos)) /* Assigment of value for SFR in the HMATRIX2_SFR register */
 #define HMATRIX2_SFR_Msk                      _UINT32_(0xFFFFFFFF)                                 /* (HMATRIX2_SFR) Register Mask  */
+
+
+/* -------- HMATRIX2_MEIER : (HMATRIX2 Offset: 0x150) ( /W 32) Master Error Interrupt Enable -------- */
+#define HMATRIX2_MEIER_MERR0_Pos              _UINT32_(0)                                          /* (HMATRIX2_MEIER) Master 0 Access Error Position */
+#define HMATRIX2_MEIER_MERR0_Msk              (_UINT32_(0x1) << HMATRIX2_MEIER_MERR0_Pos)          /* (HMATRIX2_MEIER) Master 0 Access Error Mask */
+#define HMATRIX2_MEIER_MERR0(value)           (HMATRIX2_MEIER_MERR0_Msk & (_UINT32_(value) << HMATRIX2_MEIER_MERR0_Pos)) /* Assigment of value for MERR0 in the HMATRIX2_MEIER register */
+#define HMATRIX2_MEIER_MERR1_Pos              _UINT32_(1)                                          /* (HMATRIX2_MEIER) Master 1 Access Error Position */
+#define HMATRIX2_MEIER_MERR1_Msk              (_UINT32_(0x1) << HMATRIX2_MEIER_MERR1_Pos)          /* (HMATRIX2_MEIER) Master 1 Access Error Mask */
+#define HMATRIX2_MEIER_MERR1(value)           (HMATRIX2_MEIER_MERR1_Msk & (_UINT32_(value) << HMATRIX2_MEIER_MERR1_Pos)) /* Assigment of value for MERR1 in the HMATRIX2_MEIER register */
+#define HMATRIX2_MEIER_MERR2_Pos              _UINT32_(2)                                          /* (HMATRIX2_MEIER) Master 2 Access Error Position */
+#define HMATRIX2_MEIER_MERR2_Msk              (_UINT32_(0x1) << HMATRIX2_MEIER_MERR2_Pos)          /* (HMATRIX2_MEIER) Master 2 Access Error Mask */
+#define HMATRIX2_MEIER_MERR2(value)           (HMATRIX2_MEIER_MERR2_Msk & (_UINT32_(value) << HMATRIX2_MEIER_MERR2_Pos)) /* Assigment of value for MERR2 in the HMATRIX2_MEIER register */
+#define HMATRIX2_MEIER_MERR3_Pos              _UINT32_(3)                                          /* (HMATRIX2_MEIER) Master 3 Access Error Position */
+#define HMATRIX2_MEIER_MERR3_Msk              (_UINT32_(0x1) << HMATRIX2_MEIER_MERR3_Pos)          /* (HMATRIX2_MEIER) Master 3 Access Error Mask */
+#define HMATRIX2_MEIER_MERR3(value)           (HMATRIX2_MEIER_MERR3_Msk & (_UINT32_(value) << HMATRIX2_MEIER_MERR3_Pos)) /* Assigment of value for MERR3 in the HMATRIX2_MEIER register */
+#define HMATRIX2_MEIER_MERR4_Pos              _UINT32_(4)                                          /* (HMATRIX2_MEIER) Master 4 Access Error Position */
+#define HMATRIX2_MEIER_MERR4_Msk              (_UINT32_(0x1) << HMATRIX2_MEIER_MERR4_Pos)          /* (HMATRIX2_MEIER) Master 4 Access Error Mask */
+#define HMATRIX2_MEIER_MERR4(value)           (HMATRIX2_MEIER_MERR4_Msk & (_UINT32_(value) << HMATRIX2_MEIER_MERR4_Pos)) /* Assigment of value for MERR4 in the HMATRIX2_MEIER register */
+#define HMATRIX2_MEIER_MERR5_Pos              _UINT32_(5)                                          /* (HMATRIX2_MEIER) Master 5 Access Error Position */
+#define HMATRIX2_MEIER_MERR5_Msk              (_UINT32_(0x1) << HMATRIX2_MEIER_MERR5_Pos)          /* (HMATRIX2_MEIER) Master 5 Access Error Mask */
+#define HMATRIX2_MEIER_MERR5(value)           (HMATRIX2_MEIER_MERR5_Msk & (_UINT32_(value) << HMATRIX2_MEIER_MERR5_Pos)) /* Assigment of value for MERR5 in the HMATRIX2_MEIER register */
+#define HMATRIX2_MEIER_MERR6_Pos              _UINT32_(6)                                          /* (HMATRIX2_MEIER) Master 6 Access Error Position */
+#define HMATRIX2_MEIER_MERR6_Msk              (_UINT32_(0x1) << HMATRIX2_MEIER_MERR6_Pos)          /* (HMATRIX2_MEIER) Master 6 Access Error Mask */
+#define HMATRIX2_MEIER_MERR6(value)           (HMATRIX2_MEIER_MERR6_Msk & (_UINT32_(value) << HMATRIX2_MEIER_MERR6_Pos)) /* Assigment of value for MERR6 in the HMATRIX2_MEIER register */
+#define HMATRIX2_MEIER_MERR7_Pos              _UINT32_(7)                                          /* (HMATRIX2_MEIER) Master 7 Access Error Position */
+#define HMATRIX2_MEIER_MERR7_Msk              (_UINT32_(0x1) << HMATRIX2_MEIER_MERR7_Pos)          /* (HMATRIX2_MEIER) Master 7 Access Error Mask */
+#define HMATRIX2_MEIER_MERR7(value)           (HMATRIX2_MEIER_MERR7_Msk & (_UINT32_(value) << HMATRIX2_MEIER_MERR7_Pos)) /* Assigment of value for MERR7 in the HMATRIX2_MEIER register */
+#define HMATRIX2_MEIER_MERR8_Pos              _UINT32_(8)                                          /* (HMATRIX2_MEIER) Master 8 Access Error Position */
+#define HMATRIX2_MEIER_MERR8_Msk              (_UINT32_(0x1) << HMATRIX2_MEIER_MERR8_Pos)          /* (HMATRIX2_MEIER) Master 8 Access Error Mask */
+#define HMATRIX2_MEIER_MERR8(value)           (HMATRIX2_MEIER_MERR8_Msk & (_UINT32_(value) << HMATRIX2_MEIER_MERR8_Pos)) /* Assigment of value for MERR8 in the HMATRIX2_MEIER register */
+#define HMATRIX2_MEIER_MERR9_Pos              _UINT32_(9)                                          /* (HMATRIX2_MEIER) Master 9 Access Error Position */
+#define HMATRIX2_MEIER_MERR9_Msk              (_UINT32_(0x1) << HMATRIX2_MEIER_MERR9_Pos)          /* (HMATRIX2_MEIER) Master 9 Access Error Mask */
+#define HMATRIX2_MEIER_MERR9(value)           (HMATRIX2_MEIER_MERR9_Msk & (_UINT32_(value) << HMATRIX2_MEIER_MERR9_Pos)) /* Assigment of value for MERR9 in the HMATRIX2_MEIER register */
+#define HMATRIX2_MEIER_MERR10_Pos             _UINT32_(10)                                         /* (HMATRIX2_MEIER) Master 10 Access Error Position */
+#define HMATRIX2_MEIER_MERR10_Msk             (_UINT32_(0x1) << HMATRIX2_MEIER_MERR10_Pos)         /* (HMATRIX2_MEIER) Master 10 Access Error Mask */
+#define HMATRIX2_MEIER_MERR10(value)          (HMATRIX2_MEIER_MERR10_Msk & (_UINT32_(value) << HMATRIX2_MEIER_MERR10_Pos)) /* Assigment of value for MERR10 in the HMATRIX2_MEIER register */
+#define HMATRIX2_MEIER_MERR11_Pos             _UINT32_(11)                                         /* (HMATRIX2_MEIER) Master 11 Access Error Position */
+#define HMATRIX2_MEIER_MERR11_Msk             (_UINT32_(0x1) << HMATRIX2_MEIER_MERR11_Pos)         /* (HMATRIX2_MEIER) Master 11 Access Error Mask */
+#define HMATRIX2_MEIER_MERR11(value)          (HMATRIX2_MEIER_MERR11_Msk & (_UINT32_(value) << HMATRIX2_MEIER_MERR11_Pos)) /* Assigment of value for MERR11 in the HMATRIX2_MEIER register */
+#define HMATRIX2_MEIER_MERR12_Pos             _UINT32_(12)                                         /* (HMATRIX2_MEIER) Master 12 Access Error Position */
+#define HMATRIX2_MEIER_MERR12_Msk             (_UINT32_(0x1) << HMATRIX2_MEIER_MERR12_Pos)         /* (HMATRIX2_MEIER) Master 12 Access Error Mask */
+#define HMATRIX2_MEIER_MERR12(value)          (HMATRIX2_MEIER_MERR12_Msk & (_UINT32_(value) << HMATRIX2_MEIER_MERR12_Pos)) /* Assigment of value for MERR12 in the HMATRIX2_MEIER register */
+#define HMATRIX2_MEIER_MERR13_Pos             _UINT32_(13)                                         /* (HMATRIX2_MEIER) Master 13 Access Error Position */
+#define HMATRIX2_MEIER_MERR13_Msk             (_UINT32_(0x1) << HMATRIX2_MEIER_MERR13_Pos)         /* (HMATRIX2_MEIER) Master 13 Access Error Mask */
+#define HMATRIX2_MEIER_MERR13(value)          (HMATRIX2_MEIER_MERR13_Msk & (_UINT32_(value) << HMATRIX2_MEIER_MERR13_Pos)) /* Assigment of value for MERR13 in the HMATRIX2_MEIER register */
+#define HMATRIX2_MEIER_MERR14_Pos             _UINT32_(14)                                         /* (HMATRIX2_MEIER) Master 14 Access Error Position */
+#define HMATRIX2_MEIER_MERR14_Msk             (_UINT32_(0x1) << HMATRIX2_MEIER_MERR14_Pos)         /* (HMATRIX2_MEIER) Master 14 Access Error Mask */
+#define HMATRIX2_MEIER_MERR14(value)          (HMATRIX2_MEIER_MERR14_Msk & (_UINT32_(value) << HMATRIX2_MEIER_MERR14_Pos)) /* Assigment of value for MERR14 in the HMATRIX2_MEIER register */
+#define HMATRIX2_MEIER_MERR15_Pos             _UINT32_(15)                                         /* (HMATRIX2_MEIER) Master 15 Access Error Position */
+#define HMATRIX2_MEIER_MERR15_Msk             (_UINT32_(0x1) << HMATRIX2_MEIER_MERR15_Pos)         /* (HMATRIX2_MEIER) Master 15 Access Error Mask */
+#define HMATRIX2_MEIER_MERR15(value)          (HMATRIX2_MEIER_MERR15_Msk & (_UINT32_(value) << HMATRIX2_MEIER_MERR15_Pos)) /* Assigment of value for MERR15 in the HMATRIX2_MEIER register */
+#define HMATRIX2_MEIER_Msk                    _UINT32_(0x0000FFFF)                                 /* (HMATRIX2_MEIER) Register Mask  */
+
+#define HMATRIX2_MEIER_MERR_Pos               _UINT32_(0)                                          /* (HMATRIX2_MEIER Position) Master x5 Access Error */
+#define HMATRIX2_MEIER_MERR_Msk               (_UINT32_(0xFFFF) << HMATRIX2_MEIER_MERR_Pos)        /* (HMATRIX2_MEIER Mask) MERR */
+#define HMATRIX2_MEIER_MERR(value)            (HMATRIX2_MEIER_MERR_Msk & (_UINT32_(value) << HMATRIX2_MEIER_MERR_Pos)) 
+
+/* -------- HMATRIX2_MEIDR : (HMATRIX2 Offset: 0x154) ( /W 32) Master Error Interrupt Disable -------- */
+#define HMATRIX2_MEIDR_MERR0_Pos              _UINT32_(0)                                          /* (HMATRIX2_MEIDR) Master 0 Access Error Position */
+#define HMATRIX2_MEIDR_MERR0_Msk              (_UINT32_(0x1) << HMATRIX2_MEIDR_MERR0_Pos)          /* (HMATRIX2_MEIDR) Master 0 Access Error Mask */
+#define HMATRIX2_MEIDR_MERR0(value)           (HMATRIX2_MEIDR_MERR0_Msk & (_UINT32_(value) << HMATRIX2_MEIDR_MERR0_Pos)) /* Assigment of value for MERR0 in the HMATRIX2_MEIDR register */
+#define HMATRIX2_MEIDR_MERR1_Pos              _UINT32_(1)                                          /* (HMATRIX2_MEIDR) Master 1 Access Error Position */
+#define HMATRIX2_MEIDR_MERR1_Msk              (_UINT32_(0x1) << HMATRIX2_MEIDR_MERR1_Pos)          /* (HMATRIX2_MEIDR) Master 1 Access Error Mask */
+#define HMATRIX2_MEIDR_MERR1(value)           (HMATRIX2_MEIDR_MERR1_Msk & (_UINT32_(value) << HMATRIX2_MEIDR_MERR1_Pos)) /* Assigment of value for MERR1 in the HMATRIX2_MEIDR register */
+#define HMATRIX2_MEIDR_MERR2_Pos              _UINT32_(2)                                          /* (HMATRIX2_MEIDR) Master 2 Access Error Position */
+#define HMATRIX2_MEIDR_MERR2_Msk              (_UINT32_(0x1) << HMATRIX2_MEIDR_MERR2_Pos)          /* (HMATRIX2_MEIDR) Master 2 Access Error Mask */
+#define HMATRIX2_MEIDR_MERR2(value)           (HMATRIX2_MEIDR_MERR2_Msk & (_UINT32_(value) << HMATRIX2_MEIDR_MERR2_Pos)) /* Assigment of value for MERR2 in the HMATRIX2_MEIDR register */
+#define HMATRIX2_MEIDR_MERR3_Pos              _UINT32_(3)                                          /* (HMATRIX2_MEIDR) Master 3 Access Error Position */
+#define HMATRIX2_MEIDR_MERR3_Msk              (_UINT32_(0x1) << HMATRIX2_MEIDR_MERR3_Pos)          /* (HMATRIX2_MEIDR) Master 3 Access Error Mask */
+#define HMATRIX2_MEIDR_MERR3(value)           (HMATRIX2_MEIDR_MERR3_Msk & (_UINT32_(value) << HMATRIX2_MEIDR_MERR3_Pos)) /* Assigment of value for MERR3 in the HMATRIX2_MEIDR register */
+#define HMATRIX2_MEIDR_MERR4_Pos              _UINT32_(4)                                          /* (HMATRIX2_MEIDR) Master 4 Access Error Position */
+#define HMATRIX2_MEIDR_MERR4_Msk              (_UINT32_(0x1) << HMATRIX2_MEIDR_MERR4_Pos)          /* (HMATRIX2_MEIDR) Master 4 Access Error Mask */
+#define HMATRIX2_MEIDR_MERR4(value)           (HMATRIX2_MEIDR_MERR4_Msk & (_UINT32_(value) << HMATRIX2_MEIDR_MERR4_Pos)) /* Assigment of value for MERR4 in the HMATRIX2_MEIDR register */
+#define HMATRIX2_MEIDR_MERR5_Pos              _UINT32_(5)                                          /* (HMATRIX2_MEIDR) Master 5 Access Error Position */
+#define HMATRIX2_MEIDR_MERR5_Msk              (_UINT32_(0x1) << HMATRIX2_MEIDR_MERR5_Pos)          /* (HMATRIX2_MEIDR) Master 5 Access Error Mask */
+#define HMATRIX2_MEIDR_MERR5(value)           (HMATRIX2_MEIDR_MERR5_Msk & (_UINT32_(value) << HMATRIX2_MEIDR_MERR5_Pos)) /* Assigment of value for MERR5 in the HMATRIX2_MEIDR register */
+#define HMATRIX2_MEIDR_MERR6_Pos              _UINT32_(6)                                          /* (HMATRIX2_MEIDR) Master 6 Access Error Position */
+#define HMATRIX2_MEIDR_MERR6_Msk              (_UINT32_(0x1) << HMATRIX2_MEIDR_MERR6_Pos)          /* (HMATRIX2_MEIDR) Master 6 Access Error Mask */
+#define HMATRIX2_MEIDR_MERR6(value)           (HMATRIX2_MEIDR_MERR6_Msk & (_UINT32_(value) << HMATRIX2_MEIDR_MERR6_Pos)) /* Assigment of value for MERR6 in the HMATRIX2_MEIDR register */
+#define HMATRIX2_MEIDR_MERR7_Pos              _UINT32_(7)                                          /* (HMATRIX2_MEIDR) Master 7 Access Error Position */
+#define HMATRIX2_MEIDR_MERR7_Msk              (_UINT32_(0x1) << HMATRIX2_MEIDR_MERR7_Pos)          /* (HMATRIX2_MEIDR) Master 7 Access Error Mask */
+#define HMATRIX2_MEIDR_MERR7(value)           (HMATRIX2_MEIDR_MERR7_Msk & (_UINT32_(value) << HMATRIX2_MEIDR_MERR7_Pos)) /* Assigment of value for MERR7 in the HMATRIX2_MEIDR register */
+#define HMATRIX2_MEIDR_MERR8_Pos              _UINT32_(8)                                          /* (HMATRIX2_MEIDR) Master 8 Access Error Position */
+#define HMATRIX2_MEIDR_MERR8_Msk              (_UINT32_(0x1) << HMATRIX2_MEIDR_MERR8_Pos)          /* (HMATRIX2_MEIDR) Master 8 Access Error Mask */
+#define HMATRIX2_MEIDR_MERR8(value)           (HMATRIX2_MEIDR_MERR8_Msk & (_UINT32_(value) << HMATRIX2_MEIDR_MERR8_Pos)) /* Assigment of value for MERR8 in the HMATRIX2_MEIDR register */
+#define HMATRIX2_MEIDR_MERR9_Pos              _UINT32_(9)                                          /* (HMATRIX2_MEIDR) Master 9 Access Error Position */
+#define HMATRIX2_MEIDR_MERR9_Msk              (_UINT32_(0x1) << HMATRIX2_MEIDR_MERR9_Pos)          /* (HMATRIX2_MEIDR) Master 9 Access Error Mask */
+#define HMATRIX2_MEIDR_MERR9(value)           (HMATRIX2_MEIDR_MERR9_Msk & (_UINT32_(value) << HMATRIX2_MEIDR_MERR9_Pos)) /* Assigment of value for MERR9 in the HMATRIX2_MEIDR register */
+#define HMATRIX2_MEIDR_MERR10_Pos             _UINT32_(10)                                         /* (HMATRIX2_MEIDR) Master 10 Access Error Position */
+#define HMATRIX2_MEIDR_MERR10_Msk             (_UINT32_(0x1) << HMATRIX2_MEIDR_MERR10_Pos)         /* (HMATRIX2_MEIDR) Master 10 Access Error Mask */
+#define HMATRIX2_MEIDR_MERR10(value)          (HMATRIX2_MEIDR_MERR10_Msk & (_UINT32_(value) << HMATRIX2_MEIDR_MERR10_Pos)) /* Assigment of value for MERR10 in the HMATRIX2_MEIDR register */
+#define HMATRIX2_MEIDR_MERR11_Pos             _UINT32_(11)                                         /* (HMATRIX2_MEIDR) Master 11 Access Error Position */
+#define HMATRIX2_MEIDR_MERR11_Msk             (_UINT32_(0x1) << HMATRIX2_MEIDR_MERR11_Pos)         /* (HMATRIX2_MEIDR) Master 11 Access Error Mask */
+#define HMATRIX2_MEIDR_MERR11(value)          (HMATRIX2_MEIDR_MERR11_Msk & (_UINT32_(value) << HMATRIX2_MEIDR_MERR11_Pos)) /* Assigment of value for MERR11 in the HMATRIX2_MEIDR register */
+#define HMATRIX2_MEIDR_MERR12_Pos             _UINT32_(12)                                         /* (HMATRIX2_MEIDR) Master 12 Access Error Position */
+#define HMATRIX2_MEIDR_MERR12_Msk             (_UINT32_(0x1) << HMATRIX2_MEIDR_MERR12_Pos)         /* (HMATRIX2_MEIDR) Master 12 Access Error Mask */
+#define HMATRIX2_MEIDR_MERR12(value)          (HMATRIX2_MEIDR_MERR12_Msk & (_UINT32_(value) << HMATRIX2_MEIDR_MERR12_Pos)) /* Assigment of value for MERR12 in the HMATRIX2_MEIDR register */
+#define HMATRIX2_MEIDR_MERR13_Pos             _UINT32_(13)                                         /* (HMATRIX2_MEIDR) Master 13 Access Error Position */
+#define HMATRIX2_MEIDR_MERR13_Msk             (_UINT32_(0x1) << HMATRIX2_MEIDR_MERR13_Pos)         /* (HMATRIX2_MEIDR) Master 13 Access Error Mask */
+#define HMATRIX2_MEIDR_MERR13(value)          (HMATRIX2_MEIDR_MERR13_Msk & (_UINT32_(value) << HMATRIX2_MEIDR_MERR13_Pos)) /* Assigment of value for MERR13 in the HMATRIX2_MEIDR register */
+#define HMATRIX2_MEIDR_MERR14_Pos             _UINT32_(14)                                         /* (HMATRIX2_MEIDR) Master 14 Access Error Position */
+#define HMATRIX2_MEIDR_MERR14_Msk             (_UINT32_(0x1) << HMATRIX2_MEIDR_MERR14_Pos)         /* (HMATRIX2_MEIDR) Master 14 Access Error Mask */
+#define HMATRIX2_MEIDR_MERR14(value)          (HMATRIX2_MEIDR_MERR14_Msk & (_UINT32_(value) << HMATRIX2_MEIDR_MERR14_Pos)) /* Assigment of value for MERR14 in the HMATRIX2_MEIDR register */
+#define HMATRIX2_MEIDR_MERR15_Pos             _UINT32_(15)                                         /* (HMATRIX2_MEIDR) Master 15 Access Error Position */
+#define HMATRIX2_MEIDR_MERR15_Msk             (_UINT32_(0x1) << HMATRIX2_MEIDR_MERR15_Pos)         /* (HMATRIX2_MEIDR) Master 15 Access Error Mask */
+#define HMATRIX2_MEIDR_MERR15(value)          (HMATRIX2_MEIDR_MERR15_Msk & (_UINT32_(value) << HMATRIX2_MEIDR_MERR15_Pos)) /* Assigment of value for MERR15 in the HMATRIX2_MEIDR register */
+#define HMATRIX2_MEIDR_Msk                    _UINT32_(0x0000FFFF)                                 /* (HMATRIX2_MEIDR) Register Mask  */
+
+#define HMATRIX2_MEIDR_MERR_Pos               _UINT32_(0)                                          /* (HMATRIX2_MEIDR Position) Master x5 Access Error */
+#define HMATRIX2_MEIDR_MERR_Msk               (_UINT32_(0xFFFF) << HMATRIX2_MEIDR_MERR_Pos)        /* (HMATRIX2_MEIDR Mask) MERR */
+#define HMATRIX2_MEIDR_MERR(value)            (HMATRIX2_MEIDR_MERR_Msk & (_UINT32_(value) << HMATRIX2_MEIDR_MERR_Pos)) 
+
+/* -------- HMATRIX2_MEIMR : (HMATRIX2 Offset: 0x158) ( R/ 32) Master Error Interrupt Mask -------- */
+#define HMATRIX2_MEIMR_MERR0_Pos              _UINT32_(0)                                          /* (HMATRIX2_MEIMR) Master 0 Access Error Position */
+#define HMATRIX2_MEIMR_MERR0_Msk              (_UINT32_(0x1) << HMATRIX2_MEIMR_MERR0_Pos)          /* (HMATRIX2_MEIMR) Master 0 Access Error Mask */
+#define HMATRIX2_MEIMR_MERR0(value)           (HMATRIX2_MEIMR_MERR0_Msk & (_UINT32_(value) << HMATRIX2_MEIMR_MERR0_Pos)) /* Assigment of value for MERR0 in the HMATRIX2_MEIMR register */
+#define HMATRIX2_MEIMR_MERR1_Pos              _UINT32_(1)                                          /* (HMATRIX2_MEIMR) Master 1 Access Error Position */
+#define HMATRIX2_MEIMR_MERR1_Msk              (_UINT32_(0x1) << HMATRIX2_MEIMR_MERR1_Pos)          /* (HMATRIX2_MEIMR) Master 1 Access Error Mask */
+#define HMATRIX2_MEIMR_MERR1(value)           (HMATRIX2_MEIMR_MERR1_Msk & (_UINT32_(value) << HMATRIX2_MEIMR_MERR1_Pos)) /* Assigment of value for MERR1 in the HMATRIX2_MEIMR register */
+#define HMATRIX2_MEIMR_MERR2_Pos              _UINT32_(2)                                          /* (HMATRIX2_MEIMR) Master 2 Access Error Position */
+#define HMATRIX2_MEIMR_MERR2_Msk              (_UINT32_(0x1) << HMATRIX2_MEIMR_MERR2_Pos)          /* (HMATRIX2_MEIMR) Master 2 Access Error Mask */
+#define HMATRIX2_MEIMR_MERR2(value)           (HMATRIX2_MEIMR_MERR2_Msk & (_UINT32_(value) << HMATRIX2_MEIMR_MERR2_Pos)) /* Assigment of value for MERR2 in the HMATRIX2_MEIMR register */
+#define HMATRIX2_MEIMR_MERR3_Pos              _UINT32_(3)                                          /* (HMATRIX2_MEIMR) Master 3 Access Error Position */
+#define HMATRIX2_MEIMR_MERR3_Msk              (_UINT32_(0x1) << HMATRIX2_MEIMR_MERR3_Pos)          /* (HMATRIX2_MEIMR) Master 3 Access Error Mask */
+#define HMATRIX2_MEIMR_MERR3(value)           (HMATRIX2_MEIMR_MERR3_Msk & (_UINT32_(value) << HMATRIX2_MEIMR_MERR3_Pos)) /* Assigment of value for MERR3 in the HMATRIX2_MEIMR register */
+#define HMATRIX2_MEIMR_MERR4_Pos              _UINT32_(4)                                          /* (HMATRIX2_MEIMR) Master 4 Access Error Position */
+#define HMATRIX2_MEIMR_MERR4_Msk              (_UINT32_(0x1) << HMATRIX2_MEIMR_MERR4_Pos)          /* (HMATRIX2_MEIMR) Master 4 Access Error Mask */
+#define HMATRIX2_MEIMR_MERR4(value)           (HMATRIX2_MEIMR_MERR4_Msk & (_UINT32_(value) << HMATRIX2_MEIMR_MERR4_Pos)) /* Assigment of value for MERR4 in the HMATRIX2_MEIMR register */
+#define HMATRIX2_MEIMR_MERR5_Pos              _UINT32_(5)                                          /* (HMATRIX2_MEIMR) Master 5 Access Error Position */
+#define HMATRIX2_MEIMR_MERR5_Msk              (_UINT32_(0x1) << HMATRIX2_MEIMR_MERR5_Pos)          /* (HMATRIX2_MEIMR) Master 5 Access Error Mask */
+#define HMATRIX2_MEIMR_MERR5(value)           (HMATRIX2_MEIMR_MERR5_Msk & (_UINT32_(value) << HMATRIX2_MEIMR_MERR5_Pos)) /* Assigment of value for MERR5 in the HMATRIX2_MEIMR register */
+#define HMATRIX2_MEIMR_MERR6_Pos              _UINT32_(6)                                          /* (HMATRIX2_MEIMR) Master 6 Access Error Position */
+#define HMATRIX2_MEIMR_MERR6_Msk              (_UINT32_(0x1) << HMATRIX2_MEIMR_MERR6_Pos)          /* (HMATRIX2_MEIMR) Master 6 Access Error Mask */
+#define HMATRIX2_MEIMR_MERR6(value)           (HMATRIX2_MEIMR_MERR6_Msk & (_UINT32_(value) << HMATRIX2_MEIMR_MERR6_Pos)) /* Assigment of value for MERR6 in the HMATRIX2_MEIMR register */
+#define HMATRIX2_MEIMR_MERR7_Pos              _UINT32_(7)                                          /* (HMATRIX2_MEIMR) Master 7 Access Error Position */
+#define HMATRIX2_MEIMR_MERR7_Msk              (_UINT32_(0x1) << HMATRIX2_MEIMR_MERR7_Pos)          /* (HMATRIX2_MEIMR) Master 7 Access Error Mask */
+#define HMATRIX2_MEIMR_MERR7(value)           (HMATRIX2_MEIMR_MERR7_Msk & (_UINT32_(value) << HMATRIX2_MEIMR_MERR7_Pos)) /* Assigment of value for MERR7 in the HMATRIX2_MEIMR register */
+#define HMATRIX2_MEIMR_MERR8_Pos              _UINT32_(8)                                          /* (HMATRIX2_MEIMR) Master 8 Access Error Position */
+#define HMATRIX2_MEIMR_MERR8_Msk              (_UINT32_(0x1) << HMATRIX2_MEIMR_MERR8_Pos)          /* (HMATRIX2_MEIMR) Master 8 Access Error Mask */
+#define HMATRIX2_MEIMR_MERR8(value)           (HMATRIX2_MEIMR_MERR8_Msk & (_UINT32_(value) << HMATRIX2_MEIMR_MERR8_Pos)) /* Assigment of value for MERR8 in the HMATRIX2_MEIMR register */
+#define HMATRIX2_MEIMR_MERR9_Pos              _UINT32_(9)                                          /* (HMATRIX2_MEIMR) Master 9 Access Error Position */
+#define HMATRIX2_MEIMR_MERR9_Msk              (_UINT32_(0x1) << HMATRIX2_MEIMR_MERR9_Pos)          /* (HMATRIX2_MEIMR) Master 9 Access Error Mask */
+#define HMATRIX2_MEIMR_MERR9(value)           (HMATRIX2_MEIMR_MERR9_Msk & (_UINT32_(value) << HMATRIX2_MEIMR_MERR9_Pos)) /* Assigment of value for MERR9 in the HMATRIX2_MEIMR register */
+#define HMATRIX2_MEIMR_MERR10_Pos             _UINT32_(10)                                         /* (HMATRIX2_MEIMR) Master 10 Access Error Position */
+#define HMATRIX2_MEIMR_MERR10_Msk             (_UINT32_(0x1) << HMATRIX2_MEIMR_MERR10_Pos)         /* (HMATRIX2_MEIMR) Master 10 Access Error Mask */
+#define HMATRIX2_MEIMR_MERR10(value)          (HMATRIX2_MEIMR_MERR10_Msk & (_UINT32_(value) << HMATRIX2_MEIMR_MERR10_Pos)) /* Assigment of value for MERR10 in the HMATRIX2_MEIMR register */
+#define HMATRIX2_MEIMR_MERR11_Pos             _UINT32_(11)                                         /* (HMATRIX2_MEIMR) Master 11 Access Error Position */
+#define HMATRIX2_MEIMR_MERR11_Msk             (_UINT32_(0x1) << HMATRIX2_MEIMR_MERR11_Pos)         /* (HMATRIX2_MEIMR) Master 11 Access Error Mask */
+#define HMATRIX2_MEIMR_MERR11(value)          (HMATRIX2_MEIMR_MERR11_Msk & (_UINT32_(value) << HMATRIX2_MEIMR_MERR11_Pos)) /* Assigment of value for MERR11 in the HMATRIX2_MEIMR register */
+#define HMATRIX2_MEIMR_MERR12_Pos             _UINT32_(12)                                         /* (HMATRIX2_MEIMR) Master 12 Access Error Position */
+#define HMATRIX2_MEIMR_MERR12_Msk             (_UINT32_(0x1) << HMATRIX2_MEIMR_MERR12_Pos)         /* (HMATRIX2_MEIMR) Master 12 Access Error Mask */
+#define HMATRIX2_MEIMR_MERR12(value)          (HMATRIX2_MEIMR_MERR12_Msk & (_UINT32_(value) << HMATRIX2_MEIMR_MERR12_Pos)) /* Assigment of value for MERR12 in the HMATRIX2_MEIMR register */
+#define HMATRIX2_MEIMR_MERR13_Pos             _UINT32_(13)                                         /* (HMATRIX2_MEIMR) Master 13 Access Error Position */
+#define HMATRIX2_MEIMR_MERR13_Msk             (_UINT32_(0x1) << HMATRIX2_MEIMR_MERR13_Pos)         /* (HMATRIX2_MEIMR) Master 13 Access Error Mask */
+#define HMATRIX2_MEIMR_MERR13(value)          (HMATRIX2_MEIMR_MERR13_Msk & (_UINT32_(value) << HMATRIX2_MEIMR_MERR13_Pos)) /* Assigment of value for MERR13 in the HMATRIX2_MEIMR register */
+#define HMATRIX2_MEIMR_MERR14_Pos             _UINT32_(14)                                         /* (HMATRIX2_MEIMR) Master 14 Access Error Position */
+#define HMATRIX2_MEIMR_MERR14_Msk             (_UINT32_(0x1) << HMATRIX2_MEIMR_MERR14_Pos)         /* (HMATRIX2_MEIMR) Master 14 Access Error Mask */
+#define HMATRIX2_MEIMR_MERR14(value)          (HMATRIX2_MEIMR_MERR14_Msk & (_UINT32_(value) << HMATRIX2_MEIMR_MERR14_Pos)) /* Assigment of value for MERR14 in the HMATRIX2_MEIMR register */
+#define HMATRIX2_MEIMR_MERR15_Pos             _UINT32_(15)                                         /* (HMATRIX2_MEIMR) Master 15 Access Error Position */
+#define HMATRIX2_MEIMR_MERR15_Msk             (_UINT32_(0x1) << HMATRIX2_MEIMR_MERR15_Pos)         /* (HMATRIX2_MEIMR) Master 15 Access Error Mask */
+#define HMATRIX2_MEIMR_MERR15(value)          (HMATRIX2_MEIMR_MERR15_Msk & (_UINT32_(value) << HMATRIX2_MEIMR_MERR15_Pos)) /* Assigment of value for MERR15 in the HMATRIX2_MEIMR register */
+#define HMATRIX2_MEIMR_Msk                    _UINT32_(0x0000FFFF)                                 /* (HMATRIX2_MEIMR) Register Mask  */
+
+#define HMATRIX2_MEIMR_MERR_Pos               _UINT32_(0)                                          /* (HMATRIX2_MEIMR Position) Master x5 Access Error */
+#define HMATRIX2_MEIMR_MERR_Msk               (_UINT32_(0xFFFF) << HMATRIX2_MEIMR_MERR_Pos)        /* (HMATRIX2_MEIMR Mask) MERR */
+#define HMATRIX2_MEIMR_MERR(value)            (HMATRIX2_MEIMR_MERR_Msk & (_UINT32_(value) << HMATRIX2_MEIMR_MERR_Pos)) 
+
+/* -------- HMATRIX2_MESR : (HMATRIX2 Offset: 0x15C) ( R/ 32) Master Error Status -------- */
+#define HMATRIX2_MESR_MERR0_Pos               _UINT32_(0)                                          /* (HMATRIX2_MESR) Master 0 Access Error Position */
+#define HMATRIX2_MESR_MERR0_Msk               (_UINT32_(0x1) << HMATRIX2_MESR_MERR0_Pos)           /* (HMATRIX2_MESR) Master 0 Access Error Mask */
+#define HMATRIX2_MESR_MERR0(value)            (HMATRIX2_MESR_MERR0_Msk & (_UINT32_(value) << HMATRIX2_MESR_MERR0_Pos)) /* Assigment of value for MERR0 in the HMATRIX2_MESR register */
+#define HMATRIX2_MESR_MERR1_Pos               _UINT32_(1)                                          /* (HMATRIX2_MESR) Master 1 Access Error Position */
+#define HMATRIX2_MESR_MERR1_Msk               (_UINT32_(0x1) << HMATRIX2_MESR_MERR1_Pos)           /* (HMATRIX2_MESR) Master 1 Access Error Mask */
+#define HMATRIX2_MESR_MERR1(value)            (HMATRIX2_MESR_MERR1_Msk & (_UINT32_(value) << HMATRIX2_MESR_MERR1_Pos)) /* Assigment of value for MERR1 in the HMATRIX2_MESR register */
+#define HMATRIX2_MESR_MERR2_Pos               _UINT32_(2)                                          /* (HMATRIX2_MESR) Master 2 Access Error Position */
+#define HMATRIX2_MESR_MERR2_Msk               (_UINT32_(0x1) << HMATRIX2_MESR_MERR2_Pos)           /* (HMATRIX2_MESR) Master 2 Access Error Mask */
+#define HMATRIX2_MESR_MERR2(value)            (HMATRIX2_MESR_MERR2_Msk & (_UINT32_(value) << HMATRIX2_MESR_MERR2_Pos)) /* Assigment of value for MERR2 in the HMATRIX2_MESR register */
+#define HMATRIX2_MESR_MERR3_Pos               _UINT32_(3)                                          /* (HMATRIX2_MESR) Master 3 Access Error Position */
+#define HMATRIX2_MESR_MERR3_Msk               (_UINT32_(0x1) << HMATRIX2_MESR_MERR3_Pos)           /* (HMATRIX2_MESR) Master 3 Access Error Mask */
+#define HMATRIX2_MESR_MERR3(value)            (HMATRIX2_MESR_MERR3_Msk & (_UINT32_(value) << HMATRIX2_MESR_MERR3_Pos)) /* Assigment of value for MERR3 in the HMATRIX2_MESR register */
+#define HMATRIX2_MESR_MERR4_Pos               _UINT32_(4)                                          /* (HMATRIX2_MESR) Master 4 Access Error Position */
+#define HMATRIX2_MESR_MERR4_Msk               (_UINT32_(0x1) << HMATRIX2_MESR_MERR4_Pos)           /* (HMATRIX2_MESR) Master 4 Access Error Mask */
+#define HMATRIX2_MESR_MERR4(value)            (HMATRIX2_MESR_MERR4_Msk & (_UINT32_(value) << HMATRIX2_MESR_MERR4_Pos)) /* Assigment of value for MERR4 in the HMATRIX2_MESR register */
+#define HMATRIX2_MESR_MERR5_Pos               _UINT32_(5)                                          /* (HMATRIX2_MESR) Master 5 Access Error Position */
+#define HMATRIX2_MESR_MERR5_Msk               (_UINT32_(0x1) << HMATRIX2_MESR_MERR5_Pos)           /* (HMATRIX2_MESR) Master 5 Access Error Mask */
+#define HMATRIX2_MESR_MERR5(value)            (HMATRIX2_MESR_MERR5_Msk & (_UINT32_(value) << HMATRIX2_MESR_MERR5_Pos)) /* Assigment of value for MERR5 in the HMATRIX2_MESR register */
+#define HMATRIX2_MESR_MERR6_Pos               _UINT32_(6)                                          /* (HMATRIX2_MESR) Master 6 Access Error Position */
+#define HMATRIX2_MESR_MERR6_Msk               (_UINT32_(0x1) << HMATRIX2_MESR_MERR6_Pos)           /* (HMATRIX2_MESR) Master 6 Access Error Mask */
+#define HMATRIX2_MESR_MERR6(value)            (HMATRIX2_MESR_MERR6_Msk & (_UINT32_(value) << HMATRIX2_MESR_MERR6_Pos)) /* Assigment of value for MERR6 in the HMATRIX2_MESR register */
+#define HMATRIX2_MESR_MERR7_Pos               _UINT32_(7)                                          /* (HMATRIX2_MESR) Master 7 Access Error Position */
+#define HMATRIX2_MESR_MERR7_Msk               (_UINT32_(0x1) << HMATRIX2_MESR_MERR7_Pos)           /* (HMATRIX2_MESR) Master 7 Access Error Mask */
+#define HMATRIX2_MESR_MERR7(value)            (HMATRIX2_MESR_MERR7_Msk & (_UINT32_(value) << HMATRIX2_MESR_MERR7_Pos)) /* Assigment of value for MERR7 in the HMATRIX2_MESR register */
+#define HMATRIX2_MESR_MERR8_Pos               _UINT32_(8)                                          /* (HMATRIX2_MESR) Master 8 Access Error Position */
+#define HMATRIX2_MESR_MERR8_Msk               (_UINT32_(0x1) << HMATRIX2_MESR_MERR8_Pos)           /* (HMATRIX2_MESR) Master 8 Access Error Mask */
+#define HMATRIX2_MESR_MERR8(value)            (HMATRIX2_MESR_MERR8_Msk & (_UINT32_(value) << HMATRIX2_MESR_MERR8_Pos)) /* Assigment of value for MERR8 in the HMATRIX2_MESR register */
+#define HMATRIX2_MESR_MERR9_Pos               _UINT32_(9)                                          /* (HMATRIX2_MESR) Master 9 Access Error Position */
+#define HMATRIX2_MESR_MERR9_Msk               (_UINT32_(0x1) << HMATRIX2_MESR_MERR9_Pos)           /* (HMATRIX2_MESR) Master 9 Access Error Mask */
+#define HMATRIX2_MESR_MERR9(value)            (HMATRIX2_MESR_MERR9_Msk & (_UINT32_(value) << HMATRIX2_MESR_MERR9_Pos)) /* Assigment of value for MERR9 in the HMATRIX2_MESR register */
+#define HMATRIX2_MESR_MERR10_Pos              _UINT32_(10)                                         /* (HMATRIX2_MESR) Master 10 Access Error Position */
+#define HMATRIX2_MESR_MERR10_Msk              (_UINT32_(0x1) << HMATRIX2_MESR_MERR10_Pos)          /* (HMATRIX2_MESR) Master 10 Access Error Mask */
+#define HMATRIX2_MESR_MERR10(value)           (HMATRIX2_MESR_MERR10_Msk & (_UINT32_(value) << HMATRIX2_MESR_MERR10_Pos)) /* Assigment of value for MERR10 in the HMATRIX2_MESR register */
+#define HMATRIX2_MESR_MERR11_Pos              _UINT32_(11)                                         /* (HMATRIX2_MESR) Master 11 Access Error Position */
+#define HMATRIX2_MESR_MERR11_Msk              (_UINT32_(0x1) << HMATRIX2_MESR_MERR11_Pos)          /* (HMATRIX2_MESR) Master 11 Access Error Mask */
+#define HMATRIX2_MESR_MERR11(value)           (HMATRIX2_MESR_MERR11_Msk & (_UINT32_(value) << HMATRIX2_MESR_MERR11_Pos)) /* Assigment of value for MERR11 in the HMATRIX2_MESR register */
+#define HMATRIX2_MESR_MERR12_Pos              _UINT32_(12)                                         /* (HMATRIX2_MESR) Master 12 Access Error Position */
+#define HMATRIX2_MESR_MERR12_Msk              (_UINT32_(0x1) << HMATRIX2_MESR_MERR12_Pos)          /* (HMATRIX2_MESR) Master 12 Access Error Mask */
+#define HMATRIX2_MESR_MERR12(value)           (HMATRIX2_MESR_MERR12_Msk & (_UINT32_(value) << HMATRIX2_MESR_MERR12_Pos)) /* Assigment of value for MERR12 in the HMATRIX2_MESR register */
+#define HMATRIX2_MESR_MERR13_Pos              _UINT32_(13)                                         /* (HMATRIX2_MESR) Master 13 Access Error Position */
+#define HMATRIX2_MESR_MERR13_Msk              (_UINT32_(0x1) << HMATRIX2_MESR_MERR13_Pos)          /* (HMATRIX2_MESR) Master 13 Access Error Mask */
+#define HMATRIX2_MESR_MERR13(value)           (HMATRIX2_MESR_MERR13_Msk & (_UINT32_(value) << HMATRIX2_MESR_MERR13_Pos)) /* Assigment of value for MERR13 in the HMATRIX2_MESR register */
+#define HMATRIX2_MESR_MERR14_Pos              _UINT32_(14)                                         /* (HMATRIX2_MESR) Master 14 Access Error Position */
+#define HMATRIX2_MESR_MERR14_Msk              (_UINT32_(0x1) << HMATRIX2_MESR_MERR14_Pos)          /* (HMATRIX2_MESR) Master 14 Access Error Mask */
+#define HMATRIX2_MESR_MERR14(value)           (HMATRIX2_MESR_MERR14_Msk & (_UINT32_(value) << HMATRIX2_MESR_MERR14_Pos)) /* Assigment of value for MERR14 in the HMATRIX2_MESR register */
+#define HMATRIX2_MESR_MERR15_Pos              _UINT32_(15)                                         /* (HMATRIX2_MESR) Master 15 Access Error Position */
+#define HMATRIX2_MESR_MERR15_Msk              (_UINT32_(0x1) << HMATRIX2_MESR_MERR15_Pos)          /* (HMATRIX2_MESR) Master 15 Access Error Mask */
+#define HMATRIX2_MESR_MERR15(value)           (HMATRIX2_MESR_MERR15_Msk & (_UINT32_(value) << HMATRIX2_MESR_MERR15_Pos)) /* Assigment of value for MERR15 in the HMATRIX2_MESR register */
+#define HMATRIX2_MESR_Msk                     _UINT32_(0x0000FFFF)                                 /* (HMATRIX2_MESR) Register Mask  */
+
+#define HMATRIX2_MESR_MERR_Pos                _UINT32_(0)                                          /* (HMATRIX2_MESR Position) Master x5 Access Error */
+#define HMATRIX2_MESR_MERR_Msk                (_UINT32_(0xFFFF) << HMATRIX2_MESR_MERR_Pos)         /* (HMATRIX2_MESR Mask) MERR */
+#define HMATRIX2_MESR_MERR(value)             (HMATRIX2_MESR_MERR_Msk & (_UINT32_(value) << HMATRIX2_MESR_MERR_Pos)) 
+
+/* -------- HMATRIX2_MEAR : (HMATRIX2 Offset: 0x160) ( R/ 32) Master Error Address -------- */
+#define HMATRIX2_MEAR_Msk                     _UINT32_(0x00000000)                                 /* (HMATRIX2_MEAR) Register Mask  */
 
 
 /** \brief HMATRIX2 register offsets definitions */
@@ -550,6 +550,39 @@
 #define HMATRIX2_MCFG13_REG_OFST       _UINT32_(0x34)      /* (HMATRIX2_MCFG13) Master Configuration Offset */
 #define HMATRIX2_MCFG14_REG_OFST       _UINT32_(0x38)      /* (HMATRIX2_MCFG14) Master Configuration Offset */
 #define HMATRIX2_MCFG15_REG_OFST       _UINT32_(0x3C)      /* (HMATRIX2_MCFG15) Master Configuration Offset */
+#define HMATRIX2_SCFG_REG_OFST         _UINT32_(0x40)      /* (HMATRIX2_SCFG) Slave Configuration Offset */
+#define HMATRIX2_SCFG0_REG_OFST        _UINT32_(0x40)      /* (HMATRIX2_SCFG0) Slave Configuration Offset */
+#define HMATRIX2_SCFG1_REG_OFST        _UINT32_(0x44)      /* (HMATRIX2_SCFG1) Slave Configuration Offset */
+#define HMATRIX2_SCFG2_REG_OFST        _UINT32_(0x48)      /* (HMATRIX2_SCFG2) Slave Configuration Offset */
+#define HMATRIX2_SCFG3_REG_OFST        _UINT32_(0x4C)      /* (HMATRIX2_SCFG3) Slave Configuration Offset */
+#define HMATRIX2_SCFG4_REG_OFST        _UINT32_(0x50)      /* (HMATRIX2_SCFG4) Slave Configuration Offset */
+#define HMATRIX2_SCFG5_REG_OFST        _UINT32_(0x54)      /* (HMATRIX2_SCFG5) Slave Configuration Offset */
+#define HMATRIX2_SCFG6_REG_OFST        _UINT32_(0x58)      /* (HMATRIX2_SCFG6) Slave Configuration Offset */
+#define HMATRIX2_SCFG7_REG_OFST        _UINT32_(0x5C)      /* (HMATRIX2_SCFG7) Slave Configuration Offset */
+#define HMATRIX2_SCFG8_REG_OFST        _UINT32_(0x60)      /* (HMATRIX2_SCFG8) Slave Configuration Offset */
+#define HMATRIX2_SCFG9_REG_OFST        _UINT32_(0x64)      /* (HMATRIX2_SCFG9) Slave Configuration Offset */
+#define HMATRIX2_SCFG10_REG_OFST       _UINT32_(0x68)      /* (HMATRIX2_SCFG10) Slave Configuration Offset */
+#define HMATRIX2_SCFG11_REG_OFST       _UINT32_(0x6C)      /* (HMATRIX2_SCFG11) Slave Configuration Offset */
+#define HMATRIX2_SCFG12_REG_OFST       _UINT32_(0x70)      /* (HMATRIX2_SCFG12) Slave Configuration Offset */
+#define HMATRIX2_MRCR_REG_OFST         _UINT32_(0x100)     /* (HMATRIX2_MRCR) Master Remap Control Offset */
+#define HMATRIX2_SFR_REG_OFST          _UINT32_(0x110)     /* (HMATRIX2_SFR) Special Function Offset */
+#define HMATRIX2_SFR0_REG_OFST         _UINT32_(0x110)     /* (HMATRIX2_SFR0) Special Function Offset */
+#define HMATRIX2_SFR1_REG_OFST         _UINT32_(0x114)     /* (HMATRIX2_SFR1) Special Function Offset */
+#define HMATRIX2_SFR2_REG_OFST         _UINT32_(0x118)     /* (HMATRIX2_SFR2) Special Function Offset */
+#define HMATRIX2_SFR3_REG_OFST         _UINT32_(0x11C)     /* (HMATRIX2_SFR3) Special Function Offset */
+#define HMATRIX2_SFR4_REG_OFST         _UINT32_(0x120)     /* (HMATRIX2_SFR4) Special Function Offset */
+#define HMATRIX2_SFR5_REG_OFST         _UINT32_(0x124)     /* (HMATRIX2_SFR5) Special Function Offset */
+#define HMATRIX2_SFR6_REG_OFST         _UINT32_(0x128)     /* (HMATRIX2_SFR6) Special Function Offset */
+#define HMATRIX2_SFR7_REG_OFST         _UINT32_(0x12C)     /* (HMATRIX2_SFR7) Special Function Offset */
+#define HMATRIX2_SFR8_REG_OFST         _UINT32_(0x130)     /* (HMATRIX2_SFR8) Special Function Offset */
+#define HMATRIX2_SFR9_REG_OFST         _UINT32_(0x134)     /* (HMATRIX2_SFR9) Special Function Offset */
+#define HMATRIX2_SFR10_REG_OFST        _UINT32_(0x138)     /* (HMATRIX2_SFR10) Special Function Offset */
+#define HMATRIX2_SFR11_REG_OFST        _UINT32_(0x13C)     /* (HMATRIX2_SFR11) Special Function Offset */
+#define HMATRIX2_SFR12_REG_OFST        _UINT32_(0x140)     /* (HMATRIX2_SFR12) Special Function Offset */
+#define HMATRIX2_MEIER_REG_OFST        _UINT32_(0x150)     /* (HMATRIX2_MEIER) Master Error Interrupt Enable Offset */
+#define HMATRIX2_MEIDR_REG_OFST        _UINT32_(0x154)     /* (HMATRIX2_MEIDR) Master Error Interrupt Disable Offset */
+#define HMATRIX2_MEIMR_REG_OFST        _UINT32_(0x158)     /* (HMATRIX2_MEIMR) Master Error Interrupt Mask Offset */
+#define HMATRIX2_MESR_REG_OFST         _UINT32_(0x15C)     /* (HMATRIX2_MESR) Master Error Status Offset */
 #define HMATRIX2_MEAR_REG_OFST         _UINT32_(0x160)     /* (HMATRIX2_MEAR) Master Error Address Offset */
 #define HMATRIX2_MEAR0_REG_OFST        _UINT32_(0x160)     /* (HMATRIX2_MEAR0) Master Error Address Offset */
 #define HMATRIX2_MEAR1_REG_OFST        _UINT32_(0x164)     /* (HMATRIX2_MEAR1) Master Error Address Offset */
@@ -567,39 +600,6 @@
 #define HMATRIX2_MEAR13_REG_OFST       _UINT32_(0x194)     /* (HMATRIX2_MEAR13) Master Error Address Offset */
 #define HMATRIX2_MEAR14_REG_OFST       _UINT32_(0x198)     /* (HMATRIX2_MEAR14) Master Error Address Offset */
 #define HMATRIX2_MEAR15_REG_OFST       _UINT32_(0x19C)     /* (HMATRIX2_MEAR15) Master Error Address Offset */
-#define HMATRIX2_MEIDR_REG_OFST        _UINT32_(0x154)     /* (HMATRIX2_MEIDR) Master Error Interrupt Disable Offset */
-#define HMATRIX2_MEIER_REG_OFST        _UINT32_(0x150)     /* (HMATRIX2_MEIER) Master Error Interrupt Enable Offset */
-#define HMATRIX2_MEIMR_REG_OFST        _UINT32_(0x158)     /* (HMATRIX2_MEIMR) Master Error Interrupt Mask Offset */
-#define HMATRIX2_MESR_REG_OFST         _UINT32_(0x15C)     /* (HMATRIX2_MESR) Master Error Status Offset */
-#define HMATRIX2_MRCR_REG_OFST         _UINT32_(0x100)     /* (HMATRIX2_MRCR) Master Remap Control Offset */
-#define HMATRIX2_SCFG_REG_OFST         _UINT32_(0x40)      /* (HMATRIX2_SCFG) Slave Configuration Offset */
-#define HMATRIX2_SCFG0_REG_OFST        _UINT32_(0x40)      /* (HMATRIX2_SCFG0) Slave Configuration Offset */
-#define HMATRIX2_SCFG1_REG_OFST        _UINT32_(0x44)      /* (HMATRIX2_SCFG1) Slave Configuration Offset */
-#define HMATRIX2_SCFG2_REG_OFST        _UINT32_(0x48)      /* (HMATRIX2_SCFG2) Slave Configuration Offset */
-#define HMATRIX2_SCFG3_REG_OFST        _UINT32_(0x4C)      /* (HMATRIX2_SCFG3) Slave Configuration Offset */
-#define HMATRIX2_SCFG4_REG_OFST        _UINT32_(0x50)      /* (HMATRIX2_SCFG4) Slave Configuration Offset */
-#define HMATRIX2_SCFG5_REG_OFST        _UINT32_(0x54)      /* (HMATRIX2_SCFG5) Slave Configuration Offset */
-#define HMATRIX2_SCFG6_REG_OFST        _UINT32_(0x58)      /* (HMATRIX2_SCFG6) Slave Configuration Offset */
-#define HMATRIX2_SCFG7_REG_OFST        _UINT32_(0x5C)      /* (HMATRIX2_SCFG7) Slave Configuration Offset */
-#define HMATRIX2_SCFG8_REG_OFST        _UINT32_(0x60)      /* (HMATRIX2_SCFG8) Slave Configuration Offset */
-#define HMATRIX2_SCFG9_REG_OFST        _UINT32_(0x64)      /* (HMATRIX2_SCFG9) Slave Configuration Offset */
-#define HMATRIX2_SCFG10_REG_OFST       _UINT32_(0x68)      /* (HMATRIX2_SCFG10) Slave Configuration Offset */
-#define HMATRIX2_SCFG11_REG_OFST       _UINT32_(0x6C)      /* (HMATRIX2_SCFG11) Slave Configuration Offset */
-#define HMATRIX2_SCFG12_REG_OFST       _UINT32_(0x70)      /* (HMATRIX2_SCFG12) Slave Configuration Offset */
-#define HMATRIX2_SFR_REG_OFST          _UINT32_(0x110)     /* (HMATRIX2_SFR) Special Function Offset */
-#define HMATRIX2_SFR0_REG_OFST         _UINT32_(0x110)     /* (HMATRIX2_SFR0) Special Function Offset */
-#define HMATRIX2_SFR1_REG_OFST         _UINT32_(0x114)     /* (HMATRIX2_SFR1) Special Function Offset */
-#define HMATRIX2_SFR2_REG_OFST         _UINT32_(0x118)     /* (HMATRIX2_SFR2) Special Function Offset */
-#define HMATRIX2_SFR3_REG_OFST         _UINT32_(0x11C)     /* (HMATRIX2_SFR3) Special Function Offset */
-#define HMATRIX2_SFR4_REG_OFST         _UINT32_(0x120)     /* (HMATRIX2_SFR4) Special Function Offset */
-#define HMATRIX2_SFR5_REG_OFST         _UINT32_(0x124)     /* (HMATRIX2_SFR5) Special Function Offset */
-#define HMATRIX2_SFR6_REG_OFST         _UINT32_(0x128)     /* (HMATRIX2_SFR6) Special Function Offset */
-#define HMATRIX2_SFR7_REG_OFST         _UINT32_(0x12C)     /* (HMATRIX2_SFR7) Special Function Offset */
-#define HMATRIX2_SFR8_REG_OFST         _UINT32_(0x130)     /* (HMATRIX2_SFR8) Special Function Offset */
-#define HMATRIX2_SFR9_REG_OFST         _UINT32_(0x134)     /* (HMATRIX2_SFR9) Special Function Offset */
-#define HMATRIX2_SFR10_REG_OFST        _UINT32_(0x138)     /* (HMATRIX2_SFR10) Special Function Offset */
-#define HMATRIX2_SFR11_REG_OFST        _UINT32_(0x13C)     /* (HMATRIX2_SFR11) Special Function Offset */
-#define HMATRIX2_SFR12_REG_OFST        _UINT32_(0x140)     /* (HMATRIX2_SFR12) Special Function Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief PRS register API structure */

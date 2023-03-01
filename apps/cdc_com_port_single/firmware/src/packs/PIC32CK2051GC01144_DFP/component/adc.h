@@ -1,7 +1,7 @@
 /*
  * Component description for ADC
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2022-11-28T06:54:19Z */
+/* file generated from device description version 2023-02-20T18:48:06Z */
 #ifndef _PIC32CKGC01_ADC_COMPONENT_H_
 #define _PIC32CKGC01_ADC_COMPONENT_H_
 
@@ -28,115 +28,72 @@
 /*   SOFTWARE API DEFINITION FOR ADC                                          */
 /* ************************************************************************** */
 
-/* -------- ADC_CALCTRL : (ADC Offset: 0x18) (R/W 32) SARCORE Calibration Value -------- */
-#define ADC_CALCTRL_RESETVALUE                _UINT32_(0x00)                                       /*  (ADC_CALCTRL) SARCORE Calibration Value  Reset Value */
+/* -------- ADC_CORCTRL : (ADC Offset: 0x00) (R/W 32) SARCORE Control -------- */
+#define ADC_CORCTRL_RESETVALUE                _UINT32_(0xC00)                                      /*  (ADC_CORCTRL) SARCORE Control  Reset Value */
 
-#define ADC_CALCTRL_CALBITS_Pos               _UINT32_(0)                                          /* (ADC_CALCTRL) Calibration Values Position */
-#define ADC_CALCTRL_CALBITS_Msk               (_UINT32_(0xFFFFFFFF) << ADC_CALCTRL_CALBITS_Pos)    /* (ADC_CALCTRL) Calibration Values Mask */
-#define ADC_CALCTRL_CALBITS(value)            (ADC_CALCTRL_CALBITS_Msk & (_UINT32_(value) << ADC_CALCTRL_CALBITS_Pos)) /* Assigment of value for CALBITS in the ADC_CALCTRL register */
-#define ADC_CALCTRL_Msk                       _UINT32_(0xFFFFFFFF)                                 /* (ADC_CALCTRL) Register Mask  */
-
-/* FUSES_ADC_SARCORE_12BIT_V7A0 mode */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_en_cmbf_Pos _UINT32_(0)                                          /* (ADC_CALCTRL) Enable Common Mode Buffer Position */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_en_cmbf_Msk (_UINT32_(0x1) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_en_cmbf_Pos) /* (ADC_CALCTRL) Enable Common Mode Buffer Mask */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_en_cmbf(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_en_cmbf_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_en_cmbf_Pos))
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_en_dither_Pos _UINT32_(2)                                          /* (ADC_CALCTRL) Enable Dither Position */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_en_dither_Msk (_UINT32_(0x1) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_en_dither_Pos) /* (ADC_CALCTRL) Enable Dither Mask */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_en_dither(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_en_dither_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_en_dither_Pos))
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_dis_faz_Pos _UINT32_(3)                                          /* (ADC_CALCTRL) Disable auto-zeroing Position */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_dis_faz_Msk (_UINT32_(0x1) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_dis_faz_Pos) /* (ADC_CALCTRL) Disable auto-zeroing Mask */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_dis_faz(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_dis_faz_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_dis_faz_Pos))
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_dis_saz_Pos _UINT32_(4)                                          /* (ADC_CALCTRL) Disable auto-zeroing Position */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_dis_saz_Msk (_UINT32_(0x1) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_dis_saz_Pos) /* (ADC_CALCTRL) Disable auto-zeroing Mask */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_dis_saz(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_dis_saz_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_dis_saz_Pos))
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_dis_laz_Pos _UINT32_(5)                                          /* (ADC_CALCTRL) Disable auto-zeroing Position */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_dis_laz_Msk (_UINT32_(0x1) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_dis_laz_Pos) /* (ADC_CALCTRL) Disable auto-zeroing Mask */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_dis_laz(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_dis_laz_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_dis_laz_Pos))
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_en_rdac_Pos _UINT32_(6)                                          /* (ADC_CALCTRL) Disable Power Cycling Position */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_en_rdac_Msk (_UINT32_(0x1) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_en_rdac_Pos) /* (ADC_CALCTRL) Disable Power Cycling Mask */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_en_rdac(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_en_rdac_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_en_rdac_Pos))
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_dbg_sel_Pos _UINT32_(7)                                          /* (ADC_CALCTRL) Debug Bus Select Position */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_dbg_sel_Msk (_UINT32_(0x1) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_dbg_sel_Pos) /* (ADC_CALCTRL) Debug Bus Select Mask */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_dbg_sel(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_dbg_sel_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_dbg_sel_Pos))
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_sel_del_Pos _UINT32_(8)                                          /* (ADC_CALCTRL) Scan Mode comp_out Position */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_sel_del_Msk (_UINT32_(0x1) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_sel_del_Pos) /* (ADC_CALCTRL) Scan Mode comp_out Mask */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_sel_del(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_sel_del_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_sel_del_Pos))
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_t1_dly_Pos _UINT32_(9)                                          /* (ADC_CALCTRL) Regen Latch Delay Position */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_t1_dly_Msk (_UINT32_(0x3) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_t1_dly_Pos) /* (ADC_CALCTRL) Regen Latch Delay Mask */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_t1_dly(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_t1_dly_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_t1_dly_Pos))
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_tclk_div_Pos _UINT32_(11)                                         /* (ADC_CALCTRL) Test Clock Divider Position */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_tclk_div_Msk (_UINT32_(0x1F) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_tclk_div_Pos) /* (ADC_CALCTRL) Test Clock Divider Mask */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_tclk_div(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_tclk_div_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_tclk_div_Pos))
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_iadc_1_Pos _UINT32_(20)                                         /* (ADC_CALCTRL) Current Consumption 1 Position */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_iadc_1_Msk (_UINT32_(0x3) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_iadc_1_Pos) /* (ADC_CALCTRL) Current Consumption 1 Mask */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_iadc_1(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_iadc_1_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_iadc_1_Pos))
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_iadc_2_Pos _UINT32_(22)                                         /* (ADC_CALCTRL) Current Consumption 2 Position */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_iadc_2_Msk (_UINT32_(0x3) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_iadc_2_Pos) /* (ADC_CALCTRL) Current Consumption 2 Mask */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_iadc_2(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_iadc_2_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_iadc_2_Pos))
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_icmp_1_Pos _UINT32_(24)                                         /* (ADC_CALCTRL) Bias Current Stage 1 Position */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_icmp_1_Msk (_UINT32_(0x3) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_icmp_1_Pos) /* (ADC_CALCTRL) Bias Current Stage 1 Mask */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_icmp_1(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_icmp_1_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_icmp_1_Pos))
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_icmp_2_Pos _UINT32_(26)                                         /* (ADC_CALCTRL) Bias Current Stage 2 Position */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_icmp_2_Msk (_UINT32_(0x3) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_icmp_2_Pos) /* (ADC_CALCTRL) Bias Current Stage 2 Mask */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_icmp_2(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_icmp_2_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_icmp_2_Pos))
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_icmbf_Pos _UINT32_(28)                                         /* (ADC_CALCTRL) Bias Current Common Mode Buffer Position */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_icmbf_Msk (_UINT32_(0x3) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_icmbf_Pos) /* (ADC_CALCTRL) Bias Current Common Mode Buffer Mask */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_icmbf(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_icmbf_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_icmbf_Pos))
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_en_ext_bias_Pos _UINT32_(31)                                         /* (ADC_CALCTRL) Dsiable Internal Bias Circuit Position */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_en_ext_bias_Msk (_UINT32_(0x1) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_en_ext_bias_Pos) /* (ADC_CALCTRL) Dsiable Internal Bias Circuit Mask */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_en_ext_bias(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_en_ext_bias_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_en_ext_bias_Pos))
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_Msk _UINT32_(0xBFF0FFFD)                                  /* (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0) Register Mask  */
-
-/* FUSES_ADC_SARCORE_12BIT_V7C0 mode */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_en_cmbf_Pos _UINT32_(0)                                          /* (ADC_CALCTRL) Enable Common Mode Buffer Position */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_en_cmbf_Msk (_UINT32_(0x1) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_en_cmbf_Pos) /* (ADC_CALCTRL) Enable Common Mode Buffer Mask */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_en_cmbf(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_en_cmbf_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_en_cmbf_Pos))
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_en_dither_Pos _UINT32_(2)                                          /* (ADC_CALCTRL) Enable Dither Position */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_en_dither_Msk (_UINT32_(0x1) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_en_dither_Pos) /* (ADC_CALCTRL) Enable Dither Mask */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_en_dither(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_en_dither_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_en_dither_Pos))
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_dis_faz_Pos _UINT32_(3)                                          /* (ADC_CALCTRL) Disable auto-zeroing Position */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_dis_faz_Msk (_UINT32_(0x1) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_dis_faz_Pos) /* (ADC_CALCTRL) Disable auto-zeroing Mask */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_dis_faz(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_dis_faz_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_dis_faz_Pos))
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_dis_saz_Pos _UINT32_(4)                                          /* (ADC_CALCTRL) Disable auto-zeroing Position */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_dis_saz_Msk (_UINT32_(0x1) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_dis_saz_Pos) /* (ADC_CALCTRL) Disable auto-zeroing Mask */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_dis_saz(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_dis_saz_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_dis_saz_Pos))
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_dis_laz_Pos _UINT32_(5)                                          /* (ADC_CALCTRL) Disable auto-zeroing Position */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_dis_laz_Msk (_UINT32_(0x1) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_dis_laz_Pos) /* (ADC_CALCTRL) Disable auto-zeroing Mask */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_dis_laz(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_dis_laz_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_dis_laz_Pos))
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_en_rdac_Pos _UINT32_(6)                                          /* (ADC_CALCTRL) Disable Power Cycling Position */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_en_rdac_Msk (_UINT32_(0x1) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_en_rdac_Pos) /* (ADC_CALCTRL) Disable Power Cycling Mask */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_en_rdac(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_en_rdac_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_en_rdac_Pos))
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_dbg_sel_Pos _UINT32_(7)                                          /* (ADC_CALCTRL) Debug Bus Select Position */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_dbg_sel_Msk (_UINT32_(0x1) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_dbg_sel_Pos) /* (ADC_CALCTRL) Debug Bus Select Mask */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_dbg_sel(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_dbg_sel_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_dbg_sel_Pos))
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_sel_del_Pos _UINT32_(8)                                          /* (ADC_CALCTRL) Scan Mode comp_out Position */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_sel_del_Msk (_UINT32_(0x1) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_sel_del_Pos) /* (ADC_CALCTRL) Scan Mode comp_out Mask */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_sel_del(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_sel_del_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_sel_del_Pos))
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_t1_dly_Pos _UINT32_(9)                                          /* (ADC_CALCTRL) Regen Latch Delay Position */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_t1_dly_Msk (_UINT32_(0x3) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_t1_dly_Pos) /* (ADC_CALCTRL) Regen Latch Delay Mask */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_t1_dly(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_t1_dly_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_t1_dly_Pos))
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_tclk_div_Pos _UINT32_(11)                                         /* (ADC_CALCTRL) Test Clock Divider Position */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_tclk_div_Msk (_UINT32_(0x1F) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_tclk_div_Pos) /* (ADC_CALCTRL) Test Clock Divider Mask */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_tclk_div(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_tclk_div_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_tclk_div_Pos))
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_iadc_1_Pos _UINT32_(20)                                         /* (ADC_CALCTRL) Current Consumption 1 Position */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_iadc_1_Msk (_UINT32_(0x3) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_iadc_1_Pos) /* (ADC_CALCTRL) Current Consumption 1 Mask */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_iadc_1(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_iadc_1_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_iadc_1_Pos))
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_iadc_2_Pos _UINT32_(22)                                         /* (ADC_CALCTRL) Current Consumption 2 Position */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_iadc_2_Msk (_UINT32_(0x3) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_iadc_2_Pos) /* (ADC_CALCTRL) Current Consumption 2 Mask */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_iadc_2(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_iadc_2_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_iadc_2_Pos))
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_icmp_1_Pos _UINT32_(24)                                         /* (ADC_CALCTRL) Bias Current Stage 1 Position */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_icmp_1_Msk (_UINT32_(0x3) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_icmp_1_Pos) /* (ADC_CALCTRL) Bias Current Stage 1 Mask */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_icmp_1(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_icmp_1_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_icmp_1_Pos))
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_icmp_2_Pos _UINT32_(26)                                         /* (ADC_CALCTRL) Bias Current Stage 2 Position */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_icmp_2_Msk (_UINT32_(0x3) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_icmp_2_Pos) /* (ADC_CALCTRL) Bias Current Stage 2 Mask */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_icmp_2(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_icmp_2_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_icmp_2_Pos))
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_icmbf_Pos _UINT32_(28)                                         /* (ADC_CALCTRL) Bias Current Common Mode Buffer Position */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_icmbf_Msk (_UINT32_(0x3) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_icmbf_Pos) /* (ADC_CALCTRL) Bias Current Common Mode Buffer Mask */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_icmbf(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_icmbf_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_icmbf_Pos))
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_en_ext_bias_Pos _UINT32_(31)                                         /* (ADC_CALCTRL) Dsiable Internal Bias Circuit Position */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_en_ext_bias_Msk (_UINT32_(0x1) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_en_ext_bias_Pos) /* (ADC_CALCTRL) Dsiable Internal Bias Circuit Mask */
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_en_ext_bias(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_en_ext_bias_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_en_ext_bias_Pos))
-#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_Msk _UINT32_(0xBFF0FFFD)                                  /* (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0) Register Mask  */
+#define ADC_CORCTRL_SAMC_Pos                  _UINT32_(0)                                          /* (ADC_CORCTRL) Sample Count Position */
+#define ADC_CORCTRL_SAMC_Msk                  (_UINT32_(0x3FF) << ADC_CORCTRL_SAMC_Pos)            /* (ADC_CORCTRL) Sample Count Mask */
+#define ADC_CORCTRL_SAMC(value)               (ADC_CORCTRL_SAMC_Msk & (_UINT32_(value) << ADC_CORCTRL_SAMC_Pos)) /* Assigment of value for SAMC in the ADC_CORCTRL register */
+#define ADC_CORCTRL_SELRES_Pos                _UINT32_(10)                                         /* (ADC_CORCTRL) Selects Resolution Position */
+#define ADC_CORCTRL_SELRES_Msk                (_UINT32_(0x3) << ADC_CORCTRL_SELRES_Pos)            /* (ADC_CORCTRL) Selects Resolution Mask */
+#define ADC_CORCTRL_SELRES(value)             (ADC_CORCTRL_SELRES_Msk & (_UINT32_(value) << ADC_CORCTRL_SELRES_Pos)) /* Assigment of value for SELRES in the ADC_CORCTRL register */
+#define   ADC_CORCTRL_SELRES_6_BITS_Val       _UINT32_(0x0)                                        /* (ADC_CORCTRL) 6 bits  */
+#define   ADC_CORCTRL_SELRES_8_BITS_Val       _UINT32_(0x1)                                        /* (ADC_CORCTRL) 8 bits  */
+#define   ADC_CORCTRL_SELRES_10_BITS_Val      _UINT32_(0x2)                                        /* (ADC_CORCTRL) 10 bits  */
+#define   ADC_CORCTRL_SELRES_12_BITS_Val      _UINT32_(0x3)                                        /* (ADC_CORCTRL) 12 bits (default)  */
+#define ADC_CORCTRL_SELRES_6_BITS             (ADC_CORCTRL_SELRES_6_BITS_Val << ADC_CORCTRL_SELRES_Pos) /* (ADC_CORCTRL) 6 bits Position  */
+#define ADC_CORCTRL_SELRES_8_BITS             (ADC_CORCTRL_SELRES_8_BITS_Val << ADC_CORCTRL_SELRES_Pos) /* (ADC_CORCTRL) 8 bits Position  */
+#define ADC_CORCTRL_SELRES_10_BITS            (ADC_CORCTRL_SELRES_10_BITS_Val << ADC_CORCTRL_SELRES_Pos) /* (ADC_CORCTRL) 10 bits Position  */
+#define ADC_CORCTRL_SELRES_12_BITS            (ADC_CORCTRL_SELRES_12_BITS_Val << ADC_CORCTRL_SELRES_Pos) /* (ADC_CORCTRL) 12 bits (default) Position  */
+#define ADC_CORCTRL_EIS_Pos                   _UINT32_(12)                                         /* (ADC_CORCTRL) Early Interrupt Select Position */
+#define ADC_CORCTRL_EIS_Msk                   (_UINT32_(0x7) << ADC_CORCTRL_EIS_Pos)               /* (ADC_CORCTRL) Early Interrupt Select Mask */
+#define ADC_CORCTRL_EIS(value)                (ADC_CORCTRL_EIS_Msk & (_UINT32_(value) << ADC_CORCTRL_EIS_Pos)) /* Assigment of value for EIS in the ADC_CORCTRL register */
+#define ADC_CORCTRL_EIRQOVR_Pos               _UINT32_(15)                                         /* (ADC_CORCTRL) Interrupt Type Select Position */
+#define ADC_CORCTRL_EIRQOVR_Msk               (_UINT32_(0x1) << ADC_CORCTRL_EIRQOVR_Pos)           /* (ADC_CORCTRL) Interrupt Type Select Mask */
+#define ADC_CORCTRL_EIRQOVR(value)            (ADC_CORCTRL_EIRQOVR_Msk & (_UINT32_(value) << ADC_CORCTRL_EIRQOVR_Pos)) /* Assigment of value for EIRQOVR in the ADC_CORCTRL register */
+#define ADC_CORCTRL_STRGSRC_Pos               _UINT32_(16)                                         /* (ADC_CORCTRL) SCAN trigger source selection Position */
+#define ADC_CORCTRL_STRGSRC_Msk               (_UINT32_(0xF) << ADC_CORCTRL_STRGSRC_Pos)           /* (ADC_CORCTRL) SCAN trigger source selection Mask */
+#define ADC_CORCTRL_STRGSRC(value)            (ADC_CORCTRL_STRGSRC_Msk & (_UINT32_(value) << ADC_CORCTRL_STRGSRC_Pos)) /* Assigment of value for STRGSRC in the ADC_CORCTRL register */
+#define   ADC_CORCTRL_STRGSRC_NO_TRIGGER_Val  _UINT32_(0x0)                                        /* (ADC_CORCTRL) No Trigger (NOP)  */
+#define   ADC_CORCTRL_STRGSRC_GLOBAL_SOFTWARE_TRIGGER_Val _UINT32_(0x1)                                        /* (ADC_CORCTRL) Global Software Trigger  */
+#define   ADC_CORCTRL_STRGSRC_GLOBAL_LEVEL_TRIGGER_Val _UINT32_(0x2)                                        /* (ADC_CORCTRL) Global Level Software Trigger  */
+#define   ADC_CORCTRL_STRGSRC_SYNC_TRIGGER_Val _UINT32_(0x4)                                        /* (ADC_CORCTRL) STRIG Synchronous Trigger  */
+#define   ADC_CORCTRL_STRGSRC_EVENT_USER0_Val _UINT32_(0x5)                                        /* (ADC_CORCTRL) ADC Trigger Event User 0  */
+#define   ADC_CORCTRL_STRGSRC_EVENT_USER1_Val _UINT32_(0x6)                                        /* (ADC_CORCTRL) ADC Trigger Event User 1  */
+#define   ADC_CORCTRL_STRGSRC_EVENT_USER2_Val _UINT32_(0x7)                                        /* (ADC_CORCTRL) ADC Trigger Event User 2  */
+#define   ADC_CORCTRL_STRGSRC_EVENT_USER3_Val _UINT32_(0x8)                                        /* (ADC_CORCTRL) ADC Trigger Event User 3  */
+#define   ADC_CORCTRL_STRGSRC_EVENT_USER4_Val _UINT32_(0x9)                                        /* (ADC_CORCTRL) ADC Trigger Event User 4  */
+#define   ADC_CORCTRL_STRGSRC_EVENT_USER5_Val _UINT32_(0xA)                                        /* (ADC_CORCTRL) ADC Trigger Event User 5  */
+#define   ADC_CORCTRL_STRGSRC_EVENT_USER6_Val _UINT32_(0xB)                                        /* (ADC_CORCTRL) ADC Trigger Event User 6  */
+#define   ADC_CORCTRL_STRGSRC_EVENT_USER7_Val _UINT32_(0xC)                                        /* (ADC_CORCTRL) ADC Trigger Event User 7  */
+#define   ADC_CORCTRL_STRGSRC_EVENT_USER8_Val _UINT32_(0xD)                                        /* (ADC_CORCTRL) ADC Trigger Event User 8  */
+#define   ADC_CORCTRL_STRGSRC_EVENT_USER9_Val _UINT32_(0xE)                                        /* (ADC_CORCTRL) ADC Trigger Event User 9  */
+#define   ADC_CORCTRL_STRGSRC_EVENT_USER10_Val _UINT32_(0xF)                                        /* (ADC_CORCTRL) ADC Trigger Event User 10  */
+#define ADC_CORCTRL_STRGSRC_NO_TRIGGER        (ADC_CORCTRL_STRGSRC_NO_TRIGGER_Val << ADC_CORCTRL_STRGSRC_Pos) /* (ADC_CORCTRL) No Trigger (NOP) Position  */
+#define ADC_CORCTRL_STRGSRC_GLOBAL_SOFTWARE_TRIGGER (ADC_CORCTRL_STRGSRC_GLOBAL_SOFTWARE_TRIGGER_Val << ADC_CORCTRL_STRGSRC_Pos) /* (ADC_CORCTRL) Global Software Trigger Position  */
+#define ADC_CORCTRL_STRGSRC_GLOBAL_LEVEL_TRIGGER (ADC_CORCTRL_STRGSRC_GLOBAL_LEVEL_TRIGGER_Val << ADC_CORCTRL_STRGSRC_Pos) /* (ADC_CORCTRL) Global Level Software Trigger Position  */
+#define ADC_CORCTRL_STRGSRC_SYNC_TRIGGER      (ADC_CORCTRL_STRGSRC_SYNC_TRIGGER_Val << ADC_CORCTRL_STRGSRC_Pos) /* (ADC_CORCTRL) STRIG Synchronous Trigger Position  */
+#define ADC_CORCTRL_STRGSRC_EVENT_USER0       (ADC_CORCTRL_STRGSRC_EVENT_USER0_Val << ADC_CORCTRL_STRGSRC_Pos) /* (ADC_CORCTRL) ADC Trigger Event User 0 Position  */
+#define ADC_CORCTRL_STRGSRC_EVENT_USER1       (ADC_CORCTRL_STRGSRC_EVENT_USER1_Val << ADC_CORCTRL_STRGSRC_Pos) /* (ADC_CORCTRL) ADC Trigger Event User 1 Position  */
+#define ADC_CORCTRL_STRGSRC_EVENT_USER2       (ADC_CORCTRL_STRGSRC_EVENT_USER2_Val << ADC_CORCTRL_STRGSRC_Pos) /* (ADC_CORCTRL) ADC Trigger Event User 2 Position  */
+#define ADC_CORCTRL_STRGSRC_EVENT_USER3       (ADC_CORCTRL_STRGSRC_EVENT_USER3_Val << ADC_CORCTRL_STRGSRC_Pos) /* (ADC_CORCTRL) ADC Trigger Event User 3 Position  */
+#define ADC_CORCTRL_STRGSRC_EVENT_USER4       (ADC_CORCTRL_STRGSRC_EVENT_USER4_Val << ADC_CORCTRL_STRGSRC_Pos) /* (ADC_CORCTRL) ADC Trigger Event User 4 Position  */
+#define ADC_CORCTRL_STRGSRC_EVENT_USER5       (ADC_CORCTRL_STRGSRC_EVENT_USER5_Val << ADC_CORCTRL_STRGSRC_Pos) /* (ADC_CORCTRL) ADC Trigger Event User 5 Position  */
+#define ADC_CORCTRL_STRGSRC_EVENT_USER6       (ADC_CORCTRL_STRGSRC_EVENT_USER6_Val << ADC_CORCTRL_STRGSRC_Pos) /* (ADC_CORCTRL) ADC Trigger Event User 6 Position  */
+#define ADC_CORCTRL_STRGSRC_EVENT_USER7       (ADC_CORCTRL_STRGSRC_EVENT_USER7_Val << ADC_CORCTRL_STRGSRC_Pos) /* (ADC_CORCTRL) ADC Trigger Event User 7 Position  */
+#define ADC_CORCTRL_STRGSRC_EVENT_USER8       (ADC_CORCTRL_STRGSRC_EVENT_USER8_Val << ADC_CORCTRL_STRGSRC_Pos) /* (ADC_CORCTRL) ADC Trigger Event User 8 Position  */
+#define ADC_CORCTRL_STRGSRC_EVENT_USER9       (ADC_CORCTRL_STRGSRC_EVENT_USER9_Val << ADC_CORCTRL_STRGSRC_Pos) /* (ADC_CORCTRL) ADC Trigger Event User 9 Position  */
+#define ADC_CORCTRL_STRGSRC_EVENT_USER10      (ADC_CORCTRL_STRGSRC_EVENT_USER10_Val << ADC_CORCTRL_STRGSRC_Pos) /* (ADC_CORCTRL) ADC Trigger Event User 10 Position  */
+#define ADC_CORCTRL_STRGLVL_Pos               _UINT32_(21)                                         /* (ADC_CORCTRL) Scan Trigger Level Sensitivity Position */
+#define ADC_CORCTRL_STRGLVL_Msk               (_UINT32_(0x1) << ADC_CORCTRL_STRGLVL_Pos)           /* (ADC_CORCTRL) Scan Trigger Level Sensitivity Mask */
+#define ADC_CORCTRL_STRGLVL(value)            (ADC_CORCTRL_STRGLVL_Msk & (_UINT32_(value) << ADC_CORCTRL_STRGLVL_Pos)) /* Assigment of value for STRGLVL in the ADC_CORCTRL register */
+#define ADC_CORCTRL_SCNRTDS_Pos               _UINT32_(22)                                         /* (ADC_CORCTRL) SCAN Re-trigger Disable Position */
+#define ADC_CORCTRL_SCNRTDS_Msk               (_UINT32_(0x1) << ADC_CORCTRL_SCNRTDS_Pos)           /* (ADC_CORCTRL) SCAN Re-trigger Disable Mask */
+#define ADC_CORCTRL_SCNRTDS(value)            (ADC_CORCTRL_SCNRTDS_Msk & (_UINT32_(value) << ADC_CORCTRL_SCNRTDS_Pos)) /* Assigment of value for SCNRTDS in the ADC_CORCTRL register */
+#define ADC_CORCTRL_ADCDIV_Pos                _UINT32_(24)                                         /* (ADC_CORCTRL) Division Ratio for SARCORE clock Position */
+#define ADC_CORCTRL_ADCDIV_Msk                (_UINT32_(0x7F) << ADC_CORCTRL_ADCDIV_Pos)           /* (ADC_CORCTRL) Division Ratio for SARCORE clock Mask */
+#define ADC_CORCTRL_ADCDIV(value)             (ADC_CORCTRL_ADCDIV_Msk & (_UINT32_(value) << ADC_CORCTRL_ADCDIV_Pos)) /* Assigment of value for ADCDIV in the ADC_CORCTRL register */
+#define ADC_CORCTRL_Msk                       _UINT32_(0x7F6FFFFF)                                 /* (ADC_CORCTRL) Register Mask  */
 
 
 /* -------- ADC_CHNCFG1 : (ADC Offset: 0x04) (R/W 32) Channel Configuration 1 (LVL/CMPEN) -------- */
@@ -747,72 +704,115 @@
 #define ADC_CHNCFG5_Msk                       _UINT32_(0xFFFFFFFF)                                 /* (ADC_CHNCFG5) Register Mask  */
 
 
-/* -------- ADC_CORCTRL : (ADC Offset: 0x00) (R/W 32) SARCORE Control -------- */
-#define ADC_CORCTRL_RESETVALUE                _UINT32_(0xC00)                                      /*  (ADC_CORCTRL) SARCORE Control  Reset Value */
+/* -------- ADC_CALCTRL : (ADC Offset: 0x18) (R/W 32) SARCORE Calibration Value -------- */
+#define ADC_CALCTRL_RESETVALUE                _UINT32_(0x00)                                       /*  (ADC_CALCTRL) SARCORE Calibration Value  Reset Value */
 
-#define ADC_CORCTRL_SAMC_Pos                  _UINT32_(0)                                          /* (ADC_CORCTRL) Sample Count Position */
-#define ADC_CORCTRL_SAMC_Msk                  (_UINT32_(0x3FF) << ADC_CORCTRL_SAMC_Pos)            /* (ADC_CORCTRL) Sample Count Mask */
-#define ADC_CORCTRL_SAMC(value)               (ADC_CORCTRL_SAMC_Msk & (_UINT32_(value) << ADC_CORCTRL_SAMC_Pos)) /* Assigment of value for SAMC in the ADC_CORCTRL register */
-#define ADC_CORCTRL_SELRES_Pos                _UINT32_(10)                                         /* (ADC_CORCTRL) Selects Resolution Position */
-#define ADC_CORCTRL_SELRES_Msk                (_UINT32_(0x3) << ADC_CORCTRL_SELRES_Pos)            /* (ADC_CORCTRL) Selects Resolution Mask */
-#define ADC_CORCTRL_SELRES(value)             (ADC_CORCTRL_SELRES_Msk & (_UINT32_(value) << ADC_CORCTRL_SELRES_Pos)) /* Assigment of value for SELRES in the ADC_CORCTRL register */
-#define   ADC_CORCTRL_SELRES_6_BITS_Val       _UINT32_(0x0)                                        /* (ADC_CORCTRL) 6 bits  */
-#define   ADC_CORCTRL_SELRES_8_BITS_Val       _UINT32_(0x1)                                        /* (ADC_CORCTRL) 8 bits  */
-#define   ADC_CORCTRL_SELRES_10_BITS_Val      _UINT32_(0x2)                                        /* (ADC_CORCTRL) 10 bits  */
-#define   ADC_CORCTRL_SELRES_12_BITS_Val      _UINT32_(0x3)                                        /* (ADC_CORCTRL) 12 bits (default)  */
-#define ADC_CORCTRL_SELRES_6_BITS             (ADC_CORCTRL_SELRES_6_BITS_Val << ADC_CORCTRL_SELRES_Pos) /* (ADC_CORCTRL) 6 bits Position  */
-#define ADC_CORCTRL_SELRES_8_BITS             (ADC_CORCTRL_SELRES_8_BITS_Val << ADC_CORCTRL_SELRES_Pos) /* (ADC_CORCTRL) 8 bits Position  */
-#define ADC_CORCTRL_SELRES_10_BITS            (ADC_CORCTRL_SELRES_10_BITS_Val << ADC_CORCTRL_SELRES_Pos) /* (ADC_CORCTRL) 10 bits Position  */
-#define ADC_CORCTRL_SELRES_12_BITS            (ADC_CORCTRL_SELRES_12_BITS_Val << ADC_CORCTRL_SELRES_Pos) /* (ADC_CORCTRL) 12 bits (default) Position  */
-#define ADC_CORCTRL_EIS_Pos                   _UINT32_(12)                                         /* (ADC_CORCTRL) Early Interrupt Select Position */
-#define ADC_CORCTRL_EIS_Msk                   (_UINT32_(0x7) << ADC_CORCTRL_EIS_Pos)               /* (ADC_CORCTRL) Early Interrupt Select Mask */
-#define ADC_CORCTRL_EIS(value)                (ADC_CORCTRL_EIS_Msk & (_UINT32_(value) << ADC_CORCTRL_EIS_Pos)) /* Assigment of value for EIS in the ADC_CORCTRL register */
-#define ADC_CORCTRL_EIRQOVR_Pos               _UINT32_(15)                                         /* (ADC_CORCTRL) Interrupt Type Select Position */
-#define ADC_CORCTRL_EIRQOVR_Msk               (_UINT32_(0x1) << ADC_CORCTRL_EIRQOVR_Pos)           /* (ADC_CORCTRL) Interrupt Type Select Mask */
-#define ADC_CORCTRL_EIRQOVR(value)            (ADC_CORCTRL_EIRQOVR_Msk & (_UINT32_(value) << ADC_CORCTRL_EIRQOVR_Pos)) /* Assigment of value for EIRQOVR in the ADC_CORCTRL register */
-#define ADC_CORCTRL_STRGSRC_Pos               _UINT32_(16)                                         /* (ADC_CORCTRL) SCAN trigger source selection Position */
-#define ADC_CORCTRL_STRGSRC_Msk               (_UINT32_(0xF) << ADC_CORCTRL_STRGSRC_Pos)           /* (ADC_CORCTRL) SCAN trigger source selection Mask */
-#define ADC_CORCTRL_STRGSRC(value)            (ADC_CORCTRL_STRGSRC_Msk & (_UINT32_(value) << ADC_CORCTRL_STRGSRC_Pos)) /* Assigment of value for STRGSRC in the ADC_CORCTRL register */
-#define   ADC_CORCTRL_STRGSRC_NO_TRIGGER_Val  _UINT32_(0x0)                                        /* (ADC_CORCTRL) No Trigger (NOP)  */
-#define   ADC_CORCTRL_STRGSRC_GLOBAL_SOFTWARE_TRIGGER_Val _UINT32_(0x1)                                        /* (ADC_CORCTRL) Global Software Trigger  */
-#define   ADC_CORCTRL_STRGSRC_GLOBAL_LEVEL_TRIGGER_Val _UINT32_(0x2)                                        /* (ADC_CORCTRL) Global Level Software Trigger  */
-#define   ADC_CORCTRL_STRGSRC_SYNC_TRIGGER_Val _UINT32_(0x4)                                        /* (ADC_CORCTRL) STRIG Synchronous Trigger  */
-#define   ADC_CORCTRL_STRGSRC_EVENT_USER0_Val _UINT32_(0x5)                                        /* (ADC_CORCTRL) ADC Trigger Event User 0  */
-#define   ADC_CORCTRL_STRGSRC_EVENT_USER1_Val _UINT32_(0x6)                                        /* (ADC_CORCTRL) ADC Trigger Event User 1  */
-#define   ADC_CORCTRL_STRGSRC_EVENT_USER2_Val _UINT32_(0x7)                                        /* (ADC_CORCTRL) ADC Trigger Event User 2  */
-#define   ADC_CORCTRL_STRGSRC_EVENT_USER3_Val _UINT32_(0x8)                                        /* (ADC_CORCTRL) ADC Trigger Event User 3  */
-#define   ADC_CORCTRL_STRGSRC_EVENT_USER4_Val _UINT32_(0x9)                                        /* (ADC_CORCTRL) ADC Trigger Event User 4  */
-#define   ADC_CORCTRL_STRGSRC_EVENT_USER5_Val _UINT32_(0xA)                                        /* (ADC_CORCTRL) ADC Trigger Event User 5  */
-#define   ADC_CORCTRL_STRGSRC_EVENT_USER6_Val _UINT32_(0xB)                                        /* (ADC_CORCTRL) ADC Trigger Event User 6  */
-#define   ADC_CORCTRL_STRGSRC_EVENT_USER7_Val _UINT32_(0xC)                                        /* (ADC_CORCTRL) ADC Trigger Event User 7  */
-#define   ADC_CORCTRL_STRGSRC_EVENT_USER8_Val _UINT32_(0xD)                                        /* (ADC_CORCTRL) ADC Trigger Event User 8  */
-#define   ADC_CORCTRL_STRGSRC_EVENT_USER9_Val _UINT32_(0xE)                                        /* (ADC_CORCTRL) ADC Trigger Event User 9  */
-#define   ADC_CORCTRL_STRGSRC_EVENT_USER10_Val _UINT32_(0xF)                                        /* (ADC_CORCTRL) ADC Trigger Event User 10  */
-#define ADC_CORCTRL_STRGSRC_NO_TRIGGER        (ADC_CORCTRL_STRGSRC_NO_TRIGGER_Val << ADC_CORCTRL_STRGSRC_Pos) /* (ADC_CORCTRL) No Trigger (NOP) Position  */
-#define ADC_CORCTRL_STRGSRC_GLOBAL_SOFTWARE_TRIGGER (ADC_CORCTRL_STRGSRC_GLOBAL_SOFTWARE_TRIGGER_Val << ADC_CORCTRL_STRGSRC_Pos) /* (ADC_CORCTRL) Global Software Trigger Position  */
-#define ADC_CORCTRL_STRGSRC_GLOBAL_LEVEL_TRIGGER (ADC_CORCTRL_STRGSRC_GLOBAL_LEVEL_TRIGGER_Val << ADC_CORCTRL_STRGSRC_Pos) /* (ADC_CORCTRL) Global Level Software Trigger Position  */
-#define ADC_CORCTRL_STRGSRC_SYNC_TRIGGER      (ADC_CORCTRL_STRGSRC_SYNC_TRIGGER_Val << ADC_CORCTRL_STRGSRC_Pos) /* (ADC_CORCTRL) STRIG Synchronous Trigger Position  */
-#define ADC_CORCTRL_STRGSRC_EVENT_USER0       (ADC_CORCTRL_STRGSRC_EVENT_USER0_Val << ADC_CORCTRL_STRGSRC_Pos) /* (ADC_CORCTRL) ADC Trigger Event User 0 Position  */
-#define ADC_CORCTRL_STRGSRC_EVENT_USER1       (ADC_CORCTRL_STRGSRC_EVENT_USER1_Val << ADC_CORCTRL_STRGSRC_Pos) /* (ADC_CORCTRL) ADC Trigger Event User 1 Position  */
-#define ADC_CORCTRL_STRGSRC_EVENT_USER2       (ADC_CORCTRL_STRGSRC_EVENT_USER2_Val << ADC_CORCTRL_STRGSRC_Pos) /* (ADC_CORCTRL) ADC Trigger Event User 2 Position  */
-#define ADC_CORCTRL_STRGSRC_EVENT_USER3       (ADC_CORCTRL_STRGSRC_EVENT_USER3_Val << ADC_CORCTRL_STRGSRC_Pos) /* (ADC_CORCTRL) ADC Trigger Event User 3 Position  */
-#define ADC_CORCTRL_STRGSRC_EVENT_USER4       (ADC_CORCTRL_STRGSRC_EVENT_USER4_Val << ADC_CORCTRL_STRGSRC_Pos) /* (ADC_CORCTRL) ADC Trigger Event User 4 Position  */
-#define ADC_CORCTRL_STRGSRC_EVENT_USER5       (ADC_CORCTRL_STRGSRC_EVENT_USER5_Val << ADC_CORCTRL_STRGSRC_Pos) /* (ADC_CORCTRL) ADC Trigger Event User 5 Position  */
-#define ADC_CORCTRL_STRGSRC_EVENT_USER6       (ADC_CORCTRL_STRGSRC_EVENT_USER6_Val << ADC_CORCTRL_STRGSRC_Pos) /* (ADC_CORCTRL) ADC Trigger Event User 6 Position  */
-#define ADC_CORCTRL_STRGSRC_EVENT_USER7       (ADC_CORCTRL_STRGSRC_EVENT_USER7_Val << ADC_CORCTRL_STRGSRC_Pos) /* (ADC_CORCTRL) ADC Trigger Event User 7 Position  */
-#define ADC_CORCTRL_STRGSRC_EVENT_USER8       (ADC_CORCTRL_STRGSRC_EVENT_USER8_Val << ADC_CORCTRL_STRGSRC_Pos) /* (ADC_CORCTRL) ADC Trigger Event User 8 Position  */
-#define ADC_CORCTRL_STRGSRC_EVENT_USER9       (ADC_CORCTRL_STRGSRC_EVENT_USER9_Val << ADC_CORCTRL_STRGSRC_Pos) /* (ADC_CORCTRL) ADC Trigger Event User 9 Position  */
-#define ADC_CORCTRL_STRGSRC_EVENT_USER10      (ADC_CORCTRL_STRGSRC_EVENT_USER10_Val << ADC_CORCTRL_STRGSRC_Pos) /* (ADC_CORCTRL) ADC Trigger Event User 10 Position  */
-#define ADC_CORCTRL_STRGLVL_Pos               _UINT32_(21)                                         /* (ADC_CORCTRL) Scan Trigger Level Sensitivity Position */
-#define ADC_CORCTRL_STRGLVL_Msk               (_UINT32_(0x1) << ADC_CORCTRL_STRGLVL_Pos)           /* (ADC_CORCTRL) Scan Trigger Level Sensitivity Mask */
-#define ADC_CORCTRL_STRGLVL(value)            (ADC_CORCTRL_STRGLVL_Msk & (_UINT32_(value) << ADC_CORCTRL_STRGLVL_Pos)) /* Assigment of value for STRGLVL in the ADC_CORCTRL register */
-#define ADC_CORCTRL_SCNRTDS_Pos               _UINT32_(22)                                         /* (ADC_CORCTRL) SCAN Re-trigger Disable Position */
-#define ADC_CORCTRL_SCNRTDS_Msk               (_UINT32_(0x1) << ADC_CORCTRL_SCNRTDS_Pos)           /* (ADC_CORCTRL) SCAN Re-trigger Disable Mask */
-#define ADC_CORCTRL_SCNRTDS(value)            (ADC_CORCTRL_SCNRTDS_Msk & (_UINT32_(value) << ADC_CORCTRL_SCNRTDS_Pos)) /* Assigment of value for SCNRTDS in the ADC_CORCTRL register */
-#define ADC_CORCTRL_ADCDIV_Pos                _UINT32_(24)                                         /* (ADC_CORCTRL) Division Ratio for SARCORE clock Position */
-#define ADC_CORCTRL_ADCDIV_Msk                (_UINT32_(0x7F) << ADC_CORCTRL_ADCDIV_Pos)           /* (ADC_CORCTRL) Division Ratio for SARCORE clock Mask */
-#define ADC_CORCTRL_ADCDIV(value)             (ADC_CORCTRL_ADCDIV_Msk & (_UINT32_(value) << ADC_CORCTRL_ADCDIV_Pos)) /* Assigment of value for ADCDIV in the ADC_CORCTRL register */
-#define ADC_CORCTRL_Msk                       _UINT32_(0x7F6FFFFF)                                 /* (ADC_CORCTRL) Register Mask  */
+#define ADC_CALCTRL_CALBITS_Pos               _UINT32_(0)                                          /* (ADC_CALCTRL) Calibration Values Position */
+#define ADC_CALCTRL_CALBITS_Msk               (_UINT32_(0xFFFFFFFF) << ADC_CALCTRL_CALBITS_Pos)    /* (ADC_CALCTRL) Calibration Values Mask */
+#define ADC_CALCTRL_CALBITS(value)            (ADC_CALCTRL_CALBITS_Msk & (_UINT32_(value) << ADC_CALCTRL_CALBITS_Pos)) /* Assigment of value for CALBITS in the ADC_CALCTRL register */
+#define ADC_CALCTRL_Msk                       _UINT32_(0xFFFFFFFF)                                 /* (ADC_CALCTRL) Register Mask  */
+
+/* FUSES_ADC_SARCORE_12BIT_V7A0 mode */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_en_cmbf_Pos _UINT32_(0)                                          /* (ADC_CALCTRL) Enable Common Mode Buffer Position */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_en_cmbf_Msk (_UINT32_(0x1) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_en_cmbf_Pos) /* (ADC_CALCTRL) Enable Common Mode Buffer Mask */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_en_cmbf(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_en_cmbf_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_en_cmbf_Pos))
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_en_dither_Pos _UINT32_(2)                                          /* (ADC_CALCTRL) Enable Dither Position */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_en_dither_Msk (_UINT32_(0x1) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_en_dither_Pos) /* (ADC_CALCTRL) Enable Dither Mask */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_en_dither(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_en_dither_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_en_dither_Pos))
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_dis_faz_Pos _UINT32_(3)                                          /* (ADC_CALCTRL) Disable auto-zeroing Position */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_dis_faz_Msk (_UINT32_(0x1) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_dis_faz_Pos) /* (ADC_CALCTRL) Disable auto-zeroing Mask */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_dis_faz(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_dis_faz_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_dis_faz_Pos))
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_dis_saz_Pos _UINT32_(4)                                          /* (ADC_CALCTRL) Disable auto-zeroing Position */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_dis_saz_Msk (_UINT32_(0x1) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_dis_saz_Pos) /* (ADC_CALCTRL) Disable auto-zeroing Mask */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_dis_saz(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_dis_saz_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_dis_saz_Pos))
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_dis_laz_Pos _UINT32_(5)                                          /* (ADC_CALCTRL) Disable auto-zeroing Position */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_dis_laz_Msk (_UINT32_(0x1) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_dis_laz_Pos) /* (ADC_CALCTRL) Disable auto-zeroing Mask */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_dis_laz(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_dis_laz_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_dis_laz_Pos))
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_en_rdac_Pos _UINT32_(6)                                          /* (ADC_CALCTRL) Disable Power Cycling Position */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_en_rdac_Msk (_UINT32_(0x1) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_en_rdac_Pos) /* (ADC_CALCTRL) Disable Power Cycling Mask */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_en_rdac(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_en_rdac_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_en_rdac_Pos))
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_dbg_sel_Pos _UINT32_(7)                                          /* (ADC_CALCTRL) Debug Bus Select Position */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_dbg_sel_Msk (_UINT32_(0x1) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_dbg_sel_Pos) /* (ADC_CALCTRL) Debug Bus Select Mask */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_dbg_sel(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_dbg_sel_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_dbg_sel_Pos))
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_sel_del_Pos _UINT32_(8)                                          /* (ADC_CALCTRL) Scan Mode comp_out Position */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_sel_del_Msk (_UINT32_(0x1) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_sel_del_Pos) /* (ADC_CALCTRL) Scan Mode comp_out Mask */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_sel_del(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_sel_del_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_sel_del_Pos))
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_t1_dly_Pos _UINT32_(9)                                          /* (ADC_CALCTRL) Regen Latch Delay Position */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_t1_dly_Msk (_UINT32_(0x3) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_t1_dly_Pos) /* (ADC_CALCTRL) Regen Latch Delay Mask */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_t1_dly(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_t1_dly_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_t1_dly_Pos))
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_tclk_div_Pos _UINT32_(11)                                         /* (ADC_CALCTRL) Test Clock Divider Position */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_tclk_div_Msk (_UINT32_(0x1F) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_tclk_div_Pos) /* (ADC_CALCTRL) Test Clock Divider Mask */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_tclk_div(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_tclk_div_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_tclk_div_Pos))
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_iadc_1_Pos _UINT32_(20)                                         /* (ADC_CALCTRL) Current Consumption 1 Position */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_iadc_1_Msk (_UINT32_(0x3) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_iadc_1_Pos) /* (ADC_CALCTRL) Current Consumption 1 Mask */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_iadc_1(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_iadc_1_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_iadc_1_Pos))
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_iadc_2_Pos _UINT32_(22)                                         /* (ADC_CALCTRL) Current Consumption 2 Position */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_iadc_2_Msk (_UINT32_(0x3) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_iadc_2_Pos) /* (ADC_CALCTRL) Current Consumption 2 Mask */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_iadc_2(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_iadc_2_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_iadc_2_Pos))
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_icmp_1_Pos _UINT32_(24)                                         /* (ADC_CALCTRL) Bias Current Stage 1 Position */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_icmp_1_Msk (_UINT32_(0x3) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_icmp_1_Pos) /* (ADC_CALCTRL) Bias Current Stage 1 Mask */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_icmp_1(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_icmp_1_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_icmp_1_Pos))
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_icmp_2_Pos _UINT32_(26)                                         /* (ADC_CALCTRL) Bias Current Stage 2 Position */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_icmp_2_Msk (_UINT32_(0x3) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_icmp_2_Pos) /* (ADC_CALCTRL) Bias Current Stage 2 Mask */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_icmp_2(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_icmp_2_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_icmp_2_Pos))
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_icmbf_Pos _UINT32_(28)                                         /* (ADC_CALCTRL) Bias Current Common Mode Buffer Position */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_icmbf_Msk (_UINT32_(0x3) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_icmbf_Pos) /* (ADC_CALCTRL) Bias Current Common Mode Buffer Mask */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_icmbf(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_icmbf_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_icmbf_Pos))
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_en_ext_bias_Pos _UINT32_(31)                                         /* (ADC_CALCTRL) Dsiable Internal Bias Circuit Position */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_en_ext_bias_Msk (_UINT32_(0x1) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_en_ext_bias_Pos) /* (ADC_CALCTRL) Dsiable Internal Bias Circuit Mask */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_en_ext_bias(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_en_ext_bias_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_en_ext_bias_Pos))
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0_Msk _UINT32_(0xBFF0FFFD)                                  /* (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7A0) Register Mask  */
+
+/* FUSES_ADC_SARCORE_12BIT_V7C0 mode */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_en_cmbf_Pos _UINT32_(0)                                          /* (ADC_CALCTRL) Enable Common Mode Buffer Position */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_en_cmbf_Msk (_UINT32_(0x1) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_en_cmbf_Pos) /* (ADC_CALCTRL) Enable Common Mode Buffer Mask */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_en_cmbf(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_en_cmbf_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_en_cmbf_Pos))
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_en_dither_Pos _UINT32_(2)                                          /* (ADC_CALCTRL) Enable Dither Position */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_en_dither_Msk (_UINT32_(0x1) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_en_dither_Pos) /* (ADC_CALCTRL) Enable Dither Mask */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_en_dither(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_en_dither_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_en_dither_Pos))
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_dis_faz_Pos _UINT32_(3)                                          /* (ADC_CALCTRL) Disable auto-zeroing Position */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_dis_faz_Msk (_UINT32_(0x1) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_dis_faz_Pos) /* (ADC_CALCTRL) Disable auto-zeroing Mask */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_dis_faz(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_dis_faz_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_dis_faz_Pos))
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_dis_saz_Pos _UINT32_(4)                                          /* (ADC_CALCTRL) Disable auto-zeroing Position */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_dis_saz_Msk (_UINT32_(0x1) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_dis_saz_Pos) /* (ADC_CALCTRL) Disable auto-zeroing Mask */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_dis_saz(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_dis_saz_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_dis_saz_Pos))
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_dis_laz_Pos _UINT32_(5)                                          /* (ADC_CALCTRL) Disable auto-zeroing Position */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_dis_laz_Msk (_UINT32_(0x1) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_dis_laz_Pos) /* (ADC_CALCTRL) Disable auto-zeroing Mask */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_dis_laz(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_dis_laz_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_dis_laz_Pos))
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_en_rdac_Pos _UINT32_(6)                                          /* (ADC_CALCTRL) Disable Power Cycling Position */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_en_rdac_Msk (_UINT32_(0x1) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_en_rdac_Pos) /* (ADC_CALCTRL) Disable Power Cycling Mask */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_en_rdac(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_en_rdac_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_en_rdac_Pos))
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_dbg_sel_Pos _UINT32_(7)                                          /* (ADC_CALCTRL) Debug Bus Select Position */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_dbg_sel_Msk (_UINT32_(0x1) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_dbg_sel_Pos) /* (ADC_CALCTRL) Debug Bus Select Mask */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_dbg_sel(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_dbg_sel_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_dbg_sel_Pos))
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_sel_del_Pos _UINT32_(8)                                          /* (ADC_CALCTRL) Scan Mode comp_out Position */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_sel_del_Msk (_UINT32_(0x1) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_sel_del_Pos) /* (ADC_CALCTRL) Scan Mode comp_out Mask */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_sel_del(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_sel_del_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_sel_del_Pos))
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_t1_dly_Pos _UINT32_(9)                                          /* (ADC_CALCTRL) Regen Latch Delay Position */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_t1_dly_Msk (_UINT32_(0x3) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_t1_dly_Pos) /* (ADC_CALCTRL) Regen Latch Delay Mask */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_t1_dly(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_t1_dly_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_t1_dly_Pos))
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_tclk_div_Pos _UINT32_(11)                                         /* (ADC_CALCTRL) Test Clock Divider Position */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_tclk_div_Msk (_UINT32_(0x1F) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_tclk_div_Pos) /* (ADC_CALCTRL) Test Clock Divider Mask */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_tclk_div(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_tclk_div_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_tclk_div_Pos))
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_iadc_1_Pos _UINT32_(20)                                         /* (ADC_CALCTRL) Current Consumption 1 Position */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_iadc_1_Msk (_UINT32_(0x3) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_iadc_1_Pos) /* (ADC_CALCTRL) Current Consumption 1 Mask */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_iadc_1(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_iadc_1_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_iadc_1_Pos))
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_iadc_2_Pos _UINT32_(22)                                         /* (ADC_CALCTRL) Current Consumption 2 Position */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_iadc_2_Msk (_UINT32_(0x3) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_iadc_2_Pos) /* (ADC_CALCTRL) Current Consumption 2 Mask */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_iadc_2(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_iadc_2_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_iadc_2_Pos))
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_icmp_1_Pos _UINT32_(24)                                         /* (ADC_CALCTRL) Bias Current Stage 1 Position */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_icmp_1_Msk (_UINT32_(0x3) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_icmp_1_Pos) /* (ADC_CALCTRL) Bias Current Stage 1 Mask */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_icmp_1(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_icmp_1_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_icmp_1_Pos))
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_icmp_2_Pos _UINT32_(26)                                         /* (ADC_CALCTRL) Bias Current Stage 2 Position */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_icmp_2_Msk (_UINT32_(0x3) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_icmp_2_Pos) /* (ADC_CALCTRL) Bias Current Stage 2 Mask */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_icmp_2(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_icmp_2_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_icmp_2_Pos))
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_icmbf_Pos _UINT32_(28)                                         /* (ADC_CALCTRL) Bias Current Common Mode Buffer Position */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_icmbf_Msk (_UINT32_(0x3) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_icmbf_Pos) /* (ADC_CALCTRL) Bias Current Common Mode Buffer Mask */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_icmbf(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_icmbf_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_icmbf_Pos))
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_en_ext_bias_Pos _UINT32_(31)                                         /* (ADC_CALCTRL) Dsiable Internal Bias Circuit Position */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_en_ext_bias_Msk (_UINT32_(0x1) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_en_ext_bias_Pos) /* (ADC_CALCTRL) Dsiable Internal Bias Circuit Mask */
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_en_ext_bias(value) (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_en_ext_bias_Msk & (_UINT32_(value) << ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_en_ext_bias_Pos))
+#define ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0_Msk _UINT32_(0xBFF0FFFD)                                  /* (ADC_CALCTRL_FUSES_ADC_SARCORE_12BIT_V7C0) Register Mask  */
 
 
 /* -------- ADC_EVCTRL : (ADC Offset: 0x1C) (R/W 32) Event Control -------- */
@@ -920,150 +920,6 @@
 #define ADC_INTFLAG_Msk                       _UINT32_(0xFFFFFF9F)                                 /* (ADC_INTFLAG) Register Mask  */
 
 
-/* -------- ADC_CHRDYDAT : (ADC Offset: 0xD4) (R/W 32) Channel Ready Data Register -------- */
-#define ADC_CHRDYDAT_RESETVALUE               _UINT32_(0x00)                                       /*  (ADC_CHRDYDAT) Channel Ready Data Register  Reset Value */
-
-#define ADC_CHRDYDAT_CHRDYDAT_Pos             _UINT32_(0)                                          /* (ADC_CHRDYDAT) Channel Output Data Position */
-#define ADC_CHRDYDAT_CHRDYDAT_Msk             (_UINT32_(0xFFFF) << ADC_CHRDYDAT_CHRDYDAT_Pos)      /* (ADC_CHRDYDAT) Channel Output Data Mask */
-#define ADC_CHRDYDAT_CHRDYDAT(value)          (ADC_CHRDYDAT_CHRDYDAT_Msk & (_UINT32_(value) << ADC_CHRDYDAT_CHRDYDAT_Pos)) /* Assigment of value for CHRDYDAT in the ADC_CHRDYDAT register */
-#define ADC_CHRDYDAT_LVL_Pos                  _UINT32_(24)                                         /* (ADC_CHRDYDAT) Level Setting Position */
-#define ADC_CHRDYDAT_LVL_Msk                  (_UINT32_(0x1) << ADC_CHRDYDAT_LVL_Pos)              /* (ADC_CHRDYDAT) Level Setting Mask */
-#define ADC_CHRDYDAT_LVL(value)               (ADC_CHRDYDAT_LVL_Msk & (_UINT32_(value) << ADC_CHRDYDAT_LVL_Pos)) /* Assigment of value for LVL in the ADC_CHRDYDAT register */
-#define ADC_CHRDYDAT_DIFF_Pos                 _UINT32_(25)                                         /* (ADC_CHRDYDAT) Differential Setting Position */
-#define ADC_CHRDYDAT_DIFF_Msk                 (_UINT32_(0x1) << ADC_CHRDYDAT_DIFF_Pos)             /* (ADC_CHRDYDAT) Differential Setting Mask */
-#define ADC_CHRDYDAT_DIFF(value)              (ADC_CHRDYDAT_DIFF_Msk & (_UINT32_(value) << ADC_CHRDYDAT_DIFF_Pos)) /* Assigment of value for DIFF in the ADC_CHRDYDAT register */
-#define ADC_CHRDYDAT_SIGN_Pos                 _UINT32_(26)                                         /* (ADC_CHRDYDAT) Sign Setting Position */
-#define ADC_CHRDYDAT_SIGN_Msk                 (_UINT32_(0x1) << ADC_CHRDYDAT_SIGN_Pos)             /* (ADC_CHRDYDAT) Sign Setting Mask */
-#define ADC_CHRDYDAT_SIGN(value)              (ADC_CHRDYDAT_SIGN_Msk & (_UINT32_(value) << ADC_CHRDYDAT_SIGN_Pos)) /* Assigment of value for SIGN in the ADC_CHRDYDAT register */
-#define ADC_CHRDYDAT_FRACT_Pos                _UINT32_(27)                                         /* (ADC_CHRDYDAT) Fractional Setting Position */
-#define ADC_CHRDYDAT_FRACT_Msk                (_UINT32_(0x1) << ADC_CHRDYDAT_FRACT_Pos)            /* (ADC_CHRDYDAT) Fractional Setting Mask */
-#define ADC_CHRDYDAT_FRACT(value)             (ADC_CHRDYDAT_FRACT_Msk & (_UINT32_(value) << ADC_CHRDYDAT_FRACT_Pos)) /* Assigment of value for FRACT in the ADC_CHRDYDAT register */
-#define ADC_CHRDYDAT_Msk                      _UINT32_(0x0F00FFFF)                                 /* (ADC_CHRDYDAT) Register Mask  */
-
-
-/* -------- ADC_CMPCTRL : (ADC Offset: 0xB0) (R/W 32) Comparator Control -------- */
-#define ADC_CMPCTRL_RESETVALUE                _UINT32_(0x00)                                       /*  (ADC_CMPCTRL) Comparator Control  Reset Value */
-
-#define ADC_CMPCTRL_ADCMPLO_Pos               _UINT32_(0)                                          /* (ADC_CMPCTRL) Low Limit of Digital Comparator Position */
-#define ADC_CMPCTRL_ADCMPLO_Msk               (_UINT32_(0xFFF) << ADC_CMPCTRL_ADCMPLO_Pos)         /* (ADC_CMPCTRL) Low Limit of Digital Comparator Mask */
-#define ADC_CMPCTRL_ADCMPLO(value)            (ADC_CMPCTRL_ADCMPLO_Msk & (_UINT32_(value) << ADC_CMPCTRL_ADCMPLO_Pos)) /* Assigment of value for ADCMPLO in the ADC_CMPCTRL register */
-#define ADC_CMPCTRL_CMPEN_Pos                 _UINT32_(12)                                         /* (ADC_CMPCTRL) Comparator Enable Position */
-#define ADC_CMPCTRL_CMPEN_Msk                 (_UINT32_(0x1) << ADC_CMPCTRL_CMPEN_Pos)             /* (ADC_CMPCTRL) Comparator Enable Mask */
-#define ADC_CMPCTRL_CMPEN(value)              (ADC_CMPCTRL_CMPEN_Msk & (_UINT32_(value) << ADC_CMPCTRL_CMPEN_Pos)) /* Assigment of value for CMPEN in the ADC_CMPCTRL register */
-#define ADC_CMPCTRL_IELOLO_Pos                _UINT32_(13)                                         /* (ADC_CMPCTRL) Enable VAL < CMPLO Position */
-#define ADC_CMPCTRL_IELOLO_Msk                (_UINT32_(0x1) << ADC_CMPCTRL_IELOLO_Pos)            /* (ADC_CMPCTRL) Enable VAL < CMPLO Mask */
-#define ADC_CMPCTRL_IELOLO(value)             (ADC_CMPCTRL_IELOLO_Msk & (_UINT32_(value) << ADC_CMPCTRL_IELOLO_Pos)) /* Assigment of value for IELOLO in the ADC_CMPCTRL register */
-#define ADC_CMPCTRL_IELOHI_Pos                _UINT32_(14)                                         /* (ADC_CMPCTRL) Enable VAL >= CMPLO Position */
-#define ADC_CMPCTRL_IELOHI_Msk                (_UINT32_(0x1) << ADC_CMPCTRL_IELOHI_Pos)            /* (ADC_CMPCTRL) Enable VAL >= CMPLO Mask */
-#define ADC_CMPCTRL_IELOHI(value)             (ADC_CMPCTRL_IELOHI_Msk & (_UINT32_(value) << ADC_CMPCTRL_IELOHI_Pos)) /* Assigment of value for IELOHI in the ADC_CMPCTRL register */
-#define ADC_CMPCTRL_IEBTWN_Pos                _UINT32_(15)                                         /* (ADC_CMPCTRL) Enable CMPLO <= VAL < CMPHI Position */
-#define ADC_CMPCTRL_IEBTWN_Msk                (_UINT32_(0x1) << ADC_CMPCTRL_IEBTWN_Pos)            /* (ADC_CMPCTRL) Enable CMPLO <= VAL < CMPHI Mask */
-#define ADC_CMPCTRL_IEBTWN(value)             (ADC_CMPCTRL_IEBTWN_Msk & (_UINT32_(value) << ADC_CMPCTRL_IEBTWN_Pos)) /* Assigment of value for IEBTWN in the ADC_CMPCTRL register */
-#define ADC_CMPCTRL_ADCMPHI_Pos               _UINT32_(16)                                         /* (ADC_CMPCTRL) High Limit of Digital Comparator Position */
-#define ADC_CMPCTRL_ADCMPHI_Msk               (_UINT32_(0xFFF) << ADC_CMPCTRL_ADCMPHI_Pos)         /* (ADC_CMPCTRL) High Limit of Digital Comparator Mask */
-#define ADC_CMPCTRL_ADCMPHI(value)            (ADC_CMPCTRL_ADCMPHI_Msk & (_UINT32_(value) << ADC_CMPCTRL_ADCMPHI_Pos)) /* Assigment of value for ADCMPHI in the ADC_CMPCTRL register */
-#define ADC_CMPCTRL_IEHILO_Pos                _UINT32_(28)                                         /* (ADC_CMPCTRL) Enable VAL < CMPHI Position */
-#define ADC_CMPCTRL_IEHILO_Msk                (_UINT32_(0x1) << ADC_CMPCTRL_IEHILO_Pos)            /* (ADC_CMPCTRL) Enable VAL < CMPHI Mask */
-#define ADC_CMPCTRL_IEHILO(value)             (ADC_CMPCTRL_IEHILO_Msk & (_UINT32_(value) << ADC_CMPCTRL_IEHILO_Pos)) /* Assigment of value for IEHILO in the ADC_CMPCTRL register */
-#define ADC_CMPCTRL_IEHIHI_Pos                _UINT32_(29)                                         /* (ADC_CMPCTRL) Enable VAL >= CMPHI Position */
-#define ADC_CMPCTRL_IEHIHI_Msk                (_UINT32_(0x1) << ADC_CMPCTRL_IEHIHI_Pos)            /* (ADC_CMPCTRL) Enable VAL >= CMPHI Mask */
-#define ADC_CMPCTRL_IEHIHI(value)             (ADC_CMPCTRL_IEHIHI_Msk & (_UINT32_(value) << ADC_CMPCTRL_IEHIHI_Pos)) /* Assigment of value for IEHIHI in the ADC_CMPCTRL register */
-#define ADC_CMPCTRL_Msk                       _UINT32_(0x3FFFFFFF)                                 /* (ADC_CMPCTRL) Register Mask  */
-
-
-/* -------- ADC_CORCHDATAID : (ADC Offset: 0xD0) (R/W 32) Channel Ready DATA ID -------- */
-#define ADC_CORCHDATAID_RESETVALUE            _UINT32_(0x00)                                       /*  (ADC_CORCHDATAID) Channel Ready DATA ID  Reset Value */
-
-#define ADC_CORCHDATAID_CHRDYID_Pos           _UINT32_(0)                                          /* (ADC_CORCHDATAID) Channel Read ID Position */
-#define ADC_CORCHDATAID_CHRDYID_Msk           (_UINT32_(0xF) << ADC_CORCHDATAID_CHRDYID_Pos)       /* (ADC_CORCHDATAID) Channel Read ID Mask */
-#define ADC_CORCHDATAID_CHRDYID(value)        (ADC_CORCHDATAID_CHRDYID_Msk & (_UINT32_(value) << ADC_CORCHDATAID_CHRDYID_Pos)) /* Assigment of value for CHRDYID in the ADC_CORCHDATAID register */
-#define ADC_CORCHDATAID_CORDYID_Pos           _UINT32_(4)                                          /* (ADC_CORCHDATAID) Core Read ID Position */
-#define ADC_CORCHDATAID_CORDYID_Msk           (_UINT32_(0x3) << ADC_CORCHDATAID_CORDYID_Pos)       /* (ADC_CORCHDATAID) Core Read ID Mask */
-#define ADC_CORCHDATAID_CORDYID(value)        (ADC_CORCHDATAID_CORDYID_Msk & (_UINT32_(value) << ADC_CORCHDATAID_CORDYID_Pos)) /* Assigment of value for CORDYID in the ADC_CORCHDATAID register */
-#define ADC_CORCHDATAID_Msk                   _UINT32_(0x0000003F)                                 /* (ADC_CORCHDATAID) Register Mask  */
-
-
-/* -------- ADC_CTLINTENCLR : (ADC Offset: 0x100) (R/W 32) CORE Controller Interrupt Enable Clear -------- */
-#define ADC_CTLINTENCLR_RESETVALUE            _UINT32_(0x00)                                       /*  (ADC_CTLINTENCLR) CORE Controller Interrupt Enable Clear  Reset Value */
-
-#define ADC_CTLINTENCLR_CRRDY_Pos             _UINT32_(0)                                          /* (ADC_CTLINTENCLR) Core Ready Disable Position */
-#define ADC_CTLINTENCLR_CRRDY_Msk             (_UINT32_(0xF) << ADC_CTLINTENCLR_CRRDY_Pos)         /* (ADC_CTLINTENCLR) Core Ready Disable Mask */
-#define ADC_CTLINTENCLR_CRRDY(value)          (ADC_CTLINTENCLR_CRRDY_Msk & (_UINT32_(value) << ADC_CTLINTENCLR_CRRDY_Pos)) /* Assigment of value for CRRDY in the ADC_CTLINTENCLR register */
-#define ADC_CTLINTENCLR_VREFUPD_Pos           _UINT32_(6)                                          /* (ADC_CTLINTENCLR) VREF Update Position */
-#define ADC_CTLINTENCLR_VREFUPD_Msk           (_UINT32_(0x1) << ADC_CTLINTENCLR_VREFUPD_Pos)       /* (ADC_CTLINTENCLR) VREF Update Mask */
-#define ADC_CTLINTENCLR_VREFUPD(value)        (ADC_CTLINTENCLR_VREFUPD_Msk & (_UINT32_(value) << ADC_CTLINTENCLR_VREFUPD_Pos)) /* Assigment of value for VREFUPD in the ADC_CTLINTENCLR register */
-#define ADC_CTLINTENCLR_VREFRDY_Pos           _UINT32_(7)                                          /* (ADC_CTLINTENCLR) VREF Ready Position */
-#define ADC_CTLINTENCLR_VREFRDY_Msk           (_UINT32_(0x1) << ADC_CTLINTENCLR_VREFRDY_Pos)       /* (ADC_CTLINTENCLR) VREF Ready Mask */
-#define ADC_CTLINTENCLR_VREFRDY(value)        (ADC_CTLINTENCLR_VREFRDY_Msk & (_UINT32_(value) << ADC_CTLINTENCLR_VREFRDY_Pos)) /* Assigment of value for VREFRDY in the ADC_CTLINTENCLR register */
-#define ADC_CTLINTENCLR_PFFUNF_Pos            _UINT32_(8)                                          /* (ADC_CTLINTENCLR) APB FIFO underflow Position */
-#define ADC_CTLINTENCLR_PFFUNF_Msk            (_UINT32_(0x1) << ADC_CTLINTENCLR_PFFUNF_Pos)        /* (ADC_CTLINTENCLR) APB FIFO underflow Mask */
-#define ADC_CTLINTENCLR_PFFUNF(value)         (ADC_CTLINTENCLR_PFFUNF_Msk & (_UINT32_(value) << ADC_CTLINTENCLR_PFFUNF_Pos)) /* Assigment of value for PFFUNF in the ADC_CTLINTENCLR register */
-#define ADC_CTLINTENCLR_PFFOVF_Pos            _UINT32_(9)                                          /* (ADC_CTLINTENCLR) APB FIFO overflow Position */
-#define ADC_CTLINTENCLR_PFFOVF_Msk            (_UINT32_(0x1) << ADC_CTLINTENCLR_PFFOVF_Pos)        /* (ADC_CTLINTENCLR) APB FIFO overflow Mask */
-#define ADC_CTLINTENCLR_PFFOVF(value)         (ADC_CTLINTENCLR_PFFOVF_Msk & (_UINT32_(value) << ADC_CTLINTENCLR_PFFOVF_Pos)) /* Assigment of value for PFFOVF in the ADC_CTLINTENCLR register */
-#define ADC_CTLINTENCLR_PFFRDY_Pos            _UINT32_(10)                                         /* (ADC_CTLINTENCLR) APB FIFO Ready Position */
-#define ADC_CTLINTENCLR_PFFRDY_Msk            (_UINT32_(0x1) << ADC_CTLINTENCLR_PFFRDY_Pos)        /* (ADC_CTLINTENCLR) APB FIFO Ready Mask */
-#define ADC_CTLINTENCLR_PFFRDY(value)         (ADC_CTLINTENCLR_PFFRDY_Msk & (_UINT32_(value) << ADC_CTLINTENCLR_PFFRDY_Pos)) /* Assigment of value for PFFRDY in the ADC_CTLINTENCLR register */
-#define ADC_CTLINTENCLR_PFFHFUL_Pos           _UINT32_(11)                                         /* (ADC_CTLINTENCLR) APB FIFO Half Full Position */
-#define ADC_CTLINTENCLR_PFFHFUL_Msk           (_UINT32_(0x1) << ADC_CTLINTENCLR_PFFHFUL_Pos)       /* (ADC_CTLINTENCLR) APB FIFO Half Full Mask */
-#define ADC_CTLINTENCLR_PFFHFUL(value)        (ADC_CTLINTENCLR_PFFHFUL_Msk & (_UINT32_(value) << ADC_CTLINTENCLR_PFFHFUL_Pos)) /* Assigment of value for PFFHFUL in the ADC_CTLINTENCLR register */
-#define ADC_CTLINTENCLR_Msk                   _UINT32_(0x00000FCF)                                 /* (ADC_CTLINTENCLR) Register Mask  */
-
-
-/* -------- ADC_CTLINTENSET : (ADC Offset: 0xFC) (R/W 32) CORE Controller Interrupt Enable Set -------- */
-#define ADC_CTLINTENSET_RESETVALUE            _UINT32_(0x00)                                       /*  (ADC_CTLINTENSET) CORE Controller Interrupt Enable Set  Reset Value */
-
-#define ADC_CTLINTENSET_CRRDY_Pos             _UINT32_(0)                                          /* (ADC_CTLINTENSET) Core Ready Position */
-#define ADC_CTLINTENSET_CRRDY_Msk             (_UINT32_(0xF) << ADC_CTLINTENSET_CRRDY_Pos)         /* (ADC_CTLINTENSET) Core Ready Mask */
-#define ADC_CTLINTENSET_CRRDY(value)          (ADC_CTLINTENSET_CRRDY_Msk & (_UINT32_(value) << ADC_CTLINTENSET_CRRDY_Pos)) /* Assigment of value for CRRDY in the ADC_CTLINTENSET register */
-#define ADC_CTLINTENSET_VREFUPD_Pos           _UINT32_(6)                                          /* (ADC_CTLINTENSET) VREF update Position */
-#define ADC_CTLINTENSET_VREFUPD_Msk           (_UINT32_(0x1) << ADC_CTLINTENSET_VREFUPD_Pos)       /* (ADC_CTLINTENSET) VREF update Mask */
-#define ADC_CTLINTENSET_VREFUPD(value)        (ADC_CTLINTENSET_VREFUPD_Msk & (_UINT32_(value) << ADC_CTLINTENSET_VREFUPD_Pos)) /* Assigment of value for VREFUPD in the ADC_CTLINTENSET register */
-#define ADC_CTLINTENSET_VREFRDY_Pos           _UINT32_(7)                                          /* (ADC_CTLINTENSET) VREF Ready Position */
-#define ADC_CTLINTENSET_VREFRDY_Msk           (_UINT32_(0x1) << ADC_CTLINTENSET_VREFRDY_Pos)       /* (ADC_CTLINTENSET) VREF Ready Mask */
-#define ADC_CTLINTENSET_VREFRDY(value)        (ADC_CTLINTENSET_VREFRDY_Msk & (_UINT32_(value) << ADC_CTLINTENSET_VREFRDY_Pos)) /* Assigment of value for VREFRDY in the ADC_CTLINTENSET register */
-#define ADC_CTLINTENSET_PFFUNF_Pos            _UINT32_(8)                                          /* (ADC_CTLINTENSET) APB FIFO Underflow Position */
-#define ADC_CTLINTENSET_PFFUNF_Msk            (_UINT32_(0x1) << ADC_CTLINTENSET_PFFUNF_Pos)        /* (ADC_CTLINTENSET) APB FIFO Underflow Mask */
-#define ADC_CTLINTENSET_PFFUNF(value)         (ADC_CTLINTENSET_PFFUNF_Msk & (_UINT32_(value) << ADC_CTLINTENSET_PFFUNF_Pos)) /* Assigment of value for PFFUNF in the ADC_CTLINTENSET register */
-#define ADC_CTLINTENSET_PFFOVF_Pos            _UINT32_(9)                                          /* (ADC_CTLINTENSET) APB FIFO Overflow Position */
-#define ADC_CTLINTENSET_PFFOVF_Msk            (_UINT32_(0x1) << ADC_CTLINTENSET_PFFOVF_Pos)        /* (ADC_CTLINTENSET) APB FIFO Overflow Mask */
-#define ADC_CTLINTENSET_PFFOVF(value)         (ADC_CTLINTENSET_PFFOVF_Msk & (_UINT32_(value) << ADC_CTLINTENSET_PFFOVF_Pos)) /* Assigment of value for PFFOVF in the ADC_CTLINTENSET register */
-#define ADC_CTLINTENSET_PFFRDY_Pos            _UINT32_(10)                                         /* (ADC_CTLINTENSET) APB FIFO Ready Position */
-#define ADC_CTLINTENSET_PFFRDY_Msk            (_UINT32_(0x1) << ADC_CTLINTENSET_PFFRDY_Pos)        /* (ADC_CTLINTENSET) APB FIFO Ready Mask */
-#define ADC_CTLINTENSET_PFFRDY(value)         (ADC_CTLINTENSET_PFFRDY_Msk & (_UINT32_(value) << ADC_CTLINTENSET_PFFRDY_Pos)) /* Assigment of value for PFFRDY in the ADC_CTLINTENSET register */
-#define ADC_CTLINTENSET_PFFHFUL_Pos           _UINT32_(11)                                         /* (ADC_CTLINTENSET) APB FIFO Half Full Position */
-#define ADC_CTLINTENSET_PFFHFUL_Msk           (_UINT32_(0x1) << ADC_CTLINTENSET_PFFHFUL_Pos)       /* (ADC_CTLINTENSET) APB FIFO Half Full Mask */
-#define ADC_CTLINTENSET_PFFHFUL(value)        (ADC_CTLINTENSET_PFFHFUL_Msk & (_UINT32_(value) << ADC_CTLINTENSET_PFFHFUL_Pos)) /* Assigment of value for PFFHFUL in the ADC_CTLINTENSET register */
-#define ADC_CTLINTENSET_Msk                   _UINT32_(0x00000FCF)                                 /* (ADC_CTLINTENSET) Register Mask  */
-
-
-/* -------- ADC_CTLINTFLAG : (ADC Offset: 0x104) (R/W 32) CORE Controller Interrupt Flags -------- */
-#define ADC_CTLINTFLAG_RESETVALUE             _UINT32_(0x00)                                       /*  (ADC_CTLINTFLAG) CORE Controller Interrupt Flags  Reset Value */
-
-#define ADC_CTLINTFLAG_CRRDY_Pos              _UINT32_(0)                                          /* (ADC_CTLINTFLAG) Core Ready Position */
-#define ADC_CTLINTFLAG_CRRDY_Msk              (_UINT32_(0xF) << ADC_CTLINTFLAG_CRRDY_Pos)          /* (ADC_CTLINTFLAG) Core Ready Mask */
-#define ADC_CTLINTFLAG_CRRDY(value)           (ADC_CTLINTFLAG_CRRDY_Msk & (_UINT32_(value) << ADC_CTLINTFLAG_CRRDY_Pos)) /* Assigment of value for CRRDY in the ADC_CTLINTFLAG register */
-#define ADC_CTLINTFLAG_VREFUPD_Pos            _UINT32_(6)                                          /* (ADC_CTLINTFLAG) VREF update Position */
-#define ADC_CTLINTFLAG_VREFUPD_Msk            (_UINT32_(0x1) << ADC_CTLINTFLAG_VREFUPD_Pos)        /* (ADC_CTLINTFLAG) VREF update Mask */
-#define ADC_CTLINTFLAG_VREFUPD(value)         (ADC_CTLINTFLAG_VREFUPD_Msk & (_UINT32_(value) << ADC_CTLINTFLAG_VREFUPD_Pos)) /* Assigment of value for VREFUPD in the ADC_CTLINTFLAG register */
-#define ADC_CTLINTFLAG_VREFRDY_Pos            _UINT32_(7)                                          /* (ADC_CTLINTFLAG) VREF Ready Position */
-#define ADC_CTLINTFLAG_VREFRDY_Msk            (_UINT32_(0x1) << ADC_CTLINTFLAG_VREFRDY_Pos)        /* (ADC_CTLINTFLAG) VREF Ready Mask */
-#define ADC_CTLINTFLAG_VREFRDY(value)         (ADC_CTLINTFLAG_VREFRDY_Msk & (_UINT32_(value) << ADC_CTLINTFLAG_VREFRDY_Pos)) /* Assigment of value for VREFRDY in the ADC_CTLINTFLAG register */
-#define ADC_CTLINTFLAG_PFFUNF_Pos             _UINT32_(8)                                          /* (ADC_CTLINTFLAG) APB FIFO underflow Position */
-#define ADC_CTLINTFLAG_PFFUNF_Msk             (_UINT32_(0x1) << ADC_CTLINTFLAG_PFFUNF_Pos)         /* (ADC_CTLINTFLAG) APB FIFO underflow Mask */
-#define ADC_CTLINTFLAG_PFFUNF(value)          (ADC_CTLINTFLAG_PFFUNF_Msk & (_UINT32_(value) << ADC_CTLINTFLAG_PFFUNF_Pos)) /* Assigment of value for PFFUNF in the ADC_CTLINTFLAG register */
-#define ADC_CTLINTFLAG_PFFOVF_Pos             _UINT32_(9)                                          /* (ADC_CTLINTFLAG) APB FIFO overflow Position */
-#define ADC_CTLINTFLAG_PFFOVF_Msk             (_UINT32_(0x1) << ADC_CTLINTFLAG_PFFOVF_Pos)         /* (ADC_CTLINTFLAG) APB FIFO overflow Mask */
-#define ADC_CTLINTFLAG_PFFOVF(value)          (ADC_CTLINTFLAG_PFFOVF_Msk & (_UINT32_(value) << ADC_CTLINTFLAG_PFFOVF_Pos)) /* Assigment of value for PFFOVF in the ADC_CTLINTFLAG register */
-#define ADC_CTLINTFLAG_PFFRDY_Pos             _UINT32_(10)                                         /* (ADC_CTLINTFLAG) APB FIFO Ready Position */
-#define ADC_CTLINTFLAG_PFFRDY_Msk             (_UINT32_(0x1) << ADC_CTLINTFLAG_PFFRDY_Pos)         /* (ADC_CTLINTFLAG) APB FIFO Ready Mask */
-#define ADC_CTLINTFLAG_PFFRDY(value)          (ADC_CTLINTFLAG_PFFRDY_Msk & (_UINT32_(value) << ADC_CTLINTFLAG_PFFRDY_Pos)) /* Assigment of value for PFFRDY in the ADC_CTLINTFLAG register */
-#define ADC_CTLINTFLAG_PFFHFUL_Pos            _UINT32_(11)                                         /* (ADC_CTLINTFLAG) APB FIFO Half Full Position */
-#define ADC_CTLINTFLAG_PFFHFUL_Msk            (_UINT32_(0x1) << ADC_CTLINTFLAG_PFFHFUL_Pos)        /* (ADC_CTLINTFLAG) APB FIFO Half Full Mask */
-#define ADC_CTLINTFLAG_PFFHFUL(value)         (ADC_CTLINTFLAG_PFFHFUL_Msk & (_UINT32_(value) << ADC_CTLINTFLAG_PFFHFUL_Pos)) /* Assigment of value for PFFHFUL in the ADC_CTLINTFLAG register */
-#define ADC_CTLINTFLAG_Msk                    _UINT32_(0x00000FCF)                                 /* (ADC_CTLINTFLAG) Register Mask  */
-
-
 /* -------- ADC_CTRLA : (ADC Offset: 0x00) (R/W 32) CONTROL A REGISTER -------- */
 #define ADC_CTRLA_RESETVALUE                  _UINT32_(0x80)                                       /*  (ADC_CTRLA) CONTROL A REGISTER  Reset Value */
 
@@ -1158,91 +1014,34 @@
 #define ADC_CTRLD_Msk                         _UINT32_(0x7FFF3F00)                                 /* (ADC_CTRLD) Register Mask  */
 
 
-/* -------- ADC_DBGCTRL : (ADC Offset: 0x168) (R/W 32) Debug Control Register -------- */
-#define ADC_DBGCTRL_RESETVALUE                _UINT32_(0x00)                                       /*  (ADC_DBGCTRL) Debug Control Register  Reset Value */
+/* -------- ADC_CMPCTRL : (ADC Offset: 0xB0) (R/W 32) Comparator Control -------- */
+#define ADC_CMPCTRL_RESETVALUE                _UINT32_(0x00)                                       /*  (ADC_CMPCTRL) Comparator Control  Reset Value */
 
-#define ADC_DBGCTRL_DBGRUN_Pos                _UINT32_(0)                                          /* (ADC_DBGCTRL) Debug Running State Position */
-#define ADC_DBGCTRL_DBGRUN_Msk                (_UINT32_(0x1) << ADC_DBGCTRL_DBGRUN_Pos)            /* (ADC_DBGCTRL) Debug Running State Mask */
-#define ADC_DBGCTRL_DBGRUN(value)             (ADC_DBGCTRL_DBGRUN_Msk & (_UINT32_(value) << ADC_DBGCTRL_DBGRUN_Pos)) /* Assigment of value for DBGRUN in the ADC_DBGCTRL register */
-#define ADC_DBGCTRL_Msk                       _UINT32_(0x00000001)                                 /* (ADC_DBGCTRL) Register Mask  */
-
-
-/* -------- ADC_DMABASE : (ADC Offset: 0xDC) (R/W 32) DMA Sample Base Address -------- */
-#define ADC_DMABASE_RESETVALUE                _UINT32_(0x00)                                       /*  (ADC_DMABASE) DMA Sample Base Address  Reset Value */
-
-#define ADC_DMABASE_DMABASE_Pos               _UINT32_(0)                                          /* (ADC_DMABASE) DMA Sample Value Base Address Position */
-#define ADC_DMABASE_DMABASE_Msk               (_UINT32_(0xFFFFFFFF) << ADC_DMABASE_DMABASE_Pos)    /* (ADC_DMABASE) DMA Sample Value Base Address Mask */
-#define ADC_DMABASE_DMABASE(value)            (ADC_DMABASE_DMABASE_Msk & (_UINT32_(value) << ADC_DMABASE_DMABASE_Pos)) /* Assigment of value for DMABASE in the ADC_DMABASE register */
-#define ADC_DMABASE_Msk                       _UINT32_(0xFFFFFFFF)                                 /* (ADC_DMABASE) Register Mask  */
-
-
-/* -------- ADC_DMACTRL : (ADC Offset: 0xE0) (R/W 32) DMA Control Register -------- */
-#define ADC_DMACTRL_RESETVALUE                _UINT32_(0x00)                                       /*  (ADC_DMACTRL) DMA Control Register  Reset Value */
-
-#define ADC_DMACTRL_DMAEN_Pos                 _UINT32_(1)                                          /* (ADC_DMACTRL) DMA Enable Position */
-#define ADC_DMACTRL_DMAEN_Msk                 (_UINT32_(0x1) << ADC_DMACTRL_DMAEN_Pos)             /* (ADC_DMACTRL) DMA Enable Mask */
-#define ADC_DMACTRL_DMAEN(value)              (ADC_DMACTRL_DMAEN_Msk & (_UINT32_(value) << ADC_DMACTRL_DMAEN_Pos)) /* Assigment of value for DMAEN in the ADC_DMACTRL register */
-#define ADC_DMACTRL_DMACR_Pos                 _UINT32_(4)                                          /* (ADC_DMACTRL) DMA CORE Enables Position */
-#define ADC_DMACTRL_DMACR_Msk                 (_UINT32_(0xF) << ADC_DMACTRL_DMACR_Pos)             /* (ADC_DMACTRL) DMA CORE Enables Mask */
-#define ADC_DMACTRL_DMACR(value)              (ADC_DMACTRL_DMACR_Msk & (_UINT32_(value) << ADC_DMACTRL_DMACR_Pos)) /* Assigment of value for DMACR in the ADC_DMACTRL register */
-#define ADC_DMACTRL_DMABL_Pos                 _UINT32_(8)                                          /* (ADC_DMACTRL) DMA System RAM Buffer Length Position */
-#define ADC_DMACTRL_DMABL_Msk                 (_UINT32_(0x7) << ADC_DMACTRL_DMABL_Pos)             /* (ADC_DMACTRL) DMA System RAM Buffer Length Mask */
-#define ADC_DMACTRL_DMABL(value)              (ADC_DMACTRL_DMABL_Msk & (_UINT32_(value) << ADC_DMACTRL_DMABL_Pos)) /* Assigment of value for DMABL in the ADC_DMACTRL register */
-#define ADC_DMACTRL_Msk                       _UINT32_(0x000007F2)                                 /* (ADC_DMACTRL) Register Mask  */
-
-
-/* -------- ADC_DMAINTENCLR : (ADC Offset: 0xF0) (R/W 32) DMA Interrupt Enable Clear -------- */
-#define ADC_DMAINTENCLR_RESETVALUE            _UINT32_(0x00)                                       /*  (ADC_DMAINTENCLR) DMA Interrupt Enable Clear  Reset Value */
-
-#define ADC_DMAINTENCLR_RAF_Pos               _UINT32_(0)                                          /* (ADC_DMAINTENCLR) Ram Buffer A Full Position */
-#define ADC_DMAINTENCLR_RAF_Msk               (_UINT32_(0xF) << ADC_DMAINTENCLR_RAF_Pos)           /* (ADC_DMAINTENCLR) Ram Buffer A Full Mask */
-#define ADC_DMAINTENCLR_RAF(value)            (ADC_DMAINTENCLR_RAF_Msk & (_UINT32_(value) << ADC_DMAINTENCLR_RAF_Pos)) /* Assigment of value for RAF in the ADC_DMAINTENCLR register */
-#define ADC_DMAINTENCLR_RBF_Pos               _UINT32_(4)                                          /* (ADC_DMAINTENCLR) Ram Buffer B Full Position */
-#define ADC_DMAINTENCLR_RBF_Msk               (_UINT32_(0xF) << ADC_DMAINTENCLR_RBF_Pos)           /* (ADC_DMAINTENCLR) Ram Buffer B Full Mask */
-#define ADC_DMAINTENCLR_RBF(value)            (ADC_DMAINTENCLR_RBF_Msk & (_UINT32_(value) << ADC_DMAINTENCLR_RBF_Pos)) /* Assigment of value for RBF in the ADC_DMAINTENCLR register */
-#define ADC_DMAINTENCLR_SOVFL_Pos             _UINT32_(16)                                         /* (ADC_DMAINTENCLR) Synchonizer Overflow Position */
-#define ADC_DMAINTENCLR_SOVFL_Msk             (_UINT32_(0x1) << ADC_DMAINTENCLR_SOVFL_Pos)         /* (ADC_DMAINTENCLR) Synchonizer Overflow Mask */
-#define ADC_DMAINTENCLR_SOVFL(value)          (ADC_DMAINTENCLR_SOVFL_Msk & (_UINT32_(value) << ADC_DMAINTENCLR_SOVFL_Pos)) /* Assigment of value for SOVFL in the ADC_DMAINTENCLR register */
-#define ADC_DMAINTENCLR_Msk                   _UINT32_(0x000100FF)                                 /* (ADC_DMAINTENCLR) Register Mask  */
-
-
-/* -------- ADC_DMAINTFLAG : (ADC Offset: 0xF8) (R/W 32) DMA Interrupt Flag and Status -------- */
-#define ADC_DMAINTFLAG_RESETVALUE             _UINT32_(0x00)                                       /*  (ADC_DMAINTFLAG) DMA Interrupt Flag and Status  Reset Value */
-
-#define ADC_DMAINTFLAG_RAF_Pos                _UINT32_(0)                                          /* (ADC_DMAINTFLAG) Ram Buffer A Full Position */
-#define ADC_DMAINTFLAG_RAF_Msk                (_UINT32_(0xF) << ADC_DMAINTFLAG_RAF_Pos)            /* (ADC_DMAINTFLAG) Ram Buffer A Full Mask */
-#define ADC_DMAINTFLAG_RAF(value)             (ADC_DMAINTFLAG_RAF_Msk & (_UINT32_(value) << ADC_DMAINTFLAG_RAF_Pos)) /* Assigment of value for RAF in the ADC_DMAINTFLAG register */
-#define ADC_DMAINTFLAG_RBF_Pos                _UINT32_(4)                                          /* (ADC_DMAINTFLAG) Ram Buffer B Full Position */
-#define ADC_DMAINTFLAG_RBF_Msk                (_UINT32_(0xF) << ADC_DMAINTFLAG_RBF_Pos)            /* (ADC_DMAINTFLAG) Ram Buffer B Full Mask */
-#define ADC_DMAINTFLAG_RBF(value)             (ADC_DMAINTFLAG_RBF_Msk & (_UINT32_(value) << ADC_DMAINTFLAG_RBF_Pos)) /* Assigment of value for RBF in the ADC_DMAINTFLAG register */
-#define ADC_DMAINTFLAG_EAF_Pos                _UINT32_(8)                                          /* (ADC_DMAINTFLAG) Ram Buffer A Overflow Error Position */
-#define ADC_DMAINTFLAG_EAF_Msk                (_UINT32_(0xF) << ADC_DMAINTFLAG_EAF_Pos)            /* (ADC_DMAINTFLAG) Ram Buffer A Overflow Error Mask */
-#define ADC_DMAINTFLAG_EAF(value)             (ADC_DMAINTFLAG_EAF_Msk & (_UINT32_(value) << ADC_DMAINTFLAG_EAF_Pos)) /* Assigment of value for EAF in the ADC_DMAINTFLAG register */
-#define ADC_DMAINTFLAG_EBF_Pos                _UINT32_(12)                                         /* (ADC_DMAINTFLAG) Ram Buffer B Overflow Error Position */
-#define ADC_DMAINTFLAG_EBF_Msk                (_UINT32_(0xF) << ADC_DMAINTFLAG_EBF_Pos)            /* (ADC_DMAINTFLAG) Ram Buffer B Overflow Error Mask */
-#define ADC_DMAINTFLAG_EBF(value)             (ADC_DMAINTFLAG_EBF_Msk & (_UINT32_(value) << ADC_DMAINTFLAG_EBF_Pos)) /* Assigment of value for EBF in the ADC_DMAINTFLAG register */
-#define ADC_DMAINTFLAG_SOVFL_Pos              _UINT32_(16)                                         /* (ADC_DMAINTFLAG) Synchronizer overflow Position */
-#define ADC_DMAINTFLAG_SOVFL_Msk              (_UINT32_(0x1) << ADC_DMAINTFLAG_SOVFL_Pos)          /* (ADC_DMAINTFLAG) Synchronizer overflow Mask */
-#define ADC_DMAINTFLAG_SOVFL(value)           (ADC_DMAINTFLAG_SOVFL_Msk & (_UINT32_(value) << ADC_DMAINTFLAG_SOVFL_Pos)) /* Assigment of value for SOVFL in the ADC_DMAINTFLAG register */
-#define ADC_DMAINTFLAG_DMAERR_Pos             _UINT32_(17)                                         /* (ADC_DMAINTFLAG) DMA Bus Error Position */
-#define ADC_DMAINTFLAG_DMAERR_Msk             (_UINT32_(0x1) << ADC_DMAINTFLAG_DMAERR_Pos)         /* (ADC_DMAINTFLAG) DMA Bus Error Mask */
-#define ADC_DMAINTFLAG_DMAERR(value)          (ADC_DMAINTFLAG_DMAERR_Msk & (_UINT32_(value) << ADC_DMAINTFLAG_DMAERR_Pos)) /* Assigment of value for DMAERR in the ADC_DMAINTFLAG register */
-#define ADC_DMAINTFLAG_Msk                    _UINT32_(0x0003FFFF)                                 /* (ADC_DMAINTFLAG) Register Mask  */
-
-
-/* -------- ADC_DMAINTSET : (ADC Offset: 0xF4) (R/W 32) DMA Interrupt Enable Set -------- */
-#define ADC_DMAINTSET_RESETVALUE              _UINT32_(0x00)                                       /*  (ADC_DMAINTSET) DMA Interrupt Enable Set  Reset Value */
-
-#define ADC_DMAINTSET_RAF_Pos                 _UINT32_(0)                                          /* (ADC_DMAINTSET) Ram Buffer A Full Position */
-#define ADC_DMAINTSET_RAF_Msk                 (_UINT32_(0xF) << ADC_DMAINTSET_RAF_Pos)             /* (ADC_DMAINTSET) Ram Buffer A Full Mask */
-#define ADC_DMAINTSET_RAF(value)              (ADC_DMAINTSET_RAF_Msk & (_UINT32_(value) << ADC_DMAINTSET_RAF_Pos)) /* Assigment of value for RAF in the ADC_DMAINTSET register */
-#define ADC_DMAINTSET_RBF_Pos                 _UINT32_(4)                                          /* (ADC_DMAINTSET) Ram Buffer B Full Position */
-#define ADC_DMAINTSET_RBF_Msk                 (_UINT32_(0xF) << ADC_DMAINTSET_RBF_Pos)             /* (ADC_DMAINTSET) Ram Buffer B Full Mask */
-#define ADC_DMAINTSET_RBF(value)              (ADC_DMAINTSET_RBF_Msk & (_UINT32_(value) << ADC_DMAINTSET_RBF_Pos)) /* Assigment of value for RBF in the ADC_DMAINTSET register */
-#define ADC_DMAINTSET_SOVFL_Pos               _UINT32_(16)                                         /* (ADC_DMAINTSET) Synchonizer Overflow Position */
-#define ADC_DMAINTSET_SOVFL_Msk               (_UINT32_(0x1) << ADC_DMAINTSET_SOVFL_Pos)           /* (ADC_DMAINTSET) Synchonizer Overflow Mask */
-#define ADC_DMAINTSET_SOVFL(value)            (ADC_DMAINTSET_SOVFL_Msk & (_UINT32_(value) << ADC_DMAINTSET_SOVFL_Pos)) /* Assigment of value for SOVFL in the ADC_DMAINTSET register */
-#define ADC_DMAINTSET_Msk                     _UINT32_(0x000100FF)                                 /* (ADC_DMAINTSET) Register Mask  */
+#define ADC_CMPCTRL_ADCMPLO_Pos               _UINT32_(0)                                          /* (ADC_CMPCTRL) Low Limit of Digital Comparator Position */
+#define ADC_CMPCTRL_ADCMPLO_Msk               (_UINT32_(0xFFF) << ADC_CMPCTRL_ADCMPLO_Pos)         /* (ADC_CMPCTRL) Low Limit of Digital Comparator Mask */
+#define ADC_CMPCTRL_ADCMPLO(value)            (ADC_CMPCTRL_ADCMPLO_Msk & (_UINT32_(value) << ADC_CMPCTRL_ADCMPLO_Pos)) /* Assigment of value for ADCMPLO in the ADC_CMPCTRL register */
+#define ADC_CMPCTRL_CMPEN_Pos                 _UINT32_(12)                                         /* (ADC_CMPCTRL) Comparator Enable Position */
+#define ADC_CMPCTRL_CMPEN_Msk                 (_UINT32_(0x1) << ADC_CMPCTRL_CMPEN_Pos)             /* (ADC_CMPCTRL) Comparator Enable Mask */
+#define ADC_CMPCTRL_CMPEN(value)              (ADC_CMPCTRL_CMPEN_Msk & (_UINT32_(value) << ADC_CMPCTRL_CMPEN_Pos)) /* Assigment of value for CMPEN in the ADC_CMPCTRL register */
+#define ADC_CMPCTRL_IELOLO_Pos                _UINT32_(13)                                         /* (ADC_CMPCTRL) Enable VAL < CMPLO Position */
+#define ADC_CMPCTRL_IELOLO_Msk                (_UINT32_(0x1) << ADC_CMPCTRL_IELOLO_Pos)            /* (ADC_CMPCTRL) Enable VAL < CMPLO Mask */
+#define ADC_CMPCTRL_IELOLO(value)             (ADC_CMPCTRL_IELOLO_Msk & (_UINT32_(value) << ADC_CMPCTRL_IELOLO_Pos)) /* Assigment of value for IELOLO in the ADC_CMPCTRL register */
+#define ADC_CMPCTRL_IELOHI_Pos                _UINT32_(14)                                         /* (ADC_CMPCTRL) Enable VAL >= CMPLO Position */
+#define ADC_CMPCTRL_IELOHI_Msk                (_UINT32_(0x1) << ADC_CMPCTRL_IELOHI_Pos)            /* (ADC_CMPCTRL) Enable VAL >= CMPLO Mask */
+#define ADC_CMPCTRL_IELOHI(value)             (ADC_CMPCTRL_IELOHI_Msk & (_UINT32_(value) << ADC_CMPCTRL_IELOHI_Pos)) /* Assigment of value for IELOHI in the ADC_CMPCTRL register */
+#define ADC_CMPCTRL_IEBTWN_Pos                _UINT32_(15)                                         /* (ADC_CMPCTRL) Enable CMPLO <= VAL < CMPHI Position */
+#define ADC_CMPCTRL_IEBTWN_Msk                (_UINT32_(0x1) << ADC_CMPCTRL_IEBTWN_Pos)            /* (ADC_CMPCTRL) Enable CMPLO <= VAL < CMPHI Mask */
+#define ADC_CMPCTRL_IEBTWN(value)             (ADC_CMPCTRL_IEBTWN_Msk & (_UINT32_(value) << ADC_CMPCTRL_IEBTWN_Pos)) /* Assigment of value for IEBTWN in the ADC_CMPCTRL register */
+#define ADC_CMPCTRL_ADCMPHI_Pos               _UINT32_(16)                                         /* (ADC_CMPCTRL) High Limit of Digital Comparator Position */
+#define ADC_CMPCTRL_ADCMPHI_Msk               (_UINT32_(0xFFF) << ADC_CMPCTRL_ADCMPHI_Pos)         /* (ADC_CMPCTRL) High Limit of Digital Comparator Mask */
+#define ADC_CMPCTRL_ADCMPHI(value)            (ADC_CMPCTRL_ADCMPHI_Msk & (_UINT32_(value) << ADC_CMPCTRL_ADCMPHI_Pos)) /* Assigment of value for ADCMPHI in the ADC_CMPCTRL register */
+#define ADC_CMPCTRL_IEHILO_Pos                _UINT32_(28)                                         /* (ADC_CMPCTRL) Enable VAL < CMPHI Position */
+#define ADC_CMPCTRL_IEHILO_Msk                (_UINT32_(0x1) << ADC_CMPCTRL_IEHILO_Pos)            /* (ADC_CMPCTRL) Enable VAL < CMPHI Mask */
+#define ADC_CMPCTRL_IEHILO(value)             (ADC_CMPCTRL_IEHILO_Msk & (_UINT32_(value) << ADC_CMPCTRL_IEHILO_Pos)) /* Assigment of value for IEHILO in the ADC_CMPCTRL register */
+#define ADC_CMPCTRL_IEHIHI_Pos                _UINT32_(29)                                         /* (ADC_CMPCTRL) Enable VAL >= CMPHI Position */
+#define ADC_CMPCTRL_IEHIHI_Msk                (_UINT32_(0x1) << ADC_CMPCTRL_IEHIHI_Pos)            /* (ADC_CMPCTRL) Enable VAL >= CMPHI Mask */
+#define ADC_CMPCTRL_IEHIHI(value)             (ADC_CMPCTRL_IEHIHI_Msk & (_UINT32_(value) << ADC_CMPCTRL_IEHIHI_Pos)) /* Assigment of value for IEHIHI in the ADC_CMPCTRL register */
+#define ADC_CMPCTRL_Msk                       _UINT32_(0x3FFFFFFF)                                 /* (ADC_CMPCTRL) Register Mask  */
 
 
 /* -------- ADC_FLTCTRL : (ADC Offset: 0xC0) (R/W 32) Filter Control -------- */
@@ -1282,23 +1081,37 @@
 #define ADC_FLTCTRL_Msk                       _UINT32_(0x00003D1F)                                 /* (ADC_FLTCTRL) Register Mask  */
 
 
-/* -------- ADC_PFFCTRL : (ADC Offset: 0xE4) (R/W 32) APB FIFO Control Register -------- */
-#define ADC_PFFCTRL_RESETVALUE                _UINT32_(0x00)                                       /*  (ADC_PFFCTRL) APB FIFO Control Register  Reset Value */
+/* -------- ADC_CORCHDATAID : (ADC Offset: 0xD0) (R/W 32) Channel Ready DATA ID -------- */
+#define ADC_CORCHDATAID_RESETVALUE            _UINT32_(0x00)                                       /*  (ADC_CORCHDATAID) Channel Ready DATA ID  Reset Value */
 
-#define ADC_PFFCTRL_PFFEN_Pos                 _UINT32_(1)                                          /* (ADC_PFFCTRL) APB FIFO Enable Position */
-#define ADC_PFFCTRL_PFFEN_Msk                 (_UINT32_(0x1) << ADC_PFFCTRL_PFFEN_Pos)             /* (ADC_PFFCTRL) APB FIFO Enable Mask */
-#define ADC_PFFCTRL_PFFEN(value)              (ADC_PFFCTRL_PFFEN_Msk & (_UINT32_(value) << ADC_PFFCTRL_PFFEN_Pos)) /* Assigment of value for PFFEN in the ADC_PFFCTRL register */
-#define ADC_PFFCTRL_PFFCR_Pos                 _UINT32_(4)                                          /* (ADC_PFFCTRL) APB CORE FIFO Enable Position */
-#define ADC_PFFCTRL_PFFCR_Msk                 (_UINT32_(0xF) << ADC_PFFCTRL_PFFCR_Pos)             /* (ADC_PFFCTRL) APB CORE FIFO Enable Mask */
-#define ADC_PFFCTRL_PFFCR(value)              (ADC_PFFCTRL_PFFCR_Msk & (_UINT32_(value) << ADC_PFFCTRL_PFFCR_Pos)) /* Assigment of value for PFFCR in the ADC_PFFCTRL register */
-#define ADC_PFFCTRL_PFFRDYDM_Pos              _UINT32_(16)                                         /* (ADC_PFFCTRL) DMA APB FIFO Data Ready Position */
-#define ADC_PFFCTRL_PFFRDYDM_Msk              (_UINT32_(0x1) << ADC_PFFCTRL_PFFRDYDM_Pos)          /* (ADC_PFFCTRL) DMA APB FIFO Data Ready Mask */
-#define ADC_PFFCTRL_PFFRDYDM(value)           (ADC_PFFCTRL_PFFRDYDM_Msk & (_UINT32_(value) << ADC_PFFCTRL_PFFRDYDM_Pos)) /* Assigment of value for PFFRDYDM in the ADC_PFFCTRL register */
-#define   ADC_PFFCTRL_PFFRDYDM_CTLINTFLAG_PFFHFUL_Val _UINT32_(0x0)                                        /* (ADC_PFFCTRL) Selects CTLINTFLAG.PFFHFUL for the ADC DMA PFFRDY trigger signal to the DMAC  */
-#define   ADC_PFFCTRL_PFFRDYDM_CTLINTFLAG_PFFRDY_Val _UINT32_(0x1)                                        /* (ADC_PFFCTRL) Selects CTLINTFLAG.PFFRDY for the ADC DMA PFFRDY trigger signal to the DMAC  */
-#define ADC_PFFCTRL_PFFRDYDM_CTLINTFLAG_PFFHFUL (ADC_PFFCTRL_PFFRDYDM_CTLINTFLAG_PFFHFUL_Val << ADC_PFFCTRL_PFFRDYDM_Pos) /* (ADC_PFFCTRL) Selects CTLINTFLAG.PFFHFUL for the ADC DMA PFFRDY trigger signal to the DMAC Position  */
-#define ADC_PFFCTRL_PFFRDYDM_CTLINTFLAG_PFFRDY (ADC_PFFCTRL_PFFRDYDM_CTLINTFLAG_PFFRDY_Val << ADC_PFFCTRL_PFFRDYDM_Pos) /* (ADC_PFFCTRL) Selects CTLINTFLAG.PFFRDY for the ADC DMA PFFRDY trigger signal to the DMAC Position  */
-#define ADC_PFFCTRL_Msk                       _UINT32_(0x000100F2)                                 /* (ADC_PFFCTRL) Register Mask  */
+#define ADC_CORCHDATAID_CHRDYID_Pos           _UINT32_(0)                                          /* (ADC_CORCHDATAID) Channel Read ID Position */
+#define ADC_CORCHDATAID_CHRDYID_Msk           (_UINT32_(0xF) << ADC_CORCHDATAID_CHRDYID_Pos)       /* (ADC_CORCHDATAID) Channel Read ID Mask */
+#define ADC_CORCHDATAID_CHRDYID(value)        (ADC_CORCHDATAID_CHRDYID_Msk & (_UINT32_(value) << ADC_CORCHDATAID_CHRDYID_Pos)) /* Assigment of value for CHRDYID in the ADC_CORCHDATAID register */
+#define ADC_CORCHDATAID_CORDYID_Pos           _UINT32_(4)                                          /* (ADC_CORCHDATAID) Core Read ID Position */
+#define ADC_CORCHDATAID_CORDYID_Msk           (_UINT32_(0x3) << ADC_CORCHDATAID_CORDYID_Pos)       /* (ADC_CORCHDATAID) Core Read ID Mask */
+#define ADC_CORCHDATAID_CORDYID(value)        (ADC_CORCHDATAID_CORDYID_Msk & (_UINT32_(value) << ADC_CORCHDATAID_CORDYID_Pos)) /* Assigment of value for CORDYID in the ADC_CORCHDATAID register */
+#define ADC_CORCHDATAID_Msk                   _UINT32_(0x0000003F)                                 /* (ADC_CORCHDATAID) Register Mask  */
+
+
+/* -------- ADC_CHRDYDAT : (ADC Offset: 0xD4) (R/W 32) Channel Ready Data Register -------- */
+#define ADC_CHRDYDAT_RESETVALUE               _UINT32_(0x00)                                       /*  (ADC_CHRDYDAT) Channel Ready Data Register  Reset Value */
+
+#define ADC_CHRDYDAT_CHRDYDAT_Pos             _UINT32_(0)                                          /* (ADC_CHRDYDAT) Channel Output Data Position */
+#define ADC_CHRDYDAT_CHRDYDAT_Msk             (_UINT32_(0xFFFF) << ADC_CHRDYDAT_CHRDYDAT_Pos)      /* (ADC_CHRDYDAT) Channel Output Data Mask */
+#define ADC_CHRDYDAT_CHRDYDAT(value)          (ADC_CHRDYDAT_CHRDYDAT_Msk & (_UINT32_(value) << ADC_CHRDYDAT_CHRDYDAT_Pos)) /* Assigment of value for CHRDYDAT in the ADC_CHRDYDAT register */
+#define ADC_CHRDYDAT_LVL_Pos                  _UINT32_(24)                                         /* (ADC_CHRDYDAT) Level Setting Position */
+#define ADC_CHRDYDAT_LVL_Msk                  (_UINT32_(0x1) << ADC_CHRDYDAT_LVL_Pos)              /* (ADC_CHRDYDAT) Level Setting Mask */
+#define ADC_CHRDYDAT_LVL(value)               (ADC_CHRDYDAT_LVL_Msk & (_UINT32_(value) << ADC_CHRDYDAT_LVL_Pos)) /* Assigment of value for LVL in the ADC_CHRDYDAT register */
+#define ADC_CHRDYDAT_DIFF_Pos                 _UINT32_(25)                                         /* (ADC_CHRDYDAT) Differential Setting Position */
+#define ADC_CHRDYDAT_DIFF_Msk                 (_UINT32_(0x1) << ADC_CHRDYDAT_DIFF_Pos)             /* (ADC_CHRDYDAT) Differential Setting Mask */
+#define ADC_CHRDYDAT_DIFF(value)              (ADC_CHRDYDAT_DIFF_Msk & (_UINT32_(value) << ADC_CHRDYDAT_DIFF_Pos)) /* Assigment of value for DIFF in the ADC_CHRDYDAT register */
+#define ADC_CHRDYDAT_SIGN_Pos                 _UINT32_(26)                                         /* (ADC_CHRDYDAT) Sign Setting Position */
+#define ADC_CHRDYDAT_SIGN_Msk                 (_UINT32_(0x1) << ADC_CHRDYDAT_SIGN_Pos)             /* (ADC_CHRDYDAT) Sign Setting Mask */
+#define ADC_CHRDYDAT_SIGN(value)              (ADC_CHRDYDAT_SIGN_Msk & (_UINT32_(value) << ADC_CHRDYDAT_SIGN_Pos)) /* Assigment of value for SIGN in the ADC_CHRDYDAT register */
+#define ADC_CHRDYDAT_FRACT_Pos                _UINT32_(27)                                         /* (ADC_CHRDYDAT) Fractional Setting Position */
+#define ADC_CHRDYDAT_FRACT_Msk                (_UINT32_(0x1) << ADC_CHRDYDAT_FRACT_Pos)            /* (ADC_CHRDYDAT) Fractional Setting Mask */
+#define ADC_CHRDYDAT_FRACT(value)             (ADC_CHRDYDAT_FRACT_Msk & (_UINT32_(value) << ADC_CHRDYDAT_FRACT_Pos)) /* Assigment of value for FRACT in the ADC_CHRDYDAT register */
+#define ADC_CHRDYDAT_Msk                      _UINT32_(0x0F00FFFF)                                 /* (ADC_CHRDYDAT) Register Mask  */
 
 
 /* -------- ADC_PFFDATA : (ADC Offset: 0xD8) ( R/ 32) APB FIFO Output Data -------- */
@@ -1325,6 +1138,49 @@
 #define ADC_PFFDATA_Msk                       _UINT32_(0xFFFFFFFF)                                 /* (ADC_PFFDATA) Register Mask  */
 
 
+/* -------- ADC_DMABASE : (ADC Offset: 0xDC) (R/W 32) DMA Sample Base Address -------- */
+#define ADC_DMABASE_RESETVALUE                _UINT32_(0x00)                                       /*  (ADC_DMABASE) DMA Sample Base Address  Reset Value */
+
+#define ADC_DMABASE_DMABASE_Pos               _UINT32_(0)                                          /* (ADC_DMABASE) DMA Sample Value Base Address Position */
+#define ADC_DMABASE_DMABASE_Msk               (_UINT32_(0xFFFFFFFF) << ADC_DMABASE_DMABASE_Pos)    /* (ADC_DMABASE) DMA Sample Value Base Address Mask */
+#define ADC_DMABASE_DMABASE(value)            (ADC_DMABASE_DMABASE_Msk & (_UINT32_(value) << ADC_DMABASE_DMABASE_Pos)) /* Assigment of value for DMABASE in the ADC_DMABASE register */
+#define ADC_DMABASE_Msk                       _UINT32_(0xFFFFFFFF)                                 /* (ADC_DMABASE) Register Mask  */
+
+
+/* -------- ADC_DMACTRL : (ADC Offset: 0xE0) (R/W 32) DMA Control Register -------- */
+#define ADC_DMACTRL_RESETVALUE                _UINT32_(0x00)                                       /*  (ADC_DMACTRL) DMA Control Register  Reset Value */
+
+#define ADC_DMACTRL_DMAEN_Pos                 _UINT32_(1)                                          /* (ADC_DMACTRL) DMA Enable Position */
+#define ADC_DMACTRL_DMAEN_Msk                 (_UINT32_(0x1) << ADC_DMACTRL_DMAEN_Pos)             /* (ADC_DMACTRL) DMA Enable Mask */
+#define ADC_DMACTRL_DMAEN(value)              (ADC_DMACTRL_DMAEN_Msk & (_UINT32_(value) << ADC_DMACTRL_DMAEN_Pos)) /* Assigment of value for DMAEN in the ADC_DMACTRL register */
+#define ADC_DMACTRL_DMACR_Pos                 _UINT32_(4)                                          /* (ADC_DMACTRL) DMA CORE Enables Position */
+#define ADC_DMACTRL_DMACR_Msk                 (_UINT32_(0xF) << ADC_DMACTRL_DMACR_Pos)             /* (ADC_DMACTRL) DMA CORE Enables Mask */
+#define ADC_DMACTRL_DMACR(value)              (ADC_DMACTRL_DMACR_Msk & (_UINT32_(value) << ADC_DMACTRL_DMACR_Pos)) /* Assigment of value for DMACR in the ADC_DMACTRL register */
+#define ADC_DMACTRL_DMABL_Pos                 _UINT32_(8)                                          /* (ADC_DMACTRL) DMA System RAM Buffer Length Position */
+#define ADC_DMACTRL_DMABL_Msk                 (_UINT32_(0x7) << ADC_DMACTRL_DMABL_Pos)             /* (ADC_DMACTRL) DMA System RAM Buffer Length Mask */
+#define ADC_DMACTRL_DMABL(value)              (ADC_DMACTRL_DMABL_Msk & (_UINT32_(value) << ADC_DMACTRL_DMABL_Pos)) /* Assigment of value for DMABL in the ADC_DMACTRL register */
+#define ADC_DMACTRL_Msk                       _UINT32_(0x000007F2)                                 /* (ADC_DMACTRL) Register Mask  */
+
+
+/* -------- ADC_PFFCTRL : (ADC Offset: 0xE4) (R/W 32) APB FIFO Control Register -------- */
+#define ADC_PFFCTRL_RESETVALUE                _UINT32_(0x00)                                       /*  (ADC_PFFCTRL) APB FIFO Control Register  Reset Value */
+
+#define ADC_PFFCTRL_PFFEN_Pos                 _UINT32_(1)                                          /* (ADC_PFFCTRL) APB FIFO Enable Position */
+#define ADC_PFFCTRL_PFFEN_Msk                 (_UINT32_(0x1) << ADC_PFFCTRL_PFFEN_Pos)             /* (ADC_PFFCTRL) APB FIFO Enable Mask */
+#define ADC_PFFCTRL_PFFEN(value)              (ADC_PFFCTRL_PFFEN_Msk & (_UINT32_(value) << ADC_PFFCTRL_PFFEN_Pos)) /* Assigment of value for PFFEN in the ADC_PFFCTRL register */
+#define ADC_PFFCTRL_PFFCR_Pos                 _UINT32_(4)                                          /* (ADC_PFFCTRL) APB CORE FIFO Enable Position */
+#define ADC_PFFCTRL_PFFCR_Msk                 (_UINT32_(0xF) << ADC_PFFCTRL_PFFCR_Pos)             /* (ADC_PFFCTRL) APB CORE FIFO Enable Mask */
+#define ADC_PFFCTRL_PFFCR(value)              (ADC_PFFCTRL_PFFCR_Msk & (_UINT32_(value) << ADC_PFFCTRL_PFFCR_Pos)) /* Assigment of value for PFFCR in the ADC_PFFCTRL register */
+#define ADC_PFFCTRL_PFFRDYDM_Pos              _UINT32_(16)                                         /* (ADC_PFFCTRL) DMA APB FIFO Data Ready Position */
+#define ADC_PFFCTRL_PFFRDYDM_Msk              (_UINT32_(0x1) << ADC_PFFCTRL_PFFRDYDM_Pos)          /* (ADC_PFFCTRL) DMA APB FIFO Data Ready Mask */
+#define ADC_PFFCTRL_PFFRDYDM(value)           (ADC_PFFCTRL_PFFRDYDM_Msk & (_UINT32_(value) << ADC_PFFCTRL_PFFRDYDM_Pos)) /* Assigment of value for PFFRDYDM in the ADC_PFFCTRL register */
+#define   ADC_PFFCTRL_PFFRDYDM_CTLINTFLAG_PFFHFUL_Val _UINT32_(0x0)                                        /* (ADC_PFFCTRL) Selects CTLINTFLAG.PFFHFUL for the ADC DMA PFFRDY trigger signal to the DMAC  */
+#define   ADC_PFFCTRL_PFFRDYDM_CTLINTFLAG_PFFRDY_Val _UINT32_(0x1)                                        /* (ADC_PFFCTRL) Selects CTLINTFLAG.PFFRDY for the ADC DMA PFFRDY trigger signal to the DMAC  */
+#define ADC_PFFCTRL_PFFRDYDM_CTLINTFLAG_PFFHFUL (ADC_PFFCTRL_PFFRDYDM_CTLINTFLAG_PFFHFUL_Val << ADC_PFFCTRL_PFFRDYDM_Pos) /* (ADC_PFFCTRL) Selects CTLINTFLAG.PFFHFUL for the ADC DMA PFFRDY trigger signal to the DMAC Position  */
+#define ADC_PFFCTRL_PFFRDYDM_CTLINTFLAG_PFFRDY (ADC_PFFCTRL_PFFRDYDM_CTLINTFLAG_PFFRDY_Val << ADC_PFFCTRL_PFFRDYDM_Pos) /* (ADC_PFFCTRL) Selects CTLINTFLAG.PFFRDY for the ADC DMA PFFRDY trigger signal to the DMAC Position  */
+#define ADC_PFFCTRL_Msk                       _UINT32_(0x000100F2)                                 /* (ADC_PFFCTRL) Register Mask  */
+
+
 /* -------- ADC_SYNCBUSY : (ADC Offset: 0xE8) ( R/ 32) CORE SYNC Busy Status Register -------- */
 #define ADC_SYNCBUSY_RESETVALUE               _UINT32_(0x00)                                       /*  (ADC_SYNCBUSY) CORE SYNC Busy Status Register  Reset Value */
 
@@ -1340,38 +1196,182 @@
 #define ADC_SYNCBUSY_Msk                      _UINT32_(0x00000007)                                 /* (ADC_SYNCBUSY) Register Mask  */
 
 
+/* -------- ADC_DMAINTENCLR : (ADC Offset: 0xF0) (R/W 32) DMA Interrupt Enable Clear -------- */
+#define ADC_DMAINTENCLR_RESETVALUE            _UINT32_(0x00)                                       /*  (ADC_DMAINTENCLR) DMA Interrupt Enable Clear  Reset Value */
+
+#define ADC_DMAINTENCLR_RAF_Pos               _UINT32_(0)                                          /* (ADC_DMAINTENCLR) Ram Buffer A Full Position */
+#define ADC_DMAINTENCLR_RAF_Msk               (_UINT32_(0xF) << ADC_DMAINTENCLR_RAF_Pos)           /* (ADC_DMAINTENCLR) Ram Buffer A Full Mask */
+#define ADC_DMAINTENCLR_RAF(value)            (ADC_DMAINTENCLR_RAF_Msk & (_UINT32_(value) << ADC_DMAINTENCLR_RAF_Pos)) /* Assigment of value for RAF in the ADC_DMAINTENCLR register */
+#define ADC_DMAINTENCLR_RBF_Pos               _UINT32_(4)                                          /* (ADC_DMAINTENCLR) Ram Buffer B Full Position */
+#define ADC_DMAINTENCLR_RBF_Msk               (_UINT32_(0xF) << ADC_DMAINTENCLR_RBF_Pos)           /* (ADC_DMAINTENCLR) Ram Buffer B Full Mask */
+#define ADC_DMAINTENCLR_RBF(value)            (ADC_DMAINTENCLR_RBF_Msk & (_UINT32_(value) << ADC_DMAINTENCLR_RBF_Pos)) /* Assigment of value for RBF in the ADC_DMAINTENCLR register */
+#define ADC_DMAINTENCLR_SOVFL_Pos             _UINT32_(16)                                         /* (ADC_DMAINTENCLR) Synchonizer Overflow Position */
+#define ADC_DMAINTENCLR_SOVFL_Msk             (_UINT32_(0x1) << ADC_DMAINTENCLR_SOVFL_Pos)         /* (ADC_DMAINTENCLR) Synchonizer Overflow Mask */
+#define ADC_DMAINTENCLR_SOVFL(value)          (ADC_DMAINTENCLR_SOVFL_Msk & (_UINT32_(value) << ADC_DMAINTENCLR_SOVFL_Pos)) /* Assigment of value for SOVFL in the ADC_DMAINTENCLR register */
+#define ADC_DMAINTENCLR_Msk                   _UINT32_(0x000100FF)                                 /* (ADC_DMAINTENCLR) Register Mask  */
+
+
+/* -------- ADC_DMAINTSET : (ADC Offset: 0xF4) (R/W 32) DMA Interrupt Enable Set -------- */
+#define ADC_DMAINTSET_RESETVALUE              _UINT32_(0x00)                                       /*  (ADC_DMAINTSET) DMA Interrupt Enable Set  Reset Value */
+
+#define ADC_DMAINTSET_RAF_Pos                 _UINT32_(0)                                          /* (ADC_DMAINTSET) Ram Buffer A Full Position */
+#define ADC_DMAINTSET_RAF_Msk                 (_UINT32_(0xF) << ADC_DMAINTSET_RAF_Pos)             /* (ADC_DMAINTSET) Ram Buffer A Full Mask */
+#define ADC_DMAINTSET_RAF(value)              (ADC_DMAINTSET_RAF_Msk & (_UINT32_(value) << ADC_DMAINTSET_RAF_Pos)) /* Assigment of value for RAF in the ADC_DMAINTSET register */
+#define ADC_DMAINTSET_RBF_Pos                 _UINT32_(4)                                          /* (ADC_DMAINTSET) Ram Buffer B Full Position */
+#define ADC_DMAINTSET_RBF_Msk                 (_UINT32_(0xF) << ADC_DMAINTSET_RBF_Pos)             /* (ADC_DMAINTSET) Ram Buffer B Full Mask */
+#define ADC_DMAINTSET_RBF(value)              (ADC_DMAINTSET_RBF_Msk & (_UINT32_(value) << ADC_DMAINTSET_RBF_Pos)) /* Assigment of value for RBF in the ADC_DMAINTSET register */
+#define ADC_DMAINTSET_SOVFL_Pos               _UINT32_(16)                                         /* (ADC_DMAINTSET) Synchonizer Overflow Position */
+#define ADC_DMAINTSET_SOVFL_Msk               (_UINT32_(0x1) << ADC_DMAINTSET_SOVFL_Pos)           /* (ADC_DMAINTSET) Synchonizer Overflow Mask */
+#define ADC_DMAINTSET_SOVFL(value)            (ADC_DMAINTSET_SOVFL_Msk & (_UINT32_(value) << ADC_DMAINTSET_SOVFL_Pos)) /* Assigment of value for SOVFL in the ADC_DMAINTSET register */
+#define ADC_DMAINTSET_Msk                     _UINT32_(0x000100FF)                                 /* (ADC_DMAINTSET) Register Mask  */
+
+
+/* -------- ADC_DMAINTFLAG : (ADC Offset: 0xF8) (R/W 32) DMA Interrupt Flag and Status -------- */
+#define ADC_DMAINTFLAG_RESETVALUE             _UINT32_(0x00)                                       /*  (ADC_DMAINTFLAG) DMA Interrupt Flag and Status  Reset Value */
+
+#define ADC_DMAINTFLAG_RAF_Pos                _UINT32_(0)                                          /* (ADC_DMAINTFLAG) Ram Buffer A Full Position */
+#define ADC_DMAINTFLAG_RAF_Msk                (_UINT32_(0xF) << ADC_DMAINTFLAG_RAF_Pos)            /* (ADC_DMAINTFLAG) Ram Buffer A Full Mask */
+#define ADC_DMAINTFLAG_RAF(value)             (ADC_DMAINTFLAG_RAF_Msk & (_UINT32_(value) << ADC_DMAINTFLAG_RAF_Pos)) /* Assigment of value for RAF in the ADC_DMAINTFLAG register */
+#define ADC_DMAINTFLAG_RBF_Pos                _UINT32_(4)                                          /* (ADC_DMAINTFLAG) Ram Buffer B Full Position */
+#define ADC_DMAINTFLAG_RBF_Msk                (_UINT32_(0xF) << ADC_DMAINTFLAG_RBF_Pos)            /* (ADC_DMAINTFLAG) Ram Buffer B Full Mask */
+#define ADC_DMAINTFLAG_RBF(value)             (ADC_DMAINTFLAG_RBF_Msk & (_UINT32_(value) << ADC_DMAINTFLAG_RBF_Pos)) /* Assigment of value for RBF in the ADC_DMAINTFLAG register */
+#define ADC_DMAINTFLAG_EAF_Pos                _UINT32_(8)                                          /* (ADC_DMAINTFLAG) Ram Buffer A Overflow Error Position */
+#define ADC_DMAINTFLAG_EAF_Msk                (_UINT32_(0xF) << ADC_DMAINTFLAG_EAF_Pos)            /* (ADC_DMAINTFLAG) Ram Buffer A Overflow Error Mask */
+#define ADC_DMAINTFLAG_EAF(value)             (ADC_DMAINTFLAG_EAF_Msk & (_UINT32_(value) << ADC_DMAINTFLAG_EAF_Pos)) /* Assigment of value for EAF in the ADC_DMAINTFLAG register */
+#define ADC_DMAINTFLAG_EBF_Pos                _UINT32_(12)                                         /* (ADC_DMAINTFLAG) Ram Buffer B Overflow Error Position */
+#define ADC_DMAINTFLAG_EBF_Msk                (_UINT32_(0xF) << ADC_DMAINTFLAG_EBF_Pos)            /* (ADC_DMAINTFLAG) Ram Buffer B Overflow Error Mask */
+#define ADC_DMAINTFLAG_EBF(value)             (ADC_DMAINTFLAG_EBF_Msk & (_UINT32_(value) << ADC_DMAINTFLAG_EBF_Pos)) /* Assigment of value for EBF in the ADC_DMAINTFLAG register */
+#define ADC_DMAINTFLAG_SOVFL_Pos              _UINT32_(16)                                         /* (ADC_DMAINTFLAG) Synchronizer overflow Position */
+#define ADC_DMAINTFLAG_SOVFL_Msk              (_UINT32_(0x1) << ADC_DMAINTFLAG_SOVFL_Pos)          /* (ADC_DMAINTFLAG) Synchronizer overflow Mask */
+#define ADC_DMAINTFLAG_SOVFL(value)           (ADC_DMAINTFLAG_SOVFL_Msk & (_UINT32_(value) << ADC_DMAINTFLAG_SOVFL_Pos)) /* Assigment of value for SOVFL in the ADC_DMAINTFLAG register */
+#define ADC_DMAINTFLAG_DMAERR_Pos             _UINT32_(17)                                         /* (ADC_DMAINTFLAG) DMA Bus Error Position */
+#define ADC_DMAINTFLAG_DMAERR_Msk             (_UINT32_(0x1) << ADC_DMAINTFLAG_DMAERR_Pos)         /* (ADC_DMAINTFLAG) DMA Bus Error Mask */
+#define ADC_DMAINTFLAG_DMAERR(value)          (ADC_DMAINTFLAG_DMAERR_Msk & (_UINT32_(value) << ADC_DMAINTFLAG_DMAERR_Pos)) /* Assigment of value for DMAERR in the ADC_DMAINTFLAG register */
+#define ADC_DMAINTFLAG_Msk                    _UINT32_(0x0003FFFF)                                 /* (ADC_DMAINTFLAG) Register Mask  */
+
+
+/* -------- ADC_CTLINTENSET : (ADC Offset: 0xFC) (R/W 32) CORE Controller Interrupt Enable Set -------- */
+#define ADC_CTLINTENSET_RESETVALUE            _UINT32_(0x00)                                       /*  (ADC_CTLINTENSET) CORE Controller Interrupt Enable Set  Reset Value */
+
+#define ADC_CTLINTENSET_CRRDY_Pos             _UINT32_(0)                                          /* (ADC_CTLINTENSET) Core Ready Position */
+#define ADC_CTLINTENSET_CRRDY_Msk             (_UINT32_(0xF) << ADC_CTLINTENSET_CRRDY_Pos)         /* (ADC_CTLINTENSET) Core Ready Mask */
+#define ADC_CTLINTENSET_CRRDY(value)          (ADC_CTLINTENSET_CRRDY_Msk & (_UINT32_(value) << ADC_CTLINTENSET_CRRDY_Pos)) /* Assigment of value for CRRDY in the ADC_CTLINTENSET register */
+#define ADC_CTLINTENSET_VREFUPD_Pos           _UINT32_(6)                                          /* (ADC_CTLINTENSET) VREF update Position */
+#define ADC_CTLINTENSET_VREFUPD_Msk           (_UINT32_(0x1) << ADC_CTLINTENSET_VREFUPD_Pos)       /* (ADC_CTLINTENSET) VREF update Mask */
+#define ADC_CTLINTENSET_VREFUPD(value)        (ADC_CTLINTENSET_VREFUPD_Msk & (_UINT32_(value) << ADC_CTLINTENSET_VREFUPD_Pos)) /* Assigment of value for VREFUPD in the ADC_CTLINTENSET register */
+#define ADC_CTLINTENSET_VREFRDY_Pos           _UINT32_(7)                                          /* (ADC_CTLINTENSET) VREF Ready Position */
+#define ADC_CTLINTENSET_VREFRDY_Msk           (_UINT32_(0x1) << ADC_CTLINTENSET_VREFRDY_Pos)       /* (ADC_CTLINTENSET) VREF Ready Mask */
+#define ADC_CTLINTENSET_VREFRDY(value)        (ADC_CTLINTENSET_VREFRDY_Msk & (_UINT32_(value) << ADC_CTLINTENSET_VREFRDY_Pos)) /* Assigment of value for VREFRDY in the ADC_CTLINTENSET register */
+#define ADC_CTLINTENSET_PFFUNF_Pos            _UINT32_(8)                                          /* (ADC_CTLINTENSET) APB FIFO Underflow Position */
+#define ADC_CTLINTENSET_PFFUNF_Msk            (_UINT32_(0x1) << ADC_CTLINTENSET_PFFUNF_Pos)        /* (ADC_CTLINTENSET) APB FIFO Underflow Mask */
+#define ADC_CTLINTENSET_PFFUNF(value)         (ADC_CTLINTENSET_PFFUNF_Msk & (_UINT32_(value) << ADC_CTLINTENSET_PFFUNF_Pos)) /* Assigment of value for PFFUNF in the ADC_CTLINTENSET register */
+#define ADC_CTLINTENSET_PFFOVF_Pos            _UINT32_(9)                                          /* (ADC_CTLINTENSET) APB FIFO Overflow Position */
+#define ADC_CTLINTENSET_PFFOVF_Msk            (_UINT32_(0x1) << ADC_CTLINTENSET_PFFOVF_Pos)        /* (ADC_CTLINTENSET) APB FIFO Overflow Mask */
+#define ADC_CTLINTENSET_PFFOVF(value)         (ADC_CTLINTENSET_PFFOVF_Msk & (_UINT32_(value) << ADC_CTLINTENSET_PFFOVF_Pos)) /* Assigment of value for PFFOVF in the ADC_CTLINTENSET register */
+#define ADC_CTLINTENSET_PFFRDY_Pos            _UINT32_(10)                                         /* (ADC_CTLINTENSET) APB FIFO Ready Position */
+#define ADC_CTLINTENSET_PFFRDY_Msk            (_UINT32_(0x1) << ADC_CTLINTENSET_PFFRDY_Pos)        /* (ADC_CTLINTENSET) APB FIFO Ready Mask */
+#define ADC_CTLINTENSET_PFFRDY(value)         (ADC_CTLINTENSET_PFFRDY_Msk & (_UINT32_(value) << ADC_CTLINTENSET_PFFRDY_Pos)) /* Assigment of value for PFFRDY in the ADC_CTLINTENSET register */
+#define ADC_CTLINTENSET_PFFHFUL_Pos           _UINT32_(11)                                         /* (ADC_CTLINTENSET) APB FIFO Half Full Position */
+#define ADC_CTLINTENSET_PFFHFUL_Msk           (_UINT32_(0x1) << ADC_CTLINTENSET_PFFHFUL_Pos)       /* (ADC_CTLINTENSET) APB FIFO Half Full Mask */
+#define ADC_CTLINTENSET_PFFHFUL(value)        (ADC_CTLINTENSET_PFFHFUL_Msk & (_UINT32_(value) << ADC_CTLINTENSET_PFFHFUL_Pos)) /* Assigment of value for PFFHFUL in the ADC_CTLINTENSET register */
+#define ADC_CTLINTENSET_Msk                   _UINT32_(0x00000FCF)                                 /* (ADC_CTLINTENSET) Register Mask  */
+
+
+/* -------- ADC_CTLINTENCLR : (ADC Offset: 0x100) (R/W 32) CORE Controller Interrupt Enable Clear -------- */
+#define ADC_CTLINTENCLR_RESETVALUE            _UINT32_(0x00)                                       /*  (ADC_CTLINTENCLR) CORE Controller Interrupt Enable Clear  Reset Value */
+
+#define ADC_CTLINTENCLR_CRRDY_Pos             _UINT32_(0)                                          /* (ADC_CTLINTENCLR) Core Ready Disable Position */
+#define ADC_CTLINTENCLR_CRRDY_Msk             (_UINT32_(0xF) << ADC_CTLINTENCLR_CRRDY_Pos)         /* (ADC_CTLINTENCLR) Core Ready Disable Mask */
+#define ADC_CTLINTENCLR_CRRDY(value)          (ADC_CTLINTENCLR_CRRDY_Msk & (_UINT32_(value) << ADC_CTLINTENCLR_CRRDY_Pos)) /* Assigment of value for CRRDY in the ADC_CTLINTENCLR register */
+#define ADC_CTLINTENCLR_VREFUPD_Pos           _UINT32_(6)                                          /* (ADC_CTLINTENCLR) VREF Update Position */
+#define ADC_CTLINTENCLR_VREFUPD_Msk           (_UINT32_(0x1) << ADC_CTLINTENCLR_VREFUPD_Pos)       /* (ADC_CTLINTENCLR) VREF Update Mask */
+#define ADC_CTLINTENCLR_VREFUPD(value)        (ADC_CTLINTENCLR_VREFUPD_Msk & (_UINT32_(value) << ADC_CTLINTENCLR_VREFUPD_Pos)) /* Assigment of value for VREFUPD in the ADC_CTLINTENCLR register */
+#define ADC_CTLINTENCLR_VREFRDY_Pos           _UINT32_(7)                                          /* (ADC_CTLINTENCLR) VREF Ready Position */
+#define ADC_CTLINTENCLR_VREFRDY_Msk           (_UINT32_(0x1) << ADC_CTLINTENCLR_VREFRDY_Pos)       /* (ADC_CTLINTENCLR) VREF Ready Mask */
+#define ADC_CTLINTENCLR_VREFRDY(value)        (ADC_CTLINTENCLR_VREFRDY_Msk & (_UINT32_(value) << ADC_CTLINTENCLR_VREFRDY_Pos)) /* Assigment of value for VREFRDY in the ADC_CTLINTENCLR register */
+#define ADC_CTLINTENCLR_PFFUNF_Pos            _UINT32_(8)                                          /* (ADC_CTLINTENCLR) APB FIFO underflow Position */
+#define ADC_CTLINTENCLR_PFFUNF_Msk            (_UINT32_(0x1) << ADC_CTLINTENCLR_PFFUNF_Pos)        /* (ADC_CTLINTENCLR) APB FIFO underflow Mask */
+#define ADC_CTLINTENCLR_PFFUNF(value)         (ADC_CTLINTENCLR_PFFUNF_Msk & (_UINT32_(value) << ADC_CTLINTENCLR_PFFUNF_Pos)) /* Assigment of value for PFFUNF in the ADC_CTLINTENCLR register */
+#define ADC_CTLINTENCLR_PFFOVF_Pos            _UINT32_(9)                                          /* (ADC_CTLINTENCLR) APB FIFO overflow Position */
+#define ADC_CTLINTENCLR_PFFOVF_Msk            (_UINT32_(0x1) << ADC_CTLINTENCLR_PFFOVF_Pos)        /* (ADC_CTLINTENCLR) APB FIFO overflow Mask */
+#define ADC_CTLINTENCLR_PFFOVF(value)         (ADC_CTLINTENCLR_PFFOVF_Msk & (_UINT32_(value) << ADC_CTLINTENCLR_PFFOVF_Pos)) /* Assigment of value for PFFOVF in the ADC_CTLINTENCLR register */
+#define ADC_CTLINTENCLR_PFFRDY_Pos            _UINT32_(10)                                         /* (ADC_CTLINTENCLR) APB FIFO Ready Position */
+#define ADC_CTLINTENCLR_PFFRDY_Msk            (_UINT32_(0x1) << ADC_CTLINTENCLR_PFFRDY_Pos)        /* (ADC_CTLINTENCLR) APB FIFO Ready Mask */
+#define ADC_CTLINTENCLR_PFFRDY(value)         (ADC_CTLINTENCLR_PFFRDY_Msk & (_UINT32_(value) << ADC_CTLINTENCLR_PFFRDY_Pos)) /* Assigment of value for PFFRDY in the ADC_CTLINTENCLR register */
+#define ADC_CTLINTENCLR_PFFHFUL_Pos           _UINT32_(11)                                         /* (ADC_CTLINTENCLR) APB FIFO Half Full Position */
+#define ADC_CTLINTENCLR_PFFHFUL_Msk           (_UINT32_(0x1) << ADC_CTLINTENCLR_PFFHFUL_Pos)       /* (ADC_CTLINTENCLR) APB FIFO Half Full Mask */
+#define ADC_CTLINTENCLR_PFFHFUL(value)        (ADC_CTLINTENCLR_PFFHFUL_Msk & (_UINT32_(value) << ADC_CTLINTENCLR_PFFHFUL_Pos)) /* Assigment of value for PFFHFUL in the ADC_CTLINTENCLR register */
+#define ADC_CTLINTENCLR_Msk                   _UINT32_(0x00000FCF)                                 /* (ADC_CTLINTENCLR) Register Mask  */
+
+
+/* -------- ADC_CTLINTFLAG : (ADC Offset: 0x104) (R/W 32) CORE Controller Interrupt Flags -------- */
+#define ADC_CTLINTFLAG_RESETVALUE             _UINT32_(0x00)                                       /*  (ADC_CTLINTFLAG) CORE Controller Interrupt Flags  Reset Value */
+
+#define ADC_CTLINTFLAG_CRRDY_Pos              _UINT32_(0)                                          /* (ADC_CTLINTFLAG) Core Ready Position */
+#define ADC_CTLINTFLAG_CRRDY_Msk              (_UINT32_(0xF) << ADC_CTLINTFLAG_CRRDY_Pos)          /* (ADC_CTLINTFLAG) Core Ready Mask */
+#define ADC_CTLINTFLAG_CRRDY(value)           (ADC_CTLINTFLAG_CRRDY_Msk & (_UINT32_(value) << ADC_CTLINTFLAG_CRRDY_Pos)) /* Assigment of value for CRRDY in the ADC_CTLINTFLAG register */
+#define ADC_CTLINTFLAG_VREFUPD_Pos            _UINT32_(6)                                          /* (ADC_CTLINTFLAG) VREF update Position */
+#define ADC_CTLINTFLAG_VREFUPD_Msk            (_UINT32_(0x1) << ADC_CTLINTFLAG_VREFUPD_Pos)        /* (ADC_CTLINTFLAG) VREF update Mask */
+#define ADC_CTLINTFLAG_VREFUPD(value)         (ADC_CTLINTFLAG_VREFUPD_Msk & (_UINT32_(value) << ADC_CTLINTFLAG_VREFUPD_Pos)) /* Assigment of value for VREFUPD in the ADC_CTLINTFLAG register */
+#define ADC_CTLINTFLAG_VREFRDY_Pos            _UINT32_(7)                                          /* (ADC_CTLINTFLAG) VREF Ready Position */
+#define ADC_CTLINTFLAG_VREFRDY_Msk            (_UINT32_(0x1) << ADC_CTLINTFLAG_VREFRDY_Pos)        /* (ADC_CTLINTFLAG) VREF Ready Mask */
+#define ADC_CTLINTFLAG_VREFRDY(value)         (ADC_CTLINTFLAG_VREFRDY_Msk & (_UINT32_(value) << ADC_CTLINTFLAG_VREFRDY_Pos)) /* Assigment of value for VREFRDY in the ADC_CTLINTFLAG register */
+#define ADC_CTLINTFLAG_PFFUNF_Pos             _UINT32_(8)                                          /* (ADC_CTLINTFLAG) APB FIFO underflow Position */
+#define ADC_CTLINTFLAG_PFFUNF_Msk             (_UINT32_(0x1) << ADC_CTLINTFLAG_PFFUNF_Pos)         /* (ADC_CTLINTFLAG) APB FIFO underflow Mask */
+#define ADC_CTLINTFLAG_PFFUNF(value)          (ADC_CTLINTFLAG_PFFUNF_Msk & (_UINT32_(value) << ADC_CTLINTFLAG_PFFUNF_Pos)) /* Assigment of value for PFFUNF in the ADC_CTLINTFLAG register */
+#define ADC_CTLINTFLAG_PFFOVF_Pos             _UINT32_(9)                                          /* (ADC_CTLINTFLAG) APB FIFO overflow Position */
+#define ADC_CTLINTFLAG_PFFOVF_Msk             (_UINT32_(0x1) << ADC_CTLINTFLAG_PFFOVF_Pos)         /* (ADC_CTLINTFLAG) APB FIFO overflow Mask */
+#define ADC_CTLINTFLAG_PFFOVF(value)          (ADC_CTLINTFLAG_PFFOVF_Msk & (_UINT32_(value) << ADC_CTLINTFLAG_PFFOVF_Pos)) /* Assigment of value for PFFOVF in the ADC_CTLINTFLAG register */
+#define ADC_CTLINTFLAG_PFFRDY_Pos             _UINT32_(10)                                         /* (ADC_CTLINTFLAG) APB FIFO Ready Position */
+#define ADC_CTLINTFLAG_PFFRDY_Msk             (_UINT32_(0x1) << ADC_CTLINTFLAG_PFFRDY_Pos)         /* (ADC_CTLINTFLAG) APB FIFO Ready Mask */
+#define ADC_CTLINTFLAG_PFFRDY(value)          (ADC_CTLINTFLAG_PFFRDY_Msk & (_UINT32_(value) << ADC_CTLINTFLAG_PFFRDY_Pos)) /* Assigment of value for PFFRDY in the ADC_CTLINTFLAG register */
+#define ADC_CTLINTFLAG_PFFHFUL_Pos            _UINT32_(11)                                         /* (ADC_CTLINTFLAG) APB FIFO Half Full Position */
+#define ADC_CTLINTFLAG_PFFHFUL_Msk            (_UINT32_(0x1) << ADC_CTLINTFLAG_PFFHFUL_Pos)        /* (ADC_CTLINTFLAG) APB FIFO Half Full Mask */
+#define ADC_CTLINTFLAG_PFFHFUL(value)         (ADC_CTLINTFLAG_PFFHFUL_Msk & (_UINT32_(value) << ADC_CTLINTFLAG_PFFHFUL_Pos)) /* Assigment of value for PFFHFUL in the ADC_CTLINTFLAG register */
+#define ADC_CTLINTFLAG_Msk                    _UINT32_(0x00000FCF)                                 /* (ADC_CTLINTFLAG) Register Mask  */
+
+
+/* -------- ADC_DBGCTRL : (ADC Offset: 0x168) (R/W 32) Debug Control Register -------- */
+#define ADC_DBGCTRL_RESETVALUE                _UINT32_(0x00)                                       /*  (ADC_DBGCTRL) Debug Control Register  Reset Value */
+
+#define ADC_DBGCTRL_DBGRUN_Pos                _UINT32_(0)                                          /* (ADC_DBGCTRL) Debug Running State Position */
+#define ADC_DBGCTRL_DBGRUN_Msk                (_UINT32_(0x1) << ADC_DBGCTRL_DBGRUN_Pos)            /* (ADC_DBGCTRL) Debug Running State Mask */
+#define ADC_DBGCTRL_DBGRUN(value)             (ADC_DBGCTRL_DBGRUN_Msk & (_UINT32_(value) << ADC_DBGCTRL_DBGRUN_Pos)) /* Assigment of value for DBGRUN in the ADC_DBGCTRL register */
+#define ADC_DBGCTRL_Msk                       _UINT32_(0x00000001)                                 /* (ADC_DBGCTRL) Register Mask  */
+
+
 /** \brief ADC register offsets definitions */
-#define ADC_CALCTRL_REG_OFST           _UINT32_(0x18)      /* (ADC_CALCTRL) SARCORE Calibration Value Offset */
+#define ADC_CORCTRL_REG_OFST           _UINT32_(0x00)      /* (ADC_CORCTRL) SARCORE Control Offset */
 #define ADC_CHNCFG1_REG_OFST           _UINT32_(0x04)      /* (ADC_CHNCFG1) Channel Configuration 1 (LVL/CMPEN) Offset */
 #define ADC_CHNCFG2_REG_OFST           _UINT32_(0x08)      /* (ADC_CHNCFG2) Channel Configuration 2(FRACT/CSS) Offset */
 #define ADC_CHNCFG3_REG_OFST           _UINT32_(0x0C)      /* (ADC_CHNCFG3) Channel Configuration3 (SIGN/DIFF) Offset */
 #define ADC_CHNCFG4_REG_OFST           _UINT32_(0x10)      /* (ADC_CHNCFG4) Channel Configuration 4 (TRGSRC) Offset */
 #define ADC_CHNCFG5_REG_OFST           _UINT32_(0x14)      /* (ADC_CHNCFG5) Channel Configuration 5 (TRGSRC) Offset */
-#define ADC_CORCTRL_REG_OFST           _UINT32_(0x00)      /* (ADC_CORCTRL) SARCORE Control Offset */
+#define ADC_CALCTRL_REG_OFST           _UINT32_(0x18)      /* (ADC_CALCTRL) SARCORE Calibration Value Offset */
 #define ADC_EVCTRL_REG_OFST            _UINT32_(0x1C)      /* (ADC_EVCTRL) Event Control Offset */
 #define ADC_INTENCLR_REG_OFST          _UINT32_(0x00)      /* (ADC_INTENCLR) Interrupt Enable Clear Offset */
 #define ADC_INTENSET_REG_OFST          _UINT32_(0x04)      /* (ADC_INTENSET) Interrupt Enable Set Offset */
 #define ADC_INTFLAG_REG_OFST           _UINT32_(0x08)      /* (ADC_INTFLAG) Interrupt Flags Offset */
-#define ADC_CHRDYDAT_REG_OFST          _UINT32_(0xD4)      /* (ADC_CHRDYDAT) Channel Ready Data Register Offset */
-#define ADC_CMPCTRL_REG_OFST           _UINT32_(0xB0)      /* (ADC_CMPCTRL) Comparator Control Offset */
-#define ADC_CORCHDATAID_REG_OFST       _UINT32_(0xD0)      /* (ADC_CORCHDATAID) Channel Ready DATA ID Offset */
-#define ADC_CTLINTENCLR_REG_OFST       _UINT32_(0x100)     /* (ADC_CTLINTENCLR) CORE Controller Interrupt Enable Clear Offset */
-#define ADC_CTLINTENSET_REG_OFST       _UINT32_(0xFC)      /* (ADC_CTLINTENSET) CORE Controller Interrupt Enable Set Offset */
-#define ADC_CTLINTFLAG_REG_OFST        _UINT32_(0x104)     /* (ADC_CTLINTFLAG) CORE Controller Interrupt Flags Offset */
 #define ADC_CTRLA_REG_OFST             _UINT32_(0x00)      /* (ADC_CTRLA) CONTROL A REGISTER Offset */
 #define ADC_CTRLB_REG_OFST             _UINT32_(0x04)      /* (ADC_CTRLB) CONTROL B REGISTER Offset */
 #define ADC_CTRLC_REG_OFST             _UINT32_(0x08)      /* (ADC_CTRLC) Control C Register Offset */
 #define ADC_CTRLD_REG_OFST             _UINT32_(0x10)      /* (ADC_CTRLD) Control D Register Offset */
-#define ADC_DBGCTRL_REG_OFST           _UINT32_(0x168)     /* (ADC_DBGCTRL) Debug Control Register Offset */
+#define ADC_CMPCTRL_REG_OFST           _UINT32_(0xB0)      /* (ADC_CMPCTRL) Comparator Control Offset */
+#define ADC_FLTCTRL_REG_OFST           _UINT32_(0xC0)      /* (ADC_FLTCTRL) Filter Control Offset */
+#define ADC_CORCHDATAID_REG_OFST       _UINT32_(0xD0)      /* (ADC_CORCHDATAID) Channel Ready DATA ID Offset */
+#define ADC_CHRDYDAT_REG_OFST          _UINT32_(0xD4)      /* (ADC_CHRDYDAT) Channel Ready Data Register Offset */
+#define ADC_PFFDATA_REG_OFST           _UINT32_(0xD8)      /* (ADC_PFFDATA) APB FIFO Output Data Offset */
 #define ADC_DMABASE_REG_OFST           _UINT32_(0xDC)      /* (ADC_DMABASE) DMA Sample Base Address Offset */
 #define ADC_DMACTRL_REG_OFST           _UINT32_(0xE0)      /* (ADC_DMACTRL) DMA Control Register Offset */
-#define ADC_DMAINTENCLR_REG_OFST       _UINT32_(0xF0)      /* (ADC_DMAINTENCLR) DMA Interrupt Enable Clear Offset */
-#define ADC_DMAINTFLAG_REG_OFST        _UINT32_(0xF8)      /* (ADC_DMAINTFLAG) DMA Interrupt Flag and Status Offset */
-#define ADC_DMAINTSET_REG_OFST         _UINT32_(0xF4)      /* (ADC_DMAINTSET) DMA Interrupt Enable Set Offset */
-#define ADC_FLTCTRL_REG_OFST           _UINT32_(0xC0)      /* (ADC_FLTCTRL) Filter Control Offset */
 #define ADC_PFFCTRL_REG_OFST           _UINT32_(0xE4)      /* (ADC_PFFCTRL) APB FIFO Control Register Offset */
-#define ADC_PFFDATA_REG_OFST           _UINT32_(0xD8)      /* (ADC_PFFDATA) APB FIFO Output Data Offset */
 #define ADC_SYNCBUSY_REG_OFST          _UINT32_(0xE8)      /* (ADC_SYNCBUSY) CORE SYNC Busy Status Register Offset */
+#define ADC_DMAINTENCLR_REG_OFST       _UINT32_(0xF0)      /* (ADC_DMAINTENCLR) DMA Interrupt Enable Clear Offset */
+#define ADC_DMAINTSET_REG_OFST         _UINT32_(0xF4)      /* (ADC_DMAINTSET) DMA Interrupt Enable Set Offset */
+#define ADC_DMAINTFLAG_REG_OFST        _UINT32_(0xF8)      /* (ADC_DMAINTFLAG) DMA Interrupt Flag and Status Offset */
+#define ADC_CTLINTENSET_REG_OFST       _UINT32_(0xFC)      /* (ADC_CTLINTENSET) CORE Controller Interrupt Enable Set Offset */
+#define ADC_CTLINTENCLR_REG_OFST       _UINT32_(0x100)     /* (ADC_CTLINTENCLR) CORE Controller Interrupt Enable Clear Offset */
+#define ADC_CTLINTFLAG_REG_OFST        _UINT32_(0x104)     /* (ADC_CTLINTFLAG) CORE Controller Interrupt Flags Offset */
+#define ADC_DBGCTRL_REG_OFST           _UINT32_(0x168)     /* (ADC_DBGCTRL) Debug Control Register Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief CONFIG register API structure */
