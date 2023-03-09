@@ -79,7 +79,7 @@ void __attribute__((optimize("-O1"),section(".text.Dummy_Handler"),long_call, no
 }
 
 /* MISRAC 2012 deviation block start */
-/* MISRA C-2012 Rule 8.6 deviated 161 times.  Deviation record ID -  H3_MISRAC_2012_R_8_6_DR_1 */
+/* MISRA C-2012 Rule 8.6 deviated 164 times.  Deviation record ID -  H3_MISRAC_2012_R_8_6_DR_1 */
 /* Device vectors list dummy definition*/
 extern void MemoryManagement_Handler   ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void BusFault_Handler           ( void ) __attribute__((weak, alias("Dummy_Handler")));
@@ -157,33 +157,33 @@ extern void SERCOM3_2_Handler          ( void ) __attribute__((weak, alias("Dumm
 extern void SERCOM3_3_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void SERCOM3_4_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void TCC0_OTHER_Handler         ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void TCC0_MC_0_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void TCC0_MC_1_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void TCC0_MC_2_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void TCC0_MC_3_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void TCC0_MC_4_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void TCC0_MC_5_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
+extern void TCC0_MC0_Handler           ( void ) __attribute__((weak, alias("Dummy_Handler")));
+extern void TCC0_MC1_Handler           ( void ) __attribute__((weak, alias("Dummy_Handler")));
+extern void TCC0_MC2_Handler           ( void ) __attribute__((weak, alias("Dummy_Handler")));
+extern void TCC0_MC3_Handler           ( void ) __attribute__((weak, alias("Dummy_Handler")));
+extern void TCC0_MC4_Handler           ( void ) __attribute__((weak, alias("Dummy_Handler")));
+extern void TCC0_MC5_Handler           ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void TCC1_OTHER_Handler         ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void TCC1_MC_0_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void TCC1_MC_1_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void TCC1_MC_2_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void TCC1_MC_3_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void TCC1_MC_4_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void TCC1_MC_5_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
+extern void TCC1_MC0_Handler           ( void ) __attribute__((weak, alias("Dummy_Handler")));
+extern void TCC1_MC1_Handler           ( void ) __attribute__((weak, alias("Dummy_Handler")));
+extern void TCC1_MC2_Handler           ( void ) __attribute__((weak, alias("Dummy_Handler")));
+extern void TCC1_MC3_Handler           ( void ) __attribute__((weak, alias("Dummy_Handler")));
+extern void TCC1_MC4_Handler           ( void ) __attribute__((weak, alias("Dummy_Handler")));
+extern void TCC1_MC5_Handler           ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void TCC2_OTHER_Handler         ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void TCC2_MC_0_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void TCC2_MC_1_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void TCC2_MC_2_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void TCC2_MC_3_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void TCC2_MC_4_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void TCC2_MC_5_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
+extern void TCC2_MC0_Handler           ( void ) __attribute__((weak, alias("Dummy_Handler")));
+extern void TCC2_MC1_Handler           ( void ) __attribute__((weak, alias("Dummy_Handler")));
+extern void TCC2_MC2_Handler           ( void ) __attribute__((weak, alias("Dummy_Handler")));
+extern void TCC2_MC3_Handler           ( void ) __attribute__((weak, alias("Dummy_Handler")));
+extern void TCC2_MC4_Handler           ( void ) __attribute__((weak, alias("Dummy_Handler")));
+extern void TCC2_MC5_Handler           ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void TCC3_OTHER_Handler         ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void TCC3_MC_0_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void TCC3_MC_1_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void TCC3_MC_2_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void TCC3_MC_3_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void TCC3_MC_4_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void TCC3_MC_5_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
+extern void TCC3_MC0_Handler           ( void ) __attribute__((weak, alias("Dummy_Handler")));
+extern void TCC3_MC1_Handler           ( void ) __attribute__((weak, alias("Dummy_Handler")));
+extern void TCC3_MC2_Handler           ( void ) __attribute__((weak, alias("Dummy_Handler")));
+extern void TCC3_MC3_Handler           ( void ) __attribute__((weak, alias("Dummy_Handler")));
+extern void TCC3_MC4_Handler           ( void ) __attribute__((weak, alias("Dummy_Handler")));
+extern void TCC3_MC5_Handler           ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void SERCOM4_56_Handler         ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void SERCOM4_0_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void SERCOM4_1_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
@@ -209,23 +209,23 @@ extern void SERCOM7_2_Handler          ( void ) __attribute__((weak, alias("Dumm
 extern void SERCOM7_3_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void SERCOM7_4_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void TCC4_OTHER_Handler         ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void TCC4_MC_0_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void TCC4_MC_1_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
+extern void TCC4_MC0_Handler           ( void ) __attribute__((weak, alias("Dummy_Handler")));
+extern void TCC4_MC1_Handler           ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void TCC5_OTHER_Handler         ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void TCC5_MC_0_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void TCC5_MC_1_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
+extern void TCC5_MC0_Handler           ( void ) __attribute__((weak, alias("Dummy_Handler")));
+extern void TCC5_MC1_Handler           ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void TCC6_OTHER_Handler         ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void TCC6_MC_0_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void TCC6_MC_1_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
+extern void TCC6_MC0_Handler           ( void ) __attribute__((weak, alias("Dummy_Handler")));
+extern void TCC6_MC1_Handler           ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void TCC7_OTHER_Handler         ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void TCC7_MC_0_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void TCC7_MC_1_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void ADC_0_Handler              ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void ADC_1_Handler              ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void ADC_2_Handler              ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void ADC_3_Handler              ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void ADC_4_Handler              ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void ADC_5_Handler              ( void ) __attribute__((weak, alias("Dummy_Handler")));
+extern void TCC7_MC0_Handler           ( void ) __attribute__((weak, alias("Dummy_Handler")));
+extern void TCC7_MC1_Handler           ( void ) __attribute__((weak, alias("Dummy_Handler")));
+extern void ADC_GLOBAL_Handler         ( void ) __attribute__((weak, alias("Dummy_Handler")));
+extern void ADC_CORE1_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
+extern void Reserved2_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
+extern void Reserved3_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
+extern void Reserved4_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
+extern void Reserved5_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void AC_Handler                 ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void PTC_Handler                ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void SPI_IXS_Handler            ( void ) __attribute__((weak, alias("Dummy_Handler")));
@@ -242,6 +242,9 @@ extern void USB_OTHER_Handler          ( void ) __attribute__((weak, alias("Dumm
 extern void USB_SOF_Handler            ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void USB_TRCPT0_Handler         ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void USB_TRCPT1_Handler         ( void ) __attribute__((weak, alias("Dummy_Handler")));
+extern void HSM_ERROR_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
+extern void HSM_TXINT_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
+extern void HSM_RXINT_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
 
 
 /* MISRAC 2012 deviation block end */
@@ -337,33 +340,33 @@ const H3DeviceVectors exception_table=
     .pfnSERCOM3_3_Handler          = SERCOM3_3_Handler,
     .pfnSERCOM3_4_Handler          = SERCOM3_4_Handler,
     .pfnTCC0_OTHER_Handler         = TCC0_OTHER_Handler,
-    .pfnTCC0_MC_0_Handler          = TCC0_MC_0_Handler,
-    .pfnTCC0_MC_1_Handler          = TCC0_MC_1_Handler,
-    .pfnTCC0_MC_2_Handler          = TCC0_MC_2_Handler,
-    .pfnTCC0_MC_3_Handler          = TCC0_MC_3_Handler,
-    .pfnTCC0_MC_4_Handler          = TCC0_MC_4_Handler,
-    .pfnTCC0_MC_5_Handler          = TCC0_MC_5_Handler,
+    .pfnTCC0_MC0_Handler           = TCC0_MC0_Handler,
+    .pfnTCC0_MC1_Handler           = TCC0_MC1_Handler,
+    .pfnTCC0_MC2_Handler           = TCC0_MC2_Handler,
+    .pfnTCC0_MC3_Handler           = TCC0_MC3_Handler,
+    .pfnTCC0_MC4_Handler           = TCC0_MC4_Handler,
+    .pfnTCC0_MC5_Handler           = TCC0_MC5_Handler,
     .pfnTCC1_OTHER_Handler         = TCC1_OTHER_Handler,
-    .pfnTCC1_MC_0_Handler          = TCC1_MC_0_Handler,
-    .pfnTCC1_MC_1_Handler          = TCC1_MC_1_Handler,
-    .pfnTCC1_MC_2_Handler          = TCC1_MC_2_Handler,
-    .pfnTCC1_MC_3_Handler          = TCC1_MC_3_Handler,
-    .pfnTCC1_MC_4_Handler          = TCC1_MC_4_Handler,
-    .pfnTCC1_MC_5_Handler          = TCC1_MC_5_Handler,
+    .pfnTCC1_MC0_Handler           = TCC1_MC0_Handler,
+    .pfnTCC1_MC1_Handler           = TCC1_MC1_Handler,
+    .pfnTCC1_MC2_Handler           = TCC1_MC2_Handler,
+    .pfnTCC1_MC3_Handler           = TCC1_MC3_Handler,
+    .pfnTCC1_MC4_Handler           = TCC1_MC4_Handler,
+    .pfnTCC1_MC5_Handler           = TCC1_MC5_Handler,
     .pfnTCC2_OTHER_Handler         = TCC2_OTHER_Handler,
-    .pfnTCC2_MC_0_Handler          = TCC2_MC_0_Handler,
-    .pfnTCC2_MC_1_Handler          = TCC2_MC_1_Handler,
-    .pfnTCC2_MC_2_Handler          = TCC2_MC_2_Handler,
-    .pfnTCC2_MC_3_Handler          = TCC2_MC_3_Handler,
-    .pfnTCC2_MC_4_Handler          = TCC2_MC_4_Handler,
-    .pfnTCC2_MC_5_Handler          = TCC2_MC_5_Handler,
+    .pfnTCC2_MC0_Handler           = TCC2_MC0_Handler,
+    .pfnTCC2_MC1_Handler           = TCC2_MC1_Handler,
+    .pfnTCC2_MC2_Handler           = TCC2_MC2_Handler,
+    .pfnTCC2_MC3_Handler           = TCC2_MC3_Handler,
+    .pfnTCC2_MC4_Handler           = TCC2_MC4_Handler,
+    .pfnTCC2_MC5_Handler           = TCC2_MC5_Handler,
     .pfnTCC3_OTHER_Handler         = TCC3_OTHER_Handler,
-    .pfnTCC3_MC_0_Handler          = TCC3_MC_0_Handler,
-    .pfnTCC3_MC_1_Handler          = TCC3_MC_1_Handler,
-    .pfnTCC3_MC_2_Handler          = TCC3_MC_2_Handler,
-    .pfnTCC3_MC_3_Handler          = TCC3_MC_3_Handler,
-    .pfnTCC3_MC_4_Handler          = TCC3_MC_4_Handler,
-    .pfnTCC3_MC_5_Handler          = TCC3_MC_5_Handler,
+    .pfnTCC3_MC0_Handler           = TCC3_MC0_Handler,
+    .pfnTCC3_MC1_Handler           = TCC3_MC1_Handler,
+    .pfnTCC3_MC2_Handler           = TCC3_MC2_Handler,
+    .pfnTCC3_MC3_Handler           = TCC3_MC3_Handler,
+    .pfnTCC3_MC4_Handler           = TCC3_MC4_Handler,
+    .pfnTCC3_MC5_Handler           = TCC3_MC5_Handler,
     .pfnSERCOM4_56_Handler         = SERCOM4_56_Handler,
     .pfnSERCOM4_0_Handler          = SERCOM4_0_Handler,
     .pfnSERCOM4_1_Handler          = SERCOM4_1_Handler,
@@ -389,23 +392,23 @@ const H3DeviceVectors exception_table=
     .pfnSERCOM7_3_Handler          = SERCOM7_3_Handler,
     .pfnSERCOM7_4_Handler          = SERCOM7_4_Handler,
     .pfnTCC4_OTHER_Handler         = TCC4_OTHER_Handler,
-    .pfnTCC4_MC_0_Handler          = TCC4_MC_0_Handler,
-    .pfnTCC4_MC_1_Handler          = TCC4_MC_1_Handler,
+    .pfnTCC4_MC0_Handler           = TCC4_MC0_Handler,
+    .pfnTCC4_MC1_Handler           = TCC4_MC1_Handler,
     .pfnTCC5_OTHER_Handler         = TCC5_OTHER_Handler,
-    .pfnTCC5_MC_0_Handler          = TCC5_MC_0_Handler,
-    .pfnTCC5_MC_1_Handler          = TCC5_MC_1_Handler,
+    .pfnTCC5_MC0_Handler           = TCC5_MC0_Handler,
+    .pfnTCC5_MC1_Handler           = TCC5_MC1_Handler,
     .pfnTCC6_OTHER_Handler         = TCC6_OTHER_Handler,
-    .pfnTCC6_MC_0_Handler          = TCC6_MC_0_Handler,
-    .pfnTCC6_MC_1_Handler          = TCC6_MC_1_Handler,
+    .pfnTCC6_MC0_Handler           = TCC6_MC0_Handler,
+    .pfnTCC6_MC1_Handler           = TCC6_MC1_Handler,
     .pfnTCC7_OTHER_Handler         = TCC7_OTHER_Handler,
-    .pfnTCC7_MC_0_Handler          = TCC7_MC_0_Handler,
-    .pfnTCC7_MC_1_Handler          = TCC7_MC_1_Handler,
-    .pfnADC_0_Handler              = ADC_0_Handler,
-    .pfnADC_1_Handler              = ADC_1_Handler,
-    .pfnADC_2_Handler              = ADC_2_Handler,
-    .pfnADC_3_Handler              = ADC_3_Handler,
-    .pfnADC_4_Handler              = ADC_4_Handler,
-    .pfnADC_5_Handler              = ADC_5_Handler,
+    .pfnTCC7_MC0_Handler           = TCC7_MC0_Handler,
+    .pfnTCC7_MC1_Handler           = TCC7_MC1_Handler,
+    .pfnADC_GLOBAL_Handler         = ADC_GLOBAL_Handler,
+    .pfnADC_CORE1_Handler          = ADC_CORE1_Handler,
+    .pfnReserved2_Handler          = Reserved2_Handler,
+    .pfnReserved3_Handler          = Reserved3_Handler,
+    .pfnReserved4_Handler          = Reserved4_Handler,
+    .pfnReserved5_Handler          = Reserved5_Handler,
     .pfnAC_Handler                 = AC_Handler,
     .pfnPTC_Handler                = PTC_Handler,
     .pfnSPI_IXS_Handler            = SPI_IXS_Handler,
@@ -423,6 +426,9 @@ const H3DeviceVectors exception_table=
     .pfnUSB_TRCPT0_Handler         = USB_TRCPT0_Handler,
     .pfnUSB_TRCPT1_Handler         = USB_TRCPT1_Handler,
     .pfnUSBHS_Handler              = DRV_USBHS_Handler,
+    .pfnHSM_ERROR_Handler          = HSM_ERROR_Handler,
+    .pfnHSM_TXINT_Handler          = HSM_TXINT_Handler,
+    .pfnHSM_RXINT_Handler          = HSM_RXINT_Handler,
 
 
 };

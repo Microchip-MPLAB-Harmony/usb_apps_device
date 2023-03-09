@@ -4,7 +4,11 @@
 
 
 project: cdc_com_port_single
+<<<<<<< HEAD
 creation_date: 2023-02-17T20:48:50.114+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+=======
+creation_date: 2023-03-09T15:19:39.101+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+>>>>>>> 1fcd3eeb ([Apps] Regenerated and tested USB Device vendor demo configuration for PIC32CK GC01 Curiosity Ultra board. [MH3-74889])
 operating_system: Windows 10
 mcc_mode: IDE            # [IDE|Standalone|Headless]
 mcc_version: v5.2.2

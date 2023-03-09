@@ -1,7 +1,7 @@
 /*
  * Component description for EBI
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,13 +20,49 @@
  *
  */
 
-/* file generated from device description version 2022-11-28T06:54:19Z */
+/* file generated from device description version 2023-02-20T18:48:06Z */
 #ifndef _PIC32CKGC01_EBI_COMPONENT_H_
 #define _PIC32CKGC01_EBI_COMPONENT_H_
 
 /* ************************************************************************** */
 /*   SOFTWARE API DEFINITION FOR EBI                                          */
 /* ************************************************************************** */
+
+/* -------- EBI_SMC_SETUP : (EBI Offset: 0x00) (R/W 32) SMC Setup Register -------- */
+#define EBI_SMC_SETUP_RESETVALUE              _UINT32_(0x1010101)                                  /*  (EBI_SMC_SETUP) SMC Setup Register  Reset Value */
+
+#define EBI_SMC_SETUP_NWE_SETUP_Pos           _UINT32_(0)                                          /* (EBI_SMC_SETUP) NWE Setup Length Position */
+#define EBI_SMC_SETUP_NWE_SETUP_Msk           (_UINT32_(0x3F) << EBI_SMC_SETUP_NWE_SETUP_Pos)      /* (EBI_SMC_SETUP) NWE Setup Length Mask */
+#define EBI_SMC_SETUP_NWE_SETUP(value)        (EBI_SMC_SETUP_NWE_SETUP_Msk & (_UINT32_(value) << EBI_SMC_SETUP_NWE_SETUP_Pos)) /* Assigment of value for NWE_SETUP in the EBI_SMC_SETUP register */
+#define EBI_SMC_SETUP_NCS_WR_SETUP_Pos        _UINT32_(8)                                          /* (EBI_SMC_SETUP) NCS Setup Length in WRITE Access Position */
+#define EBI_SMC_SETUP_NCS_WR_SETUP_Msk        (_UINT32_(0x3F) << EBI_SMC_SETUP_NCS_WR_SETUP_Pos)   /* (EBI_SMC_SETUP) NCS Setup Length in WRITE Access Mask */
+#define EBI_SMC_SETUP_NCS_WR_SETUP(value)     (EBI_SMC_SETUP_NCS_WR_SETUP_Msk & (_UINT32_(value) << EBI_SMC_SETUP_NCS_WR_SETUP_Pos)) /* Assigment of value for NCS_WR_SETUP in the EBI_SMC_SETUP register */
+#define EBI_SMC_SETUP_NRD_SETUP_Pos           _UINT32_(16)                                         /* (EBI_SMC_SETUP) NRD Setup Length Position */
+#define EBI_SMC_SETUP_NRD_SETUP_Msk           (_UINT32_(0x3F) << EBI_SMC_SETUP_NRD_SETUP_Pos)      /* (EBI_SMC_SETUP) NRD Setup Length Mask */
+#define EBI_SMC_SETUP_NRD_SETUP(value)        (EBI_SMC_SETUP_NRD_SETUP_Msk & (_UINT32_(value) << EBI_SMC_SETUP_NRD_SETUP_Pos)) /* Assigment of value for NRD_SETUP in the EBI_SMC_SETUP register */
+#define EBI_SMC_SETUP_NCS_RD_SETUP_Pos        _UINT32_(24)                                         /* (EBI_SMC_SETUP) NCS Setup Length in READ Access Position */
+#define EBI_SMC_SETUP_NCS_RD_SETUP_Msk        (_UINT32_(0x3F) << EBI_SMC_SETUP_NCS_RD_SETUP_Pos)   /* (EBI_SMC_SETUP) NCS Setup Length in READ Access Mask */
+#define EBI_SMC_SETUP_NCS_RD_SETUP(value)     (EBI_SMC_SETUP_NCS_RD_SETUP_Msk & (_UINT32_(value) << EBI_SMC_SETUP_NCS_RD_SETUP_Pos)) /* Assigment of value for NCS_RD_SETUP in the EBI_SMC_SETUP register */
+#define EBI_SMC_SETUP_Msk                     _UINT32_(0x3F3F3F3F)                                 /* (EBI_SMC_SETUP) Register Mask  */
+
+
+/* -------- EBI_SMC_PULSE : (EBI Offset: 0x04) (R/W 32) SMC Pulse Register -------- */
+#define EBI_SMC_PULSE_RESETVALUE              _UINT32_(0x1010101)                                  /*  (EBI_SMC_PULSE) SMC Pulse Register  Reset Value */
+
+#define EBI_SMC_PULSE_NWE_PULSE_Pos           _UINT32_(0)                                          /* (EBI_SMC_PULSE) NWE Pulse Length Position */
+#define EBI_SMC_PULSE_NWE_PULSE_Msk           (_UINT32_(0x7F) << EBI_SMC_PULSE_NWE_PULSE_Pos)      /* (EBI_SMC_PULSE) NWE Pulse Length Mask */
+#define EBI_SMC_PULSE_NWE_PULSE(value)        (EBI_SMC_PULSE_NWE_PULSE_Msk & (_UINT32_(value) << EBI_SMC_PULSE_NWE_PULSE_Pos)) /* Assigment of value for NWE_PULSE in the EBI_SMC_PULSE register */
+#define EBI_SMC_PULSE_NCS_WR_PULSE_Pos        _UINT32_(8)                                          /* (EBI_SMC_PULSE) NCS Pulse Length in WRITE Access Position */
+#define EBI_SMC_PULSE_NCS_WR_PULSE_Msk        (_UINT32_(0x7F) << EBI_SMC_PULSE_NCS_WR_PULSE_Pos)   /* (EBI_SMC_PULSE) NCS Pulse Length in WRITE Access Mask */
+#define EBI_SMC_PULSE_NCS_WR_PULSE(value)     (EBI_SMC_PULSE_NCS_WR_PULSE_Msk & (_UINT32_(value) << EBI_SMC_PULSE_NCS_WR_PULSE_Pos)) /* Assigment of value for NCS_WR_PULSE in the EBI_SMC_PULSE register */
+#define EBI_SMC_PULSE_NRD_PULSE_Pos           _UINT32_(16)                                         /* (EBI_SMC_PULSE) NRD Pulse Length Position */
+#define EBI_SMC_PULSE_NRD_PULSE_Msk           (_UINT32_(0x7F) << EBI_SMC_PULSE_NRD_PULSE_Pos)      /* (EBI_SMC_PULSE) NRD Pulse Length Mask */
+#define EBI_SMC_PULSE_NRD_PULSE(value)        (EBI_SMC_PULSE_NRD_PULSE_Msk & (_UINT32_(value) << EBI_SMC_PULSE_NRD_PULSE_Pos)) /* Assigment of value for NRD_PULSE in the EBI_SMC_PULSE register */
+#define EBI_SMC_PULSE_NCS_RD_PULSE_Pos        _UINT32_(24)                                         /* (EBI_SMC_PULSE) NCS Pulse Length in READ Access Position */
+#define EBI_SMC_PULSE_NCS_RD_PULSE_Msk        (_UINT32_(0x7F) << EBI_SMC_PULSE_NCS_RD_PULSE_Pos)   /* (EBI_SMC_PULSE) NCS Pulse Length in READ Access Mask */
+#define EBI_SMC_PULSE_NCS_RD_PULSE(value)     (EBI_SMC_PULSE_NCS_RD_PULSE_Msk & (_UINT32_(value) << EBI_SMC_PULSE_NCS_RD_PULSE_Pos)) /* Assigment of value for NCS_RD_PULSE in the EBI_SMC_PULSE register */
+#define EBI_SMC_PULSE_Msk                     _UINT32_(0x7F7F7F7F)                                 /* (EBI_SMC_PULSE) Register Mask  */
+
 
 /* -------- EBI_SMC_CYCLE : (EBI Offset: 0x08) (R/W 32) SMC Cycle Register -------- */
 #define EBI_SMC_CYCLE_RESETVALUE              _UINT32_(0x30003)                                    /*  (EBI_SMC_CYCLE) SMC Cycle Register  Reset Value */
@@ -95,42 +131,6 @@
 #define EBI_SMC_MODE_Msk                      _UINT32_(0x311F1133)                                 /* (EBI_SMC_MODE) Register Mask  */
 
 
-/* -------- EBI_SMC_PULSE : (EBI Offset: 0x04) (R/W 32) SMC Pulse Register -------- */
-#define EBI_SMC_PULSE_RESETVALUE              _UINT32_(0x1010101)                                  /*  (EBI_SMC_PULSE) SMC Pulse Register  Reset Value */
-
-#define EBI_SMC_PULSE_NWE_PULSE_Pos           _UINT32_(0)                                          /* (EBI_SMC_PULSE) NWE Pulse Length Position */
-#define EBI_SMC_PULSE_NWE_PULSE_Msk           (_UINT32_(0x7F) << EBI_SMC_PULSE_NWE_PULSE_Pos)      /* (EBI_SMC_PULSE) NWE Pulse Length Mask */
-#define EBI_SMC_PULSE_NWE_PULSE(value)        (EBI_SMC_PULSE_NWE_PULSE_Msk & (_UINT32_(value) << EBI_SMC_PULSE_NWE_PULSE_Pos)) /* Assigment of value for NWE_PULSE in the EBI_SMC_PULSE register */
-#define EBI_SMC_PULSE_NCS_WR_PULSE_Pos        _UINT32_(8)                                          /* (EBI_SMC_PULSE) NCS Pulse Length in WRITE Access Position */
-#define EBI_SMC_PULSE_NCS_WR_PULSE_Msk        (_UINT32_(0x7F) << EBI_SMC_PULSE_NCS_WR_PULSE_Pos)   /* (EBI_SMC_PULSE) NCS Pulse Length in WRITE Access Mask */
-#define EBI_SMC_PULSE_NCS_WR_PULSE(value)     (EBI_SMC_PULSE_NCS_WR_PULSE_Msk & (_UINT32_(value) << EBI_SMC_PULSE_NCS_WR_PULSE_Pos)) /* Assigment of value for NCS_WR_PULSE in the EBI_SMC_PULSE register */
-#define EBI_SMC_PULSE_NRD_PULSE_Pos           _UINT32_(16)                                         /* (EBI_SMC_PULSE) NRD Pulse Length Position */
-#define EBI_SMC_PULSE_NRD_PULSE_Msk           (_UINT32_(0x7F) << EBI_SMC_PULSE_NRD_PULSE_Pos)      /* (EBI_SMC_PULSE) NRD Pulse Length Mask */
-#define EBI_SMC_PULSE_NRD_PULSE(value)        (EBI_SMC_PULSE_NRD_PULSE_Msk & (_UINT32_(value) << EBI_SMC_PULSE_NRD_PULSE_Pos)) /* Assigment of value for NRD_PULSE in the EBI_SMC_PULSE register */
-#define EBI_SMC_PULSE_NCS_RD_PULSE_Pos        _UINT32_(24)                                         /* (EBI_SMC_PULSE) NCS Pulse Length in READ Access Position */
-#define EBI_SMC_PULSE_NCS_RD_PULSE_Msk        (_UINT32_(0x7F) << EBI_SMC_PULSE_NCS_RD_PULSE_Pos)   /* (EBI_SMC_PULSE) NCS Pulse Length in READ Access Mask */
-#define EBI_SMC_PULSE_NCS_RD_PULSE(value)     (EBI_SMC_PULSE_NCS_RD_PULSE_Msk & (_UINT32_(value) << EBI_SMC_PULSE_NCS_RD_PULSE_Pos)) /* Assigment of value for NCS_RD_PULSE in the EBI_SMC_PULSE register */
-#define EBI_SMC_PULSE_Msk                     _UINT32_(0x7F7F7F7F)                                 /* (EBI_SMC_PULSE) Register Mask  */
-
-
-/* -------- EBI_SMC_SETUP : (EBI Offset: 0x00) (R/W 32) SMC Setup Register -------- */
-#define EBI_SMC_SETUP_RESETVALUE              _UINT32_(0x1010101)                                  /*  (EBI_SMC_SETUP) SMC Setup Register  Reset Value */
-
-#define EBI_SMC_SETUP_NWE_SETUP_Pos           _UINT32_(0)                                          /* (EBI_SMC_SETUP) NWE Setup Length Position */
-#define EBI_SMC_SETUP_NWE_SETUP_Msk           (_UINT32_(0x3F) << EBI_SMC_SETUP_NWE_SETUP_Pos)      /* (EBI_SMC_SETUP) NWE Setup Length Mask */
-#define EBI_SMC_SETUP_NWE_SETUP(value)        (EBI_SMC_SETUP_NWE_SETUP_Msk & (_UINT32_(value) << EBI_SMC_SETUP_NWE_SETUP_Pos)) /* Assigment of value for NWE_SETUP in the EBI_SMC_SETUP register */
-#define EBI_SMC_SETUP_NCS_WR_SETUP_Pos        _UINT32_(8)                                          /* (EBI_SMC_SETUP) NCS Setup Length in WRITE Access Position */
-#define EBI_SMC_SETUP_NCS_WR_SETUP_Msk        (_UINT32_(0x3F) << EBI_SMC_SETUP_NCS_WR_SETUP_Pos)   /* (EBI_SMC_SETUP) NCS Setup Length in WRITE Access Mask */
-#define EBI_SMC_SETUP_NCS_WR_SETUP(value)     (EBI_SMC_SETUP_NCS_WR_SETUP_Msk & (_UINT32_(value) << EBI_SMC_SETUP_NCS_WR_SETUP_Pos)) /* Assigment of value for NCS_WR_SETUP in the EBI_SMC_SETUP register */
-#define EBI_SMC_SETUP_NRD_SETUP_Pos           _UINT32_(16)                                         /* (EBI_SMC_SETUP) NRD Setup Length Position */
-#define EBI_SMC_SETUP_NRD_SETUP_Msk           (_UINT32_(0x3F) << EBI_SMC_SETUP_NRD_SETUP_Pos)      /* (EBI_SMC_SETUP) NRD Setup Length Mask */
-#define EBI_SMC_SETUP_NRD_SETUP(value)        (EBI_SMC_SETUP_NRD_SETUP_Msk & (_UINT32_(value) << EBI_SMC_SETUP_NRD_SETUP_Pos)) /* Assigment of value for NRD_SETUP in the EBI_SMC_SETUP register */
-#define EBI_SMC_SETUP_NCS_RD_SETUP_Pos        _UINT32_(24)                                         /* (EBI_SMC_SETUP) NCS Setup Length in READ Access Position */
-#define EBI_SMC_SETUP_NCS_RD_SETUP_Msk        (_UINT32_(0x3F) << EBI_SMC_SETUP_NCS_RD_SETUP_Pos)   /* (EBI_SMC_SETUP) NCS Setup Length in READ Access Mask */
-#define EBI_SMC_SETUP_NCS_RD_SETUP(value)     (EBI_SMC_SETUP_NCS_RD_SETUP_Msk & (_UINT32_(value) << EBI_SMC_SETUP_NCS_RD_SETUP_Pos)) /* Assigment of value for NCS_RD_SETUP in the EBI_SMC_SETUP register */
-#define EBI_SMC_SETUP_Msk                     _UINT32_(0x3F3F3F3F)                                 /* (EBI_SMC_SETUP) Register Mask  */
-
-
 /* -------- EBI_SMC_WPMR : (EBI Offset: 0xE4) (R/W 32) SMC Write Protection Mode Register -------- */
 #define EBI_SMC_WPMR_RESETVALUE               _UINT32_(0x00)                                       /*  (EBI_SMC_WPMR) SMC Write Protection Mode Register  Reset Value */
 
@@ -158,10 +158,10 @@
 
 
 /** \brief EBI register offsets definitions */
+#define EBI_SMC_SETUP_REG_OFST         _UINT32_(0x00)      /* (EBI_SMC_SETUP) SMC Setup Register Offset */
+#define EBI_SMC_PULSE_REG_OFST         _UINT32_(0x04)      /* (EBI_SMC_PULSE) SMC Pulse Register Offset */
 #define EBI_SMC_CYCLE_REG_OFST         _UINT32_(0x08)      /* (EBI_SMC_CYCLE) SMC Cycle Register Offset */
 #define EBI_SMC_MODE_REG_OFST          _UINT32_(0x0C)      /* (EBI_SMC_MODE) SMC Mode Register Offset */
-#define EBI_SMC_PULSE_REG_OFST         _UINT32_(0x04)      /* (EBI_SMC_PULSE) SMC Pulse Register Offset */
-#define EBI_SMC_SETUP_REG_OFST         _UINT32_(0x00)      /* (EBI_SMC_SETUP) SMC Setup Register Offset */
 #define EBI_SMC_WPMR_REG_OFST          _UINT32_(0xE4)      /* (EBI_SMC_WPMR) SMC Write Protection Mode Register Offset */
 #define EBI_SMC_WPSR_REG_OFST          _UINT32_(0xE8)      /* (EBI_SMC_WPSR) SMC Write Protection Status Register Offset */
 

@@ -1,7 +1,7 @@
 /*
  * Header file for PIC32CK2051GC01144
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* File generated from device description version 2022-11-28T06:54:19Z */
+/* File generated from device description version 2023-02-20T18:48:06Z */
 #ifndef _PIC32CK2051GC01144_H_
 #define _PIC32CK2051GC01144_H_
 
@@ -156,33 +156,33 @@ typedef enum IRQn
   SERCOM3_3_IRQn            =  66, /* 66  Serial Communication Interface (SERCOM3) */
   SERCOM3_4_IRQn            =  67, /* 67  Serial Communication Interface (SERCOM3) */
   TCC0_OTHER_IRQn           =  68, /* 68  Timer Counter for Control Applications (TCC0) */
-  TCC0_MC_0_IRQn            =  69, /* 69  Timer Counter for Control Applications (TCC0) */
-  TCC0_MC_1_IRQn            =  70, /* 70  Timer Counter for Control Applications (TCC0) */
-  TCC0_MC_2_IRQn            =  71, /* 71  Timer Counter for Control Applications (TCC0) */
-  TCC0_MC_3_IRQn            =  72, /* 72  Timer Counter for Control Applications (TCC0) */
-  TCC0_MC_4_IRQn            =  73, /* 73  Timer Counter for Control Applications (TCC0) */
-  TCC0_MC_5_IRQn            =  74, /* 74  Timer Counter for Control Applications (TCC0) */
+  TCC0_MC0_IRQn             =  69, /* 69  Timer Counter for Control Applications (TCC0) */
+  TCC0_MC1_IRQn             =  70, /* 70  Timer Counter for Control Applications (TCC0) */
+  TCC0_MC2_IRQn             =  71, /* 71  Timer Counter for Control Applications (TCC0) */
+  TCC0_MC3_IRQn             =  72, /* 72  Timer Counter for Control Applications (TCC0) */
+  TCC0_MC4_IRQn             =  73, /* 73  Timer Counter for Control Applications (TCC0) */
+  TCC0_MC5_IRQn             =  74, /* 74  Timer Counter for Control Applications (TCC0) */
   TCC1_OTHER_IRQn           =  75, /* 75  Timer Counter for Control Applications (TCC1) */
-  TCC1_MC_0_IRQn            =  76, /* 76  Timer Counter for Control Applications (TCC1) */
-  TCC1_MC_1_IRQn            =  77, /* 77  Timer Counter for Control Applications (TCC1) */
-  TCC1_MC_2_IRQn            =  78, /* 78  Timer Counter for Control Applications (TCC1) */
-  TCC1_MC_3_IRQn            =  79, /* 79  Timer Counter for Control Applications (TCC1) */
-  TCC1_MC_4_IRQn            =  80, /* 80  Timer Counter for Control Applications (TCC1) */
-  TCC1_MC_5_IRQn            =  81, /* 81  Timer Counter for Control Applications (TCC1) */
+  TCC1_MC0_IRQn             =  76, /* 76  Timer Counter for Control Applications (TCC1) */
+  TCC1_MC1_IRQn             =  77, /* 77  Timer Counter for Control Applications (TCC1) */
+  TCC1_MC2_IRQn             =  78, /* 78  Timer Counter for Control Applications (TCC1) */
+  TCC1_MC3_IRQn             =  79, /* 79  Timer Counter for Control Applications (TCC1) */
+  TCC1_MC4_IRQn             =  80, /* 80  Timer Counter for Control Applications (TCC1) */
+  TCC1_MC5_IRQn             =  81, /* 81  Timer Counter for Control Applications (TCC1) */
   TCC2_OTHER_IRQn           =  82, /* 82  Timer Counter for Control Applications (TCC2) */
-  TCC2_MC_0_IRQn            =  83, /* 83  Timer Counter for Control Applications (TCC2) */
-  TCC2_MC_1_IRQn            =  84, /* 84  Timer Counter for Control Applications (TCC2) */
-  TCC2_MC_2_IRQn            =  85, /* 85  Timer Counter for Control Applications (TCC2) */
-  TCC2_MC_3_IRQn            =  86, /* 86  Timer Counter for Control Applications (TCC2) */
-  TCC2_MC_4_IRQn            =  87, /* 87  Timer Counter for Control Applications (TCC2) */
-  TCC2_MC_5_IRQn            =  88, /* 88  Timer Counter for Control Applications (TCC2) */
+  TCC2_MC0_IRQn             =  83, /* 83  Timer Counter for Control Applications (TCC2) */
+  TCC2_MC1_IRQn             =  84, /* 84  Timer Counter for Control Applications (TCC2) */
+  TCC2_MC2_IRQn             =  85, /* 85  Timer Counter for Control Applications (TCC2) */
+  TCC2_MC3_IRQn             =  86, /* 86  Timer Counter for Control Applications (TCC2) */
+  TCC2_MC4_IRQn             =  87, /* 87  Timer Counter for Control Applications (TCC2) */
+  TCC2_MC5_IRQn             =  88, /* 88  Timer Counter for Control Applications (TCC2) */
   TCC3_OTHER_IRQn           =  89, /* 89  Timer Counter for Control Applications (TCC3) */
-  TCC3_MC_0_IRQn            =  90, /* 90  Timer Counter for Control Applications (TCC3) */
-  TCC3_MC_1_IRQn            =  91, /* 91  Timer Counter for Control Applications (TCC3) */
-  TCC3_MC_2_IRQn            =  92, /* 92  Timer Counter for Control Applications (TCC3) */
-  TCC3_MC_3_IRQn            =  93, /* 93  Timer Counter for Control Applications (TCC3) */
-  TCC3_MC_4_IRQn            =  94, /* 94  Timer Counter for Control Applications (TCC3) */
-  TCC3_MC_5_IRQn            =  95, /* 95  Timer Counter for Control Applications (TCC3) */
+  TCC3_MC0_IRQn             =  90, /* 90  Timer Counter for Control Applications (TCC3) */
+  TCC3_MC1_IRQn             =  91, /* 91  Timer Counter for Control Applications (TCC3) */
+  TCC3_MC2_IRQn             =  92, /* 92  Timer Counter for Control Applications (TCC3) */
+  TCC3_MC3_IRQn             =  93, /* 93  Timer Counter for Control Applications (TCC3) */
+  TCC3_MC4_IRQn             =  94, /* 94  Timer Counter for Control Applications (TCC3) */
+  TCC3_MC5_IRQn             =  95, /* 95  Timer Counter for Control Applications (TCC3) */
   SERCOM4_56_IRQn           =  96, /* 96  Serial Communication Interface (SERCOM4) */
   SERCOM4_0_IRQn            =  97, /* 97  Serial Communication Interface (SERCOM4) */
   SERCOM4_1_IRQn            =  98, /* 98  Serial Communication Interface (SERCOM4) */
@@ -208,23 +208,23 @@ typedef enum IRQn
   SERCOM7_3_IRQn            = 118, /* 118 Serial Communication Interface (SERCOM7) */
   SERCOM7_4_IRQn            = 119, /* 119 Serial Communication Interface (SERCOM7) */
   TCC4_OTHER_IRQn           = 120, /* 120 Timer Counter for Control Applications (TCC4) */
-  TCC4_MC_0_IRQn            = 121, /* 121 Timer Counter for Control Applications (TCC4) */
-  TCC4_MC_1_IRQn            = 122, /* 122 Timer Counter for Control Applications (TCC4) */
+  TCC4_MC0_IRQn             = 121, /* 121 Timer Counter for Control Applications (TCC4) */
+  TCC4_MC1_IRQn             = 122, /* 122 Timer Counter for Control Applications (TCC4) */
   TCC5_OTHER_IRQn           = 123, /* 123 Timer Counter for Control Applications (TCC5) */
-  TCC5_MC_0_IRQn            = 124, /* 124 Timer Counter for Control Applications (TCC5) */
-  TCC5_MC_1_IRQn            = 125, /* 125 Timer Counter for Control Applications (TCC5) */
+  TCC5_MC0_IRQn             = 124, /* 124 Timer Counter for Control Applications (TCC5) */
+  TCC5_MC1_IRQn             = 125, /* 125 Timer Counter for Control Applications (TCC5) */
   TCC6_OTHER_IRQn           = 126, /* 126 Timer Counter for Control Applications (TCC6) */
-  TCC6_MC_0_IRQn            = 127, /* 127 Timer Counter for Control Applications (TCC6) */
-  TCC6_MC_1_IRQn            = 128, /* 128 Timer Counter for Control Applications (TCC6) */
+  TCC6_MC0_IRQn             = 127, /* 127 Timer Counter for Control Applications (TCC6) */
+  TCC6_MC1_IRQn             = 128, /* 128 Timer Counter for Control Applications (TCC6) */
   TCC7_OTHER_IRQn           = 129, /* 129 Timer Counter for Control Applications (TCC7) */
-  TCC7_MC_0_IRQn            = 130, /* 130 Timer Counter for Control Applications (TCC7) */
-  TCC7_MC_1_IRQn            = 131, /* 131 Timer Counter for Control Applications (TCC7) */
-  ADC_0_IRQn                = 132, /* 132 ADC Controller (ADC)                */
-  ADC_1_IRQn                = 133, /* 133 ADC Controller (ADC)                */
-  ADC_2_IRQn                = 134, /* 134 ADC Controller (ADC)                */
-  ADC_3_IRQn                = 135, /* 135 ADC Controller (ADC)                */
-  ADC_4_IRQn                = 136, /* 136 ADC Controller (ADC)                */
-  ADC_5_IRQn                = 137, /* 137 ADC Controller (ADC)                */
+  TCC7_MC0_IRQn             = 130, /* 130 Timer Counter for Control Applications (TCC7) */
+  TCC7_MC1_IRQn             = 131, /* 131 Timer Counter for Control Applications (TCC7) */
+  ADC_GLOBAL_IRQn           = 132, /* 132 ADC Controller (ADC)                */
+  ADC_CORE1_IRQn            = 133, /* 133 ADC Controller (ADC)                */
+  Reserved2_IRQn            = 134, /* 134 ADC Controller (ADC)                */
+  Reserved3_IRQn            = 135, /* 135 ADC Controller (ADC)                */
+  Reserved4_IRQn            = 136, /* 136 ADC Controller (ADC)                */
+  Reserved5_IRQn            = 137, /* 137 ADC Controller (ADC)                */
   AC_IRQn                   = 138, /* 138 Analog Comparator Controller (AC)   */
   PTC_IRQn                  = 139, /* 139 Peripheral Touch Controller (PTC)   */
   SPI_IXS_IRQn              = 140, /* 140 Audio SPI with 8 channels compatibilty (SPI_IXS) */
@@ -242,8 +242,11 @@ typedef enum IRQn
   USB_TRCPT0_IRQn           = 152, /* 152 Full-Speed Universal Serial Bus (USB) */
   USB_TRCPT1_IRQn           = 153, /* 153 Full-Speed Universal Serial Bus (USB) */
   USBHS_IRQn                = 154, /* 154 USB High Speed (USBHS)              */
+  HSM_ERROR_IRQn            = 155, /* 155 HSM_ERROR (HSM)                     */
+  HSM_TXINT_IRQn            = 156, /* 156 HSM_TXINT (HSM)                     */
+  HSM_RXINT_IRQn            = 157, /* 157 HSM_RXINT (HSM)                     */
 
-  PERIPH_MAX_IRQn           = 154  /* Max peripheral ID */
+  PERIPH_MAX_IRQn           = 157  /* Max peripheral ID */
 } IRQn_Type;
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
@@ -339,33 +342,33 @@ typedef struct _DeviceVectors
   void* pfnSERCOM3_3_Handler;                    /*  66 Serial Communication Interface (SERCOM3) */
   void* pfnSERCOM3_4_Handler;                    /*  67 Serial Communication Interface (SERCOM3) */
   void* pfnTCC0_OTHER_Handler;                   /*  68 Timer Counter for Control Applications (TCC0) */
-  void* pfnTCC0_MC_0_Handler;                    /*  69 Timer Counter for Control Applications (TCC0) */
-  void* pfnTCC0_MC_1_Handler;                    /*  70 Timer Counter for Control Applications (TCC0) */
-  void* pfnTCC0_MC_2_Handler;                    /*  71 Timer Counter for Control Applications (TCC0) */
-  void* pfnTCC0_MC_3_Handler;                    /*  72 Timer Counter for Control Applications (TCC0) */
-  void* pfnTCC0_MC_4_Handler;                    /*  73 Timer Counter for Control Applications (TCC0) */
-  void* pfnTCC0_MC_5_Handler;                    /*  74 Timer Counter for Control Applications (TCC0) */
+  void* pfnTCC0_MC0_Handler;                     /*  69 Timer Counter for Control Applications (TCC0) */
+  void* pfnTCC0_MC1_Handler;                     /*  70 Timer Counter for Control Applications (TCC0) */
+  void* pfnTCC0_MC2_Handler;                     /*  71 Timer Counter for Control Applications (TCC0) */
+  void* pfnTCC0_MC3_Handler;                     /*  72 Timer Counter for Control Applications (TCC0) */
+  void* pfnTCC0_MC4_Handler;                     /*  73 Timer Counter for Control Applications (TCC0) */
+  void* pfnTCC0_MC5_Handler;                     /*  74 Timer Counter for Control Applications (TCC0) */
   void* pfnTCC1_OTHER_Handler;                   /*  75 Timer Counter for Control Applications (TCC1) */
-  void* pfnTCC1_MC_0_Handler;                    /*  76 Timer Counter for Control Applications (TCC1) */
-  void* pfnTCC1_MC_1_Handler;                    /*  77 Timer Counter for Control Applications (TCC1) */
-  void* pfnTCC1_MC_2_Handler;                    /*  78 Timer Counter for Control Applications (TCC1) */
-  void* pfnTCC1_MC_3_Handler;                    /*  79 Timer Counter for Control Applications (TCC1) */
-  void* pfnTCC1_MC_4_Handler;                    /*  80 Timer Counter for Control Applications (TCC1) */
-  void* pfnTCC1_MC_5_Handler;                    /*  81 Timer Counter for Control Applications (TCC1) */
+  void* pfnTCC1_MC0_Handler;                     /*  76 Timer Counter for Control Applications (TCC1) */
+  void* pfnTCC1_MC1_Handler;                     /*  77 Timer Counter for Control Applications (TCC1) */
+  void* pfnTCC1_MC2_Handler;                     /*  78 Timer Counter for Control Applications (TCC1) */
+  void* pfnTCC1_MC3_Handler;                     /*  79 Timer Counter for Control Applications (TCC1) */
+  void* pfnTCC1_MC4_Handler;                     /*  80 Timer Counter for Control Applications (TCC1) */
+  void* pfnTCC1_MC5_Handler;                     /*  81 Timer Counter for Control Applications (TCC1) */
   void* pfnTCC2_OTHER_Handler;                   /*  82 Timer Counter for Control Applications (TCC2) */
-  void* pfnTCC2_MC_0_Handler;                    /*  83 Timer Counter for Control Applications (TCC2) */
-  void* pfnTCC2_MC_1_Handler;                    /*  84 Timer Counter for Control Applications (TCC2) */
-  void* pfnTCC2_MC_2_Handler;                    /*  85 Timer Counter for Control Applications (TCC2) */
-  void* pfnTCC2_MC_3_Handler;                    /*  86 Timer Counter for Control Applications (TCC2) */
-  void* pfnTCC2_MC_4_Handler;                    /*  87 Timer Counter for Control Applications (TCC2) */
-  void* pfnTCC2_MC_5_Handler;                    /*  88 Timer Counter for Control Applications (TCC2) */
+  void* pfnTCC2_MC0_Handler;                     /*  83 Timer Counter for Control Applications (TCC2) */
+  void* pfnTCC2_MC1_Handler;                     /*  84 Timer Counter for Control Applications (TCC2) */
+  void* pfnTCC2_MC2_Handler;                     /*  85 Timer Counter for Control Applications (TCC2) */
+  void* pfnTCC2_MC3_Handler;                     /*  86 Timer Counter for Control Applications (TCC2) */
+  void* pfnTCC2_MC4_Handler;                     /*  87 Timer Counter for Control Applications (TCC2) */
+  void* pfnTCC2_MC5_Handler;                     /*  88 Timer Counter for Control Applications (TCC2) */
   void* pfnTCC3_OTHER_Handler;                   /*  89 Timer Counter for Control Applications (TCC3) */
-  void* pfnTCC3_MC_0_Handler;                    /*  90 Timer Counter for Control Applications (TCC3) */
-  void* pfnTCC3_MC_1_Handler;                    /*  91 Timer Counter for Control Applications (TCC3) */
-  void* pfnTCC3_MC_2_Handler;                    /*  92 Timer Counter for Control Applications (TCC3) */
-  void* pfnTCC3_MC_3_Handler;                    /*  93 Timer Counter for Control Applications (TCC3) */
-  void* pfnTCC3_MC_4_Handler;                    /*  94 Timer Counter for Control Applications (TCC3) */
-  void* pfnTCC3_MC_5_Handler;                    /*  95 Timer Counter for Control Applications (TCC3) */
+  void* pfnTCC3_MC0_Handler;                     /*  90 Timer Counter for Control Applications (TCC3) */
+  void* pfnTCC3_MC1_Handler;                     /*  91 Timer Counter for Control Applications (TCC3) */
+  void* pfnTCC3_MC2_Handler;                     /*  92 Timer Counter for Control Applications (TCC3) */
+  void* pfnTCC3_MC3_Handler;                     /*  93 Timer Counter for Control Applications (TCC3) */
+  void* pfnTCC3_MC4_Handler;                     /*  94 Timer Counter for Control Applications (TCC3) */
+  void* pfnTCC3_MC5_Handler;                     /*  95 Timer Counter for Control Applications (TCC3) */
   void* pfnSERCOM4_56_Handler;                   /*  96 Serial Communication Interface (SERCOM4) */
   void* pfnSERCOM4_0_Handler;                    /*  97 Serial Communication Interface (SERCOM4) */
   void* pfnSERCOM4_1_Handler;                    /*  98 Serial Communication Interface (SERCOM4) */
@@ -391,23 +394,23 @@ typedef struct _DeviceVectors
   void* pfnSERCOM7_3_Handler;                    /* 118 Serial Communication Interface (SERCOM7) */
   void* pfnSERCOM7_4_Handler;                    /* 119 Serial Communication Interface (SERCOM7) */
   void* pfnTCC4_OTHER_Handler;                   /* 120 Timer Counter for Control Applications (TCC4) */
-  void* pfnTCC4_MC_0_Handler;                    /* 121 Timer Counter for Control Applications (TCC4) */
-  void* pfnTCC4_MC_1_Handler;                    /* 122 Timer Counter for Control Applications (TCC4) */
+  void* pfnTCC4_MC0_Handler;                     /* 121 Timer Counter for Control Applications (TCC4) */
+  void* pfnTCC4_MC1_Handler;                     /* 122 Timer Counter for Control Applications (TCC4) */
   void* pfnTCC5_OTHER_Handler;                   /* 123 Timer Counter for Control Applications (TCC5) */
-  void* pfnTCC5_MC_0_Handler;                    /* 124 Timer Counter for Control Applications (TCC5) */
-  void* pfnTCC5_MC_1_Handler;                    /* 125 Timer Counter for Control Applications (TCC5) */
+  void* pfnTCC5_MC0_Handler;                     /* 124 Timer Counter for Control Applications (TCC5) */
+  void* pfnTCC5_MC1_Handler;                     /* 125 Timer Counter for Control Applications (TCC5) */
   void* pfnTCC6_OTHER_Handler;                   /* 126 Timer Counter for Control Applications (TCC6) */
-  void* pfnTCC6_MC_0_Handler;                    /* 127 Timer Counter for Control Applications (TCC6) */
-  void* pfnTCC6_MC_1_Handler;                    /* 128 Timer Counter for Control Applications (TCC6) */
+  void* pfnTCC6_MC0_Handler;                     /* 127 Timer Counter for Control Applications (TCC6) */
+  void* pfnTCC6_MC1_Handler;                     /* 128 Timer Counter for Control Applications (TCC6) */
   void* pfnTCC7_OTHER_Handler;                   /* 129 Timer Counter for Control Applications (TCC7) */
-  void* pfnTCC7_MC_0_Handler;                    /* 130 Timer Counter for Control Applications (TCC7) */
-  void* pfnTCC7_MC_1_Handler;                    /* 131 Timer Counter for Control Applications (TCC7) */
-  void* pfnADC_0_Handler;                        /* 132 ADC Controller (ADC) */
-  void* pfnADC_1_Handler;                        /* 133 ADC Controller (ADC) */
-  void* pfnADC_2_Handler;                        /* 134 ADC Controller (ADC) */
-  void* pfnADC_3_Handler;                        /* 135 ADC Controller (ADC) */
-  void* pfnADC_4_Handler;                        /* 136 ADC Controller (ADC) */
-  void* pfnADC_5_Handler;                        /* 137 ADC Controller (ADC) */
+  void* pfnTCC7_MC0_Handler;                     /* 130 Timer Counter for Control Applications (TCC7) */
+  void* pfnTCC7_MC1_Handler;                     /* 131 Timer Counter for Control Applications (TCC7) */
+  void* pfnADC_GLOBAL_Handler;                   /* 132 ADC Controller (ADC) */
+  void* pfnADC_CORE1_Handler;                    /* 133 ADC Controller (ADC) */
+  void* pfnReserved2_Handler;                    /* 134 ADC Controller (ADC) */
+  void* pfnReserved3_Handler;                    /* 135 ADC Controller (ADC) */
+  void* pfnReserved4_Handler;                    /* 136 ADC Controller (ADC) */
+  void* pfnReserved5_Handler;                    /* 137 ADC Controller (ADC) */
   void* pfnAC_Handler;                           /* 138 Analog Comparator Controller (AC) */
   void* pfnPTC_Handler;                          /* 139 Peripheral Touch Controller (PTC) */
   void* pfnSPI_IXS_Handler;                      /* 140 Audio SPI with 8 channels compatibilty (SPI_IXS) */
@@ -425,6 +428,9 @@ typedef struct _DeviceVectors
   void* pfnUSB_TRCPT0_Handler;                   /* 152 Full-Speed Universal Serial Bus (USB) */
   void* pfnUSB_TRCPT1_Handler;                   /* 153 Full-Speed Universal Serial Bus (USB) */
   void* pfnUSBHS_Handler;                        /* 154 USB High Speed (USBHS) */
+  void* pvReserved155;
+  void* pvReserved156;
+  void* pvReserved157;
 } DeviceVectors;
 
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
@@ -516,33 +522,33 @@ void SERCOM3_2_Handler             ( void );
 void SERCOM3_3_Handler             ( void );
 void SERCOM3_4_Handler             ( void );
 void TCC0_OTHER_Handler            ( void );
-void TCC0_MC_0_Handler             ( void );
-void TCC0_MC_1_Handler             ( void );
-void TCC0_MC_2_Handler             ( void );
-void TCC0_MC_3_Handler             ( void );
-void TCC0_MC_4_Handler             ( void );
-void TCC0_MC_5_Handler             ( void );
+void TCC0_MC0_Handler              ( void );
+void TCC0_MC1_Handler              ( void );
+void TCC0_MC2_Handler              ( void );
+void TCC0_MC3_Handler              ( void );
+void TCC0_MC4_Handler              ( void );
+void TCC0_MC5_Handler              ( void );
 void TCC1_OTHER_Handler            ( void );
-void TCC1_MC_0_Handler             ( void );
-void TCC1_MC_1_Handler             ( void );
-void TCC1_MC_2_Handler             ( void );
-void TCC1_MC_3_Handler             ( void );
-void TCC1_MC_4_Handler             ( void );
-void TCC1_MC_5_Handler             ( void );
+void TCC1_MC0_Handler              ( void );
+void TCC1_MC1_Handler              ( void );
+void TCC1_MC2_Handler              ( void );
+void TCC1_MC3_Handler              ( void );
+void TCC1_MC4_Handler              ( void );
+void TCC1_MC5_Handler              ( void );
 void TCC2_OTHER_Handler            ( void );
-void TCC2_MC_0_Handler             ( void );
-void TCC2_MC_1_Handler             ( void );
-void TCC2_MC_2_Handler             ( void );
-void TCC2_MC_3_Handler             ( void );
-void TCC2_MC_4_Handler             ( void );
-void TCC2_MC_5_Handler             ( void );
+void TCC2_MC0_Handler              ( void );
+void TCC2_MC1_Handler              ( void );
+void TCC2_MC2_Handler              ( void );
+void TCC2_MC3_Handler              ( void );
+void TCC2_MC4_Handler              ( void );
+void TCC2_MC5_Handler              ( void );
 void TCC3_OTHER_Handler            ( void );
-void TCC3_MC_0_Handler             ( void );
-void TCC3_MC_1_Handler             ( void );
-void TCC3_MC_2_Handler             ( void );
-void TCC3_MC_3_Handler             ( void );
-void TCC3_MC_4_Handler             ( void );
-void TCC3_MC_5_Handler             ( void );
+void TCC3_MC0_Handler              ( void );
+void TCC3_MC1_Handler              ( void );
+void TCC3_MC2_Handler              ( void );
+void TCC3_MC3_Handler              ( void );
+void TCC3_MC4_Handler              ( void );
+void TCC3_MC5_Handler              ( void );
 void SERCOM4_56_Handler            ( void );
 void SERCOM4_0_Handler             ( void );
 void SERCOM4_1_Handler             ( void );
@@ -568,23 +574,23 @@ void SERCOM7_2_Handler             ( void );
 void SERCOM7_3_Handler             ( void );
 void SERCOM7_4_Handler             ( void );
 void TCC4_OTHER_Handler            ( void );
-void TCC4_MC_0_Handler             ( void );
-void TCC4_MC_1_Handler             ( void );
+void TCC4_MC0_Handler              ( void );
+void TCC4_MC1_Handler              ( void );
 void TCC5_OTHER_Handler            ( void );
-void TCC5_MC_0_Handler             ( void );
-void TCC5_MC_1_Handler             ( void );
+void TCC5_MC0_Handler              ( void );
+void TCC5_MC1_Handler              ( void );
 void TCC6_OTHER_Handler            ( void );
-void TCC6_MC_0_Handler             ( void );
-void TCC6_MC_1_Handler             ( void );
+void TCC6_MC0_Handler              ( void );
+void TCC6_MC1_Handler              ( void );
 void TCC7_OTHER_Handler            ( void );
-void TCC7_MC_0_Handler             ( void );
-void TCC7_MC_1_Handler             ( void );
-void ADC_0_Handler                 ( void );
-void ADC_1_Handler                 ( void );
-void ADC_2_Handler                 ( void );
-void ADC_3_Handler                 ( void );
-void ADC_4_Handler                 ( void );
-void ADC_5_Handler                 ( void );
+void TCC7_MC0_Handler              ( void );
+void TCC7_MC1_Handler              ( void );
+void ADC_GLOBAL_Handler            ( void );
+void ADC_CORE1_Handler             ( void );
+void Reserved2_Handler             ( void );
+void Reserved3_Handler             ( void );
+void Reserved4_Handler             ( void );
+void Reserved5_Handler             ( void );
 void AC_Handler                    ( void );
 void PTC_Handler                   ( void );
 void SPI_IXS_Handler               ( void );
@@ -1093,59 +1099,59 @@ void USBHS_Handler                 ( void );
 #define EVENT_ID_GEN_TCC0_OVF                            50 /* ID for TCC0 event generator OVF */
 #define EVENT_ID_GEN_TCC0_TRG                            51 /* ID for TCC0 event generator TRG */
 #define EVENT_ID_GEN_TCC0_CNT                            52 /* ID for TCC0 event generator CNT */
-#define EVENT_ID_GEN_TCC0_MCX_0                          53 /* ID for TCC0 event generator MCX_0 */
-#define EVENT_ID_GEN_TCC0_MCX_1                          54 /* ID for TCC0 event generator MCX_1 */
-#define EVENT_ID_GEN_TCC0_MCX_2                          55 /* ID for TCC0 event generator MCX_2 */
-#define EVENT_ID_GEN_TCC0_MCX_3                          56 /* ID for TCC0 event generator MCX_3 */
-#define EVENT_ID_GEN_TCC0_MCX_4                          57 /* ID for TCC0 event generator MCX_4 */
-#define EVENT_ID_GEN_TCC0_MCX_5                          58 /* ID for TCC0 event generator MCX_5 */
+#define EVENT_ID_GEN_TCC0_MC_0                           53 /* ID for TCC0 event generator MC_0 */
+#define EVENT_ID_GEN_TCC0_MC_1                           54 /* ID for TCC0 event generator MC_1 */
+#define EVENT_ID_GEN_TCC0_MC_2                           55 /* ID for TCC0 event generator MC_2 */
+#define EVENT_ID_GEN_TCC0_MC_3                           56 /* ID for TCC0 event generator MC_3 */
+#define EVENT_ID_GEN_TCC0_MC_4                           57 /* ID for TCC0 event generator MC_4 */
+#define EVENT_ID_GEN_TCC0_MC_5                           58 /* ID for TCC0 event generator MC_5 */
 #define EVENT_ID_GEN_TCC1_OVF                            59 /* ID for TCC1 event generator OVF */
 #define EVENT_ID_GEN_TCC1_TRG                            60 /* ID for TCC1 event generator TRG */
 #define EVENT_ID_GEN_TCC1_CNT                            61 /* ID for TCC1 event generator CNT */
-#define EVENT_ID_GEN_TCC1_MCX_0                          62 /* ID for TCC1 event generator MCX_0 */
-#define EVENT_ID_GEN_TCC1_MCX_1                          63 /* ID for TCC1 event generator MCX_1 */
-#define EVENT_ID_GEN_TCC1_MCX_2                          64 /* ID for TCC1 event generator MCX_2 */
-#define EVENT_ID_GEN_TCC1_MCX_3                          65 /* ID for TCC1 event generator MCX_3 */
-#define EVENT_ID_GEN_TCC1_MCX_4                          66 /* ID for TCC1 event generator MCX_4 */
-#define EVENT_ID_GEN_TCC1_MCX_5                          67 /* ID for TCC1 event generator MCX_5 */
+#define EVENT_ID_GEN_TCC1_MC_0                           62 /* ID for TCC1 event generator MC_0 */
+#define EVENT_ID_GEN_TCC1_MC_1                           63 /* ID for TCC1 event generator MC_1 */
+#define EVENT_ID_GEN_TCC1_MC_2                           64 /* ID for TCC1 event generator MC_2 */
+#define EVENT_ID_GEN_TCC1_MC_3                           65 /* ID for TCC1 event generator MC_3 */
+#define EVENT_ID_GEN_TCC1_MC_4                           66 /* ID for TCC1 event generator MC_4 */
+#define EVENT_ID_GEN_TCC1_MC_5                           67 /* ID for TCC1 event generator MC_5 */
 #define EVENT_ID_GEN_TCC2_OVF                            68 /* ID for TCC2 event generator OVF */
 #define EVENT_ID_GEN_TCC2_TRG                            69 /* ID for TCC2 event generator TRG */
 #define EVENT_ID_GEN_TCC2_CNT                            70 /* ID for TCC2 event generator CNT */
-#define EVENT_ID_GEN_TCC2_MCX_0                          71 /* ID for TCC2 event generator MCX_0 */
-#define EVENT_ID_GEN_TCC2_MCX_1                          72 /* ID for TCC2 event generator MCX_1 */
-#define EVENT_ID_GEN_TCC2_MCX_2                          73 /* ID for TCC2 event generator MCX_2 */
-#define EVENT_ID_GEN_TCC2_MCX_3                          74 /* ID for TCC2 event generator MCX_3 */
-#define EVENT_ID_GEN_TCC2_MCX_4                          75 /* ID for TCC2 event generator MCX_4 */
-#define EVENT_ID_GEN_TCC2_MCX_5                          76 /* ID for TCC2 event generator MCX_5 */
+#define EVENT_ID_GEN_TCC2_MC_0                           71 /* ID for TCC2 event generator MC_0 */
+#define EVENT_ID_GEN_TCC2_MC_1                           72 /* ID for TCC2 event generator MC_1 */
+#define EVENT_ID_GEN_TCC2_MC_2                           73 /* ID for TCC2 event generator MC_2 */
+#define EVENT_ID_GEN_TCC2_MC_3                           74 /* ID for TCC2 event generator MC_3 */
+#define EVENT_ID_GEN_TCC2_MC_4                           75 /* ID for TCC2 event generator MC_4 */
+#define EVENT_ID_GEN_TCC2_MC_5                           76 /* ID for TCC2 event generator MC_5 */
 #define EVENT_ID_GEN_TCC3_OVF                            77 /* ID for TCC3 event generator OVF */
 #define EVENT_ID_GEN_TCC3_TRG                            78 /* ID for TCC3 event generator TRG */
 #define EVENT_ID_GEN_TCC3_CNT                            79 /* ID for TCC3 event generator CNT */
-#define EVENT_ID_GEN_TCC3_MCX_0                          80 /* ID for TCC3 event generator MCX_0 */
-#define EVENT_ID_GEN_TCC3_MCX_1                          81 /* ID for TCC3 event generator MCX_1 */
-#define EVENT_ID_GEN_TCC3_MCX_2                          82 /* ID for TCC3 event generator MCX_2 */
-#define EVENT_ID_GEN_TCC3_MCX_3                          83 /* ID for TCC3 event generator MCX_3 */
-#define EVENT_ID_GEN_TCC3_MCX_4                          84 /* ID for TCC3 event generator MCX_4 */
-#define EVENT_ID_GEN_TCC3_MCX_5                          85 /* ID for TCC3 event generator MCX_5 */
+#define EVENT_ID_GEN_TCC3_MC_0                           80 /* ID for TCC3 event generator MC_0 */
+#define EVENT_ID_GEN_TCC3_MC_1                           81 /* ID for TCC3 event generator MC_1 */
+#define EVENT_ID_GEN_TCC3_MC_2                           82 /* ID for TCC3 event generator MC_2 */
+#define EVENT_ID_GEN_TCC3_MC_3                           83 /* ID for TCC3 event generator MC_3 */
+#define EVENT_ID_GEN_TCC3_MC_4                           84 /* ID for TCC3 event generator MC_4 */
+#define EVENT_ID_GEN_TCC3_MC_5                           85 /* ID for TCC3 event generator MC_5 */
 #define EVENT_ID_GEN_TCC4_OVF                            86 /* ID for TCC4 event generator OVF */
 #define EVENT_ID_GEN_TCC4_TRG                            87 /* ID for TCC4 event generator TRG */
 #define EVENT_ID_GEN_TCC4_CNT                            88 /* ID for TCC4 event generator CNT */
-#define EVENT_ID_GEN_TCC4_MCX_0                          89 /* ID for TCC4 event generator MCX_0 */
-#define EVENT_ID_GEN_TCC4_MCX_1                          90 /* ID for TCC4 event generator MCX_1 */
+#define EVENT_ID_GEN_TCC4_MC_0                           89 /* ID for TCC4 event generator MC_0 */
+#define EVENT_ID_GEN_TCC4_MC_1                           90 /* ID for TCC4 event generator MC_1 */
 #define EVENT_ID_GEN_TCC5_OVF                            91 /* ID for TCC5 event generator OVF */
 #define EVENT_ID_GEN_TCC5_TRG                            92 /* ID for TCC5 event generator TRG */
 #define EVENT_ID_GEN_TCC5_CNT                            93 /* ID for TCC5 event generator CNT */
-#define EVENT_ID_GEN_TCC5_MCX_0                          94 /* ID for TCC5 event generator MCX_0 */
-#define EVENT_ID_GEN_TCC5_MCX_1                          95 /* ID for TCC5 event generator MCX_1 */
+#define EVENT_ID_GEN_TCC5_MC_0                           94 /* ID for TCC5 event generator MC_0 */
+#define EVENT_ID_GEN_TCC5_MC_1                           95 /* ID for TCC5 event generator MC_1 */
 #define EVENT_ID_GEN_TCC6_OVF                            96 /* ID for TCC6 event generator OVF */
 #define EVENT_ID_GEN_TCC6_TRG                            97 /* ID for TCC6 event generator TRG */
 #define EVENT_ID_GEN_TCC6_CNT                            98 /* ID for TCC6 event generator CNT */
-#define EVENT_ID_GEN_TCC6_MCX_0                          99 /* ID for TCC6 event generator MCX_0 */
-#define EVENT_ID_GEN_TCC6_MCX_1                         100 /* ID for TCC6 event generator MCX_1 */
+#define EVENT_ID_GEN_TCC6_MC_0                           99 /* ID for TCC6 event generator MC_0 */
+#define EVENT_ID_GEN_TCC6_MC_1                          100 /* ID for TCC6 event generator MC_1 */
 #define EVENT_ID_GEN_TCC7_OVF                           101 /* ID for TCC7 event generator OVF */
 #define EVENT_ID_GEN_TCC7_TRG                           102 /* ID for TCC7 event generator TRG */
 #define EVENT_ID_GEN_TCC7_CNT                           103 /* ID for TCC7 event generator CNT */
-#define EVENT_ID_GEN_TCC7_MCX_0                         104 /* ID for TCC7 event generator MCX_0 */
-#define EVENT_ID_GEN_TCC7_MCX_1                         105 /* ID for TCC7 event generator MCX_1 */
+#define EVENT_ID_GEN_TCC7_MC_0                          104 /* ID for TCC7 event generator MC_0 */
+#define EVENT_ID_GEN_TCC7_MC_1                          105 /* ID for TCC7 event generator MC_1 */
 #define EVENT_ID_GEN_ADC_CHRDYC_0                       106 /* ID for ADC event generator CHRDYC_0 */
 #define EVENT_ID_GEN_ADC_CMP_0                          107 /* ID for ADC event generator CMP_0 */
 #define EVENT_ID_GEN_AC_COMP_0                          108 /* ID for AC event generator COMP_0 */
@@ -1158,8 +1164,8 @@ void USBHS_Handler                 ( void );
 #define EVENT_ID_GEN_CCL_LUTOUT_3                       117 /* ID for CCL event generator LUTOUT_3 */
 #define EVENT_ID_GEN_PDEC_DIR                           118 /* ID for PDEC event generator DIR */
 #define EVENT_ID_GEN_PDEC_ERR                           119 /* ID for PDEC event generator ERR */
-#define EVENT_ID_GEN_PDEC_MCX_0                         120 /* ID for PDEC event generator MCX_0 */
-#define EVENT_ID_GEN_PDEC_MCX_1                         121 /* ID for PDEC event generator MCX_1 */
+#define EVENT_ID_GEN_PDEC_MC_0                          120 /* ID for PDEC event generator MC_0 */
+#define EVENT_ID_GEN_PDEC_MC_1                          121 /* ID for PDEC event generator MC_1 */
 #define EVENT_ID_GEN_PDEC_OVF                           122 /* ID for PDEC event generator OVF */
 #define EVENT_ID_GEN_PDEC_VLC                           123 /* ID for PDEC event generator VLC */
 #define EVENT_ID_GEN_ETH_TSU_CMP                        124 /* ID for ETH event generator TSU_CMP */
