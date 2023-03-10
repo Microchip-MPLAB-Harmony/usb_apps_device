@@ -1,7 +1,7 @@
 /*
  * Component description for IDAU
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2022-11-28T06:54:19Z */
+/* file generated from device description version 2023-02-20T18:48:06Z */
 #ifndef _PIC32CKGC01_IDAU_COMPONENT_H_
 #define _PIC32CKGC01_IDAU_COMPONENT_H_
 
@@ -242,7 +242,7 @@ typedef struct
   __I   uint32_t                       IDAU_RSTATUSC;      /**< Offset: 0x0C (R/   32) Region Status C */
 } idau_regions_registers_t;
 
-#define IDAU_REGIONS_NUMBER 256
+#define IDAU_REGIONS_NUMBER 24
 
 /** \brief IDAU register API structure */
 typedef struct

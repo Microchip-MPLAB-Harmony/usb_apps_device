@@ -1,7 +1,7 @@
 /*
  * Component description for OSC32KCTRL
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,61 +20,13 @@
  *
  */
 
-/* file generated from device description version 2022-11-28T06:54:19Z */
+/* file generated from device description version 2023-02-20T18:48:06Z */
 #ifndef _PIC32CKGC01_OSC32KCTRL_COMPONENT_H_
 #define _PIC32CKGC01_OSC32KCTRL_COMPONENT_H_
 
 /* ************************************************************************** */
 /*   SOFTWARE API DEFINITION FOR OSC32KCTRL                                   */
 /* ************************************************************************** */
-
-/* -------- OSC32KCTRL_CFDCTRL : (OSC32KCTRL Offset: 0x14) (R/W 32) Clock Failure Detector Control -------- */
-#define OSC32KCTRL_CFDCTRL_RESETVALUE         _UINT32_(0x00)                                       /*  (OSC32KCTRL_CFDCTRL) Clock Failure Detector Control  Reset Value */
-
-#define OSC32KCTRL_CFDCTRL_CFDEN_Pos          _UINT32_(0)                                          /* (OSC32KCTRL_CFDCTRL) Clock Failure Detector Enable Position */
-#define OSC32KCTRL_CFDCTRL_CFDEN_Msk          (_UINT32_(0x1) << OSC32KCTRL_CFDCTRL_CFDEN_Pos)      /* (OSC32KCTRL_CFDCTRL) Clock Failure Detector Enable Mask */
-#define OSC32KCTRL_CFDCTRL_CFDEN(value)       (OSC32KCTRL_CFDCTRL_CFDEN_Msk & (_UINT32_(value) << OSC32KCTRL_CFDCTRL_CFDEN_Pos)) /* Assigment of value for CFDEN in the OSC32KCTRL_CFDCTRL register */
-#define OSC32KCTRL_CFDCTRL_SWBACK_Pos         _UINT32_(1)                                          /* (OSC32KCTRL_CFDCTRL) Clock Switch Back Position */
-#define OSC32KCTRL_CFDCTRL_SWBACK_Msk         (_UINT32_(0x1) << OSC32KCTRL_CFDCTRL_SWBACK_Pos)     /* (OSC32KCTRL_CFDCTRL) Clock Switch Back Mask */
-#define OSC32KCTRL_CFDCTRL_SWBACK(value)      (OSC32KCTRL_CFDCTRL_SWBACK_Msk & (_UINT32_(value) << OSC32KCTRL_CFDCTRL_SWBACK_Pos)) /* Assigment of value for SWBACK in the OSC32KCTRL_CFDCTRL register */
-#define OSC32KCTRL_CFDCTRL_CFDPRESC_Pos       _UINT32_(2)                                          /* (OSC32KCTRL_CFDCTRL) Clock Failure Detector Prescaler Position */
-#define OSC32KCTRL_CFDCTRL_CFDPRESC_Msk       (_UINT32_(0x1) << OSC32KCTRL_CFDCTRL_CFDPRESC_Pos)   /* (OSC32KCTRL_CFDCTRL) Clock Failure Detector Prescaler Mask */
-#define OSC32KCTRL_CFDCTRL_CFDPRESC(value)    (OSC32KCTRL_CFDCTRL_CFDPRESC_Msk & (_UINT32_(value) << OSC32KCTRL_CFDCTRL_CFDPRESC_Pos)) /* Assigment of value for CFDPRESC in the OSC32KCTRL_CFDCTRL register */
-#define OSC32KCTRL_CFDCTRL_Msk                _UINT32_(0x00000007)                                 /* (OSC32KCTRL_CFDCTRL) Register Mask  */
-
-
-/* -------- OSC32KCTRL_CLKSELCTRL : (OSC32KCTRL Offset: 0x10) (R/W 32) Clock Selection Control -------- */
-#define OSC32KCTRL_CLKSELCTRL_RESETVALUE      _UINT32_(0x00)                                       /*  (OSC32KCTRL_CLKSELCTRL) Clock Selection Control  Reset Value */
-
-#define OSC32KCTRL_CLKSELCTRL_RTCSEL_Pos      _UINT32_(0)                                          /* (OSC32KCTRL_CLKSELCTRL) RTC Clock Selection Position */
-#define OSC32KCTRL_CLKSELCTRL_RTCSEL_Msk      (_UINT32_(0x3) << OSC32KCTRL_CLKSELCTRL_RTCSEL_Pos)  /* (OSC32KCTRL_CLKSELCTRL) RTC Clock Selection Mask */
-#define OSC32KCTRL_CLKSELCTRL_RTCSEL(value)   (OSC32KCTRL_CLKSELCTRL_RTCSEL_Msk & (_UINT32_(value) << OSC32KCTRL_CLKSELCTRL_RTCSEL_Pos)) /* Assigment of value for RTCSEL in the OSC32KCTRL_CLKSELCTRL register */
-#define   OSC32KCTRL_CLKSELCTRL_RTCSEL_ULP32K_Val _UINT32_(0x0)                                        /* (OSC32KCTRL_CLKSELCTRL) 32.768kHz from 32kHz internal ULP oscillator  */
-#define   OSC32KCTRL_CLKSELCTRL_RTCSEL_ULP1K_Val _UINT32_(0x1)                                        /* (OSC32KCTRL_CLKSELCTRL) 1.024kHz from 32kHz internal ULP oscillator  */
-#define   OSC32KCTRL_CLKSELCTRL_RTCSEL_XOSC32K_Val _UINT32_(0x2)                                        /* (OSC32KCTRL_CLKSELCTRL) 32.768kHz from 32.768kHz external crystal oscillator  */
-#define   OSC32KCTRL_CLKSELCTRL_RTCSEL_XOSC1K_Val _UINT32_(0x3)                                        /* (OSC32KCTRL_CLKSELCTRL) 1.024kHz from 32.768kHz internal oscillator  */
-#define OSC32KCTRL_CLKSELCTRL_RTCSEL_ULP32K   (OSC32KCTRL_CLKSELCTRL_RTCSEL_ULP32K_Val << OSC32KCTRL_CLKSELCTRL_RTCSEL_Pos) /* (OSC32KCTRL_CLKSELCTRL) 32.768kHz from 32kHz internal ULP oscillator Position  */
-#define OSC32KCTRL_CLKSELCTRL_RTCSEL_ULP1K    (OSC32KCTRL_CLKSELCTRL_RTCSEL_ULP1K_Val << OSC32KCTRL_CLKSELCTRL_RTCSEL_Pos) /* (OSC32KCTRL_CLKSELCTRL) 1.024kHz from 32kHz internal ULP oscillator Position  */
-#define OSC32KCTRL_CLKSELCTRL_RTCSEL_XOSC32K  (OSC32KCTRL_CLKSELCTRL_RTCSEL_XOSC32K_Val << OSC32KCTRL_CLKSELCTRL_RTCSEL_Pos) /* (OSC32KCTRL_CLKSELCTRL) 32.768kHz from 32.768kHz external crystal oscillator Position  */
-#define OSC32KCTRL_CLKSELCTRL_RTCSEL_XOSC1K   (OSC32KCTRL_CLKSELCTRL_RTCSEL_XOSC1K_Val << OSC32KCTRL_CLKSELCTRL_RTCSEL_Pos) /* (OSC32KCTRL_CLKSELCTRL) 1.024kHz from 32.768kHz internal oscillator Position  */
-#define OSC32KCTRL_CLKSELCTRL_HSMSEL_Pos      _UINT32_(4)                                          /* (OSC32KCTRL_CLKSELCTRL) HSM Clock Selection Position */
-#define OSC32KCTRL_CLKSELCTRL_HSMSEL_Msk      (_UINT32_(0x3) << OSC32KCTRL_CLKSELCTRL_HSMSEL_Pos)  /* (OSC32KCTRL_CLKSELCTRL) HSM Clock Selection Mask */
-#define OSC32KCTRL_CLKSELCTRL_HSMSEL(value)   (OSC32KCTRL_CLKSELCTRL_HSMSEL_Msk & (_UINT32_(value) << OSC32KCTRL_CLKSELCTRL_HSMSEL_Pos)) /* Assigment of value for HSMSEL in the OSC32KCTRL_CLKSELCTRL register */
-#define   OSC32KCTRL_CLKSELCTRL_HSMSEL_ULP32K_Val _UINT32_(0x0)                                        /* (OSC32KCTRL_CLKSELCTRL) 32.768kHz from 32kHz internal ULP oscillator  */
-#define   OSC32KCTRL_CLKSELCTRL_HSMSEL_XOSC32K_Val _UINT32_(0x2)                                        /* (OSC32KCTRL_CLKSELCTRL) 32.768kHz from 32.768kHz external crystal oscillator  */
-#define OSC32KCTRL_CLKSELCTRL_HSMSEL_ULP32K   (OSC32KCTRL_CLKSELCTRL_HSMSEL_ULP32K_Val << OSC32KCTRL_CLKSELCTRL_HSMSEL_Pos) /* (OSC32KCTRL_CLKSELCTRL) 32.768kHz from 32kHz internal ULP oscillator Position  */
-#define OSC32KCTRL_CLKSELCTRL_HSMSEL_XOSC32K  (OSC32KCTRL_CLKSELCTRL_HSMSEL_XOSC32K_Val << OSC32KCTRL_CLKSELCTRL_HSMSEL_Pos) /* (OSC32KCTRL_CLKSELCTRL) 32.768kHz from 32.768kHz external crystal oscillator Position  */
-#define OSC32KCTRL_CLKSELCTRL_Msk             _UINT32_(0x00000033)                                 /* (OSC32KCTRL_CLKSELCTRL) Register Mask  */
-
-
-/* -------- OSC32KCTRL_EVCTRL : (OSC32KCTRL Offset: 0x18) (R/W 32) Event Control -------- */
-#define OSC32KCTRL_EVCTRL_RESETVALUE          _UINT32_(0x00)                                       /*  (OSC32KCTRL_EVCTRL) Event Control  Reset Value */
-
-#define OSC32KCTRL_EVCTRL_CFDEO_Pos           _UINT32_(0)                                          /* (OSC32KCTRL_EVCTRL) Clock Failure Detector Event Output Enable Position */
-#define OSC32KCTRL_EVCTRL_CFDEO_Msk           (_UINT32_(0x1) << OSC32KCTRL_EVCTRL_CFDEO_Pos)       /* (OSC32KCTRL_EVCTRL) Clock Failure Detector Event Output Enable Mask */
-#define OSC32KCTRL_EVCTRL_CFDEO(value)        (OSC32KCTRL_EVCTRL_CFDEO_Msk & (_UINT32_(value) << OSC32KCTRL_EVCTRL_CFDEO_Pos)) /* Assigment of value for CFDEO in the OSC32KCTRL_EVCTRL register */
-#define OSC32KCTRL_EVCTRL_Msk                 _UINT32_(0x00000001)                                 /* (OSC32KCTRL_EVCTRL) Register Mask  */
-
 
 /* -------- OSC32KCTRL_INTENCLR : (OSC32KCTRL Offset: 0x00) (R/W 32) Interrupt Enable Clear -------- */
 #define OSC32KCTRL_INTENCLR_RESETVALUE        _UINT32_(0x00)                                       /*  (OSC32KCTRL_INTENCLR) Interrupt Enable Clear  Reset Value */
@@ -125,6 +77,54 @@
 #define OSC32KCTRL_STATUS_XOSC32KSW_Msk       (_UINT32_(0x1) << OSC32KCTRL_STATUS_XOSC32KSW_Pos)   /* (OSC32KCTRL_STATUS) XOSC32K Clock switch Mask */
 #define OSC32KCTRL_STATUS_XOSC32KSW(value)    (OSC32KCTRL_STATUS_XOSC32KSW_Msk & (_UINT32_(value) << OSC32KCTRL_STATUS_XOSC32KSW_Pos)) /* Assigment of value for XOSC32KSW in the OSC32KCTRL_STATUS register */
 #define OSC32KCTRL_STATUS_Msk                 _UINT32_(0x0000000D)                                 /* (OSC32KCTRL_STATUS) Register Mask  */
+
+
+/* -------- OSC32KCTRL_CLKSELCTRL : (OSC32KCTRL Offset: 0x10) (R/W 32) Clock Selection Control -------- */
+#define OSC32KCTRL_CLKSELCTRL_RESETVALUE      _UINT32_(0x00)                                       /*  (OSC32KCTRL_CLKSELCTRL) Clock Selection Control  Reset Value */
+
+#define OSC32KCTRL_CLKSELCTRL_RTCSEL_Pos      _UINT32_(0)                                          /* (OSC32KCTRL_CLKSELCTRL) RTC Clock Selection Position */
+#define OSC32KCTRL_CLKSELCTRL_RTCSEL_Msk      (_UINT32_(0x3) << OSC32KCTRL_CLKSELCTRL_RTCSEL_Pos)  /* (OSC32KCTRL_CLKSELCTRL) RTC Clock Selection Mask */
+#define OSC32KCTRL_CLKSELCTRL_RTCSEL(value)   (OSC32KCTRL_CLKSELCTRL_RTCSEL_Msk & (_UINT32_(value) << OSC32KCTRL_CLKSELCTRL_RTCSEL_Pos)) /* Assigment of value for RTCSEL in the OSC32KCTRL_CLKSELCTRL register */
+#define   OSC32KCTRL_CLKSELCTRL_RTCSEL_ULP32K_Val _UINT32_(0x0)                                        /* (OSC32KCTRL_CLKSELCTRL) 32.768kHz from 32kHz internal ULP oscillator  */
+#define   OSC32KCTRL_CLKSELCTRL_RTCSEL_ULP1K_Val _UINT32_(0x1)                                        /* (OSC32KCTRL_CLKSELCTRL) 1.024kHz from 32kHz internal ULP oscillator  */
+#define   OSC32KCTRL_CLKSELCTRL_RTCSEL_XOSC32K_Val _UINT32_(0x2)                                        /* (OSC32KCTRL_CLKSELCTRL) 32.768kHz from 32.768kHz external crystal oscillator  */
+#define   OSC32KCTRL_CLKSELCTRL_RTCSEL_XOSC1K_Val _UINT32_(0x3)                                        /* (OSC32KCTRL_CLKSELCTRL) 1.024kHz from 32.768kHz internal oscillator  */
+#define OSC32KCTRL_CLKSELCTRL_RTCSEL_ULP32K   (OSC32KCTRL_CLKSELCTRL_RTCSEL_ULP32K_Val << OSC32KCTRL_CLKSELCTRL_RTCSEL_Pos) /* (OSC32KCTRL_CLKSELCTRL) 32.768kHz from 32kHz internal ULP oscillator Position  */
+#define OSC32KCTRL_CLKSELCTRL_RTCSEL_ULP1K    (OSC32KCTRL_CLKSELCTRL_RTCSEL_ULP1K_Val << OSC32KCTRL_CLKSELCTRL_RTCSEL_Pos) /* (OSC32KCTRL_CLKSELCTRL) 1.024kHz from 32kHz internal ULP oscillator Position  */
+#define OSC32KCTRL_CLKSELCTRL_RTCSEL_XOSC32K  (OSC32KCTRL_CLKSELCTRL_RTCSEL_XOSC32K_Val << OSC32KCTRL_CLKSELCTRL_RTCSEL_Pos) /* (OSC32KCTRL_CLKSELCTRL) 32.768kHz from 32.768kHz external crystal oscillator Position  */
+#define OSC32KCTRL_CLKSELCTRL_RTCSEL_XOSC1K   (OSC32KCTRL_CLKSELCTRL_RTCSEL_XOSC1K_Val << OSC32KCTRL_CLKSELCTRL_RTCSEL_Pos) /* (OSC32KCTRL_CLKSELCTRL) 1.024kHz from 32.768kHz internal oscillator Position  */
+#define OSC32KCTRL_CLKSELCTRL_HSMSEL_Pos      _UINT32_(4)                                          /* (OSC32KCTRL_CLKSELCTRL) HSM Clock Selection Position */
+#define OSC32KCTRL_CLKSELCTRL_HSMSEL_Msk      (_UINT32_(0x3) << OSC32KCTRL_CLKSELCTRL_HSMSEL_Pos)  /* (OSC32KCTRL_CLKSELCTRL) HSM Clock Selection Mask */
+#define OSC32KCTRL_CLKSELCTRL_HSMSEL(value)   (OSC32KCTRL_CLKSELCTRL_HSMSEL_Msk & (_UINT32_(value) << OSC32KCTRL_CLKSELCTRL_HSMSEL_Pos)) /* Assigment of value for HSMSEL in the OSC32KCTRL_CLKSELCTRL register */
+#define   OSC32KCTRL_CLKSELCTRL_HSMSEL_ULP32K_Val _UINT32_(0x0)                                        /* (OSC32KCTRL_CLKSELCTRL) 32.768kHz from 32kHz internal ULP oscillator  */
+#define   OSC32KCTRL_CLKSELCTRL_HSMSEL_XOSC32K_Val _UINT32_(0x2)                                        /* (OSC32KCTRL_CLKSELCTRL) 32.768kHz from 32.768kHz external crystal oscillator  */
+#define OSC32KCTRL_CLKSELCTRL_HSMSEL_ULP32K   (OSC32KCTRL_CLKSELCTRL_HSMSEL_ULP32K_Val << OSC32KCTRL_CLKSELCTRL_HSMSEL_Pos) /* (OSC32KCTRL_CLKSELCTRL) 32.768kHz from 32kHz internal ULP oscillator Position  */
+#define OSC32KCTRL_CLKSELCTRL_HSMSEL_XOSC32K  (OSC32KCTRL_CLKSELCTRL_HSMSEL_XOSC32K_Val << OSC32KCTRL_CLKSELCTRL_HSMSEL_Pos) /* (OSC32KCTRL_CLKSELCTRL) 32.768kHz from 32.768kHz external crystal oscillator Position  */
+#define OSC32KCTRL_CLKSELCTRL_Msk             _UINT32_(0x00000033)                                 /* (OSC32KCTRL_CLKSELCTRL) Register Mask  */
+
+
+/* -------- OSC32KCTRL_CFDCTRL : (OSC32KCTRL Offset: 0x14) (R/W 32) Clock Failure Detector Control -------- */
+#define OSC32KCTRL_CFDCTRL_RESETVALUE         _UINT32_(0x00)                                       /*  (OSC32KCTRL_CFDCTRL) Clock Failure Detector Control  Reset Value */
+
+#define OSC32KCTRL_CFDCTRL_CFDEN_Pos          _UINT32_(0)                                          /* (OSC32KCTRL_CFDCTRL) Clock Failure Detector Enable Position */
+#define OSC32KCTRL_CFDCTRL_CFDEN_Msk          (_UINT32_(0x1) << OSC32KCTRL_CFDCTRL_CFDEN_Pos)      /* (OSC32KCTRL_CFDCTRL) Clock Failure Detector Enable Mask */
+#define OSC32KCTRL_CFDCTRL_CFDEN(value)       (OSC32KCTRL_CFDCTRL_CFDEN_Msk & (_UINT32_(value) << OSC32KCTRL_CFDCTRL_CFDEN_Pos)) /* Assigment of value for CFDEN in the OSC32KCTRL_CFDCTRL register */
+#define OSC32KCTRL_CFDCTRL_SWBACK_Pos         _UINT32_(1)                                          /* (OSC32KCTRL_CFDCTRL) Clock Switch Back Position */
+#define OSC32KCTRL_CFDCTRL_SWBACK_Msk         (_UINT32_(0x1) << OSC32KCTRL_CFDCTRL_SWBACK_Pos)     /* (OSC32KCTRL_CFDCTRL) Clock Switch Back Mask */
+#define OSC32KCTRL_CFDCTRL_SWBACK(value)      (OSC32KCTRL_CFDCTRL_SWBACK_Msk & (_UINT32_(value) << OSC32KCTRL_CFDCTRL_SWBACK_Pos)) /* Assigment of value for SWBACK in the OSC32KCTRL_CFDCTRL register */
+#define OSC32KCTRL_CFDCTRL_CFDPRESC_Pos       _UINT32_(2)                                          /* (OSC32KCTRL_CFDCTRL) Clock Failure Detector Prescaler Position */
+#define OSC32KCTRL_CFDCTRL_CFDPRESC_Msk       (_UINT32_(0x1) << OSC32KCTRL_CFDCTRL_CFDPRESC_Pos)   /* (OSC32KCTRL_CFDCTRL) Clock Failure Detector Prescaler Mask */
+#define OSC32KCTRL_CFDCTRL_CFDPRESC(value)    (OSC32KCTRL_CFDCTRL_CFDPRESC_Msk & (_UINT32_(value) << OSC32KCTRL_CFDCTRL_CFDPRESC_Pos)) /* Assigment of value for CFDPRESC in the OSC32KCTRL_CFDCTRL register */
+#define OSC32KCTRL_CFDCTRL_Msk                _UINT32_(0x00000007)                                 /* (OSC32KCTRL_CFDCTRL) Register Mask  */
+
+
+/* -------- OSC32KCTRL_EVCTRL : (OSC32KCTRL Offset: 0x18) (R/W 32) Event Control -------- */
+#define OSC32KCTRL_EVCTRL_RESETVALUE          _UINT32_(0x00)                                       /*  (OSC32KCTRL_EVCTRL) Event Control  Reset Value */
+
+#define OSC32KCTRL_EVCTRL_CFDEO_Pos           _UINT32_(0)                                          /* (OSC32KCTRL_EVCTRL) Clock Failure Detector Event Output Enable Position */
+#define OSC32KCTRL_EVCTRL_CFDEO_Msk           (_UINT32_(0x1) << OSC32KCTRL_EVCTRL_CFDEO_Pos)       /* (OSC32KCTRL_EVCTRL) Clock Failure Detector Event Output Enable Mask */
+#define OSC32KCTRL_EVCTRL_CFDEO(value)        (OSC32KCTRL_EVCTRL_CFDEO_Msk & (_UINT32_(value) << OSC32KCTRL_EVCTRL_CFDEO_Pos)) /* Assigment of value for CFDEO in the OSC32KCTRL_EVCTRL register */
+#define OSC32KCTRL_EVCTRL_Msk                 _UINT32_(0x00000001)                                 /* (OSC32KCTRL_EVCTRL) Register Mask  */
 
 
 /* -------- OSC32KCTRL_XOSC32K : (OSC32KCTRL Offset: 0x1C) (R/W 32) 32kHz External Crystal Oscillator (XOSC32K) Control -------- */
@@ -212,13 +212,13 @@
 
 
 /** \brief OSC32KCTRL register offsets definitions */
-#define OSC32KCTRL_CFDCTRL_REG_OFST    _UINT32_(0x14)      /* (OSC32KCTRL_CFDCTRL) Clock Failure Detector Control Offset */
-#define OSC32KCTRL_CLKSELCTRL_REG_OFST _UINT32_(0x10)      /* (OSC32KCTRL_CLKSELCTRL) Clock Selection Control Offset */
-#define OSC32KCTRL_EVCTRL_REG_OFST     _UINT32_(0x18)      /* (OSC32KCTRL_EVCTRL) Event Control Offset */
 #define OSC32KCTRL_INTENCLR_REG_OFST   _UINT32_(0x00)      /* (OSC32KCTRL_INTENCLR) Interrupt Enable Clear Offset */
 #define OSC32KCTRL_INTENSET_REG_OFST   _UINT32_(0x04)      /* (OSC32KCTRL_INTENSET) Interrupt Enable Set Offset */
 #define OSC32KCTRL_INTFLAG_REG_OFST    _UINT32_(0x08)      /* (OSC32KCTRL_INTFLAG) Interrupt Flag Status and Clear Offset */
 #define OSC32KCTRL_STATUS_REG_OFST     _UINT32_(0x0C)      /* (OSC32KCTRL_STATUS) Power and Clocks Status Offset */
+#define OSC32KCTRL_CLKSELCTRL_REG_OFST _UINT32_(0x10)      /* (OSC32KCTRL_CLKSELCTRL) Clock Selection Control Offset */
+#define OSC32KCTRL_CFDCTRL_REG_OFST    _UINT32_(0x14)      /* (OSC32KCTRL_CFDCTRL) Clock Failure Detector Control Offset */
+#define OSC32KCTRL_EVCTRL_REG_OFST     _UINT32_(0x18)      /* (OSC32KCTRL_EVCTRL) Event Control Offset */
 #define OSC32KCTRL_XOSC32K_REG_OFST    _UINT32_(0x1C)      /* (OSC32KCTRL_XOSC32K) 32kHz External Crystal Oscillator (XOSC32K) Control Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))

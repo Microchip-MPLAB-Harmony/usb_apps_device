@@ -1,7 +1,7 @@
 /*
  * Component description for SUPC
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,145 +20,13 @@
  *
  */
 
-/* file generated from device description version 2022-11-28T06:54:19Z */
+/* file generated from device description version 2023-02-20T18:48:06Z */
 #ifndef _PIC32CKGC01_SUPC_COMPONENT_H_
 #define _PIC32CKGC01_SUPC_COMPONENT_H_
 
 /* ************************************************************************** */
 /*   SOFTWARE API DEFINITION FOR SUPC                                         */
 /* ************************************************************************** */
-
-/* -------- SUPC_BBPS : (SUPC Offset: 0x24) (R/W 32) Battery Backup Power Switch. This register is implemented only if SUPC_VBAT_IMPLEMENTED==1 -------- */
-#define SUPC_BBPS_RESETVALUE                  _UINT32_(0x00)                                       /*  (SUPC_BBPS) Battery Backup Power Switch. This register is implemented only if SUPC_VBAT_IMPLEMENTED==1  Reset Value */
-
-#define SUPC_BBPS_CONF_Pos                    _UINT32_(0)                                          /* (SUPC_BBPS) Battery Backup Power Switch Configuration Position */
-#define SUPC_BBPS_CONF_Msk                    (_UINT32_(0x1) << SUPC_BBPS_CONF_Pos)                /* (SUPC_BBPS) Battery Backup Power Switch Configuration Mask */
-#define SUPC_BBPS_CONF(value)                 (SUPC_BBPS_CONF_Msk & (_UINT32_(value) << SUPC_BBPS_CONF_Pos)) /* Assigment of value for CONF in the SUPC_BBPS register */
-#define   SUPC_BBPS_CONF_BOR_Val              _UINT32_(0x0)                                        /* (SUPC_BBPS) The power switch is automatically handled by the BOR  */
-#define   SUPC_BBPS_CONF_VBAT_Val             _UINT32_(0x1)                                        /* (SUPC_BBPS) In Backup mode, the power-switch is forced to VBAT.  */
-#define SUPC_BBPS_CONF_BOR                    (SUPC_BBPS_CONF_BOR_Val << SUPC_BBPS_CONF_Pos)       /* (SUPC_BBPS) The power switch is automatically handled by the BOR Position  */
-#define SUPC_BBPS_CONF_VBAT                   (SUPC_BBPS_CONF_VBAT_Val << SUPC_BBPS_CONF_Pos)      /* (SUPC_BBPS) In Backup mode, the power-switch is forced to VBAT. Position  */
-#define SUPC_BBPS_WKONVBATEN_Pos              _UINT32_(1)                                          /* (SUPC_BBPS) Wake on VBAT Enable, from Backup mode Position */
-#define SUPC_BBPS_WKONVBATEN_Msk              (_UINT32_(0x1) << SUPC_BBPS_WKONVBATEN_Pos)          /* (SUPC_BBPS) Wake on VBAT Enable, from Backup mode Mask */
-#define SUPC_BBPS_WKONVBATEN(value)           (SUPC_BBPS_WKONVBATEN_Msk & (_UINT32_(value) << SUPC_BBPS_WKONVBATEN_Pos)) /* Assigment of value for WKONVBATEN in the SUPC_BBPS register */
-#define SUPC_BBPS_WAKEEN_Pos                  _UINT32_(2)                                          /* (SUPC_BBPS) Wake Enable Position */
-#define SUPC_BBPS_WAKEEN_Msk                  (_UINT32_(0x1) << SUPC_BBPS_WAKEEN_Pos)              /* (SUPC_BBPS) Wake Enable Mask */
-#define SUPC_BBPS_WAKEEN(value)               (SUPC_BBPS_WAKEEN_Msk & (_UINT32_(value) << SUPC_BBPS_WAKEEN_Pos)) /* Assigment of value for WAKEEN in the SUPC_BBPS register */
-#define   SUPC_BBPS_WAKEEN_DIS_Val            _UINT32_(0x0)                                        /* (SUPC_BBPS) When exiting battery backup mode, the device goes to backup mode.  */
-#define   SUPC_BBPS_WAKEEN_EN_Val             _UINT32_(0x1)                                        /* (SUPC_BBPS) When exiting battery backup mode, the device is waken-up.  */
-#define SUPC_BBPS_WAKEEN_DIS                  (SUPC_BBPS_WAKEEN_DIS_Val << SUPC_BBPS_WAKEEN_Pos)   /* (SUPC_BBPS) When exiting battery backup mode, the device goes to backup mode. Position  */
-#define SUPC_BBPS_WAKEEN_EN                   (SUPC_BBPS_WAKEEN_EN_Val << SUPC_BBPS_WAKEEN_Pos)    /* (SUPC_BBPS) When exiting battery backup mode, the device is waken-up. Position  */
-#define SUPC_BBPS_ENVBATMON_Pos               _UINT32_(4)                                          /* (SUPC_BBPS) Enables battery monitor Position */
-#define SUPC_BBPS_ENVBATMON_Msk               (_UINT32_(0x1) << SUPC_BBPS_ENVBATMON_Pos)           /* (SUPC_BBPS) Enables battery monitor Mask */
-#define SUPC_BBPS_ENVBATMON(value)            (SUPC_BBPS_ENVBATMON_Msk & (_UINT32_(value) << SUPC_BBPS_ENVBATMON_Pos)) /* Assigment of value for ENVBATMON in the SUPC_BBPS register */
-#define SUPC_BBPS_SELVBATMON_Pos              _UINT32_(5)                                          /* (SUPC_BBPS) Select VBATMON supply voltage. 0 for VDDA, and 1 for VDDBAT. Position */
-#define SUPC_BBPS_SELVBATMON_Msk              (_UINT32_(0x1) << SUPC_BBPS_SELVBATMON_Pos)          /* (SUPC_BBPS) Select VBATMON supply voltage. 0 for VDDA, and 1 for VDDBAT. Mask */
-#define SUPC_BBPS_SELVBATMON(value)           (SUPC_BBPS_SELVBATMON_Msk & (_UINT32_(value) << SUPC_BBPS_SELVBATMON_Pos)) /* Assigment of value for SELVBATMON in the SUPC_BBPS register */
-#define SUPC_BBPS_Msk                         _UINT32_(0x00000037)                                 /* (SUPC_BBPS) Register Mask  */
-
-
-/* -------- SUPC_BKIN : (SUPC Offset: 0x2C) ( R/ 32) Backup Input Control -------- */
-#define SUPC_BKIN_RESETVALUE                  _UINT32_(0x00)                                       /*  (SUPC_BKIN) Backup Input Control  Reset Value */
-
-#define SUPC_BKIN_BKIN_Pos                    _UINT32_(0)                                          /* (SUPC_BKIN) Backup Input Value Position */
-#define SUPC_BKIN_BKIN_Msk                    (_UINT32_(0x3) << SUPC_BKIN_BKIN_Pos)                /* (SUPC_BKIN) Backup Input Value Mask */
-#define SUPC_BKIN_BKIN(value)                 (SUPC_BKIN_BKIN_Msk & (_UINT32_(value) << SUPC_BKIN_BKIN_Pos)) /* Assigment of value for BKIN in the SUPC_BKIN register */
-#define SUPC_BKIN_Msk                         _UINT32_(0x00000003)                                 /* (SUPC_BKIN) Register Mask  */
-
-
-/* -------- SUPC_BKOUT : (SUPC Offset: 0x28) (R/W 32) Backup Output Control -------- */
-#define SUPC_BKOUT_RESETVALUE                 _UINT32_(0x00)                                       /*  (SUPC_BKOUT) Backup Output Control  Reset Value */
-
-#define SUPC_BKOUT_EN0_Pos                    _UINT32_(0)                                          /* (SUPC_BKOUT) Enable Output Position */
-#define SUPC_BKOUT_EN0_Msk                    (_UINT32_(0x1) << SUPC_BKOUT_EN0_Pos)                /* (SUPC_BKOUT) Enable Output Mask */
-#define SUPC_BKOUT_EN0(value)                 (SUPC_BKOUT_EN0_Msk & (_UINT32_(value) << SUPC_BKOUT_EN0_Pos)) /* Assigment of value for EN0 in the SUPC_BKOUT register */
-#define SUPC_BKOUT_EN1_Pos                    _UINT32_(2)                                          /* (SUPC_BKOUT) Enable Output Position */
-#define SUPC_BKOUT_EN1_Msk                    (_UINT32_(0x1) << SUPC_BKOUT_EN1_Pos)                /* (SUPC_BKOUT) Enable Output Mask */
-#define SUPC_BKOUT_EN1(value)                 (SUPC_BKOUT_EN1_Msk & (_UINT32_(value) << SUPC_BKOUT_EN1_Pos)) /* Assigment of value for EN1 in the SUPC_BKOUT register */
-#define SUPC_BKOUT_CLR0_Pos                   _UINT32_(8)                                          /* (SUPC_BKOUT) Clear Output Position */
-#define SUPC_BKOUT_CLR0_Msk                   (_UINT32_(0x1) << SUPC_BKOUT_CLR0_Pos)               /* (SUPC_BKOUT) Clear Output Mask */
-#define SUPC_BKOUT_CLR0(value)                (SUPC_BKOUT_CLR0_Msk & (_UINT32_(value) << SUPC_BKOUT_CLR0_Pos)) /* Assigment of value for CLR0 in the SUPC_BKOUT register */
-#define SUPC_BKOUT_CLR1_Pos                   _UINT32_(10)                                         /* (SUPC_BKOUT) Clear Output Position */
-#define SUPC_BKOUT_CLR1_Msk                   (_UINT32_(0x1) << SUPC_BKOUT_CLR1_Pos)               /* (SUPC_BKOUT) Clear Output Mask */
-#define SUPC_BKOUT_CLR1(value)                (SUPC_BKOUT_CLR1_Msk & (_UINT32_(value) << SUPC_BKOUT_CLR1_Pos)) /* Assigment of value for CLR1 in the SUPC_BKOUT register */
-#define SUPC_BKOUT_SET0_Pos                   _UINT32_(16)                                         /* (SUPC_BKOUT) Set Output Position */
-#define SUPC_BKOUT_SET0_Msk                   (_UINT32_(0x1) << SUPC_BKOUT_SET0_Pos)               /* (SUPC_BKOUT) Set Output Mask */
-#define SUPC_BKOUT_SET0(value)                (SUPC_BKOUT_SET0_Msk & (_UINT32_(value) << SUPC_BKOUT_SET0_Pos)) /* Assigment of value for SET0 in the SUPC_BKOUT register */
-#define SUPC_BKOUT_SET1_Pos                   _UINT32_(18)                                         /* (SUPC_BKOUT) Set Output Position */
-#define SUPC_BKOUT_SET1_Msk                   (_UINT32_(0x1) << SUPC_BKOUT_SET1_Pos)               /* (SUPC_BKOUT) Set Output Mask */
-#define SUPC_BKOUT_SET1(value)                (SUPC_BKOUT_SET1_Msk & (_UINT32_(value) << SUPC_BKOUT_SET1_Pos)) /* Assigment of value for SET1 in the SUPC_BKOUT register */
-#define SUPC_BKOUT_TGLOM0_Pos                 _UINT32_(24)                                         /* (SUPC_BKOUT) Toggle Output Mode Position */
-#define SUPC_BKOUT_TGLOM0_Msk                 (_UINT32_(0x3) << SUPC_BKOUT_TGLOM0_Pos)             /* (SUPC_BKOUT) Toggle Output Mode Mask */
-#define SUPC_BKOUT_TGLOM0(value)              (SUPC_BKOUT_TGLOM0_Msk & (_UINT32_(value) << SUPC_BKOUT_TGLOM0_Pos)) /* Assigment of value for TGLOM0 in the SUPC_BKOUT register */
-#define   SUPC_BKOUT_TGLOM0_DISABLE_Val       _UINT32_(0x0)                                        /* (SUPC_BKOUT) The output does not toggle.  */
-#define   SUPC_BKOUT_TGLOM0_RTCTGL_Val        _UINT32_(0x1)                                        /* (SUPC_BKOUT) The output toggles on RTC event.  */
-#define   SUPC_BKOUT_TGLOM0_BKUPTGL_Val       _UINT32_(0x2)                                        /* (SUPC_BKOUT) The output is set when the device enters backup mode or battery backup mode. The output should then be cleared by software.  */
-#define SUPC_BKOUT_TGLOM0_DISABLE             (SUPC_BKOUT_TGLOM0_DISABLE_Val << SUPC_BKOUT_TGLOM0_Pos) /* (SUPC_BKOUT) The output does not toggle. Position  */
-#define SUPC_BKOUT_TGLOM0_RTCTGL              (SUPC_BKOUT_TGLOM0_RTCTGL_Val << SUPC_BKOUT_TGLOM0_Pos) /* (SUPC_BKOUT) The output toggles on RTC event. Position  */
-#define SUPC_BKOUT_TGLOM0_BKUPTGL             (SUPC_BKOUT_TGLOM0_BKUPTGL_Val << SUPC_BKOUT_TGLOM0_Pos) /* (SUPC_BKOUT) The output is set when the device enters backup mode or battery backup mode. The output should then be cleared by software. Position  */
-#define SUPC_BKOUT_TGLOM1_Pos                 _UINT32_(26)                                         /* (SUPC_BKOUT) Toggle Output Mode Position */
-#define SUPC_BKOUT_TGLOM1_Msk                 (_UINT32_(0x3) << SUPC_BKOUT_TGLOM1_Pos)             /* (SUPC_BKOUT) Toggle Output Mode Mask */
-#define SUPC_BKOUT_TGLOM1(value)              (SUPC_BKOUT_TGLOM1_Msk & (_UINT32_(value) << SUPC_BKOUT_TGLOM1_Pos)) /* Assigment of value for TGLOM1 in the SUPC_BKOUT register */
-#define   SUPC_BKOUT_TGLOM1_DISABLE_Val       _UINT32_(0x0)                                        /* (SUPC_BKOUT) The output does not toggle.  */
-#define   SUPC_BKOUT_TGLOM1_RTCTGL_Val        _UINT32_(0x1)                                        /* (SUPC_BKOUT) The output toggles on RTC event.  */
-#define   SUPC_BKOUT_TGLOM1_BKUPTGL_Val       _UINT32_(0x2)                                        /* (SUPC_BKOUT) The output is set when the device enters backup mode or battery backup mode. The output should then be cleared by software.  */
-#define SUPC_BKOUT_TGLOM1_DISABLE             (SUPC_BKOUT_TGLOM1_DISABLE_Val << SUPC_BKOUT_TGLOM1_Pos) /* (SUPC_BKOUT) The output does not toggle. Position  */
-#define SUPC_BKOUT_TGLOM1_RTCTGL              (SUPC_BKOUT_TGLOM1_RTCTGL_Val << SUPC_BKOUT_TGLOM1_Pos) /* (SUPC_BKOUT) The output toggles on RTC event. Position  */
-#define SUPC_BKOUT_TGLOM1_BKUPTGL             (SUPC_BKOUT_TGLOM1_BKUPTGL_Val << SUPC_BKOUT_TGLOM1_Pos) /* (SUPC_BKOUT) The output is set when the device enters backup mode or battery backup mode. The output should then be cleared by software. Position  */
-#define SUPC_BKOUT_Msk                        _UINT32_(0x0F050505)                                 /* (SUPC_BKOUT) Register Mask  */
-
-#define SUPC_BKOUT_EN_Pos                     _UINT32_(0)                                          /* (SUPC_BKOUT Position) Enable Output */
-#define SUPC_BKOUT_EN_Msk                     (_UINT32_(0x3) << SUPC_BKOUT_EN_Pos)                 /* (SUPC_BKOUT Mask) EN */
-#define SUPC_BKOUT_EN(value)                  (SUPC_BKOUT_EN_Msk & (_UINT32_(value) << SUPC_BKOUT_EN_Pos)) 
-#define SUPC_BKOUT_CLR_Pos                    _UINT32_(8)                                          /* (SUPC_BKOUT Position) Clear Output */
-#define SUPC_BKOUT_CLR_Msk                    (_UINT32_(0x3) << SUPC_BKOUT_CLR_Pos)                /* (SUPC_BKOUT Mask) CLR */
-#define SUPC_BKOUT_CLR(value)                 (SUPC_BKOUT_CLR_Msk & (_UINT32_(value) << SUPC_BKOUT_CLR_Pos)) 
-#define SUPC_BKOUT_SET_Pos                    _UINT32_(16)                                         /* (SUPC_BKOUT Position) Set Output */
-#define SUPC_BKOUT_SET_Msk                    (_UINT32_(0x3) << SUPC_BKOUT_SET_Pos)                /* (SUPC_BKOUT Mask) SET */
-#define SUPC_BKOUT_SET(value)                 (SUPC_BKOUT_SET_Msk & (_UINT32_(value) << SUPC_BKOUT_SET_Pos)) 
-
-/* -------- SUPC_BOR : (SUPC Offset: 0x14) (R/W 32) BOR Control -------- */
-#define SUPC_BOR_RESETVALUE                   _UINT32_(0x00)                                       /*  (SUPC_BOR) BOR Control  Reset Value */
-
-#define SUPC_BOR_ACTION_Pos                   _UINT32_(0)                                          /* (SUPC_BOR) Action when Threshold Crossed Position */
-#define SUPC_BOR_ACTION_Msk                   (_UINT32_(0x1) << SUPC_BOR_ACTION_Pos)               /* (SUPC_BOR) Action when Threshold Crossed Mask */
-#define SUPC_BOR_ACTION(value)                (SUPC_BOR_ACTION_Msk & (_UINT32_(value) << SUPC_BOR_ACTION_Pos)) /* Assigment of value for ACTION in the SUPC_BOR register */
-#define   SUPC_BOR_ACTION_RESET_Val           _UINT32_(0x0)                                        /* (SUPC_BOR) The BOR generates a reset  */
-#define   SUPC_BOR_ACTION_BBKUP_Val           _UINT32_(0x1)                                        /* (SUPC_BOR) The BOR puts the device in battery backup sleep mode  */
-#define SUPC_BOR_ACTION_RESET                 (SUPC_BOR_ACTION_RESET_Val << SUPC_BOR_ACTION_Pos)   /* (SUPC_BOR) The BOR generates a reset Position  */
-#define SUPC_BOR_ACTION_BBKUP                 (SUPC_BOR_ACTION_BBKUP_Val << SUPC_BOR_ACTION_Pos)   /* (SUPC_BOR) The BOR puts the device in battery backup sleep mode Position  */
-#define SUPC_BOR_DCBORPSEL_Pos                _UINT32_(4)                                          /* (SUPC_BOR) Duty Cycle BOR Prescaler Select Position */
-#define SUPC_BOR_DCBORPSEL_Msk                (_UINT32_(0x7) << SUPC_BOR_DCBORPSEL_Pos)            /* (SUPC_BOR) Duty Cycle BOR Prescaler Select Mask */
-#define SUPC_BOR_DCBORPSEL(value)             (SUPC_BOR_DCBORPSEL_Msk & (_UINT32_(value) << SUPC_BOR_DCBORPSEL_Pos)) /* Assigment of value for DCBORPSEL in the SUPC_BOR register */
-#define   SUPC_BOR_DCBORPSEL_NODIV_Val        _UINT32_(0x0)                                        /* (SUPC_BOR) Not Divided  */
-#define   SUPC_BOR_DCBORPSEL_DIV2_Val         _UINT32_(0x1)                                        /* (SUPC_BOR) Divide clock by 2  */
-#define   SUPC_BOR_DCBORPSEL_DIV4_Val         _UINT32_(0x2)                                        /* (SUPC_BOR) Divide clock by 4  */
-#define   SUPC_BOR_DCBORPSEL_DIV8_Val         _UINT32_(0x3)                                        /* (SUPC_BOR) Divide clock by 8  */
-#define   SUPC_BOR_DCBORPSEL_DIV16_Val        _UINT32_(0x4)                                        /* (SUPC_BOR) Divide clock by 16  */
-#define   SUPC_BOR_DCBORPSEL_DIV32_Val        _UINT32_(0x5)                                        /* (SUPC_BOR) Divide clock by 32  */
-#define   SUPC_BOR_DCBORPSEL_DIV64_Val        _UINT32_(0x6)                                        /* (SUPC_BOR) Divide clock by 64  */
-#define   SUPC_BOR_DCBORPSEL_DIV128_Val       _UINT32_(0x7)                                        /* (SUPC_BOR) Divide clock by 128  */
-#define SUPC_BOR_DCBORPSEL_NODIV              (SUPC_BOR_DCBORPSEL_NODIV_Val << SUPC_BOR_DCBORPSEL_Pos) /* (SUPC_BOR) Not Divided Position  */
-#define SUPC_BOR_DCBORPSEL_DIV2               (SUPC_BOR_DCBORPSEL_DIV2_Val << SUPC_BOR_DCBORPSEL_Pos) /* (SUPC_BOR) Divide clock by 2 Position  */
-#define SUPC_BOR_DCBORPSEL_DIV4               (SUPC_BOR_DCBORPSEL_DIV4_Val << SUPC_BOR_DCBORPSEL_Pos) /* (SUPC_BOR) Divide clock by 4 Position  */
-#define SUPC_BOR_DCBORPSEL_DIV8               (SUPC_BOR_DCBORPSEL_DIV8_Val << SUPC_BOR_DCBORPSEL_Pos) /* (SUPC_BOR) Divide clock by 8 Position  */
-#define SUPC_BOR_DCBORPSEL_DIV16              (SUPC_BOR_DCBORPSEL_DIV16_Val << SUPC_BOR_DCBORPSEL_Pos) /* (SUPC_BOR) Divide clock by 16 Position  */
-#define SUPC_BOR_DCBORPSEL_DIV32              (SUPC_BOR_DCBORPSEL_DIV32_Val << SUPC_BOR_DCBORPSEL_Pos) /* (SUPC_BOR) Divide clock by 32 Position  */
-#define SUPC_BOR_DCBORPSEL_DIV64              (SUPC_BOR_DCBORPSEL_DIV64_Val << SUPC_BOR_DCBORPSEL_Pos) /* (SUPC_BOR) Divide clock by 64 Position  */
-#define SUPC_BOR_DCBORPSEL_DIV128             (SUPC_BOR_DCBORPSEL_DIV128_Val << SUPC_BOR_DCBORPSEL_Pos) /* (SUPC_BOR) Divide clock by 128 Position  */
-#define SUPC_BOR_BORFILT_Pos                  _UINT32_(8)                                          /* (SUPC_BOR) BOR filtering Position */
-#define SUPC_BOR_BORFILT_Msk                  (_UINT32_(0x3) << SUPC_BOR_BORFILT_Pos)              /* (SUPC_BOR) BOR filtering Mask */
-#define SUPC_BOR_BORFILT(value)               (SUPC_BOR_BORFILT_Msk & (_UINT32_(value) << SUPC_BOR_BORFILT_Pos)) /* Assigment of value for BORFILT in the SUPC_BOR register */
-#define   SUPC_BOR_BORFILT_NOFILT_Val         _UINT32_(0x0)                                        /* (SUPC_BOR) No digital filtering  */
-#define   SUPC_BOR_BORFILT_FILT32US_Val       _UINT32_(0x1)                                        /* (SUPC_BOR) 32us filtering  */
-#define   SUPC_BOR_BORFILT_FILT125US_Val      _UINT32_(0x2)                                        /* (SUPC_BOR) 125us filtering  */
-#define   SUPC_BOR_BORFILT_FILT250US_Val      _UINT32_(0x3)                                        /* (SUPC_BOR) 250us filtering  */
-#define SUPC_BOR_BORFILT_NOFILT               (SUPC_BOR_BORFILT_NOFILT_Val << SUPC_BOR_BORFILT_Pos) /* (SUPC_BOR) No digital filtering Position  */
-#define SUPC_BOR_BORFILT_FILT32US             (SUPC_BOR_BORFILT_FILT32US_Val << SUPC_BOR_BORFILT_Pos) /* (SUPC_BOR) 32us filtering Position  */
-#define SUPC_BOR_BORFILT_FILT125US            (SUPC_BOR_BORFILT_FILT125US_Val << SUPC_BOR_BORFILT_Pos) /* (SUPC_BOR) 125us filtering Position  */
-#define SUPC_BOR_BORFILT_FILT250US            (SUPC_BOR_BORFILT_FILT250US_Val << SUPC_BOR_BORFILT_Pos) /* (SUPC_BOR) 250us filtering Position  */
-#define SUPC_BOR_Msk                          _UINT32_(0x00000371)                                 /* (SUPC_BOR) Register Mask  */
-
 
 /* -------- SUPC_INTENCLR : (SUPC Offset: 0x00) (R/W 32) Interrupt Enable Clear -------- */
 #define SUPC_INTENCLR_RESETVALUE              _UINT32_(0x00)                                       /*  (SUPC_INTENCLR) Interrupt Enable Clear  Reset Value */
@@ -250,31 +118,6 @@
 #define SUPC_INTFLAG_ADDVREGRDY_Msk           (_UINT32_(0x1) << SUPC_INTFLAG_ADDVREGRDY_Pos)       /* (SUPC_INTFLAG Mask) ADDVREGRDY */
 #define SUPC_INTFLAG_ADDVREGRDY(value)        (SUPC_INTFLAG_ADDVREGRDY_Msk & (_UINT32_(value) << SUPC_INTFLAG_ADDVREGRDY_Pos)) 
 
-/* -------- SUPC_LVD : (SUPC Offset: 0x18) (R/W 32) LVD Control -------- */
-#define SUPC_LVD_RESETVALUE                   _UINT32_(0x00)                                       /*  (SUPC_LVD) LVD Control  Reset Value */
-
-#define SUPC_LVD_ENABLE_Pos                   _UINT32_(1)                                          /* (SUPC_LVD) Enable Position */
-#define SUPC_LVD_ENABLE_Msk                   (_UINT32_(0x1) << SUPC_LVD_ENABLE_Pos)               /* (SUPC_LVD) Enable Mask */
-#define SUPC_LVD_ENABLE(value)                (SUPC_LVD_ENABLE_Msk & (_UINT32_(value) << SUPC_LVD_ENABLE_Pos)) /* Assigment of value for ENABLE in the SUPC_LVD register */
-#define SUPC_LVD_DIR_Pos                      _UINT32_(2)                                          /* (SUPC_LVD) Direction Position */
-#define SUPC_LVD_DIR_Msk                      (_UINT32_(0x1) << SUPC_LVD_DIR_Pos)                  /* (SUPC_LVD) Direction Mask */
-#define SUPC_LVD_DIR(value)                   (SUPC_LVD_DIR_Msk & (_UINT32_(value) << SUPC_LVD_DIR_Pos)) /* Assigment of value for DIR in the SUPC_LVD register */
-#define   SUPC_LVD_DIR_rising_Val             _UINT32_(0x0)                                        /* (SUPC_LVD) Rising detection  */
-#define   SUPC_LVD_DIR_falling_Val            _UINT32_(0x1)                                        /* (SUPC_LVD) Falling detection  */
-#define SUPC_LVD_DIR_rising                   (SUPC_LVD_DIR_rising_Val << SUPC_LVD_DIR_Pos)        /* (SUPC_LVD) Rising detection Position  */
-#define SUPC_LVD_DIR_falling                  (SUPC_LVD_DIR_falling_Val << SUPC_LVD_DIR_Pos)       /* (SUPC_LVD) Falling detection Position  */
-#define SUPC_LVD_OEVEN_Pos                    _UINT32_(3)                                          /* (SUPC_LVD) Output Event Enable Position */
-#define SUPC_LVD_OEVEN_Msk                    (_UINT32_(0x1) << SUPC_LVD_OEVEN_Pos)                /* (SUPC_LVD) Output Event Enable Mask */
-#define SUPC_LVD_OEVEN(value)                 (SUPC_LVD_OEVEN_Msk & (_UINT32_(value) << SUPC_LVD_OEVEN_Pos)) /* Assigment of value for OEVEN in the SUPC_LVD register */
-#define SUPC_LVD_RUNSTDBY_Pos                 _UINT32_(4)                                          /* (SUPC_LVD) Run during Standby Position */
-#define SUPC_LVD_RUNSTDBY_Msk                 (_UINT32_(0x1) << SUPC_LVD_RUNSTDBY_Pos)             /* (SUPC_LVD) Run during Standby Mask */
-#define SUPC_LVD_RUNSTDBY(value)              (SUPC_LVD_RUNSTDBY_Msk & (_UINT32_(value) << SUPC_LVD_RUNSTDBY_Pos)) /* Assigment of value for RUNSTDBY in the SUPC_LVD register */
-#define SUPC_LVD_LEVEL_Pos                    _UINT32_(16)                                         /* (SUPC_LVD) Threshold Level. See "pwr_smor_[nn]_v1 DOS" - level section to get details. Position */
-#define SUPC_LVD_LEVEL_Msk                    (_UINT32_(0xF) << SUPC_LVD_LEVEL_Pos)                /* (SUPC_LVD) Threshold Level. See "pwr_smor_[nn]_v1 DOS" - level section to get details. Mask */
-#define SUPC_LVD_LEVEL(value)                 (SUPC_LVD_LEVEL_Msk & (_UINT32_(value) << SUPC_LVD_LEVEL_Pos)) /* Assigment of value for LEVEL in the SUPC_LVD register */
-#define SUPC_LVD_Msk                          _UINT32_(0x000F001E)                                 /* (SUPC_LVD) Register Mask  */
-
-
 /* -------- SUPC_STATUS : (SUPC Offset: 0x0C) ( R/ 32) Flag status -------- */
 #define SUPC_STATUS_RESETVALUE                _UINT32_(0x00)                                       /*  (SUPC_STATUS) Flag status  Reset Value */
 
@@ -314,27 +157,72 @@
 #define SUPC_SYNCBUSY_Msk                     _UINT32_(0x00000001)                                 /* (SUPC_SYNCBUSY) Register Mask  */
 
 
-/* -------- SUPC_VREFCTRL : (SUPC Offset: 0x20) (R/W 32) VREF Control -------- */
-#define SUPC_VREFCTRL_RESETVALUE              _UINT32_(0x03)                                       /*  (SUPC_VREFCTRL) VREF Control  Reset Value */
+/* -------- SUPC_BOR : (SUPC Offset: 0x14) (R/W 32) BOR Control -------- */
+#define SUPC_BOR_RESETVALUE                   _UINT32_(0x00)                                       /*  (SUPC_BOR) BOR Control  Reset Value */
 
-#define SUPC_VREFCTRL_LPSTDBY_Pos             _UINT32_(0)                                          /* (SUPC_VREFCTRL) Bandgap and Regulators Low Power Standby Enable Position */
-#define SUPC_VREFCTRL_LPSTDBY_Msk             (_UINT32_(0x1) << SUPC_VREFCTRL_LPSTDBY_Pos)         /* (SUPC_VREFCTRL) Bandgap and Regulators Low Power Standby Enable Mask */
-#define SUPC_VREFCTRL_LPSTDBY(value)          (SUPC_VREFCTRL_LPSTDBY_Msk & (_UINT32_(value) << SUPC_VREFCTRL_LPSTDBY_Pos)) /* Assigment of value for LPSTDBY in the SUPC_VREFCTRL register */
-#define   SUPC_VREFCTRL_LPSTDBY_FullPower_Val _UINT32_(0x0)                                        /* (SUPC_VREFCTRL) In standby mode, bandgap and enabled regulator(s) are set to nominal power mode.  */
-#define   SUPC_VREFCTRL_LPSTDBY_LowPower_Val  _UINT32_(0x1)                                        /* (SUPC_VREFCTRL) In standby mode, bandgap and enabled regulator(s) are set to low power mode.  */
-#define SUPC_VREFCTRL_LPSTDBY_FullPower       (SUPC_VREFCTRL_LPSTDBY_FullPower_Val << SUPC_VREFCTRL_LPSTDBY_Pos) /* (SUPC_VREFCTRL) In standby mode, bandgap and enabled regulator(s) are set to nominal power mode. Position  */
-#define SUPC_VREFCTRL_LPSTDBY_LowPower        (SUPC_VREFCTRL_LPSTDBY_LowPower_Val << SUPC_VREFCTRL_LPSTDBY_Pos) /* (SUPC_VREFCTRL) In standby mode, bandgap and enabled regulator(s) are set to low power mode. Position  */
-#define SUPC_VREFCTRL_LPHIB_Pos               _UINT32_(1)                                          /* (SUPC_VREFCTRL) Bandgap and Regulators Low Power Hibernate Enable Position */
-#define SUPC_VREFCTRL_LPHIB_Msk               (_UINT32_(0x1) << SUPC_VREFCTRL_LPHIB_Pos)           /* (SUPC_VREFCTRL) Bandgap and Regulators Low Power Hibernate Enable Mask */
-#define SUPC_VREFCTRL_LPHIB(value)            (SUPC_VREFCTRL_LPHIB_Msk & (_UINT32_(value) << SUPC_VREFCTRL_LPHIB_Pos)) /* Assigment of value for LPHIB in the SUPC_VREFCTRL register */
-#define   SUPC_VREFCTRL_LPHIB_FullPower_Val   _UINT32_(0x0)                                        /* (SUPC_VREFCTRL) In hibernate mode, bandgap is set to nominal power mode. As a consequence, enabled regulator(s) are set to nominal power mode.  */
-#define   SUPC_VREFCTRL_LPHIB_LowPower_Val    _UINT32_(0x1)                                        /* (SUPC_VREFCTRL) In hibernate mode, bandgap is set to low power mode. As a consequence, enabled regulator(s) are set to low power mode.  */
-#define SUPC_VREFCTRL_LPHIB_FullPower         (SUPC_VREFCTRL_LPHIB_FullPower_Val << SUPC_VREFCTRL_LPHIB_Pos) /* (SUPC_VREFCTRL) In hibernate mode, bandgap is set to nominal power mode. As a consequence, enabled regulator(s) are set to nominal power mode. Position  */
-#define SUPC_VREFCTRL_LPHIB_LowPower          (SUPC_VREFCTRL_LPHIB_LowPower_Val << SUPC_VREFCTRL_LPHIB_Pos) /* (SUPC_VREFCTRL) In hibernate mode, bandgap is set to low power mode. As a consequence, enabled regulator(s) are set to low power mode. Position  */
-#define SUPC_VREFCTRL_TSEN_Pos                _UINT32_(4)                                          /* (SUPC_VREFCTRL) Temperature Sensor Output Enable Position */
-#define SUPC_VREFCTRL_TSEN_Msk                (_UINT32_(0x1) << SUPC_VREFCTRL_TSEN_Pos)            /* (SUPC_VREFCTRL) Temperature Sensor Output Enable Mask */
-#define SUPC_VREFCTRL_TSEN(value)             (SUPC_VREFCTRL_TSEN_Msk & (_UINT32_(value) << SUPC_VREFCTRL_TSEN_Pos)) /* Assigment of value for TSEN in the SUPC_VREFCTRL register */
-#define SUPC_VREFCTRL_Msk                     _UINT32_(0x00000013)                                 /* (SUPC_VREFCTRL) Register Mask  */
+#define SUPC_BOR_ACTION_Pos                   _UINT32_(0)                                          /* (SUPC_BOR) Action when Threshold Crossed Position */
+#define SUPC_BOR_ACTION_Msk                   (_UINT32_(0x1) << SUPC_BOR_ACTION_Pos)               /* (SUPC_BOR) Action when Threshold Crossed Mask */
+#define SUPC_BOR_ACTION(value)                (SUPC_BOR_ACTION_Msk & (_UINT32_(value) << SUPC_BOR_ACTION_Pos)) /* Assigment of value for ACTION in the SUPC_BOR register */
+#define   SUPC_BOR_ACTION_RESET_Val           _UINT32_(0x0)                                        /* (SUPC_BOR) The BOR generates a reset  */
+#define   SUPC_BOR_ACTION_BBKUP_Val           _UINT32_(0x1)                                        /* (SUPC_BOR) The BOR puts the device in battery backup sleep mode  */
+#define SUPC_BOR_ACTION_RESET                 (SUPC_BOR_ACTION_RESET_Val << SUPC_BOR_ACTION_Pos)   /* (SUPC_BOR) The BOR generates a reset Position  */
+#define SUPC_BOR_ACTION_BBKUP                 (SUPC_BOR_ACTION_BBKUP_Val << SUPC_BOR_ACTION_Pos)   /* (SUPC_BOR) The BOR puts the device in battery backup sleep mode Position  */
+#define SUPC_BOR_DCBORPSEL_Pos                _UINT32_(4)                                          /* (SUPC_BOR) Duty Cycle BOR Prescaler Select Position */
+#define SUPC_BOR_DCBORPSEL_Msk                (_UINT32_(0x7) << SUPC_BOR_DCBORPSEL_Pos)            /* (SUPC_BOR) Duty Cycle BOR Prescaler Select Mask */
+#define SUPC_BOR_DCBORPSEL(value)             (SUPC_BOR_DCBORPSEL_Msk & (_UINT32_(value) << SUPC_BOR_DCBORPSEL_Pos)) /* Assigment of value for DCBORPSEL in the SUPC_BOR register */
+#define   SUPC_BOR_DCBORPSEL_NODIV_Val        _UINT32_(0x0)                                        /* (SUPC_BOR) Not Divided  */
+#define   SUPC_BOR_DCBORPSEL_DIV2_Val         _UINT32_(0x1)                                        /* (SUPC_BOR) Divide clock by 2  */
+#define   SUPC_BOR_DCBORPSEL_DIV4_Val         _UINT32_(0x2)                                        /* (SUPC_BOR) Divide clock by 4  */
+#define   SUPC_BOR_DCBORPSEL_DIV8_Val         _UINT32_(0x3)                                        /* (SUPC_BOR) Divide clock by 8  */
+#define   SUPC_BOR_DCBORPSEL_DIV16_Val        _UINT32_(0x4)                                        /* (SUPC_BOR) Divide clock by 16  */
+#define   SUPC_BOR_DCBORPSEL_DIV32_Val        _UINT32_(0x5)                                        /* (SUPC_BOR) Divide clock by 32  */
+#define   SUPC_BOR_DCBORPSEL_DIV64_Val        _UINT32_(0x6)                                        /* (SUPC_BOR) Divide clock by 64  */
+#define   SUPC_BOR_DCBORPSEL_DIV128_Val       _UINT32_(0x7)                                        /* (SUPC_BOR) Divide clock by 128  */
+#define SUPC_BOR_DCBORPSEL_NODIV              (SUPC_BOR_DCBORPSEL_NODIV_Val << SUPC_BOR_DCBORPSEL_Pos) /* (SUPC_BOR) Not Divided Position  */
+#define SUPC_BOR_DCBORPSEL_DIV2               (SUPC_BOR_DCBORPSEL_DIV2_Val << SUPC_BOR_DCBORPSEL_Pos) /* (SUPC_BOR) Divide clock by 2 Position  */
+#define SUPC_BOR_DCBORPSEL_DIV4               (SUPC_BOR_DCBORPSEL_DIV4_Val << SUPC_BOR_DCBORPSEL_Pos) /* (SUPC_BOR) Divide clock by 4 Position  */
+#define SUPC_BOR_DCBORPSEL_DIV8               (SUPC_BOR_DCBORPSEL_DIV8_Val << SUPC_BOR_DCBORPSEL_Pos) /* (SUPC_BOR) Divide clock by 8 Position  */
+#define SUPC_BOR_DCBORPSEL_DIV16              (SUPC_BOR_DCBORPSEL_DIV16_Val << SUPC_BOR_DCBORPSEL_Pos) /* (SUPC_BOR) Divide clock by 16 Position  */
+#define SUPC_BOR_DCBORPSEL_DIV32              (SUPC_BOR_DCBORPSEL_DIV32_Val << SUPC_BOR_DCBORPSEL_Pos) /* (SUPC_BOR) Divide clock by 32 Position  */
+#define SUPC_BOR_DCBORPSEL_DIV64              (SUPC_BOR_DCBORPSEL_DIV64_Val << SUPC_BOR_DCBORPSEL_Pos) /* (SUPC_BOR) Divide clock by 64 Position  */
+#define SUPC_BOR_DCBORPSEL_DIV128             (SUPC_BOR_DCBORPSEL_DIV128_Val << SUPC_BOR_DCBORPSEL_Pos) /* (SUPC_BOR) Divide clock by 128 Position  */
+#define SUPC_BOR_BORFILT_Pos                  _UINT32_(8)                                          /* (SUPC_BOR) BOR filtering Position */
+#define SUPC_BOR_BORFILT_Msk                  (_UINT32_(0x3) << SUPC_BOR_BORFILT_Pos)              /* (SUPC_BOR) BOR filtering Mask */
+#define SUPC_BOR_BORFILT(value)               (SUPC_BOR_BORFILT_Msk & (_UINT32_(value) << SUPC_BOR_BORFILT_Pos)) /* Assigment of value for BORFILT in the SUPC_BOR register */
+#define   SUPC_BOR_BORFILT_NOFILT_Val         _UINT32_(0x0)                                        /* (SUPC_BOR) No digital filtering  */
+#define   SUPC_BOR_BORFILT_FILT32US_Val       _UINT32_(0x1)                                        /* (SUPC_BOR) 32us filtering  */
+#define   SUPC_BOR_BORFILT_FILT125US_Val      _UINT32_(0x2)                                        /* (SUPC_BOR) 125us filtering  */
+#define   SUPC_BOR_BORFILT_FILT250US_Val      _UINT32_(0x3)                                        /* (SUPC_BOR) 250us filtering  */
+#define SUPC_BOR_BORFILT_NOFILT               (SUPC_BOR_BORFILT_NOFILT_Val << SUPC_BOR_BORFILT_Pos) /* (SUPC_BOR) No digital filtering Position  */
+#define SUPC_BOR_BORFILT_FILT32US             (SUPC_BOR_BORFILT_FILT32US_Val << SUPC_BOR_BORFILT_Pos) /* (SUPC_BOR) 32us filtering Position  */
+#define SUPC_BOR_BORFILT_FILT125US            (SUPC_BOR_BORFILT_FILT125US_Val << SUPC_BOR_BORFILT_Pos) /* (SUPC_BOR) 125us filtering Position  */
+#define SUPC_BOR_BORFILT_FILT250US            (SUPC_BOR_BORFILT_FILT250US_Val << SUPC_BOR_BORFILT_Pos) /* (SUPC_BOR) 250us filtering Position  */
+#define SUPC_BOR_Msk                          _UINT32_(0x00000371)                                 /* (SUPC_BOR) Register Mask  */
+
+
+/* -------- SUPC_LVD : (SUPC Offset: 0x18) (R/W 32) LVD Control -------- */
+#define SUPC_LVD_RESETVALUE                   _UINT32_(0x00)                                       /*  (SUPC_LVD) LVD Control  Reset Value */
+
+#define SUPC_LVD_ENABLE_Pos                   _UINT32_(1)                                          /* (SUPC_LVD) Enable Position */
+#define SUPC_LVD_ENABLE_Msk                   (_UINT32_(0x1) << SUPC_LVD_ENABLE_Pos)               /* (SUPC_LVD) Enable Mask */
+#define SUPC_LVD_ENABLE(value)                (SUPC_LVD_ENABLE_Msk & (_UINT32_(value) << SUPC_LVD_ENABLE_Pos)) /* Assigment of value for ENABLE in the SUPC_LVD register */
+#define SUPC_LVD_DIR_Pos                      _UINT32_(2)                                          /* (SUPC_LVD) Direction Position */
+#define SUPC_LVD_DIR_Msk                      (_UINT32_(0x1) << SUPC_LVD_DIR_Pos)                  /* (SUPC_LVD) Direction Mask */
+#define SUPC_LVD_DIR(value)                   (SUPC_LVD_DIR_Msk & (_UINT32_(value) << SUPC_LVD_DIR_Pos)) /* Assigment of value for DIR in the SUPC_LVD register */
+#define   SUPC_LVD_DIR_rising_Val             _UINT32_(0x0)                                        /* (SUPC_LVD) Rising detection  */
+#define   SUPC_LVD_DIR_falling_Val            _UINT32_(0x1)                                        /* (SUPC_LVD) Falling detection  */
+#define SUPC_LVD_DIR_rising                   (SUPC_LVD_DIR_rising_Val << SUPC_LVD_DIR_Pos)        /* (SUPC_LVD) Rising detection Position  */
+#define SUPC_LVD_DIR_falling                  (SUPC_LVD_DIR_falling_Val << SUPC_LVD_DIR_Pos)       /* (SUPC_LVD) Falling detection Position  */
+#define SUPC_LVD_OEVEN_Pos                    _UINT32_(3)                                          /* (SUPC_LVD) Output Event Enable Position */
+#define SUPC_LVD_OEVEN_Msk                    (_UINT32_(0x1) << SUPC_LVD_OEVEN_Pos)                /* (SUPC_LVD) Output Event Enable Mask */
+#define SUPC_LVD_OEVEN(value)                 (SUPC_LVD_OEVEN_Msk & (_UINT32_(value) << SUPC_LVD_OEVEN_Pos)) /* Assigment of value for OEVEN in the SUPC_LVD register */
+#define SUPC_LVD_RUNSTDBY_Pos                 _UINT32_(4)                                          /* (SUPC_LVD) Run during Standby Position */
+#define SUPC_LVD_RUNSTDBY_Msk                 (_UINT32_(0x1) << SUPC_LVD_RUNSTDBY_Pos)             /* (SUPC_LVD) Run during Standby Mask */
+#define SUPC_LVD_RUNSTDBY(value)              (SUPC_LVD_RUNSTDBY_Msk & (_UINT32_(value) << SUPC_LVD_RUNSTDBY_Pos)) /* Assigment of value for RUNSTDBY in the SUPC_LVD register */
+#define SUPC_LVD_LEVEL_Pos                    _UINT32_(16)                                         /* (SUPC_LVD) Threshold Level. See "pwr_smor_[nn]_v1 DOS" - level section to get details. Position */
+#define SUPC_LVD_LEVEL_Msk                    (_UINT32_(0xF) << SUPC_LVD_LEVEL_Pos)                /* (SUPC_LVD) Threshold Level. See "pwr_smor_[nn]_v1 DOS" - level section to get details. Mask */
+#define SUPC_LVD_LEVEL(value)                 (SUPC_LVD_LEVEL_Msk & (_UINT32_(value) << SUPC_LVD_LEVEL_Pos)) /* Assigment of value for LEVEL in the SUPC_LVD register */
+#define SUPC_LVD_Msk                          _UINT32_(0x000F001E)                                 /* (SUPC_LVD) Register Mask  */
 
 
 /* -------- SUPC_VREGCTRL : (SUPC Offset: 0x1C) (R/W 32) VREG Control -------- */
@@ -410,19 +298,131 @@
 #define SUPC_VREGCTRL_Msk                     _UINT32_(0x0101F3B7)                                 /* (SUPC_VREGCTRL) Register Mask  */
 
 
+/* -------- SUPC_VREFCTRL : (SUPC Offset: 0x20) (R/W 32) VREF Control -------- */
+#define SUPC_VREFCTRL_RESETVALUE              _UINT32_(0x03)                                       /*  (SUPC_VREFCTRL) VREF Control  Reset Value */
+
+#define SUPC_VREFCTRL_LPSTDBY_Pos             _UINT32_(0)                                          /* (SUPC_VREFCTRL) Bandgap and Regulators Low Power Standby Enable Position */
+#define SUPC_VREFCTRL_LPSTDBY_Msk             (_UINT32_(0x1) << SUPC_VREFCTRL_LPSTDBY_Pos)         /* (SUPC_VREFCTRL) Bandgap and Regulators Low Power Standby Enable Mask */
+#define SUPC_VREFCTRL_LPSTDBY(value)          (SUPC_VREFCTRL_LPSTDBY_Msk & (_UINT32_(value) << SUPC_VREFCTRL_LPSTDBY_Pos)) /* Assigment of value for LPSTDBY in the SUPC_VREFCTRL register */
+#define   SUPC_VREFCTRL_LPSTDBY_FullPower_Val _UINT32_(0x0)                                        /* (SUPC_VREFCTRL) In standby mode, bandgap and enabled regulator(s) are set to nominal power mode.  */
+#define   SUPC_VREFCTRL_LPSTDBY_LowPower_Val  _UINT32_(0x1)                                        /* (SUPC_VREFCTRL) In standby mode, bandgap and enabled regulator(s) are set to low power mode.  */
+#define SUPC_VREFCTRL_LPSTDBY_FullPower       (SUPC_VREFCTRL_LPSTDBY_FullPower_Val << SUPC_VREFCTRL_LPSTDBY_Pos) /* (SUPC_VREFCTRL) In standby mode, bandgap and enabled regulator(s) are set to nominal power mode. Position  */
+#define SUPC_VREFCTRL_LPSTDBY_LowPower        (SUPC_VREFCTRL_LPSTDBY_LowPower_Val << SUPC_VREFCTRL_LPSTDBY_Pos) /* (SUPC_VREFCTRL) In standby mode, bandgap and enabled regulator(s) are set to low power mode. Position  */
+#define SUPC_VREFCTRL_LPHIB_Pos               _UINT32_(1)                                          /* (SUPC_VREFCTRL) Bandgap and Regulators Low Power Hibernate Enable Position */
+#define SUPC_VREFCTRL_LPHIB_Msk               (_UINT32_(0x1) << SUPC_VREFCTRL_LPHIB_Pos)           /* (SUPC_VREFCTRL) Bandgap and Regulators Low Power Hibernate Enable Mask */
+#define SUPC_VREFCTRL_LPHIB(value)            (SUPC_VREFCTRL_LPHIB_Msk & (_UINT32_(value) << SUPC_VREFCTRL_LPHIB_Pos)) /* Assigment of value for LPHIB in the SUPC_VREFCTRL register */
+#define   SUPC_VREFCTRL_LPHIB_FullPower_Val   _UINT32_(0x0)                                        /* (SUPC_VREFCTRL) In hibernate mode, bandgap is set to nominal power mode. As a consequence, enabled regulator(s) are set to nominal power mode.  */
+#define   SUPC_VREFCTRL_LPHIB_LowPower_Val    _UINT32_(0x1)                                        /* (SUPC_VREFCTRL) In hibernate mode, bandgap is set to low power mode. As a consequence, enabled regulator(s) are set to low power mode.  */
+#define SUPC_VREFCTRL_LPHIB_FullPower         (SUPC_VREFCTRL_LPHIB_FullPower_Val << SUPC_VREFCTRL_LPHIB_Pos) /* (SUPC_VREFCTRL) In hibernate mode, bandgap is set to nominal power mode. As a consequence, enabled regulator(s) are set to nominal power mode. Position  */
+#define SUPC_VREFCTRL_LPHIB_LowPower          (SUPC_VREFCTRL_LPHIB_LowPower_Val << SUPC_VREFCTRL_LPHIB_Pos) /* (SUPC_VREFCTRL) In hibernate mode, bandgap is set to low power mode. As a consequence, enabled regulator(s) are set to low power mode. Position  */
+#define SUPC_VREFCTRL_TSEN_Pos                _UINT32_(4)                                          /* (SUPC_VREFCTRL) Temperature Sensor Output Enable Position */
+#define SUPC_VREFCTRL_TSEN_Msk                (_UINT32_(0x1) << SUPC_VREFCTRL_TSEN_Pos)            /* (SUPC_VREFCTRL) Temperature Sensor Output Enable Mask */
+#define SUPC_VREFCTRL_TSEN(value)             (SUPC_VREFCTRL_TSEN_Msk & (_UINT32_(value) << SUPC_VREFCTRL_TSEN_Pos)) /* Assigment of value for TSEN in the SUPC_VREFCTRL register */
+#define SUPC_VREFCTRL_Msk                     _UINT32_(0x00000013)                                 /* (SUPC_VREFCTRL) Register Mask  */
+
+
+/* -------- SUPC_BBPS : (SUPC Offset: 0x24) (R/W 32) Battery Backup Power Switch. This register is implemented only if SUPC_VBAT_IMPLEMENTED==1 -------- */
+#define SUPC_BBPS_RESETVALUE                  _UINT32_(0x00)                                       /*  (SUPC_BBPS) Battery Backup Power Switch. This register is implemented only if SUPC_VBAT_IMPLEMENTED==1  Reset Value */
+
+#define SUPC_BBPS_CONF_Pos                    _UINT32_(0)                                          /* (SUPC_BBPS) Battery Backup Power Switch Configuration Position */
+#define SUPC_BBPS_CONF_Msk                    (_UINT32_(0x1) << SUPC_BBPS_CONF_Pos)                /* (SUPC_BBPS) Battery Backup Power Switch Configuration Mask */
+#define SUPC_BBPS_CONF(value)                 (SUPC_BBPS_CONF_Msk & (_UINT32_(value) << SUPC_BBPS_CONF_Pos)) /* Assigment of value for CONF in the SUPC_BBPS register */
+#define   SUPC_BBPS_CONF_BOR_Val              _UINT32_(0x0)                                        /* (SUPC_BBPS) The power switch is automatically handled by the BOR  */
+#define   SUPC_BBPS_CONF_VBAT_Val             _UINT32_(0x1)                                        /* (SUPC_BBPS) In Backup mode, the power-switch is forced to VBAT.  */
+#define SUPC_BBPS_CONF_BOR                    (SUPC_BBPS_CONF_BOR_Val << SUPC_BBPS_CONF_Pos)       /* (SUPC_BBPS) The power switch is automatically handled by the BOR Position  */
+#define SUPC_BBPS_CONF_VBAT                   (SUPC_BBPS_CONF_VBAT_Val << SUPC_BBPS_CONF_Pos)      /* (SUPC_BBPS) In Backup mode, the power-switch is forced to VBAT. Position  */
+#define SUPC_BBPS_WKONVBATEN_Pos              _UINT32_(1)                                          /* (SUPC_BBPS) Wake on VBAT Enable, from Backup mode Position */
+#define SUPC_BBPS_WKONVBATEN_Msk              (_UINT32_(0x1) << SUPC_BBPS_WKONVBATEN_Pos)          /* (SUPC_BBPS) Wake on VBAT Enable, from Backup mode Mask */
+#define SUPC_BBPS_WKONVBATEN(value)           (SUPC_BBPS_WKONVBATEN_Msk & (_UINT32_(value) << SUPC_BBPS_WKONVBATEN_Pos)) /* Assigment of value for WKONVBATEN in the SUPC_BBPS register */
+#define SUPC_BBPS_WAKEEN_Pos                  _UINT32_(2)                                          /* (SUPC_BBPS) Wake Enable Position */
+#define SUPC_BBPS_WAKEEN_Msk                  (_UINT32_(0x1) << SUPC_BBPS_WAKEEN_Pos)              /* (SUPC_BBPS) Wake Enable Mask */
+#define SUPC_BBPS_WAKEEN(value)               (SUPC_BBPS_WAKEEN_Msk & (_UINT32_(value) << SUPC_BBPS_WAKEEN_Pos)) /* Assigment of value for WAKEEN in the SUPC_BBPS register */
+#define   SUPC_BBPS_WAKEEN_DIS_Val            _UINT32_(0x0)                                        /* (SUPC_BBPS) When exiting battery backup mode, the device goes to backup mode.  */
+#define   SUPC_BBPS_WAKEEN_EN_Val             _UINT32_(0x1)                                        /* (SUPC_BBPS) When exiting battery backup mode, the device is waken-up.  */
+#define SUPC_BBPS_WAKEEN_DIS                  (SUPC_BBPS_WAKEEN_DIS_Val << SUPC_BBPS_WAKEEN_Pos)   /* (SUPC_BBPS) When exiting battery backup mode, the device goes to backup mode. Position  */
+#define SUPC_BBPS_WAKEEN_EN                   (SUPC_BBPS_WAKEEN_EN_Val << SUPC_BBPS_WAKEEN_Pos)    /* (SUPC_BBPS) When exiting battery backup mode, the device is waken-up. Position  */
+#define SUPC_BBPS_ENVBATMON_Pos               _UINT32_(4)                                          /* (SUPC_BBPS) Enables battery monitor Position */
+#define SUPC_BBPS_ENVBATMON_Msk               (_UINT32_(0x1) << SUPC_BBPS_ENVBATMON_Pos)           /* (SUPC_BBPS) Enables battery monitor Mask */
+#define SUPC_BBPS_ENVBATMON(value)            (SUPC_BBPS_ENVBATMON_Msk & (_UINT32_(value) << SUPC_BBPS_ENVBATMON_Pos)) /* Assigment of value for ENVBATMON in the SUPC_BBPS register */
+#define SUPC_BBPS_SELVBATMON_Pos              _UINT32_(5)                                          /* (SUPC_BBPS) Select VBATMON supply voltage. 0 for VDDA, and 1 for VDDBAT. Position */
+#define SUPC_BBPS_SELVBATMON_Msk              (_UINT32_(0x1) << SUPC_BBPS_SELVBATMON_Pos)          /* (SUPC_BBPS) Select VBATMON supply voltage. 0 for VDDA, and 1 for VDDBAT. Mask */
+#define SUPC_BBPS_SELVBATMON(value)           (SUPC_BBPS_SELVBATMON_Msk & (_UINT32_(value) << SUPC_BBPS_SELVBATMON_Pos)) /* Assigment of value for SELVBATMON in the SUPC_BBPS register */
+#define SUPC_BBPS_Msk                         _UINT32_(0x00000037)                                 /* (SUPC_BBPS) Register Mask  */
+
+
+/* -------- SUPC_BKOUT : (SUPC Offset: 0x28) (R/W 32) Backup Output Control -------- */
+#define SUPC_BKOUT_RESETVALUE                 _UINT32_(0x00)                                       /*  (SUPC_BKOUT) Backup Output Control  Reset Value */
+
+#define SUPC_BKOUT_EN0_Pos                    _UINT32_(0)                                          /* (SUPC_BKOUT) Enable Output Position */
+#define SUPC_BKOUT_EN0_Msk                    (_UINT32_(0x1) << SUPC_BKOUT_EN0_Pos)                /* (SUPC_BKOUT) Enable Output Mask */
+#define SUPC_BKOUT_EN0(value)                 (SUPC_BKOUT_EN0_Msk & (_UINT32_(value) << SUPC_BKOUT_EN0_Pos)) /* Assigment of value for EN0 in the SUPC_BKOUT register */
+#define SUPC_BKOUT_EN1_Pos                    _UINT32_(2)                                          /* (SUPC_BKOUT) Enable Output Position */
+#define SUPC_BKOUT_EN1_Msk                    (_UINT32_(0x1) << SUPC_BKOUT_EN1_Pos)                /* (SUPC_BKOUT) Enable Output Mask */
+#define SUPC_BKOUT_EN1(value)                 (SUPC_BKOUT_EN1_Msk & (_UINT32_(value) << SUPC_BKOUT_EN1_Pos)) /* Assigment of value for EN1 in the SUPC_BKOUT register */
+#define SUPC_BKOUT_CLR0_Pos                   _UINT32_(8)                                          /* (SUPC_BKOUT) Clear Output Position */
+#define SUPC_BKOUT_CLR0_Msk                   (_UINT32_(0x1) << SUPC_BKOUT_CLR0_Pos)               /* (SUPC_BKOUT) Clear Output Mask */
+#define SUPC_BKOUT_CLR0(value)                (SUPC_BKOUT_CLR0_Msk & (_UINT32_(value) << SUPC_BKOUT_CLR0_Pos)) /* Assigment of value for CLR0 in the SUPC_BKOUT register */
+#define SUPC_BKOUT_CLR1_Pos                   _UINT32_(10)                                         /* (SUPC_BKOUT) Clear Output Position */
+#define SUPC_BKOUT_CLR1_Msk                   (_UINT32_(0x1) << SUPC_BKOUT_CLR1_Pos)               /* (SUPC_BKOUT) Clear Output Mask */
+#define SUPC_BKOUT_CLR1(value)                (SUPC_BKOUT_CLR1_Msk & (_UINT32_(value) << SUPC_BKOUT_CLR1_Pos)) /* Assigment of value for CLR1 in the SUPC_BKOUT register */
+#define SUPC_BKOUT_SET0_Pos                   _UINT32_(16)                                         /* (SUPC_BKOUT) Set Output Position */
+#define SUPC_BKOUT_SET0_Msk                   (_UINT32_(0x1) << SUPC_BKOUT_SET0_Pos)               /* (SUPC_BKOUT) Set Output Mask */
+#define SUPC_BKOUT_SET0(value)                (SUPC_BKOUT_SET0_Msk & (_UINT32_(value) << SUPC_BKOUT_SET0_Pos)) /* Assigment of value for SET0 in the SUPC_BKOUT register */
+#define SUPC_BKOUT_SET1_Pos                   _UINT32_(18)                                         /* (SUPC_BKOUT) Set Output Position */
+#define SUPC_BKOUT_SET1_Msk                   (_UINT32_(0x1) << SUPC_BKOUT_SET1_Pos)               /* (SUPC_BKOUT) Set Output Mask */
+#define SUPC_BKOUT_SET1(value)                (SUPC_BKOUT_SET1_Msk & (_UINT32_(value) << SUPC_BKOUT_SET1_Pos)) /* Assigment of value for SET1 in the SUPC_BKOUT register */
+#define SUPC_BKOUT_TGLOM0_Pos                 _UINT32_(24)                                         /* (SUPC_BKOUT) Toggle Output Mode Position */
+#define SUPC_BKOUT_TGLOM0_Msk                 (_UINT32_(0x3) << SUPC_BKOUT_TGLOM0_Pos)             /* (SUPC_BKOUT) Toggle Output Mode Mask */
+#define SUPC_BKOUT_TGLOM0(value)              (SUPC_BKOUT_TGLOM0_Msk & (_UINT32_(value) << SUPC_BKOUT_TGLOM0_Pos)) /* Assigment of value for TGLOM0 in the SUPC_BKOUT register */
+#define   SUPC_BKOUT_TGLOM0_DISABLE_Val       _UINT32_(0x0)                                        /* (SUPC_BKOUT) The output does not toggle.  */
+#define   SUPC_BKOUT_TGLOM0_RTCTGL_Val        _UINT32_(0x1)                                        /* (SUPC_BKOUT) The output toggles on RTC event.  */
+#define   SUPC_BKOUT_TGLOM0_BKUPTGL_Val       _UINT32_(0x2)                                        /* (SUPC_BKOUT) The output is set when the device enters backup mode or battery backup mode. The output should then be cleared by software.  */
+#define SUPC_BKOUT_TGLOM0_DISABLE             (SUPC_BKOUT_TGLOM0_DISABLE_Val << SUPC_BKOUT_TGLOM0_Pos) /* (SUPC_BKOUT) The output does not toggle. Position  */
+#define SUPC_BKOUT_TGLOM0_RTCTGL              (SUPC_BKOUT_TGLOM0_RTCTGL_Val << SUPC_BKOUT_TGLOM0_Pos) /* (SUPC_BKOUT) The output toggles on RTC event. Position  */
+#define SUPC_BKOUT_TGLOM0_BKUPTGL             (SUPC_BKOUT_TGLOM0_BKUPTGL_Val << SUPC_BKOUT_TGLOM0_Pos) /* (SUPC_BKOUT) The output is set when the device enters backup mode or battery backup mode. The output should then be cleared by software. Position  */
+#define SUPC_BKOUT_TGLOM1_Pos                 _UINT32_(26)                                         /* (SUPC_BKOUT) Toggle Output Mode Position */
+#define SUPC_BKOUT_TGLOM1_Msk                 (_UINT32_(0x3) << SUPC_BKOUT_TGLOM1_Pos)             /* (SUPC_BKOUT) Toggle Output Mode Mask */
+#define SUPC_BKOUT_TGLOM1(value)              (SUPC_BKOUT_TGLOM1_Msk & (_UINT32_(value) << SUPC_BKOUT_TGLOM1_Pos)) /* Assigment of value for TGLOM1 in the SUPC_BKOUT register */
+#define   SUPC_BKOUT_TGLOM1_DISABLE_Val       _UINT32_(0x0)                                        /* (SUPC_BKOUT) The output does not toggle.  */
+#define   SUPC_BKOUT_TGLOM1_RTCTGL_Val        _UINT32_(0x1)                                        /* (SUPC_BKOUT) The output toggles on RTC event.  */
+#define   SUPC_BKOUT_TGLOM1_BKUPTGL_Val       _UINT32_(0x2)                                        /* (SUPC_BKOUT) The output is set when the device enters backup mode or battery backup mode. The output should then be cleared by software.  */
+#define SUPC_BKOUT_TGLOM1_DISABLE             (SUPC_BKOUT_TGLOM1_DISABLE_Val << SUPC_BKOUT_TGLOM1_Pos) /* (SUPC_BKOUT) The output does not toggle. Position  */
+#define SUPC_BKOUT_TGLOM1_RTCTGL              (SUPC_BKOUT_TGLOM1_RTCTGL_Val << SUPC_BKOUT_TGLOM1_Pos) /* (SUPC_BKOUT) The output toggles on RTC event. Position  */
+#define SUPC_BKOUT_TGLOM1_BKUPTGL             (SUPC_BKOUT_TGLOM1_BKUPTGL_Val << SUPC_BKOUT_TGLOM1_Pos) /* (SUPC_BKOUT) The output is set when the device enters backup mode or battery backup mode. The output should then be cleared by software. Position  */
+#define SUPC_BKOUT_Msk                        _UINT32_(0x0F050505)                                 /* (SUPC_BKOUT) Register Mask  */
+
+#define SUPC_BKOUT_EN_Pos                     _UINT32_(0)                                          /* (SUPC_BKOUT Position) Enable Output */
+#define SUPC_BKOUT_EN_Msk                     (_UINT32_(0x3) << SUPC_BKOUT_EN_Pos)                 /* (SUPC_BKOUT Mask) EN */
+#define SUPC_BKOUT_EN(value)                  (SUPC_BKOUT_EN_Msk & (_UINT32_(value) << SUPC_BKOUT_EN_Pos)) 
+#define SUPC_BKOUT_CLR_Pos                    _UINT32_(8)                                          /* (SUPC_BKOUT Position) Clear Output */
+#define SUPC_BKOUT_CLR_Msk                    (_UINT32_(0x3) << SUPC_BKOUT_CLR_Pos)                /* (SUPC_BKOUT Mask) CLR */
+#define SUPC_BKOUT_CLR(value)                 (SUPC_BKOUT_CLR_Msk & (_UINT32_(value) << SUPC_BKOUT_CLR_Pos)) 
+#define SUPC_BKOUT_SET_Pos                    _UINT32_(16)                                         /* (SUPC_BKOUT Position) Set Output */
+#define SUPC_BKOUT_SET_Msk                    (_UINT32_(0x3) << SUPC_BKOUT_SET_Pos)                /* (SUPC_BKOUT Mask) SET */
+#define SUPC_BKOUT_SET(value)                 (SUPC_BKOUT_SET_Msk & (_UINT32_(value) << SUPC_BKOUT_SET_Pos)) 
+
+/* -------- SUPC_BKIN : (SUPC Offset: 0x2C) ( R/ 32) Backup Input Control -------- */
+#define SUPC_BKIN_RESETVALUE                  _UINT32_(0x00)                                       /*  (SUPC_BKIN) Backup Input Control  Reset Value */
+
+#define SUPC_BKIN_BKIN_Pos                    _UINT32_(0)                                          /* (SUPC_BKIN) Backup Input Value Position */
+#define SUPC_BKIN_BKIN_Msk                    (_UINT32_(0x3) << SUPC_BKIN_BKIN_Pos)                /* (SUPC_BKIN) Backup Input Value Mask */
+#define SUPC_BKIN_BKIN(value)                 (SUPC_BKIN_BKIN_Msk & (_UINT32_(value) << SUPC_BKIN_BKIN_Pos)) /* Assigment of value for BKIN in the SUPC_BKIN register */
+#define SUPC_BKIN_Msk                         _UINT32_(0x00000003)                                 /* (SUPC_BKIN) Register Mask  */
+
+
 /** \brief SUPC register offsets definitions */
-#define SUPC_BBPS_REG_OFST             _UINT32_(0x24)      /* (SUPC_BBPS) Battery Backup Power Switch. This register is implemented only if SUPC_VBAT_IMPLEMENTED==1 Offset */
-#define SUPC_BKIN_REG_OFST             _UINT32_(0x2C)      /* (SUPC_BKIN) Backup Input Control Offset */
-#define SUPC_BKOUT_REG_OFST            _UINT32_(0x28)      /* (SUPC_BKOUT) Backup Output Control Offset */
-#define SUPC_BOR_REG_OFST              _UINT32_(0x14)      /* (SUPC_BOR) BOR Control Offset */
 #define SUPC_INTENCLR_REG_OFST         _UINT32_(0x00)      /* (SUPC_INTENCLR) Interrupt Enable Clear Offset */
 #define SUPC_INTENSET_REG_OFST         _UINT32_(0x04)      /* (SUPC_INTENSET) Interrupt Enable Set Offset */
 #define SUPC_INTFLAG_REG_OFST          _UINT32_(0x08)      /* (SUPC_INTFLAG) Interrupt Flag Status and Clear Offset */
-#define SUPC_LVD_REG_OFST              _UINT32_(0x18)      /* (SUPC_LVD) LVD Control Offset */
 #define SUPC_STATUS_REG_OFST           _UINT32_(0x0C)      /* (SUPC_STATUS) Flag status Offset */
 #define SUPC_SYNCBUSY_REG_OFST         _UINT32_(0x10)      /* (SUPC_SYNCBUSY) Synchronisation Busy Offset */
-#define SUPC_VREFCTRL_REG_OFST         _UINT32_(0x20)      /* (SUPC_VREFCTRL) VREF Control Offset */
+#define SUPC_BOR_REG_OFST              _UINT32_(0x14)      /* (SUPC_BOR) BOR Control Offset */
+#define SUPC_LVD_REG_OFST              _UINT32_(0x18)      /* (SUPC_LVD) LVD Control Offset */
 #define SUPC_VREGCTRL_REG_OFST         _UINT32_(0x1C)      /* (SUPC_VREGCTRL) VREG Control Offset */
+#define SUPC_VREFCTRL_REG_OFST         _UINT32_(0x20)      /* (SUPC_VREFCTRL) VREF Control Offset */
+#define SUPC_BBPS_REG_OFST             _UINT32_(0x24)      /* (SUPC_BBPS) Battery Backup Power Switch. This register is implemented only if SUPC_VBAT_IMPLEMENTED==1 Offset */
+#define SUPC_BKOUT_REG_OFST            _UINT32_(0x28)      /* (SUPC_BKOUT) Backup Output Control Offset */
+#define SUPC_BKIN_REG_OFST             _UINT32_(0x2C)      /* (SUPC_BKIN) Backup Input Control Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief SUPC register API structure */
