@@ -390,12 +390,12 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>pkob4hybrid</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.20</languageToolchainVersion>
+        <languageToolchainVersion>4.21</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
         <pack name="CMSIS" vendor="ARM" version="5.8.0"/>
-        <pack name="PIC32CK-GC_DFP" vendor="Microchip" version="1.0.8"/>
+        <pack name="PIC32CK-GC_DFP" vendor="Microchip" version="1.0.9"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>

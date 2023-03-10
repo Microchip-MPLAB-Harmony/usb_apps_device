@@ -1,7 +1,7 @@
 /*
  * Component description for MCLK
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,13 +20,40 @@
  *
  */
 
-/* file generated from device description version 2022-11-28T06:54:19Z */
+/* file generated from device description version 2023-02-20T18:48:06Z */
 #ifndef _PIC32CKGC01_MCLK_COMPONENT_H_
 #define _PIC32CKGC01_MCLK_COMPONENT_H_
 
 /* ************************************************************************** */
 /*   SOFTWARE API DEFINITION FOR MCLK                                         */
 /* ************************************************************************** */
+
+/* -------- MCLK_INTENCLR : (MCLK Offset: 0x00) (R/W 32) Interrupt Enable Clear -------- */
+#define MCLK_INTENCLR_RESETVALUE              _UINT32_(0x00)                                       /*  (MCLK_INTENCLR) Interrupt Enable Clear  Reset Value */
+
+#define MCLK_INTENCLR_CKRDY_Pos               _UINT32_(0)                                          /* (MCLK_INTENCLR) Clock Ready Interrupt Enable Position */
+#define MCLK_INTENCLR_CKRDY_Msk               (_UINT32_(0x1) << MCLK_INTENCLR_CKRDY_Pos)           /* (MCLK_INTENCLR) Clock Ready Interrupt Enable Mask */
+#define MCLK_INTENCLR_CKRDY(value)            (MCLK_INTENCLR_CKRDY_Msk & (_UINT32_(value) << MCLK_INTENCLR_CKRDY_Pos)) /* Assigment of value for CKRDY in the MCLK_INTENCLR register */
+#define MCLK_INTENCLR_Msk                     _UINT32_(0x00000001)                                 /* (MCLK_INTENCLR) Register Mask  */
+
+
+/* -------- MCLK_INTENSET : (MCLK Offset: 0x04) (R/W 32) Interrupt Enable Set -------- */
+#define MCLK_INTENSET_RESETVALUE              _UINT32_(0x00)                                       /*  (MCLK_INTENSET) Interrupt Enable Set  Reset Value */
+
+#define MCLK_INTENSET_CKRDY_Pos               _UINT32_(0)                                          /* (MCLK_INTENSET) Clock Ready Interrupt Enable Position */
+#define MCLK_INTENSET_CKRDY_Msk               (_UINT32_(0x1) << MCLK_INTENSET_CKRDY_Pos)           /* (MCLK_INTENSET) Clock Ready Interrupt Enable Mask */
+#define MCLK_INTENSET_CKRDY(value)            (MCLK_INTENSET_CKRDY_Msk & (_UINT32_(value) << MCLK_INTENSET_CKRDY_Pos)) /* Assigment of value for CKRDY in the MCLK_INTENSET register */
+#define MCLK_INTENSET_Msk                     _UINT32_(0x00000001)                                 /* (MCLK_INTENSET) Register Mask  */
+
+
+/* -------- MCLK_INTFLAG : (MCLK Offset: 0x08) (R/W 32) Interrupt Flag Status and Clear -------- */
+#define MCLK_INTFLAG_RESETVALUE               _UINT32_(0x01)                                       /*  (MCLK_INTFLAG) Interrupt Flag Status and Clear  Reset Value */
+
+#define MCLK_INTFLAG_CKRDY_Pos                _UINT32_(0)                                          /* (MCLK_INTFLAG) Clock Ready Position */
+#define MCLK_INTFLAG_CKRDY_Msk                (_UINT32_(0x1) << MCLK_INTFLAG_CKRDY_Pos)            /* (MCLK_INTFLAG) Clock Ready Mask */
+#define MCLK_INTFLAG_CKRDY(value)             (MCLK_INTFLAG_CKRDY_Msk & (_UINT32_(value) << MCLK_INTFLAG_CKRDY_Pos)) /* Assigment of value for CKRDY in the MCLK_INTFLAG register */
+#define MCLK_INTFLAG_Msk                      _UINT32_(0x00000001)                                 /* (MCLK_INTFLAG) Register Mask  */
+
 
 /* -------- MCLK_CLKDIV : (MCLK Offset: 0x0C) (R/W 32) Clock Divider Control -------- */
 #define MCLK_CLKDIV_RESETVALUE                _UINT32_(0x00)                                       /*  (MCLK_CLKDIV) Clock Divider Control  Reset Value */
@@ -62,34 +89,10 @@
 #define MCLK_CLKMSK_Msk                       _UINT32_(0xFFFFFFFF)                                 /* (MCLK_CLKMSK) Register Mask  */
 
 
-/* -------- MCLK_INTENCLR : (MCLK Offset: 0x00) (R/W 32) Interrupt Enable Clear -------- */
-#define MCLK_INTENCLR_RESETVALUE              _UINT32_(0x00)                                       /*  (MCLK_INTENCLR) Interrupt Enable Clear  Reset Value */
-
-#define MCLK_INTENCLR_CKRDY_Pos               _UINT32_(0)                                          /* (MCLK_INTENCLR) Clock Ready Interrupt Enable Position */
-#define MCLK_INTENCLR_CKRDY_Msk               (_UINT32_(0x1) << MCLK_INTENCLR_CKRDY_Pos)           /* (MCLK_INTENCLR) Clock Ready Interrupt Enable Mask */
-#define MCLK_INTENCLR_CKRDY(value)            (MCLK_INTENCLR_CKRDY_Msk & (_UINT32_(value) << MCLK_INTENCLR_CKRDY_Pos)) /* Assigment of value for CKRDY in the MCLK_INTENCLR register */
-#define MCLK_INTENCLR_Msk                     _UINT32_(0x00000001)                                 /* (MCLK_INTENCLR) Register Mask  */
-
-
-/* -------- MCLK_INTENSET : (MCLK Offset: 0x04) (R/W 32) Interrupt Enable Set -------- */
-#define MCLK_INTENSET_RESETVALUE              _UINT32_(0x00)                                       /*  (MCLK_INTENSET) Interrupt Enable Set  Reset Value */
-
-#define MCLK_INTENSET_CKRDY_Pos               _UINT32_(0)                                          /* (MCLK_INTENSET) Clock Ready Interrupt Enable Position */
-#define MCLK_INTENSET_CKRDY_Msk               (_UINT32_(0x1) << MCLK_INTENSET_CKRDY_Pos)           /* (MCLK_INTENSET) Clock Ready Interrupt Enable Mask */
-#define MCLK_INTENSET_CKRDY(value)            (MCLK_INTENSET_CKRDY_Msk & (_UINT32_(value) << MCLK_INTENSET_CKRDY_Pos)) /* Assigment of value for CKRDY in the MCLK_INTENSET register */
-#define MCLK_INTENSET_Msk                     _UINT32_(0x00000001)                                 /* (MCLK_INTENSET) Register Mask  */
-
-
-/* -------- MCLK_INTFLAG : (MCLK Offset: 0x08) (R/W 32) Interrupt Flag Status and Clear -------- */
-#define MCLK_INTFLAG_RESETVALUE               _UINT32_(0x01)                                       /*  (MCLK_INTFLAG) Interrupt Flag Status and Clear  Reset Value */
-
-#define MCLK_INTFLAG_CKRDY_Pos                _UINT32_(0)                                          /* (MCLK_INTFLAG) Clock Ready Position */
-#define MCLK_INTFLAG_CKRDY_Msk                (_UINT32_(0x1) << MCLK_INTFLAG_CKRDY_Pos)            /* (MCLK_INTFLAG) Clock Ready Mask */
-#define MCLK_INTFLAG_CKRDY(value)             (MCLK_INTFLAG_CKRDY_Msk & (_UINT32_(value) << MCLK_INTFLAG_CKRDY_Pos)) /* Assigment of value for CKRDY in the MCLK_INTFLAG register */
-#define MCLK_INTFLAG_Msk                      _UINT32_(0x00000001)                                 /* (MCLK_INTFLAG) Register Mask  */
-
-
 /** \brief MCLK register offsets definitions */
+#define MCLK_INTENCLR_REG_OFST         _UINT32_(0x00)      /* (MCLK_INTENCLR) Interrupt Enable Clear Offset */
+#define MCLK_INTENSET_REG_OFST         _UINT32_(0x04)      /* (MCLK_INTENSET) Interrupt Enable Set Offset */
+#define MCLK_INTFLAG_REG_OFST          _UINT32_(0x08)      /* (MCLK_INTFLAG) Interrupt Flag Status and Clear Offset */
 #define MCLK_CLKDIV_REG_OFST           _UINT32_(0x0C)      /* (MCLK_CLKDIV) Clock Divider Control Offset */
 #define MCLK_CLKMSK_REG_OFST           _UINT32_(0x3C)      /* (MCLK_CLKMSK) Peripheral Clock Enable Mask Offset */
 #define MCLK_CLKMSK0_REG_OFST          _UINT32_(0x3C)      /* (MCLK_CLKMSK0) Peripheral Clock Enable Mask Offset */
@@ -101,9 +104,6 @@
 #define MCLK_CLKMSK6_REG_OFST          _UINT32_(0x54)      /* (MCLK_CLKMSK6) Peripheral Clock Enable Mask Offset */
 #define MCLK_CLKMSK7_REG_OFST          _UINT32_(0x58)      /* (MCLK_CLKMSK7) Peripheral Clock Enable Mask Offset */
 #define MCLK_CLKMSK8_REG_OFST          _UINT32_(0x5C)      /* (MCLK_CLKMSK8) Peripheral Clock Enable Mask Offset */
-#define MCLK_INTENCLR_REG_OFST         _UINT32_(0x00)      /* (MCLK_INTENCLR) Interrupt Enable Clear Offset */
-#define MCLK_INTENSET_REG_OFST         _UINT32_(0x04)      /* (MCLK_INTENSET) Interrupt Enable Set Offset */
-#define MCLK_INTFLAG_REG_OFST          _UINT32_(0x08)      /* (MCLK_INTFLAG) Interrupt Flag Status and Clear Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief MCLK register API structure */

@@ -1,7 +1,7 @@
 /*
  * Component description for USB
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2022-11-28T06:54:19Z */
+/* file generated from device description version 2023-02-20T18:48:06Z */
 #ifndef _PIC32CKGC01_USB_COMPONENT_H_
 #define _PIC32CKGC01_USB_COMPONENT_H_
 
@@ -33,16 +33,6 @@
 #define USB_DEVICE_ADDR_ADDR_Msk              (_UINT32_(0xFFFFFFFF) << USB_DEVICE_ADDR_ADDR_Pos)   /* (USB_DEVICE_ADDR) Adress of data buffer Mask */
 #define USB_DEVICE_ADDR_ADDR(value)           (USB_DEVICE_ADDR_ADDR_Msk & (_UINT32_(value) << USB_DEVICE_ADDR_ADDR_Pos)) /* Assigment of value for ADDR in the USB_DEVICE_ADDR register */
 #define USB_DEVICE_ADDR_Msk                   _UINT32_(0xFFFFFFFF)                                 /* (USB_DEVICE_ADDR) Register Mask  */
-
-
-/* -------- USB_DEVICE_EXTREG : (USB Offset: 0x08) (R/W 16) DEVICE_DESC_BANK Endpoint Bank, Extended -------- */
-#define USB_DEVICE_EXTREG_SUBPID_Pos          _UINT16_(0)                                          /* (USB_DEVICE_EXTREG) SUBPID field send with extended token Position */
-#define USB_DEVICE_EXTREG_SUBPID_Msk          (_UINT16_(0xF) << USB_DEVICE_EXTREG_SUBPID_Pos)      /* (USB_DEVICE_EXTREG) SUBPID field send with extended token Mask */
-#define USB_DEVICE_EXTREG_SUBPID(value)       (USB_DEVICE_EXTREG_SUBPID_Msk & (_UINT16_(value) << USB_DEVICE_EXTREG_SUBPID_Pos)) /* Assigment of value for SUBPID in the USB_DEVICE_EXTREG register */
-#define USB_DEVICE_EXTREG_VARIABLE_Pos        _UINT16_(4)                                          /* (USB_DEVICE_EXTREG) Variable field send with extended token Position */
-#define USB_DEVICE_EXTREG_VARIABLE_Msk        (_UINT16_(0x7FF) << USB_DEVICE_EXTREG_VARIABLE_Pos)  /* (USB_DEVICE_EXTREG) Variable field send with extended token Mask */
-#define USB_DEVICE_EXTREG_VARIABLE(value)     (USB_DEVICE_EXTREG_VARIABLE_Msk & (_UINT16_(value) << USB_DEVICE_EXTREG_VARIABLE_Pos)) /* Assigment of value for VARIABLE in the USB_DEVICE_EXTREG register */
-#define USB_DEVICE_EXTREG_Msk                 _UINT16_(0x7FFF)                                     /* (USB_DEVICE_EXTREG) Register Mask  */
 
 
 /* -------- USB_DEVICE_PCKSIZE : (USB Offset: 0x04) (R/W 32) DEVICE_DESC_BANK Endpoint Bank, Packet Size -------- */
@@ -59,6 +49,16 @@
 #define USB_DEVICE_PCKSIZE_AUTO_ZLP_Msk       (_UINT32_(0x1) << USB_DEVICE_PCKSIZE_AUTO_ZLP_Pos)   /* (USB_DEVICE_PCKSIZE) Automatic Zero Length Packet Mask */
 #define USB_DEVICE_PCKSIZE_AUTO_ZLP(value)    (USB_DEVICE_PCKSIZE_AUTO_ZLP_Msk & (_UINT32_(value) << USB_DEVICE_PCKSIZE_AUTO_ZLP_Pos)) /* Assigment of value for AUTO_ZLP in the USB_DEVICE_PCKSIZE register */
 #define USB_DEVICE_PCKSIZE_Msk                _UINT32_(0xFFFFFFFF)                                 /* (USB_DEVICE_PCKSIZE) Register Mask  */
+
+
+/* -------- USB_DEVICE_EXTREG : (USB Offset: 0x08) (R/W 16) DEVICE_DESC_BANK Endpoint Bank, Extended -------- */
+#define USB_DEVICE_EXTREG_SUBPID_Pos          _UINT16_(0)                                          /* (USB_DEVICE_EXTREG) SUBPID field send with extended token Position */
+#define USB_DEVICE_EXTREG_SUBPID_Msk          (_UINT16_(0xF) << USB_DEVICE_EXTREG_SUBPID_Pos)      /* (USB_DEVICE_EXTREG) SUBPID field send with extended token Mask */
+#define USB_DEVICE_EXTREG_SUBPID(value)       (USB_DEVICE_EXTREG_SUBPID_Msk & (_UINT16_(value) << USB_DEVICE_EXTREG_SUBPID_Pos)) /* Assigment of value for SUBPID in the USB_DEVICE_EXTREG register */
+#define USB_DEVICE_EXTREG_VARIABLE_Pos        _UINT16_(4)                                          /* (USB_DEVICE_EXTREG) Variable field send with extended token Position */
+#define USB_DEVICE_EXTREG_VARIABLE_Msk        (_UINT16_(0x7FF) << USB_DEVICE_EXTREG_VARIABLE_Pos)  /* (USB_DEVICE_EXTREG) Variable field send with extended token Mask */
+#define USB_DEVICE_EXTREG_VARIABLE(value)     (USB_DEVICE_EXTREG_VARIABLE_Msk & (_UINT16_(value) << USB_DEVICE_EXTREG_VARIABLE_Pos)) /* Assigment of value for VARIABLE in the USB_DEVICE_EXTREG register */
+#define USB_DEVICE_EXTREG_Msk                 _UINT16_(0x7FFF)                                     /* (USB_DEVICE_EXTREG) Register Mask  */
 
 
 /* -------- USB_DEVICE_STATUS_BK : (USB Offset: 0x0A) (R/W 8) DEVICE_DESC_BANK Enpoint Bank, Status of Bank -------- */
@@ -78,31 +78,6 @@
 #define USB_HOST_ADDR_Msk                     _UINT32_(0xFFFFFFFF)                                 /* (USB_HOST_ADDR) Register Mask  */
 
 
-/* -------- USB_HOST_CTRL_PIPE : (USB Offset: 0x0C) (R/W 16) HOST_DESC_BANK Host Bank, Host Control Pipe -------- */
-#define USB_HOST_CTRL_PIPE_RESETVALUE         _UINT16_(0x00)                                       /*  (USB_HOST_CTRL_PIPE) HOST_DESC_BANK Host Bank, Host Control Pipe  Reset Value */
-
-#define USB_HOST_CTRL_PIPE_PDADDR_Pos         _UINT16_(0)                                          /* (USB_HOST_CTRL_PIPE) Pipe Device Adress Position */
-#define USB_HOST_CTRL_PIPE_PDADDR_Msk         (_UINT16_(0x7F) << USB_HOST_CTRL_PIPE_PDADDR_Pos)    /* (USB_HOST_CTRL_PIPE) Pipe Device Adress Mask */
-#define USB_HOST_CTRL_PIPE_PDADDR(value)      (USB_HOST_CTRL_PIPE_PDADDR_Msk & (_UINT16_(value) << USB_HOST_CTRL_PIPE_PDADDR_Pos)) /* Assigment of value for PDADDR in the USB_HOST_CTRL_PIPE register */
-#define USB_HOST_CTRL_PIPE_PEPNUM_Pos         _UINT16_(8)                                          /* (USB_HOST_CTRL_PIPE) Pipe Endpoint Number Position */
-#define USB_HOST_CTRL_PIPE_PEPNUM_Msk         (_UINT16_(0xF) << USB_HOST_CTRL_PIPE_PEPNUM_Pos)     /* (USB_HOST_CTRL_PIPE) Pipe Endpoint Number Mask */
-#define USB_HOST_CTRL_PIPE_PEPNUM(value)      (USB_HOST_CTRL_PIPE_PEPNUM_Msk & (_UINT16_(value) << USB_HOST_CTRL_PIPE_PEPNUM_Pos)) /* Assigment of value for PEPNUM in the USB_HOST_CTRL_PIPE register */
-#define USB_HOST_CTRL_PIPE_PERMAX_Pos         _UINT16_(12)                                         /* (USB_HOST_CTRL_PIPE) Pipe Error Max Number Position */
-#define USB_HOST_CTRL_PIPE_PERMAX_Msk         (_UINT16_(0xF) << USB_HOST_CTRL_PIPE_PERMAX_Pos)     /* (USB_HOST_CTRL_PIPE) Pipe Error Max Number Mask */
-#define USB_HOST_CTRL_PIPE_PERMAX(value)      (USB_HOST_CTRL_PIPE_PERMAX_Msk & (_UINT16_(value) << USB_HOST_CTRL_PIPE_PERMAX_Pos)) /* Assigment of value for PERMAX in the USB_HOST_CTRL_PIPE register */
-#define USB_HOST_CTRL_PIPE_Msk                _UINT16_(0xFF7F)                                     /* (USB_HOST_CTRL_PIPE) Register Mask  */
-
-
-/* -------- USB_HOST_EXTREG : (USB Offset: 0x08) (R/W 16) HOST_DESC_BANK Host Bank, Extended -------- */
-#define USB_HOST_EXTREG_SUBPID_Pos            _UINT16_(0)                                          /* (USB_HOST_EXTREG) SUBPID field send with extended token Position */
-#define USB_HOST_EXTREG_SUBPID_Msk            (_UINT16_(0xF) << USB_HOST_EXTREG_SUBPID_Pos)        /* (USB_HOST_EXTREG) SUBPID field send with extended token Mask */
-#define USB_HOST_EXTREG_SUBPID(value)         (USB_HOST_EXTREG_SUBPID_Msk & (_UINT16_(value) << USB_HOST_EXTREG_SUBPID_Pos)) /* Assigment of value for SUBPID in the USB_HOST_EXTREG register */
-#define USB_HOST_EXTREG_VARIABLE_Pos          _UINT16_(4)                                          /* (USB_HOST_EXTREG) Variable field send with extended token Position */
-#define USB_HOST_EXTREG_VARIABLE_Msk          (_UINT16_(0x7FF) << USB_HOST_EXTREG_VARIABLE_Pos)    /* (USB_HOST_EXTREG) Variable field send with extended token Mask */
-#define USB_HOST_EXTREG_VARIABLE(value)       (USB_HOST_EXTREG_VARIABLE_Msk & (_UINT16_(value) << USB_HOST_EXTREG_VARIABLE_Pos)) /* Assigment of value for VARIABLE in the USB_HOST_EXTREG register */
-#define USB_HOST_EXTREG_Msk                   _UINT16_(0x7FFF)                                     /* (USB_HOST_EXTREG) Register Mask  */
-
-
 /* -------- USB_HOST_PCKSIZE : (USB Offset: 0x04) (R/W 32) HOST_DESC_BANK Host Bank, Packet Size -------- */
 #define USB_HOST_PCKSIZE_BYTE_COUNT_Pos       _UINT32_(0)                                          /* (USB_HOST_PCKSIZE) Byte Count Position */
 #define USB_HOST_PCKSIZE_BYTE_COUNT_Msk       (_UINT32_(0x3FFF) << USB_HOST_PCKSIZE_BYTE_COUNT_Pos) /* (USB_HOST_PCKSIZE) Byte Count Mask */
@@ -119,6 +94,16 @@
 #define USB_HOST_PCKSIZE_Msk                  _UINT32_(0xFFFFFFFF)                                 /* (USB_HOST_PCKSIZE) Register Mask  */
 
 
+/* -------- USB_HOST_EXTREG : (USB Offset: 0x08) (R/W 16) HOST_DESC_BANK Host Bank, Extended -------- */
+#define USB_HOST_EXTREG_SUBPID_Pos            _UINT16_(0)                                          /* (USB_HOST_EXTREG) SUBPID field send with extended token Position */
+#define USB_HOST_EXTREG_SUBPID_Msk            (_UINT16_(0xF) << USB_HOST_EXTREG_SUBPID_Pos)        /* (USB_HOST_EXTREG) SUBPID field send with extended token Mask */
+#define USB_HOST_EXTREG_SUBPID(value)         (USB_HOST_EXTREG_SUBPID_Msk & (_UINT16_(value) << USB_HOST_EXTREG_SUBPID_Pos)) /* Assigment of value for SUBPID in the USB_HOST_EXTREG register */
+#define USB_HOST_EXTREG_VARIABLE_Pos          _UINT16_(4)                                          /* (USB_HOST_EXTREG) Variable field send with extended token Position */
+#define USB_HOST_EXTREG_VARIABLE_Msk          (_UINT16_(0x7FF) << USB_HOST_EXTREG_VARIABLE_Pos)    /* (USB_HOST_EXTREG) Variable field send with extended token Mask */
+#define USB_HOST_EXTREG_VARIABLE(value)       (USB_HOST_EXTREG_VARIABLE_Msk & (_UINT16_(value) << USB_HOST_EXTREG_VARIABLE_Pos)) /* Assigment of value for VARIABLE in the USB_HOST_EXTREG register */
+#define USB_HOST_EXTREG_Msk                   _UINT16_(0x7FFF)                                     /* (USB_HOST_EXTREG) Register Mask  */
+
+
 /* -------- USB_HOST_STATUS_BK : (USB Offset: 0x0A) (R/W 8) HOST_DESC_BANK Host Bank, Status of Bank -------- */
 #define USB_HOST_STATUS_BK_CRCERR_Pos         _UINT8_(0)                                           /* (USB_HOST_STATUS_BK) CRC Error Status Position */
 #define USB_HOST_STATUS_BK_CRCERR_Msk         (_UINT8_(0x1) << USB_HOST_STATUS_BK_CRCERR_Pos)      /* (USB_HOST_STATUS_BK) CRC Error Status Mask */
@@ -127,6 +112,21 @@
 #define USB_HOST_STATUS_BK_ERRORFLOW_Msk      (_UINT8_(0x1) << USB_HOST_STATUS_BK_ERRORFLOW_Pos)   /* (USB_HOST_STATUS_BK) Error Flow Status Mask */
 #define USB_HOST_STATUS_BK_ERRORFLOW(value)   (USB_HOST_STATUS_BK_ERRORFLOW_Msk & (_UINT8_(value) << USB_HOST_STATUS_BK_ERRORFLOW_Pos)) /* Assigment of value for ERRORFLOW in the USB_HOST_STATUS_BK register */
 #define USB_HOST_STATUS_BK_Msk                _UINT8_(0x03)                                        /* (USB_HOST_STATUS_BK) Register Mask  */
+
+
+/* -------- USB_HOST_CTRL_PIPE : (USB Offset: 0x0C) (R/W 16) HOST_DESC_BANK Host Bank, Host Control Pipe -------- */
+#define USB_HOST_CTRL_PIPE_RESETVALUE         _UINT16_(0x00)                                       /*  (USB_HOST_CTRL_PIPE) HOST_DESC_BANK Host Bank, Host Control Pipe  Reset Value */
+
+#define USB_HOST_CTRL_PIPE_PDADDR_Pos         _UINT16_(0)                                          /* (USB_HOST_CTRL_PIPE) Pipe Device Adress Position */
+#define USB_HOST_CTRL_PIPE_PDADDR_Msk         (_UINT16_(0x7F) << USB_HOST_CTRL_PIPE_PDADDR_Pos)    /* (USB_HOST_CTRL_PIPE) Pipe Device Adress Mask */
+#define USB_HOST_CTRL_PIPE_PDADDR(value)      (USB_HOST_CTRL_PIPE_PDADDR_Msk & (_UINT16_(value) << USB_HOST_CTRL_PIPE_PDADDR_Pos)) /* Assigment of value for PDADDR in the USB_HOST_CTRL_PIPE register */
+#define USB_HOST_CTRL_PIPE_PEPNUM_Pos         _UINT16_(8)                                          /* (USB_HOST_CTRL_PIPE) Pipe Endpoint Number Position */
+#define USB_HOST_CTRL_PIPE_PEPNUM_Msk         (_UINT16_(0xF) << USB_HOST_CTRL_PIPE_PEPNUM_Pos)     /* (USB_HOST_CTRL_PIPE) Pipe Endpoint Number Mask */
+#define USB_HOST_CTRL_PIPE_PEPNUM(value)      (USB_HOST_CTRL_PIPE_PEPNUM_Msk & (_UINT16_(value) << USB_HOST_CTRL_PIPE_PEPNUM_Pos)) /* Assigment of value for PEPNUM in the USB_HOST_CTRL_PIPE register */
+#define USB_HOST_CTRL_PIPE_PERMAX_Pos         _UINT16_(12)                                         /* (USB_HOST_CTRL_PIPE) Pipe Error Max Number Position */
+#define USB_HOST_CTRL_PIPE_PERMAX_Msk         (_UINT16_(0xF) << USB_HOST_CTRL_PIPE_PERMAX_Pos)     /* (USB_HOST_CTRL_PIPE) Pipe Error Max Number Mask */
+#define USB_HOST_CTRL_PIPE_PERMAX(value)      (USB_HOST_CTRL_PIPE_PERMAX_Msk & (_UINT16_(value) << USB_HOST_CTRL_PIPE_PERMAX_Pos)) /* Assigment of value for PERMAX in the USB_HOST_CTRL_PIPE register */
+#define USB_HOST_CTRL_PIPE_Msk                _UINT16_(0xFF7F)                                     /* (USB_HOST_CTRL_PIPE) Register Mask  */
 
 
 /* -------- USB_HOST_STATUS_PIPE : (USB Offset: 0x0E) (R/W 16) HOST_DESC_BANK Host Bank, Host Status Pipe -------- */
@@ -165,6 +165,132 @@
 #define USB_DEVICE_EPCFG_NYETDIS(value)       (USB_DEVICE_EPCFG_NYETDIS_Msk & (_UINT8_(value) << USB_DEVICE_EPCFG_NYETDIS_Pos)) /* Assigment of value for NYETDIS in the USB_DEVICE_EPCFG register */
 #define USB_DEVICE_EPCFG_Msk                  _UINT8_(0xF7)                                        /* (USB_DEVICE_EPCFG) Register Mask  */
 
+
+/* -------- USB_DEVICE_EPSTATUSCLR : (USB Offset: 0x04) ( /W 8) DEVICE_ENDPOINT End Point Pipe Status Clear -------- */
+#define USB_DEVICE_EPSTATUSCLR_RESETVALUE     _UINT8_(0x00)                                        /*  (USB_DEVICE_EPSTATUSCLR) DEVICE_ENDPOINT End Point Pipe Status Clear  Reset Value */
+
+#define USB_DEVICE_EPSTATUSCLR_DTGLOUT_Pos    _UINT8_(0)                                           /* (USB_DEVICE_EPSTATUSCLR) Data Toggle OUT Clear Position */
+#define USB_DEVICE_EPSTATUSCLR_DTGLOUT_Msk    (_UINT8_(0x1) << USB_DEVICE_EPSTATUSCLR_DTGLOUT_Pos) /* (USB_DEVICE_EPSTATUSCLR) Data Toggle OUT Clear Mask */
+#define USB_DEVICE_EPSTATUSCLR_DTGLOUT(value) (USB_DEVICE_EPSTATUSCLR_DTGLOUT_Msk & (_UINT8_(value) << USB_DEVICE_EPSTATUSCLR_DTGLOUT_Pos)) /* Assigment of value for DTGLOUT in the USB_DEVICE_EPSTATUSCLR register */
+#define USB_DEVICE_EPSTATUSCLR_DTGLIN_Pos     _UINT8_(1)                                           /* (USB_DEVICE_EPSTATUSCLR) Data Toggle IN Clear Position */
+#define USB_DEVICE_EPSTATUSCLR_DTGLIN_Msk     (_UINT8_(0x1) << USB_DEVICE_EPSTATUSCLR_DTGLIN_Pos)  /* (USB_DEVICE_EPSTATUSCLR) Data Toggle IN Clear Mask */
+#define USB_DEVICE_EPSTATUSCLR_DTGLIN(value)  (USB_DEVICE_EPSTATUSCLR_DTGLIN_Msk & (_UINT8_(value) << USB_DEVICE_EPSTATUSCLR_DTGLIN_Pos)) /* Assigment of value for DTGLIN in the USB_DEVICE_EPSTATUSCLR register */
+#define USB_DEVICE_EPSTATUSCLR_CURBK_Pos      _UINT8_(2)                                           /* (USB_DEVICE_EPSTATUSCLR) Current Bank Clear Position */
+#define USB_DEVICE_EPSTATUSCLR_CURBK_Msk      (_UINT8_(0x1) << USB_DEVICE_EPSTATUSCLR_CURBK_Pos)   /* (USB_DEVICE_EPSTATUSCLR) Current Bank Clear Mask */
+#define USB_DEVICE_EPSTATUSCLR_CURBK(value)   (USB_DEVICE_EPSTATUSCLR_CURBK_Msk & (_UINT8_(value) << USB_DEVICE_EPSTATUSCLR_CURBK_Pos)) /* Assigment of value for CURBK in the USB_DEVICE_EPSTATUSCLR register */
+#define USB_DEVICE_EPSTATUSCLR_STALLRQ0_Pos   _UINT8_(4)                                           /* (USB_DEVICE_EPSTATUSCLR) Stall 0 Request Clear Position */
+#define USB_DEVICE_EPSTATUSCLR_STALLRQ0_Msk   (_UINT8_(0x1) << USB_DEVICE_EPSTATUSCLR_STALLRQ0_Pos) /* (USB_DEVICE_EPSTATUSCLR) Stall 0 Request Clear Mask */
+#define USB_DEVICE_EPSTATUSCLR_STALLRQ0(value) (USB_DEVICE_EPSTATUSCLR_STALLRQ0_Msk & (_UINT8_(value) << USB_DEVICE_EPSTATUSCLR_STALLRQ0_Pos)) /* Assigment of value for STALLRQ0 in the USB_DEVICE_EPSTATUSCLR register */
+#define USB_DEVICE_EPSTATUSCLR_STALLRQ1_Pos   _UINT8_(5)                                           /* (USB_DEVICE_EPSTATUSCLR) Stall 1 Request Clear Position */
+#define USB_DEVICE_EPSTATUSCLR_STALLRQ1_Msk   (_UINT8_(0x1) << USB_DEVICE_EPSTATUSCLR_STALLRQ1_Pos) /* (USB_DEVICE_EPSTATUSCLR) Stall 1 Request Clear Mask */
+#define USB_DEVICE_EPSTATUSCLR_STALLRQ1(value) (USB_DEVICE_EPSTATUSCLR_STALLRQ1_Msk & (_UINT8_(value) << USB_DEVICE_EPSTATUSCLR_STALLRQ1_Pos)) /* Assigment of value for STALLRQ1 in the USB_DEVICE_EPSTATUSCLR register */
+#define USB_DEVICE_EPSTATUSCLR_BK0RDY_Pos     _UINT8_(6)                                           /* (USB_DEVICE_EPSTATUSCLR) Bank 0 Ready Clear Position */
+#define USB_DEVICE_EPSTATUSCLR_BK0RDY_Msk     (_UINT8_(0x1) << USB_DEVICE_EPSTATUSCLR_BK0RDY_Pos)  /* (USB_DEVICE_EPSTATUSCLR) Bank 0 Ready Clear Mask */
+#define USB_DEVICE_EPSTATUSCLR_BK0RDY(value)  (USB_DEVICE_EPSTATUSCLR_BK0RDY_Msk & (_UINT8_(value) << USB_DEVICE_EPSTATUSCLR_BK0RDY_Pos)) /* Assigment of value for BK0RDY in the USB_DEVICE_EPSTATUSCLR register */
+#define USB_DEVICE_EPSTATUSCLR_BK1RDY_Pos     _UINT8_(7)                                           /* (USB_DEVICE_EPSTATUSCLR) Bank 1 Ready Clear Position */
+#define USB_DEVICE_EPSTATUSCLR_BK1RDY_Msk     (_UINT8_(0x1) << USB_DEVICE_EPSTATUSCLR_BK1RDY_Pos)  /* (USB_DEVICE_EPSTATUSCLR) Bank 1 Ready Clear Mask */
+#define USB_DEVICE_EPSTATUSCLR_BK1RDY(value)  (USB_DEVICE_EPSTATUSCLR_BK1RDY_Msk & (_UINT8_(value) << USB_DEVICE_EPSTATUSCLR_BK1RDY_Pos)) /* Assigment of value for BK1RDY in the USB_DEVICE_EPSTATUSCLR register */
+#define USB_DEVICE_EPSTATUSCLR_Msk            _UINT8_(0xF7)                                        /* (USB_DEVICE_EPSTATUSCLR) Register Mask  */
+
+#define USB_DEVICE_EPSTATUSCLR_STALLRQ_Pos    _UINT8_(4)                                           /* (USB_DEVICE_EPSTATUSCLR Position) Stall x Request Clear */
+#define USB_DEVICE_EPSTATUSCLR_STALLRQ_Msk    (_UINT8_(0x3) << USB_DEVICE_EPSTATUSCLR_STALLRQ_Pos) /* (USB_DEVICE_EPSTATUSCLR Mask) STALLRQ */
+#define USB_DEVICE_EPSTATUSCLR_STALLRQ(value) (USB_DEVICE_EPSTATUSCLR_STALLRQ_Msk & (_UINT8_(value) << USB_DEVICE_EPSTATUSCLR_STALLRQ_Pos)) 
+
+/* -------- USB_DEVICE_EPSTATUSSET : (USB Offset: 0x05) ( /W 8) DEVICE_ENDPOINT End Point Pipe Status Set -------- */
+#define USB_DEVICE_EPSTATUSSET_RESETVALUE     _UINT8_(0x00)                                        /*  (USB_DEVICE_EPSTATUSSET) DEVICE_ENDPOINT End Point Pipe Status Set  Reset Value */
+
+#define USB_DEVICE_EPSTATUSSET_DTGLOUT_Pos    _UINT8_(0)                                           /* (USB_DEVICE_EPSTATUSSET) Data Toggle OUT Set Position */
+#define USB_DEVICE_EPSTATUSSET_DTGLOUT_Msk    (_UINT8_(0x1) << USB_DEVICE_EPSTATUSSET_DTGLOUT_Pos) /* (USB_DEVICE_EPSTATUSSET) Data Toggle OUT Set Mask */
+#define USB_DEVICE_EPSTATUSSET_DTGLOUT(value) (USB_DEVICE_EPSTATUSSET_DTGLOUT_Msk & (_UINT8_(value) << USB_DEVICE_EPSTATUSSET_DTGLOUT_Pos)) /* Assigment of value for DTGLOUT in the USB_DEVICE_EPSTATUSSET register */
+#define USB_DEVICE_EPSTATUSSET_DTGLIN_Pos     _UINT8_(1)                                           /* (USB_DEVICE_EPSTATUSSET) Data Toggle IN Set Position */
+#define USB_DEVICE_EPSTATUSSET_DTGLIN_Msk     (_UINT8_(0x1) << USB_DEVICE_EPSTATUSSET_DTGLIN_Pos)  /* (USB_DEVICE_EPSTATUSSET) Data Toggle IN Set Mask */
+#define USB_DEVICE_EPSTATUSSET_DTGLIN(value)  (USB_DEVICE_EPSTATUSSET_DTGLIN_Msk & (_UINT8_(value) << USB_DEVICE_EPSTATUSSET_DTGLIN_Pos)) /* Assigment of value for DTGLIN in the USB_DEVICE_EPSTATUSSET register */
+#define USB_DEVICE_EPSTATUSSET_CURBK_Pos      _UINT8_(2)                                           /* (USB_DEVICE_EPSTATUSSET) Current Bank Set Position */
+#define USB_DEVICE_EPSTATUSSET_CURBK_Msk      (_UINT8_(0x1) << USB_DEVICE_EPSTATUSSET_CURBK_Pos)   /* (USB_DEVICE_EPSTATUSSET) Current Bank Set Mask */
+#define USB_DEVICE_EPSTATUSSET_CURBK(value)   (USB_DEVICE_EPSTATUSSET_CURBK_Msk & (_UINT8_(value) << USB_DEVICE_EPSTATUSSET_CURBK_Pos)) /* Assigment of value for CURBK in the USB_DEVICE_EPSTATUSSET register */
+#define USB_DEVICE_EPSTATUSSET_STALLRQ0_Pos   _UINT8_(4)                                           /* (USB_DEVICE_EPSTATUSSET) Stall 0 Request Set Position */
+#define USB_DEVICE_EPSTATUSSET_STALLRQ0_Msk   (_UINT8_(0x1) << USB_DEVICE_EPSTATUSSET_STALLRQ0_Pos) /* (USB_DEVICE_EPSTATUSSET) Stall 0 Request Set Mask */
+#define USB_DEVICE_EPSTATUSSET_STALLRQ0(value) (USB_DEVICE_EPSTATUSSET_STALLRQ0_Msk & (_UINT8_(value) << USB_DEVICE_EPSTATUSSET_STALLRQ0_Pos)) /* Assigment of value for STALLRQ0 in the USB_DEVICE_EPSTATUSSET register */
+#define USB_DEVICE_EPSTATUSSET_STALLRQ1_Pos   _UINT8_(5)                                           /* (USB_DEVICE_EPSTATUSSET) Stall 1 Request Set Position */
+#define USB_DEVICE_EPSTATUSSET_STALLRQ1_Msk   (_UINT8_(0x1) << USB_DEVICE_EPSTATUSSET_STALLRQ1_Pos) /* (USB_DEVICE_EPSTATUSSET) Stall 1 Request Set Mask */
+#define USB_DEVICE_EPSTATUSSET_STALLRQ1(value) (USB_DEVICE_EPSTATUSSET_STALLRQ1_Msk & (_UINT8_(value) << USB_DEVICE_EPSTATUSSET_STALLRQ1_Pos)) /* Assigment of value for STALLRQ1 in the USB_DEVICE_EPSTATUSSET register */
+#define USB_DEVICE_EPSTATUSSET_BK0RDY_Pos     _UINT8_(6)                                           /* (USB_DEVICE_EPSTATUSSET) Bank 0 Ready Set Position */
+#define USB_DEVICE_EPSTATUSSET_BK0RDY_Msk     (_UINT8_(0x1) << USB_DEVICE_EPSTATUSSET_BK0RDY_Pos)  /* (USB_DEVICE_EPSTATUSSET) Bank 0 Ready Set Mask */
+#define USB_DEVICE_EPSTATUSSET_BK0RDY(value)  (USB_DEVICE_EPSTATUSSET_BK0RDY_Msk & (_UINT8_(value) << USB_DEVICE_EPSTATUSSET_BK0RDY_Pos)) /* Assigment of value for BK0RDY in the USB_DEVICE_EPSTATUSSET register */
+#define USB_DEVICE_EPSTATUSSET_BK1RDY_Pos     _UINT8_(7)                                           /* (USB_DEVICE_EPSTATUSSET) Bank 1 Ready Set Position */
+#define USB_DEVICE_EPSTATUSSET_BK1RDY_Msk     (_UINT8_(0x1) << USB_DEVICE_EPSTATUSSET_BK1RDY_Pos)  /* (USB_DEVICE_EPSTATUSSET) Bank 1 Ready Set Mask */
+#define USB_DEVICE_EPSTATUSSET_BK1RDY(value)  (USB_DEVICE_EPSTATUSSET_BK1RDY_Msk & (_UINT8_(value) << USB_DEVICE_EPSTATUSSET_BK1RDY_Pos)) /* Assigment of value for BK1RDY in the USB_DEVICE_EPSTATUSSET register */
+#define USB_DEVICE_EPSTATUSSET_Msk            _UINT8_(0xF7)                                        /* (USB_DEVICE_EPSTATUSSET) Register Mask  */
+
+#define USB_DEVICE_EPSTATUSSET_STALLRQ_Pos    _UINT8_(4)                                           /* (USB_DEVICE_EPSTATUSSET Position) Stall x Request Set */
+#define USB_DEVICE_EPSTATUSSET_STALLRQ_Msk    (_UINT8_(0x3) << USB_DEVICE_EPSTATUSSET_STALLRQ_Pos) /* (USB_DEVICE_EPSTATUSSET Mask) STALLRQ */
+#define USB_DEVICE_EPSTATUSSET_STALLRQ(value) (USB_DEVICE_EPSTATUSSET_STALLRQ_Msk & (_UINT8_(value) << USB_DEVICE_EPSTATUSSET_STALLRQ_Pos)) 
+
+/* -------- USB_DEVICE_EPSTATUS : (USB Offset: 0x06) ( R/ 8) DEVICE_ENDPOINT End Point Pipe Status -------- */
+#define USB_DEVICE_EPSTATUS_RESETVALUE        _UINT8_(0x00)                                        /*  (USB_DEVICE_EPSTATUS) DEVICE_ENDPOINT End Point Pipe Status  Reset Value */
+
+#define USB_DEVICE_EPSTATUS_DTGLOUT_Pos       _UINT8_(0)                                           /* (USB_DEVICE_EPSTATUS) Data Toggle Out Position */
+#define USB_DEVICE_EPSTATUS_DTGLOUT_Msk       (_UINT8_(0x1) << USB_DEVICE_EPSTATUS_DTGLOUT_Pos)    /* (USB_DEVICE_EPSTATUS) Data Toggle Out Mask */
+#define USB_DEVICE_EPSTATUS_DTGLOUT(value)    (USB_DEVICE_EPSTATUS_DTGLOUT_Msk & (_UINT8_(value) << USB_DEVICE_EPSTATUS_DTGLOUT_Pos)) /* Assigment of value for DTGLOUT in the USB_DEVICE_EPSTATUS register */
+#define USB_DEVICE_EPSTATUS_DTGLIN_Pos        _UINT8_(1)                                           /* (USB_DEVICE_EPSTATUS) Data Toggle In Position */
+#define USB_DEVICE_EPSTATUS_DTGLIN_Msk        (_UINT8_(0x1) << USB_DEVICE_EPSTATUS_DTGLIN_Pos)     /* (USB_DEVICE_EPSTATUS) Data Toggle In Mask */
+#define USB_DEVICE_EPSTATUS_DTGLIN(value)     (USB_DEVICE_EPSTATUS_DTGLIN_Msk & (_UINT8_(value) << USB_DEVICE_EPSTATUS_DTGLIN_Pos)) /* Assigment of value for DTGLIN in the USB_DEVICE_EPSTATUS register */
+#define USB_DEVICE_EPSTATUS_CURBK_Pos         _UINT8_(2)                                           /* (USB_DEVICE_EPSTATUS) Current Bank Position */
+#define USB_DEVICE_EPSTATUS_CURBK_Msk         (_UINT8_(0x1) << USB_DEVICE_EPSTATUS_CURBK_Pos)      /* (USB_DEVICE_EPSTATUS) Current Bank Mask */
+#define USB_DEVICE_EPSTATUS_CURBK(value)      (USB_DEVICE_EPSTATUS_CURBK_Msk & (_UINT8_(value) << USB_DEVICE_EPSTATUS_CURBK_Pos)) /* Assigment of value for CURBK in the USB_DEVICE_EPSTATUS register */
+#define USB_DEVICE_EPSTATUS_STALLRQ0_Pos      _UINT8_(4)                                           /* (USB_DEVICE_EPSTATUS) Stall 0 Request Position */
+#define USB_DEVICE_EPSTATUS_STALLRQ0_Msk      (_UINT8_(0x1) << USB_DEVICE_EPSTATUS_STALLRQ0_Pos)   /* (USB_DEVICE_EPSTATUS) Stall 0 Request Mask */
+#define USB_DEVICE_EPSTATUS_STALLRQ0(value)   (USB_DEVICE_EPSTATUS_STALLRQ0_Msk & (_UINT8_(value) << USB_DEVICE_EPSTATUS_STALLRQ0_Pos)) /* Assigment of value for STALLRQ0 in the USB_DEVICE_EPSTATUS register */
+#define USB_DEVICE_EPSTATUS_STALLRQ1_Pos      _UINT8_(5)                                           /* (USB_DEVICE_EPSTATUS) Stall 1 Request Position */
+#define USB_DEVICE_EPSTATUS_STALLRQ1_Msk      (_UINT8_(0x1) << USB_DEVICE_EPSTATUS_STALLRQ1_Pos)   /* (USB_DEVICE_EPSTATUS) Stall 1 Request Mask */
+#define USB_DEVICE_EPSTATUS_STALLRQ1(value)   (USB_DEVICE_EPSTATUS_STALLRQ1_Msk & (_UINT8_(value) << USB_DEVICE_EPSTATUS_STALLRQ1_Pos)) /* Assigment of value for STALLRQ1 in the USB_DEVICE_EPSTATUS register */
+#define USB_DEVICE_EPSTATUS_BK0RDY_Pos        _UINT8_(6)                                           /* (USB_DEVICE_EPSTATUS) Bank 0 ready Position */
+#define USB_DEVICE_EPSTATUS_BK0RDY_Msk        (_UINT8_(0x1) << USB_DEVICE_EPSTATUS_BK0RDY_Pos)     /* (USB_DEVICE_EPSTATUS) Bank 0 ready Mask */
+#define USB_DEVICE_EPSTATUS_BK0RDY(value)     (USB_DEVICE_EPSTATUS_BK0RDY_Msk & (_UINT8_(value) << USB_DEVICE_EPSTATUS_BK0RDY_Pos)) /* Assigment of value for BK0RDY in the USB_DEVICE_EPSTATUS register */
+#define USB_DEVICE_EPSTATUS_BK1RDY_Pos        _UINT8_(7)                                           /* (USB_DEVICE_EPSTATUS) Bank 1 ready Position */
+#define USB_DEVICE_EPSTATUS_BK1RDY_Msk        (_UINT8_(0x1) << USB_DEVICE_EPSTATUS_BK1RDY_Pos)     /* (USB_DEVICE_EPSTATUS) Bank 1 ready Mask */
+#define USB_DEVICE_EPSTATUS_BK1RDY(value)     (USB_DEVICE_EPSTATUS_BK1RDY_Msk & (_UINT8_(value) << USB_DEVICE_EPSTATUS_BK1RDY_Pos)) /* Assigment of value for BK1RDY in the USB_DEVICE_EPSTATUS register */
+#define USB_DEVICE_EPSTATUS_Msk               _UINT8_(0xF7)                                        /* (USB_DEVICE_EPSTATUS) Register Mask  */
+
+#define USB_DEVICE_EPSTATUS_STALLRQ_Pos       _UINT8_(4)                                           /* (USB_DEVICE_EPSTATUS Position) Stall x Request */
+#define USB_DEVICE_EPSTATUS_STALLRQ_Msk       (_UINT8_(0x3) << USB_DEVICE_EPSTATUS_STALLRQ_Pos)    /* (USB_DEVICE_EPSTATUS Mask) STALLRQ */
+#define USB_DEVICE_EPSTATUS_STALLRQ(value)    (USB_DEVICE_EPSTATUS_STALLRQ_Msk & (_UINT8_(value) << USB_DEVICE_EPSTATUS_STALLRQ_Pos)) 
+
+/* -------- USB_DEVICE_EPINTFLAG : (USB Offset: 0x07) (R/W 8) DEVICE_ENDPOINT End Point Interrupt Flag -------- */
+#define USB_DEVICE_EPINTFLAG_RESETVALUE       _UINT8_(0x00)                                        /*  (USB_DEVICE_EPINTFLAG) DEVICE_ENDPOINT End Point Interrupt Flag  Reset Value */
+
+#define USB_DEVICE_EPINTFLAG_TRCPT0_Pos       _UINT8_(0)                                           /* (USB_DEVICE_EPINTFLAG) Transfer Complete 0 Position */
+#define USB_DEVICE_EPINTFLAG_TRCPT0_Msk       (_UINT8_(0x1) << USB_DEVICE_EPINTFLAG_TRCPT0_Pos)    /* (USB_DEVICE_EPINTFLAG) Transfer Complete 0 Mask */
+#define USB_DEVICE_EPINTFLAG_TRCPT0(value)    (USB_DEVICE_EPINTFLAG_TRCPT0_Msk & (_UINT8_(value) << USB_DEVICE_EPINTFLAG_TRCPT0_Pos)) /* Assigment of value for TRCPT0 in the USB_DEVICE_EPINTFLAG register */
+#define USB_DEVICE_EPINTFLAG_TRCPT1_Pos       _UINT8_(1)                                           /* (USB_DEVICE_EPINTFLAG) Transfer Complete 1 Position */
+#define USB_DEVICE_EPINTFLAG_TRCPT1_Msk       (_UINT8_(0x1) << USB_DEVICE_EPINTFLAG_TRCPT1_Pos)    /* (USB_DEVICE_EPINTFLAG) Transfer Complete 1 Mask */
+#define USB_DEVICE_EPINTFLAG_TRCPT1(value)    (USB_DEVICE_EPINTFLAG_TRCPT1_Msk & (_UINT8_(value) << USB_DEVICE_EPINTFLAG_TRCPT1_Pos)) /* Assigment of value for TRCPT1 in the USB_DEVICE_EPINTFLAG register */
+#define USB_DEVICE_EPINTFLAG_TRFAIL0_Pos      _UINT8_(2)                                           /* (USB_DEVICE_EPINTFLAG) Error Flow 0 Position */
+#define USB_DEVICE_EPINTFLAG_TRFAIL0_Msk      (_UINT8_(0x1) << USB_DEVICE_EPINTFLAG_TRFAIL0_Pos)   /* (USB_DEVICE_EPINTFLAG) Error Flow 0 Mask */
+#define USB_DEVICE_EPINTFLAG_TRFAIL0(value)   (USB_DEVICE_EPINTFLAG_TRFAIL0_Msk & (_UINT8_(value) << USB_DEVICE_EPINTFLAG_TRFAIL0_Pos)) /* Assigment of value for TRFAIL0 in the USB_DEVICE_EPINTFLAG register */
+#define USB_DEVICE_EPINTFLAG_TRFAIL1_Pos      _UINT8_(3)                                           /* (USB_DEVICE_EPINTFLAG) Error Flow 1 Position */
+#define USB_DEVICE_EPINTFLAG_TRFAIL1_Msk      (_UINT8_(0x1) << USB_DEVICE_EPINTFLAG_TRFAIL1_Pos)   /* (USB_DEVICE_EPINTFLAG) Error Flow 1 Mask */
+#define USB_DEVICE_EPINTFLAG_TRFAIL1(value)   (USB_DEVICE_EPINTFLAG_TRFAIL1_Msk & (_UINT8_(value) << USB_DEVICE_EPINTFLAG_TRFAIL1_Pos)) /* Assigment of value for TRFAIL1 in the USB_DEVICE_EPINTFLAG register */
+#define USB_DEVICE_EPINTFLAG_RXSTP_Pos        _UINT8_(4)                                           /* (USB_DEVICE_EPINTFLAG) Received Setup Position */
+#define USB_DEVICE_EPINTFLAG_RXSTP_Msk        (_UINT8_(0x1) << USB_DEVICE_EPINTFLAG_RXSTP_Pos)     /* (USB_DEVICE_EPINTFLAG) Received Setup Mask */
+#define USB_DEVICE_EPINTFLAG_RXSTP(value)     (USB_DEVICE_EPINTFLAG_RXSTP_Msk & (_UINT8_(value) << USB_DEVICE_EPINTFLAG_RXSTP_Pos)) /* Assigment of value for RXSTP in the USB_DEVICE_EPINTFLAG register */
+#define USB_DEVICE_EPINTFLAG_STALL0_Pos       _UINT8_(5)                                           /* (USB_DEVICE_EPINTFLAG) Stall 0 In/out Position */
+#define USB_DEVICE_EPINTFLAG_STALL0_Msk       (_UINT8_(0x1) << USB_DEVICE_EPINTFLAG_STALL0_Pos)    /* (USB_DEVICE_EPINTFLAG) Stall 0 In/out Mask */
+#define USB_DEVICE_EPINTFLAG_STALL0(value)    (USB_DEVICE_EPINTFLAG_STALL0_Msk & (_UINT8_(value) << USB_DEVICE_EPINTFLAG_STALL0_Pos)) /* Assigment of value for STALL0 in the USB_DEVICE_EPINTFLAG register */
+#define USB_DEVICE_EPINTFLAG_STALL1_Pos       _UINT8_(6)                                           /* (USB_DEVICE_EPINTFLAG) Stall 1 In/out Position */
+#define USB_DEVICE_EPINTFLAG_STALL1_Msk       (_UINT8_(0x1) << USB_DEVICE_EPINTFLAG_STALL1_Pos)    /* (USB_DEVICE_EPINTFLAG) Stall 1 In/out Mask */
+#define USB_DEVICE_EPINTFLAG_STALL1(value)    (USB_DEVICE_EPINTFLAG_STALL1_Msk & (_UINT8_(value) << USB_DEVICE_EPINTFLAG_STALL1_Pos)) /* Assigment of value for STALL1 in the USB_DEVICE_EPINTFLAG register */
+#define USB_DEVICE_EPINTFLAG_Msk              _UINT8_(0x7F)                                        /* (USB_DEVICE_EPINTFLAG) Register Mask  */
+
+#define USB_DEVICE_EPINTFLAG_TRCPT_Pos        _UINT8_(0)                                           /* (USB_DEVICE_EPINTFLAG Position) Transfer Complete x */
+#define USB_DEVICE_EPINTFLAG_TRCPT_Msk        (_UINT8_(0x3) << USB_DEVICE_EPINTFLAG_TRCPT_Pos)     /* (USB_DEVICE_EPINTFLAG Mask) TRCPT */
+#define USB_DEVICE_EPINTFLAG_TRCPT(value)     (USB_DEVICE_EPINTFLAG_TRCPT_Msk & (_UINT8_(value) << USB_DEVICE_EPINTFLAG_TRCPT_Pos)) 
+#define USB_DEVICE_EPINTFLAG_TRFAIL_Pos       _UINT8_(2)                                           /* (USB_DEVICE_EPINTFLAG Position) Error Flow x */
+#define USB_DEVICE_EPINTFLAG_TRFAIL_Msk       (_UINT8_(0x3) << USB_DEVICE_EPINTFLAG_TRFAIL_Pos)    /* (USB_DEVICE_EPINTFLAG Mask) TRFAIL */
+#define USB_DEVICE_EPINTFLAG_TRFAIL(value)    (USB_DEVICE_EPINTFLAG_TRFAIL_Msk & (_UINT8_(value) << USB_DEVICE_EPINTFLAG_TRFAIL_Pos)) 
+#define USB_DEVICE_EPINTFLAG_STALL_Pos        _UINT8_(5)                                           /* (USB_DEVICE_EPINTFLAG Position) Stall x In/out */
+#define USB_DEVICE_EPINTFLAG_STALL_Msk        (_UINT8_(0x3) << USB_DEVICE_EPINTFLAG_STALL_Pos)     /* (USB_DEVICE_EPINTFLAG Mask) STALL */
+#define USB_DEVICE_EPINTFLAG_STALL(value)     (USB_DEVICE_EPINTFLAG_STALL_Msk & (_UINT8_(value) << USB_DEVICE_EPINTFLAG_STALL_Pos)) 
 
 /* -------- USB_DEVICE_EPINTENCLR : (USB Offset: 0x08) (R/W 8) DEVICE_ENDPOINT End Point Interrupt Clear Flag -------- */
 #define USB_DEVICE_EPINTENCLR_RESETVALUE      _UINT8_(0x00)                                        /*  (USB_DEVICE_EPINTENCLR) DEVICE_ENDPOINT End Point Interrupt Clear Flag  Reset Value */
@@ -238,141 +364,6 @@
 #define USB_DEVICE_EPINTENSET_STALL_Msk       (_UINT8_(0x3) << USB_DEVICE_EPINTENSET_STALL_Pos)    /* (USB_DEVICE_EPINTENSET Mask) STALL */
 #define USB_DEVICE_EPINTENSET_STALL(value)    (USB_DEVICE_EPINTENSET_STALL_Msk & (_UINT8_(value) << USB_DEVICE_EPINTENSET_STALL_Pos)) 
 
-/* -------- USB_DEVICE_EPINTFLAG : (USB Offset: 0x07) (R/W 8) DEVICE_ENDPOINT End Point Interrupt Flag -------- */
-#define USB_DEVICE_EPINTFLAG_RESETVALUE       _UINT8_(0x00)                                        /*  (USB_DEVICE_EPINTFLAG) DEVICE_ENDPOINT End Point Interrupt Flag  Reset Value */
-
-#define USB_DEVICE_EPINTFLAG_TRCPT0_Pos       _UINT8_(0)                                           /* (USB_DEVICE_EPINTFLAG) Transfer Complete 0 Position */
-#define USB_DEVICE_EPINTFLAG_TRCPT0_Msk       (_UINT8_(0x1) << USB_DEVICE_EPINTFLAG_TRCPT0_Pos)    /* (USB_DEVICE_EPINTFLAG) Transfer Complete 0 Mask */
-#define USB_DEVICE_EPINTFLAG_TRCPT0(value)    (USB_DEVICE_EPINTFLAG_TRCPT0_Msk & (_UINT8_(value) << USB_DEVICE_EPINTFLAG_TRCPT0_Pos)) /* Assigment of value for TRCPT0 in the USB_DEVICE_EPINTFLAG register */
-#define USB_DEVICE_EPINTFLAG_TRCPT1_Pos       _UINT8_(1)                                           /* (USB_DEVICE_EPINTFLAG) Transfer Complete 1 Position */
-#define USB_DEVICE_EPINTFLAG_TRCPT1_Msk       (_UINT8_(0x1) << USB_DEVICE_EPINTFLAG_TRCPT1_Pos)    /* (USB_DEVICE_EPINTFLAG) Transfer Complete 1 Mask */
-#define USB_DEVICE_EPINTFLAG_TRCPT1(value)    (USB_DEVICE_EPINTFLAG_TRCPT1_Msk & (_UINT8_(value) << USB_DEVICE_EPINTFLAG_TRCPT1_Pos)) /* Assigment of value for TRCPT1 in the USB_DEVICE_EPINTFLAG register */
-#define USB_DEVICE_EPINTFLAG_TRFAIL0_Pos      _UINT8_(2)                                           /* (USB_DEVICE_EPINTFLAG) Error Flow 0 Position */
-#define USB_DEVICE_EPINTFLAG_TRFAIL0_Msk      (_UINT8_(0x1) << USB_DEVICE_EPINTFLAG_TRFAIL0_Pos)   /* (USB_DEVICE_EPINTFLAG) Error Flow 0 Mask */
-#define USB_DEVICE_EPINTFLAG_TRFAIL0(value)   (USB_DEVICE_EPINTFLAG_TRFAIL0_Msk & (_UINT8_(value) << USB_DEVICE_EPINTFLAG_TRFAIL0_Pos)) /* Assigment of value for TRFAIL0 in the USB_DEVICE_EPINTFLAG register */
-#define USB_DEVICE_EPINTFLAG_TRFAIL1_Pos      _UINT8_(3)                                           /* (USB_DEVICE_EPINTFLAG) Error Flow 1 Position */
-#define USB_DEVICE_EPINTFLAG_TRFAIL1_Msk      (_UINT8_(0x1) << USB_DEVICE_EPINTFLAG_TRFAIL1_Pos)   /* (USB_DEVICE_EPINTFLAG) Error Flow 1 Mask */
-#define USB_DEVICE_EPINTFLAG_TRFAIL1(value)   (USB_DEVICE_EPINTFLAG_TRFAIL1_Msk & (_UINT8_(value) << USB_DEVICE_EPINTFLAG_TRFAIL1_Pos)) /* Assigment of value for TRFAIL1 in the USB_DEVICE_EPINTFLAG register */
-#define USB_DEVICE_EPINTFLAG_RXSTP_Pos        _UINT8_(4)                                           /* (USB_DEVICE_EPINTFLAG) Received Setup Position */
-#define USB_DEVICE_EPINTFLAG_RXSTP_Msk        (_UINT8_(0x1) << USB_DEVICE_EPINTFLAG_RXSTP_Pos)     /* (USB_DEVICE_EPINTFLAG) Received Setup Mask */
-#define USB_DEVICE_EPINTFLAG_RXSTP(value)     (USB_DEVICE_EPINTFLAG_RXSTP_Msk & (_UINT8_(value) << USB_DEVICE_EPINTFLAG_RXSTP_Pos)) /* Assigment of value for RXSTP in the USB_DEVICE_EPINTFLAG register */
-#define USB_DEVICE_EPINTFLAG_STALL0_Pos       _UINT8_(5)                                           /* (USB_DEVICE_EPINTFLAG) Stall 0 In/out Position */
-#define USB_DEVICE_EPINTFLAG_STALL0_Msk       (_UINT8_(0x1) << USB_DEVICE_EPINTFLAG_STALL0_Pos)    /* (USB_DEVICE_EPINTFLAG) Stall 0 In/out Mask */
-#define USB_DEVICE_EPINTFLAG_STALL0(value)    (USB_DEVICE_EPINTFLAG_STALL0_Msk & (_UINT8_(value) << USB_DEVICE_EPINTFLAG_STALL0_Pos)) /* Assigment of value for STALL0 in the USB_DEVICE_EPINTFLAG register */
-#define USB_DEVICE_EPINTFLAG_STALL1_Pos       _UINT8_(6)                                           /* (USB_DEVICE_EPINTFLAG) Stall 1 In/out Position */
-#define USB_DEVICE_EPINTFLAG_STALL1_Msk       (_UINT8_(0x1) << USB_DEVICE_EPINTFLAG_STALL1_Pos)    /* (USB_DEVICE_EPINTFLAG) Stall 1 In/out Mask */
-#define USB_DEVICE_EPINTFLAG_STALL1(value)    (USB_DEVICE_EPINTFLAG_STALL1_Msk & (_UINT8_(value) << USB_DEVICE_EPINTFLAG_STALL1_Pos)) /* Assigment of value for STALL1 in the USB_DEVICE_EPINTFLAG register */
-#define USB_DEVICE_EPINTFLAG_Msk              _UINT8_(0x7F)                                        /* (USB_DEVICE_EPINTFLAG) Register Mask  */
-
-#define USB_DEVICE_EPINTFLAG_TRCPT_Pos        _UINT8_(0)                                           /* (USB_DEVICE_EPINTFLAG Position) Transfer Complete x */
-#define USB_DEVICE_EPINTFLAG_TRCPT_Msk        (_UINT8_(0x3) << USB_DEVICE_EPINTFLAG_TRCPT_Pos)     /* (USB_DEVICE_EPINTFLAG Mask) TRCPT */
-#define USB_DEVICE_EPINTFLAG_TRCPT(value)     (USB_DEVICE_EPINTFLAG_TRCPT_Msk & (_UINT8_(value) << USB_DEVICE_EPINTFLAG_TRCPT_Pos)) 
-#define USB_DEVICE_EPINTFLAG_TRFAIL_Pos       _UINT8_(2)                                           /* (USB_DEVICE_EPINTFLAG Position) Error Flow x */
-#define USB_DEVICE_EPINTFLAG_TRFAIL_Msk       (_UINT8_(0x3) << USB_DEVICE_EPINTFLAG_TRFAIL_Pos)    /* (USB_DEVICE_EPINTFLAG Mask) TRFAIL */
-#define USB_DEVICE_EPINTFLAG_TRFAIL(value)    (USB_DEVICE_EPINTFLAG_TRFAIL_Msk & (_UINT8_(value) << USB_DEVICE_EPINTFLAG_TRFAIL_Pos)) 
-#define USB_DEVICE_EPINTFLAG_STALL_Pos        _UINT8_(5)                                           /* (USB_DEVICE_EPINTFLAG Position) Stall x In/out */
-#define USB_DEVICE_EPINTFLAG_STALL_Msk        (_UINT8_(0x3) << USB_DEVICE_EPINTFLAG_STALL_Pos)     /* (USB_DEVICE_EPINTFLAG Mask) STALL */
-#define USB_DEVICE_EPINTFLAG_STALL(value)     (USB_DEVICE_EPINTFLAG_STALL_Msk & (_UINT8_(value) << USB_DEVICE_EPINTFLAG_STALL_Pos)) 
-
-/* -------- USB_DEVICE_EPSTATUS : (USB Offset: 0x06) ( R/ 8) DEVICE_ENDPOINT End Point Pipe Status -------- */
-#define USB_DEVICE_EPSTATUS_RESETVALUE        _UINT8_(0x00)                                        /*  (USB_DEVICE_EPSTATUS) DEVICE_ENDPOINT End Point Pipe Status  Reset Value */
-
-#define USB_DEVICE_EPSTATUS_DTGLOUT_Pos       _UINT8_(0)                                           /* (USB_DEVICE_EPSTATUS) Data Toggle Out Position */
-#define USB_DEVICE_EPSTATUS_DTGLOUT_Msk       (_UINT8_(0x1) << USB_DEVICE_EPSTATUS_DTGLOUT_Pos)    /* (USB_DEVICE_EPSTATUS) Data Toggle Out Mask */
-#define USB_DEVICE_EPSTATUS_DTGLOUT(value)    (USB_DEVICE_EPSTATUS_DTGLOUT_Msk & (_UINT8_(value) << USB_DEVICE_EPSTATUS_DTGLOUT_Pos)) /* Assigment of value for DTGLOUT in the USB_DEVICE_EPSTATUS register */
-#define USB_DEVICE_EPSTATUS_DTGLIN_Pos        _UINT8_(1)                                           /* (USB_DEVICE_EPSTATUS) Data Toggle In Position */
-#define USB_DEVICE_EPSTATUS_DTGLIN_Msk        (_UINT8_(0x1) << USB_DEVICE_EPSTATUS_DTGLIN_Pos)     /* (USB_DEVICE_EPSTATUS) Data Toggle In Mask */
-#define USB_DEVICE_EPSTATUS_DTGLIN(value)     (USB_DEVICE_EPSTATUS_DTGLIN_Msk & (_UINT8_(value) << USB_DEVICE_EPSTATUS_DTGLIN_Pos)) /* Assigment of value for DTGLIN in the USB_DEVICE_EPSTATUS register */
-#define USB_DEVICE_EPSTATUS_CURBK_Pos         _UINT8_(2)                                           /* (USB_DEVICE_EPSTATUS) Current Bank Position */
-#define USB_DEVICE_EPSTATUS_CURBK_Msk         (_UINT8_(0x1) << USB_DEVICE_EPSTATUS_CURBK_Pos)      /* (USB_DEVICE_EPSTATUS) Current Bank Mask */
-#define USB_DEVICE_EPSTATUS_CURBK(value)      (USB_DEVICE_EPSTATUS_CURBK_Msk & (_UINT8_(value) << USB_DEVICE_EPSTATUS_CURBK_Pos)) /* Assigment of value for CURBK in the USB_DEVICE_EPSTATUS register */
-#define USB_DEVICE_EPSTATUS_STALLRQ0_Pos      _UINT8_(4)                                           /* (USB_DEVICE_EPSTATUS) Stall 0 Request Position */
-#define USB_DEVICE_EPSTATUS_STALLRQ0_Msk      (_UINT8_(0x1) << USB_DEVICE_EPSTATUS_STALLRQ0_Pos)   /* (USB_DEVICE_EPSTATUS) Stall 0 Request Mask */
-#define USB_DEVICE_EPSTATUS_STALLRQ0(value)   (USB_DEVICE_EPSTATUS_STALLRQ0_Msk & (_UINT8_(value) << USB_DEVICE_EPSTATUS_STALLRQ0_Pos)) /* Assigment of value for STALLRQ0 in the USB_DEVICE_EPSTATUS register */
-#define USB_DEVICE_EPSTATUS_STALLRQ1_Pos      _UINT8_(5)                                           /* (USB_DEVICE_EPSTATUS) Stall 1 Request Position */
-#define USB_DEVICE_EPSTATUS_STALLRQ1_Msk      (_UINT8_(0x1) << USB_DEVICE_EPSTATUS_STALLRQ1_Pos)   /* (USB_DEVICE_EPSTATUS) Stall 1 Request Mask */
-#define USB_DEVICE_EPSTATUS_STALLRQ1(value)   (USB_DEVICE_EPSTATUS_STALLRQ1_Msk & (_UINT8_(value) << USB_DEVICE_EPSTATUS_STALLRQ1_Pos)) /* Assigment of value for STALLRQ1 in the USB_DEVICE_EPSTATUS register */
-#define USB_DEVICE_EPSTATUS_BK0RDY_Pos        _UINT8_(6)                                           /* (USB_DEVICE_EPSTATUS) Bank 0 ready Position */
-#define USB_DEVICE_EPSTATUS_BK0RDY_Msk        (_UINT8_(0x1) << USB_DEVICE_EPSTATUS_BK0RDY_Pos)     /* (USB_DEVICE_EPSTATUS) Bank 0 ready Mask */
-#define USB_DEVICE_EPSTATUS_BK0RDY(value)     (USB_DEVICE_EPSTATUS_BK0RDY_Msk & (_UINT8_(value) << USB_DEVICE_EPSTATUS_BK0RDY_Pos)) /* Assigment of value for BK0RDY in the USB_DEVICE_EPSTATUS register */
-#define USB_DEVICE_EPSTATUS_BK1RDY_Pos        _UINT8_(7)                                           /* (USB_DEVICE_EPSTATUS) Bank 1 ready Position */
-#define USB_DEVICE_EPSTATUS_BK1RDY_Msk        (_UINT8_(0x1) << USB_DEVICE_EPSTATUS_BK1RDY_Pos)     /* (USB_DEVICE_EPSTATUS) Bank 1 ready Mask */
-#define USB_DEVICE_EPSTATUS_BK1RDY(value)     (USB_DEVICE_EPSTATUS_BK1RDY_Msk & (_UINT8_(value) << USB_DEVICE_EPSTATUS_BK1RDY_Pos)) /* Assigment of value for BK1RDY in the USB_DEVICE_EPSTATUS register */
-#define USB_DEVICE_EPSTATUS_Msk               _UINT8_(0xF7)                                        /* (USB_DEVICE_EPSTATUS) Register Mask  */
-
-#define USB_DEVICE_EPSTATUS_STALLRQ_Pos       _UINT8_(4)                                           /* (USB_DEVICE_EPSTATUS Position) Stall x Request */
-#define USB_DEVICE_EPSTATUS_STALLRQ_Msk       (_UINT8_(0x3) << USB_DEVICE_EPSTATUS_STALLRQ_Pos)    /* (USB_DEVICE_EPSTATUS Mask) STALLRQ */
-#define USB_DEVICE_EPSTATUS_STALLRQ(value)    (USB_DEVICE_EPSTATUS_STALLRQ_Msk & (_UINT8_(value) << USB_DEVICE_EPSTATUS_STALLRQ_Pos)) 
-
-/* -------- USB_DEVICE_EPSTATUSCLR : (USB Offset: 0x04) ( /W 8) DEVICE_ENDPOINT End Point Pipe Status Clear -------- */
-#define USB_DEVICE_EPSTATUSCLR_RESETVALUE     _UINT8_(0x00)                                        /*  (USB_DEVICE_EPSTATUSCLR) DEVICE_ENDPOINT End Point Pipe Status Clear  Reset Value */
-
-#define USB_DEVICE_EPSTATUSCLR_DTGLOUT_Pos    _UINT8_(0)                                           /* (USB_DEVICE_EPSTATUSCLR) Data Toggle OUT Clear Position */
-#define USB_DEVICE_EPSTATUSCLR_DTGLOUT_Msk    (_UINT8_(0x1) << USB_DEVICE_EPSTATUSCLR_DTGLOUT_Pos) /* (USB_DEVICE_EPSTATUSCLR) Data Toggle OUT Clear Mask */
-#define USB_DEVICE_EPSTATUSCLR_DTGLOUT(value) (USB_DEVICE_EPSTATUSCLR_DTGLOUT_Msk & (_UINT8_(value) << USB_DEVICE_EPSTATUSCLR_DTGLOUT_Pos)) /* Assigment of value for DTGLOUT in the USB_DEVICE_EPSTATUSCLR register */
-#define USB_DEVICE_EPSTATUSCLR_DTGLIN_Pos     _UINT8_(1)                                           /* (USB_DEVICE_EPSTATUSCLR) Data Toggle IN Clear Position */
-#define USB_DEVICE_EPSTATUSCLR_DTGLIN_Msk     (_UINT8_(0x1) << USB_DEVICE_EPSTATUSCLR_DTGLIN_Pos)  /* (USB_DEVICE_EPSTATUSCLR) Data Toggle IN Clear Mask */
-#define USB_DEVICE_EPSTATUSCLR_DTGLIN(value)  (USB_DEVICE_EPSTATUSCLR_DTGLIN_Msk & (_UINT8_(value) << USB_DEVICE_EPSTATUSCLR_DTGLIN_Pos)) /* Assigment of value for DTGLIN in the USB_DEVICE_EPSTATUSCLR register */
-#define USB_DEVICE_EPSTATUSCLR_CURBK_Pos      _UINT8_(2)                                           /* (USB_DEVICE_EPSTATUSCLR) Current Bank Clear Position */
-#define USB_DEVICE_EPSTATUSCLR_CURBK_Msk      (_UINT8_(0x1) << USB_DEVICE_EPSTATUSCLR_CURBK_Pos)   /* (USB_DEVICE_EPSTATUSCLR) Current Bank Clear Mask */
-#define USB_DEVICE_EPSTATUSCLR_CURBK(value)   (USB_DEVICE_EPSTATUSCLR_CURBK_Msk & (_UINT8_(value) << USB_DEVICE_EPSTATUSCLR_CURBK_Pos)) /* Assigment of value for CURBK in the USB_DEVICE_EPSTATUSCLR register */
-#define USB_DEVICE_EPSTATUSCLR_STALLRQ0_Pos   _UINT8_(4)                                           /* (USB_DEVICE_EPSTATUSCLR) Stall 0 Request Clear Position */
-#define USB_DEVICE_EPSTATUSCLR_STALLRQ0_Msk   (_UINT8_(0x1) << USB_DEVICE_EPSTATUSCLR_STALLRQ0_Pos) /* (USB_DEVICE_EPSTATUSCLR) Stall 0 Request Clear Mask */
-#define USB_DEVICE_EPSTATUSCLR_STALLRQ0(value) (USB_DEVICE_EPSTATUSCLR_STALLRQ0_Msk & (_UINT8_(value) << USB_DEVICE_EPSTATUSCLR_STALLRQ0_Pos)) /* Assigment of value for STALLRQ0 in the USB_DEVICE_EPSTATUSCLR register */
-#define USB_DEVICE_EPSTATUSCLR_STALLRQ1_Pos   _UINT8_(5)                                           /* (USB_DEVICE_EPSTATUSCLR) Stall 1 Request Clear Position */
-#define USB_DEVICE_EPSTATUSCLR_STALLRQ1_Msk   (_UINT8_(0x1) << USB_DEVICE_EPSTATUSCLR_STALLRQ1_Pos) /* (USB_DEVICE_EPSTATUSCLR) Stall 1 Request Clear Mask */
-#define USB_DEVICE_EPSTATUSCLR_STALLRQ1(value) (USB_DEVICE_EPSTATUSCLR_STALLRQ1_Msk & (_UINT8_(value) << USB_DEVICE_EPSTATUSCLR_STALLRQ1_Pos)) /* Assigment of value for STALLRQ1 in the USB_DEVICE_EPSTATUSCLR register */
-#define USB_DEVICE_EPSTATUSCLR_BK0RDY_Pos     _UINT8_(6)                                           /* (USB_DEVICE_EPSTATUSCLR) Bank 0 Ready Clear Position */
-#define USB_DEVICE_EPSTATUSCLR_BK0RDY_Msk     (_UINT8_(0x1) << USB_DEVICE_EPSTATUSCLR_BK0RDY_Pos)  /* (USB_DEVICE_EPSTATUSCLR) Bank 0 Ready Clear Mask */
-#define USB_DEVICE_EPSTATUSCLR_BK0RDY(value)  (USB_DEVICE_EPSTATUSCLR_BK0RDY_Msk & (_UINT8_(value) << USB_DEVICE_EPSTATUSCLR_BK0RDY_Pos)) /* Assigment of value for BK0RDY in the USB_DEVICE_EPSTATUSCLR register */
-#define USB_DEVICE_EPSTATUSCLR_BK1RDY_Pos     _UINT8_(7)                                           /* (USB_DEVICE_EPSTATUSCLR) Bank 1 Ready Clear Position */
-#define USB_DEVICE_EPSTATUSCLR_BK1RDY_Msk     (_UINT8_(0x1) << USB_DEVICE_EPSTATUSCLR_BK1RDY_Pos)  /* (USB_DEVICE_EPSTATUSCLR) Bank 1 Ready Clear Mask */
-#define USB_DEVICE_EPSTATUSCLR_BK1RDY(value)  (USB_DEVICE_EPSTATUSCLR_BK1RDY_Msk & (_UINT8_(value) << USB_DEVICE_EPSTATUSCLR_BK1RDY_Pos)) /* Assigment of value for BK1RDY in the USB_DEVICE_EPSTATUSCLR register */
-#define USB_DEVICE_EPSTATUSCLR_Msk            _UINT8_(0xF7)                                        /* (USB_DEVICE_EPSTATUSCLR) Register Mask  */
-
-#define USB_DEVICE_EPSTATUSCLR_STALLRQ_Pos    _UINT8_(4)                                           /* (USB_DEVICE_EPSTATUSCLR Position) Stall x Request Clear */
-#define USB_DEVICE_EPSTATUSCLR_STALLRQ_Msk    (_UINT8_(0x3) << USB_DEVICE_EPSTATUSCLR_STALLRQ_Pos) /* (USB_DEVICE_EPSTATUSCLR Mask) STALLRQ */
-#define USB_DEVICE_EPSTATUSCLR_STALLRQ(value) (USB_DEVICE_EPSTATUSCLR_STALLRQ_Msk & (_UINT8_(value) << USB_DEVICE_EPSTATUSCLR_STALLRQ_Pos)) 
-
-/* -------- USB_DEVICE_EPSTATUSSET : (USB Offset: 0x05) ( /W 8) DEVICE_ENDPOINT End Point Pipe Status Set -------- */
-#define USB_DEVICE_EPSTATUSSET_RESETVALUE     _UINT8_(0x00)                                        /*  (USB_DEVICE_EPSTATUSSET) DEVICE_ENDPOINT End Point Pipe Status Set  Reset Value */
-
-#define USB_DEVICE_EPSTATUSSET_DTGLOUT_Pos    _UINT8_(0)                                           /* (USB_DEVICE_EPSTATUSSET) Data Toggle OUT Set Position */
-#define USB_DEVICE_EPSTATUSSET_DTGLOUT_Msk    (_UINT8_(0x1) << USB_DEVICE_EPSTATUSSET_DTGLOUT_Pos) /* (USB_DEVICE_EPSTATUSSET) Data Toggle OUT Set Mask */
-#define USB_DEVICE_EPSTATUSSET_DTGLOUT(value) (USB_DEVICE_EPSTATUSSET_DTGLOUT_Msk & (_UINT8_(value) << USB_DEVICE_EPSTATUSSET_DTGLOUT_Pos)) /* Assigment of value for DTGLOUT in the USB_DEVICE_EPSTATUSSET register */
-#define USB_DEVICE_EPSTATUSSET_DTGLIN_Pos     _UINT8_(1)                                           /* (USB_DEVICE_EPSTATUSSET) Data Toggle IN Set Position */
-#define USB_DEVICE_EPSTATUSSET_DTGLIN_Msk     (_UINT8_(0x1) << USB_DEVICE_EPSTATUSSET_DTGLIN_Pos)  /* (USB_DEVICE_EPSTATUSSET) Data Toggle IN Set Mask */
-#define USB_DEVICE_EPSTATUSSET_DTGLIN(value)  (USB_DEVICE_EPSTATUSSET_DTGLIN_Msk & (_UINT8_(value) << USB_DEVICE_EPSTATUSSET_DTGLIN_Pos)) /* Assigment of value for DTGLIN in the USB_DEVICE_EPSTATUSSET register */
-#define USB_DEVICE_EPSTATUSSET_CURBK_Pos      _UINT8_(2)                                           /* (USB_DEVICE_EPSTATUSSET) Current Bank Set Position */
-#define USB_DEVICE_EPSTATUSSET_CURBK_Msk      (_UINT8_(0x1) << USB_DEVICE_EPSTATUSSET_CURBK_Pos)   /* (USB_DEVICE_EPSTATUSSET) Current Bank Set Mask */
-#define USB_DEVICE_EPSTATUSSET_CURBK(value)   (USB_DEVICE_EPSTATUSSET_CURBK_Msk & (_UINT8_(value) << USB_DEVICE_EPSTATUSSET_CURBK_Pos)) /* Assigment of value for CURBK in the USB_DEVICE_EPSTATUSSET register */
-#define USB_DEVICE_EPSTATUSSET_STALLRQ0_Pos   _UINT8_(4)                                           /* (USB_DEVICE_EPSTATUSSET) Stall 0 Request Set Position */
-#define USB_DEVICE_EPSTATUSSET_STALLRQ0_Msk   (_UINT8_(0x1) << USB_DEVICE_EPSTATUSSET_STALLRQ0_Pos) /* (USB_DEVICE_EPSTATUSSET) Stall 0 Request Set Mask */
-#define USB_DEVICE_EPSTATUSSET_STALLRQ0(value) (USB_DEVICE_EPSTATUSSET_STALLRQ0_Msk & (_UINT8_(value) << USB_DEVICE_EPSTATUSSET_STALLRQ0_Pos)) /* Assigment of value for STALLRQ0 in the USB_DEVICE_EPSTATUSSET register */
-#define USB_DEVICE_EPSTATUSSET_STALLRQ1_Pos   _UINT8_(5)                                           /* (USB_DEVICE_EPSTATUSSET) Stall 1 Request Set Position */
-#define USB_DEVICE_EPSTATUSSET_STALLRQ1_Msk   (_UINT8_(0x1) << USB_DEVICE_EPSTATUSSET_STALLRQ1_Pos) /* (USB_DEVICE_EPSTATUSSET) Stall 1 Request Set Mask */
-#define USB_DEVICE_EPSTATUSSET_STALLRQ1(value) (USB_DEVICE_EPSTATUSSET_STALLRQ1_Msk & (_UINT8_(value) << USB_DEVICE_EPSTATUSSET_STALLRQ1_Pos)) /* Assigment of value for STALLRQ1 in the USB_DEVICE_EPSTATUSSET register */
-#define USB_DEVICE_EPSTATUSSET_BK0RDY_Pos     _UINT8_(6)                                           /* (USB_DEVICE_EPSTATUSSET) Bank 0 Ready Set Position */
-#define USB_DEVICE_EPSTATUSSET_BK0RDY_Msk     (_UINT8_(0x1) << USB_DEVICE_EPSTATUSSET_BK0RDY_Pos)  /* (USB_DEVICE_EPSTATUSSET) Bank 0 Ready Set Mask */
-#define USB_DEVICE_EPSTATUSSET_BK0RDY(value)  (USB_DEVICE_EPSTATUSSET_BK0RDY_Msk & (_UINT8_(value) << USB_DEVICE_EPSTATUSSET_BK0RDY_Pos)) /* Assigment of value for BK0RDY in the USB_DEVICE_EPSTATUSSET register */
-#define USB_DEVICE_EPSTATUSSET_BK1RDY_Pos     _UINT8_(7)                                           /* (USB_DEVICE_EPSTATUSSET) Bank 1 Ready Set Position */
-#define USB_DEVICE_EPSTATUSSET_BK1RDY_Msk     (_UINT8_(0x1) << USB_DEVICE_EPSTATUSSET_BK1RDY_Pos)  /* (USB_DEVICE_EPSTATUSSET) Bank 1 Ready Set Mask */
-#define USB_DEVICE_EPSTATUSSET_BK1RDY(value)  (USB_DEVICE_EPSTATUSSET_BK1RDY_Msk & (_UINT8_(value) << USB_DEVICE_EPSTATUSSET_BK1RDY_Pos)) /* Assigment of value for BK1RDY in the USB_DEVICE_EPSTATUSSET register */
-#define USB_DEVICE_EPSTATUSSET_Msk            _UINT8_(0xF7)                                        /* (USB_DEVICE_EPSTATUSSET) Register Mask  */
-
-#define USB_DEVICE_EPSTATUSSET_STALLRQ_Pos    _UINT8_(4)                                           /* (USB_DEVICE_EPSTATUSSET Position) Stall x Request Set */
-#define USB_DEVICE_EPSTATUSSET_STALLRQ_Msk    (_UINT8_(0x3) << USB_DEVICE_EPSTATUSSET_STALLRQ_Pos) /* (USB_DEVICE_EPSTATUSSET Mask) STALLRQ */
-#define USB_DEVICE_EPSTATUSSET_STALLRQ(value) (USB_DEVICE_EPSTATUSSET_STALLRQ_Msk & (_UINT8_(value) << USB_DEVICE_EPSTATUSSET_STALLRQ_Pos)) 
-
-/* -------- USB_HOST_BINTERVAL : (USB Offset: 0x03) (R/W 8) HOST_PIPE Bus Access Period of Pipe -------- */
-#define USB_HOST_BINTERVAL_RESETVALUE         _UINT8_(0x00)                                        /*  (USB_HOST_BINTERVAL) HOST_PIPE Bus Access Period of Pipe  Reset Value */
-
-#define USB_HOST_BINTERVAL_BITINTERVAL_Pos    _UINT8_(0)                                           /* (USB_HOST_BINTERVAL) Bit Interval Position */
-#define USB_HOST_BINTERVAL_BITINTERVAL_Msk    (_UINT8_(0xFF) << USB_HOST_BINTERVAL_BITINTERVAL_Pos) /* (USB_HOST_BINTERVAL) Bit Interval Mask */
-#define USB_HOST_BINTERVAL_BITINTERVAL(value) (USB_HOST_BINTERVAL_BITINTERVAL_Msk & (_UINT8_(value) << USB_HOST_BINTERVAL_BITINTERVAL_Pos)) /* Assigment of value for BITINTERVAL in the USB_HOST_BINTERVAL register */
-#define USB_HOST_BINTERVAL_Msk                _UINT8_(0xFF)                                        /* (USB_HOST_BINTERVAL) Register Mask  */
-
-
 /* -------- USB_HOST_PCFG : (USB Offset: 0x00) (R/W 8) HOST_PIPE End Point Configuration -------- */
 #define USB_HOST_PCFG_RESETVALUE              _UINT8_(0x00)                                        /*  (USB_HOST_PCFG) HOST_PIPE End Point Configuration  Reset Value */
 
@@ -387,6 +378,105 @@
 #define USB_HOST_PCFG_PTYPE(value)            (USB_HOST_PCFG_PTYPE_Msk & (_UINT8_(value) << USB_HOST_PCFG_PTYPE_Pos)) /* Assigment of value for PTYPE in the USB_HOST_PCFG register */
 #define USB_HOST_PCFG_Msk                     _UINT8_(0x3F)                                        /* (USB_HOST_PCFG) Register Mask  */
 
+
+/* -------- USB_HOST_BINTERVAL : (USB Offset: 0x03) (R/W 8) HOST_PIPE Bus Access Period of Pipe -------- */
+#define USB_HOST_BINTERVAL_RESETVALUE         _UINT8_(0x00)                                        /*  (USB_HOST_BINTERVAL) HOST_PIPE Bus Access Period of Pipe  Reset Value */
+
+#define USB_HOST_BINTERVAL_BITINTERVAL_Pos    _UINT8_(0)                                           /* (USB_HOST_BINTERVAL) Bit Interval Position */
+#define USB_HOST_BINTERVAL_BITINTERVAL_Msk    (_UINT8_(0xFF) << USB_HOST_BINTERVAL_BITINTERVAL_Pos) /* (USB_HOST_BINTERVAL) Bit Interval Mask */
+#define USB_HOST_BINTERVAL_BITINTERVAL(value) (USB_HOST_BINTERVAL_BITINTERVAL_Msk & (_UINT8_(value) << USB_HOST_BINTERVAL_BITINTERVAL_Pos)) /* Assigment of value for BITINTERVAL in the USB_HOST_BINTERVAL register */
+#define USB_HOST_BINTERVAL_Msk                _UINT8_(0xFF)                                        /* (USB_HOST_BINTERVAL) Register Mask  */
+
+
+/* -------- USB_HOST_PSTATUSCLR : (USB Offset: 0x04) ( /W 8) HOST_PIPE End Point Pipe Status Clear -------- */
+#define USB_HOST_PSTATUSCLR_RESETVALUE        _UINT8_(0x00)                                        /*  (USB_HOST_PSTATUSCLR) HOST_PIPE End Point Pipe Status Clear  Reset Value */
+
+#define USB_HOST_PSTATUSCLR_DTGL_Pos          _UINT8_(0)                                           /* (USB_HOST_PSTATUSCLR) Data Toggle clear Position */
+#define USB_HOST_PSTATUSCLR_DTGL_Msk          (_UINT8_(0x1) << USB_HOST_PSTATUSCLR_DTGL_Pos)       /* (USB_HOST_PSTATUSCLR) Data Toggle clear Mask */
+#define USB_HOST_PSTATUSCLR_DTGL(value)       (USB_HOST_PSTATUSCLR_DTGL_Msk & (_UINT8_(value) << USB_HOST_PSTATUSCLR_DTGL_Pos)) /* Assigment of value for DTGL in the USB_HOST_PSTATUSCLR register */
+#define USB_HOST_PSTATUSCLR_CURBK_Pos         _UINT8_(2)                                           /* (USB_HOST_PSTATUSCLR) Curren Bank clear Position */
+#define USB_HOST_PSTATUSCLR_CURBK_Msk         (_UINT8_(0x1) << USB_HOST_PSTATUSCLR_CURBK_Pos)      /* (USB_HOST_PSTATUSCLR) Curren Bank clear Mask */
+#define USB_HOST_PSTATUSCLR_CURBK(value)      (USB_HOST_PSTATUSCLR_CURBK_Msk & (_UINT8_(value) << USB_HOST_PSTATUSCLR_CURBK_Pos)) /* Assigment of value for CURBK in the USB_HOST_PSTATUSCLR register */
+#define USB_HOST_PSTATUSCLR_PFREEZE_Pos       _UINT8_(4)                                           /* (USB_HOST_PSTATUSCLR) Pipe Freeze Clear Position */
+#define USB_HOST_PSTATUSCLR_PFREEZE_Msk       (_UINT8_(0x1) << USB_HOST_PSTATUSCLR_PFREEZE_Pos)    /* (USB_HOST_PSTATUSCLR) Pipe Freeze Clear Mask */
+#define USB_HOST_PSTATUSCLR_PFREEZE(value)    (USB_HOST_PSTATUSCLR_PFREEZE_Msk & (_UINT8_(value) << USB_HOST_PSTATUSCLR_PFREEZE_Pos)) /* Assigment of value for PFREEZE in the USB_HOST_PSTATUSCLR register */
+#define USB_HOST_PSTATUSCLR_BK0RDY_Pos        _UINT8_(6)                                           /* (USB_HOST_PSTATUSCLR) Bank 0 Ready Clear Position */
+#define USB_HOST_PSTATUSCLR_BK0RDY_Msk        (_UINT8_(0x1) << USB_HOST_PSTATUSCLR_BK0RDY_Pos)     /* (USB_HOST_PSTATUSCLR) Bank 0 Ready Clear Mask */
+#define USB_HOST_PSTATUSCLR_BK0RDY(value)     (USB_HOST_PSTATUSCLR_BK0RDY_Msk & (_UINT8_(value) << USB_HOST_PSTATUSCLR_BK0RDY_Pos)) /* Assigment of value for BK0RDY in the USB_HOST_PSTATUSCLR register */
+#define USB_HOST_PSTATUSCLR_BK1RDY_Pos        _UINT8_(7)                                           /* (USB_HOST_PSTATUSCLR) Bank 1 Ready Clear Position */
+#define USB_HOST_PSTATUSCLR_BK1RDY_Msk        (_UINT8_(0x1) << USB_HOST_PSTATUSCLR_BK1RDY_Pos)     /* (USB_HOST_PSTATUSCLR) Bank 1 Ready Clear Mask */
+#define USB_HOST_PSTATUSCLR_BK1RDY(value)     (USB_HOST_PSTATUSCLR_BK1RDY_Msk & (_UINT8_(value) << USB_HOST_PSTATUSCLR_BK1RDY_Pos)) /* Assigment of value for BK1RDY in the USB_HOST_PSTATUSCLR register */
+#define USB_HOST_PSTATUSCLR_Msk               _UINT8_(0xD5)                                        /* (USB_HOST_PSTATUSCLR) Register Mask  */
+
+
+/* -------- USB_HOST_PSTATUSSET : (USB Offset: 0x05) ( /W 8) HOST_PIPE End Point Pipe Status Set -------- */
+#define USB_HOST_PSTATUSSET_RESETVALUE        _UINT8_(0x00)                                        /*  (USB_HOST_PSTATUSSET) HOST_PIPE End Point Pipe Status Set  Reset Value */
+
+#define USB_HOST_PSTATUSSET_DTGL_Pos          _UINT8_(0)                                           /* (USB_HOST_PSTATUSSET) Data Toggle Set Position */
+#define USB_HOST_PSTATUSSET_DTGL_Msk          (_UINT8_(0x1) << USB_HOST_PSTATUSSET_DTGL_Pos)       /* (USB_HOST_PSTATUSSET) Data Toggle Set Mask */
+#define USB_HOST_PSTATUSSET_DTGL(value)       (USB_HOST_PSTATUSSET_DTGL_Msk & (_UINT8_(value) << USB_HOST_PSTATUSSET_DTGL_Pos)) /* Assigment of value for DTGL in the USB_HOST_PSTATUSSET register */
+#define USB_HOST_PSTATUSSET_CURBK_Pos         _UINT8_(2)                                           /* (USB_HOST_PSTATUSSET) Current Bank Set Position */
+#define USB_HOST_PSTATUSSET_CURBK_Msk         (_UINT8_(0x1) << USB_HOST_PSTATUSSET_CURBK_Pos)      /* (USB_HOST_PSTATUSSET) Current Bank Set Mask */
+#define USB_HOST_PSTATUSSET_CURBK(value)      (USB_HOST_PSTATUSSET_CURBK_Msk & (_UINT8_(value) << USB_HOST_PSTATUSSET_CURBK_Pos)) /* Assigment of value for CURBK in the USB_HOST_PSTATUSSET register */
+#define USB_HOST_PSTATUSSET_PFREEZE_Pos       _UINT8_(4)                                           /* (USB_HOST_PSTATUSSET) Pipe Freeze Set Position */
+#define USB_HOST_PSTATUSSET_PFREEZE_Msk       (_UINT8_(0x1) << USB_HOST_PSTATUSSET_PFREEZE_Pos)    /* (USB_HOST_PSTATUSSET) Pipe Freeze Set Mask */
+#define USB_HOST_PSTATUSSET_PFREEZE(value)    (USB_HOST_PSTATUSSET_PFREEZE_Msk & (_UINT8_(value) << USB_HOST_PSTATUSSET_PFREEZE_Pos)) /* Assigment of value for PFREEZE in the USB_HOST_PSTATUSSET register */
+#define USB_HOST_PSTATUSSET_BK0RDY_Pos        _UINT8_(6)                                           /* (USB_HOST_PSTATUSSET) Bank 0 Ready Set Position */
+#define USB_HOST_PSTATUSSET_BK0RDY_Msk        (_UINT8_(0x1) << USB_HOST_PSTATUSSET_BK0RDY_Pos)     /* (USB_HOST_PSTATUSSET) Bank 0 Ready Set Mask */
+#define USB_HOST_PSTATUSSET_BK0RDY(value)     (USB_HOST_PSTATUSSET_BK0RDY_Msk & (_UINT8_(value) << USB_HOST_PSTATUSSET_BK0RDY_Pos)) /* Assigment of value for BK0RDY in the USB_HOST_PSTATUSSET register */
+#define USB_HOST_PSTATUSSET_BK1RDY_Pos        _UINT8_(7)                                           /* (USB_HOST_PSTATUSSET) Bank 1 Ready Set Position */
+#define USB_HOST_PSTATUSSET_BK1RDY_Msk        (_UINT8_(0x1) << USB_HOST_PSTATUSSET_BK1RDY_Pos)     /* (USB_HOST_PSTATUSSET) Bank 1 Ready Set Mask */
+#define USB_HOST_PSTATUSSET_BK1RDY(value)     (USB_HOST_PSTATUSSET_BK1RDY_Msk & (_UINT8_(value) << USB_HOST_PSTATUSSET_BK1RDY_Pos)) /* Assigment of value for BK1RDY in the USB_HOST_PSTATUSSET register */
+#define USB_HOST_PSTATUSSET_Msk               _UINT8_(0xD5)                                        /* (USB_HOST_PSTATUSSET) Register Mask  */
+
+
+/* -------- USB_HOST_PSTATUS : (USB Offset: 0x06) ( R/ 8) HOST_PIPE End Point Pipe Status -------- */
+#define USB_HOST_PSTATUS_RESETVALUE           _UINT8_(0x00)                                        /*  (USB_HOST_PSTATUS) HOST_PIPE End Point Pipe Status  Reset Value */
+
+#define USB_HOST_PSTATUS_DTGL_Pos             _UINT8_(0)                                           /* (USB_HOST_PSTATUS) Data Toggle Position */
+#define USB_HOST_PSTATUS_DTGL_Msk             (_UINT8_(0x1) << USB_HOST_PSTATUS_DTGL_Pos)          /* (USB_HOST_PSTATUS) Data Toggle Mask */
+#define USB_HOST_PSTATUS_DTGL(value)          (USB_HOST_PSTATUS_DTGL_Msk & (_UINT8_(value) << USB_HOST_PSTATUS_DTGL_Pos)) /* Assigment of value for DTGL in the USB_HOST_PSTATUS register */
+#define USB_HOST_PSTATUS_CURBK_Pos            _UINT8_(2)                                           /* (USB_HOST_PSTATUS) Current Bank Position */
+#define USB_HOST_PSTATUS_CURBK_Msk            (_UINT8_(0x1) << USB_HOST_PSTATUS_CURBK_Pos)         /* (USB_HOST_PSTATUS) Current Bank Mask */
+#define USB_HOST_PSTATUS_CURBK(value)         (USB_HOST_PSTATUS_CURBK_Msk & (_UINT8_(value) << USB_HOST_PSTATUS_CURBK_Pos)) /* Assigment of value for CURBK in the USB_HOST_PSTATUS register */
+#define USB_HOST_PSTATUS_PFREEZE_Pos          _UINT8_(4)                                           /* (USB_HOST_PSTATUS) Pipe Freeze Position */
+#define USB_HOST_PSTATUS_PFREEZE_Msk          (_UINT8_(0x1) << USB_HOST_PSTATUS_PFREEZE_Pos)       /* (USB_HOST_PSTATUS) Pipe Freeze Mask */
+#define USB_HOST_PSTATUS_PFREEZE(value)       (USB_HOST_PSTATUS_PFREEZE_Msk & (_UINT8_(value) << USB_HOST_PSTATUS_PFREEZE_Pos)) /* Assigment of value for PFREEZE in the USB_HOST_PSTATUS register */
+#define USB_HOST_PSTATUS_BK0RDY_Pos           _UINT8_(6)                                           /* (USB_HOST_PSTATUS) Bank 0 ready Position */
+#define USB_HOST_PSTATUS_BK0RDY_Msk           (_UINT8_(0x1) << USB_HOST_PSTATUS_BK0RDY_Pos)        /* (USB_HOST_PSTATUS) Bank 0 ready Mask */
+#define USB_HOST_PSTATUS_BK0RDY(value)        (USB_HOST_PSTATUS_BK0RDY_Msk & (_UINT8_(value) << USB_HOST_PSTATUS_BK0RDY_Pos)) /* Assigment of value for BK0RDY in the USB_HOST_PSTATUS register */
+#define USB_HOST_PSTATUS_BK1RDY_Pos           _UINT8_(7)                                           /* (USB_HOST_PSTATUS) Bank 1 ready Position */
+#define USB_HOST_PSTATUS_BK1RDY_Msk           (_UINT8_(0x1) << USB_HOST_PSTATUS_BK1RDY_Pos)        /* (USB_HOST_PSTATUS) Bank 1 ready Mask */
+#define USB_HOST_PSTATUS_BK1RDY(value)        (USB_HOST_PSTATUS_BK1RDY_Msk & (_UINT8_(value) << USB_HOST_PSTATUS_BK1RDY_Pos)) /* Assigment of value for BK1RDY in the USB_HOST_PSTATUS register */
+#define USB_HOST_PSTATUS_Msk                  _UINT8_(0xD5)                                        /* (USB_HOST_PSTATUS) Register Mask  */
+
+
+/* -------- USB_HOST_PINTFLAG : (USB Offset: 0x07) (R/W 8) HOST_PIPE Pipe Interrupt Flag -------- */
+#define USB_HOST_PINTFLAG_RESETVALUE          _UINT8_(0x00)                                        /*  (USB_HOST_PINTFLAG) HOST_PIPE Pipe Interrupt Flag  Reset Value */
+
+#define USB_HOST_PINTFLAG_TRCPT0_Pos          _UINT8_(0)                                           /* (USB_HOST_PINTFLAG) Transfer Complete 0 Interrupt Flag Position */
+#define USB_HOST_PINTFLAG_TRCPT0_Msk          (_UINT8_(0x1) << USB_HOST_PINTFLAG_TRCPT0_Pos)       /* (USB_HOST_PINTFLAG) Transfer Complete 0 Interrupt Flag Mask */
+#define USB_HOST_PINTFLAG_TRCPT0(value)       (USB_HOST_PINTFLAG_TRCPT0_Msk & (_UINT8_(value) << USB_HOST_PINTFLAG_TRCPT0_Pos)) /* Assigment of value for TRCPT0 in the USB_HOST_PINTFLAG register */
+#define USB_HOST_PINTFLAG_TRCPT1_Pos          _UINT8_(1)                                           /* (USB_HOST_PINTFLAG) Transfer Complete 1 Interrupt Flag Position */
+#define USB_HOST_PINTFLAG_TRCPT1_Msk          (_UINT8_(0x1) << USB_HOST_PINTFLAG_TRCPT1_Pos)       /* (USB_HOST_PINTFLAG) Transfer Complete 1 Interrupt Flag Mask */
+#define USB_HOST_PINTFLAG_TRCPT1(value)       (USB_HOST_PINTFLAG_TRCPT1_Msk & (_UINT8_(value) << USB_HOST_PINTFLAG_TRCPT1_Pos)) /* Assigment of value for TRCPT1 in the USB_HOST_PINTFLAG register */
+#define USB_HOST_PINTFLAG_TRFAIL_Pos          _UINT8_(2)                                           /* (USB_HOST_PINTFLAG) Error Flow Interrupt Flag Position */
+#define USB_HOST_PINTFLAG_TRFAIL_Msk          (_UINT8_(0x1) << USB_HOST_PINTFLAG_TRFAIL_Pos)       /* (USB_HOST_PINTFLAG) Error Flow Interrupt Flag Mask */
+#define USB_HOST_PINTFLAG_TRFAIL(value)       (USB_HOST_PINTFLAG_TRFAIL_Msk & (_UINT8_(value) << USB_HOST_PINTFLAG_TRFAIL_Pos)) /* Assigment of value for TRFAIL in the USB_HOST_PINTFLAG register */
+#define USB_HOST_PINTFLAG_PERR_Pos            _UINT8_(3)                                           /* (USB_HOST_PINTFLAG) Pipe Error Interrupt Flag Position */
+#define USB_HOST_PINTFLAG_PERR_Msk            (_UINT8_(0x1) << USB_HOST_PINTFLAG_PERR_Pos)         /* (USB_HOST_PINTFLAG) Pipe Error Interrupt Flag Mask */
+#define USB_HOST_PINTFLAG_PERR(value)         (USB_HOST_PINTFLAG_PERR_Msk & (_UINT8_(value) << USB_HOST_PINTFLAG_PERR_Pos)) /* Assigment of value for PERR in the USB_HOST_PINTFLAG register */
+#define USB_HOST_PINTFLAG_TXSTP_Pos           _UINT8_(4)                                           /* (USB_HOST_PINTFLAG) Transmit  Setup Interrupt Flag Position */
+#define USB_HOST_PINTFLAG_TXSTP_Msk           (_UINT8_(0x1) << USB_HOST_PINTFLAG_TXSTP_Pos)        /* (USB_HOST_PINTFLAG) Transmit  Setup Interrupt Flag Mask */
+#define USB_HOST_PINTFLAG_TXSTP(value)        (USB_HOST_PINTFLAG_TXSTP_Msk & (_UINT8_(value) << USB_HOST_PINTFLAG_TXSTP_Pos)) /* Assigment of value for TXSTP in the USB_HOST_PINTFLAG register */
+#define USB_HOST_PINTFLAG_STALL_Pos           _UINT8_(5)                                           /* (USB_HOST_PINTFLAG) Stall Interrupt Flag Position */
+#define USB_HOST_PINTFLAG_STALL_Msk           (_UINT8_(0x1) << USB_HOST_PINTFLAG_STALL_Pos)        /* (USB_HOST_PINTFLAG) Stall Interrupt Flag Mask */
+#define USB_HOST_PINTFLAG_STALL(value)        (USB_HOST_PINTFLAG_STALL_Msk & (_UINT8_(value) << USB_HOST_PINTFLAG_STALL_Pos)) /* Assigment of value for STALL in the USB_HOST_PINTFLAG register */
+#define USB_HOST_PINTFLAG_Msk                 _UINT8_(0x3F)                                        /* (USB_HOST_PINTFLAG) Register Mask  */
+
+#define USB_HOST_PINTFLAG_TRCPT_Pos           _UINT8_(0)                                           /* (USB_HOST_PINTFLAG Position) Transfer Complete x Interrupt Flag */
+#define USB_HOST_PINTFLAG_TRCPT_Msk           (_UINT8_(0x3) << USB_HOST_PINTFLAG_TRCPT_Pos)        /* (USB_HOST_PINTFLAG Mask) TRCPT */
+#define USB_HOST_PINTFLAG_TRCPT(value)        (USB_HOST_PINTFLAG_TRCPT_Msk & (_UINT8_(value) << USB_HOST_PINTFLAG_TRCPT_Pos)) 
 
 /* -------- USB_HOST_PINTENCLR : (USB Offset: 0x08) (R/W 8) HOST_PIPE Pipe Interrupt Flag Clear -------- */
 #define USB_HOST_PINTENCLR_RESETVALUE         _UINT8_(0x00)                                        /*  (USB_HOST_PINTENCLR) HOST_PIPE Pipe Interrupt Flag Clear  Reset Value */
@@ -442,96 +532,6 @@
 #define USB_HOST_PINTENSET_TRCPT_Msk          (_UINT8_(0x3) << USB_HOST_PINTENSET_TRCPT_Pos)       /* (USB_HOST_PINTENSET Mask) TRCPT */
 #define USB_HOST_PINTENSET_TRCPT(value)       (USB_HOST_PINTENSET_TRCPT_Msk & (_UINT8_(value) << USB_HOST_PINTENSET_TRCPT_Pos)) 
 
-/* -------- USB_HOST_PINTFLAG : (USB Offset: 0x07) (R/W 8) HOST_PIPE Pipe Interrupt Flag -------- */
-#define USB_HOST_PINTFLAG_RESETVALUE          _UINT8_(0x00)                                        /*  (USB_HOST_PINTFLAG) HOST_PIPE Pipe Interrupt Flag  Reset Value */
-
-#define USB_HOST_PINTFLAG_TRCPT0_Pos          _UINT8_(0)                                           /* (USB_HOST_PINTFLAG) Transfer Complete 0 Interrupt Flag Position */
-#define USB_HOST_PINTFLAG_TRCPT0_Msk          (_UINT8_(0x1) << USB_HOST_PINTFLAG_TRCPT0_Pos)       /* (USB_HOST_PINTFLAG) Transfer Complete 0 Interrupt Flag Mask */
-#define USB_HOST_PINTFLAG_TRCPT0(value)       (USB_HOST_PINTFLAG_TRCPT0_Msk & (_UINT8_(value) << USB_HOST_PINTFLAG_TRCPT0_Pos)) /* Assigment of value for TRCPT0 in the USB_HOST_PINTFLAG register */
-#define USB_HOST_PINTFLAG_TRCPT1_Pos          _UINT8_(1)                                           /* (USB_HOST_PINTFLAG) Transfer Complete 1 Interrupt Flag Position */
-#define USB_HOST_PINTFLAG_TRCPT1_Msk          (_UINT8_(0x1) << USB_HOST_PINTFLAG_TRCPT1_Pos)       /* (USB_HOST_PINTFLAG) Transfer Complete 1 Interrupt Flag Mask */
-#define USB_HOST_PINTFLAG_TRCPT1(value)       (USB_HOST_PINTFLAG_TRCPT1_Msk & (_UINT8_(value) << USB_HOST_PINTFLAG_TRCPT1_Pos)) /* Assigment of value for TRCPT1 in the USB_HOST_PINTFLAG register */
-#define USB_HOST_PINTFLAG_TRFAIL_Pos          _UINT8_(2)                                           /* (USB_HOST_PINTFLAG) Error Flow Interrupt Flag Position */
-#define USB_HOST_PINTFLAG_TRFAIL_Msk          (_UINT8_(0x1) << USB_HOST_PINTFLAG_TRFAIL_Pos)       /* (USB_HOST_PINTFLAG) Error Flow Interrupt Flag Mask */
-#define USB_HOST_PINTFLAG_TRFAIL(value)       (USB_HOST_PINTFLAG_TRFAIL_Msk & (_UINT8_(value) << USB_HOST_PINTFLAG_TRFAIL_Pos)) /* Assigment of value for TRFAIL in the USB_HOST_PINTFLAG register */
-#define USB_HOST_PINTFLAG_PERR_Pos            _UINT8_(3)                                           /* (USB_HOST_PINTFLAG) Pipe Error Interrupt Flag Position */
-#define USB_HOST_PINTFLAG_PERR_Msk            (_UINT8_(0x1) << USB_HOST_PINTFLAG_PERR_Pos)         /* (USB_HOST_PINTFLAG) Pipe Error Interrupt Flag Mask */
-#define USB_HOST_PINTFLAG_PERR(value)         (USB_HOST_PINTFLAG_PERR_Msk & (_UINT8_(value) << USB_HOST_PINTFLAG_PERR_Pos)) /* Assigment of value for PERR in the USB_HOST_PINTFLAG register */
-#define USB_HOST_PINTFLAG_TXSTP_Pos           _UINT8_(4)                                           /* (USB_HOST_PINTFLAG) Transmit  Setup Interrupt Flag Position */
-#define USB_HOST_PINTFLAG_TXSTP_Msk           (_UINT8_(0x1) << USB_HOST_PINTFLAG_TXSTP_Pos)        /* (USB_HOST_PINTFLAG) Transmit  Setup Interrupt Flag Mask */
-#define USB_HOST_PINTFLAG_TXSTP(value)        (USB_HOST_PINTFLAG_TXSTP_Msk & (_UINT8_(value) << USB_HOST_PINTFLAG_TXSTP_Pos)) /* Assigment of value for TXSTP in the USB_HOST_PINTFLAG register */
-#define USB_HOST_PINTFLAG_STALL_Pos           _UINT8_(5)                                           /* (USB_HOST_PINTFLAG) Stall Interrupt Flag Position */
-#define USB_HOST_PINTFLAG_STALL_Msk           (_UINT8_(0x1) << USB_HOST_PINTFLAG_STALL_Pos)        /* (USB_HOST_PINTFLAG) Stall Interrupt Flag Mask */
-#define USB_HOST_PINTFLAG_STALL(value)        (USB_HOST_PINTFLAG_STALL_Msk & (_UINT8_(value) << USB_HOST_PINTFLAG_STALL_Pos)) /* Assigment of value for STALL in the USB_HOST_PINTFLAG register */
-#define USB_HOST_PINTFLAG_Msk                 _UINT8_(0x3F)                                        /* (USB_HOST_PINTFLAG) Register Mask  */
-
-#define USB_HOST_PINTFLAG_TRCPT_Pos           _UINT8_(0)                                           /* (USB_HOST_PINTFLAG Position) Transfer Complete x Interrupt Flag */
-#define USB_HOST_PINTFLAG_TRCPT_Msk           (_UINT8_(0x3) << USB_HOST_PINTFLAG_TRCPT_Pos)        /* (USB_HOST_PINTFLAG Mask) TRCPT */
-#define USB_HOST_PINTFLAG_TRCPT(value)        (USB_HOST_PINTFLAG_TRCPT_Msk & (_UINT8_(value) << USB_HOST_PINTFLAG_TRCPT_Pos)) 
-
-/* -------- USB_HOST_PSTATUS : (USB Offset: 0x06) ( R/ 8) HOST_PIPE End Point Pipe Status -------- */
-#define USB_HOST_PSTATUS_RESETVALUE           _UINT8_(0x00)                                        /*  (USB_HOST_PSTATUS) HOST_PIPE End Point Pipe Status  Reset Value */
-
-#define USB_HOST_PSTATUS_DTGL_Pos             _UINT8_(0)                                           /* (USB_HOST_PSTATUS) Data Toggle Position */
-#define USB_HOST_PSTATUS_DTGL_Msk             (_UINT8_(0x1) << USB_HOST_PSTATUS_DTGL_Pos)          /* (USB_HOST_PSTATUS) Data Toggle Mask */
-#define USB_HOST_PSTATUS_DTGL(value)          (USB_HOST_PSTATUS_DTGL_Msk & (_UINT8_(value) << USB_HOST_PSTATUS_DTGL_Pos)) /* Assigment of value for DTGL in the USB_HOST_PSTATUS register */
-#define USB_HOST_PSTATUS_CURBK_Pos            _UINT8_(2)                                           /* (USB_HOST_PSTATUS) Current Bank Position */
-#define USB_HOST_PSTATUS_CURBK_Msk            (_UINT8_(0x1) << USB_HOST_PSTATUS_CURBK_Pos)         /* (USB_HOST_PSTATUS) Current Bank Mask */
-#define USB_HOST_PSTATUS_CURBK(value)         (USB_HOST_PSTATUS_CURBK_Msk & (_UINT8_(value) << USB_HOST_PSTATUS_CURBK_Pos)) /* Assigment of value for CURBK in the USB_HOST_PSTATUS register */
-#define USB_HOST_PSTATUS_PFREEZE_Pos          _UINT8_(4)                                           /* (USB_HOST_PSTATUS) Pipe Freeze Position */
-#define USB_HOST_PSTATUS_PFREEZE_Msk          (_UINT8_(0x1) << USB_HOST_PSTATUS_PFREEZE_Pos)       /* (USB_HOST_PSTATUS) Pipe Freeze Mask */
-#define USB_HOST_PSTATUS_PFREEZE(value)       (USB_HOST_PSTATUS_PFREEZE_Msk & (_UINT8_(value) << USB_HOST_PSTATUS_PFREEZE_Pos)) /* Assigment of value for PFREEZE in the USB_HOST_PSTATUS register */
-#define USB_HOST_PSTATUS_BK0RDY_Pos           _UINT8_(6)                                           /* (USB_HOST_PSTATUS) Bank 0 ready Position */
-#define USB_HOST_PSTATUS_BK0RDY_Msk           (_UINT8_(0x1) << USB_HOST_PSTATUS_BK0RDY_Pos)        /* (USB_HOST_PSTATUS) Bank 0 ready Mask */
-#define USB_HOST_PSTATUS_BK0RDY(value)        (USB_HOST_PSTATUS_BK0RDY_Msk & (_UINT8_(value) << USB_HOST_PSTATUS_BK0RDY_Pos)) /* Assigment of value for BK0RDY in the USB_HOST_PSTATUS register */
-#define USB_HOST_PSTATUS_BK1RDY_Pos           _UINT8_(7)                                           /* (USB_HOST_PSTATUS) Bank 1 ready Position */
-#define USB_HOST_PSTATUS_BK1RDY_Msk           (_UINT8_(0x1) << USB_HOST_PSTATUS_BK1RDY_Pos)        /* (USB_HOST_PSTATUS) Bank 1 ready Mask */
-#define USB_HOST_PSTATUS_BK1RDY(value)        (USB_HOST_PSTATUS_BK1RDY_Msk & (_UINT8_(value) << USB_HOST_PSTATUS_BK1RDY_Pos)) /* Assigment of value for BK1RDY in the USB_HOST_PSTATUS register */
-#define USB_HOST_PSTATUS_Msk                  _UINT8_(0xD5)                                        /* (USB_HOST_PSTATUS) Register Mask  */
-
-
-/* -------- USB_HOST_PSTATUSCLR : (USB Offset: 0x04) ( /W 8) HOST_PIPE End Point Pipe Status Clear -------- */
-#define USB_HOST_PSTATUSCLR_RESETVALUE        _UINT8_(0x00)                                        /*  (USB_HOST_PSTATUSCLR) HOST_PIPE End Point Pipe Status Clear  Reset Value */
-
-#define USB_HOST_PSTATUSCLR_DTGL_Pos          _UINT8_(0)                                           /* (USB_HOST_PSTATUSCLR) Data Toggle clear Position */
-#define USB_HOST_PSTATUSCLR_DTGL_Msk          (_UINT8_(0x1) << USB_HOST_PSTATUSCLR_DTGL_Pos)       /* (USB_HOST_PSTATUSCLR) Data Toggle clear Mask */
-#define USB_HOST_PSTATUSCLR_DTGL(value)       (USB_HOST_PSTATUSCLR_DTGL_Msk & (_UINT8_(value) << USB_HOST_PSTATUSCLR_DTGL_Pos)) /* Assigment of value for DTGL in the USB_HOST_PSTATUSCLR register */
-#define USB_HOST_PSTATUSCLR_CURBK_Pos         _UINT8_(2)                                           /* (USB_HOST_PSTATUSCLR) Curren Bank clear Position */
-#define USB_HOST_PSTATUSCLR_CURBK_Msk         (_UINT8_(0x1) << USB_HOST_PSTATUSCLR_CURBK_Pos)      /* (USB_HOST_PSTATUSCLR) Curren Bank clear Mask */
-#define USB_HOST_PSTATUSCLR_CURBK(value)      (USB_HOST_PSTATUSCLR_CURBK_Msk & (_UINT8_(value) << USB_HOST_PSTATUSCLR_CURBK_Pos)) /* Assigment of value for CURBK in the USB_HOST_PSTATUSCLR register */
-#define USB_HOST_PSTATUSCLR_PFREEZE_Pos       _UINT8_(4)                                           /* (USB_HOST_PSTATUSCLR) Pipe Freeze Clear Position */
-#define USB_HOST_PSTATUSCLR_PFREEZE_Msk       (_UINT8_(0x1) << USB_HOST_PSTATUSCLR_PFREEZE_Pos)    /* (USB_HOST_PSTATUSCLR) Pipe Freeze Clear Mask */
-#define USB_HOST_PSTATUSCLR_PFREEZE(value)    (USB_HOST_PSTATUSCLR_PFREEZE_Msk & (_UINT8_(value) << USB_HOST_PSTATUSCLR_PFREEZE_Pos)) /* Assigment of value for PFREEZE in the USB_HOST_PSTATUSCLR register */
-#define USB_HOST_PSTATUSCLR_BK0RDY_Pos        _UINT8_(6)                                           /* (USB_HOST_PSTATUSCLR) Bank 0 Ready Clear Position */
-#define USB_HOST_PSTATUSCLR_BK0RDY_Msk        (_UINT8_(0x1) << USB_HOST_PSTATUSCLR_BK0RDY_Pos)     /* (USB_HOST_PSTATUSCLR) Bank 0 Ready Clear Mask */
-#define USB_HOST_PSTATUSCLR_BK0RDY(value)     (USB_HOST_PSTATUSCLR_BK0RDY_Msk & (_UINT8_(value) << USB_HOST_PSTATUSCLR_BK0RDY_Pos)) /* Assigment of value for BK0RDY in the USB_HOST_PSTATUSCLR register */
-#define USB_HOST_PSTATUSCLR_BK1RDY_Pos        _UINT8_(7)                                           /* (USB_HOST_PSTATUSCLR) Bank 1 Ready Clear Position */
-#define USB_HOST_PSTATUSCLR_BK1RDY_Msk        (_UINT8_(0x1) << USB_HOST_PSTATUSCLR_BK1RDY_Pos)     /* (USB_HOST_PSTATUSCLR) Bank 1 Ready Clear Mask */
-#define USB_HOST_PSTATUSCLR_BK1RDY(value)     (USB_HOST_PSTATUSCLR_BK1RDY_Msk & (_UINT8_(value) << USB_HOST_PSTATUSCLR_BK1RDY_Pos)) /* Assigment of value for BK1RDY in the USB_HOST_PSTATUSCLR register */
-#define USB_HOST_PSTATUSCLR_Msk               _UINT8_(0xD5)                                        /* (USB_HOST_PSTATUSCLR) Register Mask  */
-
-
-/* -------- USB_HOST_PSTATUSSET : (USB Offset: 0x05) ( /W 8) HOST_PIPE End Point Pipe Status Set -------- */
-#define USB_HOST_PSTATUSSET_RESETVALUE        _UINT8_(0x00)                                        /*  (USB_HOST_PSTATUSSET) HOST_PIPE End Point Pipe Status Set  Reset Value */
-
-#define USB_HOST_PSTATUSSET_DTGL_Pos          _UINT8_(0)                                           /* (USB_HOST_PSTATUSSET) Data Toggle Set Position */
-#define USB_HOST_PSTATUSSET_DTGL_Msk          (_UINT8_(0x1) << USB_HOST_PSTATUSSET_DTGL_Pos)       /* (USB_HOST_PSTATUSSET) Data Toggle Set Mask */
-#define USB_HOST_PSTATUSSET_DTGL(value)       (USB_HOST_PSTATUSSET_DTGL_Msk & (_UINT8_(value) << USB_HOST_PSTATUSSET_DTGL_Pos)) /* Assigment of value for DTGL in the USB_HOST_PSTATUSSET register */
-#define USB_HOST_PSTATUSSET_CURBK_Pos         _UINT8_(2)                                           /* (USB_HOST_PSTATUSSET) Current Bank Set Position */
-#define USB_HOST_PSTATUSSET_CURBK_Msk         (_UINT8_(0x1) << USB_HOST_PSTATUSSET_CURBK_Pos)      /* (USB_HOST_PSTATUSSET) Current Bank Set Mask */
-#define USB_HOST_PSTATUSSET_CURBK(value)      (USB_HOST_PSTATUSSET_CURBK_Msk & (_UINT8_(value) << USB_HOST_PSTATUSSET_CURBK_Pos)) /* Assigment of value for CURBK in the USB_HOST_PSTATUSSET register */
-#define USB_HOST_PSTATUSSET_PFREEZE_Pos       _UINT8_(4)                                           /* (USB_HOST_PSTATUSSET) Pipe Freeze Set Position */
-#define USB_HOST_PSTATUSSET_PFREEZE_Msk       (_UINT8_(0x1) << USB_HOST_PSTATUSSET_PFREEZE_Pos)    /* (USB_HOST_PSTATUSSET) Pipe Freeze Set Mask */
-#define USB_HOST_PSTATUSSET_PFREEZE(value)    (USB_HOST_PSTATUSSET_PFREEZE_Msk & (_UINT8_(value) << USB_HOST_PSTATUSSET_PFREEZE_Pos)) /* Assigment of value for PFREEZE in the USB_HOST_PSTATUSSET register */
-#define USB_HOST_PSTATUSSET_BK0RDY_Pos        _UINT8_(6)                                           /* (USB_HOST_PSTATUSSET) Bank 0 Ready Set Position */
-#define USB_HOST_PSTATUSSET_BK0RDY_Msk        (_UINT8_(0x1) << USB_HOST_PSTATUSSET_BK0RDY_Pos)     /* (USB_HOST_PSTATUSSET) Bank 0 Ready Set Mask */
-#define USB_HOST_PSTATUSSET_BK0RDY(value)     (USB_HOST_PSTATUSSET_BK0RDY_Msk & (_UINT8_(value) << USB_HOST_PSTATUSSET_BK0RDY_Pos)) /* Assigment of value for BK0RDY in the USB_HOST_PSTATUSSET register */
-#define USB_HOST_PSTATUSSET_BK1RDY_Pos        _UINT8_(7)                                           /* (USB_HOST_PSTATUSSET) Bank 1 Ready Set Position */
-#define USB_HOST_PSTATUSSET_BK1RDY_Msk        (_UINT8_(0x1) << USB_HOST_PSTATUSSET_BK1RDY_Pos)     /* (USB_HOST_PSTATUSSET) Bank 1 Ready Set Mask */
-#define USB_HOST_PSTATUSSET_BK1RDY(value)     (USB_HOST_PSTATUSSET_BK1RDY_Msk & (_UINT8_(value) << USB_HOST_PSTATUSSET_BK1RDY_Pos)) /* Assigment of value for BK1RDY in the USB_HOST_PSTATUSSET register */
-#define USB_HOST_PSTATUSSET_Msk               _UINT8_(0xD5)                                        /* (USB_HOST_PSTATUSSET) Register Mask  */
-
-
 /* -------- USB_CTRLA : (USB Offset: 0x00) (R/W 8) Control A -------- */
 #define USB_CTRLA_RESETVALUE                  _UINT8_(0x00)                                        /*  (USB_CTRLA) Control A  Reset Value */
 
@@ -552,6 +552,30 @@
 #define USB_CTRLA_MODE_DEVICE                 (USB_CTRLA_MODE_DEVICE_Val << USB_CTRLA_MODE_Pos)    /* (USB_CTRLA) Device Mode Position  */
 #define USB_CTRLA_MODE_HOST                   (USB_CTRLA_MODE_HOST_Val << USB_CTRLA_MODE_Pos)      /* (USB_CTRLA) Host Mode Position  */
 #define USB_CTRLA_Msk                         _UINT8_(0x87)                                        /* (USB_CTRLA) Register Mask  */
+
+
+/* -------- USB_SYNCBUSY : (USB Offset: 0x02) ( R/ 8) Synchronization Busy -------- */
+#define USB_SYNCBUSY_RESETVALUE               _UINT8_(0x00)                                        /*  (USB_SYNCBUSY) Synchronization Busy  Reset Value */
+
+#define USB_SYNCBUSY_SWRST_Pos                _UINT8_(0)                                           /* (USB_SYNCBUSY) Software Reset Synchronization Busy Position */
+#define USB_SYNCBUSY_SWRST_Msk                (_UINT8_(0x1) << USB_SYNCBUSY_SWRST_Pos)             /* (USB_SYNCBUSY) Software Reset Synchronization Busy Mask */
+#define USB_SYNCBUSY_SWRST(value)             (USB_SYNCBUSY_SWRST_Msk & (_UINT8_(value) << USB_SYNCBUSY_SWRST_Pos)) /* Assigment of value for SWRST in the USB_SYNCBUSY register */
+#define USB_SYNCBUSY_ENABLE_Pos               _UINT8_(1)                                           /* (USB_SYNCBUSY) Enable Synchronization Busy Position */
+#define USB_SYNCBUSY_ENABLE_Msk               (_UINT8_(0x1) << USB_SYNCBUSY_ENABLE_Pos)            /* (USB_SYNCBUSY) Enable Synchronization Busy Mask */
+#define USB_SYNCBUSY_ENABLE(value)            (USB_SYNCBUSY_ENABLE_Msk & (_UINT8_(value) << USB_SYNCBUSY_ENABLE_Pos)) /* Assigment of value for ENABLE in the USB_SYNCBUSY register */
+#define USB_SYNCBUSY_Msk                      _UINT8_(0x03)                                        /* (USB_SYNCBUSY) Register Mask  */
+
+
+/* -------- USB_QOSCTRL : (USB Offset: 0x03) (R/W 8) USB Quality Of Service -------- */
+#define USB_QOSCTRL_RESETVALUE                _UINT8_(0x0F)                                        /*  (USB_QOSCTRL) USB Quality Of Service  Reset Value */
+
+#define USB_QOSCTRL_CQOS_Pos                  _UINT8_(0)                                           /* (USB_QOSCTRL) Configuration Quality of Service Position */
+#define USB_QOSCTRL_CQOS_Msk                  (_UINT8_(0x3) << USB_QOSCTRL_CQOS_Pos)               /* (USB_QOSCTRL) Configuration Quality of Service Mask */
+#define USB_QOSCTRL_CQOS(value)               (USB_QOSCTRL_CQOS_Msk & (_UINT8_(value) << USB_QOSCTRL_CQOS_Pos)) /* Assigment of value for CQOS in the USB_QOSCTRL register */
+#define USB_QOSCTRL_DQOS_Pos                  _UINT8_(2)                                           /* (USB_QOSCTRL) Data Quality of Service Position */
+#define USB_QOSCTRL_DQOS_Msk                  (_UINT8_(0x3) << USB_QOSCTRL_DQOS_Pos)               /* (USB_QOSCTRL) Data Quality of Service Mask */
+#define USB_QOSCTRL_DQOS(value)               (USB_QOSCTRL_DQOS_Msk & (_UINT8_(value) << USB_QOSCTRL_DQOS_Pos)) /* Assigment of value for DQOS in the USB_QOSCTRL register */
+#define USB_QOSCTRL_Msk                       _UINT8_(0x0F)                                        /* (USB_QOSCTRL) Register Mask  */
 
 
 /* -------- USB_DEVICE_CTRLB : (USB Offset: 0x08) (R/W 16) DEVICE Control B -------- */
@@ -658,55 +682,75 @@
 #define USB_DEVICE_DADD_Msk                   _UINT8_(0xFF)                                        /* (USB_DEVICE_DADD) Register Mask  */
 
 
-/* -------- USB_DESCADD : (USB Offset: 0x24) (R/W 32) Descriptor Address -------- */
-#define USB_DESCADD_RESETVALUE                _UINT32_(0x00)                                       /*  (USB_DESCADD) Descriptor Address  Reset Value */
+/* -------- USB_HOST_HSOFC : (USB Offset: 0x0A) (R/W 8) HOST Host Start Of Frame Control -------- */
+#define USB_HOST_HSOFC_RESETVALUE             _UINT8_(0x00)                                        /*  (USB_HOST_HSOFC) HOST Host Start Of Frame Control  Reset Value */
 
-#define USB_DESCADD_DESCADD_Pos               _UINT32_(0)                                          /* (USB_DESCADD) Descriptor Address Value Position */
-#define USB_DESCADD_DESCADD_Msk               (_UINT32_(0xFFFFFFFF) << USB_DESCADD_DESCADD_Pos)    /* (USB_DESCADD) Descriptor Address Value Mask */
-#define USB_DESCADD_DESCADD(value)            (USB_DESCADD_DESCADD_Msk & (_UINT32_(value) << USB_DESCADD_DESCADD_Pos)) /* Assigment of value for DESCADD in the USB_DESCADD register */
-#define USB_DESCADD_Msk                       _UINT32_(0xFFFFFFFF)                                 /* (USB_DESCADD) Register Mask  */
+#define USB_HOST_HSOFC_FLENC_Pos              _UINT8_(0)                                           /* (USB_HOST_HSOFC) Frame Length Control Position */
+#define USB_HOST_HSOFC_FLENC_Msk              (_UINT8_(0xF) << USB_HOST_HSOFC_FLENC_Pos)           /* (USB_HOST_HSOFC) Frame Length Control Mask */
+#define USB_HOST_HSOFC_FLENC(value)           (USB_HOST_HSOFC_FLENC_Msk & (_UINT8_(value) << USB_HOST_HSOFC_FLENC_Pos)) /* Assigment of value for FLENC in the USB_HOST_HSOFC register */
+#define USB_HOST_HSOFC_FLENCE_Pos             _UINT8_(7)                                           /* (USB_HOST_HSOFC) Frame Length Control Enable Position */
+#define USB_HOST_HSOFC_FLENCE_Msk             (_UINT8_(0x1) << USB_HOST_HSOFC_FLENCE_Pos)          /* (USB_HOST_HSOFC) Frame Length Control Enable Mask */
+#define USB_HOST_HSOFC_FLENCE(value)          (USB_HOST_HSOFC_FLENCE_Msk & (_UINT8_(value) << USB_HOST_HSOFC_FLENCE_Pos)) /* Assigment of value for FLENCE in the USB_HOST_HSOFC register */
+#define USB_HOST_HSOFC_Msk                    _UINT8_(0x8F)                                        /* (USB_HOST_HSOFC) Register Mask  */
 
 
-/* -------- USB_DEVICE_EPINTSMRY : (USB Offset: 0x20) ( R/ 16) DEVICE End Point Interrupt Summary -------- */
-#define USB_DEVICE_EPINTSMRY_RESETVALUE       _UINT16_(0x00)                                       /*  (USB_DEVICE_EPINTSMRY) DEVICE End Point Interrupt Summary  Reset Value */
+/* -------- USB_DEVICE_STATUS : (USB Offset: 0x0C) ( R/ 8) DEVICE Status -------- */
+#define USB_DEVICE_STATUS_RESETVALUE          _UINT8_(0x40)                                        /*  (USB_DEVICE_STATUS) DEVICE Status  Reset Value */
 
-#define USB_DEVICE_EPINTSMRY_EPINT0_Pos       _UINT16_(0)                                          /* (USB_DEVICE_EPINTSMRY) End Point 0 Interrupt Position */
-#define USB_DEVICE_EPINTSMRY_EPINT0_Msk       (_UINT16_(0x1) << USB_DEVICE_EPINTSMRY_EPINT0_Pos)   /* (USB_DEVICE_EPINTSMRY) End Point 0 Interrupt Mask */
-#define USB_DEVICE_EPINTSMRY_EPINT0(value)    (USB_DEVICE_EPINTSMRY_EPINT0_Msk & (_UINT16_(value) << USB_DEVICE_EPINTSMRY_EPINT0_Pos)) /* Assigment of value for EPINT0 in the USB_DEVICE_EPINTSMRY register */
-#define USB_DEVICE_EPINTSMRY_EPINT1_Pos       _UINT16_(1)                                          /* (USB_DEVICE_EPINTSMRY) End Point 1 Interrupt Position */
-#define USB_DEVICE_EPINTSMRY_EPINT1_Msk       (_UINT16_(0x1) << USB_DEVICE_EPINTSMRY_EPINT1_Pos)   /* (USB_DEVICE_EPINTSMRY) End Point 1 Interrupt Mask */
-#define USB_DEVICE_EPINTSMRY_EPINT1(value)    (USB_DEVICE_EPINTSMRY_EPINT1_Msk & (_UINT16_(value) << USB_DEVICE_EPINTSMRY_EPINT1_Pos)) /* Assigment of value for EPINT1 in the USB_DEVICE_EPINTSMRY register */
-#define USB_DEVICE_EPINTSMRY_EPINT2_Pos       _UINT16_(2)                                          /* (USB_DEVICE_EPINTSMRY) End Point 2 Interrupt Position */
-#define USB_DEVICE_EPINTSMRY_EPINT2_Msk       (_UINT16_(0x1) << USB_DEVICE_EPINTSMRY_EPINT2_Pos)   /* (USB_DEVICE_EPINTSMRY) End Point 2 Interrupt Mask */
-#define USB_DEVICE_EPINTSMRY_EPINT2(value)    (USB_DEVICE_EPINTSMRY_EPINT2_Msk & (_UINT16_(value) << USB_DEVICE_EPINTSMRY_EPINT2_Pos)) /* Assigment of value for EPINT2 in the USB_DEVICE_EPINTSMRY register */
-#define USB_DEVICE_EPINTSMRY_EPINT3_Pos       _UINT16_(3)                                          /* (USB_DEVICE_EPINTSMRY) End Point 3 Interrupt Position */
-#define USB_DEVICE_EPINTSMRY_EPINT3_Msk       (_UINT16_(0x1) << USB_DEVICE_EPINTSMRY_EPINT3_Pos)   /* (USB_DEVICE_EPINTSMRY) End Point 3 Interrupt Mask */
-#define USB_DEVICE_EPINTSMRY_EPINT3(value)    (USB_DEVICE_EPINTSMRY_EPINT3_Msk & (_UINT16_(value) << USB_DEVICE_EPINTSMRY_EPINT3_Pos)) /* Assigment of value for EPINT3 in the USB_DEVICE_EPINTSMRY register */
-#define USB_DEVICE_EPINTSMRY_EPINT4_Pos       _UINT16_(4)                                          /* (USB_DEVICE_EPINTSMRY) End Point 4 Interrupt Position */
-#define USB_DEVICE_EPINTSMRY_EPINT4_Msk       (_UINT16_(0x1) << USB_DEVICE_EPINTSMRY_EPINT4_Pos)   /* (USB_DEVICE_EPINTSMRY) End Point 4 Interrupt Mask */
-#define USB_DEVICE_EPINTSMRY_EPINT4(value)    (USB_DEVICE_EPINTSMRY_EPINT4_Msk & (_UINT16_(value) << USB_DEVICE_EPINTSMRY_EPINT4_Pos)) /* Assigment of value for EPINT4 in the USB_DEVICE_EPINTSMRY register */
-#define USB_DEVICE_EPINTSMRY_EPINT5_Pos       _UINT16_(5)                                          /* (USB_DEVICE_EPINTSMRY) End Point 5 Interrupt Position */
-#define USB_DEVICE_EPINTSMRY_EPINT5_Msk       (_UINT16_(0x1) << USB_DEVICE_EPINTSMRY_EPINT5_Pos)   /* (USB_DEVICE_EPINTSMRY) End Point 5 Interrupt Mask */
-#define USB_DEVICE_EPINTSMRY_EPINT5(value)    (USB_DEVICE_EPINTSMRY_EPINT5_Msk & (_UINT16_(value) << USB_DEVICE_EPINTSMRY_EPINT5_Pos)) /* Assigment of value for EPINT5 in the USB_DEVICE_EPINTSMRY register */
-#define USB_DEVICE_EPINTSMRY_EPINT6_Pos       _UINT16_(6)                                          /* (USB_DEVICE_EPINTSMRY) End Point 6 Interrupt Position */
-#define USB_DEVICE_EPINTSMRY_EPINT6_Msk       (_UINT16_(0x1) << USB_DEVICE_EPINTSMRY_EPINT6_Pos)   /* (USB_DEVICE_EPINTSMRY) End Point 6 Interrupt Mask */
-#define USB_DEVICE_EPINTSMRY_EPINT6(value)    (USB_DEVICE_EPINTSMRY_EPINT6_Msk & (_UINT16_(value) << USB_DEVICE_EPINTSMRY_EPINT6_Pos)) /* Assigment of value for EPINT6 in the USB_DEVICE_EPINTSMRY register */
-#define USB_DEVICE_EPINTSMRY_EPINT7_Pos       _UINT16_(7)                                          /* (USB_DEVICE_EPINTSMRY) End Point 7 Interrupt Position */
-#define USB_DEVICE_EPINTSMRY_EPINT7_Msk       (_UINT16_(0x1) << USB_DEVICE_EPINTSMRY_EPINT7_Pos)   /* (USB_DEVICE_EPINTSMRY) End Point 7 Interrupt Mask */
-#define USB_DEVICE_EPINTSMRY_EPINT7(value)    (USB_DEVICE_EPINTSMRY_EPINT7_Msk & (_UINT16_(value) << USB_DEVICE_EPINTSMRY_EPINT7_Pos)) /* Assigment of value for EPINT7 in the USB_DEVICE_EPINTSMRY register */
-#define USB_DEVICE_EPINTSMRY_Msk              _UINT16_(0x00FF)                                     /* (USB_DEVICE_EPINTSMRY) Register Mask  */
+#define USB_DEVICE_STATUS_SPEED_Pos           _UINT8_(2)                                           /* (USB_DEVICE_STATUS) Speed Status Position */
+#define USB_DEVICE_STATUS_SPEED_Msk           (_UINT8_(0x3) << USB_DEVICE_STATUS_SPEED_Pos)        /* (USB_DEVICE_STATUS) Speed Status Mask */
+#define USB_DEVICE_STATUS_SPEED(value)        (USB_DEVICE_STATUS_SPEED_Msk & (_UINT8_(value) << USB_DEVICE_STATUS_SPEED_Pos)) /* Assigment of value for SPEED in the USB_DEVICE_STATUS register */
+#define   USB_DEVICE_STATUS_SPEED_FS_Val      _UINT8_(0x0)                                         /* (USB_DEVICE_STATUS) Full-speed mode  */
+#define   USB_DEVICE_STATUS_SPEED_LS_Val      _UINT8_(0x1)                                         /* (USB_DEVICE_STATUS) Low-speed mode  */
+#define   USB_DEVICE_STATUS_SPEED_HS_Val      _UINT8_(0x2)                                         /* (USB_DEVICE_STATUS) High-speed mode  */
+#define USB_DEVICE_STATUS_SPEED_FS            (USB_DEVICE_STATUS_SPEED_FS_Val << USB_DEVICE_STATUS_SPEED_Pos) /* (USB_DEVICE_STATUS) Full-speed mode Position  */
+#define USB_DEVICE_STATUS_SPEED_LS            (USB_DEVICE_STATUS_SPEED_LS_Val << USB_DEVICE_STATUS_SPEED_Pos) /* (USB_DEVICE_STATUS) Low-speed mode Position  */
+#define USB_DEVICE_STATUS_SPEED_HS            (USB_DEVICE_STATUS_SPEED_HS_Val << USB_DEVICE_STATUS_SPEED_Pos) /* (USB_DEVICE_STATUS) High-speed mode Position  */
+#define USB_DEVICE_STATUS_LINESTATE_Pos       _UINT8_(6)                                           /* (USB_DEVICE_STATUS) USB Line State Status Position */
+#define USB_DEVICE_STATUS_LINESTATE_Msk       (_UINT8_(0x3) << USB_DEVICE_STATUS_LINESTATE_Pos)    /* (USB_DEVICE_STATUS) USB Line State Status Mask */
+#define USB_DEVICE_STATUS_LINESTATE(value)    (USB_DEVICE_STATUS_LINESTATE_Msk & (_UINT8_(value) << USB_DEVICE_STATUS_LINESTATE_Pos)) /* Assigment of value for LINESTATE in the USB_DEVICE_STATUS register */
+#define   USB_DEVICE_STATUS_LINESTATE_0_Val   _UINT8_(0x0)                                         /* (USB_DEVICE_STATUS) SE0/RESET  */
+#define   USB_DEVICE_STATUS_LINESTATE_1_Val   _UINT8_(0x1)                                         /* (USB_DEVICE_STATUS) FS-J or LS-K State  */
+#define   USB_DEVICE_STATUS_LINESTATE_2_Val   _UINT8_(0x2)                                         /* (USB_DEVICE_STATUS) FS-K or LS-J State  */
+#define USB_DEVICE_STATUS_LINESTATE_0         (USB_DEVICE_STATUS_LINESTATE_0_Val << USB_DEVICE_STATUS_LINESTATE_Pos) /* (USB_DEVICE_STATUS) SE0/RESET Position  */
+#define USB_DEVICE_STATUS_LINESTATE_1         (USB_DEVICE_STATUS_LINESTATE_1_Val << USB_DEVICE_STATUS_LINESTATE_Pos) /* (USB_DEVICE_STATUS) FS-J or LS-K State Position  */
+#define USB_DEVICE_STATUS_LINESTATE_2         (USB_DEVICE_STATUS_LINESTATE_2_Val << USB_DEVICE_STATUS_LINESTATE_Pos) /* (USB_DEVICE_STATUS) FS-K or LS-J State Position  */
+#define USB_DEVICE_STATUS_Msk                 _UINT8_(0xCC)                                        /* (USB_DEVICE_STATUS) Register Mask  */
 
-#define USB_DEVICE_EPINTSMRY_EPINT_Pos        _UINT16_(0)                                          /* (USB_DEVICE_EPINTSMRY Position) End Point 7 Interrupt */
-#define USB_DEVICE_EPINTSMRY_EPINT_Msk        (_UINT16_(0xFF) << USB_DEVICE_EPINTSMRY_EPINT_Pos)   /* (USB_DEVICE_EPINTSMRY Mask) EPINT */
-#define USB_DEVICE_EPINTSMRY_EPINT(value)     (USB_DEVICE_EPINTSMRY_EPINT_Msk & (_UINT16_(value) << USB_DEVICE_EPINTSMRY_EPINT_Pos)) 
 
-/* -------- USB_HOST_FLENHIGH : (USB Offset: 0x12) ( R/ 8) HOST Host Frame Length -------- */
-#define USB_HOST_FLENHIGH_RESETVALUE          _UINT8_(0x00)                                        /*  (USB_HOST_FLENHIGH) HOST Host Frame Length  Reset Value */
+/* -------- USB_HOST_STATUS : (USB Offset: 0x0C) (R/W 8) HOST Status -------- */
+#define USB_HOST_STATUS_RESETVALUE            _UINT8_(0x00)                                        /*  (USB_HOST_STATUS) HOST Status  Reset Value */
 
-#define USB_HOST_FLENHIGH_FLENHIGH_Pos        _UINT8_(0)                                           /* (USB_HOST_FLENHIGH) Frame Length Position */
-#define USB_HOST_FLENHIGH_FLENHIGH_Msk        (_UINT8_(0xFF) << USB_HOST_FLENHIGH_FLENHIGH_Pos)    /* (USB_HOST_FLENHIGH) Frame Length Mask */
-#define USB_HOST_FLENHIGH_FLENHIGH(value)     (USB_HOST_FLENHIGH_FLENHIGH_Msk & (_UINT8_(value) << USB_HOST_FLENHIGH_FLENHIGH_Pos)) /* Assigment of value for FLENHIGH in the USB_HOST_FLENHIGH register */
-#define USB_HOST_FLENHIGH_Msk                 _UINT8_(0xFF)                                        /* (USB_HOST_FLENHIGH) Register Mask  */
+#define USB_HOST_STATUS_SPEED_Pos             _UINT8_(2)                                           /* (USB_HOST_STATUS) Speed Status Position */
+#define USB_HOST_STATUS_SPEED_Msk             (_UINT8_(0x3) << USB_HOST_STATUS_SPEED_Pos)          /* (USB_HOST_STATUS) Speed Status Mask */
+#define USB_HOST_STATUS_SPEED(value)          (USB_HOST_STATUS_SPEED_Msk & (_UINT8_(value) << USB_HOST_STATUS_SPEED_Pos)) /* Assigment of value for SPEED in the USB_HOST_STATUS register */
+#define USB_HOST_STATUS_LINESTATE_Pos         _UINT8_(6)                                           /* (USB_HOST_STATUS) USB Line State Status Position */
+#define USB_HOST_STATUS_LINESTATE_Msk         (_UINT8_(0x3) << USB_HOST_STATUS_LINESTATE_Pos)      /* (USB_HOST_STATUS) USB Line State Status Mask */
+#define USB_HOST_STATUS_LINESTATE(value)      (USB_HOST_STATUS_LINESTATE_Msk & (_UINT8_(value) << USB_HOST_STATUS_LINESTATE_Pos)) /* Assigment of value for LINESTATE in the USB_HOST_STATUS register */
+#define USB_HOST_STATUS_Msk                   _UINT8_(0xCC)                                        /* (USB_HOST_STATUS) Register Mask  */
+
+
+/* -------- USB_FSMSTATUS : (USB Offset: 0x0D) ( R/ 8) Finite State Machine Status -------- */
+#define USB_FSMSTATUS_RESETVALUE              _UINT8_(0x01)                                        /*  (USB_FSMSTATUS) Finite State Machine Status  Reset Value */
+
+#define USB_FSMSTATUS_FSMSTATE_Pos            _UINT8_(0)                                           /* (USB_FSMSTATUS) Fine State Machine Status Position */
+#define USB_FSMSTATUS_FSMSTATE_Msk            (_UINT8_(0x7F) << USB_FSMSTATUS_FSMSTATE_Pos)        /* (USB_FSMSTATUS) Fine State Machine Status Mask */
+#define USB_FSMSTATUS_FSMSTATE(value)         (USB_FSMSTATUS_FSMSTATE_Msk & (_UINT8_(value) << USB_FSMSTATUS_FSMSTATE_Pos)) /* Assigment of value for FSMSTATE in the USB_FSMSTATUS register */
+#define   USB_FSMSTATUS_FSMSTATE_OFF_Val      _UINT8_(0x1)                                         /* (USB_FSMSTATUS) OFF (L3). It corresponds to the powered-off, disconnected, and disabled state  */
+#define   USB_FSMSTATUS_FSMSTATE_ON_Val       _UINT8_(0x2)                                         /* (USB_FSMSTATUS) ON (L0). It corresponds to the Idle and Active states  */
+#define   USB_FSMSTATUS_FSMSTATE_SUSPEND_Val  _UINT8_(0x4)                                         /* (USB_FSMSTATUS) SUSPEND (L2)  */
+#define   USB_FSMSTATUS_FSMSTATE_SLEEP_Val    _UINT8_(0x8)                                         /* (USB_FSMSTATUS) SLEEP (L1)  */
+#define   USB_FSMSTATUS_FSMSTATE_DNRESUME_Val _UINT8_(0x10)                                        /* (USB_FSMSTATUS) DNRESUME. Down Stream Resume.  */
+#define   USB_FSMSTATUS_FSMSTATE_UPRESUME_Val _UINT8_(0x20)                                        /* (USB_FSMSTATUS) UPRESUME. Up Stream Resume.  */
+#define   USB_FSMSTATUS_FSMSTATE_RESET_Val    _UINT8_(0x40)                                        /* (USB_FSMSTATUS) RESET. USB lines Reset.  */
+#define USB_FSMSTATUS_FSMSTATE_OFF            (USB_FSMSTATUS_FSMSTATE_OFF_Val << USB_FSMSTATUS_FSMSTATE_Pos) /* (USB_FSMSTATUS) OFF (L3). It corresponds to the powered-off, disconnected, and disabled state Position  */
+#define USB_FSMSTATUS_FSMSTATE_ON             (USB_FSMSTATUS_FSMSTATE_ON_Val << USB_FSMSTATUS_FSMSTATE_Pos) /* (USB_FSMSTATUS) ON (L0). It corresponds to the Idle and Active states Position  */
+#define USB_FSMSTATUS_FSMSTATE_SUSPEND        (USB_FSMSTATUS_FSMSTATE_SUSPEND_Val << USB_FSMSTATUS_FSMSTATE_Pos) /* (USB_FSMSTATUS) SUSPEND (L2) Position  */
+#define USB_FSMSTATUS_FSMSTATE_SLEEP          (USB_FSMSTATUS_FSMSTATE_SLEEP_Val << USB_FSMSTATUS_FSMSTATE_Pos) /* (USB_FSMSTATUS) SLEEP (L1) Position  */
+#define USB_FSMSTATUS_FSMSTATE_DNRESUME       (USB_FSMSTATUS_FSMSTATE_DNRESUME_Val << USB_FSMSTATUS_FSMSTATE_Pos) /* (USB_FSMSTATUS) DNRESUME. Down Stream Resume. Position  */
+#define USB_FSMSTATUS_FSMSTATE_UPRESUME       (USB_FSMSTATUS_FSMSTATE_UPRESUME_Val << USB_FSMSTATUS_FSMSTATE_Pos) /* (USB_FSMSTATUS) UPRESUME. Up Stream Resume. Position  */
+#define USB_FSMSTATUS_FSMSTATE_RESET          (USB_FSMSTATUS_FSMSTATE_RESET_Val << USB_FSMSTATUS_FSMSTATE_Pos) /* (USB_FSMSTATUS) RESET. USB lines Reset. Position  */
+#define USB_FSMSTATUS_Msk                     _UINT8_(0x7F)                                        /* (USB_FSMSTATUS) Register Mask  */
 
 
 /* -------- USB_DEVICE_FNUM : (USB Offset: 0x10) ( R/ 16) DEVICE Device Frame Number -------- */
@@ -736,39 +780,13 @@
 #define USB_HOST_FNUM_Msk                     _UINT16_(0x3FFF)                                     /* (USB_HOST_FNUM) Register Mask  */
 
 
-/* -------- USB_FSMSTATUS : (USB Offset: 0x0D) ( R/ 8) Finite State Machine Status -------- */
-#define USB_FSMSTATUS_RESETVALUE              _UINT8_(0x01)                                        /*  (USB_FSMSTATUS) Finite State Machine Status  Reset Value */
+/* -------- USB_HOST_FLENHIGH : (USB Offset: 0x12) ( R/ 8) HOST Host Frame Length -------- */
+#define USB_HOST_FLENHIGH_RESETVALUE          _UINT8_(0x00)                                        /*  (USB_HOST_FLENHIGH) HOST Host Frame Length  Reset Value */
 
-#define USB_FSMSTATUS_FSMSTATE_Pos            _UINT8_(0)                                           /* (USB_FSMSTATUS) Fine State Machine Status Position */
-#define USB_FSMSTATUS_FSMSTATE_Msk            (_UINT8_(0x7F) << USB_FSMSTATUS_FSMSTATE_Pos)        /* (USB_FSMSTATUS) Fine State Machine Status Mask */
-#define USB_FSMSTATUS_FSMSTATE(value)         (USB_FSMSTATUS_FSMSTATE_Msk & (_UINT8_(value) << USB_FSMSTATUS_FSMSTATE_Pos)) /* Assigment of value for FSMSTATE in the USB_FSMSTATUS register */
-#define   USB_FSMSTATUS_FSMSTATE_OFF_Val      _UINT8_(0x1)                                         /* (USB_FSMSTATUS) OFF (L3). It corresponds to the powered-off, disconnected, and disabled state  */
-#define   USB_FSMSTATUS_FSMSTATE_ON_Val       _UINT8_(0x2)                                         /* (USB_FSMSTATUS) ON (L0). It corresponds to the Idle and Active states  */
-#define   USB_FSMSTATUS_FSMSTATE_SUSPEND_Val  _UINT8_(0x4)                                         /* (USB_FSMSTATUS) SUSPEND (L2)  */
-#define   USB_FSMSTATUS_FSMSTATE_SLEEP_Val    _UINT8_(0x8)                                         /* (USB_FSMSTATUS) SLEEP (L1)  */
-#define   USB_FSMSTATUS_FSMSTATE_DNRESUME_Val _UINT8_(0x10)                                        /* (USB_FSMSTATUS) DNRESUME. Down Stream Resume.  */
-#define   USB_FSMSTATUS_FSMSTATE_UPRESUME_Val _UINT8_(0x20)                                        /* (USB_FSMSTATUS) UPRESUME. Up Stream Resume.  */
-#define   USB_FSMSTATUS_FSMSTATE_RESET_Val    _UINT8_(0x40)                                        /* (USB_FSMSTATUS) RESET. USB lines Reset.  */
-#define USB_FSMSTATUS_FSMSTATE_OFF            (USB_FSMSTATUS_FSMSTATE_OFF_Val << USB_FSMSTATUS_FSMSTATE_Pos) /* (USB_FSMSTATUS) OFF (L3). It corresponds to the powered-off, disconnected, and disabled state Position  */
-#define USB_FSMSTATUS_FSMSTATE_ON             (USB_FSMSTATUS_FSMSTATE_ON_Val << USB_FSMSTATUS_FSMSTATE_Pos) /* (USB_FSMSTATUS) ON (L0). It corresponds to the Idle and Active states Position  */
-#define USB_FSMSTATUS_FSMSTATE_SUSPEND        (USB_FSMSTATUS_FSMSTATE_SUSPEND_Val << USB_FSMSTATUS_FSMSTATE_Pos) /* (USB_FSMSTATUS) SUSPEND (L2) Position  */
-#define USB_FSMSTATUS_FSMSTATE_SLEEP          (USB_FSMSTATUS_FSMSTATE_SLEEP_Val << USB_FSMSTATUS_FSMSTATE_Pos) /* (USB_FSMSTATUS) SLEEP (L1) Position  */
-#define USB_FSMSTATUS_FSMSTATE_DNRESUME       (USB_FSMSTATUS_FSMSTATE_DNRESUME_Val << USB_FSMSTATUS_FSMSTATE_Pos) /* (USB_FSMSTATUS) DNRESUME. Down Stream Resume. Position  */
-#define USB_FSMSTATUS_FSMSTATE_UPRESUME       (USB_FSMSTATUS_FSMSTATE_UPRESUME_Val << USB_FSMSTATUS_FSMSTATE_Pos) /* (USB_FSMSTATUS) UPRESUME. Up Stream Resume. Position  */
-#define USB_FSMSTATUS_FSMSTATE_RESET          (USB_FSMSTATUS_FSMSTATE_RESET_Val << USB_FSMSTATUS_FSMSTATE_Pos) /* (USB_FSMSTATUS) RESET. USB lines Reset. Position  */
-#define USB_FSMSTATUS_Msk                     _UINT8_(0x7F)                                        /* (USB_FSMSTATUS) Register Mask  */
-
-
-/* -------- USB_HOST_HSOFC : (USB Offset: 0x0A) (R/W 8) HOST Host Start Of Frame Control -------- */
-#define USB_HOST_HSOFC_RESETVALUE             _UINT8_(0x00)                                        /*  (USB_HOST_HSOFC) HOST Host Start Of Frame Control  Reset Value */
-
-#define USB_HOST_HSOFC_FLENC_Pos              _UINT8_(0)                                           /* (USB_HOST_HSOFC) Frame Length Control Position */
-#define USB_HOST_HSOFC_FLENC_Msk              (_UINT8_(0xF) << USB_HOST_HSOFC_FLENC_Pos)           /* (USB_HOST_HSOFC) Frame Length Control Mask */
-#define USB_HOST_HSOFC_FLENC(value)           (USB_HOST_HSOFC_FLENC_Msk & (_UINT8_(value) << USB_HOST_HSOFC_FLENC_Pos)) /* Assigment of value for FLENC in the USB_HOST_HSOFC register */
-#define USB_HOST_HSOFC_FLENCE_Pos             _UINT8_(7)                                           /* (USB_HOST_HSOFC) Frame Length Control Enable Position */
-#define USB_HOST_HSOFC_FLENCE_Msk             (_UINT8_(0x1) << USB_HOST_HSOFC_FLENCE_Pos)          /* (USB_HOST_HSOFC) Frame Length Control Enable Mask */
-#define USB_HOST_HSOFC_FLENCE(value)          (USB_HOST_HSOFC_FLENCE_Msk & (_UINT8_(value) << USB_HOST_HSOFC_FLENCE_Pos)) /* Assigment of value for FLENCE in the USB_HOST_HSOFC register */
-#define USB_HOST_HSOFC_Msk                    _UINT8_(0x8F)                                        /* (USB_HOST_HSOFC) Register Mask  */
+#define USB_HOST_FLENHIGH_FLENHIGH_Pos        _UINT8_(0)                                           /* (USB_HOST_FLENHIGH) Frame Length Position */
+#define USB_HOST_FLENHIGH_FLENHIGH_Msk        (_UINT8_(0xFF) << USB_HOST_FLENHIGH_FLENHIGH_Pos)    /* (USB_HOST_FLENHIGH) Frame Length Mask */
+#define USB_HOST_FLENHIGH_FLENHIGH(value)     (USB_HOST_FLENHIGH_FLENHIGH_Msk & (_UINT8_(value) << USB_HOST_FLENHIGH_FLENHIGH_Pos)) /* Assigment of value for FLENHIGH in the USB_HOST_FLENHIGH register */
+#define USB_HOST_FLENHIGH_Msk                 _UINT8_(0xFF)                                        /* (USB_HOST_FLENHIGH) Register Mask  */
 
 
 /* -------- USB_DEVICE_INTENCLR : (USB Offset: 0x14) (R/W 16) DEVICE Device Interrupt Enable Clear -------- */
@@ -969,20 +987,38 @@
 #define USB_HOST_INTFLAG_Msk                  _UINT16_(0x03FC)                                     /* (USB_HOST_INTFLAG) Register Mask  */
 
 
-/* -------- USB_PADCAL : (USB Offset: 0x28) (R/W 16) USB PAD Calibration -------- */
-#define USB_PADCAL_RESETVALUE                 _UINT16_(0x00)                                       /*  (USB_PADCAL) USB PAD Calibration  Reset Value */
+/* -------- USB_DEVICE_EPINTSMRY : (USB Offset: 0x20) ( R/ 16) DEVICE End Point Interrupt Summary -------- */
+#define USB_DEVICE_EPINTSMRY_RESETVALUE       _UINT16_(0x00)                                       /*  (USB_DEVICE_EPINTSMRY) DEVICE End Point Interrupt Summary  Reset Value */
 
-#define USB_PADCAL_TRANSP_Pos                 _UINT16_(0)                                          /* (USB_PADCAL) USB Pad Transp calibration Position */
-#define USB_PADCAL_TRANSP_Msk                 (_UINT16_(0x1F) << USB_PADCAL_TRANSP_Pos)            /* (USB_PADCAL) USB Pad Transp calibration Mask */
-#define USB_PADCAL_TRANSP(value)              (USB_PADCAL_TRANSP_Msk & (_UINT16_(value) << USB_PADCAL_TRANSP_Pos)) /* Assigment of value for TRANSP in the USB_PADCAL register */
-#define USB_PADCAL_TRANSN_Pos                 _UINT16_(6)                                          /* (USB_PADCAL) USB Pad Transn calibration Position */
-#define USB_PADCAL_TRANSN_Msk                 (_UINT16_(0x1F) << USB_PADCAL_TRANSN_Pos)            /* (USB_PADCAL) USB Pad Transn calibration Mask */
-#define USB_PADCAL_TRANSN(value)              (USB_PADCAL_TRANSN_Msk & (_UINT16_(value) << USB_PADCAL_TRANSN_Pos)) /* Assigment of value for TRANSN in the USB_PADCAL register */
-#define USB_PADCAL_TRIM_Pos                   _UINT16_(12)                                         /* (USB_PADCAL) USB Pad Trim calibration Position */
-#define USB_PADCAL_TRIM_Msk                   (_UINT16_(0x7) << USB_PADCAL_TRIM_Pos)               /* (USB_PADCAL) USB Pad Trim calibration Mask */
-#define USB_PADCAL_TRIM(value)                (USB_PADCAL_TRIM_Msk & (_UINT16_(value) << USB_PADCAL_TRIM_Pos)) /* Assigment of value for TRIM in the USB_PADCAL register */
-#define USB_PADCAL_Msk                        _UINT16_(0x77DF)                                     /* (USB_PADCAL) Register Mask  */
+#define USB_DEVICE_EPINTSMRY_EPINT0_Pos       _UINT16_(0)                                          /* (USB_DEVICE_EPINTSMRY) End Point 0 Interrupt Position */
+#define USB_DEVICE_EPINTSMRY_EPINT0_Msk       (_UINT16_(0x1) << USB_DEVICE_EPINTSMRY_EPINT0_Pos)   /* (USB_DEVICE_EPINTSMRY) End Point 0 Interrupt Mask */
+#define USB_DEVICE_EPINTSMRY_EPINT0(value)    (USB_DEVICE_EPINTSMRY_EPINT0_Msk & (_UINT16_(value) << USB_DEVICE_EPINTSMRY_EPINT0_Pos)) /* Assigment of value for EPINT0 in the USB_DEVICE_EPINTSMRY register */
+#define USB_DEVICE_EPINTSMRY_EPINT1_Pos       _UINT16_(1)                                          /* (USB_DEVICE_EPINTSMRY) End Point 1 Interrupt Position */
+#define USB_DEVICE_EPINTSMRY_EPINT1_Msk       (_UINT16_(0x1) << USB_DEVICE_EPINTSMRY_EPINT1_Pos)   /* (USB_DEVICE_EPINTSMRY) End Point 1 Interrupt Mask */
+#define USB_DEVICE_EPINTSMRY_EPINT1(value)    (USB_DEVICE_EPINTSMRY_EPINT1_Msk & (_UINT16_(value) << USB_DEVICE_EPINTSMRY_EPINT1_Pos)) /* Assigment of value for EPINT1 in the USB_DEVICE_EPINTSMRY register */
+#define USB_DEVICE_EPINTSMRY_EPINT2_Pos       _UINT16_(2)                                          /* (USB_DEVICE_EPINTSMRY) End Point 2 Interrupt Position */
+#define USB_DEVICE_EPINTSMRY_EPINT2_Msk       (_UINT16_(0x1) << USB_DEVICE_EPINTSMRY_EPINT2_Pos)   /* (USB_DEVICE_EPINTSMRY) End Point 2 Interrupt Mask */
+#define USB_DEVICE_EPINTSMRY_EPINT2(value)    (USB_DEVICE_EPINTSMRY_EPINT2_Msk & (_UINT16_(value) << USB_DEVICE_EPINTSMRY_EPINT2_Pos)) /* Assigment of value for EPINT2 in the USB_DEVICE_EPINTSMRY register */
+#define USB_DEVICE_EPINTSMRY_EPINT3_Pos       _UINT16_(3)                                          /* (USB_DEVICE_EPINTSMRY) End Point 3 Interrupt Position */
+#define USB_DEVICE_EPINTSMRY_EPINT3_Msk       (_UINT16_(0x1) << USB_DEVICE_EPINTSMRY_EPINT3_Pos)   /* (USB_DEVICE_EPINTSMRY) End Point 3 Interrupt Mask */
+#define USB_DEVICE_EPINTSMRY_EPINT3(value)    (USB_DEVICE_EPINTSMRY_EPINT3_Msk & (_UINT16_(value) << USB_DEVICE_EPINTSMRY_EPINT3_Pos)) /* Assigment of value for EPINT3 in the USB_DEVICE_EPINTSMRY register */
+#define USB_DEVICE_EPINTSMRY_EPINT4_Pos       _UINT16_(4)                                          /* (USB_DEVICE_EPINTSMRY) End Point 4 Interrupt Position */
+#define USB_DEVICE_EPINTSMRY_EPINT4_Msk       (_UINT16_(0x1) << USB_DEVICE_EPINTSMRY_EPINT4_Pos)   /* (USB_DEVICE_EPINTSMRY) End Point 4 Interrupt Mask */
+#define USB_DEVICE_EPINTSMRY_EPINT4(value)    (USB_DEVICE_EPINTSMRY_EPINT4_Msk & (_UINT16_(value) << USB_DEVICE_EPINTSMRY_EPINT4_Pos)) /* Assigment of value for EPINT4 in the USB_DEVICE_EPINTSMRY register */
+#define USB_DEVICE_EPINTSMRY_EPINT5_Pos       _UINT16_(5)                                          /* (USB_DEVICE_EPINTSMRY) End Point 5 Interrupt Position */
+#define USB_DEVICE_EPINTSMRY_EPINT5_Msk       (_UINT16_(0x1) << USB_DEVICE_EPINTSMRY_EPINT5_Pos)   /* (USB_DEVICE_EPINTSMRY) End Point 5 Interrupt Mask */
+#define USB_DEVICE_EPINTSMRY_EPINT5(value)    (USB_DEVICE_EPINTSMRY_EPINT5_Msk & (_UINT16_(value) << USB_DEVICE_EPINTSMRY_EPINT5_Pos)) /* Assigment of value for EPINT5 in the USB_DEVICE_EPINTSMRY register */
+#define USB_DEVICE_EPINTSMRY_EPINT6_Pos       _UINT16_(6)                                          /* (USB_DEVICE_EPINTSMRY) End Point 6 Interrupt Position */
+#define USB_DEVICE_EPINTSMRY_EPINT6_Msk       (_UINT16_(0x1) << USB_DEVICE_EPINTSMRY_EPINT6_Pos)   /* (USB_DEVICE_EPINTSMRY) End Point 6 Interrupt Mask */
+#define USB_DEVICE_EPINTSMRY_EPINT6(value)    (USB_DEVICE_EPINTSMRY_EPINT6_Msk & (_UINT16_(value) << USB_DEVICE_EPINTSMRY_EPINT6_Pos)) /* Assigment of value for EPINT6 in the USB_DEVICE_EPINTSMRY register */
+#define USB_DEVICE_EPINTSMRY_EPINT7_Pos       _UINT16_(7)                                          /* (USB_DEVICE_EPINTSMRY) End Point 7 Interrupt Position */
+#define USB_DEVICE_EPINTSMRY_EPINT7_Msk       (_UINT16_(0x1) << USB_DEVICE_EPINTSMRY_EPINT7_Pos)   /* (USB_DEVICE_EPINTSMRY) End Point 7 Interrupt Mask */
+#define USB_DEVICE_EPINTSMRY_EPINT7(value)    (USB_DEVICE_EPINTSMRY_EPINT7_Msk & (_UINT16_(value) << USB_DEVICE_EPINTSMRY_EPINT7_Pos)) /* Assigment of value for EPINT7 in the USB_DEVICE_EPINTSMRY register */
+#define USB_DEVICE_EPINTSMRY_Msk              _UINT16_(0x00FF)                                     /* (USB_DEVICE_EPINTSMRY) Register Mask  */
 
+#define USB_DEVICE_EPINTSMRY_EPINT_Pos        _UINT16_(0)                                          /* (USB_DEVICE_EPINTSMRY Position) End Point 7 Interrupt */
+#define USB_DEVICE_EPINTSMRY_EPINT_Msk        (_UINT16_(0xFF) << USB_DEVICE_EPINTSMRY_EPINT_Pos)   /* (USB_DEVICE_EPINTSMRY Mask) EPINT */
+#define USB_DEVICE_EPINTSMRY_EPINT(value)     (USB_DEVICE_EPINTSMRY_EPINT_Msk & (_UINT16_(value) << USB_DEVICE_EPINTSMRY_EPINT_Pos)) 
 
 /* -------- USB_HOST_PINTSMRY : (USB Offset: 0x20) ( R/ 16) HOST Pipe Interrupt Summary -------- */
 #define USB_HOST_PINTSMRY_RESETVALUE          _UINT16_(0x00)                                       /*  (USB_HOST_PINTSMRY) HOST Pipe Interrupt Summary  Reset Value */
@@ -1017,115 +1053,79 @@
 #define USB_HOST_PINTSMRY_EPINT_Msk           (_UINT16_(0xFF) << USB_HOST_PINTSMRY_EPINT_Pos)      /* (USB_HOST_PINTSMRY Mask) EPINT */
 #define USB_HOST_PINTSMRY_EPINT(value)        (USB_HOST_PINTSMRY_EPINT_Msk & (_UINT16_(value) << USB_HOST_PINTSMRY_EPINT_Pos)) 
 
-/* -------- USB_QOSCTRL : (USB Offset: 0x03) (R/W 8) USB Quality Of Service -------- */
-#define USB_QOSCTRL_RESETVALUE                _UINT8_(0x0F)                                        /*  (USB_QOSCTRL) USB Quality Of Service  Reset Value */
+/* -------- USB_DESCADD : (USB Offset: 0x24) (R/W 32) Descriptor Address -------- */
+#define USB_DESCADD_RESETVALUE                _UINT32_(0x00)                                       /*  (USB_DESCADD) Descriptor Address  Reset Value */
 
-#define USB_QOSCTRL_CQOS_Pos                  _UINT8_(0)                                           /* (USB_QOSCTRL) Configuration Quality of Service Position */
-#define USB_QOSCTRL_CQOS_Msk                  (_UINT8_(0x3) << USB_QOSCTRL_CQOS_Pos)               /* (USB_QOSCTRL) Configuration Quality of Service Mask */
-#define USB_QOSCTRL_CQOS(value)               (USB_QOSCTRL_CQOS_Msk & (_UINT8_(value) << USB_QOSCTRL_CQOS_Pos)) /* Assigment of value for CQOS in the USB_QOSCTRL register */
-#define USB_QOSCTRL_DQOS_Pos                  _UINT8_(2)                                           /* (USB_QOSCTRL) Data Quality of Service Position */
-#define USB_QOSCTRL_DQOS_Msk                  (_UINT8_(0x3) << USB_QOSCTRL_DQOS_Pos)               /* (USB_QOSCTRL) Data Quality of Service Mask */
-#define USB_QOSCTRL_DQOS(value)               (USB_QOSCTRL_DQOS_Msk & (_UINT8_(value) << USB_QOSCTRL_DQOS_Pos)) /* Assigment of value for DQOS in the USB_QOSCTRL register */
-#define USB_QOSCTRL_Msk                       _UINT8_(0x0F)                                        /* (USB_QOSCTRL) Register Mask  */
+#define USB_DESCADD_DESCADD_Pos               _UINT32_(0)                                          /* (USB_DESCADD) Descriptor Address Value Position */
+#define USB_DESCADD_DESCADD_Msk               (_UINT32_(0xFFFFFFFF) << USB_DESCADD_DESCADD_Pos)    /* (USB_DESCADD) Descriptor Address Value Mask */
+#define USB_DESCADD_DESCADD(value)            (USB_DESCADD_DESCADD_Msk & (_UINT32_(value) << USB_DESCADD_DESCADD_Pos)) /* Assigment of value for DESCADD in the USB_DESCADD register */
+#define USB_DESCADD_Msk                       _UINT32_(0xFFFFFFFF)                                 /* (USB_DESCADD) Register Mask  */
 
 
-/* -------- USB_DEVICE_STATUS : (USB Offset: 0x0C) ( R/ 8) DEVICE Status -------- */
-#define USB_DEVICE_STATUS_RESETVALUE          _UINT8_(0x40)                                        /*  (USB_DEVICE_STATUS) DEVICE Status  Reset Value */
+/* -------- USB_PADCAL : (USB Offset: 0x28) (R/W 16) USB PAD Calibration -------- */
+#define USB_PADCAL_RESETVALUE                 _UINT16_(0x00)                                       /*  (USB_PADCAL) USB PAD Calibration  Reset Value */
 
-#define USB_DEVICE_STATUS_SPEED_Pos           _UINT8_(2)                                           /* (USB_DEVICE_STATUS) Speed Status Position */
-#define USB_DEVICE_STATUS_SPEED_Msk           (_UINT8_(0x3) << USB_DEVICE_STATUS_SPEED_Pos)        /* (USB_DEVICE_STATUS) Speed Status Mask */
-#define USB_DEVICE_STATUS_SPEED(value)        (USB_DEVICE_STATUS_SPEED_Msk & (_UINT8_(value) << USB_DEVICE_STATUS_SPEED_Pos)) /* Assigment of value for SPEED in the USB_DEVICE_STATUS register */
-#define   USB_DEVICE_STATUS_SPEED_FS_Val      _UINT8_(0x0)                                         /* (USB_DEVICE_STATUS) Full-speed mode  */
-#define   USB_DEVICE_STATUS_SPEED_LS_Val      _UINT8_(0x1)                                         /* (USB_DEVICE_STATUS) Low-speed mode  */
-#define   USB_DEVICE_STATUS_SPEED_HS_Val      _UINT8_(0x2)                                         /* (USB_DEVICE_STATUS) High-speed mode  */
-#define USB_DEVICE_STATUS_SPEED_FS            (USB_DEVICE_STATUS_SPEED_FS_Val << USB_DEVICE_STATUS_SPEED_Pos) /* (USB_DEVICE_STATUS) Full-speed mode Position  */
-#define USB_DEVICE_STATUS_SPEED_LS            (USB_DEVICE_STATUS_SPEED_LS_Val << USB_DEVICE_STATUS_SPEED_Pos) /* (USB_DEVICE_STATUS) Low-speed mode Position  */
-#define USB_DEVICE_STATUS_SPEED_HS            (USB_DEVICE_STATUS_SPEED_HS_Val << USB_DEVICE_STATUS_SPEED_Pos) /* (USB_DEVICE_STATUS) High-speed mode Position  */
-#define USB_DEVICE_STATUS_LINESTATE_Pos       _UINT8_(6)                                           /* (USB_DEVICE_STATUS) USB Line State Status Position */
-#define USB_DEVICE_STATUS_LINESTATE_Msk       (_UINT8_(0x3) << USB_DEVICE_STATUS_LINESTATE_Pos)    /* (USB_DEVICE_STATUS) USB Line State Status Mask */
-#define USB_DEVICE_STATUS_LINESTATE(value)    (USB_DEVICE_STATUS_LINESTATE_Msk & (_UINT8_(value) << USB_DEVICE_STATUS_LINESTATE_Pos)) /* Assigment of value for LINESTATE in the USB_DEVICE_STATUS register */
-#define   USB_DEVICE_STATUS_LINESTATE_0_Val   _UINT8_(0x0)                                         /* (USB_DEVICE_STATUS) SE0/RESET  */
-#define   USB_DEVICE_STATUS_LINESTATE_1_Val   _UINT8_(0x1)                                         /* (USB_DEVICE_STATUS) FS-J or LS-K State  */
-#define   USB_DEVICE_STATUS_LINESTATE_2_Val   _UINT8_(0x2)                                         /* (USB_DEVICE_STATUS) FS-K or LS-J State  */
-#define USB_DEVICE_STATUS_LINESTATE_0         (USB_DEVICE_STATUS_LINESTATE_0_Val << USB_DEVICE_STATUS_LINESTATE_Pos) /* (USB_DEVICE_STATUS) SE0/RESET Position  */
-#define USB_DEVICE_STATUS_LINESTATE_1         (USB_DEVICE_STATUS_LINESTATE_1_Val << USB_DEVICE_STATUS_LINESTATE_Pos) /* (USB_DEVICE_STATUS) FS-J or LS-K State Position  */
-#define USB_DEVICE_STATUS_LINESTATE_2         (USB_DEVICE_STATUS_LINESTATE_2_Val << USB_DEVICE_STATUS_LINESTATE_Pos) /* (USB_DEVICE_STATUS) FS-K or LS-J State Position  */
-#define USB_DEVICE_STATUS_Msk                 _UINT8_(0xCC)                                        /* (USB_DEVICE_STATUS) Register Mask  */
-
-
-/* -------- USB_HOST_STATUS : (USB Offset: 0x0C) (R/W 8) HOST Status -------- */
-#define USB_HOST_STATUS_RESETVALUE            _UINT8_(0x00)                                        /*  (USB_HOST_STATUS) HOST Status  Reset Value */
-
-#define USB_HOST_STATUS_SPEED_Pos             _UINT8_(2)                                           /* (USB_HOST_STATUS) Speed Status Position */
-#define USB_HOST_STATUS_SPEED_Msk             (_UINT8_(0x3) << USB_HOST_STATUS_SPEED_Pos)          /* (USB_HOST_STATUS) Speed Status Mask */
-#define USB_HOST_STATUS_SPEED(value)          (USB_HOST_STATUS_SPEED_Msk & (_UINT8_(value) << USB_HOST_STATUS_SPEED_Pos)) /* Assigment of value for SPEED in the USB_HOST_STATUS register */
-#define USB_HOST_STATUS_LINESTATE_Pos         _UINT8_(6)                                           /* (USB_HOST_STATUS) USB Line State Status Position */
-#define USB_HOST_STATUS_LINESTATE_Msk         (_UINT8_(0x3) << USB_HOST_STATUS_LINESTATE_Pos)      /* (USB_HOST_STATUS) USB Line State Status Mask */
-#define USB_HOST_STATUS_LINESTATE(value)      (USB_HOST_STATUS_LINESTATE_Msk & (_UINT8_(value) << USB_HOST_STATUS_LINESTATE_Pos)) /* Assigment of value for LINESTATE in the USB_HOST_STATUS register */
-#define USB_HOST_STATUS_Msk                   _UINT8_(0xCC)                                        /* (USB_HOST_STATUS) Register Mask  */
-
-
-/* -------- USB_SYNCBUSY : (USB Offset: 0x02) ( R/ 8) Synchronization Busy -------- */
-#define USB_SYNCBUSY_RESETVALUE               _UINT8_(0x00)                                        /*  (USB_SYNCBUSY) Synchronization Busy  Reset Value */
-
-#define USB_SYNCBUSY_SWRST_Pos                _UINT8_(0)                                           /* (USB_SYNCBUSY) Software Reset Synchronization Busy Position */
-#define USB_SYNCBUSY_SWRST_Msk                (_UINT8_(0x1) << USB_SYNCBUSY_SWRST_Pos)             /* (USB_SYNCBUSY) Software Reset Synchronization Busy Mask */
-#define USB_SYNCBUSY_SWRST(value)             (USB_SYNCBUSY_SWRST_Msk & (_UINT8_(value) << USB_SYNCBUSY_SWRST_Pos)) /* Assigment of value for SWRST in the USB_SYNCBUSY register */
-#define USB_SYNCBUSY_ENABLE_Pos               _UINT8_(1)                                           /* (USB_SYNCBUSY) Enable Synchronization Busy Position */
-#define USB_SYNCBUSY_ENABLE_Msk               (_UINT8_(0x1) << USB_SYNCBUSY_ENABLE_Pos)            /* (USB_SYNCBUSY) Enable Synchronization Busy Mask */
-#define USB_SYNCBUSY_ENABLE(value)            (USB_SYNCBUSY_ENABLE_Msk & (_UINT8_(value) << USB_SYNCBUSY_ENABLE_Pos)) /* Assigment of value for ENABLE in the USB_SYNCBUSY register */
-#define USB_SYNCBUSY_Msk                      _UINT8_(0x03)                                        /* (USB_SYNCBUSY) Register Mask  */
+#define USB_PADCAL_TRANSP_Pos                 _UINT16_(0)                                          /* (USB_PADCAL) USB Pad Transp calibration Position */
+#define USB_PADCAL_TRANSP_Msk                 (_UINT16_(0x1F) << USB_PADCAL_TRANSP_Pos)            /* (USB_PADCAL) USB Pad Transp calibration Mask */
+#define USB_PADCAL_TRANSP(value)              (USB_PADCAL_TRANSP_Msk & (_UINT16_(value) << USB_PADCAL_TRANSP_Pos)) /* Assigment of value for TRANSP in the USB_PADCAL register */
+#define USB_PADCAL_TRANSN_Pos                 _UINT16_(6)                                          /* (USB_PADCAL) USB Pad Transn calibration Position */
+#define USB_PADCAL_TRANSN_Msk                 (_UINT16_(0x1F) << USB_PADCAL_TRANSN_Pos)            /* (USB_PADCAL) USB Pad Transn calibration Mask */
+#define USB_PADCAL_TRANSN(value)              (USB_PADCAL_TRANSN_Msk & (_UINT16_(value) << USB_PADCAL_TRANSN_Pos)) /* Assigment of value for TRANSN in the USB_PADCAL register */
+#define USB_PADCAL_TRIM_Pos                   _UINT16_(12)                                         /* (USB_PADCAL) USB Pad Trim calibration Position */
+#define USB_PADCAL_TRIM_Msk                   (_UINT16_(0x7) << USB_PADCAL_TRIM_Pos)               /* (USB_PADCAL) USB Pad Trim calibration Mask */
+#define USB_PADCAL_TRIM(value)                (USB_PADCAL_TRIM_Msk & (_UINT16_(value) << USB_PADCAL_TRIM_Pos)) /* Assigment of value for TRIM in the USB_PADCAL register */
+#define USB_PADCAL_Msk                        _UINT16_(0x77DF)                                     /* (USB_PADCAL) Register Mask  */
 
 
 /** \brief USB register offsets definitions */
 #define USB_DEVICE_ADDR_REG_OFST       _UINT32_(0x00)      /* (USB_DEVICE_ADDR) DEVICE_DESC_BANK Endpoint Bank, Adress of Data Buffer Offset */
-#define USB_DEVICE_EXTREG_REG_OFST     _UINT32_(0x08)      /* (USB_DEVICE_EXTREG) DEVICE_DESC_BANK Endpoint Bank, Extended Offset */
 #define USB_DEVICE_PCKSIZE_REG_OFST    _UINT32_(0x04)      /* (USB_DEVICE_PCKSIZE) DEVICE_DESC_BANK Endpoint Bank, Packet Size Offset */
+#define USB_DEVICE_EXTREG_REG_OFST     _UINT32_(0x08)      /* (USB_DEVICE_EXTREG) DEVICE_DESC_BANK Endpoint Bank, Extended Offset */
 #define USB_DEVICE_STATUS_BK_REG_OFST  _UINT32_(0x0A)      /* (USB_DEVICE_STATUS_BK) DEVICE_DESC_BANK Enpoint Bank, Status of Bank Offset */
 #define USB_HOST_ADDR_REG_OFST         _UINT32_(0x00)      /* (USB_HOST_ADDR) HOST_DESC_BANK Host Bank, Adress of Data Buffer Offset */
-#define USB_HOST_CTRL_PIPE_REG_OFST    _UINT32_(0x0C)      /* (USB_HOST_CTRL_PIPE) HOST_DESC_BANK Host Bank, Host Control Pipe Offset */
-#define USB_HOST_EXTREG_REG_OFST       _UINT32_(0x08)      /* (USB_HOST_EXTREG) HOST_DESC_BANK Host Bank, Extended Offset */
 #define USB_HOST_PCKSIZE_REG_OFST      _UINT32_(0x04)      /* (USB_HOST_PCKSIZE) HOST_DESC_BANK Host Bank, Packet Size Offset */
+#define USB_HOST_EXTREG_REG_OFST       _UINT32_(0x08)      /* (USB_HOST_EXTREG) HOST_DESC_BANK Host Bank, Extended Offset */
 #define USB_HOST_STATUS_BK_REG_OFST    _UINT32_(0x0A)      /* (USB_HOST_STATUS_BK) HOST_DESC_BANK Host Bank, Status of Bank Offset */
+#define USB_HOST_CTRL_PIPE_REG_OFST    _UINT32_(0x0C)      /* (USB_HOST_CTRL_PIPE) HOST_DESC_BANK Host Bank, Host Control Pipe Offset */
 #define USB_HOST_STATUS_PIPE_REG_OFST  _UINT32_(0x0E)      /* (USB_HOST_STATUS_PIPE) HOST_DESC_BANK Host Bank, Host Status Pipe Offset */
 #define USB_DEVICE_EPCFG_REG_OFST      _UINT32_(0x00)      /* (USB_DEVICE_EPCFG) DEVICE_ENDPOINT End Point Configuration Offset */
-#define USB_DEVICE_EPINTENCLR_REG_OFST _UINT32_(0x08)      /* (USB_DEVICE_EPINTENCLR) DEVICE_ENDPOINT End Point Interrupt Clear Flag Offset */
-#define USB_DEVICE_EPINTENSET_REG_OFST _UINT32_(0x09)      /* (USB_DEVICE_EPINTENSET) DEVICE_ENDPOINT End Point Interrupt Set Flag Offset */
-#define USB_DEVICE_EPINTFLAG_REG_OFST  _UINT32_(0x07)      /* (USB_DEVICE_EPINTFLAG) DEVICE_ENDPOINT End Point Interrupt Flag Offset */
-#define USB_DEVICE_EPSTATUS_REG_OFST   _UINT32_(0x06)      /* (USB_DEVICE_EPSTATUS) DEVICE_ENDPOINT End Point Pipe Status Offset */
 #define USB_DEVICE_EPSTATUSCLR_REG_OFST _UINT32_(0x04)      /* (USB_DEVICE_EPSTATUSCLR) DEVICE_ENDPOINT End Point Pipe Status Clear Offset */
 #define USB_DEVICE_EPSTATUSSET_REG_OFST _UINT32_(0x05)      /* (USB_DEVICE_EPSTATUSSET) DEVICE_ENDPOINT End Point Pipe Status Set Offset */
-#define USB_HOST_BINTERVAL_REG_OFST    _UINT32_(0x03)      /* (USB_HOST_BINTERVAL) HOST_PIPE Bus Access Period of Pipe Offset */
+#define USB_DEVICE_EPSTATUS_REG_OFST   _UINT32_(0x06)      /* (USB_DEVICE_EPSTATUS) DEVICE_ENDPOINT End Point Pipe Status Offset */
+#define USB_DEVICE_EPINTFLAG_REG_OFST  _UINT32_(0x07)      /* (USB_DEVICE_EPINTFLAG) DEVICE_ENDPOINT End Point Interrupt Flag Offset */
+#define USB_DEVICE_EPINTENCLR_REG_OFST _UINT32_(0x08)      /* (USB_DEVICE_EPINTENCLR) DEVICE_ENDPOINT End Point Interrupt Clear Flag Offset */
+#define USB_DEVICE_EPINTENSET_REG_OFST _UINT32_(0x09)      /* (USB_DEVICE_EPINTENSET) DEVICE_ENDPOINT End Point Interrupt Set Flag Offset */
 #define USB_HOST_PCFG_REG_OFST         _UINT32_(0x00)      /* (USB_HOST_PCFG) HOST_PIPE End Point Configuration Offset */
-#define USB_HOST_PINTENCLR_REG_OFST    _UINT32_(0x08)      /* (USB_HOST_PINTENCLR) HOST_PIPE Pipe Interrupt Flag Clear Offset */
-#define USB_HOST_PINTENSET_REG_OFST    _UINT32_(0x09)      /* (USB_HOST_PINTENSET) HOST_PIPE Pipe Interrupt Flag Set Offset */
-#define USB_HOST_PINTFLAG_REG_OFST     _UINT32_(0x07)      /* (USB_HOST_PINTFLAG) HOST_PIPE Pipe Interrupt Flag Offset */
-#define USB_HOST_PSTATUS_REG_OFST      _UINT32_(0x06)      /* (USB_HOST_PSTATUS) HOST_PIPE End Point Pipe Status Offset */
+#define USB_HOST_BINTERVAL_REG_OFST    _UINT32_(0x03)      /* (USB_HOST_BINTERVAL) HOST_PIPE Bus Access Period of Pipe Offset */
 #define USB_HOST_PSTATUSCLR_REG_OFST   _UINT32_(0x04)      /* (USB_HOST_PSTATUSCLR) HOST_PIPE End Point Pipe Status Clear Offset */
 #define USB_HOST_PSTATUSSET_REG_OFST   _UINT32_(0x05)      /* (USB_HOST_PSTATUSSET) HOST_PIPE End Point Pipe Status Set Offset */
+#define USB_HOST_PSTATUS_REG_OFST      _UINT32_(0x06)      /* (USB_HOST_PSTATUS) HOST_PIPE End Point Pipe Status Offset */
+#define USB_HOST_PINTFLAG_REG_OFST     _UINT32_(0x07)      /* (USB_HOST_PINTFLAG) HOST_PIPE Pipe Interrupt Flag Offset */
+#define USB_HOST_PINTENCLR_REG_OFST    _UINT32_(0x08)      /* (USB_HOST_PINTENCLR) HOST_PIPE Pipe Interrupt Flag Clear Offset */
+#define USB_HOST_PINTENSET_REG_OFST    _UINT32_(0x09)      /* (USB_HOST_PINTENSET) HOST_PIPE Pipe Interrupt Flag Set Offset */
 #define USB_CTRLA_REG_OFST             _UINT32_(0x00)      /* (USB_CTRLA) Control A Offset */
+#define USB_SYNCBUSY_REG_OFST          _UINT32_(0x02)      /* (USB_SYNCBUSY) Synchronization Busy Offset */
+#define USB_QOSCTRL_REG_OFST           _UINT32_(0x03)      /* (USB_QOSCTRL) USB Quality Of Service Offset */
 #define USB_DEVICE_CTRLB_REG_OFST      _UINT32_(0x08)      /* (USB_DEVICE_CTRLB) DEVICE Control B Offset */
 #define USB_HOST_CTRLB_REG_OFST        _UINT32_(0x08)      /* (USB_HOST_CTRLB) HOST Control B Offset */
 #define USB_DEVICE_DADD_REG_OFST       _UINT32_(0x0A)      /* (USB_DEVICE_DADD) DEVICE Device Address Offset */
-#define USB_DESCADD_REG_OFST           _UINT32_(0x24)      /* (USB_DESCADD) Descriptor Address Offset */
-#define USB_DEVICE_EPINTSMRY_REG_OFST  _UINT32_(0x20)      /* (USB_DEVICE_EPINTSMRY) DEVICE End Point Interrupt Summary Offset */
-#define USB_HOST_FLENHIGH_REG_OFST     _UINT32_(0x12)      /* (USB_HOST_FLENHIGH) HOST Host Frame Length Offset */
+#define USB_HOST_HSOFC_REG_OFST        _UINT32_(0x0A)      /* (USB_HOST_HSOFC) HOST Host Start Of Frame Control Offset */
+#define USB_DEVICE_STATUS_REG_OFST     _UINT32_(0x0C)      /* (USB_DEVICE_STATUS) DEVICE Status Offset */
+#define USB_HOST_STATUS_REG_OFST       _UINT32_(0x0C)      /* (USB_HOST_STATUS) HOST Status Offset */
+#define USB_FSMSTATUS_REG_OFST         _UINT32_(0x0D)      /* (USB_FSMSTATUS) Finite State Machine Status Offset */
 #define USB_DEVICE_FNUM_REG_OFST       _UINT32_(0x10)      /* (USB_DEVICE_FNUM) DEVICE Device Frame Number Offset */
 #define USB_HOST_FNUM_REG_OFST         _UINT32_(0x10)      /* (USB_HOST_FNUM) HOST Host Frame Number Offset */
-#define USB_FSMSTATUS_REG_OFST         _UINT32_(0x0D)      /* (USB_FSMSTATUS) Finite State Machine Status Offset */
-#define USB_HOST_HSOFC_REG_OFST        _UINT32_(0x0A)      /* (USB_HOST_HSOFC) HOST Host Start Of Frame Control Offset */
+#define USB_HOST_FLENHIGH_REG_OFST     _UINT32_(0x12)      /* (USB_HOST_FLENHIGH) HOST Host Frame Length Offset */
 #define USB_DEVICE_INTENCLR_REG_OFST   _UINT32_(0x14)      /* (USB_DEVICE_INTENCLR) DEVICE Device Interrupt Enable Clear Offset */
 #define USB_HOST_INTENCLR_REG_OFST     _UINT32_(0x14)      /* (USB_HOST_INTENCLR) HOST Host Interrupt Enable Clear Offset */
 #define USB_DEVICE_INTENSET_REG_OFST   _UINT32_(0x18)      /* (USB_DEVICE_INTENSET) DEVICE Device Interrupt Enable Set Offset */
 #define USB_HOST_INTENSET_REG_OFST     _UINT32_(0x18)      /* (USB_HOST_INTENSET) HOST Host Interrupt Enable Set Offset */
 #define USB_DEVICE_INTFLAG_REG_OFST    _UINT32_(0x1C)      /* (USB_DEVICE_INTFLAG) DEVICE Device Interrupt Flag Offset */
 #define USB_HOST_INTFLAG_REG_OFST      _UINT32_(0x1C)      /* (USB_HOST_INTFLAG) HOST Host Interrupt Flag Offset */
-#define USB_PADCAL_REG_OFST            _UINT32_(0x28)      /* (USB_PADCAL) USB PAD Calibration Offset */
+#define USB_DEVICE_EPINTSMRY_REG_OFST  _UINT32_(0x20)      /* (USB_DEVICE_EPINTSMRY) DEVICE End Point Interrupt Summary Offset */
 #define USB_HOST_PINTSMRY_REG_OFST     _UINT32_(0x20)      /* (USB_HOST_PINTSMRY) HOST Pipe Interrupt Summary Offset */
-#define USB_QOSCTRL_REG_OFST           _UINT32_(0x03)      /* (USB_QOSCTRL) USB Quality Of Service Offset */
-#define USB_DEVICE_STATUS_REG_OFST     _UINT32_(0x0C)      /* (USB_DEVICE_STATUS) DEVICE Status Offset */
-#define USB_HOST_STATUS_REG_OFST       _UINT32_(0x0C)      /* (USB_HOST_STATUS) HOST Status Offset */
-#define USB_SYNCBUSY_REG_OFST          _UINT32_(0x02)      /* (USB_SYNCBUSY) Synchronization Busy Offset */
+#define USB_DESCADD_REG_OFST           _UINT32_(0x24)      /* (USB_DESCADD) Descriptor Address Offset */
+#define USB_PADCAL_REG_OFST            _UINT32_(0x28)      /* (USB_PADCAL) USB PAD Calibration Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief DEVICE_DESC_BANK register API structure */
