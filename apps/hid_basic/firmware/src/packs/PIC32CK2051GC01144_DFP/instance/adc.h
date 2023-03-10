@@ -1,7 +1,7 @@
 /*
  * Instance header file for PIC32CK2051GC01144
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,14 +20,14 @@
  *
  */
 
-/* file generated from device description version 2022-11-28T06:54:19Z */
+/* file generated from device description version 2023-02-20T18:48:06Z */
 #ifndef _PIC32CKGC01_ADC_INSTANCE_
 #define _PIC32CKGC01_ADC_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for ADC peripheral ========== */
 #define ADC_APB_FIFO_DEPTH                       (16)       /* Number of Words in APB FIFO */
-#define ADC_CHNSAR_NMBR1                         (16)       /* Number of Channels on SARCORE number 1 */
+#define ADC_CHNSAR_NMBR1                         (15)       /* Number of Channels on SARCORE number 1 */
 #define ADC_CHNSAR_NMBR2                         (0)        /* Number of Channels on SARCORE number 2 */
 #define ADC_CHNSAR_NMBR3                         (0)        /* Number of Channels on SARCORE number 3 */
 #define ADC_CHNSAR_NMBR4                         (0)        /* Number of Channels on SARCORE number 4 */

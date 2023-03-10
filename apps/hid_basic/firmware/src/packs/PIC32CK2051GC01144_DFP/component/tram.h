@@ -1,7 +1,7 @@
 /*
  * Component description for TRAM
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2022-11-28T06:54:19Z */
+/* file generated from device description version 2023-02-20T18:48:06Z */
 #ifndef _PIC32CKGC01_TRAM_COMPONENT_H_
 #define _PIC32CKGC01_TRAM_COMPONENT_H_
 
@@ -47,18 +47,6 @@
 #define TRAM_CTRLA_SILACC_Msk                 (_UINT32_(0x1) << TRAM_CTRLA_SILACC_Pos)             /* (TRAM_CTRLA) Silent Access Mask */
 #define TRAM_CTRLA_SILACC(value)              (TRAM_CTRLA_SILACC_Msk & (_UINT32_(value) << TRAM_CTRLA_SILACC_Pos)) /* Assigment of value for SILACC in the TRAM_CTRLA register */
 #define TRAM_CTRLA_Msk                        _UINT32_(0x000000D3)                                 /* (TRAM_CTRLA) Register Mask  */
-
-
-/* -------- TRAM_DSCC : (TRAM Offset: 0x18) ( /W 32) Data Scramble Control -------- */
-#define TRAM_DSCC_RESETVALUE                  _UINT32_(0x00)                                       /*  (TRAM_DSCC) Data Scramble Control  Reset Value */
-
-#define TRAM_DSCC_DSCKEY_Pos                  _UINT32_(0)                                          /* (TRAM_DSCC) Data Scramble Key Position */
-#define TRAM_DSCC_DSCKEY_Msk                  (_UINT32_(0x3FFFFFFF) << TRAM_DSCC_DSCKEY_Pos)       /* (TRAM_DSCC) Data Scramble Key Mask */
-#define TRAM_DSCC_DSCKEY(value)               (TRAM_DSCC_DSCKEY_Msk & (_UINT32_(value) << TRAM_DSCC_DSCKEY_Pos)) /* Assigment of value for DSCKEY in the TRAM_DSCC register */
-#define TRAM_DSCC_DSCEN_Pos                   _UINT32_(31)                                         /* (TRAM_DSCC) Data Scramble Enable Position */
-#define TRAM_DSCC_DSCEN_Msk                   (_UINT32_(0x1) << TRAM_DSCC_DSCEN_Pos)               /* (TRAM_DSCC) Data Scramble Enable Mask */
-#define TRAM_DSCC_DSCEN(value)                (TRAM_DSCC_DSCEN_Msk & (_UINT32_(value) << TRAM_DSCC_DSCEN_Pos)) /* Assigment of value for DSCEN in the TRAM_DSCC register */
-#define TRAM_DSCC_Msk                         _UINT32_(0xBFFFFFFF)                                 /* (TRAM_DSCC) Register Mask  */
 
 
 /* -------- TRAM_INTENCLR : (TRAM Offset: 0x04) (R/W 32) Interrupt Enable Clear -------- */
@@ -97,33 +85,6 @@
 #define TRAM_INTFLAG_Msk                      _UINT32_(0x00000003)                                 /* (TRAM_INTFLAG) Register Mask  */
 
 
-/* -------- TRAM_PERMR : (TRAM Offset: 0x20) ( R/ 32) Permutation Read -------- */
-#define TRAM_PERMR_RESETVALUE                 _UINT32_(0x00)                                       /*  (TRAM_PERMR) Permutation Read  Reset Value */
-
-#define TRAM_PERMR_DATA_Pos                   _UINT32_(0)                                          /* (TRAM_PERMR) Permutation Scrambler Data Output Position */
-#define TRAM_PERMR_DATA_Msk                   (_UINT32_(0x7) << TRAM_PERMR_DATA_Pos)               /* (TRAM_PERMR) Permutation Scrambler Data Output Mask */
-#define TRAM_PERMR_DATA(value)                (TRAM_PERMR_DATA_Msk & (_UINT32_(value) << TRAM_PERMR_DATA_Pos)) /* Assigment of value for DATA in the TRAM_PERMR register */
-#define TRAM_PERMR_Msk                        _UINT32_(0x00000007)                                 /* (TRAM_PERMR) Register Mask  */
-
-
-/* -------- TRAM_PERMW : (TRAM Offset: 0x1C) ( /W 32) Permutation Write -------- */
-#define TRAM_PERMW_RESETVALUE                 _UINT32_(0x00)                                       /*  (TRAM_PERMW) Permutation Write  Reset Value */
-
-#define TRAM_PERMW_DATA_Pos                   _UINT32_(0)                                          /* (TRAM_PERMW) Permutation Scrambler Data Input Position */
-#define TRAM_PERMW_DATA_Msk                   (_UINT32_(0x7) << TRAM_PERMW_DATA_Pos)               /* (TRAM_PERMW) Permutation Scrambler Data Input Mask */
-#define TRAM_PERMW_DATA(value)                (TRAM_PERMW_DATA_Msk & (_UINT32_(value) << TRAM_PERMW_DATA_Pos)) /* Assigment of value for DATA in the TRAM_PERMW register */
-#define TRAM_PERMW_Msk                        _UINT32_(0x00000007)                                 /* (TRAM_PERMW) Register Mask  */
-
-
-/* -------- TRAM_RAM : (TRAM Offset: 0x1000) (R/W 32) TrustRAM -------- */
-#define TRAM_RAM_RESETVALUE                   _UINT32_(0x00)                                       /*  (TRAM_RAM) TrustRAM  Reset Value */
-
-#define TRAM_RAM_DATA_Pos                     _UINT32_(0)                                          /* (TRAM_RAM) Trust RAM Data Position */
-#define TRAM_RAM_DATA_Msk                     (_UINT32_(0xFFFFFFFF) << TRAM_RAM_DATA_Pos)          /* (TRAM_RAM) Trust RAM Data Mask */
-#define TRAM_RAM_DATA(value)                  (TRAM_RAM_DATA_Msk & (_UINT32_(value) << TRAM_RAM_DATA_Pos)) /* Assigment of value for DATA in the TRAM_RAM register */
-#define TRAM_RAM_Msk                          _UINT32_(0xFFFFFFFF)                                 /* (TRAM_RAM) Register Mask  */
-
-
 /* -------- TRAM_STATUS : (TRAM Offset: 0x10) ( R/ 32) Status -------- */
 #define TRAM_STATUS_RESETVALUE                _UINT32_(0x00)                                       /*  (TRAM_STATUS) Status  Reset Value */
 
@@ -148,14 +109,55 @@
 #define TRAM_SYNCBUSY_Msk                     _UINT32_(0x00000003)                                 /* (TRAM_SYNCBUSY) Register Mask  */
 
 
+/* -------- TRAM_DSCC : (TRAM Offset: 0x18) ( /W 32) Data Scramble Control -------- */
+#define TRAM_DSCC_RESETVALUE                  _UINT32_(0x00)                                       /*  (TRAM_DSCC) Data Scramble Control  Reset Value */
+
+#define TRAM_DSCC_DSCKEY_Pos                  _UINT32_(0)                                          /* (TRAM_DSCC) Data Scramble Key Position */
+#define TRAM_DSCC_DSCKEY_Msk                  (_UINT32_(0x3FFFFFFF) << TRAM_DSCC_DSCKEY_Pos)       /* (TRAM_DSCC) Data Scramble Key Mask */
+#define TRAM_DSCC_DSCKEY(value)               (TRAM_DSCC_DSCKEY_Msk & (_UINT32_(value) << TRAM_DSCC_DSCKEY_Pos)) /* Assigment of value for DSCKEY in the TRAM_DSCC register */
+#define TRAM_DSCC_DSCEN_Pos                   _UINT32_(31)                                         /* (TRAM_DSCC) Data Scramble Enable Position */
+#define TRAM_DSCC_DSCEN_Msk                   (_UINT32_(0x1) << TRAM_DSCC_DSCEN_Pos)               /* (TRAM_DSCC) Data Scramble Enable Mask */
+#define TRAM_DSCC_DSCEN(value)                (TRAM_DSCC_DSCEN_Msk & (_UINT32_(value) << TRAM_DSCC_DSCEN_Pos)) /* Assigment of value for DSCEN in the TRAM_DSCC register */
+#define TRAM_DSCC_Msk                         _UINT32_(0xBFFFFFFF)                                 /* (TRAM_DSCC) Register Mask  */
+
+
+/* -------- TRAM_PERMW : (TRAM Offset: 0x1C) ( /W 32) Permutation Write -------- */
+#define TRAM_PERMW_RESETVALUE                 _UINT32_(0x00)                                       /*  (TRAM_PERMW) Permutation Write  Reset Value */
+
+#define TRAM_PERMW_DATA_Pos                   _UINT32_(0)                                          /* (TRAM_PERMW) Permutation Scrambler Data Input Position */
+#define TRAM_PERMW_DATA_Msk                   (_UINT32_(0x7) << TRAM_PERMW_DATA_Pos)               /* (TRAM_PERMW) Permutation Scrambler Data Input Mask */
+#define TRAM_PERMW_DATA(value)                (TRAM_PERMW_DATA_Msk & (_UINT32_(value) << TRAM_PERMW_DATA_Pos)) /* Assigment of value for DATA in the TRAM_PERMW register */
+#define TRAM_PERMW_Msk                        _UINT32_(0x00000007)                                 /* (TRAM_PERMW) Register Mask  */
+
+
+/* -------- TRAM_PERMR : (TRAM Offset: 0x20) ( R/ 32) Permutation Read -------- */
+#define TRAM_PERMR_RESETVALUE                 _UINT32_(0x00)                                       /*  (TRAM_PERMR) Permutation Read  Reset Value */
+
+#define TRAM_PERMR_DATA_Pos                   _UINT32_(0)                                          /* (TRAM_PERMR) Permutation Scrambler Data Output Position */
+#define TRAM_PERMR_DATA_Msk                   (_UINT32_(0x7) << TRAM_PERMR_DATA_Pos)               /* (TRAM_PERMR) Permutation Scrambler Data Output Mask */
+#define TRAM_PERMR_DATA(value)                (TRAM_PERMR_DATA_Msk & (_UINT32_(value) << TRAM_PERMR_DATA_Pos)) /* Assigment of value for DATA in the TRAM_PERMR register */
+#define TRAM_PERMR_Msk                        _UINT32_(0x00000007)                                 /* (TRAM_PERMR) Register Mask  */
+
+
+/* -------- TRAM_RAM : (TRAM Offset: 0x1000) (R/W 32) TrustRAM -------- */
+#define TRAM_RAM_RESETVALUE                   _UINT32_(0x00)                                       /*  (TRAM_RAM) TrustRAM  Reset Value */
+
+#define TRAM_RAM_DATA_Pos                     _UINT32_(0)                                          /* (TRAM_RAM) Trust RAM Data Position */
+#define TRAM_RAM_DATA_Msk                     (_UINT32_(0xFFFFFFFF) << TRAM_RAM_DATA_Pos)          /* (TRAM_RAM) Trust RAM Data Mask */
+#define TRAM_RAM_DATA(value)                  (TRAM_RAM_DATA_Msk & (_UINT32_(value) << TRAM_RAM_DATA_Pos)) /* Assigment of value for DATA in the TRAM_RAM register */
+#define TRAM_RAM_Msk                          _UINT32_(0xFFFFFFFF)                                 /* (TRAM_RAM) Register Mask  */
+
+
 /** \brief TRAM register offsets definitions */
 #define TRAM_CTRLA_REG_OFST            _UINT32_(0x00)      /* (TRAM_CTRLA) Control Offset */
-#define TRAM_DSCC_REG_OFST             _UINT32_(0x18)      /* (TRAM_DSCC) Data Scramble Control Offset */
 #define TRAM_INTENCLR_REG_OFST         _UINT32_(0x04)      /* (TRAM_INTENCLR) Interrupt Enable Clear Offset */
 #define TRAM_INTENSET_REG_OFST         _UINT32_(0x08)      /* (TRAM_INTENSET) Interrupt Enable Set Offset */
 #define TRAM_INTFLAG_REG_OFST          _UINT32_(0x0C)      /* (TRAM_INTFLAG) Interrupt Flag Status and Clear Offset */
-#define TRAM_PERMR_REG_OFST            _UINT32_(0x20)      /* (TRAM_PERMR) Permutation Read Offset */
+#define TRAM_STATUS_REG_OFST           _UINT32_(0x10)      /* (TRAM_STATUS) Status Offset */
+#define TRAM_SYNCBUSY_REG_OFST         _UINT32_(0x14)      /* (TRAM_SYNCBUSY) Synchronization Busy Status Offset */
+#define TRAM_DSCC_REG_OFST             _UINT32_(0x18)      /* (TRAM_DSCC) Data Scramble Control Offset */
 #define TRAM_PERMW_REG_OFST            _UINT32_(0x1C)      /* (TRAM_PERMW) Permutation Write Offset */
+#define TRAM_PERMR_REG_OFST            _UINT32_(0x20)      /* (TRAM_PERMR) Permutation Read Offset */
 #define TRAM_RAM_REG_OFST              _UINT32_(0x1000)    /* (TRAM_RAM) TrustRAM Offset */
 #define TRAM_RAM0_REG_OFST             _UINT32_(0x1000)    /* (TRAM_RAM0) TrustRAM Offset */
 #define TRAM_RAM1_REG_OFST             _UINT32_(0x1004)    /* (TRAM_RAM1) TrustRAM Offset */
@@ -2205,8 +2207,6 @@
 #define TRAM_RAM2045_REG_OFST          _UINT32_(0x2FF4)    /* (TRAM_RAM2045) TrustRAM Offset */
 #define TRAM_RAM2046_REG_OFST          _UINT32_(0x2FF8)    /* (TRAM_RAM2046) TrustRAM Offset */
 #define TRAM_RAM2047_REG_OFST          _UINT32_(0x2FFC)    /* (TRAM_RAM2047) TrustRAM Offset */
-#define TRAM_STATUS_REG_OFST           _UINT32_(0x10)      /* (TRAM_STATUS) Status Offset */
-#define TRAM_SYNCBUSY_REG_OFST         _UINT32_(0x14)      /* (TRAM_SYNCBUSY) Synchronization Busy Status Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief TRAM register API structure */

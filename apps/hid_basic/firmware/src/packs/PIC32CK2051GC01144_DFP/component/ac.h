@@ -1,7 +1,7 @@
 /*
  * Component description for AC
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,119 +20,13 @@
  *
  */
 
-/* file generated from device description version 2022-11-28T06:54:19Z */
+/* file generated from device description version 2023-02-20T18:48:06Z */
 #ifndef _PIC32CKGC01_AC_COMPONENT_H_
 #define _PIC32CKGC01_AC_COMPONENT_H_
 
 /* ************************************************************************** */
 /*   SOFTWARE API DEFINITION FOR AC                                           */
 /* ************************************************************************** */
-
-/* -------- AC_COMPCTRL : (AC Offset: 0x30) (R/W 32) Pair n Comparator Control 0 -------- */
-#define AC_COMPCTRL_RESETVALUE                _UINT32_(0x00)                                       /*  (AC_COMPCTRL) Pair n Comparator Control 0  Reset Value */
-
-#define AC_COMPCTRL_ENABLE_Pos                _UINT32_(1)                                          /* (AC_COMPCTRL) Enable Position */
-#define AC_COMPCTRL_ENABLE_Msk                (_UINT32_(0x1) << AC_COMPCTRL_ENABLE_Pos)            /* (AC_COMPCTRL) Enable Mask */
-#define AC_COMPCTRL_ENABLE(value)             (AC_COMPCTRL_ENABLE_Msk & (_UINT32_(value) << AC_COMPCTRL_ENABLE_Pos)) /* Assigment of value for ENABLE in the AC_COMPCTRL register */
-#define AC_COMPCTRL_SINGLE_Pos                _UINT32_(3)                                          /* (AC_COMPCTRL) Single-Shot Mode Position */
-#define AC_COMPCTRL_SINGLE_Msk                (_UINT32_(0x1) << AC_COMPCTRL_SINGLE_Pos)            /* (AC_COMPCTRL) Single-Shot Mode Mask */
-#define AC_COMPCTRL_SINGLE(value)             (AC_COMPCTRL_SINGLE_Msk & (_UINT32_(value) << AC_COMPCTRL_SINGLE_Pos)) /* Assigment of value for SINGLE in the AC_COMPCTRL register */
-#define AC_COMPCTRL_INTSEL_Pos                _UINT32_(4)                                          /* (AC_COMPCTRL) Interrupt Selection Position */
-#define AC_COMPCTRL_INTSEL_Msk                (_UINT32_(0x3) << AC_COMPCTRL_INTSEL_Pos)            /* (AC_COMPCTRL) Interrupt Selection Mask */
-#define AC_COMPCTRL_INTSEL(value)             (AC_COMPCTRL_INTSEL_Msk & (_UINT32_(value) << AC_COMPCTRL_INTSEL_Pos)) /* Assigment of value for INTSEL in the AC_COMPCTRL register */
-#define   AC_COMPCTRL_INTSEL_TOGGLE_Val       _UINT32_(0x0)                                        /* (AC_COMPCTRL) Interrupt on comparator output toggle  */
-#define   AC_COMPCTRL_INTSEL_RISING_Val       _UINT32_(0x1)                                        /* (AC_COMPCTRL) Interrupt on comparator output rising  */
-#define   AC_COMPCTRL_INTSEL_FALLING_Val      _UINT32_(0x2)                                        /* (AC_COMPCTRL) Interrupt on comparator output falling  */
-#define   AC_COMPCTRL_INTSEL_EOC_Val          _UINT32_(0x3)                                        /* (AC_COMPCTRL) Interrupt on end of comparison (single-shot mode only)  */
-#define AC_COMPCTRL_INTSEL_TOGGLE             (AC_COMPCTRL_INTSEL_TOGGLE_Val << AC_COMPCTRL_INTSEL_Pos) /* (AC_COMPCTRL) Interrupt on comparator output toggle Position  */
-#define AC_COMPCTRL_INTSEL_RISING             (AC_COMPCTRL_INTSEL_RISING_Val << AC_COMPCTRL_INTSEL_Pos) /* (AC_COMPCTRL) Interrupt on comparator output rising Position  */
-#define AC_COMPCTRL_INTSEL_FALLING            (AC_COMPCTRL_INTSEL_FALLING_Val << AC_COMPCTRL_INTSEL_Pos) /* (AC_COMPCTRL) Interrupt on comparator output falling Position  */
-#define AC_COMPCTRL_INTSEL_EOC                (AC_COMPCTRL_INTSEL_EOC_Val << AC_COMPCTRL_INTSEL_Pos) /* (AC_COMPCTRL) Interrupt on end of comparison (single-shot mode only) Position  */
-#define AC_COMPCTRL_RUNSTDBY_Pos              _UINT32_(6)                                          /* (AC_COMPCTRL) Run in Standby Position */
-#define AC_COMPCTRL_RUNSTDBY_Msk              (_UINT32_(0x1) << AC_COMPCTRL_RUNSTDBY_Pos)          /* (AC_COMPCTRL) Run in Standby Mask */
-#define AC_COMPCTRL_RUNSTDBY(value)           (AC_COMPCTRL_RUNSTDBY_Msk & (_UINT32_(value) << AC_COMPCTRL_RUNSTDBY_Pos)) /* Assigment of value for RUNSTDBY in the AC_COMPCTRL register */
-#define AC_COMPCTRL_MUXNEG_Pos                _UINT32_(8)                                          /* (AC_COMPCTRL) Negative Input Mux Selection Position */
-#define AC_COMPCTRL_MUXNEG_Msk                (_UINT32_(0x7) << AC_COMPCTRL_MUXNEG_Pos)            /* (AC_COMPCTRL) Negative Input Mux Selection Mask */
-#define AC_COMPCTRL_MUXNEG(value)             (AC_COMPCTRL_MUXNEG_Msk & (_UINT32_(value) << AC_COMPCTRL_MUXNEG_Pos)) /* Assigment of value for MUXNEG in the AC_COMPCTRL register */
-#define   AC_COMPCTRL_MUXNEG_PIN0_Val         _UINT32_(0x0)                                        /* (AC_COMPCTRL) I/O pin 0  */
-#define   AC_COMPCTRL_MUXNEG_PIN1_Val         _UINT32_(0x1)                                        /* (AC_COMPCTRL) I/O pin 1  */
-#define   AC_COMPCTRL_MUXNEG_PIN2_Val         _UINT32_(0x2)                                        /* (AC_COMPCTRL) I/O pin 2  */
-#define   AC_COMPCTRL_MUXNEG_PIN3_Val         _UINT32_(0x3)                                        /* (AC_COMPCTRL) I/O pin 3  */
-#define   AC_COMPCTRL_MUXNEG_INT0_Val         _UINT32_(0x4)                                        /* (AC_COMPCTRL) Internal connection 0, device specific  */
-#define   AC_COMPCTRL_MUXNEG_BANDGAP_Val      _UINT32_(0x5)                                        /* (AC_COMPCTRL) Bangap  */
-#define   AC_COMPCTRL_MUXNEG_GND_Val          _UINT32_(0x6)                                        /* (AC_COMPCTRL) Ground  */
-#define   AC_COMPCTRL_MUXNEG_INTDAC_Val       _UINT32_(0x7)                                        /* (AC_COMPCTRL) Internal DAC  */
-#define AC_COMPCTRL_MUXNEG_PIN0               (AC_COMPCTRL_MUXNEG_PIN0_Val << AC_COMPCTRL_MUXNEG_Pos) /* (AC_COMPCTRL) I/O pin 0 Position  */
-#define AC_COMPCTRL_MUXNEG_PIN1               (AC_COMPCTRL_MUXNEG_PIN1_Val << AC_COMPCTRL_MUXNEG_Pos) /* (AC_COMPCTRL) I/O pin 1 Position  */
-#define AC_COMPCTRL_MUXNEG_PIN2               (AC_COMPCTRL_MUXNEG_PIN2_Val << AC_COMPCTRL_MUXNEG_Pos) /* (AC_COMPCTRL) I/O pin 2 Position  */
-#define AC_COMPCTRL_MUXNEG_PIN3               (AC_COMPCTRL_MUXNEG_PIN3_Val << AC_COMPCTRL_MUXNEG_Pos) /* (AC_COMPCTRL) I/O pin 3 Position  */
-#define AC_COMPCTRL_MUXNEG_INT0               (AC_COMPCTRL_MUXNEG_INT0_Val << AC_COMPCTRL_MUXNEG_Pos) /* (AC_COMPCTRL) Internal connection 0, device specific Position  */
-#define AC_COMPCTRL_MUXNEG_BANDGAP            (AC_COMPCTRL_MUXNEG_BANDGAP_Val << AC_COMPCTRL_MUXNEG_Pos) /* (AC_COMPCTRL) Bangap Position  */
-#define AC_COMPCTRL_MUXNEG_GND                (AC_COMPCTRL_MUXNEG_GND_Val << AC_COMPCTRL_MUXNEG_Pos) /* (AC_COMPCTRL) Ground Position  */
-#define AC_COMPCTRL_MUXNEG_INTDAC             (AC_COMPCTRL_MUXNEG_INTDAC_Val << AC_COMPCTRL_MUXNEG_Pos) /* (AC_COMPCTRL) Internal DAC Position  */
-#define AC_COMPCTRL_MUXPOS_Pos                _UINT32_(12)                                         /* (AC_COMPCTRL) Positive Input Mux Selection Position */
-#define AC_COMPCTRL_MUXPOS_Msk                (_UINT32_(0x7) << AC_COMPCTRL_MUXPOS_Pos)            /* (AC_COMPCTRL) Positive Input Mux Selection Mask */
-#define AC_COMPCTRL_MUXPOS(value)             (AC_COMPCTRL_MUXPOS_Msk & (_UINT32_(value) << AC_COMPCTRL_MUXPOS_Pos)) /* Assigment of value for MUXPOS in the AC_COMPCTRL register */
-#define   AC_COMPCTRL_MUXPOS_PIN0_Val         _UINT32_(0x0)                                        /* (AC_COMPCTRL) I/O pin 0  */
-#define   AC_COMPCTRL_MUXPOS_PIN1_Val         _UINT32_(0x1)                                        /* (AC_COMPCTRL) I/O pin 1  */
-#define   AC_COMPCTRL_MUXPOS_PIN2_Val         _UINT32_(0x2)                                        /* (AC_COMPCTRL) I/O pin 2  */
-#define   AC_COMPCTRL_MUXPOS_PIN3_Val         _UINT32_(0x3)                                        /* (AC_COMPCTRL) I/O pin 3  */
-#define   AC_COMPCTRL_MUXPOS_INT0_Val         _UINT32_(0x4)                                        /* (AC_COMPCTRL) Internal connection 0, device specific  */
-#define   AC_COMPCTRL_MUXPOS_INT1_Val         _UINT32_(0x5)                                        /* (AC_COMPCTRL) Internal connection 1, device specific  */
-#define   AC_COMPCTRL_MUXPOS_INT2_Val         _UINT32_(0x6)                                        /* (AC_COMPCTRL) Internal connection 2, device specific  */
-#define   AC_COMPCTRL_MUXPOS_INTDAC_Val       _UINT32_(0x7)                                        /* (AC_COMPCTRL) Internal DAC  */
-#define AC_COMPCTRL_MUXPOS_PIN0               (AC_COMPCTRL_MUXPOS_PIN0_Val << AC_COMPCTRL_MUXPOS_Pos) /* (AC_COMPCTRL) I/O pin 0 Position  */
-#define AC_COMPCTRL_MUXPOS_PIN1               (AC_COMPCTRL_MUXPOS_PIN1_Val << AC_COMPCTRL_MUXPOS_Pos) /* (AC_COMPCTRL) I/O pin 1 Position  */
-#define AC_COMPCTRL_MUXPOS_PIN2               (AC_COMPCTRL_MUXPOS_PIN2_Val << AC_COMPCTRL_MUXPOS_Pos) /* (AC_COMPCTRL) I/O pin 2 Position  */
-#define AC_COMPCTRL_MUXPOS_PIN3               (AC_COMPCTRL_MUXPOS_PIN3_Val << AC_COMPCTRL_MUXPOS_Pos) /* (AC_COMPCTRL) I/O pin 3 Position  */
-#define AC_COMPCTRL_MUXPOS_INT0               (AC_COMPCTRL_MUXPOS_INT0_Val << AC_COMPCTRL_MUXPOS_Pos) /* (AC_COMPCTRL) Internal connection 0, device specific Position  */
-#define AC_COMPCTRL_MUXPOS_INT1               (AC_COMPCTRL_MUXPOS_INT1_Val << AC_COMPCTRL_MUXPOS_Pos) /* (AC_COMPCTRL) Internal connection 1, device specific Position  */
-#define AC_COMPCTRL_MUXPOS_INT2               (AC_COMPCTRL_MUXPOS_INT2_Val << AC_COMPCTRL_MUXPOS_Pos) /* (AC_COMPCTRL) Internal connection 2, device specific Position  */
-#define AC_COMPCTRL_MUXPOS_INTDAC             (AC_COMPCTRL_MUXPOS_INTDAC_Val << AC_COMPCTRL_MUXPOS_Pos) /* (AC_COMPCTRL) Internal DAC Position  */
-#define AC_COMPCTRL_SWAP_Pos                  _UINT32_(16)                                         /* (AC_COMPCTRL) Swap Inputs and Invert Position */
-#define AC_COMPCTRL_SWAP_Msk                  (_UINT32_(0x1) << AC_COMPCTRL_SWAP_Pos)              /* (AC_COMPCTRL) Swap Inputs and Invert Mask */
-#define AC_COMPCTRL_SWAP(value)               (AC_COMPCTRL_SWAP_Msk & (_UINT32_(value) << AC_COMPCTRL_SWAP_Pos)) /* Assigment of value for SWAP in the AC_COMPCTRL register */
-#define AC_COMPCTRL_SPEED_Pos                 _UINT32_(17)                                         /* (AC_COMPCTRL) Speed Selection Position */
-#define AC_COMPCTRL_SPEED_Msk                 (_UINT32_(0x1) << AC_COMPCTRL_SPEED_Pos)             /* (AC_COMPCTRL) Speed Selection Mask */
-#define AC_COMPCTRL_SPEED(value)              (AC_COMPCTRL_SPEED_Msk & (_UINT32_(value) << AC_COMPCTRL_SPEED_Pos)) /* Assigment of value for SPEED in the AC_COMPCTRL register */
-#define   AC_COMPCTRL_SPEED_HIGH_Val          _UINT32_(0x0)                                        /* (AC_COMPCTRL) High speed, high power  */
-#define   AC_COMPCTRL_SPEED_LOW_Val           _UINT32_(0x1)                                        /* (AC_COMPCTRL) Low speed, low power  */
-#define AC_COMPCTRL_SPEED_HIGH                (AC_COMPCTRL_SPEED_HIGH_Val << AC_COMPCTRL_SPEED_Pos) /* (AC_COMPCTRL) High speed, high power Position  */
-#define AC_COMPCTRL_SPEED_LOW                 (AC_COMPCTRL_SPEED_LOW_Val << AC_COMPCTRL_SPEED_Pos) /* (AC_COMPCTRL) Low speed, low power Position  */
-#define AC_COMPCTRL_HYST_Pos                  _UINT32_(19)                                         /* (AC_COMPCTRL) Hysteresis Level Position */
-#define AC_COMPCTRL_HYST_Msk                  (_UINT32_(0x3) << AC_COMPCTRL_HYST_Pos)              /* (AC_COMPCTRL) Hysteresis Level Mask */
-#define AC_COMPCTRL_HYST(value)               (AC_COMPCTRL_HYST_Msk & (_UINT32_(value) << AC_COMPCTRL_HYST_Pos)) /* Assigment of value for HYST in the AC_COMPCTRL register */
-#define   AC_COMPCTRL_HYST_HYST10_Val         _UINT32_(0x0)                                        /* (AC_COMPCTRL) 10mV  */
-#define   AC_COMPCTRL_HYST_HYST20_Val         _UINT32_(0x1)                                        /* (AC_COMPCTRL) 20mV  */
-#define   AC_COMPCTRL_HYST_HYST40_Val         _UINT32_(0x2)                                        /* (AC_COMPCTRL) 40mV  */
-#define   AC_COMPCTRL_HYST_HYST60_Val         _UINT32_(0x3)                                        /* (AC_COMPCTRL) 60mV  */
-#define AC_COMPCTRL_HYST_HYST10               (AC_COMPCTRL_HYST_HYST10_Val << AC_COMPCTRL_HYST_Pos) /* (AC_COMPCTRL) 10mV Position  */
-#define AC_COMPCTRL_HYST_HYST20               (AC_COMPCTRL_HYST_HYST20_Val << AC_COMPCTRL_HYST_Pos) /* (AC_COMPCTRL) 20mV Position  */
-#define AC_COMPCTRL_HYST_HYST40               (AC_COMPCTRL_HYST_HYST40_Val << AC_COMPCTRL_HYST_Pos) /* (AC_COMPCTRL) 40mV Position  */
-#define AC_COMPCTRL_HYST_HYST60               (AC_COMPCTRL_HYST_HYST60_Val << AC_COMPCTRL_HYST_Pos) /* (AC_COMPCTRL) 60mV Position  */
-#define AC_COMPCTRL_FLEN_Pos                  _UINT32_(21)                                         /* (AC_COMPCTRL) Filter Length Position */
-#define AC_COMPCTRL_FLEN_Msk                  (_UINT32_(0x7) << AC_COMPCTRL_FLEN_Pos)              /* (AC_COMPCTRL) Filter Length Mask */
-#define AC_COMPCTRL_FLEN(value)               (AC_COMPCTRL_FLEN_Msk & (_UINT32_(value) << AC_COMPCTRL_FLEN_Pos)) /* Assigment of value for FLEN in the AC_COMPCTRL register */
-#define   AC_COMPCTRL_FLEN_OFF_Val            _UINT32_(0x0)                                        /* (AC_COMPCTRL) No filtering  */
-#define   AC_COMPCTRL_FLEN_MAJ3_Val           _UINT32_(0x1)                                        /* (AC_COMPCTRL) 3-bit majority function (2 of 3)  */
-#define   AC_COMPCTRL_FLEN_MAJ5_Val           _UINT32_(0x2)                                        /* (AC_COMPCTRL) 5-bit majority function (3 of 5)  */
-#define AC_COMPCTRL_FLEN_OFF                  (AC_COMPCTRL_FLEN_OFF_Val << AC_COMPCTRL_FLEN_Pos)   /* (AC_COMPCTRL) No filtering Position  */
-#define AC_COMPCTRL_FLEN_MAJ3                 (AC_COMPCTRL_FLEN_MAJ3_Val << AC_COMPCTRL_FLEN_Pos)  /* (AC_COMPCTRL) 3-bit majority function (2 of 3) Position  */
-#define AC_COMPCTRL_FLEN_MAJ5                 (AC_COMPCTRL_FLEN_MAJ5_Val << AC_COMPCTRL_FLEN_Pos)  /* (AC_COMPCTRL) 5-bit majority function (3 of 5) Position  */
-#define AC_COMPCTRL_OUT_Pos                   _UINT32_(24)                                         /* (AC_COMPCTRL) Output Position */
-#define AC_COMPCTRL_OUT_Msk                   (_UINT32_(0x3) << AC_COMPCTRL_OUT_Pos)               /* (AC_COMPCTRL) Output Mask */
-#define AC_COMPCTRL_OUT(value)                (AC_COMPCTRL_OUT_Msk & (_UINT32_(value) << AC_COMPCTRL_OUT_Pos)) /* Assigment of value for OUT in the AC_COMPCTRL register */
-#define   AC_COMPCTRL_OUT_OFF_Val             _UINT32_(0x0)                                        /* (AC_COMPCTRL) The output of COMPn is not routed to the COMPn I/O port  */
-#define   AC_COMPCTRL_OUT_ASYNC_Val           _UINT32_(0x1)                                        /* (AC_COMPCTRL) The asynchronous output of COMPn is routed to the COMPn I/O port  */
-#define   AC_COMPCTRL_OUT_SYNC_Val            _UINT32_(0x2)                                        /* (AC_COMPCTRL) The synchronous output (including filtering) of COMPn is routed to the COMPn I/O port  */
-#define AC_COMPCTRL_OUT_OFF                   (AC_COMPCTRL_OUT_OFF_Val << AC_COMPCTRL_OUT_Pos)     /* (AC_COMPCTRL) The output of COMPn is not routed to the COMPn I/O port Position  */
-#define AC_COMPCTRL_OUT_ASYNC                 (AC_COMPCTRL_OUT_ASYNC_Val << AC_COMPCTRL_OUT_Pos)   /* (AC_COMPCTRL) The asynchronous output of COMPn is routed to the COMPn I/O port Position  */
-#define AC_COMPCTRL_OUT_SYNC                  (AC_COMPCTRL_OUT_SYNC_Val << AC_COMPCTRL_OUT_Pos)    /* (AC_COMPCTRL) The synchronous output (including filtering) of COMPn is routed to the COMPn I/O port Position  */
-#define AC_COMPCTRL_SUT_Pos                   _UINT32_(26)                                         /* (AC_COMPCTRL) Start-up Time Position */
-#define AC_COMPCTRL_SUT_Msk                   (_UINT32_(0x3F) << AC_COMPCTRL_SUT_Pos)              /* (AC_COMPCTRL) Start-up Time Mask */
-#define AC_COMPCTRL_SUT(value)                (AC_COMPCTRL_SUT_Msk & (_UINT32_(value) << AC_COMPCTRL_SUT_Pos)) /* Assigment of value for SUT in the AC_COMPCTRL register */
-#define AC_COMPCTRL_Msk                       _UINT32_(0xFFFB777A)                                 /* (AC_COMPCTRL) Register Mask  */
-
 
 /* -------- AC_CTRLA : (AC Offset: 0x00) (R/W 32) Control A -------- */
 #define AC_CTRLA_RESETVALUE                   _UINT32_(0x00)                                       /*  (AC_CTRLA) Control A  Reset Value */
@@ -196,33 +90,6 @@
 #define AC_CTRLC_CONFIG_Msk                   (_UINT32_(0xF) << AC_CTRLC_CONFIG_Pos)               /* (AC_CTRLC) Configuration Extension Mask */
 #define AC_CTRLC_CONFIG(value)                (AC_CTRLC_CONFIG_Msk & (_UINT32_(value) << AC_CTRLC_CONFIG_Pos)) /* Assigment of value for CONFIG in the AC_CTRLC register */
 #define AC_CTRLC_Msk                          _UINT32_(0xFF3FF3FF)                                 /* (AC_CTRLC) Register Mask  */
-
-
-/* -------- AC_DACCTRL : (AC Offset: 0x38) (R/W 32) Dac Control -------- */
-#define AC_DACCTRL_RESETVALUE                 _UINT32_(0x00)                                       /*  (AC_DACCTRL) Dac Control  Reset Value */
-
-#define AC_DACCTRL_VALUE0_Pos                 _UINT32_(0)                                          /* (AC_DACCTRL) DAC0 Output Value Position */
-#define AC_DACCTRL_VALUE0_Msk                 (_UINT32_(0x7F) << AC_DACCTRL_VALUE0_Pos)            /* (AC_DACCTRL) DAC0 Output Value Mask */
-#define AC_DACCTRL_VALUE0(value)              (AC_DACCTRL_VALUE0_Msk & (_UINT32_(value) << AC_DACCTRL_VALUE0_Pos)) /* Assigment of value for VALUE0 in the AC_DACCTRL register */
-#define AC_DACCTRL_SHEN0_Pos                  _UINT32_(15)                                         /* (AC_DACCTRL) DAC0 Sample and Hold Enable Operating Mode Position */
-#define AC_DACCTRL_SHEN0_Msk                  (_UINT32_(0x1) << AC_DACCTRL_SHEN0_Pos)              /* (AC_DACCTRL) DAC0 Sample and Hold Enable Operating Mode Mask */
-#define AC_DACCTRL_SHEN0(value)               (AC_DACCTRL_SHEN0_Msk & (_UINT32_(value) << AC_DACCTRL_SHEN0_Pos)) /* Assigment of value for SHEN0 in the AC_DACCTRL register */
-#define AC_DACCTRL_VALUE1_Pos                 _UINT32_(16)                                         /* (AC_DACCTRL) DAC1 Output Value Position */
-#define AC_DACCTRL_VALUE1_Msk                 (_UINT32_(0x7F) << AC_DACCTRL_VALUE1_Pos)            /* (AC_DACCTRL) DAC1 Output Value Mask */
-#define AC_DACCTRL_VALUE1(value)              (AC_DACCTRL_VALUE1_Msk & (_UINT32_(value) << AC_DACCTRL_VALUE1_Pos)) /* Assigment of value for VALUE1 in the AC_DACCTRL register */
-#define AC_DACCTRL_SHEN1_Pos                  _UINT32_(31)                                         /* (AC_DACCTRL) DAC1 Sample and Hold Enable Operating Mode Position */
-#define AC_DACCTRL_SHEN1_Msk                  (_UINT32_(0x1) << AC_DACCTRL_SHEN1_Pos)              /* (AC_DACCTRL) DAC1 Sample and Hold Enable Operating Mode Mask */
-#define AC_DACCTRL_SHEN1(value)               (AC_DACCTRL_SHEN1_Msk & (_UINT32_(value) << AC_DACCTRL_SHEN1_Pos)) /* Assigment of value for SHEN1 in the AC_DACCTRL register */
-#define AC_DACCTRL_Msk                        _UINT32_(0x807F807F)                                 /* (AC_DACCTRL) Register Mask  */
-
-
-/* -------- AC_DBGCTRL : (AC Offset: 0x24) (R/W 32) Debug Control -------- */
-#define AC_DBGCTRL_RESETVALUE                 _UINT32_(0x00)                                       /*  (AC_DBGCTRL) Debug Control  Reset Value */
-
-#define AC_DBGCTRL_DBGRUN_Pos                 _UINT32_(0)                                          /* (AC_DBGCTRL) Debug Run Position */
-#define AC_DBGCTRL_DBGRUN_Msk                 (_UINT32_(0x1) << AC_DBGCTRL_DBGRUN_Pos)             /* (AC_DBGCTRL) Debug Run Mask */
-#define AC_DBGCTRL_DBGRUN(value)              (AC_DBGCTRL_DBGRUN_Msk & (_UINT32_(value) << AC_DBGCTRL_DBGRUN_Pos)) /* Assigment of value for DBGRUN in the AC_DBGCTRL register */
-#define AC_DBGCTRL_Msk                        _UINT32_(0x00000001)                                 /* (AC_DBGCTRL) Register Mask  */
 
 
 /* -------- AC_EVCTRL : (AC Offset: 0x0C) (R/W 32) Event Control -------- */
@@ -366,6 +233,15 @@
 #define AC_STATUSB_READY_Msk                  (_UINT32_(0x3) << AC_STATUSB_READY_Pos)              /* (AC_STATUSB Mask) READY */
 #define AC_STATUSB_READY(value)               (AC_STATUSB_READY_Msk & (_UINT32_(value) << AC_STATUSB_READY_Pos)) 
 
+/* -------- AC_DBGCTRL : (AC Offset: 0x24) (R/W 32) Debug Control -------- */
+#define AC_DBGCTRL_RESETVALUE                 _UINT32_(0x00)                                       /*  (AC_DBGCTRL) Debug Control  Reset Value */
+
+#define AC_DBGCTRL_DBGRUN_Pos                 _UINT32_(0)                                          /* (AC_DBGCTRL) Debug Run Position */
+#define AC_DBGCTRL_DBGRUN_Msk                 (_UINT32_(0x1) << AC_DBGCTRL_DBGRUN_Pos)             /* (AC_DBGCTRL) Debug Run Mask */
+#define AC_DBGCTRL_DBGRUN(value)              (AC_DBGCTRL_DBGRUN_Msk & (_UINT32_(value) << AC_DBGCTRL_DBGRUN_Pos)) /* Assigment of value for DBGRUN in the AC_DBGCTRL register */
+#define AC_DBGCTRL_Msk                        _UINT32_(0x00000001)                                 /* (AC_DBGCTRL) Register Mask  */
+
+
 /* -------- AC_SYNCBUSY : (AC Offset: 0x28) ( R/ 32) Synchronization Busy -------- */
 #define AC_SYNCBUSY_RESETVALUE                _UINT32_(0x00)                                       /*  (AC_SYNCBUSY) Synchronization Busy  Reset Value */
 
@@ -393,6 +269,130 @@
 #define AC_SYNCBUSY_WINCTRL_Msk               (_UINT32_(0x1) << AC_SYNCBUSY_WINCTRL_Pos)           /* (AC_SYNCBUSY Mask) WINCTRL */
 #define AC_SYNCBUSY_WINCTRL(value)            (AC_SYNCBUSY_WINCTRL_Msk & (_UINT32_(value) << AC_SYNCBUSY_WINCTRL_Pos)) 
 
+/* -------- AC_COMPCTRL : (AC Offset: 0x30) (R/W 32) Pair n Comparator Control 0 -------- */
+#define AC_COMPCTRL_RESETVALUE                _UINT32_(0x00)                                       /*  (AC_COMPCTRL) Pair n Comparator Control 0  Reset Value */
+
+#define AC_COMPCTRL_ENABLE_Pos                _UINT32_(1)                                          /* (AC_COMPCTRL) Enable Position */
+#define AC_COMPCTRL_ENABLE_Msk                (_UINT32_(0x1) << AC_COMPCTRL_ENABLE_Pos)            /* (AC_COMPCTRL) Enable Mask */
+#define AC_COMPCTRL_ENABLE(value)             (AC_COMPCTRL_ENABLE_Msk & (_UINT32_(value) << AC_COMPCTRL_ENABLE_Pos)) /* Assigment of value for ENABLE in the AC_COMPCTRL register */
+#define AC_COMPCTRL_SINGLE_Pos                _UINT32_(3)                                          /* (AC_COMPCTRL) Single-Shot Mode Position */
+#define AC_COMPCTRL_SINGLE_Msk                (_UINT32_(0x1) << AC_COMPCTRL_SINGLE_Pos)            /* (AC_COMPCTRL) Single-Shot Mode Mask */
+#define AC_COMPCTRL_SINGLE(value)             (AC_COMPCTRL_SINGLE_Msk & (_UINT32_(value) << AC_COMPCTRL_SINGLE_Pos)) /* Assigment of value for SINGLE in the AC_COMPCTRL register */
+#define AC_COMPCTRL_INTSEL_Pos                _UINT32_(4)                                          /* (AC_COMPCTRL) Interrupt Selection Position */
+#define AC_COMPCTRL_INTSEL_Msk                (_UINT32_(0x3) << AC_COMPCTRL_INTSEL_Pos)            /* (AC_COMPCTRL) Interrupt Selection Mask */
+#define AC_COMPCTRL_INTSEL(value)             (AC_COMPCTRL_INTSEL_Msk & (_UINT32_(value) << AC_COMPCTRL_INTSEL_Pos)) /* Assigment of value for INTSEL in the AC_COMPCTRL register */
+#define   AC_COMPCTRL_INTSEL_TOGGLE_Val       _UINT32_(0x0)                                        /* (AC_COMPCTRL) Interrupt on comparator output toggle  */
+#define   AC_COMPCTRL_INTSEL_RISING_Val       _UINT32_(0x1)                                        /* (AC_COMPCTRL) Interrupt on comparator output rising  */
+#define   AC_COMPCTRL_INTSEL_FALLING_Val      _UINT32_(0x2)                                        /* (AC_COMPCTRL) Interrupt on comparator output falling  */
+#define   AC_COMPCTRL_INTSEL_EOC_Val          _UINT32_(0x3)                                        /* (AC_COMPCTRL) Interrupt on end of comparison (single-shot mode only)  */
+#define AC_COMPCTRL_INTSEL_TOGGLE             (AC_COMPCTRL_INTSEL_TOGGLE_Val << AC_COMPCTRL_INTSEL_Pos) /* (AC_COMPCTRL) Interrupt on comparator output toggle Position  */
+#define AC_COMPCTRL_INTSEL_RISING             (AC_COMPCTRL_INTSEL_RISING_Val << AC_COMPCTRL_INTSEL_Pos) /* (AC_COMPCTRL) Interrupt on comparator output rising Position  */
+#define AC_COMPCTRL_INTSEL_FALLING            (AC_COMPCTRL_INTSEL_FALLING_Val << AC_COMPCTRL_INTSEL_Pos) /* (AC_COMPCTRL) Interrupt on comparator output falling Position  */
+#define AC_COMPCTRL_INTSEL_EOC                (AC_COMPCTRL_INTSEL_EOC_Val << AC_COMPCTRL_INTSEL_Pos) /* (AC_COMPCTRL) Interrupt on end of comparison (single-shot mode only) Position  */
+#define AC_COMPCTRL_RUNSTDBY_Pos              _UINT32_(6)                                          /* (AC_COMPCTRL) Run in Standby Position */
+#define AC_COMPCTRL_RUNSTDBY_Msk              (_UINT32_(0x1) << AC_COMPCTRL_RUNSTDBY_Pos)          /* (AC_COMPCTRL) Run in Standby Mask */
+#define AC_COMPCTRL_RUNSTDBY(value)           (AC_COMPCTRL_RUNSTDBY_Msk & (_UINT32_(value) << AC_COMPCTRL_RUNSTDBY_Pos)) /* Assigment of value for RUNSTDBY in the AC_COMPCTRL register */
+#define AC_COMPCTRL_MUXNEG_Pos                _UINT32_(8)                                          /* (AC_COMPCTRL) Negative Input Mux Selection Position */
+#define AC_COMPCTRL_MUXNEG_Msk                (_UINT32_(0x7) << AC_COMPCTRL_MUXNEG_Pos)            /* (AC_COMPCTRL) Negative Input Mux Selection Mask */
+#define AC_COMPCTRL_MUXNEG(value)             (AC_COMPCTRL_MUXNEG_Msk & (_UINT32_(value) << AC_COMPCTRL_MUXNEG_Pos)) /* Assigment of value for MUXNEG in the AC_COMPCTRL register */
+#define   AC_COMPCTRL_MUXNEG_PIN0_Val         _UINT32_(0x0)                                        /* (AC_COMPCTRL) I/O pin 0  */
+#define   AC_COMPCTRL_MUXNEG_PIN1_Val         _UINT32_(0x1)                                        /* (AC_COMPCTRL) I/O pin 1  */
+#define   AC_COMPCTRL_MUXNEG_PIN2_Val         _UINT32_(0x2)                                        /* (AC_COMPCTRL) I/O pin 2  */
+#define   AC_COMPCTRL_MUXNEG_PIN3_Val         _UINT32_(0x3)                                        /* (AC_COMPCTRL) I/O pin 3  */
+#define   AC_COMPCTRL_MUXNEG_INT0_Val         _UINT32_(0x4)                                        /* (AC_COMPCTRL) Internal connection 0, device specific  */
+#define   AC_COMPCTRL_MUXNEG_BANDGAP_Val      _UINT32_(0x5)                                        /* (AC_COMPCTRL) Bangap  */
+#define   AC_COMPCTRL_MUXNEG_GND_Val          _UINT32_(0x6)                                        /* (AC_COMPCTRL) Ground  */
+#define   AC_COMPCTRL_MUXNEG_INTDAC_Val       _UINT32_(0x7)                                        /* (AC_COMPCTRL) Internal DAC  */
+#define AC_COMPCTRL_MUXNEG_PIN0               (AC_COMPCTRL_MUXNEG_PIN0_Val << AC_COMPCTRL_MUXNEG_Pos) /* (AC_COMPCTRL) I/O pin 0 Position  */
+#define AC_COMPCTRL_MUXNEG_PIN1               (AC_COMPCTRL_MUXNEG_PIN1_Val << AC_COMPCTRL_MUXNEG_Pos) /* (AC_COMPCTRL) I/O pin 1 Position  */
+#define AC_COMPCTRL_MUXNEG_PIN2               (AC_COMPCTRL_MUXNEG_PIN2_Val << AC_COMPCTRL_MUXNEG_Pos) /* (AC_COMPCTRL) I/O pin 2 Position  */
+#define AC_COMPCTRL_MUXNEG_PIN3               (AC_COMPCTRL_MUXNEG_PIN3_Val << AC_COMPCTRL_MUXNEG_Pos) /* (AC_COMPCTRL) I/O pin 3 Position  */
+#define AC_COMPCTRL_MUXNEG_INT0               (AC_COMPCTRL_MUXNEG_INT0_Val << AC_COMPCTRL_MUXNEG_Pos) /* (AC_COMPCTRL) Internal connection 0, device specific Position  */
+#define AC_COMPCTRL_MUXNEG_BANDGAP            (AC_COMPCTRL_MUXNEG_BANDGAP_Val << AC_COMPCTRL_MUXNEG_Pos) /* (AC_COMPCTRL) Bangap Position  */
+#define AC_COMPCTRL_MUXNEG_GND                (AC_COMPCTRL_MUXNEG_GND_Val << AC_COMPCTRL_MUXNEG_Pos) /* (AC_COMPCTRL) Ground Position  */
+#define AC_COMPCTRL_MUXNEG_INTDAC             (AC_COMPCTRL_MUXNEG_INTDAC_Val << AC_COMPCTRL_MUXNEG_Pos) /* (AC_COMPCTRL) Internal DAC Position  */
+#define AC_COMPCTRL_MUXPOS_Pos                _UINT32_(12)                                         /* (AC_COMPCTRL) Positive Input Mux Selection Position */
+#define AC_COMPCTRL_MUXPOS_Msk                (_UINT32_(0x7) << AC_COMPCTRL_MUXPOS_Pos)            /* (AC_COMPCTRL) Positive Input Mux Selection Mask */
+#define AC_COMPCTRL_MUXPOS(value)             (AC_COMPCTRL_MUXPOS_Msk & (_UINT32_(value) << AC_COMPCTRL_MUXPOS_Pos)) /* Assigment of value for MUXPOS in the AC_COMPCTRL register */
+#define   AC_COMPCTRL_MUXPOS_PIN0_Val         _UINT32_(0x0)                                        /* (AC_COMPCTRL) I/O pin 0  */
+#define   AC_COMPCTRL_MUXPOS_PIN1_Val         _UINT32_(0x1)                                        /* (AC_COMPCTRL) I/O pin 1  */
+#define   AC_COMPCTRL_MUXPOS_PIN2_Val         _UINT32_(0x2)                                        /* (AC_COMPCTRL) I/O pin 2  */
+#define   AC_COMPCTRL_MUXPOS_PIN3_Val         _UINT32_(0x3)                                        /* (AC_COMPCTRL) I/O pin 3  */
+#define   AC_COMPCTRL_MUXPOS_INT0_Val         _UINT32_(0x4)                                        /* (AC_COMPCTRL) Internal connection 0, device specific  */
+#define   AC_COMPCTRL_MUXPOS_INT1_Val         _UINT32_(0x5)                                        /* (AC_COMPCTRL) Internal connection 1, device specific  */
+#define   AC_COMPCTRL_MUXPOS_INT2_Val         _UINT32_(0x6)                                        /* (AC_COMPCTRL) Internal connection 2, device specific  */
+#define   AC_COMPCTRL_MUXPOS_INTDAC_Val       _UINT32_(0x7)                                        /* (AC_COMPCTRL) Internal DAC  */
+#define AC_COMPCTRL_MUXPOS_PIN0               (AC_COMPCTRL_MUXPOS_PIN0_Val << AC_COMPCTRL_MUXPOS_Pos) /* (AC_COMPCTRL) I/O pin 0 Position  */
+#define AC_COMPCTRL_MUXPOS_PIN1               (AC_COMPCTRL_MUXPOS_PIN1_Val << AC_COMPCTRL_MUXPOS_Pos) /* (AC_COMPCTRL) I/O pin 1 Position  */
+#define AC_COMPCTRL_MUXPOS_PIN2               (AC_COMPCTRL_MUXPOS_PIN2_Val << AC_COMPCTRL_MUXPOS_Pos) /* (AC_COMPCTRL) I/O pin 2 Position  */
+#define AC_COMPCTRL_MUXPOS_PIN3               (AC_COMPCTRL_MUXPOS_PIN3_Val << AC_COMPCTRL_MUXPOS_Pos) /* (AC_COMPCTRL) I/O pin 3 Position  */
+#define AC_COMPCTRL_MUXPOS_INT0               (AC_COMPCTRL_MUXPOS_INT0_Val << AC_COMPCTRL_MUXPOS_Pos) /* (AC_COMPCTRL) Internal connection 0, device specific Position  */
+#define AC_COMPCTRL_MUXPOS_INT1               (AC_COMPCTRL_MUXPOS_INT1_Val << AC_COMPCTRL_MUXPOS_Pos) /* (AC_COMPCTRL) Internal connection 1, device specific Position  */
+#define AC_COMPCTRL_MUXPOS_INT2               (AC_COMPCTRL_MUXPOS_INT2_Val << AC_COMPCTRL_MUXPOS_Pos) /* (AC_COMPCTRL) Internal connection 2, device specific Position  */
+#define AC_COMPCTRL_MUXPOS_INTDAC             (AC_COMPCTRL_MUXPOS_INTDAC_Val << AC_COMPCTRL_MUXPOS_Pos) /* (AC_COMPCTRL) Internal DAC Position  */
+#define AC_COMPCTRL_SWAP_Pos                  _UINT32_(16)                                         /* (AC_COMPCTRL) Swap Inputs and Invert Position */
+#define AC_COMPCTRL_SWAP_Msk                  (_UINT32_(0x1) << AC_COMPCTRL_SWAP_Pos)              /* (AC_COMPCTRL) Swap Inputs and Invert Mask */
+#define AC_COMPCTRL_SWAP(value)               (AC_COMPCTRL_SWAP_Msk & (_UINT32_(value) << AC_COMPCTRL_SWAP_Pos)) /* Assigment of value for SWAP in the AC_COMPCTRL register */
+#define AC_COMPCTRL_SPEED_Pos                 _UINT32_(17)                                         /* (AC_COMPCTRL) Speed Selection Position */
+#define AC_COMPCTRL_SPEED_Msk                 (_UINT32_(0x1) << AC_COMPCTRL_SPEED_Pos)             /* (AC_COMPCTRL) Speed Selection Mask */
+#define AC_COMPCTRL_SPEED(value)              (AC_COMPCTRL_SPEED_Msk & (_UINT32_(value) << AC_COMPCTRL_SPEED_Pos)) /* Assigment of value for SPEED in the AC_COMPCTRL register */
+#define   AC_COMPCTRL_SPEED_HIGH_Val          _UINT32_(0x0)                                        /* (AC_COMPCTRL) High speed, high power  */
+#define   AC_COMPCTRL_SPEED_LOW_Val           _UINT32_(0x1)                                        /* (AC_COMPCTRL) Low speed, low power  */
+#define AC_COMPCTRL_SPEED_HIGH                (AC_COMPCTRL_SPEED_HIGH_Val << AC_COMPCTRL_SPEED_Pos) /* (AC_COMPCTRL) High speed, high power Position  */
+#define AC_COMPCTRL_SPEED_LOW                 (AC_COMPCTRL_SPEED_LOW_Val << AC_COMPCTRL_SPEED_Pos) /* (AC_COMPCTRL) Low speed, low power Position  */
+#define AC_COMPCTRL_HYST_Pos                  _UINT32_(19)                                         /* (AC_COMPCTRL) Hysteresis Level Position */
+#define AC_COMPCTRL_HYST_Msk                  (_UINT32_(0x3) << AC_COMPCTRL_HYST_Pos)              /* (AC_COMPCTRL) Hysteresis Level Mask */
+#define AC_COMPCTRL_HYST(value)               (AC_COMPCTRL_HYST_Msk & (_UINT32_(value) << AC_COMPCTRL_HYST_Pos)) /* Assigment of value for HYST in the AC_COMPCTRL register */
+#define   AC_COMPCTRL_HYST_HYST10_Val         _UINT32_(0x0)                                        /* (AC_COMPCTRL) 10mV  */
+#define   AC_COMPCTRL_HYST_HYST20_Val         _UINT32_(0x1)                                        /* (AC_COMPCTRL) 20mV  */
+#define   AC_COMPCTRL_HYST_HYST40_Val         _UINT32_(0x2)                                        /* (AC_COMPCTRL) 40mV  */
+#define   AC_COMPCTRL_HYST_HYST60_Val         _UINT32_(0x3)                                        /* (AC_COMPCTRL) 60mV  */
+#define AC_COMPCTRL_HYST_HYST10               (AC_COMPCTRL_HYST_HYST10_Val << AC_COMPCTRL_HYST_Pos) /* (AC_COMPCTRL) 10mV Position  */
+#define AC_COMPCTRL_HYST_HYST20               (AC_COMPCTRL_HYST_HYST20_Val << AC_COMPCTRL_HYST_Pos) /* (AC_COMPCTRL) 20mV Position  */
+#define AC_COMPCTRL_HYST_HYST40               (AC_COMPCTRL_HYST_HYST40_Val << AC_COMPCTRL_HYST_Pos) /* (AC_COMPCTRL) 40mV Position  */
+#define AC_COMPCTRL_HYST_HYST60               (AC_COMPCTRL_HYST_HYST60_Val << AC_COMPCTRL_HYST_Pos) /* (AC_COMPCTRL) 60mV Position  */
+#define AC_COMPCTRL_FLEN_Pos                  _UINT32_(21)                                         /* (AC_COMPCTRL) Filter Length Position */
+#define AC_COMPCTRL_FLEN_Msk                  (_UINT32_(0x7) << AC_COMPCTRL_FLEN_Pos)              /* (AC_COMPCTRL) Filter Length Mask */
+#define AC_COMPCTRL_FLEN(value)               (AC_COMPCTRL_FLEN_Msk & (_UINT32_(value) << AC_COMPCTRL_FLEN_Pos)) /* Assigment of value for FLEN in the AC_COMPCTRL register */
+#define   AC_COMPCTRL_FLEN_OFF_Val            _UINT32_(0x0)                                        /* (AC_COMPCTRL) No filtering  */
+#define   AC_COMPCTRL_FLEN_MAJ3_Val           _UINT32_(0x1)                                        /* (AC_COMPCTRL) 3-bit majority function (2 of 3)  */
+#define   AC_COMPCTRL_FLEN_MAJ5_Val           _UINT32_(0x2)                                        /* (AC_COMPCTRL) 5-bit majority function (3 of 5)  */
+#define AC_COMPCTRL_FLEN_OFF                  (AC_COMPCTRL_FLEN_OFF_Val << AC_COMPCTRL_FLEN_Pos)   /* (AC_COMPCTRL) No filtering Position  */
+#define AC_COMPCTRL_FLEN_MAJ3                 (AC_COMPCTRL_FLEN_MAJ3_Val << AC_COMPCTRL_FLEN_Pos)  /* (AC_COMPCTRL) 3-bit majority function (2 of 3) Position  */
+#define AC_COMPCTRL_FLEN_MAJ5                 (AC_COMPCTRL_FLEN_MAJ5_Val << AC_COMPCTRL_FLEN_Pos)  /* (AC_COMPCTRL) 5-bit majority function (3 of 5) Position  */
+#define AC_COMPCTRL_OUT_Pos                   _UINT32_(24)                                         /* (AC_COMPCTRL) Output Position */
+#define AC_COMPCTRL_OUT_Msk                   (_UINT32_(0x3) << AC_COMPCTRL_OUT_Pos)               /* (AC_COMPCTRL) Output Mask */
+#define AC_COMPCTRL_OUT(value)                (AC_COMPCTRL_OUT_Msk & (_UINT32_(value) << AC_COMPCTRL_OUT_Pos)) /* Assigment of value for OUT in the AC_COMPCTRL register */
+#define   AC_COMPCTRL_OUT_OFF_Val             _UINT32_(0x0)                                        /* (AC_COMPCTRL) The output of COMPn is not routed to the COMPn I/O port  */
+#define   AC_COMPCTRL_OUT_ASYNC_Val           _UINT32_(0x1)                                        /* (AC_COMPCTRL) The asynchronous output of COMPn is routed to the COMPn I/O port  */
+#define   AC_COMPCTRL_OUT_SYNC_Val            _UINT32_(0x2)                                        /* (AC_COMPCTRL) The synchronous output (including filtering) of COMPn is routed to the COMPn I/O port  */
+#define AC_COMPCTRL_OUT_OFF                   (AC_COMPCTRL_OUT_OFF_Val << AC_COMPCTRL_OUT_Pos)     /* (AC_COMPCTRL) The output of COMPn is not routed to the COMPn I/O port Position  */
+#define AC_COMPCTRL_OUT_ASYNC                 (AC_COMPCTRL_OUT_ASYNC_Val << AC_COMPCTRL_OUT_Pos)   /* (AC_COMPCTRL) The asynchronous output of COMPn is routed to the COMPn I/O port Position  */
+#define AC_COMPCTRL_OUT_SYNC                  (AC_COMPCTRL_OUT_SYNC_Val << AC_COMPCTRL_OUT_Pos)    /* (AC_COMPCTRL) The synchronous output (including filtering) of COMPn is routed to the COMPn I/O port Position  */
+#define AC_COMPCTRL_SUT_Pos                   _UINT32_(26)                                         /* (AC_COMPCTRL) Start-up Time Position */
+#define AC_COMPCTRL_SUT_Msk                   (_UINT32_(0x3F) << AC_COMPCTRL_SUT_Pos)              /* (AC_COMPCTRL) Start-up Time Mask */
+#define AC_COMPCTRL_SUT(value)                (AC_COMPCTRL_SUT_Msk & (_UINT32_(value) << AC_COMPCTRL_SUT_Pos)) /* Assigment of value for SUT in the AC_COMPCTRL register */
+#define AC_COMPCTRL_Msk                       _UINT32_(0xFFFB777A)                                 /* (AC_COMPCTRL) Register Mask  */
+
+
+/* -------- AC_DACCTRL : (AC Offset: 0x38) (R/W 32) Dac Control -------- */
+#define AC_DACCTRL_RESETVALUE                 _UINT32_(0x00)                                       /*  (AC_DACCTRL) Dac Control  Reset Value */
+
+#define AC_DACCTRL_VALUE0_Pos                 _UINT32_(0)                                          /* (AC_DACCTRL) DAC0 Output Value Position */
+#define AC_DACCTRL_VALUE0_Msk                 (_UINT32_(0x7F) << AC_DACCTRL_VALUE0_Pos)            /* (AC_DACCTRL) DAC0 Output Value Mask */
+#define AC_DACCTRL_VALUE0(value)              (AC_DACCTRL_VALUE0_Msk & (_UINT32_(value) << AC_DACCTRL_VALUE0_Pos)) /* Assigment of value for VALUE0 in the AC_DACCTRL register */
+#define AC_DACCTRL_SHEN0_Pos                  _UINT32_(15)                                         /* (AC_DACCTRL) DAC0 Sample and Hold Enable Operating Mode Position */
+#define AC_DACCTRL_SHEN0_Msk                  (_UINT32_(0x1) << AC_DACCTRL_SHEN0_Pos)              /* (AC_DACCTRL) DAC0 Sample and Hold Enable Operating Mode Mask */
+#define AC_DACCTRL_SHEN0(value)               (AC_DACCTRL_SHEN0_Msk & (_UINT32_(value) << AC_DACCTRL_SHEN0_Pos)) /* Assigment of value for SHEN0 in the AC_DACCTRL register */
+#define AC_DACCTRL_VALUE1_Pos                 _UINT32_(16)                                         /* (AC_DACCTRL) DAC1 Output Value Position */
+#define AC_DACCTRL_VALUE1_Msk                 (_UINT32_(0x7F) << AC_DACCTRL_VALUE1_Pos)            /* (AC_DACCTRL) DAC1 Output Value Mask */
+#define AC_DACCTRL_VALUE1(value)              (AC_DACCTRL_VALUE1_Msk & (_UINT32_(value) << AC_DACCTRL_VALUE1_Pos)) /* Assigment of value for VALUE1 in the AC_DACCTRL register */
+#define AC_DACCTRL_SHEN1_Pos                  _UINT32_(31)                                         /* (AC_DACCTRL) DAC1 Sample and Hold Enable Operating Mode Position */
+#define AC_DACCTRL_SHEN1_Msk                  (_UINT32_(0x1) << AC_DACCTRL_SHEN1_Pos)              /* (AC_DACCTRL) DAC1 Sample and Hold Enable Operating Mode Mask */
+#define AC_DACCTRL_SHEN1(value)               (AC_DACCTRL_SHEN1_Msk & (_UINT32_(value) << AC_DACCTRL_SHEN1_Pos)) /* Assigment of value for SHEN1 in the AC_DACCTRL register */
+#define AC_DACCTRL_Msk                        _UINT32_(0x807F807F)                                 /* (AC_DACCTRL) Register Mask  */
+
+
 /* -------- AC_WINCTRL : (AC Offset: 0x3C) (R/W 32) Window Monitor Control -------- */
 #define AC_WINCTRL_RESETVALUE                 _UINT32_(0x00)                                       /*  (AC_WINCTRL) Window Monitor Control  Reset Value */
 
@@ -414,21 +414,21 @@
 
 
 /** \brief AC register offsets definitions */
-#define AC_COMPCTRL_REG_OFST           _UINT32_(0x30)      /* (AC_COMPCTRL) Pair n Comparator Control 0 Offset */
-#define AC_COMPCTRL0_REG_OFST          _UINT32_(0x30)      /* (AC_COMPCTRL0) Pair n Comparator Control 0 Offset */
-#define AC_COMPCTRL1_REG_OFST          _UINT32_(0x34)      /* (AC_COMPCTRL1) Pair n Comparator Control 0 Offset */
 #define AC_CTRLA_REG_OFST              _UINT32_(0x00)      /* (AC_CTRLA) Control A Offset */
 #define AC_CTRLB_REG_OFST              _UINT32_(0x04)      /* (AC_CTRLB) Control B Offset */
 #define AC_CTRLC_REG_OFST              _UINT32_(0x08)      /* (AC_CTRLC) Control C Offset */
-#define AC_DACCTRL_REG_OFST            _UINT32_(0x38)      /* (AC_DACCTRL) Dac Control Offset */
-#define AC_DBGCTRL_REG_OFST            _UINT32_(0x24)      /* (AC_DBGCTRL) Debug Control Offset */
 #define AC_EVCTRL_REG_OFST             _UINT32_(0x0C)      /* (AC_EVCTRL) Event Control Offset */
 #define AC_INTENCLR_REG_OFST           _UINT32_(0x10)      /* (AC_INTENCLR) Interrupt Enable Clear Offset */
 #define AC_INTENSET_REG_OFST           _UINT32_(0x14)      /* (AC_INTENSET) Interrupt Enable Set Offset */
 #define AC_INTFLAG_REG_OFST            _UINT32_(0x18)      /* (AC_INTFLAG) Interrupt Flag Status and Clear Offset */
 #define AC_STATUSA_REG_OFST            _UINT32_(0x1C)      /* (AC_STATUSA) Status A Offset */
 #define AC_STATUSB_REG_OFST            _UINT32_(0x20)      /* (AC_STATUSB) Status B Offset */
+#define AC_DBGCTRL_REG_OFST            _UINT32_(0x24)      /* (AC_DBGCTRL) Debug Control Offset */
 #define AC_SYNCBUSY_REG_OFST           _UINT32_(0x28)      /* (AC_SYNCBUSY) Synchronization Busy Offset */
+#define AC_COMPCTRL_REG_OFST           _UINT32_(0x30)      /* (AC_COMPCTRL) Pair n Comparator Control 0 Offset */
+#define AC_COMPCTRL0_REG_OFST          _UINT32_(0x30)      /* (AC_COMPCTRL0) Pair n Comparator Control 0 Offset */
+#define AC_COMPCTRL1_REG_OFST          _UINT32_(0x34)      /* (AC_COMPCTRL1) Pair n Comparator Control 0 Offset */
+#define AC_DACCTRL_REG_OFST            _UINT32_(0x38)      /* (AC_DACCTRL) Dac Control Offset */
 #define AC_WINCTRL_REG_OFST            _UINT32_(0x3C)      /* (AC_WINCTRL) Window Monitor Control Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
