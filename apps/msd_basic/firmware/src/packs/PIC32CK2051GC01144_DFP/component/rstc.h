@@ -1,7 +1,7 @@
 /*
  * Component description for RSTC
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,13 +20,47 @@
  *
  */
 
-/* file generated from device description version 2022-11-28T06:54:19Z */
+/* file generated from device description version 2023-02-20T18:48:06Z */
 #ifndef _PIC32CKGC01_RSTC_COMPONENT_H_
 #define _PIC32CKGC01_RSTC_COMPONENT_H_
 
 /* ************************************************************************** */
 /*   SOFTWARE API DEFINITION FOR RSTC                                         */
 /* ************************************************************************** */
+
+/* -------- RSTC_RCAUSE : (RSTC Offset: 0x00) ( R/ 16) Reset Cause -------- */
+#define RSTC_RCAUSE_POR_Pos                   _UINT16_(0)                                          /* (RSTC_RCAUSE) Power On Reset Position */
+#define RSTC_RCAUSE_POR_Msk                   (_UINT16_(0x1) << RSTC_RCAUSE_POR_Pos)               /* (RSTC_RCAUSE) Power On Reset Mask */
+#define RSTC_RCAUSE_POR(value)                (RSTC_RCAUSE_POR_Msk & (_UINT16_(value) << RSTC_RCAUSE_POR_Pos)) /* Assigment of value for POR in the RSTC_RCAUSE register */
+#define RSTC_RCAUSE_PORCORE_Pos               _UINT16_(1)                                          /* (RSTC_RCAUSE) Brown Out CORE Detector Reset Position */
+#define RSTC_RCAUSE_PORCORE_Msk               (_UINT16_(0x1) << RSTC_RCAUSE_PORCORE_Pos)           /* (RSTC_RCAUSE) Brown Out CORE Detector Reset Mask */
+#define RSTC_RCAUSE_PORCORE(value)            (RSTC_RCAUSE_PORCORE_Msk & (_UINT16_(value) << RSTC_RCAUSE_PORCORE_Pos)) /* Assigment of value for PORCORE in the RSTC_RCAUSE register */
+#define RSTC_RCAUSE_BORVDDREG_Pos             _UINT16_(2)                                          /* (RSTC_RCAUSE) Brown Out VDDREG Detector Reset Position */
+#define RSTC_RCAUSE_BORVDDREG_Msk             (_UINT16_(0x1) << RSTC_RCAUSE_BORVDDREG_Pos)         /* (RSTC_RCAUSE) Brown Out VDDREG Detector Reset Mask */
+#define RSTC_RCAUSE_BORVDDREG(value)          (RSTC_RCAUSE_BORVDDREG_Msk & (_UINT16_(value) << RSTC_RCAUSE_BORVDDREG_Pos)) /* Assigment of value for BORVDDREG in the RSTC_RCAUSE register */
+#define RSTC_RCAUSE_BORVDDA_Pos               _UINT16_(3)                                          /* (RSTC_RCAUSE) Brown Out VDDA Detector Reset Position */
+#define RSTC_RCAUSE_BORVDDA_Msk               (_UINT16_(0x1) << RSTC_RCAUSE_BORVDDA_Pos)           /* (RSTC_RCAUSE) Brown Out VDDA Detector Reset Mask */
+#define RSTC_RCAUSE_BORVDDA(value)            (RSTC_RCAUSE_BORVDDA_Msk & (_UINT16_(value) << RSTC_RCAUSE_BORVDDA_Pos)) /* Assigment of value for BORVDDA in the RSTC_RCAUSE register */
+#define RSTC_RCAUSE_BORVDDIO_Pos              _UINT16_(4)                                          /* (RSTC_RCAUSE) Brown Out VDDIO Detector Reset Position */
+#define RSTC_RCAUSE_BORVDDIO_Msk              (_UINT16_(0x1) << RSTC_RCAUSE_BORVDDIO_Pos)          /* (RSTC_RCAUSE) Brown Out VDDIO Detector Reset Mask */
+#define RSTC_RCAUSE_BORVDDIO(value)           (RSTC_RCAUSE_BORVDDIO_Msk & (_UINT16_(value) << RSTC_RCAUSE_BORVDDIO_Pos)) /* Assigment of value for BORVDDIO in the RSTC_RCAUSE register */
+#define RSTC_RCAUSE_EXT_Pos                   _UINT16_(5)                                          /* (RSTC_RCAUSE) External Reset Position */
+#define RSTC_RCAUSE_EXT_Msk                   (_UINT16_(0x1) << RSTC_RCAUSE_EXT_Pos)               /* (RSTC_RCAUSE) External Reset Mask */
+#define RSTC_RCAUSE_EXT(value)                (RSTC_RCAUSE_EXT_Msk & (_UINT16_(value) << RSTC_RCAUSE_EXT_Pos)) /* Assigment of value for EXT in the RSTC_RCAUSE register */
+#define RSTC_RCAUSE_WDT_Pos                   _UINT16_(6)                                          /* (RSTC_RCAUSE) Watchdog Reset Position */
+#define RSTC_RCAUSE_WDT_Msk                   (_UINT16_(0x1) << RSTC_RCAUSE_WDT_Pos)               /* (RSTC_RCAUSE) Watchdog Reset Mask */
+#define RSTC_RCAUSE_WDT(value)                (RSTC_RCAUSE_WDT_Msk & (_UINT16_(value) << RSTC_RCAUSE_WDT_Pos)) /* Assigment of value for WDT in the RSTC_RCAUSE register */
+#define RSTC_RCAUSE_SYST_Pos                  _UINT16_(7)                                          /* (RSTC_RCAUSE) System Reset Request Position */
+#define RSTC_RCAUSE_SYST_Msk                  (_UINT16_(0x1) << RSTC_RCAUSE_SYST_Pos)              /* (RSTC_RCAUSE) System Reset Request Mask */
+#define RSTC_RCAUSE_SYST(value)               (RSTC_RCAUSE_SYST_Msk & (_UINT16_(value) << RSTC_RCAUSE_SYST_Pos)) /* Assigment of value for SYST in the RSTC_RCAUSE register */
+#define RSTC_RCAUSE_BACKUP_Pos                _UINT16_(8)                                          /* (RSTC_RCAUSE) Backup Reset Position */
+#define RSTC_RCAUSE_BACKUP_Msk                (_UINT16_(0x1) << RSTC_RCAUSE_BACKUP_Pos)            /* (RSTC_RCAUSE) Backup Reset Mask */
+#define RSTC_RCAUSE_BACKUP(value)             (RSTC_RCAUSE_BACKUP_Msk & (_UINT16_(value) << RSTC_RCAUSE_BACKUP_Pos)) /* Assigment of value for BACKUP in the RSTC_RCAUSE register */
+#define RSTC_RCAUSE_LOCKUP_Pos                _UINT16_(9)                                          /* (RSTC_RCAUSE) Lockup Reset Position */
+#define RSTC_RCAUSE_LOCKUP_Msk                (_UINT16_(0x1) << RSTC_RCAUSE_LOCKUP_Pos)            /* (RSTC_RCAUSE) Lockup Reset Mask */
+#define RSTC_RCAUSE_LOCKUP(value)             (RSTC_RCAUSE_LOCKUP_Msk & (_UINT16_(value) << RSTC_RCAUSE_LOCKUP_Pos)) /* Assigment of value for LOCKUP in the RSTC_RCAUSE register */
+#define RSTC_RCAUSE_Msk                       _UINT16_(0x03FF)                                     /* (RSTC_RCAUSE) Register Mask  */
+
 
 /* -------- RSTC_BKUPEXIT : (RSTC Offset: 0x02) ( R/ 8) Backup Exit Source. Implemented only if RSTC_BACKUP_IMPLEMENTED=1 -------- */
 #define RSTC_BKUPEXIT_RESETVALUE              _UINT8_(0x00)                                        /*  (RSTC_BKUPEXIT) Backup Exit Source. Implemented only if RSTC_BACKUP_IMPLEMENTED=1  Reset Value */
@@ -64,44 +98,10 @@
 #define RSTC_DBGCTRL_Msk                      _UINT32_(0x00000001)                                 /* (RSTC_DBGCTRL) Register Mask  */
 
 
-/* -------- RSTC_RCAUSE : (RSTC Offset: 0x00) ( R/ 16) Reset Cause -------- */
-#define RSTC_RCAUSE_POR_Pos                   _UINT16_(0)                                          /* (RSTC_RCAUSE) Power On Reset Position */
-#define RSTC_RCAUSE_POR_Msk                   (_UINT16_(0x1) << RSTC_RCAUSE_POR_Pos)               /* (RSTC_RCAUSE) Power On Reset Mask */
-#define RSTC_RCAUSE_POR(value)                (RSTC_RCAUSE_POR_Msk & (_UINT16_(value) << RSTC_RCAUSE_POR_Pos)) /* Assigment of value for POR in the RSTC_RCAUSE register */
-#define RSTC_RCAUSE_PORCORE_Pos               _UINT16_(1)                                          /* (RSTC_RCAUSE) Brown Out CORE Detector Reset Position */
-#define RSTC_RCAUSE_PORCORE_Msk               (_UINT16_(0x1) << RSTC_RCAUSE_PORCORE_Pos)           /* (RSTC_RCAUSE) Brown Out CORE Detector Reset Mask */
-#define RSTC_RCAUSE_PORCORE(value)            (RSTC_RCAUSE_PORCORE_Msk & (_UINT16_(value) << RSTC_RCAUSE_PORCORE_Pos)) /* Assigment of value for PORCORE in the RSTC_RCAUSE register */
-#define RSTC_RCAUSE_BORVDDREG_Pos             _UINT16_(2)                                          /* (RSTC_RCAUSE) Brown Out VDDREG Detector Reset Position */
-#define RSTC_RCAUSE_BORVDDREG_Msk             (_UINT16_(0x1) << RSTC_RCAUSE_BORVDDREG_Pos)         /* (RSTC_RCAUSE) Brown Out VDDREG Detector Reset Mask */
-#define RSTC_RCAUSE_BORVDDREG(value)          (RSTC_RCAUSE_BORVDDREG_Msk & (_UINT16_(value) << RSTC_RCAUSE_BORVDDREG_Pos)) /* Assigment of value for BORVDDREG in the RSTC_RCAUSE register */
-#define RSTC_RCAUSE_BORVDDA_Pos               _UINT16_(3)                                          /* (RSTC_RCAUSE) Brown Out VDDA Detector Reset Position */
-#define RSTC_RCAUSE_BORVDDA_Msk               (_UINT16_(0x1) << RSTC_RCAUSE_BORVDDA_Pos)           /* (RSTC_RCAUSE) Brown Out VDDA Detector Reset Mask */
-#define RSTC_RCAUSE_BORVDDA(value)            (RSTC_RCAUSE_BORVDDA_Msk & (_UINT16_(value) << RSTC_RCAUSE_BORVDDA_Pos)) /* Assigment of value for BORVDDA in the RSTC_RCAUSE register */
-#define RSTC_RCAUSE_BORVDDIO_Pos              _UINT16_(4)                                          /* (RSTC_RCAUSE) Brown Out VDDIO Detector Reset Position */
-#define RSTC_RCAUSE_BORVDDIO_Msk              (_UINT16_(0x1) << RSTC_RCAUSE_BORVDDIO_Pos)          /* (RSTC_RCAUSE) Brown Out VDDIO Detector Reset Mask */
-#define RSTC_RCAUSE_BORVDDIO(value)           (RSTC_RCAUSE_BORVDDIO_Msk & (_UINT16_(value) << RSTC_RCAUSE_BORVDDIO_Pos)) /* Assigment of value for BORVDDIO in the RSTC_RCAUSE register */
-#define RSTC_RCAUSE_EXT_Pos                   _UINT16_(5)                                          /* (RSTC_RCAUSE) External Reset Position */
-#define RSTC_RCAUSE_EXT_Msk                   (_UINT16_(0x1) << RSTC_RCAUSE_EXT_Pos)               /* (RSTC_RCAUSE) External Reset Mask */
-#define RSTC_RCAUSE_EXT(value)                (RSTC_RCAUSE_EXT_Msk & (_UINT16_(value) << RSTC_RCAUSE_EXT_Pos)) /* Assigment of value for EXT in the RSTC_RCAUSE register */
-#define RSTC_RCAUSE_WDT_Pos                   _UINT16_(6)                                          /* (RSTC_RCAUSE) Watchdog Reset Position */
-#define RSTC_RCAUSE_WDT_Msk                   (_UINT16_(0x1) << RSTC_RCAUSE_WDT_Pos)               /* (RSTC_RCAUSE) Watchdog Reset Mask */
-#define RSTC_RCAUSE_WDT(value)                (RSTC_RCAUSE_WDT_Msk & (_UINT16_(value) << RSTC_RCAUSE_WDT_Pos)) /* Assigment of value for WDT in the RSTC_RCAUSE register */
-#define RSTC_RCAUSE_SYST_Pos                  _UINT16_(7)                                          /* (RSTC_RCAUSE) System Reset Request Position */
-#define RSTC_RCAUSE_SYST_Msk                  (_UINT16_(0x1) << RSTC_RCAUSE_SYST_Pos)              /* (RSTC_RCAUSE) System Reset Request Mask */
-#define RSTC_RCAUSE_SYST(value)               (RSTC_RCAUSE_SYST_Msk & (_UINT16_(value) << RSTC_RCAUSE_SYST_Pos)) /* Assigment of value for SYST in the RSTC_RCAUSE register */
-#define RSTC_RCAUSE_BACKUP_Pos                _UINT16_(8)                                          /* (RSTC_RCAUSE) Backup Reset Position */
-#define RSTC_RCAUSE_BACKUP_Msk                (_UINT16_(0x1) << RSTC_RCAUSE_BACKUP_Pos)            /* (RSTC_RCAUSE) Backup Reset Mask */
-#define RSTC_RCAUSE_BACKUP(value)             (RSTC_RCAUSE_BACKUP_Msk & (_UINT16_(value) << RSTC_RCAUSE_BACKUP_Pos)) /* Assigment of value for BACKUP in the RSTC_RCAUSE register */
-#define RSTC_RCAUSE_LOCKUP_Pos                _UINT16_(9)                                          /* (RSTC_RCAUSE) Lockup Reset Position */
-#define RSTC_RCAUSE_LOCKUP_Msk                (_UINT16_(0x1) << RSTC_RCAUSE_LOCKUP_Pos)            /* (RSTC_RCAUSE) Lockup Reset Mask */
-#define RSTC_RCAUSE_LOCKUP(value)             (RSTC_RCAUSE_LOCKUP_Msk & (_UINT16_(value) << RSTC_RCAUSE_LOCKUP_Pos)) /* Assigment of value for LOCKUP in the RSTC_RCAUSE register */
-#define RSTC_RCAUSE_Msk                       _UINT16_(0x03FF)                                     /* (RSTC_RCAUSE) Register Mask  */
-
-
 /** \brief RSTC register offsets definitions */
+#define RSTC_RCAUSE_REG_OFST           _UINT32_(0x00)      /* (RSTC_RCAUSE) Reset Cause Offset */
 #define RSTC_BKUPEXIT_REG_OFST         _UINT32_(0x02)      /* (RSTC_BKUPEXIT) Backup Exit Source. Implemented only if RSTC_BACKUP_IMPLEMENTED=1 Offset */
 #define RSTC_DBGCTRL_REG_OFST          _UINT32_(0x04)      /* (RSTC_DBGCTRL) Debug Control Offset */
-#define RSTC_RCAUSE_REG_OFST           _UINT32_(0x00)      /* (RSTC_RCAUSE) Reset Cause Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief RSTC register API structure */

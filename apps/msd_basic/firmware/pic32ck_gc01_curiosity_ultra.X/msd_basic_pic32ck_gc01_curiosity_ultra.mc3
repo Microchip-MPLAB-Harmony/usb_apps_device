@@ -3242,8 +3242,7 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="!@#harmonyUserData"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;UserData&gt;
   &lt;UserData dnOrder=&quot;0&quot;&gt;
-    &lt;GraphSettings canvasHeight=&quot;478&quot; canvasWidth=&quot;562&quot; dnOrder=&quot;0&quot;/&gt;
-    &lt;ComponentGraph dnOrder=&quot;1&quot; id=&quot;__ROOTVIEW&quot;&gt;
+    &lt;ComponentGraph dnOrder=&quot;0&quot; id=&quot;__ROOTVIEW&quot;&gt;
       &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
         &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;BSP_PIC32CK_GC01_Curiosity_Ultra&quot; x=&quot;154&quot; y=&quot;49&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;HarmonyCore&quot; x=&quot;399&quot; y=&quot;19&quot;/&gt;
@@ -3259,6 +3258,7 @@
         &lt;ElementPosition dnOrder=&quot;11&quot; id=&quot;usb_device_msd&quot; x=&quot;322&quot; y=&quot;161&quot;/&gt;
       &lt;/ElementPositions&gt;
     &lt;/ComponentGraph&gt;
+    &lt;GraphSettings canvasHeight=&quot;478&quot; canvasWidth=&quot;562&quot; dnOrder=&quot;1&quot;/&gt;
   &lt;/UserData&gt;
 &lt;/UserData&gt;
 </value>
@@ -5544,7 +5544,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\interrupts.c</file>
-         <hash>4b92e57d8972ecd8d749f56dff6bb0908fb79185862127d1177405dc5175706b</hash>
+         <hash>e95951fc56e418fb3cd74c90ecb196eeb6f0f317714d76318fa753c87a2bfc9e</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\driver\usb\usbhs\src\drv_usbhs.c</file>
@@ -5552,11 +5552,11 @@
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\ac.h</file>
-         <hash>34a588c8b9255a2c3956ce106f2314c9dcfca32e086b72188b155976cabd6d84</hash>
+         <hash>1c56ad8f18056b9e2021ca3064ca976fd68bbcc22523283e4e5e7c541d7a8a4d</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\sig.h</file>
-         <hash>5ccdcf505255f92c7b7f81fc780d150348f0a321a7c6c046041d6c5cfdcfb87b</hash>
+         <hash>bfe2796794714130a702379ca65e9b061a805fd3fd89045310515013925135d2</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\interrupts.h</file>
@@ -5564,11 +5564,11 @@
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\tcc5.h</file>
-         <hash>4fc6b93b18f14ec4ea455774936ae0f17326145320ed46b26db90428b581ecf4</hash>
+         <hash>71fa8e97170e43670a65d937ba75548ac0368ced2f1ba510868fb168cb94358a</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\usb.h</file>
-         <hash>1726bbd8f15805b4b4b255d232d5dbec78836b082747aad524a1b9dc73fe6062</hash>
+         <hash>f1ba49cff63a0f60e09eb8cc81863fd05bd1e6a82003771a316c2bd28de3ca02</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\usb\usb_device.h</file>
@@ -5576,7 +5576,7 @@
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\component\spi_ixs.h</file>
-         <hash>d4a01946dad39fbdfdf02528e56168ffa5554f879367b124413702117af4ceb0</hash>
+         <hash>d561e5a3bc6d093d32c138705dafdc45cb20306640040be58d7b19a49ee112d9</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\usb\src\usb_device.c</file>
@@ -5588,7 +5588,7 @@
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\gclk.h</file>
-         <hash>e97f12274cd00e153546685a75244bb999860106b1b515c6bbf8bfa84340e114</hash>
+         <hash>68865e7c590cd908a334716b1a75976804cecec903f669d34eed061aa5e96b51</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\peripheral\port\plib_port.c</file>
@@ -5596,7 +5596,7 @@
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\component\gclk.h</file>
-         <hash>d5721e49a47c04c4aef5576bd8c200a9c5756b1a5863cabeaf68e292a4771e0e</hash>
+         <hash>142389022d1f105cf0095f8b4e9da6d92f566a202e2ffb8d959aa53d4fe075e5</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\driver\memory\src\drv_memory_fcw.c</file>
@@ -5604,11 +5604,11 @@
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\pic32ck2051gc01144.h</file>
-         <hash>03254c76c5063add8178ce155967b9f29da7413b5f971fc3ea89efa819c37ab0</hash>
+         <hash>a26dde3e2ebd8add81c332877a05c33669caa15d669610eb996bd7eb6d91fd25</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\component\freqm.h</file>
-         <hash>8ceadeec9a9d796868e0364176e451aff9cf8777f9a4b29c2f3097d501df9527</hash>
+         <hash>6b60f1bba404cfccdbb291fa952df55f7ce2abb0ef6b6377637649045ecb224e</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\osal\osal_definitions.h</file>
@@ -5620,11 +5620,11 @@
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\sercom7.h</file>
-         <hash>ae95116e2a0d5097e886c17102c4aa93e17f7fc7d707c8ce6c5701a028c84b8e</hash>
+         <hash>95730cd57e58aa92f19d670ec08f4c20fefe6cd8cd9930c8ec3210f351b39d88</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\component\rstc.h</file>
-         <hash>65b65e72748b2806ac917fe311a0808b6298511e47901c00bffe7efca2c0ebaa</hash>
+         <hash>b4dc4ccaba85208caeb0e343f6b97b17a9c79980463c0baee04256350f8b58a8</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\driver\usb\usbhs\drv_usbhs.h</file>
@@ -5644,11 +5644,11 @@
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\fcr.h</file>
-         <hash>ddade950e14d5b43a1616c854f053f31b0b82814ac7a9b16a0c7719a0b3b8fe3</hash>
+         <hash>d35e036a10288b3b6cd252b58672322bc8ad37720655e00fdbb2022dd1798f49</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\tcc4.h</file>
-         <hash>3e134b6d5f871f8b27b603ee83b3b70f62f41b63e186e4d937ea5ddc94aae9b1</hash>
+         <hash>e04eb88c5e2fa95919015e4803ae5ebe8e6e864d6628f41d261fcb5ba1b02de7</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_registers.h</file>
@@ -5664,7 +5664,7 @@
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\component\sdmmc.h</file>
-         <hash>91a269f3a4b2bc899c3157ac9f65c0a7a497091dd992dc893df37a3b44c3afcf</hash>
+         <hash>f769a1c963e4a9e65a547de83b464da0c25b1533417b14d052278a5e790a0f2f</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\driver\memory\src\drv_memory.c</file>
@@ -5672,7 +5672,7 @@
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\component\rtc.h</file>
-         <hash>fef4fea2aa0569c2ec1dbaf88a332a90f75dd0244d67ca624e82481a2dcf3eca</hash>
+         <hash>5742793063f72f2899377c43bee56b3a4750cbf418b708c9dda9b8bf67dc7b05</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\system\int\src\sys_int.c</file>
@@ -5680,23 +5680,23 @@
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\component\fcw.h</file>
-         <hash>ca41fe4a9258ec2c2f4bf2241ad6695daf0ec2cddd858b04d1c7696bd3364759</hash>
+         <hash>a148c62c622f941edba2d1b46e9dc09587a0dd6ed264799dc26ab100821b65c8</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\oscctrl.h</file>
-         <hash>a61ec1f56c75ae60c0d5ba5d3d00ec49d4bda83848c6dc06d3708c423685e983</hash>
+         <hash>0e966981c4d951f65c8c365eae32eda20bdd4fe403987b6530511da6365257a4</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\sercom0.h</file>
-         <hash>221948daab4f26b90c3e5cf625a4c470cb73ba10405f8733377f64646e9f3272</hash>
+         <hash>b2c839b760fbe899d3b1114fa286d54d85d75d776b6387b28f1f20150c317177</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\component\dma.h</file>
-         <hash>2ea4b0f40478108c032654e6787980a74f474a6c657b0ea71e9e3abad4ed0708</hash>
+         <hash>8faacf85e37cfdc18a154ceb11873c1df7fbd11f8293c9027200e098a1c5be10</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\component\ccl.h</file>
-         <hash>e233005d47b5390f3305bc2fe82ed85cd1cc412cd4f8f5924c2b28f5518a40dd</hash>
+         <hash>ffb1fd9496e8ae1202653a87057b7589ec69626e401ea28c350a36cf644d11b5</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\usb\usb_host.h</file>
@@ -5716,15 +5716,15 @@
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\trng.h</file>
-         <hash>079e557c32d62e7b6fff15c8f6c07bd818d8f75c44aacdbaa7a5efde113bf4d5</hash>
+         <hash>b6b0aea9a93a04aaf4fdd536aa2246c101486c5bc51e9092941eeac47cf4fa8a</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\sqi.h</file>
-         <hash>d4c0faf3aebe7b169a853acfb4be2b020db5e4aab16f9983f49cf45c9a21b696</hash>
+         <hash>fac2db5b4257e2f2d740341d5e2d815da3812b2bf5a5d52cbf5573326d0b1707</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\pcc.h</file>
-         <hash>1be827c6fd9ec3a32b28067e738db672e072c78812b2b9ed40eefb07c7bdc744</hash>
+         <hash>6811b0a85d4fdff89bd785376b2fcc82ec2892baec24ade68d1c96750b990476</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\usb\src\usb_device_msd_local.h</file>
@@ -5736,11 +5736,11 @@
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\component\ptc.h</file>
-         <hash>bfd01d62627b7d6046112abf16ec5861ad432cb767fbae34ad7e026ec3def4b7</hash>
+         <hash>c64a49f1ec3b866c4511867f9ef997017e6793d4a1e8968480adbb19b1726720</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\definitions.h</file>
-         <hash>70a559222b0c0d355ded5a921f11969334e23d903e634858b9697f8361050e40</hash>
+         <hash>7e33d4490b84c3d70cbb092bff6c181a9fdd6de28744a54992e137f86809e231</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\bsp\bsp.c</file>
@@ -5748,15 +5748,15 @@
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\component\mclk.h</file>
-         <hash>d1d92aa520246b80a65d09a3de08657253e1c9ea3aecd6e73f7e9a4624bb4de1</hash>
+         <hash>b60c84824b3ac8da96f6ec742f75a4b952d78c130f2c154d6a552731abbfbe87</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\startup_xc32.c</file>
-         <hash>5c7069cf4c253dac56689121d7bb12822596270ec68403997865486b57e0561b</hash>
+         <hash>11caa9a0b02e9cb9ce9c34129246742b0aec16dd5c7ea904d2b1abbd15e5432e</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\tcc7.h</file>
-         <hash>c6e8fb1e8c406bf7d057a95515943edc3809a754322913a3d5e3a931baabd1cc</hash>
+         <hash>fbd1656d489f51727a8d91ef550fc1f42f1b9e3990b053b7028028d28763322b</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\peripheral\pm\plib_pm.c</file>
@@ -5764,7 +5764,7 @@
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\component\supc.h</file>
-         <hash>3284c183845f91d2ac652c607967ea45bc7cc575a5b5249014d039a46d9d9605</hash>
+         <hash>b9123a9b7b20efc591e0182c45aca10ea2ed06e801535cda414849482dd4014f</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_USBIDControl_Unsupported.h</file>
@@ -5780,7 +5780,7 @@
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\eth.h</file>
-         <hash>32d173b369706eef7e0408e9b8ad2c004771a8bba886ab8e9d971db833a51f4c</hash>
+         <hash>2908ced93ecf82bd8eb267d750c85536c380dbe18310b55c14e1ef51bcbe516c</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_EndpointFIFO_Default.h</file>
@@ -5792,11 +5792,11 @@
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\mclk.h</file>
-         <hash>b3343170bbd868af629c3ace0593734d127084d6795d904b3695b5a38a62eb22</hash>
+         <hash>c66d247b880b1d6a7460e508123e627b96242b4a06253480310cdf31bc4312a3</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\rstc.h</file>
-         <hash>4d37cced226f8f96cc08fbdecdc3b2278f0a157dcffa43fc811d355fed881251</hash>
+         <hash>507820cba8255361b6e0224fa13257c58aea16719e53c0f74031bb9c3f1c3782</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\system\system.h</file>
@@ -5812,7 +5812,7 @@
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\sercom1.h</file>
-         <hash>d13b665b49f36469f18d93872686e6d47a86fecd32e234287d131aad3fd9397f</hash>
+         <hash>a78fb3c560f36b0236179b875ec2e588cc485dfe3edfbfd99a9c0b9b2d62ed6a</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_RxEPStatus_Unsupported.h</file>
@@ -5832,7 +5832,7 @@
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\component\pcc.h</file>
-         <hash>707b134850f5a2e3861ac79216d319d3d6a39867506e3b8543618454ef2aedb3</hash>
+         <hash>9f4f9308f86a985c50a625ceabe80e34e7be6ae449139a627eb232a28dfc3467</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\driver\memory\src\drv_memory_local.h</file>
@@ -5840,7 +5840,7 @@
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\freqm.h</file>
-         <hash>c9e1c8ac77406e1271d51d3a20299d8ef81a6808e9468dfd6977317e98b9cf4b</hash>
+         <hash>f4c513bfdf5ed4e0a5913eaa22b52c2b4740830ddf37fe3f254cb5fe46a13e8a</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\driver\driver_common.h</file>
@@ -5848,7 +5848,7 @@
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\pdec.h</file>
-         <hash>93731d663dc67d9d7ab54491e0f6b3515a367bd7e933f4e5cc34e7c2bcd2e637</hash>
+         <hash>9dc467e5a081a980dc15ae341976833ce930acf8be03d10d7c2c0f069ba594cc</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\usb\usb_common.h</file>
@@ -5864,7 +5864,7 @@
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\component\sig.h</file>
-         <hash>3232145c800491482ee620281e80407d3918b433a181dd97ddf01d295519ae57</hash>
+         <hash>d4ec5366eeb2645dde60e530d5139e1f2feaefd05df4be08425c6468a600ac38</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\driver\memory\drv_memory_fcw.h</file>
@@ -5872,19 +5872,19 @@
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\component\idau.h</file>
-         <hash>0fee3f2d5b856104c28201d4655bdf864b239bd1d20a9608bf34213655fa9d49</hash>
+         <hash>1608e8a16b6d90e51ca9440378205fa145936f2e1dcc0fa00e859097598504e9</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\port.h</file>
-         <hash>d32295967e5601e57397991b786786fd5e206455dcc6a87a6227817c25e1bdaa</hash>
+         <hash>b749af79f9b5532bdf5a253b8ad70b5d1e6b0cd0b71eff8cbb4c8ff7003f5259</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\tcc6.h</file>
-         <hash>493fa99340712c0141998ef9adfcf6f7dba2c75e04ee46f0827e5fb28b09356b</hash>
+         <hash>b68551e1f015dab160fcaef0454afa18cc8f243891c26aa0371307b40315c31a</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\component\port.h</file>
-         <hash>92dcd1e536a09144211c36c17631e5aefee82267d24482c9878505d0194c1d84</hash>
+         <hash>c6d3c05878b8c846e8e38e08a987831d360b30f9944a767f6ffda45c98331809</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\system\int\sys_int.h</file>
@@ -5912,35 +5912,35 @@
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\component\eth.h</file>
-         <hash>7e3d5dd61d6fc4e8503fd3e6e396008af3aa9d56af20545036888ac9fb3682cf</hash>
+         <hash>0947c3a8afe15dff5cc4f62983699d0dea8094007ce6a3ddf46661433dec6680</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\component\pdec.h</file>
-         <hash>ef5e27480a9dff96594150e7b8d2ae7b49eec62e9a7277eaecb2f7edcb2fc724</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32ck_gc01_curiosity_ultra\peripheral\fcw\plib_fcw.c</file>
-         <hash>7d3abbed25014eeeda7166ccf38a8b45264550bc517e6337787446588910458b</hash>
+         <hash>8c8e4cdfa0db58a0ff5271c429e71885136b1cc4bc71f32fe753b892e4509b71</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_TxEPStatus_Unsupported.h</file>
          <hash>190c0d3c025a1dd4dc421a37b5918bb0f0bad8ab491f74bc79b9a4aadc50a65d</hash>
       </entry>
       <entry>
+         <file>..\src\config\pic32ck_gc01_curiosity_ultra\peripheral\fcw\plib_fcw.c</file>
+         <hash>7d3abbed25014eeeda7166ccf38a8b45264550bc517e6337787446588910458b</hash>
+      </entry>
+      <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\PIC32CK2051GC01144.ld</file>
-         <hash>12ddfa6f5f1b8beceab8bf0decf6beb5ebef54cf49ee5001ec7f3009a20ad6f9</hash>
+         <hash>0ab02aa97f10c8e86ec14c6dbb5a889476d05de049c231a2fb1bdeaf8295528c</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\pm.h</file>
-         <hash>60189ec2fb613b86613ab3a5a54efcf8fcc267d141ca5c0a7c4bbd67040560b0</hash>
+         <hash>a831b2a356a9891bf4ec1b227087a62c99cd2d16ff6bb2fcc781eee35ccf8abf</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\component\usb.h</file>
-         <hash>f36a8c7f755ec50730d7971bb5534c2743a862e093dd3d5607714e39bf5aa683</hash>
+         <hash>4433d372635a9aa0b34194adb105a5e66e79b51f76e3a54041d2595a6da97d84</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\sercom2.h</file>
-         <hash>b800d3848eeb2ab89a676a352cae76cf2bd9b152d7aa2d6462d2b1ea9d2f2112</hash>
+         <hash>cff90ca984793c48c2ac332ff8751b93473cb58978ec2830cfd1c24b9e7e9e0c</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\usb\scsi.h</file>
@@ -5948,7 +5948,7 @@
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\ptc.h</file>
-         <hash>e69019ab7c6b58a3d35fd64ba60492dc58c6a102c2b25a0a8da9de17c9e40a6d</hash>
+         <hash>71f4578971455c87ebb4b29deaa806e36079ad38750b65baf4f82b3746a2fa1d</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\osal\osal.h</file>
@@ -5964,11 +5964,11 @@
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\osc32kctrl.h</file>
-         <hash>e7724066973ee694d2ee64b407bd5bcc7fe64781abba3bb40823911953cc9a12</hash>
+         <hash>9018f42f27c74766959e0ce41ed34244e5adcda55765d64b974ac984fe97d814</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\fcw.h</file>
-         <hash>4530030f7cb1f8f38d810b49839aacb2d7cbbc2ccb0284e8f493bbcd668f03f9</hash>
+         <hash>814da258af799485289d6584d92aff9639f1a0183c49ad417be02d534aa92448</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\system\debug\sys_debug.h</file>
@@ -5976,7 +5976,7 @@
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\idau.h</file>
-         <hash>c71d64764e8eaf487a5af9ec9af8b2feddefd4ddbb2570ecd81e51f4f0a5eae8</hash>
+         <hash>f02fefb386bb87089c7aa3ecba426f1702cd6209e2a253bdfc04270f9887565b</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\system\cache\sys_cache.c</file>
@@ -5988,15 +5988,15 @@
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\tcc1.h</file>
-         <hash>92558c1c55af7d29af796454c2853e6ae89675622fbf14b4e7587c6a02e78d1e</hash>
+         <hash>e3edf15b024167eadcd05d25aea9154e059d307ddaa711be51f8fca14ab9b8a9</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\component\usbhs.h</file>
-         <hash>dbfe33c310eff63da2ffd9ad144b7e6c64239bd1ac567ccf2c9ed9d93c80cadd</hash>
+         <hash>0c78b54141207f01e78cdad8d8b9d8bae3064b75bde7080177c37f9e2ad07d8c</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\adc.h</file>
-         <hash>5afd6f9dcd08ce4f532bfcc7514bddb21703425f43835e30cff6016d76ccb72e</hash>
+         <hash>231a187cfe05c6a23076c42310d10dc511503e54f2e50b804811b3818d88f03d</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_RxEPStatus_Default.h</file>
@@ -6004,7 +6004,7 @@
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\spi_ixs.h</file>
-         <hash>75fe7fb9bed5fc8747eef28abc447367fe4f1a4df330d2eb1f2074e6de581830</hash>
+         <hash>82a2be9a3af61560e25cff07478ec52c949f87cb627a68dc3a691617703735d8</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\usb\src\usb_device_function_driver.h</file>
@@ -6016,7 +6016,7 @@
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\sdmmc0.h</file>
-         <hash>5156dc7f7110891253bb11e5e9567537b0c70e4b251dfec77024d54d2ef8ee08</hash>
+         <hash>b9af9a6e1020b192b065557c14560ac8dd67c40e28c216ade47b1ff377a3d8fa</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_ModuleControl_Unsupported.h</file>
@@ -6028,7 +6028,7 @@
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\wdt.h</file>
-         <hash>5e12aa1907e89a870eb7161f451962e152f6eaf92eab0b1101aa5e951ed39e40</hash>
+         <hash>fa997fa9eeec3e9ff356af0565ddf40aabcf46ba8562390da945ec7ceb67c3fb</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\usb\usb_hub.h</file>
@@ -6036,15 +6036,15 @@
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\component\fcr.h</file>
-         <hash>75095b3e0485b55964dab637b4c7035b4392efe8056c023ecf32d4e427ac9f9e</hash>
+         <hash>ee43b1d1732da01da8ea13a492be6c823eb9559200e36511485de9260b047c87</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\component\tcc.h</file>
-         <hash>ca1c04b4b46743af239166333e5186c7ba6277b963d0ce1d4137a723f95e6e5e</hash>
+         <hash>7834d74884ec8bbc2cba9573fd4dc07060fcde6a4736a77089804acee33b5ce8</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\component\evsys.h</file>
-         <hash>a9e6eb1d2c45b99212670a65f44c9fd995afbfe1424f362eed97c996651d362c</hash>
+         <hash>d7e09e0a7a5c47dc48923971bb9f3c89820580c6bb9ac8c8705af955317163c2</hash>
       </entry>
       <entry>
          <file>..\src\app.h</file>
@@ -6052,7 +6052,7 @@
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\component\tram.h</file>
-         <hash>30162f84965faa456593a251c0c1c92efdba257bb6b7b521e44f942e71284f9d</hash>
+         <hash>72910937f12028df1f1c4bc94d699c8fd0f6ca2d7bcc432fe81f79ee612e7a36</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_Interrupts_Unsupported.h</file>
@@ -6060,11 +6060,11 @@
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\component\can.h</file>
-         <hash>ea63a10868ae3af2e52b70cbe978e6196e79405c709c6fa027fb9dadbc398dbf</hash>
+         <hash>aa7b3b15bb34f1a6c932790994f5eb95875409df2737c3b3c1c9b4e11d3274e4</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\sercom3.h</file>
-         <hash>f5e9ae9c0fc13639a81e8b2bfbf3ee852b3c40f291414d7df66dea96b8fe6892</hash>
+         <hash>6168fe573f5b5d08b7ec1d58dc1253b78e1226013db66a9222eaf28527b6a653</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_ClockResetControl_Default.h</file>
@@ -6080,19 +6080,19 @@
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\eic.h</file>
-         <hash>6ce63f17b7d71f8aef71b42af10782068d5746792072562aabd10133981ed86d</hash>
+         <hash>67bddbd0cb2bc7f367dbf1cfd75a7ad36a49a9f41dcddff0dff9fbbbdb1b3834</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\tram.h</file>
-         <hash>766fd3d5fc2bb8535fa820c7fca4acc91698929a58d51e3c326f71f8d437d343</hash>
+         <hash>a859cda41399a16a4940eb1179fe2d7f3336938e2a3e2b59dd33266f16ac3a9a</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\tcc0.h</file>
-         <hash>1967be7c4b3564e9875b3055aa0bd0098ca8c946977a119bf8571de26e51a22b</hash>
+         <hash>e7d89750a80b85e9f846480c80d78542c9c78048a7b48dfb3c8447b2fb062117</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\initialization.c</file>
-         <hash>8d1c408d51e92f77a5616668df8bf012ee29e3628af77979af374bd5839061c3</hash>
+         <hash>963701699a62718639d553d1c9cf08ba23c3cf441c49bb4a6552b0a6e1b98472</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\system\system_common.h</file>
@@ -6100,19 +6100,19 @@
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\ebi.h</file>
-         <hash>c0441e971ca9b1080e293bc4ea913fc4ffb906a4118020a63f4291771148e31e</hash>
+         <hash>d1b13cec5c7403051a8f0c34b8e1225856922028922e328ec8f8b1233a225dff</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\component\sqi.h</file>
-         <hash>d9bec3958e9f9687543f86893f637590d5e9e3417e17654dbc47f36472ef16a3</hash>
+         <hash>a477fbaf3dcb5ad10d93ddd2092a5973b7de19d1ba1e424df89c3fd6f27c5c8a</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\supc.h</file>
-         <hash>7fd62c34a266520e9a58af30aafc8af9797b5fc327c410d6fba9ad07e4613323</hash>
+         <hash>3eed2668f6d4eda021109f2a1a19312823efea3d8bdcb3bda0e764e10ec5bee7</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\evsys.h</file>
-         <hash>0e84d385c273cdf7fc8ef13eaa5d634637c47e7ad6a1d03a1c423e50f8cb7f80</hash>
+         <hash>7c33dcb4a1a0c980ed285ff1fa3e39bbd13139a2348f67843fae3147b4a3d091</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\peripheral\cmcc\plib_cmcc.c</file>
@@ -6132,11 +6132,11 @@
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\component\hmatrix2.h</file>
-         <hash>a502668de7c5b1fda33a302e7d641efd0565bc439bc3c9b3e391112750412b24</hash>
+         <hash>ca252fe6c7c78e2bf292831dcfe9791fe418072d2a385c20959f352c044a0b0e</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\component\oscctrl.h</file>
-         <hash>7044a3c464fe324d3b1a966a5141916f857c07d48b51c2a8352c52b4c544e31b</hash>
+         <hash>a1f7f844eae437dee29334ccb1988a714a8f749ff367959f44a23261a9972627</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\usb_device_init_data_0.c</file>
@@ -6144,7 +6144,7 @@
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\component\fuses.h</file>
-         <hash>15cc844edbb43537539e3f25d0ee7622719b5150119ef51957c64957986a07b3</hash>
+         <hash>3ec9be4ac71013d8de3162723d6f56a6c3a6958bad558b4b6b3465f51039ce1b</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\stdio\xc32_monitor.c</file>
@@ -6156,15 +6156,15 @@
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\component\pm.h</file>
-         <hash>5aa3f47be2bd0ef3de71765ecb98d13d41324b2b5abcdf3838f6c3976481defe</hash>
+         <hash>b5f343862bb009ff1afabfdad4c256ceec041bb6756fe9de93eb4d5b5dc41550</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\component\trng.h</file>
-         <hash>ffc78d6e5c6c990105f56563c459ca1a4ec421bbbc6e3e2f1e9cbbe1128782c2</hash>
+         <hash>0327b5a955abd2e9b78a1b393c800bd389bd3305123b830f77dcf4ea03f562d9</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\sdmmc1.h</file>
-         <hash>92b6b18e6cb6ad66389bd8bea7553868e1217e0ac5f66a7b86487fe04bee043e</hash>
+         <hash>481b1acdc9edba5efb30b1f5e1d7f3a71f51d66c0a1ae49b657bc0c693373239</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\peripheral\evsys\plib_evsys.c</file>
@@ -6176,7 +6176,7 @@
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\dsu.h</file>
-         <hash>cbb05bb96e523acca49d5031514f626bfbf1a37c2586a361d238cf90cd7bd621</hash>
+         <hash>a0415019660aa57621fc1a52e5930e22bcb9ea9cef027729c250e4dd4368cbfa</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\driver\usb\drv_usb_external_dependencies.h</file>
@@ -6188,7 +6188,7 @@
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\sercom4.h</file>
-         <hash>c70a2432fb268af6ead5e6fb8d0d8919f60da78d208fb475fb37a23a3bf18a58</hash>
+         <hash>86fa9799776cd674441b7599ff433fda84097a86edc8cce9a1caa4ca01e12e12</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_EndpointOperations_Unsupported.h</file>
@@ -6196,15 +6196,15 @@
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\component\pac.h</file>
-         <hash>477cdc84447bd2bac5c869951540ba46e37a0cfb86aa03c22c53da5c672b0642</hash>
+         <hash>5c6791fc5111d0a66c85f72d9b42fc98dc2cb7608eaa7dc992c68ef63cc880f6</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\component\eic.h</file>
-         <hash>33bb63b668a22578dc8dfb6468c4ee0e94f15c745ae45c44715ace8e0048ea24</hash>
+         <hash>967845022104723b5f3f73ad98019ef0561ea4f65320c2df60ff7ab41baf486f</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\component\ac.h</file>
-         <hash>208c95cf6668fb80726e2f3e9bd00e9f52966e4adaa1355846e18e91a6792916</hash>
+         <hash>d2b512b20ce7ed6053565966f2ce1609d831fd40d88d3537c7840401242af7d1</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\peripheral\clock\plib_clock.c</file>
@@ -6216,7 +6216,7 @@
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\component\cmcc.h</file>
-         <hash>20b50a2d5d0c00be481f5a869a582add99949ba1bd8f476221da2002257c09cd</hash>
+         <hash>831b008bfb85869191719c40bdb8d9af8c7102dc9feb7dcad91bef8ff68ab530</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_EndpointOperations_Default.h</file>
@@ -6232,7 +6232,7 @@
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\component\wdt.h</file>
-         <hash>2f87cd604fd25c64a9634c33a9cf6dfb1366135b3bdc34aa3782e6408ed803da</hash>
+         <hash>8408910d7455bd4b47b852fd1fd6404945c63f8e9d10b4567911ef5f402d157d</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\device_cache.h</file>
@@ -6244,7 +6244,7 @@
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\tcc3.h</file>
-         <hash>cbce91fe3988a020cdfc9382da91ad9ada569d949d6250cd265cead31917fc3c</hash>
+         <hash>5d4aad0837125eabb50e04f33441c8efb7d9ada2f9ce9ebb69b111a1780df1ed</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_iccarm.h</file>
@@ -6252,11 +6252,11 @@
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\can1.h</file>
-         <hash>099866191cfe5c911e04a3b12da48d4a682fc21df8af52275f1f31066d568522</hash>
+         <hash>7ae3107368ca2446c94df03692a74f22cd51d22f852556cb2343c688c6a85e7b</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\component\sercom.h</file>
-         <hash>8e5268224aad968fe861a52172fcb8ae3e12a14633b27b07101b106cb3511587</hash>
+         <hash>7ba6b765b7fc83bef0307fb28fab6d9c120c4b238d6b4745e0b622a3ae605864</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\usb\src\usb_device_mapping.h</file>
@@ -6264,15 +6264,15 @@
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\usbhs.h</file>
-         <hash>5ef79dffcc2ce344cecd09821d6ba82662320a8eaa1329fe91e79ba5ffd398b0</hash>
+         <hash>72c736f2d42a381841af30f1c8acb667aa3f7a3b949b4be303c6d25bb84f33a8</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\device_vectors.h</file>
-         <hash>9286640b56d4349a8e75f9b300f1ce8f003bfd7576db603ff8cd60a416849777</hash>
+         <hash>dc853617f7875e6a95194e872e2657c222a3cfddd7349ba75e8e39e966c72b3a</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\dma0.h</file>
-         <hash>e60ef4cdd66276476e9d228c2ddb93ab9ee620217270d1b2e8a33619c7412854</hash>
+         <hash>930f60aeae1111c80eef7453031ebe1f3a21fb98e50eaf79da8526ff9f40f092</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\libc_syscalls.c</file>
@@ -6280,15 +6280,15 @@
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\ccl.h</file>
-         <hash>9ecb3398854af20d41befb53a98d710733a457c23623f77d2f8388bcd19e785b</hash>
+         <hash>a56dddcaa6fd772dac3b65684b7ec64f1f4c05246474f28a23106508c679a84d</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\component\dsu.h</file>
-         <hash>e3827fbf9514e3635c9c125704ecf32cba0db2529437b328224a634e356c23a8</hash>
+         <hash>fe1c39a454a9c92579e06275f16b06b3021ce8f1e023370cd43757d736571f4e</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\prm.h</file>
-         <hash>446a42214edc1c7cc3155ca9e1c150e0d7f4bb92d5245b8ebf6ed36de725b8e5</hash>
+         <hash>9ef6b767e84ab32b7bce2a9c401431778b48c96727672ccdcc6ad57816e85345</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\system\system_module.h</file>
@@ -6300,11 +6300,11 @@
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\sercom5.h</file>
-         <hash>f0b5cbca5b0bbf883870b3c9e24efd26482891ccc710822733a9fb5f94878878</hash>
+         <hash>eebae38be6850c2e4f7a6f889d49896119631f88bab4103be2976eac28df38e7</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\pac.h</file>
-         <hash>873fb6ea993550a4719ef587a88cdb0114290a93424c54b6384bb0d51452dad4</hash>
+         <hash>e03c2652d16150966b1167ae749a8cc43dd0f87db422b6b16a0bdf22163340e4</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_EP0Status_Default.h</file>
@@ -6324,15 +6324,15 @@
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\component\osc32kctrl.h</file>
-         <hash>531c1a49bf84509f05e9ca0a4d9bebe76df8e12c77f074802c6515029d2912e8</hash>
+         <hash>33ddda0641cbf59cc8611ce7b7f78534d9c8702a1708ecca703c622ffd8d4870</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\pio\pic32ck2051gc01144.h</file>
-         <hash>fbfe024ef074f943c20c92663dbdd569f063ed4f86a0edd6a7c9e18c6d94469b</hash>
+         <hash>c69344f48071e765d52f6bd9f78d98c9b42fcda77c4294967b23f59c71cfd237</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\rtc.h</file>
-         <hash>7ecc34441d134f6965e85449ee4229da4be469bf4e7de0d2ad3528c69bbe1a16</hash>
+         <hash>f659ebf472ca866876c902d0eff4d3b4a29e8ff82ac4e87f09066a8f17101041</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\user.h</file>
@@ -6340,11 +6340,11 @@
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\component\prm.h</file>
-         <hash>8a324195d0ae1da2229305c6a9180d64669ad1d51ea8d23d6bd93e02b5cf282b</hash>
+         <hash>d3e37ec3ee6dbfca72278ae53c052642ed2c4d35b281b25bb8b7eedf2f1cb280</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\tcc2.h</file>
-         <hash>8ceb4b4e17fdd42cd224831d17f6f23db270b47a7020114f8d203dacbccb76fb</hash>
+         <hash>fff5cc28677f9921a310ddd8b588b892dc88379784d2b4b6239301a075871213</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\tz_context.h</file>
@@ -6352,19 +6352,19 @@
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\dma1.h</file>
-         <hash>06c708d7baaeaf9d2f2b67f26a2288c4e467e01d8cf598131bbe0af21291cd7c</hash>
+         <hash>db5f0a7e603eee9cacdf3b6c347ea6e11a06405f13b479ce8aaebefc0d22a1b6</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\component\adc.h</file>
-         <hash>82f79a9e1943f36a6e4b72a5c4d7564d140970401933d97ce265a7bf0e3c3932</hash>
+         <hash>06b8c53b5317f1aa0c714622e85595207be61297191398f08a1bc0467e2d5486</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\can0.h</file>
-         <hash>b27c518ff3aa05e85e1005f254d0826a87bf0ecde4ed8420ca302c2b1baac912</hash>
+         <hash>9920c25c7871a66b9633823f48dc4eee5c95eccb18a36aa520b589f12c0aa803</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\cmcc.h</file>
-         <hash>d3afc38288252503dfe787da9635e4b141ef68f372bf43e17fec1f7f3fff75d2</hash>
+         <hash>0ef581f8f4792c36df2ee2479e26ee2baba596588b6d032f2e7e235f0899ca73</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\peripheral\nvic\plib_nvic.h</file>
@@ -6372,7 +6372,7 @@
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\hmatrix.h</file>
-         <hash>da68be8732f960ba959735bd16df2a8244f4ea1a6f769c72eda5814ded6e8854</hash>
+         <hash>d0ee55c5f9f015fad98b194dfcdb67b3c3f090b1930dabb8932499ec0f22d554</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_USBIDControl_Default.h</file>
@@ -6396,7 +6396,7 @@
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\component\ebi.h</file>
-         <hash>917a7b6a6cdd2bbb5696603117d30f9784ab5cbdf1b1b4268ba5c704dbcb745b</hash>
+         <hash>9042849ac86bab1a2a9f8b2404d102d85ff750c4d0fe65f5ee617f6e467d001d</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\driver\usb\usbhs\src\drv_usbhs_local.h</file>
@@ -6404,7 +6404,7 @@
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\fuses.h</file>
-         <hash>da41901d3a8e495eeef0218a5559bb0e25758147566de5fab622976a3f8eb1b5</hash>
+         <hash>d037343666e1383a594f507c816d6fe29c4af353c858ca631bd49b480dcd648a</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\driver\memory\drv_memory.h</file>
@@ -6412,7 +6412,7 @@
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\sercom6.h</file>
-         <hash>ba62f893a7a233f83cee89a5da5e586ac38d9c2458fe407c85f6ebd308ca1542</hash>
+         <hash>2a07acb970a0775e8a2aa567aa57ee3de6b473cb86f4cb39edceeacdff213524</hash>
       </entry>
    </generatedFileHashHistoryMap>
 </config>
