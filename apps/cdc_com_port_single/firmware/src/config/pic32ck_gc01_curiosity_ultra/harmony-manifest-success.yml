@@ -4,22 +4,14 @@
 
 
 project: cdc_com_port_single
-<<<<<<< HEAD
-<<<<<<< HEAD
-creation_date: 2023-02-17T20:48:50.114+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
-=======
-creation_date: 2023-03-09T15:19:39.101+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
->>>>>>> 1fcd3eeb ([Apps] Regenerated and tested USB Device vendor demo configuration for PIC32CK GC01 Curiosity Ultra board. [MH3-74889])
-=======
-creation_date: 2023-03-08T15:16:37.309+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
->>>>>>> e5f669a2 ([Apps] Regenerated and tested USB Device cdc_com_port_single demo configuration for PIC32CK GC01 Curiosity Ultra board. [MH3-74884])
+creation_date: 2023-03-13T14:44:16.664+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
 operating_system: Windows 10
 mcc_mode: IDE            # [IDE|Standalone|Headless]
-mcc_version: v5.2.1
+mcc_version: v5.2.2
 mcc_core_version: v5.4.14
 mplabx_version: v6.05        # if MPLAB X plugin only
 harmony_version: v1.2.0
-compiler: XC32 (v4.21) 
+compiler: XC32 (v4.20) 
 
 modules:
     - {name: "csp", version: "v3.16.0"}
