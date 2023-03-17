@@ -16,7 +16,7 @@ compiler: XC32 (v4.20)
 modules:
     - {name: "csp", version: "v3.15.0-E1"}
     - {name: "core", version: "v3.11.1"}
-    - {name: "usb", version: "unknown"}
+    - {name: "usb", version: "v3.11.0-E2"}
     - {name: "dev_packs", version: "v3.15.0-E1"}
     - {name: "bsp", version: "v3.15.0-E1"}
     - {name: "CMSIS-FreeRTOS", version: "v10.4.6"}
