@@ -13,8 +13,8 @@
   Description:
     This header file provides function prototypes and data type definitions for
     the application.  Some of these are required by the system (such as the
-    "APP_Initialize" and "APP_Tasks" prototypes) and some of them are only used
-    internally by the application (such as the "APP_STATES" definition).  Both
+    "APP_FREERTOS_Initialize" and "APP_FREERTOS_Tasks" prototypes) and some of them are only used
+    internally by the application (such as the "APP_FREERTOS_STATES" definition).  Both
     are defined here for convenience.
 *******************************************************************************/
 
@@ -43,9 +43,8 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
  *******************************************************************************/
 //DOM-IGNORE-END
 
-#ifndef _APP_H
-#define _APP_H
-
+#ifndef _APP_FREERTOS_H
+#define _APP_FREERTOS_H
 
 // *****************************************************************************
 // *****************************************************************************
@@ -210,7 +209,7 @@ USB_DEVICE_CDC_EVENT_RESPONSE APP_USBDeviceCDCEventHandler (
   Description:
     This function initializes the Harmony application.  It places the 
     application in its initial state and prepares it to run so that its 
-    APP_Tasks function can be called.
+    APP_FREERTOS_Tasks function can be called.
 
   Precondition:
     All other system initialization routines should be called before calling
@@ -268,9 +267,9 @@ void APP_FREERTOS_Tasks ( void );
 void APP_FREERTOS_Initialize ( void );
 
 
-#endif /* _APP_H */
+#endif /* _APP_FREERTOS_H */
+
 /*******************************************************************************
  End of File
  */
-
 
