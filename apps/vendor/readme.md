@@ -33,6 +33,8 @@ Following table gives the details of project configurations, target device used,
 | pic32mm_usb_curiosity.X         | MPLABX | PIC32MM0256GPM064   | [PIC32MM USB Curiosity Development Board](#config_20)                      |
 | sam_9x60_ek.X                   | MPLABX | SAM9X60             | [SAM9X60-EK Evaluation Board](#config_9)                                   |
 | sam_9x60_ek_freertos.X          | MPLABX | SAM9X60             | [SAM9X60-EK Evaluation Board](#config_9)                                   |
+| sam_9x60_curiosity.X            | MPLABX | SAM9X60             | [SAM9X60 Curiosity Development Board](#config_sam9x60_curiosity) |
+
 | sam_9x75_eb.X                   | MPLABX | SAM9X75             | [SAM9X75-DDR3-EB Evaluation Board](#config_22)                             |
 | sam_a5d2_xult.X                 | MPLABX | ATSAMA5D27C         | [SAMA5D2 Xplained Ultra Board](#config_10)                                 |
 | sam_a5d2_xult_iar.IAR           | IAR    | ATSAMA5D27C         | [SAMA5D2 Xplained Ultra Board](#config_10)                                 |
@@ -111,6 +113,18 @@ Following table gives the details of project configurations, target device used,
     ![SAM9X60-EK Evaluation Board](images/sam9x60_evk.png)
 
     **Note: Reset push button on SAM9X60 EK is labelled as SW3**
+
+### <a name="#config_sam9x60_curiosity"></a> [SAM9X60-Curiosity Board](https://www.microchip.com/en-us/development-tool/EV40E67A)
+- Setup the SD card 
+    - Download harmony MPU bootstrap loader from this [location](firmware/at91bootstrap_sam_9x60_curiosity.X/build/binaries/boot.bin).
+    - Copy the downloaded boot loader binary (boot.bin) and generated application binary (harmony.bin) into the SD card.
+    - Insert the SD card into the SDMMC connector J3 on the board.
+    - Reset the board by pressing the Push Button "RESET". 
+- Jumper J4 must be shorted.
+- Connect the USB Micro-B Connector (J1) on the board to the computer using a micro USB cable. 
+- LED D1 indicates USB Device Configuration Set Complete event (The USB device functionality has been activated by the USB Host).
+- Press the switch "USER" to trigger communication from the USB Device to the USB Host.
+    ![SAM9X60-EK Evaluation Board](images/sam9x60_curiosity.png)
 
 ### <a name="config_22"></a> [SAM9X75-DDR3-EB Evaluation Board]()
 
