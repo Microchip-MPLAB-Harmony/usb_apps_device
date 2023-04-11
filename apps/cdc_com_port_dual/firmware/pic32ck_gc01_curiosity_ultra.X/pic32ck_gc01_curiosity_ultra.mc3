@@ -1,4 +1,4 @@
-<config configName="pic32ck_gc01_curiosity_ultra" projectName="pic32ck_gc01_curiosity_ultra" configVersion="1.1" device="PIC32CK2051GC01144" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.4.14">
+<config configName="pic32ck_gc01_curiosity_ultra" projectName="pic32ck_gc01_curiosity_ultra" configVersion="1.1" device="PIC32CK2051GC01144" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.5.0">
    <usedPackages class="java.util.ArrayList"/>
    <usedClasses class="java.util.TreeMap">
       <entry>
