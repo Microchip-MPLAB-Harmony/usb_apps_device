@@ -26,6 +26,7 @@ Following table gives the details of project configurations, target device used,
 
 | Project Name                    | IDE    | Target Device       | Hardware / Configuration                                                   |
 | ------------------------------- | ------ | ------------------- | -------------------------------------------------------------------------- |
+| sam_9x75_eb.X                   | MPLABX | SAM9X75             | [SAM9X75-DDR3-EB Evaluation Board](#config_22)                             |
 | sam_9x60_curiosity.X            | MPLABX | SAM9X60             | [SAM9X60 Curiosity Development Board](#config_sam9x60_curiosity) |
 | sam_d11_xpro.X                  | MPLABX | ATSAMD11D14A        | [SAMD11 Xplained Pro board](#config_1)                                    |
 | sam_d21_xpro.X                  | MPLABX | ATSAMD21J18A        | [SAMD21 Xplained Pro board](#config_2)                                    |
@@ -96,6 +97,20 @@ Following table gives the details of project configurations, target device used,
 
 - Use the micro-B USB connector USB2 on the board to connect the USB Device to the USB Host PC.
 - LED1 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
+
+### <a name="config_22"></a> [SAM9X75-DDR3-EB Evaluation Board]()
+
+- Powered the board with an external power supply (or use the micro AB connector).
+- Setup the SD card 
+    - Download harmony MPU bootstrap loader from this [location](firmware/at91bootstrap_sam_9x75_eb.X/build/binaries/boot.bin).
+    - Copy the downloaded boot loader binary (boot.bin) and generated application binary (harmony.bin) into the SD card.
+    - Insert the SD card into the SDMMC connector (SDMMC0) on the board.
+    - Reset the board by pressing the Push Button RESET, then START.
+- Connect the USB Micro-AB Connector on the board to the computer using a micro USB cable. 
+- LED near VDDCORE inscription on the board indicates USB Device Configuration Set Complete event (The USB device functionality has been activated by the USB Host).
+
+    ![SAM9X75-DDR3-EB Evaluation Board](images/sam9x75_ddr3_eb.png)
+
 
 ### <a name="config_21"></a> [SAMA7G5-EK Evaluation Kit](https://www.microchip.com/en-us/development-tool/EV21H18A)
 
