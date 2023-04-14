@@ -26,6 +26,7 @@ Following table gives the details of project configurations, target device used,
 
 | Project Name                    | IDE    | Target Device       | Hardware / Configuration                                                   |
 | ------------------------------- | ------ | ------------------- | -------------------------------------------------------------------------- |
+| sam_9x60_curiosity.X            | MPLABX | SAM9X60             | [SAM9X60 Curiosity Development Board](#config_sam9x60_curiosity) |
 | sam_d11_xpro.X                  | MPLABX | ATSAMD11D14A        | [SAMD11 Xplained Pro board](#config_1)                                    |
 | sam_d21_xpro.X                  | MPLABX | ATSAMD21J18A        | [SAMD21 Xplained Pro board](#config_2)                                    |
 | sam_a7g5_ek.X                   | MPLABX | SAMA7G54            | [SAMA7G5 EK Board](#config_21)                                    |
@@ -107,6 +108,18 @@ Following table gives the details of project configurations, target device used,
 - Press the "nSTART" button to activate board start-up.  
 - Connect the USB MicroAB connector (J7) to the computer using an USB cable.
 - RGB LED turning to Green indicates USB Device Configuration Set Complete event (The USB device functionality has been activated by the USB Host).
+
+### <a name="#config_sam9x60_curiosity"></a> [SAM9X60-Curiosity Board](https://www.microchip.com/en-us/development-tool/EV40E67A)
+- Setup the SD card 
+    - Download harmony MPU bootstrap loader from this [location](firmware/at91bootstrap_sam_9x60_curiosity.X/build/binaries/boot.bin).
+    - Copy the downloaded boot loader binary (boot.bin) and generated application binary (harmony.bin) into the SD card.
+    - Insert the SD card into the SDMMC0 connector J3 on the board.
+    - Reset the board by pressing the Push Button RESET. 
+- Jumper J4 must be shorted.
+- Connect the USB Micro-B Connector (J1) on the board to the computer using a micro USB cable. 
+- LED D1 indicates USB Device Configuration Set Complete event (The USB device functionality has been activated by the USB Host).
+    ![SAM9X60-EK Evaluation Board](images/sam9x60_curiosity.png)
+
 
 ## Running the Application
 
