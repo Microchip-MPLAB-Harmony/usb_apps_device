@@ -27,6 +27,8 @@ Following table gives the details of project configurations, target device used,
 | Project Name                    | IDE    | Target Device       | Hardware / Configuration                                                   |
 | ------------------------------- | ------ | ------------------- | -------------------------------------------------------------------------- |
 | pic32mz_ef_curiosity_2_0.X      | MPLABX | PIC32MZ2048EFM144   | [Curiosity PIC32MZ EF 2.0 Development Board](#config_15)                   |
+| sam_9x60_curiosity.X            | MPLABX | SAM9X60             | [SAM9X60 Curiosity Development Board](#config_sam9x60_curiosity) |
+
 | sam_9x60_ek_iar.IAR             | IAR    | SAM9X60             | [SAM9X60-EK Evaluation Board](#config_9)                                   |
 | sam_e54_xpro.X                  | MPLABX | ATSAME54P20A        | [SAME54 Xplained Pro Board](#config_3)                                    |
 pic32cz_ca80_curiosity_ultra.X    | MPLABX | PIC32CZ8110CA80208  | [PIC32CZ Curiosity Development Board](#config_23)      
@@ -51,6 +53,18 @@ pic32cz_ca80_curiosity_ultra.X    | MPLABX | PIC32CZ8110CA80208  | [PIC32CZ Curi
 - Connect the USB Micro-B Connector (J7) on the board to the computer using a micro USB cable.
 - LED D1 indicates USB Device Configuration Set Complete event (The USB device functionality has been activated by the USB Host).
     ![SAM9X60-EK Evaluation Board](images/sam9x60_evk.png)
+
+### <a name="#config_sam9x60_curiosity"></a> [SAM9X60-Curiosity Board](https://www.microchip.com/en-us/development-tool/EV40E67A)
+- Setup the SD card 
+    - Download harmony MPU bootstrap loader from this [location](firmware/at91bootstrap_sam_9x60_curiosity.X/build/binaries/boot.bin).
+    - Copy the downloaded boot loader binary (boot.bin) and generated application binary (harmony.bin) into the SD card.
+    - Insert the SD card into the SDMMC0 connector J3 on the board.
+    - Reset the board by pressing the Push Button "RESET". 
+- Jumper J4 must be shorted.
+- Connect the USB Micro-B Connector (J1) on the board to the computer using a micro USB cable. 
+- LED D1 indicates USB Device Configuration Set Complete event (The USB device functionality has been activated by the USB Host).
+- Press the switch "USER" to trigger communication from the USB Device to the USB Host.
+    ![SAM9X60-EK Evaluation Board](images/sam9x60_curiosity.png)
 
 
 ### <a name="config_3"></a> [SAME54 Xplained Pro Board](https://www.microchip.com/developmenttools/productdetails/atsame54-xpro)
