@@ -1,4 +1,4 @@
-<config configName="sam_9x75_eb" projectName="cdc_com_port_single_sam_9x75_eb" configVersion="1.1" device="SAM9X75" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.4.4">
+<config configName="sam_9x75_eb" projectName="cdc_com_port_single_sam_9x75_eb" configVersion="1.1" device="SAM9X75" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.5.0">
    <usedPackages class="java.util.ArrayList">
       <package packageName="bsp" version="3.13.0" contentType="HARMONY">
          <modules class="java.util.ArrayList"/>
@@ -1789,7 +1789,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\definitions.h</file>
-         <hash>6530e9bb0d226cd47ba6ac8573289c7eb809ac0ababfd54cc7bb0506a667e2a9</hash>
+         <hash>2393aebab4aa22c1719d5145e86ab0f341a170a7f0b93769c30d104857eacd1f</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\peripheral\mmu\plib_mmu.c</file>
@@ -2153,7 +2153,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\driver\usb\udphs\src\drv_usb_udphs_local.h</file>
-         <hash>ea8579bb14a806f319070bb198668ce8dd58b7e8a020db12cbb4c97529100747</hash>
+         <hash>fba1c93c7fd6379063b24b6697d665487e0acbdb502c9e41ad2c2cbd011ed8a4</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\peripheral\pio\plib_pio.c</file>
@@ -2237,7 +2237,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\usb\src\usb_device.c</file>
-         <hash>b530b020cfa777eed5e76731e125a07d285ad49f2014ccf93858db1581a40d96</hash>
+         <hash>e2299e7132aaf91acd6857a827520f8bd5ecdc40d8ba2e6c4018b8441064a6cb</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75_DFP\component\tc.h</file>

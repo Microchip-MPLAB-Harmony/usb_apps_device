@@ -1,4 +1,4 @@
-<config configName="sam_9x75_eb" projectName="vendor_sam_9x75_eb" configVersion="1.1" device="SAM9X75" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.4.4">
+<config configName="sam_9x75_eb" projectName="vendor_sam_9x75_eb" configVersion="1.1" device="SAM9X75" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.5.0">
    <usedPackages class="java.util.ArrayList">
       <package packageName="bsp" version="3.13.0" contentType="HARMONY">
          <modules class="java.util.ArrayList"/>
@@ -149,8 +149,7 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="!@#harmonyUserData"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;UserData&gt;
   &lt;UserData dnOrder=&quot;0&quot;&gt;
-    &lt;GraphSettings canvasHeight=&quot;338&quot; canvasWidth=&quot;621&quot; dnOrder=&quot;0&quot;/&gt;
-    &lt;ComponentGraph dnOrder=&quot;1&quot; id=&quot;__ROOTVIEW&quot;&gt;
+    &lt;ComponentGraph dnOrder=&quot;0&quot; id=&quot;__ROOTVIEW&quot;&gt;
       &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
         &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;BSP_SAM_9X75_Evaluation_Board&quot; x=&quot;170&quot; y=&quot;69&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;HarmonyCore&quot; x=&quot;12&quot; y=&quot;11&quot;/&gt;
@@ -161,6 +160,7 @@
         &lt;ElementPosition dnOrder=&quot;6&quot; id=&quot;usb_device_vendor&quot; x=&quot;359&quot; y=&quot;174&quot;/&gt;
       &lt;/ElementPositions&gt;
     &lt;/ComponentGraph&gt;
+    &lt;GraphSettings canvasHeight=&quot;338&quot; canvasWidth=&quot;621&quot; dnOrder=&quot;1&quot;/&gt;
   &lt;/UserData&gt;
 &lt;/UserData&gt;
 </value>
@@ -2103,7 +2103,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\driver\usb\udphs\src\drv_usb_udphs_local.h</file>
-         <hash>ea8579bb14a806f319070bb198668ce8dd58b7e8a020db12cbb4c97529100747</hash>
+         <hash>fba1c93c7fd6379063b24b6697d665487e0acbdb502c9e41ad2c2cbd011ed8a4</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\peripheral\pio\plib_pio.c</file>
@@ -2183,7 +2183,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\usb\src\usb_device.c</file>
-         <hash>b530b020cfa777eed5e76731e125a07d285ad49f2014ccf93858db1581a40d96</hash>
+         <hash>e2299e7132aaf91acd6857a827520f8bd5ecdc40d8ba2e6c4018b8441064a6cb</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75_DFP\component\tc.h</file>
