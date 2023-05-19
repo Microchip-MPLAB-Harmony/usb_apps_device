@@ -230,10 +230,6 @@ void APP_Tasks ( void );
 
 
 
-extern const USB_DEVICE_FUNCTION_REGISTRATION_TABLE funcRegistrationTable[1];
-extern const USB_DEVICE_MASTER_DESCRIPTOR usbMasterDescriptor;
-
-
 #endif /* _APP_H */
 /*******************************************************************************
  End of File
