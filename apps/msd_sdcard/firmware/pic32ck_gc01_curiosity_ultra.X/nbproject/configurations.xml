@@ -139,6 +139,7 @@
           <itemPath>../src/config/pic32ck_gc01_curiosity_ultra/toolchain_specifics.h</itemPath>
           <itemPath>../src/config/pic32ck_gc01_curiosity_ultra/device_cache.h</itemPath>
           <itemPath>../src/config/pic32ck_gc01_curiosity_ultra/device.h</itemPath>
+          <itemPath>../src/config/pic32ck_gc01_curiosity_ultra/sys_tasks.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="packs" displayName="packs" projectFiles="true">

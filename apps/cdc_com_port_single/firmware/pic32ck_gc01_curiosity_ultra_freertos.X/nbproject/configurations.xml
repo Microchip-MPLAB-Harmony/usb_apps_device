@@ -121,6 +121,7 @@
           <itemPath>../src/config/pic32ck_gc01_curiosity_ultra_freertos/device.h</itemPath>
           <itemPath>../src/config/pic32ck_gc01_curiosity_ultra_freertos/interrupts.h</itemPath>
           <itemPath>../src/config/pic32ck_gc01_curiosity_ultra_freertos/FreeRTOSConfig.h</itemPath>
+          <itemPath>../src/config/pic32ck_gc01_curiosity_ultra_freertos/sys_tasks.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="FreeRTOS" displayName="FreeRTOS" projectFiles="true">
@@ -151,6 +152,7 @@
                 <logicalFolder name="non_secure" displayName="non_secure" projectFiles="true">
                   <itemPath>../src/third_party/rtos/FreeRTOS/Source/portable/GCC/ARM_CM33_NTZ/non_secure/portasm.h</itemPath>
                   <itemPath>../src/third_party/rtos/FreeRTOS/Source/portable/GCC/ARM_CM33_NTZ/non_secure/portmacro.h</itemPath>
+                  <itemPath>../src/third_party/rtos/FreeRTOS/Source/portable/GCC/ARM_CM33_NTZ/non_secure/portmacrocommon.h</itemPath>
                 </logicalFolder>
               </logicalFolder>
             </logicalFolder>
@@ -601,6 +603,11 @@
         <property key="stack-smashing" value=""/>
         <property key="wpo-lto" value="false"/>
       </C32Global>
+      <Tool>
+        <property key="memories.programmemory.ranges" value="0-63ffffff"/>
+        <property key="programmerToGoFilePath"
+                  value="C:/Harmony_Riverside/usb_apps_device/apps/cdc_com_port_single/firmware/pic32ck_gc01_curiosity_ultra_freertos.X/debug/pic32ck_gc01_curiosity_ultra_freertos/pic32ck_gc01_curiosity_ultra_freertos_ptg"/>
+      </Tool>
       <pkob4hybrid>
         <property key="memories.programmemory.ranges" value="0-63ffffff"/>
         <property key="programmerToGoFilePath"

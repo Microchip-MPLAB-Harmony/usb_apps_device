@@ -46,7 +46,7 @@ static void OSCCTRL_Initialize(void)
     /****************** XOSC Initialization ********************************/
 
     /* Configure External Oscillator */
-    OSCCTRL_REGS->OSCCTRL_XOSCCTRLA = OSCCTRL_XOSCCTRLA_STARTUP(14U) | OSCCTRL_XOSCCTRLA_USBHSDIV(0x1U) | OSCCTRL_XOSCCTRLA_ENABLE_Msk;
+    OSCCTRL_REGS->OSCCTRL_XOSCCTRLA = OSCCTRL_XOSCCTRLA_STARTUP(14U) | OSCCTRL_XOSCCTRLA_USBHSDIV(0x1U) | OSCCTRL_XOSCCTRLA_XTALEN_Msk | OSCCTRL_XOSCCTRLA_ENABLE_Msk;
     while((OSCCTRL_REGS->OSCCTRL_STATUS & OSCCTRL_STATUS_XOSCRDY_Msk) != OSCCTRL_STATUS_XOSCRDY_Msk)
     {
         /* Waiting for the XOSC Ready state */
@@ -91,11 +91,6 @@ static void PLL0_Initialize(void)
     }
 }
 
-static void DFLL_Initialize(void)
-{
-}
-
-
 static void GCLK0_Initialize(void)
 {
 
@@ -116,9 +111,7 @@ void CLOCK_Initialize (void)
     OSC32KCTRL_Initialize();
 
     PLL0_Initialize();
-    DFLL_Initialize();
     GCLK0_Initialize();
-
 
 
 

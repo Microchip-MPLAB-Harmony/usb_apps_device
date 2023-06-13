@@ -48,7 +48,6 @@
 #include "device.h"
 
 
-
 // ****************************************************************************
 // ****************************************************************************
 // Section: Configuration Bits
@@ -325,15 +324,19 @@
 // Section: Driver Initialization Data
 // *****************************************************************************
 // *****************************************************************************
+/* Following MISRA-C rules are deviated in the below code block */
+/* MISRA C-2012 Rule 11.1 */
+/* MISRA C-2012 Rule 11.3 */
+/* MISRA C-2012 Rule 11.8 */
 // <editor-fold defaultstate="collapsed" desc="DRV_MEMORY Instance 0 Initialization Data">
 
 static uint8_t gDrvMemory0EraseBuffer[FCW_ERASE_BUFFER_SIZE] CACHE_ALIGN;
 
 static DRV_MEMORY_CLIENT_OBJECT gDrvMemory0ClientObject[DRV_MEMORY_CLIENTS_NUMBER_IDX0];
 
-static DRV_MEMORY_BUFFER_OBJECT gDrvMemory0BufferObject[DRV_MEMORY_BUFFER_QUEUE_SIZE_IDX0];
+static DRV_MEMORY_BUFFER_OBJECT gDrvMemory0BufferObject[DRV_MEMORY_BUF_Q_SIZE_IDX0];
 
-const DRV_MEMORY_DEVICE_INTERFACE drvMemory0DeviceAPI = {
+static const DRV_MEMORY_DEVICE_INTERFACE drvMemory0DeviceAPI = {
     .Open               = DRV_FCW_Open,
     .Close              = DRV_FCW_Close,
     .Status             = DRV_FCW_Status,
@@ -344,8 +347,7 @@ const DRV_MEMORY_DEVICE_INTERFACE drvMemory0DeviceAPI = {
     .GeometryGet        = (DRV_MEMORY_DEVICE_GEOMETRY_GET)DRV_FCW_GeometryGet,
     .TransferStatusGet  = (DRV_MEMORY_DEVICE_TRANSFER_STATUS_GET)DRV_FCW_TransferStatusGet
 };
-
-const DRV_MEMORY_INIT drvMemory0InitData =
+static const DRV_MEMORY_INIT drvMemory0InitData =
 {
     .memDevIndex                = 0,
     .memoryDevice               = &drvMemory0DeviceAPI,
@@ -354,11 +356,12 @@ const DRV_MEMORY_INIT drvMemory0InitData =
     .ewBuffer                   = &gDrvMemory0EraseBuffer[0],
     .clientObjPool              = (uintptr_t)&gDrvMemory0ClientObject[0],
     .bufferObj                  = (uintptr_t)&gDrvMemory0BufferObject[0],
-    .queueSize                  = DRV_MEMORY_BUFFER_QUEUE_SIZE_IDX0,
+    .queueSize                  = DRV_MEMORY_BUF_Q_SIZE_IDX0,
     .nClientsMax                = DRV_MEMORY_CLIENTS_NUMBER_IDX0
 };
 
 // </editor-fold>
+
 
 
 // *****************************************************************************
@@ -422,7 +425,7 @@ const DRV_USBHS_INIT drvUSBInit =
 // *****************************************************************************
 // *****************************************************************************
 
-
+/* MISRAC 2012 deviation block end */
 
 /*******************************************************************************
   Function:
@@ -436,6 +439,7 @@ const DRV_USBHS_INIT drvUSBInit =
 
 void SYS_Initialize ( void* data )
 {
+
     /* MISRAC 2012 deviation block start */
     /* MISRA C-2012 Rule 2.2 deviated in this file.  Deviation record ID -  H3_MISRAC_2012_R_2_2_DR_1 */
 
@@ -455,6 +459,13 @@ void SYS_Initialize ( void* data )
 
 	BSP_Initialize();
 
+
+    /* MISRAC 2012 deviation block start */
+    /* Following MISRA-C rules deviated in this block  */
+    /* MISRA C-2012 Rule 11.3 - Deviation record ID - H3_MISRAC_2012_R_11_3_DR_1 */
+    /* MISRA C-2012 Rule 11.8 - Deviation record ID - H3_MISRAC_2012_R_11_8_DR_1 */
+
+
     sysObj.drvMemory0 = DRV_MEMORY_Initialize((SYS_MODULE_INDEX)DRV_MEMORY_INDEX_0, (SYS_MODULE_INIT *)&drvMemory0InitData);
 
 
@@ -468,14 +479,15 @@ void SYS_Initialize ( void* data )
 
 
 
+    /* MISRAC 2012 deviation block end */
     APP_Initialize();
 
 
     NVIC_Initialize();
 
+
     /* MISRAC 2012 deviation block end */
 }
-
 
 /*******************************************************************************
  End of File

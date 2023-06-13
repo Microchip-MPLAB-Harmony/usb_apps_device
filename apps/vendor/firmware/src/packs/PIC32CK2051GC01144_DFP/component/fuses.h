@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2023-02-20T18:48:06Z */
+/* file generated from device description version 2023-04-05T13:26:38Z */
 #ifndef _PIC32CKGC01_FUSES_COMPONENT_H_
 #define _PIC32CKGC01_FUSES_COMPONENT_H_
 
@@ -311,6 +311,83 @@
 #define FUSES_FUCFG9_Msk                      _UINT32_(0x00000000)                                 /* (FUSES_FUCFG9) Register Mask  */
 
 
+/* -------- FUSES_FCCFG64 : (FUSES Offset: 0x180) ( R/ 32) PTC Calibration -------- */
+#define FUSES_FCCFG64_PTCFG0_Pos              _UINT32_(0)                                          /* (FUSES_FCCFG64)  Position */
+#define FUSES_FCCFG64_PTCFG0_Msk              (_UINT32_(0xFFFF) << FUSES_FCCFG64_PTCFG0_Pos)       /* (FUSES_FCCFG64)  Mask */
+#define FUSES_FCCFG64_PTCFG0(value)           (FUSES_FCCFG64_PTCFG0_Msk & (_UINT32_(value) << FUSES_FCCFG64_PTCFG0_Pos)) /* Assigment of value for PTCFG0 in the FUSES_FCCFG64 register */
+#define FUSES_FCCFG64_Msk                     _UINT32_(0x0000FFFF)                                 /* (FUSES_FCCFG64) Register Mask  */
+
+
+/* -------- FUSES_FCCFG65 : (FUSES Offset: 0x184) ( R/ 32) ADC Calibration -------- */
+#define FUSES_FCCFG65_ADCFG0_Pos              _UINT32_(0)                                          /* (FUSES_FCCFG65)  Position */
+#define FUSES_FCCFG65_ADCFG0_Msk              (_UINT32_(0xFFFFFFFF) << FUSES_FCCFG65_ADCFG0_Pos)   /* (FUSES_FCCFG65)  Mask */
+#define FUSES_FCCFG65_ADCFG0(value)           (FUSES_FCCFG65_ADCFG0_Msk & (_UINT32_(value) << FUSES_FCCFG65_ADCFG0_Pos)) /* Assigment of value for ADCFG0 in the FUSES_FCCFG65 register */
+#define FUSES_FCCFG65_Msk                     _UINT32_(0xFFFFFFFF)                                 /* (FUSES_FCCFG65) Register Mask  */
+
+
+/* -------- FUSES_FCCFG66 : (FUSES Offset: 0x188) ( R/ 32) Comparator Calibration -------- */
+#define FUSES_FCCFG66_ACPAIR_SEL_Pos          _UINT32_(0)                                          /* (FUSES_FCCFG66)  Position */
+#define FUSES_FCCFG66_ACPAIR_SEL_Msk          (_UINT32_(0xFF) << FUSES_FCCFG66_ACPAIR_SEL_Pos)     /* (FUSES_FCCFG66)  Mask */
+#define FUSES_FCCFG66_ACPAIR_SEL(value)       (FUSES_FCCFG66_ACPAIR_SEL_Msk & (_UINT32_(value) << FUSES_FCCFG66_ACPAIR_SEL_Pos)) /* Assigment of value for ACPAIR_SEL in the FUSES_FCCFG66 register */
+#define FUSES_FCCFG66_Msk                     _UINT32_(0x000000FF)                                 /* (FUSES_FCCFG66) Register Mask  */
+
+
+/* -------- FUSES_FCCFG69 : (FUSES Offset: 0x194) ( R/ 32) Temperature  calibration values 0 -------- */
+#define FUSES_FCCFG69_ROOM_ADC_VAL_PTAT_Pos   _UINT32_(0)                                          /* (FUSES_FCCFG69)  Position */
+#define FUSES_FCCFG69_ROOM_ADC_VAL_PTAT_Msk   (_UINT32_(0xFFF) << FUSES_FCCFG69_ROOM_ADC_VAL_PTAT_Pos) /* (FUSES_FCCFG69)  Mask */
+#define FUSES_FCCFG69_ROOM_ADC_VAL_PTAT(value) (FUSES_FCCFG69_ROOM_ADC_VAL_PTAT_Msk & (_UINT32_(value) << FUSES_FCCFG69_ROOM_ADC_VAL_PTAT_Pos)) /* Assigment of value for ROOM_ADC_VAL_PTAT in the FUSES_FCCFG69 register */
+#define FUSES_FCCFG69_ROOM_ADC_VAL_BUFF1V2_Pos _UINT32_(12)                                         /* (FUSES_FCCFG69)  Position */
+#define FUSES_FCCFG69_ROOM_ADC_VAL_BUFF1V2_Msk (_UINT32_(0xFFF) << FUSES_FCCFG69_ROOM_ADC_VAL_BUFF1V2_Pos) /* (FUSES_FCCFG69)  Mask */
+#define FUSES_FCCFG69_ROOM_ADC_VAL_BUFF1V2(value) (FUSES_FCCFG69_ROOM_ADC_VAL_BUFF1V2_Msk & (_UINT32_(value) << FUSES_FCCFG69_ROOM_ADC_VAL_BUFF1V2_Pos)) /* Assigment of value for ROOM_ADC_VAL_BUFF1V2 in the FUSES_FCCFG69 register */
+#define FUSES_FCCFG69_ROOM_TEMP_VAL_INT_Pos   _UINT32_(24)                                         /* (FUSES_FCCFG69)  Position */
+#define FUSES_FCCFG69_ROOM_TEMP_VAL_INT_Msk   (_UINT32_(0xFF) << FUSES_FCCFG69_ROOM_TEMP_VAL_INT_Pos) /* (FUSES_FCCFG69)  Mask */
+#define FUSES_FCCFG69_ROOM_TEMP_VAL_INT(value) (FUSES_FCCFG69_ROOM_TEMP_VAL_INT_Msk & (_UINT32_(value) << FUSES_FCCFG69_ROOM_TEMP_VAL_INT_Pos)) /* Assigment of value for ROOM_TEMP_VAL_INT in the FUSES_FCCFG69 register */
+#define FUSES_FCCFG69_Msk                     _UINT32_(0xFFFFFFFF)                                 /* (FUSES_FCCFG69) Register Mask  */
+
+
+/* -------- FUSES_FCCFG70 : (FUSES Offset: 0x198) ( R/ 32) Temperature  calibration values 1 -------- */
+#define FUSES_FCCFG70_ROOM_TEMP_VAL_DEC_Pos   _UINT32_(0)                                          /* (FUSES_FCCFG70)  Position */
+#define FUSES_FCCFG70_ROOM_TEMP_VAL_DEC_Msk   (_UINT32_(0xF) << FUSES_FCCFG70_ROOM_TEMP_VAL_DEC_Pos) /* (FUSES_FCCFG70)  Mask */
+#define FUSES_FCCFG70_ROOM_TEMP_VAL_DEC(value) (FUSES_FCCFG70_ROOM_TEMP_VAL_DEC_Msk & (_UINT32_(value) << FUSES_FCCFG70_ROOM_TEMP_VAL_DEC_Pos)) /* Assigment of value for ROOM_TEMP_VAL_DEC in the FUSES_FCCFG70 register */
+#define FUSES_FCCFG70_ROOM_VREF_VAL_Pos       _UINT32_(4)                                          /* (FUSES_FCCFG70)  Position */
+#define FUSES_FCCFG70_ROOM_VREF_VAL_Msk       (_UINT32_(0xFFF) << FUSES_FCCFG70_ROOM_VREF_VAL_Pos) /* (FUSES_FCCFG70)  Mask */
+#define FUSES_FCCFG70_ROOM_VREF_VAL(value)    (FUSES_FCCFG70_ROOM_VREF_VAL_Msk & (_UINT32_(value) << FUSES_FCCFG70_ROOM_VREF_VAL_Pos)) /* Assigment of value for ROOM_VREF_VAL in the FUSES_FCCFG70 register */
+#define FUSES_FCCFG70_HOT_TEMP_VAL_DEC_Pos    _UINT32_(16)                                         /* (FUSES_FCCFG70)  Position */
+#define FUSES_FCCFG70_HOT_TEMP_VAL_DEC_Msk    (_UINT32_(0xF) << FUSES_FCCFG70_HOT_TEMP_VAL_DEC_Pos) /* (FUSES_FCCFG70)  Mask */
+#define FUSES_FCCFG70_HOT_TEMP_VAL_DEC(value) (FUSES_FCCFG70_HOT_TEMP_VAL_DEC_Msk & (_UINT32_(value) << FUSES_FCCFG70_HOT_TEMP_VAL_DEC_Pos)) /* Assigment of value for HOT_TEMP_VAL_DEC in the FUSES_FCCFG70 register */
+#define FUSES_FCCFG70_Reserved_Pos            _UINT32_(20)                                         /* (FUSES_FCCFG70)  Position */
+#define FUSES_FCCFG70_Reserved_Msk            (_UINT32_(0xFFF) << FUSES_FCCFG70_Reserved_Pos)      /* (FUSES_FCCFG70)  Mask */
+#define FUSES_FCCFG70_Reserved(value)         (FUSES_FCCFG70_Reserved_Msk & (_UINT32_(value) << FUSES_FCCFG70_Reserved_Pos)) /* Assigment of value for Reserved in the FUSES_FCCFG70 register */
+#define FUSES_FCCFG70_Msk                     _UINT32_(0xFFFFFFFF)                                 /* (FUSES_FCCFG70) Register Mask  */
+
+
+/* -------- FUSES_FCCFG71 : (FUSES Offset: 0x19C) ( R/ 32) Temperature  calibration values 2 -------- */
+#define FUSES_FCCFG71_HOT_ADC_VAL_PTAT_Pos    _UINT32_(0)                                          /* (FUSES_FCCFG71)  Position */
+#define FUSES_FCCFG71_HOT_ADC_VAL_PTAT_Msk    (_UINT32_(0xFFF) << FUSES_FCCFG71_HOT_ADC_VAL_PTAT_Pos) /* (FUSES_FCCFG71)  Mask */
+#define FUSES_FCCFG71_HOT_ADC_VAL_PTAT(value) (FUSES_FCCFG71_HOT_ADC_VAL_PTAT_Msk & (_UINT32_(value) << FUSES_FCCFG71_HOT_ADC_VAL_PTAT_Pos)) /* Assigment of value for HOT_ADC_VAL_PTAT in the FUSES_FCCFG71 register */
+#define FUSES_FCCFG71_HOT_ADC_VAL_BUFF1V2_Pos _UINT32_(12)                                         /* (FUSES_FCCFG71)  Position */
+#define FUSES_FCCFG71_HOT_ADC_VAL_BUFF1V2_Msk (_UINT32_(0xFFF) << FUSES_FCCFG71_HOT_ADC_VAL_BUFF1V2_Pos) /* (FUSES_FCCFG71)  Mask */
+#define FUSES_FCCFG71_HOT_ADC_VAL_BUFF1V2(value) (FUSES_FCCFG71_HOT_ADC_VAL_BUFF1V2_Msk & (_UINT32_(value) << FUSES_FCCFG71_HOT_ADC_VAL_BUFF1V2_Pos)) /* Assigment of value for HOT_ADC_VAL_BUFF1V2 in the FUSES_FCCFG71 register */
+#define FUSES_FCCFG71_HOT_TEMP_VAL_INT_Pos    _UINT32_(24)                                         /* (FUSES_FCCFG71)  Position */
+#define FUSES_FCCFG71_HOT_TEMP_VAL_INT_Msk    (_UINT32_(0xFF) << FUSES_FCCFG71_HOT_TEMP_VAL_INT_Pos) /* (FUSES_FCCFG71)  Mask */
+#define FUSES_FCCFG71_HOT_TEMP_VAL_INT(value) (FUSES_FCCFG71_HOT_TEMP_VAL_INT_Msk & (_UINT32_(value) << FUSES_FCCFG71_HOT_TEMP_VAL_INT_Pos)) /* Assigment of value for HOT_TEMP_VAL_INT in the FUSES_FCCFG71 register */
+#define FUSES_FCCFG71_Msk                     _UINT32_(0xFFFFFFFF)                                 /* (FUSES_FCCFG71) Register Mask  */
+
+
+/* -------- FUSES_FCCFG72 : (FUSES Offset: 0x1A0) ( R/ 32) MAC ID (31 through 0) -------- */
+#define FUSES_FCCFG72_FMAC_31_0_Pos           _UINT32_(0)                                          /* (FUSES_FCCFG72)  Position */
+#define FUSES_FCCFG72_FMAC_31_0_Msk           (_UINT32_(0xFFFFFFFF) << FUSES_FCCFG72_FMAC_31_0_Pos) /* (FUSES_FCCFG72)  Mask */
+#define FUSES_FCCFG72_FMAC_31_0(value)        (FUSES_FCCFG72_FMAC_31_0_Msk & (_UINT32_(value) << FUSES_FCCFG72_FMAC_31_0_Pos)) /* Assigment of value for FMAC_31_0 in the FUSES_FCCFG72 register */
+#define FUSES_FCCFG72_Msk                     _UINT32_(0xFFFFFFFF)                                 /* (FUSES_FCCFG72) Register Mask  */
+
+
+/* -------- FUSES_FCCFG73 : (FUSES Offset: 0x1A4) ( R/ 32) MAC ID (47 through 32) -------- */
+#define FUSES_FCCFG73_FMAC_47_32_Pos          _UINT32_(0)                                          /* (FUSES_FCCFG73)  Position */
+#define FUSES_FCCFG73_FMAC_47_32_Msk          (_UINT32_(0xFFFF) << FUSES_FCCFG73_FMAC_47_32_Pos)   /* (FUSES_FCCFG73)  Mask */
+#define FUSES_FCCFG73_FMAC_47_32(value)       (FUSES_FCCFG73_FMAC_47_32_Msk & (_UINT32_(value) << FUSES_FCCFG73_FMAC_47_32_Pos)) /* Assigment of value for FMAC_47_32 in the FUSES_FCCFG73 register */
+#define FUSES_FCCFG73_Msk                     _UINT32_(0x0000FFFF)                                 /* (FUSES_FCCFG73) Register Mask  */
+
+
 /** \brief FUSES register offsets definitions */
 #define FUSES_BLDRCFG_REG_OFST         _UINT32_(0x00)      /* (FUSES_BLDRCFG) Bootloader Configuration Offset */
 #define FUSES_BROM_BSEQ_REG_OFST       _UINT32_(0x04)      /* (FUSES_BROM_BSEQ) Boot Configuraiton Page Sequence Number Offset */
@@ -418,6 +495,14 @@
 #define FUSES_FUCFG7_REG_OFST          _UINT32_(0x5C)      /* (FUSES_FUCFG7) User Configuration 7 (FCR CTRLB Configuration) Offset */
 #define FUSES_FUCFG8_REG_OFST          _UINT32_(0x60)      /* (FUSES_FUCFG8) User Configuration 8 (FCW CWP Configuration) Offset */
 #define FUSES_FUCFG9_REG_OFST          _UINT32_(0x64)      /* (FUSES_FUCFG9) User Configuration 9 (RAM BISR and ECC Configuraiton) Offset */
+#define FUSES_FCCFG64_REG_OFST         _UINT32_(0x180)     /* (FUSES_FCCFG64) PTC Calibration Offset */
+#define FUSES_FCCFG65_REG_OFST         _UINT32_(0x184)     /* (FUSES_FCCFG65) ADC Calibration Offset */
+#define FUSES_FCCFG66_REG_OFST         _UINT32_(0x188)     /* (FUSES_FCCFG66) Comparator Calibration Offset */
+#define FUSES_FCCFG69_REG_OFST         _UINT32_(0x194)     /* (FUSES_FCCFG69) Temperature  calibration values 0 Offset */
+#define FUSES_FCCFG70_REG_OFST         _UINT32_(0x198)     /* (FUSES_FCCFG70) Temperature  calibration values 1 Offset */
+#define FUSES_FCCFG71_REG_OFST         _UINT32_(0x19C)     /* (FUSES_FCCFG71) Temperature  calibration values 2 Offset */
+#define FUSES_FCCFG72_REG_OFST         _UINT32_(0x1A0)     /* (FUSES_FCCFG72) MAC ID (31 through 0) Offset */
+#define FUSES_FCCFG73_REG_OFST         _UINT32_(0x1A4)     /* (FUSES_FCCFG73) MAC ID (47 through 32) Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief FUSES_BOOTCFG1 register API structure */
@@ -475,6 +560,21 @@ typedef struct
   __IO  uint32_t                       FUSES_FUCFG8;       /**< Offset: 0x60 (R/W  32) User Configuration 8 (FCW CWP Configuration) */
   __IO  uint32_t                       FUSES_FUCFG9;       /**< Offset: 0x64 (R/W  32) User Configuration 9 (RAM BISR and ECC Configuraiton) */
 } fuses_usercfg1_registers_t;
+
+/** \brief FUSES_CALOTP register API structure */
+typedef struct
+{  /* Defines FUSE parameters */
+  __I   uint8_t                        Reserved1[0x180];
+  __I   uint32_t                       FUSES_FCCFG64;      /**< Offset: 0x180 (R/   32) PTC Calibration */
+  __I   uint32_t                       FUSES_FCCFG65;      /**< Offset: 0x184 (R/   32) ADC Calibration */
+  __I   uint32_t                       FUSES_FCCFG66;      /**< Offset: 0x188 (R/   32) Comparator Calibration */
+  __I   uint8_t                        Reserved2[0x08];
+  __I   uint32_t                       FUSES_FCCFG69;      /**< Offset: 0x194 (R/   32) Temperature  calibration values 0 */
+  __I   uint32_t                       FUSES_FCCFG70;      /**< Offset: 0x198 (R/   32) Temperature  calibration values 1 */
+  __I   uint32_t                       FUSES_FCCFG71;      /**< Offset: 0x19C (R/   32) Temperature  calibration values 2 */
+  __I   uint32_t                       FUSES_FCCFG72;      /**< Offset: 0x1A0 (R/   32) MAC ID (31 through 0) */
+  __I   uint32_t                       FUSES_FCCFG73;      /**< Offset: 0x1A4 (R/   32) MAC ID (47 through 32) */
+} fuses_calotp_registers_t;
 
 
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */

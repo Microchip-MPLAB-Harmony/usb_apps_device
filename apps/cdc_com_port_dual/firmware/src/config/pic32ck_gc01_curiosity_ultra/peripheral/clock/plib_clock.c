@@ -91,11 +91,6 @@ static void PLL0_Initialize(void)
     }
 }
 
-static void DFLL_Initialize(void)
-{
-}
-
-
 static void GCLK0_Initialize(void)
 {
 
@@ -126,10 +121,8 @@ void CLOCK_Initialize (void)
     OSC32KCTRL_Initialize();
 
     PLL0_Initialize();
-    DFLL_Initialize();
     GCLK0_Initialize();
     GCLK1_Initialize();
-
 
 
 

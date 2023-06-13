@@ -125,6 +125,7 @@
           <itemPath>../src/config/pic32ck_gc01_curiosity_ultra/device_vectors.h</itemPath>
           <itemPath>../src/config/pic32ck_gc01_curiosity_ultra/definitions.h</itemPath>
           <itemPath>../src/config/pic32ck_gc01_curiosity_ultra/toolchain_specifics.h</itemPath>
+          <itemPath>../src/config/pic32ck_gc01_curiosity_ultra/sys_tasks.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="packs" displayName="packs" projectFiles="true">
@@ -365,7 +366,7 @@
         <targetDevice>PIC32CK2051GC01144</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>noID</platformTool>
+        <platformTool>pkob4hybrid</platformTool>
         <languageToolchain>XC32</languageToolchain>
         <languageToolchainVersion>4.21</languageToolchainVersion>
         <platform>3</platform>

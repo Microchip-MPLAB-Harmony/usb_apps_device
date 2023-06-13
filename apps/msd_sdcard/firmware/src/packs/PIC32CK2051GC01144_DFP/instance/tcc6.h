@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2023-02-20T18:48:06Z */
+/* file generated from device description version 2023-04-05T13:26:38Z */
 #ifndef _PIC32CKGC01_TCC6_INSTANCE_
 #define _PIC32CKGC01_TCC6_INSTANCE_
 
