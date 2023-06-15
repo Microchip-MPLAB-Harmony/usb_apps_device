@@ -1,7 +1,7 @@
 /*
  * Instance header file for ATSAM9X75D5M
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,25 +20,25 @@
  *
  */
 
-/* file generated from device description version 2022-01-05T08:57:53Z */
+/* file generated from device description version 2023-01-20T08:33:42Z */
 #ifndef _SAM9X7_TC0_INSTANCE_
 #define _SAM9X7_TC0_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for TC0 peripheral ========== */
-#define TC0_INSTANCE_ID                          _UL_(17)   /* TC 0,1,2 */
-#define TC0_CLOCK_ID                             _UL_(17)   
-#define TC0_DMAC_ID_RX                           _UL_(41)   
-#define TC0_TCCLKS_                              _UL_(0)    /* MCK */
-#define TC0_TCCLKS_TIMER_CLOCK1                  _UL_(1)    /* GCLK */
-#define TC0_TCCLKS_TIMER_CLOCK2                  _UL_(2)    /* MCK/8 */
-#define TC0_TCCLKS_TIMER_CLOCK3                  _UL_(3)    /* MCK/32 */
-#define TC0_TCCLKS_TIMER_CLOCK4                  _UL_(4)    /* MCK/128 */
-#define TC0_TCCLKS_TIMER_CLOCK5                  _UL_(5)    /* MD_SLCK */
-#define TC0_TCCLKS_XC0                           _UL_(6)    /* XC0 */
-#define TC0_TCCLKS_XC1                           _UL_(7)    /* XC1 */
-#define TC0_TCCLKS_XC2                           _UL_(8)    /* XC2 */
-#define TC0_NUM_INTERRUPT_LINES                  _UL_(1)    
-#define TC0_TIMER_WIDTH                          _UL_(32)   
+#define TC0_CLOCK_ID                             (17)       
+#define TC0_DMAC_ID_RX                           (41)       
+#define TC0_INSTANCE_ID                          (17)       /* TC 0,1,2 */
+#define TC0_NUM_INTERRUPT_LINES                  (1)        
+#define TC0_TCCLKS_                              (0)        /* MCK */
+#define TC0_TCCLKS_TIMER_CLOCK1                  (1)        /* GCLK */
+#define TC0_TCCLKS_TIMER_CLOCK2                  (2)        /* MCK/8 */
+#define TC0_TCCLKS_TIMER_CLOCK3                  (3)        /* MCK/32 */
+#define TC0_TCCLKS_TIMER_CLOCK4                  (4)        /* MCK/128 */
+#define TC0_TCCLKS_TIMER_CLOCK5                  (5)        /* MD_SLCK */
+#define TC0_TCCLKS_XC0                           (6)        /* XC0 */
+#define TC0_TCCLKS_XC1                           (7)        /* XC1 */
+#define TC0_TCCLKS_XC2                           (8)        /* XC2 */
+#define TC0_TIMER_WIDTH                          (32)       
 
 #endif /* _SAM9X7_TC0_INSTANCE_ */
