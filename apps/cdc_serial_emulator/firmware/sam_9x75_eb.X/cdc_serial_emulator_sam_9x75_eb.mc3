@@ -1,4 +1,4 @@
-<config configName="sam_9x75_eb" projectName="cdc_serial_emulator_sam_9x75_eb" configVersion="1.1" device="SAM9X75" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.5.0">
+<config configName="sam_9x75_eb" projectName="cdc_serial_emulator_sam_9x75_eb" configVersion="1.1" device="SAM9X75" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.5.7">
    <usedPackages class="java.util.ArrayList"/>
    <usedClasses class="java.util.TreeMap">
       <entry>
@@ -5901,7 +5901,7 @@
    <generatedFileHashHistoryMap class="java.util.HashMap">
       <entry>
          <file>..\src\config\sam_9x75_eb\driver\usart\drv_usart_definitions.h</file>
-         <hash>a6dd1c88a00f5682914c3879c7cd5e24294675731cd72b37f8f2c73db31e4891</hash>
+         <hash>2303ed0c3d118933e7bbe5d42e79fe4972422220bbace1e59056c4b62130dd2c</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75_DFP\component\pio.h</file>
@@ -5925,7 +5925,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\system\system_module.h</file>
-         <hash>981fac23277aa77f682e7a9a28d436f892006cd5b4c7f23f50941b6d9a30e740</hash>
+         <hash>96c74368801b0a7aaa25aec3ec2cb0d483250385f103ffc1ff64089b4ca2c6d9</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\stdio\xc32_monitor.c</file>
@@ -5956,16 +5956,16 @@
          <hash>310598cfec2b2714a17acbba450fd86b78e75b9fc557e94a0b1ea11b02690833</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_9x75_eb\usb\src\usb_device_local.h</file>
-         <hash>7ef3cbc9e2060d1d2800fb7a5d6d5597bb008b3da58bf475fc09219dd40c2244</hash>
-      </entry>
-      <entry>
          <file>..\src\packs\SAM9X75_DFP\instance\aes.h</file>
          <hash>bac97ef0bfbe80daf827ba322c899a5d3246e34b63870319c7f3d7bd86ab83e8</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75_DFP\instance\gpbr.h</file>
          <hash>668d59dd8ca821b72388a84ec9cba2ef70646fef6b6b89c004b49c3d59b378d4</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_9x75_eb\usb\src\usb_device_local.h</file>
+         <hash>7ef3cbc9e2060d1d2800fb7a5d6d5597bb008b3da58bf475fc09219dd40c2244</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75_DFP\instance\otpc.h</file>
@@ -5977,7 +5977,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\osal\osal.h</file>
-         <hash>d42702188d00d3e1d7219d7eef030485896bf8b5ebe55318656e82f0fbb89788</hash>
+         <hash>8404fbe44807fa0484ffb38843a72cb9af8e31c9c30bd1b2594e609b8ea317d9</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75_DFP\instance\ssc.h</file>
@@ -5985,7 +5985,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\driver\usart\drv_usart.h</file>
-         <hash>38c9b2141416ac19cc67edf851ed6ab381d5c19c8878c8460df6a3190703dba7</hash>
+         <hash>e13f2ded2fac55dd1f1522f341758ecac9115aef3acb88102a0ebcbe83cbdf79</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75_DFP\instance\pit.h</file>
@@ -5997,7 +5997,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\toolchain_specifics.h</file>
-         <hash>943f2c097f75062855ef1434b1b63a84e68ac691a93097a46016a699601a3306</hash>
+         <hash>d93ab2a56ea91cac163fc49b5e3f3491fe3c8ada3bd2f72c752b286f280b40ef</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75_DFP\instance\flexcom5.h</file>
@@ -6029,11 +6029,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\driver\usart\src\drv_usart.c</file>
-         <hash>d39dffc8a9ac1fb7cce741741da4e02d53048e8918fe97fd7b57c375d66359cc</hash>
+         <hash>2265fe7065e09a3ff1c6b93386a1ee62cfc8369d09a90fa5b11424ad9a2412d2</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\bsp\bsp.h</file>
-         <hash>a0f9370cbaed1bdd3666738e32f753e519257d7889998488a3232d806b09a742</hash>
+         <hash>6154e6abf268078e1f62bfc950cb328a96a749910ddec384dd32d137965916bc</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\usb_device_init_data.c</file>
@@ -6061,7 +6061,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\peripheral\dbgu\plib_dbgu.c</file>
-         <hash>612bfe24558cb70e44daf301b43b0278d595cd18986591ed724bd0fe087c0c7d</hash>
+         <hash>093dad431d8d12590ad8972a5e2b8b19a8ead0def70df4b928e22cb042596469</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75_DFP\component\gfx2d.h</file>
@@ -6085,15 +6085,15 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\interrupts.h</file>
-         <hash>91abdb8d191ae865fc6082f30783c3d6cca8aa8d5aca823a7fb2cc65e3a57d24</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_9x75_eb\usb\src\usb_device_mapping.h</file>
-         <hash>3a5eee6b064c49fd7a495f574736eaec5838e63f7de457ff688d70aa80432ce6</hash>
+         <hash>17c6e0c9450e0d6c311d2b231a740fc6405f379a5a501255e399536b508a0fb4</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75_DFP\instance\pit64b1.h</file>
          <hash>b8b5710c5f726cba9e3bceac29b301c8827969618c530d4ab125d915950eef2c</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_9x75_eb\usb\src\usb_device_mapping.h</file>
+         <hash>3a5eee6b064c49fd7a495f574736eaec5838e63f7de457ff688d70aa80432ce6</hash>
       </entry>
       <entry>
          <file>..\src\app.h</file>
@@ -6117,7 +6117,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\interrupts.c</file>
-         <hash>4d3ae75b0108ade6e7592b25166f2d75e58aeac3d0101ac5551d5ec95b07715a</hash>
+         <hash>361f5e1d843df60d762741cff2e30549cff849154b7e8d5aa89a3b3a8b07aa80</hash>
       </entry>
       <entry>
          <file>..\src\app.c</file>
@@ -6129,7 +6129,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\system\debug\sys_debug.h</file>
-         <hash>222cdc284bd651e83188b9641cc57c133cf86563dbeb5d5523766d4a36087165</hash>
+         <hash>bc6fa321b0be542d074e4564065b7fd69f52556486ac3d892d315b51c434f9ec</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75_DFP\component\dsi.h</file>
@@ -6149,15 +6149,15 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\osal\osal_impl_basic.h</file>
-         <hash>0c388837ef1d4e207a028ed31bfe07f1aac7ea8b0505caff58f737667ccbeaee</hash>
+         <hash>67ce72d34fd1e4dee0b6937fa026ab2c7bd285f82a24da09742c68333adaf0fc</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\definitions.h</file>
-         <hash>73c53ed6a8d5a7b2dec563382b5cb14129d63d9ae705f112f13e0ff216d02a5e</hash>
+         <hash>48cfddd87fca56288d79ee9d6a78639e5cd2b94b99a31dec7b28928d3ce65d7c</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\peripheral\mmu\plib_mmu.c</file>
-         <hash>87a1d4803bc64a6cf07d4d0d18d8ab323f88f64e922eb0caf6dd1bfed6ec3479</hash>
+         <hash>2c6345ce6de293ab29ec6dc5ace828503a790a68895c3d2fa53b3702d0b4a8a9</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75_DFP\instance\wdt.h</file>
@@ -6169,7 +6169,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\peripheral\mmu\cp15.h</file>
-         <hash>24907eff18f34ad82252c89fde571ebd0f51da7ca4b9f72c8810e9c3d6485edb</hash>
+         <hash>d927deee45b9b50351c5513daf446ae3278f5fa85915c06c434b24c7eb61b64b</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\driver\driver_common.h</file>
@@ -6189,11 +6189,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\fault_handlers.c</file>
-         <hash>34134ba54c0becfbe75cd670be15133f2a10dea081d9fa5fab75f17afc1109ba</hash>
+         <hash>931e951cf7431d3d70d6ab81bcd265ff0ac8b3f473b73cd7a541f59d49786b7c</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\peripheral\mmu\plib_mmu.h</file>
-         <hash>a777af67221ce686baec242376d2cccad707ed3e197c3b049b7d9fd5519e3dfe</hash>
+         <hash>7fb6e6b8ad6a80b7fc04c0264b7cdf49e6d6b887e4f3c5aa394eda88e32e0116</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75_DFP\component\gmac.h</file>
@@ -6261,7 +6261,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\system\system_common.h</file>
-         <hash>0dbf2f60b29c97426e70187bc59c652ab5a355f51cfbe3f195ff1c8c6c0b1602</hash>
+         <hash>c9f34bd226f8efab12f5766e77f8355996cd0430b50e0f6ee30258664c494984</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75_DFP\instance\csi.h</file>
@@ -6273,7 +6273,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\peripheral\aic\plib_aic.h</file>
-         <hash>3744d8f5ae1843ce5b3b78bbae13a22a7f22b2f0584db476b657b40cb7850809</hash>
+         <hash>9ff729f3819887a6769c1a4386db9727e6e88fe6bee25960985d9ccd09229a7d</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75_DFP\instance\rstc.h</file>
@@ -6285,7 +6285,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\peripheral\aic\plib_aic.c</file>
-         <hash>070dd40c1714ceef62d715de5a5f54f9ec530fa06671cba4034504f8395112bf</hash>
+         <hash>b237e8497ec0693ed71b287222fdc86f5b6882e1355c53dec6ade4963ab96b16</hash>
       </entry>
       <entry>
          <file>..\src\main.c</file>
@@ -6337,7 +6337,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\peripheral\clk\plib_clk.c</file>
-         <hash>ea4977e9146f6c6377c067543107bfb22e7cf6e655e8c2041dcdf04cf361d814</hash>
+         <hash>0bcf1914fe650350e061f82a68b4bffad538da721f303fb26f55cde4c837be49</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75_DFP\component\sdmmc.h</file>
@@ -6345,11 +6345,15 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\system\int\sys_int_mapping.h</file>
-         <hash>a88ed061ebd75cff98fc9703d2dbd3c868a729737c0d00afff3e0755ab4f8910</hash>
+         <hash>652a7ea6c065e3a4cbcbfaef7c3519fca207fa36de25351875c3ba746dff242b</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\cstartup.S</file>
          <hash>bab52b245ee3ee78ff26156c06ac67761ea78039030859fa772ece111fd5dab3</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X75_DFP\instance\matrix.h</file>
+         <hash>41cc11fa62d646540a2aff17cc34a48d1a0d0590b4905153f8062e63fac6ce2c</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\usb\usb_chapter_9.h</file>
@@ -6358,10 +6362,6 @@
       <entry>
          <file>..\src\config\sam_9x75_eb\usb\src\usb_external_dependencies.h</file>
          <hash>5110f718908d8f79253ce5b4b44172288cc179ff61d18e387f9e90ae9afbb1b6</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAM9X75_DFP\instance\matrix.h</file>
-         <hash>41cc11fa62d646540a2aff17cc34a48d1a0d0590b4905153f8062e63fac6ce2c</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75_DFP\component\syscwp.h</file>
@@ -6385,19 +6385,23 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\system\int\sys_int.h</file>
-         <hash>71e36331ee689ae305b3d8ec49948e3dde0324b65f51bf38f4472b900a421ed6</hash>
+         <hash>dc104ae181fd5309e1bb42896246644fae95915a8e639b23ecfccc8840850274</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\system\cache\sys_cache.h</file>
-         <hash>3407ecac4da455d4b8ba70043f10c20b10e1304e92402db824ca5efa6a2f8402</hash>
+         <hash>b4b3a4e7434759c9bbcd3c6a0ab97558eb2a007f083a4eb76dbedcb2e2c3d86b</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\system\cache\sys_cache.c</file>
-         <hash>96e3cf05b3e24641f89f3726e0f900a28002ae53ccebb23c8cf27563c59d3076</hash>
+         <hash>9754314ec0e099723a3604ecfe12fb6e682cf64cddf01c968ca931d26c448f0e</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75_DFP\component\isc.h</file>
          <hash>d491a2c22e69db4237674c291eb4014aadbfddadc9bfd2c8b22e517d80e38827</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_9x75_eb\sys_tasks.h</file>
+         <hash>21f254f497a18a024cd00128d06c4776c2643f867a460c1ba9880a7dd41a8d56</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75_DFP\instance\bsc.h</file>
@@ -6413,7 +6417,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\initialization.c</file>
-         <hash>7ca1daf3ea81f68c7f52a6a68592b3c53e31d8f13fc33b2696f1e3d65943b666</hash>
+         <hash>2cd8de84a78ba79f25a0932a11edfce00d4952dce80642ab6b341d1c7d1d73bc</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75_DFP\instance\flexcom3.h</file>
@@ -6505,7 +6509,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\driver\usart\src\drv_usart_local.h</file>
-         <hash>971b1920831077d1392314c895d71a465074843e35182827b887d96f5671958b</hash>
+         <hash>67fc75739e4210784198a555a051c1152209250bf0ead10d7c66d56652055fd7</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75_DFP\component\pit.h</file>
@@ -6521,11 +6525,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\driver\usb\udphs\src\drv_usb_udphs_local.h</file>
-         <hash>fba1c93c7fd6379063b24b6697d665487e0acbdb502c9e41ad2c2cbd011ed8a4</hash>
+         <hash>cadaf0b99497e8e094867cfac4f909cc21a2ce1cad05f24f38870ff4cdf4e29f</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\peripheral\pio\plib_pio.c</file>
-         <hash>66df98736c1679e04a8dd8256c1c4a0f9656ee9f5770e9f8cfc2ce5d5de53fb3</hash>
+         <hash>bc5d217ea5face1e97cdc3bfa1a24fd9a94fd9e71e5ed082b192b1218fab167e</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75_DFP\component\smc.h</file>
@@ -6549,7 +6553,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\system\int\src\sys_int.c</file>
-         <hash>f188fc9be907b9be357e526fbba7eb3a14b5fa936d029c3e33d324298aa77548</hash>
+         <hash>5a683ab50cabf3aa131d76d12f4715e103de0e5cce67d22ab26d11665c38614f</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75_DFP\instance\classd.h</file>
@@ -6565,7 +6569,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\osal\osal_definitions.h</file>
-         <hash>0a5ca28c4812bb37babfebc1fe30a90b13583504d81910ad159feb746a5b002c</hash>
+         <hash>5f0a2513a093b6d228e2b50646b204923a82047335a47f3d35a2938309ab6f37</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75_DFP\sam9x75.h</file>
@@ -6577,7 +6581,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\peripheral\dbgu\plib_dbgu_common.h</file>
-         <hash>38ba54965e21e645d68a373d3277c7a4571cabb3ed0ba7e93b7af32a08376e2f</hash>
+         <hash>3a5532ba83c46095ed55db646a9be166772429df5eac103b28c31a562c9cf1a2</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75_DFP\instance\flexcom4.h</file>
@@ -6601,7 +6605,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\tasks.c</file>
-         <hash>72f917cb6c6dc97d268f22117749eb2c269aef2fac75a1d198026dddf1e1cdc8</hash>
+         <hash>3be954c4abca314b5971cf835be26d9ea3cf4c74871ea085905db8ba85c58127</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75_DFP\instance\udphs.h</file>
