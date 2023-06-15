@@ -83,6 +83,7 @@
           <itemPath>../src/config/sam_9x75_eb/interrupts.h</itemPath>
           <itemPath>../src/config/sam_9x75_eb/device.h</itemPath>
           <itemPath>../src/config/sam_9x75_eb/configuration.h</itemPath>
+          <itemPath>../src/config/sam_9x75_eb/sys_tasks.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="packs" displayName="packs" projectFiles="true">
@@ -97,7 +98,6 @@
             <itemPath>../src/packs/SAM9X75_DFP/component/bsc.h</itemPath>
             <itemPath>../src/packs/SAM9X75_DFP/component/mcan.h</itemPath>
             <itemPath>../src/packs/SAM9X75_DFP/component/udphs.h</itemPath>
-            <itemPath>../src/packs/SAM9X75_DFP/component/uhpfs.h</itemPath>
             <itemPath>../src/packs/SAM9X75_DFP/component/csi.h</itemPath>
             <itemPath>../src/packs/SAM9X75_DFP/component/pmc.h</itemPath>
             <itemPath>../src/packs/SAM9X75_DFP/component/xdmac.h</itemPath>
@@ -168,7 +168,6 @@
             <itemPath>../src/packs/SAM9X75_DFP/instance/pmc.h</itemPath>
             <itemPath>../src/packs/SAM9X75_DFP/instance/pit64b1.h</itemPath>
             <itemPath>../src/packs/SAM9X75_DFP/instance/pmerrloc.h</itemPath>
-            <itemPath>../src/packs/SAM9X75_DFP/instance/uhphs_ohci.h</itemPath>
             <itemPath>../src/packs/SAM9X75_DFP/instance/pioc.h</itemPath>
             <itemPath>../src/packs/SAM9X75_DFP/instance/flexcom9.h</itemPath>
             <itemPath>../src/packs/SAM9X75_DFP/instance/mcan1.h</itemPath>
@@ -205,6 +204,8 @@
             <itemPath>../src/packs/SAM9X75_DFP/instance/sfr.h</itemPath>
             <itemPath>../src/packs/SAM9X75_DFP/instance/i2smcc.h</itemPath>
             <itemPath>../src/packs/SAM9X75_DFP/instance/lvdsc.h</itemPath>
+            <itemPath>../src/packs/SAM9X75_DFP/instance/dsi.h</itemPath>
+            <itemPath>../src/packs/SAM9X75_DFP/instance/csi.h</itemPath>
           </logicalFolder>
           <logicalFolder name="pio" displayName="pio" projectFiles="true">
             <itemPath>../src/packs/SAM9X75_DFP/pio/sam9x75.h</itemPath>
@@ -299,13 +300,13 @@
         <targetDevice>SAM9X75</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>samice</platformTool>
+        <platformTool>noID</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.20</languageToolchainVersion>
+        <languageToolchainVersion>4.21</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="SAM9X7_DFP" vendor="Microchip" version="1.2.123"/>
+        <pack name="SAM9X7_DFP" vendor="Microchip" version="1.1.120"/>
       </packs>
       <ScriptingSettings>
         <ScriptingSetting key="boot.load_adr" value=""/>
@@ -343,6 +344,8 @@
       <C32>
         <property key="additional-warnings" value="true"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe"
+                  value="-Wundef -Wshadow -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wno-deprecated-declarations -Wredundant-decls -Wnested-externs -Wlong-long -Wunreachable-code -Wmissing-noreturn "/>
         <property key="enable-app-io" value="false"/>
         <property key="enable-omit-frame-pointer" value="false"/>
         <property key="enable-symbols" value="true"/>
@@ -400,6 +403,7 @@
         <property key="additional-options-use-response-files" value="false"/>
         <property key="additional-options-write-sla" value="false"/>
         <property key="allocate-dinit" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="code-dinit" value="false"/>
         <property key="ebase-addr" value=""/>
         <property key="enable-check-sections" value="false"/>
@@ -439,6 +443,7 @@
       <C32CPP>
         <property key="additional-warnings" value="false"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="check-new" value="false"/>
         <property key="eh-specs" value="true"/>
         <property key="enable-app-io" value="false"/>
