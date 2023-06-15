@@ -83,6 +83,7 @@
           <itemPath>../src/config/sam_9x75_eb/definitions.h</itemPath>
           <itemPath>../src/config/sam_9x75_eb/toolchain_specifics.h</itemPath>
           <itemPath>../src/config/sam_9x75_eb/user.h</itemPath>
+          <itemPath>../src/config/sam_9x75_eb/sys_tasks.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="packs" displayName="packs" projectFiles="true">
@@ -101,7 +102,6 @@
             <itemPath>../src/packs/SAM9X75_DFP/component/udphs.h</itemPath>
             <itemPath>../src/packs/SAM9X75_DFP/component/aic.h</itemPath>
             <itemPath>../src/packs/SAM9X75_DFP/component/matrix.h</itemPath>
-            <itemPath>../src/packs/SAM9X75_DFP/component/uhpfs.h</itemPath>
             <itemPath>../src/packs/SAM9X75_DFP/component/puf.h</itemPath>
             <itemPath>../src/packs/SAM9X75_DFP/component/gmac.h</itemPath>
             <itemPath>../src/packs/SAM9X75_DFP/component/pwm.h</itemPath>
@@ -171,7 +171,6 @@
             <itemPath>../src/packs/SAM9X75_DFP/instance/rtc.h</itemPath>
             <itemPath>../src/packs/SAM9X75_DFP/instance/qspi.h</itemPath>
             <itemPath>../src/packs/SAM9X75_DFP/instance/mcan1.h</itemPath>
-            <itemPath>../src/packs/SAM9X75_DFP/instance/uhphs_ohci.h</itemPath>
             <itemPath>../src/packs/SAM9X75_DFP/instance/dbgu.h</itemPath>
             <itemPath>../src/packs/SAM9X75_DFP/instance/piod.h</itemPath>
             <itemPath>../src/packs/SAM9X75_DFP/instance/gfx2d.h</itemPath>
@@ -205,6 +204,8 @@
             <itemPath>../src/packs/SAM9X75_DFP/instance/udphs.h</itemPath>
             <itemPath>../src/packs/SAM9X75_DFP/instance/otpc.h</itemPath>
             <itemPath>../src/packs/SAM9X75_DFP/instance/flexcom7.h</itemPath>
+            <itemPath>../src/packs/SAM9X75_DFP/instance/csi.h</itemPath>
+            <itemPath>../src/packs/SAM9X75_DFP/instance/dsi.h</itemPath>
           </logicalFolder>
           <logicalFolder name="pio" displayName="pio" projectFiles="true">
             <itemPath>../src/packs/SAM9X75_DFP/pio/sam9x75.h</itemPath>
@@ -303,13 +304,13 @@
         <targetDevice>SAM9X75</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>samice</platformTool>
+        <platformTool>noID</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.20</languageToolchainVersion>
+        <languageToolchainVersion>4.21</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="SAM9X7_DFP" vendor="Microchip" version="1.1.116"/>
+        <pack name="SAM9X7_DFP" vendor="Microchip" version="1.1.120"/>
       </packs>
       <ScriptingSettings>
         <ScriptingSetting key="boot.load_adr" value=""/>
@@ -496,6 +497,7 @@
         <property key="debugoptions.debug-startup" value="Use system settings"/>
         <property key="debugoptions.reset-behaviour" value="Use system settings"/>
         <property key="event.recorder.enabled" value="false"/>
+        <property key="event.recorder.scvd.files" value=""/>
         <property key="jlink.override" value=""/>
         <property key="lastid" value=""/>
         <property key="loader.board_file" value="${ProjectDir}/board.xboard"/>
@@ -528,6 +530,7 @@
         <property key="debugoptions.debug-startup" value="Use system settings"/>
         <property key="debugoptions.reset-behaviour" value="Use system settings"/>
         <property key="event.recorder.enabled" value="false"/>
+        <property key="event.recorder.scvd.files" value=""/>
         <property key="jlink.override" value=""/>
         <property key="lastid" value=""/>
         <property key="loader.board_file" value="${ProjectDir}/board.xboard"/>

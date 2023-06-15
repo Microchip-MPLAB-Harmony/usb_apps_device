@@ -1,7 +1,7 @@
 /*
  * Header file for ATSAM9X75
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,15 +20,16 @@
  *
  */
 
-/* File generated from device description version 2022-01-05T08:57:51Z */
+/* File generated from device description version 2023-01-20T08:33:39Z */
 #ifndef _SAM9X75_H_
 #define _SAM9X75_H_
 
 /* Header version uses Semantic Versioning 2.0.0 (https://semver.org/) */
-#define HEADER_FORMAT_VERSION "2.0.0"
+#define HEADER_FORMAT_VERSION "2.1.0"
 
 #define HEADER_FORMAT_VERSION_MAJOR (2)
-#define HEADER_FORMAT_VERSION_MINOR (0)
+#define HEADER_FORMAT_VERSION_MINOR (1)
+#define HEADER_FORMAT_VERSION_PATCH (0)
 
 /* SAM9X75 definitions
   This file defines all structures and symbols for SAM9X75:
@@ -47,21 +48,21 @@
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #if !defined(SKIP_INTEGER_LITERALS)
-#  if defined(_U_) || defined(_L_) || defined(_UL_)
-#    error "Integer Literals macros already defined elsewhere"
+#  if defined(_UINT8_) || defined(_UINT16_) || defined(_UINT32_)
+#    error "Integer constant value macros already defined elsewhere"
 #  endif
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
-/* Macros that deal with adding suffixes to integer literal constants for C/C++ */
-#  define _U_(x) (x ## U)    /* C code: Unsigned integer literal constant value */
-#  define _L_(x) (x ## L)    /* C code: Long integer literal constant value */
-#  define _UL_(x) (x ## UL)  /* C code: Unsigned Long integer literal constant value */
+/* Macros that deal with sizes of integer constants for C/C++ */
+#  define _UINT8_(x)   ((uint8_t)(x))    /* C code: 8-bits unsigned integer constant value */
+#  define _UINT16_(x)  ((uint16_t)(x))   /* C code: 16-bits unsigned integer constant value */
+#  define _UINT32_(x)  ((uint32_t)(x))   /* C code: 32-bits unsigned integer constant value */
 
 #else /* Assembler */
 
-#  define _U_(x) x    /* Assembler: Unsigned integer literal constant value */
-#  define _L_(x) x    /* Assembler: Long integer literal constant value */
-#  define _UL_(x) x   /* Assembler: Unsigned Long integer literal constant value */
+#  define _UINT8_(x) x    /* Assembler: 8-bits unsigned integer constant value */
+#  define _UINT16_(x) x   /* Assembler: 16-bits unsigned integer constant value */
+#  define _UINT32_(x) x   /* Assembler: 32-bits unsigned integer constant value */
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 #endif /* SKIP_INTEGER_LITERALS */
 
@@ -74,11 +75,11 @@ typedef enum IRQn
 {
 /******  SAM9X75 specific Interrupt Numbers ***********************************/
   EXT_FIQ_IRQn              =   0, /* 0   Advanced Interrupt Controller (AIC) */
-  RTT_IRQn                  =   1, /* 1   Shared between PMC WDT PIT RSTC RTT RTC (RTT) */
+  PIT_IRQn                  =   1, /* 1   Shared between PMC WDT PIT RSTC RTT RTC (PIT) */
+  PMC_IRQn                  =   1, /* 1   Shared between PMC WDT PIT RSTC RTT RTC (PMC) */
   RSTC_IRQn                 =   1, /* 1   Shared between PMC WDT PIT RSTC RTT RTC (RSTC) */
   RTC_IRQn                  =   1, /* 1   Shared between PMC WDT PIT RSTC RTT RTC (RTC) */
-  PMC_IRQn                  =   1, /* 1   Shared between PMC WDT PIT RSTC RTT RTC (PMC) */
-  PIT_IRQn                  =   1, /* 1   Shared between PMC WDT PIT RSTC RTT RTC (PIT) */
+  RTT_IRQn                  =   1, /* 1   Shared between PMC WDT PIT RSTC RTT RTC (RTT) */
   WDT_IRQn                  =   1, /* 1   Shared between PMC WDT PIT RSTC RTT RTC (WDT) */
   PIOA_IRQn                 =   2, /* 2   Parallel Input/Output Controller (PIOA) */
   PIOB_IRQn                 =   3, /* 3   Parallel Input/Output Controller (PIOB) */
@@ -125,11 +126,14 @@ typedef enum IRQn
   TC1_IRQn                  =  45, /* 45  Timer Counter (TC1)                 */
   OTPC_IRQn                 =  46, /* 46  OTP Memory Controller (OTPC)        */
   DBGU_IRQn                 =  47, /* 47  Debug Unit (DBGU)                   */
-  PMERRLOC_IRQn             =  48, /* 48  Shared between PMECC PMERRLOC (PMERRLOC) */
   PMECC_IRQn                =  48, /* 48  Shared between PMECC PMERRLOC (PMECC) */
+  PMERRLOC_IRQn             =  48, /* 48  Shared between PMECC PMERRLOC (PMERRLOC) */
   MPDDRC_IRQn               =  49, /* 49  Shared between MPDDRC SMC (MPDDRC)  */
   SMC_IRQn                  =  49, /* 49  Shared between MPDDRC SMC (SMC)     */
   CSI2DC_IRQn               =  52, /* 52  CSI-2 Demultiplexer Controller (CSI2DC) */
+  CSI_IRQn                  =  53, /* 53  CSI Host Controller (CSI)           */
+  DSI_IRQn                  =  54, /* 54  LCD Controller (DSI)                */
+  MIPIPHY_IRQn              =  55, /* 55   (MIPIPHY)                          */
   LVDSC_IRQn                =  56, /* 56  LVDS Controller (LVDSC)             */
   LVDSPHY_IRQn              =  57, /* 57   (LVDSPHY)                          */
   PIT64B1_IRQn              =  58, /* 58  Periodic Interval Timer 64-bit (PIT64B1) */
@@ -208,7 +212,6 @@ typedef enum IRQn
 #include "component/tdes.h"
 #include "component/trng.h"
 #include "component/udphs.h"
-#include "component/uhpfs.h"
 #include "component/uhphs.h"
 #include "component/wdt.h"
 #include "component/xdmac.h"
@@ -221,8 +224,10 @@ typedef enum IRQn
 #include "instance/aic.h"
 #include "instance/bsc.h"
 #include "instance/classd.h"
+#include "instance/csi.h"
 #include "instance/csi2dc.h"
 #include "instance/dbgu.h"
+#include "instance/dsi.h"
 #include "instance/flexcom0.h"
 #include "instance/flexcom1.h"
 #include "instance/flexcom10.h"
@@ -278,7 +283,6 @@ typedef enum IRQn
 #include "instance/trng.h"
 #include "instance/udphs.h"
 #include "instance/uhphs_ehci.h"
-#include "instance/uhphs_ohci.h"
 #include "instance/wdt.h"
 #include "instance/xdmac.h"
 #include "instance/xlcdc.h"
@@ -335,6 +339,9 @@ typedef enum IRQn
 #define ID_PMECC         ( 48) /* logical-OR interrupt of PMECC and PMERRLOC (PMECC) */
 #define ID_MPDDRC        ( 49) /* logical-OR interrupt of MPDDRC and SMC (MPDDRC) */
 #define ID_CSI2DC        ( 52) /* CSI to Demultiplexer Controller (CSI2DC) */
+#define ID_CSI           ( 53) /* Camera Serial Interface 2 4-Lanes (CSI) */
+#define ID_DSI           ( 54) /* Display Serial Interface 4-Lanes (DSI) */
+#define ID_MIPIPHY       ( 55) /* MIPI DPHY interface (MIPIPHY) */
 #define ID_LVDSC         ( 56) /* Display Serial Interface between XLCDC and LVDS interface (LVDSC) */
 #define ID_LVDSPHY       ( 57) /* LVDS PHY (LVDSPHY) */
 #define ID_PIT64B1       ( 58) /* 64-b Timer 1 (PIT64B1) */
@@ -359,8 +366,10 @@ typedef enum IRQn
 #define AIC_REGS                         ((aic_registers_t*)0xfffff100)                /* AIC Registers Address        */
 #define BSC_REGS                         ((bsc_registers_t*)0xfffffe54)                /* BSC Registers Address        */
 #define CLASSD_REGS                      ((classd_registers_t*)0xf003c000)             /* CLASSD Registers Address     */
+#define CSI_REGS                         ((csi_registers_t*)0xf8058000)                /* CSI Registers Address        */
 #define CSI2DC_REGS                      ((csi2dc_registers_t*)0xf805c000)             /* CSI2DC Registers Address     */
 #define DBGU_REGS                        ((dbgu_registers_t*)0xfffff200)               /* DBGU Registers Address       */
+#define DSI_REGS                         ((dsi_registers_t*)0xf8054000)                /* DSI Registers Address        */
 #define FLEXCOM0_REGS                    ((flexcom_registers_t*)0xf801c000)            /* FLEXCOM0 Registers Address   */
 #define FLEXCOM1_REGS                    ((flexcom_registers_t*)0xf8020000)            /* FLEXCOM1 Registers Address   */
 #define FLEXCOM2_REGS                    ((flexcom_registers_t*)0xf8024000)            /* FLEXCOM2 Registers Address   */
@@ -416,7 +425,6 @@ typedef enum IRQn
 #define TDES_REGS                        ((tdes_registers_t*)0xf0038000)               /* TDES Registers Address       */
 #define TRNG_REGS                        ((trng_registers_t*)0xf0030000)               /* TRNG Registers Address       */
 #define UDPHS_REGS                       ((udphs_registers_t*)0xf803c000)              /* UDPHS Registers Address      */
-#define UHPHS_OHCI_REGS                  ((uhpfs_registers_t*)0x00600000)              /* UHPHS_OHCI Registers Address */
 #define UHPHS_EHCI_REGS                  ((uhphs_registers_t*)0x00700000)              /* UHPHS_EHCI Registers Address */
 #define WDT_REGS                         ((wdt_registers_t*)0xffffff80)                /* WDT Registers Address        */
 #define XDMAC_REGS                       ((xdmac_registers_t*)0xf0008000)              /* XDMAC Registers Address      */
@@ -425,72 +433,73 @@ typedef enum IRQn
 /* ************************************************************************** */
 /*   BASE ADDRESS DEFINITIONS FOR SAM9X75                                     */
 /* ************************************************************************** */
-#define ADC_BASE_ADDRESS                 _UL_(0xf804c000)                              /* ADC Base Address */
-#define AES_BASE_ADDRESS                 _UL_(0xf0034000)                              /* AES Base Address */
-#define AIC_BASE_ADDRESS                 _UL_(0xfffff100)                              /* AIC Base Address */
-#define BSC_BASE_ADDRESS                 _UL_(0xfffffe54)                              /* BSC Base Address */
-#define CLASSD_BASE_ADDRESS              _UL_(0xf003c000)                              /* CLASSD Base Address */
-#define CSI2DC_BASE_ADDRESS              _UL_(0xf805c000)                              /* CSI2DC Base Address */
-#define DBGU_BASE_ADDRESS                _UL_(0xfffff200)                              /* DBGU Base Address */
-#define FLEXCOM0_BASE_ADDRESS            _UL_(0xf801c000)                              /* FLEXCOM0 Base Address */
-#define FLEXCOM1_BASE_ADDRESS            _UL_(0xf8020000)                              /* FLEXCOM1 Base Address */
-#define FLEXCOM2_BASE_ADDRESS            _UL_(0xf8024000)                              /* FLEXCOM2 Base Address */
-#define FLEXCOM3_BASE_ADDRESS            _UL_(0xf8028000)                              /* FLEXCOM3 Base Address */
-#define FLEXCOM4_BASE_ADDRESS            _UL_(0xf0000000)                              /* FLEXCOM4 Base Address */
-#define FLEXCOM5_BASE_ADDRESS            _UL_(0xf0004000)                              /* FLEXCOM5 Base Address */
-#define FLEXCOM6_BASE_ADDRESS            _UL_(0xf8010000)                              /* FLEXCOM6 Base Address */
-#define FLEXCOM7_BASE_ADDRESS            _UL_(0xf8014000)                              /* FLEXCOM7 Base Address */
-#define FLEXCOM8_BASE_ADDRESS            _UL_(0xf8018000)                              /* FLEXCOM8 Base Address */
-#define FLEXCOM9_BASE_ADDRESS            _UL_(0xf8040000)                              /* FLEXCOM9 Base Address */
-#define FLEXCOM10_BASE_ADDRESS           _UL_(0xf8044000)                              /* FLEXCOM10 Base Address */
-#define FLEXCOM11_BASE_ADDRESS           _UL_(0xf0020000)                              /* FLEXCOM11 Base Address */
-#define FLEXCOM12_BASE_ADDRESS           _UL_(0xf0024000)                              /* FLEXCOM12 Base Address */
-#define GFX2D_BASE_ADDRESS               _UL_(0xf0018000)                              /* GFX2D Base Address */
-#define GMAC_BASE_ADDRESS                _UL_(0xf802c000)                              /* GMAC Base Address */
-#define GPBR_BASE_ADDRESS                _UL_(0xfffffe60)                              /* GPBR Base Address */
-#define I2SMCC_BASE_ADDRESS              _UL_(0xf001c000)                              /* I2SMCC Base Address */
-#define ISC_BASE_ADDRESS                 _UL_(0xf8048000)                              /* ISC Base Address */
-#define XLCDC_BASE_ADDRESS               _UL_(0xf8038000)                              /* XLCDC Base Address */
-#define LVDSC_BASE_ADDRESS               _UL_(0xf8060000)                              /* LVDSC Base Address */
-#define MATRIX_BASE_ADDRESS              _UL_(0xffffde00)                              /* MATRIX Base Address */
-#define MCAN0_BASE_ADDRESS               _UL_(0xf8000000)                              /* MCAN0 Base Address */
-#define MCAN1_BASE_ADDRESS               _UL_(0xf8004000)                              /* MCAN1 Base Address */
-#define MPDDRC_BASE_ADDRESS              _UL_(0xffffe800)                              /* MPDDRC Base Address */
-#define OTPC_BASE_ADDRESS                _UL_(0xeff00000)                              /* OTPC Base Address */
-#define PIOA_BASE_ADDRESS                _UL_(0xfffff400)                              /* PIOA Base Address */
-#define PIOB_BASE_ADDRESS                _UL_(0xfffff600)                              /* PIOB Base Address */
-#define PIOC_BASE_ADDRESS                _UL_(0xfffff800)                              /* PIOC Base Address */
-#define PIOD_BASE_ADDRESS                _UL_(0xfffffa00)                              /* PIOD Base Address */
-#define PIT_BASE_ADDRESS                 _UL_(0xfffffe40)                              /* PIT Base Address */
-#define PIT64B0_BASE_ADDRESS             _UL_(0xf0028000)                              /* PIT64B0 Base Address */
-#define PIT64B1_BASE_ADDRESS             _UL_(0xf0040000)                              /* PIT64B1 Base Address */
-#define PMC_BASE_ADDRESS                 _UL_(0xfffffc00)                              /* PMC Base Address */
-#define PMECC_BASE_ADDRESS               _UL_(0xffffe000)                              /* PMECC Base Address */
-#define PMERRLOC_BASE_ADDRESS            _UL_(0xffffe600)                              /* PMERRLOC Base Address */
-#define PUF_BASE_ADDRESS                 _UL_(0xf8030000)                              /* PUF Base Address */
-#define PWM_BASE_ADDRESS                 _UL_(0xf8034000)                              /* PWM Base Address */
-#define QSPI_BASE_ADDRESS                _UL_(0xf0014000)                              /* QSPI Base Address */
-#define RSTC_BASE_ADDRESS                _UL_(0xfffffe00)                              /* RSTC Base Address */
-#define RTC_BASE_ADDRESS                 _UL_(0xfffffea8)                              /* RTC Base Address */
-#define RTT_BASE_ADDRESS                 _UL_(0xfffffe20)                              /* RTT Base Address */
-#define SCKC_BASE_ADDRESS                _UL_(0xfffffe50)                              /* SCKC Base Address */
-#define SDMMC0_BASE_ADDRESS              _UL_(0x80000000)                              /* SDMMC0 Base Address */
-#define SDMMC1_BASE_ADDRESS              _UL_(0x90000000)                              /* SDMMC1 Base Address */
-#define SFR_BASE_ADDRESS                 _UL_(0xf8050000)                              /* SFR Base Address */
-#define SHA_BASE_ADDRESS                 _UL_(0xf002c000)                              /* SHA Base Address */
-#define SHDWC_BASE_ADDRESS               _UL_(0xfffffe10)                              /* SHDWC Base Address */
-#define SMC_BASE_ADDRESS                 _UL_(0xffffea00)                              /* SMC Base Address */
-#define SSC_BASE_ADDRESS                 _UL_(0xf0010000)                              /* SSC Base Address */
-#define SYSCWP_BASE_ADDRESS              _UL_(0xfffffedc)                              /* SYSCWP Base Address */
-#define TC0_BASE_ADDRESS                 _UL_(0xf8008000)                              /* TC0 Base Address */
-#define TC1_BASE_ADDRESS                 _UL_(0xf800c000)                              /* TC1 Base Address */
-#define TDES_BASE_ADDRESS                _UL_(0xf0038000)                              /* TDES Base Address */
-#define TRNG_BASE_ADDRESS                _UL_(0xf0030000)                              /* TRNG Base Address */
-#define UDPHS_BASE_ADDRESS               _UL_(0xf803c000)                              /* UDPHS Base Address */
-#define UHPHS_OHCI_BASE_ADDRESS          _UL_(0x00600000)                              /* UHPHS_OHCI Base Address */
-#define UHPHS_EHCI_BASE_ADDRESS          _UL_(0x00700000)                              /* UHPHS_EHCI Base Address */
-#define WDT_BASE_ADDRESS                 _UL_(0xffffff80)                              /* WDT Base Address */
-#define XDMAC_BASE_ADDRESS               _UL_(0xf0008000)                              /* XDMAC Base Address */
+#define ADC_BASE_ADDRESS                 _UINT32_(0xf804c000)                          /* ADC Base Address */
+#define AES_BASE_ADDRESS                 _UINT32_(0xf0034000)                          /* AES Base Address */
+#define AIC_BASE_ADDRESS                 _UINT32_(0xfffff100)                          /* AIC Base Address */
+#define BSC_BASE_ADDRESS                 _UINT32_(0xfffffe54)                          /* BSC Base Address */
+#define CLASSD_BASE_ADDRESS              _UINT32_(0xf003c000)                          /* CLASSD Base Address */
+#define CSI_BASE_ADDRESS                 _UINT32_(0xf8058000)                          /* CSI Base Address */
+#define CSI2DC_BASE_ADDRESS              _UINT32_(0xf805c000)                          /* CSI2DC Base Address */
+#define DBGU_BASE_ADDRESS                _UINT32_(0xfffff200)                          /* DBGU Base Address */
+#define DSI_BASE_ADDRESS                 _UINT32_(0xf8054000)                          /* DSI Base Address */
+#define FLEXCOM0_BASE_ADDRESS            _UINT32_(0xf801c000)                          /* FLEXCOM0 Base Address */
+#define FLEXCOM1_BASE_ADDRESS            _UINT32_(0xf8020000)                          /* FLEXCOM1 Base Address */
+#define FLEXCOM2_BASE_ADDRESS            _UINT32_(0xf8024000)                          /* FLEXCOM2 Base Address */
+#define FLEXCOM3_BASE_ADDRESS            _UINT32_(0xf8028000)                          /* FLEXCOM3 Base Address */
+#define FLEXCOM4_BASE_ADDRESS            _UINT32_(0xf0000000)                          /* FLEXCOM4 Base Address */
+#define FLEXCOM5_BASE_ADDRESS            _UINT32_(0xf0004000)                          /* FLEXCOM5 Base Address */
+#define FLEXCOM6_BASE_ADDRESS            _UINT32_(0xf8010000)                          /* FLEXCOM6 Base Address */
+#define FLEXCOM7_BASE_ADDRESS            _UINT32_(0xf8014000)                          /* FLEXCOM7 Base Address */
+#define FLEXCOM8_BASE_ADDRESS            _UINT32_(0xf8018000)                          /* FLEXCOM8 Base Address */
+#define FLEXCOM9_BASE_ADDRESS            _UINT32_(0xf8040000)                          /* FLEXCOM9 Base Address */
+#define FLEXCOM10_BASE_ADDRESS           _UINT32_(0xf8044000)                          /* FLEXCOM10 Base Address */
+#define FLEXCOM11_BASE_ADDRESS           _UINT32_(0xf0020000)                          /* FLEXCOM11 Base Address */
+#define FLEXCOM12_BASE_ADDRESS           _UINT32_(0xf0024000)                          /* FLEXCOM12 Base Address */
+#define GFX2D_BASE_ADDRESS               _UINT32_(0xf0018000)                          /* GFX2D Base Address */
+#define GMAC_BASE_ADDRESS                _UINT32_(0xf802c000)                          /* GMAC Base Address */
+#define GPBR_BASE_ADDRESS                _UINT32_(0xfffffe60)                          /* GPBR Base Address */
+#define I2SMCC_BASE_ADDRESS              _UINT32_(0xf001c000)                          /* I2SMCC Base Address */
+#define ISC_BASE_ADDRESS                 _UINT32_(0xf8048000)                          /* ISC Base Address */
+#define XLCDC_BASE_ADDRESS               _UINT32_(0xf8038000)                          /* XLCDC Base Address */
+#define LVDSC_BASE_ADDRESS               _UINT32_(0xf8060000)                          /* LVDSC Base Address */
+#define MATRIX_BASE_ADDRESS              _UINT32_(0xffffde00)                          /* MATRIX Base Address */
+#define MCAN0_BASE_ADDRESS               _UINT32_(0xf8000000)                          /* MCAN0 Base Address */
+#define MCAN1_BASE_ADDRESS               _UINT32_(0xf8004000)                          /* MCAN1 Base Address */
+#define MPDDRC_BASE_ADDRESS              _UINT32_(0xffffe800)                          /* MPDDRC Base Address */
+#define OTPC_BASE_ADDRESS                _UINT32_(0xeff00000)                          /* OTPC Base Address */
+#define PIOA_BASE_ADDRESS                _UINT32_(0xfffff400)                          /* PIOA Base Address */
+#define PIOB_BASE_ADDRESS                _UINT32_(0xfffff600)                          /* PIOB Base Address */
+#define PIOC_BASE_ADDRESS                _UINT32_(0xfffff800)                          /* PIOC Base Address */
+#define PIOD_BASE_ADDRESS                _UINT32_(0xfffffa00)                          /* PIOD Base Address */
+#define PIT_BASE_ADDRESS                 _UINT32_(0xfffffe40)                          /* PIT Base Address */
+#define PIT64B0_BASE_ADDRESS             _UINT32_(0xf0028000)                          /* PIT64B0 Base Address */
+#define PIT64B1_BASE_ADDRESS             _UINT32_(0xf0040000)                          /* PIT64B1 Base Address */
+#define PMC_BASE_ADDRESS                 _UINT32_(0xfffffc00)                          /* PMC Base Address */
+#define PMECC_BASE_ADDRESS               _UINT32_(0xffffe000)                          /* PMECC Base Address */
+#define PMERRLOC_BASE_ADDRESS            _UINT32_(0xffffe600)                          /* PMERRLOC Base Address */
+#define PUF_BASE_ADDRESS                 _UINT32_(0xf8030000)                          /* PUF Base Address */
+#define PWM_BASE_ADDRESS                 _UINT32_(0xf8034000)                          /* PWM Base Address */
+#define QSPI_BASE_ADDRESS                _UINT32_(0xf0014000)                          /* QSPI Base Address */
+#define RSTC_BASE_ADDRESS                _UINT32_(0xfffffe00)                          /* RSTC Base Address */
+#define RTC_BASE_ADDRESS                 _UINT32_(0xfffffea8)                          /* RTC Base Address */
+#define RTT_BASE_ADDRESS                 _UINT32_(0xfffffe20)                          /* RTT Base Address */
+#define SCKC_BASE_ADDRESS                _UINT32_(0xfffffe50)                          /* SCKC Base Address */
+#define SDMMC0_BASE_ADDRESS              _UINT32_(0x80000000)                          /* SDMMC0 Base Address */
+#define SDMMC1_BASE_ADDRESS              _UINT32_(0x90000000)                          /* SDMMC1 Base Address */
+#define SFR_BASE_ADDRESS                 _UINT32_(0xf8050000)                          /* SFR Base Address */
+#define SHA_BASE_ADDRESS                 _UINT32_(0xf002c000)                          /* SHA Base Address */
+#define SHDWC_BASE_ADDRESS               _UINT32_(0xfffffe10)                          /* SHDWC Base Address */
+#define SMC_BASE_ADDRESS                 _UINT32_(0xffffea00)                          /* SMC Base Address */
+#define SSC_BASE_ADDRESS                 _UINT32_(0xf0010000)                          /* SSC Base Address */
+#define SYSCWP_BASE_ADDRESS              _UINT32_(0xfffffedc)                          /* SYSCWP Base Address */
+#define TC0_BASE_ADDRESS                 _UINT32_(0xf8008000)                          /* TC0 Base Address */
+#define TC1_BASE_ADDRESS                 _UINT32_(0xf800c000)                          /* TC1 Base Address */
+#define TDES_BASE_ADDRESS                _UINT32_(0xf0038000)                          /* TDES Base Address */
+#define TRNG_BASE_ADDRESS                _UINT32_(0xf0030000)                          /* TRNG Base Address */
+#define UDPHS_BASE_ADDRESS               _UINT32_(0xf803c000)                          /* UDPHS Base Address */
+#define UHPHS_EHCI_BASE_ADDRESS          _UINT32_(0x00700000)                          /* UHPHS_EHCI Base Address */
+#define WDT_BASE_ADDRESS                 _UINT32_(0xffffff80)                          /* WDT Base Address */
+#define XDMAC_BASE_ADDRESS               _UINT32_(0xf0008000)                          /* XDMAC Base Address */
 
 /* ************************************************************************** */
 /*   PIO DEFINITIONS FOR SAM9X75                                              */
@@ -500,47 +509,48 @@ typedef enum IRQn
 /* ************************************************************************** */
 /*   MEMORY MAPPING DEFINITIONS FOR SAM9X75                                   */
 /* ************************************************************************** */
+#define ECC_ROM_SIZE                   _UINT32_(0x00100000)    /* 1024kB Memory segment type: rom */
+#define SRAM0_SIZE                     _UINT32_(0x00100000)    /* 1024kB Memory segment type: ram */
+#define SRAM1_SIZE                     _UINT32_(0x00100000)    /* 1024kB Memory segment type: ram */
+#define UDPHS_RAM_SIZE                 _UINT32_(0x00100000)    /* 1024kB Memory segment type: ram */
+#define UHPHS_OHCI_SIZE                _UINT32_(0x00100000)    /* 1024kB Memory segment type: ram */
+#define UHPHS_EHCI_SIZE                _UINT32_(0x00100000)    /* 1024kB Memory segment type: ram */
+#define EBI_CS0_SIZE                   _UINT32_(0x10000000)    /* 262144kB Memory segment type: ram */
+#define EBI_CS1_SIZE                   _UINT32_(0x10000000)    /* 262144kB Memory segment type: ram */
+#define EBI_MPDDR_SIZE                 _UINT32_(0x10000000)    /* 262144kB Memory segment type: ram */
+#define SDRAM_CS_SIZE                  _UINT32_(0x10000000)    /* 262144kB Memory segment type: ram */
+#define EBI_CS2_SIZE                   _UINT32_(0x10000000)    /* 262144kB Memory segment type: ram */
+#define EBI_NF_SIZE                    _UINT32_(0x10000000)    /* 262144kB Memory segment type: ram */
+#define QSPIMEM_SIZE                   _UINT32_(0x20000000)    /* 524288kB Memory segment type: ram */
+#define SDMMC0_SIZE                    _UINT32_(0x10000000)    /* 262144kB Memory segment type: ram */
+#define SDMMC1_SIZE                    _UINT32_(0x10000000)    /* 262144kB Memory segment type: ram */
+#define CSI2DC_META_SIZE               _UINT32_(0x00100000)    /* 1024kB Memory segment type: ram */
+#define OTPC_SIZE                      _UINT32_(0x00001000)    /*    4kB Memory segment type: ram */
 
-#define ECC_ROM_SIZE                   _UL_(0x00100000)    /* 1024kB Memory segment type: rom */
-#define IRAM0_SIZE                     _UL_(0x00100000)    /* 1024kB Memory segment type: ram */
-#define IRAM1_SIZE                     _UL_(0x00100000)    /* 1024kB Memory segment type: ram */
-#define UDPHS_RAM_SIZE                 _UL_(0x00100000)    /* 1024kB Memory segment type: ram */
-#define UHPHS_OHCI_SIZE                _UL_(0x00100000)    /* 1024kB Memory segment type: ram */
-#define UHPHS_EHCI_SIZE                _UL_(0x00100000)    /* 1024kB Memory segment type: ram */
-#define EBI_CS0_SIZE                   _UL_(0x10000000)    /* 262144kB Memory segment type: ram */
-#define EBI_CS1_SIZE                   _UL_(0x10000000)    /* 262144kB Memory segment type: ram */
-#define EBI_MPDDR_SIZE                 _UL_(0x10000000)    /* 262144kB Memory segment type: ram */
-#define EBI_CS2_SIZE                   _UL_(0x10000000)    /* 262144kB Memory segment type: ram */
-#define EBI_NF_SIZE                    _UL_(0x10000000)    /* 262144kB Memory segment type: ram */
-#define QSPI_MEM_SIZE                  _UL_(0x20000000)    /* 524288kB Memory segment type: ram */
-#define SDMMC0_SIZE                    _UL_(0x10000000)    /* 262144kB Memory segment type: ram */
-#define SDMMC1_SIZE                    _UL_(0x10000000)    /* 262144kB Memory segment type: ram */
-#define CSI2DC_META_SIZE               _UL_(0x00100000)    /* 1024kB Memory segment type: ram */
-#define OTPC_SIZE                      _UL_(0x00001000)    /*    4kB Memory segment type: ram */
-
-#define ECC_ROM_ADDR                   _UL_(0x00100000)    /* ECC_ROM base address (type: rom)*/
-#define IRAM0_ADDR                     _UL_(0x00300000)    /* IRAM0 base address (type: ram)*/
-#define IRAM1_ADDR                     _UL_(0x00400000)    /* IRAM1 base address (type: ram)*/
-#define UDPHS_RAM_ADDR                 _UL_(0x00500000)    /* UDPHS_RAM base address (type: ram)*/
-#define UHPHS_OHCI_ADDR                _UL_(0x00600000)    /* UHPHS_OHCI base address (type: ram)*/
-#define UHPHS_EHCI_ADDR                _UL_(0x00700000)    /* UHPHS_EHCI base address (type: ram)*/
-#define EBI_CS0_ADDR                   _UL_(0x10000000)    /* EBI_CS0 base address (type: ram)*/
-#define EBI_CS1_ADDR                   _UL_(0x20000000)    /* EBI_CS1 base address (type: ram)*/
-#define EBI_MPDDR_ADDR                 _UL_(0x20000000)    /* EBI_MPDDR base address (type: ram)*/
-#define EBI_CS2_ADDR                   _UL_(0x30000000)    /* EBI_CS2 base address (type: ram)*/
-#define EBI_NF_ADDR                    _UL_(0x30000000)    /* EBI_NF base address (type: ram)*/
-#define QSPI_MEM_ADDR                  _UL_(0x60000000)    /* QSPI_MEM base address (type: ram)*/
-#define SDMMC0_ADDR                    _UL_(0x80000000)    /* SDMMC0 base address (type: ram)*/
-#define SDMMC1_ADDR                    _UL_(0x90000000)    /* SDMMC1 base address (type: ram)*/
-#define CSI2DC_META_ADDR               _UL_(0xd0000000)    /* CSI2DC_META base address (type: ram)*/
-#define OTPC_ADDR                      _UL_(0xeff00000)    /* OTPC base address (type: ram)*/
+#define ECC_ROM_ADDR                   _UINT32_(0x00100000)    /* ECC_ROM base address (type: rom)*/
+#define SRAM0_ADDR                     _UINT32_(0x00300000)    /* SRAM0 base address (type: ram)*/
+#define SRAM1_ADDR                     _UINT32_(0x00400000)    /* SRAM1 base address (type: ram)*/
+#define UDPHS_RAM_ADDR                 _UINT32_(0x00500000)    /* UDPHS_RAM base address (type: ram)*/
+#define UHPHS_OHCI_ADDR                _UINT32_(0x00600000)    /* UHPHS_OHCI base address (type: ram)*/
+#define UHPHS_EHCI_ADDR                _UINT32_(0x00700000)    /* UHPHS_EHCI base address (type: ram)*/
+#define EBI_CS0_ADDR                   _UINT32_(0x10000000)    /* EBI_CS0 base address (type: ram)*/
+#define EBI_CS1_ADDR                   _UINT32_(0x20000000)    /* EBI_CS1 base address (type: ram)*/
+#define EBI_MPDDR_ADDR                 _UINT32_(0x20000000)    /* EBI_MPDDR base address (type: ram)*/
+#define SDRAM_CS_ADDR                  _UINT32_(0x20000000)    /* SDRAM_CS base address (type: ram)*/
+#define EBI_CS2_ADDR                   _UINT32_(0x30000000)    /* EBI_CS2 base address (type: ram)*/
+#define EBI_NF_ADDR                    _UINT32_(0x30000000)    /* EBI_NF base address (type: ram)*/
+#define QSPIMEM_ADDR                   _UINT32_(0x60000000)    /* QSPIMEM base address (type: ram)*/
+#define SDMMC0_ADDR                    _UINT32_(0x80000000)    /* SDMMC0 base address (type: ram)*/
+#define SDMMC1_ADDR                    _UINT32_(0x90000000)    /* SDMMC1 base address (type: ram)*/
+#define CSI2DC_META_ADDR               _UINT32_(0xd0000000)    /* CSI2DC_META base address (type: ram)*/
+#define OTPC_ADDR                      _UINT32_(0xeff00000)    /* OTPC base address (type: ram)*/
 
 /* ************************************************************************** */
 /*   DEVICE SIGNATURES FOR SAM9X75                                            */
 /* ************************************************************************** */
-#define CHIP_JTAGID                    _UL_(0X00000000)
-#define CHIP_CIDR                      _UL_(0X89750030)
-#define CHIP_EXID                      _UL_(0X00000000)
+#define CHIP_JTAGID                    _UINT32_(0X00000000)
+#define CHIP_CIDR                      _UINT32_(0X89750030)
+#define CHIP_EXID                      _UINT32_(0X00000085)
 
 /* ************************************************************************** */
 /*   ELECTRICAL DEFINITIONS FOR SAM9X75                                       */
