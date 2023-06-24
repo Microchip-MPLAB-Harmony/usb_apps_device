@@ -91,9 +91,6 @@ uint8_t receivedDataBuffer[512] CACHE_ALIGN;
 /* Transmit data buffer */
 uint8_t  transmitDataBuffer[512] CACHE_ALIGN;
 
-/* The endpoint size is 64 for FS and 512 for HS */
-uint16_t endpointSize;
-
 // *****************************************************************************
 // *****************************************************************************
 // Section: Application Callback Functions
@@ -280,23 +277,23 @@ void APP_Tasks (void )
             {
                 if (USB_DEVICE_ActiveSpeedGet(appData.usbDevHandle) == USB_SPEED_FULL)
                 {
-                    endpointSize = 64;
+                    appData.endpointMaxPktSize = 64;
                 }
                 else if (USB_DEVICE_ActiveSpeedGet(appData.usbDevHandle) == USB_SPEED_HIGH)
                 {
-                    endpointSize = 512;
+                    appData.endpointMaxPktSize = 512;
                 }
                 if (USB_DEVICE_EndpointIsEnabled(appData.usbDevHandle, appData.endpointRx) == false )
                 {
                     /* Enable Read Endpoint */
                     USB_DEVICE_EndpointEnable(appData.usbDevHandle, 0, appData.endpointRx,
-                            USB_TRANSFER_TYPE_BULK, endpointSize);
+                            USB_TRANSFER_TYPE_BULK, appData.endpointMaxPktSize);
                 }
                 if (USB_DEVICE_EndpointIsEnabled(appData.usbDevHandle, appData.endpointTx) == false )
                 {
                     /* Enable Write Endpoint */
                     USB_DEVICE_EndpointEnable(appData.usbDevHandle, 0, appData.endpointTx,
-                            USB_TRANSFER_TYPE_BULK, endpointSize);
+                            USB_TRANSFER_TYPE_BULK, appData.endpointMaxPktSize);
                 }
                 /* Indicate that we are waiting for read */
                 appData.epDataReadPending = true;

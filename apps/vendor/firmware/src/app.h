@@ -160,6 +160,8 @@ typedef struct
     /* Switch debounce timer count */
     unsigned int debounceCount;
 
+    /* The endpoint size is 64 for FS and 512 for HS */
+    uint16_t endpointMaxPktSize;
 
 } APP_DATA;
 
