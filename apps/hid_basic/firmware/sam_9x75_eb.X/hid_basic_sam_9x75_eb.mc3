@@ -1,21 +1,5 @@
 <config configName="sam_9x75_eb" projectName="hid_basic_sam_9x75_eb" configVersion="1.1" device="SAM9X75" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.5.0">
-   <usedPackages class="java.util.ArrayList">
-      <package packageName="bsp" version="3.13.0" contentType="HARMONY">
-         <modules class="java.util.ArrayList"/>
-      </package>
-      <package packageName="core" version="3.11.0" contentType="HARMONY">
-         <modules class="java.util.ArrayList"/>
-      </package>
-      <package packageName="csp" version="3.13.0" contentType="HARMONY">
-         <modules class="java.util.ArrayList"/>
-      </package>
-      <package packageName="dev_packs" version="3.13.0" contentType="HARMONY">
-         <modules class="java.util.ArrayList"/>
-      </package>
-      <package packageName="usb" version="" contentType="HARMONY">
-         <modules class="java.util.ArrayList"/>
-      </package>
-   </usedPackages>
+   <usedPackages class="java.util.ArrayList"/>
    <usedClasses class="java.util.TreeMap">
       <entry>
          <string>BSP_SAM_9X75_Evaluation_Board</string>

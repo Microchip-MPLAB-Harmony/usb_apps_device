@@ -1,21 +1,5 @@
 <config configName="sam_e70_xult" projectName="hid_keyboard_sam_e70_xult" configVersion="1.1" device="ATSAME70Q21B" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.5.0">
-   <usedPackages class="java.util.ArrayList">
-      <package packageName="bsp" version="3.15.0" contentType="HARMONY">
-         <modules class="java.util.ArrayList"/>
-      </package>
-      <package packageName="core" version="3.12.0" contentType="HARMONY">
-         <modules class="java.util.ArrayList"/>
-      </package>
-      <package packageName="csp" version="3.16.0" contentType="HARMONY">
-         <modules class="java.util.ArrayList"/>
-      </package>
-      <package packageName="dev_packs" version="3.16.0" contentType="HARMONY">
-         <modules class="java.util.ArrayList"/>
-      </package>
-      <package packageName="usb" version="" contentType="HARMONY">
-         <modules class="java.util.ArrayList"/>
-      </package>
-   </usedPackages>
+   <usedPackages class="java.util.ArrayList"/>
    <usedClasses class="java.util.TreeMap">
       <entry>
          <string>BSP_SAM_E70_Xplained_Ultra</string>

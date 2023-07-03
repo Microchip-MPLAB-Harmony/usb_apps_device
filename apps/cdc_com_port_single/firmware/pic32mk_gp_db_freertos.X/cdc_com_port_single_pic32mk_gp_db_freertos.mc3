@@ -1,24 +1,5 @@
 <config configName="pic32mk_gp_db_freertos" projectName="cdc_com_port_single_pic32mk_gp_db_freertos" configVersion="1.1" device="PIC32MK1024GPE100" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.4.14">
-   <usedPackages class="java.util.ArrayList">
-      <package packageName="CMSIS-FreeRTOS" version="10.4.6" contentType="HARMONY">
-         <modules class="java.util.ArrayList"/>
-      </package>
-      <package packageName="bsp" version="3.15.0-E1" contentType="HARMONY">
-         <modules class="java.util.ArrayList"/>
-      </package>
-      <package packageName="core" version="3.11.1" contentType="HARMONY">
-         <modules class="java.util.ArrayList"/>
-      </package>
-      <package packageName="csp" version="3.15.0-E1" contentType="HARMONY">
-         <modules class="java.util.ArrayList"/>
-      </package>
-      <package packageName="dev_packs" version="3.15.0-E1" contentType="HARMONY">
-         <modules class="java.util.ArrayList"/>
-      </package>
-      <package packageName="usb" version="" contentType="HARMONY">
-         <modules class="java.util.ArrayList"/>
-      </package>
-   </usedPackages>
+   <usedPackages class="java.util.ArrayList"/>
    <usedClasses class="java.util.TreeMap">
       <entry>
          <string>BSP_PIC32MK_GP_Development_Kit</string>

@@ -1,21 +1,5 @@
 <config configName="pic32cz_ca80_curiosity_ultra" projectName="pic32cz_ca80_curiosity_ultra" configVersion="1.1" device="PIC32CZ8110CA80208" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.4.14">
-   <usedPackages class="java.util.ArrayList">
-      <package packageName="bsp" version="" contentType="HARMONY">
-         <modules class="java.util.ArrayList"/>
-      </package>
-      <package packageName="core" version="3.11.1" contentType="HARMONY">
-         <modules class="java.util.ArrayList"/>
-      </package>
-      <package packageName="csp" version="3.13.1" contentType="HARMONY">
-         <modules class="java.util.ArrayList"/>
-      </package>
-      <package packageName="dev_packs" version="3.13.1" contentType="HARMONY">
-         <modules class="java.util.ArrayList"/>
-      </package>
-      <package packageName="usb" version="" contentType="HARMONY">
-         <modules class="java.util.ArrayList"/>
-      </package>
-   </usedPackages>
+   <usedPackages class="java.util.ArrayList"/>
    <usedClasses class="java.util.TreeMap">
       <entry>
          <string>BSP_PIC32CZ_CA80_Curiosity_Ultra</string>

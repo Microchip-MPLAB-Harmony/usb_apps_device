@@ -1,21 +1,5 @@
 <config configName="sam_l21_xpro" projectName="cdc_com_port_single_sam_l21_xpro" configVersion="1.1" device="ATSAML21J18B" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.5.0">
-   <usedPackages class="java.util.ArrayList">
-      <package packageName="bsp" version="3.15.0" contentType="HARMONY">
-         <modules class="java.util.ArrayList"/>
-      </package>
-      <package packageName="core" version="3.12.0" contentType="HARMONY">
-         <modules class="java.util.ArrayList"/>
-      </package>
-      <package packageName="csp" version="3.16.0" contentType="HARMONY">
-         <modules class="java.util.ArrayList"/>
-      </package>
-      <package packageName="dev_packs" version="3.16.0" contentType="HARMONY">
-         <modules class="java.util.ArrayList"/>
-      </package>
-      <package packageName="usb" version="3.11.0-E2" contentType="HARMONY">
-         <modules class="java.util.ArrayList"/>
-      </package>
-   </usedPackages>
+   <usedPackages class="java.util.ArrayList"/>
    <usedClasses class="java.util.TreeMap">
       <entry>
          <string>BSP_SAM_L21_Xplained_Pro</string>

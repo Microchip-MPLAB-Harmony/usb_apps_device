@@ -1,21 +1,5 @@
 <config configName="sam_e54_xpro" projectName="sam_e54_xpro" configVersion="1.1" device="ATSAME54P20A" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.4.4">
-   <usedPackages class="java.util.ArrayList">
-      <package packageName="bsp" version="3.13.0" contentType="HARMONY">
-         <modules class="java.util.ArrayList"/>
-      </package>
-      <package packageName="core" version="3.11.0" contentType="HARMONY">
-         <modules class="java.util.ArrayList"/>
-      </package>
-      <package packageName="csp" version="" contentType="HARMONY">
-         <modules class="java.util.ArrayList"/>
-      </package>
-      <package packageName="dev_packs" version="3.13.0" contentType="HARMONY">
-         <modules class="java.util.ArrayList"/>
-      </package>
-      <package packageName="usb" version="3.10.0" contentType="HARMONY">
-         <modules class="java.util.ArrayList"/>
-      </package>
-   </usedPackages>
+   <usedPackages class="java.util.ArrayList"/>
    <usedClasses class="java.util.TreeMap">
       <entry>
          <string>BSP_SAM_E54_Xplained_Pro</string>
