@@ -71,7 +71,7 @@ Following table gives the details of project configurations, target device used,
 
 - Powered the board with an external power supply (or use the micro AB connector).
 - Setup the SD card 
-    - Download harmony MPU bootstrap loader from this [location](firmware/at91bootstrap_sam_9x75_eb.X/build/binaries/boot.bin).
+    - Download harmony MPU bootstrap loader from this [location](../../deps/at91bootstrap_sam_9x7_binaries/boot.bin).
     - Copy the downloaded boot loader binary (boot.bin) and generated application binary (harmony.bin) into the SD card.
     - Insert the SD card into the SDMMC connector (SDMMC0) on the board.
     - Reset the board by pressing the Push Button RESET, then START. 
