@@ -1,7 +1,0 @@
-# Copyright (C) 2006 Microchip Technology Inc. and its subsidiaries
-#
-# SPDX-License-Identifier: MIT
-
-config DEVICENAME
-	string
-	default "sama5d3" if SAMA5D3X
