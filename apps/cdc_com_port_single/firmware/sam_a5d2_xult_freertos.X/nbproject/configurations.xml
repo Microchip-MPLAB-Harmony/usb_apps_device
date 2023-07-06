@@ -424,7 +424,7 @@
         <ScriptingSetting key="boot.use" value="true"/>
         <ScriptingSetting key="boot.entry_adr" value=""/>
         <ScriptingSetting key="boot.path"
-                          value="${ProjectDir}\..\at91bootstrap_sam_a5d2_xult_freertos.X\build\binaries\at91bootstrap.elf "/>
+                          value="${ProjectDir}\..\..\..\..\deps\at91bootstrap_sam_a5d2_binaries\at91bootstrap.elf"/>
         <ScriptingSetting key="boot.prj" value=""/>
       </ScriptingSettings>
       <compileType>
