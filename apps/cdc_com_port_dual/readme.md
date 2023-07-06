@@ -102,7 +102,7 @@ Following table gives the details of project configurations, target device used,
 
 - Powered the board with an external power supply (or use the micro AB connector).
 - Setup the SD card 
-    - Download harmony MPU bootstrap loader from this [location](firmware/at91bootstrap_sam_9x75_eb.X/build/binaries/boot.bin).
+    - Download harmony MPU bootstrap loader from this [location](../../deps/at91bootstrap_sam_9x7_binaries/boot.bin).
     - Copy the downloaded boot loader binary (boot.bin) and generated application binary (harmony.bin) into the SD card.
     - Insert the SD card into the SDMMC connector (SDMMC0) on the board.
     - Reset the board by pressing the Push Button RESET, then START.
@@ -116,7 +116,7 @@ Following table gives the details of project configurations, target device used,
 
 - Powered the board with an external power supply (J1) or power supply the board by connecting J7 to the computer using a micro USB cable.
 - Setup the SD card 
-    - Download harmony MPU bootstrap loader from this [location](firmware/at91bootstrap_sam_a7g5_ek.X/build/binaries/boot.bin).
+    - Download harmony MPU bootstrap loader from this [location](../../deps/at91bootstrap_sam_a7g5_binaries/boot.bin).
     - Copy the downloaded boot loader binary (boot.bin) and generated application binary (harmony.bin) into the SD card.
     - Insert the SD card into the SD Card Connector (J4) on the board.
     - Reset the board by pressing the Reset Button (nRST) 
@@ -126,7 +126,7 @@ Following table gives the details of project configurations, target device used,
 
 ### <a name="#config_sam9x60_curiosity"></a> [SAM9X60-Curiosity Board](https://www.microchip.com/en-us/development-tool/EV40E67A)
 - Setup the SD card 
-    - Download harmony MPU bootstrap loader from this [location](firmware/at91bootstrap_sam_9x60_curiosity.X/build/binaries/boot.bin).
+    - Download harmony MPU bootstrap loader from this [location](../../deps/at91bootstrap_sam_9x60_binaries/boot.bin).
     - Copy the downloaded boot loader binary (boot.bin) and generated application binary (harmony.bin) into the SD card.
     - Insert the SD card into the SDMMC0 connector J3 on the board.
     - Reset the board by pressing the Push Button RESET. 
