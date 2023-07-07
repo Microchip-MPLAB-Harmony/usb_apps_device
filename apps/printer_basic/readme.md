@@ -28,7 +28,7 @@ Following table gives the details of project configurations, target device used,
 | ------------------------------- | ------ | ------------------- | -------------------------------------------------------------------------- |
 | pic32mz_ef_curiosity_2_0.X      | MPLABX | PIC32MZ2048EFM144   | [Curiosity PIC32MZ EF 2.0 Development Board](#config_15)                   |
 | sam_9x60_curiosity.X            | MPLABX | SAM9X60             | [SAM9X60 Curiosity Development Board](#config_sam9x60_curiosity) |
-| sam_9x75_eb.X                   | MPLABX | SAM9X75             | [SAM9X75-DDR3-EB Evaluation Board](#config_22)                             |
+| sam_9x75_eb.X                   | MPLABX | SAM9X75             | [SAM9X75-DDR3-EB Evaluation Board](#config_25)                             |
 | sam_e54_xpro.X                  | MPLABX | ATSAME54P20A        | [SAME54 Xplained Pro Board](#config_3)                                    |
 pic32cz_ca80_curiosity_ultra.X    | MPLABX | PIC32CZ8110CA80208  | [PIC32CZ Curiosity Development Board](#config_23)      
 
@@ -80,7 +80,7 @@ pic32cz_ca80_curiosity_ultra.X    | MPLABX | PIC32CZ8110CA80208  | [PIC32CZ Curi
 - The CDC USB (UART to USB) interface on this board is served by the PKOB connector (DEBUG_USB). Connecting this to the PC will create a COM port on the PC Host.
 - LED0 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
 
-### <a name="config_22"></a> [SAM9X75-DDR3-EB Evaluation Board]()
+### <a name="config_25"></a> [SAM9X75-DDR3-EB Evaluation Board](https://www.microchip.com/en-us/development-tool/EA14J50A)
 
 - Powered the board with an external power supply (or use the micro AB connector).
 - Setup the SD card 

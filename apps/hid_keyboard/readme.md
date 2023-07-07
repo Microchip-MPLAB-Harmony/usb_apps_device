@@ -28,7 +28,7 @@ Following table gives the details of project configurations, target device used,
 | ------------------------------- | ------ | ------------------- | -------------------------------------------------------------------------- |
 | pic32mz_ef_curiosity_2_0.X      | MPLABX | PIC32MZ2048EFM144   | [Curiosity PIC32MZ EF 2.0 Development Board](#config_15)                   |
 | pic32mx470_curiosity.X          | MPLABX | PIC32MX470F512H     | [PIC32MX Curiosity Development Board](#config_13)                          |
-| sam_9x75_eb.X                   | MPLABX | SAM9X75             | [SAM9X75-DDR3-EB Evaluation Board](#config_22)|
+| sam_9x75_eb.X                   | MPLABX | SAM9X75             | [SAM9X75-DDR3-EB Evaluation Board](#config_25)|
 | sam_e70_xult.X                  | MPLABX | ATSAME70Q21B        | [SAM E70 Xplained Ultra Board](#config_4)                                  |
 | sam_e70_xult_freertos.X         | MPLABX | ATSAME70Q21B        | [SAM E70 Xplained Ultra Board](#config_4)                                  |
 | pic32cz_ca80_curiosity_ultra.X  | MPLABX | PIC32CZ8110CA80208  | [PIC32CZ Curiosity Development Board](#config_23)                                     |
@@ -60,7 +60,7 @@ Following table gives the details of project configurations, target device used,
 - LED3 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host). LED3 also indicates status of Caps Lock on the PC.
 - Press Switch SW1 to exercise the keyboard key press function.
 
-### <a name="config_22"></a> [SAM9X75-DDR3-EB Evaluation Board]()
+### <a name="config_25"></a> [SAM9X75-DDR3-EB Evaluation Board](https://www.microchip.com/en-us/development-tool/EA14J50A)
 
 - Powered the board with an external power supply (or use the micro AB connector).
 - Setup the SD card 

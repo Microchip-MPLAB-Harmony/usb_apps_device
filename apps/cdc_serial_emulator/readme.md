@@ -26,7 +26,7 @@ Following table gives the details of project configurations, target device used,
 
 | Project Name            | IDE    | Target Device   | Hardware / Configuration                       |
 | ----------------------- | ------ | --------------- | ---------------------------------------------- |
-| sam_9x75_eb.X           | MPLABX | SAM9X75         | [SAM9X75-DDR3-EB Evaluation Board](#config_22)|
+| sam_9x75_eb.X           | MPLABX | SAM9X75         | [SAM9X75-DDR3-EB Evaluation Board](#config_25)|
 | sam_d11_xpro.X          | MPLABX | ATSAMD11D14A    | [SAMD11 Xplained Pro board](#config_1)        |
 | sam_d21_xpro.X          | MPLABX | ATSAMD21J18A    | [SAMD21 Xplained Pro board](#config_2)        |
 | sam_e54_xpro.X          | MPLABX | ATSAME54P20A    | [SAME54 Xplained Pro board](#config_3)        |
@@ -75,7 +75,7 @@ Following table gives the details of project configurations, target device used,
 - LED0 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
 - The CDC USB (UART to USB) interface on this board is served by the DEBUG_USB connector. Connecting this to the PC will create a COM port on the PC Host.
 
-### <a name="config_22"></a> [SAM9X75-DDR3-EB Evaluation Board]()
+### <a name="config_25"></a> [SAM9X75-DDR3-EB Evaluation Board](https://www.microchip.com/en-us/development-tool/EA14J50A)
 
 - Powered the board with an external power supply (or use the micro AB connector).
 - Setup the SD card 

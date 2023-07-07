@@ -33,7 +33,7 @@ Following table gives the details of project configurations, target device used,
 | sam_e70_xult.X                  | MPLABX | ATSAME70Q21B        | [SAM E70 Xplained Ultra Board](#config_4)                                  |
 | sam_e70_xult_freertos.X         | MPLABX | ATSAME70Q21B        | [SAM E70 Xplained Ultra Board](#config_4)                                  |
 | pic32cz_ca80_curiosity_ultra.X  | MPLABX | PIC32CZ8110CA80208  | [PIC32CZ Curiosity Development Board](#config_23)   
-| sam_9x75_eb.X                   | MPLABX | SAM9X75             | [SAM9X75-DDR3-EB Evaluation Board](#config_22)                             |
+| sam_9x75_eb.X                   | MPLABX | SAM9X75             | [SAM9X75-DDR3-EB Evaluation Board](#config_25)                             |
 
 ## <a name="config_title"></a> Configuring the Hardware
 
@@ -67,7 +67,7 @@ Following table gives the details of project configurations, target device used,
 - Use TARGET USB J200 connector on the board to connect the USB Device to the USB Host PC.
 - LED3 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
 - Use Switch SW1 to stop and start the circular motion of the mouse pointer.
-### <a name="config_22"></a> [SAM9X75-DDR3-EB Evaluation Board]()
+### <a name="config_25"></a> [SAM9X75-DDR3-EB Evaluation Board](https://www.microchip.com/en-us/development-tool/EA14J50A)
 
 - Powered the board with an external power supply (or use the micro AB connector).
 - Setup the SD card 
