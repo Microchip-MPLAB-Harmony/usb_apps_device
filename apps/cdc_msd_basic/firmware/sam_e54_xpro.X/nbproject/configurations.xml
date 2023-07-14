@@ -331,7 +331,7 @@
                    displayName="Important Files"
                    projectFiles="false">
       <itemPath>Makefile</itemPath>
-      <itemPath>sam_e54_xpro.mc3</itemPath>
+      <itemPath>cdc_msd_basic_sam_e54_xpro.mc3</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>

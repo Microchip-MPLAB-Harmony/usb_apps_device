@@ -345,7 +345,7 @@
                    displayName="Important Files"
                    projectFiles="false">
       <itemPath>Makefile</itemPath>
-      <itemPath>pic32ck_gc01_curiosity_ultra.mc3</itemPath>
+      <itemPath>cdc_com_port_dual_pic32ck_gc01_curiosity_ultra.mc3</itemPath>
     </logicalFolder>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
