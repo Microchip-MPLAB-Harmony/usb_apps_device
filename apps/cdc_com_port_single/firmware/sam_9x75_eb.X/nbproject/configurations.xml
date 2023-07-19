@@ -83,6 +83,7 @@
           <itemPath>../src/config/sam_9x75_eb/toolchain_specifics.h</itemPath>
           <itemPath>../src/config/sam_9x75_eb/user.h</itemPath>
           <itemPath>../src/config/sam_9x75_eb/configuration.h</itemPath>
+          <itemPath>../src/config/sam_9x75_eb/sys_tasks.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="packs" displayName="packs" projectFiles="true">
@@ -98,7 +99,6 @@
             <itemPath>../src/packs/SAM9X75_DFP/component/classd.h</itemPath>
             <itemPath>../src/packs/SAM9X75_DFP/component/gfx2d.h</itemPath>
             <itemPath>../src/packs/SAM9X75_DFP/component/xdmac.h</itemPath>
-            <itemPath>../src/packs/SAM9X75_DFP/component/uhpfs.h</itemPath>
             <itemPath>../src/packs/SAM9X75_DFP/component/dsi.h</itemPath>
             <itemPath>../src/packs/SAM9X75_DFP/component/adc.h</itemPath>
             <itemPath>../src/packs/SAM9X75_DFP/component/tdes.h</itemPath>
@@ -152,7 +152,6 @@
             <itemPath>../src/packs/SAM9X75_DFP/instance/udphs.h</itemPath>
             <itemPath>../src/packs/SAM9X75_DFP/instance/pit64b0.h</itemPath>
             <itemPath>../src/packs/SAM9X75_DFP/instance/flexcom1.h</itemPath>
-            <itemPath>../src/packs/SAM9X75_DFP/instance/uhphs_ohci.h</itemPath>
             <itemPath>../src/packs/SAM9X75_DFP/instance/tdes.h</itemPath>
             <itemPath>../src/packs/SAM9X75_DFP/instance/flexcom5.h</itemPath>
             <itemPath>../src/packs/SAM9X75_DFP/instance/sdmmc1.h</itemPath>
@@ -205,6 +204,8 @@
             <itemPath>../src/packs/SAM9X75_DFP/instance/flexcom0.h</itemPath>
             <itemPath>../src/packs/SAM9X75_DFP/instance/flexcom4.h</itemPath>
             <itemPath>../src/packs/SAM9X75_DFP/instance/rstc.h</itemPath>
+            <itemPath>../src/packs/SAM9X75_DFP/instance/dsi.h</itemPath>
+            <itemPath>../src/packs/SAM9X75_DFP/instance/csi.h</itemPath>
           </logicalFolder>
           <logicalFolder name="pio" displayName="pio" projectFiles="true">
             <itemPath>../src/packs/SAM9X75_DFP/pio/sam9x75.h</itemPath>

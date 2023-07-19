@@ -50,7 +50,6 @@
 #include <stdbool.h>
 #include "usb/usb_device_cdc.h"
 #include "usb/usb_cdc.h"
-#include "bsp/bsp.h"
 #include "driver/usb/udphs/drv_usb_udphs.h"
 #include "peripheral/mmu/plib_mmu.h"
 #include "peripheral/clk/plib_clk.h"
@@ -58,6 +57,7 @@
 #include "peripheral/aic/plib_aic.h"
 #include "usb/usb_chapter_9.h"
 #include "usb/usb_device.h"
+#include "bsp/bsp.h"
 #include "system/int/sys_int.h"
 #include "system/cache/sys_cache.h"
 #include "osal/osal.h"
@@ -73,6 +73,12 @@ extern "C" {
 
 #endif
 // DOM-IGNORE-END
+
+/* Device Information */
+#define DEVICE_NAME			 "SAM9X75"
+#define DEVICE_ARCH			 "ARM926EJ-S"
+#define DEVICE_FAMILY		 "SAM9"
+#define DEVICE_SERIES		 "SAM9X7"
 
 /* CPU clock frequency */
 #define CPU_CLOCK_FREQUENCY 800000000

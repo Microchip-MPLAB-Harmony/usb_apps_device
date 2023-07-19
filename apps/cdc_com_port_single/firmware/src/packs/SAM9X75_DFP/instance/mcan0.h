@@ -1,7 +1,7 @@
 /*
  * Instance header file for ATSAM9X75D5M
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,15 +20,15 @@
  *
  */
 
-/* file generated from device description version 2022-01-05T08:57:53Z */
+/* file generated from device description version 2023-01-20T08:33:42Z */
 #ifndef _SAM9X7_MCAN0_INSTANCE_
 #define _SAM9X7_MCAN0_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for MCAN0 peripheral ========== */
-#define MCAN0_INSTANCE_ID                        _UL_(29)   /* Master CAN 0 */
-#define MCAN0_CLOCK_ID                           _UL_(29)   
-#define MCAN0_ID_MCAN0_INT0                      _UL_(29)   /* Master CAN 0 interrupt 0 */
-#define MCAN0_ID_MCAN0_INT1                      _UL_(68)   /* Master CAN 0 interrupt 1 */
+#define MCAN0_CLOCK_ID                           (29)       
+#define MCAN0_ID_MCAN0_INT0                      (29)       /* Master CAN 0 interrupt 0 */
+#define MCAN0_ID_MCAN0_INT1                      (68)       /* Master CAN 0 interrupt 1 */
+#define MCAN0_INSTANCE_ID                        (29)       /* Master CAN 0 */
 
 #endif /* _SAM9X7_MCAN0_INSTANCE_ */

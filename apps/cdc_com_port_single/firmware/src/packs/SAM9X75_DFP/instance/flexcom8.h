@@ -1,7 +1,7 @@
 /*
  * Instance header file for ATSAM9X75D5M
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,18 +20,18 @@
  *
  */
 
-/* file generated from device description version 2022-01-05T08:57:53Z */
+/* file generated from device description version 2023-01-20T08:33:42Z */
 #ifndef _SAM9X7_FLEXCOM8_INSTANCE_
 #define _SAM9X7_FLEXCOM8_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for FLEXCOM8 peripheral ========== */
-#define FLEXCOM8_INSTANCE_ID                     _UL_(11)   /* Flexcom 8 */
-#define FLEXCOM8_CLOCK_ID                        _UL_(11)   
-#define FLEXCOM8_DMAC_ID_TX                      _UL_(16)   
-#define FLEXCOM8_DMAC_ID_RX                      _UL_(17)   
-#define FLEXCOM8_USART_FIFO_SIZE                 _UL_(16)   
-#define FLEXCOM8_SPI_FIFO_SIZE                   _UL_(16)   
-#define FLEXCOM8_TWI_FIFO_SIZE                   _UL_(16)   
+#define FLEXCOM8_CLOCK_ID                        (11)       
+#define FLEXCOM8_DMAC_ID_RX                      (17)       
+#define FLEXCOM8_DMAC_ID_TX                      (16)       
+#define FLEXCOM8_INSTANCE_ID                     (11)       /* Flexcom 8 */
+#define FLEXCOM8_SPI_FIFO_SIZE                   (16)       
+#define FLEXCOM8_TWI_FIFO_SIZE                   (16)       
+#define FLEXCOM8_USART_FIFO_SIZE                 (16)       
 
 #endif /* _SAM9X7_FLEXCOM8_INSTANCE_ */
