@@ -326,7 +326,7 @@
                    displayName="Important Files"
                    projectFiles="false">
       <itemPath>Makefile</itemPath>
-      <itemPath>cdc_msd_sdcard_sam_9x75_ebcdc_msd_sdcard_sam_9x75_eb.mc3</itemPath>
+      <itemPath>cdc_msd_sdcard_sam_9x75_eb.mc3</itemPath>
     </logicalFolder>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>

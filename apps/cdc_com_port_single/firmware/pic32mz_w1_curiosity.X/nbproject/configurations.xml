@@ -214,7 +214,7 @@
       </logicalFolder>
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/pic32mz_w1_curiosity/harmony-manifest-success.yml</itemPath>
-      <itemPath>cdc_com_port_single_pic32mz_w1_curiosity_cdc_com_port_single.mc3</itemPath>
+      <itemPath>cdc_com_port_single_pic32mz_w1_curiosity.mc3</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
