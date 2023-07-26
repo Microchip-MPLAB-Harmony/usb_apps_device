@@ -52,6 +52,7 @@
 
 #include "configuration.h"
 #include "definitions.h"
+#include "sys_tasks.h"
 
 
 // *****************************************************************************
@@ -59,6 +60,16 @@
 // Section: RTOS "Tasks" Routine
 // *****************************************************************************
 // *****************************************************************************
+void _USB_DEVICE_Tasks(  void *pvParameters  )
+{
+    while(1)
+    {
+                /* USB Device layer tasks routine */
+        USB_DEVICE_Tasks(sysObj.usbDevObject0);
+        vTaskDelay(10 / portTICK_PERIOD_MS);
+    }
+}
+
 void _DRV_USBFSV1_Tasks(  void *pvParameters  )
 {
     while(1)
@@ -69,25 +80,15 @@ void _DRV_USBFSV1_Tasks(  void *pvParameters  )
     }
 }
 
-void _USB_DEVICE_Tasks(  void *pvParameters  )
-{
-    while(1)
-    {
-				 /* USB Device layer tasks routine */
-        USB_DEVICE_Tasks(sysObj.usbDevObject0);
-        vTaskDelay(10 / portTICK_PERIOD_MS);
-    }
-}
-
 /* Handle for the APP_Tasks. */
 TaskHandle_t xAPP_Tasks;
 
-void _APP_Tasks(  void *pvParameters  )
+static void lAPP_Tasks(  void *pvParameters  )
 {   
-    while(1)
+    while(true)
     {
         APP_Tasks();
-        vTaskDelay(10 / portTICK_PERIOD_MS);
+        vTaskDelay(10U / portTICK_PERIOD_MS);
     }
 }
 
@@ -116,18 +117,18 @@ void SYS_Tasks ( void )
     
 
     /* Maintain Middleware & Other Libraries */
-    	/* Create OS Thread for USB Driver Tasks. */
-    xTaskCreate( _DRV_USBFSV1_Tasks,
-        "DRV_USBFSV1_TASKS",
+        /* Create OS Thread for USB_DEVICE_Tasks. */
+    xTaskCreate( _USB_DEVICE_Tasks,
+        "USB_DEVICE_TASKS",
         1024,
         (void*)NULL,
         1,
         (TaskHandle_t*)NULL
     );
 
-    /* Create OS Thread for USB_DEVICE_Tasks. */
-    xTaskCreate( _USB_DEVICE_Tasks,
-        "USB_DEVICE_TASKS",
+	/* Create OS Thread for USB Driver Tasks. */
+    xTaskCreate( _DRV_USBFSV1_Tasks,
+        "DRV_USBFSV1_TASKS",
         1024,
         (void*)NULL,
         1,
@@ -138,7 +139,7 @@ void SYS_Tasks ( void )
 
     /* Maintain the application's state machine. */
         /* Create OS Thread for APP_Tasks. */
-    xTaskCreate((TaskFunction_t) _APP_Tasks,
+    (void) xTaskCreate((TaskFunction_t) lAPP_Tasks,
                 "APP_Tasks",
                 1024,
                 NULL,
