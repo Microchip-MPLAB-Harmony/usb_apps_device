@@ -1,7 +1,7 @@
 /*
- * Instance header file for SAMA7G54
+ * Instance header file for ATSAMA7G54D4G
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,13 +20,13 @@
  *
  */
 
-/* file generated from device description version 2021-07-26T12:51:16Z */
+/* file generated from device description version 2023-02-02T10:07:15Z */
 #ifndef _SAMA7G_ACC_INSTANCE_
 #define _SAMA7G_ACC_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for ACC peripheral ========== */
-#define ACC_INSTANCE_ID                          _UL_(25)   /* Analog Comparator Controller */
-#define ACC_CLOCK_ID                             _UL_(25)   
+#define ACC_CLOCK_ID                             (25)       
+#define ACC_INSTANCE_ID                          (25)       /* Analog Comparator Controller */
 
 #endif /* _SAMA7G_ACC_INSTANCE_ */
