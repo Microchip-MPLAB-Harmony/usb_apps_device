@@ -52,6 +52,7 @@
 
 #include "configuration.h"
 #include "definitions.h"
+#include "sys_tasks.h"
 
 
 
@@ -83,7 +84,7 @@ void SYS_Tasks ( void )
         /* USBHS Driver Task Routine */ 
     DRV_USBHS_Tasks(sysObj.drvUSBHSObject);
 
-	/* USB Device layer tasks routine */ 
+    /* USB Device layer tasks routine */ 
     USB_DEVICE_Tasks(sysObj.usbDevObject0);
 
 

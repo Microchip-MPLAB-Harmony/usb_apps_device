@@ -75,6 +75,12 @@ extern "C" {
 #endif
 // DOM-IGNORE-END
 
+/* Device Information */
+#define DEVICE_NAME			 "PIC32MZ2048EFM144"
+#define DEVICE_ARCH			 "MIPS"
+#define DEVICE_FAMILY		 "PIC32MZEF"
+#define DEVICE_SERIES		 "PIC32MZ"
+
 /* CPU clock frequency */
 #define CPU_CLOCK_FREQUENCY 198000000
 
@@ -191,7 +197,7 @@ typedef struct
 	SYS_MODULE_OBJ  drvUSBHSObject;
 
     SYS_MODULE_OBJ  drvMemory0;
-	SYS_MODULE_OBJ  usbDevObject0;
+    SYS_MODULE_OBJ  usbDevObject0;
 
 
 } SYSTEM_OBJECTS;
