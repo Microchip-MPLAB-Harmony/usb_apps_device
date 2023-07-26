@@ -1,5 +1,5 @@
 /*------------------------------------------------------------------------------
- *      Linker script for running in internal DDRAM on the SAM9X60
+ *      Linker script for running in internal DDRAM on the SAM9
  *----------------------------------------------------------------------------*/
 
 OUTPUT_FORMAT("elf32-littlearm", "elf32-littlearm", "elf32-littlearm")
@@ -11,8 +11,8 @@ SEARCH_DIR(.)
 MEMORY
 {
 	sram        (WX) : ORIGIN = 0x300000,   LENGTH = 64K  /* sram */
-	ram         (LWX!R) : ORIGIN = 0x21000000, LENGTH = 240M  /* ddr */
-	ram_nocache  (!RWX) : ORIGIN = 0x20000000, LENGTH = 16M  /* ddr (non-cached) */
+	ram         (LWX!R) : ORIGIN = 0x21000000, LENGTH = 0x0F000000  /* ram */
+	ram_nocache  (!RWX) : ORIGIN = 0x20000000, LENGTH = 0x01000000  /* ram (non-cached) */
 	rom         (LRX) : ORIGIN = 0, LENGTH = 0
 }
 
@@ -104,26 +104,26 @@ SECTIONS
 	.region_cache_aligned_const :
 	{
 		. = ALIGN(32);
-		*(.region_cache_aligned_const)
+		*(.region_cache_aligned_const .region_cache_aligned_const.*)
 		. = ALIGN(32);
 	} >ram
 
 	.region_sram (NOLOAD) :
 	{
 		. = ALIGN(4);
-		*(.region_sram)
+		*(.region_sram .region_sram.*)
 	} >sram
 
 	.region_ram (NOLOAD) :
 	{
 		. = ALIGN(4);
-		*(.region_ram)
+		*(.region_ram .region_ram.*)
 	} >ram
 
 	.region_nocache (NOLOAD) :
 	{
 		. = ALIGN(4);
-		*(.region_nocache)
+		*(.region_nocache .region_nocache.*)
 	} >ram_nocache
 
 	/* .bss section which is used for uninitialized data */
@@ -140,7 +140,7 @@ SECTIONS
 	.region_cache_aligned (NOLOAD) :
 	{
 		. = ALIGN(32);
-		*(.region_cache_aligned)
+		*(.region_cache_aligned .region_cache_aligned.*)
 		. = ALIGN(32);
 	} >ram
 
@@ -176,12 +176,12 @@ SECTIONS
 	.ramcode :
 	AT ( _ramcode_lma )
 	{
-		_sramcode = .; *(.ramcode_section); _eramcode = .;
+		_sramcode = .; *(.ramcode_section .ramcode_section.*); _eramcode = .;
 	} > sram
 	_ramdata_lma = _end + _eramcode - _sramcode;
 	.ramdata :
 	AT ( _ramdata_lma )
 	{
-		_sramdata = .; *(.ramdata_section); _eramdata = .;
+		_sramdata = .; *(.ramdata_section .ramdata_section.*); _eramdata = .;
 	} > sram
 }
