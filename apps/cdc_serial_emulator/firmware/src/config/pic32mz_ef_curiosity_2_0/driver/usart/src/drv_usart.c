@@ -65,12 +65,12 @@ static DRV_USART_OBJ gDrvUSARTObj[DRV_USART_INSTANCES_NUMBER];
 // *****************************************************************************
 // *****************************************************************************
 
-static inline uint32_t  _DRV_USART_MAKE_HANDLE(uint16_t token, uint8_t drvIndex, uint8_t index)
+static inline uint32_t  lDRV_USART_MAKE_HANDLE(uint16_t token, uint8_t drvIndex, uint8_t index)
 {
-    return ((token << 16) | (drvIndex << 8) | index);
+    return (((uint32_t)token << 16) | ((uint32_t)drvIndex << 8) | (uint32_t)index);
 }
 
-static inline uint16_t _DRV_USART_UPDATE_TOKEN(uint16_t token)
+static inline uint16_t lDRV_USART_UPDATE_TOKEN(uint16_t token)
 {
     token++;
 
@@ -82,7 +82,7 @@ static inline uint16_t _DRV_USART_UPDATE_TOKEN(uint16_t token)
     return token;
 }
 
-static DRV_USART_CLIENT_OBJ* _DRV_USART_DriverHandleValidate(DRV_HANDLE handle)
+static DRV_USART_CLIENT_OBJ* lDRV_USART_DriverHandleValidate(DRV_HANDLE handle)
 {
     /* This function returns the pointer to the client object that is
        associated with this handle if the handle is valid. Returns NULL
@@ -91,12 +91,12 @@ static DRV_USART_CLIENT_OBJ* _DRV_USART_DriverHandleValidate(DRV_HANDLE handle)
     uint32_t drvInstance = 0;
     DRV_USART_CLIENT_OBJ* clientObj = NULL;
 
-    if((handle != DRV_HANDLE_INVALID) && (handle != 0))
+    if((handle != DRV_HANDLE_INVALID) && (handle != 0U))
     {
         /* Extract the drvInstance value from the handle */
         drvInstance = ((handle & DRV_USART_INSTANCE_MASK) >> 8);
 
-        if (drvInstance >= DRV_USART_INSTANCES_NUMBER)
+        if (drvInstance >= (uint32_t)DRV_USART_INSTANCES_NUMBER)
         {
             return (NULL);
         }
@@ -118,7 +118,7 @@ static DRV_USART_CLIENT_OBJ* _DRV_USART_DriverHandleValidate(DRV_HANDLE handle)
     return(clientObj);
 }
 
-static void _DRV_USART_DisableInterrupts(DRV_USART_OBJ* dObj)
+static void lDRV_USART_DisableInterrupts(DRV_USART_OBJ* dObj)
 {
     bool interruptStatus;
     const DRV_USART_INTERRUPT_SOURCES* intInfo = dObj->interruptSources;
@@ -160,7 +160,7 @@ static void _DRV_USART_DisableInterrupts(DRV_USART_OBJ* dObj)
     SYS_INT_Restore(interruptStatus);
 }
 
-static void _DRV_USART_EnableInterrupts(DRV_USART_OBJ* dObj)
+static void lDRV_USART_EnableInterrupts(DRV_USART_OBJ* dObj)
 {
     bool interruptStatus;
     const DRV_USART_INTERRUPT_SOURCES* intInfo = dObj->interruptSources;
@@ -202,39 +202,40 @@ static void _DRV_USART_EnableInterrupts(DRV_USART_OBJ* dObj)
     SYS_INT_Restore(interruptStatus);
 }
 
-static bool _DRV_USART_ResourceLock( DRV_USART_OBJ* dObj )
+
+static bool lDRV_USART_ResourceLock( DRV_USART_OBJ* dObj )
 {
     /* We will allow buffers to be added in the interrupt context of the USART
        driver. But we must make sure that if we are inside interrupt, then we
        should not modify mutex. */
-    if(dObj->interruptNestingCount == 0)
+    if(dObj->interruptNestingCount == 0U)
     {
         /* Grab a mutex. This is okay because we are not in an interrupt context */
-        if(OSAL_MUTEX_Lock(&(dObj->mutexTransferObjects), OSAL_WAIT_FOREVER) == OSAL_RESULT_FALSE)
+        if(OSAL_MUTEX_Lock(&(dObj->mutexTransferObjects), OSAL_WAIT_FOREVER) == OSAL_RESULT_FAIL)
         {
             return false;
         }
     }
 
-    _DRV_USART_DisableInterrupts(dObj);
+    lDRV_USART_DisableInterrupts(dObj);
 
     return true;
 }
 
-static void _DRV_USART_ResourceUnlock( DRV_USART_OBJ* dObj )
+static void lDRV_USART_ResourceUnlock( DRV_USART_OBJ* dObj )
 {
-    _DRV_USART_EnableInterrupts(dObj);
+    lDRV_USART_EnableInterrupts(dObj);
 
-    if(dObj->interruptNestingCount == 0)
+    if(dObj->interruptNestingCount == 0U)
     {
         /* Mutex is never acquired from the interrupt context and hence should
          * never be released if in interrupt context.
          */
-        OSAL_MUTEX_Unlock(&(dObj->mutexTransferObjects));
+       (void) OSAL_MUTEX_Unlock(&(dObj->mutexTransferObjects));
     }
 }
 
-static DRV_USART_ERROR _DRV_USART_GetErrorType(
+static DRV_USART_ERROR lDRV_USART_GetErrorType(
     const uint32_t* remapError,
     uint32_t errorMask
 )
@@ -242,11 +243,11 @@ static DRV_USART_ERROR _DRV_USART_GetErrorType(
     uint32_t i;
     DRV_USART_ERROR error = DRV_USART_ERROR_NONE;
 
-    for (i = 0; i < 3; i++)
+    for (i = 0U; i < 3U; i++)
     {
         if (remapError[i] == errorMask)
         {
-            error = (DRV_USART_ERROR)(i+1);
+            error = (DRV_USART_ERROR)(i+1U);
             break;
         }
     }
@@ -254,7 +255,7 @@ static DRV_USART_ERROR _DRV_USART_GetErrorType(
     return error;
 }
 
-static DRV_USART_OBJ* _DRV_USART_GetDriverObj(
+static DRV_USART_OBJ* lDRV_USART_GetDriverObj(
     DRV_USART_BUFFER_HANDLE bufferHandle
 )
 {
@@ -268,7 +269,7 @@ static DRV_USART_OBJ* _DRV_USART_GetDriverObj(
     /* Extract driver instance value from the transfer handle */
     drvInstance = ((bufferHandle & DRV_USART_INSTANCE_MASK) >> 8);
 
-    if(drvInstance >= DRV_USART_INSTANCES_NUMBER)
+    if(drvInstance >= (uint32_t)DRV_USART_INSTANCES_NUMBER)
     {
         return NULL;
     }
@@ -278,14 +279,14 @@ static DRV_USART_OBJ* _DRV_USART_GetDriverObj(
     }
 }
 
-static DRV_USART_BUFFER_OBJ* _DRV_USART_GetTransferObj(
+static DRV_USART_BUFFER_OBJ* lDRV_USART_GetTransferObj(
     DRV_USART_BUFFER_HANDLE bufferHandle
 )
 {
     DRV_USART_OBJ* dObj = NULL;
     uint8_t bufferIndex;
 
-    dObj = _DRV_USART_GetDriverObj(bufferHandle);
+    dObj = lDRV_USART_GetDriverObj(bufferHandle);
 
     if (dObj == NULL)
     {
@@ -293,7 +294,7 @@ static DRV_USART_BUFFER_OBJ* _DRV_USART_GetTransferObj(
     }
 
     /* Extract buffer index value from the buffer handle */
-    bufferIndex = bufferHandle & DRV_USART_INDEX_MASK;
+    bufferIndex = (uint8_t)(bufferHandle & DRV_USART_INDEX_MASK);
 
     if(bufferIndex >= dObj->bufferObjPoolSize)
     {
@@ -312,7 +313,7 @@ static DRV_USART_BUFFER_OBJ* _DRV_USART_GetTransferObj(
     }
 }
 
-static DRV_USART_BUFFER_OBJ* _DRV_USART_FreeTransferObjGet(DRV_USART_CLIENT_OBJ* clientObj)
+static DRV_USART_BUFFER_OBJ* lDRV_USART_FreeTransferObjGet(DRV_USART_CLIENT_OBJ* clientObj)
 {
     uint32_t index;
     DRV_USART_OBJ* dObj = (DRV_USART_OBJ* )&gDrvUSARTObj[clientObj->drvIndex];
@@ -328,11 +329,11 @@ static DRV_USART_BUFFER_OBJ* _DRV_USART_FreeTransferObjGet(DRV_USART_CLIENT_OBJ*
             /* Generate a unique buffer handle consisting of an incrementing
              * token counter, driver index and the buffer index.
              */
-            pBufferObj[index].bufferHandle = (DRV_USART_BUFFER_HANDLE)_DRV_USART_MAKE_HANDLE(
-                dObj->usartTokenCount, (uint8_t)clientObj->drvIndex, index);
+            pBufferObj[index].bufferHandle = (DRV_USART_BUFFER_HANDLE)lDRV_USART_MAKE_HANDLE(
+                dObj->usartTokenCount, (uint8_t)clientObj->drvIndex, (uint8_t)index);
 
             /* Update the token for next time */
-            dObj->usartTokenCount = _DRV_USART_UPDATE_TOKEN(dObj->usartTokenCount);
+            dObj->usartTokenCount = lDRV_USART_UPDATE_TOKEN(dObj->usartTokenCount);
 
             return &pBufferObj[index];
         }
@@ -340,7 +341,7 @@ static DRV_USART_BUFFER_OBJ* _DRV_USART_FreeTransferObjGet(DRV_USART_CLIENT_OBJ*
     return NULL;
 }
 
-static bool _DRV_USART_TransferObjAddToList(
+static bool lDRV_USART_TransferObjAddToList(
     DRV_USART_OBJ* dObj,
     DRV_USART_BUFFER_OBJ* bufferObj,
     DRV_USART_DIRECTION dir
@@ -384,7 +385,7 @@ static bool _DRV_USART_TransferObjAddToList(
     return isFirstBufferInList;
 }
 
-static DRV_USART_BUFFER_OBJ* _DRV_USART_TransferObjListGet(
+static DRV_USART_BUFFER_OBJ* lDRV_USART_TransferObjListGet(
     DRV_USART_OBJ* dObj,
     DRV_USART_DIRECTION dir
 )
@@ -403,7 +404,7 @@ static DRV_USART_BUFFER_OBJ* _DRV_USART_TransferObjListGet(
     return pBufferObj;
 }
 
-static void _DRV_USART_RemoveTransferObjFromList(
+static void lDRV_USART_RemoveTransferObjFromList(
     DRV_USART_OBJ* dObj,
     DRV_USART_DIRECTION dir
 )
@@ -433,7 +434,7 @@ static void _DRV_USART_RemoveTransferObjFromList(
     }
 }
 
-static void _DRV_USART_RemoveClientTransfersFromList(
+static void lDRV_USART_RemoveClientTransfersFromList(
     DRV_USART_OBJ* dObj,
     DRV_USART_CLIENT_OBJ* clientObj,
     DRV_USART_DIRECTION dir
@@ -475,12 +476,12 @@ static void _DRV_USART_RemoveClientTransfersFromList(
     }
 }
 
-static void _DRV_USART_ReadAbort(DRV_USART_OBJ* dObj, DRV_USART_CLIENT_OBJ* clientObj)
+static void lDRV_USART_ReadAbort(DRV_USART_OBJ* dObj, DRV_USART_CLIENT_OBJ* clientObj)
 {
     DRV_USART_BUFFER_OBJ* bufferObj = NULL;
 
     // Get the buffer object at the head of the list
-    bufferObj = _DRV_USART_TransferObjListGet(dObj, DRV_USART_DIRECTION_RX);
+    bufferObj = lDRV_USART_TransferObjListGet(dObj, DRV_USART_DIRECTION_RX);
 
     if (bufferObj == NULL)
     {
@@ -492,20 +493,20 @@ static void _DRV_USART_ReadAbort(DRV_USART_OBJ* dObj, DRV_USART_CLIENT_OBJ* clie
     if ((bufferObj->clientHandle == clientObj->clientHandle) && (bufferObj->currentState == DRV_USART_BUFFER_IS_PROCESSING))
     {
 
-        dObj->usartPlib->readAbort();
+        (void) dObj->usartPlib->readAbort();
 
         /* Free the buffer at the top of the list */
-        _DRV_USART_RemoveTransferObjFromList(dObj, DRV_USART_DIRECTION_RX);
+        lDRV_USART_RemoveTransferObjFromList(dObj, DRV_USART_DIRECTION_RX);
     }
 }
 
-static bool _DRV_USART_QueuePurge(const DRV_HANDLE handle, DRV_USART_DIRECTION dir)
+static bool lDRV_USART_QueuePurge(const DRV_HANDLE handle, DRV_USART_DIRECTION dir)
 {
     DRV_USART_OBJ* dObj = NULL;
     DRV_USART_CLIENT_OBJ* clientObj = NULL;
 
     /* Validate the driver handle */
-    clientObj = _DRV_USART_DriverHandleValidate(handle);
+    clientObj = lDRV_USART_DriverHandleValidate(handle);
 
     if (clientObj == NULL)
     {
@@ -514,7 +515,7 @@ static bool _DRV_USART_QueuePurge(const DRV_HANDLE handle, DRV_USART_DIRECTION d
 
     dObj = (DRV_USART_OBJ* )&gDrvUSARTObj[clientObj->drvIndex];
 
-    if (_DRV_USART_ResourceLock(dObj) == false)
+    if (lDRV_USART_ResourceLock(dObj) == false)
     {
         return false;
     }
@@ -522,21 +523,21 @@ static bool _DRV_USART_QueuePurge(const DRV_HANDLE handle, DRV_USART_DIRECTION d
     if (dir == DRV_USART_DIRECTION_RX)
     {
         /* For read, abort the ongoing read request and then remove the queued requests */
-        _DRV_USART_ReadAbort(dObj, clientObj);
+        lDRV_USART_ReadAbort(dObj, clientObj);
     }
 
     /* Remove any pending read requests in the queue */
-    _DRV_USART_RemoveClientTransfersFromList(dObj, clientObj, dir);
+    lDRV_USART_RemoveClientTransfersFromList(dObj, clientObj, dir);
 
-    _DRV_USART_ResourceUnlock(dObj);
+    lDRV_USART_ResourceUnlock(dObj);
 
     return true;
 }
 
-static void _DRV_USART_WriteSubmit( DRV_USART_OBJ* dObj )
+static void lDRV_USART_WriteSubmit( DRV_USART_OBJ* dObj )
 {
     // Get the buffer object at the top of the list
-    DRV_USART_BUFFER_OBJ* bufferObj = _DRV_USART_TransferObjListGet(dObj, DRV_USART_DIRECTION_TX);
+    DRV_USART_BUFFER_OBJ* bufferObj = lDRV_USART_TransferObjListGet(dObj, DRV_USART_DIRECTION_TX);
 
     if (bufferObj == NULL)
     {
@@ -551,13 +552,13 @@ static void _DRV_USART_WriteSubmit( DRV_USART_OBJ* dObj )
 
     bufferObj->currentState = DRV_USART_BUFFER_IS_PROCESSING;
 
-    dObj->usartPlib->write(bufferObj->buffer, bufferObj->size);
+    (void) dObj->usartPlib->write_t(bufferObj->buffer, bufferObj->size);
 }
 
-static void _DRV_USART_ReadSubmit( DRV_USART_OBJ* dObj )
+static void lDRV_USART_ReadSubmit( DRV_USART_OBJ* dObj )
 {
     // Get the buffer object at the top of the list
-    DRV_USART_BUFFER_OBJ* bufferObj = _DRV_USART_TransferObjListGet(dObj, DRV_USART_DIRECTION_RX);
+    DRV_USART_BUFFER_OBJ* bufferObj = lDRV_USART_TransferObjListGet(dObj, DRV_USART_DIRECTION_RX);
 
     if (bufferObj == NULL)
     {
@@ -572,10 +573,10 @@ static void _DRV_USART_ReadSubmit( DRV_USART_OBJ* dObj )
 
     bufferObj->currentState = DRV_USART_BUFFER_IS_PROCESSING;
 
-    dObj->usartPlib->read(bufferObj->buffer, bufferObj->size);
+    (void) dObj->usartPlib->read_t(bufferObj->buffer, bufferObj->size);
 }
 
-static void _DRV_USART_BufferQueueTask(
+static void lDRV_USART_BufferQueueTask(
     DRV_USART_OBJ* dObj,
     DRV_USART_DIRECTION direction,
     DRV_USART_BUFFER_EVENT event,
@@ -592,7 +593,7 @@ static void _DRV_USART_BufferQueueTask(
     }
 
     // Get the buffer object at the head of the list
-    bufferObj = _DRV_USART_TransferObjListGet(dObj, direction);
+    bufferObj = lDRV_USART_TransferObjListGet(dObj, direction);
 
     // bufferObj can never be NULL. Very likely a false PLIB callback to the driver.
     if (bufferObj == NULL)
@@ -614,7 +615,7 @@ static void _DRV_USART_BufferQueueTask(
             // Save the error in buffer object. This will be valid until it is
             // read by the application or the buffer object is assigned to a new request,
             // whichever happens first.
-            bufferObj->errors = _DRV_USART_GetErrorType(dObj->remapError, plibErrorMask);
+            bufferObj->errors = lDRV_USART_GetErrorType(dObj->remapError, plibErrorMask);
             bufferObj->nCount = dObj->usartPlib->readCountGet();
         }
         else
@@ -631,7 +632,7 @@ static void _DRV_USART_BufferQueueTask(
          * This is done before giving callback to allow application to use the freed
          * buffer and queue in a new request from within the callback */
 
-        _DRV_USART_RemoveTransferObjFromList(dObj, direction);
+        lDRV_USART_RemoveTransferObjFromList(dObj, direction);
 
         if((clientObj->eventHandler != NULL))
         {
@@ -645,31 +646,31 @@ static void _DRV_USART_BufferQueueTask(
     else
     {
         /* Free the completed buffer */
-        _DRV_USART_RemoveTransferObjFromList(dObj, direction);
+        lDRV_USART_RemoveTransferObjFromList(dObj, direction);
     }
 
     // Submit the next request (if any) from the queue to the USART PLIB
     if (direction == DRV_USART_DIRECTION_RX)
     {
-        _DRV_USART_ReadSubmit(dObj);
+        lDRV_USART_ReadSubmit(dObj);
     }
     else
     {
-        _DRV_USART_WriteSubmit(dObj);
+        lDRV_USART_WriteSubmit(dObj);
     }
 }
 
-static void _DRV_USART_TX_PLIB_CallbackHandler( uintptr_t context )
+static void lDRV_USART_TX_PLIB_CallbackHandler( uintptr_t context )
 {
     DRV_USART_OBJ* dObj = (DRV_USART_OBJ* )context;
     uint32_t errorMask = (uint32_t) DRV_USART_ERROR_NONE;
 
-    _DRV_USART_BufferQueueTask(dObj, DRV_USART_DIRECTION_TX, DRV_USART_BUFFER_EVENT_COMPLETE, errorMask);
+    lDRV_USART_BufferQueueTask(dObj, DRV_USART_DIRECTION_TX, DRV_USART_BUFFER_EVENT_COMPLETE, errorMask);
 
     return;
 }
 
-static void _DRV_USART_RX_PLIB_CallbackHandler( uintptr_t context )
+static void lDRV_USART_RX_PLIB_CallbackHandler( uintptr_t context )
 {
     DRV_USART_OBJ* dObj = (DRV_USART_OBJ* )context;
     uint32_t errorMask;
@@ -678,11 +679,11 @@ static void _DRV_USART_RX_PLIB_CallbackHandler( uintptr_t context )
 
     if(errorMask == (uint32_t) DRV_USART_ERROR_NONE)
     {
-        _DRV_USART_BufferQueueTask(dObj, DRV_USART_DIRECTION_RX, DRV_USART_BUFFER_EVENT_COMPLETE, errorMask);
+        lDRV_USART_BufferQueueTask(dObj, DRV_USART_DIRECTION_RX, DRV_USART_BUFFER_EVENT_COMPLETE, errorMask);
     }
     else
     {
-        _DRV_USART_BufferQueueTask(dObj, DRV_USART_DIRECTION_RX, DRV_USART_BUFFER_EVENT_ERROR, errorMask);
+        lDRV_USART_BufferQueueTask(dObj, DRV_USART_DIRECTION_RX, DRV_USART_BUFFER_EVENT_ERROR, errorMask);
     }
 
     return;
@@ -694,7 +695,8 @@ static void _DRV_USART_RX_PLIB_CallbackHandler( uintptr_t context )
 // Section: USART Driver Common Interface Implementation
 // *****************************************************************************
 // *****************************************************************************
-
+/* MISRA C-2012 Rule 11.3, 11.8 deviated below. Deviation record ID -
+  H3_MISRAC_2012_R_11_3_DR_1 & H3_MISRAC_2012_R_11_8_DR_1*/
 SYS_MODULE_OBJ DRV_USART_Initialize(
     const SYS_MODULE_INDEX drvIndex,
     const SYS_MODULE_INIT* const init
@@ -704,7 +706,7 @@ SYS_MODULE_OBJ DRV_USART_Initialize(
     DRV_USART_INIT* usartInit = (DRV_USART_INIT *)init ;
 
     /* Validate the request */
-    if(drvIndex >= DRV_USART_INSTANCES_NUMBER)
+    if(drvIndex >= (uint32_t)DRV_USART_INSTANCES_NUMBER)
     {
         return SYS_MODULE_OBJ_INVALID;
     }
@@ -720,12 +722,12 @@ SYS_MODULE_OBJ DRV_USART_Initialize(
 
     /* Create the Mutexes needed for RTOS mode. These calls always passes in the
      * non-RTOS mode */
-    if(OSAL_MUTEX_Create(&dObj->mutexTransferObjects) != OSAL_RESULT_TRUE)
+    if(OSAL_MUTEX_Create(&dObj->mutexTransferObjects) != OSAL_RESULT_SUCCESS)
     {
         return SYS_MODULE_OBJ_INVALID;
     }
 
-    if(OSAL_MUTEX_Create(&dObj->mutexClientObjects) != OSAL_RESULT_TRUE)
+    if(OSAL_MUTEX_Create(&dObj->mutexClientObjects) != OSAL_RESULT_SUCCESS)
     {
         return SYS_MODULE_OBJ_INVALID;
     }
@@ -751,9 +753,9 @@ SYS_MODULE_OBJ DRV_USART_Initialize(
     /* Register a callback with either DMA or USART PLIB based on configuration.
      * dObj is used as a context parameter, that will be used to distinguish the
      * events for different driver instances. */
-    dObj->usartPlib->writeCallbackRegister(_DRV_USART_TX_PLIB_CallbackHandler, (uintptr_t)dObj);
+    dObj->usartPlib->writeCallbackRegister(lDRV_USART_TX_PLIB_CallbackHandler, (uintptr_t)dObj);
 
-    dObj->usartPlib->readCallbackRegister(_DRV_USART_RX_PLIB_CallbackHandler, (uintptr_t)dObj);
+    dObj->usartPlib->readCallbackRegister(lDRV_USART_RX_PLIB_CallbackHandler, (uintptr_t)dObj);
 
     /* Update the status */
     dObj->status = SYS_STATUS_READY;
@@ -761,11 +763,12 @@ SYS_MODULE_OBJ DRV_USART_Initialize(
     /* Return the object structure */
     return ( (SYS_MODULE_OBJ)drvIndex );
 }
+/* MISRAC 2012 deviation block end */
 
 SYS_STATUS DRV_USART_Status( SYS_MODULE_OBJ object)
 {
     /* Validate the request */
-    if( (object == SYS_MODULE_OBJ_INVALID) || (object >= DRV_USART_INSTANCES_NUMBER) )
+    if( (object == SYS_MODULE_OBJ_INVALID) || (object >= (uint32_t)DRV_USART_INSTANCES_NUMBER) )
     {
         return SYS_STATUS_UNINITIALIZED;
     }
@@ -781,9 +784,10 @@ DRV_HANDLE DRV_USART_Open(
     DRV_USART_OBJ* dObj = NULL;
     DRV_USART_CLIENT_OBJ* clientObj = NULL;
     uint32_t iClient;
+    uint32_t temp;
 
     /* Validate the request */
-    if (drvIndex >= DRV_USART_INSTANCES_NUMBER)
+    if (drvIndex >= (uint32_t)DRV_USART_INSTANCES_NUMBER)
     {
         return DRV_HANDLE_INVALID;
     }
@@ -796,7 +800,7 @@ DRV_HANDLE DRV_USART_Open(
     }
 
     /* Guard against multiple threads trying to open the driver */
-    if (OSAL_MUTEX_Lock(&dObj->mutexClientObjects , OSAL_WAIT_FOREVER ) == OSAL_RESULT_FALSE)
+    if (OSAL_MUTEX_Lock(&dObj->mutexClientObjects , OSAL_WAIT_FOREVER ) == OSAL_RESULT_FAIL)
     {
         return DRV_HANDLE_INVALID;
     }
@@ -806,16 +810,16 @@ DRV_HANDLE DRV_USART_Open(
     {
         /* This means the another client has opened the driver in exclusive
            mode. So the driver cannot be opened by any other client. */
-        OSAL_MUTEX_Unlock( &dObj->mutexClientObjects);
+        (void) OSAL_MUTEX_Unlock( &dObj->mutexClientObjects);
         return DRV_HANDLE_INVALID;
     }
 
-    if((dObj->nClients > 0) && (ioIntent & DRV_IO_INTENT_EXCLUSIVE))
+    if((dObj->nClients > 0U) && (((uint32_t)ioIntent & (uint32_t)DRV_IO_INTENT_EXCLUSIVE) != 0U))
     {
         /* This means the driver was already opened and another driver was
            trying to open it exclusively.  We cannot give exclusive access in
            this case */
-        OSAL_MUTEX_Unlock(&dObj->mutexClientObjects);
+        (void) OSAL_MUTEX_Unlock(&dObj->mutexClientObjects);
         return DRV_HANDLE_INVALID;
     }
 
@@ -828,7 +832,7 @@ DRV_HANDLE DRV_USART_Open(
             /* This means we have a free client object to use */
             clientObj->inUse = true;
 
-            if(ioIntent & DRV_IO_INTENT_EXCLUSIVE)
+            if(((uint32_t)ioIntent & (uint32_t)DRV_IO_INTENT_EXCLUSIVE) != 0U)
             {
                 /* Set the driver exclusive flag */
                 dObj->isExclusive = true;
@@ -837,27 +841,28 @@ DRV_HANDLE DRV_USART_Open(
             dObj->nClients++;
 
             /* Generate the client handle */
-            clientObj->clientHandle = (DRV_HANDLE)_DRV_USART_MAKE_HANDLE(dObj->usartTokenCount, (uint8_t)drvIndex, iClient);
+            clientObj->clientHandle = (DRV_HANDLE)lDRV_USART_MAKE_HANDLE(dObj->usartTokenCount, (uint8_t)drvIndex, (uint8_t)iClient);
 
             /* Increment the instance specific token counter */
-            dObj->usartTokenCount = _DRV_USART_UPDATE_TOKEN(dObj->usartTokenCount);
+            dObj->usartTokenCount = lDRV_USART_UPDATE_TOKEN(dObj->usartTokenCount);
 
             /* We have found a client object and also updated corresponding driver object members, now release the mutex */
-            OSAL_MUTEX_Unlock(&(dObj->mutexClientObjects));
+             (void) OSAL_MUTEX_Unlock(&(dObj->mutexClientObjects));
 
+            temp = (uint32_t)ioIntent | (uint32_t)DRV_IO_INTENT_NONBLOCKING;
             /* This driver will always work in Non-Blocking mode */
-            clientObj->ioIntent = (DRV_IO_INTENT)(ioIntent | DRV_IO_INTENT_NONBLOCKING);
+            clientObj->ioIntent = (DRV_IO_INTENT)(temp);
 
             /* Initialize other elements in Client Object */
             clientObj->eventHandler  = NULL;
-            clientObj->context       = (uintptr_t)NULL;
+            clientObj->context       = 0U;
             clientObj->drvIndex      = drvIndex;
 
             return clientObj->clientHandle;
         }
     }
 
-    OSAL_MUTEX_Unlock(&(dObj->mutexClientObjects));
+    (void) OSAL_MUTEX_Unlock(&(dObj->mutexClientObjects));
 
     return DRV_HANDLE_INVALID;
 }
@@ -868,7 +873,7 @@ void DRV_USART_Close( DRV_HANDLE handle )
     DRV_USART_CLIENT_OBJ* clientObj = NULL;
 
     /* Validate the driver handle */
-    clientObj = _DRV_USART_DriverHandleValidate(handle);
+    clientObj = lDRV_USART_DriverHandleValidate(handle);
 
     if (clientObj == NULL)
     {
@@ -878,7 +883,7 @@ void DRV_USART_Close( DRV_HANDLE handle )
     dObj = (DRV_USART_OBJ* )&gDrvUSARTObj[clientObj->drvIndex];
 
     /* Guard against multiple threads trying to open/close the driver */
-    if (OSAL_MUTEX_Lock(&dObj->mutexClientObjects , OSAL_WAIT_FOREVER ) == OSAL_RESULT_FALSE)
+    if (OSAL_MUTEX_Lock(&dObj->mutexClientObjects , OSAL_WAIT_FOREVER ) == OSAL_RESULT_FAIL)
     {
         return;
     }
@@ -886,15 +891,15 @@ void DRV_USART_Close( DRV_HANDLE handle )
     /* We will be removing the transfers queued by the client. Guard the linked list
      * against interrupts and/or other threads trying to modify the linked list.
      */
-    if (_DRV_USART_ResourceLock(dObj) == false)
+    if (lDRV_USART_ResourceLock(dObj) == false)
     {
         return;
     }
 
-    _DRV_USART_RemoveClientTransfersFromList(dObj, clientObj, DRV_USART_DIRECTION_TX);
-    _DRV_USART_RemoveClientTransfersFromList(dObj, clientObj, DRV_USART_DIRECTION_RX);
+    lDRV_USART_RemoveClientTransfersFromList(dObj, clientObj, DRV_USART_DIRECTION_TX);
+    lDRV_USART_RemoveClientTransfersFromList(dObj, clientObj, DRV_USART_DIRECTION_RX);
 
-    _DRV_USART_ResourceUnlock(dObj);
+    lDRV_USART_ResourceUnlock(dObj);
 
     /* Reduce the number of clients */
     dObj->nClients--;
@@ -908,30 +913,30 @@ void DRV_USART_Close( DRV_HANDLE handle )
     /* De-allocate the client object */
     clientObj->inUse = false;
 
-    OSAL_MUTEX_Unlock(&(dObj->mutexClientObjects));
+   (void) OSAL_MUTEX_Unlock(&(dObj->mutexClientObjects));
 }
 
-DRV_USART_ERROR DRV_USART_ErrorGet( const DRV_USART_BUFFER_HANDLE bufferHandle )
+DRV_USART_ERROR DRV_USART_ErrorGet( const DRV_USART_BUFFER_HANDLE handle )
 {
     DRV_USART_OBJ* dObj = NULL;
     DRV_USART_BUFFER_OBJ* bufferObj = NULL;
     DRV_USART_ERROR errors = DRV_USART_ERROR_NONE;
 
     /* Get USART driver object from bufferHandle */
-    dObj = _DRV_USART_GetDriverObj(bufferHandle);
+    dObj = lDRV_USART_GetDriverObj(handle);
 
     if (dObj == NULL)
     {
         return errors;
     }
 
-    if (_DRV_USART_ResourceLock(dObj) == false)
+    if (lDRV_USART_ResourceLock(dObj) == false)
     {
         return errors;
     }
 
     /* Get buffer object from bufferHandle */
-    bufferObj = _DRV_USART_GetTransferObj(bufferHandle);
+    bufferObj = lDRV_USART_GetTransferObj(handle);
 
     if (bufferObj != NULL)
     {
@@ -940,7 +945,7 @@ DRV_USART_ERROR DRV_USART_ErrorGet( const DRV_USART_BUFFER_HANDLE bufferHandle )
         bufferObj->errors = DRV_USART_ERROR_NONE;
     }
 
-    _DRV_USART_ResourceUnlock(dObj);
+    lDRV_USART_ResourceUnlock(dObj);
 
     return errors;
 }
@@ -956,7 +961,7 @@ bool DRV_USART_SerialSetup(
     bool isSuccess = false;
 
     /* Validate the driver handle */
-    clientObj = _DRV_USART_DriverHandleValidate(handle);
+    clientObj = lDRV_USART_DriverHandleValidate(handle);
 
     if (clientObj == NULL)
     {
@@ -971,7 +976,7 @@ bool DRV_USART_SerialSetup(
     dObj = (DRV_USART_OBJ* )&gDrvUSARTObj[clientObj->drvIndex];
 
     /* Grab a mutex */
-    if(OSAL_MUTEX_Lock(&(dObj->mutexTransferObjects), OSAL_WAIT_FOREVER) == OSAL_RESULT_FALSE)
+    if(OSAL_MUTEX_Lock(&(dObj->mutexTransferObjects), OSAL_WAIT_FOREVER) == OSAL_RESULT_FAIL)
     {
         return isSuccess;
     }
@@ -996,10 +1001,11 @@ bool DRV_USART_SerialSetup(
          }
     }
 
-    OSAL_MUTEX_Unlock(&(dObj->mutexTransferObjects));
+    (void) OSAL_MUTEX_Unlock(&(dObj->mutexTransferObjects));
 
     return isSuccess;
 }
+
 
 void DRV_USART_BufferEventHandlerSet(
     const DRV_HANDLE handle,
@@ -1011,7 +1017,7 @@ void DRV_USART_BufferEventHandlerSet(
     DRV_USART_CLIENT_OBJ* clientObj = NULL;
 
     /* Validate the driver handle */
-    clientObj = _DRV_USART_DriverHandleValidate(handle);
+    clientObj = lDRV_USART_DriverHandleValidate(handle);
 
     if (clientObj == NULL)
     {
@@ -1020,7 +1026,7 @@ void DRV_USART_BufferEventHandlerSet(
 
     dObj = (DRV_USART_OBJ* )&gDrvUSARTObj[clientObj->drvIndex];
 
-    if (_DRV_USART_ResourceLock(dObj) == false)
+    if (lDRV_USART_ResourceLock(dObj) == false)
     {
         return;
     }
@@ -1028,10 +1034,10 @@ void DRV_USART_BufferEventHandlerSet(
     clientObj->eventHandler = eventHandler;
     clientObj->context = context;
 
-    _DRV_USART_ResourceUnlock(dObj);
+    lDRV_USART_ResourceUnlock(dObj);
 }
 
-static void _DRV_USART_BufferAdd(
+static void lDRV_USART_BufferAdd(
     DRV_HANDLE handle,
     void* buffer,
     const size_t size,
@@ -1051,13 +1057,13 @@ static void _DRV_USART_BufferAdd(
 
     *bufferHandle = DRV_USART_BUFFER_HANDLE_INVALID;
 
-    if((size == 0) || (buffer == NULL))
+    if((size == 0U) || (buffer == NULL))
     {
         return;
     }
 
     /* Validate the driver handle */
-    clientObj = _DRV_USART_DriverHandleValidate(handle);
+    clientObj = lDRV_USART_DriverHandleValidate(handle);
 
     if (clientObj == NULL)
     {
@@ -1066,17 +1072,17 @@ static void _DRV_USART_BufferAdd(
 
     dObj = (DRV_USART_OBJ* )&gDrvUSARTObj[clientObj->drvIndex];
 
-    if (_DRV_USART_ResourceLock(dObj) == false)
+    if (lDRV_USART_ResourceLock(dObj) == false)
     {
         return;
     }
 
     // Get a free buffer object
-    bufferObj = _DRV_USART_FreeTransferObjGet(clientObj);
+    bufferObj = lDRV_USART_FreeTransferObjGet(clientObj);
 
     if(bufferObj == NULL)
     {
-        _DRV_USART_ResourceUnlock(dObj);
+        lDRV_USART_ResourceUnlock(dObj);
         return;
     }
 
@@ -1092,20 +1098,20 @@ static void _DRV_USART_BufferAdd(
     *bufferHandle = bufferObj->bufferHandle;
 
     // Add the buffer object to the transfer buffer list
-    if (_DRV_USART_TransferObjAddToList(dObj, bufferObj, dir) == true)
+    if (lDRV_USART_TransferObjAddToList(dObj, bufferObj, dir) == true)
     {
         /* This is the first request in the queue, hence initiate a PLIB transfer */
         if (dir == DRV_USART_DIRECTION_TX)
         {
-            _DRV_USART_WriteSubmit(dObj);
+            lDRV_USART_WriteSubmit(dObj);
         }
         else
         {
-            _DRV_USART_ReadSubmit(dObj);
+            lDRV_USART_ReadSubmit(dObj);
         }
     }
 
-    _DRV_USART_ResourceUnlock(dObj);
+    lDRV_USART_ResourceUnlock(dObj);
 }
 
 void DRV_USART_WriteBufferAdd(
@@ -1115,7 +1121,7 @@ void DRV_USART_WriteBufferAdd(
     DRV_USART_BUFFER_HANDLE* bufferHandle
 )
 {
-    _DRV_USART_BufferAdd(handle, buffer, size, bufferHandle, DRV_USART_DIRECTION_TX);
+    lDRV_USART_BufferAdd(handle, buffer, size, bufferHandle, DRV_USART_DIRECTION_TX);
 }
 
 void DRV_USART_ReadBufferAdd(
@@ -1125,7 +1131,7 @@ void DRV_USART_ReadBufferAdd(
     DRV_USART_BUFFER_HANDLE* bufferHandle
 )
 {
-    _DRV_USART_BufferAdd(handle, buffer, size, bufferHandle, DRV_USART_DIRECTION_RX);
+    lDRV_USART_BufferAdd(handle, buffer, size, bufferHandle, DRV_USART_DIRECTION_RX);
 }
 
 size_t DRV_USART_BufferCompletedBytesGet( DRV_USART_BUFFER_HANDLE bufferHandle )
@@ -1135,20 +1141,20 @@ size_t DRV_USART_BufferCompletedBytesGet( DRV_USART_BUFFER_HANDLE bufferHandle )
     size_t processedBytes = DRV_USART_BUFFER_HANDLE_INVALID;
 
     /* Get USART driver object from bufferHandle */
-    dObj = _DRV_USART_GetDriverObj(bufferHandle);
+    dObj = lDRV_USART_GetDriverObj(bufferHandle);
 
     if (dObj == NULL)
     {
         return processedBytes;
     }
 
-    if (_DRV_USART_ResourceLock(dObj) == false)
+    if (lDRV_USART_ResourceLock(dObj) == false)
     {
         return processedBytes;
     }
 
     /* Get buffer object from bufferHandle */
-    bufferObj = _DRV_USART_GetTransferObj(bufferHandle);
+    bufferObj = lDRV_USART_GetTransferObj(bufferHandle);
 
     if (bufferObj != NULL)
     {
@@ -1166,6 +1172,10 @@ size_t DRV_USART_BufferCompletedBytesGet( DRV_USART_BUFFER_HANDLE bufferHandle )
                 /* Get the number of bytes processed by PLIB. */
                 processedBytes = dObj->usartPlib->readCountGet();
             }
+            else
+            {
+                /* Nothing to do */
+            }
         }
         else
         {
@@ -1174,7 +1184,7 @@ size_t DRV_USART_BufferCompletedBytesGet( DRV_USART_BUFFER_HANDLE bufferHandle )
         }
     }
 
-    _DRV_USART_ResourceUnlock(dObj);
+    lDRV_USART_ResourceUnlock(dObj);
 
     return processedBytes;
 }
@@ -1188,20 +1198,20 @@ DRV_USART_BUFFER_EVENT DRV_USART_BufferStatusGet(
     DRV_USART_BUFFER_EVENT event = DRV_USART_BUFFER_EVENT_HANDLE_INVALID;
 
     /* Get USART driver object from bufferHandle */
-    dObj = _DRV_USART_GetDriverObj(bufferHandle);
+    dObj = lDRV_USART_GetDriverObj(bufferHandle);
 
     if (dObj == NULL)
     {
         return event;
     }
 
-    if (_DRV_USART_ResourceLock(dObj) == false)
+    if (lDRV_USART_ResourceLock(dObj) == false)
     {
         return event;
     }
 
     /* Extract transfer buffer index value from the buffer handle */
-    bufferIndex = bufferHandle & DRV_USART_INDEX_MASK;
+    bufferIndex = (uint8_t)(bufferHandle & DRV_USART_INDEX_MASK);
 
     /* Validate the transferIndex and corresponding request */
     if(bufferIndex < dObj->bufferObjPoolSize)
@@ -1216,19 +1226,19 @@ DRV_USART_BUFFER_EVENT DRV_USART_BufferStatusGet(
         }
     }
 
-    _DRV_USART_ResourceUnlock(dObj);
+    lDRV_USART_ResourceUnlock(dObj);
 
     return event;
 }
 
 bool DRV_USART_WriteQueuePurge( const DRV_HANDLE handle )
 {
-    return _DRV_USART_QueuePurge(handle, DRV_USART_DIRECTION_TX);
+    return lDRV_USART_QueuePurge(handle, DRV_USART_DIRECTION_TX);
 }
 
 bool DRV_USART_ReadQueuePurge( const DRV_HANDLE handle )
 {
-    return _DRV_USART_QueuePurge(handle, DRV_USART_DIRECTION_RX);
+    return lDRV_USART_QueuePurge(handle, DRV_USART_DIRECTION_RX);
 }
 
 bool DRV_USART_ReadAbort(const DRV_HANDLE handle)
@@ -1237,7 +1247,7 @@ bool DRV_USART_ReadAbort(const DRV_HANDLE handle)
     DRV_USART_CLIENT_OBJ* clientObj = NULL;
 
     /* Validate the driver handle */
-    clientObj = _DRV_USART_DriverHandleValidate(handle);
+    clientObj = lDRV_USART_DriverHandleValidate(handle);
 
     if (clientObj == NULL)
     {
@@ -1246,17 +1256,17 @@ bool DRV_USART_ReadAbort(const DRV_HANDLE handle)
 
     dObj = (DRV_USART_OBJ* )&gDrvUSARTObj[clientObj->drvIndex];
 
-    if (_DRV_USART_ResourceLock(dObj) == false)
+    if (lDRV_USART_ResourceLock(dObj) == false)
     {
         return false;
     }
 
-    _DRV_USART_ReadAbort(dObj, clientObj);
+    lDRV_USART_ReadAbort(dObj, clientObj);
 
     // Submit the next request (if any) from the queue to the USART PLIB
-    _DRV_USART_ReadSubmit(dObj);
+    lDRV_USART_ReadSubmit(dObj);
 
-    _DRV_USART_ResourceUnlock(dObj);
+    lDRV_USART_ResourceUnlock(dObj);
 
     return true;
 }

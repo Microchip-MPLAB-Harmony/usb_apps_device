@@ -48,9 +48,9 @@
 #include <stdint.h>
 #include <stddef.h>
 #include <stdbool.h>
+#include "driver/usb/usbhs/drv_usbhs.h"
 #include "usb/usb_device_cdc.h"
 #include "usb/usb_cdc.h"
-#include "driver/usb/usbhs/drv_usbhs.h"
 #include "driver/usart/drv_usart.h"
 #include "peripheral/clk/plib_clk.h"
 #include "peripheral/gpio/plib_gpio.h"
@@ -58,11 +58,11 @@
 #include "usb/usb_chapter_9.h"
 #include "usb/usb_device.h"
 #include "bsp/bsp.h"
+#include "peripheral/uart/plib_uart6.h"
 #include "system/int/sys_int.h"
 #include "system/dma/sys_dma.h"
 #include "osal/osal.h"
 #include "system/debug/sys_debug.h"
-#include "peripheral/uart/plib_uart6.h"
 #include "app.h"
 
 
@@ -74,6 +74,12 @@ extern "C" {
 
 #endif
 // DOM-IGNORE-END
+
+/* Device Information */
+#define DEVICE_NAME			 "PIC32MZ2048EFM144"
+#define DEVICE_ARCH			 "MIPS"
+#define DEVICE_FAMILY		 "PIC32MZEF"
+#define DEVICE_SERIES		 "PIC32MZ"
 
 /* CPU clock frequency */
 #define CPU_CLOCK_FREQUENCY 198000000
@@ -190,7 +196,7 @@ typedef struct
 {
 	SYS_MODULE_OBJ  drvUSBHSObject;
 
-	SYS_MODULE_OBJ  usbDevObject0;
+    SYS_MODULE_OBJ  usbDevObject0;
 
     SYS_MODULE_OBJ  drvUsart0;
 
