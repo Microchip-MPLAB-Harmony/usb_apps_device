@@ -1,7 +1,7 @@
 /*
  * Component description for AXIMX
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,26 +20,26 @@
  *
  */
 
-/* file generated from device description version 2021-06-28T09:00:02Z */
-#ifndef _SAMA5D2_AXIMX_COMPONENT_H_
-#define _SAMA5D2_AXIMX_COMPONENT_H_
+/* file generated from device description version 2022-10-04T10:37:14Z */
+#ifndef _SAMA5D_AXIMX_COMPONENT_H_
+#define _SAMA5D_AXIMX_COMPONENT_H_
 
 /* ************************************************************************** */
 /*   SOFTWARE API DEFINITION FOR AXIMX                                        */
 /* ************************************************************************** */
 
 /* -------- AXIMX_REMAP : (AXIMX Offset: 0x00) ( /W 32) AXI Matrix Remap Register -------- */
-#define AXIMX_REMAP_REMAP0_Pos                _U_(0)                                               /**< (AXIMX_REMAP) Remap State 0 Position */
-#define AXIMX_REMAP_REMAP0_Msk                (_U_(0x1) << AXIMX_REMAP_REMAP0_Pos)                 /**< (AXIMX_REMAP) Remap State 0 Mask */
-#define AXIMX_REMAP_REMAP0(value)             (AXIMX_REMAP_REMAP0_Msk & ((value) << AXIMX_REMAP_REMAP0_Pos))
-#define AXIMX_REMAP_Msk                       _U_(0x00000001)                                      /**< (AXIMX_REMAP) Register Mask  */
+#define AXIMX_REMAP_REMAP0_Pos                _UINT32_(0)                                          /* (AXIMX_REMAP) Remap State 0 Position */
+#define AXIMX_REMAP_REMAP0_Msk                (_UINT32_(0x1) << AXIMX_REMAP_REMAP0_Pos)            /* (AXIMX_REMAP) Remap State 0 Mask */
+#define AXIMX_REMAP_REMAP0(value)             (AXIMX_REMAP_REMAP0_Msk & (_UINT32_(value) << AXIMX_REMAP_REMAP0_Pos)) /* Assigment of value for REMAP0 in the AXIMX_REMAP register */
+#define AXIMX_REMAP_Msk                       _UINT32_(0x00000001)                                 /* (AXIMX_REMAP) Register Mask  */
 
-#define AXIMX_REMAP_REMAP_Pos                 _U_(0)                                               /**< (AXIMX_REMAP Position) Remap State x */
-#define AXIMX_REMAP_REMAP_Msk                 (_U_(0x1) << AXIMX_REMAP_REMAP_Pos)                  /**< (AXIMX_REMAP Mask) REMAP */
-#define AXIMX_REMAP_REMAP(value)              (AXIMX_REMAP_REMAP_Msk & ((value) << AXIMX_REMAP_REMAP_Pos)) 
+#define AXIMX_REMAP_REMAP_Pos                 _UINT32_(0)                                          /* (AXIMX_REMAP Position) Remap State x */
+#define AXIMX_REMAP_REMAP_Msk                 (_UINT32_(0x1) << AXIMX_REMAP_REMAP_Pos)             /* (AXIMX_REMAP Mask) REMAP */
+#define AXIMX_REMAP_REMAP(value)              (AXIMX_REMAP_REMAP_Msk & (_UINT32_(value) << AXIMX_REMAP_REMAP_Pos)) 
 
 /** \brief AXIMX register offsets definitions */
-#define AXIMX_REMAP_REG_OFST           (0x00)              /**< (AXIMX_REMAP) AXI Matrix Remap Register Offset */
+#define AXIMX_REMAP_REG_OFST           _UINT32_(0x00)      /* (AXIMX_REMAP) AXI Matrix Remap Register Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief AXIMX register API structure */
@@ -50,4 +50,4 @@ typedef struct
 
 
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
-#endif /* _SAMA5D2_AXIMX_COMPONENT_H_ */
+#endif /* _SAMA5D_AXIMX_COMPONENT_H_ */
