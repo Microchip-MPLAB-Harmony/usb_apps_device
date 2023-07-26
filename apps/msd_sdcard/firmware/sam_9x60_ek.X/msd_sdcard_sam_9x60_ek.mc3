@@ -55,7 +55,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.3.1"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.3.2"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -4597,120 +4597,432 @@
          <hash>4b6a4b8b638039002cde563fb508b72a0b2fa68c20a98d01eaa2464a1cb5c41a</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_9x60_ek\usb\src\usb_external_dependencies.h</file>
-         <hash>5110f718908d8f79253ce5b4b44172288cc179ff61d18e387f9e90ae9afbb1b6</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAM9X60_DFP\instance\pioc.h</file>
-         <hash>5b5a93096cbdae4cab2db4034a96bb6180aba4e87177122f4624e914f9822419</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAM9X60_DFP\instance\flexcom10.h</file>
-         <hash>8e19d1dc74454bfefaac5a562be7e422c4edee5bf9bc6d83332edc6566e75f3c</hash>
-      </entry>
-      <entry>
          <file>..\src\config\sam_9x60_ek\device.h</file>
          <hash>272c30439d908c419ccaac5f8a4dff8f7caa7881537bac508320752dfcfbf0d0</hash>
       </entry>
       <entry>
-         <file>..\src\packs\SAM9X60_DFP\component\pwm.h</file>
-         <hash>20d5a6bc695482d9c7c3166cfc829090fdda0e90679b2c4402f0441744daec63</hash>
-      </entry>
-      <entry>
          <file>..\src\packs\SAM9X60_DFP\instance\sfr.h</file>
-         <hash>94f64aade96b4e8593d278892ddc7ce346f2bb5dfacb9fa1344dae5dfb707012</hash>
+         <hash>331e3a6470eb1a005d862253117ff8a8f9a2fd740e69c8bccfc5ef137fb9a9c9</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\system\time\src\sys_time.c</file>
-         <hash>ddec1a83e32b63552ae72f884dc849e376b60d411669554f7ec492fff180662f</hash>
+         <hash>fa2d85ab967b80157caf8483f6e28a23b12b548844a1d80f2fef760cd9b99271</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\instance\sdmmc1.h</file>
-         <hash>7f23fa0859ed868f13cd5a5343d6f303529c5b7be1d3b5a69e8aa74f20eb47c9</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAM9X60_DFP\pio\sam9x60.h</file>
-         <hash>e52750138308860b5ee60f1a2f3d09e9612636cc9d8e4206990e9e9dbf2c7a67</hash>
+         <hash>792d96dcaf250c25261b0b7e188de1732da58b55f8a16b278a2de8885c4f40d2</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\instance\pmc.h</file>
-         <hash>f082ab72defe8e8fa2f9a54068c79240c506aa1921ec514751bf8731cd0e42b8</hash>
+         <hash>a9ffe76d516ae888b142c2aa64b184531b3038751bf07d371a806b9cb49e771e</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\instance\pit64b.h</file>
-         <hash>4a144694a768afbf389ff7435a6bdd4dd7a60c5cd23f21eaf11e5b5b4c97b9cd</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_9x60_ek\system\system_module.h</file>
-         <hash>981fac23277aa77f682e7a9a28d436f892006cd5b4c7f23f50941b6d9a30e740</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_9x60_ek\usb\src\usb_device.c</file>
-         <hash>b530b020cfa777eed5e76731e125a07d285ad49f2014ccf93858db1581a40d96</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAM9X60_DFP\instance\sha.h</file>
-         <hash>d1f430c515f2d0b4b12371fa32d237a5f1b6843217d1c1b348b01c826c26bdce</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAM9X60_DFP\component\classd.h</file>
-         <hash>25d46da62ffb19ebb369df543376a8cdb4d0653ffa7e392b665bcb9ee419dcb4</hash>
+         <hash>89850cf98cb6eab392f3d0596a565d9d2128e58eb4996dce308a75c5608cb8af</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\peripheral\mmu\plib_mmu.c</file>
-         <hash>0c0c4814324d06ca80722e02980f3d01dc045c6ccb8a86ea393f34e3811ca4ea</hash>
+         <hash>ed88b8ad1cd711ccf2826a7a17df4dc7b2413ab75ebf22f1c23246a4cbcd85a5</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\peripheral\tc\plib_tc_common.h</file>
-         <hash>444f1845776c5bbdd53278a60d8f2101e23eb3605b8b3950811ef24f9fd05ec0</hash>
+         <hash>aa07077b6355fa1dc9e938cb4def1c725bffddf452ffc55e4f982f83d3988a9e</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\peripheral\mmu\plib_mmu.h</file>
-         <hash>a777af67221ce686baec242376d2cccad707ed3e197c3b049b7d9fd5519e3dfe</hash>
+         <hash>7fb6e6b8ad6a80b7fc04c0264b7cdf49e6d6b887e4f3c5aa394eda88e32e0116</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\component\pit.h</file>
-         <hash>6168d720cc1df52d8c57b63fca1d7fd1b0ea424d8c82a28e33b373f95b850197</hash>
+         <hash>58f8b87152ee8ef318157491367e38ec42df0fc4bcb3ee3e70cbc825d5273f34</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\instance\bsc.h</file>
-         <hash>868d723f0fde5162a0265cd56ddbfcc1caf2be31c18df844dfcd24e1c6f2129c</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_9x60_ek\ddram.ld</file>
-         <hash>6b56efb7fd149bff100474db874ea199c592d073d35a31c6a20e95495b657019</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_9x60_ek\usb\usb_host.h</file>
-         <hash>4ec16dee42ae6b1bad8a7199b44750ccf0c5fa3aee5e44766e7b6dffc9979e83</hash>
+         <hash>5b93c751ff317dc93ce3598865ddc613df1bec97dc1731829ef836203109ab4d</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\device_cache.h</file>
          <hash>022a4c6bce1d10badd66bfa60707c3dbc830d5b1a6702dfd825d3317ccba1188</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_9x60_ek\driver\usb\udphs\src\drv_usb_udphs_local.h</file>
-         <hash>799fc9a1e7388804cfbc9d5e5cac60edda2b6ffd9082f75bb7f4c8c95dd57e34</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAM9X60_DFP\component\pmecc.h</file>
-         <hash>66b37c6796d62875634d15edaf4dd1e169e184e9dd1c7bdabcf0b6ec680b3452</hash>
-      </entry>
-      <entry>
          <file>..\src\config\sam_9x60_ek\driver\usb\drv_usb.h</file>
          <hash>dce0fe53973e23d87ee16fec7ef65f171b537ac80e14eaa2ca43962156f1c6e7</hash>
       </entry>
       <entry>
-         <file>..\src\packs\SAM9X60_DFP\component\sckc.h</file>
-         <hash>7b0a312de99e594b36e73b509c90d7a1b2d2843c59ae2ffd41fcf638bcef6938</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_9x60_ek\system\int\sys_int.h</file>
-         <hash>71e36331ee689ae305b3d8ec49948e3dde0324b65f51bf38f4472b900a421ed6</hash>
+         <file>..\src\config\sam_9x60_ek\pin_configurations.csv</file>
+         <hash>a374e5611d5608b40a9dee5e61312500bca2dbd8487771eb570efd0a5e26228e</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\instance\udphs.h</file>
-         <hash>9df30f4ee05543c0c228717f85f241e5ece213ba4045ee5ed4bf8db39151b93f</hash>
+         <hash>a57cc5d7e3992acdec104705056f162198b40f2de8582a8f1cb37a57ab669269</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60_DFP\component\sfr.h</file>
+         <hash>61b0fcd7a38a474abe4e62ba4e631c4723790fc6c43ebbf517abaf1ee0bd5f5c</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60_DFP\instance\flexcom3.h</file>
+         <hash>f7c6547248eee1901a40337ca06ef326bea9b03227b49bcabd7cc62a37124f08</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_9x60_ek\usb\usb_host_client_driver.h</file>
+         <hash>d11085e6a64f6b4551b1dc19aaee5b8a2555b7df649057bdb2ce8549c296a87d</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60_DFP\instance\mpddrc.h</file>
+         <hash>96576d4d203898b67d3995f27d446b39a03942199c72fffd5194daec0d2d8e3d</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60_DFP\component\uhphs.h</file>
+         <hash>ee7a2305a2fdb001255b53cc8933a164b3e692ef8409efa3ad2a4a89a6619e8d</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60_DFP\component\bsc.h</file>
+         <hash>70d948d6bf8290b919894548a5afb2a7c963f61f9c737da3ca2cae19f330c5d0</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_9x60_ek\driver\sdmmc\drv_sdmmc_definitions.h</file>
+         <hash>4917f65a8afb9ae28e08fab862bfba969b892990b1d1039f1d03d66edcaa826e</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_9x60_ek\driver\usb\udphs\src\drv_usb_udphs_device.c</file>
+         <hash>f6bd8361d8f3e4c80b8fb73d87e24b60ca48c731ddf39a3c10df6cee7208a568</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_9x60_ek\bsp\bsp.c</file>
+         <hash>6607c125c95b14935d29a85142d6c90fc93ae2213eaa0712e961d9c2263ddaa8</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_9x60_ek\bsp\bsp.h</file>
+         <hash>debb2428a9eeb67c5cf8e061d57ee1e12ce163aabc195d4d4befa6caf0489808</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_9x60_ek\usb\usb_msd.h</file>
+         <hash>411e51784fd839785fa33a6b5c5fd26b446947816cc1c96b6f5e9d3b3ac65559</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_9x60_ek\usb\usb_common.h</file>
+         <hash>fc9f44df7ab465084d1522901685e5bfad10548e44563a7460d7e089e6276ded</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60_DFP\component\lcdc.h</file>
+         <hash>6eff6eca4f4eedf91ca6a18ffac67b1cc7f977008ca0e3d8e793123ca20e52d6</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60_DFP\instance\tdes.h</file>
+         <hash>dce5c8e9be1d1e28eca808d7e988ebb3d5f72010ea70e9b74ba939ebe9a30f67</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_9x60_ek\osal\osal.h</file>
+         <hash>8404fbe44807fa0484ffb38843a72cb9af8e31c9c30bd1b2594e609b8ea317d9</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_9x60_ek\user.h</file>
+         <hash>451e0878e9fcf6cf9fab046c1452ea662757988346c7f39e6bc98478ca25f995</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60_DFP\component\matrix.h</file>
+         <hash>279b00a61a7375d0b01c7667db5f535ebd7cef5c512bc450cd9761563edb00ea</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60_DFP\component\smc.h</file>
+         <hash>ee42aa745d737139fbad77165ac106bf2b07cda77c0daa42c8e3a8e3c65aad54</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60_DFP\component\gpbr.h</file>
+         <hash>7b81a6dee23352a388c8cc5b5b6930e4f338d3c9cf4eaf4fa3c3d8c253bd051e</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60_DFP\instance\emac0.h</file>
+         <hash>b60e2385294b2e67badfa6a266dde0c454f3da6e19114830de752a6f7824d82f</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60_DFP\component\can.h</file>
+         <hash>30fae0b668bca96b744b0ece01a84645876923bf59493ead625fef60422a67d1</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60_DFP\instance\syscwp.h</file>
+         <hash>5a611683e99c7455a1fb5fb64ff475abf1a576defecf04d4a44712063d45f947</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_9x60_ek\peripheral\aic\plib_aic.h</file>
+         <hash>9ff729f3819887a6769c1a4386db9727e6e88fe6bee25960985d9ccd09229a7d</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_9x60_ek\peripheral\sdmmc\plib_sdmmc0.c</file>
+         <hash>19d19e11fffa9d9430dda3b9d4c177b5ace8cc6e0d48ffb17d01e7198a32a153</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60_DFP\instance\smc.h</file>
+         <hash>73972604e8ed997480bb40676b21e51d56d791879a1e381a55f5b39e026eea9b</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60_DFP\instance\flexcom2.h</file>
+         <hash>d14e6115c945a564d1d80c97ab11d7626c41c2cd2663868d22a385849fa06323</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_9x60_ek\peripheral\aic\plib_aic.c</file>
+         <hash>19cd9d59f24ac3008ff315b25118599b24ebc10aa1f3f79857bb96b389086c67</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_9x60_ek\peripheral\sdmmc\plib_sdmmc0.h</file>
+         <hash>3e4c5d26242522a5fbbc57fdc2650158fec09f032ba8a1c1f2a816ef67f65edb</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60_DFP\instance\pioa.h</file>
+         <hash>e4e8e6c994e52507ff47139afe9dac244f563408fa527582812b4c160ea12c5e</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60_DFP\instance\flexcom12.h</file>
+         <hash>33babdb4cdc397991a6e7f4dcaa149d62149f5462b77d110e26a3a9a4a8594ae</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60_DFP\instance\dbgu.h</file>
+         <hash>5ba13b9a8428c7803315e68ad7fcfb304994caec45b8e6a75277b5bd7dbf687d</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_9x60_ek\usb\src\usb_device_local.h</file>
+         <hash>3dc9e27b535edb31aa97aae04a0ce9ac12e5092ed3bae7ef6fd203bc1520ef33</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60_DFP\instance\flexcom1.h</file>
+         <hash>db311f98cc8d9917d8ca4f0e6dc2e9bb73ea54ced10aa047bc707449e0cfb7ac</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60_DFP\instance\isi.h</file>
+         <hash>dcef76b15caf7cd038a43b395c655e52024a2e58f31fa85085d10d004ed34703</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60_DFP\component\qspi.h</file>
+         <hash>5e3ead5a0a3c0ceabec79d063bbc14c3135883ed92a3aea202cdb2e81adedbc5</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60_DFP\instance\i2smcc.h</file>
+         <hash>3e0d5b36778268fe0647bba6e15624aa992a39ae259141532b0b9d1e98563b75</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60_DFP\component\udphs.h</file>
+         <hash>01573b1b16c5f876de2e18f679be66c25a2797d7c1bf24201db3c06562f8ad60</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_9x60_ek\usb\usb_chapter_9.h</file>
+         <hash>86a258d763c7f0f563122ccd4ec0bbef422fd4e2f523402bb89be10568cecf3f</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60_DFP\instance\sckc.h</file>
+         <hash>ae9ef9aebc3281946a79ba85a83c072d1ffd882936dee08bb001db0fba6a9f13</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60_DFP\component\isi.h</file>
+         <hash>1121c873c1f58bd5714db6a51db5fd28b997c57c4d03ec8a02c8410251220ba3</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_9x60_ek\driver\sdmmc\drv_sdmmc.h</file>
+         <hash>697acb93f32d8f9c5fb4987da5587233adf62a9b331fb30a195d1c788455339d</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60_DFP\component\otpc.h</file>
+         <hash>918e1c2d0cc4c03a80192b2bd91c4830334fd8e3570e23f2b4dd842824afc453</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_9x60_ek\sys_tasks.h</file>
+         <hash>21f254f497a18a024cd00128d06c4776c2643f867a460c1ba9880a7dd41a8d56</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_9x60_ek\usb\usb_device_msd.h</file>
+         <hash>3b8a62ad093b5897cb4331c111e0da500db8769bcc29d27885bd17ceacb9451f</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_9x60_ek\system\system.h</file>
+         <hash>2b75f8e370e5cb2c54f70da7351ee149f0d5a7673e700f39b373099716b31b55</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60_DFP\instance\matrix.h</file>
+         <hash>552bc0d243f31df555d1d96973a14907a359c07fbd5187fa4b2952df01bb8d08</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_9x60_ek\system\system_media.h</file>
+         <hash>e61ba67015cfba6a7425d077cd2c633ba9989218bbe585078efe2face729401f</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60_DFP\instance\sdramc.h</file>
+         <hash>da86b54cd9b1ece95a6a264796d138c5117a43c990f3417ff2633711cd870621</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60_DFP\instance\gfx2d.h</file>
+         <hash>c2cfcb1a7fb82edf12b1b9713ec356d270da22eb589a6f037ab1e696d349c426</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_9x60_ek\peripheral\sdmmc\plib_sdmmc_common.h</file>
+         <hash>c8693c2b48d12e81468827118033749902c15d2ff29044c878587fd933322909</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60_DFP\instance\flexcom9.h</file>
+         <hash>157653e909a6bc0f16d7e90539e18abd3828bc81e44e64f70d4d76fa1d518df2</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60_DFP\instance\trng.h</file>
+         <hash>8d9132598c95d06081ea08337ed668edb5a858cd9d45776780bb32d088d14b8d</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60_DFP\component\mpddrc.h</file>
+         <hash>04413a096bb2c9176f1ebb7e26da847c8f6244dc949899e73039356e17f9d037</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60_DFP\instance\flexcom11.h</file>
+         <hash>3ba34d771483afbf2827a1e96993cc68b900f8ae6d071db6c1a691384817d2b9</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60_DFP\instance\piob.h</file>
+         <hash>3e6b61a204296854245a4954892c9593e2e7f5e081e0ebea2f7b859eb48f9a47</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60_DFP\instance\flexcom0.h</file>
+         <hash>31c3d426a8c71dad8e1d3551a338dc7f730357739f8542fed53e3c2eeda08dd4</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60_DFP\instance\pit.h</file>
+         <hash>3bf821c9be19ce77d9e617fb96e8622bbf3dc70f876bb06dd601086b73d40fac</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60_DFP\instance\uhphs_ehci.h</file>
+         <hash>a7e1dea9242b20a6c03272cce8887d0900ab8803273c1df9c0359e09aea9ddf2</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60_DFP\instance\sdmmc0.h</file>
+         <hash>435f418959e205099d8365ad15ac543eb4412a97d3421b9f29635a221a97ad22</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_9x60_ek\initialization.c</file>
+         <hash>8a0a1f5a1b4e3ad9c3c8a62edaf3a7706ed8303938b436437a6e3b825b164ab8</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_9x60_ek\usb\src\usb_device_msd.c</file>
+         <hash>01b3dc1b9b9ced6a917d57fe19063bf66ea40cb6ada4b45dfb9662502e3487ae</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60_DFP\component\syscwp.h</file>
+         <hash>e1de8c1d87ab6d5cb78e0aa4ef0890a1761750073287087d7493adea275fb5a1</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60_DFP\component\pmc.h</file>
+         <hash>ec1bbcec5446a05122fe5d92882e197618a5e11fa3da1af012fb9c4b4ed59334</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60_DFP\instance\rstc.h</file>
+         <hash>17bcd398d5e1d9017550296158ed98d24ecf1dbb4e39ad8252840c694f636c49</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_9x60_ek\peripheral\pio\plib_pio.h</file>
+         <hash>51d463d5dbf86a49a4529c01a9503383ae4ea36b7615d134bc40036f95d2f9d2</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_9x60_ek\peripheral\pio\plib_pio.c</file>
+         <hash>7825f9e3303af0d5e03e2e96073ef290a3aab9e4054570954d26b43b17c2decb</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60_DFP\component\pmerrloc.h</file>
+         <hash>23d2f80a1b0d36534cbff3d19e9ffe68f12272b021cebe50756419c9b54f84a6</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60_DFP\component\shdwc.h</file>
+         <hash>066822422a1c3dd3d9a00f90d66379cb31d0e89aa7e1a44d1178d9b95933887f</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_9x60_ek\usb_device_init_data.c</file>
+         <hash>ca07b407cd7196d8933cad0c3a8468d22b5277e51c6a6aed1ad8ef7c096e5353</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_9x60_ek\osal\osal_impl_basic.h</file>
+         <hash>67ce72d34fd1e4dee0b6937fa026ab2c7bd285f82a24da09742c68333adaf0fc</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60_DFP\sam9x60.h</file>
+         <hash>c9eff7dc4369eac81b86962ab9ad85cc615e52cd8a76f3fe1d426bc01a62402a</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60_DFP\component\pit64b.h</file>
+         <hash>6f0482aa2117839b6334842b25ee9e650c46c3fa255fe71963aaf2f7e415fef9</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_9x60_ek\usb\usb_hub.h</file>
+         <hash>f07eb653a11355424adb96ff0fec6796f6b95c8924ac93fb9207f888d130bc7d</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_9x60_ek\driver\driver_common.h</file>
+         <hash>5217965f6720b4fdf717e99ce9df4f2c9fbd82bbbc9655847166d1eefa806fee</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60_DFP\instance\flexcom8.h</file>
+         <hash>4a4c362330d14ddc9f74a05a3f3c373a0164cc0f62337fc7363adb12dabfc4cd</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60_DFP\instance\classd.h</file>
+         <hash>65da8ac57d70f2667343e59f658b0339b4b8fe837577ddb560d035bf5caf785a</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_9x60_ek\tasks.c</file>
+         <hash>59f85ac8a1b37e0f0f63abf7fd76c19ba648a0ce5197b1e4124f5201080c0211</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_9x60_ek\usb\src\usb_external_dependencies.h</file>
+         <hash>5110f718908d8f79253ce5b4b44172288cc179ff61d18e387f9e90ae9afbb1b6</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60_DFP\instance\pioc.h</file>
+         <hash>b836f5aa03c45968aa92a8c66ceb7e5276a70876e707ee5dd0d90aa82dc443d6</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60_DFP\instance\flexcom10.h</file>
+         <hash>1845cfcdd931f3faf6c31827bbfc886da72bdd7ea7ca2eca0c412d0f6df1b1c0</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60_DFP\component\pwm.h</file>
+         <hash>ffe11f093f5c06646b0f0470f9d36fb641ec31579ef88618ba094f59637082ec</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60_DFP\pio\sam9x60.h</file>
+         <hash>46c6f7c3dd42cc6ad70e2bc6f76354636290cf2dbcfcf8449b72512ec7704555</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_9x60_ek\system\system_module.h</file>
+         <hash>96c74368801b0a7aaa25aec3ec2cb0d483250385f103ffc1ff64089b4ca2c6d9</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_9x60_ek\usb\src\usb_device.c</file>
+         <hash>e2299e7132aaf91acd6857a827520f8bd5ecdc40d8ba2e6c4018b8441064a6cb</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60_DFP\instance\sha.h</file>
+         <hash>867bbdb507f15777e53683ac4c740c770ed284c3f735e6f62f8000bb48f8578a</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60_DFP\component\classd.h</file>
+         <hash>a4c21ce48a8d846eee18b5beecee458859115e3ed72b3d40030d4510b13854ce</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_9x60_ek\ddram.ld</file>
+         <hash>6726b057f4693885faf7e71c8cfe44e210a9ae72e9af402661357fdf82e47276</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_9x60_ek\usb\usb_host.h</file>
+         <hash>4ec16dee42ae6b1bad8a7199b44750ccf0c5fa3aee5e44766e7b6dffc9979e83</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_9x60_ek\driver\usb\udphs\src\drv_usb_udphs_local.h</file>
+         <hash>cadaf0b99497e8e094867cfac4f909cc21a2ce1cad05f24f38870ff4cdf4e29f</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60_DFP\component\pmecc.h</file>
+         <hash>c6beed559bf3ea5ff6f22990862cf5b9c73ccb213d8ff100ba0e87f8428f67e2</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60_DFP\component\sckc.h</file>
+         <hash>cff51c6896a853491977ae87f3dfc616b51b771dd7ffa00ef2b1c4ba6953b1c5</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_9x60_ek\system\int\sys_int.h</file>
+         <hash>dc104ae181fd5309e1bb42896246644fae95915a8e639b23ecfccc8840850274</hash>
       </entry>
       <entry>
          <file>..\src\app.h</file>
@@ -4722,19 +5034,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\peripheral\mmu\cp15.h</file>
-         <hash>24907eff18f34ad82252c89fde571ebd0f51da7ca4b9f72c8810e9c3d6485edb</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAM9X60_DFP\component\sfr.h</file>
-         <hash>c0bf40090b4437fe78839094ab7cca689bf9d087ebdb34ce1687101ec41ff0d9</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAM9X60_DFP\instance\flexcom3.h</file>
-         <hash>e851e78a6764393d11362377eefe934b129b8bed0eaabbb7f9abb98843d5c202</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_9x60_ek\usb\usb_host_client_driver.h</file>
-         <hash>d11085e6a64f6b4551b1dc19aaee5b8a2555b7df649057bdb2ce8549c296a87d</hash>
+         <hash>d927deee45b9b50351c5513daf446ae3278f5fa85915c06c434b24c7eb61b64b</hash>
       </entry>
       <entry>
          <file>..\src\app.c</file>
@@ -4742,187 +5042,99 @@
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\instance\flexcom7.h</file>
-         <hash>5435070845239348b89919c9d8ad4088efd01d4b860d433b51d6d7852d8bf982</hash>
+         <hash>401bd59d5c05d78525a21098442385d0ab878f60d3160d8a004742775b21287f</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\system\int\src\sys_int.c</file>
-         <hash>f188fc9be907b9be357e526fbba7eb3a14b5fa936d029c3e33d324298aa77548</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAM9X60_DFP\instance\mpddrc.h</file>
-         <hash>c4f712f0713bba3fb44adc797f7fdc77eaaff815c56e544c2b820d0991f27a61</hash>
+         <hash>5a683ab50cabf3aa131d76d12f4715e103de0e5cce67d22ab26d11665c38614f</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\instance\rtt.h</file>
-         <hash>05b36b601f184ab9d4838970d8dc49f5688b764d315f8b8b46d809d9bb16c6ed</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAM9X60_DFP\component\uhphs.h</file>
-         <hash>7626068e885fb9552d9e33a8bd237d1e869c83d5da49f905781e87e1dfb827f7</hash>
+         <hash>4f2dd14309a78fc15e2b90f04f0f3d419f88c115900d999b15b4e7cb5b99b1a7</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\instance\piod.h</file>
-         <hash>802185fd64f89bbc5e8f215741a632fa0f052a698911fd73b6b7fb6dac38c29a</hash>
+         <hash>4b760603a929aa11626e073e58dab35b6441264b6fbd38174f1cc98f8f9b0b9e</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\driver\sdmmc\src\drv_sdmmc.c</file>
-         <hash>df63b920a5f5add5c55ba8ec9dfe6f96ad444372e14743100d0b90aedc61382c</hash>
+         <hash>ef409309bba623086fdcbfd28a9b3f895235bb02b7a3c7a7ee986924c591fc18</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\cstartup.S</file>
          <hash>bab52b245ee3ee78ff26156c06ac67761ea78039030859fa772ece111fd5dab3</hash>
       </entry>
       <entry>
-         <file>..\src\packs\SAM9X60_DFP\component\bsc.h</file>
-         <hash>7e2706316a6c97e4d5936f45cb3d2b16165fad19c4116e34cbdbb2fc54a62664</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_9x60_ek\driver\sdmmc\drv_sdmmc_definitions.h</file>
-         <hash>8e3fa241696362bae6415e2c9f4d750536d8956fc32845f72406b1f01c7e460a</hash>
-      </entry>
-      <entry>
          <file>..\src\config\sam_9x60_ek\usb\usb_host_hub_interface.h</file>
          <hash>9db9028cdb085f4ed90d06c8d0013e5b9d300be9b49f0933094c373552193645</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_9x60_ek\driver\usb\udphs\src\drv_usb_udphs_device.c</file>
-         <hash>61da1602d7be3babff14cf25591ae0510085dcb0e6b7d282e19425579a017aab</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_9x60_ek\bsp\bsp.c</file>
-         <hash>6607c125c95b14935d29a85142d6c90fc93ae2213eaa0712e961d9c2263ddaa8</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_9x60_ek\bsp\bsp.h</file>
-         <hash>f6f1b79e5e94618fe79c07cb6f71caa348a4be12c6791085c9b8900c79764ff9</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_9x60_ek\usb\usb_msd.h</file>
-         <hash>411e51784fd839785fa33a6b5c5fd26b446947816cc1c96b6f5e9d3b3ac65559</hash>
-      </entry>
-      <entry>
          <file>..\src\packs\SAM9X60_DFP\component\gfx2d.h</file>
-         <hash>48fa0c20d2d6ccc6111c92fcb2bd1bb95e2b3448f25eab0ac62acd7a27148297</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_9x60_ek\usb\usb_common.h</file>
-         <hash>fc9f44df7ab465084d1522901685e5bfad10548e44563a7460d7e089e6276ded</hash>
+         <hash>6e0d42a889781d5acaba3d88acfeff2b82972fb8c0ca4ab86f52e2201ec60580</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\instance\qspi.h</file>
-         <hash>887a8e70c7038cef723f5ea96a5150291c35a428ed27d54c3681b5ede268034c</hash>
+         <hash>66e4791019e4d5c45fc75549aa28638978280a5d049de11b015083b771cfc76c</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\interrupts.h</file>
-         <hash>91abdb8d191ae865fc6082f30783c3d6cca8aa8d5aca823a7fb2cc65e3a57d24</hash>
+         <hash>87dd37a663af5e2a79550365ee0fb5881b2dadd59b3dd35810fafc3da15a479e</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\component\rtc.h</file>
-         <hash>bde50d5d14f4f47d3045b6102745f1ee9efcb29a5fa73c4328244cf06f7d6a4b</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAM9X60_DFP\component\lcdc.h</file>
-         <hash>7faf8dd0a6cf98e7d59263a0fb6fd5bf434399a8bc2b7bfdf9abbfe0e179f8c1</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAM9X60_DFP\instance\tdes.h</file>
-         <hash>cb84ac1e1c3c5991841028978ca45c5dfde5e266f564bef1899675ef8af22645</hash>
+         <hash>2ef22f04d392e5d0e21bbb35e87a916ca693346b98529c3c4c33a602cbc9fa7c</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\component\flexcom.h</file>
-         <hash>106389d219b2d687383fa3811253d12130423bb15456416fad15716e099b8156</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_9x60_ek\osal\osal.h</file>
-         <hash>d42702188d00d3e1d7219d7eef030485896bf8b5ebe55318656e82f0fbb89788</hash>
+         <hash>7439ef738b07d7ec7e311d5c421393857ad388c7cc9c1e6b6430213fbd847c90</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\interrupts.c</file>
-         <hash>7dc92e15bcf48758a166170eb54a02d6a4d80ab835dbd9988b6a8fae4b233c35</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_9x60_ek\user.h</file>
-         <hash>451e0878e9fcf6cf9fab046c1452ea662757988346c7f39e6bc98478ca25f995</hash>
+         <hash>361f5e1d843df60d762741cff2e30549cff849154b7e8d5aa89a3b3a8b07aa80</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\instance\uhphs_ohci.h</file>
-         <hash>0e4f4156665165d740d5fb6287ca05a0b9b7af27e64e3e912d693afff4e88d0a</hash>
+         <hash>1ec5b51e62d9230c8da9dc082d9137b20493502c4332ecd29593a45a33bfe491</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\component\aes.h</file>
-         <hash>157e95abf5da36f03f683b366aeb19c1501d9650eca5dd25004b0b10c9d1a152</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAM9X60_DFP\component\matrix.h</file>
-         <hash>bef4dc6dec407319098cfc3c70dd373c8bbb16b4a790111f8544ba7d1390c9c1</hash>
+         <hash>b35f37b628e990ca4020b329b0d10b09dd4960d368f0df8f1d0041d4450e03ae</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\instance\rtc.h</file>
-         <hash>941fa051b0d617890fa9f41abe6a54b87e7e5926647c17835dd2ef50dfcbf986</hash>
+         <hash>2bd939d1606b98e09ea229fab36071a383aa2cac00c51b12f9a2885f77422326</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\component\pio.h</file>
-         <hash>92bf489866774e306465ef48252c20bc8c3669874d8e1d82935ee4e9d64eb5f1</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAM9X60_DFP\component\smc.h</file>
-         <hash>b46967a28e39e91899644a3d7ae10437716ceaa177eeca9bea39342482c2ba59</hash>
+         <hash>fbb0c8b247f568aedc4f4750359d637c2f87fa0a13bb6140517bef68de05bb0b</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\instance\shdwc.h</file>
-         <hash>48862c44ffadde2490cb6580051137e685498ed71c1edc4e52f8b1e06146a450</hash>
+         <hash>8713dad40fd5a868e5615de4083d822c44b1be214855248e31643fff2f19da33</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\usb\src\usb_device_mapping.h</file>
          <hash>3a5eee6b064c49fd7a495f574736eaec5838e63f7de457ff688d70aa80432ce6</hash>
       </entry>
       <entry>
-         <file>..\src\packs\SAM9X60_DFP\component\gpbr.h</file>
-         <hash>a4e2bff950c6e2dfcb4050e04b120ba76ee18515310adafd22794f769e0b287c</hash>
-      </entry>
-      <entry>
          <file>..\src\packs\SAM9X60_DFP\component\rtt.h</file>
-         <hash>d72c58374ca75aefc5e17465cb346951906482b4e01ff5a23bf47e16b56a34fd</hash>
+         <hash>0cf17edffe989ed7ad54cf2f25f27a37f1ade980c9256969f22065f94329b48a</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\component\emac.h</file>
-         <hash>f4dfad2229c906d9e35d016028f08d70f1c6c9803ebb05a307589579f7997ab2</hash>
+         <hash>60dc865bc9fbb0e7a8ff797845be41546398bfd0ae980cbc89f65141c0b9055e</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\instance\aes.h</file>
-         <hash>701d64b4f72b01131278750aa201445d5478ba121e20db2abf4a7e8e2a167f6f</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAM9X60_DFP\instance\emac0.h</file>
-         <hash>95cb160c6d086f13cabaa014c7c9f9bb6e38515b28dcc9a7c7f3d40e3f708f96</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAM9X60_DFP\component\can.h</file>
-         <hash>02330ba48a6d77dda61da1ac8cb35cc63f2250a6314c841172ae0e675852c73c</hash>
+         <hash>d986bf5aed46518f9607b2a94fa6aa372951c1065558102ffc19f1966f3e8a5b</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\definitions.h</file>
-         <hash>b34a1f987b47a31cfdc45a72ca9bd0614f3221822e1c851d527117a4ec5fd6fe</hash>
+         <hash>36719652bbffbca9906f890eb5116aa653c30dd5af4efedc5d47e0210edb127a</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\system\time\src\sys_time_local.h</file>
-         <hash>a761ad68ce0cbac8c326bd17e54cc01d10324ed8d5e120ef092856a21604b6a2</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAM9X60_DFP\instance\syscwp.h</file>
-         <hash>016e7d39988265723adf897f7d57b442a2ef2f68e182e7b07574dd4c1f42bf7b</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_9x60_ek\peripheral\aic\plib_aic.h</file>
-         <hash>3744d8f5ae1843ce5b3b78bbae13a22a7f22b2f0584db476b657b40cb7850809</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_9x60_ek\peripheral\sdmmc\plib_sdmmc0.c</file>
-         <hash>7615b097b7dfee8a7a85dda34da1d1ab6f48977ee28d696e0459c3541c0f31ad</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAM9X60_DFP\instance\smc.h</file>
-         <hash>2811cc4e9bef09fe44c10aff1d49aaf16870c46ccc6e07a433092c07546494a8</hash>
+         <hash>df56f970664902417d798760e44978cf4b84c108cf0761647a383e91db76980c</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\driver\usb\udphs\src\drv_usb_udphs.c</file>
@@ -4933,124 +5145,44 @@
          <hash>d3c233d419e6304bfacbafc18cc68c0f5c26e365f23b20ea40ccfac458f664c5</hash>
       </entry>
       <entry>
-         <file>..\src\packs\SAM9X60_DFP\instance\flexcom2.h</file>
-         <hash>61e961ce66c07c7aad711eefd8e7614a3f1a7079aaa87251ae6e4cf69dc29152</hash>
-      </entry>
-      <entry>
          <file>..\src\packs\SAM9X60_DFP\instance\flexcom6.h</file>
-         <hash>68668b1f93c9f0f70e3fa6663c127e2265185331b56bdae72885c2d9884cd5f6</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_9x60_ek\peripheral\aic\plib_aic.c</file>
-         <hash>568ed06bb32c866260c835746f3ded1b1b705d2b10b13b77db53bb3348baa912</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_9x60_ek\peripheral\sdmmc\plib_sdmmc0.h</file>
-         <hash>3e4c5d26242522a5fbbc57fdc2650158fec09f032ba8a1c1f2a816ef67f65edb</hash>
+         <hash>a40bae2d1b6fc5f84bb80905d71d9bf0123758fdea98b1b5b578588c1ca23f14</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\stdio\xc32_monitor.c</file>
-         <hash>26e5749db654ed433fd94f6c732ef8600d0cbf5196493374cf111877c02b694e</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAM9X60_DFP\instance\pioa.h</file>
-         <hash>d2fa7d9fd1ea9270b5b07cdcc067e443ab25174fb39dc4dfc14708dd42aac767</hash>
+         <hash>858f8710d4287200a5ee7f3b3ad7c24f505aed9c05c16956ab0ff9f7bb162a6a</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\instance\ssc.h</file>
-         <hash>e9922293e261deff0d4a37ea82b826a618ef7e0f4aa893af9d4cb5e038b856a1</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAM9X60_DFP\instance\flexcom12.h</file>
-         <hash>d3aa4872a2b76fad2bb58e8de111e097c5648515fcac7d2f74f050239e8616b1</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAM9X60_DFP\instance\dbgu.h</file>
-         <hash>f226db4705970308b368b97d7155bdd6ecef35ed99c184160291be4a7fba619a</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_9x60_ek\usb\src\usb_device_local.h</file>
-         <hash>7ef3cbc9e2060d1d2800fb7a5d6d5597bb008b3da58bf475fc09219dd40c2244</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAM9X60_DFP\instance\flexcom1.h</file>
-         <hash>fa6c7b8e212e91b9ef6e1b99f36fade9525ae6619f0fe0bba08f2009b18dc184</hash>
+         <hash>a5c5ff81b38f6cecfa3d9dc044b4bd3eb5ba2880c40bab80cdb2f9b4a67c7d4a</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\component\i2smcc.h</file>
-         <hash>06f8a73f12d00092c466cb01731468d2cc35e5b2d347e39d59f81b0293948f70</hash>
+         <hash>e35bed6b3dae2269c19c01a5a18f456359da6144c344d68b42874d585f8d4931</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\component\uhpfs.h</file>
-         <hash>06991953e73aeb41ac0c59ce23d564439fcb31d8de759ffab3db9daa6d10aa3b</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAM9X60_DFP\instance\isi.h</file>
-         <hash>f44b59215ac685170aff2c36b5c66c26cb6d150c3bff2ec13fb4e178c566eff1</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAM9X60_DFP\component\qspi.h</file>
-         <hash>15f2dd9b307da74ebe6892eb26ed3ffd1f95b62b606fa9c1db37fa924c5df861</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAM9X60_DFP\instance\i2smcc.h</file>
-         <hash>f0225e64cc5c9b1be5d355e35c2960834f2e1b4b7de3648458972d99f177cde1</hash>
+         <hash>b7de69d3802f1569f2d0863333f72f09189d3aac15721eb30e5667ba7140ba14</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\component\sdramc.h</file>
-         <hash>1c3e005c8d6778f1f84f6a730c220851235007c4560ff76582861aadfd4bcf8a</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAM9X60_DFP\component\udphs.h</file>
-         <hash>ba739114cb2010b48824e13c90b1f32493acdab4f67d6cef2e6261c397c87e51</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_9x60_ek\usb\usb_chapter_9.h</file>
-         <hash>86a258d763c7f0f563122ccd4ec0bbef422fd4e2f523402bb89be10568cecf3f</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAM9X60_DFP\instance\sckc.h</file>
-         <hash>6e75b0abd5f60e88f28bc30fef5a9f9c135ff25248919204a3db3bf9c9916451</hash>
+         <hash>3c64fcaed207141f09f78d7af2b3671e0f73b21aa50e1b67178c90f2ac13f1d9</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\component\trng.h</file>
-         <hash>e412a5b60e03296a17967789dbe03bbfbfe5412b77a1f688b711a9dae428659e</hash>
+         <hash>c63e22a64176958c2cbf6313cafad23070352d976146de02476012e051a68720</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\instance\tc0.h</file>
-         <hash>4320dfb06ecba660afc1d465a9596f22436ca6905cc43d89f6bb8b73e9abd57c</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAM9X60_DFP\component\isi.h</file>
-         <hash>b680808d5870db7f8378850bfe8f586cf2a6824f7990f58c5575619f04bade70</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_9x60_ek\driver\sdmmc\drv_sdmmc.h</file>
-         <hash>adfd11fa4fb647cbc17073c5e43c29875b46cef63c016b655ef8d6bed9d514e2</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAM9X60_DFP\component\otpc.h</file>
-         <hash>e813976731e139df4f90507a2e93b2873791e161e557895552c85f02f3d00131</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_9x60_ek\usb\usb_device_msd.h</file>
-         <hash>3b8a62ad093b5897cb4331c111e0da500db8769bcc29d27885bd17ceacb9451f</hash>
+         <hash>caae006d87264cb5b6727d8c07ff8bf246a7bfd75099eda2aeec4ee575240dae</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\instance\tc1.h</file>
-         <hash>721b9fdc88d14653a16ba60f05eaaf676b45c0b843672f54497d5368b641ff3f</hash>
+         <hash>f9a7cee186c367ce574d31417db5a1853b3b15ece744af717962b1eb0c28d804</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\component\ssc.h</file>
-         <hash>44be28f6a93c5613f110e9c6cab12668e8d1d297179e901d7cd56c6b29a707f8</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_9x60_ek\system\system.h</file>
-         <hash>2b75f8e370e5cb2c54f70da7351ee149f0d5a7673e700f39b373099716b31b55</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAM9X60_DFP\instance\matrix.h</file>
-         <hash>6a3aeffc121b7a372ac6ffa446d2c5c295b8c4329eeb108f192f3b420c42bcf4</hash>
+         <hash>96345b2a5e806c97f92af07b99872412f09a45501c3d47a84a805a250f46f49f</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\peripheral\clk\plib_clk.h</file>
@@ -5058,223 +5190,127 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\system\time\sys_time.h</file>
-         <hash>f21b100d8f0b8b79af9217315098d51df855d9015f05a7e25ad77414cd19b2c3</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_9x60_ek\system\system_media.h</file>
-         <hash>be592b4eb9eb4cc8f25cf734fc15b088de091d2f8051b0fcba091c1b6194df5f</hash>
+         <hash>6357468f7670698b16bfb6439d9919ed38eba99d4f03277a8b43ac34586fa1b3</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\peripheral\clk\plib_clk.c</file>
-         <hash>0b48378856b80078b3e0c4a1010ab101450240313a46e035580e1ac241676a0a</hash>
+         <hash>47bfb080e748ed6655f8db54cbf1a0fc6e64abf237d5b9a2e01f4fe91b652f3d</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\instance\gpbr.h</file>
-         <hash>2edc8dbf991da2292e13f13dbbc3d4a3ed52a3653c89560dc5f50585a27df639</hash>
+         <hash>f98bcd24a5eb9a25cbe6be6dfcb542188d571b60374047d2c0b5cdf919db31ae</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\system\time\sys_time_definitions.h</file>
-         <hash>904195d4340ba6b97cf19c25b9695d2a9f37ed67cf6abdf8ee1ee839506e2801</hash>
+         <hash>46537746b1d12ece6b682c9be1c8f3f219663c638c21a51a973762b7b393afe6</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\instance\emac1.h</file>
-         <hash>410cf5a450a0280356a9efcf7e57d8a277187d97bf82539cd6b5d8f34e764fb9</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAM9X60_DFP\instance\sdramc.h</file>
-         <hash>8751bd1b8c1887260989b15a8891bd3f27fa3f65e17ac25d944391ea6f99828a</hash>
+         <hash>6bd540a130c83b2b1e3592da3605e59586950a9f96e3d1b1f459596bd45a6126</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\system\system_common.h</file>
-         <hash>0dbf2f60b29c97426e70187bc59c652ab5a355f51cfbe3f195ff1c8c6c0b1602</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAM9X60_DFP\instance\gfx2d.h</file>
-         <hash>3bfb1cb05ac569b1506cb77acfd1764e3f10859ebee6b06b7147a7108eb0a6d1</hash>
+         <hash>c9f34bd226f8efab12f5766e77f8355996cd0430b50e0f6ee30258664c494984</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\instance\can0.h</file>
-         <hash>1c061920b845ff08cefa0367b5a35ad07729d225db770436c550c94830ab029f</hash>
+         <hash>96421dff80fb7ffa5c214c6eb8e13779cf20e7033c98849f46da366877ae094f</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\instance\wdt.h</file>
-         <hash>54e5680589e7cd565c285467ff5a2cb2bf26bc49121f626155bdb50bad49e88b</hash>
+         <hash>4e354475dbf789da0200fb2a68668c412e3f3c8d5ca7dccc4bc2ab0869ec6033</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\instance\flexcom5.h</file>
-         <hash>c277187dc1726be158f11d7ce663565d0c669daec551cad4d79079d89bb64058</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_9x60_ek\peripheral\sdmmc\plib_sdmmc_common.h</file>
-         <hash>6f088d1d63864640549aa4ef6e9238e20fc1f685382ebad6a08947002c23b936</hash>
+         <hash>fb253465203a6d419d74e15aa9999e37e6ab9ad7a4f1c24173a5eae9f508b19a</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\component\wdt.h</file>
-         <hash>b5cb7701b5c86fadeb971e739bb576baa115aa0e5c0a082e0a6490be2e899ff9</hash>
+         <hash>97e932ae19c77042116c59dee3e4eb20c7e665e03b8ba3d998b835068d849bce</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\component\xdmac.h</file>
-         <hash>e4df6e67670cab142f6c71a922c0c3de0be614711ff4bafc2e9a801cde8ab33a</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAM9X60_DFP\instance\flexcom9.h</file>
-         <hash>631b1b7269fa086ff961fea851ec96277dd9be4dd708ca27cd1785d4990aaa18</hash>
+         <hash>25b3f0132bc7d7255f1b4b1ac7f2f3471963daec655aad013e8bc4b7d0008f51</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\component\rstc.h</file>
-         <hash>6852a7d16383d2ff3c3ba8c4bee590267889e982e9538bdd586db391dde6d733</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAM9X60_DFP\instance\trng.h</file>
-         <hash>ca7d8b32c4ade1493bab7a906a48fdf92a992bc64434ba7647785eab376ae807</hash>
+         <hash>ef0efe26e7e32714263fc5b8fea67fdc7a59cb14dace76f5360b375520f38e50</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\toolchain_specifics.h</file>
-         <hash>943f2c097f75062855ef1434b1b63a84e68ac691a93097a46016a699601a3306</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAM9X60_DFP\component\mpddrc.h</file>
-         <hash>0676be061428ecc5d5bcd7b79a7d8d4292b61ca5d108290644fa673b48e5b1b5</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAM9X60_DFP\instance\flexcom11.h</file>
-         <hash>a8ee00b56046a529d3b67cc359ef1ddf4fb74476c12a799f1c4bbaa023104cad</hash>
+         <hash>d93ab2a56ea91cac163fc49b5e3f3491fe3c8ada3bd2f72c752b286f280b40ef</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\system\int\sys_int_mapping.h</file>
-         <hash>a88ed061ebd75cff98fc9703d2dbd3c868a729737c0d00afff3e0755ab4f8910</hash>
+         <hash>652a7ea6c065e3a4cbcbfaef7c3519fca207fa36de25351875c3ba746dff242b</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\component\dbgu.h</file>
-         <hash>fe128ad0523af7b777da4213a227cdbadec365605e938ff104e8164391180687</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAM9X60_DFP\instance\piob.h</file>
-         <hash>3a5dbacce5c75ac20b09818889dae2ee860606efe8e0cb63c0e0c2ba95c825a6</hash>
+         <hash>6aba4897286b9acf9296d6d68d8541359225d0cdfe904fb5b5127eba730999ae</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\component\adc.h</file>
-         <hash>af09b5e8ba067d1894e4321ed4be4c448fab358f5a72c5ce0f4284615e1e20bf</hash>
+         <hash>4f740a4b2b8f0e864478614972dc4742433358aabf74cdbc0556aa37de6d7237</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\instance\aic.h</file>
-         <hash>fec82488ce96a71ceefa992555a3516ed4a2b4f775a1a47f00401c50e7a6131b</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAM9X60_DFP\instance\flexcom0.h</file>
-         <hash>503147e2c4dacb2cbe6e6460e955ec26d7f64db2980e8024b24b9e97bd693e79</hash>
+         <hash>a93e93ba13ceacb90067fb9f73f3dfa953651fc8303035305e388a555bf4a9ee</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\component\sha.h</file>
-         <hash>182183f35d9250cc02ace33cad2a695c40425484e242754bf48c1a379b915538</hash>
+         <hash>a169457392b48712d04eac4337b8d23237e432caf1a852063a7081ed4c708c39</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\instance\pmerrloc.h</file>
-         <hash>d8925f8480675db6253803c5d036cb03f55610186959ca0f95566da4823be16d</hash>
+         <hash>bc04fab5984e2aaf629a3fcdb7e28ca83ffd17894e5c02dc6008f638c558a2de</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\configuration.h</file>
-         <hash>915188a620b3e4c056b7108746b7f5007a56ed39dddbfa36cd5188f59f014326</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAM9X60_DFP\instance\pit.h</file>
-         <hash>c0a2186e98eeae069ac9592b27fe2ce22ec0361d267532aa4b1c1380c9a103b0</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAM9X60_DFP\instance\uhphs_ehci.h</file>
-         <hash>2aa079e115af6de86960fddf1231e8532820494925ecbec289ef2cbe3a3bbe36</hash>
+         <hash>bc9a1feef88cd3c464a413e933e8570502bc7fdf92d4ad8dc6023dbd79105131</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\driver\usb\udphs\src\drv_usb_udphs_variant_mapping.h</file>
          <hash>4a113775685461132617e519899ab157185af830ce702c2d5ab9a41803ee9d81</hash>
       </entry>
       <entry>
-         <file>..\src\packs\SAM9X60_DFP\instance\sdmmc0.h</file>
-         <hash>66e1ab14a6200d969b86f9908d7081ffba1335010e13b044f41de8fa9cfc6e01</hash>
-      </entry>
-      <entry>
          <file>..\src\config\sam_9x60_ek\system\debug\sys_debug.h</file>
-         <hash>c17a266d85e3ed1dd692a96184193c0ebfea1099f6698ca073f82418d92d8b53</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_9x60_ek\initialization.c</file>
-         <hash>e8a0ed0a36ed99b6b99516496f4d110a4d2dde904d979c007c7257a49f83afc8</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_9x60_ek\usb\src\usb_device_msd.c</file>
-         <hash>01b3dc1b9b9ced6a917d57fe19063bf66ea40cb6ada4b45dfb9662502e3487ae</hash>
+         <hash>bc6fa321b0be542d074e4564065b7fd69f52556486ac3d892d315b51c434f9ec</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\instance\pmecc.h</file>
-         <hash>37f363cbf81edbd2d9ca8a2a820a96af967f9c12adca2e703029d2dd078eeba5</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAM9X60_DFP\component\syscwp.h</file>
-         <hash>c1f87afdfbfe9ab17c48a901a6c255a771726ec26ad97d6d64072ec42c42343c</hash>
+         <hash>8cbcee73e3d54a7ba34849b607689abd45a623a9a65d839d4abd6ed8c9359605</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\component\tc.h</file>
-         <hash>0229483e80938b4acb84256572600a35715498ac4b8ca52522305658d8657e83</hash>
+         <hash>544fbb24616f35ed2976de6e6d5a6ba48286dafdba0c5c21ef17c6b4be119744</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\instance\xdmac.h</file>
-         <hash>f821faa5661cbd9aa82ba80b18de83e9cf668d21f46a53dfcf21e88afbd0d0fc</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAM9X60_DFP\component\pmc.h</file>
-         <hash>59b69acf949c830df2f8f3020935d866515fb5a47f254944959b5ba2ac3b6f74</hash>
+         <hash>547e4a5403f1c1fdd12f532117f0ef7a4b9f1112852bf340faaa2e30137f4d8e</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\instance\pwm.h</file>
-         <hash>be514ce352f39caa818db0d06674d5702d8ed1f5aefbc81673cf9d3ba7787ca0</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAM9X60_DFP\instance\rstc.h</file>
-         <hash>1547ad7d00763b1866a6a18cd072a5e3f762f8f780c81000cc3cb9e70e03ad49</hash>
+         <hash>a8330c552e22c5b100793b34e43e93075d3177160c312436a16f30954745efad</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\osal\osal_definitions.h</file>
-         <hash>0a5ca28c4812bb37babfebc1fe30a90b13583504d81910ad159feb746a5b002c</hash>
+         <hash>5f0a2513a093b6d228e2b50646b204923a82047335a47f3d35a2938309ab6f37</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\driver\driver.h</file>
          <hash>042fdd289460dbddb8e805850af7e3ac9aea95468e37414959781ebc5b2f454d</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_9x60_ek\peripheral\pio\plib_pio.h</file>
-         <hash>efbdc2440df958947ba8ab98f250bf600772e327eee359cd060a41f198427b67</hash>
-      </entry>
-      <entry>
          <file>..\src\packs\SAM9X60_DFP\instance\adc.h</file>
-         <hash>619e7bf7e8c3da173d73923fa2a3f207529e1be0e3ea8b00933294e59353eda2</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_9x60_ek\peripheral\pio\plib_pio.c</file>
-         <hash>c1aa9c5cb35a199916d419e6fa811c39f87a1fdbc51be8840e94b4e9a829df85</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAM9X60_DFP\component\pmerrloc.h</file>
-         <hash>7567dffb2998106d586529909b02667a59faff9c83aa560dcbb2f267e307c43c</hash>
+         <hash>887d974cc9e9a855bb0b32443d2a288f158aee0b7a18158672d4bb1778a9d994</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\usb\usb_device.h</file>
          <hash>06a4f4c06b4b32ab90474b522ddbfc4922fbad93ccf6975240148f1ce4b71b46</hash>
       </entry>
       <entry>
-         <file>..\src\packs\SAM9X60_DFP\component\shdwc.h</file>
-         <hash>c1e29be3a9d39a7edf777e75644315b406817dd5a8d313f8ba78388ec67bfa57</hash>
-      </entry>
-      <entry>
          <file>..\src\packs\SAM9X60_DFP\instance\otpc.h</file>
-         <hash>7e8a9298ccea10ef5d38ecabc3604fd2f23d67e070ad30e1a9147461082a6f02</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_9x60_ek\usb_device_init_data.c</file>
-         <hash>fc4e4de859f2048dc05ee94c511b17669934ec166474d2c10dada7094abd6e43</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_9x60_ek\osal\osal_impl_basic.h</file>
-         <hash>0c388837ef1d4e207a028ed31bfe07f1aac7ea8b0505caff58f737667ccbeaee</hash>
+         <hash>dcf94a525169c2f0284a806ac9916c8d72cf5306bc5807f70f981f8ce231ce56</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\peripheral\tc\plib_tc0.h</file>
@@ -5282,79 +5318,51 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\driver\sdmmc\src\drv_sdmmc_local.h</file>
-         <hash>b43061fb86929f99f8b414ec1733a726b52a0dafed0b54c3082464fbf291440d</hash>
+         <hash>07a772675d632648815baef0ed90e60b3038a6aedf7dc989042357f93367b0c1</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\driver\usb\udphs\drv_usb_udphs.h</file>
          <hash>9ee963cb3fac6f48836fe6a9950ebcf042da2462012f3a2ab67148d545e3b542</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_9x60_ek\peripheral\tc\plib_tc0.c</file>
-         <hash>31be478f89108b048d6ad4c0dfb9a8d973a950f18def476cc985b832ce10ca3b</hash>
+         <file>..\src\config\sam_9x60_ek\fault_handlers.c</file>
+         <hash>931e951cf7431d3d70d6ab81bcd265ff0ac8b3f473b73cd7a541f59d49786b7c</hash>
       </entry>
       <entry>
-         <file>..\src\packs\SAM9X60_DFP\sam9x60.h</file>
-         <hash>20b3f03b3efa779a1ceaa3b69f1b11c868e4ed719a48e806c9cd650bd9cbca28</hash>
+         <file>..\src\config\sam_9x60_ek\peripheral\tc\plib_tc0.c</file>
+         <hash>c9bf7dc22d3246852f35ef21424a686d58bc801ade85fd2cc3c9d54092f68b15</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\system\cache\sys_cache.c</file>
-         <hash>96e3cf05b3e24641f89f3726e0f900a28002ae53ccebb23c8cf27563c59d3076</hash>
+         <hash>9754314ec0e099723a3604ecfe12fb6e682cf64cddf01c968ca931d26c448f0e</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\component\aic.h</file>
-         <hash>20e7bd6578359b41325ef84ea734b6de366f81589c3893e5d49535e36619dcd9</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAM9X60_DFP\component\pit64b.h</file>
-         <hash>9a3b7a73317193d5524c6460ca3f5fbc9baa55ca0a87f4fc760180ceadcba20d</hash>
+         <hash>c29b75d32d62b66d22526c1d2b6761d27e235226eb9e8e730a66ba97da110e46</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\component\sdmmc.h</file>
-         <hash>2b2a7e26a510b293ee2a32ea0f46b34f9d73d1b1d4b91d202513b627a7205d10</hash>
+         <hash>6b4a61fce82e300163aa42a996ddd1e251d75a80d92d965d456a8caf8dc97e9b</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\instance\can1.h</file>
-         <hash>cf29175eb435e63629b7217b22e0bd724cfb343f9c604040a09e854c280df99a</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_9x60_ek\usb\usb_hub.h</file>
-         <hash>f07eb653a11355424adb96ff0fec6796f6b95c8924ac93fb9207f888d130bc7d</hash>
+         <hash>91e4b1c9896fce14d181b3e3baac306214b579f19fb1605eca505a8c39623fb7</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\component\tdes.h</file>
-         <hash>e9b088958d00c7ced4511bc90ed83d3f5c997f82eb7746536b5813a65f901608</hash>
+         <hash>9f16ccda28e7b0557cdc906cd2d195ed2b432935f8c9fe27026c8962c53b43b9</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\instance\flexcom4.h</file>
-         <hash>9e0d304f28ac5ac2efd90ac92f9a1369b132e891f0a398f0bc0cddf931f6d677</hash>
+         <hash>012f6194a63c2ffae2945f296436493b16d6e7e175a1a5cffb7266fb29216333</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\instance\lcdc.h</file>
-         <hash>74f3be65b5f327dd44ca3d66f935c86d75b3ddf8fe38203a993dfd87f3aeae57</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_9x60_ek\driver\driver_common.h</file>
-         <hash>5217965f6720b4fdf717e99ce9df4f2c9fbd82bbbc9655847166d1eefa806fee</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAM9X60_DFP\instance\flexcom8.h</file>
-         <hash>1da3e084618b5e7a6176eb5491b785c2a68a71bec0b024016a563c613597b242</hash>
+         <hash>98571ca3d9b4228de66521788ea0d792287d237ad214a25858b84071b265e0c0</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\system\cache\sys_cache.h</file>
-         <hash>3407ecac4da455d4b8ba70043f10c20b10e1304e92402db824ca5efa6a2f8402</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_9x60_ek\vectortrap.s</file>
-         <hash>3d585f4a9a6c290556e7f5a32deea770510647323e11d31f16840ed743db661b</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAM9X60_DFP\instance\classd.h</file>
-         <hash>3d81e082767e6996f1eee1bcec43292e8d1ed15a37b1b66758e4264e60ddadc4</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_9x60_ek\tasks.c</file>
-         <hash>54b6cd99462b1d030747bac4c7123f23c0ac46225b2afdf0f6bcc7e9e87d2185</hash>
+         <hash>b4b3a4e7434759c9bbcd3c6a0ab97558eb2a007f083a4eb76dbedcb2e2c3d86b</hash>
       </entry>
    </generatedFileHashHistoryMap>
 </config>
