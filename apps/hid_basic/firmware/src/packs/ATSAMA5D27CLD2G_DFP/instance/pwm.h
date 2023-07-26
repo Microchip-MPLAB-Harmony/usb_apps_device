@@ -1,7 +1,7 @@
 /*
- * Instance header file for ATSAMA5D28CLD2G
+ * Instance header file for ATSAMA5D29
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,20 +20,20 @@
  *
  */
 
-/* file generated from device description version 2021-06-28T09:00:02Z */
-#ifndef _SAMA5D2_PWM_INSTANCE_
-#define _SAMA5D2_PWM_INSTANCE_
+/* file generated from device description version 2022-10-04T10:37:14Z */
+#ifndef _SAMA5D_PWM_INSTANCE_
+#define _SAMA5D_PWM_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for PWM peripheral ========== */
-#define PWM_INSTANCE_ID                          _UL_(38)   
-#define PWM_CLOCK_ID                             _UL_(38)   
-#define PWM_DMAC_ID_TX                           _UL_(10)   
-#define PWM_FAULT_PWM_ID0                        _UL_(0x0)  /* Fault 0 - PWM0_PWMFI0 Input pin */
-#define PWM_FAULT_PWM_ID1                        _UL_(0x1)  /* Fault 1 - PWM0_PWMFI1 Input pin */
-#define PWM_FAULT_PWM_ID2                        _UL_(0x2)  /* Fault 2 - MAIN_OSC_PMC */
-#define PWM_FAULT_PWM_ID3                        _UL_(0x3)  /* Fault 3 - ADC */
-#define PWM_FAULT_PWM_ID4                        _UL_(0x4)  /* Fault 4 - TIMER0 */
-#define PWM_FAULT_PWM_ID5                        _UL_(0x5)  /* Fault 5 - TIMER1 */
+#define PWM_INSTANCE_ID                          (38)       
+#define PWM_CLOCK_ID                             (38)       
+#define PWM_DMAC_ID_TX                           (10)       
+#define PWM_FAULT_PWM_ID0                        (0x0)      /* Fault 0 - PWM0_PWMFI0 Input pin */
+#define PWM_FAULT_PWM_ID1                        (0x1)      /* Fault 1 - PWM0_PWMFI1 Input pin */
+#define PWM_FAULT_PWM_ID2                        (0x2)      /* Fault 2 - MAIN_OSC_PMC */
+#define PWM_FAULT_PWM_ID3                        (0x3)      /* Fault 3 - ADC */
+#define PWM_FAULT_PWM_ID4                        (0x4)      /* Fault 4 - TIMER0 */
+#define PWM_FAULT_PWM_ID5                        (0x5)      /* Fault 5 - TIMER1 */
 
-#endif /* _SAMA5D2_PWM_INSTANCE_ */
+#endif /* _SAMA5D_PWM_INSTANCE_ */
