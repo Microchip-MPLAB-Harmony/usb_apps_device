@@ -110,7 +110,7 @@ extern "C" {
 
 
 /* SDSPI Driver Common Configuration Options */
-#define DRV_SDSPI_INSTANCES_NUMBER              1
+#define DRV_SDSPI_INSTANCES_NUMBER              (1U)
 
 
 
@@ -154,9 +154,10 @@ extern "C" {
 
 /* Enables Device Support */
 #define DRV_USBFS_DEVICE_SUPPORT                          true
-	
+
 /* Disable Host Support */
 #define DRV_USBFS_HOST_SUPPORT                            false
+
 
 
 
