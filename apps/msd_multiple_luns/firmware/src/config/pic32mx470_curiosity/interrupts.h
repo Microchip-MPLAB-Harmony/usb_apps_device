@@ -57,6 +57,13 @@
 // *****************************************************************************
 // *****************************************************************************
 
+void CORE_TIMER_InterruptHandler( void );
+void NVM_InterruptHandler( void );
+void DRV_USBFS_USB_Handler( void );
+void SPI_1_InterruptHandler( void );
+void DMA_0_InterruptHandler( void );
+void DMA_1_InterruptHandler( void );
+
 
 
 #endif // INTERRUPTS_H

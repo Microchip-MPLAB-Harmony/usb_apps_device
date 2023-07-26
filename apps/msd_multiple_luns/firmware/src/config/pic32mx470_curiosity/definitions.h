@@ -54,9 +54,9 @@
 #include "peripheral/gpio/plib_gpio.h"
 #include "peripheral/evic/plib_evic.h"
 #include "peripheral/dmac/plib_dmac.h"
-#include "driver/memory/drv_memory.h"
 #include "usb/usb_chapter_9.h"
 #include "usb/usb_device.h"
+#include "driver/memory/drv_memory.h"
 #include "driver/sdspi/drv_sdspi.h"
 #include "peripheral/nvm/plib_nvm.h"
 #include "system/time/sys_time.h"
@@ -81,6 +81,12 @@ extern "C" {
 
 #endif
 // DOM-IGNORE-END
+
+/* Device Information */
+#define DEVICE_NAME			 "PIC32MX470F512H"
+#define DEVICE_ARCH			 "MIPS"
+#define DEVICE_FAMILY		 "PIC32MX1185"
+#define DEVICE_SERIES		 "PIC32MX"
 
 /* CPU clock frequency */
 #define CPU_CLOCK_FREQUENCY 96000000
@@ -198,7 +204,7 @@ typedef struct
     /* SDSPI0 Driver Object */
     SYS_MODULE_OBJ drvSDSPI0;
 
-	SYS_MODULE_OBJ  usbDevObject0;
+    SYS_MODULE_OBJ  usbDevObject0;
 
     SYS_MODULE_OBJ  sysTime;
     SYS_MODULE_OBJ  drvMemory0;
