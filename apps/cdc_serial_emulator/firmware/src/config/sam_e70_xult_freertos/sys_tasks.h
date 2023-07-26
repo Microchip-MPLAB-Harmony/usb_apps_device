@@ -1,5 +1,23 @@
 /*******************************************************************************
-* Copyright (C) 2019 Microchip Technology Inc. and its subsidiaries.
+ System Tasks Header File
+
+  File Name:
+    sys_tasks.h
+
+  Summary:
+    This file contains declarations for task handles.
+
+  Description:
+    Task handles declared in this header file can be used by the application
+    to control the behavior of the tasks.
+
+  Remarks:
+    None
+ *******************************************************************************/
+
+// DOM-IGNORE-BEGIN
+/*******************************************************************************
+* Copyright (C) 2023 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -19,60 +37,30 @@
 * FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
-*******************************************************************************/
+ *******************************************************************************/
+// DOM-IGNORE-END
 
-#ifndef PLIB_CLK_H
-#define PLIB_CLK_H
+#ifndef SYS_TASKS_H
+#define SYS_TASKS_H
 
-#include <stddef.h>
-
-#ifdef __cplusplus  // Provide C++ Compatibility
-
-    extern "C" {
-
-#endif
- 
 // *****************************************************************************
 // *****************************************************************************
-// Section: CLK Module System Interface Routines
+// Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
 
+#include "configuration.h"
+#include "definitions.h"
+
 // *****************************************************************************
-/* Function:
-    void CLOCK_Initialize ( void )
+// *****************************************************************************
+// Section: RTOS "Tasks" Handles
+// *****************************************************************************
+// *****************************************************************************
+/* Declaration of  APP_Tasks task handle */
+extern TaskHandle_t xAPP_Tasks;
 
-  Summary:
-    Initializes hardware of the System Clock and Peripheral Clock.
-    
-  Description:
-    This function initializes the hardware of System Clock and Peripheral Clocks.
 
-  Precondition:
-    None.
 
-  Parameters:
-    None.
 
-  Returns:
-    None.
-
-  Example:
-    <code>
-
-    CLOCK_Initialize ( );
-
-    </code>
-
-  Remarks:
-    None.
-*/
-
-void CLOCK_Initialize ( void );
-
-#ifdef __cplusplus
-}
-#endif
-
-#endif //PLIB_CLK_H
-
+#endif //SYS_TASKS_H
