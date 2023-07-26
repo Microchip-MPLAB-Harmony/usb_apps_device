@@ -88,7 +88,7 @@ void TC3_TimerInitialize( void )
     TC3_REGS->COUNT16.TC_WAVE = (uint8_t)TC_WAVE_WAVEGEN_MPWM;
 
     /* Configure timer period */
-    TC3_REGS->COUNT16.TC_CC[0U] = 65535U;
+    TC3_REGS->COUNT16.TC_CC[0U] = 65534U;
 
     /* Clear all interrupt flags */
     TC3_REGS->COUNT16.TC_INTFLAG = (uint8_t)TC_INTFLAG_Msk;
@@ -133,7 +133,7 @@ void TC3_TimerCommandSet(TC_COMMAND command)
     while((TC3_REGS->COUNT16.TC_SYNCBUSY) != 0U)
     {
         /* Wait for Write Synchronization */
-    }    
+    }
 }
 
 /* Get the current timer counter value */
