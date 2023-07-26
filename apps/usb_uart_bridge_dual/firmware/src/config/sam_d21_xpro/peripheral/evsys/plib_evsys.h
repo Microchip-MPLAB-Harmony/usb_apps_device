@@ -56,13 +56,12 @@
 // *****************************************************************************
 // *****************************************************************************
 
-typedef enum
-{
+
     /* EVSYS Channel 0 */
-    EVSYS_CHANNEL_0 = 0,
+#define    EVSYS_CHANNEL_0    (0U)
     /* EVSYS Channel 1 */
-    EVSYS_CHANNEL_1 = 1,
-} EVSYS_CHANNEL;
+#define    EVSYS_CHANNEL_1    (1U)
+typedef uint32_t EVSYS_CHANNEL;
 
 
 /***************************** EVSYS API *******************************/
