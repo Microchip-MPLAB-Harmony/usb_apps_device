@@ -87,18 +87,17 @@ extern "C" {
 // *****************************************************************************
 // *****************************************************************************
 /* Memory Driver Global Configuration Options */
-#define DRV_MEMORY_INSTANCES_NUMBER          1
+#define DRV_MEMORY_INSTANCES_NUMBER          (1U)
 
 /* Memory Driver Instance 0 Configuration */
 #define DRV_MEMORY_INDEX_0                   0
 #define DRV_MEMORY_CLIENTS_NUMBER_IDX0       1
-#define DRV_MEMORY_BUFFER_QUEUE_SIZE_IDX0    1
-#define DRV_MEMORY_DEVICE_START_ADDRESS      0x40000
+#define DRV_MEMORY_BUF_Q_SIZE_IDX0    1
+#define DRV_MEMORY_DEVICE_START_ADDRESS      0x40000U
 #define DRV_MEMORY_DEVICE_MEDIA_SIZE         256UL
-#define DRV_MEMORY_DEVICE_MEDIA_SIZE_BYTES   (DRV_MEMORY_DEVICE_MEDIA_SIZE * 1024)
-#define DRV_MEMORY_DEVICE_PROGRAM_SIZE       64
-#define DRV_MEMORY_DEVICE_ERASE_SIZE         256
-
+#define DRV_MEMORY_DEVICE_MEDIA_SIZE_BYTES   (DRV_MEMORY_DEVICE_MEDIA_SIZE * 1024U)
+#define DRV_MEMORY_DEVICE_PROGRAM_SIZE       64U
+#define DRV_MEMORY_DEVICE_ERASE_SIZE         256U
 
 
 
