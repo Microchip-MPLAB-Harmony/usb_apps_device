@@ -67,35 +67,32 @@
 #define NVM_FLASH_ROWSIZE          (256U)
 #define NVM_FLASH_PAGESIZE         (2048U)
 
-#define NVM_START_ADDRESS              0x9d020000
+#define NVM_START_ADDRESS              0x9d020000U
 #define NVM_MEDIA_SIZE                 32
 #define NVM_ERASE_BUFFER_SIZE          4096
 
-typedef enum
-{
-    /* No error */
-    NVM_ERROR_NONE = 0x0,
+/* No error */
+#define     NVM_ERROR_NONE         (0x0U)
 
     /* NVM write error */
-    NVM_ERROR_WRITE = _NVMCON_WRERR_MASK,
+#define     NVM_ERROR_WRITE        (_NVMCON_WRERR_MASK)
 
     /* NVM Low Voltage Detect error */
-    NVM_ERROR_LOWVOLTAGE = _NVMCON_LVDERR_MASK,
+#define     NVM_ERROR_LOWVOLTAGE   (_NVMCON_LVDERR_MASK)
 
-} NVM_ERROR;
+typedef uint32_t NVM_ERROR;
 
-typedef enum
-{
-    /* Boot Flash Page 0 Write Protect */
-    NVM_BOOT_WRITE_PROTECT_0 = _NVMBWP_BWP0_MASK,
 
-    /* Boot Flash Page 1 Write Protect */
-    NVM_BOOT_WRITE_PROTECT_1 = _NVMBWP_BWP1_MASK,
+/* Boot Flash Page 0 Write Protect */
+#define    NVM_BOOT_WRITE_PROTECT_0   _NVMBWP_BWP0_MASK
 
-    /* Boot Flash Page 2 Write Protect */
-    NVM_BOOT_WRITE_PROTECT_2 = _NVMBWP_BWP2_MASK,
+/* Boot Flash Page 1 Write Protect */
+#define    NVM_BOOT_WRITE_PROTECT_1   _NVMBWP_BWP1_MASK
 
-} NVM_BOOT_FLASH_WRITE_PROTECT;
+/* Boot Flash Page 2 Write Protect */
+#define    NVM_BOOT_WRITE_PROTECT_2   _NVMBWP_BWP2_MASK
+
+typedef uint32_t NVM_BOOT_FLASH_WRITE_PROTECT;
 
 typedef void (*NVM_CALLBACK)( uintptr_t context );
 
