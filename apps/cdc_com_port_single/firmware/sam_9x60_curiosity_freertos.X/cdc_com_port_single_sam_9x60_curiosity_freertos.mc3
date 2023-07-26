@@ -43,7 +43,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.3.1"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.3.2"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -6595,7 +6595,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\usb\src\usb_device_local.h</file>
-         <hash>7ef3cbc9e2060d1d2800fb7a5d6d5597bb008b3da58bf475fc09219dd40c2244</hash>
+         <hash>3dc9e27b535edb31aa97aae04a0ce9ac12e5092ed3bae7ef6fd203bc1520ef33</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\component\gfx2d.h</file>
@@ -6790,12 +6790,12 @@
          <hash>01573b1b16c5f876de2e18f679be66c25a2797d7c1bf24201db3c06562f8ad60</hash>
       </entry>
       <entry>
-         <file>..\src\packs\SAM9X60D1G_DFP\instance\rtc.h</file>
-         <hash>2bd939d1606b98e09ea229fab36071a383aa2cac00c51b12f9a2885f77422326</hash>
-      </entry>
-      <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\usb\src\usb_external_dependencies.h</file>
          <hash>5110f718908d8f79253ce5b4b44172288cc179ff61d18e387f9e90ae9afbb1b6</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60D1G_DFP\instance\rtc.h</file>
+         <hash>2bd939d1606b98e09ea229fab36071a383aa2cac00c51b12f9a2885f77422326</hash>
       </entry>
       <entry>
          <file>..\src\main.c</file>
