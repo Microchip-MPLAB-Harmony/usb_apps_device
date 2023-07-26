@@ -142,44 +142,6 @@ PLIB_TEMPLATE bool USBHS_SoftResetIsComplete_Default( USBHS_MODULE_ID index )
 	return ( returnVal );
 }
 
-//******************************************************************************
-/* Function :  USBHS_ResumeSignalingEnable_Default
-
-  Summary:
-    Implements Default variant of PLIB_USBHS_ResumeSignalingEnable 
-
-  Description:
-    This template implements the Default variant of the PLIB_USBHS_ResumeSignalingEnable function.
-*/
-
-PLIB_TEMPLATE void USBHS_ResumeSignalingEnable_Default( USBHS_MODULE_ID index)
-{
-   /* Remote Wakeup start */
-    
-    volatile usbhs_registers_t * usbhs = (usbhs_registers_t *)(index + 0x1000);
-//	usbhs->ENDPOINT0.USBHS_LPMATTR |= USBHS_LPMATTR_RMTWAK_Msk;
-    usbhs->ENDPOINT0.USBHS_LPMCNTRL |= USBHS_LPMCNTRL_HOST_LPMRES_Msk;
-}
-
-//******************************************************************************
-/* Function :  USBHS_ResumeSignalingDisable_Default
-
-  Summary:
-    Implements Default variant of PLIB_USBHS_ResumeSignalingDisable 
-
-  Description:
-    This template implements the Default variant of the PLIB_USBHS_ResumeSignalingDisable function.
-*/
-
-PLIB_TEMPLATE void USBHS_ResumeSignalingDisable_Default( USBHS_MODULE_ID index)
-{
-   /* Remote Wakeup stop */
-    
-//    volatile usbhs_registers_t * usbhs = (usbhs_registers_t *)(index + 0x1000);
-//    usbhs->ENDPOINT0.USBHS_LPMCNTRL &= ~USBHS_LPMCNTRL_HOST_LPMRES_Msk;
-}
-
-
 #endif /*_USBHS_SOFTRESET_DEFAULT_H*/
 
 /******************************************************************************

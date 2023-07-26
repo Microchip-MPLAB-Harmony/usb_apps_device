@@ -494,16 +494,6 @@ PLIB_INLINE_API void PLIB_USBHS_DeviceDetach(USBHS_MODULE_ID index)
      USBHS_DeviceDetach_Default(index);
 }
 
-PLIB_INLINE_API void PLIB_USBHS_ResumeSignalingEnable(USBHS_MODULE_ID index)
-{
-    USBHS_ResumeSignalingEnable_Default(index);
-}
-
-PLIB_INLINE_API void PLIB_USBHS_ResumeSignalingDisable(USBHS_MODULE_ID index)
-{
-    USBHS_ResumeSignalingDisable_Default(index);
-}
-
 PLIB_INLINE_API bool PLIB_USBHS_ExistsModuleControl(USBHS_MODULE_ID index)
 {
      return USBHS_ExistsModuleControl_Default(index);
