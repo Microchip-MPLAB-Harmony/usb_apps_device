@@ -64,9 +64,9 @@ static void PLL0_Initialize(void)
     /* Enable Additional Voltage Regulator */
     SUPC_REGS->SUPC_VREGCTRL |= SUPC_VREGCTRL_AVREGEN_Msk;
     while ((SUPC_REGS->SUPC_STATUS & SUPC_STATUS_ADDVREGRDY_Msk) != SUPC_STATUS_ADDVREGRDY_Msk)
-	{
-		/* Do Nothing */
-	}
+    {
+        /* Do Nothing */
+    }
 
 
     /****************** PLL0 Initialization  *********************************/
@@ -89,11 +89,6 @@ static void PLL0_Initialize(void)
     {
         /* Waiting for the Ready state */
     }
-}
-
-
-static void DFLL_Initialize(void)
-{
 }
 
 
@@ -135,6 +130,7 @@ static void GCLK2_Initialize(void)
     }
 }
 
+
 void CLOCK_Initialize (void)
 {
     /* Function to Initialize the Oscillators */
@@ -144,7 +140,6 @@ void CLOCK_Initialize (void)
     OSC32KCTRL_Initialize();
 
     PLL0_Initialize();
-    DFLL_Initialize();
     GCLK0_Initialize();
     GCLK1_Initialize();
     GCLK2_Initialize();

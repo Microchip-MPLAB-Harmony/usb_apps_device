@@ -59,7 +59,7 @@
 
 static CACHE_ALIGN SDMMC_ADMA_DESCR sdmmc1DmaDescrTable[(SDMMC1_DMA_DESC_TABLE_SIZE_CACHE_ALIGN/8U)];
 
-static SDMMC_OBJECT sdmmc1Obj;
+volatile static SDMMC_OBJECT sdmmc1Obj;
 
 static void SDMMC1_VariablesInit ( void )
 {
@@ -104,7 +104,7 @@ static void SDMMC1_TransferModeSet ( uint32_t opcode )
     SDMMC1_REGS->SDMMC_TMR = transferMode;
 }
 
-void SDMMC1_InterruptHandler(void)
+void __attribute__((used)) SDMMC1_InterruptHandler(void)
 {
     uint16_t nistr = 0U;
     uint16_t eistr = 0U;
@@ -172,7 +172,8 @@ void SDMMC1_InterruptHandler(void)
 
     if ((sdmmc1Obj.callback != NULL) && ((uint32_t)xferStatus > 0U))
     {
-        sdmmc1Obj.callback(xferStatus, sdmmc1Obj.context);
+        uintptr_t context = sdmmc1Obj.context;
+        sdmmc1Obj.callback(xferStatus, context);
     }
 }
 
