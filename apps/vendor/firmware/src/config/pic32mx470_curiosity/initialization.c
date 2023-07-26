@@ -48,7 +48,6 @@
 #include "device.h"
 
 
-
 // ****************************************************************************
 // ****************************************************************************
 // Section: Configuration Bits
@@ -96,11 +95,17 @@
 
 
 
+
 // *****************************************************************************
 // *****************************************************************************
 // Section: Driver Initialization Data
 // *****************************************************************************
 // *****************************************************************************
+/* Following MISRA-C rules are deviated in the below code block */
+/* MISRA C-2012 Rule 11.1 */
+/* MISRA C-2012 Rule 11.3 */
+/* MISRA C-2012 Rule 11.8 */
+
 
 
 // *****************************************************************************
@@ -172,7 +177,7 @@ const DRV_USBFS_INIT drvUSBFSInit =
 // *****************************************************************************
 // *****************************************************************************
 
-
+/* MISRAC 2012 deviation block end */
 
 /*******************************************************************************
   Function:
@@ -187,21 +192,24 @@ const DRV_USBFS_INIT drvUSBFSInit =
 void SYS_Initialize ( void* data )
 {
 
+    /* MISRAC 2012 deviation block start */
+    /* MISRA C-2012 Rule 2.2 deviated in this file.  Deviation record ID -  H3_MISRAC_2012_R_2_2_DR_1 */
+
     /* Start out with interrupts disabled before configuring any modules */
-    __builtin_disable_interrupts();
+    (void)__builtin_disable_interrupts();
 
   
     CLK_Initialize();
 
     /* Configure KSEG0 as cacheable memory. This is needed for Prefetch Buffer */
-    __builtin_mtc0(16, 0,(__builtin_mfc0(16, 0) | 0x3));
+    __builtin_mtc0(16, 0,(__builtin_mfc0(16, 0) | 0x3U));
 
     /* Configure Flash Wait States and Prefetch */
     CHECONbits.PFMWS = 2;
     CHECONbits.PREFEN = 3;
 
-    /* Set the SRAM wait states to zero */
-    BMXCONbits.BMXWSDRM = 0;
+    /* Set the SRAM wait states to One */
+    BMXCONbits.BMXWSDRM = 1;
 
 
 
@@ -211,28 +219,35 @@ void SYS_Initialize ( void* data )
 	BSP_Initialize();
 
 
+    /* MISRAC 2012 deviation block start */
+    /* Following MISRA-C rules deviated in this block  */
+    /* MISRA C-2012 Rule 11.3 - Deviation record ID - H3_MISRAC_2012_R_11_3_DR_1 */
+    /* MISRA C-2012 Rule 11.8 - Deviation record ID - H3_MISRAC_2012_R_11_8_DR_1 */
+
+
+
+
+    /* Initialize the USB device layer */
+    sysObj.usbDevObject0 = USB_DEVICE_Initialize (USB_DEVICE_INDEX_0 , ( SYS_MODULE_INIT* ) & usbDevInitData);
+
 
 	/* Initialize USB Driver */ 
     sysObj.drvUSBFSObject = DRV_USBFS_Initialize(DRV_USBFS_INDEX_0, (SYS_MODULE_INIT *) &drvUSBFSInit);	
 
 
-	 /* Initialize the USB device layer */
-    sysObj.usbDevObject0 = USB_DEVICE_Initialize (USB_DEVICE_INDEX_0 , ( SYS_MODULE_INIT* ) & usbDevInitData);
-	
-	
-
-
+    /* MISRAC 2012 deviation block end */
     APP_Initialize();
 
 
     EVIC_Initialize();
 
 	/* Enable global interrupts */
-    __builtin_enable_interrupts();
+    (void)__builtin_enable_interrupts();
 
 
+
+    /* MISRAC 2012 deviation block end */
 }
-
 
 /*******************************************************************************
  End of File
