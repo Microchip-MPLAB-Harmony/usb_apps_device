@@ -39,7 +39,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.3.1"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.3.2"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -2075,7 +2075,7 @@
    <generatedFileHashHistoryMap class="java.util.HashMap">
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\peripheral\gpio\plib_gpio.h</file>
-         <hash>e7d3944b3642d1fb86161f19d9b3d92ece04853e86fb6ac7c171a1934c532b89</hash>
+         <hash>a56f49aa8799ec088531e790cfd1ba241f40e1c67c8ff4e3fae2e12cc86e3dd2</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\driver\usb\usbfs\src\templates\usb_GEN_Interrupt_Default.h</file>
@@ -2083,19 +2083,19 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\tasks.c</file>
-         <hash>ad8039f125c56a8c536363593fdf93db4598da9af8b1b62443bd4417db2b0750</hash>
+         <hash>85cdd80193027729ad0e3cf81d96f62cab8d52f22295d04868ac6460b0cdbc0a</hash>
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\task.h</file>
-         <hash>2bdfb8e3c1a76a5ccacb1b7815ca9acb63d1ba1f1bd29e5a75757d5e186c5056</hash>
+         <hash>45f2245c914ed25ab26a1ea78ddd4ac74cb6522e1b26ac5c44b614ca4c8cee99</hash>
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\timers.c</file>
-         <hash>0d16405e621a2c4b003b5f0324b9713cd4865364133df6f742f482a6b2dbc773</hash>
+         <hash>24962ef361f396aaa5e6e33776eeeddaf2fb251c87b6fe50602acc56c537b093</hash>
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\stream_buffer.h</file>
-         <hash>0607fcca1927ba782a29a3814481d69db3569e6e53a68ebf2c01f5598a3af2b8</hash>
+         <hash>b876d839460197d94d0f95fb93c6aeb457f6fc572d32258480fed7d4de686b6b</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\usb\src\usb_device_cdc.c</file>
@@ -2103,7 +2103,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\peripheral\gpio\plib_gpio.c</file>
-         <hash>b8ce3a1c1266f8d42d24ad63f2a2ef8eecb7e4f46a68769779f4f735077d6153</hash>
+         <hash>cc6b927817860e707ba924ffe9d64ff2faab0e2186714ed6b84cc3fe52d31505</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\driver\usb\usbfs\src\templates\usb_EP0NAKRetry_Unsupported.h</file>
@@ -2115,7 +2115,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\list.h</file>
-         <hash>f9b239f168976f7b167e054fa72616826f55ae4d74d76b87c9e70b2df079363f</hash>
+         <hash>dc572f54391c0407fc25db360d912fca9118cddae7bd2e3099eb13f18804e5a9</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\usb\usb_chapter_9.h</file>
@@ -2123,7 +2123,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\croutine.h</file>
-         <hash>8df4c5eec7eb30262f09b7c47fc2eb0534a27721293b0d260a3398846494f9ac</hash>
+         <hash>cf52c15fa26a8d4f82b55909b75ebfe2aab25468ba7780748912ddead9812b4e</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\driver\usb\usbfs\src\templates\usb_GEN_InterruptStatus_Unsupported.h</file>
@@ -2135,7 +2135,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\definitions.h</file>
-         <hash>34074db764baa3aa707201f309c5e56c6de744071a7ac4010679cdfa7ef49af4</hash>
+         <hash>db8a2c0605fff996115ffc99cb72a6f8806cd3823aa06dffae5cf26834a37bed</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\driver\usb\usbfs\src\templates\usb_StartOfFrames_Default.h</file>
@@ -2155,7 +2155,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\peripheral\clk\plib_clk.h</file>
-         <hash>aeb73e24e5a518024b1c3f7dce953a5cbacead08f55e80ae465fc8d2e522e477</hash>
+         <hash>35384f2e13e59b7190bf77f6996baf3ea2377ec42df94979a6f793326def5255</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\driver\usb\usbfs\src\templates\usb_OTG_VbusPowerOnOff_Default.h</file>
@@ -2167,11 +2167,11 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\mpu_prototypes.h</file>
-         <hash>3fafd21399ef619a55b2f8112750d750685c8ae1cb458363d21ee37a105ac6e7</hash>
+         <hash>2b46a2511ce5d23a56bc83079333d8d0a2e33763e5829c9383252806887a3dc0</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\system\int\sys_int.h</file>
-         <hash>c6ec8fc3c7ad1fa570998b9f65cb37fba4364ab07c3869f2d6cb30612a8a91e8</hash>
+         <hash>2c878ab7ff41ae56b5c0c3c94929ad66eb87b8660bf9a439177d049e8ad8f8c8</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\driver\usb\usbfs\src\templates\usb_OTG_LineState_Default.h</file>
@@ -2195,7 +2195,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\FreeRTOS.h</file>
-         <hash>b7a81501c3f4ff9537df5c9a5e0231f37638cdc8324965ae10064128fded840f</hash>
+         <hash>03e9c94aba57e3cf7f4f73bc2d3eb4a96ae38f3425eedb5450622ca286475a0b</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\driver\driver_common.h</file>
@@ -2210,12 +2210,12 @@
          <hash>2d1b22adec23ec188da16c62bdd0b2d25b7159e7b630bd3b762686a2db5e3453</hash>
       </entry>
       <entry>
-         <file>..\src\config\pic32mx470_curiosity_freertos\usb\usb_host_client_driver.h</file>
-         <hash>d11085e6a64f6b4551b1dc19aaee5b8a2555b7df649057bdb2ce8549c296a87d</hash>
+         <file>..\src\config\pic32mx470_curiosity_freertos\usb_device_init_data.c</file>
+         <hash>512f73fcd25dc8bb9b344e6ae6a46e50fd17b96150ce3625a9c78caf24139edb</hash>
       </entry>
       <entry>
-         <file>..\src\config\pic32mx470_curiosity_freertos\usb_device_init_data.c</file>
-         <hash>cf3e89713b630f0d626cc9c439e5c71c6b7ca28856e5cb7462c21c3ad8a1fd56</hash>
+         <file>..\src\config\pic32mx470_curiosity_freertos\usb\usb_host_client_driver.h</file>
+         <hash>d11085e6a64f6b4551b1dc19aaee5b8a2555b7df649057bdb2ce8549c296a87d</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\driver\usb\usbfs\src\templates\usb_EPnHandshake_Default.h</file>
@@ -2227,7 +2227,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\system\debug\sys_debug.h</file>
-         <hash>970de73fb9806906b5429168c66ab403309d8a9cad46febab875a5e6d071525e</hash>
+         <hash>5c34d947b4d700829a89d9d7616d941fa9e17047c67adc6de4d365b0a8ce39f4</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\driver\usb\usbfs\src\templates\usb_OpModeSelect_Unsupported.h</file>
@@ -2263,11 +2263,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\system\system_module.h</file>
-         <hash>981fac23277aa77f682e7a9a28d436f892006cd5b4c7f23f50941b6d9a30e740</hash>
+         <hash>96c74368801b0a7aaa25aec3ec2cb0d483250385f103ffc1ff64089b4ca2c6d9</hash>
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\deprecated_definitions.h</file>
-         <hash>382f8a7a0e00240fb69911dff8d8515248beb9dadfe77c22c4e5544f49cc76eb</hash>
+         <hash>35000a143464bbbd8df7c9a6f066a64598a24da5174a7be33972e62bfbd75f4d</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\driver\usb\usbfs\src\templates\usb_EPnControlTransfer_Unsupported.h</file>
@@ -2279,7 +2279,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\osal\osal_definitions.h</file>
-         <hash>6dc49e317b4557c5516a172c1437125874abd98ffcc7260e3422966078dcef7f</hash>
+         <hash>af2f2336fac0fd5b49fb2d1c8f81baa4f554101b06f130aaa608cd9685c4ac35</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\driver\usb\usbfs\src\templates\usb_OTG_PullUpPullDown_Default.h</file>
@@ -2287,15 +2287,15 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\timers.h</file>
-         <hash>cfd11f78d92b398e8347f2b55dc1e79dffce83f63f7e570c6fc821334681ad12</hash>
+         <hash>ee0f596a54137e26ca806ebf067c4c6219a61348f1cbae8861a43d2d4891e1f9</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\toolchain_specifics.h</file>
-         <hash>9dfc75809b6eb23cee342231de51f6b382f8f7eabf8a939539cf44c0da32acbc</hash>
+         <hash>b4de6e02e3e48c62f7ba233405ffdf6ef31bb971d1a7b49efa1676f45cabc1ac</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\system\int\sys_int_mapping.h</file>
-         <hash>771b853250bfb05ceac0f525749007ca1d4478e660c13f6a7b7e8fe28eefcf75</hash>
+         <hash>a2dcf05575becc98aa212af1d220eda07487bd645d82c4d7a980aa3a22384cf3</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\driver\usb\usbfs\src\templates\usb_ActivityPending_Unsupported.h</file>
@@ -2319,7 +2319,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\usb\usb_host.h</file>
-         <hash>8fe091b3db430b897da28d7f7effb6fffbb882d025c878a54cc5e627909a8cc2</hash>
+         <hash>4ec16dee42ae6b1bad8a7199b44750ccf0c5fa3aee5e44766e7b6dffc9979e83</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\driver\usb\usbfs\src\templates\usb_ActivityPending_Default.h</file>
@@ -2331,11 +2331,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\peripheral\evic\plib_evic.c</file>
-         <hash>14062c92283ccefabee5bd198323747135be881e28f90e2371cac84b325d419c</hash>
+         <hash>993b30c05c56c6f987cee279c9fc0b304efa008c9234a6ea3c0f74df13b1b9b3</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\peripheral\evic\plib_evic.h</file>
-         <hash>ba6aa89118f11cdda7abe88b65c0dffa5e2bde61bd9710cfacbf5b82aeca02f8</hash>
+         <hash>e583d61209911805b20188f532f6c5075500408e9f75de59324804b7203f1997</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\driver\usb\usbfs\src\templates\usb_SleepEntryGuard_Default.h</file>
@@ -2343,7 +2343,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\portable\MemMang\heap_1.c</file>
-         <hash>6d8eb84e5171bce4d5cde80abc575ebd7d81ac007b7733f34d5032bac93f1748</hash>
+         <hash>286e3fee81c9107fc6dec40405f500cabdca56836d29747c182f0899bb8997fd</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\driver\usb\usbfs\src\templates\usb_BDTFunctions_Unsupported.h</file>
@@ -2351,19 +2351,23 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\interrupts.h</file>
-         <hash>91abdb8d191ae865fc6082f30783c3d6cca8aa8d5aca823a7fb2cc65e3a57d24</hash>
+         <hash>18fa0e2848cd2743a3d873986630516e784123eabc7aba156cbcad5900c5f231</hash>
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\stack_macros.h</file>
-         <hash>7d1d30b6c9ae34bebb26b14402f78a59a35ae826f460a1ad28534c9590b32151</hash>
+         <hash>3cddf2b3d47ae387e376ac75eb468f9d8ffb575d68c143e08d54af4087474cce</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\interrupts.c</file>
-         <hash>2d49a5122d5f58ea013ef447d3a7ec7ef2191e04391ea4202f4c49fcba2e1773</hash>
+         <hash>553e9d7996ce0f967b6cdeb5a4bbe44a64692531f407eea334281fed93a213b6</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\usb\src\usb_device_cdc_local.h</file>
          <hash>037e4e110e0620e39d144ec4b348481c7460a9dc44a6170c95a25e41c2c936bb</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mx470_curiosity_freertos\sys_tasks.h</file>
+         <hash>25af9d9b58e74328aac7685fb6681460e66e97837cf6116f0da0fecce5f59970</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\driver\usb\usbfs\src\templates\usb_HostBusyWithToken_Unsupported.h</file>
@@ -2399,7 +2403,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\portable\MPLAB\PIC32MX\ISR_Support.h</file>
-         <hash>97266128ba592406b8aa9dbf7acdebaae8faedecca7a6fec05035118c8ace82f</hash>
+         <hash>226a67783cd76e2d57761e2dadfcc986be65184e6116cee325fde0f69a663dd2</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\driver\usb\usbfs\src\templates\usb_OTG_ASessionValid_Unsupported.h</file>
@@ -2407,7 +2411,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\queue.c</file>
-         <hash>06a153c1ce111213af32dfc8797bd2e5c7819e264dfa338b4049f058dc1edb11</hash>
+         <hash>5cdf4fa35fe059446effff5bf20deaf83ddffb08921bc198fda106b1d17dd894</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\driver\usb\usbfs\src\templates\usb_StopInIdle_Unsupported.h</file>
@@ -2426,16 +2430,16 @@
          <hash>de9ae8ba4446db2edd0535c8b63a951f95a1a0791b538609dc230bbd1ffcac1e</hash>
       </entry>
       <entry>
-         <file>..\src\config\pic32mx470_curiosity_freertos\driver\usb\usbfs\src\templates\usb_SleepEntryGuard_Unsupported.h</file>
-         <hash>fc4b7f1601694d556cb587ca5196aca63f056cbffc80cbb0fd9af47b0cee559b</hash>
-      </entry>
-      <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\usb\src\usb_external_dependencies.h</file>
          <hash>5110f718908d8f79253ce5b4b44172288cc179ff61d18e387f9e90ae9afbb1b6</hash>
       </entry>
       <entry>
+         <file>..\src\config\pic32mx470_curiosity_freertos\driver\usb\usbfs\src\templates\usb_SleepEntryGuard_Unsupported.h</file>
+         <hash>fc4b7f1601694d556cb587ca5196aca63f056cbffc80cbb0fd9af47b0cee559b</hash>
+      </entry>
+      <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\freertos_hooks.c</file>
-         <hash>9ad70cf61f23e435987222ef070cf0b4b099d56f1e8b13fcf9d69723c064bd16</hash>
+         <hash>ee4a4dfc44aa3d45b99065a3d972818fcbd019d39450a67f168aa7f047f55149</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\driver\usb\usbfs\src\templates\usb_LastTransactionDetails_Default.h</file>
@@ -2451,7 +2455,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\system\int\src\sys_int.c</file>
-         <hash>ff706bb4bde7b62a65b603efea8bab8b5a7d9a1a2c1cb2a9e981d68bbf20f764</hash>
+         <hash>30ac5e334ca90204f545f1ab769ae26f421b910b3fb3be99354b364febceee64</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\usb\src\usb_device_function_driver.h</file>
@@ -2459,7 +2463,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\driver\usb\usbfs\src\drv_usbfs_device.c</file>
-         <hash>19a9b3d3ecbfac6a202374935180dcfdfbdf572e65ae22cfdb5111a6ec512101</hash>
+         <hash>04ed761e97236d51a52fa1cfcd5c29f8db2e7a8598d2992c88f7a75060c7ea45</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\bsp\bsp.c</file>
@@ -2503,7 +2507,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\bsp\bsp.h</file>
-         <hash>c7063d8511e845cc9ac413b02ae8646c23f772fb035d13c1fcfbf2b192ed8ef9</hash>
+         <hash>c86b48e7da7659771063add5e4e29246011b0c5380c864711d16dc856ff936bb</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\driver\usb\usbfs\src\templates\usb_ERR_InterruptStatus_Unsupported.h</file>
@@ -2515,7 +2519,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\croutine.c</file>
-         <hash>e31cd1c9c280c919a92edc28885e9bebce589d4cfab71cefab832a73683200fb</hash>
+         <hash>ebf0cdce261dc4a256c06c0d4ad2582e6026a6da0e973d4cb92092e94ce8f370</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\driver\usb\usbfs\src\templates\usb_AutomaticSuspend_Unsupported.h</file>
@@ -2527,7 +2531,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\portable.h</file>
-         <hash>39795c8dded505f24f53646ecd8192251851c74f366d2a5b0aae3fbfa68c191b</hash>
+         <hash>7ade8f368002778c723b3c4e14084910b7225cd36363ed0c948e9ea36c6f251f</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\driver\usb\usbfs\src\templates\usb_OTG_ASessionValid_Default.h</file>
@@ -2535,7 +2539,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\list.c</file>
-         <hash>e735517f308fad5dd77d03b6858c16bdbc937bb9d0754735849fc7799ebe2b59</hash>
+         <hash>db5c169cf3efd68da1c6a923ac84eebc724d602c940bde0b9b5f01f05028fde4</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\driver\usb\usbfs\src\templates\usb_ERR_Interrupt_Default.h</file>
@@ -2579,7 +2583,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\osal\osal.h</file>
-         <hash>d42702188d00d3e1d7219d7eef030485896bf8b5ebe55318656e82f0fbb89788</hash>
+         <hash>8404fbe44807fa0484ffb38843a72cb9af8e31c9c30bd1b2594e609b8ea317d9</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\driver\driver.h</file>
@@ -2603,7 +2607,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\portable\MPLAB\PIC32MX\port.c</file>
-         <hash>f67c39a4ff778d09d52d48f7426082be52d6274109320e3357e3aa5767983add</hash>
+         <hash>92b2eaa37d8da822b70bf1a25ec8846ec686b9cd122443ae2efe9cbbd305810a</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\p32MX470F512H.ld</file>
@@ -2631,7 +2635,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\system\system_common.h</file>
-         <hash>0dbf2f60b29c97426e70187bc59c652ab5a355f51cfbe3f195ff1c8c6c0b1602</hash>
+         <hash>c9f34bd226f8efab12f5766e77f8355996cd0430b50e0f6ee30258664c494984</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\driver\usb\usbfs\src\templates\usb_LastDirection_Unsupported.h</file>
@@ -2647,7 +2651,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\queue.h</file>
-         <hash>39d58a203f1b67fdb1099293914a2af9722d223586cfc5ff06e230e047919dea</hash>
+         <hash>1b61c1669091e59798a34c32c0f1e234d3f6a645f47641753eceeb7e1d9ce628</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\driver\usb\usbfs\src\templates\usb_NextTokenSpeed_Default.h</file>
@@ -2663,7 +2667,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\portable\MPLAB\PIC32MX\port_asm.S</file>
-         <hash>c13e3bdc04a6be309ee5ff3bb1b893c93ae848fd57bbc740707578231ea485cd</hash>
+         <hash>bd205593af5acf858f27a41a3cfef0719afe9a0b190e1373369f78b4e605e373</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\driver\usb\usbfs\src\templates\usb_HostGeneratesReset_Unsupported.h</file>
@@ -2678,16 +2682,16 @@
          <hash>a2ca84d8c2ce2c3241eb107552678f46fd2a87d361e5d3b807e91eca12330050</hash>
       </entry>
       <entry>
-         <file>..\src\config\pic32mx470_curiosity_freertos\driver\usb\usbfs\src\templates\usb_EPnTxRx_Unsupported.h</file>
-         <hash>cfd20f7c846cdec32a82e486d5a3f64dab5b4e7f1b26e7e8977ac86e0cb486ab</hash>
-      </entry>
-      <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\usb\usb_device.h</file>
          <hash>06a4f4c06b4b32ab90474b522ddbfc4922fbad93ccf6975240148f1ce4b71b46</hash>
       </entry>
       <entry>
+         <file>..\src\config\pic32mx470_curiosity_freertos\driver\usb\usbfs\src\templates\usb_EPnTxRx_Unsupported.h</file>
+         <hash>cfd20f7c846cdec32a82e486d5a3f64dab5b4e7f1b26e7e8977ac86e0cb486ab</hash>
+      </entry>
+      <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\osal\osal_freertos.h</file>
-         <hash>ca5e502b9f076c4bdc8d97ac2e4cfdfa5d1b49f7d64222c353fac4dcd794bc7c</hash>
+         <hash>7ad9faa903d8587bab9490660328f134b8e027f9c24bca47201f3f96f3b99474</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\driver\usb\usbfs\src\templates\usb_ALL_Interrupt_Unsupported.h</file>
@@ -2699,7 +2703,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\osal\osal_freertos.c</file>
-         <hash>6f35cfd335587dd112d0ac648ae99539a5acbb98ba80ce6e8c7c855e7b8d7465</hash>
+         <hash>8092bb557d244984ab601e36d3dc25408c8b57f3c8f090aac491891b4a32cb28</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\driver\usb\usbfs\src\templates\usb_ModuleBusy_Default.h</file>
@@ -2707,11 +2711,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\FreeRTOSConfig.h</file>
-         <hash>11d1503218a6ccf400f5a5f93d951740fa4e4501d8fa1bcf75b27b9597d5721f</hash>
+         <hash>4e2922583541a2d995c09c48c8f9ae2baf47ffc81398daeb336d89d727400b89</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\exceptions.c</file>
-         <hash>95f85ed420907afcd5b4d9fbac78f98c61fa943ffac2c86b7124fa75da774271</hash>
+         <hash>7c1b9a2e42598d51c643984260a4b0d966a18f1ad97cc90d166aa9a4311ab6af</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\driver\usb\usbfs\src\templates\usb_OTG_SessionValid_Unsupported.h</file>
@@ -2723,7 +2727,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\semphr.h</file>
-         <hash>b9b2ff28a0c80fa21443690bb28de64c8b9451cccd57e484de0bcf02fc367575</hash>
+         <hash>c624e8cdfc07844d4cf35382f3cc908c872375c7a3048482bdc110bda88cc4f2</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\driver\usb\usbfs\src\templates\usb_EP0LowSpeedConnect_Default.h</file>
@@ -2731,7 +2735,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\initialization.c</file>
-         <hash>97253355cd72750bcdb850741f802c62c90d2acfb4d7807a51c72d28bf7ddf19</hash>
+         <hash>bf66e6194435793e63bad0b57c43e2812690af87ffb030de5fe142a24cce5cf9</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\usb\usb_common.h</file>
@@ -2739,11 +2743,11 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\FreeRTOS_tasks.c</file>
-         <hash>8cb1eabe18f130b2b8980e880847f773fb12a4071c763d26c51624223b32a3a4</hash>
+         <hash>14020d617b96dd2814e1211f6e3b645bcf5e2bd3179c23fe7dd16bc666fe9463</hash>
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\event_groups.c</file>
-         <hash>a72063c3977fad098a87a5430e04e9fc5b892d703e01fbe09ea907f67aacf20e</hash>
+         <hash>76e967b14d231e4f31f014f1564f359a7bfd36bfa263ee6f437afa8c056df657</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\driver\usb\usbfs\src\templates\usb_DeviceAddress_Unsupported.h</file>
@@ -2759,7 +2763,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\configuration.h</file>
-         <hash>ff9c6a9a5be05ae6b0e9bdcc4d3923ab07cd5b18720b60e6b8f46d08a140c7f9</hash>
+         <hash>c62542e4f37133a22469736a0020cdd8bf8311b68a00a2948a02ef5d31590556</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\driver\usb\usbfs\src\templates\usb_LastTransactionDetails_Unsupported.h</file>
@@ -2771,7 +2775,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\usb\src\usb_device.c</file>
-         <hash>b530b020cfa777eed5e76731e125a07d285ad49f2014ccf93858db1581a40d96</hash>
+         <hash>e2299e7132aaf91acd6857a827520f8bd5ecdc40d8ba2e6c4018b8441064a6cb</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\usb\usb_hub.h</file>
@@ -2779,7 +2783,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\peripheral\clk\plib_clk.c</file>
-         <hash>8fb8b6b746271ec778b196aa04b2c6968e22a5fa251cfcd85594963156de20a1</hash>
+         <hash>86808ee1e7870436ce8e56888feaa65f6198fcc7b9f96fc4678fbccfc0f8da22</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\driver\usb\usbfs\src\templates\usb_StopInIdle_Default.h</file>
@@ -2799,11 +2803,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\usb\src\usb_device_local.h</file>
-         <hash>7ef3cbc9e2060d1d2800fb7a5d6d5597bb008b3da58bf475fc09219dd40c2244</hash>
+         <hash>3dc9e27b535edb31aa97aae04a0ce9ac12e5092ed3bae7ef6fd203bc1520ef33</hash>
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\projdefs.h</file>
-         <hash>399814721d9735e91d74ca07be3974edb20639acb46a6792230ff9f61f67b353</hash>
+         <hash>8faf4220ded25b00fd72424a2fa4e63e154713ae7b42f7270f1e3289362a6312</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\driver\usb\usbfs\src\templates\usb_OTG_BSessionEnd_Unsupported.h</file>
@@ -2815,11 +2819,11 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\message_buffer.h</file>
-         <hash>504a77558f13b66fd1eec5adf4d81e274f0b54c12880424833c24f577be0800a</hash>
+         <hash>9a8141d3d6c8044a57d7e448180c9bd2ed32e45ded32be288d095a39dced91ab</hash>
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\event_groups.h</file>
-         <hash>3b9cbd64db721c4317544700fff4e42ac68d989f71b7d610b31087bb19175839</hash>
+         <hash>7b3dd12a50d649c124c1af8be742671b9965b6f924310bda7984fe1b65c7f54a</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\driver\usb\usbfs\src\templates\usb_EPnStall_Unsupported.h</file>
@@ -2831,7 +2835,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\stdio\xc32_monitor.c</file>
-         <hash>26e5749db654ed433fd94f6c732ef8600d0cbf5196493374cf111877c02b694e</hash>
+         <hash>858f8710d4287200a5ee7f3b3ad7c24f505aed9c05c16956ab0ff9f7bb162a6a</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\driver\usb\usbfs\src\templates\usb_EPnRxEnableEnhanced_PIC32.h</file>
@@ -2847,7 +2851,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\mpu_wrappers.h</file>
-         <hash>c1fc47acdb79efb0fb8a0fb8a169ae4423fdc3a6d820b2f81d49e8e077c1ed48</hash>
+         <hash>5014408cc33f0f616215f2b48c67b0d47ccc35bfd5f0044ac653b5bbc6cf5778</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\driver\usb\drv_usb_external_dependencies.h</file>
@@ -2879,11 +2883,11 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\stream_buffer.c</file>
-         <hash>4376714fecad0f72dc4c8b45236591a7e0ffe24dd018382f56e8b0dfc2230b28</hash>
+         <hash>0ec303ba296caca5de955dc470bcadd134fb15b192ddf61c9afc92070bc1039a</hash>
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\portable\MPLAB\PIC32MX\portmacro.h</file>
-         <hash>abe947b110955e23017744d0314ee35d2ec00386d7e48f26a1955162bc8a4f3c</hash>
+         <hash>4e096fd7cf4dde01a4416fb6cfa9ddb55443bd95b10572002c2f6a397f021cde</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\driver\usb\usbfs\src\templates\usb_SpeedControl_Unsupported.h</file>

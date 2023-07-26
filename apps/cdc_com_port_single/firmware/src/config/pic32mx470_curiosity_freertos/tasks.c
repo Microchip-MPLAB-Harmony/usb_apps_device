@@ -52,6 +52,7 @@
 
 #include "configuration.h"
 #include "definitions.h"
+#include "sys_tasks.h"
 
 
 // *****************************************************************************
@@ -63,18 +64,19 @@ void _USB_DEVICE_Tasks(  void *pvParameters  )
 {
     while(1)
     {
-				 /* USB Device layer tasks routine */
+                /* USB Device layer tasks routine */
         USB_DEVICE_Tasks(sysObj.usbDevObject0);
         vTaskDelay(10 / portTICK_PERIOD_MS);
     }
 }
 
+
 /* Handle for the APP_FREERTOS_Tasks. */
 TaskHandle_t xAPP_FREERTOS_Tasks;
 
-void _APP_FREERTOS_Tasks(  void *pvParameters  )
+static void lAPP_FREERTOS_Tasks(  void *pvParameters  )
 {   
-    while(1)
+    while(true)
     {
         APP_FREERTOS_Tasks();
     }
@@ -105,8 +107,7 @@ void SYS_Tasks ( void )
     
 
     /* Maintain Middleware & Other Libraries */
-    
-    /* Create OS Thread for USB_DEVICE_Tasks. */
+        /* Create OS Thread for USB_DEVICE_Tasks. */
     xTaskCreate( _USB_DEVICE_Tasks,
         "USB_DEVICE_TASKS",
         1024,
@@ -117,9 +118,10 @@ void SYS_Tasks ( void )
 
 
 
+
     /* Maintain the application's state machine. */
         /* Create OS Thread for APP_FREERTOS_Tasks. */
-    xTaskCreate((TaskFunction_t) _APP_FREERTOS_Tasks,
+    (void) xTaskCreate((TaskFunction_t) lAPP_FREERTOS_Tasks,
                 "APP_FREERTOS_Tasks",
                 1024,
                 NULL,

@@ -102,26 +102,6 @@ extern "C" {
    function driver */
 #define USB_DEVICE_CDC_QUEUE_DEPTH_COMBINED                 3
 
-/*** USB Driver Configuration ***/
-
-/* Maximum USB driver instances */
-#define DRV_USBFS_INSTANCES_NUMBER                        1
-
-/* Interrupt mode enabled */
-#define DRV_USBFS_INTERRUPT_MODE                          true
-
-
-/* Enables Device Support */
-#define DRV_USBFS_DEVICE_SUPPORT                          true
-	
-/* Disable Host Support */
-#define DRV_USBFS_HOST_SUPPORT                            false
-
-
-
-/* Alignment for buffers that are submitted to USB Driver*/ 
-#define USB_ALIGN  CACHE_ALIGN
-
 /* Number of Endpoints used */
 #define DRV_USBFS_ENDPOINTS_NUMBER                        5
 
@@ -137,6 +117,27 @@ extern "C" {
 /* Enable SOF Events */
 #define USB_DEVICE_SOF_EVENT_ENABLE
 
+
+/*** USB Driver Configuration ***/
+
+/* Maximum USB driver instances */
+#define DRV_USBFS_INSTANCES_NUMBER                        1
+
+/* Interrupt mode enabled */
+#define DRV_USBFS_INTERRUPT_MODE                          true
+
+
+/* Enables Device Support */
+#define DRV_USBFS_DEVICE_SUPPORT                          true
+
+/* Disable Host Support */
+#define DRV_USBFS_HOST_SUPPORT                            false
+
+
+
+
+/* Alignment for buffers that are submitted to USB Driver*/ 
+#define USB_ALIGN  CACHE_ALIGN
 
 
 
