@@ -1,5 +1,5 @@
 /*******************************************************************************
-  Periodic Interval Timer (PIT) 
+  Periodic Interval Timer (PIT)
 
   Company:
     Microchip Technology Inc.
@@ -44,11 +44,12 @@
 // *****************************************************************************
 // Section: Included Files
 // *****************************************************************************
-#include "plib_pit.h"
+#include <stddef.h>
 #include "device.h"
+#include "plib_pit.h"
+#include "interrupts.h"
 
 #define PIT_COUNTER_FREQUENCY       (200000000U / 16U)
-
 
 // *****************************************************************************
 // *****************************************************************************
@@ -67,7 +68,7 @@ typedef struct
 // Section: File Scope or Global Constants
 // *****************************************************************************
 // *****************************************************************************
-static PIT_OBJECT pit;
+volatile static PIT_OBJECT pit;
 
 
 void PIT_TimerInitialize(void)
@@ -172,16 +173,18 @@ void PIT_TimerCallbackSet(PIT_CALLBACK callback, uintptr_t context)
     pit.context = context;
 }
 
-void PIT_InterruptHandler(void)
+void __attribute__((used)) PIT_InterruptHandler(void)
 {
     uint32_t interruptStatus = PIT_REGS->PIT_SR;
-    if( interruptStatus ) {
-        volatile uint32_t reg = PIT_REGS->PIT_PIVR;
-        (void)reg;
+    /* Additional temporary variable used to prevent MISRA violations (Rule 13.x) */
+    uintptr_t context = pit.context;
+    if(interruptStatus != 0U)
+	{
+        (void)PIT_REGS->PIT_PIVR;
         pit.tickCounter++;
-        if(pit.callback)
+        if((pit.callback) != NULL)
         {
-            pit.callback(pit.context);
+            pit.callback(context);
         }
     }
 }
