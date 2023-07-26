@@ -104,15 +104,17 @@ extern "C" {
 
 /* Enables Device Support */
 #define DRV_USBHS_DEVICE_SUPPORT                          true
-	
+
 /* Disable Host Support */
 #define DRV_USBHS_HOST_SUPPORT                            false
 
 
 
 
+
 /* Alignment for buffers that are submitted to USB Driver*/ 
 #define USB_ALIGN  CACHE_ALIGN  __ALIGNED(16)
+
 
 /* Number of Endpoints used */
 #define DRV_USBHS_ENDPOINTS_NUMBER                        3
