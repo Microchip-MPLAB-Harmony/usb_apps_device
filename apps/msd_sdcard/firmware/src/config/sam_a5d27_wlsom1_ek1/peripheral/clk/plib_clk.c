@@ -34,13 +34,16 @@ static void CLK_UTMIPLLInitialize(void)
 {
     /* Set the UTMI reference clock */
     uint32_t sfr_utmiclktrim_val = SFR_REGS->SFR_UTMICKTRIM & ~SFR_UTMICKTRIM_FREQ_Msk;
-	SFR_REGS->SFR_UTMICKTRIM = sfr_utmiclktrim_val | SFR_UTMICKTRIM_FREQ_24;
+    SFR_REGS->SFR_UTMICKTRIM = sfr_utmiclktrim_val | SFR_UTMICKTRIM_FREQ_24;
 
-	/* Enable UPLL and configure UPLL lock time */
-	PMC_REGS->CKGR_UCKR = CKGR_UCKR_UPLLEN_Msk | CKGR_UCKR_UPLLCOUNT(15);
+    /* Enable UPLL and configure UPLL lock time */
+    PMC_REGS->CKGR_UCKR = CKGR_UCKR_UPLLEN_Msk | CKGR_UCKR_UPLLCOUNT(15U);
 
-	/* Wait until PLL Lock occurs */
-    while ((PMC_REGS->PMC_SR & PMC_SR_LOCKU_Msk) != PMC_SR_LOCKU_Msk);
+    /* Wait until PLL Lock occurs */
+    while ((PMC_REGS->PMC_SR & PMC_SR_LOCKU_Msk) != PMC_SR_LOCKU_Msk)
+    {
+        /* Wait for PLL lock to rise */
+    }
 }
 
 
@@ -65,10 +68,10 @@ static void CLK_PeripheralClockInitialize(void)
 {
     /* Enable clock for the selected peripherals, since the rom boot will turn on
      * certain clocks turn off all clocks not expressly enabled */
-   	PMC_REGS->PMC_PCER0=0x80042000;
-    PMC_REGS->PMC_PCDR0=~0x80042000;
-    PMC_REGS->PMC_PCER1=0x408;
-    PMC_REGS->PMC_PCDR1=~0x408;
+    PMC_REGS->PMC_PCER0=0x80042000U;
+    PMC_REGS->PMC_PCDR0=~0x80042000U;
+    PMC_REGS->PMC_PCER1=0x408U;
+    PMC_REGS->PMC_PCDR1=~0x408U;
 }
 
 
@@ -79,14 +82,14 @@ Clock Initialize
 
 void CLK_Initialize( void )
 {
-	/* Initialize UTMI PLL */
-	CLK_UTMIPLLInitialize();
+    /* Initialize UTMI PLL */
+    CLK_UTMIPLLInitialize();
 
-	/* Initialize Generic Clock */
-	CLK_GenericClockInitialize();
+    /* Initialize Generic Clock */
+    CLK_GenericClockInitialize();
 
-	/* Initialize Peripheral Clock */
-	CLK_PeripheralClockInitialize();
+    /* Initialize Peripheral Clock */
+    CLK_PeripheralClockInitialize();
 
 }
 
