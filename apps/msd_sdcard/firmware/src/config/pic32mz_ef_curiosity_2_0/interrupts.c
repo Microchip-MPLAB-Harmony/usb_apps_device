@@ -48,10 +48,10 @@
 // Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
-
 #include "configuration.h"
 #include "interrupts.h"
 #include "definitions.h"
+
 
 
 // *****************************************************************************
@@ -61,17 +61,26 @@
 // *****************************************************************************
 
 
-void TIMER_1_InterruptHandler( void );
-void SPI1_RX_InterruptHandler( void );
-void SPI1_TX_InterruptHandler( void );
-void DRV_USBHS_InterruptHandler( void );
-void DRV_USBHS_DMAInterruptHandler( void );
-void DMA0_InterruptHandler( void );
-void DMA1_InterruptHandler( void );
-
-
-
 /* All the handlers are defined here.  Each will call its PLIB-specific function. */
+// *****************************************************************************
+// *****************************************************************************
+// Section: System Interrupt Vector declarations
+// *****************************************************************************
+// *****************************************************************************
+void TIMER_1_Handler (void);
+void SPI1_RX_Handler (void);
+void SPI1_TX_Handler (void);
+void USB_Handler (void);
+void USB_DMA_Handler (void);
+void DMA0_Handler (void);
+void DMA1_Handler (void);
+
+
+// *****************************************************************************
+// *****************************************************************************
+// Section: System Interrupt Vector definitions
+// *****************************************************************************
+// *****************************************************************************
 void __ISR(_TIMER_1_VECTOR, ipl1SRS) TIMER_1_Handler (void)
 {
     TIMER_1_InterruptHandler();
