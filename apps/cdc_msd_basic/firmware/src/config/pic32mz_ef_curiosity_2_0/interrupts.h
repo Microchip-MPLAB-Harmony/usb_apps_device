@@ -57,6 +57,11 @@
 // *****************************************************************************
 // *****************************************************************************
 
+void TIMER_1_InterruptHandler( void );
+void DRV_USBHS_InterruptHandler( void );
+void DRV_USBHS_DMAInterruptHandler( void );
+void NVM_InterruptHandler( void );
+
 
 
 #endif // INTERRUPTS_H
