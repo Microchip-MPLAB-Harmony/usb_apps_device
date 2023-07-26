@@ -1,7 +1,7 @@
 /*
- * Instance header file for SAM9X60D6K
+ * Instance header file for ATSAM9X60D6K
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,15 +20,15 @@
  *
  */
 
-/* file generated from device description version 2021-05-04T16:22:14Z */
+/* file generated from device description version 2022-01-05T08:53:32Z */
 #ifndef _SAM9X_TDES_INSTANCE_
 #define _SAM9X_TDES_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for TDES peripheral ========== */
-#define TDES_INSTANCE_ID                         _UL_(40)   
-#define TDES_CLOCK_ID                            _UL_(40)   
-#define TDES_DMAC_ID_TX                          _UL_(31)   
-#define TDES_DMAC_ID_RX                          _UL_(30)   
+#define TDES_INSTANCE_ID                         (40)       
+#define TDES_CLOCK_ID                            (40)       
+#define TDES_DMAC_ID_TX                          (31)       
+#define TDES_DMAC_ID_RX                          (30)       
 
 #endif /* _SAM9X_TDES_INSTANCE_ */

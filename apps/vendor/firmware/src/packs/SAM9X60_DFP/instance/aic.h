@@ -1,7 +1,7 @@
 /*
- * Instance header file for SAM9X60D6K
+ * Instance header file for ATSAM9X60D6K
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,13 +20,13 @@
  *
  */
 
-/* file generated from device description version 2021-05-04T16:22:14Z */
+/* file generated from device description version 2022-01-05T08:53:32Z */
 #ifndef _SAM9X_AIC_INSTANCE_
 #define _SAM9X_AIC_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for AIC peripheral ========== */
-#define AIC_ID_EXT_FIQ                           _UL_(0)    
-#define AIC_ID_EXT_IRQ                           _UL_(31)   
+#define AIC_ID_EXT_FIQ                           (0)        
+#define AIC_ID_EXT_IRQ                           (31)       
 
 #endif /* _SAM9X_AIC_INSTANCE_ */
