@@ -1,7 +1,7 @@
 /*
- * Instance header file for SAMA7G54
+ * Instance header file for ATSAMA7G54D4G
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,32 +20,32 @@
  *
  */
 
-/* file generated from device description version 2021-07-26T12:51:16Z */
+/* file generated from device description version 2023-02-02T10:07:15Z */
 #ifndef _SAMA7G_TC1_INSTANCE_
 #define _SAMA7G_TC1_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for TC1 peripheral ========== */
-#define TC1_INSTANCE_ID_CHANNEL0                 _UL_(91)   /* 32-bit Timer Counter 1 Channel 0 */
-#define TC1_CLOCK_ID_CHANNEL0                    _UL_(91)   
-#define TC1_INSTANCE_ID_CHANNEL1                 _UL_(92)   /* 32-bit Timer Counter 1 Channel 1 interrupt */
-#define TC1_CLOCK_ID_CHANNEL1                    _UL_(92)   
-#define TC1_INSTANCE_ID_CHANNEL2                 _UL_(93)   /* 32-bit Timer Counter 1 Channel 2 interrupt */
-#define TC1_CLOCK_ID_CHANNEL2                    _UL_(93)   
-#define TC1_INSTANCE_ID_SINT0                    _UL_(148)  /* 32-bit Timer Counter 1 Channel 0, Secure INTerrupt */
-#define TC1_INSTANCE_ID_SINT1                    _UL_(149)  /* 32-bit Timer Counter 1 Channel 1, Secure INTerrupt */
-#define TC1_INSTANCE_ID_SINT2                    _UL_(150)  /* 32-bit Timer Counter 1 Channel 2, Secure INTerrupt */
-#define TC1_DMAC_ID_RX                           _UL_(52)   
-#define TC1_TCCLKS_                              _UL_(0)    /* MCK1 */
-#define TC1_TCCLKS_TIMER_CLOCK1                  _UL_(1)    /* GCLK */
-#define TC1_TCCLKS_TIMER_CLOCK2                  _UL_(2)    /* MCK1/8 */
-#define TC1_TCCLKS_TIMER_CLOCK3                  _UL_(3)    /* MCK1/32 */
-#define TC1_TCCLKS_TIMER_CLOCK4                  _UL_(4)    /* MCK1/128 */
-#define TC1_TCCLKS_TIMER_CLOCK5                  _UL_(5)    /* TD_SLCK */
-#define TC1_TCCLKS_XC0                           _UL_(6)    /* XC0 */
-#define TC1_TCCLKS_XC1                           _UL_(7)    /* XC1 */
-#define TC1_TCCLKS_XC2                           _UL_(8)    /* XC2 */
-#define TC1_NUM_INTERRUPT_LINES                  _UL_(3)    
-#define TC1_TIMER_WIDTH                          _UL_(32)   
+#define TC1_CLOCK_ID_CHANNEL0                    (91)       
+#define TC1_CLOCK_ID_CHANNEL1                    (92)       
+#define TC1_CLOCK_ID_CHANNEL2                    (93)       
+#define TC1_DMAC_ID_RX                           (52)       
+#define TC1_INSTANCE_ID_CHANNEL0                 (91)       /* 32-bit Timer Counter 1 Channel 0 */
+#define TC1_INSTANCE_ID_CHANNEL1                 (92)       /* 32-bit Timer Counter 1 Channel 1 interrupt */
+#define TC1_INSTANCE_ID_CHANNEL2                 (93)       /* 32-bit Timer Counter 1 Channel 2 interrupt */
+#define TC1_INSTANCE_ID_SINT0                    (148)      /* 32-bit Timer Counter 1 Channel 0, Secure INTerrupt */
+#define TC1_INSTANCE_ID_SINT1                    (149)      /* 32-bit Timer Counter 1 Channel 1, Secure INTerrupt */
+#define TC1_INSTANCE_ID_SINT2                    (150)      /* 32-bit Timer Counter 1 Channel 2, Secure INTerrupt */
+#define TC1_NUM_INTERRUPT_LINES                  (3)        
+#define TC1_TCCLKS_                              (0)        /* MCK1 */
+#define TC1_TCCLKS_TIMER_CLOCK1                  (1)        /* GCLK */
+#define TC1_TCCLKS_TIMER_CLOCK2                  (2)        /* MCK1/8 */
+#define TC1_TCCLKS_TIMER_CLOCK3                  (3)        /* MCK1/32 */
+#define TC1_TCCLKS_TIMER_CLOCK4                  (4)        /* MCK1/128 */
+#define TC1_TCCLKS_TIMER_CLOCK5                  (5)        /* TD_SLCK */
+#define TC1_TCCLKS_XC0                           (6)        /* XC0 */
+#define TC1_TCCLKS_XC1                           (7)        /* XC1 */
+#define TC1_TCCLKS_XC2                           (8)        /* XC2 */
+#define TC1_TIMER_WIDTH                          (32)       
 
 #endif /* _SAMA7G_TC1_INSTANCE_ */

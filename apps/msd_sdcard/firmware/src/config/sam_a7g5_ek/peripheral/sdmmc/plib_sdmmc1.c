@@ -40,6 +40,7 @@
 #include "device.h"
 #include "plib_sdmmc1.h"
 
+
 // *****************************************************************************
 // *****************************************************************************
 // Section: Include Files
@@ -47,19 +48,20 @@
 // *****************************************************************************
 
 #include "plib_sdmmc_common.h"
+#include "interrupts.h"
 
-#define SDMMC1_DMA_NUM_DESCR_LINES              1
-#define SDMMC1_HCLOCK_FREQUENCY                 200000000
-#define SDMMC1_BASECLK_FREQUENCY                50000000
-#define SDMMC1_MULTCLK_FREQUENCY                100000000
+#define SDMMC1_DMA_NUM_DESCR_LINES              1U
+#define SDMMC1_HCLOCK_FREQUENCY                 200000000U
+#define SDMMC1_BASECLK_FREQUENCY                50000000U
+#define SDMMC1_MULTCLK_FREQUENCY                100000000U
 #define SDMMC1_DMA_DESC_TABLE_SIZE	 (8 * 1)
 #define SDMMC1_DMA_DESC_TABLE_SIZE_CACHE_ALIGN	 (SDMMC1_DMA_DESC_TABLE_SIZE + ((SDMMC1_DMA_DESC_TABLE_SIZE % CACHE_LINE_SIZE)? (CACHE_LINE_SIZE - (SDMMC1_DMA_DESC_TABLE_SIZE % CACHE_LINE_SIZE)) : 0))
 
 #define SDMMC1_MAX_SUPPORTED_SDCLK_FREQUENCY    50000000UL
 
-#define SDMMC1_MAX_SUPPORTED_DIVIDER            0x3FF
+#define SDMMC1_MAX_SUPPORTED_DIVIDER            0x3FFU
 
-#define SDMMC1_MAX_BLOCK_SIZE                   0x200
+#define SDMMC1_MAX_BLOCK_SIZE                   0x200U
 
 #define SDMMC1_MAX_ADMA2_TRANSFER_SIZE          0x10000U
 
@@ -75,18 +77,18 @@ static inline uint32_t SDMMC1_ABS_DIFF_U32(uint32_t a, uint32_t b)
 /* Divide two 32 bit integers with dividend rounded upto the next divisor */
 static inline uint32_t SDMMC1_CEIL_INT_DIV_U32(uint32_t n, uint32_t d)
 {
-  return  ((n + d - 1) / d);
+  return  ((n + d - 1U) / d);
 }
 
 /* Minimum value among two 32 bit integers */
 static inline uint32_t SDMMC1_MIN_U32 (uint32_t a, uint32_t b)
 {
-  return a > b ? b : a;
+  return (a > b) ? b : a;
 }
 
 static CACHE_ALIGN SDMMC_ADMA_DESCR sdmmc1DmaDescrTable[(SDMMC1_DMA_DESC_TABLE_SIZE_CACHE_ALIGN/8)];
 
-static SDMMC_OBJECT sdmmc1Obj;
+volatile static SDMMC_OBJECT sdmmc1Obj;
 
 static void SDMMC1_InitVariables ( void )
 {
@@ -124,43 +126,45 @@ static void SDMMC1_SetTransferMode ( uint32_t opcode )
             transferMode = (SDMMC_TMR_DMAEN_ENABLED | SDMMC_TMR_MSBSEL_Msk | SDMMC_TMR_BCEN_Msk);
             break;
 
-        default:
+        default:  /* Do Nothing */
             break;
     }
 
     SDMMC1_REGS->SDMMC_TMR = transferMode;
 }
 
-void SDMMC1_InterruptHandler( void )
+void __attribute__((used)) SDMMC1_InterruptHandler( void )
 {
     uint16_t nistr = 0;
     uint16_t eistr = 0;
     SDMMC_XFER_STATUS xferStatus = SDMMC_XFER_STATUS_IDLE;
+    /* Additional temporary variable used to prevent MISRA violations (Rule 13.x) */
+    uintptr_t context = sdmmc1Obj.context;
 
     nistr = SDMMC1_REGS->SDMMC_NISTR;
     eistr = SDMMC1_REGS->SDMMC_EISTR;
     /* Save the error in a global variable for later use */
     sdmmc1Obj.errorStatus |= eistr;
 
-    if (nistr & SDMMC_NISTR_SD_SDIO_CINS_Msk)
+    if ((nistr & SDMMC_NISTR_SD_SDIO_CINS_Msk) != 0U)
     {
         xferStatus |= SDMMC_XFER_STATUS_CARD_INSERTED;
     }
-    if (nistr & SDMMC_NISTR_SD_SDIO_CREM_Msk)
+    if ((nistr & SDMMC_NISTR_SD_SDIO_CREM_Msk) != 0U)
     {
         xferStatus |= SDMMC_XFER_STATUS_CARD_REMOVED;
     }
 
     if (sdmmc1Obj.isCmdInProgress == true)
     {
-        if (nistr & (SDMMC_NISTR_SD_SDIO_CMDC_Msk | SDMMC_NISTR_SD_SDIO_TRFC_Msk | SDMMC_NISTR_SD_SDIO_ERRINT_Msk))
+        if ((nistr & (SDMMC_NISTR_SD_SDIO_CMDC_Msk | SDMMC_NISTR_SD_SDIO_TRFC_Msk | SDMMC_NISTR_SD_SDIO_ERRINT_Msk)) != 0U)
         {
-            if (nistr & SDMMC_NISTR_SD_SDIO_ERRINT_Msk)
+            if ((nistr & SDMMC_NISTR_SD_SDIO_ERRINT_Msk) != 0U)
             {
-                if (eistr & (SDMMC_EISTR_SD_SDIO_CMDTEO_Msk | \
+                if ((eistr & (SDMMC_EISTR_SD_SDIO_CMDTEO_Msk | \
                                       SDMMC_EISTR_SD_SDIO_CMDCRC_Msk | \
                                       SDMMC_EISTR_SD_SDIO_CMDEND_Msk | \
-                                      SDMMC_EISTR_SD_SDIO_CMDIDX_Msk))
+                                      SDMMC_EISTR_SD_SDIO_CMDIDX_Msk)) != 0U)
                 {
                     SDMMC1_ErrorReset (SDMMC_RESET_CMD);
                 }
@@ -172,18 +176,18 @@ void SDMMC1_InterruptHandler( void )
 
     if (sdmmc1Obj.isDataInProgress == true)
     {
-        if (nistr & (SDMMC_NISTR_SD_SDIO_TRFC_Msk | SDMMC_NISTR_SD_SDIO_DMAINT_Msk | SDMMC_NISTR_SD_SDIO_ERRINT_Msk))
+        if ((nistr & (SDMMC_NISTR_SD_SDIO_TRFC_Msk | SDMMC_NISTR_SD_SDIO_DMAINT_Msk | SDMMC_NISTR_SD_SDIO_ERRINT_Msk)) != 0U)
         {
-            if (nistr & SDMMC_NISTR_SD_SDIO_ERRINT_Msk)
+            if ((nistr & SDMMC_NISTR_SD_SDIO_ERRINT_Msk) != 0U)
             {
-                if (eistr & (SDMMC_EISTR_SD_SDIO_DATTEO_Msk | \
+                if ((eistr & (SDMMC_EISTR_SD_SDIO_DATTEO_Msk | \
                             SDMMC_EISTR_SD_SDIO_DATCRC_Msk | \
-                            SDMMC_EISTR_SD_SDIO_DATEND_Msk))
+                            SDMMC_EISTR_SD_SDIO_DATEND_Msk)) != 0U)
                 {
                     SDMMC1_ErrorReset (SDMMC_RESET_DAT);
                 }
             }
-            if (nistr & SDMMC_NISTR_SD_SDIO_TRFC_Msk)
+            if ((nistr & SDMMC_NISTR_SD_SDIO_TRFC_Msk) != 0U)
             {
                 /* Clear the data timeout error as transfer complete has higher priority */
                 sdmmc1Obj.errorStatus &= ~SDMMC_EISTR_SD_SDIO_DATTEO_Msk;
@@ -199,16 +203,19 @@ void SDMMC1_InterruptHandler( void )
 
     if ((sdmmc1Obj.callback != NULL) && (xferStatus != SDMMC_XFER_STATUS_IDLE))
     {
-        sdmmc1Obj.callback(xferStatus, sdmmc1Obj.context);
+        sdmmc1Obj.callback(xferStatus, context);
     }
 }
 
 void SDMMC1_ErrorReset ( SDMMC_RESET_TYPE resetType )
 {
-    SDMMC1_REGS->SDMMC_SRR = resetType;
+    SDMMC1_REGS->SDMMC_SRR = (uint8_t)resetType;
 
     /* Wait until host resets the error status */
-    while (SDMMC1_REGS->SDMMC_SRR & resetType);
+    while ((SDMMC1_REGS->SDMMC_SRR & resetType) != 0U)
+    {
+        /* Do Nothing */
+    }
 }
 
 uint16_t SDMMC1_ErrorGet( void )
@@ -269,9 +276,9 @@ bool SDMMC1_IsCardAttached ( void )
 
 void SDMMC1_BlockSizeSet ( uint16_t blockSize )
 {
-    if(blockSize == 0)
+    if(blockSize == 0U)
     {
-        blockSize = 1;
+        blockSize = 1U;
     }
     else if(blockSize > SDMMC1_MAX_BLOCK_SIZE)
     {
@@ -295,7 +302,10 @@ void SDMMC1_ClockEnable ( void )
     SDMMC1_REGS->SDMMC_CCR |= SDMMC_CCR_INTCLKEN_Msk;
 
     /* Wait for internal clock to stabilize */
-    while (!(SDMMC1_REGS->SDMMC_CCR & SDMMC_CCR_INTCLKS_Msk)) ;
+    while ((SDMMC1_REGS->SDMMC_CCR & SDMMC_CCR_INTCLKS_Msk) == 0U)
+    {
+        /* Do Nothing */
+    }
 
     /* Enable the SD Clock */
     SDMMC1_REGS->SDMMC_CCR |= SDMMC_CCR_SDCLKEN_Msk;
@@ -312,11 +322,7 @@ void SDMMC1_DmaSetup (
     SDMMC_DATA_TRANSFER_DIR direction
 )
 {
-    uint32_t i;
-    uint32_t pendingBytes = numBytes;
-    uint32_t nBytes = 0;
-
-    (void)direction;
+  (void)direction;
 
     /* Each ADMA2 descriptor can transfer 65536 bytes (or 128 blocks) of data.
      * Block count register being a 16 bit register, maximum number of blocks is
@@ -325,32 +331,23 @@ void SDMMC1_DmaSetup (
      * a block size of 512 bytes.
      */
 
-    if (pendingBytes > SDMMC1_MAX_DMA_TRANSFER_SIZE)
+    if (numBytes <= 65536U)
     {
-        /* Too many blocks requested in one go */
-        return;
-    }
-
-    for (i = 0; (i < SDMMC1_DMA_NUM_DESCR_LINES) && (pendingBytes > 0); i++)
-    {
-        nBytes = SDMMC1_MIN_U32(pendingBytes, SDMMC1_MAX_ADMA2_TRANSFER_SIZE);
-
-        sdmmc1DmaDescrTable[i].address = (uint32_t)(buffer);
-        sdmmc1DmaDescrTable[i].length = nBytes;
-        sdmmc1DmaDescrTable[i].attribute = \
+        sdmmc1DmaDescrTable[0].address = (uint32_t)(buffer);
+        sdmmc1DmaDescrTable[0].length = (uint16_t)numBytes;
+        sdmmc1DmaDescrTable[0].attribute = \
             (SDMMC_DESC_TABLE_ATTR_XFER_DATA | SDMMC_DESC_TABLE_ATTR_VALID | SDMMC_DESC_TABLE_ATTR_INTR);
 
-        pendingBytes = pendingBytes - nBytes;
+
+        /* The last descriptor line must indicate the end of the descriptor list */
+        sdmmc1DmaDescrTable[0].attribute |= (uint16_t)(SDMMC_DESC_TABLE_ATTR_END);
+
+        /* Clean the cache associated with the modified descriptors */
+        DCACHE_CLEAN_BY_ADDR(sdmmc1DmaDescrTable, (int32_t)(sizeof(SDMMC_ADMA_DESCR)));
+
+        /* Set the starting address of the descriptor table */
+        SDMMC1_REGS->SDMMC_ASAR0 = (uint32_t)(&sdmmc1DmaDescrTable[0]);
     }
-
-    /* The last descriptor line must indicate the end of the descriptor list */
-    sdmmc1DmaDescrTable[i-1].attribute |= (SDMMC_DESC_TABLE_ATTR_END);
-
-    /* Clean the cache associated with the modified descriptors */
-    DCACHE_CLEAN_BY_ADDR((uint32_t*)(sdmmc1DmaDescrTable), (i * sizeof(SDMMC_ADMA_DESCR)));
-
-    /* Set the starting address of the descriptor table */
-    SDMMC1_REGS->SDMMC_ASAR0 = (uint32_t)(&sdmmc1DmaDescrTable[0]);
 }
 
 
@@ -358,38 +355,41 @@ bool SDMMC1_ClockSet ( uint32_t freq )
 {
     const uint32_t base_clk_freq = SDMMC1_BASECLK_FREQUENCY;
     const uint32_t mult_clk_freq = SDMMC1_MULTCLK_FREQUENCY;
-    uint32_t div = 0;
+    bool use_prog_mode = false;
     uint32_t new_div_freq = 0;
     uint32_t prog_div = 0;
     uint32_t new_prog_freq = 0;
+    uint32_t divs = 0;
     uint16_t reg_val = 0;
-    bool use_prog_mode = false;
     bool hs_mode = freq > SDMMC_CLOCK_FREQ_DS_25_MHZ;
 
     /* Limit frequency to max supported */
     freq = SDMMC1_MIN_U32(freq, SDMMC1_MAX_SUPPORTED_SDCLK_FREQUENCY);
 
     /* Find the divider in the divided clock mode: DIV = FBASECLK / (2 * FSDCLK)  */
-    div = SDMMC1_CEIL_INT_DIV_U32(base_clk_freq, 2 * freq);
+    divs = SDMMC1_CEIL_INT_DIV_U32(base_clk_freq, 2U * freq);
 
     /* Limit the divider to maximum supported */
-    if (div > SDMMC1_MAX_SUPPORTED_DIVIDER)
+    if (divs > SDMMC1_MAX_SUPPORTED_DIVIDER)
     {
-        div = SDMMC1_MAX_SUPPORTED_DIVIDER;
+        divs = SDMMC1_MAX_SUPPORTED_DIVIDER;
     }
 
     /* IP limitation: if high speed mode is active, divider must be non zero */
-    else if (hs_mode && (0 == div))
+    else if (hs_mode && (0U == divs))
     {
-        div =  1;
+        divs =  1U;
+    }
+    else
+    {
+        /* Do Nothing */
     }
 
     /* target frequency if divider mode is used */
-	new_div_freq = base_clk_freq / (div == 0 ? 1UL : 2 * div);
+    new_div_freq = base_clk_freq / ((divs == 0U) ? 1UL : (2U* divs));
 
-    /* Check if programmable clock mode is supported and programmable clock is enabled */
-    if((0 != mult_clk_freq) &&
-      (0 != ((SDMMC1_REGS->SDMMC_CA1R & SDMMC_CA1R_CLKMULT_Msk) >> SDMMC_CA1R_CLKMULT_Pos)))
+    /* Check if programmable clock is enabled */
+    if(((SDMMC1_REGS->SDMMC_CA1R & SDMMC_CA1R_CLKMULT_Msk) >> SDMMC_CA1R_CLKMULT_Pos) != 0U)
     {
       /*Find the divider in the programmable clock mode: DIV = (FMULTCLK / FSDCLK) - 1 */
       prog_div = SDMMC1_CEIL_INT_DIV_U32(mult_clk_freq, freq);
@@ -400,32 +400,33 @@ bool SDMMC1_ClockSet ( uint32_t freq )
         prog_div = SDMMC1_MAX_SUPPORTED_DIVIDER;
       }
       /* IP limitation, if high speed mode is active divider must be non zero */
-      else if (hs_mode && (prog_div <= 1))
+      else if (hs_mode && (prog_div < 1U))
       {
-          prog_div = 1;
+          prog_div = 1U;
       }
       /* DIV counts from zero */
-      else if (prog_div > 0)
+      else if (prog_div > 0U)
       {
-        prog_div = prog_div - 1;
+        prog_div = prog_div - 1U;
       }
-
-
+      else
+      {
+          /* Do Nothing */
+      }
       /* target frequency if programmable clock mode is used */
-      new_prog_freq = mult_clk_freq / (prog_div + 1);
+      new_prog_freq = mult_clk_freq / (prog_div + 1U);
 
       /* decide on what mode to use based on the least delta from target */
       use_prog_mode = (SDMMC1_ABS_DIFF_U32(freq, new_prog_freq) < SDMMC1_ABS_DIFF_U32(freq, new_div_freq));
     }
 
-     /* Stop the output clock, so we can change the frequency.
-	 * Deviation from the SD Host Controller Specification: if the internal
-	 * clock was temporarily disabled, the controller would then switch to
-	 * an irrelevant clock frequency, hence keep the SDMMC internal clock enabled. */
-	reg_val = SDMMC1_REGS->SDMMC_CCR & ~SDMMC_CCR_SDCLKEN_Msk;
-	SDMMC1_REGS->SDMMC_CCR = reg_val;
-
-	if (hs_mode)
+    /* Stop the output clock, so we can change the frequency.
+    * Deviation from the SD Host Controller Specification: if the internal
+    * clock was temporarily disabled, the controller would then switch to
+    * an irrelevant clock frequency, hence keep the SDMMC internal clock enabled. */
+    reg_val = SDMMC1_REGS->SDMMC_CCR & ~SDMMC_CCR_SDCLKEN_Msk;
+    SDMMC1_REGS->SDMMC_CCR = reg_val;
+    if (hs_mode)
     {
         /* Enable the high speed mode */
         SDMMC1_REGS->SDMMC_HC1R |= SDMMC_HC1R_SD_SDIO_HSEN_Msk;
@@ -437,30 +438,32 @@ bool SDMMC1_ClockSet ( uint32_t freq )
     }
 
     /* Select the clock mode and divider */
-	if (use_prog_mode)
+    if (use_prog_mode)
     {
-		reg_val |= SDMMC_CCR_CLKGSEL_Msk;
+        reg_val |= SDMMC_CCR_CLKGSEL_Msk;
         reg_val =   (reg_val & ~SDMMC_CCR_USDCLKFSEL_Msk & ~SDMMC_CCR_SDCLKFSEL_Msk)
                     | SDMMC_CCR_USDCLKFSEL(prog_div >> 8)
-                    | SDMMC_CCR_SDCLKFSEL(prog_div & 0xff)
+                    | SDMMC_CCR_SDCLKFSEL(prog_div & 0xffU)
                     | SDMMC_CCR_INTCLKEN_Msk;
     }
-	else
+    else
     {
-		reg_val &= ~SDMMC_CCR_CLKGSEL_Msk;
+        reg_val &= ~SDMMC_CCR_CLKGSEL_Msk;
         reg_val =   (reg_val & ~SDMMC_CCR_USDCLKFSEL_Msk & ~SDMMC_CCR_SDCLKFSEL_Msk)
-                    | SDMMC_CCR_USDCLKFSEL(div >> 8)
-                    | SDMMC_CCR_SDCLKFSEL(div & 0xff)
+                    | SDMMC_CCR_USDCLKFSEL(divs >> 8)
+                    | SDMMC_CCR_SDCLKFSEL(divs & 0xffU)
                     | SDMMC_CCR_INTCLKEN_Msk;
     }
-
 
     /* Start the internal clock (if not started already) and wait for it to stabilize */
     SDMMC1_REGS->SDMMC_CCR = reg_val;
-	while (!(SDMMC1_REGS->SDMMC_CCR & SDMMC_CCR_INTCLKS_Msk)) ;
+    while ((SDMMC1_REGS->SDMMC_CCR & SDMMC_CCR_INTCLKS_Msk) == 0U)
+    {
+        /* Do Nothing */
+    }
 
     /* Start the output clock */
-	SDMMC1_REGS->SDMMC_CCR |= SDMMC_CCR_SDCLKEN_Msk;
+    SDMMC1_REGS->SDMMC_CCR |= SDMMC_CCR_SDCLKEN_Msk;
 
     return true;
 }
@@ -473,11 +476,6 @@ void SDMMC1_ResponseRead (
 {
     switch (respReg)
     {
-        case SDMMC_READ_RESP_REG_0:
-        default:
-            *response = SDMMC1_REGS->SDMMC_RR[0];
-            break;
-
         case SDMMC_READ_RESP_REG_1:
             *response = SDMMC1_REGS->SDMMC_RR[1];
             break;
@@ -496,6 +494,11 @@ void SDMMC1_ResponseRead (
             response[2] = SDMMC1_REGS->SDMMC_RR[2];
             response[3] = SDMMC1_REGS->SDMMC_RR[3];
             break;
+
+        case SDMMC_READ_RESP_REG_0:
+        default:
+            *response = SDMMC1_REGS->SDMMC_RR[0];
+            break;
     }
 }
 
@@ -508,7 +511,7 @@ void SDMMC1_CommandSend (
 {
     uint16_t cmd = 0;
     uint16_t normalIntSigEnable = 0;
-    uint8_t flags = 0;
+    uint8_t flags = 0U;
 
     /* Clear the flags */
     sdmmc1Obj.isCmdInProgress = false;
@@ -563,7 +566,7 @@ void SDMMC1_CommandSend (
     }
     else
     {
-        SDMMC1_REGS->SDMMC_TMR = 0;
+        SDMMC1_REGS->SDMMC_TMR = 0U;
     }
 
     /* Enable the needed normal interrupt signals */
@@ -576,7 +579,7 @@ void SDMMC1_CommandSend (
 
     sdmmc1Obj.isCmdInProgress = true;
 
-    cmd = (SDMMC_CR_CMDIDX(opCode) | (transferFlags.isDataPresent << SDMMC_CR_DPSEL_Pos) | flags);
+    cmd = (SDMMC_CR_CMDIDX(opCode) | ((uint8_t)transferFlags.isDataPresent << SDMMC_CR_DPSEL_Pos) | flags);
     SDMMC1_REGS->SDMMC_CR = cmd;
 }
 
@@ -584,17 +587,20 @@ void SDMMC1_ModuleInit( void )
 {
     /* Reset module*/
     SDMMC1_REGS->SDMMC_SRR = SDMMC_SRR_SWRSTALL_Msk;
-    while((SDMMC1_REGS->SDMMC_SRR & SDMMC_SRR_SWRSTALL_Msk) == SDMMC_SRR_SWRSTALL_Msk);
+    while((SDMMC1_REGS->SDMMC_SRR & SDMMC_SRR_SWRSTALL_Msk) == SDMMC_SRR_SWRSTALL_Msk)
+    {
+        /* Do Nothing */
+    }
 
     /* Set timeout control register */
     SDMMC1_REGS->SDMMC_TCR = SDMMC_TCR_DTCVAL(0xE);
 
     /* Configure maximum AHB burst size */
-	SDMMC1_REGS->SDMMC_ACR = SDMMC_ACR_BMAX_INCR16;
+    SDMMC1_REGS->SDMMC_ACR = SDMMC_ACR_BMAX_INCR16;
 
     /* Enable ADMA2 */
     SDMMC1_REGS->SDMMC_HC1R = SDMMC_HC1R_SD_SDIO_DMASEL_ADMA32;
-    
+
     /* Clear the normal and error interrupt status flags */
     SDMMC1_REGS->SDMMC_EISTR = SDMMC_EISTR_SD_SDIO_Msk;
     SDMMC1_REGS->SDMMC_NISTR = SDMMC_NISTR_SD_SDIO_Msk;
@@ -604,12 +610,12 @@ void SDMMC1_ModuleInit( void )
     SDMMC1_REGS->SDMMC_EISTER = SDMMC_EISTER_SD_SDIO_Msk;
 
     /* Set SD Bus Power On */
-    /* (NOTE: Perform a read/modify write to preserve the values of the 
+    /* (NOTE: Perform a read/modify write to preserve the values of the
         reserved bits */
     SDMMC1_REGS->SDMMC_PCR |= SDMMC_PCR_SDBPWR_Msk;
-    
+
     /* Set initial clock to 400 KHz*/
-    SDMMC1_ClockSet (SDMMC_CLOCK_FREQ_400_KHZ);
+    (void) SDMMC1_ClockSet (SDMMC_CLOCK_FREQ_400_KHZ);
 }
 
 void SDMMC1_Initialize( void )

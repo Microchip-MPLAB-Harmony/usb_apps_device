@@ -21,9 +21,20 @@
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *******************************************************************************/
-
+// *****************************************************************************
+// *****************************************************************************
+// Section: Included Files
+// *****************************************************************************
+// *****************************************************************************
+#include "interrupts.h"
 #include "plib_gic.h"
 
+/* ************************************************************************** */
+/* ************************************************************************** */
+/* Section: File Scope or Global Data                                         */
+/* ************************************************************************** */
+/* ************************************************************************** */
+// *****************************************************************************
 #define GIC_IRQ_CONFIG_LEVEL            0U
 #define GIC_IRQ_CONFIG_EDGE             2U
 
@@ -34,11 +45,11 @@
 
 #define IAR_CPU_ID_Mask                 3U
 #define IAR_CPU_ID_Pos                  10U
-#define GET_IAR_CPU_ID(iarRegVal)       ((iarRegVal & IAR_CPU_ID_Mask) >> IAR_CPU_ID_Pos)
+#define GET_IAR_CPU_ID(iarRegVal)       (((iarRegVal) & (IAR_CPU_ID_Mask)) >> IAR_CPU_ID_Pos)
 
 #define IAR_INTERRUPT_ID_Mask           0x3FFU
 #define IAR_INTERRUPT_ID_Pos            0x0U
-#define GET_IAR_INTERRUPT_ID(iarRegVal) ((iarRegVal & IAR_INTERRUPT_ID_Mask) >> IAR_INTERRUPT_ID_Pos)
+#define GET_IAR_INTERRUPT_ID(iarRegVal) (((iarRegVal) & (IAR_INTERRUPT_ID_Mask)) >> IAR_INTERRUPT_ID_Pos)
 
 #define TOTAL_SGI_INTERRUPTS            0x10U
 #define MAX_SGI_INTERRUPT_ID            0x00FU
@@ -46,25 +57,31 @@
 #define MAX_SPI_INTERRUPT_ID            186U
 #define SPURIOUS_INTERRUPT_ID           0x3FFU
 
-extern peripheral_interrupt_handler_t gicPIVectorTable[171U];
+void GIC_IRQHandler(uint32_t  iarRegVal);
+void GIC_FIQHandler(uint32_t  iarRegVal);
 
-static struct {
+
+volatile static PPI_SPI_HANDLER gicPIVectorTable[171U];
+volatile static SGI_HANDLER gicSGIHandler;
+
+static const struct {
     IRQn_Type irqID;
+    PPI_SPI_HANDLER irqHandler;
     uint32_t  irqCfg;
     uint32_t  irqPriority;
     uint32_t  irqSecurity;
 }gicIrqConfig[] =
 {
-
-    {SDMMC1_IRQn, GIC_IRQ_CONFIG_LEVEL, 0,  GIC_IRQ_GROUP_SECURE},
-
-    {TC0_CH0_IRQn, GIC_IRQ_CONFIG_LEVEL, 0,  GIC_IRQ_GROUP_SECURE},
-
-    {UDPHSA_IRQn, GIC_IRQ_CONFIG_LEVEL, 0,  GIC_IRQ_GROUP_SECURE},
+    {SDMMC1_IRQn, SDMMC1_InterruptHandler, GIC_IRQ_CONFIG_LEVEL, 0, GIC_IRQ_GROUP_SECURE},
+    {TC0_CH0_IRQn, TC0_CH0_InterruptHandler, GIC_IRQ_CONFIG_LEVEL, 0, GIC_IRQ_GROUP_SECURE},
+    {UDPHSA_IRQn, UDPHSA_Handler, GIC_IRQ_CONFIG_LEVEL, 0, GIC_IRQ_GROUP_SECURE},
 };
 
-static sgi_interrupt_handler_t gicSGIHandler = NULL;
-
+// *****************************************************************************
+// *****************************************************************************
+// Section: GIC Implementation
+// *****************************************************************************
+// *****************************************************************************
 void GIC_IRQHandler(uint32_t  iarRegVal)
 {
     uint32_t irqNum = GET_IAR_INTERRUPT_ID(iarRegVal);
@@ -80,7 +97,7 @@ void GIC_IRQHandler(uint32_t  iarRegVal)
     /* Peripheral interrupt, dispatch peripheral handler if set */
     else if (irqNum <= MAX_SPI_INTERRUPT_ID)
     {
-        peripheral_interrupt_handler_t pHandler = gicPIVectorTable[ irqNum - TOTAL_SGI_INTERRUPTS];
+        PPI_SPI_HANDLER pHandler = gicPIVectorTable[ irqNum - TOTAL_SGI_INTERRUPTS];
         if(pHandler != NULL)
         {
             pHandler();
@@ -107,7 +124,7 @@ void GIC_FIQHandler(uint32_t  iarRegVal)
     /* Peripheral interrupt, dispatch peripheral handler if set */
     else if (irqNum <= MAX_SPI_INTERRUPT_ID)
     {
-        peripheral_interrupt_handler_t pHandler = gicPIVectorTable[ irqNum - TOTAL_SGI_INTERRUPTS];
+        PPI_SPI_HANDLER pHandler = gicPIVectorTable[ irqNum - TOTAL_SGI_INTERRUPTS];
         if(pHandler != NULL)
         {
             pHandler();
@@ -119,13 +136,13 @@ void GIC_FIQHandler(uint32_t  iarRegVal)
     }
 }
 
-void GIC_RegisterSGIInterruptHandler(sgi_interrupt_handler_t pHandler)
+void __attribute__((used)) GIC_RegisterSGIInterruptHandler(SGI_HANDLER pHandler)
 {
     gicSGIHandler = pHandler;
 }
 
 
-void GIC_RegisterPeripheralInterruptHandler(IRQn_Type irqID, peripheral_interrupt_handler_t pHandler)
+void __attribute__((used)) GIC_RegisterPeripheralInterruptHandler(IRQn_Type irqID, PPI_SPI_HANDLER pHandler)
 {
     gicPIVectorTable[ (uint32_t)irqID - TOTAL_SGI_INTERRUPTS] = pHandler;
 }
@@ -146,6 +163,7 @@ void GIC_Initialize(void)
         GIC_SetPriority(gicIrqConfig[i].irqID, gicIrqConfig[i].irqPriority);
         GIC_SetSecurity(gicIrqConfig[i].irqID, gicIrqConfig[i].irqSecurity);
         GIC_EnableIRQ (gicIrqConfig[i].irqID);
+        gicPIVectorTable[(uint32_t)gicIrqConfig[i].irqID - TOTAL_SGI_INTERRUPTS] = gicIrqConfig[i].irqHandler;
     }
 
     __enable_irq();
@@ -161,7 +179,7 @@ void GIC_INT_IrqEnable(void)
 bool GIC_INT_IrqDisable(void)
 {
     /* Add a volatile qualifier to the return value to prevent the compiler from optimizing out this function */
-    volatile bool previousValue = (CPSR_I_Msk & __get_CPSR())? false:true;
+    volatile bool previousValue = ((CPSR_I_Msk & __get_CPSR()) == 0U);
     __disable_irq();
     __DMB();
     return previousValue;
