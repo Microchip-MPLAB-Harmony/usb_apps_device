@@ -48,9 +48,9 @@
 #include <stdint.h>
 #include <stddef.h>
 #include <stdbool.h>
-#include "bsp/bsp.h"
 #include "usb/usb_device_cdc.h"
 #include "usb/usb_cdc.h"
+#include "bsp/bsp.h"
 #include "driver/usb/udphs/drv_usb_udphs.h"
 #include "peripheral/pit/plib_pit.h"
 #include "peripheral/mmu/plib_mmu.h"
@@ -77,6 +77,12 @@ extern "C" {
 
 #endif
 // DOM-IGNORE-END
+
+/* Device Information */
+#define DEVICE_NAME			 "ATSAMA5D27"
+#define DEVICE_ARCH			 "CORTEX-A5"
+#define DEVICE_FAMILY		 "SAMA5"
+#define DEVICE_SERIES		 "SAMA5D2"
 
 /* CPU clock frequency */
 #define CPU_CLOCK_FREQUENCY 498000000
@@ -193,7 +199,7 @@ typedef struct
 {
 	SYS_MODULE_OBJ  drvUSBUDPHSObject;
 
-	SYS_MODULE_OBJ  usbDevObject0;
+    SYS_MODULE_OBJ  usbDevObject0;
 
 
 } SYSTEM_OBJECTS;
