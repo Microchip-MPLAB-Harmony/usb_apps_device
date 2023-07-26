@@ -58,13 +58,7 @@
 #include "usb/usb_cdc.h"
 #include "driver/usb/usbhs/drv_usbhs.h"
 #include "bsp/bsp.h"
-#include "system/int/sys_int.h"
 #include "system/cache/sys_cache.h"
-#include "osal/osal.h"
-#include "system/debug/sys_debug.h"
-#include "app.h"
-
-
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
@@ -73,6 +67,12 @@ extern "C" {
 
 #endif
 // DOM-IGNORE-END
+
+/* Device Information */
+#define DEVICE_NAME			 "PIC32CZ8110CA80208"
+#define DEVICE_ARCH			 "CORTEX-M7"
+#define DEVICE_FAMILY		 "PIC32C"
+#define DEVICE_SERIES		 "PIC32CZCA80"
 
 /* CPU clock frequency */
 #define CPU_CLOCK_FREQUENCY 300000000
@@ -124,77 +124,8 @@ extern "C" {
 
 void SYS_Initialize( void *data );
 
-// *****************************************************************************
-/* System Tasks Function
-
-Function:
-    void SYS_Tasks ( void );
-
-Summary:
-    Function that performs all polled system tasks.
-
-Description:
-    This function performs all polled system tasks by calling the state machine
-    "tasks" functions for all polled modules in the system, including drivers,
-    services, middleware and applications.
-
-Precondition:
-    The SYS_Initialize function must have been called and completed.
-
-Parameters:
-    None.
-
-Returns:
-    None.
-
-Example:
-    <code>
-    SYS_Initialize ( NULL );
-
-    while ( true )
-    {
-        SYS_Tasks ( );
-    }
-    </code>
-
-Remarks:
-    If the module is interrupt driven, the system will call this routine from
-    an interrupt context.
-*/
-
-void SYS_Tasks ( void );
-
-// *****************************************************************************
-// *****************************************************************************
-// Section: Type Definitions
-// *****************************************************************************
-// *****************************************************************************
-
-// *****************************************************************************
-/* System Objects
-
-Summary:
-    Structure holding the system's object handles
-
-Description:
-    This structure contains the object handles for all objects in the
-    MPLAB Harmony project's system configuration.
-
-Remarks:
-    These handles are returned from the "Initialize" functions for each module
-    and must be passed into the "Tasks" function for each module.
-*/
-
-typedef struct
-{
-    SYS_MODULE_OBJ  usbDevObject0;
-
-
-    SYS_MODULE_OBJ  drvUSBHSObject0;
-
-
-
-} SYSTEM_OBJECTS;
+/* Nullify SYS_Tasks() if only PLIBs are used. */
+#define     SYS_Tasks()
 
 // *****************************************************************************
 // *****************************************************************************
@@ -206,7 +137,6 @@ extern const USB_DEVICE_INIT usbDevInitData0;
 
 
 
-extern SYSTEM_OBJECTS sysObj;
 
 //DOM-IGNORE-BEGIN
 #ifdef __cplusplus
