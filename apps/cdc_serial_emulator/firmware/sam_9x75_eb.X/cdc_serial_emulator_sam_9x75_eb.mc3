@@ -47,7 +47,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.3.1"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.3.2"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -5956,16 +5956,16 @@
          <hash>310598cfec2b2714a17acbba450fd86b78e75b9fc557e94a0b1ea11b02690833</hash>
       </entry>
       <entry>
+         <file>..\src\config\sam_9x75_eb\usb\src\usb_device_local.h</file>
+         <hash>3dc9e27b535edb31aa97aae04a0ce9ac12e5092ed3bae7ef6fd203bc1520ef33</hash>
+      </entry>
+      <entry>
          <file>..\src\packs\SAM9X75_DFP\instance\aes.h</file>
          <hash>bac97ef0bfbe80daf827ba322c899a5d3246e34b63870319c7f3d7bd86ab83e8</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75_DFP\instance\gpbr.h</file>
          <hash>668d59dd8ca821b72388a84ec9cba2ef70646fef6b6b89c004b49c3d59b378d4</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_9x75_eb\usb\src\usb_device_local.h</file>
-         <hash>7ef3cbc9e2060d1d2800fb7a5d6d5597bb008b3da58bf475fc09219dd40c2244</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75_DFP\instance\otpc.h</file>
@@ -6088,12 +6088,12 @@
          <hash>17c6e0c9450e0d6c311d2b231a740fc6405f379a5a501255e399536b508a0fb4</hash>
       </entry>
       <entry>
-         <file>..\src\packs\SAM9X75_DFP\instance\pit64b1.h</file>
-         <hash>b8b5710c5f726cba9e3bceac29b301c8827969618c530d4ab125d915950eef2c</hash>
-      </entry>
-      <entry>
          <file>..\src\config\sam_9x75_eb\usb\src\usb_device_mapping.h</file>
          <hash>3a5eee6b064c49fd7a495f574736eaec5838e63f7de457ff688d70aa80432ce6</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X75_DFP\instance\pit64b1.h</file>
+         <hash>b8b5710c5f726cba9e3bceac29b301c8827969618c530d4ab125d915950eef2c</hash>
       </entry>
       <entry>
          <file>..\src\app.h</file>
@@ -6352,16 +6352,16 @@
          <hash>bab52b245ee3ee78ff26156c06ac67761ea78039030859fa772ece111fd5dab3</hash>
       </entry>
       <entry>
-         <file>..\src\packs\SAM9X75_DFP\instance\matrix.h</file>
-         <hash>41cc11fa62d646540a2aff17cc34a48d1a0d0590b4905153f8062e63fac6ce2c</hash>
-      </entry>
-      <entry>
          <file>..\src\config\sam_9x75_eb\usb\usb_chapter_9.h</file>
          <hash>86a258d763c7f0f563122ccd4ec0bbef422fd4e2f523402bb89be10568cecf3f</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\usb\src\usb_external_dependencies.h</file>
          <hash>5110f718908d8f79253ce5b4b44172288cc179ff61d18e387f9e90ae9afbb1b6</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X75_DFP\instance\matrix.h</file>
+         <hash>41cc11fa62d646540a2aff17cc34a48d1a0d0590b4905153f8062e63fac6ce2c</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75_DFP\component\syscwp.h</file>
