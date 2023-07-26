@@ -47,7 +47,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.3.1"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.3.2"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -2902,7 +2902,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\system\int\sys_int_mapping.h</file>
-         <hash>771b853250bfb05ceac0f525749007ca1d4478e660c13f6a7b7e8fe28eefcf75</hash>
+         <hash>a2dcf05575becc98aa212af1d220eda07487bd645d82c4d7a980aa3a22384cf3</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\driver\usb\usbfs\src\templates\usb_SpeedControl_Unsupported.h</file>
@@ -2958,7 +2958,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\usb\src\usb_device_local.h</file>
-         <hash>7ef3cbc9e2060d1d2800fb7a5d6d5597bb008b3da58bf475fc09219dd40c2244</hash>
+         <hash>3dc9e27b535edb31aa97aae04a0ce9ac12e5092ed3bae7ef6fd203bc1520ef33</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\driver\usb\usbfs\src\templates\usb_OTG_SessionValid_Unsupported.h</file>
@@ -2998,7 +2998,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\osal\osal_definitions.h</file>
-         <hash>0a5ca28c4812bb37babfebc1fe30a90b13583504d81910ad159feb746a5b002c</hash>
+         <hash>5f0a2513a093b6d228e2b50646b204923a82047335a47f3d35a2938309ab6f37</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\usb\usb_chapter_9.h</file>
@@ -3022,7 +3022,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\interrupts.c</file>
-         <hash>11975104bc4aba27aef95049ef90ac14a35c4b5c66848b9c4aed78fbe4efd31d</hash>
+         <hash>9139729909ebd0e841cfe70c1cd1baaced16752df07da2dbba9f4dc7f244de1b</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\driver\usb\usbfs\src\templates\usb_OTG_ASessionValid_Default.h</file>
@@ -3038,11 +3038,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\system\int\src\sys_int.c</file>
-         <hash>ff706bb4bde7b62a65b603efea8bab8b5a7d9a1a2c1cb2a9e981d68bbf20f764</hash>
+         <hash>30ac5e334ca90204f545f1ab769ae26f421b910b3fb3be99354b364febceee64</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\interrupts.h</file>
-         <hash>91abdb8d191ae865fc6082f30783c3d6cca8aa8d5aca823a7fb2cc65e3a57d24</hash>
+         <hash>10133d76c5b99bf2101989486dfda05030f1d5ee52e7f3c0fe6e0f7419ae5447</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\usb\usb_host.h</file>
@@ -3070,7 +3070,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\peripheral\gpio\plib_gpio.c</file>
-         <hash>b710e4d5de07c26bbd6cb3049516eea2697dded000dabdcdf8b23191650daf85</hash>
+         <hash>09801e15a630667dc480a7b79dab46ad5d6b643b53f67fc50359294d44ef6120</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\driver\usb\usbfs\src\templates\usb_OTG_Interrupt_Default.h</file>
@@ -3078,7 +3078,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\system\int\sys_int.h</file>
-         <hash>c6ec8fc3c7ad1fa570998b9f65cb37fba4364ab07c3869f2d6cb30612a8a91e8</hash>
+         <hash>2c878ab7ff41ae56b5c0c3c94929ad66eb87b8660bf9a439177d049e8ad8f8c8</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\driver\usb\usbfs\src\templates\usb_EPnHandshake_Default.h</file>
@@ -3153,6 +3153,10 @@
          <hash>8ae4cb9225eb86ae64b7eee12043a6de582eccef95a0b81261df41b7e1bb1a83</hash>
       </entry>
       <entry>
+         <file>..\src\config\pic32mk_gp_db\sys_tasks.h</file>
+         <hash>21f254f497a18a024cd00128d06c4776c2643f867a460c1ba9880a7dd41a8d56</hash>
+      </entry>
+      <entry>
          <file>..\src\config\pic32mk_gp_db\driver\usb\usbfs\src\templates\usb_StopInIdle_Default.h</file>
          <hash>fce9d0ef857d13d1d2149d1147bf83ad55e6fcb4c2691d927816eb4d82ad7e07</hash>
       </entry>
@@ -3162,7 +3166,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\peripheral\clk\plib_clk.c</file>
-         <hash>d58d9fb63bae3d44462eb1db5b57752278ac3e589e5f8bc732a484a2196ca378</hash>
+         <hash>1dbfb6a8a97f676a6786dd3b578adae0f0e54f53e1a29f5fab9ac63095f745ff</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\driver\usb\usbfs\src\templates\usb_EPnControlTransfer_Default.h</file>
@@ -3170,7 +3174,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\peripheral\clk\plib_clk.h</file>
-         <hash>aeb73e24e5a518024b1c3f7dce953a5cbacead08f55e80ae465fc8d2e522e477</hash>
+         <hash>35384f2e13e59b7190bf77f6996baf3ea2377ec42df94979a6f793326def5255</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\driver\usb\usbfs\src\templates\usb_ActivityPending_Unsupported.h</file>
@@ -3262,7 +3266,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\osal\osal_impl_basic.h</file>
-         <hash>0c388837ef1d4e207a028ed31bfe07f1aac7ea8b0505caff58f737667ccbeaee</hash>
+         <hash>67ce72d34fd1e4dee0b6937fa026ab2c7bd285f82a24da09742c68333adaf0fc</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\driver\usb\usbfs\src\templates\usb_EPnTxRx_Default.h</file>
@@ -3302,11 +3306,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\osal\osal.h</file>
-         <hash>d42702188d00d3e1d7219d7eef030485896bf8b5ebe55318656e82f0fbb89788</hash>
+         <hash>8404fbe44807fa0484ffb38843a72cb9af8e31c9c30bd1b2594e609b8ea317d9</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\system\system_common.h</file>
-         <hash>0dbf2f60b29c97426e70187bc59c652ab5a355f51cfbe3f195ff1c8c6c0b1602</hash>
+         <hash>c9f34bd226f8efab12f5766e77f8355996cd0430b50e0f6ee30258664c494984</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\usb\src\usb_device_cdc_acm.c</file>
@@ -3322,7 +3326,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\initialization.c</file>
-         <hash>750a89ce53b3dd2c8e7c112c8ef10a4bb85ceb3ec6061a04073c923564eb946b</hash>
+         <hash>875609ac409a2a1b4c9cd90dffcdcf2993ac08f04be4f85f235c7a374fbf39f6</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\system\system.h</file>
@@ -3358,7 +3362,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\toolchain_specifics.h</file>
-         <hash>9dfc75809b6eb23cee342231de51f6b382f8f7eabf8a939539cf44c0da32acbc</hash>
+         <hash>b4de6e02e3e48c62f7ba233405ffdf6ef31bb971d1a7b49efa1676f45cabc1ac</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\driver\usb\usbfs\src\templates\usb_OTG_VbusDischarge_Default.h</file>
@@ -3394,7 +3398,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\system\debug\sys_debug.h</file>
-         <hash>16fbc4bbf026e4713e9b835b1511411e053aaf92ab7d6a000638630576fe92b3</hash>
+         <hash>5c34d947b4d700829a89d9d7616d941fa9e17047c67adc6de4d365b0a8ce39f4</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\driver\usb\usbfs\src\templates\usb_StartOfFrames_Unsupported.h</file>
@@ -3414,7 +3418,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\system\system_module.h</file>
-         <hash>981fac23277aa77f682e7a9a28d436f892006cd5b4c7f23f50941b6d9a30e740</hash>
+         <hash>96c74368801b0a7aaa25aec3ec2cb0d483250385f103ffc1ff64089b4ca2c6d9</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\driver\usb\usbfs\src\templates\usb_BufferFreeze_Default.h</file>
@@ -3446,7 +3450,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\definitions.h</file>
-         <hash>a8712c7f03e6cb3618f2c45590438a342b969340664559b31f6939395cc9d44b</hash>
+         <hash>bbd1b962116c9b7a32aa8a74a248591e7a41096c5fbfe28ab1e9b5278fd6dc10</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\driver\usb\usbfs\src\templates\usb_LastDirection_Unsupported.h</file>
@@ -3530,7 +3534,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\peripheral\evic\plib_evic.c</file>
-         <hash>f92ee75050bc290d14d268b368e23b874f70f15eb1f9f1db0c5fff39ed41e11d</hash>
+         <hash>a8c121d098f2b67c4cc55997b6427d78146fc2f93316fc026782de4b738fed3d</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\bsp\bsp.c</file>
@@ -3542,15 +3546,15 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\tasks.c</file>
-         <hash>2aa581486b826e7ae102cd10d4074d499bd16778297d7486769efa40be665ae7</hash>
+         <hash>f8c72f6a3a7e79ba3b72540b266048f3a5003179bf4cd64a056f200bdffecbb5</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\bsp\bsp.h</file>
-         <hash>1699e4bb40bfa03c800bdf1a16a273a54004c06df0cbaf616464cb09708783e3</hash>
+         <hash>de32cb1ef6d4389507bdfdc594dd5026024ef8d758fea1bc7ea1ad0bda9b8b3b</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\exceptions.c</file>
-         <hash>95f85ed420907afcd5b4d9fbac78f98c61fa943ffac2c86b7124fa75da774271</hash>
+         <hash>7c1b9a2e42598d51c643984260a4b0d966a18f1ad97cc90d166aa9a4311ab6af</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\usb\src\usb_device_cdc.c</file>
@@ -3570,7 +3574,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\peripheral\evic\plib_evic.h</file>
-         <hash>60146b58f53d310dae6bbff3576ca4c6e36826624ee5f1b4ba3eb407663eadee</hash>
+         <hash>5d2b2a2d0c07aaa79af7d507e11e666e511be2c8a65fd2179aab81c6547e985a</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\driver\usb\usbfs\src\templates\usb_OTG_LineState_Unsupported.h</file>
