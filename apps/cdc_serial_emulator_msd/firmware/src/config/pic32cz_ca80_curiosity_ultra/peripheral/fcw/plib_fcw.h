@@ -67,7 +67,7 @@
 #define FCW_FLASH_PAGESIZE         (4096U)
 
 #define FCW_START_ADDRESS              (0xc400000U)
-#define FCW_MEDIA_SIZE                 (32U)
+#define FCW_MEDIA_SIZE                 (4096U)
 #define FCW_ERASE_BUFFER_SIZE          (4096U)
 
 

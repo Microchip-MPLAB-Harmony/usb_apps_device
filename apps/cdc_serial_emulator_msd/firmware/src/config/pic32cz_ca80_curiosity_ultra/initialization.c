@@ -48,7 +48,6 @@
 #include "device.h"
 
 
-
 // ****************************************************************************
 // ****************************************************************************
 // Section: Configuration Bits
@@ -134,13 +133,13 @@
 #pragma config FUSES_BOOTCFG1_FCR_CTRLA_RDBUFWS = 0xfU
 #pragma config FUSES_BOOTCFG1_RPMU_VREGCTRL_VREGOUT = 0x2
 #pragma config FUSES_BOOTCFG1_RPMU_VREGCTRL_OFFSTDBY = ON
-#pragma config FUSES_BOOTCFG1_RPMU_VREGCTRL_LVSTDBY = 0x1
-#pragma config FUSES_BOOTCFG1_RPMU_VREGCTRL_LVHIB = 0x1
+#pragma config FUSES_BOOTCFG1_RPMU_VREGCTRL_SRAM_VLD = CLEAR
+#pragma config FUSES_BOOTCFG1_RPMU_VREGCTRL_BKUP_VLD = CLEAR
 #pragma config FUSES_BOOTCFG1_RPMU_VREGCTRL_CPEN = 0x7U
 #pragma config FUSES_BOOTCFG1_RPMU_VREGCTRL_ULDOEN = SET
 #pragma config FUSES_BOOTCFG1_RPMU_VREGCTRL_ULDOSTDBY = ONINSTDBY
 #pragma config FUSES_BOOTCFG1_RPMU_VREGCTRL_ULDOLEVEL = 0x3
-#pragma config FUSES_BOOTCFG1_RPMU_VREGCTRL_AVREGEN = 0x7U
+#pragma config FUSES_BOOTCFG1_RPMU_VREGCTRL_AVREGEN = PLL_EN
 #pragma config FUSES_BOOTCFG1_RPMU_VREGCTRL_AVREGSTDBY = ONINSTDBY
 #pragma config FUSES_BOOTCFG1_PLL0_CTRL_ENABLE = SET
 #pragma config FUSES_BOOTCFG1_PLL0_CTRL_WRTLOCK = SET
@@ -158,8 +157,6 @@
 #pragma config FUSES_BOOTCFG1_BROM_BOOTCFGCRC2_BROM_BOOTCFGCRC = 0xffffffffU
 #pragma config FUSES_BOOTCFG1_BROM_BOOTCFGCRC3_BROM_BOOTCFGCRC = 0xffffffffU
 #pragma config FUSES_BOOTCFG1_BROM_PAGEEND_BROM_PAGEEND = 0xffffffffU
-#pragma config FUSES_DALCFG_DAL_CPU0 = 0xDB
-#pragma config FUSES_DALCFG_DAL_CPU1 = 0xDB
 #pragma config FUSES_USERCFG2_FSEQ_SEQNUM = 0x0U
 #pragma config FUSES_USERCFG2_FSEQ_SEQBAR = 0xffffU
 #pragma config FUSES_USERCFG2_AFSEQ_ASEQNUM = 0xffffU
@@ -240,13 +237,13 @@
 #pragma config FUSES_BOOTCFG2_FCR_CTRLA_RDBUFWS = 0xfU
 #pragma config FUSES_BOOTCFG2_RPMU_VREGCTRL_VREGOUT = 0x2
 #pragma config FUSES_BOOTCFG2_RPMU_VREGCTRL_OFFSTDBY = ON
-#pragma config FUSES_BOOTCFG2_RPMU_VREGCTRL_LVSTDBY = 0x1
-#pragma config FUSES_BOOTCFG2_RPMU_VREGCTRL_LVHIB = 0x1
+#pragma config FUSES_BOOTCFG2_RPMU_VREGCTRL_SRAM_VLD = CLEAR
+#pragma config FUSES_BOOTCFG2_RPMU_VREGCTRL_BKUP_VLD = CLEAR
 #pragma config FUSES_BOOTCFG2_RPMU_VREGCTRL_CPEN = 0x7U
 #pragma config FUSES_BOOTCFG2_RPMU_VREGCTRL_ULDOEN = SET
 #pragma config FUSES_BOOTCFG2_RPMU_VREGCTRL_ULDOSTDBY = ONINSTDBY
 #pragma config FUSES_BOOTCFG2_RPMU_VREGCTRL_ULDOLEVEL = 0x3
-#pragma config FUSES_BOOTCFG2_RPMU_VREGCTRL_AVREGEN = 0x7U
+#pragma config FUSES_BOOTCFG2_RPMU_VREGCTRL_AVREGEN = PLL_EN
 #pragma config FUSES_BOOTCFG2_RPMU_VREGCTRL_AVREGSTDBY = ONINSTDBY
 #pragma config FUSES_BOOTCFG2_PLL0_CTRL_ENABLE = SET
 #pragma config FUSES_BOOTCFG2_PLL0_CTRL_WRTLOCK = SET
@@ -273,6 +270,10 @@
 // Section: Driver Initialization Data
 // *****************************************************************************
 // *****************************************************************************
+/* Following MISRA-C rules are deviated in the below code block */
+/* MISRA C-2012 Rule 11.1 */
+/* MISRA C-2012 Rule 11.3 */
+/* MISRA C-2012 Rule 11.8 */
 // <editor-fold defaultstate="collapsed" desc="DRV_USART Instance 0 Initialization Data">
 
 static DRV_USART_CLIENT_OBJ drvUSART0ClientObjPool[DRV_USART_CLIENTS_NUMBER_IDX0];
@@ -280,38 +281,38 @@ static DRV_USART_CLIENT_OBJ drvUSART0ClientObjPool[DRV_USART_CLIENTS_NUMBER_IDX0
 /* USART transmit/receive transfer objects pool */
 static DRV_USART_BUFFER_OBJ drvUSART0BufferObjPool[DRV_USART_QUEUE_SIZE_IDX0];
 
-const DRV_USART_PLIB_INTERFACE drvUsart0PlibAPI = {
+static const DRV_USART_PLIB_INTERFACE drvUsart0PlibAPI = {
     .readCallbackRegister = (DRV_USART_PLIB_READ_CALLBACK_REG)SERCOM1_USART_ReadCallbackRegister,
-    .read = (DRV_USART_PLIB_READ)SERCOM1_USART_Read,
+    .read_t = (DRV_USART_PLIB_READ)SERCOM1_USART_Read,
     .readIsBusy = (DRV_USART_PLIB_READ_IS_BUSY)SERCOM1_USART_ReadIsBusy,
     .readCountGet = (DRV_USART_PLIB_READ_COUNT_GET)SERCOM1_USART_ReadCountGet,
     .readAbort = (DRV_USART_PLIB_READ_ABORT)SERCOM1_USART_ReadAbort,
     .writeCallbackRegister = (DRV_USART_PLIB_WRITE_CALLBACK_REG)SERCOM1_USART_WriteCallbackRegister,
-    .write = (DRV_USART_PLIB_WRITE)SERCOM1_USART_Write,
+    .write_t = (DRV_USART_PLIB_WRITE)SERCOM1_USART_Write,
     .writeIsBusy = (DRV_USART_PLIB_WRITE_IS_BUSY)SERCOM1_USART_WriteIsBusy,
     .writeCountGet = (DRV_USART_PLIB_WRITE_COUNT_GET)SERCOM1_USART_WriteCountGet,
     .errorGet = (DRV_USART_PLIB_ERROR_GET)SERCOM1_USART_ErrorGet,
     .serialSetup = (DRV_USART_PLIB_SERIAL_SETUP)SERCOM1_USART_SerialSetup
 };
 
-const uint32_t drvUsart0remapDataWidth[] = { 0x5, 0x6, 0x7, 0x0, 0x1 };
-const uint32_t drvUsart0remapParity[] = { 0x2, 0x0, 0x80000, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF };
-const uint32_t drvUsart0remapStopBits[] = { 0x0, 0xFFFFFFFF, 0x40 };
-const uint32_t drvUsart0remapError[] = { 0x4, 0x0, 0x2 };
+static const uint32_t drvUsart0remapDataWidth[] = { 0x5, 0x6, 0x7, 0x0, 0x1 };
+static const uint32_t drvUsart0remapParity[] = { 0x2, 0x0, 0x80000, 0xFFFFFFFFU, 0xFFFFFFFFU, 0xFFFFFFFFU };
+static const uint32_t drvUsart0remapStopBits[] = { 0x0, 0xFFFFFFFFU, 0x40 };
+static const uint32_t drvUsart0remapError[] = { 0x4, 0x0, 0x2 };
 
-const DRV_USART_INTERRUPT_SOURCES drvUSART0InterruptSources =
+static const DRV_USART_INTERRUPT_SOURCES drvUSART0InterruptSources =
 {
     /* Peripheral has more than one interrupt vector */
     .isSingleIntSrc                        = false,
 
     /* Peripheral interrupt lines */
-    .intSources.multi.usartTxCompleteInt   = SERCOM1_1_IRQn,
-    .intSources.multi.usartTxReadyInt      = SERCOM1_0_IRQn,
-    .intSources.multi.usartRxCompleteInt   = SERCOM1_2_IRQn,
-    .intSources.multi.usartErrorInt        = SERCOM1_6_IRQn,
+    .intSources.multi.usartTxCompleteInt   = (int32_t)SERCOM1_1_IRQn,
+    .intSources.multi.usartTxReadyInt      = (int32_t)SERCOM1_0_IRQn,
+    .intSources.multi.usartRxCompleteInt   = (int32_t)SERCOM1_2_IRQn,
+    .intSources.multi.usartErrorInt        = (int32_t)SERCOM1_6_IRQn,
 };
 
-const DRV_USART_INIT drvUsart0InitData =
+static const DRV_USART_INIT drvUsart0InitData =
 {
     .usartPlib = &drvUsart0PlibAPI,
 
@@ -347,9 +348,9 @@ static uint8_t gDrvMemory0EraseBuffer[FCW_ERASE_BUFFER_SIZE] CACHE_ALIGN;
 
 static DRV_MEMORY_CLIENT_OBJECT gDrvMemory0ClientObject[DRV_MEMORY_CLIENTS_NUMBER_IDX0];
 
-static DRV_MEMORY_BUFFER_OBJECT gDrvMemory0BufferObject[DRV_MEMORY_BUFFER_QUEUE_SIZE_IDX0];
+static DRV_MEMORY_BUFFER_OBJECT gDrvMemory0BufferObject[DRV_MEMORY_BUF_Q_SIZE_IDX0];
 
-const DRV_MEMORY_DEVICE_INTERFACE drvMemory0DeviceAPI = {
+static const DRV_MEMORY_DEVICE_INTERFACE drvMemory0DeviceAPI = {
     .Open               = DRV_FCW_Open,
     .Close              = DRV_FCW_Close,
     .Status             = DRV_FCW_Status,
@@ -360,8 +361,7 @@ const DRV_MEMORY_DEVICE_INTERFACE drvMemory0DeviceAPI = {
     .GeometryGet        = (DRV_MEMORY_DEVICE_GEOMETRY_GET)DRV_FCW_GeometryGet,
     .TransferStatusGet  = (DRV_MEMORY_DEVICE_TRANSFER_STATUS_GET)DRV_FCW_TransferStatusGet
 };
-
-const DRV_MEMORY_INIT drvMemory0InitData =
+static const DRV_MEMORY_INIT drvMemory0InitData =
 {
     .memDevIndex                = 0,
     .memoryDevice               = &drvMemory0DeviceAPI,
@@ -370,11 +370,12 @@ const DRV_MEMORY_INIT drvMemory0InitData =
     .ewBuffer                   = &gDrvMemory0EraseBuffer[0],
     .clientObjPool              = (uintptr_t)&gDrvMemory0ClientObject[0],
     .bufferObj                  = (uintptr_t)&gDrvMemory0BufferObject[0],
-    .queueSize                  = DRV_MEMORY_BUFFER_QUEUE_SIZE_IDX0,
+    .queueSize                  = DRV_MEMORY_BUF_Q_SIZE_IDX0,
     .nClientsMax                = DRV_MEMORY_CLIENTS_NUMBER_IDX0
 };
 
 // </editor-fold>
+
 
 
 // *****************************************************************************
@@ -440,7 +441,7 @@ const DRV_USBHS_INIT drvUSBHSInit0 =
 // *****************************************************************************
 // *****************************************************************************
 
-
+/* MISRAC 2012 deviation block end */
 
 /*******************************************************************************
   Function:
@@ -454,6 +455,7 @@ const DRV_USBHS_INIT drvUSBHSInit0 =
 
 void SYS_Initialize ( void* data )
 {
+
     /* MISRAC 2012 deviation block start */
     /* MISRA C-2012 Rule 2.2 deviated in this file.  Deviation record ID -  H3_MISRAC_2012_R_2_2_DR_1 */
 
@@ -465,15 +467,22 @@ void SYS_Initialize ( void* data )
 
 
 
-    FCW_Initialize();
-
     SERCOM1_USART_Initialize();
+
+    FCW_Initialize();
 
     EVSYS_Initialize();
 
 	BSP_Initialize();
 
+
+    /* MISRAC 2012 deviation block start */
+    /* Following MISRA-C rules deviated in this block  */
+    /* MISRA C-2012 Rule 11.3 - Deviation record ID - H3_MISRAC_2012_R_11_3_DR_1 */
+    /* MISRA C-2012 Rule 11.8 - Deviation record ID - H3_MISRAC_2012_R_11_8_DR_1 */
+
     sysObj.drvUsart0 = DRV_USART_Initialize(DRV_USART_INDEX_0, (SYS_MODULE_INIT *)&drvUsart0InitData);
+
 
     sysObj.drvMemory0 = DRV_MEMORY_Initialize((SYS_MODULE_INDEX)DRV_MEMORY_INDEX_0, (SYS_MODULE_INIT *)&drvMemory0InitData);
 
@@ -488,14 +497,15 @@ void SYS_Initialize ( void* data )
     sysObj.drvUSBHSObject0 = DRV_USBHS_Initialize(DRV_USBHS_INDEX_0, (SYS_MODULE_INIT *) &drvUSBHSInit0);	
 
 
+    /* MISRAC 2012 deviation block end */
     APP_Initialize();
 
 
     NVIC_Initialize();
 
+
     /* MISRAC 2012 deviation block end */
 }
-
 
 /*******************************************************************************
  End of File
