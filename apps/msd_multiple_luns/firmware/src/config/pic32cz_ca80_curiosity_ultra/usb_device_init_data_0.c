@@ -58,7 +58,7 @@ uint8_t sectorBuffer[512 * USB_DEVICE_MSD_NUM_SECTOR_BUFFERS] USB_ALIGN;
  * CBW and CSW structure needed by for the MSD
  * function driver instance.
  ***********************************************/
-USB_MSD_CBW msdCBW0 USB_ALIGN;
+uint8_t msdCBW0[512] USB_ALIGN;
 USB_MSD_CSW msdCSW0 USB_ALIGN;
 /***************************************************************************
  * The USB Device MSD function driver will use this buffer to cache the data 
@@ -158,7 +158,7 @@ USB_DEVICE_MSD_MEDIA_INIT_DATA USB_ALIGN  msdMediaInit0[2] =
 const USB_DEVICE_MSD_INIT msdInit0 =
 {
     .numberOfLogicalUnits = 2,
-    .msdCBW = &msdCBW0,
+    .msdCBW = (USB_MSD_CBW*)&msdCBW0,
     .msdCSW = &msdCSW0,
     .mediaInit = &msdMediaInit0[0]
 };
