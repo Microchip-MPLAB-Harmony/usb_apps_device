@@ -43,7 +43,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.3.1"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.3.2"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -4900,17 +4900,6 @@
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="SDRAMC_CLOCK_FREQUENCY"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
-  &lt;core dnOrder=&quot;0&quot; id=&quot;SDRAMC_CLOCK_FREQUENCY&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;150000000&quot;/&gt;
-    &lt;/Values&gt;
-  &lt;/core&gt;
-&lt;/core&gt;
-</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="SMC_CLOCK_FREQUENCY"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;SMC_CLOCK_FREQUENCY&quot;&gt;
@@ -5505,7 +5494,7 @@
    <generatedFileHashHistoryMap class="java.util.HashMap">
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\instance\chipid.h</file>
-         <hash>994129aeb7646f2f4abdce29d727e48a9059931e25347293da4307463455dd05</hash>
+         <hash>816544dc4e243efa32c3e92d0a968ba105c6784c7c995c3347ed6fae6242c77a</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\cachel1_armv7.h</file>
@@ -5513,15 +5502,15 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\instance\dacc.h</file>
-         <hash>fd4dbf9f2ea6386af0cd2a86cefeabcdde5fdd18391a3f9c9f42f79423e0be6f</hash>
+         <hash>a1b3c33e9d237b2abe15f975718be3dcb6567bf037345fc220c9bc59a3d52723</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\component\tc.h</file>
-         <hash>b4532d45fa9fa17512fd87be0d64237fb3a779531ee84009478baf2b07fad490</hash>
+         <hash>0bc1ed6f42a3930a68cfecdd0ee76f622f3abb91cc26c87a399fc55074f05a13</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\instance\aes.h</file>
-         <hash>c4945614e3639799b737f36ecbf752db2e6762894c00dec831d422bcb3fffad0</hash>
+         <hash>8578701ae7db412b33af0c3a2b3d48b74eda8ca0a05bba19e034db3fc0396c14</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_gcc.h</file>
@@ -5529,7 +5518,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\instance\pioc.h</file>
-         <hash>29309bd4729694ae9150376e6c5f936bd85e199581d47d4d5ab16a7515a4fa42</hash>
+         <hash>daacd11baeaab13b16b3352bb5a9a39b77347173ba4d342806f42147942981d3</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\driver\usb\usbhsv1\src\drv_usbhsv1_variant_mapping.h</file>
@@ -5544,24 +5533,28 @@
          <hash>86a258d763c7f0f563122ccd4ec0bbef422fd4e2f523402bb89be10568cecf3f</hash>
       </entry>
       <entry>
+         <file>..\src\config\sam_v71_xult\pin_configurations.csv</file>
+         <hash>33f209f0f1b48d2ae00448e9dc392e2e6248cd37ced841f70909dbca2f8f6834</hash>
+      </entry>
+      <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\component\matrix.h</file>
-         <hash>7058600b054950524797940004dd8bd3ae1e523611375c41cfddd257e750b2f1</hash>
+         <hash>307af0668a89c3293647f826864b2358dfce3609c33392fc10a1064694a9edaa</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\instance\spi1.h</file>
-         <hash>84e7fc1eb44773f33f096fb255936944d549ab7eef63a752a83a47b14561cecf</hash>
+         <hash>36d5c74978139842d056aec6727bec3f63f002bab2ba37d2ab36fd0fe9ff37ff</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\usb\usb_host.h</file>
-         <hash>8fe091b3db430b897da28d7f7effb6fffbb882d025c878a54cc5e627909a8cc2</hash>
+         <hash>4ec16dee42ae6b1bad8a7199b44750ccf0c5fa3aee5e44766e7b6dffc9979e83</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\system\cache\sys_cache.c</file>
-         <hash>7266793f96d0991d1cff7006720bff2a3f6974ca34aa53e488763b2a9f307ab9</hash>
+         <hash>5f8c30e8077b915a4c4ff0515354b2877dc74c3236f307bdc1132307269fbf86</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\component\mcan.h</file>
-         <hash>82d47a6e697f72f28b58d3d870caeebb1eab4ba0f6039642545d052731287fff</hash>
+         <hash>796a1b2bf5f6fac8c2f86197d6c7db0313e36bb19926a4f40acafe9efe0765a1</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\bsp\bsp.c</file>
@@ -5569,87 +5562,87 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\instance\twihs0.h</file>
-         <hash>7e4821f1b611579546d9fd86682b4c42ea20e07c00e0fafd899f0faee7eb4090</hash>
+         <hash>66c24242ae6a9e8e3fca0e4a6fd8b7220b4f1b8bac142bdd9ab98ad635a8ac00</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\system\cache\sys_cache.h</file>
-         <hash>3407ecac4da455d4b8ba70043f10c20b10e1304e92402db824ca5efa6a2f8402</hash>
+         <hash>b4b3a4e7434759c9bbcd3c6a0ab97558eb2a007f083a4eb76dbedcb2e2c3d86b</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\instance\usart1.h</file>
-         <hash>ad6fb6ae38d89d4fe80d8dd3a58d1d52e4146b46b1eac7f8ee0506e1a3e91e1a</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\ATSAMV71Q21B_DFP\instance\tc1.h</file>
-         <hash>35e7fa7038fdd095fd05388a5ca7788bb21afe7fce1d7a607d542971c5fe9f2a</hash>
+         <hash>1f3119315f85ce8a50e773d49b56caa4b448468a246b8b42b6515e1c1e508aaf</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\usb_device_init_data.c</file>
-         <hash>4fdd842fd9fbb243f3b3da44adfc50492b14b3249c7187f50ed464bf27d08bc4</hash>
+         <hash>005fe783c8e94ce413dfc1f2d7923aa9edb54e2db733ed9a79ff3dfe817aad73</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\ATSAMV71Q21B_DFP\instance\tc1.h</file>
+         <hash>32925ff6ea464d837ad3b9436f46a8f4db0cfc1d1a38bf574b6d3e165407acc3</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\instance\rtt.h</file>
-         <hash>c3175236d83c4344d032d0dd29cea9285578f7dd654bfd12d66b2d54e125675f</hash>
+         <hash>0ecb9f4eebbb16eecf7ef2d235d84b3d450bb8e5a35c13cce00e5dbedc43b305</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\instance\i2sc1.h</file>
-         <hash>6de39808ed23ab18f76b23b9f2e7595d7613911af7817c6c965f39291656d520</hash>
+         <hash>0b59f2b1a52026817f0c887aa14aed5e59a29d6c6b70c50a5ad7db6c3e5d6daa</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\instance\uart1.h</file>
-         <hash>bcf302f910f5502ed57091b7a4abf0635cc8f8bf090e7b4c916b8119fed2af08</hash>
+         <hash>a64d7eced2a04d9945b5483cac84b22dba780927ecca8d2ebbeab3da1547bd11</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\bsp\bsp.h</file>
-         <hash>fff6d2bc7923ac974066d837df3cb42ba9a8399ccd37ab58a556d779419803e4</hash>
+         <hash>ac117f8aeb36d3c66e17da14f1a9f8d43a48a3c3d6672f6491b5193472014e51</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\component\usart.h</file>
-         <hash>da5d1b6ee2e7f89ee88f5b6f4d850ed0ffe4eacd076e8588214f3c378a4f7085</hash>
+         <hash>5548489f6ab9e2f5e8aa836281de9af39b063d5ec17529ab7ea50900e48193f2</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\component\supc.h</file>
-         <hash>32082c687fb6eb444f0e20510e5ab9de92082347b95e81fa8d984d6a8ffc594e</hash>
+         <hash>16248f2319daf6b91f302a1e720ce8c32c5280944177c5e2097a20a14fa14387</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\instance\pwm0.h</file>
-         <hash>b9f823104982e0150efdfd17762697e5cb70d4875392798f9bf71cd786e79072</hash>
+         <hash>dd2fb9bed5a0eedc95981121916aec65b738f86da49e31fc0cfca4ab50d4ca6d</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\instance\twihs1.h</file>
-         <hash>3e0ac9f15de8f94d74753e4bbd2a6c4935e9373865c7a20b673ad84cad166d9b</hash>
+         <hash>9c85a76e346f7ffb4310b2a646aef7e795f64b0b59e0ed3be48805edc61e80de</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\startup_xc32.c</file>
-         <hash>6d004d9817df8dd84a5b559658637b3ab2d3ceac98a751c46d986afa54b4d60f</hash>
+         <hash>eea4e495dc8487c0587ebfe6d915202cd456a4dde990a9847f3bd149ae8ec7d2</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\component\fuses.h</file>
-         <hash>6d188ea72297318bfb0dee23890c6a005bb62e6a6d101576cbe9a709663433ca</hash>
+         <hash>cd718b89f6a730e8d70cc775ece7af80432d77c3666a1b160008a563d79c2f5f</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\libc_syscalls.c</file>
-         <hash>ff03e955db4f7bb775c7989bc2254553698f3d921e9885caac347ccd118e55d7</hash>
+         <hash>88bb2e34c939601b5b7ad076556e3ee0fcedf388436b8cddb6d6fd3e9d07472f</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\instance\acc.h</file>
-         <hash>80ee0f738b5603fdd63063bbc44a07e5b9656f63ead161c8f1671a92e76606a0</hash>
+         <hash>3e5b82100450c321bee403579b8a19242f4fb5f37aaf4dd72144d281b5f025a1</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\component\hsmci.h</file>
-         <hash>ef3025d19a07204d6c8a80196e4369430f142ffe02add7edb81c909b4d53584a</hash>
+         <hash>179c255613beb08ac52398e64903940fede99a4ad8197b167eef8cc1ed2fd2c6</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\instance\rstc.h</file>
-         <hash>141cc892f70170086104d81a74d6c10177f3d234bc209406b3bfb3bed5bc902f</hash>
+         <hash>eb3c9ea482d8e575d47e2387d91b8cf0e6084fe04235f5bc877ed7bcce97757e</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\component\pmc.h</file>
-         <hash>5b8245b5fdffc6742ffaad94001e861afea9731bda3c319bda880953a2ad0cba</hash>
+         <hash>7c4e81054e2080cf878bd123015c59995b14ff68ea9681aeeb7cb1c82bffb5a3</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\component\gmac.h</file>
-         <hash>88592ed56ae5c835c23d9ff192877f211ba01d10f05db36d6edb52c6903f20a1</hash>
+         <hash>8281eff438512a8f49e678377790222ee7417d99a938d633cd50a7bff7d91e17</hash>
       </entry>
       <entry>
          <file>..\src\app.h</file>
@@ -5657,7 +5650,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\component\rtt.h</file>
-         <hash>e42d1e8118c66f0f57aa979955e2345e8359b6b66d3254b838007f5961cd4f21</hash>
+         <hash>e9fe9c6e1f59adb3b0051639f5fa1f4d2ea0412ef2b2f4b1752f21307c7b0cd7</hash>
       </entry>
       <entry>
          <file>..\src\app.c</file>
@@ -5665,19 +5658,19 @@
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\exceptions.c</file>
-         <hash>8373b825c302768f52e3568c20241f4eb49c1fbb3614139e8e65ba694066141e</hash>
+         <hash>89852728a9a1cc4c9746839cc3caf5308b8698c0c30bf6bfbad0db9e552a387e</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\instance\ssc.h</file>
-         <hash>843234e42069429e9b820ab8c515664e2a68bb6b77722e43dbe8ccb9e65d8509</hash>
+         <hash>3b3dd26e16e1db34b1a53190bf7252982b1c3a6d6248152a9f9dce88ecba7124</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\instance\wdt.h</file>
-         <hash>f6fb10e41b30e487ebca55fcd1bdd97a3463cad28947422eb6cd0d09052d4226</hash>
+         <hash>7929d455e160dc6a9691e5c5777a5fa0302083a2e7a32d87a500f287409b988b</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\system\int\src\sys_int.c</file>
-         <hash>23e798871ce6f7b4b0e0dbd5cb2cad7b43bd2dd1f38152f28d14f5a5b7a2938b</hash>
+         <hash>4281667cc2b84c9e4be1f0dfb3f7d42b77d36c5dcf6513d29ff40262f746cfc6</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\driver\usb\drv_usb.h</file>
@@ -5685,31 +5678,27 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\component\efc.h</file>
-         <hash>6aa3c1cdc15d0c0dade1c1a0fdbd5c25a2e8036ec15ba7e178f167a14f95017c</hash>
+         <hash>b854ca12ac3ce2889cf74c389579cc9089b8f958149275691a8facc3da3ad784</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\component\spi.h</file>
-         <hash>830a1c2f86dcc4c8db80a676c6b7efa4d211cd8d4a31ccead7a4db647fd702aa</hash>
+         <hash>5b49c1362204855cea64ecdc213949af4183725d1cfbd5344cb50b228f77d806</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\system\int\sys_int.h</file>
-         <hash>71e36331ee689ae305b3d8ec49948e3dde0324b65f51bf38f4472b900a421ed6</hash>
+         <hash>dc104ae181fd5309e1bb42896246644fae95915a8e639b23ecfccc8840850274</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\instance\piob.h</file>
-         <hash>26f63c686cb52a2355f4febe55440971ec04c953409dfb71be70f6e8dd694c95</hash>
+         <hash>2c93ad68caedc5d8c364bc3df06315d8bf21af1eefc40d79e19579959dbc07ce</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\component\xdmac.h</file>
-         <hash>937bbd0f5007ee47ad20ab3cad9a3abf26c2bfb2bfcd60a4fd76296fe19bcdb6</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\ATSAMV71Q21B_DFP\component\sdramc.h</file>
-         <hash>4b6ec51e72163067753dc63648bc8c5906cd09eefdaa15e2e78fcaf36c19f54e</hash>
+         <hash>c5510b6456376695757941a551c4e2493d52a14dcefbcbdc24191501055106cb</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\usb\src\usb_device.c</file>
-         <hash>b530b020cfa777eed5e76731e125a07d285ad49f2014ccf93858db1581a40d96</hash>
+         <hash>e2299e7132aaf91acd6857a827520f8bd5ecdc40d8ba2e6c4018b8441064a6cb</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\mpu_armv7.h</file>
@@ -5717,7 +5706,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\instance\spi0.h</file>
-         <hash>95303c61a4b4773cffdc37e1c6dfb6dbc4c8bf7082d5d4eaa19f6ba5134c70ad</hash>
+         <hash>14e497a1bb4c6840be1fc0a87cfae8843b85983b379b49806028c838e8a3dfae</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\system\system.h</file>
@@ -5725,7 +5714,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\instance\mcan1.h</file>
-         <hash>6f99343e353343c5d21b64e8e5dbf23da66ecbca7ac782d17599c6cf87344be9</hash>
+         <hash>d916ddff1b85f9094143fe2ed5a3da216942c5852d249e06a1358d8748c06a8e</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_armcc.h</file>
@@ -5733,35 +5722,35 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\instance\uart2.h</file>
-         <hash>1d105ef6d7cdcc1017b8c4fbbf2d90ede8e7bb7c6a3f1b380fa468222b2c9882</hash>
+         <hash>2654c663d3c1eed2dd96f654c024c7589f26f9132465556831786e01a0e26a29</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\instance\usart0.h</file>
-         <hash>e179dea4bf8fd9ce26e1e23fbe9295632bdbc514f8508b1ddf79c6b1e3cc67f7</hash>
+         <hash>6dc1d3f1fc30bb36fd7ec7addb89434a99e7fde1ce405b3269f234872738da21</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\peripheral\efc\plib_efc.c</file>
-         <hash>8be9112c3f429a87758ecf528bab200101a0843c1ee428400ed2b8c51dcbadb0</hash>
+         <hash>f68a48f3b8cad5bfef0a13c840114bbf962b54a993824bf3b8e9666204219b75</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\instance\fuses.h</file>
-         <hash>4f6953663c5056b7ab1ffecb45c266c3f7319cd67670d708ed1a825975a988ab</hash>
+         <hash>cce6c5e41e4b1b5e0ea7ff64226fa4c611340ec8e2431182b97709b34f2f91aa</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\instance\rswdt.h</file>
-         <hash>d90ba099c7c0c368e75b2ce24bff925fd198100e3b79906af74bcbc2945ad67d</hash>
+         <hash>9d2782d04b4e1f773ff5f91a184a39378b1aaa0cbc9ddc499f3365e9db1dea1d</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\component\gpbr.h</file>
-         <hash>1ee25e8d320f88d104bd74c80411ab06a712acb91e8b0f5cea166770ca79416d</hash>
+         <hash>fb9e40e696fc2bbbba71b9d2c486fa8e1cfdd4d92b1a26bb237a5055b365b41f</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\component\mlb.h</file>
-         <hash>2c4fc850d356eab3ecf4856c0cc6c8d1efbc733c62ad3317fd98e66a58c364d8</hash>
+         <hash>0137c80a7dce3df5f236f92fdb88ef5ef3228892279305ccaa1de55a2160f07f</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\instance\utmi.h</file>
-         <hash>95124c16febba82690ec942d2c5f6bb658fdb4f3edf10d3906ebb5427034154f</hash>
+         <hash>9c1325b469a2407b418b396bbb91a53f64af480a708629915896acec6b2cab40</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_armclang.h</file>
@@ -5773,7 +5762,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\instance\tc0.h</file>
-         <hash>b77e0d5c766ff53f6bde3490ae4e62aeabcf843cfb14fa85bb13b9a62a637b9d</hash>
+         <hash>d598ff47881d927706046ab2fcf6f618534856d7ace1de8ebe23a5f23e576e30</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\driver\driver.h</file>
@@ -5781,23 +5770,23 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\component\i2sc.h</file>
-         <hash>9ff3e81943b938a09747e05720a71d2bf5badcfb50aa1450bb529197dfff078a</hash>
+         <hash>06f38a39f9e189a9512665f08437d1400427a11395b39e109b0046fbb9565688</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\peripheral\efc\plib_efc.h</file>
-         <hash>679c78122a085f1a428986341e827cc6b040ef94acf52194b180145eb1823b38</hash>
+         <hash>7880a0c8d5ac47f4e0e4a173e28729e208a9807234ad9c26ac48c0948f8c9e90</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\osal\osal_definitions.h</file>
-         <hash>0a5ca28c4812bb37babfebc1fe30a90b13583504d81910ad159feb746a5b002c</hash>
+         <hash>5f0a2513a093b6d228e2b50646b204923a82047335a47f3d35a2938309ab6f37</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\initialization.c</file>
-         <hash>7bafacf81a56a853cb75e18ef5fb2eafb6cb208b2ce85b10207a5f03ea2528e1</hash>
+         <hash>e8549e8d191c65083decb1fddba3da7c87e493ca69cbb681fc11d3de3d2ae523</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\component\usbhs.h</file>
-         <hash>1dd806377841f148c76e5c374745445cba5986a88445a9058b14c8f318001145</hash>
+         <hash>0e041e960e195211ebc7d2edb3abbccfff5d7261d2f48f879c823cebff45b0e1</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_compiler.h</file>
@@ -5805,7 +5794,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\instance\mlb.h</file>
-         <hash>73e6f2553e8fcc9fea0d6b85a9fa4bc6f4514d8533f9cb511ecfd40ea0201bac</hash>
+         <hash>f4b357ad8ffa7eed75074289b175f706a888c28f1bf65cd7e099a07a57464c31</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\usb\src\usb_device_endpoint_functions.c</file>
@@ -5813,19 +5802,19 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\instance\pwm1.h</file>
-         <hash>e129c025bdf4456e3c308039ccc03aa2d484e492a733e2b28a8a713f67bf7da1</hash>
+         <hash>1acfc63b106018a91561330c41ec6c828d7a6cd2aeae2f5a5c237c460fd60d15</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\instance\efc.h</file>
-         <hash>f383ce512dbac86bff27d7d642380d910cc71a3515a501f82710e9b2839bb6e6</hash>
+         <hash>cb8cdc52201d4cc797418dc13993995b3107e5208f912a762baa245403492ffb</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\instance\twihs2.h</file>
-         <hash>399e607c741d614adcf0e35ce2a3069ba8ae32c160603138151d10e560c41f43</hash>
+         <hash>86cd728752f3aa37bfd51fde26939015edf681f5e6c6f79b9997d46e11a59b9e</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\tasks.c</file>
-         <hash>d0d03bdfc07d15dbf4556ec197b0adb64f635b5dce6f6750411aaa2a3a125480</hash>
+         <hash>8602e5e5beab514682b747a63a57b64e790656f76c6d558cefd69d2244efd599</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\driver\usb\usbhsv1\src\drv_usbhsv1.c</file>
@@ -5833,11 +5822,11 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\instance\gpbr.h</file>
-         <hash>dd6e5593dd30bb59d8c53c38e21b21e63593c2955f53b012f4478fc74d31e766</hash>
+         <hash>c4f4b9a2a6d01a9bd39f26473d73ae4a9b4fec7d7a3e3927e9b8fb1a1865a511</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\component\twihs.h</file>
-         <hash>ff5156596ff78376126b2588c4851d5b532c5516d3feb2c30ba0988607c5db1b</hash>
+         <hash>ab3912322404ca6c0332696a2499f16eac2baeb62387bad06cede0c1c6f7cced</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\driver\usb\usbhsv1\src\drv_usbhsv1_local.h</file>
@@ -5849,15 +5838,11 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\pio\samv71q21b.h</file>
-         <hash>c4fbf7aabd45e8137a4b22b95f8955a718fa4004497b532b682e3bef23aa790f</hash>
+         <hash>4167ea85344d2877b2e50d18a2dbdf2bb50d480c9f6ae7a518ab61ffde126dc2</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\component\pwm.h</file>
-         <hash>3ea82869582b4aecbf5cb28f6236cc9c3918ddf1508298781d957a981a37f18a</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\ATSAMV71Q21B_DFP\instance\sdramc.h</file>
-         <hash>eedb423906a27712aacea7060f61093a3513de9fead0e01d7439f82c4402a328</hash>
+         <hash>2c4d9e73f6154d4f2880df35189ecfb66290b92e50fd9f0d404748ef48d962d0</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\driver\usb\usbhsv1\drv_usbhsv1.h</file>
@@ -5865,15 +5850,15 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\instance\pioa.h</file>
-         <hash>f93bf5f153c052451bf5d267943fec7364237b900977932f8f069ae45fd52ed5</hash>
+         <hash>e7690dac4081cd6aaf72cc935de7c27bcab2fdbefb5b6ff1d50b20da331740a3</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\component\icm.h</file>
-         <hash>2f1a0faef088e0fd0fdf0a69a5786f76ee0a6d62539e35c1a70d18e7d54d863b</hash>
+         <hash>fe4cc33af7d454553461085fa9c0220eeeffaf3fc6d7ed37b18ea1591a76b276</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\ATSAMV71Q21B.ld</file>
-         <hash>a70a0c471a7390f1dfdbeb65794895899697db01cb1b39b027e0eb7eb5e3eba2</hash>
+         <hash>0685903c7026c68a5d857ac6258bed5bd6e7748f91c87fdf878c5ecf8a8dccf6</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\driver\driver_common.h</file>
@@ -5881,15 +5866,15 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\instance\pioe.h</file>
-         <hash>b1512edc79ec58178f067f3535c913f743f53b5b9a9118a8b3633430f4fe1b9c</hash>
+         <hash>9df7a19e6f1a14bf69eee82813e89378e65454ead47077a0d4e742de5d488e68</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\instance\supc.h</file>
-         <hash>851c7ae067b19d7c6bf2bdaff1a3363a36068867e701d5859e66091b536f87b1</hash>
+         <hash>f7f706204949866913b3b9dd35976b1abb6e03205b4bb3202fa57f937444f934</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\instance\matrix.h</file>
-         <hash>6f722b12d8e7660465dd0292958248fdb8f93b416948d32d0c09a56fd79a461d</hash>
+         <hash>e39804c9003c8eb9459f8f15709b2e1556975f21b73b9b8d6997e72c7986eb78</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\usb\usb_host_hub_interface.h</file>
@@ -5901,35 +5886,35 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\instance\mcan0.h</file>
-         <hash>2e842b42774e68fb3c05af5b21e6ec24f0720ed2fc6b33c778d7485f8ad69aa5</hash>
+         <hash>3b28368ecf232a2f93b96f18b5c79f40ea66eb14f6158e14f57a916ca048ccd1</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\instance\uart3.h</file>
-         <hash>40f2c3784dd34cebd300cd2dfa7471dc13db13a4ee5e766bbe130b33eaba5474</hash>
+         <hash>568ecdb5aec442390bd92d65ecca2988000e1a12403ea161ce94916e171723c7</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\system\int\sys_int_mapping.h</file>
-         <hash>660e7081f93de17660144721849acf269925988a4f6510028d25903aaa866ea1</hash>
+         <hash>5abf8528dabc1b17378f5d137870597037214fddf33880fa40e9263352da3008</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\component\wdt.h</file>
-         <hash>6276a80d726cc16f731ef2114b3257b7aa8e64e9fda341cedd8e28864b5db4aa</hash>
+         <hash>df724cfd000bdf318d7e188feae38dd91eb16a7f882a04143911d4ce84964a17</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\instance\afec1.h</file>
-         <hash>9ab25eb793c715c949299391326571d221726e928b730e002c97c4a95218e6bf</hash>
+         <hash>a5c3d6a5657f7abf503f8417c8c76aa5975a39fdbea3e4474b223f48f3f76b3b</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\peripheral\clk\plib_clk.h</file>
-         <hash>0f35b6627a40335b91b683f19cd1c1d6c0700cb72567d017ceeba9caa25b6b0f</hash>
+         <hash>4f80a7fdb2529a654f89f11159078b9ebad3e5dddbd7fe60c58df49c05c8e55d</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\instance\tc3.h</file>
-         <hash>b147bf1fb7ed0dcbab6a001d289fb576ab4534a2a89c1d65e6b8c85ed59b3660</hash>
+         <hash>b6e4ae89af2a977977de03de2ce8fa6642c0a40a6d7c5e2b7935ddaeda828856</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\peripheral\clk\plib_clk.c</file>
-         <hash>045866e94b5dcf1efe17dff8ef43f51e25017454abc55df1d4136230374c68aa</hash>
+         <hash>c3c42e2366c5a2aa2656fc4f69dfcfbbcddd490271f95f5566626814eba838ad</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_version.h</file>
@@ -5941,27 +5926,27 @@
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\system\system_common.h</file>
-         <hash>0dbf2f60b29c97426e70187bc59c652ab5a355f51cfbe3f195ff1c8c6c0b1602</hash>
+         <hash>c9f34bd226f8efab12f5766e77f8355996cd0430b50e0f6ee30258664c494984</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\instance\hsmci.h</file>
-         <hash>0b25bdbe97b84c624cf29b14286e25b61dba6cf036a490b0eac60e02752f84ca</hash>
+         <hash>8264f58234bcbffeff4479f7311b30462e79eb769cb17a835b7302cbc3fe8381</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\component\dacc.h</file>
-         <hash>34ac2987010f06c9c2970979a9f731e197c4a5b8b1e699540bbd40080da21105</hash>
+         <hash>45306dcc2fd6050c22111308590631df19d8064b56bfd7adfa7eb66f6a4e7abd</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\component\afec.h</file>
-         <hash>8a9937c14f772bfa8b3b31023de0f5f08c6f83ebd75337289b62b56a17e063e1</hash>
+         <hash>47d67d94cc300deaf755a0fd2c13c3f7d068a0ea55b9985389d2f47600f5130f</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\component\pio.h</file>
-         <hash>4a2d25b38840c4a61e56bae4e72a94f37c72e7fe9604832c58fd3e952b9eaa20</hash>
+         <hash>99a2ea47e40401ed6f1ceb07624c97f0d71c0d55a91dd667453ecc32c89ba8ea</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\instance\pmc.h</file>
-         <hash>7106011bcd39a0764e8ae245db4a29b6bd4c2caaa25735fa2b84eff3a449fb70</hash>
+         <hash>b3326d35cf0598a293ff3a0a26d0114e874dcf9b21bd0aeada633020217dc32d</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\usb\usb_hub.h</file>
@@ -5969,7 +5954,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\instance\gmac.h</file>
-         <hash>b0ca8edefe9e6d4234177806f3ed7d0b19ea82b0372e7b7f81d7f905b530b33d</hash>
+         <hash>34e08ed88915152518b858ac0e31c96c820687343525f67a36f1edb4532e496d</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\driver\usb\usbhsv1\src\drv_usbhsv1_device.c</file>
@@ -5977,7 +5962,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\toolchain_specifics.h</file>
-         <hash>2559d185e92918f61c308a62200cb0cda72726c63111561524dd53afcc635a18</hash>
+         <hash>406ef48ae415706beb0796977cab09342077f7b1efc3f24767bd97bbd5e5a433</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\driver\usb\drv_usb_external_dependencies.h</file>
@@ -5985,31 +5970,31 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\instance\icm.h</file>
-         <hash>8e965bbf1b458ba430d49422764b333f3f9e7e3e55173204d1655e45e69d3863</hash>
+         <hash>27b78007bb60242cb755f05a7cd86501e31a98aeddee897d45646ab86cff6413</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\definitions.h</file>
-         <hash>9a076457d916bcfce8a28bbe09fc80c8d4be027c7fec9363ede9eb7c898eb23a</hash>
+         <hash>a723a03119058fff1570f63d37015cc26e8d321e5e3e2d2088260fd942968081</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\component\rstc.h</file>
-         <hash>be9d6d4f93e807a7f125b133848cecffaa0d550aaa3630b24839d614824bff06</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\ATSAMV71Q21B_DFP\component\chipid.h</file>
-         <hash>bed7539156242e9217709bc29be813743abca417c94d9af5a122504e9e175821</hash>
+         <hash>88879161fdea0d5bf76e229f5b9d1b09230632d5d7ef7bcb95a8297eef259f8e</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\usb\src\usb_external_dependencies.h</file>
          <hash>5110f718908d8f79253ce5b4b44172288cc179ff61d18e387f9e90ae9afbb1b6</hash>
       </entry>
       <entry>
+         <file>..\src\packs\ATSAMV71Q21B_DFP\component\chipid.h</file>
+         <hash>3f906e8102fa3ee389c5372622a2d3b67d5c51c79ff74e3f4f088381569c8c5c</hash>
+      </entry>
+      <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\component\uart.h</file>
-         <hash>8432bdc237f8f9cc4f6ba825af1e2f2263eab99681c15da0bc41e7672f1d9455</hash>
+         <hash>59df1db39cee917ad25850681ee6960a4d5df7233c58ad2d623c779f0932573e</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\device_vectors.h</file>
-         <hash>18c7ad5bf1286ca8fd67b829a09b7470a4c8d655c2063940ece9980b6d75f0b1</hash>
+         <hash>50cee28c214e424bfb711628711e010bc9e8f1f9f4e16c02c12e806b7521c833</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\usb\usb_device.h</file>
@@ -6017,7 +6002,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\component\utmi.h</file>
-         <hash>ec6c3b5ba3fafdb3078152ecc019e2e65c3ba871323e0f1ab6ddd72f60962bfc</hash>
+         <hash>20b5c4078083928b2e004307f9d5a0adf1cf0a27050d457cb632c8326d2d63ca</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_armclang_ltm.h</file>
@@ -6025,95 +6010,99 @@
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\osal\osal.h</file>
-         <hash>d42702188d00d3e1d7219d7eef030485896bf8b5ebe55318656e82f0fbb89788</hash>
+         <hash>8404fbe44807fa0484ffb38843a72cb9af8e31c9c30bd1b2594e609b8ea317d9</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\peripheral\nvic\plib_nvic.h</file>
          <hash>81e813a093101d546799e00723cbf7245e2d18471fa51c8d130c5809cecca03e</hash>
       </entry>
       <entry>
-         <file>..\src\packs\ATSAMV71Q21B_DFP\instance\piod.h</file>
-         <hash>d085417f73abae73c19881064dd9f307d3c9cd6206e091d6614036442c7a66d9</hash>
+         <file>..\src\config\sam_v71_xult\sys_tasks.h</file>
+         <hash>21f254f497a18a024cd00128d06c4776c2643f867a460c1ba9880a7dd41a8d56</hash>
       </entry>
       <entry>
-         <file>..\src\packs\ATSAMV71Q21B_DFP\component\trng.h</file>
-         <hash>bf57664ec149dbbf0e9973c2efb42ce44d7925e0043014631b78d41b9b3affce</hash>
+         <file>..\src\packs\ATSAMV71Q21B_DFP\instance\piod.h</file>
+         <hash>4b0bc3ca1260f6a5a9f932e1a39e97d1da5e0f8c24ff23d5c162ecc1167d4937</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\usb\src\usb_device_mapping.h</file>
          <hash>3a5eee6b064c49fd7a495f574736eaec5838e63f7de457ff688d70aa80432ce6</hash>
       </entry>
       <entry>
+         <file>..\src\packs\ATSAMV71Q21B_DFP\component\trng.h</file>
+         <hash>2c097ba0e6689da5c33442dab65bc62e13ad5ad12aec5ab787cd5d5ae3242c02</hash>
+      </entry>
+      <entry>
          <file>..\src\config\sam_v71_xult\system\debug\sys_debug.h</file>
-         <hash>c17a266d85e3ed1dd692a96184193c0ebfea1099f6698ca073f82418d92d8b53</hash>
+         <hash>bc6fa321b0be542d074e4564065b7fd69f52556486ac3d892d315b51c434f9ec</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\usb\src\usb_device_local.h</file>
-         <hash>7ef3cbc9e2060d1d2800fb7a5d6d5597bb008b3da58bf475fc09219dd40c2244</hash>
+         <hash>3dc9e27b535edb31aa97aae04a0ce9ac12e5092ed3bae7ef6fd203bc1520ef33</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\peripheral\nvic\plib_nvic.c</file>
-         <hash>5a88a20697bc973415af973be9f669370efd6718c39cf1df405b5ce24b04d9ba</hash>
+         <hash>fdff467c6b4924865d8ddc0de8a2b3540efb01a12893357d48d60b19e040f69c</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\component\rtc.h</file>
-         <hash>f1a1d759f08f12d861bc411a3cdabce70c04f99766dbaa2e57ad1a742fabe08b</hash>
+         <hash>ddffe421af0d5465abdc3fa225d02926c6f2b03f730671ccb550787185e00ed8</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\instance\isi.h</file>
-         <hash>fbe78505b05fe5496fe019c143636dd786bf2b2616c461a7618d24f7e810bc3c</hash>
+         <hash>e5dc0ad865870606cc5dd7e9358ca17f69d5258c3326a5c36fa4db2f892f1c43</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\interrupts.h</file>
-         <hash>e9181e7f2fa715c87902bc29a1197880c3cf3660f609001a1e3df7507afd8400</hash>
+         <hash>ff4b4ff03eb28be9fdc0d896cdfe0ed3b7abc3d9f742d25543169fb61599e927</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\peripheral\pio\plib_pio.c</file>
-         <hash>b62ffee5aef880345a12a8b79d5fecd7f38eaafd3e430beeda3233d1db50daaa</hash>
+         <hash>aa5e38285dae028413e1bc4236243f14ab40f21c1fe89e13583695e73cda0525</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\instance\uart4.h</file>
-         <hash>5b9c76deab9cec61b08cd91b313442810b2b8aa335922b2be2ee1733b98464d0</hash>
+         <hash>2cdd403c40b83a006517a94fae0cd5fd22f44ae02757e151af5983d4254ddc1e</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\component\aes.h</file>
-         <hash>c2b4816f33d50e342015b584175be286f422b03a446bc7ffbf4dab82d05ad512</hash>
+         <hash>5bf0ff27dc5f28c379907db8018e249faa953e31a25bcebe0ddf426ecb278505</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\instance\afec0.h</file>
-         <hash>5eaec22f517b8aee5ec34d3948cb084a7bce04e250e8c2540615dbc9357fbdb8</hash>
+         <hash>eac38ece73a8e1af7c07fa9d1aad19da08f2fb5de97f42b4a992992a912a2247</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\instance\qspi.h</file>
-         <hash>767aa71f1b7080662d1beb25cd63e62201cd6d47374dfacda0f0d488751bd2b8</hash>
+         <hash>35ca4207d5b51dd9efa566b3688da2fbd660d84b9aa7b69f0c9a43f906b7d2cb</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\instance\usart2.h</file>
-         <hash>99b7f33ae96accebd02b999ff6e6431493032507c150f0baa4d25522017b9351</hash>
+         <hash>3d60bfe570b80e5e01cf11cdd4c6fd966c3434e8e0ac4b4f456a6453c7f53736</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\instance\tc2.h</file>
-         <hash>d0bc9e51da8df8aefc4f42f838e90fd79387f6a9174956756175766675b98b52</hash>
+         <hash>b4195745ac16b0ece7e23d19b6a1736745bce57e6811e16b020c7512ba522517</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\interrupts.c</file>
-         <hash>c200ca960ef5aec356a11fd56b84f5076ce963c90df688b2e531c3182dfc56c1</hash>
+         <hash>39baaccf8882ea733cbac9b329deb46b5ab64ce7d180d988723772bab56fd5c0</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\instance\usbhs.h</file>
-         <hash>c73677648d34349375db5c303fa7eefea8c997c1e83b7b717d32898dbd20f081</hash>
+         <hash>7076516daade654bd1ca763ac07698a65a580d4880bcd9ff7c68a89c452453e1</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\instance\i2sc0.h</file>
-         <hash>603ad1aceddc917ea59603377a8aabced9e702058adbb9217b41eb6954b4e38f</hash>
+         <hash>56fbbb6c3f3a95e2fb6bdd7b706364413cdc00cd09bd8c6d97dada74d361a9f7</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\instance\xdmac.h</file>
-         <hash>871b9281d4281d8e53bf7c82837befbfbbdf2a6ace01ca466dc388439dbdd05e</hash>
+         <hash>b2792a11d9d3c5c6707aa321d303b0d55adafa273da31ab132caccadbbecde63</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\peripheral\pio\plib_pio.h</file>
-         <hash>7b08f3fd9f612152393f56e00176a952911863a110576f75e6c0ebbb01ed637e</hash>
+         <hash>70f1b1182212fb9ff30a9b18710753b4e8481d367633603f6f470cc24fe2d4fc</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\core_cm7.h</file>
@@ -6121,15 +6110,15 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\component\ssc.h</file>
-         <hash>08f66e7439482aef9eab164a799c23931d429c167066c4c8ec3c19c0af452072</hash>
+         <hash>a7b4d8a135f627538c921736acd6d124e484fcac72086614d8070dfa18701673</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\instance\uart0.h</file>
-         <hash>02b8b7b4dd1011cf0593343c191c80eb5aedf3743586694bfe67593b4a2f790f</hash>
+         <hash>d6f8d66ef20d77224fdda82eddfa6294e75e0decb7594f300596058de67791e7</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\component\smc.h</file>
-         <hash>97a1d5011dc5ab741e50d0e3c168c64e62d2bf95cbfcba9bf16f103fc993e5f2</hash>
+         <hash>a62caf4d185c5ca13cb81072d9a07a178cfdf7f06d88de01324d4651e73fea7a</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\usb\src\usb_device_function_driver.h</file>
@@ -6137,7 +6126,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\component\acc.h</file>
-         <hash>d858e27a4cef4ac3f75a7dc1ee4ac073843f9f520b55da0ef298b6d68cc6c49c</hash>
+         <hash>183f5db0c3c2e87f642bb0edc04be50aeb6473392d56b078ba2246b7623bc568</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\usb\usb_common.h</file>
@@ -6149,15 +6138,15 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\instance\rtc.h</file>
-         <hash>0b128ee3f4df95cb9ea4fde2f52174db919770cf1076f1c98ea94d7f9199250b</hash>
+         <hash>ea64e3fc1c3003d25ea9011fcc4ab0717d0e520029a7fe50177081cf33661cc5</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\instance\trng.h</file>
-         <hash>e3406d4c570c4260eb2621566abcb8b1b826f23ae8718ca259f18f024268ced0</hash>
+         <hash>8794ccbfb330dc3daa18f10508bb5ed38717898a4e88a26474bec422575b5f70</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\samv71q21b.h</file>
-         <hash>6e0cc5bbba65d1b0225e7eeedd24fa633f643df240b1b0a46446a6a63529455e</hash>
+         <hash>7866168a4de7c22b5edd9a1977218aa8a7087fdee8e5d800d5c92b2dd84f3524</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\configuration.h</file>
@@ -6165,31 +6154,31 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\component\isi.h</file>
-         <hash>6414cb7ac8291142183b8266cf2854931231057c945bc95d0d199c8e66fddb21</hash>
+         <hash>8070b217c48cfbfa3883eed4e39faae03b80de809878e10b07807e1be0256c3c</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\component\qspi.h</file>
-         <hash>a00cdd4238f97dccab96b605f86a49d8428bb656ba972bd6d44ada2eb39e8573</hash>
+         <hash>8a8cdac649395658cdcb15a093578c64c2e80a2d7af791955623b85be82e9b71</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\stdio\xc32_monitor.c</file>
-         <hash>26e5749db654ed433fd94f6c732ef8600d0cbf5196493374cf111877c02b694e</hash>
+         <hash>858f8710d4287200a5ee7f3b3ad7c24f505aed9c05c16956ab0ff9f7bb162a6a</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\instance\smc.h</file>
-         <hash>80cbbf5c1e010fbc9e35c7d3e1a04f9a259d31c68aa8ddc2115f1b1fa6143ff1</hash>
+         <hash>b5a6fe48b14c3994b258571a41ce66fee783f89a9477c1a41b60354040a33c05</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\component\rswdt.h</file>
-         <hash>cc67d8542465448b317460c477bd9c719a9b79845d92ca23895656db1fbcdd22</hash>
+         <hash>1b921cb3e65b2fbcb8f48b42d4cc6ad9107eb169daadef52b44773bdb85ae986</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\osal\osal_impl_basic.h</file>
-         <hash>0c388837ef1d4e207a028ed31bfe07f1aac7ea8b0505caff58f737667ccbeaee</hash>
+         <hash>67ce72d34fd1e4dee0b6937fa026ab2c7bd285f82a24da09742c68333adaf0fc</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\system\system_module.h</file>
-         <hash>981fac23277aa77f682e7a9a28d436f892006cd5b4c7f23f50941b6d9a30e740</hash>
+         <hash>96c74368801b0a7aaa25aec3ec2cb0d483250385f103ffc1ff64089b4ca2c6d9</hash>
       </entry>
    </generatedFileHashHistoryMap>
 </config>
