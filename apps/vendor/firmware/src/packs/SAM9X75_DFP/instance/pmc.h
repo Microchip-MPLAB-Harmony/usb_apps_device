@@ -1,7 +1,7 @@
 /*
  * Instance header file for ATSAM9X75D5M
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,12 +20,12 @@
  *
  */
 
-/* file generated from device description version 2022-01-05T08:57:53Z */
+/* file generated from device description version 2023-01-20T08:33:42Z */
 #ifndef _SAM9X7_PMC_INSTANCE_
 #define _SAM9X7_PMC_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for PMC peripheral ========== */
-#define PMC_PROG_CLK_NB                          _UL_(2)    /* Number of PCKs in the product - 1 SAM9X60, SAM9X7: 1 SAMA7G5: 7 */
+#define PMC_PROG_CLK_NB                          (2)        /* Number of PCKs in the product - 1 SAM9X60, SAM9X7: 1 SAMA7G5: 7 */
 
 #endif /* _SAM9X7_PMC_INSTANCE_ */
