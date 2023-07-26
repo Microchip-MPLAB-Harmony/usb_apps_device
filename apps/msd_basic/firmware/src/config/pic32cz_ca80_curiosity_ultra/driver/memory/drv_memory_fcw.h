@@ -40,8 +40,8 @@
 *******************************************************************************/
 //DOM-IGNORE-END
 
-#ifndef _DRV_MEMORY_FCW_H
-#define _DRV_MEMORY_FCW_H
+#ifndef DRV_MEMORY_FCW_H
+#define DRV_MEMORY_FCW_H
 
 // *****************************************************************************
 // *****************************************************************************
@@ -79,7 +79,7 @@ bool DRV_FCW_GeometryGet( const DRV_HANDLE handle, MEMORY_DEVICE_GEOMETRY *geome
 }
 #endif
 
-#endif // #ifndef _DRV_MEMORY_FCW_H
+#endif // #ifndef DRV_MEMORY_FCW_H
 /*******************************************************************************
  End of File
 */
