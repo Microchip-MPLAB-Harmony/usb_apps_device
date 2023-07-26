@@ -48,7 +48,6 @@
 #include "device.h"
 
 
-
 // ****************************************************************************
 // ****************************************************************************
 // Section: Configuration Bits
@@ -119,6 +118,11 @@
 // Section: Driver Initialization Data
 // *****************************************************************************
 // *****************************************************************************
+/* Following MISRA-C rules are deviated in the below code block */
+/* MISRA C-2012 Rule 11.1 */
+/* MISRA C-2012 Rule 11.3 */
+/* MISRA C-2012 Rule 11.8 */
+
 
 
 // *****************************************************************************
@@ -143,16 +147,15 @@ const DRV_USBHS_INIT drvUSBInit =
     /* Interrupt Source for USB module */
     .interruptSource = INT_SOURCE_USB,
 
-	/* Interrupt Source for USB module */
+    /* Interrupt Source for USB module */
     .interruptSourceUSBDma = INT_SOURCE_USB_DMA,
-	
     /* System module initialization */
     .moduleInit = {0},
 
     /* USB Controller to operate as USB Device */
     .operationMode = DRV_USBHS_OPMODE_DEVICE,
 
-	/* Enable High Speed Operation */
+    /* Enable High Speed Operation */
     .operationSpeed = USB_SPEED_HIGH,
     
     /* Stop in idle */
@@ -163,7 +166,7 @@ const DRV_USBHS_INIT drvUSBInit =
 
     /* Identifies peripheral (PLIB-level) ID */
     .usbID = USBHS_ID_0,
-	
+
 };
 
 
@@ -183,7 +186,7 @@ const DRV_USBHS_INIT drvUSBInit =
 // *****************************************************************************
 // *****************************************************************************
 
-
+/* MISRAC 2012 deviation block end */
 
 /*******************************************************************************
   Function:
@@ -198,8 +201,11 @@ const DRV_USBHS_INIT drvUSBInit =
 void SYS_Initialize ( void* data )
 {
 
+    /* MISRAC 2012 deviation block start */
+    /* MISRA C-2012 Rule 2.2 deviated in this file.  Deviation record ID -  H3_MISRAC_2012_R_2_2_DR_1 */
+
     /* Start out with interrupts disabled before configuring any modules */
-    __builtin_disable_interrupts();
+    (void)__builtin_disable_interrupts();
 
   
     CLK_Initialize();
@@ -215,28 +221,35 @@ void SYS_Initialize ( void* data )
 	BSP_Initialize();
 
 
+    /* MISRAC 2012 deviation block start */
+    /* Following MISRA-C rules deviated in this block  */
+    /* MISRA C-2012 Rule 11.3 - Deviation record ID - H3_MISRAC_2012_R_11_3_DR_1 */
+    /* MISRA C-2012 Rule 11.8 - Deviation record ID - H3_MISRAC_2012_R_11_8_DR_1 */
+
+
 
 	/* Initialize USB Driver */ 
     sysObj.drvUSBHSObject = DRV_USBHS_Initialize(DRV_USBHS_INDEX_0, (SYS_MODULE_INIT *) &drvUSBInit);	
 
 
-	 /* Initialize the USB device layer */
+    /* Initialize the USB device layer */
     sysObj.usbDevObject0 = USB_DEVICE_Initialize (USB_DEVICE_INDEX_0 , ( SYS_MODULE_INIT* ) & usbDevInitData);
-	
-	
 
 
+
+    /* MISRAC 2012 deviation block end */
     APP_FREERTOS_Initialize();
 
 
     EVIC_Initialize();
 
 	/* Enable global interrupts */
-    __builtin_enable_interrupts();
+    (void)__builtin_enable_interrupts();
 
 
+
+    /* MISRAC 2012 deviation block end */
 }
-
 
 /*******************************************************************************
  End of File
