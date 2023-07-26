@@ -40,8 +40,8 @@
 *******************************************************************************/
 // DOM-IGNORE-END
 
-#ifndef _BSP_H
-#define _BSP_H
+#ifndef BSP_H
+#define BSP_H
 
 // *****************************************************************************
 // *****************************************************************************
@@ -60,10 +60,13 @@
 // Section: BSP Macros
 // *****************************************************************************
 // *****************************************************************************
+#define sam_e70_xult
+#define BSP_NAME             "sam_e70_xult"
+
 /*** LED Macros for LED1 ***/
-#define LED1_Toggle() (PIOA_REGS->PIO_ODSR ^= (1<<5))
-#define LED1_On() (PIOA_REGS->PIO_CODR = (1<<5))
-#define LED1_Off() (PIOA_REGS->PIO_SODR = (1<<5))
+#define LED1_Toggle() (PIOA_REGS->PIO_ODSR ^= (1UL<<5))
+#define LED1_On() (PIOA_REGS->PIO_CODR = (1UL<<5))
+#define LED1_Off() (PIOA_REGS->PIO_SODR = (1UL<<5))
 /*** SWITCH Macros for SWITCH ***/
 #define SWITCH_Get() ((PIOA_REGS->PIO_PDSR >> 11) & 0x1)
 #define SWITCH_STATE_PRESSED 0
@@ -101,7 +104,6 @@
 
   Example:
     <code>
-    //Initialize the BSP
     BSP_Initialize();
     </code>
 
@@ -111,7 +113,7 @@
 
 void BSP_Initialize(void);
 
-#endif // _BSP_H
+#endif // BSP_H
 
 /*******************************************************************************
  End of File
