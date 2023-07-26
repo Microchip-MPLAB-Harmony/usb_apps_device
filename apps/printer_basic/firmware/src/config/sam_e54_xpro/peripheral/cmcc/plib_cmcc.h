@@ -1,22 +1,21 @@
 /*******************************************************************************
-  EVSYS Peripheral Library
+  Interface definition of CMCC PLIB.
 
   Company:
     Microchip Technology Inc.
 
   File Name:
-    plib_evsys.c
+    plib_cmcc.h
 
   Summary:
-    EVSYS Source File
+    Interface definition of the CMCC(Cortex M Cache Controller) Peripheral Library
 
   Description:
-    None
-
+    This file defines the interface for the CMCC Plib.
 *******************************************************************************/
 
 /*******************************************************************************
-* Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
+* Copyright (C) 2019 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -38,16 +37,38 @@
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *******************************************************************************/
 
-#include "plib_evsys.h"
-#include "interrupts.h"
+#ifndef PLIB_CMCC_H    // Guards against multiple inclusion
+#define PLIB_CMCC_H
 
 
+#ifdef __cplusplus // Provide C++ Compatibility
+	extern "C" {
+#endif
 
 
-void EVSYS_Initialize( void )
-{
-    /*Event Channel User Configuration*/
+// *****************************************************************************
+// *****************************************************************************
+// Section: Interface
+// *****************************************************************************
+// *****************************************************************************
 
-}
+#define CMCC_NO_OF_WAYS     (4U)
+#define CMCC_LINE_PER_WAY   (64U)
+#define CMCC_LINE_SIZE      (16U)
+#define CMCC_WAY_SIZE       (1024U)
 
+/***************************** CMCC API *******************************/
+void CMCC_Disable (void );
+void CMCC_EnableDCache (void );
+void CMCC_DisableDCache (void );
 
+void CMCC_EnableICache (void );
+void CMCC_DisableICache (void );
+
+void CMCC_InvalidateAll (void );
+
+#ifdef __cplusplus  // Provide C++ Compatibility
+    }
+#endif
+
+#endif
