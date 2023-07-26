@@ -96,17 +96,17 @@ extern "C" {
 // *****************************************************************************
 // *****************************************************************************
 /* SDMMC Driver Global Configuration Options */
-#define DRV_SDMMC_INSTANCES_NUMBER                       1
+#define DRV_SDMMC_INSTANCES_NUMBER                       (1U)
 
 
 /*** SDMMC Driver Instance 0 Configuration ***/
 #define DRV_SDMMC_INDEX_0                                0
-#define DRV_SDMMC_CLIENTS_NUMBER_IDX0                    1
-#define DRV_SDMMC_QUEUE_SIZE_IDX0                        2
-#define DRV_SDMMC_PROTOCOL_SUPPORT_IDX0                  DRV_SDMMC_PROTOCOL_SD
-#define DRV_SDMMC_CONFIG_SPEED_MODE_IDX0                 DRV_SDMMC_SPEED_MODE_DEFAULT
-#define DRV_SDMMC_CONFIG_BUS_WIDTH_IDX0                  DRV_SDMMC_BUS_WIDTH_4_BIT
-#define DRV_SDMMC_CARD_DETECTION_METHOD_IDX0             DRV_SDMMC_CD_METHOD_USE_SDCD
+#define DRV_SDMMC_IDX0_CLIENTS_NUMBER                    1
+#define DRV_SDMMC_IDX0_QUEUE_SIZE                        2
+#define DRV_SDMMC_IDX0_PROTOCOL_SUPPORT                  DRV_SDMMC_PROTOCOL_SD
+#define DRV_SDMMC_IDX0_CONFIG_SPEED_MODE                 DRV_SDMMC_SPEED_MODE_DEFAULT
+#define DRV_SDMMC_IDX0_CONFIG_BUS_WIDTH                  DRV_SDMMC_BUS_WIDTH_4_BIT
+#define DRV_SDMMC_IDX0_CARD_DETECTION_METHOD             DRV_SDMMC_CD_METHOD_USE_SDCD
 
 
 

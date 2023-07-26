@@ -1,7 +1,7 @@
 /*
- * Instance header file for SAMA7G54
+ * Instance header file for ATSAMA7G54D4G
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,14 +20,14 @@
  *
  */
 
-/* file generated from device description version 2021-07-26T12:51:16Z */
+/* file generated from device description version 2023-02-02T10:07:15Z */
 #ifndef _SAMA7G_NICGPV_INSTANCE_
 #define _SAMA7G_NICGPV_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for NICGPV peripheral ========== */
-#define NICGPV_AMIB_COUNT                        _UL_(15)   /* Number of AXI master interface blocks -1 SAMA7G5: 14 */
-#define NICGPV_ASIB_COUNT                        _UL_(11)   /* Number of AXI slave interface blocks -1 SAMA7G5: 10 */
-#define NICGPV_IB_COUNT                          _UL_(2)    /* Number of interface blocks -1 SAMA7G5: 1 */
+#define NICGPV_AMIB_COUNT                        (15)       /* Number of AXI master interface blocks -1 SAMA7G5: 14 */
+#define NICGPV_ASIB_COUNT                        (11)       /* Number of AXI slave interface blocks -1 SAMA7G5: 10 */
+#define NICGPV_IB_COUNT                          (2)        /* Number of interface blocks -1 SAMA7G5: 1 */
 
 #endif /* _SAMA7G_NICGPV_INSTANCE_ */
