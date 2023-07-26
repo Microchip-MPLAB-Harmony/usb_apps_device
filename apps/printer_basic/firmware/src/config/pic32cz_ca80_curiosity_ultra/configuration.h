@@ -122,6 +122,9 @@ extern "C" {
 /* The USB Device Layer will not initialize the USB Driver */
 #define USB_DEVICE_DRIVER_INITIALIZE_EXPLICIT
 
+/* Enable SOF Events */
+#define USB_DEVICE_SOF_EVENT_ENABLE
+
 
 /* Number High Speed USB Driver instances */ 
 #define DRV_USBHS_INSTANCES_NUMBER                       1
