@@ -59,7 +59,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.3.1"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.3.2"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -6906,7 +6906,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\driver\usb\usbhs\src\drv_usbhs.c</file>
-         <hash>15016c7c82e16ed30dfcceab8a1b74dcb83b360d1926c17e92611b849b75969d</hash>
+         <hash>d4a536e3a02c985e9638a0d1367edae9b407bc55379cd895a7757ba5151ec5e5</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\ac.h</file>
@@ -7066,7 +7066,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\usb\src\usb_device_local.h</file>
-         <hash>7ef3cbc9e2060d1d2800fb7a5d6d5597bb008b3da58bf475fc09219dd40c2244</hash>
+         <hash>3dc9e27b535edb31aa97aae04a0ce9ac12e5092ed3bae7ef6fd203bc1520ef33</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\trng.h</file>
@@ -7286,7 +7286,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\driver\usb\usbhs\src\drv_usbhs_variant_mapping.h</file>
-         <hash>5ac5fd76810174eb395be5560bafb97bcfbbb4a2e7b60c87d9b917dcc62d8df7</hash>
+         <hash>f2934150963d6e3bcb35792c39e2a924f9bc0c109e889fa429877e09bcc55511</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\usb\src\usb_device_endpoint_functions.c</file>
@@ -7454,7 +7454,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\driver\usb\usbhs\src\drv_usbhs_device.c</file>
-         <hash>03b239f4df9e3a7cbbc7198bf62623f5c3902c1a29cadb2d0e327aef69829854</hash>
+         <hash>3d81c8553c86f274ab846c7bb30af0d8177a476cb3a8fcabfac17d542c8e1b56</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_compiler.h</file>
@@ -7734,7 +7734,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\driver\usb\usbhs\src\drv_usbhs_local.h</file>
-         <hash>5c885a480c066676c67358712baa36212fcc8ac458dc96f63393bec79262b99f</hash>
+         <hash>60d09333e1d0485b55f3f8df8a8e0dfa31cb2c75d569d505a77fe8767edeeb51</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\fuses.h</file>
