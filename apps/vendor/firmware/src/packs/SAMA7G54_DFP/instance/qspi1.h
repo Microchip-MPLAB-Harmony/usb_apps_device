@@ -1,7 +1,7 @@
 /*
- * Instance header file for SAMA7G54
+ * Instance header file for ATSAMA7G54D4G
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,15 +20,15 @@
  *
  */
 
-/* file generated from device description version 2021-07-26T12:51:16Z */
+/* file generated from device description version 2023-02-02T10:07:15Z */
 #ifndef _SAMA7G_QSPI1_INSTANCE_
 #define _SAMA7G_QSPI1_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for QSPI1 peripheral ========== */
-#define QSPI1_INSTANCE_ID                        _UL_(79)   /* Quad IO Serial Peripheral Interface 1 */
-#define QSPI1_CLOCK_ID                           _UL_(79)   
-#define QSPI1_DMAC_ID_RX                         _UL_(42)   
-#define QSPI1_DMAC_ID_TX                         _UL_(43)   
+#define QSPI1_CLOCK_ID                           (79)       
+#define QSPI1_DMAC_ID_RX                         (42)       
+#define QSPI1_DMAC_ID_TX                         (43)       
+#define QSPI1_INSTANCE_ID                        (79)       /* Quad IO Serial Peripheral Interface 1 */
 
 #endif /* _SAMA7G_QSPI1_INSTANCE_ */

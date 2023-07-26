@@ -74,6 +74,12 @@ extern "C" {
 #endif
 // DOM-IGNORE-END
 
+/* Device Information */
+#define DEVICE_NAME			 "SAMA7G54"
+#define DEVICE_ARCH			 "CORTEX-A7"
+#define DEVICE_FAMILY		 "SAMA"
+#define DEVICE_SERIES		 "SAMA7G"
+
 /* CPU clock frequency */
 #define CPU_CLOCK_FREQUENCY 800000000
 
@@ -189,7 +195,7 @@ typedef struct
 {
 	SYS_MODULE_OBJ  drvUSBUDPHSObject;
 
-	SYS_MODULE_OBJ  usbDevObject0;
+    SYS_MODULE_OBJ  usbDevObject0;
 
 
 } SYSTEM_OBJECTS;

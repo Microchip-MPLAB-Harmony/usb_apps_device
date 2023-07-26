@@ -1,7 +1,7 @@
 /*
- * Instance header file for SAMA7G54
+ * Instance header file for ATSAMA7G54D4G
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,14 +20,14 @@
  *
  */
 
-/* file generated from device description version 2021-07-26T12:51:16Z */
+/* file generated from device description version 2023-02-02T10:07:15Z */
 #ifndef _SAMA7G_SDMMC0_INSTANCE_
 #define _SAMA7G_SDMMC0_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for SDMMC0 peripheral ========== */
-#define SDMMC0_INSTANCE_ID                       _UL_(80)   /* Ultra High Speed SD Host controller 0 (eMMC 5.1) */
-#define SDMMC0_CLOCK_ID                          _UL_(80)   
-#define SDMMC0_INSTANCE_ID_TIMER                 _UL_(141)  /* Ultra High Speed SD Host controller 0 (eMMC 5.1) Timer interrupt */
+#define SDMMC0_CLOCK_ID                          (80)       
+#define SDMMC0_INSTANCE_ID                       (80)       /* Ultra High Speed SD Host controller 0 (eMMC 5.1) */
+#define SDMMC0_INSTANCE_ID_TIMER                 (141)      /* Ultra High Speed SD Host controller 0 (eMMC 5.1) Timer interrupt */
 
 #endif /* _SAMA7G_SDMMC0_INSTANCE_ */

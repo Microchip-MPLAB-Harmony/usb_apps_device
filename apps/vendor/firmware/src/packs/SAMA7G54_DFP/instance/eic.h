@@ -1,7 +1,7 @@
 /*
- * Instance header file for SAMA7G54
+ * Instance header file for ATSAMA7G54D4G
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,15 +20,15 @@
  *
  */
 
-/* file generated from device description version 2021-07-26T12:51:16Z */
+/* file generated from device description version 2023-02-02T10:07:15Z */
 #ifndef _SAMA7G_EIC_INSTANCE_
 #define _SAMA7G_EIC_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for EIC peripheral ========== */
-#define EIC_INSTANCE_ID                          _UL_(37)   /* External  Interrupt Controller */
-#define EIC_CLOCK_ID                             _UL_(37)   
-#define EIC_INSTANCE_ID_EXT_IRQ0                 _UL_(153)  /* External  Interrupt ID0 (FIQ) */
-#define EIC_INSTANCE_ID_EXT_IRQ1                 _UL_(154)  /* External  Interrupt ID1 (IRQ) */
+#define EIC_CLOCK_ID                             (37)       
+#define EIC_INSTANCE_ID                          (37)       /* External  Interrupt Controller */
+#define EIC_INSTANCE_ID_EXT_IRQ0                 (153)      /* External  Interrupt ID0 (FIQ) */
+#define EIC_INSTANCE_ID_EXT_IRQ1                 (154)      /* External  Interrupt ID1 (IRQ) */
 
 #endif /* _SAMA7G_EIC_INSTANCE_ */

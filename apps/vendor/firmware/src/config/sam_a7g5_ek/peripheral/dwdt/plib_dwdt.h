@@ -53,7 +53,7 @@ extern "C" {
 
 #include <stdbool.h>
 
-typedef void (*DWDT_CALLBACK) (uint32_t interruptStatus, void* context);
+typedef void (*DWDT_CALLBACK) (uint32_t interruptStatus, uintptr_t context);
 
 void DWDT_Initialize(void);
 #ifdef __cplusplus // Provide C++ Compatibility

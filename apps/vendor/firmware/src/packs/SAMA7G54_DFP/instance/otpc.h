@@ -1,7 +1,7 @@
 /*
- * Instance header file for SAMA7G54
+ * Instance header file for ATSAMA7G54D4G
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,14 +20,14 @@
  *
  */
 
-/* file generated from device description version 2021-07-26T12:51:16Z */
+/* file generated from device description version 2023-02-02T10:07:15Z */
 #ifndef _SAMA7G_OTPC_INSTANCE_
 #define _SAMA7G_OTPC_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for OTPC peripheral ========== */
-#define OTPC_INSTANCE_ID                         _UL_(67)   /* One Time Programmable memory Controller */
-#define OTPC_EMULATION_ADDRESS                   _UL_(0xE0000000) 
-#define OTPC_EMULATION_SIZE                      _UL_(0x00001000) 
+#define OTPC_EMULATION_ADDRESS                   (0xE0000000) 
+#define OTPC_EMULATION_SIZE                      (0x00001000) 
+#define OTPC_INSTANCE_ID                         (67)       /* One Time Programmable memory Controller */
 
 #endif /* _SAMA7G_OTPC_INSTANCE_ */
