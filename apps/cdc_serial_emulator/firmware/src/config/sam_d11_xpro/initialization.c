@@ -48,7 +48,6 @@
 #include "device.h"
 
 
-
 // ****************************************************************************
 // ****************************************************************************
 // Section: Configuration Bits
@@ -56,19 +55,19 @@
 // ****************************************************************************
 #pragma config NVMCTRL_BOOTPROT = SIZE_0BYTES
 #pragma config NVMCTRL_EEPROM_SIZE = SIZE_0BYTES
-#pragma config BOD33USERLEVEL = 0x7 // Enter Hexadecimal value
+#pragma config BOD33USERLEVEL = 0x7U // Enter Hexadecimal value
 #pragma config BOD33_EN = ENABLED
 #pragma config BOD33_ACTION = RESET
 
 #pragma config BOD33_HYST = DISABLED
-#pragma config NVMCTRL_REGION_LOCKS = 0xffff // Enter Hexadecimal value
+#pragma config NVMCTRL_REGION_LOCKS = 0xffffU // Enter Hexadecimal value
 
 #pragma config WDT_ENABLE = DISABLED
 #pragma config WDT_ALWAYSON = DISABLED
 #pragma config WDT_PER = CYC16384
 
 #pragma config WDT_WINDOW_0 = SET
-#pragma config WDT_WINDOW_1 = 0x4 // Enter Hexadecimal value
+#pragma config WDT_WINDOW_1 = 0x4U // Enter Hexadecimal value
 #pragma config WDT_EWOFFSET = CYC16384
 #pragma config WDT_WEN = DISABLED
 
@@ -80,6 +79,10 @@
 // Section: Driver Initialization Data
 // *****************************************************************************
 // *****************************************************************************
+/* Following MISRA-C rules are deviated in the below code block */
+/* MISRA C-2012 Rule 11.1 */
+/* MISRA C-2012 Rule 11.3 */
+/* MISRA C-2012 Rule 11.8 */
 // <editor-fold defaultstate="collapsed" desc="DRV_USART Instance 0 Initialization Data">
 
 static DRV_USART_CLIENT_OBJ drvUSART0ClientObjPool[DRV_USART_CLIENTS_NUMBER_IDX0];
@@ -87,35 +90,35 @@ static DRV_USART_CLIENT_OBJ drvUSART0ClientObjPool[DRV_USART_CLIENTS_NUMBER_IDX0
 /* USART transmit/receive transfer objects pool */
 static DRV_USART_BUFFER_OBJ drvUSART0BufferObjPool[DRV_USART_QUEUE_SIZE_IDX0];
 
-const DRV_USART_PLIB_INTERFACE drvUsart0PlibAPI = {
+static const DRV_USART_PLIB_INTERFACE drvUsart0PlibAPI = {
     .readCallbackRegister = (DRV_USART_PLIB_READ_CALLBACK_REG)SERCOM2_USART_ReadCallbackRegister,
-    .read = (DRV_USART_PLIB_READ)SERCOM2_USART_Read,
+    .read_t = (DRV_USART_PLIB_READ)SERCOM2_USART_Read,
     .readIsBusy = (DRV_USART_PLIB_READ_IS_BUSY)SERCOM2_USART_ReadIsBusy,
     .readCountGet = (DRV_USART_PLIB_READ_COUNT_GET)SERCOM2_USART_ReadCountGet,
     .readAbort = (DRV_USART_PLIB_READ_ABORT)SERCOM2_USART_ReadAbort,
     .writeCallbackRegister = (DRV_USART_PLIB_WRITE_CALLBACK_REG)SERCOM2_USART_WriteCallbackRegister,
-    .write = (DRV_USART_PLIB_WRITE)SERCOM2_USART_Write,
+    .write_t = (DRV_USART_PLIB_WRITE)SERCOM2_USART_Write,
     .writeIsBusy = (DRV_USART_PLIB_WRITE_IS_BUSY)SERCOM2_USART_WriteIsBusy,
     .writeCountGet = (DRV_USART_PLIB_WRITE_COUNT_GET)SERCOM2_USART_WriteCountGet,
     .errorGet = (DRV_USART_PLIB_ERROR_GET)SERCOM2_USART_ErrorGet,
     .serialSetup = (DRV_USART_PLIB_SERIAL_SETUP)SERCOM2_USART_SerialSetup
 };
 
-const uint32_t drvUsart0remapDataWidth[] = { 0x5, 0x6, 0x7, 0x0, 0x1 };
-const uint32_t drvUsart0remapParity[] = { 0x2, 0x0, 0x80000, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF };
-const uint32_t drvUsart0remapStopBits[] = { 0x0, 0xFFFFFFFF, 0x40 };
-const uint32_t drvUsart0remapError[] = { 0x4, 0x0, 0x2 };
+static const uint32_t drvUsart0remapDataWidth[] = { 0x5, 0x6, 0x7, 0x0, 0x1 };
+static const uint32_t drvUsart0remapParity[] = { 0x2, 0x0, 0x80000, 0xFFFFFFFFU, 0xFFFFFFFFU, 0xFFFFFFFFU };
+static const uint32_t drvUsart0remapStopBits[] = { 0x0, 0xFFFFFFFFU, 0x40 };
+static const uint32_t drvUsart0remapError[] = { 0x4, 0x0, 0x2 };
 
-const DRV_USART_INTERRUPT_SOURCES drvUSART0InterruptSources =
+static const DRV_USART_INTERRUPT_SOURCES drvUSART0InterruptSources =
 {
     /* Peripheral has single interrupt vector */
     .isSingleIntSrc                        = true,
 
     /* Peripheral interrupt line */
-    .intSources.usartInterrupt             = SERCOM2_IRQn,
+    .intSources.usartInterrupt             = (int32_t)SERCOM2_IRQn,
 };
 
-const DRV_USART_INIT drvUsart0InitData =
+static const DRV_USART_INIT drvUsart0InitData =
 {
     .usartPlib = &drvUsart0PlibAPI,
 
@@ -147,6 +150,7 @@ const DRV_USART_INIT drvUsart0InitData =
 // </editor-fold>
 
 
+
 // *****************************************************************************
 // *****************************************************************************
 // Section: System Data
@@ -166,22 +170,22 @@ SYSTEM_OBJECTS sysObj;
  
 /*  When designing a Self-powered USB Device, the application should make sure
     that USB_DEVICE_Attach() function is called only when VBUS is actively powered.
-	Therefore, the firmware needs some means to detect when the Host is powering 
-	the VBUS. A 5V tolerant I/O pin can be connected to VBUS (through a resistor)
-	and can be used to detect when VBUS is high or low. The application can specify
-	a VBUS Detect function through the USB Driver Initialize data structure. 
-	The USB device stack will periodically call this function. If the VBUS is 
-	detected, the USB_DEVICE_EVENT_POWER_DETECTED event is generated. If the VBUS 
-	is removed (i.e., the device is physically detached from Host), the USB stack 
-	will generate the event USB_DEVICE_EVENT_POWER_REMOVED. The application should 
-	call USB_DEVICE_Detach() when VBUS is removed. 
+    Therefore, the firmware needs some means to detect when the Host is powering 
+    the VBUS. A 5V tolerant I/O pin can be connected to VBUS (through a resistor)
+    and can be used to detect when VBUS is high or low. The application can specify
+    a VBUS Detect function through the USB Driver Initialize data structure. 
+    The USB device stack will periodically call this function. If the VBUS is 
+    detected, the USB_DEVICE_EVENT_POWER_DETECTED event is generated. If the VBUS 
+    is removed (i.e., the device is physically detached from Host), the USB stack 
+    will generate the event USB_DEVICE_EVENT_POWER_REMOVED. The application should 
+    call USB_DEVICE_Detach() when VBUS is removed. 
     
     The following are the steps to generate the VBUS_SENSE Function through MHC     
         1) Navigate to MHC->Tools->Pin Configuration and Configure the pin used 
-		   as VBUS_SENSE. Set this pin Function as "GPIO" and set as "Input". 
-		   Provide a custom name to the pin.
+           as VBUS_SENSE. Set this pin Function as "GPIO" and set as "Input". 
+           Provide a custom name to the pin.
         2) Select the USB Driver Component in MHC Project Graph and enable the  
-		   "Enable VBUS Sense" Check-box.     
+           "Enable VBUS Sense" Check-box.     
         3) Specify the custom name of the VBUS SENSE pin in the "VBUS SENSE Pin Name" box.  */ 
 static DRV_USB_VBUS_LEVEL DRV_USBFSV1_VBUS_Comparator(void)
 {
@@ -191,10 +195,9 @@ static DRV_USB_VBUS_LEVEL DRV_USBFSV1_VBUS_Comparator(void)
     {
         retVal = DRV_USB_VBUS_LEVEL_VALID;
     }
-	return (retVal);
+    return (retVal);
 
 }
-
 
 const DRV_USBFSV1_INIT drvUSBInit =
 {
@@ -208,7 +211,7 @@ const DRV_USBFSV1_INIT drvUSBInit =
     .operationMode = DRV_USBFSV1_OPMODE_DEVICE,
 
     /* USB Full Speed Operation */
-	.operationSpeed = USB_SPEED_FULL,
+    .operationSpeed = USB_SPEED_FULL,
     
     /* Stop in idle */
     .runInStandby = true,
@@ -218,10 +221,10 @@ const DRV_USBFSV1_INIT drvUSBInit =
 
     /* Identifies peripheral (PLIB-level) ID */
     .usbID = USB_REGS,
-	
+
     /* Function to check for VBus */
     .vbusComparator = DRV_USBFSV1_VBUS_Comparator
-	
+
 };
 
 
@@ -241,7 +244,7 @@ const DRV_USBFSV1_INIT drvUSBInit =
 // *****************************************************************************
 // *****************************************************************************
 
-
+/* MISRAC 2012 deviation block end */
 
 /*******************************************************************************
   Function:
@@ -255,6 +258,9 @@ const DRV_USBFSV1_INIT drvUSBInit =
 
 void SYS_Initialize ( void* data )
 {
+
+    /* MISRAC 2012 deviation block start */
+    /* MISRA C-2012 Rule 2.2 deviated in this file.  Deviation record ID -  H3_MISRAC_2012_R_2_2_DR_1 */
 
     NVMCTRL_REGS->NVMCTRL_CTRLB = NVMCTRL_CTRLB_RWS(3UL);
 
@@ -270,31 +276,37 @@ void SYS_Initialize ( void* data )
 
     SERCOM2_USART_Initialize();
 
-    EVSYS_Initialize();
 
 	BSP_Initialize();
+
+
+    /* MISRAC 2012 deviation block start */
+    /* Following MISRA-C rules deviated in this block  */
+    /* MISRA C-2012 Rule 11.3 - Deviation record ID - H3_MISRAC_2012_R_11_3_DR_1 */
+    /* MISRA C-2012 Rule 11.8 - Deviation record ID - H3_MISRAC_2012_R_11_8_DR_1 */
 
     sysObj.drvUsart0 = DRV_USART_Initialize(DRV_USART_INDEX_0, (SYS_MODULE_INIT *)&drvUsart0InitData);
 
 
 
 
-	 /* Initialize the USB device layer */
+    /* Initialize the USB device layer */
     sysObj.usbDevObject0 = USB_DEVICE_Initialize (USB_DEVICE_INDEX_0 , ( SYS_MODULE_INIT* ) & usbDevInitData);
-	
-	
-
-	/* Initialize USB Driver */ 
-    sysObj.drvUSBFSV1Object = DRV_USBFSV1_Initialize(DRV_USBFSV1_INDEX_0, (SYS_MODULE_INIT *) &drvUSBInit);	
 
 
+    /* Initialize USB Driver */ 
+    sysObj.drvUSBFSV1Object = DRV_USBFSV1_Initialize(DRV_USBFSV1_INDEX_0, (SYS_MODULE_INIT *) &drvUSBInit);
+
+
+    /* MISRAC 2012 deviation block end */
     APP_Initialize();
 
 
     NVIC_Initialize();
 
-}
 
+    /* MISRAC 2012 deviation block end */
+}
 
 /*******************************************************************************
  End of File
