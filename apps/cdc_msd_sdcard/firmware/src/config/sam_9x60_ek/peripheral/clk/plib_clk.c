@@ -29,18 +29,18 @@
 
 
 /*********************************************************************************
-Generate Software delay (in multiples of microsecond units) 
+Generate Software delay (in multiples of microsecond units)
 *********************************************************************************/
 static void swDelayUs(uint32_t delay)
 {
     uint32_t i, count;
-
     /* delay * (CPU_FREQ/1000000) / 6 */
-    count = delay *  (600000000/1000000)/6;
-
-    /* 6 CPU cycles per iteration */
+    count = delay *  (600000000U/1000000U)/6U;
     for (i = 0; i < count; i++)
+    {
+        /* 6 CPU cycles per iteration */
         __NOP();
+    }
 }
 
 /*********************************************************************************
@@ -49,29 +49,29 @@ Initialize UPLL
 static void initUPLLCLK(void)
 {
     /* STEP 1: PMC_PLL_UPDT to target UPLL, startup time of 150us and update disabled */
-    PMC_REGS->PMC_PLL_UPDT = PMC_PLL_UPDT_STUPTIM(0x6) |\
-                             PMC_PLL_UPDT_UPDATE(0x0) |\
+    PMC_REGS->PMC_PLL_UPDT = PMC_PLL_UPDT_STUPTIM(0x6U) |\
+                             PMC_PLL_UPDT_UPDATE(0x0U) |\
                              PMC_PLL_UPDT_ID(PLL_ID_UPLL);
 
     /* STEP 2: Set the Analog controls to the values recommended by data sheet */
-    PMC_REGS->PMC_PLL_ACR = PMC_PLL_ACR_LOOP_FILTER(0x1B) |\
-                            PMC_PLL_ACR_LOCK_THR(0x4) |\
-                            PMC_PLL_ACR_CONTROL(0x10);
+    PMC_REGS->PMC_PLL_ACR = PMC_PLL_ACR_LOOP_FILTER(0x1BU) |\
+                            PMC_PLL_ACR_LOCK_THR(0x4U) |\
+                            PMC_PLL_ACR_CONTROL(0x10U);
 
     /* STEP 3: Set loop paramaters for the fractional PLL */
-    PMC_REGS->PMC_PLL_CTRL1 = PMC_PLL_CTRL1_MUL(39) |\
-                              PMC_PLL_CTRL1_FRACR(0);
+    PMC_REGS->PMC_PLL_CTRL1 = PMC_PLL_CTRL1_MUL(39U) |\
+                              PMC_PLL_CTRL1_FRACR(0U);
 
-    /* STEP 4: Enable UTMI Bandgap */ 
+    /* STEP 4: Enable UTMI Bandgap */
     PMC_REGS->PMC_PLL_ACR |= PMC_PLL_ACR_UTMIBG_Msk;
 
-    /* STEP 5: Wait 10 us */        
+    /* STEP 5: Wait 10 us */
     swDelayUs(10);
 
     /* STEP 6: Enable UTMI Internal Regulator */
     PMC_REGS->PMC_PLL_ACR |= PMC_PLL_ACR_UTMIVR_Msk;
 
-    /* STEP 7: Wait 10 us */        
+    /* STEP 7: Wait 10 us */
     swDelayUs(10);
 
     /* STEP 8: Update the PLL controls */
@@ -81,13 +81,16 @@ static void initUPLLCLK(void)
     PMC_REGS->PMC_PLL_CTRL0 = PMC_PLL_CTRL0_ENLOCK_Msk |\
                               PMC_PLL_CTRL0_ENPLL_Msk |\
                               PMC_PLL_CTRL0_ENPLLCK_Msk;
-    
+
     /* STEP 10: Wait for the lock bit to rise by polling the PMC_PLL_ISR0 */
-    while ((PMC_REGS->PMC_PLL_ISR0 & PMC_PLL_ISR0_LOCKU_Msk) != PMC_PLL_ISR0_LOCKU_Msk);
+    while ((PMC_REGS->PMC_PLL_ISR0 & PMC_PLL_ISR0_LOCKU_Msk) != PMC_PLL_ISR0_LOCKU_Msk)
+    {
+        /* Wait for PLL lock to rise */
+    }
 }
 
 /*********************************************************************************
-Initialize Programmable clocks 
+Initialize Programmable clocks
 *********************************************************************************/
 static void initProgrammableClk(void)
 {
@@ -99,12 +102,13 @@ Initialize Peripheral clocks
 *********************************************************************************/
 static void initPeriphClk(void)
 {
+    const uint8_t EOL_MARKER = ((uint8_t)ID_PERIPH_MAX + 1U);
     struct {
         uint8_t id;
         uint8_t clken;
         uint8_t gclken;
         uint8_t css;
-        uint8_t div;
+        uint8_t divv;
     } periphList[] =
     {
         { ID_PIOA, 1, 0, 0, 0},
@@ -114,23 +118,23 @@ static void initPeriphClk(void)
         { ID_TC0, 1, 0, 0, 0},
         { ID_UDPHS, 1, 0, 0, 0},
         { ID_PIOD, 1, 0, 0, 0},
-        { ID_PERIPH_MAX + 1, 0, 0, 0, 0}//end of list marker
+        { EOL_MARKER, 0, 0, 0, 0}//end of list marker
     };
 
-    int count = sizeof(periphList)/sizeof(periphList[0]);
-    for (int i = 0; i < count; i++)
+    uint32_t count = sizeof(periphList)/sizeof(periphList[0]);
+    for (uint32_t i = 0; i < count; i++)
     {
-        if (periphList[i].id == (ID_PERIPH_MAX + 1))
+        if (periphList[i].id == EOL_MARKER)
         {
             break;
         }
 
         PMC_REGS->PMC_PCR = PMC_PCR_CMD_Msk |\
-                            PMC_PCR_GCLKEN(periphList[i].gclken) |\
-                            PMC_PCR_EN(periphList[i].clken) |\
-                            PMC_PCR_GCLKDIV(periphList[i].div) |\
-                            PMC_PCR_GCLKCSS(periphList[i].css) |\
-                            PMC_PCR_PID(periphList[i].id);                
+                            PMC_PCR_GCLKEN((uint32_t)periphList[i].gclken) |\
+                            PMC_PCR_EN((uint32_t)periphList[i].clken) |\
+                            PMC_PCR_GCLKDIV((uint32_t)periphList[i].divv) |\
+                            PMC_PCR_GCLKCSS((uint32_t)periphList[i].css) |\
+                            PMC_PCR_PID((uint32_t)periphList[i].id);
     }
 
 }
@@ -144,11 +148,10 @@ void CLK_Initialize( void )
 
     /* Initialize UPLLA clock generator */
     initUPLLCLK();
-    
+
     /* Initialize Programmable clock */
     initProgrammableClk();
 
     /* Initialize Peripheral clock */
     initPeriphClk();
- 
 }

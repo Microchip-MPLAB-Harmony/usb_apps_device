@@ -1,7 +1,7 @@
 /*
- * Instance header file for SAM9X60D6K
+ * Instance header file for ATSAM9X60D6K
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,15 +20,15 @@
  *
  */
 
-/* file generated from device description version 2021-05-04T16:22:14Z */
+/* file generated from device description version 2022-01-05T08:53:32Z */
 #ifndef _SAM9X_QSPI_INSTANCE_
 #define _SAM9X_QSPI_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for QSPI peripheral ========== */
-#define QSPI_INSTANCE_ID                         _UL_(35)   
-#define QSPI_CLOCK_ID                            _UL_(35)   
-#define QSPI_DMAC_ID_TX                          _UL_(26)   
-#define QSPI_DMAC_ID_RX                          _UL_(27)   
+#define QSPI_INSTANCE_ID                         (35)       
+#define QSPI_CLOCK_ID                            (35)       
+#define QSPI_DMAC_ID_TX                          (26)       
+#define QSPI_DMAC_ID_RX                          (27)       
 
 #endif /* _SAM9X_QSPI_INSTANCE_ */
