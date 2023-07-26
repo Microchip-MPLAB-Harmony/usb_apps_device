@@ -21,12 +21,12 @@
  */
 
 /* file generated from device description version 2022-10-04T10:37:14Z */
-#ifndef _SAMA5D_SECUMOD_INSTANCE_
-#define _SAMA5D_SECUMOD_INSTANCE_
+#ifndef _SAMA5D_HSMC_INSTANCE_
+#define _SAMA5D_HSMC_INSTANCE_
 
 
-/* ========== Instance Parameter definitions for SECUMOD peripheral ========== */
-#define SECUMOD_INSTANCE_ID                      (16)       
-#define SECUMOD_CLOCK_ID                         (16)       
+/* ========== Instance Parameter definitions for HSMC peripheral ========== */
+#define HSMC_INSTANCE_ID                         (17)       
+#define HSMC_CLOCK_ID                            (17)       
 
-#endif /* _SAMA5D_SECUMOD_INSTANCE_ */
+#endif /* _SAMA5D_HSMC_INSTANCE_ */
