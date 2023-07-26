@@ -19,10 +19,44 @@
 * FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
-*******************************************************************************/
+ *******************************************************************************/
+#include <stdint.h>
+#include <stdbool.h>
 
-#ifndef OSAL_DEFINITIONS_H
-#define OSAL_DEFINITIONS_H
+void undefined_instruction_irq_handler (void);
+void software_interrupt_irq_handler(void);
+void data_abort_irq_handler(void);
+void prefetch_abort_irq_handler(void);
 
-#include "osal/osal_impl_basic.h"
-#endif// OSAL_DEFINITIONS_H
+void __attribute((weak, noreturn)) undefined_instruction_irq_handler (void)
+{
+    while(true)
+    {
+        /* Spin forever */
+    }
+}
+
+void __attribute((weak, noreturn)) software_interrupt_irq_handler(void)
+{
+    while(true)
+    {
+        /* Spin forever */
+    }
+}
+
+void __attribute((weak, noreturn)) data_abort_irq_handler(void)
+{
+    while(true)
+    {
+        /* Spin forever */
+    }
+}
+
+void __attribute((weak, noreturn)) prefetch_abort_irq_handler(void)
+{
+    while(true)
+    {
+        /* Spin forever */
+    }
+}
+
