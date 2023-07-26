@@ -1,7 +1,7 @@
 /*
- * Instance header file for ATSAMA5D28CLD2G
+ * Instance header file for ATSAMA5D29
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,14 +20,14 @@
  *
  */
 
-/* file generated from device description version 2021-06-28T09:00:02Z */
-#ifndef _SAMA5D2_PDMIC_INSTANCE_
-#define _SAMA5D2_PDMIC_INSTANCE_
+/* file generated from device description version 2022-10-04T10:37:14Z */
+#ifndef _SAMA5D_PDMIC_INSTANCE_
+#define _SAMA5D_PDMIC_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for PDMIC peripheral ========== */
-#define PDMIC_INSTANCE_ID                        _UL_(48)   
-#define PDMIC_CLOCK_ID                           _UL_(48)   
-#define PDMIC_DMAC_ID_RX                         _UL_(50)   
+#define PDMIC_INSTANCE_ID                        (48)       
+#define PDMIC_CLOCK_ID                           (48)       
+#define PDMIC_DMAC_ID_RX                         (50)       
 
-#endif /* _SAMA5D2_PDMIC_INSTANCE_ */
+#endif /* _SAMA5D_PDMIC_INSTANCE_ */

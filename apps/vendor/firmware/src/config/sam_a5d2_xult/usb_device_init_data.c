@@ -49,10 +49,10 @@
 /**************************************************
  * USB Device Function Driver Init Data
  **************************************************/
-	
+
 
 /**************************************************
- * USB Device Layer Function Driver Registration 
+ * USB Device Layer Function Driver Registration
  * Table
  **************************************************/
 const USB_DEVICE_FUNCTION_REGISTRATION_TABLE funcRegistrationTable[1] =
@@ -77,22 +77,21 @@ const USB_DEVICE_FUNCTION_REGISTRATION_TABLE funcRegistrationTable[1] =
  * USB Device Layer Descriptors
  *******************************************/
 /*******************************************
- *  USB Device Descriptor 
+ *  USB Device Descriptor
  *******************************************/
-
 const USB_DEVICE_DESCRIPTOR deviceDescriptor =
 {
     0x12,                                                   // Size of this descriptor in bytes
     USB_DESCRIPTOR_DEVICE,                                  // DEVICE descriptor type
     0x0200,                                                 // USB Spec Release Number in BCD format
-        0x00,         // Class Code
+    0x00,         // Class Code
     0x00,         // Subclass code
     0x00,         // Protocol code
 
 
     USB_DEVICE_EP0_BUFFER_SIZE,                             // Max packet size for EP0, see configuration.h
     0x04D8,                                                 // Vendor ID
-    0x0053,                                                 // Product ID				
+    0x0053,                                                 // Product ID
     0x0100,                                                 // Device release number in BCD format
     0x01,                                                   // Manufacturer string index
     0x02,                                                   // Product string index
@@ -109,7 +108,7 @@ const USB_DEVICE_QUALIFIER deviceQualifierDescriptor1 =
     0x0A,                                                   // Size of this descriptor in bytes
     USB_DESCRIPTOR_DEVICE_QUALIFIER,                        // Device Qualifier Type
     0x0200,                                                 // USB Specification Release number
-	    0x00,         // Class Code
+    0x00,         // Class Code
     0x00,         // Subclass code
     0x00,         // Protocol code
 
@@ -119,24 +118,22 @@ const USB_DEVICE_QUALIFIER deviceQualifierDescriptor1 =
     0x00                                                    // Reserved for future use.
 };
 
-
 /*******************************************
  *  USB High Speed Configuration Descriptor
  *******************************************/
- 
 const uint8_t highSpeedConfigurationDescriptor[]=
 {
-	/* Configuration Descriptor */
+    /* Configuration Descriptor */
 
-    0x09,                                                   // Size of this descriptor in bytes
-    USB_DESCRIPTOR_CONFIGURATION,                           // Descriptor Type
-    USB_DEVICE_16bitTo8bitArrange(32),                      //(32 Bytes)Size of the Configuration descriptor
-    1,                                                      // Number of interfaces in this configuration
+    0x09,                                               // Size of this descriptor in bytes
+    USB_DESCRIPTOR_CONFIGURATION,                       // Descriptor Type
+    USB_DEVICE_16bitTo8bitArrange(32),                  //(32 Bytes)Size of the Configuration descriptor
+    1,                                                  // Number of interfaces in this configuration
     0x01,                                               // Index value of this configuration
     0x00,                                               // Configuration string index
     USB_ATTRIBUTE_DEFAULT | USB_ATTRIBUTE_SELF_POWERED, // Attributes
-    50,
-	
+    50,                                                 // Maximum power consumption (mA) /2
+
 	/* Interface Descriptor */
 
     0x09,                       // Size of this descriptor in bytes
@@ -184,7 +181,7 @@ USB_DEVICE_CONFIGURATION_DESCRIPTORS_TABLE highSpeedConfigDescSet[1] =
  *******************************************/
 const uint8_t fullSpeedConfigurationDescriptor[]=
 {
-	/* Configuration Descriptor */
+    /* Configuration Descriptor */
 
     0x09,                                                   // Size of this descriptor in bytes
     USB_DESCRIPTOR_CONFIGURATION,                           // Descriptor Type
@@ -193,8 +190,7 @@ const uint8_t fullSpeedConfigurationDescriptor[]=
     0x01,                                                   // Index value of this configuration
     0x00,                                                   // Configuration string index
     USB_ATTRIBUTE_DEFAULT | USB_ATTRIBUTE_SELF_POWERED, // Attributes
-    50,
-	
+    50,                                                 // Maximum power consumption (mA) /2
 	/* Interface Descriptor */
 
     0x09,                       // Size of this descriptor in bytes
@@ -230,7 +226,7 @@ const uint8_t fullSpeedConfigurationDescriptor[]=
 };
 
 /*******************************************
- * Array of Full speed Configuration 
+ * Array of Full speed Configuration
  * descriptors
  *******************************************/
 USB_DEVICE_CONFIGURATION_DESCRIPTORS_TABLE fullSpeedConfigDescSet[1] =
@@ -238,57 +234,58 @@ USB_DEVICE_CONFIGURATION_DESCRIPTORS_TABLE fullSpeedConfigDescSet[1] =
     fullSpeedConfigurationDescriptor
 };
 
-
 /**************************************
  *  String descriptors.
  *************************************/
- /*******************************************
- *  Language code string descriptor
- *******************************************/
-    const struct
-    {
-        uint8_t bLength;
-        uint8_t bDscType;
-        uint16_t string[1];
-    }
-    sd000 =
-    {
-        sizeof(sd000),                                      // Size of this descriptor in bytes
-        USB_DESCRIPTOR_STRING,                              // STRING descriptor type
-        {0x0409}                                            // Language ID
-    };
+/*******************************************
+*  Language code string descriptor
+*******************************************/
+const struct
+{
+    uint8_t bLength;
+    uint8_t bDscType;
+    uint16_t string[1];
+}
+
+sd000 =
+{
+    sizeof(sd000),                                      // Size of this descriptor in bytes
+    USB_DESCRIPTOR_STRING,                              // STRING descriptor type
+    {0x0409}                                            // Language ID
+};
 /*******************************************
  *  Manufacturer string descriptor
  *******************************************/
-    const struct
-    {
-        uint8_t bLength;                                    // Size of this descriptor in bytes
-        uint8_t bDscType;                                   // STRING descriptor type
-        uint16_t string[25];                                // String
-    }
-    sd001 =
-    {
-        sizeof(sd001),
-        USB_DESCRIPTOR_STRING,
-        {'M','i','c','r','o','c','h','i','p',' ','T','e','c','h','n','o','l','o','g','y',' ','I','n','c','.'}
-		
-    };
+const struct
+{
+    uint8_t bLength;                                    // Size of this descriptor in bytes
+    uint8_t bDscType;                                   // STRING descriptor type
+    uint16_t string[25];                                // String
+}
+
+sd001 =
+{
+    sizeof(sd001),
+    USB_DESCRIPTOR_STRING,
+    {'M','i','c','r','o','c','h','i','p',' ','T','e','c','h','n','o','l','o','g','y',' ','I','n','c','.'}
+};
 
 /*******************************************
  *  Product string descriptor
  *******************************************/
-	const struct
-    {
-        uint8_t bLength;                                    // Size of this descriptor in bytes
-        uint8_t bDscType;                                   // STRING descriptor type
-        uint16_t string[25];                                // String
-    }
-    sd002 =
-    {
-        sizeof(sd002),
-        USB_DESCRIPTOR_STRING,
-		{'S','i','m','p','l','e',' ','W','i','n','U','S','B',' ','D','e','v','i','c','e',' ','D','e','m','o'}
-    }; 
+const struct
+{
+    uint8_t bLength;                                    // Size of this descriptor in bytes
+    uint8_t bDscType;                                   // STRING descriptor type
+    uint16_t string[25];                                // String
+}
+
+sd002 =
+{
+    sizeof(sd002),
+    USB_DESCRIPTOR_STRING,
+    {'S','i','m','p','l','e',' ','W','i','n','U','S','B',' ','D','e','v','i','c','e',' ','D','e','m','o'}
+};
 /******************************************************************************
  * Serial number string descriptor.  Note: This should be unique for each unit
  * built on the assembly line.  Plugging in two units simultaneously with the
@@ -298,19 +295,19 @@ USB_DEVICE_CONFIGURATION_DESCRIPTORS_TABLE fullSpeedConfigDescSet[1] =
  * consist only of ASCII characters "0" through "9" and capital letters "A"
  * through "F".
  ******************************************************************************/
-    const struct
-    {
-        uint8_t bLength;                                    // Size of this descriptor in bytes
-        uint8_t bDscType;                                   // STRING descriptor type
-        uint16_t string[12];                                // String
-    }
-    serialNumberStringDescriptor =
-    {
-        sizeof(serialNumberStringDescriptor),
-        USB_DESCRIPTOR_STRING,
-        {'1','2','3','4','5','6','7','8','9','0','1','2'}
-		
-    };
+const struct
+{
+    uint8_t bLength;                                    // Size of this descriptor in bytes
+    uint8_t bDscType;                                   // STRING descriptor type
+    uint16_t string[12];                                // String
+}
+serialNumberStringDescriptor =
+{
+    sizeof(serialNumberStringDescriptor),
+    USB_DESCRIPTOR_STRING,
+    {'1','2','3','4','5','6','7','8','9','0','1','2'}
+
+};
 
 /***************************************
  * Array of string descriptors
@@ -320,13 +317,12 @@ USB_DEVICE_STRING_DESCRIPTORS_TABLE stringDescriptors[4]=
     (uint8_t *)&sd000,
     (uint8_t *)&sd001,
     (uint8_t *)&sd002,
-    (uint8_t *)&serialNumberStringDescriptor
+    (uint8_t *)&serialNumberStringDescriptor,
 };
 
 /*******************************************
- * USB Device Layer Master Descriptor Table 
+ * USB Device Layer Master Descriptor Table
  *******************************************/
- 
 const USB_DEVICE_MASTER_DESCRIPTOR usbMasterDescriptor =
 {
     &deviceDescriptor,                                      // Full speed descriptor
@@ -335,7 +331,7 @@ const USB_DEVICE_MASTER_DESCRIPTOR usbMasterDescriptor =
     &deviceDescriptor,                                      // High speed device descriptor
     1,                                                      // Total number of high speed configurations available
     highSpeedConfigDescSet,                                 // Pointer to array of high speed configurations descriptors
-	4,  													// Total number of string descriptors available.
+    4,                                                      // Total number of string descriptors available.
     stringDescriptors,                                      // Pointer to array of string descriptors.
     &deviceQualifierDescriptor1,                            // Pointer to full speed dev qualifier.
     &deviceQualifierDescriptor1                             // Pointer to high speed dev qualifier.
@@ -345,13 +341,12 @@ const USB_DEVICE_MASTER_DESCRIPTOR usbMasterDescriptor =
 /****************************************************
  * USB Device Layer Initialization Data
  ****************************************************/
-
 const USB_DEVICE_INIT usbDevInitData =
 {
     /* Number of function drivers registered to this instance of the
        USB device layer */
     .registeredFuncCount = 1,
-	
+
     /* Function driver table registered to this instance of the USB device layer*/
     .registeredFunctions = (USB_DEVICE_FUNCTION_REGISTRATION_TABLE*)funcRegistrationTable,
 
@@ -359,18 +354,18 @@ const USB_DEVICE_INIT usbDevInitData =
     .usbMasterDescriptor = (USB_DEVICE_MASTER_DESCRIPTOR*)&usbMasterDescriptor,
 
     /* USB Device Speed */
-    .deviceSpeed =  USB_SPEED_HIGH,   
-	
-	/* Index of the USB Driver to be used by this Device Layer Instance */
+    .deviceSpeed =  USB_SPEED_HIGH,
+
+    /* Index of the USB Driver to be used by this Device Layer Instance */
     .driverIndex = DRV_USB_UDPHS_INDEX_0,
 
     /* Pointer to the USB Driver Functions. */
     .usbDriverInterface = DRV_USB_UDPHS_DEVICE_INTERFACE,
-	
-	/* Specify queue size for vendor endpoint read */
+
+    /* Specify queue size for vendor endpoint read */
     .queueSizeEndpointRead = 1,
-    
+
     /* Specify queue size for vendor endpoint write */
-    .queueSizeEndpointWrite= 1,
+    .queueSizeEndpointWrite= 1
 };
 // </editor-fold>
