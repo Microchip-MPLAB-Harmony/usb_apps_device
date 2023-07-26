@@ -52,6 +52,7 @@
 
 #include "configuration.h"
 #include "definitions.h"
+#include "sys_tasks.h"
 
 
 // *****************************************************************************
@@ -69,9 +70,9 @@ void _DRV_USBHS_Tasks(  void *pvParameters  )
     }
 }
 
-void _DRV_MEMORY_0_Tasks(  void *pvParameters  )
+static void lDRV_MEMORY_0_Tasks(  void *pvParameters  )
 {
-    while(1)
+    while(true)
     {
         DRV_MEMORY_Tasks(sysObj.drvMemory0);
         vTaskDelay(DRV_MEMORY_RTOS_DELAY_IDX0 / portTICK_PERIOD_MS);
@@ -82,7 +83,7 @@ void _USB_DEVICE_Tasks(  void *pvParameters  )
 {
     while(1)
     {
-				 /* USB Device layer tasks routine */
+                /* USB Device layer tasks routine */
         USB_DEVICE_Tasks(sysObj.usbDevObject0);
         vTaskDelay(10 / portTICK_PERIOD_MS);
     }
@@ -91,12 +92,12 @@ void _USB_DEVICE_Tasks(  void *pvParameters  )
 /* Handle for the APP_Tasks. */
 TaskHandle_t xAPP_Tasks;
 
-void _APP_Tasks(  void *pvParameters  )
+static void lAPP_Tasks(  void *pvParameters  )
 {   
-    while(1)
+    while(true)
     {
         APP_Tasks();
-        vTaskDelay(5 / portTICK_PERIOD_MS);
+        vTaskDelay(5U / portTICK_PERIOD_MS);
     }
 }
 
@@ -122,7 +123,7 @@ void SYS_Tasks ( void )
     
 
     /* Maintain Device Drivers */
-        xTaskCreate( _DRV_MEMORY_0_Tasks,
+        (void)xTaskCreate( lDRV_MEMORY_0_Tasks,
         "DRV_MEM_0_TASKS",
         DRV_MEMORY_STACK_SIZE_IDX0,
         (void*)NULL,
@@ -155,7 +156,7 @@ void SYS_Tasks ( void )
 
     /* Maintain the application's state machine. */
         /* Create OS Thread for APP_Tasks. */
-    xTaskCreate((TaskFunction_t) _APP_Tasks,
+    (void) xTaskCreate((TaskFunction_t) lAPP_Tasks,
                 "APP_Tasks",
                 1024,
                 NULL,
