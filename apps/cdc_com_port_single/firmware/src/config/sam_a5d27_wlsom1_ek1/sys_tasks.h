@@ -1,22 +1,23 @@
 /*******************************************************************************
-  Matrix (AHB) PLIB
-
-  Company:
-    Microchip Technology Inc.
+ System Tasks Header File
 
   File Name:
-    plib_matrix.c
+    sys_tasks.h
 
   Summary:
-    AHB Matrix PLIB implementation file
+    This file contains declarations for task handles.
 
   Description:
-    Configure AHB masters and slaves.
-*******************************************************************************/
+    Task handles declared in this header file can be used by the application
+    to control the behavior of the tasks.
+
+  Remarks:
+    None
+ *******************************************************************************/
 
 // DOM-IGNORE-BEGIN
 /*******************************************************************************
-* Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
+* Copyright (C) 2023 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -36,60 +37,20 @@
 * FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
-*******************************************************************************/
+ *******************************************************************************/
 // DOM-IGNORE-END
 
-#ifndef PLIB_MATRIX_H    // Guards against multiple inclusion
-#define PLIB_MATRIX_H
-
-#ifdef __cplusplus  // Provide C++ Compatibility
-
-    extern "C" {
-
-#endif
-
-
-
+#ifndef SYS_TASKS_H
+#define SYS_TASKS_H
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: Interface Routines
+// Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
 
-// *****************************************************************************
-/* Function:
-    void Matrix_Initialize(void)
-
-  Summary:
-    Initialize AHB Masters and Slaves.
-
-  Description:
-    Inialize AHB Masters and Slaves and peripheral's as secure or non-secure.
-
-  Precondition:
-    None.
-
-  Parameters:
-    None.
-
-  Returns:
-    None.
-
-  Remarks:
-    Until security is implemented all peripherals will be non-secure.
-*/
-void Matrix_Initialize(void);
+#include "configuration.h"
+#include "definitions.h"
 
 
-#ifdef __cplusplus  // Provide C++ Compatibility
-
-    }
-
-#endif
-
-#endif // _FILE_TEMPLATE_HEADER_H
-
-/*******************************************************************************
- End of File
-*/
+#endif //SYS_TASKS_H
