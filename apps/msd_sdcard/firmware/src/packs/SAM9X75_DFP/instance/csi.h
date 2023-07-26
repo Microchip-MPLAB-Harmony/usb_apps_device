@@ -21,7 +21,12 @@
  */
 
 /* file generated from device description version 2023-01-20T08:33:42Z */
-#ifndef _SAM9X7_RTC_INSTANCE_
-#define _SAM9X7_RTC_INSTANCE_
+#ifndef _SAM9X7_CSI_INSTANCE_
+#define _SAM9X7_CSI_INSTANCE_
 
-#endif /* _SAM9X7_RTC_INSTANCE_ */
+
+/* ========== Instance Parameter definitions for CSI peripheral ========== */
+#define CSI_CLOCK_ID                             (53)       
+#define CSI_INSTANCE_ID                          (53)       /* Camera Serial Interface 2 4-Lanes */
+
+#endif /* _SAM9X7_CSI_INSTANCE_ */

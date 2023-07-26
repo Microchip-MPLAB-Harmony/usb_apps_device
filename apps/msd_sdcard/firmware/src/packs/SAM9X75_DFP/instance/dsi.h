@@ -21,7 +21,12 @@
  */
 
 /* file generated from device description version 2023-01-20T08:33:42Z */
-#ifndef _SAM9X7_RTC_INSTANCE_
-#define _SAM9X7_RTC_INSTANCE_
+#ifndef _SAM9X7_DSI_INSTANCE_
+#define _SAM9X7_DSI_INSTANCE_
 
-#endif /* _SAM9X7_RTC_INSTANCE_ */
+
+/* ========== Instance Parameter definitions for DSI peripheral ========== */
+#define DSI_CLOCK_ID                             (54)       
+#define DSI_INSTANCE_ID                          (54)       /* Display Serial Interface 4-Lanes */
+
+#endif /* _SAM9X7_DSI_INSTANCE_ */
