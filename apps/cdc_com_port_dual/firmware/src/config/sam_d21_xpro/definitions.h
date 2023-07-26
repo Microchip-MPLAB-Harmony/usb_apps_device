@@ -48,17 +48,17 @@
 #include <stdint.h>
 #include <stddef.h>
 #include <stdbool.h>
+#include "bsp/bsp.h"
 #include "usb/usb_device_cdc.h"
 #include "usb/usb_cdc.h"
-#include "bsp/bsp.h"
 #include "peripheral/nvmctrl/plib_nvmctrl.h"
 #include "peripheral/evsys/plib_evsys.h"
 #include "peripheral/port/plib_port.h"
 #include "peripheral/clock/plib_clock.h"
 #include "peripheral/nvic/plib_nvic.h"
-#include "driver/usb/usbfsv1/drv_usbfsv1.h"
 #include "usb/usb_chapter_9.h"
 #include "usb/usb_device.h"
+#include "driver/usb/usbfsv1/drv_usbfsv1.h"
 #include "system/int/sys_int.h"
 #include "osal/osal.h"
 #include "system/debug/sys_debug.h"
@@ -73,6 +73,12 @@ extern "C" {
 
 #endif
 // DOM-IGNORE-END
+
+/* Device Information */
+#define DEVICE_NAME			 "ATSAMD21J18A"
+#define DEVICE_ARCH			 "CORTEX-M0PLUS"
+#define DEVICE_FAMILY		 "SAMD"
+#define DEVICE_SERIES		 "SAMD21"
 
 /* CPU clock frequency */
 #define CPU_CLOCK_FREQUENCY 48000000
@@ -187,9 +193,9 @@ Remarks:
 
 typedef struct
 {
-	SYS_MODULE_OBJ  drvUSBFSV1Object;
+    SYS_MODULE_OBJ  usbDevObject0;
 
-	SYS_MODULE_OBJ  usbDevObject0;
+	SYS_MODULE_OBJ  drvUSBFSV1Object;
 
 
 } SYSTEM_OBJECTS;
