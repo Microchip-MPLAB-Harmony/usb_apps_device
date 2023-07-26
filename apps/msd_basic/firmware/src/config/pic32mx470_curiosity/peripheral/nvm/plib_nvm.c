@@ -50,7 +50,7 @@
 #include <string.h>
 #include "sys/kmem.h"
 #include "plib_nvm.h"
-
+#include "interrupts.h"
 /* ************************************************************************** */
 /* ************************************************************************** */
 /* Section: File Scope or Global Data                                         */
@@ -79,8 +79,16 @@ typedef enum
     NVM_UNLOCK_KEY2 = 0x556699AA
 } NVM_UNLOCK_KEYS;
 
-#define NVM_INTERRUPT_ENABLE_MASK   0x80000000L
-#define NVM_INTERRUPT_FLAG_MASK     0x80000000L
+#define NVM_INTERRUPT_ENABLE_MASK   0x80000000LU
+#define NVM_INTERRUPT_FLAG_MASK     0x80000000LU
+
+typedef struct
+{
+    NVM_CALLBACK CallbackFunc;
+    uintptr_t Context;
+}nvmCallbackObjType;
+
+volatile static nvmCallbackObjType nvmCallbackObj;
 
 /* ************************************************************************** */
 /* ************************************************************************** */
@@ -94,24 +102,21 @@ typedef enum
 // *****************************************************************************
 // *****************************************************************************
 
-NVM_CALLBACK nvmCallbackFunc;
-
-uintptr_t nvmContext;
-
 void NVM_CallbackRegister( NVM_CALLBACK callback, uintptr_t context )
 {
     /* Register callback function */
-    nvmCallbackFunc    = callback;
-    nvmContext         = context;
+    nvmCallbackObj.CallbackFunc    = callback;
+    nvmCallbackObj.Context         = context;
 }
 
-void NVM_InterruptHandler( void )
+void __attribute__((used)) NVM_InterruptHandler( void )
 {
     IFS0CLR = NVM_INTERRUPT_FLAG_MASK;
 
-    if(nvmCallbackFunc != NULL)
+    if(nvmCallbackObj.CallbackFunc != NULL)
     {
-        nvmCallbackFunc(nvmContext);
+        uintptr_t context = nvmCallbackObj.Context;
+        nvmCallbackObj.CallbackFunc(context);
     }
 }
 
@@ -135,8 +140,8 @@ static void NVM_StartOperationAtAddress( uint32_t address,  NVM_OPERATION_MODE o
 
     // Write the unlock key sequence
     NVMKEY = 0x0;
-    NVMKEY = NVM_UNLOCK_KEY1;
-    NVMKEY = NVM_UNLOCK_KEY2;
+    NVMKEY = (uint32_t)NVM_UNLOCK_KEY1;
+    NVMKEY = (uint32_t)NVM_UNLOCK_KEY2;
 
     // Start the operation
     NVMCONSET = _NVMCON_WR_MASK;
@@ -159,7 +164,8 @@ void NVM_Initialize( void )
 
 bool NVM_Read( uint32_t *data, uint32_t length, const uint32_t address )
 {
-    memcpy((void *)data, (void *)KVA0_TO_KVA1(address), length);
+    /* MISRA C-2012 Rule 11.6 violated 1 time below. Deviation record ID - H3_MISRAC_2012_R_11_6_DR_1*/
+    (void)memcpy(data, (uint32_t*)KVA0_TO_KVA1(address), length);
 
     return true;
 }
@@ -197,5 +203,5 @@ NVM_ERROR NVM_ErrorGet( void )
 
 bool NVM_IsBusy( void )
 {
-    return (bool)NVMCONbits.WR;
+    return (NVMCONbits.WR != 0U);
 }
