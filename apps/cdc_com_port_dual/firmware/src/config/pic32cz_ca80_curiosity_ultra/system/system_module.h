@@ -195,6 +195,10 @@ typedef enum
     and DRV_<module>_Reinitialize that are defined by each device driver.
 
 */
+/* MISRA C-2012 Rule 6.1 deviated:1 Deviation record ID -  H3_MISRAC_2012_R_6_1_DR_1 */
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wunknown-pragmas"
+#pragma coverity compliance block deviate:1 "MISRA C-2012 Rule 6.1" "H3_MISRAC_2012_R_6_1_DR_1"    
 
 typedef union
 {
@@ -208,7 +212,9 @@ typedef union
 
 } SYS_MODULE_INIT;
 
-
+#pragma coverity compliance end_block "MISRA C-2012 Rule 6.1"
+#pragma GCC diagnostic pop
+/* MISRAC 2012 deviation block end */
 // *****************************************************************************
 // *****************************************************************************
 // Section:  Pointers to System Module Routines
