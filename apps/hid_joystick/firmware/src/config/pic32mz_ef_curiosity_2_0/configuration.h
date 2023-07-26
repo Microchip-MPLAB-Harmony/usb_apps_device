@@ -104,15 +104,17 @@ extern "C" {
 
 /* Enables Device Support */
 #define DRV_USBHS_DEVICE_SUPPORT                          true
-	
+
 /* Disable Host Support */
 #define DRV_USBHS_HOST_SUPPORT                            false
 
 
 
 
+
 /* Alignment for buffers that are submitted to USB Driver*/ 
 #define USB_ALIGN  CACHE_ALIGN  __ALIGNED(16)
+
 
 /* Maximum instances of HID function driver */
 #define USB_DEVICE_HID_INSTANCES_NUMBER     1 
