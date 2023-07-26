@@ -40,67 +40,86 @@
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *******************************************************************************/
 //DOM-IGNORE-END
+#include <device.h>
 #include "definitions.h"
+#include "interrupts.h"
 
+// *****************************************************************************
+// *****************************************************************************
+// Section: Local defines
+// *****************************************************************************
+// *****************************************************************************
+#define AICREDIR_KEY_GUARD 0xB6D81C4DU
+
+typedef void (*pfn_handler_t)(void);
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: Local Functions
+// Section: Local Variables
 // *****************************************************************************
 // *****************************************************************************
+/* data for irq register initialization */
+static struct
+{
+    uint32_t        peripheralId;
+    pfn_handler_t   handler;
+    uint32_t        srcType;
+    uint32_t        priority;
+}irqData[] =
+{
+    { 3U,  FreeRTOS_Tick_Handler,      AIC_SMR_SRCTYPE_INT_LEVEL_SENSITIVE_Val,  0x0U },
+    { 42U, DRV_USB_UDPHS_Handler,      AIC_SMR_SRCTYPE_INT_LEVEL_SENSITIVE_Val,  0x0U },
+};
 
 // *****************************************************************************
 // *****************************************************************************
 // Section: AIC Implementation
 // *****************************************************************************
 // *****************************************************************************
-extern IrqData  irqData[2];
-extern uint32_t irqDataEntryCount;
-void DefaultInterruptHandlerForSpurious( void );
 
-void
-AIC_INT_Initialize( void )
-{   
-    const uint32_t      keyGuard = 0xb6d81c4d;
-    const unsigned      MaxNumPeripherals = 77;
-    const unsigned      MaxInterruptDepth = 8;
-    uint32_t            ii;
-    aic_registers_t *   aicPtr;
+void AIC_INT_Initialize( void )
+{
+    const uint32_t MaxNumPeripherals = 77U;
+    const uint32_t MaxInterruptDepth = 8U;
+    uint32_t ii;
+    uint32_t irqDataEntryCount = sizeof(irqData) / sizeof(irqData[0]);
 
     __disable_irq();
-    __DMB();                                                // Data Memory Barrier
-    __ISB();                                                // Instruction Synchronization Barrier
-    ////// secure to nonSecure redirection
-    SFR_REGS->SFR_AICREDIR = (keyGuard ^ SFR_REGS->SFR_SN1) | SFR_AICREDIR_NSAIC_Msk;
-    //////
-    aicPtr = (aic_registers_t *) AIC_REGS;
+    __DMB();
+    __ISB();
+    /* All interrupts are managed by non secure AIC */
+    SFR_REGS->SFR_AICREDIR = (AICREDIR_KEY_GUARD ^ SFR_REGS->SFR_SN1) | SFR_AICREDIR_NSAIC_Msk;
+
+    /* Disable all interrupts */
     for( ii= 0; ii < MaxNumPeripherals; ++ii )
     {
-        aicPtr->AIC_SSR = AIC_SSR_INTSEL( ii );
-        aicPtr->AIC_IDCR = AIC_IDCR_Msk;
+        AIC_REGS->AIC_SSR = AIC_SSR_INTSEL(ii);
+        AIC_REGS->AIC_IDCR = AIC_IDCR_Msk;
         __DSB();
         __ISB();
-        aicPtr->AIC_ICCR = AIC_ICCR_INTCLR_Msk;
-    }
-    for( ii = 0; ii < MaxInterruptDepth; ++ii )
-    {   // pop all possible nested interrupts from internal hw stack
-        aicPtr->AIC_EOICR = AIC_EOICR_ENDIT_Msk;
+        AIC_REGS->AIC_ICCR = AIC_ICCR_INTCLR_Msk;
     }
 
-    for( ii = 0; ii < irqDataEntryCount; ++ii )
-    {   // inspect irqData array in interrupts.c to see the configuration data
-        aicPtr = (aic_registers_t *) irqData[ ii ].targetRegisters;
-        aicPtr->AIC_SSR = AIC_SSR_INTSEL( irqData[ ii ].peripheralId );
-        aicPtr->AIC_SMR = (aicPtr->AIC_SMR & ~AIC_SMR_SRCTYPE_Msk)  | AIC_SMR_SRCTYPE( irqData[ ii ].srcType );
-        aicPtr->AIC_SMR = (aicPtr->AIC_SMR & ~AIC_SMR_PRIORITY_Msk) | (irqData[ ii ].priority << AIC_SMR_PRIORITY_Pos);
-        aicPtr->AIC_SPU = (uint32_t) DefaultInterruptHandlerForSpurious;
-        aicPtr->AIC_SVR = (uint32_t) irqData[ ii ].handler;
-        aicPtr->AIC_IECR = AIC_IECR_Msk;
+    /* pop all possible nested interrupts from internal hw stack */
+    for( ii = 0; ii < MaxInterruptDepth; ++ii )
+    {
+        AIC_REGS->AIC_EOICR = AIC_EOICR_ENDIT_Msk;
     }
-    //////
-    __DSB();                                                // Data Synchronization Barrier
+
+    /* Configure active interrupts */
+    for( ii = 0; ii < irqDataEntryCount; ++ii )
+    {
+        AIC_REGS->AIC_SSR = AIC_SSR_INTSEL(irqData[ii].peripheralId);
+        AIC_REGS->AIC_SMR = (AIC_REGS->AIC_SMR & ~AIC_SMR_SRCTYPE_Msk) | AIC_SMR_SRCTYPE( irqData[ii].srcType );
+        AIC_REGS->AIC_SMR = (AIC_REGS->AIC_SMR & ~AIC_SMR_PRIORITY_Msk) | AIC_SMR_PRIORITY(irqData[ii].priority);
+        AIC_REGS->AIC_SPU = (uint32_t) SPURIOUS_INTERRUPT_Handler;
+        AIC_REGS->AIC_SVR = (uint32_t) irqData[ii].handler;
+        AIC_REGS->AIC_IECR = AIC_IECR_Msk;
+    }
+
+    __DSB();
     __enable_irq();
-    __ISB();                                                // Allow pended interrupts to be recognized immediately
+    __ISB();
 }
 
 void AIC_INT_IrqEnable( void )
@@ -112,7 +131,7 @@ void AIC_INT_IrqEnable( void )
 bool AIC_INT_IrqDisable( void )
 {
     /* Add a volatile qualifier to the return value to prevent the compiler from optimizing out this function */
-    volatile bool previousValue = (CPSR_I_Msk & __get_CPSR())? false:true;
+    volatile bool previousValue = ((CPSR_I_Msk & __get_CPSR()) == 0U);
     __disable_irq();
     __DMB();
     return( previousValue );
@@ -120,7 +139,7 @@ bool AIC_INT_IrqDisable( void )
 
 void AIC_INT_IrqRestore( bool state )
 {
-    if( state == true )
+    if(state)
     {
         __DMB();
         __enable_irq();
