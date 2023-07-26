@@ -1,7 +1,7 @@
 /*
- * Instance header file for ATSAMA5D28CLD2G
+ * Instance header file for ATSAMA5D29
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,17 +20,17 @@
  *
  */
 
-/* file generated from device description version 2021-06-28T09:00:02Z */
-#ifndef _SAMA5D2_UART3_INSTANCE_
-#define _SAMA5D2_UART3_INSTANCE_
+/* file generated from device description version 2022-10-04T10:37:14Z */
+#ifndef _SAMA5D_UART3_INSTANCE_
+#define _SAMA5D_UART3_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for UART3 peripheral ========== */
-#define UART3_INSTANCE_ID                        _UL_(27)   
-#define UART3_CLOCK_ID                           _UL_(27)   
-#define UART3_DMAC_ID_TX                         _UL_(41)   
-#define UART3_DMAC_ID_RX                         _UL_(42)   
-#define UART3_BRSRCCK_PERIPH_CLK                 _UL_(0)    /* MCK */
-#define UART3_BRSRCCK_GCLK                       _UL_(0)    /* GCLK */
+#define UART3_INSTANCE_ID                        (27)       
+#define UART3_CLOCK_ID                           (27)       
+#define UART3_DMAC_ID_TX                         (41)       
+#define UART3_DMAC_ID_RX                         (42)       
+#define UART3_BRSRCCK_PERIPH_CLK                 (0)        /* MCK */
+#define UART3_BRSRCCK_GCLK                       (0)        /* GCLK */
 
-#endif /* _SAMA5D2_UART3_INSTANCE_ */
+#endif /* _SAMA5D_UART3_INSTANCE_ */

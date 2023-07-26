@@ -57,6 +57,13 @@
 // *****************************************************************************
 // *****************************************************************************
 
+void SDMMC1_InterruptHandler (void);
+void TC0_InterruptHandler (void);
+void DRV_USB_UDPHS_Handler (void);
+
+
+/* Interrupt Handler for spurious interrupts */
+void SPURIOUS_INTERRUPT_Handler (void);
 
 
 #endif // INTERRUPTS_H
