@@ -1,18 +1,23 @@
 /*******************************************************************************
-  System Exceptions File
+  Interrupt System Service Library Interface Implementation File
 
-  File Name:
-    exceptions.c
+  Company
+    Microchip Technology Inc.
 
-  Summary:
-    This file contains a function which overrides the default _weak_ exception
-    handlers provided by the interrupt.c file.
+  File Name
+    sys_int_nvic.c
 
-  Description:
-    This file redefines the default _weak_  exception handler with a more debug
-    friendly one. If an unexpected exception occurs the code will stop in a
-    while(1) loop.
- *******************************************************************************/
+  Summary
+    NVIC implementation of interrupt system service library.
+
+  Description
+    This file implements the interface to the interrupt system service library
+    not provided in CMSIS.
+
+  Remarks:
+    None.
+
+*******************************************************************************/
 
 // DOM-IGNORE-BEGIN
 /*******************************************************************************
@@ -39,84 +44,59 @@
 *******************************************************************************/
 // DOM-IGNORE-END
 
+
 // *****************************************************************************
 // *****************************************************************************
 // Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
-    #include "configuration.h"
-#include "interrupts.h"
-#include "definitions.h"
+#include "system/int/sys_int.h"
+#include "peripheral/nvic/plib_nvic.h"
 
- 
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: Exception Handling Routine
+// Section: Interface Implementation
 // *****************************************************************************
 // *****************************************************************************
 
-/* Brief default interrupt handlers for core IRQs.*/
-void __attribute__((noreturn, weak)) NonMaskableInt_Handler(void)
+// *****************************************************************************
+void SYS_INT_Enable( void )
 {
-#if defined(__DEBUG) || defined(__DEBUG_D) && defined(__XC32)
-    __builtin_software_breakpoint();
-#endif
-    while (true)
-    {
+    NVIC_INT_Enable();
+}
+
+bool SYS_INT_Disable( void )
+{
+    return NVIC_INT_Disable();
+}
+
+void SYS_INT_Restore( bool state )
+{
+    NVIC_INT_Restore(state);
+}
+
+bool SYS_INT_SourceDisable( INT_SOURCE source )
+{
+    bool processorStatus;
+    bool intSrcStatus;
+
+    processorStatus = SYS_INT_Disable();
+
+    intSrcStatus = (NVIC_GetEnableIRQ(source) != 0U);
+
+    NVIC_DisableIRQ( source );
+
+    SYS_INT_Restore( processorStatus );
+
+    /* return the source status */
+    return intSrcStatus;
+}
+
+void SYS_INT_SourceRestore( INT_SOURCE source, bool status )
+{
+    if( status ) {
+        SYS_INT_SourceEnable( source );
     }
+    return;
 }
- 
-void __attribute__((noreturn, weak)) HardFault_Handler(void)
-{
-#if defined(__DEBUG) || defined(__DEBUG_D) && defined(__XC32)
-   __builtin_software_breakpoint();
-#endif
-   while (true)
-   {
-   }
-}
-
-void __attribute__((noreturn, weak)) DebugMonitor_Handler(void)
-{
-#if defined(__DEBUG) || defined(__DEBUG_D) && defined(__XC32)
-   __builtin_software_breakpoint();
-#endif
-   while (true)
-   {
-   }
-}
-
-void __attribute__((noreturn, weak)) MemoryManagement_Handler(void)
-{
-#if defined(__DEBUG) || defined(__DEBUG_D) && defined(__XC32)
-   __builtin_software_breakpoint();
-#endif
-   while (true)
-   {
-   }
-}
-
-void __attribute__((noreturn, weak)) BusFault_Handler(void)
-{
-#if defined(__DEBUG) || defined(__DEBUG_D) && defined(__XC32)
-   __builtin_software_breakpoint();
-#endif
-   while (true)
-   {
-   }
-}
-
-void __attribute__((noreturn, weak)) UsageFault_Handler(void)
-{
-#if defined(__DEBUG) || defined(__DEBUG_D) && defined(__XC32)
-   __builtin_software_breakpoint();
-#endif
-   while (true)
-   {
-   }
-}
- 
-/*******************************************************************************
- End of File
- */

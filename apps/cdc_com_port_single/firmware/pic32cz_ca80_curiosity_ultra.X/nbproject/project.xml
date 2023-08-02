@@ -4,7 +4,7 @@
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
             <name>cdc_com_port_single_pic32cz_ca80_curiosity_ultra</name>
-            <creation-uuid>7823a87c-b6f3-4578-8acb-356677498e68</creation-uuid>
+            <creation-uuid>b14698f8-0150-45e0-8bfa-95bd2917c713</creation-uuid>
             <make-project-type>0</make-project-type>
             <sourceEncoding>ISO-8859-1</sourceEncoding>
             <make-dep-projects/>

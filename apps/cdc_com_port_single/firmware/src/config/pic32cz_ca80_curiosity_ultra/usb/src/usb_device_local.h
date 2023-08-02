@@ -114,8 +114,8 @@ typedef struct
 {
     /* Control transfer state */
     bool  inProgress;
-    uint32_t rxDataCount;
-    uint32_t expectedRxDataCount;
+    uint8_t rxDataCount;
+    uint8_t expectedRxDataCount;
     SYS_MODULE_INDEX handlerIndex;
     uint8_t * rxBuffer;
 
