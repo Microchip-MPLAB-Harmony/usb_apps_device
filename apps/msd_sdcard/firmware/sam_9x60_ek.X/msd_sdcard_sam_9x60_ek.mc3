@@ -5130,7 +5130,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\definitions.h</file>
-         <hash>36719652bbffbca9906f890eb5116aa653c30dd5af4efedc5d47e0210edb127a</hash>
+         <hash>af7c4215a53cd54efe72f6ff64864a9633ebe756459d00223e9c631f454d492a</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\system\time\src\sys_time_local.h</file>

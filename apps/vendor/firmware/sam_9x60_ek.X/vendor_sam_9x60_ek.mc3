@@ -448,7 +448,8 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="!@#harmonyUserData"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;UserData&gt;
   &lt;UserData dnOrder=&quot;0&quot;&gt;
-    &lt;ComponentGraph dnOrder=&quot;0&quot; id=&quot;__ROOTVIEW&quot;&gt;
+    &lt;GraphSettings canvasHeight=&quot;246&quot; canvasWidth=&quot;533&quot; dnOrder=&quot;0&quot;/&gt;
+    &lt;ComponentGraph dnOrder=&quot;1&quot; id=&quot;__ROOTVIEW&quot;&gt;
       &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
         &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;BSP_SAM_9X60_Evaluation_Kit&quot; x=&quot;159&quot; y=&quot;61&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;HarmonyCore&quot; x=&quot;8&quot; y=&quot;8&quot;/&gt;
@@ -459,7 +460,6 @@
         &lt;ElementPosition dnOrder=&quot;6&quot; id=&quot;usb_device_vendor&quot; x=&quot;332&quot; y=&quot;129&quot;/&gt;
       &lt;/ElementPositions&gt;
     &lt;/ComponentGraph&gt;
-    &lt;GraphSettings canvasHeight=&quot;246&quot; canvasWidth=&quot;533&quot; dnOrder=&quot;1&quot;/&gt;
   &lt;/UserData&gt;
 &lt;/UserData&gt;
 </value>
@@ -3555,7 +3555,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\definitions.h</file>
-         <hash>be30c87fd9d1c20139df6eabd8e581c5a0ec17f8c1db85b35988998fbe4598cf</hash>
+         <hash>867e9943cb76738b82d6991545b145e1f419b3865e28d1ca784ee128526ed30f</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\instance\syscwp.h</file>
