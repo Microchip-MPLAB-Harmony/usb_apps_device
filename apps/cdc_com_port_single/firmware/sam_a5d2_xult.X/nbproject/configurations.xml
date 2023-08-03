@@ -153,6 +153,7 @@
             <itemPath>../src/packs/ATSAMA5D27_DFP/instance/flexcom3.h</itemPath>
             <itemPath>../src/packs/ATSAMA5D27_DFP/instance/flexcom4.h</itemPath>
             <itemPath>../src/packs/ATSAMA5D27_DFP/instance/gmac.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/hsmc.h</itemPath>
             <itemPath>../src/packs/ATSAMA5D27_DFP/instance/i2sc0.h</itemPath>
             <itemPath>../src/packs/ATSAMA5D27_DFP/instance/i2sc1.h</itemPath>
             <itemPath>../src/packs/ATSAMA5D27_DFP/instance/icm.h</itemPath>

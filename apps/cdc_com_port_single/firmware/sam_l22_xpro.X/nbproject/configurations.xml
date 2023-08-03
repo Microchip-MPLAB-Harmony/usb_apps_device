@@ -99,6 +99,7 @@
             <itemPath>../src/packs/ATSAML22N18A_DFP/component/dsu.h</itemPath>
             <itemPath>../src/packs/ATSAML22N18A_DFP/component/eic.h</itemPath>
             <itemPath>../src/packs/ATSAML22N18A_DFP/component/evsys.h</itemPath>
+            <itemPath>../src/packs/ATSAML22N18A_DFP/component/fuses.h</itemPath>
             <itemPath>../src/packs/ATSAML22N18A_DFP/component/freqm.h</itemPath>
             <itemPath>../src/packs/ATSAML22N18A_DFP/component/gclk.h</itemPath>
             <itemPath>../src/packs/ATSAML22N18A_DFP/component/mclk.h</itemPath>
@@ -130,6 +131,7 @@
             <itemPath>../src/packs/ATSAML22N18A_DFP/instance/dsu.h</itemPath>
             <itemPath>../src/packs/ATSAML22N18A_DFP/instance/eic.h</itemPath>
             <itemPath>../src/packs/ATSAML22N18A_DFP/instance/evsys.h</itemPath>
+            <itemPath>../src/packs/ATSAML22N18A_DFP/instance/fuses.h</itemPath>
             <itemPath>../src/packs/ATSAML22N18A_DFP/instance/freqm.h</itemPath>
             <itemPath>../src/packs/ATSAML22N18A_DFP/instance/gclk.h</itemPath>
             <itemPath>../src/packs/ATSAML22N18A_DFP/instance/mclk.h</itemPath>

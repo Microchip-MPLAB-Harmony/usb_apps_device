@@ -132,6 +132,7 @@
             <itemPath>../src/packs/SAMA7G54_DFP/component/bsc.h</itemPath>
             <itemPath>../src/packs/SAMA7G54_DFP/component/chipid.h</itemPath>
             <itemPath>../src/packs/SAMA7G54_DFP/component/cpkcc.h</itemPath>
+            <itemPath>../src/packs/SAMA7G54_DFP/component/csi.h</itemPath>
             <itemPath>../src/packs/SAMA7G54_DFP/component/csi2dc.h</itemPath>
             <itemPath>../src/packs/SAMA7G54_DFP/component/ddr3phy.h</itemPath>
             <itemPath>../src/packs/SAMA7G54_DFP/component/dwdt.h</itemPath>

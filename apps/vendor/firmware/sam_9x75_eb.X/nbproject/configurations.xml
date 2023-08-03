@@ -201,6 +201,7 @@
             <itemPath>../src/packs/SAM9X75_DFP/instance/ssc.h</itemPath>
             <itemPath>../src/packs/SAM9X75_DFP/instance/flexcom4.h</itemPath>
             <itemPath>../src/packs/SAM9X75_DFP/instance/gmac.h</itemPath>
+            <itemPath>../src/packs/SAM9X75_DFP/instance/dsi.h</itemPath>
           </logicalFolder>
           <logicalFolder name="pio" displayName="pio" projectFiles="true">
             <itemPath>../src/packs/SAM9X75_DFP/pio/sam9x75.h</itemPath>

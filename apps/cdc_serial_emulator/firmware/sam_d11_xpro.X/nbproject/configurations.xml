@@ -109,6 +109,7 @@
             <itemPath>../src/packs/ATSAMD11D14AM_DFP/component/dsu.h</itemPath>
             <itemPath>../src/packs/ATSAMD11D14AM_DFP/component/eic.h</itemPath>
             <itemPath>../src/packs/ATSAMD11D14AM_DFP/component/evsys.h</itemPath>
+            <itemPath>../src/packs/ATSAMD11D14AM_DFP/component/fuses.h</itemPath>
             <itemPath>../src/packs/ATSAMD11D14AM_DFP/component/gclk.h</itemPath>
             <itemPath>../src/packs/ATSAMD11D14AM_DFP/component/hmatrixb.h</itemPath>
             <itemPath>../src/packs/ATSAMD11D14AM_DFP/component/mtb.h</itemPath>
@@ -133,6 +134,7 @@
             <itemPath>../src/packs/ATSAMD11D14AM_DFP/instance/dsu.h</itemPath>
             <itemPath>../src/packs/ATSAMD11D14AM_DFP/instance/eic.h</itemPath>
             <itemPath>../src/packs/ATSAMD11D14AM_DFP/instance/evsys.h</itemPath>
+            <itemPath>../src/packs/ATSAMD11D14AM_DFP/instance/fuses.h</itemPath>
             <itemPath>../src/packs/ATSAMD11D14AM_DFP/instance/gclk.h</itemPath>
             <itemPath>../src/packs/ATSAMD11D14AM_DFP/instance/mtb.h</itemPath>
             <itemPath>../src/packs/ATSAMD11D14AM_DFP/instance/nvmctrl.h</itemPath>

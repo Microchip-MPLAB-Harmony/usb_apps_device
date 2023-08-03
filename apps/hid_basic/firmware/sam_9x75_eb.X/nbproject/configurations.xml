@@ -204,6 +204,7 @@
             <itemPath>../src/packs/SAM9X75_DFP/instance/classd.h</itemPath>
             <itemPath>../src/packs/SAM9X75_DFP/instance/csi2dc.h</itemPath>
             <itemPath>../src/packs/SAM9X75_DFP/instance/aic.h</itemPath>
+            <itemPath>../src/packs/SAM9X75_DFP/instance/dsi.h</itemPath>
           </logicalFolder>
           <logicalFolder name="pio" displayName="pio" projectFiles="true">
             <itemPath>../src/packs/SAM9X75_DFP/pio/sam9x75.h</itemPath>
