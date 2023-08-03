@@ -187,6 +187,7 @@
           <itemPath>../src/config/pic32mk_gp_db_freertos/FreeRTOSConfig.h</itemPath>
           <itemPath>../src/config/pic32mk_gp_db_freertos/user.h</itemPath>
           <itemPath>../src/config/pic32mk_gp_db_freertos/configuration.h</itemPath>
+          <itemPath>../src/config/pic32mk_gp_db_freertos/sys_tasks.h</itemPath>
           <itemPath>../src/config/pic32mk_gp_db_freertos/device.h</itemPath>
           <itemPath>../src/config/pic32mk_gp_db_freertos/interrupts.h</itemPath>
         </logicalFolder>

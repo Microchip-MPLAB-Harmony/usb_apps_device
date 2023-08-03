@@ -102,6 +102,7 @@
           <itemPath>../src/config/pic32mz_ef_sk_freertos/FreeRTOSConfig.h</itemPath>
           <itemPath>../src/config/pic32mz_ef_sk_freertos/user.h</itemPath>
           <itemPath>../src/config/pic32mz_ef_sk_freertos/configuration.h</itemPath>
+          <itemPath>../src/config/pic32mz_ef_sk_freertos/sys_tasks.h</itemPath>
           <itemPath>../src/config/pic32mz_ef_sk_freertos/interrupts.h</itemPath>
         </logicalFolder>
       </logicalFolder>

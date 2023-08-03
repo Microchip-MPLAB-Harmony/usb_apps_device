@@ -86,6 +86,7 @@
           <itemPath>../src/config/sam_a5d2_xult_freertos/FreeRTOSConfig.h</itemPath>
           <itemPath>../src/config/sam_a5d2_xult_freertos/user.h</itemPath>
           <itemPath>../src/config/sam_a5d2_xult_freertos/configuration.h</itemPath>
+          <itemPath>../src/config/sam_a5d2_xult_freertos/sys_tasks.h</itemPath>
           <itemPath>../src/config/sam_a5d2_xult_freertos/interrupts.h</itemPath>
         </logicalFolder>
       </logicalFolder>
@@ -380,6 +381,7 @@
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
       <itemPath>../src/app.c</itemPath>
+      <itemPath>../src/config/sam_a5d2_xult_freertos/pin_configurations.csv</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>

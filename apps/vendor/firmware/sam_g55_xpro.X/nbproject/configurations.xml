@@ -78,6 +78,7 @@
           <itemPath>../src/config/sam_g55_xpro/definitions.h</itemPath>
           <itemPath>../src/config/sam_g55_xpro/user.h</itemPath>
           <itemPath>../src/config/sam_g55_xpro/configuration.h</itemPath>
+          <itemPath>../src/config/sam_g55_xpro/sys_tasks.h</itemPath>
           <itemPath>../src/config/sam_g55_xpro/device.h</itemPath>
           <itemPath>../src/config/sam_g55_xpro/interrupts.h</itemPath>
           <itemPath>../src/config/sam_g55_xpro/device_vectors.h</itemPath>
@@ -284,6 +285,7 @@
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
       <itemPath>../src/app.c</itemPath>
+      <itemPath>../src/config/sam_g55_xpro/pin_configurations.csv</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>

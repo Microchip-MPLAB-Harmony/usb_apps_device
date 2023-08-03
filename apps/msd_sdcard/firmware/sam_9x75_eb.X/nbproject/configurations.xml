@@ -101,6 +101,7 @@
           <itemPath>../src/config/sam_9x75_eb/toolchain_specifics.h</itemPath>
           <itemPath>../src/config/sam_9x75_eb/user.h</itemPath>
           <itemPath>../src/config/sam_9x75_eb/configuration.h</itemPath>
+          <itemPath>../src/config/sam_9x75_eb/sys_tasks.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="packs" displayName="packs" projectFiles="true">

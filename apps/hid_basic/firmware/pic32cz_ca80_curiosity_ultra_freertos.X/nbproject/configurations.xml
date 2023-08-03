@@ -109,6 +109,7 @@
           <itemPath>../src/config/pic32cz_ca80_curiosity_ultra_freertos/FreeRTOSConfig.h</itemPath>
           <itemPath>../src/config/pic32cz_ca80_curiosity_ultra_freertos/interrupts.h</itemPath>
           <itemPath>../src/config/pic32cz_ca80_curiosity_ultra_freertos/configuration.h</itemPath>
+          <itemPath>../src/config/pic32cz_ca80_curiosity_ultra_freertos/sys_tasks.h</itemPath>
           <itemPath>../src/config/pic32cz_ca80_curiosity_ultra_freertos/device_cache.h</itemPath>
           <itemPath>../src/config/pic32cz_ca80_curiosity_ultra_freertos/device.h</itemPath>
         </logicalFolder>

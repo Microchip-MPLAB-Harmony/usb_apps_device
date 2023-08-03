@@ -80,6 +80,7 @@
           <itemPath>../src/config/sam_e70_xult_freertos/FreeRTOSConfig.h</itemPath>
           <itemPath>../src/config/sam_e70_xult_freertos/user.h</itemPath>
           <itemPath>../src/config/sam_e70_xult_freertos/configuration.h</itemPath>
+          <itemPath>../src/config/sam_e70_xult_freertos/sys_tasks.h</itemPath>
           <itemPath>../src/config/sam_e70_xult_freertos/device.h</itemPath>
           <itemPath>../src/config/sam_e70_xult_freertos/interrupts.h</itemPath>
           <itemPath>../src/config/sam_e70_xult_freertos/device_vectors.h</itemPath>
@@ -356,6 +357,7 @@
       <itemPath>../src/mouse.c</itemPath>
       <itemPath>../src/main.c</itemPath>
       <itemPath>../src/app.c</itemPath>
+      <itemPath>../src/config/sam_e70_xult_freertos/pin_configurations.csv</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>

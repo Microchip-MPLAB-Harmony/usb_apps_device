@@ -86,6 +86,7 @@
           <itemPath>../src/config/sam_a7g5_ek/interrupts.h</itemPath>
           <itemPath>../src/config/sam_a7g5_ek/user.h</itemPath>
           <itemPath>../src/config/sam_a7g5_ek/configuration.h</itemPath>
+          <itemPath>../src/config/sam_a7g5_ek/sys_tasks.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="f2" displayName="packs" projectFiles="true">
@@ -350,6 +351,7 @@
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
       <itemPath>../src/app.c</itemPath>
+      <itemPath>../src/config/sam_a7g5_ek/pin_configurations.csv</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>

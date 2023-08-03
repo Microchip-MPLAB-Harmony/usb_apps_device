@@ -82,6 +82,7 @@
           <itemPath>../src/config/sam_a5d27_wlsom1_ek1/definitions.h</itemPath>
           <itemPath>../src/config/sam_a5d27_wlsom1_ek1/user.h</itemPath>
           <itemPath>../src/config/sam_a5d27_wlsom1_ek1/configuration.h</itemPath>
+          <itemPath>../src/config/sam_a5d27_wlsom1_ek1/sys_tasks.h</itemPath>
           <itemPath>../src/config/sam_a5d27_wlsom1_ek1/interrupts.h</itemPath>
         </logicalFolder>
       </logicalFolder>
@@ -312,6 +313,7 @@
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
       <itemPath>../src/app.c</itemPath>
+      <itemPath>../src/config/sam_a5d27_wlsom1_ek1/pin_configurations.csv</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>

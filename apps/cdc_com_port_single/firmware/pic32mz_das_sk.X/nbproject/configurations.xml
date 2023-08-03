@@ -101,6 +101,7 @@
           <itemPath>../src/config/pic32mz_das_sk/device.h</itemPath>
           <itemPath>../src/config/pic32mz_das_sk/user.h</itemPath>
           <itemPath>../src/config/pic32mz_das_sk/configuration.h</itemPath>
+          <itemPath>../src/config/pic32mz_das_sk/sys_tasks.h</itemPath>
           <itemPath>../src/config/pic32mz_das_sk/interrupts.h</itemPath>
         </logicalFolder>
       </logicalFolder>

@@ -188,6 +188,7 @@
           <itemPath>../src/config/pic32mx470_curiosity_freertos/FreeRTOSConfig.h</itemPath>
           <itemPath>../src/config/pic32mx470_curiosity_freertos/user.h</itemPath>
           <itemPath>../src/config/pic32mx470_curiosity_freertos/configuration.h</itemPath>
+          <itemPath>../src/config/pic32mx470_curiosity_freertos/sys_tasks.h</itemPath>
           <itemPath>../src/config/pic32mx470_curiosity_freertos/device.h</itemPath>
           <itemPath>../src/config/pic32mx470_curiosity_freertos/interrupts.h</itemPath>
         </logicalFolder>

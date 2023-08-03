@@ -76,6 +76,7 @@
           <itemPath>../src/config/sam_v71_xult/definitions.h</itemPath>
           <itemPath>../src/config/sam_v71_xult/user.h</itemPath>
           <itemPath>../src/config/sam_v71_xult/configuration.h</itemPath>
+          <itemPath>../src/config/sam_v71_xult/sys_tasks.h</itemPath>
           <itemPath>../src/config/sam_v71_xult/device.h</itemPath>
           <itemPath>../src/config/sam_v71_xult/interrupts.h</itemPath>
           <itemPath>../src/config/sam_v71_xult/device_vectors.h</itemPath>
@@ -293,6 +294,7 @@
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
       <itemPath>../src/app.c</itemPath>
+      <itemPath>../src/config/sam_v71_xult/pin_configurations.csv</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>

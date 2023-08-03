@@ -106,6 +106,7 @@
           <itemPath>../src/config/sam_a5d2_xult/device.h</itemPath>
           <itemPath>../src/config/sam_a5d2_xult/user.h</itemPath>
           <itemPath>../src/config/sam_a5d2_xult/configuration.h</itemPath>
+          <itemPath>../src/config/sam_a5d2_xult/sys_tasks.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="f2" displayName="packs" projectFiles="true">
@@ -353,6 +354,7 @@
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
       <itemPath>../src/app.c</itemPath>
+      <itemPath>../src/config/sam_a5d2_xult/pin_configurations.csv</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>

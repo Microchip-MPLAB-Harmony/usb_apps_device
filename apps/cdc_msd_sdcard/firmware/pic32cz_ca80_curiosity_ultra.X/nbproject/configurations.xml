@@ -132,6 +132,7 @@
             <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/usb/usb_host_hub_interface.h</itemPath>
           </logicalFolder>
           <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/configuration.h</itemPath>
+          <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/sys_tasks.h</itemPath>
           <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/definitions.h</itemPath>
           <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/device_vectors.h</itemPath>
           <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/interrupts.h</itemPath>

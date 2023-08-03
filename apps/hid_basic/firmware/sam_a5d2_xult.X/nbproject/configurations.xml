@@ -82,6 +82,7 @@
           <itemPath>../src/config/sam_a5d2_xult/definitions.h</itemPath>
           <itemPath>../src/config/sam_a5d2_xult/user.h</itemPath>
           <itemPath>../src/config/sam_a5d2_xult/configuration.h</itemPath>
+          <itemPath>../src/config/sam_a5d2_xult/sys_tasks.h</itemPath>
           <itemPath>../src/config/sam_a5d2_xult/interrupts.h</itemPath>
         </logicalFolder>
       </logicalFolder>
@@ -311,6 +312,7 @@
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
       <itemPath>../src/app.c</itemPath>
+      <itemPath>../src/config/sam_a5d2_xult/pin_configurations.csv</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>

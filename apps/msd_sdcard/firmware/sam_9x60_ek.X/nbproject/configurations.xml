@@ -102,6 +102,7 @@
           <itemPath>../src/config/sam_9x60_ek/device.h</itemPath>
           <itemPath>../src/config/sam_9x60_ek/user.h</itemPath>
           <itemPath>../src/config/sam_9x60_ek/configuration.h</itemPath>
+          <itemPath>../src/config/sam_9x60_ek/sys_tasks.h</itemPath>
           <itemPath>../src/config/sam_9x60_ek/interrupts.h</itemPath>
           <itemPath>../src/config/sam_9x60_ek/sys_tasks.h</itemPath>
         </logicalFolder>
@@ -332,6 +333,7 @@
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
       <itemPath>../src/app.c</itemPath>
+      <itemPath>../src/config/sam_9x60_ek/pin_configurations.csv</itemPath>
       <itemPath>../src/config/sam_9x60_ek/pin_configurations.csv</itemPath>
     </logicalFolder>
   </logicalFolder>

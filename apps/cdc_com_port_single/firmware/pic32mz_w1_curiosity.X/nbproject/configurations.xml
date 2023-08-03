@@ -190,6 +190,7 @@
           <itemPath>../src/config/pic32mz_w1_curiosity/device.h</itemPath>
           <itemPath>../src/config/pic32mz_w1_curiosity/user.h</itemPath>
           <itemPath>../src/config/pic32mz_w1_curiosity/configuration.h</itemPath>
+          <itemPath>../src/config/pic32mz_w1_curiosity/sys_tasks.h</itemPath>
           <itemPath>../src/config/pic32mz_w1_curiosity/interrupts.h</itemPath>
           <itemPath>../src/config/pic32mz_w1_curiosity/sys_tasks.h</itemPath>
         </logicalFolder>

@@ -92,6 +92,7 @@
             <itemPath>../src/config/sam_e54_xpro/usb/usb_chapter_9.h</itemPath>
           </logicalFolder>
           <itemPath>../src/config/sam_e54_xpro/configuration.h</itemPath>
+          <itemPath>../src/config/sam_e54_xpro/sys_tasks.h</itemPath>
           <itemPath>../src/config/sam_e54_xpro/interrupts.h</itemPath>
           <itemPath>../src/config/sam_e54_xpro/user.h</itemPath>
           <itemPath>../src/config/sam_e54_xpro/definitions.h</itemPath>

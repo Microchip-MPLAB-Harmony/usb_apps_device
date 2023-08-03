@@ -86,6 +86,7 @@
           <itemPath>../src/config/sam_a5d27_wlsom1_ek1_freertos/FreeRTOSConfig.h</itemPath>
           <itemPath>../src/config/sam_a5d27_wlsom1_ek1_freertos/user.h</itemPath>
           <itemPath>../src/config/sam_a5d27_wlsom1_ek1_freertos/configuration.h</itemPath>
+          <itemPath>../src/config/sam_a5d27_wlsom1_ek1_freertos/sys_tasks.h</itemPath>
           <itemPath>../src/config/sam_a5d27_wlsom1_ek1_freertos/interrupts.h</itemPath>
         </logicalFolder>
       </logicalFolder>

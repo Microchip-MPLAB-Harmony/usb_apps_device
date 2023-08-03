@@ -83,6 +83,7 @@
           <itemPath>../src/config/pic32cm_le00_curiosity_pro/definitions.h</itemPath>
           <itemPath>../src/config/pic32cm_le00_curiosity_pro/user.h</itemPath>
           <itemPath>../src/config/pic32cm_le00_curiosity_pro/configuration.h</itemPath>
+          <itemPath>../src/config/pic32cm_le00_curiosity_pro/sys_tasks.h</itemPath>
           <itemPath>../src/config/pic32cm_le00_curiosity_pro/interrupts.h</itemPath>
           <itemPath>../src/config/pic32cm_le00_curiosity_pro/device_vectors.h</itemPath>
         </logicalFolder>

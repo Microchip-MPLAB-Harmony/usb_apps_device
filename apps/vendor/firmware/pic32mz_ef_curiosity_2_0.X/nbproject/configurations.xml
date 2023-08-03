@@ -99,6 +99,7 @@
           <itemPath>../src/config/pic32mz_ef_curiosity_2_0/interrupts.h</itemPath>
           <itemPath>../src/config/pic32mz_ef_curiosity_2_0/user.h</itemPath>
           <itemPath>../src/config/pic32mz_ef_curiosity_2_0/configuration.h</itemPath>
+          <itemPath>../src/config/pic32mz_ef_curiosity_2_0/sys_tasks.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <itemPath>../src/app.h</itemPath>

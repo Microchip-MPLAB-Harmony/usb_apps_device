@@ -101,6 +101,7 @@
           <itemPath>../src/config/pic32mz_ef_curiosity_2/device.h</itemPath>
           <itemPath>../src/config/pic32mz_ef_curiosity_2/user.h</itemPath>
           <itemPath>../src/config/pic32mz_ef_curiosity_2/configuration.h</itemPath>
+          <itemPath>../src/config/pic32mz_ef_curiosity_2/sys_tasks.h</itemPath>
           <itemPath>../src/config/pic32mz_ef_curiosity_2/interrupts.h</itemPath>
         </logicalFolder>
       </logicalFolder>

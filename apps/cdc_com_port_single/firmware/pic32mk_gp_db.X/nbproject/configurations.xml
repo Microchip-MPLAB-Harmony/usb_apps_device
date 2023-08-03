@@ -186,6 +186,7 @@
           <itemPath>../src/config/pic32mk_gp_db/definitions.h</itemPath>
           <itemPath>../src/config/pic32mk_gp_db/user.h</itemPath>
           <itemPath>../src/config/pic32mk_gp_db/configuration.h</itemPath>
+          <itemPath>../src/config/pic32mk_gp_db/sys_tasks.h</itemPath>
           <itemPath>../src/config/pic32mk_gp_db/device.h</itemPath>
           <itemPath>../src/config/pic32mk_gp_db/interrupts.h</itemPath>
         </logicalFolder>

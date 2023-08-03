@@ -86,6 +86,7 @@
           <itemPath>../src/config/sam_e54_xpro_freertos/FreeRTOSConfig.h</itemPath>
           <itemPath>../src/config/sam_e54_xpro_freertos/user.h</itemPath>
           <itemPath>../src/config/sam_e54_xpro_freertos/configuration.h</itemPath>
+          <itemPath>../src/config/sam_e54_xpro_freertos/sys_tasks.h</itemPath>
           <itemPath>../src/config/sam_e54_xpro_freertos/device.h</itemPath>
           <itemPath>../src/config/sam_e54_xpro_freertos/interrupts.h</itemPath>
           <itemPath>../src/config/sam_e54_xpro_freertos/device_vectors.h</itemPath>

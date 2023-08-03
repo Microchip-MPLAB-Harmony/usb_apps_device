@@ -80,6 +80,7 @@
           <itemPath>../src/config/sam_9x75_eb/definitions.h</itemPath>
           <itemPath>../src/config/sam_9x75_eb/toolchain_specifics.h</itemPath>
           <itemPath>../src/config/sam_9x75_eb/configuration.h</itemPath>
+          <itemPath>../src/config/sam_9x75_eb/sys_tasks.h</itemPath>
           <itemPath>../src/config/sam_9x75_eb/device_cache.h</itemPath>
           <itemPath>../src/config/sam_9x75_eb/sys_tasks.h</itemPath>
         </logicalFolder>
