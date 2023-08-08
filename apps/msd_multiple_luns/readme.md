@@ -54,11 +54,11 @@ Board](#config_23)                   |
 - USB micro-B port J12 to connect the USB device to the USB Host PC.
 - LED1 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
 
-### <a name="config_23"></a> PIC32CZ Curiosity Development Board
+### <a name="config_23"></a> [PIC32CZ CA80 Curiosity Ultra development board](https://www.microchip.com/en-us/development-tool/ea61x20a)
 
 - To run the demo, the following additional hardware is required:
  
-- Insert the micro-SD card into the micro-SD Card slot J600 of the PIC32CZ Curiosity Development Board. 
+- Insert the micro-SD card into the micro-SD Card slot J600 of the PIC32CZ CA80 Curiosity Ultra development board. 
 - Use the USB micro-B port J102 to connect the USB Device to the USB Host PC.
 - LED1 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
 

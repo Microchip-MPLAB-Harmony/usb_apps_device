@@ -59,14 +59,14 @@ Following table gives the details of project configurations, target device used,
 | sam_g55_xpro.X                  | MPLABX | ATSAMG55J19         | [SAMG55 Xplained Pro Board](#config_6)                                    |
 | sam_l21_xpro.X                  | MPLABX | ATSAML21J18B        | [SAML21 Xplained Pro Board](#config_7)                                    |
 | sam_l22_xpro.X                  | MPLABX | ATSAML22N18A        | [SAML22 Xplained Pro Board](#config_8)                                    |
-| pic32cz_ca80_curiosity_ultra.X         | MPLABX | PIC32CZ8110CA80208   | [PIC32CZ Curiosity Development Board](#config_23)           |
-| pic32cz_ca80_curiosity_ultra_freertos.X         | MPLABX | PIC32CZ8110CA80208   | [PIC32CZ Curiosity Development Board](#config_23)           |
+| pic32cz_ca80_curiosity_ultra.X         | MPLABX | PIC32CZ8110CA80208   | [PIC32CZ CA80 Curiosity Ultra development board](#config_23)           |
+| pic32cz_ca80_curiosity_ultra_freertos.X         | MPLABX | PIC32CZ8110CA80208   | [PIC32CZ CA80 Curiosity Ultra development board](#config_23)           |
 | pic32ck_gc01_curiosity_ultra.X         | MPLABX | PIC32CK2051GC01144   | [PIC32CK Curiosity Ultra Development Board](#config_24)           |
 | pic32ck_gc01_curiosity_ultra_freertos.X         | MPLABX | PIC32CK2051GC01144   | [PIC32CK Curiosity Ultra Development Board](#config_24)           |
 
 ## <a name="config_title"></a> Configuring the Hardware
 
-### <a name="config_23"></a> PIC32CZ Curiosity Development Board
+### <a name="config_23"></a> [PIC32CZ CA80 Curiosity Ultra development board](https://www.microchip.com/en-us/development-tool/ea61x20a)
 
 - Use the USB micro-B connector (J102) to connect the USB Device to the USB Host PC.
 - LED0 indicates USB Device Configuration Set Complete event (The USB device functionality has been activated by the USB Host).

@@ -28,11 +28,11 @@ Following table gives the details of project configurations, target device used,
 | ------------------------------- | ------ | ------------------- | -------------------------------------------------------------------------- |
 | sam_e54_xpro.X                  | MPLABX | ATSAME54P20A        | [SAM E54 Xplained Pro Board](#config_3)                                    |
 | sam_l21_xpro.X                  | MPLABX | ATSAML21J18B        | [SAML21 Xplained Pro Board](#config_7)                                    |
-| pic32cz_ca80_curiosity_ultra.X  | MPLABX | PIC32CZ8110CA80208  | [PIC32CZ Curiosity Development Board](#config_23)           |
+| pic32cz_ca80_curiosity_ultra.X  | MPLABX | PIC32CZ8110CA80208  | [PIC32CZ CA80 Curiosity Ultra development board](#config_23)           |
 
 ## <a name="config_title"></a> Configuring the Hardware
 
-### <a name="config_23"></a> PIC32CZ CA80 Curiosity Development Board
+### <a name="config_23"></a> [PIC32CZ CA80 Curiosity Ultra development board](https://www.microchip.com/en-us/development-tool/ea61x20a)
 - Connect the USB device to the micro-B connector (J102) using a USB Type-A Female to micro-B male cable  (This cable is not included in the kit). 
 - LED0 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
 - Press the switch SW0 to trigger communication from the USB Device to the USB Host.

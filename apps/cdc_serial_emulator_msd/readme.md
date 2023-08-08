@@ -40,7 +40,7 @@ Following table gives the details of project configurations, target device used,
 - The CDC USB (UART to USB) interface on this board is served by the DEBUG_USB connector J700. Connecting this to the PC will create a COM port on the PC Host.
 
 
-### <a name="config_23"></a> PIC32CZ Curiosity Development Board
+### <a name="config_23"></a> [PIC32CZ CA80 Curiosity Ultra development board](https://www.microchip.com/en-us/development-tool/ea61x20a)
 
 - Use the USB micro-B port J102 to connect the USB Device to the USB Host PC.
 - LED0 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).

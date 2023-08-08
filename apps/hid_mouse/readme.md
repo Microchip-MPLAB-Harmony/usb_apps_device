@@ -32,7 +32,7 @@ Following table gives the details of project configurations, target device used,
 | sam_e54_xpro_freertos.X         | MPLABX | ATSAME54P20A        | [SAM E54 Xplained Pro Board](#config_3)                                    |
 | sam_e70_xult.X                  | MPLABX | ATSAME70Q21B        | [SAM E70 Xplained Ultra Board](#config_4)                                  |
 | sam_e70_xult_freertos.X         | MPLABX | ATSAME70Q21B        | [SAM E70 Xplained Ultra Board](#config_4)                                  |
-| pic32cz_ca80_curiosity_ultra.X  | MPLABX | PIC32CZ8110CA80208  | [PIC32CZ Curiosity Development Board](#config_23)   
+| pic32cz_ca80_curiosity_ultra.X  | MPLABX | PIC32CZ8110CA80208  | [PIC32CZ CA80 Curiosity Ultra development board](#config_23)   
 | sam_9x75_eb.X                   | MPLABX | SAM9X75             | [SAM9X75-DDR3-EB Evaluation Board](#config_25)                             |
 
 ## <a name="config_title"></a> Configuring the Hardware
@@ -40,7 +40,7 @@ Following table gives the details of project configurations, target device used,
 ### <a name="config_15"></a> [Curiosity PIC32MZ EF 2.0 Development Board](https://www.microchip.com/Developmenttools/ProductDetails/DM320209)
 
 - Use the USB micro-B port J201 to connect the USB Device to the USB Host PC.
-- LED2 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
+- LED1 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
 - Use Switch SW1 to stop and start the circular motion of the mouse pointer.
 
 ### <a name="config_13"></a> [Curiosity PIC32MX470 Development Board](https://www.microchip.com/Developmenttools/ProductDetails/dm320103)
@@ -49,17 +49,17 @@ Following table gives the details of project configurations, target device used,
 - LED1 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
 - Press the switch S1 to trigger communication from the USB Device to the USB Host.
 
-### <a name="config_23"></a> PIC32CZ Curiosity Development Board
+### <a name="config_23"></a> [PIC32CZ CA80 Curiosity Ultra development board](https://www.microchip.com/en-us/development-tool/ea61x20a)
 
 - Use the USB micro-B "USB DEVICE" connector (J102) to connect the USB Device to the USB Host PC.
-- LED0 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
+- LED1 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
 - Press the switch SW0 to trigger communication from the USB Device to the USB Host.
 
 ### <a name="config_3"></a> [SAM E54 Xplained Pro Board](https://www.microchip.com/developmenttools/productdetails/atsame54-xpro)
 
 - Use TARGET USB connector on the board to connect the USB Device to the USB Host PC.
 - LED0 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
-- Use Switch SW1 to stop and start the circular motion of the mouse pointer.
+- Use the Switch SW0 to stop and start the circular motion of the mouse pointer.
 
 ### <a name="config_4"></a> [SAM E70 Xplained Ultra Board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)
 
@@ -67,6 +67,7 @@ Following table gives the details of project configurations, target device used,
 - Use TARGET USB J200 connector on the board to connect the USB Device to the USB Host PC.
 - LED3 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
 - Use Switch SW1 to stop and start the circular motion of the mouse pointer.
+
 ### <a name="config_25"></a> [SAM9X75-DDR3-EB Evaluation Board](https://www.microchip.com/en-us/development-tool/EA14J50A)
 
 - Powered the board with an external power supply (or use the micro AB connector).

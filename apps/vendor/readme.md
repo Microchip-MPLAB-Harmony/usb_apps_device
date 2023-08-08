@@ -47,7 +47,7 @@ Following table gives the details of project configurations, target device used,
 | sam_e70_xult_freertos.X         | MPLABX | ATSAME70Q21B        | [SAME70 Xplained Ultra Board](#config_4)                                   |
 | sam_g55_xpro.X                  | MPLABX | ATSAMG55J19         | [SAMG55 Xplained Pro Board](#config_6)                                     |
 | sam_v71_xult.X                  | MPLABX | ATSAMV71Q21B        | [SAMV71 Xplained Ultra board](config_5)                                    |
-| pic32cz_ca80_curiosity_ultra.X  | MPLABX | PIC32CZ8110CA80208  | [PIC32CZ Curiosity Development Board](#config_23)                                     |
+| pic32cz_ca80_curiosity_ultra.X  | MPLABX | PIC32CZ8110CA80208  | [PIC32CZ CA80 Curiosity Ultra development board](#config_23)                                     |
 | pic32ck_gc01_curiosity_ultra.X  | MPLABX | PIC32CK2051GC01144  | [PIC32CK Curiosity Development Board](#config_24)                                     |
 
 
@@ -78,7 +78,7 @@ Following table gives the details of project configurations, target device used,
 - Use TARGET USB connector on the board to connect the USB Device to the USB Host PC.
 - LED0 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
 
-### <a name="config_23"></a> PIC32CZ Curiosity Development Board
+### <a name="config_23"></a> [PIC32CZ CA80 Curiosity Ultra development board](https://www.microchip.com/en-us/development-tool/ea61x20a)
 
 - Use the USB micro-B "USB DEVICE" connector (J102) to connect the USB Device to the USB Host PC.
 - LED0 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).

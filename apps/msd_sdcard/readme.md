@@ -37,7 +37,7 @@ Following table gives the details of project configurations, target device used,
 | sam_a5d27_wlsom1_ek1.X          | MPLABX | ATSAMA5D27C         | [ATSAMA5D27 WLSOM1 EK1](#config_19)                                        |
 | sam_a7g5_ek.X                   | MPLABX | SAMA7G54            | [SAMA7G5 EK Board](#config_21)                                             |
 | sam_e70_xult.X                  | MPLABX | ATSAME70Q21B        | [SAME70 Xplained Ultra Board](#config_4)                                   |
-| pic32cz_ca80_curiosity_ultra.X  | MPLABX | PIC32CZ8110CA80208  | [PIC32CZ Curiosity Development Board](#config_23)                                |
+| pic32cz_ca80_curiosity_ultra.X  | MPLABX | PIC32CZ8110CA80208  | [PIC32CZ CA80 Curiosity Ultra development board](#config_23)                                |
 | pic32ck_gc01_curiosity_ultra.X  | MPLABX | PIC32CK2051GC01144  | [PIC32CK Curiosity Development Board](#config_24)                                  |
 
 ## <a name="config_title"></a> Configuring the Hardware
@@ -159,12 +159,12 @@ Following table gives the details of project configurations, target device used,
 - Connect the USB MicroAB connector (J7) to the computer using an USB cable.
 - RGB LED turning to Green indicates USB Device Configuration Set Complete event (The USB device functionality has been activated by the USB Host).
 
-### <a name="config_23"></a> [PIC32CZ Curiosity Development Board](https://www.microchip.com/en-us/products/microcontrollers-and-microprocessors/32-bit-mcus)
+### <a name="config_23"></a> [PIC32CZ CA80 Curiosity Ultra development board](https://www.microchip.com/en-us/products/microcontrollers-and-microprocessors/32-bit-mcus)
 
 - To run the demo, the following additional hardware is required:
     - micro-sd card
 
-- Insert the micro-SD card into the micro-SD Card slot J600 of the PIC32CZ Curiosity Development Board. 
+- Insert the micro-SD card into the micro-SD Card slot J600 of the PIC32CZ CA80 Curiosity Ultra development board. 
 - Use the USB micro-B port J102 to connect the USB Device to the USB Host PC.
 - LED0 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
 
