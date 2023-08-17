@@ -313,7 +313,7 @@
       </toolsSet>
       <packs>
         <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
-        <pack name="SAME70_DFP" vendor="Microchip" version="4.9.129"/>
+        <pack name="SAME70_DFP" vendor="Microchip" version="4.10.248"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
