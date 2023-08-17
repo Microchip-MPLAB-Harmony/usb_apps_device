@@ -7866,12 +7866,12 @@
          <hash>6357468f7670698b16bfb6439d9919ed38eba99d4f03277a8b43ac34586fa1b3</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_9x60_curiosity\peripheral\sdmmc\plib_sdmmc0.h</file>
-         <hash>3e4c5d26242522a5fbbc57fdc2650158fec09f032ba8a1c1f2a816ef67f65edb</hash>
-      </entry>
-      <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\shdwc.h</file>
          <hash>8713dad40fd5a868e5615de4083d822c44b1be214855248e31643fff2f19da33</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_9x60_curiosity\peripheral\sdmmc\plib_sdmmc0.h</file>
+         <hash>3e4c5d26242522a5fbbc57fdc2650158fec09f032ba8a1c1f2a816ef67f65edb</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\peripheral\sdmmc\plib_sdmmc0.c</file>
@@ -8231,7 +8231,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\driver\usb\udphs\src\drv_usb_udphs_device.c</file>
-         <hash>f6bd8361d8f3e4c80b8fb73d87e24b60ca48c731ddf39a3c10df6cee7208a568</hash>
+         <hash>059f2399832f7226817d6c9cb6b21db3c657d73d68935c2772bb0af316090e18</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\toolchain_specifics.h</file>
@@ -8410,12 +8410,12 @@
          <hash>279b00a61a7375d0b01c7667db5f535ebd7cef5c512bc450cd9761563edb00ea</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_9x60_curiosity\peripheral\sdmmc\plib_sdmmc_common.h</file>
-         <hash>c8693c2b48d12e81468827118033749902c15d2ff29044c878587fd933322909</hash>
-      </entry>
-      <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\component\pwm.h</file>
          <hash>ffe11f093f5c06646b0f0470f9d36fb641ec31579ef88618ba094f59637082ec</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_9x60_curiosity\peripheral\sdmmc\plib_sdmmc_common.h</file>
+         <hash>c8693c2b48d12e81468827118033749902c15d2ff29044c878587fd933322909</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\peripheral\tc\plib_tc0.h</file>

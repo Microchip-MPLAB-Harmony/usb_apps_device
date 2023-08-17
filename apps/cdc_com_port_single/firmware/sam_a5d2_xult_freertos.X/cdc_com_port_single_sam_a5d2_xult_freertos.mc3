@@ -4423,12 +4423,12 @@
          <hash>5f8f12d88a8abdf3f90deb5a3d9bef9b7e940e939b2af3ebdf504ccaf629b859</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_a5d2_xult_freertos\usb\usb_device.h</file>
-         <hash>06a4f4c06b4b32ab90474b522ddbfc4922fbad93ccf6975240148f1ce4b71b46</hash>
-      </entry>
-      <entry>
          <file>..\src\packs\ATSAMA5D27_DFP\instance\uart2.h</file>
          <hash>4fa7e8ca8063272ed3e69fd1ea600965f74659f7f330f2812876d6a51bb359e5</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_a5d2_xult_freertos\usb\usb_device.h</file>
+         <hash>06a4f4c06b4b32ab90474b522ddbfc4922fbad93ccf6975240148f1ce4b71b46</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMA5D27_DFP\instance\pmc.h</file>
@@ -4495,16 +4495,16 @@
          <hash>03e9c94aba57e3cf7f4f73bc2d3eb4a96ae38f3425eedb5450622ca286475a0b</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_a5d2_xult_freertos\usb\src\usb_device_local.h</file>
-         <hash>3dc9e27b535edb31aa97aae04a0ce9ac12e5092ed3bae7ef6fd203bc1520ef33</hash>
-      </entry>
-      <entry>
          <file>..\src\packs\ATSAMA5D27_DFP\component\ptc.h</file>
          <hash>c322807df205ac6c4b22f8a4ffcb3297d60dcde08066f7d908274c6bda657069</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMA5D27_DFP\component\tc.h</file>
          <hash>bae243dc041d8719ed260fda1433acb5e04467f05daf68c04802125e4722dc61</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_a5d2_xult_freertos\usb\src\usb_device_local.h</file>
+         <hash>3dc9e27b535edb31aa97aae04a0ce9ac12e5092ed3bae7ef6fd203bc1520ef33</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMA5D27_DFP\instance\flexcom3.h</file>
@@ -4523,12 +4523,12 @@
          <hash>42327b9048e3d3a6ebd662384f479ccd68d3a1a4c5cb50e8255a32fa74feca54</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_a5d2_xult_freertos\usb_device_init_data.c</file>
-         <hash>dc4e1ea55db5c9591310a69f85384180db91e03f3a81ec6ef9d794d77cf4fc43</hash>
-      </entry>
-      <entry>
          <file>..\src\packs\ATSAMA5D27_DFP\component\chipid.h</file>
          <hash>19c216001e1dd64df7ee0f58fd9b0ffdbcea1915d58320675ec8d6268a2d5574</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_a5d2_xult_freertos\usb_device_init_data.c</file>
+         <hash>dc4e1ea55db5c9591310a69f85384180db91e03f3a81ec6ef9d794d77cf4fc43</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult_freertos\system\system_module.h</file>
@@ -5056,7 +5056,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult_freertos\driver\usb\udphs\src\drv_usb_udphs_device.c</file>
-         <hash>f6bd8361d8f3e4c80b8fb73d87e24b60ca48c731ddf39a3c10df6cee7208a568</hash>
+         <hash>059f2399832f7226817d6c9cb6b21db3c657d73d68935c2772bb0af316090e18</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult_freertos\peripheral\clk\plib_clk.h</file>

@@ -4741,16 +4741,16 @@
          <hash>cb55e2ae8eb4185d735f40e823a6cfdba53cf48a02c0766fbeeecca628d865a6</hash>
       </entry>
       <entry>
+         <file>..\src\config\sam_a5d27_wlsom1_ek1_freertos\usb\src\usb_device_function_driver.h</file>
+         <hash>5d7b7287898c95485fbfc37840b9bb3e6ace46ef7333413493137d0e40e50bec</hash>
+      </entry>
+      <entry>
          <file>..\src\packs\ATSAMA5D27CLD2G_DFP\component\pwm.h</file>
          <hash>e3c515a908d08ccafb2f0cd5254701da582f796f055ff7e8bd80ade8ecfa2049</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMA5D27CLD2G_DFP\component\rtc.h</file>
          <hash>d27186182faa8653cf63d011ef15d855f39781d2df99190905d9b6c153766247</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_a5d27_wlsom1_ek1_freertos\usb\src\usb_device_function_driver.h</file>
-         <hash>5d7b7287898c95485fbfc37840b9bb3e6ace46ef7333413493137d0e40e50bec</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMA5D27CLD2G_DFP\instance\aic.h</file>
@@ -5074,7 +5074,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_wlsom1_ek1_freertos\driver\usb\udphs\src\drv_usb_udphs_device.c</file>
-         <hash>f6bd8361d8f3e4c80b8fb73d87e24b60ca48c731ddf39a3c10df6cee7208a568</hash>
+         <hash>059f2399832f7226817d6c9cb6b21db3c657d73d68935c2772bb0af316090e18</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_wlsom1_ek1_freertos\usb_device_init_data.c</file>

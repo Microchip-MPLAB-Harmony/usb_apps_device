@@ -8711,7 +8711,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\definitions.h</file>
-         <hash>b6a2c281b4abcbe885081ea4c43e5422881c54fd264a99d5d0889e7d0ebd93a1</hash>
+         <hash>f8961a4b56bba0e664b81866458fd224fdd9348db806f26d59a3bc8b579ba733</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\flexcom12.h</file>
@@ -9059,7 +9059,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\driver\usb\udphs\src\drv_usb_udphs_device.c</file>
-         <hash>f6bd8361d8f3e4c80b8fb73d87e24b60ca48c731ddf39a3c10df6cee7208a568</hash>
+         <hash>059f2399832f7226817d6c9cb6b21db3c657d73d68935c2772bb0af316090e18</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\component\ssc.h</file>

@@ -3963,7 +3963,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\driver\usb\udphs\src\drv_usb_udphs_device.c</file>
-         <hash>f6bd8361d8f3e4c80b8fb73d87e24b60ca48c731ddf39a3c10df6cee7208a568</hash>
+         <hash>059f2399832f7226817d6c9cb6b21db3c657d73d68935c2772bb0af316090e18</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\interrupts.c</file>
@@ -4095,7 +4095,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\definitions.h</file>
-         <hash>ff518378f91368a2088a4002675c6da6fd93eb07cb2b290e9dcf112e90400773</hash>
+         <hash>1cc4d7c00532567157f7702c488715a1037dac66a06264d6b46676b666ceec3f</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\instance\uhphs_ohci.h</file>
@@ -4254,12 +4254,12 @@
          <hash>3348d3b5fafae4f7a5213f7e81b21ec30584eedaecc374349727faff40f68650</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_9x60_ek_freertos\usb\src\usb_device.c</file>
-         <hash>e2299e7132aaf91acd6857a827520f8bd5ecdc40d8ba2e6c4018b8441064a6cb</hash>
-      </entry>
-      <entry>
          <file>..\src\packs\SAM9X60_DFP\component\xdmac.h</file>
          <hash>25b3f0132bc7d7255f1b4b1ac7f2f3471963daec655aad013e8bc4b7d0008f51</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_9x60_ek_freertos\usb\src\usb_device.c</file>
+         <hash>e2299e7132aaf91acd6857a827520f8bd5ecdc40d8ba2e6c4018b8441064a6cb</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\component\rstc.h</file>

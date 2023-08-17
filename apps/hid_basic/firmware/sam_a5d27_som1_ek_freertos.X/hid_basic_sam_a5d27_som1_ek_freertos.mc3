@@ -4904,12 +4904,12 @@
          <hash>e53e54f4e14983807c691f0d3c3b9c8f2455bcd6bbeae93ccce8adb26268fd96</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_a5d27_som1_ek_freertos\usb\src\usb_device.c</file>
-         <hash>e2299e7132aaf91acd6857a827520f8bd5ecdc40d8ba2e6c4018b8441064a6cb</hash>
-      </entry>
-      <entry>
          <file>..\src\packs\ATSAMA5D27CD1G_DFP\instance\flexcom1.h</file>
          <hash>112cfa2079724597ffb9c0f23027a1fff41986132c0ddac11471e3d3daee21da</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_a5d27_som1_ek_freertos\usb\src\usb_device.c</file>
+         <hash>e2299e7132aaf91acd6857a827520f8bd5ecdc40d8ba2e6c4018b8441064a6cb</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\usb\usb_hid.h</file>
@@ -5513,7 +5513,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\driver\usb\udphs\src\drv_usb_udphs_device.c</file>
-         <hash>f6bd8361d8f3e4c80b8fb73d87e24b60ca48c731ddf39a3c10df6cee7208a568</hash>
+         <hash>059f2399832f7226817d6c9cb6b21db3c657d73d68935c2772bb0af316090e18</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMA5D27CD1G_DFP\component\xdmac.h</file>
@@ -5576,12 +5576,12 @@
          <hash>264985fdfdad294e2dadea6ac67bf5aba8d7f634123746cd20998decd4bb0d6c</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_a5d27_som1_ek_freertos\usb\src\usb_external_dependencies.h</file>
-         <hash>5110f718908d8f79253ce5b4b44172288cc179ff61d18e387f9e90ae9afbb1b6</hash>
-      </entry>
-      <entry>
          <file>..\src\packs\ATSAMA5D27CD1G_DFP\instance\ssc1.h</file>
          <hash>18d2e8a0bb953618385b8ab05d4a2e815d15b4d92bd313e442a4794e7cb5a6db</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_a5d27_som1_ek_freertos\usb\src\usb_external_dependencies.h</file>
+         <hash>5110f718908d8f79253ce5b4b44172288cc179ff61d18e387f9e90ae9afbb1b6</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\peripheral\mmu\plib_mmu.h</file>

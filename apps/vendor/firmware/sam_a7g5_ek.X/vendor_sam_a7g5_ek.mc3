@@ -3809,10 +3809,6 @@
          <hash>dce0fe53973e23d87ee16fec7ef65f171b537ac80e14eaa2ca43962156f1c6e7</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_a7g5_ek\usb\src\usb_device_function_driver.h</file>
-         <hash>5d7b7287898c95485fbfc37840b9bb3e6ace46ef7333413493137d0e40e50bec</hash>
-      </entry>
-      <entry>
          <file>..\src\packs\SAMA7G54_DFP\instance\flexcom10.h</file>
          <hash>8bf0cc41cb6ba65d06c6cb612bc1d8c176e6044959100c752cc14da952cc20fa</hash>
       </entry>
@@ -3823,6 +3819,10 @@
       <entry>
          <file>..\src\packs\SAMA7G54_DFP\instance\sdmmc1.h</file>
          <hash>c3943a5e77cf4d354a514c527a45b57d1bb547db08a71893bf89a5461564b347</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_a7g5_ek\usb\src\usb_device_function_driver.h</file>
+         <hash>5d7b7287898c95485fbfc37840b9bb3e6ace46ef7333413493137d0e40e50bec</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\configuration.h</file>
@@ -3869,12 +3869,12 @@
          <hash>8e35d8509552a4d1d6e6f123ad75694cf784a707f7dac592ed33b55121aa8e28</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_a7g5_ek\usb\src\usb_device_local.h</file>
-         <hash>3dc9e27b535edb31aa97aae04a0ce9ac12e5092ed3bae7ef6fd203bc1520ef33</hash>
-      </entry>
-      <entry>
          <file>..\src\packs\SAMA7G54_DFP\instance\dwdt.h</file>
          <hash>8ac8c4e6dff311eeda4989e174f9b43776ce2eca9238c7231ba5dca80350b506</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_a7g5_ek\usb\src\usb_device_local.h</file>
+         <hash>3dc9e27b535edb31aa97aae04a0ce9ac12e5092ed3bae7ef6fd203bc1520ef33</hash>
       </entry>
       <entry>
          <file>..\src\app.c</file>
@@ -4117,12 +4117,12 @@
          <hash>41e2f8d3bf78f57d30b3bd3bf7dbf3ad631fc142ed42900537b16bce373f1547</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_a7g5_ek\usb\usb_common.h</file>
-         <hash>fc9f44df7ab465084d1522901685e5bfad10548e44563a7460d7e089e6276ded</hash>
-      </entry>
-      <entry>
          <file>..\src\packs\SAMA7G54_DFP\component\pio.h</file>
          <hash>68482694713b896d4b8d33262a9d609721a6a50179e69cba3aa4d2e2251997b6</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_a7g5_ek\usb\usb_common.h</file>
+         <hash>fc9f44df7ab465084d1522901685e5bfad10548e44563a7460d7e089e6276ded</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAMA7G54_DFP\instance\mcan5.h</file>
@@ -4142,7 +4142,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\driver\usb\udphs\src\drv_usb_udphs_device.c</file>
-         <hash>f6bd8361d8f3e4c80b8fb73d87e24b60ca48c731ddf39a3c10df6cee7208a568</hash>
+         <hash>059f2399832f7226817d6c9cb6b21db3c657d73d68935c2772bb0af316090e18</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAMA7G54_DFP\instance\sdmmc0.h</file>
@@ -4189,16 +4189,16 @@
          <hash>745ecd579adca68b386442fdb607518ccd354a0b13df34031a84bca6bd5e85ca</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_a7g5_ek\usb\usb_chapter_9.h</file>
-         <hash>86a258d763c7f0f563122ccd4ec0bbef422fd4e2f523402bb89be10568cecf3f</hash>
-      </entry>
-      <entry>
          <file>..\src\packs\SAMA7G54_DFP\component\rtc.h</file>
          <hash>8fda94e3867992b8997a93aabf4c9529811ec2f46acb408d1367015c62212736</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAMA7G54_DFP\instance\tdes.h</file>
          <hash>1a09b69faa2ded679cd80703175695bb1cbc2feb3b01eeec2d7ac670c5fa4b59</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_a7g5_ek\usb\usb_chapter_9.h</file>
+         <hash>86a258d763c7f0f563122ccd4ec0bbef422fd4e2f523402bb89be10568cecf3f</hash>
       </entry>
    </generatedFileHashHistoryMap>
 </config>
