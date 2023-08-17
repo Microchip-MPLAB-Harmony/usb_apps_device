@@ -375,13 +375,8 @@
         <platform>3</platform>
       </toolsSet>
       <packs>
-<<<<<<< HEAD
         <pack name="SAME70_DFP" vendor="Microchip" version="4.10.248"/>
-        <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
-=======
-        <pack name="SAME70_DFP" vendor="Microchip" version="4.9.129"/>
         <pack name="CMSIS" vendor="ARM" version="5.8.0"/>
->>>>>>> 18a4ae61 ([APPS.]Updated CMSIS Version to "5.8.0" in configuration.xml files for all device demo applications[MH3-84865])
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
