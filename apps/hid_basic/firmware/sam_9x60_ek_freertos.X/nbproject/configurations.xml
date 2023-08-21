@@ -568,6 +568,7 @@
         <property key="legacy-libc" value="false"/>
         <property key="mdtcm" value=""/>
         <property key="mitcm" value=""/>
+        <appendMe value="-marm"/>
         <property key="mstacktcm" value="false"/>
         <property key="omit-pack-options" value="1"/>
         <property key="relaxed-math" value="false"/>
