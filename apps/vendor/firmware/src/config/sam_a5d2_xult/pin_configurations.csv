@@ -120,7 +120,7 @@ R12,PA6,,Available,In,,,,,,,
 R13,PA21,,Available,In,,,,,,,
 R15,PA30,,Available,In,,,,,,,
 R16,PA28,,Available,In,,,,,,,
-R17,PA31,USB_VBUS_SENSE,GPIO,In,n/a,No,Disabled,No,Yes,Disabled,0x0
+R17,PA31,USB_VBUS_SENSE,GPIO,In,n/a,No,Disabled,No,No,Disabled,0x0
 T11,PA2,,Available,In,,,,,,,
 T12,PA5,,Available,In,,,,,,,
 T13,PA7,,Available,In,,,,,,,

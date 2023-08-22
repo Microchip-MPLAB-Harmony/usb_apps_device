@@ -120,7 +120,7 @@ R12,PA6,,Available,In,,,,,,,
 R13,PA21,,SDMMC1_DAT3,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
 R15,PA30,,SDMMC1_CD,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
 R16,PA28,,SDMMC1_CMD,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
-R17,PA31,USB_VBUS_SENSE,GPIO,In,n/a,No,Disabled,No,Yes,Disabled,0x0
+R17,PA31,USB_VBUS_SENSE,GPIO,In,n/a,No,Disabled,No,No,Disabled,0x0
 T11,PA2,,Available,In,,,,,,,
 T12,PA5,,Available,In,,,,,,,
 T13,PA7,,Available,In,,,,,,,

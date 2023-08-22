@@ -64,7 +64,7 @@ void PIO_Initialize ( void )
 
  /* Port A Pin 31 configuration */
    PIOA_REGS->PIO_MSKR = 0x80000000LU;
-   PIOA_REGS->PIO_CFGR = (PIOA_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x3400U;
+   PIOA_REGS->PIO_CFGR = (PIOA_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x3000U;
 
  /* Port A Latch configuration */
    PIOA_REGS->PIO_CODR = 0x80000000LU;

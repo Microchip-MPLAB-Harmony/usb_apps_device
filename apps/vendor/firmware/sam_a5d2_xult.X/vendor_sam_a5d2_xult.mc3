@@ -1546,7 +1546,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_255_PD&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;True&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -2076,7 +2076,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PORT_A_CFGR_Value31&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;0x3400&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;0x3000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -3991,7 +3991,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult\peripheral\pio\plib_pio.c</file>
-         <hash>60b63d7dc0517e7cfc82261bb4617124410d9121d16f26825ac8d03c109469b1</hash>
+         <hash>4ebcade0d7ca0215517c853a6b31d051645189c6135a4c5de72c368b28fee3b2</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMA5D27_DFP\instance\lcdc.h</file>
@@ -4367,7 +4367,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult\pin_configurations.csv</file>
-         <hash>2b8467af855225cd8bb948f01449a770ed854a08f594a7acf6ec36b897cc7627</hash>
+         <hash>643ed23c8b79802ca14392be343eb4d43541f4125524722a38518b73d6977114</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMA5D27_DFP\instance\matrix0.h</file>
