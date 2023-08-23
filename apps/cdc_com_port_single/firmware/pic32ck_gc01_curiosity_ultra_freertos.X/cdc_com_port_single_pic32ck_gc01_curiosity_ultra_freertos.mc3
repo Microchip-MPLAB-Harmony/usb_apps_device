@@ -3868,7 +3868,8 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="!@#harmonyUserData"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;UserData&gt;
   &lt;UserData dnOrder=&quot;0&quot;&gt;
-    &lt;ComponentGraph dnOrder=&quot;0&quot; id=&quot;__ROOTVIEW&quot;&gt;
+    &lt;GraphSettings canvasHeight=&quot;435&quot; canvasWidth=&quot;714&quot; dnOrder=&quot;0&quot;/&gt;
+    &lt;ComponentGraph dnOrder=&quot;1&quot; id=&quot;__ROOTVIEW&quot;&gt;
       &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
         &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;BSP_PIC32CK_GC01_Curiosity_Ultra&quot; x=&quot;180&quot; y=&quot;20&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;FreeRTOS&quot; x=&quot;416&quot; y=&quot;71&quot;/&gt;
@@ -3883,7 +3884,6 @@
         &lt;ElementPosition dnOrder=&quot;10&quot; id=&quot;usb_device_cdc&quot; x=&quot;482&quot; y=&quot;273&quot;/&gt;
       &lt;/ElementPositions&gt;
     &lt;/ComponentGraph&gt;
-    &lt;GraphSettings canvasHeight=&quot;435&quot; canvasWidth=&quot;714&quot; dnOrder=&quot;1&quot;/&gt;
   &lt;/UserData&gt;
 &lt;/UserData&gt;
 </value>
@@ -4270,7 +4270,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_133_FUNCTION_NAME"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_133_FUNCTION_NAME&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;LED&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
 </value>
@@ -4340,7 +4342,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_63_FUNCTION_NAME&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;LED&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;LED1&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -5960,7 +5962,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra_freertos\pin_configurations.csv</file>
-         <hash>90226407440861497ef995da29691f3991085abf938fe9b1ff8b41e31e0dc1bf</hash>
+         <hash>b59368a0bd39a5b93f0004ad4794a1ee61bd2d785c6b47cf849f6e2dd84dc554</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\instance\oscctrl.h</file>
@@ -6584,7 +6586,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra_freertos\bsp\bsp.c</file>
-         <hash>81b5ee1f223d871ae6c5f8e67e0766cee02f4508b5ad287170ecd075f05d010b</hash>
+         <hash>704608a168a9ed6f268642f4de46899b61f06fcaf2df62527f4c3c1d22d7798d</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra_freertos\stdio\xc32_monitor.c</file>
@@ -6608,7 +6610,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra_freertos\bsp\bsp.h</file>
-         <hash>b445eaca76b11efff05f11c478374fa8ef65eb43d642dfd762fa2d7b0f2e2431</hash>
+         <hash>dd9d7ecd2fdf97d32853f043d24879d0de43f86cfdd534cd95ea2281aef586a5</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra_freertos\FreeRTOSConfig.h</file>

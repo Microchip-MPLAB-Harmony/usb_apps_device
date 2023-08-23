@@ -44,7 +44,7 @@ Pin Number,Pin ID,Custom Name,Function,Mode, Direction,Latch,Pull Up,Pull Down,O
 60,PB22,,Available,,,,,,No,FAST
 61,PB23,,Available,,,,,,No,FAST
 62,PB24,,Available,,,,,,No,FAST
-63,PB25,LED,LED_AL,Digital,Out,High,,,No,FAST
+63,PB25,LED1,LED_AL,Digital,Out,High,,,No,FAST
 64,PB26,SWITCH,SWITCH_AL,Digital,In,n/a,Yes,No,No,FAST
 65,PB16,,Available,,,,,,No,FAST
 68,PB17,,Available,,,,,,No,FAST
@@ -93,7 +93,7 @@ Pin Number,Pin ID,Custom Name,Function,Mode, Direction,Latch,Pull Up,Pull Down,O
 130,PD17,,Available,,,,,,No,FAST
 131,PD18,,Available,,,,,,No,FAST
 132,PD19,,Available,,,,,,No,FAST
-133,PD20,LED0,LED_AL,Digital,Out,High,,,No,FAST
+133,PD20,LED,LED_AL,Digital,Out,High,,,No,FAST
 134,PD21,,Available,,,,,,No,FAST
 135,PD12,,Available,,,,,,No,FAST
 136,PD05,,Available,,,,,,No,FAST

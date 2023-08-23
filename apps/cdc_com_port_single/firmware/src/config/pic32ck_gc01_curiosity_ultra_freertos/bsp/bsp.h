@@ -65,14 +65,14 @@
 
 
 
+/*** LED Macros for LED1 ***/
+#define LED1_Toggle()     (PORT_REGS->GROUP[1].PORT_OUTTGL = 1UL << 25)
+#define LED1_On()         (PORT_REGS->GROUP[1].PORT_OUTCLR = 1UL << 25)
+#define LED1_Off()        (PORT_REGS->GROUP[1].PORT_OUTSET = 1UL << 25)
 /*** LED Macros for LED ***/
-#define LED_Toggle()     (PORT_REGS->GROUP[1].PORT_OUTTGL = 1UL << 25)
-#define LED_On()         (PORT_REGS->GROUP[1].PORT_OUTCLR = 1UL << 25)
-#define LED_Off()        (PORT_REGS->GROUP[1].PORT_OUTSET = 1UL << 25)
-/*** LED Macros for LED0 ***/
-#define LED0_Toggle()     (PORT_REGS->GROUP[3].PORT_OUTTGL = 1UL << 20)
-#define LED0_On()         (PORT_REGS->GROUP[3].PORT_OUTCLR = 1UL << 20)
-#define LED0_Off()        (PORT_REGS->GROUP[3].PORT_OUTSET = 1UL << 20)
+#define LED_Toggle()     (PORT_REGS->GROUP[3].PORT_OUTTGL = 1UL << 20)
+#define LED_On()         (PORT_REGS->GROUP[3].PORT_OUTCLR = 1UL << 20)
+#define LED_Off()        (PORT_REGS->GROUP[3].PORT_OUTSET = 1UL << 20)
 
 /*** SWITCH Macros for SWITCH ***/
 #define SWITCH_Get()     ((PORT_REGS->GROUP[1].PORT_IN >> 26) & 0x01)
