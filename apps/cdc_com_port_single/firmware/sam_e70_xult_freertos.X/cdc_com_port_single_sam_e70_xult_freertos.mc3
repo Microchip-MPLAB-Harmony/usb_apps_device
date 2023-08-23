@@ -228,7 +228,7 @@
       &lt;/Boolean&gt;
     &lt;/Attributes&gt;
     &lt;Values dnOrder=&quot;1&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;10&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;1&quot;/&gt;
     &lt;/Values&gt;
   &lt;/HarmonyCore&gt;
 &lt;/HarmonyCore&gt;
@@ -563,7 +563,8 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="!@#harmonyUserData"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;UserData&gt;
   &lt;UserData dnOrder=&quot;0&quot;&gt;
-    &lt;ComponentGraph dnOrder=&quot;0&quot; id=&quot;__ROOTVIEW&quot;&gt;
+    &lt;GraphSettings canvasHeight=&quot;400&quot; canvasWidth=&quot;400&quot; dnOrder=&quot;0&quot;/&gt;
+    &lt;ComponentGraph dnOrder=&quot;1&quot; id=&quot;__ROOTVIEW&quot;&gt;
       &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
         &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;BSP_SAM_E70_Xplained_Ultra&quot; x=&quot;140&quot; y=&quot;59&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;FreeRTOS&quot; x=&quot;143&quot; y=&quot;97&quot;/&gt;
@@ -573,11 +574,10 @@
         &lt;ElementPosition dnOrder=&quot;5&quot; id=&quot;dfp&quot; x=&quot;140&quot; y=&quot;9&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;6&quot; id=&quot;drv_usbhs_v1&quot; x=&quot;0&quot; y=&quot;222&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;7&quot; id=&quot;efc&quot; x=&quot;0&quot; y=&quot;97&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;8&quot; id=&quot;usb_device&quot; x=&quot;159&quot; y=&quot;222&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;9&quot; id=&quot;usb_device_cdc&quot; x=&quot;299&quot; y=&quot;222&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;8&quot; id=&quot;usb_device&quot; x=&quot;273&quot; y=&quot;197&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;9&quot; id=&quot;usb_device_cdc&quot; x=&quot;440&quot; y=&quot;97&quot;/&gt;
       &lt;/ElementPositions&gt;
     &lt;/ComponentGraph&gt;
-    &lt;GraphSettings canvasHeight=&quot;400&quot; canvasWidth=&quot;400&quot; dnOrder=&quot;1&quot;/&gt;
   &lt;/UserData&gt;
 &lt;/UserData&gt;
 </value>
@@ -8515,12 +8515,12 @@
          <hash>2a98de80113db810ecafa8fd166ea66059df2101b88606fb79a01d53bd047ba9</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_e70_xult_freertos\usb\src\usb_device.c</file>
-         <hash>e2299e7132aaf91acd6857a827520f8bd5ecdc40d8ba2e6c4018b8441064a6cb</hash>
-      </entry>
-      <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\component\matrix.h</file>
          <hash>ec7b2e1700ba7e3c465f3922e13dc4f3ee399a200539b48e1dbced0783ed2972</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_e70_xult_freertos\usb\src\usb_device.c</file>
+         <hash>e2299e7132aaf91acd6857a827520f8bd5ecdc40d8ba2e6c4018b8441064a6cb</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\uart0.h</file>
@@ -8640,7 +8640,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult_freertos\definitions.h</file>
-         <hash>093bde35ac678b6932f919609629ded4383f59ce5a273a116352a4c677002b36</hash>
+         <hash>2f3c220279c397742956610bb596d08d9f1299d64de2b9a2a665c6d27fae4302</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\tc0.h</file>
@@ -8904,7 +8904,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult_freertos\tasks.c</file>
-         <hash>74badbc5417005f83b3586bd71131b542f0171fe86e4d3e5c6ca6919deb52b26</hash>
+         <hash>d3e46e75315879681f987e76b9a79912188b9545ebc4d16167715219f843cbb2</hash>
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\FreeRTOS_tasks.c</file>
@@ -8944,7 +8944,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult_freertos\configuration.h</file>
-         <hash>fccf6a5ef11c7f3fce7b96b2d6e2258971d6398500d6001d021d39bdc81cc56e</hash>
+         <hash>5935b758b823f6363d0c62686f14205d1d78dd751d2d021235f017d890de3ac8</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult_freertos\usb_device_init_data.c</file>

@@ -232,7 +232,7 @@
       &lt;/Boolean&gt;
     &lt;/Attributes&gt;
     &lt;Values dnOrder=&quot;1&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;10&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;1&quot;/&gt;
     &lt;/Values&gt;
   &lt;/HarmonyCore&gt;
 &lt;/HarmonyCore&gt;
@@ -9192,12 +9192,12 @@
          <hash>2de01ae2556a38eb82c389de23c701805ec63308cfbcf3f84cb12141589b0858</hash>
       </entry>
       <entry>
-         <file>..\src\packs\ATSAME54P20A_DFP\instance\tc6.h</file>
-         <hash>5137ab8599f1becf3094082d99942c572c1265ab86505ed59819d5e11e979d7b</hash>
-      </entry>
-      <entry>
          <file>..\src\config\sam_e54_xpro_freertos\usb\usb_host_hub_interface.h</file>
          <hash>9db9028cdb085f4ed90d06c8d0013e5b9d300be9b49f0933094c373552193645</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\ATSAME54P20A_DFP\instance\tc6.h</file>
+         <hash>5137ab8599f1becf3094082d99942c572c1265ab86505ed59819d5e11e979d7b</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\aes.h</file>
@@ -9441,7 +9441,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro_freertos\tasks.c</file>
-         <hash>ffa05ff9feca9a631d007980f4e75d76b9a1c45c01ab4d646d48cc08c34efa0d</hash>
+         <hash>33101bbbf7ce3c1b613a155041b0d1ebdf5e325cd940c1883ec5d187463b80cb</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro_freertos\exceptions.c</file>

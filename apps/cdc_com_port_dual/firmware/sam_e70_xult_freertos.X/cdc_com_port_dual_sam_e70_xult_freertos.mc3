@@ -232,7 +232,7 @@
       &lt;/Boolean&gt;
     &lt;/Attributes&gt;
     &lt;Values dnOrder=&quot;1&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;10&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;1&quot;/&gt;
     &lt;/Values&gt;
   &lt;/HarmonyCore&gt;
 &lt;/HarmonyCore&gt;
@@ -8743,7 +8743,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult_freertos\definitions.h</file>
-         <hash>093bde35ac678b6932f919609629ded4383f59ce5a273a116352a4c677002b36</hash>
+         <hash>9a04a262acda32286ec3efee8662da09f91a6231644e826306c7a7b94f1b1724</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\tc0.h</file>
@@ -9007,7 +9007,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult_freertos\tasks.c</file>
-         <hash>74badbc5417005f83b3586bd71131b542f0171fe86e4d3e5c6ca6919deb52b26</hash>
+         <hash>d3e46e75315879681f987e76b9a79912188b9545ebc4d16167715219f843cbb2</hash>
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\FreeRTOS_tasks.c</file>
