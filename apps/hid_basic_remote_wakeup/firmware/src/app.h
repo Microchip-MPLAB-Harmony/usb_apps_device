@@ -224,6 +224,8 @@ typedef struct
 
     /* Flag to track the timer status */
     bool tmrExpired;
+    
+    bool remoteWakeUpInProgress; 
 
 } APP_DATA;
 

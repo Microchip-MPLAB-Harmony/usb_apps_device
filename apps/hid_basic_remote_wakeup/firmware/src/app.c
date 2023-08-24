@@ -235,6 +235,7 @@ void APP_USBDeviceEventHandler(USB_DEVICE_EVENT event, void * eventData, uintptr
             }
             /* Device is resumed. */
             appData.IsSuspended = false;
+            appData.remoteWakeUpInProgress = false; 
             break;
 
         case USB_DEVICE_EVENT_ERROR:
@@ -285,7 +286,8 @@ void APP_Initialize ( void )
     /* Initialize all the application variables. */
     appData.tmrExpired = false;
     appData.IsAttached = false; 
-    appData.IsSuspended = false;   
+    appData.IsSuspended = false;  
+    appData.remoteWakeUpInProgress = false; 
     appData.usbDevHandle = USB_DEVICE_HANDLE_INVALID;
     appData.deviceConfigured = false;
     appData.txTransferHandle = USB_DEVICE_HID_TRANSFER_HANDLE_INVALID;
@@ -429,13 +431,13 @@ void APP_Tasks (void )
                         break;
                 }
             }
-//            else if (appData.IsSuspended == true)
-//            {
-//                /* USB Device is suspended. */
-//                appData.state = APP_STATE_USB_SUSPENDED;
-//                
-//                SYS_CONSOLE_MESSAGE("USB Device Suspended\r\n");
-//            }
+            else if (appData.IsSuspended == true)
+            {
+                /* USB Device is suspended. */
+                appData.state = APP_STATE_USB_SUSPENDED;
+                
+                SYS_CONSOLE_MESSAGE("USB Device Suspended\r\n");
+            }
             break;
 
         case APP_STATE_USB_SUSPENDED:
@@ -529,7 +531,7 @@ void APP_Tasks (void )
                     /* Go back to executing Main HID tasks */
                     appData.state = APP_STATE_HID_TASK;                 
                 }
-                else if(( SWITCH_Get() == SWITCH_STATE_PRESSED ) && (appData.tmrExpired == true))
+                else if(( SWITCH_Get() == SWITCH_STATE_PRESSED ) && (appData.tmrExpired == true) && (appData.remoteWakeUpInProgress == false))
                 {
                     /* User has pressed the Switch. This is to wake up the USB Host */
                     if(USB_DEVICE_RemoteWakeupStatusGet(appData.usbDevHandle) == USB_DEVICE_REMOTE_WAKEUP_ENABLED)
@@ -539,6 +541,7 @@ void APP_Tasks (void )
                          * Sleep Mode and wait for PC host to drive USB device 
                          * resume. */
                         USB_DEVICE_RemoteWakeupStart(appData.usbDevHandle);
+                        appData.remoteWakeUpInProgress = true; 
 
                         SYS_CONSOLE_MESSAGE("Remote Wakeup Start Sent\r\n");  
                     }
