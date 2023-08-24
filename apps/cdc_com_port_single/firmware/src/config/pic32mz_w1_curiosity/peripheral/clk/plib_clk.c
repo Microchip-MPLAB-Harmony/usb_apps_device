@@ -201,11 +201,11 @@ void CLK_Initialize( void )
 			/* CF       = NO_FAILDET       */
 			/* SLPEN    = IDLE    */
 			/* CLKLOCK  = UNLOCKED  */
-			/* NOSC     = POSC     */
+			/* NOSC     = SPLL     */
 			/* WAKE2SPD = SELECTED_CLK */
 			/* DRMEN    = NO_EFFECT    */
 			/* FRCDIV   = OSC_FRC_DIV_1   */
-			OSCCON = 0x200;
+			OSCCON = 0x100;
 
 			OSCCONSET = _OSCCON_OSWEN_MASK;  /* request oscillator switch to occur */
 
@@ -321,11 +321,11 @@ void CLK_Initialize( void )
 		/* CF       = NO_FAILDET       */
 		/* SLPEN    = IDLE    */
 		/* CLKLOCK  = UNLOCKED  */
-		/* NOSC     = POSC     */
+		/* NOSC     = SPLL     */
 		/* WAKE2SPD = SELECTED_CLK */
 		/* DRMEN    = NO_EFFECT    */
 		/* FRCDIV   = OSC_FRC_DIV_1   */
-		OSCCON = 0x200;
+		OSCCON = 0x100;
 
 		OSCCONSET = _OSCCON_OSWEN_MASK;  /* request oscillator switch to occur */
 

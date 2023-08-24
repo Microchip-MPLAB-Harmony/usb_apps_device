@@ -168,9 +168,12 @@ Following table gives the details of project configurations, target device used,
 ### <a name="config_17"></a> [Curiosity PIC32MZ W1 Development Board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320104)
 
 - Use the USB micro-B port J204 to connect the USB Device to the USB Host PC.
+- J205 must be open for the Device Functionality
+- Jumper on the pin J211 must be placed between pin 1 and pin 2
+
 - The LED D202 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
 - Press the switch SW200 to trigger communication from the USB Device to the USB Host.
-
+   ![Curiosity PIC32MZ W1 Development Board](images/PIC32MZW1.png)
 
 ### <a name="config_20"></a> [PIC32MM USB Curiosity Development Board](https://www.microchip.com/en-us/development-tool/dm320107)
 

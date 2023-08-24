@@ -1072,7 +1072,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;CONFIG_PRECON_PFMWS&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;3&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;5&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -1083,7 +1083,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;CONFIG_SYS_CLK_PBCLK1_FREQ&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;20000000&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;100000000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -1094,7 +1094,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;CONFIG_SYS_CLK_PBCLK2_FREQ&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;20000000&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;100000000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -1105,7 +1105,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;CONFIG_SYS_CLK_PBCLK3_FREQ&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;20000000&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;100000000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -1127,7 +1127,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;CONFIG_SYS_CLK_PBCLK5_FREQ&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;20000000&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;100000000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -1138,7 +1138,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;CONFIG_SYS_CLK_PBCLK6_FREQ&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;40000000&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;200000000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -1149,7 +1149,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;CONFIG_SYS_CLK_REFCLK1_FREQ&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;40000000&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;200000000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -1160,7 +1160,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;CONFIG_SYS_CLK_REFCLK2_FREQ&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;40000000&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;200000000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -1171,7 +1171,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;CONFIG_SYS_CLK_REFCLK3_FREQ&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;40000000&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;200000000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -1182,7 +1182,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;CONFIG_SYS_CLK_REFCLK4_FREQ&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;40000000&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;200000000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -1193,7 +1193,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;CPU_CLOCK_FREQUENCY&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;40000000&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;200000000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -1226,7 +1226,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;DMAC_CLOCK_FREQUENCY&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;40000000&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;200000000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -1655,7 +1655,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;OSCCON_NOSC_VALUE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;POSC&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;SPLL&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -1666,7 +1666,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;OSCCON_VALUE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;512&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;256&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -1721,7 +1721,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;REFO1_CLOCK_FREQUENCY&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;40000000&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;200000000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -1732,7 +1732,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;REFO2_CLOCK_FREQUENCY&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;40000000&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;200000000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -1743,7 +1743,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;REFO3_CLOCK_FREQUENCY&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;40000000&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;200000000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -1754,7 +1754,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;REFO4_CLOCK_FREQUENCY&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;40000000&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;200000000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -1820,7 +1820,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;SYS_CLK_FREQ&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;40000000&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;200000000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -2062,7 +2062,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;USB1_CLOCK_FREQUENCY&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;20000000&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;100000000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -2374,7 +2374,7 @@
    <generatedFileHashHistoryMap class="java.util.HashMap">
       <entry>
          <file>..\src\config\pic32mz_w1_curiosity\configuration.h</file>
-         <hash>3bfcfeb42a22a6e5710ff1a75f75b142bb660bb70021062169b28a9b102a0f13</hash>
+         <hash>fabb66bb790b6bb9639a6dd6ddc3eba5411cb4c24078d004e757c419026b3dd3</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_w1_curiosity\driver\usb\usbfs\src\templates\usb_DeviceAddress_Default.h</file>
@@ -2694,7 +2694,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_w1_curiosity\peripheral\clk\plib_clk.c</file>
-         <hash>1d8ffa71cb4b256995efcd466bc0b2b2fff39052bea8f002101f4a757f125d29</hash>
+         <hash>fa0525609b962fd3231d104e496a7524d08f9421c5a250e3d9c426dfadcc36cc</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_w1_curiosity\driver\usb\usbfs\src\templates\usb_GEN_Interrupt_Unsupported.h</file>
@@ -2757,12 +2757,12 @@
          <hash>d3c233d419e6304bfacbafc18cc68c0f5c26e365f23b20ea40ccfac458f664c5</hash>
       </entry>
       <entry>
-         <file>..\src\config\pic32mz_w1_curiosity\driver\usb\usbfs\src\plib_usbfs.h</file>
-         <hash>e305fe0c89c125541351aff6084023a26e932caa24cde3ad33d64d3b18916a1a</hash>
-      </entry>
-      <entry>
          <file>..\src\config\pic32mz_w1_curiosity\usb\usb_chapter_9.h</file>
          <hash>86a258d763c7f0f563122ccd4ec0bbef422fd4e2f523402bb89be10568cecf3f</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mz_w1_curiosity\driver\usb\usbfs\src\plib_usbfs.h</file>
+         <hash>e305fe0c89c125541351aff6084023a26e932caa24cde3ad33d64d3b18916a1a</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_w1_curiosity\usb\src\usb_device_local.h</file>
@@ -2821,12 +2821,12 @@
          <hash>a2ca84d8c2ce2c3241eb107552678f46fd2a87d361e5d3b807e91eca12330050</hash>
       </entry>
       <entry>
-         <file>..\src\config\pic32mz_w1_curiosity\driver\usb\usbfs\src\templates\usb_ActivityPending_Unsupported.h</file>
-         <hash>521a3b9175ff4c46fe27bdeb92fdb835caa697f22f4a92c95b92d30302173152</hash>
-      </entry>
-      <entry>
          <file>..\src\config\pic32mz_w1_curiosity\usb_device_init_data.c</file>
          <hash>cac3ba7f2939054d8d092b9be66dca776596729301057d6590ad3b3d11d260f1</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mz_w1_curiosity\driver\usb\usbfs\src\templates\usb_ActivityPending_Unsupported.h</file>
+         <hash>521a3b9175ff4c46fe27bdeb92fdb835caa697f22f4a92c95b92d30302173152</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_w1_curiosity\driver\usb\usbfs\src\templates\usb_ALL_Interrupt_Unsupported.h</file>
@@ -2865,12 +2865,12 @@
          <hash>d9292b4d956bb953950e7731a1b6a09593d46d0f06c9c4d2a73bfcbd0f7dad99</hash>
       </entry>
       <entry>
-         <file>..\src\config\pic32mz_w1_curiosity\driver\usb\usbfs\src\templates\usb_EyePattern_Default.h</file>
-         <hash>5898d9555c18b43a149916f4f4eef4e81d2c3b90df1b3d598625346639b11758</hash>
-      </entry>
-      <entry>
          <file>..\src\config\pic32mz_w1_curiosity\usb\usb_device.h</file>
          <hash>06a4f4c06b4b32ab90474b522ddbfc4922fbad93ccf6975240148f1ce4b71b46</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mz_w1_curiosity\driver\usb\usbfs\src\templates\usb_EyePattern_Default.h</file>
+         <hash>5898d9555c18b43a149916f4f4eef4e81d2c3b90df1b3d598625346639b11758</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_w1_curiosity\driver\usb\usbfs\src\templates\usb_OTG_BSessionEnd_Default.h</file>
@@ -2938,7 +2938,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_w1_curiosity\initialization.c</file>
-         <hash>749aefebc2d6aac18a2ae5022f3d91de9f0a7cec1bbd931466d0650d975186b6</hash>
+         <hash>08c33b943d812ef5ba7cd1b458f96f3e0d0251bfb113223153eee5c67b3b08af</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_w1_curiosity\usb\usb_host_client_driver.h</file>
@@ -2954,7 +2954,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_w1_curiosity\tasks.c</file>
-         <hash>2e39cf49517830e5508fdda962752f8c78495bad0ffaf61b7a9a1b9f00976d69</hash>
+         <hash>c68e57e635fa50389a54cbe94cf7a25f16abf17e7e22b6ebfa75868737c73155</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_w1_curiosity\driver\usb\usbfs\src\templates\usb_LiveSingleEndedZero_Unsupported.h</file>
@@ -2994,7 +2994,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_w1_curiosity\definitions.h</file>
-         <hash>0c3408c37f6d588d7c7835fee5f3cd8ad99c5c74f162877bac2a5e8810855375</hash>
+         <hash>37b44e3f5c66b52b165781acde880a9367d7313b475b749737270b98bb0b477c</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_w1_curiosity\peripheral\evic\plib_evic.c</file>
