@@ -9,7 +9,7 @@ operating_system: Windows 10
 mcc_mode: IDE            # [IDE|Standalone|Headless]
 mcc_version: v5.3.7
 mcc_core_version: v5.5.7
-mplabx_version: v6.10        # if MPLAB X plugin only
+mplabx_version: v6.15        # if MPLAB X plugin only
 harmony_version: v1.3.1
 compiler: XC32 (v4.30)
 
