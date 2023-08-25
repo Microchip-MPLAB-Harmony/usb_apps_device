@@ -52,7 +52,6 @@
 #include "configuration.h"
 #include "driver/sdmmc/drv_sdmmc.h"
 #include "driver/sdmmc/src/drv_sdmmc_local.h"
-#include "system/cache/sys_cache.h"
 #include <string.h>
 
 static DRV_SDMMC_OBJ gDrvSDMMCObj[DRV_SDMMC_INSTANCES_NUMBER];
@@ -580,7 +579,6 @@ static void lDRV_SDMMC_MediaInitialize (
 )
 {
     uint32_t response = 0;
-    uint32_t readBufferLen;
 
     switch (dObj->initState)
     {
@@ -1039,10 +1037,6 @@ static void lDRV_SDMMC_MediaInitialize (
             dObj->dataTransferFlags.transferDir = DRV_SDMMC_DATA_TRANSFER_DIR_READ;
             dObj->dataTransferFlags.transferType = DRV_SDMMC_DATA_TRANSFER_TYPE_SINGLE;
 
-            /* Invalidate the cache to force the CPU to read the latest data
-             * from the main memory. */
-            readBufferLen = DRV_SDMMC_SCR_BUFFER_LEN;
-            SYS_CACHE_InvalidateDCache_by_Addr(dObj->cardCtxt.scrBuffer, (int32_t)readBufferLen);
 
             /* Set up the DMA for the data transfer. */
             dObj->sdmmcPlib->sdhostSetupDma (&dObj->cardCtxt.scrBuffer[0], 8, DRV_SDMMC_OPERATION_TYPE_READ);
@@ -1102,9 +1096,6 @@ static void lDRV_SDMMC_MediaInitialize (
               dObj->sdmmcPlib->sdhostSetBlockCount (0);
               dObj->sdmmcPlib->sdhostSetBlockSize(DRV_SDMMC_EXT_CSD_RESP_SIZE);
 
-              /* Invalidate the cache to force the CPU to read the latest data
-               * from the main memory. */
-              SYS_CACHE_InvalidateDCache_by_Addr(dObj->cardCtxt.extCSDBuffer, (int32_t)DRV_SDMMC_EXT_CSD_RESP_SIZE);
 
               dObj->sdmmcPlib->sdhostSetupDma (dObj->cardCtxt.extCSDBuffer,
                                                DRV_SDMMC_EXT_CSD_RESP_SIZE,
@@ -1211,9 +1202,6 @@ static void lDRV_SDMMC_MediaInitialize (
             dObj->dataTransferFlags.transferDir = DRV_SDMMC_DATA_TRANSFER_DIR_READ;
             dObj->dataTransferFlags.transferType = DRV_SDMMC_DATA_TRANSFER_TYPE_SINGLE;
 
-            /* Invalidate the cache to force the CPU to read the latest data
-             * from the main memory. */
-            SYS_CACHE_InvalidateDCache_by_Addr(dObj->cardCtxt.switchStatusBuffer, (int32_t)DRV_SDMMC_SWITCH_STATUS_BUFFER_LEN);
 
             /* Set up the DMA for the data transfer. */
             dObj->sdmmcPlib->sdhostSetupDma (&dObj->cardCtxt.switchStatusBuffer[0], 64, DRV_SDMMC_OPERATION_TYPE_READ);
@@ -1844,7 +1832,6 @@ void DRV_SDMMC_Tasks( SYS_MODULE_OBJ object )
     DRV_SDMMC_EVENT evtStatus = DRV_SDMMC_EVENT_COMMAND_COMPLETE;
     uint32_t response = 0;
     static bool cardAttached = true;
-    uint32_t readNblocks;
     dObj = &gDrvSDMMCObj[object];
 
     if (OSAL_MUTEX_Lock(&dObj->mutex, OSAL_WAIT_FOREVER) != OSAL_RESULT_SUCCESS)
@@ -2218,24 +2205,6 @@ void DRV_SDMMC_Tasks( SYS_MODULE_OBJ object )
             /* Block count has already been set. */
             dObj->sdmmcPlib->sdhostSetBlockSize(512);
 
-            if (currentBufObj->opType == DRV_SDMMC_OPERATION_TYPE_WRITE)
-            {
-                /* Clean the cache to push the data to be written, from the cache
-                 * memory to the main memory for the DMA */
-                readNblocks = (currentBufObj->nBlocks << 9);
-                SYS_CACHE_CleanDCache_by_Addr(currentBufObj->buffer, (int32_t)readNblocks);
-            }
-            else if (currentBufObj->opType == DRV_SDMMC_OPERATION_TYPE_READ)
-            {
-                /* Invalidate the cache to force the CPU to read the latest data
-                 * from the main memory. */
-                readNblocks = (currentBufObj->nBlocks << 9);
-                SYS_CACHE_InvalidateDCache_by_Addr(currentBufObj->buffer, (int32_t)readNblocks);
-            }
-            else
-            {
-                /* Nothing to do */
-            }
 
             dObj->dataTransferFlags.isDataPresent = true;
             dObj->sdmmcPlib->sdhostSetupDma (currentBufObj->buffer, (currentBufObj->nBlocks << 9), currentBufObj->opType);

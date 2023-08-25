@@ -70,7 +70,7 @@ void PIO_Initialize ( void )
    PIOA_REGS->PIO_CODR = 0x3000U;
 
  /* Port B Peripheral function A configuration */
-   PIOB_REGS->PIO_MSKR = 0xf0000000LU;
+   PIOB_REGS->PIO_MSKR = 0xe0000000LU;
    PIOB_REGS->PIO_CFGR = 0x1U;
 
  /* Port B Peripheral function GPIO configuration */
@@ -85,7 +85,7 @@ void PIO_Initialize ( void )
    PIOB_REGS->PIO_CODR = 0x100LU;
 
  /* Port C Peripheral function A configuration */
-   PIOC_REGS->PIO_MSKR = 0x1fU;
+   PIOC_REGS->PIO_MSKR = 0x17U;
    PIOC_REGS->PIO_CFGR = 0x1U;
 
 

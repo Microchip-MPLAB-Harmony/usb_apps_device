@@ -75,11 +75,6 @@
 /* TTB Section Descriptor: Section Base Address */
 #define TTB_SECT_ADDR(x)           ((x) & 0xFFF00000U)
 
-#define L1_DATA_CACHE_BYTES            64U
-#define L1_DATA_CACHE_WAYS         4U
-#define L1_DATA_CACHE_SETS         256U
-#define L1_DATA_CACHE_SETWAY(set, way) (((set)UL << 5U) | ((way)UL << 30U))
-
 __ALIGNED(16384) static uint32_t tlb[4096];
 
 // *****************************************************************************
@@ -126,87 +121,6 @@ void icache_Disable(void)
     {
         __set_SCTLR(sctlr & ~SCTLR_I_Msk);
         L1C_InvalidateICacheAll();
-    }
-}
-
-void dcache_InvalidateAll(void)
-{
-    L1C_InvalidateDCacheAll();
-}
-
-void dcache_CleanAll(void)
-{
-    L1C_CleanDCacheAll();
-}
-
-void dcache_CleanInvalidateAll(void)
-{
-    L1C_CleanInvalidateDCacheAll();
-}
-
-void dcache_InvalidateByAddr(volatile void *pAddr, int32_t size)
-{
-    volatile uint32_t uAddr = (volatile uint32_t)((volatile uint32_t*)pAddr);
-    uint32_t uSize = (uint32_t)size;
-    uint32_t mva = uAddr & ~(L1_DATA_CACHE_BYTES - 1U);
-
-    while(mva < (uAddr + uSize))
-    {
-        __set_DCIMVAC(mva);
-        __DMB();
-        mva += L1_DATA_CACHE_BYTES;
-    }
-    __DSB();
-}
-
-void dcache_CleanByAddr(volatile void *pAddr, int32_t size)
-{
-    volatile uint32_t uAddr = (volatile uint32_t)((volatile uint32_t*)pAddr);
-    uint32_t uSize = (uint32_t)size;
-    uint32_t mva = uAddr & ~(L1_DATA_CACHE_BYTES - 1U);
-
-    while(mva < (uAddr + uSize))
-    {
-        __set_DCCMVAC(mva);
-        __DMB();
-        mva += L1_DATA_CACHE_BYTES;
-    }
-    __DSB();
-}
-
-void dcache_CleanInvalidateByAddr(volatile void *pAddr, int32_t size)
-{
-    volatile uint32_t uAddr = (volatile uint32_t)((volatile uint32_t*)pAddr);
-    uint32_t uSize = (uint32_t)size;
-    uint32_t mva = uAddr & ~(L1_DATA_CACHE_BYTES - 1U);
-
-    while(mva < (uAddr + uSize))
-    {
-        __set_DCCIMVAC(mva);
-        __DMB();
-        mva += L1_DATA_CACHE_BYTES;
-    }
-    __DSB();
-}
-
-void dcache_Enable(void)
-{
-    uint32_t sctlr = __get_SCTLR();
-    if ((sctlr & SCTLR_C_Msk) == 0U)
-    {
-        L1C_InvalidateDCacheAll();
-        __set_SCTLR(sctlr | SCTLR_C_Msk);
-    }
-}
-
-void dcache_Disable(void)
-{
-    uint32_t sctlr = __get_SCTLR();
-    if ((sctlr & SCTLR_C_Msk) != 0U)
-    {
-        L1C_CleanDCacheAll();
-        __set_SCTLR(sctlr & ~SCTLR_C_Msk);
-        L1C_InvalidateDCacheAll();
     }
 }
 
@@ -453,5 +367,4 @@ void MMU_Initialize(void)
     mmu_configure(tlb);
     icache_Enable();
     MMU_Enable();
-    dcache_Enable();
 }
