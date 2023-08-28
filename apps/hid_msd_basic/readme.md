@@ -40,8 +40,8 @@ Board](#config_23)                         |
 ### <a name="config_15"></a> [Curiosity PIC32MZ EF 2.0 Development Board](https://www.microchip.com/Developmenttools/ProductDetails/DM320209)
 
 - Use the USB micro-B port J201 to connect the USB Device to the USB Host PC.
-- LED2 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host). 
-- Pressing the LED Toggle button on the USB Host PC Utility toggles LED0.
+- LED1 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host). 
+- Pressing the LED Toggle button on the USB Host PC Utility toggles LED1.
 - The USB Host PC utility monitors the switch SW1 switch press on the board.
 
 ### <a name="config_13"></a> [Curiosity PIC32MX470 Development Board](https://www.microchip.com/Developmenttools/ProductDetails/dm320103)
