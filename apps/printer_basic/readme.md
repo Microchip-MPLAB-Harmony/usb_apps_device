@@ -37,7 +37,7 @@ pic32cz_ca80_curiosity_ultra.X    | MPLABX | PIC32CZ8110CA80208  | [PIC32CZ CA80
 ### <a name="config_15"></a> [Curiosity PIC32MZ EF 2.0 Development Board](https://www.microchip.com/Developmenttools/ProductDetails/DM320209)
 
 - Use the USB micro-B port J201 to connect the USB Device to the USB Host PC.
-- LED2 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
+- LED1 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
 - The CDC USB (UART to USB) interface on this board is served by the DEBUG_USB connector J700. Connecting this to the PC will create a COM port on the PC Host.
 
 ### <a name="config_9"></a> [SAM9X60-EK Evaluation Board](https://www.microchip.com/developmenttools/ProductDetails/DT100126)
