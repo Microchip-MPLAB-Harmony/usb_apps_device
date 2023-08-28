@@ -66,7 +66,7 @@ Following table gives the details of project configurations, target device used,
 - Jumper J203 must be shorted between PB08 and VBUS (positions 2 and 3).
 - Use TARGET USB J200 connector on the board to connect the USB Device to the USB Host PC.
 - LED3 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
-- Use Switch SW1 to stop and start the circular motion of the mouse pointer.
+- Use Switch SW400 to stop and start the circular motion of the mouse pointer.
 
 ### <a name="config_25"></a> [SAM9X75-DDR3-EB Evaluation Board](https://www.microchip.com/en-us/development-tool/EA14J50A)
 

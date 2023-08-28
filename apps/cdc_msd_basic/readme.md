@@ -39,7 +39,7 @@ Following table gives the details of project configurations, target device used,
 - Jumper J203 must be shorted between PB08 and VBUS (positions 2 and 3).
 - Use TARGET USB J200 connector on the board to connect the USB Device to the USB Host PC.
 - LED3 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
-- Press the switch SW1 to trigger communication from the USB Device to the USB Host.
+- Press the switch SW400 to trigger communication from the USB Device to the USB Host.
 
 ### <a name="config_13"></a> [Curiosity PIC32MX470 Development Board](https://www.microchip.com/Developmenttools/ProductDetails/dm320103)
 

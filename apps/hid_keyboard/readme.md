@@ -58,7 +58,7 @@ Following table gives the details of project configurations, target device used,
 - Jumper J203 must be shorted between PB08 and VBUS (positions 2 and 3).
 - Use TARGET USB J200 connector on the board to connect the USB Device to the USB Host PC.
 - LED3 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host). LED3 also indicates status of Caps Lock on the PC.
-- Press Switch SW1 to exercise the keyboard key press function.
+- Press Switch SW400 to exercise the keyboard key press function.
 
 ### <a name="config_25"></a> [SAM9X75-DDR3-EB Evaluation Board](https://www.microchip.com/en-us/development-tool/EA14J50A)
 

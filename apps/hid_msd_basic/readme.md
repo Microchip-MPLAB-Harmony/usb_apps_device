@@ -70,7 +70,7 @@ Board](#config_23)                         |
 - Use TARGET USB J200 connector on the board to connect the USB Device to the USB Host PC.
 - LED3 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
 - Pressing the LED Toggle button on the USB Host PC Utility toggles LED3.
-- The USB Host PC utility monitors SW1 switch press on the board.
+- The USB Host PC utility monitors SW400 switch press on the board.
 
 ### <a name="config_23"></a> [PIC32CZ CA80 Curiosity Ultra development board](https://www.microchip.com/en-us/development-tool/ea61x20a)
 
