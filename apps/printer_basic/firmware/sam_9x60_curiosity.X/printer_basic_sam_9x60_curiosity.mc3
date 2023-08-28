@@ -3364,7 +3364,7 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="!@#harmonyUserData"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;UserData&gt;
   &lt;UserData dnOrder=&quot;0&quot;&gt;
-    &lt;GraphSettings canvasHeight=&quot;342&quot; canvasWidth=&quot;560&quot; dnOrder=&quot;0&quot;/&gt;
+    &lt;GraphSettings canvasHeight=&quot;299&quot; canvasWidth=&quot;560&quot; dnOrder=&quot;0&quot;/&gt;
     &lt;ComponentGraph dnOrder=&quot;1&quot; id=&quot;__ROOTVIEW&quot;&gt;
       &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
         &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;BSP_SAM_9X60_Curiosity&quot; x=&quot;156&quot; y=&quot;13&quot;/&gt;
@@ -3374,7 +3374,7 @@
         &lt;ElementPosition dnOrder=&quot;4&quot; id=&quot;dfp&quot; x=&quot;160&quot; y=&quot;40&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;5&quot; id=&quot;drv_usart&quot; x=&quot;352&quot; y=&quot;15&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;6&quot; id=&quot;drv_usb_udphs&quot; x=&quot;10&quot; y=&quot;183&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;7&quot; id=&quot;usb_device&quot; x=&quot;204&quot; y=&quot;183&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;7&quot; id=&quot;usb_device&quot; x=&quot;204&quot; y=&quot;184&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;8&quot; id=&quot;usb_device_printer&quot; x=&quot;356&quot; y=&quot;178&quot;/&gt;
       &lt;/ElementPositions&gt;
     &lt;/ComponentGraph&gt;
@@ -3991,6 +3991,50 @@
 </value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_147_FUNCTION_TYPE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_147_FUNCTION_TYPE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;DBGU_DTXD&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_147_PERIPHERAL_FUNCTION"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_147_PERIPHERAL_FUNCTION&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;A&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_157_FUNCTION_TYPE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_157_FUNCTION_TYPE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;DBGU_DRXD&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_157_PERIPHERAL_FUNCTION"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_157_PERIPHERAL_FUNCTION&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;A&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_40_DIR"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_40_DIR&quot;&gt;
@@ -4216,7 +4260,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PIOA_PDR_VALUE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;0&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;1536&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -4525,6 +4569,17 @@
   &lt;core dnOrder=&quot;0&quot; id=&quot;SSC_CLOCK_FREQUENCY&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
       &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;200000000&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="TC0_CLOCK_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;TC0_CLOCK_ENABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -5448,7 +5503,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="usb_device" name="CONFIG_USB_DEVICE_SERIAL_NUMBER_STRING_ENABLE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;usb_device&gt;
   &lt;usb_device dnOrder=&quot;0&quot; id=&quot;CONFIG_USB_DEVICE_SERIAL_NUMBER_STRING_ENABLE&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/usb_device&gt;
 &lt;/usb_device&gt;
 </value>
@@ -5696,12 +5753,12 @@
          <hash>c653eab2dc2e1aa743f83e1f30d114decded62d3534bbb98bee0ea5fffe39238</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_9x60_curiosity\usb_device_init_data.c</file>
-         <hash>9ecbaed8639717258b76ffff8798d187e74f7edc68477d452aa2c4251db29055</hash>
-      </entry>
-      <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\component\isi.h</file>
          <hash>1121c873c1f58bd5714db6a51db5fd28b997c57c4d03ec8a02c8410251220ba3</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_9x60_curiosity\usb_device_init_data.c</file>
+         <hash>c29a7c0800cd8d7e2e91245104c287f8c89a9238214450385f56ff4f814cd2f9</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\interrupts.h</file>
@@ -5773,11 +5830,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\pin_configurations.csv</file>
-         <hash>9368798b6a936717236cf20dae713702ad5043fb0d9caa985a0b0e3fbb0d5a73</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_9x60_curiosity\usb\src\usb_device_local.h</file>
-         <hash>3dc9e27b535edb31aa97aae04a0ce9ac12e5092ed3bae7ef6fd203bc1520ef33</hash>
+         <hash>2d2c8abfc22af3e09cd999129e52610c041efeb4660176fc647cbac235beccf0</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\component\i2smcc.h</file>
@@ -5786,6 +5839,10 @@
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\flexcom11.h</file>
          <hash>3ba34d771483afbf2827a1e96993cc68b900f8ae6d071db6c1a691384817d2b9</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_9x60_curiosity\usb\src\usb_device_local.h</file>
+         <hash>3dc9e27b535edb31aa97aae04a0ce9ac12e5092ed3bae7ef6fd203bc1520ef33</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\sfr.h</file>
@@ -5897,7 +5954,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\peripheral\pio\plib_pio.c</file>
-         <hash>43375325ba777018475661ebacf1d65109aa4ac65511305d9acef1f081e1fe53</hash>
+         <hash>73fe861f8dde8898fa5b1d4bd6d4c111b2a6e092381bbdae6387974c6949cc18</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\driver\driver.h</file>
@@ -6168,12 +6225,12 @@
          <hash>5a611683e99c7455a1fb5fb64ff475abf1a576defecf04d4a44712063d45f947</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_9x60_curiosity\usb\usb_common.h</file>
-         <hash>fc9f44df7ab465084d1522901685e5bfad10548e44563a7460d7e089e6276ded</hash>
-      </entry>
-      <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\component\tc.h</file>
          <hash>544fbb24616f35ed2976de6e6d5a6ba48286dafdba0c5c21ef17c6b4be119744</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_9x60_curiosity\usb\usb_common.h</file>
+         <hash>fc9f44df7ab465084d1522901685e5bfad10548e44563a7460d7e089e6276ded</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\flexcom6.h</file>
@@ -6260,16 +6317,16 @@
          <hash>4e354475dbf789da0200fb2a68668c412e3f3c8d5ca7dccc4bc2ab0869ec6033</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_9x60_curiosity\usb\src\usb_device.c</file>
-         <hash>e2299e7132aaf91acd6857a827520f8bd5ecdc40d8ba2e6c4018b8441064a6cb</hash>
-      </entry>
-      <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\component\bsc.h</file>
          <hash>70d948d6bf8290b919894548a5afb2a7c963f61f9c737da3ca2cae19f330c5d0</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\lcdc.h</file>
          <hash>98571ca3d9b4228de66521788ea0d792287d237ad214a25858b84071b265e0c0</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_9x60_curiosity\usb\src\usb_device.c</file>
+         <hash>e2299e7132aaf91acd6857a827520f8bd5ecdc40d8ba2e6c4018b8441064a6cb</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\peripheral\mmu\plib_mmu.c</file>

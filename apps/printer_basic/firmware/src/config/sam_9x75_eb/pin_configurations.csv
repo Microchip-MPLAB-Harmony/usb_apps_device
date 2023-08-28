@@ -47,8 +47,8 @@ H3,PA15,,Available,In,,,,,,,,
 J3,PA21,,Available,In,,,,,,,,
 J4,PA18,,Available,In,,,,,,,,
 L1,PA30,,Available,In,,,,,,,,
-L2,PA27,,Available,In,,,,,,,,
-L3,PA26,,Available,In,,,,,,,,
+L2,PA27,,DBGU_DTXD,n/a,n/a,No,Disabled,No,No,Disabled,No,Low
+L3,PA26,,DBGU_DRXD,n/a,n/a,No,Disabled,No,No,Disabled,No,Low
 L4,PA29,,Available,In,,,,,,,,
 L9,PB11,,Available,In,,,,,,,,
 M1,PA25,,Available,In,,,,,,,,
