@@ -102,7 +102,7 @@ Following table gives the details of project configurations, target device used,
 
 ### <a name="config_24"></a> PIC32CK Curiosity Development Board
 
-- Use the USB micro-B "USB DEVICE" connector (J202) to connect the USB Device to the USB Host PC.
+- Use the USB Type-C "USB DEVICE" connector (J202) to connect the USB Device to the USB Host PC.
 - LED0 indicates USB Device Configuration Set Complete event (The USB device functionality has been activated by the USB Host).
 - Press the switch SW0 to trigger communication from the USB Device to the USB Host.
 

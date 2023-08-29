@@ -69,9 +69,9 @@ Following table gives the details of project configurations, target device used,
 - Use the micro-B USB connector USB2 on the board to connect the USB Device to the USB Host PC.
 - LED1 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
 
-### <a name="config_24"></a> [PIC32CK USB Curiosity Development Board]
+### <a name="config_24"></a> PIC32CK USB Curiosity Development Board
 
-- Use the micro-C USB connector J202 on the board to connect the USB Device to the USB Host PC.
+- Use the USB Type-C connector J202 on the board to connect the USB Device to the USB Host PC.
 - LED0 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
 
 ### <a name="config_22"></a> [Curiosity Pro PIC32CM LE00 Development Board](https://www.microchip.com/Developmenttools/ProductDetails/DMXXXXX)
