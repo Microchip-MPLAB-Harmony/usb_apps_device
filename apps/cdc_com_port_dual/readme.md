@@ -83,6 +83,11 @@ Following table gives the details of project configurations, target device used,
 - Use the USB Type-c connector (J202) to connect the USB Device to the USB Host PC.
 - LED0 indicates USB Device Configuration Set Complete event (The USB device functionality has been activated by the USB Host).
 
+### <a name="config_22"></a> [Curiosity Pro PIC32CM LE00 Development Board](https://www.microchip.com/en-us/development-tool/EV80P12A)
+
+- Use the USB micro-A/B "TARGET USB" connector (D200) to connect the USB Device to the USB Host PC.
+- LED0 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
+
 ### <a name="config_6"></a> [Curiosity PIC32MZ EF 2.0 Development Board](https://www.microchip.com/developmenttools/ProductDetails/DM320209)
 
 - Use the USB micro-B port J201 to connect the USB Device to the USB Host PC.
