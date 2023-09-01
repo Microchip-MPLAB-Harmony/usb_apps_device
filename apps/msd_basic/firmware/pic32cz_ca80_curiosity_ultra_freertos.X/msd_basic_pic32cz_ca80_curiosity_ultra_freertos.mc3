@@ -3997,6 +3997,17 @@
 </value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="DATA_CACHE_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;DATA_CACHE_ENABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;false&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="DFLL_CLOCK_FREQ"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;DFLL_CLOCK_FREQ&quot;&gt;
@@ -8984,7 +8995,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra_freertos\peripheral\fcw\plib_fcw.c</file>
-         <hash>47b328b964ec75c9f5a7a463bd31830e829e63ca948ef8814ae254519f573d06</hash>
+         <hash>44bc42111317ddd04656917568c4c8edc4010516f895c2cee9d346b8a60f4b93</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CZ8110CA80208_DFP\component\port.h</file>
@@ -9516,7 +9527,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra_freertos\startup_xc32.c</file>
-         <hash>e2d9460ddd6b662bd743e38b8a87b586aa5ef981df6f472e265bdac6c04536ee</hash>
+         <hash>30150412a7cb3fd8720fb2d66cd6bc2ea744710a066004e3b6dd39dcfc71aee0</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra_freertos\system\cache\sys_cache.h</file>
@@ -9636,7 +9647,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra_freertos\device_cache.h</file>
-         <hash>90ab2a7320a2a8c1123fb5d297dfaa0f56e3cb28c3ad1ea2ab5633988c1ef252</hash>
+         <hash>079fd3e8819d4bdecd46b1e720a3d8e01dc62df9f84f9c93e2e5b30e53d222ea</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CZ8110CA80208_DFP\component\can.h</file>

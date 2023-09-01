@@ -49,7 +49,6 @@
 #include "configuration.h"
 #include "driver/usart/drv_usart.h"
 #include "drv_usart_local.h"
-#include "system/cache/sys_cache.h"
 
 // *****************************************************************************
 // *****************************************************************************

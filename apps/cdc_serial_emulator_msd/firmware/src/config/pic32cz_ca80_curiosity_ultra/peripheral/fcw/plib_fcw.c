@@ -203,10 +203,6 @@ bool FCW_RowWrite( uint32_t *data, uint32_t address )
         /* Do Nothing */
     }
 
-    if (DATA_CACHE_IS_ENABLED() != 0U)
-    {
-        DCACHE_CLEAN_BY_ADDR(data, (int32_t)FCW_FLASH_ROWSIZE);
-    }
 
     FCW_REGS->FCW_SRCADDR = (uint32_t )(data);
 

@@ -168,7 +168,7 @@ const USB_DEVICE_FUNCTION_REGISTRATION_TABLE funcRegistrationTable0[2] =
 	/* MSD Function 0 */
     { 
         .configurationValue = 1,    /* Configuration value */ 
-        .interfaceNumber = 1,       /* First interfaceNumber of this function */ 
+        .interfaceNumber = 0,       /* First interfaceNumber of this function */ 
         .speed = USB_SPEED_HIGH|USB_SPEED_FULL,    /* Function Speed */ 
         .numberOfInterfaces = 1,    /* Number of interfaces */
         .funcDriverIndex = 0,  /* Index of MSD Function Driver */
@@ -181,7 +181,7 @@ const USB_DEVICE_FUNCTION_REGISTRATION_TABLE funcRegistrationTable0[2] =
 	/* HID Function 0 */
     { 
         .configurationValue = 1,    /* Configuration value */ 
-        .interfaceNumber = 0,       /* First interfaceNumber of this function */ 
+        .interfaceNumber = 1,       /* First interfaceNumber of this function */ 
         .speed = USB_SPEED_HIGH|USB_SPEED_FULL,    /* Function Speed */ 
         .numberOfInterfaces = 1,    /* Number of interfaces */
         .funcDriverIndex = 0,  /* Index of HID Function Driver */
@@ -258,7 +258,7 @@ const uint8_t highSpeedConfigurationDescriptor0[]=
 
     9,                              // Size of this descriptor in bytes
     USB_DESCRIPTOR_INTERFACE,       // INTERFACE descriptor type
-    1,                              // Interface Number
+    0,                              // Interface Number
     0,                              // Alternate Setting Number
     2,                              // Number of endpoints in this intf
     USB_MSD_CLASS_CODE,             // Class code
@@ -270,7 +270,7 @@ const uint8_t highSpeedConfigurationDescriptor0[]=
 
     7,                          // Size of this descriptor in bytes
     USB_DESCRIPTOR_ENDPOINT,    // Endpoint Descriptor
-    2  | USB_EP_DIRECTION_IN,    // EndpointAddress ( EP1 IN )
+    1  | USB_EP_DIRECTION_IN,    // EndpointAddress ( EP1 IN )
     USB_TRANSFER_TYPE_BULK,     // Attributes type of EP (BULK)
     0x00,0x02,                  // Max packet size of this EP
     0x00,                       // Interval (in ms)
@@ -278,7 +278,7 @@ const uint8_t highSpeedConfigurationDescriptor0[]=
 
     7,                          // Size of this descriptor in bytes
     USB_DESCRIPTOR_ENDPOINT,    // Endpoint Descriptor
-    2  | USB_EP_DIRECTION_OUT,   // EndpointAddress ( EP2 OUT )
+    1  | USB_EP_DIRECTION_OUT,   // EndpointAddress ( EP2 OUT )
     USB_TRANSFER_TYPE_BULK,     // Attributes type of EP (BULK)
     0x00,0x02,                  // Max packet size of this EP
     0x00,                       // Interval (in ms)
@@ -291,7 +291,7 @@ const uint8_t highSpeedConfigurationDescriptor0[]=
 
     0x09,                               // Size of this descriptor in bytes
     USB_DESCRIPTOR_INTERFACE,           // Descriptor Type is Interface descriptor
-    0,                                  // Interface Number
+    1,                                  // Interface Number
     0x00,                                  // Alternate Setting Number
     0x02,                                  // Number of endpoints in this interface
     USB_HID_CLASS_CODE,                 // Class code
@@ -313,7 +313,7 @@ const uint8_t highSpeedConfigurationDescriptor0[]=
 
     0x07,                           // Size of this descriptor in bytes
     USB_DESCRIPTOR_ENDPOINT,        // Endpoint Descriptor
-    1 | USB_EP_DIRECTION_IN,    // EndpointAddress ( EP1 IN )
+    2 | USB_EP_DIRECTION_IN,    // EndpointAddress ( EP2 IN )
     USB_TRANSFER_TYPE_INTERRUPT,    // Attributes
     0x40,0x00,                      // Size
     0x01,                           // Interval
@@ -322,7 +322,7 @@ const uint8_t highSpeedConfigurationDescriptor0[]=
 
     0x07,                           // Size of this descriptor in bytes
     USB_DESCRIPTOR_ENDPOINT,        // Endpoint Descriptor
-    1 | USB_EP_DIRECTION_OUT,   // EndpointAddress ( EP1 OUT )
+    2 | USB_EP_DIRECTION_OUT,   // EndpointAddress ( EP2 OUT )
     USB_TRANSFER_TYPE_INTERRUPT,    // Attributes
     0x40,0x00,                      // size
     0x01,                           // Interval
@@ -362,7 +362,7 @@ const uint8_t fullSpeedConfigurationDescriptor0[]=
 
     9,                              // Size of this descriptor in bytes
     USB_DESCRIPTOR_INTERFACE,       // INTERFACE descriptor type
-    1,                              // Interface Number
+    0,                              // Interface Number
     0,                              // Alternate Setting Number
     2,                              // Number of endpoints in this intf
     USB_MSD_CLASS_CODE,             // Class code
@@ -374,7 +374,7 @@ const uint8_t fullSpeedConfigurationDescriptor0[]=
 
     7,                          // Size of this descriptor in bytes
     USB_DESCRIPTOR_ENDPOINT,    // Endpoint Descriptor
-    2  | USB_EP_DIRECTION_IN,    // EndpointAddress ( EP1 IN )
+    1  | USB_EP_DIRECTION_IN,    // EndpointAddress ( EP1 IN )
     USB_TRANSFER_TYPE_BULK,     // Attributes type of EP (BULK)
     0x40,0x00,                  // Max packet size of this EP
     0x00,                       // Interval (in ms)
@@ -382,7 +382,7 @@ const uint8_t fullSpeedConfigurationDescriptor0[]=
 
     7,                          // Size of this descriptor in bytes
     USB_DESCRIPTOR_ENDPOINT,    // Endpoint Descriptor
-    2  | USB_EP_DIRECTION_OUT,   // EndpointAddress ( EP2 OUT )
+    1  | USB_EP_DIRECTION_OUT,   // EndpointAddress ( EP2 OUT )
     USB_TRANSFER_TYPE_BULK,     // Attributes type of EP (BULK)
     0x40,0x00,                  // Max packet size of this EP
     0x00,                       // Interval (in ms)
@@ -392,7 +392,7 @@ const uint8_t fullSpeedConfigurationDescriptor0[]=
 
     0x09,                               // Size of this descriptor in bytes
     USB_DESCRIPTOR_INTERFACE,           // Descriptor Type is Interface descriptor
-    0,                                  // Interface Number
+    1,                                  // Interface Number
     0x00,                                  // Alternate Setting Number
     0x02,                                  // Number of endpoints in this interface
     USB_HID_CLASS_CODE,                 // Class code
@@ -414,7 +414,7 @@ const uint8_t fullSpeedConfigurationDescriptor0[]=
 
     0x07,                           // Size of this descriptor in bytes
     USB_DESCRIPTOR_ENDPOINT,        // Endpoint Descriptor
-    1 | USB_EP_DIRECTION_IN,    // EndpointAddress ( EP1 IN )
+    2 | USB_EP_DIRECTION_IN,    // EndpointAddress ( EP2 IN )
     USB_TRANSFER_TYPE_INTERRUPT,    // Attributes
     0x40,0x00,                      // Size
     0x01,                           // Interval
@@ -423,7 +423,7 @@ const uint8_t fullSpeedConfigurationDescriptor0[]=
 
     0x07,                           // Size of this descriptor in bytes
     USB_DESCRIPTOR_ENDPOINT,        // Endpoint Descriptor
-    1 | USB_EP_DIRECTION_OUT,   // EndpointAddress ( EP1 OUT )
+    2 | USB_EP_DIRECTION_OUT,   // EndpointAddress ( EP2 OUT )
     USB_TRANSFER_TYPE_INTERRUPT,    // Attributes
     0x40,0x00,                      // size
     0x01,                           // Interval
