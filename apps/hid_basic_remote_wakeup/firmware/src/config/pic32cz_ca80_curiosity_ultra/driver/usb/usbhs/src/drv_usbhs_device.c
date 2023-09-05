@@ -643,7 +643,7 @@ void DRV_USBHS_DEVICE_RemoteWakeupStart
         {
             hDriver = ((DRV_USBHS_CLIENT_OBJ *)handle)->hDriver;
             usbID = hDriver->usbDrvCommonObj.usbID;
-            ((usbhs_registers_t*)usbID)->ENDPOINT0.USBHS_LPMATTR |= USBHS_LPMATTR_RMTWAK_Msk;        
+            ((usbhs_registers_t*)usbID)->ENDPOINT0.USBHS_POWER |= USBHS_POWER_RESUME_Msk;
         }
         else
         {
@@ -662,18 +662,14 @@ void DRV_USBHS_DEVICE_RemoteWakeupStop
 )
 {
     DRV_USBHS_OBJ * hDriver =  NULL;
-    
+    USBHS_MODULE_ID usbID = USBHS_NUMBER_OF_MODULES;
     if( (DRV_HANDLE_INVALID !=  handle) && (NULL != ((DRV_USBHS_CLIENT_OBJ *)handle)) )
     {
         if(((DRV_USBHS_CLIENT_OBJ *)handle)->inUse)
         {
             hDriver = ((DRV_USBHS_CLIENT_OBJ *)handle)->hDriver;
-
-            /* Added to avoid build compilation issue */
-            hDriver = hDriver;
-            
-            /* Commented till PLIB implementation is completed */
-            //PLIB_USB_ResumeSignalingDisable(hDriver->usbDrvCommonObj.usbID);
+            usbID = hDriver->usbDrvCommonObj.usbID;
+            ((usbhs_registers_t*)usbID)->ENDPOINT0.USBHS_POWER &= ~(USBHS_POWER_RESUME_Msk);
         }
         else
         {

@@ -173,6 +173,8 @@ void APP_USBDeviceEventHandler(USB_DEVICE_EVENT event, void * eventData, uintptr
     switch(event)
     {
         case USB_DEVICE_EVENT_RESET:
+            appData.IsSuspended = false;
+
         case USB_DEVICE_EVENT_DECONFIGURED:
 
             /* Host has de configured the device or a bus reset has happened.
@@ -540,9 +542,14 @@ void APP_Tasks (void )
                          * initiate a Remote Wakeup Start and go back to Standby 
                          * Sleep Mode and wait for PC host to drive USB device 
                          * resume. */
+                        /*A 10ms delay has been added between the remote wakeup
+                        start and stop function as per the USB Spec*/
                         USB_DEVICE_RemoteWakeupStart(appData.usbDevHandle);
                         appData.remoteWakeUpInProgress = true; 
-
+                        SYS_TIME_HANDLE timeh; 
+                        SYS_TIME_DelayMS ( 10,  &timeh );
+                        while(SYS_TIME_DelayIsComplete(timeh) != true);
+                        USB_DEVICE_RemoteWakeupStop(appData.usbDevHandle);
                         SYS_CONSOLE_MESSAGE("Remote Wakeup Start Sent\r\n");  
                     }
                     else
