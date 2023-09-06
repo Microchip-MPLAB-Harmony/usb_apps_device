@@ -4,27 +4,27 @@
 	"content": {
 		"metaDataVersion": "1.3.0",
 		"name": "com.microchip.mcu32.mplabx.project.usb_apps_device_usb_uart_bridge_single_sam_d21_xpro",
-		"version": "3.4.1",
+		"version": "3.5.0",
 		"displayName": "USB UART Bridge Single Channel Example (usb_usart_bridge_single) Example for SAM D21/DA1 Family",
 		"projectName": "usb_uart_bridge_single_sam_d21_xpro",
 		"shortDescription": "This application demonstrates the use of the CDC device class to implement a single USB-UART bridge. The application enumerates two COM ports on the personal computer. Any data sent through the virtual COM port will be seen at the respective UART port Tx pin and data sent through the UART Rx pin of the MCU will be seen at the virtual COM port.",
 		"ide": {
 			"name": "MPLABX",
-			"semverRange": ">=6.00.0"
+			"semverRange": ">=6.15.0"
 		},
 		"compiler": [
 			{
 				"name": "XC32",
-				"semverRange": ">=4.1.0"
+				"semverRange": ">=4.3.0"
 			}
 		],
 		"dfp": {
 			"name": "SAMD21_DFP",
-			"semverRange": "^3.5.132"
+			"semverRange": "^3.6.144"
 		},
 		"configurator": {
 			"name": "MCC",
-			"semverRange": ">=5.1.1"
+			"semverRange": ">=5.3.7"
 		},
 		"device": {
 			"metaDataVersion": "1.0.0",

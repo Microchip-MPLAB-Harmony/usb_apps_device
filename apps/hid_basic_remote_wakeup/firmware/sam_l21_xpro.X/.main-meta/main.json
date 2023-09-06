@@ -4,27 +4,27 @@
 	"content": {
 		"metaDataVersion": "1.3.0",
 		"name": "com.microchip.mcu32.mplabx.project.usb_apps_device_hid_basic_remote_wakeup_sam_l21_xpro",
-		"version": "3.4.1",
+		"version": "3.5.0",
 		"displayName": "HID Basic Remote basic Example (hid_basic) Example for SAM L21/L22 Family",
 		"projectName": "hid_basic_remote_wakeup_sam_l21_xpro",
 		"shortDescription": "This application creates a USB HID Device that enumerates as a custom USB HID device on the USB host PC. The device allows the status of a device and having a remote wakeup feature.",
 		"ide": {
 			"name": "MPLABX",
-			"semverRange": ">=6.00.0"
+			"semverRange": ">=6.15.0"
 		},
 		"compiler": [
 			{
 				"name": "XC32",
-				"semverRange": ">=4.1.0"
+				"semverRange": ">=4.3.0"
 			}
 		],
 		"dfp": {
 			"name": "SAML21_DFP",
-			"semverRange": "^3.5.87"
+			"semverRange": "^3.7.217"
 		},
 		"configurator": {
 			"name": "MCC",
-			"semverRange": ">=5.1.1"
+			"semverRange": ">=5.3.7"
 		},
 		"device": {
 			"metaDataVersion": "1.0.0",

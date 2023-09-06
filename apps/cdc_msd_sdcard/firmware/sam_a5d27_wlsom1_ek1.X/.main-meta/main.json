@@ -4,27 +4,27 @@
 	"content": {
 		"metaDataVersion": "1.3.0",
 		"name": "com.microchip.mcu32.mplabx.project.usb_apps_device_cdc_msd_sdcard_sam_a5d2_wlsom1_ek1",
-		"version": "3.4.1",
+		"version": "3.5.0",
 		"displayName": "CDC MSD Sdcard Example (cdc_msd_sdcard) Example for SAM A5D2 Family",
 		"projectName": "cdc_msd_sdcard_sam_a5d2_wlsom1_ek1",
 		"shortDescription": "This application creates a USB CDC Device that enumerates as a COM port and Flash Drive simultaneously. The COM port can be opened using any of the terminal applications and to demonstrate two-way communication, a character typed on the terminal window is echoed back by the USB device. Flash drive acts similar to any Mass Storage Class device where the SDCARD is used as storage media.",
 		"ide": {
 			"name": "MPLABX",
-			"semverRange": ">=6.00.0"
+			"semverRange": ">=6.15.0"
 		},
 		"compiler": [
 			{
 				"name": "XC32",
-				"semverRange": ">=4.1.0"
+				"semverRange": ">=4.3.0"
 			}
 		],
 		"dfp": {
 			"name": "SAMA5D2_DFP",
-			"semverRange": "^1.6.69"
+			"semverRange": "^1.9.106"
 		},
 		"configurator": {
 			"name": "MCC",
-			"semverRange": ">=5.1.1"
+			"semverRange": ">=5.3.7"
 		},
 		"device": {
 			"metaDataVersion": "1.0.0",

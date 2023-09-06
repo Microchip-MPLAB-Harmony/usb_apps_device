@@ -4,18 +4,18 @@
 	"content": {
 		"metaDataVersion": "1.3.0",
 		"name": "com.microchip.mcu32.mplabx.project.usb_apps_device_hid_keyboard_pic32cz_ca80_curiosity_ultra",
-		"version": "3.5.0-E1",
+		"version": "3.5.0",
 		"displayName": "HID Keyboard Example (hid_keyboard) Example for PIC32CZ_CA Family",
 		"projectName": "hid_keyboard_pic32cz_ca80_curiosity_ultra",
 		"shortDescription": "This demonstration application creates a Generic HID keyboard. Pressing a switch on the target board emulates a keyboard key press.",
 		"ide": {
 			"name": "MPLABX",
-			"semverRange": ">=6.05.0"
+			"semverRange": ">=6.15.0"
 		},
 		"compiler": [
 			{
 				"name": "XC32",
-				"semverRange": ">=4.2.0"
+				"semverRange": ">=4.3.0"
 			}
 		],
 		"dfp": {

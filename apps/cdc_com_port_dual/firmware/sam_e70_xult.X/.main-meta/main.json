@@ -4,27 +4,27 @@
 	"content": {
 		"metaDataVersion": "1.3.0",
 		"name": "com.microchip.mcu32.mplabx.project.usb_apps_device_cdc_com_port_dual_sam_e70_xult",
-		"version": "3.4.1",
+		"version": "3.5.0",
 		"displayName": "CDC COM Port Dual Example (cdc_com_port_dual) Example for SAM E70/S70/V70/V71 Family",
 		"projectName": "cdc_com_port_dual_sam_e70_xult",
 		"shortDescription": "This application is example of a USB CDC Device that enumerates as a dual COM port on the USB host PC. The COM port can be opened using any of the terminal applications. To demonstrate communication between the two COM ports, a character typed in one of the COM port is displayed on the other and vice versa.",
 		"ide": {
 			"name": "MPLABX",
-			"semverRange": ">=6.00.0"
+			"semverRange": ">=6.15.0"
 		},
 		"compiler": [
 			{
 				"name": "XC32",
-				"semverRange": ">=4.1.0"
+				"semverRange": ">=4.3.0"
 			}
 		],
 		"dfp": {
 			"name": "SAME70_DFP",
-			"semverRange": "^4.6.98"
+			"semverRange": "^4.10.248"
 		},
 		"configurator": {
 			"name": "MCC",
-			"semverRange": ">=5.1.1"
+			"semverRange": ">=5.3.7"
 		},
 		"device": {
 			"metaDataVersion": "1.0.0",

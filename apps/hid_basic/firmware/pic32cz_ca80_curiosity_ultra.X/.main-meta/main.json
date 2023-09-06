@@ -4,18 +4,18 @@
 	"content": {
 		"metaDataVersion": "1.3.0",
 		"name": "com.microchip.mcu32.mplabx.project.usb_apps_device_hid_basic_pic32cz_ca80_curiosity_ultra",
-		"version": "3.5.0-E1",
+		"version": "3.5.0",
 		"displayName": "HID Basic Example (hid_basic ) Example for PIC32CZ_CA Family",
 		"projectName": "hid_basic_pic32cz_ca80_curiosity_ultra",
 		"shortDescription": "This application creates a USB HID Device that enumerates as a custom USB HID device on the USB host PC. The device allows the USB Host utility to control the LEDs on the board and query the status of a switch.",
 		"ide": {
 			"name": "MPLABX",
-			"semverRange": ">=6.05.0"
+			"semverRange": ">=6.15.0"
 		},
 		"compiler": [
 			{
 				"name": "XC32",
-				"semverRange": ">=4.2.0"
+				"semverRange": ">=4.3.0"
 			}
 		],
 		"dfp": {
