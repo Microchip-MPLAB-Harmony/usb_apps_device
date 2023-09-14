@@ -4845,7 +4845,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\drv_usbhs.c</file>
-         <hash>1ab70a68a1a446e89aad8fe4d9600bce4bd011f98f36e9ba1f90c4c5a7e14add</hash>
+         <hash>938d611391c54d0e9f7a76ca0c84b41948ff058988278a61e31a47ad9cff5614</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_gcc.h</file>
@@ -4925,7 +4925,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\drv_usbhs_device.c</file>
-         <hash>158fd4cc87e2d01a1fae35e0b52bb0201290167183cfbabf610c435d66887e92</hash>
+         <hash>c10ff7848ade02d99ae12b564836e795cbb7c965a8743939ebe79d35f99fd500</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CZ8110CA80208_DFP\instance\can5.h</file>
@@ -5153,7 +5153,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\initialization.c</file>
-         <hash>32829f98020a829f542ef04730786c0e577f1ea2a105f8aca24c5f4afa87d499</hash>
+         <hash>5a592ef80c3fcab21a30861b114d43de1b5a3a66f3ef5565325407d37aefbc44</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\usb\src\usb_device_local.h</file>
@@ -5417,7 +5417,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\definitions.h</file>
-         <hash>ece55f8f3196de4ef6db4732fdc2780205e8989019bd0f6fb3102126bb3b3a27</hash>
+         <hash>0658c097ad3f9d834c228e4a19025c737bec1e63e5305d49519fd85d362a2e13</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CZ8110CA80208_DFP\instance\gclk.h</file>
@@ -5613,7 +5613,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\usb\usb_host_client_driver.h</file>
-         <hash>d11085e6a64f6b4551b1dc19aaee5b8a2555b7df649057bdb2ce8549c296a87d</hash>
+         <hash>999717236876c88cfbb582f50c8b6429396a0e6696aba8a74556c25862070e8d</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CZ8110CA80208_DFP\instance\tcc5.h</file>
@@ -5697,7 +5697,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\configuration.h</file>
-         <hash>e5bde53355f8ca20f5f03e9b9fce36bc4f1a18c17e51c99858bd1989434b3f02</hash>
+         <hash>c4964d857e003a549f6bd5bc2d3b1f2e8a3a38749df5dac434922efa077b68ca</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CZ8110CA80208_DFP\component\spi_ixs.h</file>

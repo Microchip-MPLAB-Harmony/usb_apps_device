@@ -5472,7 +5472,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\usb\usb_host_client_driver.h</file>
-         <hash>d11085e6a64f6b4551b1dc19aaee5b8a2555b7df649057bdb2ce8549c296a87d</hash>
+         <hash>999717236876c88cfbb582f50c8b6429396a0e6696aba8a74556c25862070e8d</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\component\eth.h</file>
@@ -5684,7 +5684,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\driver\usb\usbhs\src\drv_usbhs_device.c</file>
-         <hash>3d81c8553c86f274ab846c7bb30af0d8177a476cb3a8fcabfac17d542c8e1b56</hash>
+         <hash>c10ff7848ade02d99ae12b564836e795cbb7c965a8743939ebe79d35f99fd500</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_compiler.h</file>
@@ -5704,7 +5704,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\usb_device_init_data_0.c</file>
-         <hash>6ae908699ae5d9c31afe737c101223be6282f390414593c1df6d1f00efa0150f</hash>
+         <hash>4381de0167500ab0451b5114bdebfa489361f66ed0e38823d38cab2d934c29fa</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\component\fuses.h</file>

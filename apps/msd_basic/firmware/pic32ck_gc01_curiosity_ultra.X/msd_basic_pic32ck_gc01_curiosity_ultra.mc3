@@ -5744,7 +5744,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\definitions.h</file>
-         <hash>c80f1998cd8695284e03fb42258c22fe776f554a0ef278bbbc53ef8c5af93332</hash>
+         <hash>ad8f5971933aa16e79ed88091401f2986415e83762395583a8c07297cd35312f</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\bsp\bsp.c</file>
@@ -5908,7 +5908,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\usb\usb_host_client_driver.h</file>
-         <hash>d11085e6a64f6b4551b1dc19aaee5b8a2555b7df649057bdb2ce8549c296a87d</hash>
+         <hash>999717236876c88cfbb582f50c8b6429396a0e6696aba8a74556c25862070e8d</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\system\system_media.h</file>
@@ -5923,12 +5923,12 @@
          <hash>7b458d537456b8845d20c99ab4ffca565b87b772bc4a039d72512f44d4b299df</hash>
       </entry>
       <entry>
-         <file>..\src\config\pic32ck_gc01_curiosity_ultra\peripheral\fcw\plib_fcw.c</file>
-         <hash>44bc42111317ddd04656917568c4c8edc4010516f895c2cee9d346b8a60f4b93</hash>
-      </entry>
-      <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_TxEPStatus_Unsupported.h</file>
          <hash>190c0d3c025a1dd4dc421a37b5918bb0f0bad8ab491f74bc79b9a4aadc50a65d</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32ck_gc01_curiosity_ultra\peripheral\fcw\plib_fcw.c</file>
+         <hash>44bc42111317ddd04656917568c4c8edc4010516f895c2cee9d346b8a60f4b93</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\PIC32CK2051GC01144.ld</file>
@@ -6124,7 +6124,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\driver\usb\usbhs\src\drv_usbhs_device.c</file>
-         <hash>3d81c8553c86f274ab846c7bb30af0d8177a476cb3a8fcabfac17d542c8e1b56</hash>
+         <hash>c10ff7848ade02d99ae12b564836e795cbb7c965a8743939ebe79d35f99fd500</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_compiler.h</file>
