@@ -1,0 +1,506 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us" data-whc_version="24.1">
+    <head><link rel="shortcut icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><link rel="icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="This application demonstrates the ability of the MPLAB Harmony USB Device Stack to support CDC Device Class using a real-world application. It implements a CDC USART Serial Emulator application. ..."/><meta name="copyright" content="(C) Copyright 2023"/><meta name="generator" content="DITA-OT"/><title>1.5 CDC Serial Emulator Example (cdc_serial_emulator)</title><!--  Generated with Oxygen version 24.1, build number 2022062014.  --><meta name="wh-path2root" content=""/><meta name="wh-toc-id" content="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5-d269e53"/><meta name="wh-source-relpath" content="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5.xml"/><meta name="wh-out-relpath" content="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5.html"/>
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/lib/bootstrap/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" href="./oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css"/>
+    
+    <!-- Template default styles  -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/topic-page.css?buildId=2022062014"/>
+    
+    
+    <script src="./oxygen-webhelp/lib/jquery/jquery-3.5.1.min.js"></script>
+    
+    <script data-main="./oxygen-webhelp/app/topic-page.js" src="./oxygen-webhelp/lib/requirejs/require.js"></script>
+<link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/microchip.css?buildId=2022062014"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/notes.css?buildId=2022062014"/>
+<script src="mchp-context-help.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async="" type="text/javascript"></script>
+</head>
+
+    <body id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5" class="wh_topic_page frmBody">
+        <a href="#wh_topic_body" class="sr-only sr-only-focusable">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <a href="index.html" class=" wh_logo d-none d-sm-block "><img src="oxygen-webhelp\template\resources/images/microchip.png" alt="MPLAB Harmony USB Device application examples "/></a>
+                    <div class=" wh_publication_title "><a href="index.html">MPLAB Harmony USB Device application examples </a></div>
+                    
+                </div>
+                
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="search.html"><div class="d-flex justify-contents-around"><div class="flex-grow-1"></div><div class="position-relative flex-grow-1"><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div><div class="align-self-center flex-grow-1 ml-2"></div></div></form>
+            
+            <div class="mchp-color-stripe-grid-container">
+  <div class="mchp-main-bar mchp-orange-bar"></div>
+  <div class="mchp-main-bar mchp-blue-bar"></div>
+  <div class="mchp-main-bar mchp-green-bar"></div>
+</div>
+            
+        </div>
+        
+        <div class="container-fluid" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none navbar-expand-md" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol class="d-print-none"><li><span class="home"><a href="index.html"><span>Home</span></a></span></li><li><div class="topicref" data-id="GUID-90055758-897E-445A-8A8B-CE4EBF3930A7"><div class="title"><a href="GUID-90055758-897E-445A-8A8B-CE4EBF3930A7.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1</ph>
+Harmony 3 USB Device application examples</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li class="active"><div class="topicref" data-id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5"><div class="title"><a href="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.5</ph>
+CDC Serial Emulator Example (cdc_serial_emulator)</a></div></div></li></ol></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        <button type="button" id="wh_toc_button" class="custom-toggler navbar-toggler collapsed wh_toggle_button navbar-light" aria-expanded="false" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        <nav id="wh_publication_toc" class="col-lg-3 col-md-3 col-sm-12 d-md-block d-none d-print-none" aria-label="Table of Contents Container">
+                            <div id="wh_publication_toc_content">
+		                        
+                            	<div class=" wh_publication_toc " data-tooltip-position="right"><span class="expand-button-action-labels"><span id="button-expand-action" role="button" aria-label="Expand"></span><span id="button-collapse-action" role="button" aria-label="Collapse"></span><span id="button-pending-action" role="button" aria-label="Pending"></span></span><ul role="tree" aria-label="Table of Contents"><li role="treeitem" aria-expanded="true"><div data-tocid="GUID-90055758-897E-445A-8A8B-CE4EBF3930A7-d269e11" class="topicref" data-id="GUID-90055758-897E-445A-8A8B-CE4EBF3930A7" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action GUID-90055758-897E-445A-8A8B-CE4EBF3930A7-d269e11-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-90055758-897E-445A-8A8B-CE4EBF3930A7.html" id="GUID-90055758-897E-445A-8A8B-CE4EBF3930A7-d269e11-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1</ph>
+Harmony 3 USB Device application examples</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="GUID-DC9141E3-DB3A-4237-B2B5-ECC8B29BFBCA-d269e21" class="topicref" data-id="GUID-DC9141E3-DB3A-4237-B2B5-ECC8B29BFBCA" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-DC9141E3-DB3A-4237-B2B5-ECC8B29BFBCA.html" id="GUID-DC9141E3-DB3A-4237-B2B5-ECC8B29BFBCA-d269e21-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.1</ph>
+CDC COM Port Dual Example (cdc_com_port_dual)</a></div></div></li><li role="treeitem"><div data-tocid="GUID-DB15E610-4438-4D75-A60F-9BC2079E65EC-d269e29" class="topicref" data-id="GUID-DB15E610-4438-4D75-A60F-9BC2079E65EC" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-DB15E610-4438-4D75-A60F-9BC2079E65EC.html" id="GUID-DB15E610-4438-4D75-A60F-9BC2079E65EC-d269e29-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.2</ph>
+CDC COM Port Single Example (cdc_com_port_single)</a></div></div></li><li role="treeitem"><div data-tocid="GUID-461D5868-A2B8-4F4F-B3E3-C866DE626629-d269e37" class="topicref" data-id="GUID-461D5868-A2B8-4F4F-B3E3-C866DE626629" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-461D5868-A2B8-4F4F-B3E3-C866DE626629.html" id="GUID-461D5868-A2B8-4F4F-B3E3-C866DE626629-d269e37-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.3</ph>
+CDC MSD Basic Example (cdc_msd_basic)</a></div></div></li><li role="treeitem"><div data-tocid="GUID-8F76AB96-1C39-4752-BFB5-002111E06759-d269e45" class="topicref" data-id="GUID-8F76AB96-1C39-4752-BFB5-002111E06759" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-8F76AB96-1C39-4752-BFB5-002111E06759.html" id="GUID-8F76AB96-1C39-4752-BFB5-002111E06759-d269e45-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.4</ph>
+CDC MSD SD Card Example (cdc_msd_sdcard)</a></div></div></li><li role="treeitem" class="active"><div data-tocid="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5-d269e53" class="topicref" data-id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5.html" id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5-d269e53-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.5</ph>
+CDC Serial Emulator Example (cdc_serial_emulator)</a></div></div></li><li role="treeitem"><div data-tocid="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570-d269e61" class="topicref" data-id="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570.html" id="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570-d269e61-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.6</ph>
+CDC Serial Emulator MSD Example (cdc_serial_emulator_msd)</a></div></div></li><li role="treeitem"><div data-tocid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7-d269e69" class="topicref" data-id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7.html" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7-d269e69-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.7</ph>
+HID Basic Example (hid_basic)</a></div></div></li><li role="treeitem"><div data-tocid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11-d269e77" class="topicref" data-id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11.html" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11-d269e77-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.8</ph>
+HID Basic Remote Wakeup Example (hid_basic_remote_wakeup)</a></div></div></li><li role="treeitem"><div data-tocid="GUID-21956FBE-8E6E-4872-8A1C-3C3F89868BCD-d269e85" class="topicref" data-id="GUID-21956FBE-8E6E-4872-8A1C-3C3F89868BCD" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-21956FBE-8E6E-4872-8A1C-3C3F89868BCD.html" id="GUID-21956FBE-8E6E-4872-8A1C-3C3F89868BCD-d269e85-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.9</ph>
+HID Joystick Example (hid_joystick)</a></div></div></li><li role="treeitem"><div data-tocid="GUID-659FAABC-7E33-4359-B1D8-66E784DF9E43-d269e93" class="topicref" data-id="GUID-659FAABC-7E33-4359-B1D8-66E784DF9E43" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-659FAABC-7E33-4359-B1D8-66E784DF9E43.html" id="GUID-659FAABC-7E33-4359-B1D8-66E784DF9E43-d269e93-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.10</ph>
+HID Keyboard Example (hid_keyboard)</a></div></div></li><li role="treeitem"><div data-tocid="GUID-AC1353F8-AC36-4056-AFD7-B7AC4BC20ABA-d269e102" class="topicref" data-id="GUID-AC1353F8-AC36-4056-AFD7-B7AC4BC20ABA" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-AC1353F8-AC36-4056-AFD7-B7AC4BC20ABA.html" id="GUID-AC1353F8-AC36-4056-AFD7-B7AC4BC20ABA-d269e102-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.11</ph>
+HID Mouse Example (hid_mouse)</a></div></div></li><li role="treeitem"><div data-tocid="GUID-76564693-9E64-4564-8CDB-22EA12DF5263-d269e110" class="topicref" data-id="GUID-76564693-9E64-4564-8CDB-22EA12DF5263" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-76564693-9E64-4564-8CDB-22EA12DF5263.html" id="GUID-76564693-9E64-4564-8CDB-22EA12DF5263-d269e110-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.12</ph>
+HID MSD Basic Example (hid_msd_basic)</a></div></div></li><li role="treeitem"><div data-tocid="GUID-253EA897-AFA3-4A65-9976-EF08D2D362E8-d269e118" class="topicref" data-id="GUID-253EA897-AFA3-4A65-9976-EF08D2D362E8" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-253EA897-AFA3-4A65-9976-EF08D2D362E8.html" id="GUID-253EA897-AFA3-4A65-9976-EF08D2D362E8-d269e118-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.13</ph>
+MSD Basic Example (msd_basic)</a></div></div></li><li role="treeitem"><div data-tocid="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF-d269e126" class="topicref" data-id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF.html" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF-d269e126-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.14</ph>
+MSD Multiple LUN Example (msd_multiple_luns)</a></div></div></li><li role="treeitem"><div data-tocid="GUID-6CE28C84-CAF9-4BF9-9CC9-BD571C25AE48-d269e134" class="topicref" data-id="GUID-6CE28C84-CAF9-4BF9-9CC9-BD571C25AE48" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-6CE28C84-CAF9-4BF9-9CC9-BD571C25AE48.html" id="GUID-6CE28C84-CAF9-4BF9-9CC9-BD571C25AE48-d269e134-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.15</ph>
+MSD SD Card Example (msd_sdcard)</a></div></div></li><li role="treeitem"><div data-tocid="GUID-A5C060F0-73BA-4993-8431-D42B9AFA6834-d269e142" class="topicref" data-id="GUID-A5C060F0-73BA-4993-8431-D42B9AFA6834" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-A5C060F0-73BA-4993-8431-D42B9AFA6834.html" id="GUID-A5C060F0-73BA-4993-8431-D42B9AFA6834-d269e142-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.16</ph>
+Printer Example (printer)</a></div></div></li><li role="treeitem"><div data-tocid="GUID-B94E42DD-C87D-47DF-BEC4-81E2DB4A2C4A-d269e150" class="topicref" data-id="GUID-B94E42DD-C87D-47DF-BEC4-81E2DB4A2C4A" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-B94E42DD-C87D-47DF-BEC4-81E2DB4A2C4A.html" id="GUID-B94E42DD-C87D-47DF-BEC4-81E2DB4A2C4A-d269e150-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.17</ph>
+USB UART Bridge Dual Channel Example (usb_usart_bridge_dual)</a></div></div></li><li role="treeitem"><div data-tocid="GUID-2A54BC88-B3E1-4DA2-85DC-4A6739A4B0DB-d269e158" class="topicref" data-id="GUID-2A54BC88-B3E1-4DA2-85DC-4A6739A4B0DB" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-2A54BC88-B3E1-4DA2-85DC-4A6739A4B0DB.html" id="GUID-2A54BC88-B3E1-4DA2-85DC-4A6739A4B0DB-d269e158-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.18</ph>
+USB UART Bridge Single Channel Example (usb_usart_bridge_single)</a></div></div></li><li role="treeitem"><div data-tocid="GUID-3DAA29D1-4247-461D-A81C-17C442A1104B-d269e166" class="topicref" data-id="GUID-3DAA29D1-4247-461D-A81C-17C442A1104B" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-3DAA29D1-4247-461D-A81C-17C442A1104B.html" id="GUID-3DAA29D1-4247-461D-A81C-17C442A1104B-d269e166-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.19</ph>
+ Vendor Example (vendor)</a></div></div></li></ul></li><li role="treeitem"><div data-tocid="GUID-29D960CF-1444-43A7-8083-C6848BB452E3-d269e174" class="topicref" data-id="GUID-29D960CF-1444-43A7-8083-C6848BB452E3" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-29D960CF-1444-43A7-8083-C6848BB452E3.html" id="GUID-29D960CF-1444-43A7-8083-C6848BB452E3-d269e174-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">2</ph>
+Microchip MPLAB® Harmony 3 Release Notes</a></div></div></li><li role="treeitem"><div data-tocid="GUID-4DFFB218-8EDE-4428-8BF9-3382D1C7569D-d269e182" class="topicref" data-id="GUID-4DFFB218-8EDE-4428-8BF9-3382D1C7569D" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-4DFFB218-8EDE-4428-8BF9-3382D1C7569D.html" id="GUID-4DFFB218-8EDE-4428-8BF9-3382D1C7569D-d269e182-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">3</ph>
+License</a></div></div></li></ul></div>
+		                        
+                            </div>
+                        </nav>
+                    
+                    
+                    <div class="col-lg-7 col-md-9 col-sm-12" id="wh_topic_body">
+                        <button id="wh_close_publication_toc_button" class="close-toc-button d-none" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        <button id="wh_close_topic_toc_button" class="close-toc-button d-none" aria-label="Toggle topic table of content" aria-controls="wh_topic_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-EF7E0E64-26F1-43DA-AD2A-197A8C0D1F52">
+<h1 class="- topic/title title topictitle1" id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-EF7E0E64-26F1-43DA-AD2A-197A8C0D1F52" style="">1.5 CDC Serial Emulator Example (cdc_serial_emulator)</h1>
+<div class="- topic/body body">
+    <p class="- topic/p p">This application demonstrates the ability of the MPLAB Harmony USB Device Stack to support
+      CDC Device Class using a real-world application. It implements a CDC USART Serial Emulator
+      application.</p>
+    <section class="- topic/section section" id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-207E4E0D-47F1-44F2-8636-69ADEE8F82AF" data-ofbid="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-207E4E0D-47F1-44F2-8636-69ADEE8F82AF"><h2 class="- topic/title title sectiontitle"><strong class="+ topic/ph hi-d/b ph b">Description</strong></h2>
+      
+      <p class="- topic/p p">This application demonstrates the use of the CDC device class to implement a USB-to-Serial
+        Converter. TThe application enumerates a COM port on the personal computer. Data received
+        through the CDC USB interface is forwarded to a UART. Data received on the UART is forwarded
+        to the CDC USB interface on the target board. The interface between the UART and the CDC USB
+        Interface on the board demonstrates the USB to UART capability.</p>
+    </section>
+    <section class="- topic/section section" id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-881128E3-6074-4E48-A64B-F7927AF9F95E" data-ofbid="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-881128E3-6074-4E48-A64B-F7927AF9F95E"><h2 class="- topic/title title sectiontitle"><strong class="+ topic/ph hi-d/b ph b">Downloading and building the application</strong></h2>
+      
+      <p dir="lro" class="- topic/p p">To clone or download this application from Github, go to the <a class="- topic/xref xref" href="https://github.com/Microchip-MPLAB-Harmony/usb_apps_device" target="_blank" rel="external noopener">main page of this repository</a> and then click <strong class="+ topic/ph hi-d/b ph b">Clone</strong> button to
+        clone this repository or download as zip file. This content can also be downloaded using
+        content manager by following these <a class="- topic/xref xref" href="https://github.com/Microchip-MPLAB-Harmony/contentmanager/wiki" target="_blank" rel="external noopener">instructions</a>.</p>
+      <p dir="lro" class="- topic/p p">Path of the application within the repository is
+        <strong class="+ topic/ph hi-d/b ph b">apps\cdc_serial_emulator</strong>.</p>
+      <p dir="lro" class="- topic/p p">Following table gives the details of project configurations, target device used,
+        hardware and its IDE. Open the project using the respective IDE and build it.</p>
+      <div class="table-container"><table dir="lro" class="- topic/table table" id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-8DF794F9-CC10-4E70-94B1-695F36E2C9EE" data-ofbid="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-8DF794F9-CC10-4E70-94B1-695F36E2C9EE" data-cols="4"><caption></caption><colgroup><col/><col/><col/><col/></colgroup><thead dir="lro" class="- topic/thead thead">
+            <tr dir="lro" class="- topic/row">
+              <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-8DF794F9-CC10-4E70-94B1-695F36E2C9EE__entry__1">Project Name</th>
+              <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-8DF794F9-CC10-4E70-94B1-695F36E2C9EE__entry__2">IDE</th>
+              <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-8DF794F9-CC10-4E70-94B1-695F36E2C9EE__entry__3">Target Device</th>
+              <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-8DF794F9-CC10-4E70-94B1-695F36E2C9EE__entry__4">Hardware / Configuration</th>
+            </tr>
+          </thead><tbody class="- topic/tbody tbody">
+            <tr dir="lro" class="- topic/row">
+              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-8DF794F9-CC10-4E70-94B1-695F36E2C9EE__entry__1">sam_9x75_eb.X</td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-8DF794F9-CC10-4E70-94B1-695F36E2C9EE__entry__2">MPLABX</td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-8DF794F9-CC10-4E70-94B1-695F36E2C9EE__entry__3">SAM9X75</td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-8DF794F9-CC10-4E70-94B1-695F36E2C9EE__entry__4">SAM9X75-DDR3-EB Evaluation Board</td>
+            </tr>
+            <tr dir="lro" class="- topic/row">
+              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-8DF794F9-CC10-4E70-94B1-695F36E2C9EE__entry__1">sam_d11_xpro.X</td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-8DF794F9-CC10-4E70-94B1-695F36E2C9EE__entry__2">MPLABX</td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-8DF794F9-CC10-4E70-94B1-695F36E2C9EE__entry__3">ATSAMD11D14A</td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-8DF794F9-CC10-4E70-94B1-695F36E2C9EE__entry__4">SAMD11 Xplained Pro board</td>
+            </tr>
+            <tr dir="lro" class="- topic/row">
+              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-8DF794F9-CC10-4E70-94B1-695F36E2C9EE__entry__1">sam_d21_xpro.X</td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-8DF794F9-CC10-4E70-94B1-695F36E2C9EE__entry__2">MPLABX</td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-8DF794F9-CC10-4E70-94B1-695F36E2C9EE__entry__3">ATSAMD21J18A</td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-8DF794F9-CC10-4E70-94B1-695F36E2C9EE__entry__4">SAMD21 Xplained Pro board</td>
+            </tr>
+            <tr dir="lro" class="- topic/row">
+              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-8DF794F9-CC10-4E70-94B1-695F36E2C9EE__entry__1">sam_e54_xpro.X</td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-8DF794F9-CC10-4E70-94B1-695F36E2C9EE__entry__2">MPLABX</td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-8DF794F9-CC10-4E70-94B1-695F36E2C9EE__entry__3">ATSAME54P20A</td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-8DF794F9-CC10-4E70-94B1-695F36E2C9EE__entry__4">SAME54 Xplained Pro board</td>
+            </tr>
+            <tr dir="lro" class="- topic/row">
+              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-8DF794F9-CC10-4E70-94B1-695F36E2C9EE__entry__1">sam_e70_xult.X</td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-8DF794F9-CC10-4E70-94B1-695F36E2C9EE__entry__2">MPLABX</td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-8DF794F9-CC10-4E70-94B1-695F36E2C9EE__entry__3">ATSAME70Q21B</td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-8DF794F9-CC10-4E70-94B1-695F36E2C9EE__entry__4">SAME70 Xplained Ultra board</td>
+            </tr>
+            <tr dir="lro" class="- topic/row">
+              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-8DF794F9-CC10-4E70-94B1-695F36E2C9EE__entry__1">sam_e70_xult_freertos.X</td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-8DF794F9-CC10-4E70-94B1-695F36E2C9EE__entry__2">MPLABX</td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-8DF794F9-CC10-4E70-94B1-695F36E2C9EE__entry__3">ATSAME70Q21B</td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-8DF794F9-CC10-4E70-94B1-695F36E2C9EE__entry__4">SAME70 Xplained Ultra board</td>
+            </tr>
+            <tr dir="lro" class="- topic/row">
+              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-8DF794F9-CC10-4E70-94B1-695F36E2C9EE__entry__1">pic32mz_ef_curiosity_2_0.X</td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-8DF794F9-CC10-4E70-94B1-695F36E2C9EE__entry__2">MPLABX</td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-8DF794F9-CC10-4E70-94B1-695F36E2C9EE__entry__3">PIC32MZ2048EFM144</td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-8DF794F9-CC10-4E70-94B1-695F36E2C9EE__entry__4">Curiosity PIC32MZ EF 2.0 Development Board</td>
+            </tr>
+            <tr class="- topic/row">
+              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-8DF794F9-CC10-4E70-94B1-695F36E2C9EE__entry__1">pic32cz_ca80_curiosity_ultra.X</td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-8DF794F9-CC10-4E70-94B1-695F36E2C9EE__entry__2"> MPLABX</td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-8DF794F9-CC10-4E70-94B1-695F36E2C9EE__entry__3"> PIC32CZ8110CA80208 </td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-8DF794F9-CC10-4E70-94B1-695F36E2C9EE__entry__4">
+                <p dir="lro" class="- topic/p p">PIC32CZ CA80 Curiosity Ultra development board</p>
+              </td>
+            </tr>
+          </tbody></table></div>
+    </section>
+    <section class="- topic/section section" id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-50E2DC57-410B-40AC-BFF7-C7BF108709AA" data-ofbid="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-50E2DC57-410B-40AC-BFF7-C7BF108709AA"><h2 class="- topic/title title sectiontitle"><strong class="+ topic/ph hi-d/b ph b">Configuring the Hardware</strong></h2>
+      
+      <div class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b"><a class="- topic/xref xref" href="https://www.microchip.com/developmenttools/ProductDetails/atsamd11-xpro" target="_blank" rel="external noopener">SAM D11 Xplained Pro board</a></strong><ul class="- topic/ul ul">
+          <li dir="lro" class="- topic/li li" id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-9E6C52BB-C3DB-4EF6-866F-0B89E234D138" data-ofbid="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-9E6C52BB-C3DB-4EF6-866F-0B89E234D138">Use TARGET USB connector on the board to connect the USB Device to the USB
+            Host PC.</li>
+          <li dir="lro" class="- topic/li li" id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-87DB0A0D-5057-4607-BBFB-2BF3B3B19B0A" data-ofbid="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-87DB0A0D-5057-4607-BBFB-2BF3B3B19B0A">LED0 indicates USB Device Configuration Set Complete event (the USB device
+            functionality has been activated by the USB Host).</li>
+          <li dir="lro" class="- topic/li li" id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-054763B2-7A9B-43A0-92D7-A85C6FBB0086" data-ofbid="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-054763B2-7A9B-43A0-92D7-A85C6FBB0086">The CDC USB (UART to USB) interface on this board is served by the EDBG
+            connector (DEBUG_USB). Connecting this to the PC will create a COM port on the PC
+            Host.</li>
+        </ul><strong class="+ topic/ph hi-d/b ph b"><a class="- topic/xref xref" href="https://www.microchip.com/developmenttools/ProductDetails/atsamd21-xpro" target="_blank" rel="external noopener">SAMD21 Xplained Pro board</a></strong><ul class="- topic/ul ul">
+          <li dir="lro" class="- topic/li li" id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-230088AA-3579-4382-A831-6ECDC1A74F9C" data-ofbid="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-230088AA-3579-4382-A831-6ECDC1A74F9C">Use TARGET USB connector on the board to connect the USB Device to the USB
+            Host PC.</li>
+          <li dir="lro" class="- topic/li li" id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-978C46C2-A485-43D1-B0CD-5BE7CB2E0A88" data-ofbid="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-978C46C2-A485-43D1-B0CD-5BE7CB2E0A88">LED0 indicates USB Device Configuration Set Complete event (the USB device
+            functionality has been activated by the USB Host).</li>
+          <li dir="lro" class="- topic/li li" id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-BEA32903-1F6B-4C33-9691-8AD08ADA4469" data-ofbid="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-BEA32903-1F6B-4C33-9691-8AD08ADA4469">The CDC USB (UART to USB) interface on this board is served by the EDBG
+            connector (DEBUG_USB). Connecting this to the PC will create a COM port on the PC
+            Host.</li>
+        </ul><strong class="+ topic/ph hi-d/b ph b"><a class="- topic/xref xref" href="https://www.microchip.com/developmenttools/productdetails/atsame54-xpro" target="_blank" rel="external noopener">SAME54 Xplained Pro board</a></strong><ul class="- topic/ul ul">
+          <li dir="lro" class="- topic/li li" id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-6FBB173D-FDF3-4F80-A4B0-F8568F839EA8" data-ofbid="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-6FBB173D-FDF3-4F80-A4B0-F8568F839EA8">Use TARGET USB connector on the board to connect the USB Device to the USB
+            Host PC.</li>
+          <li dir="lro" class="- topic/li li" id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-D34184A5-A040-405D-84E8-6C257867164C" data-ofbid="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-D34184A5-A040-405D-84E8-6C257867164C">LED0 indicates USB Device Configuration Set Complete event (the USB device
+            functionality has been activated by the USB Host).</li>
+          <li dir="lro" class="- topic/li li" id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-255FD3FF-348A-42DA-82C5-B2B1FF9753A7" data-ofbid="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-255FD3FF-348A-42DA-82C5-B2B1FF9753A7">The CDC USB (UART to USB) interface on this board is served by the EDBG
+            connector (DEBUG_USB). Connecting this to the PC will create a COM port on the PC
+            Host.</li>
+        </ul><strong class="+ topic/ph hi-d/b ph b"><a class="- topic/xref xref" href="https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113" target="_blank" rel="external noopener">SAME70 Xplained Ultra board</a></strong><ul class="- topic/ul ul">
+          <li dir="lro" class="- topic/li li" id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-C4D62AAA-308F-4A33-828B-3DDF4EBAAE58" data-ofbid="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-C4D62AAA-308F-4A33-828B-3DDF4EBAAE58">Jumper J203 must be shorted between PB08 and VBUS (positions 2 and 3).</li>
+          <li dir="lro" class="- topic/li li" id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-0FC0EC92-424B-4E17-A1E5-B672A3B1875C" data-ofbid="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-0FC0EC92-424B-4E17-A1E5-B672A3B1875C">Use TARGET USB connector on the board to connect the USB Device to the USB
+            Host PC.</li>
+          <li dir="lro" class="- topic/li li" id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-336E08B5-EA06-4E77-BB2B-A8C22A7BCDF0" data-ofbid="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-336E08B5-EA06-4E77-BB2B-A8C22A7BCDF0">LED3 indicates USB Device Configuration Set Complete event (the USB device
+            functionality has been activated by the USB Host).</li>
+          <li dir="lro" class="- topic/li li" id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-5FCF2A39-6CBC-4A4E-A0E1-50AB80F8FD34" data-ofbid="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-5FCF2A39-6CBC-4A4E-A0E1-50AB80F8FD34">The CDC USB (UART to USB) interface on this board is served by the EDBG
+            connector J300. Connecting this to the PC will create a COM port on the PC Host.</li>
+        </ul><strong class="+ topic/ph hi-d/b ph b"><a class="- topic/xref xref" href="https://www.microchip.com/Developmenttools/ProductDetails/DM320209" target="_blank" rel="external noopener">Curiosity PIC32MZ EF 2.0 Development Board</a></strong><ul class="- topic/ul ul">
+          <li dir="lro" class="- topic/li li" id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-2E8C618E-F797-4253-B4BF-FAE40EEE7E1F" data-ofbid="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-2E8C618E-F797-4253-B4BF-FAE40EEE7E1F">Use the USB micro-B port J201 to connect the USB Device to the USB Host
+            PC.</li>
+          <li dir="lro" class="- topic/li li" id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-27C1FF97-9AE7-48D5-87F3-8E745ACD4C74" data-ofbid="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-27C1FF97-9AE7-48D5-87F3-8E745ACD4C74">LED1 indicates USB Device Configuration Set Complete event (the USB device
+            functionality has been activated by the USB Host).</li>
+          <li dir="lro" class="- topic/li li" id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-73229A39-95A2-4A99-8E81-5AAEAECABA59" data-ofbid="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-73229A39-95A2-4A99-8E81-5AAEAECABA59">The CDC USB (UART to USB) interface on this board is served by the DEBUG_USB
+            connector J700. Connecting this to the PC will create a COM port on the PC Host.</li>
+        </ul><strong class="+ topic/ph hi-d/b ph b"><a class="- topic/xref xref" href="https://www.microchip.com/en-us/development-tool/ea61x20a" target="_blank" rel="external noopener">PIC32CZ CA80 Curiosity Ultra development board</a></strong><ul class="- topic/ul ul">
+          <li dir="lro" class="- topic/li li" id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-87A8B9AF-5D93-48BE-B093-AC8E57129909" data-ofbid="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-87A8B9AF-5D93-48BE-B093-AC8E57129909">Use the USB micro-B "USB DEVICE" connector (J102) to connect the USB Device
+            to the USB Host PC.</li>
+          <li dir="lro" class="- topic/li li" id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-E60CE4D6-D269-419A-9F1F-2B4B9D4E8952" data-ofbid="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-E60CE4D6-D269-419A-9F1F-2B4B9D4E8952">LED0 indicates USB Device Configuration Set Complete event (the USB device
+            functionality has been activated by the USB Host).</li>
+          <li dir="lro" class="- topic/li li" id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-78DABE2E-83F5-4400-A125-EFCCE013FDEC" data-ofbid="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-78DABE2E-83F5-4400-A125-EFCCE013FDEC">The CDC USB (UART to USB) interface on this board is served by the DEBUG_USB
+            connector. Connecting this to the PC will create a COM port on the PC Host.</li>
+        </ul><strong class="+ topic/ph hi-d/b ph b"><a class="- topic/xref xref" href="https://www.microchip.com/en-us/development-tool/EA14J50A" target="_blank" rel="external noopener">SAM9X75-DDR3-EB Evaluation Board</a></strong><ul class="- topic/ul ul">
+          <li dir="lro" class="- topic/li li" id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-68F38582-A22C-43C8-A149-32D3DECC0CD0" data-ofbid="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-68F38582-A22C-43C8-A149-32D3DECC0CD0">
+            <p dir="lro" class="- topic/p p">Powered the board with an external power supply (or use the micro AB
+              connector).</p>
+          </li>
+          <li dir="lro" class="- topic/li li" id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-EEE8C11F-C234-491C-85BA-D80CFB3B51D6" data-ofbid="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-EEE8C11F-C234-491C-85BA-D80CFB3B51D6">
+            <p dir="lro" class="- topic/p p">Setup the SD card (Note: exFAT formatted SD Cards are not supported)</p>
+            <ul class="- topic/ul ul">
+              <li dir="lro" class="- topic/li li" id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-8281D025-9A7C-4991-9255-8269008E8E87" data-ofbid="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-8281D025-9A7C-4991-9255-8269008E8E87">Download harmony MPU
+                bootstrap loader from this <a class="- topic/xref xref" href="https://github.com/Microchip-MPLAB-Harmony/usb_apps_device/tree/master/deps/at91bootstrap_sam_9x7_binaries/boot.bin" target="_blank" rel="external noopener">location</a>.</li>
+              <li dir="lro" class="- topic/li li" id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-25088589-8095-4012-9EC2-6ED47E33E28A" data-ofbid="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-25088589-8095-4012-9EC2-6ED47E33E28A">Copy the downloaded boot loader binary (boot.bin) and generated
+                application binary (harmony.bin) into the SD card.</li>
+              <li dir="lro" class="- topic/li li" id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-ADDD9123-7918-4260-996A-FBF6FE0D5AC0" data-ofbid="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-ADDD9123-7918-4260-996A-FBF6FE0D5AC0">Insert the SD card into the SDMMC connector (SDMMC0) on the board.</li>
+              <li dir="lro" class="- topic/li li" id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-2CA6B70E-1D48-4D74-9C1C-DB48AF060D85" data-ofbid="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-2CA6B70E-1D48-4D74-9C1C-DB48AF060D85">Reset the board by pressing the Push Button RESET, then START.</li>
+            </ul>
+          </li>
+          <li dir="lro" class="- topic/li li" id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-DC005A65-08BD-445E-959E-20C6AE19E239" data-ofbid="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-DC005A65-08BD-445E-959E-20C6AE19E239">
+            <p dir="lro" class="- topic/p p">Connect USB to serial cable to DBGU0 (to enable debug com port).</p>
+          </li>
+          <li dir="lro" class="- topic/li li" id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-FFE077D1-0979-4036-8740-4FBBCE17C01C" data-ofbid="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-FFE077D1-0979-4036-8740-4FBBCE17C01C">
+            <p dir="lro" class="- topic/p p">Connect the USB Micro-AB Connector on the board to the computer using a
+              micro USB cable.</p>
+          </li>
+          <li dir="lro" class="- topic/li li" id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-8A931236-2B6A-453A-9FAC-3D093B5E6442" data-ofbid="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-8A931236-2B6A-453A-9FAC-3D093B5E6442">
+            <p dir="lro" class="- topic/p p">LED near VDDCORE inscription on the board indicates USB Device
+              Configuration Set Complete event (The USB device functionality has been activated by
+              the USB Host).</p>
+          </li>
+          <li class="- topic/li li" id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-9CEBA303-187B-4E4E-AD7C-48780BA5B403" data-ofbid="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-9CEBA303-187B-4E4E-AD7C-48780BA5B403">
+            <p dir="lro" class="- topic/p p">The demonstration uses an USB to serial cable to transfer demonstration
+              application messages on a PC.</p>
+            <p dir="lro" class="- topic/p p"><div class=""><img class="- topic/image image" src="GUID-8F485B5C-0DFC-47B7-A493-8B8AA7796BD8-low.png" height="430" width="693"/></div></p>
+          </li>
+        </ul></div>
+    </section>
+    <section class="- topic/section section" id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-D7C80A12-6086-4B88-8DC8-267895FBF1FA" data-ofbid="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-D7C80A12-6086-4B88-8DC8-267895FBF1FA"><h2 class="- topic/title title sectiontitle"><strong class="+ topic/ph hi-d/b ph b">Running the Application</strong></h2>
+      
+      <p dir="lro" class="- topic/p p">This application demonstrates the use of the CDC Device class in implementing a
+        USB-to-Serial Converter. The application enumerates a COM port on the USB Host PC. Data
+        received through the CDC USB interface is forwarded to a UART. Data received on the UART is
+        forwarded to the CDC USB interface. This emulates a USB-to-Serial Converter.</p>
+      <ol class="- topic/ol ol" id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-17811B98-7BF1-4AFA-934D-06037CD00706" data-ofbid="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-17811B98-7BF1-4AFA-934D-06037CD00706">
+        <li dir="lro" class="- topic/li li" id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-6FBF9047-8DF9-45BF-A8B0-D78AA9C2D288" data-ofbid="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-6FBF9047-8DF9-45BF-A8B0-D78AA9C2D288">
+          <p dir="lro" class="- topic/p p">Open the project with appropriate IDE. Compile the project and program the
+            target device.</p>
+        </li>
+        <li dir="lro" class="- topic/li li" id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-2FBB85D3-6F06-4855-92E4-AC72C861F943" data-ofbid="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-2FBB85D3-6F06-4855-92E4-AC72C861F943">
+          <p dir="lro" class="- topic/p p">Attach the device to the host. If the host is a personal computer and this is
+            the first time you have plugged this device into the computer you may be prompted for a
+            .inf file.</p>
+          <p dir="lro" class="- topic/p p"><div class=""><img class="- topic/image image" src="GUID-93CA9A9C-07C1-4296-8DA9-48293479AF47-low.png"/></div></p>
+        </li>
+        <li class="- topic/li li" id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-8E8400C4-29DB-448B-9DB8-83C00D6645AC" data-ofbid="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-8E8400C4-29DB-448B-9DB8-83C00D6645AC">Select the "Install from a list or
+          specific location (Advanced)" option. Navigate to the driver path available in the repo -
+            <em class="+ topic/ph hi-d/i ph i">..\usb_apps_device\apps\cdc_serial_emulator\inf</em>.<div class=""><img class="- topic/image image" src="GUID-1AEE7A91-FE79-4D95-8D8A-D48F80B56A33-low.png"/></div><p class="- topic/lines lines"><strong class="+ topic/ph hi-d/b ph b">NOTE: </strong>The LEDs on the demonstration board will indicate the USB state of the device. Refer to the Configuring the Hardware section for the selected target hardware.</p></li>
+        <li class="- topic/li li" id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-F6C986F8-3EBD-4645-9329-CFB2B2A1AFEB" data-ofbid="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-F6C986F8-3EBD-4645-9329-CFB2B2A1AFEB">Once the device is successfully installed and visible on the <em class="+ topic/ph hi-d/i ph i">Device Manager</em>, open
+          up a terminal program, such as HyperTerminal and select the appropriate COM port. This is
+          terminal 1. Set the serial port settings as follows:<ul class="- topic/ul ul">
+            <li dir="lro" class="- topic/li li" id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-AC402C71-8011-484A-AF7F-E4F85A59573B" data-ofbid="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-AC402C71-8011-484A-AF7F-E4F85A59573B">Baud : 9600</li>
+            <li dir="lro" class="- topic/li li" id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-25BED628-E562-4E24-AA10-7CDE3B49A2BA" data-ofbid="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-25BED628-E562-4E24-AA10-7CDE3B49A2BA">Data : 8 Bits</li>
+            <li dir="lro" class="- topic/li li" id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-576331C9-4D7E-489B-8ACE-82338C27CAC0" data-ofbid="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-576331C9-4D7E-489B-8ACE-82338C27CAC0">Parity : None</li>
+            <li dir="lro" class="- topic/li li" id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-FC4231DA-9384-4309-B5BE-53D96DEFA442" data-ofbid="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-FC4231DA-9384-4309-B5BE-53D96DEFA442">Stop : 1 Bit</li>
+            <li dir="lro" class="- topic/li li" id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-F1DE2FB1-A6D2-41AF-B0E9-BD69671EDBA3" data-ofbid="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-F1DE2FB1-A6D2-41AF-B0E9-BD69671EDBA3">Flow Control : None</li>
+          </ul></li>
+        <li class="- topic/li li" id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-F93F466E-9799-4EB5-ADBD-6194EF624E18" data-ofbid="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-F93F466E-9799-4EB5-ADBD-6194EF624E18">Connect the CDC USB port to the Host PC
+          and ensure that a second COM port is available on the Host PC. Refer to the Configuring
+          the Hardware section for more details. Open a serial terminal program and select the
+          second COM port. The serial settings of this COM port should match the setting made in
+            <em class="+ topic/ph hi-d/i ph i">previous step</em>. This is terminal 2. The setup should resemble the below
+            figure.<p class="- topic/lines lines" id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__LINES_SF3_HG2_TYB" data-ofbid="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__LINES_SF3_HG2_TYB"></p><div class=""><img class="- topic/image image" id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__IMAGE_Q5C_DG2_TYB" src="GUID-10FC6999-5476-421F-9A62-C54B3A8BB76E-low.png"/></div></li>
+        <li class="- topic/li li" id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-37A46888-3277-41E1-A6AC-111B6A6E7B07" data-ofbid="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-37A46888-3277-41E1-A6AC-111B6A6E7B07">To run the demonstration, turn on local
+          echo on both the terminals. If the terminal application is Tera Term, navigate to
+          Setup-&gt;Terminal to turn on local echo. Type a character or string in one terminal
+          window. The same character or string shall appear on the second terminal window and vice
+          versa. The following screen shot shows two instances of Tera
+            Term.<p class="- topic/lines lines" id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__LINES_D5S_PR5_TYB" data-ofbid="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__LINES_D5S_PR5_TYB"></p><div class=""><img class="- topic/image image" id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__IMAGE_VFX_JG2_TYB" src="GUID-295DA2D2-68C5-4D76-898E-CBDA03900F8E-low.png" height="211" width="600"/></div><p class="- topic/lines lines" id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__LINES_IRV_KG2_TYB" data-ofbid="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__LINES_IRV_KG2_TYB"><strong class="+ topic/ph hi-d/b ph b">Note:</strong> Some terminal programs, like HyperTerminal, require users to click the disconnect button before removing the device from the computer. Failing to do so may result in having to close and open the program again to reconnect to the device.</p></li>
+      </ol>
+    </section>
+</div>
+</article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                        <nav role="navigation" id="wh_topic_toc" aria-label="On this page" class="col-lg-2 d-none d-lg-block navbar d-print-none"> 
+                            <div id="wh_topic_toc_content">
+		                        
+	                            <div class=" wh_topic_toc "><div class="wh_topic_label">On this page</div><ul><li class="section-item"><div class="section-title"><a href="#GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-207E4E0D-47F1-44F2-8636-69ADEE8F82AF" data-tocid="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-207E4E0D-47F1-44F2-8636-69ADEE8F82AF"><strong class="+ topic/ph hi-d/b ph b">Description</strong></a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-881128E3-6074-4E48-A64B-F7927AF9F95E" data-tocid="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-881128E3-6074-4E48-A64B-F7927AF9F95E"><strong class="+ topic/ph hi-d/b ph b">Downloading and building the application</strong></a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-50E2DC57-410B-40AC-BFF7-C7BF108709AA" data-tocid="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-50E2DC57-410B-40AC-BFF7-C7BF108709AA"><strong class="+ topic/ph hi-d/b ph b">Configuring the Hardware</strong></a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-D7C80A12-6086-4B88-8DC8-267895FBF1FA" data-tocid="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5__GUID-D7C80A12-6086-4B88-8DC8-267895FBF1FA"><strong class="+ topic/ph hi-d/b ph b">Running the Application</strong></a></div></li></ul></div>
+	                        	
+                        	</div>
+                        </nav>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <div class="mchp_disclaimer"><p class="mchp_disclaimer_text">The online versions of the documents are provided as a courtesy. Verify all content and data in the device’s PDF documentation found on the device product page.</p></div><footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container mx-auto ">
+    <div class="footer">
+  <div class="mchp-wh-footer">
+    <div class="mchp-footer">
+      <div class="mchp-footer-tier1">
+        <div class="spacer"></div>
+        <div class="mchp-footer-container">
+          <div class="mchp-footer-links mchp-social-media-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.facebook.com/pages/Microchip-Technology-Inc/20320981741" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Facebook" src="oxygen-webhelp/template/resources/images/201016-corp-facebook.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.linkedin.com/company/microchip-technology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip LinkedIn" src="oxygen-webhelp/template/resources/images/201016-corp-linkedin.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://twitter.com/MicrochipTech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Twitter" src="oxygen-webhelp/template/resources/images/201016-corp-twitter.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.youtube.com/user/MicrochipTechnology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip YouTube" src="oxygen-webhelp/template/resources/images/201016-corp-youtube.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.instagram.com/microchiptechnologyinc/" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Instagram" src="oxygen-webhelp/template/resources/images/201016-corp-instagram.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.weibo.com/microchiptech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Weibo" src="oxygen-webhelp/template/resources/images/201016-corp-weibo.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.microchip.com/en-us/about/blog" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Blog" src="oxygen-webhelp/template/resources/images/201016-corp-blog.png"/>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://www.microchip.com/about-us/contact-us" class="mchp-link__link">Contact</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information" class="mchp-link__link">Legal</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/privacy-policy" class="mchp-link__link">Privacy Policy</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/microchip-cookie-statement" class="mchp-link__link">Cookies</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://careers.microchip.com/" class="mchp-link__link">Careers</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-newsletter">
+            <div class="cmp-text">
+              <p>Stay on the leading edge with our blog</p>
+            </div>
+            <div class="mchp-button-wrapper">
+              <a role="button" href="https://www.microchip.com/en-us/about/blog" class="mchp-button mchp-button-regular solid">
+                <span class="mchp-button__span">MicroSolutions</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="graphic">
+          <img src="oxygen-webhelp/template/resources/images/footer-graphic.png"/>
+        </div>
+      </div>
+      <div class="mchp-footer-tier2">
+        <p class="mchp-copyright">© Copyright 1998-2022 Microchip Technology Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async="true" src="https://www.googletagmanager.com/gtag/js?id=UA-2724382-19"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];  
+    function gtag(){dataLayer.push(arguments);}  
+    gtag('js', new Date());   
+    gtag('config', 'UA-2724382-19');
+  </script>
+</div>
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

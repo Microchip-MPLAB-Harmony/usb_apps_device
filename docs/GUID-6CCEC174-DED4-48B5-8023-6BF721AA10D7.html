@@ -1,0 +1,520 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us" data-whc_version="24.1">
+    <head><link rel="shortcut icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><link rel="icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="This application demonstrates the ability of the MPLAB Harmony USB Device Stack to support custom HID device class. This custom HID device can be controlled by a PC-based utility. Description This ..."/><meta name="copyright" content="(C) Copyright 2023"/><meta name="generator" content="DITA-OT"/><title>1.7 HID Basic Example (hid_basic)</title><!--  Generated with Oxygen version 24.1, build number 2022062014.  --><meta name="wh-path2root" content=""/><meta name="wh-toc-id" content="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7-d269e69"/><meta name="wh-source-relpath" content="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7.xml"/><meta name="wh-out-relpath" content="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7.html"/>
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/lib/bootstrap/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" href="./oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css"/>
+    
+    <!-- Template default styles  -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/topic-page.css?buildId=2022062014"/>
+    
+    
+    <script src="./oxygen-webhelp/lib/jquery/jquery-3.5.1.min.js"></script>
+    
+    <script data-main="./oxygen-webhelp/app/topic-page.js" src="./oxygen-webhelp/lib/requirejs/require.js"></script>
+<link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/microchip.css?buildId=2022062014"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/notes.css?buildId=2022062014"/>
+<script src="mchp-context-help.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async="" type="text/javascript"></script>
+</head>
+
+    <body id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7" class="wh_topic_page frmBody">
+        <a href="#wh_topic_body" class="sr-only sr-only-focusable">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <a href="index.html" class=" wh_logo d-none d-sm-block "><img src="oxygen-webhelp\template\resources/images/microchip.png" alt="MPLAB Harmony USB Device application examples "/></a>
+                    <div class=" wh_publication_title "><a href="index.html">MPLAB Harmony USB Device application examples </a></div>
+                    
+                </div>
+                
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="search.html"><div class="d-flex justify-contents-around"><div class="flex-grow-1"></div><div class="position-relative flex-grow-1"><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div><div class="align-self-center flex-grow-1 ml-2"></div></div></form>
+            
+            <div class="mchp-color-stripe-grid-container">
+  <div class="mchp-main-bar mchp-orange-bar"></div>
+  <div class="mchp-main-bar mchp-blue-bar"></div>
+  <div class="mchp-main-bar mchp-green-bar"></div>
+</div>
+            
+        </div>
+        
+        <div class="container-fluid" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none navbar-expand-md" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol class="d-print-none"><li><span class="home"><a href="index.html"><span>Home</span></a></span></li><li><div class="topicref" data-id="GUID-90055758-897E-445A-8A8B-CE4EBF3930A7"><div class="title"><a href="GUID-90055758-897E-445A-8A8B-CE4EBF3930A7.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1</ph>
+Harmony 3 USB Device application examples</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li class="active"><div class="topicref" data-id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7"><div class="title"><a href="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.7</ph>
+HID Basic Example (hid_basic)</a></div></div></li></ol></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        <button type="button" id="wh_toc_button" class="custom-toggler navbar-toggler collapsed wh_toggle_button navbar-light" aria-expanded="false" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        <nav id="wh_publication_toc" class="col-lg-3 col-md-3 col-sm-12 d-md-block d-none d-print-none" aria-label="Table of Contents Container">
+                            <div id="wh_publication_toc_content">
+		                        
+                            	<div class=" wh_publication_toc " data-tooltip-position="right"><span class="expand-button-action-labels"><span id="button-expand-action" role="button" aria-label="Expand"></span><span id="button-collapse-action" role="button" aria-label="Collapse"></span><span id="button-pending-action" role="button" aria-label="Pending"></span></span><ul role="tree" aria-label="Table of Contents"><li role="treeitem" aria-expanded="true"><div data-tocid="GUID-90055758-897E-445A-8A8B-CE4EBF3930A7-d269e11" class="topicref" data-id="GUID-90055758-897E-445A-8A8B-CE4EBF3930A7" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action GUID-90055758-897E-445A-8A8B-CE4EBF3930A7-d269e11-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-90055758-897E-445A-8A8B-CE4EBF3930A7.html" id="GUID-90055758-897E-445A-8A8B-CE4EBF3930A7-d269e11-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1</ph>
+Harmony 3 USB Device application examples</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="GUID-DC9141E3-DB3A-4237-B2B5-ECC8B29BFBCA-d269e21" class="topicref" data-id="GUID-DC9141E3-DB3A-4237-B2B5-ECC8B29BFBCA" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-DC9141E3-DB3A-4237-B2B5-ECC8B29BFBCA.html" id="GUID-DC9141E3-DB3A-4237-B2B5-ECC8B29BFBCA-d269e21-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.1</ph>
+CDC COM Port Dual Example (cdc_com_port_dual)</a></div></div></li><li role="treeitem"><div data-tocid="GUID-DB15E610-4438-4D75-A60F-9BC2079E65EC-d269e29" class="topicref" data-id="GUID-DB15E610-4438-4D75-A60F-9BC2079E65EC" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-DB15E610-4438-4D75-A60F-9BC2079E65EC.html" id="GUID-DB15E610-4438-4D75-A60F-9BC2079E65EC-d269e29-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.2</ph>
+CDC COM Port Single Example (cdc_com_port_single)</a></div></div></li><li role="treeitem"><div data-tocid="GUID-461D5868-A2B8-4F4F-B3E3-C866DE626629-d269e37" class="topicref" data-id="GUID-461D5868-A2B8-4F4F-B3E3-C866DE626629" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-461D5868-A2B8-4F4F-B3E3-C866DE626629.html" id="GUID-461D5868-A2B8-4F4F-B3E3-C866DE626629-d269e37-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.3</ph>
+CDC MSD Basic Example (cdc_msd_basic)</a></div></div></li><li role="treeitem"><div data-tocid="GUID-8F76AB96-1C39-4752-BFB5-002111E06759-d269e45" class="topicref" data-id="GUID-8F76AB96-1C39-4752-BFB5-002111E06759" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-8F76AB96-1C39-4752-BFB5-002111E06759.html" id="GUID-8F76AB96-1C39-4752-BFB5-002111E06759-d269e45-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.4</ph>
+CDC MSD SD Card Example (cdc_msd_sdcard)</a></div></div></li><li role="treeitem"><div data-tocid="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5-d269e53" class="topicref" data-id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5.html" id="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5-d269e53-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.5</ph>
+CDC Serial Emulator Example (cdc_serial_emulator)</a></div></div></li><li role="treeitem"><div data-tocid="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570-d269e61" class="topicref" data-id="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570.html" id="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570-d269e61-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.6</ph>
+CDC Serial Emulator MSD Example (cdc_serial_emulator_msd)</a></div></div></li><li role="treeitem" class="active"><div data-tocid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7-d269e69" class="topicref" data-id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7.html" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7-d269e69-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.7</ph>
+HID Basic Example (hid_basic)</a></div></div></li><li role="treeitem"><div data-tocid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11-d269e77" class="topicref" data-id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11.html" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11-d269e77-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.8</ph>
+HID Basic Remote Wakeup Example (hid_basic_remote_wakeup)</a></div></div></li><li role="treeitem"><div data-tocid="GUID-21956FBE-8E6E-4872-8A1C-3C3F89868BCD-d269e85" class="topicref" data-id="GUID-21956FBE-8E6E-4872-8A1C-3C3F89868BCD" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-21956FBE-8E6E-4872-8A1C-3C3F89868BCD.html" id="GUID-21956FBE-8E6E-4872-8A1C-3C3F89868BCD-d269e85-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.9</ph>
+HID Joystick Example (hid_joystick)</a></div></div></li><li role="treeitem"><div data-tocid="GUID-659FAABC-7E33-4359-B1D8-66E784DF9E43-d269e93" class="topicref" data-id="GUID-659FAABC-7E33-4359-B1D8-66E784DF9E43" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-659FAABC-7E33-4359-B1D8-66E784DF9E43.html" id="GUID-659FAABC-7E33-4359-B1D8-66E784DF9E43-d269e93-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.10</ph>
+HID Keyboard Example (hid_keyboard)</a></div></div></li><li role="treeitem"><div data-tocid="GUID-AC1353F8-AC36-4056-AFD7-B7AC4BC20ABA-d269e102" class="topicref" data-id="GUID-AC1353F8-AC36-4056-AFD7-B7AC4BC20ABA" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-AC1353F8-AC36-4056-AFD7-B7AC4BC20ABA.html" id="GUID-AC1353F8-AC36-4056-AFD7-B7AC4BC20ABA-d269e102-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.11</ph>
+HID Mouse Example (hid_mouse)</a></div></div></li><li role="treeitem"><div data-tocid="GUID-76564693-9E64-4564-8CDB-22EA12DF5263-d269e110" class="topicref" data-id="GUID-76564693-9E64-4564-8CDB-22EA12DF5263" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-76564693-9E64-4564-8CDB-22EA12DF5263.html" id="GUID-76564693-9E64-4564-8CDB-22EA12DF5263-d269e110-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.12</ph>
+HID MSD Basic Example (hid_msd_basic)</a></div></div></li><li role="treeitem"><div data-tocid="GUID-253EA897-AFA3-4A65-9976-EF08D2D362E8-d269e118" class="topicref" data-id="GUID-253EA897-AFA3-4A65-9976-EF08D2D362E8" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-253EA897-AFA3-4A65-9976-EF08D2D362E8.html" id="GUID-253EA897-AFA3-4A65-9976-EF08D2D362E8-d269e118-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.13</ph>
+MSD Basic Example (msd_basic)</a></div></div></li><li role="treeitem"><div data-tocid="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF-d269e126" class="topicref" data-id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF.html" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF-d269e126-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.14</ph>
+MSD Multiple LUN Example (msd_multiple_luns)</a></div></div></li><li role="treeitem"><div data-tocid="GUID-6CE28C84-CAF9-4BF9-9CC9-BD571C25AE48-d269e134" class="topicref" data-id="GUID-6CE28C84-CAF9-4BF9-9CC9-BD571C25AE48" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-6CE28C84-CAF9-4BF9-9CC9-BD571C25AE48.html" id="GUID-6CE28C84-CAF9-4BF9-9CC9-BD571C25AE48-d269e134-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.15</ph>
+MSD SD Card Example (msd_sdcard)</a></div></div></li><li role="treeitem"><div data-tocid="GUID-A5C060F0-73BA-4993-8431-D42B9AFA6834-d269e142" class="topicref" data-id="GUID-A5C060F0-73BA-4993-8431-D42B9AFA6834" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-A5C060F0-73BA-4993-8431-D42B9AFA6834.html" id="GUID-A5C060F0-73BA-4993-8431-D42B9AFA6834-d269e142-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.16</ph>
+Printer Example (printer)</a></div></div></li><li role="treeitem"><div data-tocid="GUID-B94E42DD-C87D-47DF-BEC4-81E2DB4A2C4A-d269e150" class="topicref" data-id="GUID-B94E42DD-C87D-47DF-BEC4-81E2DB4A2C4A" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-B94E42DD-C87D-47DF-BEC4-81E2DB4A2C4A.html" id="GUID-B94E42DD-C87D-47DF-BEC4-81E2DB4A2C4A-d269e150-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.17</ph>
+USB UART Bridge Dual Channel Example (usb_usart_bridge_dual)</a></div></div></li><li role="treeitem"><div data-tocid="GUID-2A54BC88-B3E1-4DA2-85DC-4A6739A4B0DB-d269e158" class="topicref" data-id="GUID-2A54BC88-B3E1-4DA2-85DC-4A6739A4B0DB" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-2A54BC88-B3E1-4DA2-85DC-4A6739A4B0DB.html" id="GUID-2A54BC88-B3E1-4DA2-85DC-4A6739A4B0DB-d269e158-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.18</ph>
+USB UART Bridge Single Channel Example (usb_usart_bridge_single)</a></div></div></li><li role="treeitem"><div data-tocid="GUID-3DAA29D1-4247-461D-A81C-17C442A1104B-d269e166" class="topicref" data-id="GUID-3DAA29D1-4247-461D-A81C-17C442A1104B" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-3DAA29D1-4247-461D-A81C-17C442A1104B.html" id="GUID-3DAA29D1-4247-461D-A81C-17C442A1104B-d269e166-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.19</ph>
+ Vendor Example (vendor)</a></div></div></li></ul></li><li role="treeitem"><div data-tocid="GUID-29D960CF-1444-43A7-8083-C6848BB452E3-d269e174" class="topicref" data-id="GUID-29D960CF-1444-43A7-8083-C6848BB452E3" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-29D960CF-1444-43A7-8083-C6848BB452E3.html" id="GUID-29D960CF-1444-43A7-8083-C6848BB452E3-d269e174-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">2</ph>
+Microchip MPLAB® Harmony 3 Release Notes</a></div></div></li><li role="treeitem"><div data-tocid="GUID-4DFFB218-8EDE-4428-8BF9-3382D1C7569D-d269e182" class="topicref" data-id="GUID-4DFFB218-8EDE-4428-8BF9-3382D1C7569D" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-4DFFB218-8EDE-4428-8BF9-3382D1C7569D.html" id="GUID-4DFFB218-8EDE-4428-8BF9-3382D1C7569D-d269e182-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">3</ph>
+License</a></div></div></li></ul></div>
+		                        
+                            </div>
+                        </nav>
+                    
+                    
+                    <div class="col-lg-7 col-md-9 col-sm-12" id="wh_topic_body">
+                        <button id="wh_close_publication_toc_button" class="close-toc-button d-none" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        <button id="wh_close_topic_toc_button" class="close-toc-button d-none" aria-label="Toggle topic table of content" aria-controls="wh_topic_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-1DC3F1BB-6345-4C6B-BDAD-EC9FB25712F6"><h1 class="- topic/title title topictitle1" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-1DC3F1BB-6345-4C6B-BDAD-EC9FB25712F6" style="">1.7 HID Basic Example (hid_basic)</h1><div class="- topic/body body"><p class="- topic/p p">This application demonstrates the ability of the MPLAB Harmony USB Device Stack to support
+      custom HID device class. This custom HID device can be controlled by a PC-based utility.</p><section class="- topic/section section" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-F501684E-BBB3-40CE-85AE-34568B9E481F" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-F501684E-BBB3-40CE-85AE-34568B9E481F"><h2 class="- topic/title title sectiontitle"><strong class="+ topic/ph hi-d/b ph b">Description</strong></h2>
+      
+      <p class="- topic/p p">This application creates a USB HID Device that enumerates as a custom USB HID device on the
+        USB host PC. The device allows the USB Host utility to control the LEDs on the board and
+        query the status of a switch.</p>
+    </section><section class="- topic/section section" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-51692406-5CA2-4850-B7D4-5F4E5E244F53" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-51692406-5CA2-4850-B7D4-5F4E5E244F53"><h2 class="- topic/title title sectiontitle"><strong class="+ topic/ph hi-d/b ph b">Downloading and building the application</strong></h2>
+      
+      <p dir="lro" class="- topic/p p">To clone or download this application from Github, go to the <a class="- topic/xref xref" href="https://github.com/Microchip-MPLAB-Harmony/usb_apps_device" target="_blank" rel="external noopener">main page of this repository</a> and then click <strong class="+ topic/ph hi-d/b ph b">Clone</strong> button to
+        clone this repository or download as zip file. This content can also be downloaded using
+        content manager by following these <a class="- topic/xref xref" href="https://github.com/Microchip-MPLAB-Harmony/contentmanager/wiki" target="_blank" rel="external noopener">instructions</a>.</p>
+      <p dir="lro" class="- topic/p p">Path of the application within the repository is <a class="- topic/xref xref" href="https://github.com/Microchip-MPLAB-Harmony/usb_apps_device/tree/master/apps/hid_basic" target="_blank" rel="external noopener">usb_apps_device/apps/hid_basic</a>.</p>
+      <p dir="lro" class="- topic/p p">Following table gives the details of project configurations, target device used,
+        hardware and its IDE. Open the project using the respective IDE and build it.</p>
+      <div class="- topic/p p">
+        <div class="table-container"><table dir="lro" class="- topic/table table" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C" data-cols="0"><caption></caption><thead dir="lro" class="- topic/thead thead"><tr dir="lro" class="- topic/row"><th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__1">Project Name</th><th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__2">IDE</th><th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__3">Target Device</th><th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__4">Hardware / Configuration</th></tr></thead><tbody class="- topic/tbody tbody"><tr dir="lro" class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__1">pic32cm_le00_curiosity_pro.X</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__2">MPLABX</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__3">PIC32CM5164LE00100</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__4">PIC32CM Lx Curiosity Pro Board</td></tr><tr dir="lro" class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__1">pic32mz_ef_sk.X</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__2">MPLABX</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__3">PIC32MZ2048EFH144</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__4">PIC32MZ Embedded Connectivity with FPU (EF) Starter Kit</td></tr><tr dir="lro" class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__1">pic32mz_ef_sk_freertos.X</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__2">MPLABX</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__3">PIC32MZ2048EFH144</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__4">PIC32MZ Embedded Connectivity with FPU (EF) Starter Kit</td></tr><tr dir="lro" class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__1">sam_9x60_ek.X</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__2">MPLABX</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__3">SAM9X60</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__4">SAM9X60-EK Evaluation Board</td></tr><tr dir="lro" class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__1">sam_9x60_ek_freertos.X</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__2">MPLABX</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__3">SAM9X60</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__4">SAM9X60-EK Evaluation Board</td></tr><tr dir="lro" class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__1">sam_9x60_curiosity.X</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__2">MPLABX</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__3">SAM9X60</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__4">SAM9X60 Curiosity Development Board</td></tr><tr dir="lro" class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__1">sam_9x60_curiosity_freertos.X</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__2">MPLABX</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__3">SAM9X60</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__4">SAM9X60 Curiosity Development Board</td></tr><tr dir="lro" class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__1">sam_9x75_eb.X</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__2">MPLABX</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__3">SAM9X75</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__4">SAM9X75-DDR3-EB Evaluation Board</td></tr><tr dir="lro" class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__1">sam_a5d2_xult.X</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__2">MPLABX</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__3">ATSAMA5D27C</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__4">SAMA5D2 Xplained Ultra Board</td></tr><tr dir="lro" class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__1">sam_a5d2_xult_freertos.X</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__2">MPLABX</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__3">ATSAMA5D27C</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__4">SAMA5D2 Xplained Ultra Board</td></tr><tr dir="lro" class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__1">sam_a5d27_som1_ek.X</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__2">MPLABX</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__3">ATSAMA5D27C</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__4">SAMA5D27 SOM1 Kit1</td></tr><tr dir="lro" class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__1">sam_a5d27_som1_ek_freertos.X</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__2">MPLABX</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__3">ATSAMA5D27C</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__4">SAMA5D27 SOM1 Kit1</td></tr><tr dir="lro" class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__1">sam_a5d27_wlsom1_ek1.X</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__2">MPLABX</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__3">ATSAMA5D27C</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__4">ATSAMA5D27 WLSOM1 EK1</td></tr><tr dir="lro" class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__1">sam_a5d27_wlsom1_ek1_freertos.X</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__2">MPLABX</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__3">ATSAMA5D27C</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__4">ATSAMA5D27 WLSOM1 EK1</td></tr><tr dir="lro" class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__1">sam_a7g5_ek.X</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__2">MPLABX</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__3">SAMA7G54</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__4">SAMA7G5 EK Board</td></tr><tr dir="lro" class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__1">sam_d11_xpro.X</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__2">MPLABX</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__3">ATSAMD11D14A</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__4">SAMD11 Xplained Pro Board</td></tr><tr dir="lro" class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__1">sam_d21_xpro.X</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__2">MPLABX</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__3">ATSAMD21J18A</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__4">SAMD21 Xplained Pro Board</td></tr><tr dir="lro" class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__1">sam_e54_xpro.X</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__2">MPLABX</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__3">ATSAME54P20A</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__4">SAME54 Xplained Pro Board</td></tr><tr dir="lro" class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__1">sam_e54_xpro_freertos.X</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__2">MPLABX</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__3">ATSAME54P20A</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__4">SAME54 Xplained Pro Board</td></tr><tr dir="lro" class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__1">sam_e70_xult.X</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__2">MPLABX</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__3">ATSAME70Q21B</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__4">SAME70 Xplained Ultra Board</td></tr><tr dir="lro" class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__1">sam_e70_xult_freertos.X</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__2">MPLABX</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__3">ATSAME70Q21B</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__4">SAME70 Xplained Ultra Board</td></tr><tr dir="lro" class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__1">sam_g55_xpro.X</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__2">MPLABX</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__3">ATSAMG55J19</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__4">SAMG55 Xplained Pro Board</td></tr><tr dir="lro" class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__1">pic32mz_ef_curiosity_2_0.X</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__2">MPLABX</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__3">PIC32MZ2048EFM144</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__4">Curiosity PIC32MZ EF 2.0 Development Board</td></tr><tr dir="lro" class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__1">pic32mx470_curiosity.X</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__2">MPLABX</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__3">PIC32MX470F512H</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__4">PIC32MX Curiosity Development Board</td></tr><tr dir="lro" class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__1">pic32mm_usb_curiosity.X</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__2">MPLABX</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__3">PIC32MM0256GPM064</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__4">PIC32MM USB Curiosity Development Board</td></tr><tr dir="lro" class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__1">pic32cz_ca80_curiosity_ultra.X</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__2">MPLABX</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__3">PIC32CZ8110CA80208</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__4">PIC32CZ CA80 Curiosity Ultra development board</td></tr><tr dir="lro" class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__1">pic32cz_ca80_curiosity_ultra_freertos.X</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__2">MPLABX</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__3">PIC32CZ8110CA80208</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__4">PIC32CZ CA80 Curiosity Ultra development board</td></tr><tr dir="lro" class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__1">pic32ck_gc01_curiosity_ultra.X</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__2">MPLABX</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__3">PIC32CK2051GC01144</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-673030AD-6D60-4CF0-B96D-6C702AE92F7C__entry__4">PIC32CK Curiosity Development Board</td></tr></tbody></table></div>
+      </div>
+    </section><section class="- topic/section section" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-FF9F7CAA-B4C1-498F-ABBD-F21E1B32422F" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-FF9F7CAA-B4C1-498F-ABBD-F21E1B32422F"><h2 class="- topic/title title sectiontitle"><strong class="+ topic/ph hi-d/b ph b">Configuring the
+            Hardware</strong></h2><div class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b"><a class="- topic/xref xref" href="https://www.microchip.com/developmenttools/ProductDetails/atsamd11-xpro" target="_blank" rel="external noopener">SAMD11 Xplained Pro Board</a></strong><ul class="- topic/ul ul"><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-7FD03668-4FCB-4BDB-962E-E43291E8E657" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-7FD03668-4FCB-4BDB-962E-E43291E8E657">Use TARGET USB connector on
+            the board to connect the USB Device to the USB Host PC.</li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-F488EACC-4991-4C7C-94E4-FF218A7C05FA" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-F488EACC-4991-4C7C-94E4-FF218A7C05FA">LED0 indicates USB Device
+            Configuration Set Complete event (the USB device functionality has been activated by the
+            USB Host). The LED is turned off when the Bus is suspended.</li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-CD5A1A8E-F299-4CD9-A63C-E450BDD7DF36" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-CD5A1A8E-F299-4CD9-A63C-E450BDD7DF36">Press the switch SW0 to
+            trigger communication from the USB Device to the USB Host.</li></ul><strong class="+ topic/ph hi-d/b ph b"><a class="- topic/xref xref" href="https://www.microchip.com/developmenttools/ProductDetails/atsamd21-xpro" target="_blank" rel="external noopener">SAMD21 Xplained Pro Board</a></strong><ul class="- topic/ul ul"><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-67B471B2-A49E-4F42-BAB0-D6721D7E4C13" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-67B471B2-A49E-4F42-BAB0-D6721D7E4C13">Use TARGET USB connector on
+            the board to connect the USB Device to the USB Host PC.</li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-CFD7E35F-7710-41F8-B8B0-8086ECC8843C" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-CFD7E35F-7710-41F8-B8B0-8086ECC8843C">LED0 indicates USB Device
+            Configuration Set Complete event (the USB device functionality has been activated by the
+            USB Host). The LED is turned off when the Bus is suspended.</li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-145FD55B-C9C3-4896-8042-0D177FD525BD" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-145FD55B-C9C3-4896-8042-0D177FD525BD">Press the switch SW0 to
+            trigger communication from the USB Device to the USB Host.</li></ul><strong class="+ topic/ph hi-d/b ph b"><a class="- topic/xref xref" href="https://www.microchip.com/developmenttools/productdetails/atsame54-xpro" target="_blank" rel="external noopener">SAME54 Xplained Pro Board</a></strong><ul class="- topic/ul ul"><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-188D30BC-652A-4856-A003-D898184B88A0" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-188D30BC-652A-4856-A003-D898184B88A0">Use TARGET USB connector on
+            the board to connect the USB Device to the USB Host PC.</li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-1635B9D3-1A45-43A0-925C-020F1D45AF30" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-1635B9D3-1A45-43A0-925C-020F1D45AF30">LED0 indicates USB Device
+            Configuration Set Complete event (the USB device functionality has been activated by the
+            USB Host). The LED is turned off when the Bus is suspended.</li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-35864447-E9C5-4DC7-81D5-79C96FDE1400" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-35864447-E9C5-4DC7-81D5-79C96FDE1400">Press the switch SW0 to
+            trigger communication from the USB Device to the USB Host.</li></ul><strong class="+ topic/ph hi-d/b ph b"><a class="- topic/xref xref" href="https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113" target="_blank" rel="external noopener">SAME70 Xplained Ultra Board</a></strong><ul class="- topic/ul ul"><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-F8F64A81-44A5-408D-8268-49049717BC17" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-F8F64A81-44A5-408D-8268-49049717BC17">Jumper J203 must be shorted
+            between PB08 and VBUS (positions 2 and 3).</li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-E5938A2C-BCE9-493B-8614-7A6DF96109AB" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-E5938A2C-BCE9-493B-8614-7A6DF96109AB">Use TARGET USB J200 connector
+            on the board to connect the USB Device to the USB Host PC.</li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-D50D079A-CB1A-422C-8A50-C969B142B2EE" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-D50D079A-CB1A-422C-8A50-C969B142B2EE">LED3 indicates USB Device
+            Configuration Set Complete event (the USB device functionality has been activated by the
+            USB Host). The LED is turned off when the Bus is suspended.</li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-40CADF5C-EE38-421E-8FFF-F2F54B8D2840" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-40CADF5C-EE38-421E-8FFF-F2F54B8D2840">Press the switch SW400 to
+            trigger communication from the USB Device to the USB Host.</li></ul><strong class="+ topic/ph hi-d/b ph b"><a class="- topic/xref xref" href="https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/ATSAMG55-XPRO" target="_blank" rel="external noopener">SAMG55 Xplained Pro Board</a></strong><ul class="- topic/ul ul"><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-17AAEC17-CFE2-4FA0-A662-030D20697576" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-17AAEC17-CFE2-4FA0-A662-030D20697576">Use TARGET USB connector on
+            the board to connect the USB Device to the USB Host PC.</li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-7C95E7DE-64A2-492F-BD36-320CFB9656CC" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-7C95E7DE-64A2-492F-BD36-320CFB9656CC">LED0 indicates USB Device
+            Configuration Set Complete event (the USB device functionality has been activated by the
+            USB Host). The LED is turned off when the Bus is suspended.</li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-C8B296A8-87AF-4F5F-A505-45D3C61556DA" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-C8B296A8-87AF-4F5F-A505-45D3C61556DA">Press the switch SW0 to
+            trigger communication from the USB Device to the USB Host.</li></ul><strong class="+ topic/ph hi-d/b ph b"><a class="- topic/xref xref" href="https://www.microchip.com/en-us/development-tool/EV80P12A" target="_blank" rel="external noopener">Curiosity Pro PIC32CM LE00 Development Board</a></strong><ul class="- topic/ul ul"><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-1D7D127D-CABF-4249-96FE-168B9E860161" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-1D7D127D-CABF-4249-96FE-168B9E860161">Use the USB micro-A/B "TARGET
+            USB" connector (D200) to connect the USB Device to the USB Host PC.</li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-C7A42D6B-6FB6-46AC-9A88-83DF4B35C8DC" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-C7A42D6B-6FB6-46AC-9A88-83DF4B35C8DC">LED0 indicates USB Device
+            Configuration Set Complete event (the USB device functionality has been activated by the
+            USB Host).</li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-7D206FBA-26FB-4923-95D4-22EFA402A65F" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-7D206FBA-26FB-4923-95D4-22EFA402A65F">Press the switch SW0 to
+            trigger communication from the USB Device to the USB Host.</li></ul><strong class="+ topic/ph hi-d/b ph b"><a class="- topic/xref xref" href="https://www.microchip.com/en-us/development-tool/ea61x20a" target="_blank" rel="external noopener">PIC32CZ CA80 Curiosity Ultra development board</a></strong><ul class="- topic/ul ul"><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-6E52FADB-2B8D-4194-8C96-0AC546481942" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-6E52FADB-2B8D-4194-8C96-0AC546481942">Use the USB micro-B "USB
+            DEVICE" connector (J102) to connect the USB Device to the USB Host PC.</li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-613F4D38-25B5-4DFC-978A-E91EC3A10775" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-613F4D38-25B5-4DFC-978A-E91EC3A10775">LED0 indicates USB Device
+            Configuration Set Complete event (The USB device functionality has been activated by the
+            USB Host).</li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-191A37B7-FB36-4588-B224-7960902D1B96" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-191A37B7-FB36-4588-B224-7960902D1B96">Press the switch SW0 to
+            trigger communication from the USB Device to the USB Host.</li></ul><strong class="+ topic/ph hi-d/b ph b"><a class="- topic/xref xref" href="https://www.microchip.com/en-us/development-tool/ea23j82a" target="_blank" rel="external noopener">PIC32CK Curiosity Development Board</a></strong><ul class="- topic/ul ul"><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-2130BF4B-DCBC-427D-8B8E-A6E116EFEE5C" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-2130BF4B-DCBC-427D-8B8E-A6E116EFEE5C">Use the USB Type-C "USB
+            DEVICE" connector (J202) to connect the USB Device to the USB Host PC.</li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-C138565F-93FE-44D9-AAB1-BB2B98ABCB5C" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-C138565F-93FE-44D9-AAB1-BB2B98ABCB5C">LED0 indicates USB Device
+            Configuration Set Complete event (The USB device functionality has been activated by the
+            USB Host).</li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-A28A8855-67E6-4298-9386-E07FB8B5C628" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-A28A8855-67E6-4298-9386-E07FB8B5C628">Press the switch SW0 to
+            trigger communication from the USB Device to the USB Host.</li></ul><strong class="+ topic/ph hi-d/b ph b"><a class="- topic/xref xref" href="https://www.microchip.com/Developmenttools/ProductDetails/DM320209" target="_blank" rel="external noopener">Curiosity PIC32MZ EF 2.0 Development Board</a></strong><ul class="- topic/ul ul"><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-A5E33BBF-99E2-4ABC-B8D3-763312AE74EA" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-A5E33BBF-99E2-4ABC-B8D3-763312AE74EA">Use the USB micro-B port J201
+            to connect the USB Device to the USB Host PC.</li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-6E8C6705-0F31-48B3-A42F-969191B1F556" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-6E8C6705-0F31-48B3-A42F-969191B1F556">LED1 indicates USB Device
+            Configuration Set Complete event (the USB device functionality has been activated by the
+            USB Host). The LED is turned off when the Bus is suspended.</li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-1117180A-1ABE-4DB2-97D6-4D17A985BD96" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-1117180A-1ABE-4DB2-97D6-4D17A985BD96">Press the switch SW1 to
+            trigger communication from the USB Device to the USB Host.</li></ul><strong class="+ topic/ph hi-d/b ph b"><a class="- topic/xref xref" href="https://www.microchip.com/Developmenttools/ProductDetails/dm320103" target="_blank" rel="external noopener">Curiosity PIC32MX470 Development Board</a></strong><ul class="- topic/ul ul"><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-9E2035F6-27EA-4BBC-93B8-AF65166E91C3" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-9E2035F6-27EA-4BBC-93B8-AF65166E91C3">Use the USB micro-B port J12
+            to connect the USB Device to the USB Host PC.</li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-36988350-F6F3-4F7C-8D7C-9B1AA234D661" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-36988350-F6F3-4F7C-8D7C-9B1AA234D661">LED1 indicates USB Device
+            Configuration Set Complete event (the USB device functionality has been activated by the
+            USB Host).</li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-00D1BBFC-67B8-49BE-9A12-F69DFFFD30CC" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-00D1BBFC-67B8-49BE-9A12-F69DFFFD30CC">Press the switch S1 to
+            trigger communication from the USB Device to the USB Host.</li></ul><strong class="+ topic/ph hi-d/b ph b"><a class="- topic/xref xref" href="https://www.microchip.com/Developmenttools/ProductDetails/DM320007" target="_blank" rel="external noopener">PIC32MZ Embedded Connectivity with FPU (EF) Starter Kit</a></strong><ul class="- topic/ul ul"><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-55166D00-2583-444A-81DD-2401006882CF" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-55166D00-2583-444A-81DD-2401006882CF">Use the micro-A/B port J4
+            (which is located on the bottom side of the board) to connect the USB Device to the USB
+            Host PC.</li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-3328264C-D495-45BC-864A-913F013610AE" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-3328264C-D495-45BC-864A-913F013610AE">LED1 indicates USB Device
+            Configuration Set Complete event (the USB device functionality has been activated by the
+            USB Host). The LED is turned off when the Bus is suspended.</li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-B6B0268D-650B-44D5-8FC7-4C55CFB81215" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-B6B0268D-650B-44D5-8FC7-4C55CFB81215">Press the switch SW1 to
+            trigger communication from the USB Device to the USB Host.</li></ul><strong class="+ topic/ph hi-d/b ph b"><a class="- topic/xref xref" href="https://www.microchip.com/en-us/development-tool/dm320107" target="_blank" rel="external noopener">PIC32MM USB Curiosity Development Board</a></strong><ul class="- topic/ul ul"><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-FCC92CDD-2542-4080-BD38-8E9C4FD9AD80" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-FCC92CDD-2542-4080-BD38-8E9C4FD9AD80">Use the micro-B USB connector
+            USB2 on the board to connect the USB Device to the USB Host PC.</li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-B5CD9252-18C6-4538-A43B-A76A592DDFC0" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-B5CD9252-18C6-4538-A43B-A76A592DDFC0">LED1 indicates USB Device
+            Configuration Set Complete event (the USB device functionality has been activated by the
+            USB Host).</li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-1B5E120F-EAF5-4E03-8224-AC54079ED5E7" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-1B5E120F-EAF5-4E03-8224-AC54079ED5E7">Press the switch S1 to
+            trigger communication from the USB Device to the USB Host.</li></ul><strong class="+ topic/ph hi-d/b ph b"><a class="- topic/xref xref" href="https://www.microchip.com/developmenttools/ProductDetails/DT100126" target="_blank" rel="external noopener">SAM9X60-EK Evaluation Board</a></strong><ul class="- topic/ul ul"><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-36384BD6-8FE0-48CA-B2BF-04D338F72058" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-36384BD6-8FE0-48CA-B2BF-04D338F72058">
+            <p dir="lro" class="- topic/p p">Setup the SD card (Note: exFAT formatted SD Cards are not supported)</p>
+            <ul class="- topic/ul ul"><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-E72596B2-2FF2-4F0C-AA59-EE7598593257" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-E72596B2-2FF2-4F0C-AA59-EE7598593257">Download harmony MPU
+                bootstrap loader from this <a class="- topic/xref xref" href="https://github.com/Microchip-MPLAB-Harmony/usb_apps_device/tree/master/deps/at91bootstrap_sam_9x60_binaries/boot.bin" target="_blank" rel="external noopener">location</a>.</li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-9CAB7F9A-A6CF-4099-9671-19B59CB924D1" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-9CAB7F9A-A6CF-4099-9671-19B59CB924D1">Copy the downloaded boot
+                loader binary (boot.bin) and generated application binary (harmony.bin) into the SD
+                card.</li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-7D366A38-FD75-4BCC-9296-CF81C2E5B982" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-7D366A38-FD75-4BCC-9296-CF81C2E5B982">Insert the SD card into
+                the SDMMC connector J4 on the board.</li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-D0780C8F-1F8C-4986-9056-28A2F02AA5D5" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-D0780C8F-1F8C-4986-9056-28A2F02AA5D5">Reset the board by
+                pressing the Push Button SW3.</li></ul>
+          </li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-0ECAF72C-6E90-4091-89B2-D8C4F8627A8B" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-0ECAF72C-6E90-4091-89B2-D8C4F8627A8B">
+            <p dir="lro" class="- topic/p p">Jumpers J20, J21, and J13 must be open.</p>
+          </li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-CE7C449C-1CDC-44E1-BB9C-78ED6FFE6C46" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-CE7C449C-1CDC-44E1-BB9C-78ED6FFE6C46">
+            <p dir="lro" class="- topic/p p">Jumper J2 and J3 must be shorted.</p>
+          </li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-7CDF0991-960B-4671-B472-D044C15351CE" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-7CDF0991-960B-4671-B472-D044C15351CE">
+            <p dir="lro" class="- topic/p p">Connect the USB Micro-B port J22 on board to the computer using a micro USB
+              cable (to enable the debug com port).</p>
+          </li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-059D40FC-512F-4AF1-A4AF-E90108B32D27" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-059D40FC-512F-4AF1-A4AF-E90108B32D27">
+            <p dir="lro" class="- topic/p p">Connect the USB Micro-B Connector (J7) on the board to the computer using a
+              micro USB cable.</p>
+          </li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-19F88C6C-DC38-46FC-B2EC-DFAD53C2AFC2" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-19F88C6C-DC38-46FC-B2EC-DFAD53C2AFC2">
+            <p dir="lro" class="- topic/p p">LED D1 indicates USB Device Configuration Set Complete event (The USB
+              device functionality has been activated by the USB Host). The LED is turned off when
+              the Bus is suspended.</p>
+          </li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-0B147781-5DB1-4AB8-87B8-0CD287B70338" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-0B147781-5DB1-4AB8-87B8-0CD287B70338">
+            <p dir="lro" class="- topic/p p">Press the switch SW1 to trigger communication from the USB Device to the
+              USB Host.</p>
+            <p dir="lro" class="- topic/p p"><div class=""><img class="- topic/image image" src="GUID-D7C919FA-1F75-4514-AECB-6E73D0CFEE22-low.png" height="328" width="480"/></div></p>
+            <div class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b"><a class="- topic/xref xref" href="https://www.microchip.com/en-us/development-tool/EA14J50A" target="_blank" rel="external noopener">SAM9X75-DDR3-EB Evaluation Board</a></strong><ul class="- topic/ul ul"><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-D464658C-0F2A-4A9F-8289-C0505D9CE7E9" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-D464658C-0F2A-4A9F-8289-C0505D9CE7E9">
+                  <p dir="lro" class="- topic/p p">Powered the board with an external power supply (or use the micro AB
+                    connector).</p>
+                </li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-29B62193-ED26-42AD-BD4B-375BA12C29C6" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-29B62193-ED26-42AD-BD4B-375BA12C29C6">
+                  <p dir="lro" class="- topic/p p">Setup the SD card (Note: exFAT formatted SD Cards are not
+                    supported)</p>
+                  <ul class="- topic/ul ul"><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-70F4AFF6-0A7E-4743-90C9-4FF51FA5460C" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-70F4AFF6-0A7E-4743-90C9-4FF51FA5460C">Download harmony
+                      MPU bootstrap loader from this <a class="- topic/xref xref" href="https://github.com/Microchip-MPLAB-Harmony/usb_apps_device/tree/master/deps/at91bootstrap_sam_9x7_binaries/boot.bin" target="_blank" rel="external noopener">location</a>.</li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-59001E87-9945-441C-8EA4-DBC909BCB45D" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-59001E87-9945-441C-8EA4-DBC909BCB45D">Copy the downloaded
+                      boot loader binary (boot.bin) and generated application binary (harmony.bin)
+                      into the SD card.</li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-26CE5932-0466-4F76-8D50-B7748709FAE4" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-26CE5932-0466-4F76-8D50-B7748709FAE4">Insert the SD card
+                      into the SDMMC connector (SDMMC0) on the board.</li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-CE26CEDF-B0E8-425E-A65B-B5882BB136F1" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-CE26CEDF-B0E8-425E-A65B-B5882BB136F1">Reset the board by
+                      pressing the Push Button RESET, then START.</li></ul>
+                </li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-F7B3DB2B-82F4-432D-A096-2FCB91AEF873" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-F7B3DB2B-82F4-432D-A096-2FCB91AEF873">
+                  <p dir="lro" class="- topic/p p">Connect USB to serial cable to DBGU0 (to enable debug com port).</p>
+                </li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-9650F890-5E50-4EB7-9891-E3ABDA1A8876" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-9650F890-5E50-4EB7-9891-E3ABDA1A8876">
+                  <p dir="lro" class="- topic/p p">Connect the USB Micro-AB Connector on the board to the computer using
+                    a micro USB cable.</p>
+                </li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-EDD353FF-3D0B-45AB-A186-229CC46B7F57" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-EDD353FF-3D0B-45AB-A186-229CC46B7F57">
+                  <p dir="lro" class="- topic/p p">LED near VDDCORE inscription on the board indicates USB Device
+                    Configuration Set Complete event (The USB device functionality has been
+                    activated by the USB Host). The LED is turned off when the Bus is suspended.</p>
+                </li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-DC9076F6-5B91-444C-B839-B959661CAE29" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-DC9076F6-5B91-444C-B839-B959661CAE29">
+                  <p dir="lro" class="- topic/p p">Press the switch USER to trigger communication from the USB Device to
+                    the USB Host.<div class=""><img class="- topic/image image" src="GUID-8F485B5C-0DFC-47B7-A493-8B8AA7796BD8-low.png" height="430" width="693"/></div></p>
+                </li></ul></div>
+          </li></ul></div><strong class="+ topic/ph hi-d/b ph b"><a class="- topic/xref xref" href="https://www.microchip.com/Developmenttools/ProductDetails/ATSAMA5D2C-XULT" target="_blank" rel="external noopener">SAMA5D2 Xplained Ultra Board</a></strong><ul class="- topic/ul ul"><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-6F80A48C-7FA9-4BA1-8CEE-53E6494EBB65" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-6F80A48C-7FA9-4BA1-8CEE-53E6494EBB65">Setup the SD card (Note: exFAT
+          formatted SD Cards are not supported)<ul class="- topic/ul ul"><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-A3576AD8-B83C-4DBE-B723-874D2CA1984E" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-A3576AD8-B83C-4DBE-B723-874D2CA1984E">Download harmony MPU
+              bootstrap loader from this <a class="- topic/xref xref" href="https://github.com/Microchip-MPLAB-Harmony/usb_apps_device/tree/master/deps/at91bootstrap_sam_a5d2_binaries/boot.bin" target="_blank" rel="external noopener">location</a>.</li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-3500525E-8F1E-459A-A8C6-7B01223D2490" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-3500525E-8F1E-459A-A8C6-7B01223D2490">Copy the downloaded boot
+              loader binary (boot.bin) and generated application binary (harmony.bin) into the SD
+              card.</li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-1F054D2F-8862-4D0D-B054-858ED5450232" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-1F054D2F-8862-4D0D-B054-858ED5450232">Insert the SD card into the
+              SDMMC1 slot on the board.</li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-7FEBC97B-E838-4343-8E9F-01C11BFBE2DB" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-7FEBC97B-E838-4343-8E9F-01C11BFBE2DB">Reset the board by pressing
+              the Push Button BP3.</li></ul></li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-7B681D07-1DA2-4E78-BA89-AE06EB49A2D9" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-7B681D07-1DA2-4E78-BA89-AE06EB49A2D9">Short jumper
+          JP2(DEBUG_DIS).</li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-E68F5DC9-B87C-41A2-AA68-6A765141FD1B" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-E68F5DC9-B87C-41A2-AA68-6A765141FD1B">Connect the EDBG USB Micro-B
+          port J14 on the board to the computer using a micro USB cable.</li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-6B68084C-AE9D-4238-91DA-79D86140B839" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-6B68084C-AE9D-4238-91DA-79D86140B839">Use the "A5-USB-A" connector
+          (J23 - Micro A/B connector) on the board to connect the USB device to the USB Host.</li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-9CFCCC88-38B1-4087-A311-65E2842656CF" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-9CFCCC88-38B1-4087-A311-65E2842656CF">RGB LED turning to Green
+          indicates USB Device Configuration Set Complete event (The USB device functionality has
+          been activated by the USB Host). The LED is turned off when the Bus is suspended.</li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-70BD27C5-36A9-4806-B69B-65BC74169A5F" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-70BD27C5-36A9-4806-B69B-65BC74169A5F">Press PB_USER Switch to trigger
+          communication from the USB Device to the USB Host.</li></ul><strong class="+ topic/ph hi-d/b ph b"><a class="- topic/xref xref" href="https://www.microchip.com/developmenttools/ProductDetails/atsama5d27-som1-ek1" target="_blank" rel="external noopener">SAMA5D27 SOM1 Kit1</a></strong><ul class="- topic/ul ul"><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-10B48B6A-8943-49CA-9449-0257A8156CF5" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-10B48B6A-8943-49CA-9449-0257A8156CF5">Setup the SD card (Note: exFAT
+          formatted SD Cards are not supported)<ul class="- topic/ul ul"><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-8D65D91F-2959-46AD-948B-DEB0FB9B0078" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-8D65D91F-2959-46AD-948B-DEB0FB9B0078">Download harmony MPU
+              bootstrap loader from this <a class="- topic/xref xref" href="https://github.com/Microchip-MPLAB-Harmony/usb_apps_device/tree/master/deps/at91bootstrap_sam_a5d27_som1_binaries/boot.bin" target="_blank" rel="external noopener">location</a>.</li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-702EAB4F-7EBA-4E0B-BF14-8C0C9EC25596" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-702EAB4F-7EBA-4E0B-BF14-8C0C9EC25596">Copy the downloaded boot
+              loader binary (boot.bin) and generated application binary (harmony.bin) into the SD
+              card.</li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-BC501A5C-2789-428A-B3D8-E52BC56C2F8F" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-BC501A5C-2789-428A-B3D8-E52BC56C2F8F">Insert the SD card into the
+              SDMMC0 slot (J12) on the board.</li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-9FD6AB71-29D5-4959-A133-B79623CD80D7" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-9FD6AB71-29D5-4959-A133-B79623CD80D7">Reset the board by pressing
+              the Push Button PB1.</li></ul></li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-4D4FD456-687A-428D-BB7F-D70B385B07E7" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-4D4FD456-687A-428D-BB7F-D70B385B07E7">Connect the Debug USB port
+          (J10) on the board to the computer using a micro USB cable.</li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-8B2055C3-FF8D-413B-8154-F0645759C827" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-8B2055C3-FF8D-413B-8154-F0645759C827">Connect the USB Micro-B
+          Connector (J17) on the board to the computer using a micro USB cable.</li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-B215F96B-2A50-41FD-AC76-668B25F6AEA5" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-B215F96B-2A50-41FD-AC76-668B25F6AEA5">RGB LED turning to Green
+          indicates USB Device Configuration Set Complete event (The USB device functionality has
+          been activated by the USB Host). The LED is turned off when the Bus is suspended.</li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-91BA02FE-01DB-4C9C-8895-30241CC2D2B3" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-91BA02FE-01DB-4C9C-8895-30241CC2D2B3">Press the pushbutton PB4 to
+          trigger communication from the USB Device to the USB Host. <div class=""><img class="- topic/image image" src="GUID-7BA71B1E-CF17-4387-B78A-238F8424521E-low.png" height="516" width="713"/></div></li></ul><strong class="+ topic/ph hi-d/b ph b"><a class="- topic/xref xref" href="https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320117" target="_blank" rel="external noopener">ATSAMA5D27-WLSOM1 Evaluation Kit</a></strong><ul class="- topic/ul ul"><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-9A2DEF4B-47F1-4868-9A9F-D38BC1297831" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-9A2DEF4B-47F1-4868-9A9F-D38BC1297831">Setup the SD card (Note: exFAT
+          formatted SD Cards are not supported)<ul class="- topic/ul ul"><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-53B0EC21-F09D-47D6-8C7F-B547497FF313" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-53B0EC21-F09D-47D6-8C7F-B547497FF313">Download harmony MPU
+              bootstrap loader from this <a class="- topic/xref xref" href="https://github.com/Microchip-MPLAB-Harmony/usb_apps_device/tree/master/deps/at91bootstrap_sam_a5d27_wlsom1_binaries/boot.bin" target="_blank" rel="external noopener">location</a>.</li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-AC342A0A-7DB2-478A-9D87-B587D00AB658" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-AC342A0A-7DB2-478A-9D87-B587D00AB658">Copy the downloaded boot
+              loader binary (boot.bin) and generated application binary (harmony.bin) into the SD
+              card.</li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-CE9FBDF4-A235-4B91-B7F7-D03A98241036" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-CE9FBDF4-A235-4B91-B7F7-D03A98241036">Insert the SD card into the
+              SDMMC0 Card Connector (J9) on the board.</li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-734BA7C9-1970-43E6-A676-35EA0E02DBD5" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-734BA7C9-1970-43E6-A676-35EA0E02DBD5">Reset the board by pressing
+              the Reset Button (SW2)</li></ul></li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-67F8579F-BBD7-4A7D-9C0C-F1A13A5E0407" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-67F8579F-BBD7-4A7D-9C0C-F1A13A5E0407">Connect the USB-A MicroAB
+          connector (J10) on the board to the computer using a micro USB cable.</li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-D52358D5-F9AF-47A1-A602-9252A0A22504" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-D52358D5-F9AF-47A1-A602-9252A0A22504">Press the "START_SOM" button to
+          activate board start-up.</li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-202AB602-8579-4587-B5CE-724BC536FD55" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-202AB602-8579-4587-B5CE-724BC536FD55">RGB LED turning to Green
+          indicates USB Device Configuration Set Complete event (The USB device functionality has
+          been activated by the USB Host). The LED is turned off when the Bus is suspended.</li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-340F9259-6643-4F02-A033-2AFBEA2EB6E2" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-340F9259-6643-4F02-A033-2AFBEA2EB6E2">Press the pushbutton SW4 to
+          trigger communication from the USB Device to the USB Host.<p class="- topic/lines lines"></p><div class=""><img class="- topic/image image" src="GUID-F008CEE8-4EFC-4D8A-8C97-7080015D9FD4-low.png" height="476" width="481"/></div></li></ul><strong class="+ topic/ph hi-d/b ph b"><a class="- topic/xref xref" href="https://www.microchip.com/en-us/development-tool/EV21H18A" target="_blank" rel="external noopener">SAMA7G5-EK Evaluation Kit</a></strong><ul class="- topic/ul ul"><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-860B4F84-A491-4113-AD49-FE6033E6C20F" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-860B4F84-A491-4113-AD49-FE6033E6C20F">Powered the board with an
+          external power supply (J1) or power supply the board by connecting J7 to the computer
+          using a micro USB cable.</li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-44F2ADC0-A034-4031-AD78-B346D1D37EDA" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-44F2ADC0-A034-4031-AD78-B346D1D37EDA">Setup the SD card (Note: exFAT
+          formatted SD Cards are not supported)<ul class="- topic/ul ul"><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-6C77F575-84E0-436A-B0E3-95AE20AD870B" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-6C77F575-84E0-436A-B0E3-95AE20AD870B">Download harmony MPU
+              bootstrap loader from this <a class="- topic/xref xref" href="https://github.com/Microchip-MPLAB-Harmony/usb_apps_device/tree/master/deps/at91bootstrap_sam_a7g5_binaries/boot.bin" target="_blank" rel="external noopener">location</a>.</li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-64DD7F1B-81EA-4E7D-9FD6-B79E1626D3F1" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-64DD7F1B-81EA-4E7D-9FD6-B79E1626D3F1">Copy the downloaded boot
+              loader binary (boot.bin) and generated application binary (harmony.bin) into the SD
+              card.</li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-44EA7D58-F512-4941-9480-2ABD2EF69068" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-44EA7D58-F512-4941-9480-2ABD2EF69068">Insert the SD card into the
+              SD Card Connector (J4) on the board.</li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-D5668E5F-B6C3-4464-8F5C-FE62C45D45FB" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-D5668E5F-B6C3-4464-8F5C-FE62C45D45FB">Reset the board by pressing
+              the Reset Button (nRST)</li></ul></li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-95C5F7C8-0AB4-4A35-9C91-0AB288FD58AC" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-95C5F7C8-0AB4-4A35-9C91-0AB288FD58AC">Press the "nSTART" button to
+          activate board start-up.</li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-859220A1-D771-414A-975B-4FBF19A50A5F" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-859220A1-D771-414A-975B-4FBF19A50A5F">Connect the USB MicroAB
+          connector (J7) to the computer using an USB cable.</li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-AD4D37F1-796C-4063-8C12-7AAF3B77852B" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-AD4D37F1-796C-4063-8C12-7AAF3B77852B">RGB LED turning to Green
+          indicates USB Device Configuration Set Complete event (The USB device functionality has
+          been activated by the USB Host). The LED is turned off when the Bus is suspended.</li><li dir="lro" class="- topic/li li" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-CDC272A2-28DA-4C61-9AD6-85B82B1F91D7" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-CDC272A2-28DA-4C61-9AD6-85B82B1F91D7">Press the USER BUTTON SW1 to
+          trigger communication from the USB Device to the USB Host.</li></ul></section><section class="- topic/section section" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-328CA84E-DD5A-489E-B524-7DF74F771613" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-328CA84E-DD5A-489E-B524-7DF74F771613"><h2 class="- topic/title title sectiontitle"><strong class="+ topic/ph hi-d/b ph b">Running the Application</strong></h2>
+      
+      <p dir="lro" class="- topic/p p">This demonstration uses the selected hardware platform as a HID class USB device,
+        but uses the HID class for general purpose I/O operations. Open the project with appropriate
+        IDE. Compile the project and program the target device.</p>
+      <p dir="lro" class="- topic/p p">Typically, the HID class is used to implement human interface products, such as
+        mice and keyboards. The HID protocol, is however, quite flexible, and can be adapted and
+        used to send/receive general purpose data to/from a USB device. Using the HID class for
+        general purpose I/O operations is quite advantageous, in that it does not require any kind
+        of custom driver installation process. HID class drivers are already provided by and are
+        distributed with common operating systems. Therefore, upon plugging in a HID class device
+        into a typical computer system, no user installation of drivers is required, the
+        installation is fully automatic.</p>
+      <p dir="lro" class="- topic/p p">The LEDs on the demonstration board will indicate the USB state of the device as
+        described in Configuring the Hardware section.</p>
+      <p dir="lro" class="- topic/p p">HID devices primarily communicate through one interrupt IN endpoint and one
+        interrupt OUT endpoint. In most applications, this effectively limits the maximum achievable
+        bandwidth for full speed HID devices to 64 kBytes/s of IN traffic, and 64 kBytes/s of OUT
+        traffic (64 kB/s, but effectively "full duplex").</p>
+      <p dir="lro" class="- topic/p p">The <em class="+ topic/ph hi-d/i ph i">GenericHIDSimpleDemo.exe</em> program, and the associated firmware
+        demonstrate how to use the HID protocol for basic general purpose USB data transfer.</p>
+      <p dir="lro" class="- topic/p p">Before you can run the <em class="+ topic/ph hi-d/i ph i">GenericHIDSimpleDemo.exe</em> executable, you will need
+        to have the Microsoft® .NET Framework Version 2.0 Redistributable Package (later versions
+        are probably acceptable, but have not been tested) installed on your computer. Programs that
+        were built in the Visual Studio® .NET languages require the .NET redistributable package.
+        The redistributable package can be freely downloaded from Microsoft’s website. Users of
+        Windows Vista® operating systems will not need to install the .NET framework, as it comes
+        preinstalled as part of the operating system.</p>
+    </section><section class="- topic/section section" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-10B2E6BB-1371-49DB-8BF8-CA30C68FC645" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-10B2E6BB-1371-49DB-8BF8-CA30C68FC645"><h2 class="- topic/title title sectiontitle">Launching the Application</h2>
+      
+      <p dir="lro" class="- topic/p p">To launch the application, open the executable <em class="+ topic/ph hi-d/i ph i">GenericHIDSimpleDemo.exe</em>
+        from the folder path
+          <em class="+ topic/ph hi-d/i ph i"><strong class="+ topic/ph hi-d/b ph b">usb_apps_device/apps/hid_basic/bin/GenericHIDSimpleDemo.exe</strong></em>. A UI similar to
+        the following should appear</p>
+      <p dir="lro" class="- topic/p p">:<div class=""><img class="- topic/image image" src="GUID-B396825F-65DC-47C7-8E60-C0963C127A36-low.png"/></div></p>
+      <p class="- topic/lines lines">Note: If instead of this window, an error message appears while trying to launch the application, it is likely the Microsoft .NET Framework Version 2.0 Redistributable Package has not yet been installed. Please install it and try again.</p>
+    </section><section class="- topic/section section" id="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-4053B878-EFC7-4B5D-B34A-9558E54AEFFB" data-ofbid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-4053B878-EFC7-4B5D-B34A-9558E54AEFFB"><h2 class="- topic/title title sectiontitle"><strong class="+ topic/ph hi-d/b ph b">Send/Receive Packets</strong></h2>
+      
+      <p dir="lro" class="- topic/p p">To begin sending/receiving packets to the device, you must first find and connect
+        to the device. As configured by default, the application is looking for HID class USB
+        devices with VID = 0x04D8 and PID = 0x003F. The device descriptor in the firmware project
+        meant to be used with this demonstration uses the same VID/PID. If you plug in a USB device
+        programmed with the correct precompiled .hex file, and click <strong class="+ topic/ph hi-d/b ph b">Connect</strong>, the other push
+        buttons should become enabled. If clicking <strong class="+ topic/ph hi-d/b ph b">Connect</strong> has no effect, it is likely the
+        USB device is either not connected, or has not been programmed with the correct
+        firmware.</p>
+      <p dir="lro" class="- topic/p p">Clicking <strong class="+ topic/ph hi-d/b ph b">Toggle LED(s)</strong> should send a single packet of general purpose
+        generic data to the HID class USB peripheral device. The data will arrive on the interrupt
+        OUT endpoint. The firmware has been configured to receive this generic data packet, parse
+        the packet looking for the Toggle LED(s) command, and should respond appropriately by
+        controlling the LED(s) on the demonstration board.</p>
+      <p dir="lro" class="- topic/p p">The Get Pushbutton State option will send one packet of data over the USB to the
+        peripheral device (to the interrupt OUT endpoint) requesting the current push button state.
+        The firmware will process the received Get Pushbutton State command, and will prepare an
+        appropriate response packet depending upon the pushbutton state.</p>
+      <p dir="lro" class="- topic/p p">Refer to the Configuring the Hardware section for details on the LED indication
+        and Switch, that are relevant to the selected hardware.</p>
+    </section></div></article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                        <nav role="navigation" id="wh_topic_toc" aria-label="On this page" class="col-lg-2 d-none d-lg-block navbar d-print-none"> 
+                            <div id="wh_topic_toc_content">
+		                        
+	                            <div class=" wh_topic_toc "><div class="wh_topic_label">On this page</div><ul><li class="section-item"><div class="section-title"><a href="#GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-F501684E-BBB3-40CE-85AE-34568B9E481F" data-tocid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-F501684E-BBB3-40CE-85AE-34568B9E481F"><strong class="+ topic/ph hi-d/b ph b">Description</strong></a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-51692406-5CA2-4850-B7D4-5F4E5E244F53" data-tocid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-51692406-5CA2-4850-B7D4-5F4E5E244F53"><strong class="+ topic/ph hi-d/b ph b">Downloading and building the application</strong></a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-FF9F7CAA-B4C1-498F-ABBD-F21E1B32422F" data-tocid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-FF9F7CAA-B4C1-498F-ABBD-F21E1B32422F"><strong class="+ topic/ph hi-d/b ph b">Configuring the
+            Hardware</strong></a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-328CA84E-DD5A-489E-B524-7DF74F771613" data-tocid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-328CA84E-DD5A-489E-B524-7DF74F771613"><strong class="+ topic/ph hi-d/b ph b">Running the Application</strong></a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-10B2E6BB-1371-49DB-8BF8-CA30C68FC645" data-tocid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-10B2E6BB-1371-49DB-8BF8-CA30C68FC645">Launching the Application</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-4053B878-EFC7-4B5D-B34A-9558E54AEFFB" data-tocid="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7__GUID-4053B878-EFC7-4B5D-B34A-9558E54AEFFB"><strong class="+ topic/ph hi-d/b ph b">Send/Receive Packets</strong></a></div></li></ul></div>
+	                        	
+                        	</div>
+                        </nav>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <div class="mchp_disclaimer"><p class="mchp_disclaimer_text">The online versions of the documents are provided as a courtesy. Verify all content and data in the device’s PDF documentation found on the device product page.</p></div><footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container mx-auto ">
+    <div class="footer">
+  <div class="mchp-wh-footer">
+    <div class="mchp-footer">
+      <div class="mchp-footer-tier1">
+        <div class="spacer"></div>
+        <div class="mchp-footer-container">
+          <div class="mchp-footer-links mchp-social-media-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.facebook.com/pages/Microchip-Technology-Inc/20320981741" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Facebook" src="oxygen-webhelp/template/resources/images/201016-corp-facebook.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.linkedin.com/company/microchip-technology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip LinkedIn" src="oxygen-webhelp/template/resources/images/201016-corp-linkedin.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://twitter.com/MicrochipTech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Twitter" src="oxygen-webhelp/template/resources/images/201016-corp-twitter.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.youtube.com/user/MicrochipTechnology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip YouTube" src="oxygen-webhelp/template/resources/images/201016-corp-youtube.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.instagram.com/microchiptechnologyinc/" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Instagram" src="oxygen-webhelp/template/resources/images/201016-corp-instagram.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.weibo.com/microchiptech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Weibo" src="oxygen-webhelp/template/resources/images/201016-corp-weibo.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.microchip.com/en-us/about/blog" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Blog" src="oxygen-webhelp/template/resources/images/201016-corp-blog.png"/>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://www.microchip.com/about-us/contact-us" class="mchp-link__link">Contact</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information" class="mchp-link__link">Legal</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/privacy-policy" class="mchp-link__link">Privacy Policy</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/microchip-cookie-statement" class="mchp-link__link">Cookies</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://careers.microchip.com/" class="mchp-link__link">Careers</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-newsletter">
+            <div class="cmp-text">
+              <p>Stay on the leading edge with our blog</p>
+            </div>
+            <div class="mchp-button-wrapper">
+              <a role="button" href="https://www.microchip.com/en-us/about/blog" class="mchp-button mchp-button-regular solid">
+                <span class="mchp-button__span">MicroSolutions</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="graphic">
+          <img src="oxygen-webhelp/template/resources/images/footer-graphic.png"/>
+        </div>
+      </div>
+      <div class="mchp-footer-tier2">
+        <p class="mchp-copyright">© Copyright 1998-2022 Microchip Technology Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async="true" src="https://www.googletagmanager.com/gtag/js?id=UA-2724382-19"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];  
+    function gtag(){dataLayer.push(arguments);}  
+    gtag('js', new Date());   
+    gtag('config', 'UA-2724382-19');
+  </script>
+</div>
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>
