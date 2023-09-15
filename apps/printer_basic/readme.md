@@ -40,19 +40,6 @@ pic32cz_ca80_curiosity_ultra.X    | MPLABX | PIC32CZ8110CA80208  | [PIC32CZ CA80
 - LED1 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
 - The CDC USB (UART to USB) interface on this board is served by the DEBUG_USB connector J700. Connecting this to the PC will create a COM port on the PC Host.
 
-### <a name="config_9"></a> [SAM9X60-EK Evaluation Board](https://www.microchip.com/developmenttools/ProductDetails/DT100126)
-
-- Setup the SD card (Note: exFAT formatted SD Cards are not supported) 
-    - Download harmony MPU bootstrap loader from this [location](../../deps/at91bootstrap_sam_9x60_binaries/boot.bin).
-    - Copy the downloaded boot loader binary (boot.bin) and generated application binary (harmony.bin) into the SD card.
-    - Insert the SD card into the SDMMC connector J4 on the board.
-    - Reset the board by pressing the Push Button SW3. 
-- Jumpers J20, J21, and J13 must be open.
-- Jumper J2 and J3 must be shorted.
-- Connect the USB Micro-B port J22 on board to the computer using a micro USB cable (to enable the debug com port). The USB COM port interface on this port is used to transfer demonstration application messages to a PC. 
-- Connect the USB Micro-B Connector (J7) on the board to the computer using a micro USB cable.
-- LED D1 indicates USB Device Configuration Set Complete event (The USB device functionality has been activated by the USB Host).
-    ![SAM9X60-EK Evaluation Board](images/sam9x60_evk.png)
 
 ### <a name="#config_sam9x60_curiosity"></a> [SAM9X60-Curiosity Board](https://www.microchip.com/en-us/development-tool/EV40E67A)
 - Setup the SD card (Note: exFAT formatted SD Cards are not supported) 

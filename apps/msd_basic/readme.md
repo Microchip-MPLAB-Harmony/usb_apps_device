@@ -35,7 +35,7 @@ Following table gives the details of project configurations, target device used,
 | pic32mx470_curiosity.X          | MPLABX | PIC32MX470F512H     | [PIC32MX Curiosity Development Board](#config_13)                          |
 | pic32mm_usb_curiosity.X                | MPLABX | PIC32MM0256GPM064   | [PIC32MM USB Curiosity Development Board](#config_20)               |
 | pic32ck_gc01_curiosity_ultra.X                | MPLABX | pic32ck_gc01_curiosity_ultra   | [PIC32CK USB Curiosity Development Board](#config_24)               |
-
+| pic32cz_ca80_curiosity_ultra_freertos.X         | MPLABX | PIC32CZ8110CA80208   | [PIC32CZ CA80 Curiosity Ultra development board](#config_23)           |
 
 ## <a name="config_title"></a> Configuring the Hardware
 
@@ -68,6 +68,11 @@ Following table gives the details of project configurations, target device used,
 
 - Use the micro-B USB connector USB2 on the board to connect the USB Device to the USB Host PC.
 - LED1 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
+
+### <a name="config_23"></a> [PIC32CZ CA80 Curiosity Ultra development board](https://www.microchip.com/en-us/development-tool/ea61x20a)
+
+- Use the USB micro-B "USB DEVICE" connector (J102) to connect the USB Device to the USB Host PC.
+- LED0 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
 
 ### <a name="config_24"></a> PIC32CK USB Curiosity Development Board
 
