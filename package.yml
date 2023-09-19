@@ -1,7 +1,7 @@
 package:
   format-version: "1.0.0"
   name: "usb_apps_device"
-  version: "v3.5.0-E2"
+  version: "v3.5.0"
   type: "application"
   status: "production"
   required: true
@@ -9,15 +9,15 @@ package:
   dependencies:
     - name: "usb"
       type: "package"
-      version: "dev"
+      version: "v3.11.0"
     - name: "csp"
       type: "package"
-      version: "v3.17.0"
+      version: "v3.18.0"
     - name: "core"
       type: "package"
-      version: "v3.13.0"
+      version: "v3.13.1"
     - name: "bsp"
       type: "package"
-      version: "v3.16.0"
+      version: "v3.17.0"
 
 
