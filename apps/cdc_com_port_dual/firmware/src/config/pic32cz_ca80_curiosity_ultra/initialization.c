@@ -302,7 +302,7 @@ SYSTEM_OBJECTS sysObj;
  * USB Driver Initialization
  ******************************************************/
 
-const DRV_USBHS_INIT drvUSBHSInit0 =
+static const DRV_USBHS_INIT drvUSBHSInit0 =
 {
 
     /* Interrupt Source for USB module */
@@ -400,7 +400,7 @@ void SYS_Initialize ( void* data )
 
 
     /* Initialize USB Driver */ 
-    sysObj.drvUSBHSObject0 = DRV_USBHS_Initialize(DRV_USBHS_INDEX_0, (SYS_MODULE_INIT *) &drvUSBHSInit0);	
+    sysObj.drvUSBHSObject0 = DRV_USBHS_Initialize(DRV_USBHS_INDEX_0, (SYS_MODULE_INIT *) &drvUSBHSInit0);    
 
 
     #pragma coverity compliance end_block "MISRA C-2012 Rule 11.3"
