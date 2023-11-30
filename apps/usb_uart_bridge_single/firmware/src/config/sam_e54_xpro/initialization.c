@@ -124,7 +124,7 @@ static DRV_USB_VBUS_LEVEL DRV_USBFSV1_VBUS_Comparator(void)
 {
     DRV_USB_VBUS_LEVEL retVal = DRV_USB_VBUS_LEVEL_INVALID;
     
-    if(true == USB_VBUS_SENSE_Get())
+    if(1U == USB_VBUS_SENSE_Get())
     {
         retVal = DRV_USB_VBUS_LEVEL_VALID;
     }
@@ -132,7 +132,7 @@ static DRV_USB_VBUS_LEVEL DRV_USBFSV1_VBUS_Comparator(void)
 
 }
 
-const DRV_USBFSV1_INIT drvUSBInit =
+static const DRV_USBFSV1_INIT drvUSBInit =
 {
     /* Interrupt Source for USB module */
     .interruptSource = USB_OTHER_IRQn,
@@ -214,9 +214,9 @@ void SYS_Initialize ( void* data )
 
 
 
-    EVSYS_Initialize();
-
     SERCOM0_USART_Initialize();
+
+    EVSYS_Initialize();
 
     DMAC_Initialize();
 
