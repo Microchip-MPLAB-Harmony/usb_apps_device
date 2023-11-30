@@ -58,8 +58,8 @@
 #include "usb/usb_device.h"
 #include "driver/memory/drv_memory.h"
 #include "driver/sdspi/drv_sdspi.h"
-#include "peripheral/nvm/plib_nvm.h"
 #include "system/time/sys_time.h"
+#include "peripheral/nvm/plib_nvm.h"
 #include "peripheral/coretimer/plib_coretimer.h"
 #include "driver/memory/drv_memory_nvm.h"
 #include "bsp/bsp.h"
@@ -208,7 +208,7 @@ typedef struct
 
     SYS_MODULE_OBJ  sysTime;
     SYS_MODULE_OBJ  drvMemory0;
-	SYS_MODULE_OBJ  drvUSBFSObject;
+    SYS_MODULE_OBJ  drvUSBFSObject;
 
 
 } SYSTEM_OBJECTS;
