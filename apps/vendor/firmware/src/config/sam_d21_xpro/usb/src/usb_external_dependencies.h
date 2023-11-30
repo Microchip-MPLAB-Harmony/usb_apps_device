@@ -39,8 +39,8 @@
  *******************************************************************************/
 //DOM-IGNORE-END
 
-#ifndef _USB_EXTERNAL_DEPENDENCIES_H
-#define _USB_EXTERNAL_DEPENDENCIES_H
+#ifndef USB_EXTERNAL_DEPENDENCIES_H
+#define USB_EXTERNAL_DEPENDENCIES_H
 
 #include <string.h>
 #include "system/system_common.h"
@@ -55,9 +55,9 @@
 
 #ifndef SYS_DEBUG_ENABLE
 
-	#define SYS_DEBUG_PRINT(level, format, ...) 
-	#define SYS_DEBUG_MESSAGE(a,b, ...)     
-	#define SYS_DEBUG(a,b)
+    #define SYS_DEBUG_PRINT(level, format, ...) 
+    #define SYS_DEBUG_MESSAGE(a,b, ...)     
+    #define SYS_DEBUG(a,b)
 #else
     #include "system/debug/sys_debug.h"
 #endif 
