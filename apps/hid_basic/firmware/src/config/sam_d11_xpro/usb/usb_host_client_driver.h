@@ -39,8 +39,8 @@
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
  *******************************************************************************/
-#ifndef _USB_HOST_CLIENT_DRIVER_H_
-#define _USB_HOST_CLIENT_DRIVER_H_
+#ifndef USB_HOST_CLIENT_DRIVER_H_
+#define USB_HOST_CLIENT_DRIVER_H_
 
 #include <stdint.h>
 #include <stddef.h>
@@ -132,6 +132,8 @@ typedef enum
 } USB_HOST_DEVICE_EVENT_RESPONSE;
 
 // *****************************************************************************
+/* MISRA C-2012 Rule 5.2 deviated:15 Deviation record ID -  H3_MISRAC_2012_R_5_2_DR_1 */
+
 /* Host Layer Device Interface Events Handler Function Return Type
 
   Summary:
@@ -255,6 +257,132 @@ typedef enum
     USB_HOST_DEVICE_INTERFACE_EVENT_PIPE_HALT_CLEAR_COMPLETE,
 
 } USB_HOST_DEVICE_INTERFACE_EVENT;
+
+// *****************************************************************************
+/* USB Host Client Driver Interface Assign Function Pointer Type
+
+  Summary:
+    Define the USB Host Client Driver Interface Assign Function Pointer Type
+
+  Description:
+    This type defines the type of function pointer that a client driver must
+    register with the host layer to handle the Interface Assign operation.
+
+  Remarks
+    None.
+*/
+
+typedef void (*USB_HOST_INTERFACE_ASSIGN)
+(
+    USB_HOST_DEVICE_INTERFACE_HANDLE * interfaces,
+    USB_HOST_DEVICE_OBJ_HANDLE deviceObjHandle,
+    size_t nInterfaces,
+    uint8_t * descriptor
+);
+
+// *****************************************************************************
+/* USB Host Client Driver Device Assign Function Pointer Type
+
+  Summary:
+    Define the USB Host Client Driver Device Assign Function Pointer Type
+
+  Description:
+    This type defines the type of function pointer that a client driver must
+    register with the host layer to handle the Device Assign operation.
+
+  Remarks
+    None.
+*/
+
+typedef void (*USB_HOST_DEVICE_ASSIGN)
+(
+    USB_HOST_DEVICE_CLIENT_HANDLE deviceHandle,
+    USB_HOST_DEVICE_OBJ_HANDLE deviceObjHandle,
+    USB_DEVICE_DESCRIPTOR * deviceDescriptor
+);
+
+// *****************************************************************************
+/* USB Host Client Driver Device Release Function Pointer Type
+
+  Summary:
+    Define the USB Host Client Driver Device Release Function Pointer Type
+
+  Description:
+    This type defines the type of function pointer that a client driver must
+    register with the host layer to handle the Device Release operation.
+
+  Remarks
+    None.
+*/
+
+typedef void (*USB_HOST_DEVICE_RELEASE)
+(
+    USB_HOST_DEVICE_CLIENT_HANDLE deviceHandle
+);
+
+// *****************************************************************************
+/* USB Host Client Driver Interface Release Function Pointer Type
+
+  Summary:
+    Define the USB Host Client Driver Interface Release Function Pointer Type
+
+  Description:
+    This type defines the type of function pointer that a client driver must
+    register with the host layer to handle the Interface Release operation.
+
+  Remarks
+    None.
+*/
+
+typedef void (*USB_HOST_INTERFACE_RELEASE)
+(
+    USB_HOST_DEVICE_CLIENT_HANDLE deviceHandle
+);
+
+// *****************************************************************************
+/* USB Host Client Driver Interface Event Handler Function Pointer Type
+
+  Summary:
+    Define the USB Host Client Driver Interface Event Handler Function Pointer Type
+
+  Description:
+    This type defines the type of function pointer that a client driver must
+    register with the host layer to handle the Interface Events.
+
+  Remarks
+    None.
+*/
+
+typedef USB_HOST_DEVICE_INTERFACE_EVENT_RESPONSE (*USB_HOST_DEVICE_INTERFACE_EVENT_HANDLER)
+(
+    USB_HOST_DEVICE_INTERFACE_HANDLE interfaceHandle,
+    USB_HOST_DEVICE_INTERFACE_EVENT event,
+    void * eventData,
+    uintptr_t context
+);
+
+// *****************************************************************************
+/* USB Host Client Driver Device Event Handler Function Pointer Type
+
+  Summary:
+    Define the USB Host Client Driver Device Event Handler Function Pointer Type
+
+  Description:
+    This type defines the type of function pointer that a client driver must
+    register with the host layer to handle the Device Events.
+
+  Remarks
+    None.
+*/
+
+typedef USB_HOST_DEVICE_EVENT_RESPONSE (*USB_HOST_DEVICE_EVENT_HANDLER)
+(
+    USB_HOST_DEVICE_CLIENT_HANDLE deviceHandle,
+    USB_HOST_DEVICE_EVENT event,
+    void * eventData,
+    uintptr_t context
+);
+
 
 // *****************************************************************************
 /* USB Host Client Driver Interface
@@ -562,6 +690,7 @@ typedef struct
    
 } USB_HOST_DEVICE_INTERFACE_EVENT_TRANSFER_COMPLETE_DATA;
 
+/* MISRAC 2012 deviation block end */
 // *****************************************************************************
 /* USB Host Control Transfer Complete Callback Function Pointer type
 
@@ -816,6 +945,7 @@ USB_HOST_RESULT USB_HOST_DeviceConfigurationDescriptorGet
 );
 
 // *****************************************************************************
+/* MISRA C-2012 Rule 8.6 deviated:2 Deviation record ID -  H3_MISRAC_2012_R_8_6_DR_1 */
 /* Function:
     USB_HOST_RESULT USB_HOST_DeviceConfigurationGet 
     (
@@ -853,7 +983,6 @@ USB_HOST_RESULT USB_HOST_DeviceConfigurationDescriptorGet
   Example:
     <code>
 
-    // TBD
     </code>
 
   Remarks:
@@ -912,7 +1041,6 @@ USB_HOST_RESULT USB_HOST_DeviceConfigurationGet
   Example:
     <code>
 
-    // TBD
     </code>
 
   Remarks:
@@ -923,7 +1051,7 @@ USB_HOST_RESULT USB_HOST_DeviceConfigurationSet
 (
     USB_HOST_DEVICE_CLIENT_HANDLE deviceHandle,
     USB_HOST_REQUEST_HANDLE * requestHandle,
-    uint8_t configurationValue,
+    uint8_t configurationIndex,
     uintptr_t context
 );
 
@@ -1177,7 +1305,7 @@ USB_HOST_RESULT USB_HOST_DevicePipeHaltClear
 
 USB_HOST_PIPE_HANDLE USB_HOST_DevicePipeOpen 
 (
-    USB_HOST_DEVICE_INTERFACE_HANDLE interfaceHandle,
+    USB_HOST_DEVICE_INTERFACE_HANDLE deviceInterfaceHandle,
     USB_ENDPOINT_ADDRESS endpointAddress
 );
 
@@ -1341,6 +1469,7 @@ USB_HOST_RESULT USB_HOST_DeviceTransferTerminate
     USB_HOST_TRANSFER_HANDLE transferHandle
 );
 
+/* MISRAC 2012 deviation block end */
 // *****************************************************************************
 // *****************************************************************************
 // Section: USB Host Client Driver Routines. Endpoint and Interface Query
@@ -1878,7 +2007,7 @@ void USB_HOST_DeviceEndpointQueryContextClear
 
 USB_HOST_DEVICE_OBJ_HANDLE USB_HOST_DeviceEnumerate
 (
-    USB_HOST_DEVICE_OBJ_HANDLE parentHubObjHandle, 
+    USB_HOST_DEVICE_OBJ_HANDLE parentDeviceIdentifier, 
     uint8_t port 
 );
 

@@ -104,12 +104,12 @@ extern "C" {
 /*** USB Driver Configuration ***/
 
 /* Maximum USB driver instances */
-#define DRV_USBFSV1_INSTANCES_NUMBER                        1
+#define DRV_USBFSV1_INSTANCES_NUMBER                        1U
 
 
 /* Enables Device Support */
 #define DRV_USBFSV1_DEVICE_SUPPORT                          true
-	
+    
 /* Disable Host Support */
 #define DRV_USBFSV1_HOST_SUPPORT                            false
 
@@ -120,16 +120,16 @@ extern "C" {
 #define USB_ALIGN  __ALIGNED(CACHE_LINE_SIZE)
 
 /* Number of Endpoints used */
-#define DRV_USBFSV1_ENDPOINTS_NUMBER                        2
+#define DRV_USBFSV1_ENDPOINTS_NUMBER                        2U
 
 /* The USB Device Layer will not initialize the USB Driver */
 #define USB_DEVICE_DRIVER_INITIALIZE_EXPLICIT
 
 /* Maximum device layer instances */
-#define USB_DEVICE_INSTANCES_NUMBER                         1
+#define USB_DEVICE_INSTANCES_NUMBER                         1U
 
 /* EP0 size in bytes */
-#define USB_DEVICE_EP0_BUFFER_SIZE                          64
+#define USB_DEVICE_EP0_BUFFER_SIZE                          64U
 
 /* Enable SOF Events */
 #define USB_DEVICE_SOF_EVENT_ENABLE
