@@ -6,10 +6,10 @@
     
   File Name:
     drv_usb.h
-	
+    
   Summary:
     PIC32 USB Host Hub Interface Header File
-	
+    
   Description:
     This file contains defintions and structure that implement the interface
     between the USB Host Layer and an external Hub.
@@ -40,8 +40,8 @@
  *******************************************************************************/
 //DOM-IGNORE-END
 
-#ifndef _USB_HOST_HUB_INTERFACE_H_
-#define _USB_HOST_HUB_INTERFACE_H_
+#ifndef USB_HOST_HUB_INTERFACE_H_
+#define USB_HOST_HUB_INTERFACE_H_
 
 
 // DOM-IGNORE-BEGIN
