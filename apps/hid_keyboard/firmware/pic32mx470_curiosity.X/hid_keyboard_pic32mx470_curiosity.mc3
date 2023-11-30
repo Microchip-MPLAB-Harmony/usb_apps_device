@@ -1862,15 +1862,19 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\usb\usb_host_client_driver.h</file>
-         <hash>d11085e6a64f6b4551b1dc19aaee5b8a2555b7df649057bdb2ce8549c296a87d</hash>
+         <hash>38b5d7e5fee9b09db48b48b52d9b2773f458b09dc2d659c703a075fc90f32490</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_UOEMonitor_Unsupported.h</file>
-         <hash>bbd5494d1a619ab1a94216f99b488d9a781ccb9d1ba61718a79f989cd94b0b9d</hash>
+         <hash>4804548e4131b05776737ddf3d28767ad5b3ba8def9a1f15cbbc61ad3f1a652a</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\user.h</file>
          <hash>451e0878e9fcf6cf9fab046c1452ea662757988346c7f39e6bc98478ca25f995</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mx470_curiosity\usb\src\usb_device.c</file>
+         <hash>7a4440af5b5231ce28d78053c499cf3f0be4d8bd400086d0b65d3b06b377ff2c</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_EP0LowSpeedConnect_Unsupported.h</file>
@@ -1878,11 +1882,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_GEN_InterruptStatus_Default.h</file>
-         <hash>005f6dfc69404ba33bf130eb468d57041632bac6f0609b24377150afc7ed842b</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mx470_curiosity\usb\src\usb_device.c</file>
-         <hash>e2299e7132aaf91acd6857a827520f8bd5ecdc40d8ba2e6c4018b8441064a6cb</hash>
+         <hash>24a67bb3a298e8166bb820932e1f2053da7034d66f2a064fae7554ec034876f3</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_ActivityPending_Unsupported.h</file>
@@ -1894,7 +1894,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_FrameNumber_Default.h</file>
-         <hash>e7c35b3062a4f7694304cbb6ebfa9fbf15d61194594913bd350f81c48113c4f7</hash>
+         <hash>d6d2069cd82cc9f7cc4bb8953cd2ab02a9351bf177b87d77300de95c7650d42f</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_LastPingPong_Unsupported.h</file>
@@ -1906,7 +1906,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_EyePattern_Default.h</file>
-         <hash>5898d9555c18b43a149916f4f4eef4e81d2c3b90df1b3d598625346639b11758</hash>
+         <hash>f88a41be81d02c0566e861daa240fcbd8b4fa5b7b0f3aaad8328fcb409353861</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_OTG_IDPinState_Unsupported.h</file>
@@ -1914,11 +1914,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\usb\src\usb_device_hid.c</file>
-         <hash>03c05393f61bfed316ca2ead2c2291b2dd8643829d44b8fec193e0f2a0a57716</hash>
+         <hash>ff7b91f0adaf7b8c14a0f975baeabd46381f5b91b8c969f2ace2f3f4f1c99aee</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_GEN_Interrupt_Default.h</file>
-         <hash>df25d68153402b66afaa0f65aeb57216a2c65e261a21d398120300a4d0ed3071</hash>
+         <hash>aa0f4544f6d7fbd685a96078745d38b9969dc733a7ff4882a6ee9c9d8a762c4c</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_GEN_Interrupt_Unsupported.h</file>
@@ -1926,7 +1926,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_EP0NAKRetry_Default.h</file>
-         <hash>cb4ecc7c67c13c42cb7429ca3eddb9603b741fdce70d1a3e7c3a47263e0bbd23</hash>
+         <hash>7263317ff0cd1fbb63a3e1161a84dc4c1a4e7f3bb21cfcf07b04b4803f96865e</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_OpModeSelect_Unsupported.h</file>
@@ -1938,7 +1938,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\usb\src\usb_external_dependencies.h</file>
-         <hash>5110f718908d8f79253ce5b4b44172288cc179ff61d18e387f9e90ae9afbb1b6</hash>
+         <hash>b12fd8f239e37735d34cbd777cd98b448b9ad8bc4fde516bf6ca8a5c1120163f</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_EP0NAKRetry_Unsupported.h</file>
@@ -1966,7 +1966,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_OTG_SessionValid_Default.h</file>
-         <hash>ba5c2261600e4fe658f7c42e2de4ef456c6b59b17a561d2ce16b140ff4c2b696</hash>
+         <hash>5638599a6ae126a4911b97e8950a48fc17b5eb85bcceb3bd22b0e460d02eb2be</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\system\int\src\sys_int.c</file>
@@ -1974,7 +1974,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_EP0LowSpeedConnect_Default.h</file>
-         <hash>7381a98a354e411c14a4ab45c92a94488156e4544aec64363d3cafdda59bcd0d</hash>
+         <hash>0ae797c6f17fb6df096b128b7981b2bd36ab3559333e55b3aecd812a99d39761</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_HostBusyWithToken_Unsupported.h</file>
@@ -1982,11 +1982,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_OTG_BSessionEnd_Default.h</file>
-         <hash>037a1479657b869c92a1322377bcb673a372058d7ca9c45f612ff5c2b71ecab3</hash>
+         <hash>b6c2b6426bd7e4e7acc1f9a51e806b2137dac861ba46bebedb7cd07ebfae94fd</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_SpeedControl_Unsupported.h</file>
-         <hash>4ab2b3b061fde035810128ad7d4c8ccff9a5ac19379cd17bc7f8ecdd17c26fc1</hash>
+         <hash>d1fd181db5d2006177567b10d21f15658023709696aed75cf8e53a440df8a7ba</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\osal\osal_impl_basic.h</file>
@@ -1994,23 +1994,23 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_BDTFunctions_PIC32.h</file>
-         <hash>6618167def52786d398c02eb21908d391e0ffe1106d1e8f05448fd7ff4a1872f</hash>
+         <hash>9c1d3356039f1550c8bdd617dc620d5785bc3bed8b3bb8dc2056fc5334cceca0</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_OnChipTransceiver_Unsupported.h</file>
-         <hash>469f38c5397a3c985182e21a2167ff5710e466d8150bfbf81c63ca65b269a451</hash>
+         <hash>43e2716badb6f56af59a6eaa51e2400aed04a61979ed5a3d0f6134abc98f6cbb</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mx470_curiosity\usb\usb_device.h</file>
+         <hash>d65ea056c90c04440c30f615adff6e4d573ca17c75f78fc4fd6c755b90fe5572</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_EPnHandshake_Unsupported.h</file>
          <hash>3cb1ae1340fa97e88c8b4e8f66b1ba1e176f2f41f5a6daa5eb55f327fae2325e</hash>
       </entry>
       <entry>
-         <file>..\src\config\pic32mx470_curiosity\usb\usb_device.h</file>
-         <hash>06a4f4c06b4b32ab90474b522ddbfc4922fbad93ccf6975240148f1ce4b71b46</hash>
-      </entry>
-      <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_LiveJState_Default.h</file>
-         <hash>a9d97d04f3aa873d3f359bd804f075b36b0b7db6eec52a0fd1f7ba98ef297f19</hash>
+         <hash>7cd03f20f60ba1465c62b8fa6a4f1677d2e09b6ab9a02a755bee71b1f9c10b6a</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_ModuleBusy_Unsupported.h</file>
@@ -2018,7 +2018,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_ModulePower_32Bit16Bit.h</file>
-         <hash>2a4e565585521dc491efdfa357e55219cf1f03afacbaa456d0bd0f26832512fe</hash>
+         <hash>7e083dd0318ae8a691046c0bfa102697f54e4955166fc8ddd80a7feb20c94277</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_TokenPID_Unsupported.h</file>
@@ -2038,7 +2038,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\configuration.h</file>
-         <hash>69a3533e3873e6d47b287101d3ba42ff33a676ea2b55c2eff40a787379779fd7</hash>
+         <hash>47705f45d12205210d98164ae58fb0dd4c6a3914ebf521e77018f7b82a375058</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_ModulePower_Unsupported.h</file>
@@ -2046,15 +2046,15 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\usb\usb_hub.h</file>
-         <hash>f07eb653a11355424adb96ff0fec6796f6b95c8924ac93fb9207f888d130bc7d</hash>
+         <hash>733473045c756b6184188c2cf000d8f187f530a9e048dabefaecee347c05e4db</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\plib_usbfs_header.h</file>
-         <hash>07c3ccbb17435d891ca3ab7c19c5bbd02629324ff4bdeede90d56faa5340136a</hash>
+         <hash>3b21a0063e8153c5a50325be40b06e2a798f949a4333e8d635eec0de1b8b5530</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_TokenEP_Default.h</file>
-         <hash>227f9d506ab723149711579017f673fc26e137e20debb11707c34c5869c57064</hash>
+         <hash>4b6c9df799b8bf5fef0ca6147fd765d3a75cb657b3eb8b290086a3d594be335c</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_NextTokenSpeed_Unsupported.h</file>
@@ -2066,11 +2066,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_OnChipPullup_Unsupported.h</file>
-         <hash>493deea65f4fa7712d259b0a583a9389895b32a9d9996bcbd46ca56a004a51a7</hash>
+         <hash>290fa136c61dab9711f40a5f25b92fad7652d207aa5496870754739d7a5d45d3</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\drv_usb.h</file>
-         <hash>dce0fe53973e23d87ee16fec7ef65f171b537ac80e14eaa2ca43962156f1c6e7</hash>
+         <hash>ee59efb38b1cf87e1c4bb6e833a9c9be0c106005daa6c1ccd90fca9fb5c17b44</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_DeviceAddress_Unsupported.h</file>
@@ -2082,7 +2082,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\usb\usb_hid.h</file>
-         <hash>7bf5db6ff39b841993597cb91717a4b22d187f437863ae4c5da83b983217f249</hash>
+         <hash>c55841d2ce5c249f72306d11914abccede9a3084239d294612f0e902db98e628</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\driver_common.h</file>
@@ -2090,15 +2090,15 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\drv_usb_external_dependencies.h</file>
-         <hash>9c425976fc28dee4877b6dc97e3d85c69d99a3bbacf7813ea324948a6c9e8431</hash>
+         <hash>347035feb1b3460c279e58f4210d0e22e5d1505ec60a69f78375ac81db5e95e8</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_ResumeSignaling_Default.h</file>
-         <hash>29c6de1294d6fd30607b16c4aa09f1e8bad1bc5527902e57696be721cb9b9603</hash>
+         <hash>5ea097b45ce7118dc5ba7703581c0ab1030fe6d12c7d9e8c43852c223529663e</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\usb\usb_host_hub_interface.h</file>
-         <hash>9db9028cdb085f4ed90d06c8d0013e5b9d300be9b49f0933094c373552193645</hash>
+         <hash>bcd95afaa026ab8559047e85ac157597452ab0ceee4e96612e5273ec324f1ef9</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_BDTFunctions_Unsupported.h</file>
@@ -2110,19 +2110,19 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_StartOfFrames_Default.h</file>
-         <hash>783b91e3197e96db5da889e6e6eebe277288d3f5549a4a54a6444b37a5dde139</hash>
+         <hash>7055926ccb809b5102b7555ba308a1e93c509ed66c28f2271ad893195ca52131</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_TokenPID_Default.h</file>
-         <hash>f3eba13e829fd502b08dcbd21d615764006ec02ffb716eadfbee1078f1b00bd2</hash>
+         <hash>69a118f59568856897aa47b18c73302fba2689486c576025fafccdf7a83b192d</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_LiveSingleEndedZero_Default.h</file>
-         <hash>cdd7066381c008d04259ca0118efe34271e6821c8b7b517f06ee371c9ac5ad71</hash>
+         <hash>a2948afa9b8edda88e0732d0eabcc7fd5018b394c1688b3a0a8d08be8c7ef33b</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_OTG_Interrupt_Default.h</file>
-         <hash>fe16bdcc4b2ffc64a5358c4b49ad2139d042d4510b500ddb030df166fc1330a0</hash>
+         <hash>031630fc79598ab1f4af177e06c54d08169215716272c7d8cd6a8bea9408f9c0</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_OTG_VbusCharge_Unsupported.h</file>
@@ -2138,11 +2138,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_AutomaticSuspend_Default.h</file>
-         <hash>91c384114cfaf01bb1eb1ef7fd519258857a38cde322cf2efbb26e3fbe2b77c0</hash>
+         <hash>6ea942310cc7be6dff29b8cb707bd5cbcf38cfc26ace3016634e4759fea7f455</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_BDTBaseAddress_Default.h</file>
-         <hash>b4107179a2d79479584020c7e897c020839d2a27531e796e6599c661369a2d17</hash>
+         <hash>e5757d9bfcd5599b076967cfcedcd5740d4e9464aa653f172187be6ed88221a3</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\system\int\sys_int_mapping.h</file>
@@ -2150,7 +2150,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_PacketTransfer_Default.h</file>
-         <hash>464657f66c380b83150f695793546c8d3d2330fbb47afba4b43923f06a054d07</hash>
+         <hash>af2efe3275366d4e379064e22f91ebdf9ec158fc18939f3d65aec38ac44bbada</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_StartOfFrames_Unsupported.h</file>
@@ -2162,7 +2162,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_EPnTxRx_Default.h</file>
-         <hash>bf9f6f62cba48afa9060e754c75a45fdee2ee6849f2db3093b1ae6d84ca6a732</hash>
+         <hash>a5382a258511d5074f771b49dae391cebef2fc6f8cb3121c8f1f2f74e9ab908b</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_HostGeneratesReset_Unsupported.h</file>
@@ -2170,11 +2170,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\drv_usbfs_variant_mapping.h</file>
-         <hash>4ddd05a310b7cd972057442fea47416dcd13d963f1759e74c8cca4b039f2e079</hash>
+         <hash>77b485d8c9dd1f8a4d226512a9a56e3db3862bf840c1c49a3e966adf32a0a435</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\usb\usb_host.h</file>
-         <hash>4ec16dee42ae6b1bad8a7199b44750ccf0c5fa3aee5e44766e7b6dffc9979e83</hash>
+         <hash>1fd7a53f3b04f3a63013a3350d1f6b1c15aa9f162e9c5acf31b111c27987ad89</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_LastDirection_Unsupported.h</file>
@@ -2182,7 +2182,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_OTG_VbusCharge_Default.h</file>
-         <hash>2651f9cf409ea455c673c3d802149bc6967d4ae9a8d5c9f8ac3132c3e1b995f6</hash>
+         <hash>aebb6c977221daf7f40139d5ba4b98b9ab9b7a7b1f698e966e21391730efe141</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\interrupts.h</file>
@@ -2210,7 +2210,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_BufferFreeze_Default.h</file>
-         <hash>348694cb27ba58ceb5b91355aa2c62b9f289ddeeb95069484badd45df9034a2f</hash>
+         <hash>874a2308ed738883429b0a0387c7043518c355fb44ab5599661c79e447a25930</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_ResumeSignaling_Unsupported.h</file>
@@ -2226,31 +2226,31 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\usb\usb_chapter_9.h</file>
-         <hash>86a258d763c7f0f563122ccd4ec0bbef422fd4e2f523402bb89be10568cecf3f</hash>
+         <hash>e5e4a9cd868fa4b90113a0bd3ae76d176c7d21d791e7ea9891f1bf9d981da54c</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\usb\src\usb_device_hid_local.h</file>
-         <hash>27ade42539241c6c5bcfaf02200801a891ab2ced10a00a8f3a8a465f75392a99</hash>
+         <hash>7e4feb6fd2512dc5923d675c97758b063ed461fab1a1b5ca4e58256d9472d626</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_SOFThreshold_Default.h</file>
-         <hash>09389d2fbc319d1d9d0ba441a0ae858a2ae8359ff52ee30cfad3b96f0b4fdb90</hash>
+         <hash>8ac070a9ed9b901298be8ca8abc13a6ea553e32c3013ba0ec81892ab5f0e93dc</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\usb\usb_common.h</file>
-         <hash>fc9f44df7ab465084d1522901685e5bfad10548e44563a7460d7e089e6276ded</hash>
+         <hash>8e8a0115a555330065b8569621173186a2a2815758125026b02596e0d0278c56</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\system\system.h</file>
          <hash>2b75f8e370e5cb2c54f70da7351ee149f0d5a7673e700f39b373099716b31b55</hash>
       </entry>
       <entry>
-         <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_LastEndpoint_Default.h</file>
-         <hash>86bcca287d5e856ce888f861d9278f1cb7ff2ea3f52ccdd1a318cb2b008f0487</hash>
+         <file>..\src\config\pic32mx470_curiosity\usb\src\usb_device_local.h</file>
+         <hash>935dceb5785f858042e7c2752e0a707b8be4f4edfa2bd8b8c0c93e3a51f3fc00</hash>
       </entry>
       <entry>
-         <file>..\src\config\pic32mx470_curiosity\usb\src\usb_device_local.h</file>
-         <hash>3dc9e27b535edb31aa97aae04a0ce9ac12e5092ed3bae7ef6fd203bc1520ef33</hash>
+         <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_LastEndpoint_Default.h</file>
+         <hash>370b596d43179bc18d92d379f12caa43a4ce9c4bfd571b7fc9ce86c7c8d89d60</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\peripheral\evic\plib_evic.h</file>
@@ -2258,11 +2258,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_NextTokenSpeed_Default.h</file>
-         <hash>30a2495ec7ac62e365100d2112ebac70bb49710981a12c1aa1e946c877f793ab</hash>
+         <hash>73a60bd3d9cdc7b36037aeb49ab3200dbc0f19826e250e6bc8eef543463b13a0</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\definitions.h</file>
-         <hash>cf726c7fef8a875bc3703b6a38b56b0bccb24d77dd1115c3a21aa7b1886f076b</hash>
+         <hash>df054fde72534de6092d86e0ad2f3f4128ea699cdb59e9e7b161e7115a37dab6</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_LiveJState_Unsupported.h</file>
@@ -2274,7 +2274,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\initialization.c</file>
-         <hash>a7607bbd3188c0874f19cadc66417a820aab13a00dfa974746559ac0b25e41bc</hash>
+         <hash>16b0503777a28f3541c99558f9ca20e1d31293c5393072f5f8cfd1db449b69f4</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\osal\osal.h</file>
@@ -2286,7 +2286,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_LastTransactionDetails_Default.h</file>
-         <hash>5489baf0b8b7e246086566e8e4e4206010ee0413bab642f50f6758aadf432e69</hash>
+         <hash>0113798f4bf2e68f70460df301634deddd9984a38957bc04b94fd984cd2e2889</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\system\debug\sys_debug.h</file>
@@ -2294,7 +2294,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\drv_usbfs.h</file>
-         <hash>41eea314a630d43aa7da2bb17af9495b23b800069655a2809b6e1f33be7fb564</hash>
+         <hash>0e091a9a7fc05f9f36a97994988294c309ca14de5c50a51bc4bbcadbfa3a72e7</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_OTG_VbusDischarge_Unsupported.h</file>
@@ -2306,15 +2306,15 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\tasks.c</file>
-         <hash>2e39cf49517830e5508fdda962752f8c78495bad0ffaf61b7a9a1b9f00976d69</hash>
+         <hash>c68e57e635fa50389a54cbe94cf7a25f16abf17e7e22b6ebfa75868737c73155</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\usb_device_init_data.c</file>
-         <hash>60b292354d56aa7dbe5e53e63b352bd9ba4b7784690d3491446ac97fbd7b654a</hash>
+         <hash>6652188344c6f1f640920a474f7799c994687177a0ed4d6b6d04aeaa53073ae9</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_OTG_VbusDischarge_Default.h</file>
-         <hash>8accf1a2b6005c8127ed352411007769c6344e6bf8ceab3f7bd185c5650c2ab5</hash>
+         <hash>c46975451bf11f303f01afb0696c127822a136e9f5c0557b7918a63fae3b1d7a</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\peripheral\evic\plib_evic.c</file>
@@ -2322,31 +2322,31 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_ALL_Interrupt_Default.h</file>
-         <hash>8397a3663d4c971448fb4f6fbf32d4b783bd7cee33ba30cc42c9954ba3102cb5</hash>
+         <hash>e96258853489db1f5257cc7f1d2f312204b7d5dbc90d570cb4273ad5fe21cfd7</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\usb\src\usb_device_function_driver.h</file>
-         <hash>5d7b7287898c95485fbfc37840b9bb3e6ace46ef7333413493137d0e40e50bec</hash>
+         <hash>176f78389b138ea9db6114bea85bb66799223dc7877daea10ed80f5589c5a940</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_OTG_VbusPowerOnOff_Default.h</file>
-         <hash>8b8deb94285069cbca6558f516f4feba0d94a46efe4159ce73941d77cc9a6666</hash>
+         <hash>dfe2cacf0c7f1e9870b6d273319dbf31ca1cf62e3f95961fb6ab7ea3a338d87c</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_ModuleBusy_Default.h</file>
-         <hash>7a4576603e1d55a1de691581611bbbda560419f79bd686032d9a453c4dcde517</hash>
+         <hash>9918c7311ff0b093e6e188734d35b34cab5952ee0d4f8c702e7fac85137ebb38</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_OTG_LineState_Default.h</file>
-         <hash>b6aa823f7839bde3e7993c60f68f8b8a5f6c79de6d696f9b7493f41a18afb885</hash>
+         <hash>1b06212b27445cedcac4852e502385b48ff866c118e198444262c1f1f8759581</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usbfs_registers.h</file>
-         <hash>11450fec02e9e47cdf1a7de3a36378976aa1d56b73f00be0ce2cf701b1bf22fb</hash>
+         <hash>f37bad14d9f285f304e938d4fe09fdd57fb270b4839621f33f785dc64188eb68</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\drv_usbfs_local.h</file>
-         <hash>cdf1d150071ee320f2ac2d537be26dfe9466ee14a38a3f3568cd19c5596c9753</hash>
+         <hash>2c9b977b775ed605b5a92ca0d3e2739a7568b9c824ae8bcb34b68dff97a568c6</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_OTG_PullUpPullDown_Unsupported.h</file>
@@ -2362,7 +2362,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_OpModeSelect_Default.h</file>
-         <hash>7577fcda59379ba839bc6015c5885743dc0e61ef99cb3b88a916d844d5a8278f</hash>
+         <hash>97593d3d4273f2ced7b372a1d20f7fec4771e8efc05554988a41dd424d6455f2</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\peripheral\gpio\plib_gpio.c</file>
@@ -2370,7 +2370,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_OTG_InterruptStatus_Default.h</file>
-         <hash>f6ee648a8a4bbfc6aa0cb76eaf8b2f5134f7a55199ee2ee4ee5bc454aa498a5d</hash>
+         <hash>85132de860fad1ed76172c59c7ee91548f8549895cf7fe7dee0a5683915fde23</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_OTG_VbusPowerOnOff_Unsupported.h</file>
@@ -2378,7 +2378,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_HostBusyWithToken_Default.h</file>
-         <hash>8ae4cb9225eb86ae64b7eee12043a6de582eccef95a0b81261df41b7e1bb1a83</hash>
+         <hash>9dcc52e754a52dfcb73e68d2ba13d7f1baca25bf2788eb4f6fb03f29e3f61bfb</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\peripheral\gpio\plib_gpio.h</file>
@@ -2398,27 +2398,27 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\usbfs_registers.h</file>
-         <hash>746cb912f970316c52c03ddb0c71de989f9fd2bbe4aec76e7898d42da4743b21</hash>
+         <hash>4ac858c65ed4a64b3fcaccd406beddc3f7797f51d8dce487ad3052f04da0a65a</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\drv_usbfs.c</file>
-         <hash>e39b6c58a49cae7b14bc7c2c7cba9ecd96656e67d471e7d2ae0a2e1e1a18002f</hash>
+         <hash>72413a826f46d92b303da641a570d849c27581664f422fbcd28fc333fd02e423</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_EPnControlTransfer_Default.h</file>
-         <hash>72072fbfa3ae2ebc8606aaea933f96a5d73886415cf1212a55f80dfcfa6054b7</hash>
+         <hash>efd1536037a9b38e0aab6ceb6e4122a60299174793f632156f2340747b23d3f0</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_LastPingPong_Default.h</file>
-         <hash>5886483f6fd7c4bd2b6cfc5a90b7adca568d9091dbe23a427ab17a4e4206ee5a</hash>
+         <hash>1f822bde2e108cea76e9bb83ff123a669fd0900a4cb5d2791f2d9b4caac11f58</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_OTG_ASessionValid_Default.h</file>
-         <hash>304dbc70dced6fb5b439d8056bf7148aee2bf0320bfa94bd91a706a40519dac0</hash>
+         <hash>cb0f209cd339f330173d2b1733904c59009e51f09b4be6bd8e2ac6d6bd4afe53</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_SleepEntryGuard_Unsupported.h</file>
-         <hash>fc4b7f1601694d556cb587ca5196aca63f056cbffc80cbb0fd9af47b0cee559b</hash>
+         <hash>d354ebcb2702514b1a1ee70b6948fd9a50bb24295ab74faaf75280b05925322b</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_BDTBaseAddress_Unsupported.h</file>
@@ -2426,27 +2426,27 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\usb\usb_device_hid.h</file>
-         <hash>6233f5dbbfcada759111c6c9c5db54e381c7c26ebdb7e31aa7a8d7e71f4f5c67</hash>
+         <hash>b7da17b515e0f1dd803a1c6e8b97fc41b6c9f0b141c8911530ba6b027e4582b8</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_OTG_IDPinState_Default.h</file>
-         <hash>53b764463c93674ca2f9c8936b5b880aebec62c2601f01b06342cd2ffdc05721</hash>
+         <hash>7ec9b8c8b2d653454fea3f6ac17835699989acff3bbf540204562722cae1c136</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_LastDirection_Default.h</file>
-         <hash>2c0999c179779ce95e0d502d528cdc300d0a57a30995104cf662802abcc5175d</hash>
+         <hash>df16c398dccd551bf75afff47de3a737f885ef980242a314bb868e392fbc3b1b</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_StopInIdle_Default.h</file>
-         <hash>fce9d0ef857d13d1d2149d1147bf83ad55e6fcb4c2691d927816eb4d82ad7e07</hash>
+         <hash>c46b737c99ef0194c0cc53ebf9f9568c7ad3f9492a7fb90d5d5d6094d2d02009</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_DeviceAddress_Default.h</file>
-         <hash>714b7cdd9afa81f41da1f0a582754b41af90464e889e6f7ae352d2905fe4c80c</hash>
+         <hash>161f111c1678d18a01187ad960b8f97f10ea9bc1cc97fdefa7a15ceaec057963</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_HostGeneratesReset_Default.h</file>
-         <hash>b1543f032627c78c204b3ed1132a5bbcf1f2967e9275ed4e488fabc498eff2a6</hash>
+         <hash>0eb6cdd60e3b1a80237d0cf2491ffcb09053863b74a781d34cc292efa06f2b0a</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_Suspend_Unsupported.h</file>
@@ -2466,27 +2466,27 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_ERR_Interrupt_Default.h</file>
-         <hash>e1779f8eca87e184ec13d99f84b3d1cb026fe34148ca31906d89ab87540c8d21</hash>
+         <hash>7bb52edd7b531eaed0a214a9b5f96b0146274bf6a510469cb4a58d3da3d3c5b9</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_OTG_PullUpPullDown_Default.h</file>
-         <hash>8fae94e37fab733e2522e3907bd0ced440261a46214d04b33a64ca9779d75560</hash>
+         <hash>56c04c29f1789f0fc0b81d0c94bad00e225ae8c8828e53504f6d7facfcbec41b</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_EPnRxEnableEnhanced_PIC32.h</file>
-         <hash>b74788c7ae75c12bfb0a3232a3c8554e6faaa92d18cb05869ff24e414328a290</hash>
+         <hash>ced101e94082620c6d6769c89fee923377e57ec7caefdfedfab9b5efb33876d1</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_SleepEntryGuard_Default.h</file>
-         <hash>f0b5ca79559f0356cd988573786871c206a6ff397da3f1efb11d3ded56546514</hash>
+         <hash>253ab99775bf301f6d73d70ad686bb602c6b54026026ea781b136a3da0f76326</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_EPnStall_Default.h</file>
-         <hash>efbc98a32c78914844a014a1899be90a034f46b0ac469d0c19ce498b980a8fe7</hash>
+         <hash>90482e6f9f7fa4e7a28fc9215c52823381e025e59ccd6f3d701f7011d0bbfc35</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_PingPongMode_Unsupported.h</file>
-         <hash>2d1b22adec23ec188da16c62bdd0b2d25b7159e7b630bd3b762686a2db5e3453</hash>
+         <hash>d97a6b2ee9b90bf838b86a7c8aacac6f638f68a8c443c218458a26bbf1184b54</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_OTG_BSessionEnd_Unsupported.h</file>
@@ -2502,35 +2502,35 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\plib_usbfs.h</file>
-         <hash>e305fe0c89c125541351aff6084023a26e932caa24cde3ad33d64d3b18916a1a</hash>
+         <hash>07b9b4014d9e9867210d0094c56a3d16a9109b142df0749b516e21b111843c13</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\drv_usbfs_device.c</file>
-         <hash>04ed761e97236d51a52fa1cfcd5c29f8db2e7a8598d2992c88f7a75060c7ea45</hash>
+         <hash>72612687bff9141b715722556ff8d85dbc06adbd35127104d8912ab8b3484fff</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_EPnHandshake_Default.h</file>
-         <hash>52a73c617323764c158197f16be0925e6dfe1d25cd0c4f05644f7a321eb8582d</hash>
+         <hash>f38927f63d218417a8b0ba4232b4469956157f4fa2d641519fa502dc3e002801</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_Suspend_Default.h</file>
-         <hash>c264cb4e5f3fe43fc73991f21f39d26322803ddad6496f7557539238a330cd17</hash>
+         <hash>bc934b29e33caced6b2ba02e0701b3ec35a981cbe49049dfecb84a69f8a960ff</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\peripheral\clk\plib_clk.h</file>
          <hash>35384f2e13e59b7190bf77f6996baf3ea2377ec42df94979a6f793326def5255</hash>
       </entry>
       <entry>
-         <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_ERR_InterruptStatus_Default.h</file>
-         <hash>aeb08f637a84b677a22955c8a6521e06c7938708098111857e56e3203757ff07</hash>
+         <file>..\src\config\pic32mx470_curiosity\usb\src\usb_device_mapping.h</file>
+         <hash>25c83489e10ce6221df1b7a6bbfcabd3e012a452b6d2937f85cb3c594189f468</hash>
       </entry>
       <entry>
-         <file>..\src\config\pic32mx470_curiosity\usb\src\usb_device_mapping.h</file>
-         <hash>3a5eee6b064c49fd7a495f574736eaec5838e63f7de457ff688d70aa80432ce6</hash>
+         <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_ERR_InterruptStatus_Default.h</file>
+         <hash>a7e71972c762f8d4c63ffc6e96dfb3852383819933213bed55792324488d55e7</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_ActivityPending_Default.h</file>
-         <hash>6a52c8c0a029b031e2a4fc4c6106a2c409da18eb428480b787d13d80310c277d</hash>
+         <hash>14efbe4de376b30453e291bffc54bd8e0cc5b9864f7e9d7ff46a47697fe9b09a</hash>
       </entry>
    </generatedFileHashHistoryMap>
 </config>

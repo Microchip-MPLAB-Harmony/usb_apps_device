@@ -44,12 +44,14 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 
 //DOM-IGNORE-END
 
-#ifndef _USB_STARTOFFRAMES_DEFAULT_H
-#define _USB_STARTOFFRAMES_DEFAULT_H
+#ifndef USB_STARTOFFRAMES_DEFAULT_H
+#define USB_STARTOFFRAMES_DEFAULT_H
 
 #include "driver/usb/usbfs/src/templates/usbfs_registers.h"
 
-
+/* MISRA C-2012 Rule 10.1, Rule 10.3, Rule 10.4 and Rule 11.7.
+   Deviation record ID - H3_MISRAC_2012_R_10_1_DR_1, H3_MISRAC_2012_R_10_3_DR_1, 
+    H3_MISRAC_2012_R_10_4_DR_1 and H3_MISRAC_2012_R_11_7_DR_1 */
 //******************************************************************************
 /* Function :  USB_SOFEnable_Default
 
@@ -62,8 +64,8 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 
 PLIB_TEMPLATE void USB_SOFEnable_Default( USB_MODULE_ID index )
 {
-	volatile usb_registers_t   * usb = ((usb_registers_t *)(index));
-	usb->UxCON.w |=  UxCON_USBEN_SOFEN_MASK ;
+    volatile usb_registers_t   * usb = ((usb_registers_t *)(index));
+    usb->UxCON.w |=  UxCON_USBEN_SOFEN_MASK ;
 }
 
 //******************************************************************************
@@ -78,8 +80,8 @@ PLIB_TEMPLATE void USB_SOFEnable_Default( USB_MODULE_ID index )
 
 PLIB_TEMPLATE void USB_SOFDisable_Default( USB_MODULE_ID index )
 {
-	volatile usb_registers_t   * usb = ((usb_registers_t *)(index));
-	usb->UxCON.w &= ( ~ UxCON_USBEN_SOFEN_MASK);
+    volatile usb_registers_t   * usb = ((usb_registers_t *)(index));
+    usb->UxCON.w &= ( ~ UxCON_USBEN_SOFEN_MASK);
  
 }
 
@@ -100,7 +102,9 @@ PLIB_TEMPLATE bool USB_ExistsStartOfFrames_Default( USB_MODULE_ID index )
     return true;
 }
 
-#endif /*_USB_STARTOFFRAMES_DEFAULT_H*/
+/* MISRAC 2012 deviation block end */
+
+#endif /*USB_STARTOFFRAMES_DEFAULT_H*/
 
 /******************************************************************************
  End of File
