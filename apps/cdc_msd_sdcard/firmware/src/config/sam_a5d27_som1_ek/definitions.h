@@ -200,7 +200,7 @@ Remarks:
 
 typedef struct
 {
-	SYS_MODULE_OBJ  drvUSBUDPHSObject;
+    SYS_MODULE_OBJ  drvUSBUDPHSObject;
 
     SYS_MODULE_OBJ  usbDevObject0;
 
