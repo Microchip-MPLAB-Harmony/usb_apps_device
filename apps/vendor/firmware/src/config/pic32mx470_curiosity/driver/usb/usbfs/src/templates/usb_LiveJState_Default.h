@@ -43,11 +43,14 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 
 //DOM-IGNORE-END
 
-#ifndef _USB_LIVEJSTATE_DEFAULT_H
-#define _USB_LIVEJSTATE_DEFAULT_H
+#ifndef USB_LIVEJSTATE_DEFAULT_H
+#define USB_LIVEJSTATE_DEFAULT_H
 
 #include "driver/usb/usbfs/src/templates/usbfs_registers.h"
 
+/* MISRA C-2012 Rule 10.3,and Rule 11.7.
+   Deviation record ID - H3_MISRAC_2012_R_10_3_DR_1, 
+   and H3_MISRAC_2012_R_11_7_DR_1 */
 //******************************************************************************
 /* Function :  USB_JStateIsActive_Default
 
@@ -80,8 +83,9 @@ PLIB_TEMPLATE bool USB_ExistsLiveJState_Default( USB_MODULE_ID index )
     return true;
 }
 
+/* MISRAC 2012 deviation block end */
 
-#endif /*_USB_LIVEJSTATE_DEFAULT_H*/
+#endif /*USB_LIVEJSTATE_DEFAULT_H*/
 
 /******************************************************************************
  End of File
