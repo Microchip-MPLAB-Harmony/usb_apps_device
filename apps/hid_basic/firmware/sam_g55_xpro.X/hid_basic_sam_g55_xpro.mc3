@@ -1894,7 +1894,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\driver\usb\usbdp\src\drv_usbdp_variant_mapping.h</file>
-         <hash>df1cb8b83b8b5d80797b9fa52e71eeabb15e544bb1b5169188053059afb6d3bb</hash>
+         <hash>9605cb334dd157dc53a25606bb6acaa162aedbc0e170f81f7fbbcf00c6250bf0</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\twi5.h</file>
@@ -1902,7 +1902,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\usb\src\usb_device.c</file>
-         <hash>e2299e7132aaf91acd6857a827520f8bd5ecdc40d8ba2e6c4018b8441064a6cb</hash>
+         <hash>7a4440af5b5231ce28d78053c499cf3f0be4d8bd400086d0b65d3b06b377ff2c</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\flexcom3.h</file>
@@ -1962,7 +1962,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\usb\src\usb_device_function_driver.h</file>
-         <hash>5d7b7287898c95485fbfc37840b9bb3e6ace46ef7333413493137d0e40e50bec</hash>
+         <hash>176f78389b138ea9db6114bea85bb66799223dc7877daea10ed80f5589c5a940</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\peripheral\clock\plib_clock.c</file>
@@ -1970,11 +1970,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\usb\usb_host_hub_interface.h</file>
-         <hash>9db9028cdb085f4ed90d06c8d0013e5b9d300be9b49f0933094c373552193645</hash>
+         <hash>bcd95afaa026ab8559047e85ac157597452ab0ceee4e96612e5273ec324f1ef9</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\usb_device_init_data.c</file>
-         <hash>ed915ce413d9bd007547af3b4ca1ce1191cf1547fd6c0953b0d90e0f880e36bd</hash>
+         <hash>a719da918278dc8bd494f121ebecbb3933c6e48f95c6487d6046be63543dc84d</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\peripheral\nvic\plib_nvic.h</file>
@@ -2006,7 +2006,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\initialization.c</file>
-         <hash>311d14e637348b1fdb1aeed07b8596957aade539d0b5b314139fec4880dbe3ce</hash>
+         <hash>6c0352a8952aa258291be68578577e0abe77642706cbe301bb16ad907c62c9ca</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\usart0.h</file>
@@ -2022,7 +2022,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\usb\usb_common.h</file>
-         <hash>fc9f44df7ab465084d1522901685e5bfad10548e44563a7460d7e089e6276ded</hash>
+         <hash>8e8a0115a555330065b8569621173186a2a2815758125026b02596e0d0278c56</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\component\tc.h</file>
@@ -2034,7 +2034,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\driver\usb\usbdp\src\drv_usbdp_device.c</file>
-         <hash>7b1e841da33885eeac4a7d50f90b60fd13b0a893060f95dd06af44cff84145ae</hash>
+         <hash>7efcd506f5f705f5ca12cd22adaf5bd440c73a584019b87cbfa232ab3259a526</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_armcc.h</file>
@@ -2046,7 +2046,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\driver\usb\usbdp\drv_usbdp.h</file>
-         <hash>e70c87424ebf855a95e6dac0bfa6c07a67b5146adef1b692c95177f26dc2ff1b</hash>
+         <hash>65e1cc9ecaa480d49563f08c9114f40c18f5f804a8beed38d902ffd0ac788259</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\peripheral\pio\plib_pio.c</file>
@@ -2062,7 +2062,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\usb\usb_device_hid.h</file>
-         <hash>6233f5dbbfcada759111c6c9c5db54e381c7c26ebdb7e31aa7a8d7e71f4f5c67</hash>
+         <hash>b7da17b515e0f1dd803a1c6e8b97fc41b6c9f0b141c8911530ba6b027e4582b8</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\adc.h</file>
@@ -2086,7 +2086,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\usb\usb_host_client_driver.h</file>
-         <hash>d11085e6a64f6b4551b1dc19aaee5b8a2555b7df649057bdb2ce8549c296a87d</hash>
+         <hash>38b5d7e5fee9b09db48b48b52d9b2773f458b09dc2d659c703a075fc90f32490</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_armclang.h</file>
@@ -2166,7 +2166,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\usb\src\usb_external_dependencies.h</file>
-         <hash>5110f718908d8f79253ce5b4b44172288cc179ff61d18e387f9e90ae9afbb1b6</hash>
+         <hash>b12fd8f239e37735d34cbd777cd98b448b9ad8bc4fde516bf6ca8a5c1120163f</hash>
       </entry>
       <entry>
          <file>..\src\main.c</file>
@@ -2218,7 +2218,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\usb\src\usb_device_local.h</file>
-         <hash>3dc9e27b535edb31aa97aae04a0ce9ac12e5092ed3bae7ef6fd203bc1520ef33</hash>
+         <hash>935dceb5785f858042e7c2752e0a707b8be4f4edfa2bd8b8c0c93e3a51f3fc00</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\component\pdmic.h</file>
@@ -2250,7 +2250,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\tasks.c</file>
-         <hash>f2803c74bca20923936a83ecbed5970a2a12255b26fbaa2bcd287178da550f2f</hash>
+         <hash>36ebdcd7d3ee7735a5d0e7a2b5a333f3cfceb84cdf0f5f2379c5d03404e179f8</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\spi7.h</file>
@@ -2286,7 +2286,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\configuration.h</file>
-         <hash>81ba20d615dee90ef38c4dc628e573d642dc1f8de5b978beec8c910bc8f78c13</hash>
+         <hash>03b34eb27a43a3e29a6fac0d1b092e4fb722b3012b5194475e8e87aad066691e</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\flexcom0.h</file>
@@ -2314,7 +2314,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\usb\usb_hub.h</file>
-         <hash>f07eb653a11355424adb96ff0fec6796f6b95c8924ac93fb9207f888d130bc7d</hash>
+         <hash>733473045c756b6184188c2cf000d8f187f530a9e048dabefaecee347c05e4db</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\component\twi.h</file>
@@ -2330,7 +2330,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\usb\src\usb_device_hid_local.h</file>
-         <hash>27ade42539241c6c5bcfaf02200801a891ab2ced10a00a8f3a8a465f75392a99</hash>
+         <hash>7e4feb6fd2512dc5923d675c97758b063ed461fab1a1b5ca4e58256d9472d626</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\system\int\src\sys_int.c</file>
@@ -2338,7 +2338,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\usb\usb_hid.h</file>
-         <hash>7bf5db6ff39b841993597cb91717a4b22d187f437863ae4c5da83b983217f249</hash>
+         <hash>c55841d2ce5c249f72306d11914abccede9a3084239d294612f0e902db98e628</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\driver\driver_common.h</file>
@@ -2370,7 +2370,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\definitions.h</file>
-         <hash>c1b0b10c9ecca880fef6528c60568956edac73f6e5db21e4260796b61327c003</hash>
+         <hash>8c12fb3bac9b14851a3a185133ef35ce3fa5fb09bb37bae62a48818668921716</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\osal\osal.h</file>
@@ -2382,7 +2382,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\usb\usb_host.h</file>
-         <hash>4ec16dee42ae6b1bad8a7199b44750ccf0c5fa3aee5e44766e7b6dffc9979e83</hash>
+         <hash>1fd7a53f3b04f3a63013a3350d1f6b1c15aa9f162e9c5acf31b111c27987ad89</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\twi2.h</file>
@@ -2394,7 +2394,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\usb\usb_chapter_9.h</file>
-         <hash>86a258d763c7f0f563122ccd4ec0bbef422fd4e2f523402bb89be10568cecf3f</hash>
+         <hash>e5e4a9cd868fa4b90113a0bd3ae76d176c7d21d791e7ea9891f1bf9d981da54c</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\mem2mem.h</file>
@@ -2414,7 +2414,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\driver\usb\usbdp\src\drv_usbdp_local.h</file>
-         <hash>0bd13f6942a1f7e0d524a5c302d71c6293bd3ddeb9b78fb006df8afdbaafc4c6</hash>
+         <hash>7c538dc109b96e71f73e25968c99799545e4c9eb94043d1753709c0164287d96</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\pio\samg55j19.h</file>
@@ -2442,7 +2442,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\usb\usb_device.h</file>
-         <hash>06a4f4c06b4b32ab90474b522ddbfc4922fbad93ccf6975240148f1ce4b71b46</hash>
+         <hash>d65ea056c90c04440c30f615adff6e4d573ca17c75f78fc4fd6c755b90fe5572</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\system\system_common.h</file>
@@ -2474,7 +2474,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\usb\src\usb_device_mapping.h</file>
-         <hash>3a5eee6b064c49fd7a495f574736eaec5838e63f7de457ff688d70aa80432ce6</hash>
+         <hash>25c83489e10ce6221df1b7a6bbfcabd3e012a452b6d2937f85cb3c594189f468</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\startup_xc32.c</file>
@@ -2486,7 +2486,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\driver\usb\drv_usb.h</file>
-         <hash>dce0fe53973e23d87ee16fec7ef65f171b537ac80e14eaa2ca43962156f1c6e7</hash>
+         <hash>ee59efb38b1cf87e1c4bb6e833a9c9be0c106005daa6c1ccd90fca9fb5c17b44</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\system\int\sys_int.h</file>
@@ -2494,7 +2494,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\usb\src\usb_device_hid.c</file>
-         <hash>03c05393f61bfed316ca2ead2c2291b2dd8643829d44b8fec193e0f2a0a57716</hash>
+         <hash>ff7b91f0adaf7b8c14a0f975baeabd46381f5b91b8c969f2ace2f3f4f1c99aee</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\rtt.h</file>
