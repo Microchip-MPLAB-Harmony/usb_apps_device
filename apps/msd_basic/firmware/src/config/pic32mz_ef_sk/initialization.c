@@ -175,7 +175,7 @@ SYSTEM_OBJECTS sysObj;
  * USB Driver Initialization
  ******************************************************/
 
-const DRV_USBHS_INIT drvUSBInit =
+static const DRV_USBHS_INIT drvUSBInit =
 {
     /* Interrupt Source for USB module */
     .interruptSource = INT_SOURCE_USB,
@@ -266,8 +266,8 @@ void SYS_Initialize ( void* data )
 
 
 
-	/* Initialize USB Driver */ 
-    sysObj.drvUSBHSObject = DRV_USBHS_Initialize(DRV_USBHS_INDEX_0, (SYS_MODULE_INIT *) &drvUSBInit);	
+    /* Initialize USB Driver */ 
+    sysObj.drvUSBHSObject = DRV_USBHS_Initialize(DRV_USBHS_INDEX_0, (SYS_MODULE_INIT *) &drvUSBInit);    
 
 
     /* Initialize the USB device layer */
