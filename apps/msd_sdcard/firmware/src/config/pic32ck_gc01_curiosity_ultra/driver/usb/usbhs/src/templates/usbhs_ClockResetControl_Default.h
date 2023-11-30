@@ -44,9 +44,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 
 //DOM-IGNORE-END
 
-#ifndef _USBHS_CLOCKRESETCONTROL_DEFAULT_H
-#define _USBHS_CLOCKRESETCONTROL_DEFAULT_H
+#ifndef USBHS_CLOCKRESETCONTROL_DEFAULT_H
+#define USBHS_CLOCKRESETCONTROL_DEFAULT_H
 
+/* MISRA C-2012 Rule 10.1, Rule 5.2, and Rule 10.4.Deviation record ID -  
+    H3_MISRAC_2012_R_10_1_DR_1, H3_MISRAC_2012_R_10_4_DR_1 */
 //******************************************************************************
 /* Function :  USBHS_ExistsClockResetControl_Default
 
@@ -84,7 +86,7 @@ PLIB_TEMPLATE void USBHS_GlobalInterruptEnable_Default( USBHS_MODULE_ID index )
     volatile __USBCRCONbits_t * usbcrcon = (__USBCRCONbits_t *)(index - 0x5F000);
     usbcrcon->USBIE = 1;
 */
-	volatile usbhs_registers_t *usbhs = (usbhs_registers_t*)(index-0x1000);
+    volatile usbhs_registers_t *usbhs = (usbhs_registers_t*)(index-0x1000);
     usbhs->ENDPOINT0.USBHS_INTENSET = USBHS_INTENSET_USB_Msk | USBHS_INTENSET_WAKEUP_Msk | USBHS_INTENSET_WAKEUP_Msk;
 }
 
@@ -107,11 +109,13 @@ PLIB_TEMPLATE void USBHS_GlobalInterruptDisable_Default( USBHS_MODULE_ID index )
     volatile __USBCRCONbits_t * usbcrcon = (__USBCRCONbits_t *)(index - 0x5F000);
     usbcrcon->USBIE = 0;
 */
-	volatile usbhs_registers_t *usbhs = (usbhs_registers_t*)(index-0x1000);
+    volatile usbhs_registers_t *usbhs = (usbhs_registers_t*)(index-0x1000);
     usbhs->ENDPOINT0.USBHS_INTENCLR = USBHS_INTENSET_USB_Msk;
 }
 
-#endif /*_USBHS_CLOCKRESETCONTROL_DEFAULT_H*/
+/* MISRAC 2012 deviation block end */
+
+#endif /*USBHS_CLOCKRESETCONTROL_DEFAULT_H*/
 
 /******************************************************************************
  End of File
