@@ -41,8 +41,8 @@
  *******************************************************************************/
 //DOM-IGNORE-END
 
-#ifndef _USB_DEVICE_HID_H_
-#define _USB_DEVICE_HID_H_
+#ifndef USB_DEVICE_HID_H
+#define USB_DEVICE_HID_H
 
 // *****************************************************************************
 // *****************************************************************************
@@ -152,6 +152,7 @@ typedef uintptr_t USB_DEVICE_HID_TRANSFER_HANDLE;
 #define USB_DEVICE_HID_TRANSFER_HANDLE_INVALID  /*DOM-IGNORE-BEGIN*/((USB_DEVICE_HID_TRANSFER_HANDLE)(-1))/*DOM-IGNORE-END*/
 
 // *****************************************************************************
+/* MISRA C-2012 Rule 5.2 deviated:8 Deviation record ID -  H3_MISRAC_2012_R_5_2_DR_1 */
 /* USB Device HID Function Driver USB Device HID Result enumeration.
  
   Summary:
@@ -201,6 +202,7 @@ typedef enum
 
 } USB_DEVICE_HID_RESULT;
 // *****************************************************************************
+/* MISRA C-2012 Rule 3.1 deviated:5 Deviation record ID -  H3_MISRAC_2012_R_3_1_DR_1 */
 /* USB Device HID Function Driver Events
 
   Summary:
@@ -604,6 +606,8 @@ typedef struct
 
 } USB_DEVICE_HID_EVENT_DATA_REPORT_RECEIVED;
 
+
+/* MISRAC 2012 deviation block end */
 // *****************************************************************************
 /* USB Device HID Set Idle Event Data Type.
 
@@ -770,7 +774,7 @@ typedef USB_DEVICE_HID_EVENT_RESPONSE (*USB_DEVICE_HID_EVENT_HANDLER)
 /* Function:
     USB_DEVICE_HID_RESULT USB_DEVICE_HID_EventHandlerSet
     (
-        USB_DEVICE_HID_INDEX instance 
+        USB_DEVICE_HID_INDEX instanceIndex 
         USB_DEVICE_HID_EVENT_HANDLER eventHandler 
         uintptr_t context
     );
@@ -861,7 +865,7 @@ USB_DEVICE_HID_RESULT USB_DEVICE_HID_EventHandlerSet
     USB_DEVICE_HID_RESULT USB_DEVICE_HID_ReportSend
     (
         USB_DEVICE_HID_INDEX instanceIndex,
-        USB_DEVICE_HID_TRANSFER_HANDLE * transferHandle,
+        USB_DEVICE_HID_TRANSFER_HANDLE * handle,
         void * buffer, 
         size_t size
     )
@@ -987,7 +991,7 @@ USB_DEVICE_HID_RESULT USB_DEVICE_HID_ReportSend
     USB_DEVICE_HID_RESULT USB_DEVICE_HID_ReportReceive 
     (
         USB_DEVICE_HID_INDEX instanceIndex,
-        USB_DEVICE_HID_TRANSFER_HANDLE * transferHandle,
+        USB_DEVICE_HID_TRANSFER_HANDLE * handle,
         void * buffer, 
         size_t size
     );
@@ -1166,10 +1170,12 @@ USB_DEVICE_HID_RESULT USB_DEVICE_HID_ReportReceive
 
 USB_DEVICE_HID_RESULT USB_DEVICE_HID_TransferCancel
 (
-    USB_DEVICE_HID_INDEX usbDeviceHandle,
+    USB_DEVICE_HID_INDEX instanceIndex,
     USB_DEVICE_HID_TRANSFER_HANDLE transferHandle
 );
 
+
+/* MISRAC 2012 deviation block end */
 // *****************************************************************************
 // *****************************************************************************
 // Section: Data Types and constants specific to PIC32 implementation of the
