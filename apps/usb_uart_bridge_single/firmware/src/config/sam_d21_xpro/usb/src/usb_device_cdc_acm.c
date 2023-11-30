@@ -73,7 +73,7 @@
 
 //******************************************************************************
 /* Function:
-    void _USB_DEVICE_CDC_ACMSetUpPacketHandler ( USB_DEVICE_CDC_INSTANCE *instance,
+    void F_USB_DEVICE_CDC_ACMSetUpPacketHandler ( USB_DEVICE_CDC_INSTANCE *instance,
                                                     uint16_t value )
 
   Summary:
@@ -85,17 +85,21 @@
   Remarks:
     Called by the CDC function driver.
  */
+ /* MISRA C-2012 Rule 11.3 deviated:1 Deviation record ID -  H3_MISRAC_2012_R_11_3_DR_1 */
 
-void _USB_DEVICE_CDC_ACMSetUpPacketHandler 
+
+
+void F_USB_DEVICE_CDC_ACMSetUpPacketHandler 
 (
     SYS_MODULE_INDEX iCDC ,
     USB_DEVICE_CDC_INSTANCE * thisCDCDevice,
     USB_SETUP_PACKET * setupRequest
 )
 {
+    USB_CDC_REQUEST bRequest = (USB_CDC_REQUEST)setupRequest->bRequest;
     
     /* Check the request */
-    switch (setupRequest->bRequest )
+    switch (bRequest)
     {
         case USB_CDC_REQUEST_SET_LINE_CODING:
 
@@ -147,7 +151,7 @@ void _USB_DEVICE_CDC_ACMSetUpPacketHandler
         case USB_CDC_REQUEST_GET_ENCAPSULATED_RESPONSE:
 
             /* AT commands are not supported */
-            USB_DEVICE_ControlStatus(thisCDCDevice->deviceHandle, 
+            (void) USB_DEVICE_ControlStatus(thisCDCDevice->deviceHandle, 
                     USB_DEVICE_CONTROL_STATUS_ERROR);
             break;
 
@@ -200,13 +204,14 @@ void _USB_DEVICE_CDC_ACMSetUpPacketHandler
 
             /* These request are not supported */
 
-            USB_DEVICE_ControlStatus(thisCDCDevice->deviceHandle,
+            (void) USB_DEVICE_ControlStatus(thisCDCDevice->deviceHandle,
                        USB_DEVICE_CONTROL_STATUS_ERROR);
 
             break;
     }
 }
 
+/* MISRAC 2012 deviation block end */
 
 
 /*******************************************************************************
