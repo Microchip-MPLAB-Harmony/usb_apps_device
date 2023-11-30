@@ -41,8 +41,8 @@
  *******************************************************************************/
 // DOM-IGNORE-END
 
-#ifndef _USB_MSD_H
-#define _USB_MSD_H
+#ifndef USB_MSD_H
+#define USB_MSD_H
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
@@ -64,14 +64,14 @@
 // *****************************************************************************
 // *****************************************************************************
 
-#define USB_MSD_CLASS_CODE                                  0x08
-#define USB_MSD_SUBCLASS_CODE_SCSI_TRANSPARENT_COMMAND_SET  0x06 
-#define USB_MSD_PROTOCOL                                    0x50
-#define USB_MSD_REQUEST_CLASS_SPECIFIC                      0x21
-#define USB_MSD_REQUEST_ENDPONT_SPECIFIC                    0x02
+#define USB_MSD_CLASS_CODE                                  0x08U
+#define USB_MSD_SUBCLASS_CODE_SCSI_TRANSPARENT_COMMAND_SET  0x06U 
+#define USB_MSD_PROTOCOL                                    0x50U
+#define USB_MSD_REQUEST_CLASS_SPECIFIC                      0x21U
+#define USB_MSD_REQUEST_ENDPONT_SPECIFIC                    0x02U
 
 /* This is a useful constant */
-#define USB_MSD_CBW_DIRECTION_BITMASK                   0x80
+#define USB_MSD_CBW_DIRECTION_BITMASK                   0x80U
 
 /* Maximum size of the command block in the CBW */
 #define USB_MSD_MAX_CB_SIZE 0x10    
@@ -127,6 +127,8 @@ typedef enum
 } USB_MSD_COMMAND;
 
 // *****************************************************************************
+
+/* MISRA C-2012 Rule 6.1 deviated:2 Deviation record ID -  H3_MISRAC_2012_R_6_1_DR_1 */
 /* USB MSD Command Block Wrapper structure.
 
   Summary:
@@ -172,6 +174,7 @@ typedef struct __attribute__((packed))
 
 } USB_MSD_CBW;
 
+/* MISRAC 2012 deviation block end */
 // *****************************************************************************
 /* USB device MSD CSW structure.
 

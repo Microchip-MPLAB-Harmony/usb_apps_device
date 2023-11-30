@@ -53,9 +53,9 @@
 #include "peripheral/clk/plib_clk.h"
 #include "peripheral/gpio/plib_gpio.h"
 #include "peripheral/evic/plib_evic.h"
-#include "driver/memory/drv_memory.h"
 #include "usb/usb_chapter_9.h"
 #include "usb/usb_device.h"
+#include "driver/memory/drv_memory.h"
 #include "bsp/bsp.h"
 #include "peripheral/nvm/plib_nvm.h"
 #include "driver/usb/usbhs/drv_usbhs.h"
@@ -198,7 +198,7 @@ typedef struct
 {
     SYS_MODULE_OBJ  usbDevObject0;
 
-	SYS_MODULE_OBJ  drvUSBHSObject;
+    SYS_MODULE_OBJ  drvUSBHSObject;
 
     SYS_MODULE_OBJ  drvMemory0;
 
