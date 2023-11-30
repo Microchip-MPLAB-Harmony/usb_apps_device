@@ -93,19 +93,10 @@ extern "C" {
 // Section: Middleware & Other Library Configuration
 // *****************************************************************************
 // *****************************************************************************
-/* Maximum instances of CDC function driver */
-#define USB_DEVICE_CDC_INSTANCES_NUMBER                     1
-
-
-/* CDC Transfer Queue Size for both read and
-   write. Applicable to all instances of the
-   function driver */
-#define USB_DEVICE_CDC_QUEUE_DEPTH_COMBINED                 3
-
 /*** USB Driver Configuration ***/
 
 /* Maximum USB driver instances */
-#define DRV_USBHS_INSTANCES_NUMBER                        1
+#define DRV_USBHS_INSTANCES_NUMBER                        1U
 
 /* Interrupt mode enabled */
 #define DRV_USBHS_INTERRUPT_MODE                          true
@@ -125,17 +116,26 @@ extern "C" {
 #define USB_ALIGN  CACHE_ALIGN  __ALIGNED(16)
 
 
+/* Maximum instances of CDC function driver */
+#define USB_DEVICE_CDC_INSTANCES_NUMBER                     1U
+
+
+/* CDC Transfer Queue Size for both read and
+   write. Applicable to all instances of the
+   function driver */
+#define USB_DEVICE_CDC_QUEUE_DEPTH_COMBINED                 3U
+
 /* Number of Endpoints used */
-#define DRV_USBHS_ENDPOINTS_NUMBER                        4
+#define DRV_USBHS_ENDPOINTS_NUMBER                        4U
 
 /* The USB Device Layer will not initialize the USB Driver */
 #define USB_DEVICE_DRIVER_INITIALIZE_EXPLICIT
 
 /* Maximum device layer instances */
-#define USB_DEVICE_INSTANCES_NUMBER                         1
+#define USB_DEVICE_INSTANCES_NUMBER                         1U
 
 /* EP0 size in bytes */
-#define USB_DEVICE_EP0_BUFFER_SIZE                          64
+#define USB_DEVICE_EP0_BUFFER_SIZE                          64U
 
 /* Enable SOF Events */
 #define USB_DEVICE_SOF_EVENT_ENABLE
