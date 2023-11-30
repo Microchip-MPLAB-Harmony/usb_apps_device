@@ -54,10 +54,10 @@
 #include "usb/usb_chapter_9.h"
 #include "usb/usb_device.h"
 #include "peripheral/efc/plib_efc.h"
+#include "driver/usb/usbhsv1/drv_usbhsv1.h"
 #include "usb/usb_device_cdc.h"
 #include "usb/usb_cdc.h"
 #include "bsp/bsp.h"
-#include "driver/usb/usbhsv1/drv_usbhsv1.h"
 #include "driver/usart/drv_usart.h"
 #include "FreeRTOS.h"
 #include "task.h"
@@ -201,7 +201,7 @@ typedef struct
     SYS_MODULE_OBJ  usbDevObject0;
 
     SYS_MODULE_OBJ  drvUsart0;
-	SYS_MODULE_OBJ  drvUSBHSV1Object;
+    SYS_MODULE_OBJ  drvUSBHSV1Object;
 
 
 } SYSTEM_OBJECTS;
