@@ -73,19 +73,19 @@ const USB_DEVICE_FUNCTION_DRIVER cdcFunctionDriver =
 {
 
     /* CDC init function */
-    .initializeByDescriptor         = _USB_DEVICE_CDC_Initialization ,
+    .initializeByDescriptor         = F_USB_DEVICE_CDC_Initialization ,
 
     /* CDC de-init function */
-    .deInitialize                   = _USB_DEVICE_CDC_Deinitialization ,
+    .deInitialize                   = F_USB_DEVICE_CDC_Deinitialization ,
 
     /* EP0 activity callback */
-    .controlTransferNotification    = _USB_DEVICE_CDC_ControlTransferHandler,
+    .controlTransferNotification    = F_USB_DEVICE_CDC_ControlTransferHandler,
 
     /* CDC tasks function */
     .tasks                          = NULL,
 
     /* CDC Global Initialize */
-    .globalInitialize = _USB_DEVICE_CDC_GlobalInitialize
+    .globalInitialize = F_USB_DEVICE_CDC_GlobalInitialize
 };
 
 // *****************************************************************************
@@ -102,11 +102,11 @@ const USB_DEVICE_FUNCTION_DRIVER cdcFunctionDriver =
     This array is private to the USB stack.
 */
 
-USB_DEVICE_IRP gUSBDeviceCDCIRP[USB_DEVICE_CDC_QUEUE_DEPTH_COMBINED];
+static USB_DEVICE_IRP gUSBDeviceCDCIRP[USB_DEVICE_CDC_QUEUE_DEPTH_COMBINED];
 
 
 /* Create a variable for holding CDC IRP mutex Handle and status */
-USB_DEVICE_CDC_COMMON_DATA_OBJ gUSBDeviceCdcCommonDataObj;
+static USB_DEVICE_CDC_COMMON_DATA_OBJ gUSBDeviceCdcCommonDataObj;
  
 
 // *****************************************************************************
@@ -123,7 +123,7 @@ USB_DEVICE_CDC_COMMON_DATA_OBJ gUSBDeviceCdcCommonDataObj;
     This structure is private to the CDC.
 */
 
-USB_DEVICE_CDC_INSTANCE gUSBDeviceCDCInstance[USB_DEVICE_CDC_INSTANCES_NUMBER];
+static USB_DEVICE_CDC_INSTANCE gUSBDeviceCDCInstance[USB_DEVICE_CDC_INSTANCES_NUMBER];
 
 // *****************************************************************************
 /* CDC Instance Serial State Response structure
@@ -133,13 +133,13 @@ USB_DEVICE_CDC_INSTANCE gUSBDeviceCDCInstance[USB_DEVICE_CDC_INSTANCES_NUMBER];
 
   Description:
     This data type defines the CDC Serial State Response structures. 
-	The number of buffers is defined by the application using the 
-	USB_DEVICE_CDC_INSTANCES_NUMBER.
+    The number of buffers is defined by the application using the 
+    USB_DEVICE_CDC_INSTANCES_NUMBER.
 
   Remarks:
     This structure is private to the CDC.
 */
-USB_CDC_SERIAL_STATE_RESPONSE gUSBDeviceCDCSerialStateResponse[USB_DEVICE_CDC_INSTANCES_NUMBER] USB_ALIGN;
+static USB_CDC_SERIAL_STATE_RESPONSE gUSBDeviceCDCSerialStateResponse[USB_DEVICE_CDC_INSTANCES_NUMBER] USB_ALIGN;
 
 // *****************************************************************************
 // *****************************************************************************
@@ -148,7 +148,7 @@ USB_CDC_SERIAL_STATE_RESPONSE gUSBDeviceCDCSerialStateResponse[USB_DEVICE_CDC_IN
 // *****************************************************************************
 // ******************************************************************************
 /* Function:
-    void _USB_DEVICE_CDC_GlobalInitialize ( void )
+    void F_USB_DEVICE_CDC_GlobalInitialize ( void )
 
   Summary:
     This function initializes resourses required common to all instances of CDC
@@ -161,7 +161,10 @@ USB_CDC_SERIAL_STATE_RESPONSE gUSBDeviceCDCSerialStateResponse[USB_DEVICE_CDC_IN
   Remarks:
     This is local function and should not be called directly by the application.
 */
-void _USB_DEVICE_CDC_GlobalInitialize (void)
+
+/* MISRA C-2012 Rule 10.4 False Positive:10 Deviation record ID -  H3_MISRAC_2012_R_10_4_DR_1 */
+
+void F_USB_DEVICE_CDC_GlobalInitialize (void)
 {
     OSAL_RESULT osal_err;
     
@@ -183,7 +186,7 @@ void _USB_DEVICE_CDC_GlobalInitialize (void)
 }
 // ******************************************************************************
 /* Function:
-    void _USB_DEVICE_CDC_Initialization 
+    void F_USB_DEVICE_CDC_Initialization 
     ( 
         SYS_MODULE_INDEX iCDC ,
         DRV_HANDLE deviceHandle ,
@@ -206,7 +209,9 @@ void _USB_DEVICE_CDC_GlobalInitialize (void)
     This is local function and should not be called directly by the application.
 */
 
-void _USB_DEVICE_CDC_Initialization 
+/* MISRA C-2012 Rule 11.3 deviated:3 Deviation record ID -  H3_MISRAC_2012_R_11_3_DR_1 */
+
+void F_USB_DEVICE_CDC_Initialization 
 ( 
     SYS_MODULE_INDEX iCDC ,
     USB_DEVICE_HANDLE deviceHandle ,
@@ -243,7 +248,7 @@ void _USB_DEVICE_CDC_Initialization
     /* Initialize the queue sizes. This code may run several times
      * but then we dont expect the queue sizes to change.*/
 
-    cdcInit = ((USB_DEVICE_CDC_INIT *)initData);
+    cdcInit = (USB_DEVICE_CDC_INIT *) initData;
     thisCDCInstance->queueSizeWrite = cdcInit->queueSizeWrite;
     thisCDCInstance->queueSizeRead = cdcInit->queueSizeRead;
     thisCDCInstance->queueSizeSerialStateNotification = 
@@ -251,9 +256,9 @@ void _USB_DEVICE_CDC_Initialization
     thisCDCInstance->currentQSizeWrite = 0;
     thisCDCInstance->currentQSizeRead = 0;
     thisCDCInstance->currentQSizeSerialStateNotification = 0;
-	
-	/* Initialize pointer to the Serial state notification buffer */ 
-	thisCDCInstance->serialStateResponse = &gUSBDeviceCDCSerialStateResponse[iCDC]; 
+    
+    /* Initialize pointer to the Serial state notification buffer */ 
+    thisCDCInstance->serialStateResponse = &gUSBDeviceCDCSerialStateResponse[iCDC]; 
 
     
     /* check the type of descriptor passed by device layer */
@@ -269,7 +274,7 @@ void _USB_DEVICE_CDC_Initialization
 
                 /* check if this is notification(communication) interface */
                 if ( ( pInfDesc->bInterfaceClass == USB_CDC_COMMUNICATIONS_INTERFACE_CLASS_CODE ) &&
-                        ( pInfDesc->bInterfaceSubClass == USB_CDC_SUBCLASS_ABSTRACT_CONTROL_MODEL ) )
+                        ( pInfDesc->bInterfaceSubClass == (uint8_t)USB_CDC_SUBCLASS_ABSTRACT_CONTROL_MODEL ) )
                 {
                     /* Save the notification interface number */
                     thisCDCInstance->notificationInterface.interfaceNum = infNum;
@@ -300,18 +305,18 @@ void _USB_DEVICE_CDC_Initialization
                 epAddress = pEPDesc->bEndpointAddress;
 
                 /* Get the direction */
-                epDir = ( epAddress & 0x80 ) ? 
-                    ( USB_DEVICE_CDC_ENDPOINT_TX ) : ( USB_DEVICE_CDC_ENDPOINT_RX );
+                epDir = (( epAddress & 0x80U ) != 0U) ? 
+                    (uint8_t)( USB_DEVICE_CDC_ENDPOINT_TX ) : (uint8_t)( USB_DEVICE_CDC_ENDPOINT_RX );
 
                 /* Save max packet size */
                 maxPacketSize = ( ( USB_ENDPOINT_DESCRIPTOR* ) pDesc )->wMaxPacketSize;
 
-                if ( pEPDesc->transferType == USB_TRANSFER_TYPE_BULK )
+                if ( pEPDesc->transferType == (uint8_t)USB_TRANSFER_TYPE_BULK )
                 {
                     /* This is a data interface endpoint */
                     deviceCDCEndpoint = &thisCDCInstance->dataInterface.endpoint[epDir];
                 }
-                else if( pEPDesc->transferType == USB_TRANSFER_TYPE_INTERRUPT)
+                else if( pEPDesc->transferType == (uint8_t)USB_TRANSFER_TYPE_INTERRUPT)
                 {
                     /* This is notification endpoint */
                     deviceCDCEndpoint = &thisCDCInstance->notificationInterface.endpoint[epDir];
@@ -330,7 +335,7 @@ void _USB_DEVICE_CDC_Initialization
                 deviceCDCEndpoint->maxPacketSize = maxPacketSize;
 
                 /* Enable the endpoint */
-                USB_DEVICE_EndpointEnable ( deviceHandle ,
+                (void) USB_DEVICE_EndpointEnable ( deviceHandle ,
                         0,
                         epAddress ,
                         (USB_TRANSFER_TYPE)pEPDesc->transferType ,
@@ -342,7 +347,7 @@ void _USB_DEVICE_CDC_Initialization
                 break;
             }
 
-        case USB_CDC_DESC_CS_INTERFACE:
+        case (uint8_t)USB_CDC_DESC_CS_INTERFACE:
             {
                 break;
             }
@@ -353,9 +358,11 @@ void _USB_DEVICE_CDC_Initialization
     }
 }
 
+/* MISRAC 2012 deviation block end */
+
 // ******************************************************************************
 /* Function:
-    void _USB_DEVICE_CDC_EndpointDisable
+    void F_USB_DEVICE_CDC_EndpointDisable
     (
         USB_DEVICE_HANDLE deviceHandle, 
         USB_DEVICE_CDC_ENDPOINT * deviceCDCEndpoint
@@ -371,7 +378,7 @@ void _USB_DEVICE_CDC_Initialization
     This is local function and should not be called directly by the application.
 */
 
-void _USB_DEVICE_CDC_EndpointDisable
+void F_USB_DEVICE_CDC_EndpointDisable
 (
     USB_DEVICE_HANDLE deviceHandle, 
     USB_DEVICE_CDC_ENDPOINT * deviceCDCEndpoint
@@ -379,15 +386,15 @@ void _USB_DEVICE_CDC_EndpointDisable
 {
     if(deviceCDCEndpoint->isConfigured)
     {
-        USB_DEVICE_IRPCancelAll(deviceHandle, deviceCDCEndpoint->address);
-        USB_DEVICE_EndpointDisable(deviceHandle, deviceCDCEndpoint->address);
+        (void) USB_DEVICE_IRPCancelAll(deviceHandle, deviceCDCEndpoint->address);
+        (void) USB_DEVICE_EndpointDisable(deviceHandle, deviceCDCEndpoint->address);
         deviceCDCEndpoint->isConfigured = false;
     }
 }
 
 // ******************************************************************************
 /* Function:
-    void _USB_DEVICE_CDC_Deinitialization ( SYS_MODULE_INDEX iCDC )
+    void F_USB_DEVICE_CDC_Deinitialization ( SYS_MODULE_INDEX iCDC )
  
   Summary:
     Deinitializes the function driver instance.
@@ -399,7 +406,7 @@ void _USB_DEVICE_CDC_EndpointDisable
     This is local function and should not be called directly by the application.
 */
 
-void _USB_DEVICE_CDC_Deinitialization ( SYS_MODULE_INDEX iCDC )
+void F_USB_DEVICE_CDC_Deinitialization ( SYS_MODULE_INDEX iCDC )
 {
     /* Cancel all IRPs on the owned endpoints and then 
      * disable the endpoint */
@@ -416,22 +423,22 @@ void _USB_DEVICE_CDC_Deinitialization ( SYS_MODULE_INDEX iCDC )
     deviceHandle = gUSBDeviceCDCInstance[iCDC].deviceHandle;
 
     deviceCDCEndpoint = &gUSBDeviceCDCInstance[iCDC].dataInterface.endpoint[0];
-    _USB_DEVICE_CDC_EndpointDisable(deviceHandle, deviceCDCEndpoint);
+    F_USB_DEVICE_CDC_EndpointDisable(deviceHandle, deviceCDCEndpoint);
     
     deviceCDCEndpoint = &gUSBDeviceCDCInstance[iCDC].dataInterface.endpoint[1];
-    _USB_DEVICE_CDC_EndpointDisable(deviceHandle, deviceCDCEndpoint);
+    F_USB_DEVICE_CDC_EndpointDisable(deviceHandle, deviceCDCEndpoint);
     
     deviceCDCEndpoint = &gUSBDeviceCDCInstance[iCDC].notificationInterface.endpoint[0];
-    _USB_DEVICE_CDC_EndpointDisable(deviceHandle, deviceCDCEndpoint);
+    F_USB_DEVICE_CDC_EndpointDisable(deviceHandle, deviceCDCEndpoint);
     
     deviceCDCEndpoint = &gUSBDeviceCDCInstance[iCDC].notificationInterface.endpoint[1];
-    _USB_DEVICE_CDC_EndpointDisable(deviceHandle, deviceCDCEndpoint);
+    F_USB_DEVICE_CDC_EndpointDisable(deviceHandle, deviceCDCEndpoint);
 
 }
 
 // ******************************************************************************
 /* Function:
-    void _USB_DEVICE_CDC_ControlTransferHandler 
+    void F_USB_DEVICE_CDC_ControlTransferHandler 
     (
         USB_DEVICE_CONTROL_TRANSFER_HANDLE controlTransferHandle ,
         SYS_MODULE_INDEX iCDC ,
@@ -450,8 +457,10 @@ void _USB_DEVICE_CDC_Deinitialization ( SYS_MODULE_INDEX iCDC )
   Remarks:
     This is local function and should not be called directly by the application.
 */
+/* MISRA C-2012 Rule 16.1, 16.3 deviated below. Deviation record ID -  
+   H3_MISRAC_2012_R_16_1_DR_1 & H3_MISRAC_2012_R_16_3_DR_1*/
 
-void _USB_DEVICE_CDC_ControlTransferHandler 
+void F_USB_DEVICE_CDC_ControlTransferHandler 
 (
     SYS_MODULE_INDEX iCDC ,
     USB_DEVICE_EVENT controlTransferEvent,
@@ -460,6 +469,7 @@ void _USB_DEVICE_CDC_ControlTransferHandler
 {
     USB_DEVICE_HANDLE deviceHandle;
     USB_DEVICE_CDC_INSTANCE * thisCDCDevice;
+    USB_CDC_REQUEST bRequest = (USB_CDC_REQUEST) setupRequest->bRequest;
     
     /* Check the validity of the function driver index */
     if (iCDC >= USB_DEVICE_CDC_INSTANCES_NUMBER)
@@ -483,17 +493,18 @@ void _USB_DEVICE_CDC_ControlTransferHandler
 
             /* This means we have a setup packet for this interface */
             
-            if(!(setupRequest->bmRequestType & USB_CDC_REQUEST_CLASS_SPECIFIC))
+            if((setupRequest->bmRequestType & (uint8_t)USB_CDC_REQUEST_CLASS_SPECIFIC) == 0U)
             {
                 /* This means this is not a class specific request.
                  * We stall this request */
 
-                USB_DEVICE_ControlStatus(deviceHandle, USB_DEVICE_CONTROL_STATUS_ERROR);
+                (void) USB_DEVICE_ControlStatus(deviceHandle, USB_DEVICE_CONTROL_STATUS_ERROR);
             }
             else
             {
+
                 /* Check if the requests belong to the ACM sub class */
-                switch(setupRequest->bRequest)
+                switch(bRequest)
                 {
                     case USB_CDC_REQUEST_SET_LINE_CODING:
                     case USB_CDC_REQUEST_GET_LINE_CODING:
@@ -501,16 +512,13 @@ void _USB_DEVICE_CDC_ControlTransferHandler
                     case USB_CDC_REQUEST_SEND_BREAK:
                     case USB_CDC_REQUEST_SEND_ENCAPSULATED_COMMAND:
                     case USB_CDC_REQUEST_GET_ENCAPSULATED_RESPONSE:
-
                         /* These are ACM requests */
-
-                        _USB_DEVICE_CDC_ACMSetUpPacketHandler(iCDC, thisCDCDevice, 
+                        (void) F_USB_DEVICE_CDC_ACMSetUpPacketHandler(iCDC, thisCDCDevice, 
                                 setupRequest);
-
                         break;
                     default:
                         /* This is an un-supported request */
-                        USB_DEVICE_ControlStatus(deviceHandle, USB_DEVICE_CONTROL_STATUS_ERROR);
+                        (void) USB_DEVICE_ControlStatus(deviceHandle, USB_DEVICE_CONTROL_STATUS_ERROR);
                         break;
                 }
             }
@@ -524,7 +532,7 @@ void _USB_DEVICE_CDC_ControlTransferHandler
 
             if(thisCDCDevice->appEventCallBack != NULL)
             {
-                thisCDCDevice->appEventCallBack(iCDC, 
+                (void) thisCDCDevice->appEventCallBack(iCDC, 
                         USB_DEVICE_CDC_EVENT_CONTROL_TRANSFER_DATA_RECEIVED,
                         NULL, thisCDCDevice->userData );
             }
@@ -538,19 +546,22 @@ void _USB_DEVICE_CDC_ControlTransferHandler
 
             if(thisCDCDevice->appEventCallBack != NULL)
             {
-                thisCDCDevice->appEventCallBack(iCDC, 
+                (void) thisCDCDevice->appEventCallBack(iCDC, 
                         USB_DEVICE_CDC_EVENT_CONTROL_TRANSFER_DATA_SENT,
                         NULL, thisCDCDevice->userData );
             }
 
         default:
+            /* Do Nothing */
             break;
     }
 }
 
+/* MISRAC 2012 deviation block end */
+
 // ******************************************************************************
 /* Function:
-    void _USB_DEVICE_CDC_SerialStateSendIRPCallback (USB_DEVICE_IRP * irp )
+    void F_USB_DEVICE_CDC_SerialStateSendIRPCallback (USB_DEVICE_IRP * irp )
  
   Summary:
     IRP call back for Serial State Send IRPs.
@@ -563,7 +574,7 @@ void _USB_DEVICE_CDC_ControlTransferHandler
     This is local function and should not be called directly by the application.
 */
 
-void _USB_DEVICE_CDC_SerialStateSendIRPCallback (USB_DEVICE_IRP * irp )
+void F_USB_DEVICE_CDC_SerialStateSendIRPCallback (USB_DEVICE_IRP * irp )
 {
     USB_DEVICE_CDC_INSTANCE * thisCDCDevice;
 
@@ -610,7 +621,7 @@ void _USB_DEVICE_CDC_SerialStateSendIRPCallback (USB_DEVICE_IRP * irp )
     thisCDCDevice->currentQSizeSerialStateNotification --;
 
     /* valid application event handler present? */
-    if ( thisCDCDevice->appEventCallBack )
+    if ( thisCDCDevice->appEventCallBack != NULL )
     {
         /* inform the application */
         thisCDCDevice->appEventCallBack ( (USB_DEVICE_CDC_INDEX)(irp->userData) , 
@@ -622,7 +633,7 @@ void _USB_DEVICE_CDC_SerialStateSendIRPCallback (USB_DEVICE_IRP * irp )
 
 // ******************************************************************************
 /* Function:
-    void _USB_DEVICE_CDC_ReadIRPCallback (USB_DEVICE_IRP * irp )
+    void F_USB_DEVICE_CDC_ReadIRPCallback (USB_DEVICE_IRP * irp )
  
   Summary:
     IRP call back for Data Read IRPs.
@@ -635,7 +646,7 @@ void _USB_DEVICE_CDC_SerialStateSendIRPCallback (USB_DEVICE_IRP * irp )
     This is local function and should not be called directly by the application.
 */
 
-void _USB_DEVICE_CDC_ReadIRPCallback (USB_DEVICE_IRP * irp )
+void F_USB_DEVICE_CDC_ReadIRPCallback (USB_DEVICE_IRP * irp )
 {
     USB_DEVICE_CDC_INSTANCE * thisCDCDevice;
 
@@ -681,7 +692,7 @@ void _USB_DEVICE_CDC_ReadIRPCallback (USB_DEVICE_IRP * irp )
     thisCDCDevice->currentQSizeRead --;
 
     /* valid application event handler present? */
-    if ( thisCDCDevice->appEventCallBack )
+    if ( thisCDCDevice->appEventCallBack != NULL )
     {
         /* inform the application */
         thisCDCDevice->appEventCallBack ( (USB_DEVICE_CDC_INDEX)(irp->userData) , 
@@ -693,7 +704,7 @@ void _USB_DEVICE_CDC_ReadIRPCallback (USB_DEVICE_IRP * irp )
 
 // ******************************************************************************
 /* Function:
-    void _USB_DEVICE_CDC_WriteIRPCallback (USB_DEVICE_IRP * irp )
+    void F_USB_DEVICE_CDC_WriteIRPCallback (USB_DEVICE_IRP * irp )
  
   Summary:
     IRP call back for Data Write IRPs.
@@ -706,7 +717,7 @@ void _USB_DEVICE_CDC_ReadIRPCallback (USB_DEVICE_IRP * irp )
     This is local function and should not be called directly by the application.
 */
 
-void _USB_DEVICE_CDC_WriteIRPCallback (USB_DEVICE_IRP * irp )
+void F_USB_DEVICE_CDC_WriteIRPCallback (USB_DEVICE_IRP * irp )
 {
     USB_DEVICE_CDC_INSTANCE * thisCDCDevice;
 
@@ -752,7 +763,7 @@ void _USB_DEVICE_CDC_WriteIRPCallback (USB_DEVICE_IRP * irp )
     thisCDCDevice->currentQSizeWrite --;
 
     /* valid application event handler present? */
-    if ( thisCDCDevice->appEventCallBack )
+    if ( thisCDCDevice->appEventCallBack != NULL)
     {
         /* inform the application */
         thisCDCDevice->appEventCallBack ( (USB_DEVICE_CDC_INDEX)(irp->userData) , 
@@ -819,7 +830,7 @@ USB_DEVICE_CDC_RESULT USB_DEVICE_CDC_Read
 )
 {
     unsigned int cnt;
-    unsigned int remainder;
+    unsigned int remainderValue;
     USB_DEVICE_IRP * irp;
     USB_DEVICE_CDC_ENDPOINT * endpoint;
     USB_DEVICE_CDC_INSTANCE * thisCDCDevice;
@@ -849,9 +860,9 @@ USB_DEVICE_CDC_RESULT USB_DEVICE_CDC_Read
     }
 
     /* For read the size should be a multiple of endpoint size*/
-    remainder = size % endpoint->maxPacketSize;
+    remainderValue = size % endpoint->maxPacketSize;
 
-    if((size == 0) || (remainder != 0))
+    if((size == 0U) || (remainderValue != 0U))
     {
         /* Size is not valid */
         SYS_ASSERT(false, "Invalid size in IRP read");
@@ -886,7 +897,7 @@ USB_DEVICE_CDC_RESULT USB_DEVICE_CDC_Read
             irp->data = data;
             irp->size = size;
             irp->userData = (uintptr_t) iCDC;
-            irp->callback = _USB_DEVICE_CDC_ReadIRPCallback;
+            irp->callback = F_USB_DEVICE_CDC_ReadIRPCallback;
             
             /* Prevent other tasks pre-empting this sequence of code */ 
             IntState = OSAL_CRIT_Enter(OSAL_CRIT_TYPE_HIGH);
@@ -965,6 +976,8 @@ USB_DEVICE_CDC_RESULT USB_DEVICE_CDC_Read
     Refer to usb_device_cdc.h for usage information.
 */
 
+/* MISRA C-2012 Rule 11.8 deviated:1 Deviation record ID -  H3_MISRAC_2012_R_11_8_DR_1 */
+
 USB_DEVICE_CDC_RESULT USB_DEVICE_CDC_Write 
 (
     USB_DEVICE_CDC_INDEX iCDC ,
@@ -973,8 +986,8 @@ USB_DEVICE_CDC_RESULT USB_DEVICE_CDC_Write
     USB_DEVICE_CDC_TRANSFER_FLAGS flags 
 )
 {
-    unsigned int cnt;
-    unsigned int remainder;
+    uint32_t cnt;
+    uint32_t remainderValue;
     USB_DEVICE_IRP * irp;
     USB_DEVICE_IRP_FLAG irpFlag = USB_DEVICE_IRP_FLAG_NONE;
     USB_DEVICE_CDC_INSTANCE * thisCDCDevice;
@@ -1006,7 +1019,7 @@ USB_DEVICE_CDC_RESULT USB_DEVICE_CDC_Write
         return (USB_DEVICE_CDC_RESULT_ERROR_INSTANCE_NOT_CONFIGURED);
     }
 
-    if(size == 0) 
+    if(size == 0U) 
     {
         /* Size cannot be zero */
         return (USB_DEVICE_CDC_RESULT_ERROR_TRANSFER_SIZE_INVALID);
@@ -1014,7 +1027,7 @@ USB_DEVICE_CDC_RESULT USB_DEVICE_CDC_Write
 
     /* Check the flag */
 
-    if(flags & USB_DEVICE_CDC_TRANSFER_FLAGS_MORE_DATA_PENDING)
+    if(((uint8_t)flags & (uint8_t)USB_DEVICE_CDC_TRANSFER_FLAGS_MORE_DATA_PENDING) != 0U)
     {
         if(size < endpoint->maxPacketSize)
         {
@@ -1024,18 +1037,22 @@ USB_DEVICE_CDC_RESULT USB_DEVICE_CDC_Write
             return(USB_DEVICE_CDC_RESULT_ERROR_TRANSFER_SIZE_INVALID);
         }
 
-        remainder = size % endpoint->maxPacketSize;
+        remainderValue = size % endpoint->maxPacketSize;
         
-        if(remainder != 0)
+        if(remainderValue != 0U)
         {
-            size -= remainder;
+            size -= remainderValue;
         }
 
         irpFlag = USB_DEVICE_IRP_FLAG_DATA_PENDING;
     }
-    else if(flags & USB_DEVICE_CDC_TRANSFER_FLAGS_DATA_COMPLETE)
+    else if(((uint8_t)flags & (uint8_t)USB_DEVICE_CDC_TRANSFER_FLAGS_DATA_COMPLETE) != 0U)
     {
         irpFlag = USB_DEVICE_IRP_FLAG_DATA_COMPLETE;
+    }
+    else
+    {
+        /* Do Nothing */
     }
 
     if(thisCDCDevice->currentQSizeWrite >= thisCDCDevice->queueSizeWrite)
@@ -1065,7 +1082,7 @@ USB_DEVICE_CDC_RESULT USB_DEVICE_CDC_Write
             irp->size   = size;
 
             irp->userData   = (uintptr_t) iCDC;
-            irp->callback   = _USB_DEVICE_CDC_WriteIRPCallback;
+            irp->callback   = F_USB_DEVICE_CDC_WriteIRPCallback;
             irp->flags      = irpFlag;
 
             /* Prevent other tasks pre-empting this sequence of code */ 
@@ -1113,6 +1130,8 @@ USB_DEVICE_CDC_RESULT USB_DEVICE_CDC_Write
     return(USB_DEVICE_CDC_RESULT_ERROR_TRANSFER_QUEUE_FULL);
 }
 
+/* MISRAC 2012 deviation block end */
+
 USB_DEVICE_CDC_RESULT USB_DEVICE_CDC_EventHandlerSet 
 (
     USB_DEVICE_CDC_INDEX iCDC ,
@@ -1129,7 +1148,7 @@ USB_DEVICE_CDC_RESULT USB_DEVICE_CDC_EventHandlerSet
     }
 
     /* Check if the given event handler is valid */
-    if ( eventHandler )
+    if ( eventHandler != NULL)
     {
         /* update the event handler for this instance */
         gUSBDeviceCDCInstance[iCDC].appEventCallBack = eventHandler;
@@ -1249,7 +1268,7 @@ USB_DEVICE_CDC_RESULT USB_DEVICE_CDC_SerialStateNotificationSend
     OSAL_RESULT osalError;
     USB_ERROR irpError;
     OSAL_CRITSECT_DATA_TYPE IntState;
-	USB_CDC_SERIAL_STATE_RESPONSE * serialStateResponse; 
+    USB_CDC_SERIAL_STATE_RESPONSE * serialStateResponse; 
 
     *transferHandle = USB_DEVICE_CDC_TRANSFER_HANDLE_INVALID;
 
@@ -1264,29 +1283,29 @@ USB_DEVICE_CDC_RESULT USB_DEVICE_CDC_SerialStateNotificationSend
 
     thisCDCDevice = &gUSBDeviceCDCInstance[iCDC];
     endpoint = &thisCDCDevice->notificationInterface.endpoint[USB_DEVICE_CDC_ENDPOINT_TX];
-	
-	serialStateResponse = thisCDCDevice->serialStateResponse; 
-	
-	/* Fill in the USB CDC Serial state buffer */ 
-	
-	/* bmRequestType = 10100001B (Direction = Device to Host, Request Type = Class, Recipient = Interface) */ 
-	serialStateResponse->bmRequestType = 0xA1; 
-	
-	/* bRequest = SERIAL_STATE */ 
-	serialStateResponse->bNotification = USB_CDC_NOTIFICATION_SERIAL_STATE; 
-	
-	/* wValue = Zero */ 
-	serialStateResponse->wValue = 0; 
-	
-	/* Get the interface Number from the CDC instance */ 
-	serialStateResponse->wIndex = (uint16_t)(thisCDCDevice->notificationInterface.interfaceNum); 
-	
-	/* Fill in the length */ 
-	serialStateResponse->wLength = sizeof(USB_CDC_SERIAL_STATE);
-	
-	/* Copy Serial state data received from the client to the buffer */ 
-	memcpy (&(serialStateResponse->stSerial), notificationData, sizeof(USB_CDC_SERIAL_STATE)); 
-	
+    
+    serialStateResponse = thisCDCDevice->serialStateResponse; 
+    
+    /* Fill in the USB CDC Serial state buffer */ 
+    
+    /* bmRequestType = 10100001B (Direction = Device to Host, Request Type = Class, Recipient = Interface) */ 
+    serialStateResponse->bmRequestType = 0xA1; 
+    
+    /* bRequest = SERIAL_STATE */ 
+    serialStateResponse->bNotification = (uint8_t)USB_CDC_NOTIFICATION_SERIAL_STATE; 
+    
+    /* wValue = Zero */ 
+    serialStateResponse->wValue = 0; 
+    
+    /* Get the interface Number from the CDC instance */ 
+    serialStateResponse->wIndex = (uint16_t)(thisCDCDevice->notificationInterface.interfaceNum); 
+    
+    /* Fill in the length */ 
+    serialStateResponse->wLength = (uint16_t)sizeof(USB_CDC_SERIAL_STATE);
+    
+    /* Copy Serial state data received from the client to the buffer */ 
+    (void) memcpy (&(serialStateResponse->stSerial), notificationData, sizeof(USB_CDC_SERIAL_STATE)); 
+    
 
     if(!(endpoint->isConfigured))
     {
@@ -1321,7 +1340,7 @@ USB_DEVICE_CDC_RESULT USB_DEVICE_CDC_SerialStateNotificationSend
             irp->data = serialStateResponse;
             irp->size = sizeof(USB_CDC_SERIAL_STATE_RESPONSE);
             irp->userData = (uintptr_t) iCDC;
-            irp->callback = _USB_DEVICE_CDC_SerialStateSendIRPCallback;
+            irp->callback = F_USB_DEVICE_CDC_SerialStateSendIRPCallback;
             irp->flags = USB_DEVICE_IRP_FLAG_DATA_COMPLETE;
             /* Prevent other tasks pre-empting this sequence of code */ 
             IntState = OSAL_CRIT_Enter(OSAL_CRIT_TYPE_HIGH);
@@ -1367,6 +1386,9 @@ USB_DEVICE_CDC_RESULT USB_DEVICE_CDC_SerialStateNotificationSend
     /* If here means we could not find a spare IRP */
     return(USB_DEVICE_CDC_RESULT_ERROR_TRANSFER_QUEUE_FULL);
 }
+
+
+/* MISRAC 2012 deviation block end */
 
 /*******************************************************************************
  End of File
