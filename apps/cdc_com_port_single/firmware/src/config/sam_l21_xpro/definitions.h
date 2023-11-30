@@ -56,13 +56,13 @@
 #include "peripheral/clock/plib_clock.h"
 #include "peripheral/nvic/plib_nvic.h"
 #include "peripheral/pm/plib_pm.h"
+#include "driver/usb/usbfsv1/drv_usbfsv1.h"
 #include "usb/usb_chapter_9.h"
 #include "usb/usb_device.h"
-#include "driver/usb/usbfsv1/drv_usbfsv1.h"
+#include "bsp/bsp.h"
 #include "system/int/sys_int.h"
 #include "osal/osal.h"
 #include "system/debug/sys_debug.h"
-#include "bsp/bsp.h"
 #include "app.h"
 
 
@@ -194,9 +194,9 @@ Remarks:
 
 typedef struct
 {
-    SYS_MODULE_OBJ  usbDevObject0;
+    SYS_MODULE_OBJ  drvUSBFSV1Object;
 
-	SYS_MODULE_OBJ  drvUSBFSV1Object;
+    SYS_MODULE_OBJ  usbDevObject0;
 
 
 } SYSTEM_OBJECTS;
