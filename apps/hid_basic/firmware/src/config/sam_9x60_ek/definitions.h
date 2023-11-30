@@ -48,8 +48,8 @@
 #include <stdint.h>
 #include <stddef.h>
 #include <stdbool.h>
-#include "driver/usb/udphs/drv_usb_udphs.h"
 #include "bsp/bsp.h"
+#include "driver/usb/udphs/drv_usb_udphs.h"
 #include "usb/usb_device_hid.h"
 #include "usb/usb_hid.h"
 #include "peripheral/mmu/plib_mmu.h"
@@ -193,7 +193,7 @@ Remarks:
 
 typedef struct
 {
-	SYS_MODULE_OBJ  drvUSBUDPHSObject;
+    SYS_MODULE_OBJ  drvUSBUDPHSObject;
 
     SYS_MODULE_OBJ  usbDevObject0;
 
