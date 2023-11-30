@@ -395,7 +395,7 @@ SYSTEM_OBJECTS sysObj;
  * USB Driver Initialization
  ******************************************************/
 
-const DRV_USBHS_INIT drvUSBHSInit0 =
+static const DRV_USBHS_INIT drvUSBHSInit0 =
 {
 
     /* Interrupt Source for USB module */
@@ -467,9 +467,9 @@ void SYS_Initialize ( void* data )
 
 
 
-    SERCOM1_USART_Initialize();
-
     FCW_Initialize();
+
+    SERCOM1_USART_Initialize();
 
     EVSYS_Initialize();
 
@@ -494,7 +494,7 @@ void SYS_Initialize ( void* data )
 
 
     /* Initialize USB Driver */ 
-    sysObj.drvUSBHSObject0 = DRV_USBHS_Initialize(DRV_USBHS_INDEX_0, (SYS_MODULE_INIT *) &drvUSBHSInit0);	
+    sysObj.drvUSBHSObject0 = DRV_USBHS_Initialize(DRV_USBHS_INDEX_0, (SYS_MODULE_INIT *) &drvUSBHSInit0);    
 
 
     /* MISRAC 2012 deviation block end */

@@ -48,8 +48,8 @@
 #include <stdint.h>
 #include <stddef.h>
 #include <stdbool.h>
-#include "peripheral/sercom/usart/plib_sercom1_usart.h"
 #include "peripheral/fcw/plib_fcw.h"
+#include "peripheral/sercom/usart/plib_sercom1_usart.h"
 #include "usb/usb_device_msd.h"
 #include "usb/usb_msd.h"
 #include "peripheral/evsys/plib_evsys.h"

@@ -1,13 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <configurationDescriptor version="65">
   <logicalFolder name="root" displayName="root" projectFiles="true">
-    <logicalFolder name="HeaderFiles"
-                   displayName="Header Files"
-                   projectFiles="true">
+    <logicalFolder name="HeaderFiles" displayName="Header Files" projectFiles="true">
       <logicalFolder name="config" displayName="config" projectFiles="true">
-        <logicalFolder name="pic32cz_ca80_curiosity_ultra"
-                       displayName="pic32cz_ca80_curiosity_ultra"
-                       projectFiles="true">
+        <logicalFolder name="pic32cz_ca80_curiosity_ultra" displayName="pic32cz_ca80_curiosity_ultra" projectFiles="true">
           <logicalFolder name="bsp" displayName="bsp" projectFiles="true">
             <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/bsp/bsp.h</itemPath>
           </logicalFolder>
@@ -161,9 +157,7 @@
             </logicalFolder>
           </logicalFolder>
         </logicalFolder>
-        <logicalFolder name="PIC32CZ8110CA80208_DFP"
-                       displayName="PIC32CZ8110CA80208_DFP"
-                       projectFiles="true">
+        <logicalFolder name="PIC32CZ8110CA80208_DFP" displayName="PIC32CZ8110CA80208_DFP" projectFiles="true">
           <logicalFolder name="component" displayName="component" projectFiles="true">
             <itemPath>../src/packs/PIC32CZ8110CA80208_DFP/component/evsys.h</itemPath>
             <itemPath>../src/packs/PIC32CZ8110CA80208_DFP/component/ebi.h</itemPath>
@@ -277,24 +271,16 @@
       </logicalFolder>
       <itemPath>../src/app.h</itemPath>
     </logicalFolder>
-    <logicalFolder name="LinkerScript"
-                   displayName="Linker Files"
-                   projectFiles="true">
+    <logicalFolder name="LinkerScript" displayName="Linker Files" projectFiles="true">
       <logicalFolder name="config" displayName="config" projectFiles="true">
-        <logicalFolder name="pic32cz_ca80_curiosity_ultra"
-                       displayName="pic32cz_ca80_curiosity_ultra"
-                       projectFiles="true">
+        <logicalFolder name="pic32cz_ca80_curiosity_ultra" displayName="pic32cz_ca80_curiosity_ultra" projectFiles="true">
           <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/PIC32CZ8110CA80208.ld</itemPath>
         </logicalFolder>
       </logicalFolder>
     </logicalFolder>
-    <logicalFolder name="SourceFiles"
-                   displayName="Source Files"
-                   projectFiles="true">
+    <logicalFolder name="SourceFiles" displayName="Source Files" projectFiles="true">
       <logicalFolder name="config" displayName="config" projectFiles="true">
-        <logicalFolder name="pic32cz_ca80_curiosity_ultra"
-                       displayName="pic32cz_ca80_curiosity_ultra"
-                       projectFiles="true">
+        <logicalFolder name="pic32cz_ca80_curiosity_ultra" displayName="pic32cz_ca80_curiosity_ultra" projectFiles="true">
           <logicalFolder name="bsp" displayName="bsp" projectFiles="true">
             <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/bsp/bsp.c</itemPath>
           </logicalFolder>
@@ -370,9 +356,7 @@
       <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/pin_configurations.csv</itemPath>
       <itemPath>../src/main.c</itemPath>
     </logicalFolder>
-    <logicalFolder name="ExternalFiles"
-                   displayName="Important Files"
-                   projectFiles="false">
+    <logicalFolder name="ExternalFiles" displayName="Important Files" projectFiles="false">
       <itemPath>Makefile</itemPath>
       <itemPath>cdc_serial_emulator_msd_pic32cz_ca80_curiosity_ultra.mc3</itemPath>
     </logicalFolder>
@@ -383,11 +367,11 @@
       <toolsSet>
         <developmentServer>localhost</developmentServer>
         <targetDevice>PIC32CZ8110CA80208</targetDevice>
-        <targetHeader></targetHeader>
-        <targetPluginBoard></targetPluginBoard>
+        <targetHeader/>
+        <targetPluginBoard/>
         <platformTool>pkob4hybrid</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.30</languageToolchainVersion>
+        <languageToolchainVersion>4.35</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
@@ -406,7 +390,7 @@
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
           <parseOnProdLoad>false</parseOnProdLoad>
-          <alternateLoadableFile></alternateLoadableFile>
+          <alternateLoadableFile/>
         </loading>
         <subordinates>
         </subordinates>
@@ -414,9 +398,9 @@
       <makeCustomizationType>
         <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
         <makeUseCleanTarget>false</makeUseCleanTarget>
-        <makeCustomizationPreStep></makeCustomizationPreStep>
+        <makeCustomizationPreStep/>
         <makeCustomizationPostStepEnabled>false</makeCustomizationPostStepEnabled>
-        <makeCustomizationPostStep></makeCustomizationPostStep>
+        <makeCustomizationPostStep/>
         <makeCustomizationPutChecksumInUserID>false</makeCustomizationPutChecksumInUserID>
         <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
@@ -424,15 +408,13 @@
       <C32>
         <property key="additional-warnings" value="true"/>
         <property key="addresss-attribute-use" value="false"/>
-        <property key="appendMe"
-                  value="-Wundef -Wshadow -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wno-deprecated-declarations -Wredundant-decls -Wnested-externs -Wlong-long -Wunreachable-code -Wmissing-noreturn"/>
+        <property key="appendMe" value="-Wundef -Wshadow -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wno-deprecated-declarations -Wredundant-decls -Wnested-externs -Wlong-long -Wunreachable-code -Wmissing-noreturn"/>
         <property key="enable-app-io" value="false"/>
         <property key="enable-omit-frame-pointer" value="false"/>
         <property key="enable-symbols" value="true"/>
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
-        <property key="extra-include-directories"
-                  value="../src;../src/config/pic32cz_ca80_curiosity_ultra;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/PIC32CZ8110CA80208_DFP"/>
+        <property key="extra-include-directories" value="../src;../src/config/pic32cz_ca80_curiosity_ultra;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/PIC32CZ8110CA80208_DFP"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -532,8 +514,7 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
-        <property key="extra-include-directories"
-                  value="../src;../src/config/pic32cz_ca80_curiosity_ultra;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/PIC32CZ8110CA80208_DFP"/>
+        <property key="extra-include-directories" value="../src;../src/config/pic32cz_ca80_curiosity_ultra;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/PIC32CZ8110CA80208_DFP"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -567,12 +548,9 @@
       </C32Global>
       <Tool>
         <property key="AutoSelectMemRanges" value="auto"/>
-        <property key="ToolFirmwareFilePath"
-                  value="Press to browse for a specific firmware version"/>
-        <property key="ToolFirmwareOption.UpdateOptions"
-                  value="ToolFirmwareOption.UseLatest"/>
-        <property key="ToolFirmwareToolPack"
-                  value="Press to select which tool pack to use"/>
+        <property key="ToolFirmwareFilePath" value="Press to browse for a specific firmware version"/>
+        <property key="ToolFirmwareOption.UpdateOptions" value="ToolFirmwareOption.UseLatest"/>
+        <property key="ToolFirmwareToolPack" value="Press to select which tool pack to use"/>
         <property key="communication.interface" value="swd"/>
         <property key="communication.interface.jtag" value="2wire"/>
         <property key="communication.speed" value="2.000"/>
@@ -590,8 +568,7 @@
         <property key="memories.exclude.configurationmemory" value="true"/>
         <property key="memories.flashdata" value="true"/>
         <property key="memories.id" value="true"/>
-        <property key="memories.instruction.ram.ranges"
-                  value="${memories.instruction.ram.ranges}"/>
+        <property key="memories.instruction.ram.ranges" value="${memories.instruction.ram.ranges}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-9fffffff"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
@@ -599,8 +576,7 @@
         <property key="programoptions.pgmentry.voltage" value="low"/>
         <property key="programoptions.pgmspeed" value="Med"/>
         <property key="programoptions.preservedataflash" value="false"/>
-        <property key="programoptions.preservedataflash.ranges"
-                  value="${memories.dataflash.default}"/>
+        <property key="programoptions.preservedataflash.ranges" value="${memories.dataflash.default}"/>
         <property key="programoptions.preserveeeprom" value="false"/>
         <property key="programoptions.preserveeeprom.ranges" value=""/>
         <property key="programoptions.preserveprogram.ranges" value=""/>
@@ -610,20 +586,15 @@
         <property key="programoptions.programcalmem" value="false"/>
         <property key="programoptions.programuserotp" value="false"/>
         <property key="programoptions.testmodeentrymethod" value="VDDFirst"/>
-        <property key="toolpack.updateoptions"
-                  value="toolpack.updateoptions.uselatestoolpack"/>
-        <property key="toolpack.updateoptions.packversion"
-                  value="Press to select which tool pack to use"/>
+        <property key="toolpack.updateoptions" value="toolpack.updateoptions.uselatestoolpack"/>
+        <property key="toolpack.updateoptions.packversion" value="Press to select which tool pack to use"/>
         <property key="x.erase.key" value="0xFFFFFFFF,0xFFFFFFFF,0xFFFFFFFF,0xFFFFFFFF"/>
       </Tool>
       <pkob4hybrid>
         <property key="AutoSelectMemRanges" value="auto"/>
-        <property key="ToolFirmwareFilePath"
-                  value="Press to browse for a specific firmware version"/>
-        <property key="ToolFirmwareOption.UpdateOptions"
-                  value="ToolFirmwareOption.UseLatest"/>
-        <property key="ToolFirmwareToolPack"
-                  value="Press to select which tool pack to use"/>
+        <property key="ToolFirmwareFilePath" value="Press to browse for a specific firmware version"/>
+        <property key="ToolFirmwareOption.UpdateOptions" value="ToolFirmwareOption.UseLatest"/>
+        <property key="ToolFirmwareToolPack" value="Press to select which tool pack to use"/>
         <property key="communication.interface" value="swd"/>
         <property key="communication.interface.jtag" value="2wire"/>
         <property key="communication.speed" value="2.000"/>
@@ -641,8 +612,7 @@
         <property key="memories.exclude.configurationmemory" value="true"/>
         <property key="memories.flashdata" value="true"/>
         <property key="memories.id" value="true"/>
-        <property key="memories.instruction.ram.ranges"
-                  value="${memories.instruction.ram.ranges}"/>
+        <property key="memories.instruction.ram.ranges" value="${memories.instruction.ram.ranges}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-9fffffff"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
@@ -650,8 +620,7 @@
         <property key="programoptions.pgmentry.voltage" value="low"/>
         <property key="programoptions.pgmspeed" value="Med"/>
         <property key="programoptions.preservedataflash" value="false"/>
-        <property key="programoptions.preservedataflash.ranges"
-                  value="${memories.dataflash.default}"/>
+        <property key="programoptions.preservedataflash.ranges" value="${memories.dataflash.default}"/>
         <property key="programoptions.preserveeeprom" value="false"/>
         <property key="programoptions.preserveeeprom.ranges" value=""/>
         <property key="programoptions.preserveprogram.ranges" value=""/>
@@ -661,10 +630,8 @@
         <property key="programoptions.programcalmem" value="false"/>
         <property key="programoptions.programuserotp" value="false"/>
         <property key="programoptions.testmodeentrymethod" value="VDDFirst"/>
-        <property key="toolpack.updateoptions"
-                  value="toolpack.updateoptions.uselatestoolpack"/>
-        <property key="toolpack.updateoptions.packversion"
-                  value="Press to select which tool pack to use"/>
+        <property key="toolpack.updateoptions" value="toolpack.updateoptions.uselatestoolpack"/>
+        <property key="toolpack.updateoptions.packversion" value="Press to select which tool pack to use"/>
         <property key="x.erase.key" value="0xFFFFFFFF,0xFFFFFFFF,0xFFFFFFFF,0xFFFFFFFF"/>
       </pkob4hybrid>
     </conf>
