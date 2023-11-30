@@ -56,9 +56,9 @@
 #include "peripheral/clock/plib_clock.h"
 #include "peripheral/nvic/plib_nvic.h"
 #include "peripheral/cmcc/plib_cmcc.h"
-#include "driver/memory/drv_memory.h"
 #include "usb/usb_chapter_9.h"
 #include "usb/usb_device.h"
+#include "driver/memory/drv_memory.h"
 #include "usb/usb_device_cdc.h"
 #include "usb/usb_cdc.h"
 #include "driver/memory/drv_memory_nvmctrl.h"
@@ -202,7 +202,7 @@ typedef struct
     SYS_MODULE_OBJ  usbDevObject0;
 
     SYS_MODULE_OBJ  drvMemory0;
-	SYS_MODULE_OBJ  drvUSBFSV1Object;
+    SYS_MODULE_OBJ  drvUSBFSV1Object;
 
 
 } SYSTEM_OBJECTS;
