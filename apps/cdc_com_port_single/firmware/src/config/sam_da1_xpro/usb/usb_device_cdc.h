@@ -41,8 +41,8 @@
  *******************************************************************************/
 // DOM-IGNORE-END
 
-#ifndef _USB_DEVICE_CDC_H
-#define _USB_DEVICE_CDC_H
+#ifndef M_USB_DEVICE_CDC_H
+#define M_USB_DEVICE_CDC_H
 
 // *****************************************************************************
 // *****************************************************************************
@@ -125,6 +125,8 @@
 */
 
 typedef uintptr_t USB_DEVICE_CDC_INDEX;
+
+/* MISRA C-2012 Rule 3.1 deviated:5 Deviation record ID -  H3_MISRAC_2012_R_3_1_DR_1 */
 
 // *****************************************************************************
 /* USB Device CDC Function Driver Events
@@ -292,6 +294,7 @@ typedef uintptr_t USB_DEVICE_CDC_INDEX;
     transactions. Even when deferring response, the application must respond
     promptly if such time outs have to be avoided.
 */
+/* MISRA C-2012 Rule 5.2 deviated:15 Deviation record ID -  H3_MISRAC_2012_R_5_2_DR_1 */
 
 typedef enum
 {
@@ -601,6 +604,7 @@ typedef enum
 
 } USB_DEVICE_CDC_RESULT;
 
+/* MISRAC 2012 deviation block end */
 // *****************************************************************************
 /* USB Device CDC Function Driver Send Break Event Data
  
@@ -710,17 +714,17 @@ USB_DEVICE_CDC_EVENT_DATA_SERIAL_STATE_NOTIFICATION_COMPLETE;
     // instance of the CDC function driver.
 
     // Application states
-	typedef enum
-	{
-		//Application's state machine's initial state.
-		APP_STATE_INIT=0,
-		APP_STATE_SERVICE_TASKS,
-		APP_STATE_WAIT_FOR_CONFIGURATION, 
-	} APP_STATES;
+    typedef enum
+    {
+        //Application's state machine's initial state.
+        APP_STATE_INIT=0,
+        APP_STATE_SERVICE_TASKS,
+        APP_STATE_WAIT_FOR_CONFIGURATION, 
+    } APP_STATES;
 
     USB_DEVICE_HANDLE usbDeviceHandle;
     
-	APP_STATES appState; 
+    APP_STATES appState; 
 
     // Get Line Coding Data 
     USB_CDC_LINE_CODING getLineCodingData;
@@ -746,13 +750,13 @@ USB_DEVICE_CDC_EVENT_DATA_SERIAL_STATE_NOTIFICATION_COMPLETE;
         switch(event) 
         {
             case USB_DEVICE_CDC_EVENT_GET_LINE_CODING:
-					// This means the host wants to know the current line
-					// coding. This is a control transfer request. Use the
-					// USB_DEVICE_ControlSend() function to send the data to
-					// host.  
+                    // This means the host wants to know the current line
+                    // coding. This is a control transfer request. Use the
+                    // USB_DEVICE_ControlSend() function to send the data to
+                    // host.  
 
-					USB_DEVICE_ControlSend(usbDeviceHandle,
-						&getLineCodingData, sizeof(USB_CDC_LINE_CODING));
+                    USB_DEVICE_ControlSend(usbDeviceHandle,
+                        &getLineCodingData, sizeof(USB_CDC_LINE_CODING));
 
             break;
             
@@ -826,101 +830,101 @@ USB_DEVICE_CDC_EVENT_DATA_SERIAL_STATE_NOTIFICATION_COMPLETE;
         uintptr_t context
     )
     {
-		USB_SETUP_PACKET * setupPacket;
+        USB_SETUP_PACKET * setupPacket;
         switch(event)
         {
             case USB_DEVICE_EVENT_POWER_DETECTED:
-				// This event in generated when VBUS is detected. Attach the device 
-				USB_DEVICE_Attach(usbDeviceHandle);
+                // This event in generated when VBUS is detected. Attach the device 
+                USB_DEVICE_Attach(usbDeviceHandle);
                 break;
-				
+                
             case USB_DEVICE_EVENT_POWER_REMOVED:
-				// This event is generated when VBUS is removed. Detach the device
-				USB_DEVICE_Detach (usbDeviceHandle);
+                // This event is generated when VBUS is removed. Detach the device
+                USB_DEVICE_Detach (usbDeviceHandle);
                 break; 
-				
+                
             case USB_DEVICE_EVENT_CONFIGURED:
-				// This event indicates that Host has set Configuration in the Device. 
-				// Register CDC Function driver Event Handler.  
-				USB_DEVICE_CDC_EventHandlerSet(USB_DEVICE_CDC_INDEX_0, APP_USBDeviceCDCEventHandler, (uintptr_t)0);
+                // This event indicates that Host has set Configuration in the Device. 
+                // Register CDC Function driver Event Handler.  
+                USB_DEVICE_CDC_EventHandlerSet(USB_DEVICE_CDC_INDEX_0, APP_USBDeviceCDCEventHandler, (uintptr_t)0);
                 break;
-				
-			case USB_DEVICE_EVENT_CONTROL_TRANSFER_SETUP_REQUEST:
-				// This event indicates a Control transfer setup stage has been completed. 
-				setupPacket = (USB_SETUP_PACKET *)pData;
-				
-				// Parse the setup packet and respond with a USB_DEVICE_ControlSend(), 
-				// USB_DEVICE_ControlReceive or USB_DEVICE_ControlStatus(). 
-				
-				break; 
-				
-			case USB_DEVICE_EVENT_CONTROL_TRANSFER_DATA_SENT:
-				// This event indicates that a Control transfer Data has been sent to Host.   
-			    break; 
-				
-			case USB_DEVICE_EVENT_CONTROL_TRANSFER_DATA_RECEIVED:
-				// This event indicates that a Control transfer Data has been received from Host.
-				break; 
-				
-			case USB_DEVICE_EVENT_CONTROL_TRANSFER_ABORTED:
-				// This event indicates a control transfer was aborted. 
-				break; 
-				
+                
+            case USB_DEVICE_EVENT_CONTROL_TRANSFER_SETUP_REQUEST:
+                // This event indicates a Control transfer setup stage has been completed. 
+                setupPacket = (USB_SETUP_PACKET *)pData;
+                
+                // Parse the setup packet and respond with a USB_DEVICE_ControlSend(), 
+                // USB_DEVICE_ControlReceive or USB_DEVICE_ControlStatus(). 
+                
+                break; 
+                
+            case USB_DEVICE_EVENT_CONTROL_TRANSFER_DATA_SENT:
+                // This event indicates that a Control transfer Data has been sent to Host.   
+                break; 
+                
+            case USB_DEVICE_EVENT_CONTROL_TRANSFER_DATA_RECEIVED:
+                // This event indicates that a Control transfer Data has been received from Host.
+                break; 
+                
+            case USB_DEVICE_EVENT_CONTROL_TRANSFER_ABORTED:
+                // This event indicates a control transfer was aborted. 
+                break; 
+                
             case USB_DEVICE_EVENT_SUSPENDED:
                 break;
-				
+                
             case USB_DEVICE_EVENT_RESUMED:
                 break;
-				
+                
             case USB_DEVICE_EVENT_ERROR:
                 break;
-				
+                
             case USB_DEVICE_EVENT_RESET:
                 break;
-				
+                
             case USB_DEVICE_EVENT_SOF:
-				// This event indicates an SOF is detected on the bus. The 	USB_DEVICE_SOF_EVENT_ENABLE
-				// macro should be defined to get this event. 
+                // This event indicates an SOF is detected on the bus. The     USB_DEVICE_SOF_EVENT_ENABLE
+                // macro should be defined to get this event. 
                 break;
             default:
                 break;
         }
     }
 
-	
-	void APP_Tasks ( void )
-	{
-		// Check the application's current state.
-		switch ( appState )
-		{
-			// Application's initial state. 
-			case APP_STATE_INIT:
-				// Open the device layer 
-				usbDeviceHandle = USB_DEVICE_Open( USB_DEVICE_INDEX_0,
+    
+    void APP_Tasks ( void )
+    {
+        // Check the application's current state.
+        switch ( appState )
+        {
+            // Application's initial state. 
+            case APP_STATE_INIT:
+                // Open the device layer 
+                usbDeviceHandle = USB_DEVICE_Open( USB_DEVICE_INDEX_0,
                     DRV_IO_INTENT_READWRITE );
 
-				if(usbDeviceHandle != USB_DEVICE_HANDLE_INVALID)
-				{
-					// Register a callback with device layer to get event notification 
-					USB_DEVICE_EventHandlerSet(usbDeviceHandle,
+                if(usbDeviceHandle != USB_DEVICE_HANDLE_INVALID)
+                {
+                    // Register a callback with device layer to get event notification 
+                    USB_DEVICE_EventHandlerSet(usbDeviceHandle,
                         APP_USBDeviceEventHandler, 0);
-					appState = APP_STATE_WAIT_FOR_CONFIGURATION;
-				}
-				else
-				{
-					// The Device Layer is not ready to be opened. We should try
-					// gain later. 
-				}
-				break; 
+                    appState = APP_STATE_WAIT_FOR_CONFIGURATION;
+                }
+                else
+                {
+                    // The Device Layer is not ready to be opened. We should try
+                    // gain later. 
+                }
+                break; 
 
-			case APP_STATE_SERVICE_TASKS:
-				break; 
+            case APP_STATE_SERVICE_TASKS:
+                break; 
 
-				// The default state should never be executed. 
-			default:
-				break; 
-		}
-	}
+                // The default state should never be executed. 
+            default:
+                break; 
+        }
+    }
     </code>
 
   Remarks:
@@ -929,9 +933,9 @@ USB_DEVICE_CDC_EVENT_DATA_SERIAL_STATE_NOTIFICATION_COMPLETE;
 
 USB_DEVICE_CDC_RESULT USB_DEVICE_CDC_EventHandlerSet 
 ( 
-    USB_DEVICE_CDC_INDEX instanceIndex ,
+    USB_DEVICE_CDC_INDEX iCDC ,
     USB_DEVICE_CDC_EVENT_HANDLER eventHandler,
-    uintptr_t context
+    uintptr_t userData
 );
 
 // *****************************************************************************
@@ -1133,7 +1137,7 @@ USB_DEVICE_CDC_RESULT USB_DEVICE_CDC_EventHandlerSet
 
 USB_DEVICE_CDC_RESULT USB_DEVICE_CDC_Write
 (
-    USB_DEVICE_CDC_INDEX instanceIndex,
+    USB_DEVICE_CDC_INDEX iCDC,
     USB_DEVICE_CDC_TRANSFER_HANDLE * transferHandle,
     const void * data, 
     size_t size, 
@@ -1245,7 +1249,7 @@ USB_DEVICE_CDC_RESULT USB_DEVICE_CDC_Write
 
 USB_DEVICE_CDC_RESULT USB_DEVICE_CDC_Read
 (
-    USB_DEVICE_CDC_INDEX instanceIndex,
+    USB_DEVICE_CDC_INDEX iCDC,
     USB_DEVICE_CDC_TRANSFER_HANDLE * transferHandle,
     void * data, 
     size_t size
@@ -1342,10 +1346,12 @@ USB_DEVICE_CDC_RESULT USB_DEVICE_CDC_Read
 
 USB_DEVICE_CDC_RESULT USB_DEVICE_CDC_SerialStateNotificationSend 
 ( 
-    USB_DEVICE_CDC_INDEX instanceIndex ,
+    USB_DEVICE_CDC_INDEX iCDC,
     USB_DEVICE_CDC_TRANSFER_HANDLE * transferHandle ,
     USB_CDC_SERIAL_STATE * notificationData
 );
+
+/* MISRAC 2012 deviation block end */
 
 // *****************************************************************************
 // *****************************************************************************
