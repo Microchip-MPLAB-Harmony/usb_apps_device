@@ -91,28 +91,28 @@ SYSTEM_OBJECTS sysObj;
 static DRV_USB_VBUS_LEVEL DRV_USBDP_VBUS_Comparator(void)
 {
     DRV_USB_VBUS_LEVEL retVal = DRV_USB_VBUS_LEVEL_INVALID;
-    if(true == USB_VBUS_SENSE_Get())
+    if(1U == USB_VBUS_SENSE_Get())
     {
         retVal = DRV_USB_VBUS_LEVEL_VALID;
     }
-	return (retVal);
+    return (retVal);
 
 }
 
-const DRV_USBDP_INIT drvUSBInit =
+static const DRV_USBDP_INIT drvUSBInit =
 {
     /* Interrupt Source for USB module */
-    .interruptSource = UDP_IRQn,
+    .interruptSource = (INT_SOURCE)UDP_IRQn,
 
     /* System module initialization */
     .moduleInit = {0},
 
     /* To operate in USB Normal Mode */
-	.operationSpeed = USB_SPEED_FULL,
+    .operationSpeed = USB_SPEED_FULL,
 
     /* Identifies peripheral (PLIB-level) ID */
     .usbID = UDP_REGS,
-	
+    
     /* Function to check for VBus */
     .vbusComparator = DRV_USBDP_VBUS_Comparator
 };
@@ -173,8 +173,8 @@ void SYS_Initialize ( void* data )
 
 
 
-	/* Initialize USB Driver */ 
-    sysObj.drvUSBDPObject = DRV_USBDP_Initialize(DRV_USBDP_INDEX_0, (SYS_MODULE_INIT *) &drvUSBInit);	
+    /* Initialize USB Driver */ 
+    sysObj.drvUSBDPObject = DRV_USBDP_Initialize(DRV_USBDP_INDEX_0, (SYS_MODULE_INIT *) &drvUSBInit);    
 
 
     /* Initialize the USB device layer */
