@@ -5219,11 +5219,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\driver\usb\udphs\src\drv_usb_udphs_variant_mapping.h</file>
-         <hash>4a113775685461132617e519899ab157185af830ce702c2d5ab9a41803ee9d81</hash>
+         <hash>b0404bd97932bfd81356027e714ec5dbc2b57633d0124ecd6c9c743827d7504f</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\usb\usb_device.h</file>
-         <hash>06a4f4c06b4b32ab90474b522ddbfc4922fbad93ccf6975240148f1ce4b71b46</hash>
+         <hash>d65ea056c90c04440c30f615adff6e4d573ca17c75f78fc4fd6c755b90fe5572</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75_DFP\component\rstc.h</file>
@@ -5247,11 +5247,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\usb\src\usb_device_function_driver.h</file>
-         <hash>5d7b7287898c95485fbfc37840b9bb3e6ace46ef7333413493137d0e40e50bec</hash>
+         <hash>176f78389b138ea9db6114bea85bb66799223dc7877daea10ed80f5589c5a940</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\usb\usb_hub.h</file>
-         <hash>f07eb653a11355424adb96ff0fec6796f6b95c8924ac93fb9207f888d130bc7d</hash>
+         <hash>733473045c756b6184188c2cf000d8f187f530a9e048dabefaecee347c05e4db</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\user.h</file>
@@ -5262,16 +5262,16 @@
          <hash>310598cfec2b2714a17acbba450fd86b78e75b9fc557e94a0b1ea11b02690833</hash>
       </entry>
       <entry>
+         <file>..\src\config\sam_9x75_eb\usb\src\usb_device_local.h</file>
+         <hash>935dceb5785f858042e7c2752e0a707b8be4f4edfa2bd8b8c0c93e3a51f3fc00</hash>
+      </entry>
+      <entry>
          <file>..\src\packs\SAM9X75_DFP\instance\aes.h</file>
          <hash>bac97ef0bfbe80daf827ba322c899a5d3246e34b63870319c7f3d7bd86ab83e8</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75_DFP\instance\gpbr.h</file>
          <hash>668d59dd8ca821b72388a84ec9cba2ef70646fef6b6b89c004b49c3d59b378d4</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_9x75_eb\usb\src\usb_device_local.h</file>
-         <hash>3dc9e27b535edb31aa97aae04a0ce9ac12e5092ed3bae7ef6fd203bc1520ef33</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75_DFP\instance\otpc.h</file>
@@ -5335,7 +5335,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\usb_device_init_data.c</file>
-         <hash>b16ad8db24ed47072dc3eed37d6e386f4f8107dc51aad16e969a3ca47ee9ab56</hash>
+         <hash>746cc662e5eb4a08899fbb6f9e0d364d7263b638ee53086f0773360e7a4dad9f</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75_DFP\component\classd.h</file>
@@ -5374,12 +5374,12 @@
          <hash>9f56286fb5dfe6a16af81238e8ae6fe767f9be4915fedc25a5fcee8f21175e9c</hash>
       </entry>
       <entry>
-         <file>..\src\packs\SAM9X75_DFP\instance\pit64b1.h</file>
-         <hash>b8b5710c5f726cba9e3bceac29b301c8827969618c530d4ab125d915950eef2c</hash>
+         <file>..\src\config\sam_9x75_eb\usb\src\usb_device_mapping.h</file>
+         <hash>25c83489e10ce6221df1b7a6bbfcabd3e012a452b6d2937f85cb3c594189f468</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_9x75_eb\usb\src\usb_device_mapping.h</file>
-         <hash>3a5eee6b064c49fd7a495f574736eaec5838e63f7de457ff688d70aa80432ce6</hash>
+         <file>..\src\packs\SAM9X75_DFP\instance\pit64b1.h</file>
+         <hash>b8b5710c5f726cba9e3bceac29b301c8827969618c530d4ab125d915950eef2c</hash>
       </entry>
       <entry>
          <file>..\src\app.h</file>
@@ -5435,7 +5435,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\definitions.h</file>
-         <hash>0ffaf4905f14247f7876b556a75faf3f867ddd804d527d0712a2953e3a309752</hash>
+         <hash>051da35da13bc82e8ebd7cdec1df3d2c12ea8e08afd5f6d1c4ede70a87bc3996</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\peripheral\mmu\plib_mmu.c</file>
@@ -5499,7 +5499,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\driver\usb\udphs\drv_usb_udphs.h</file>
-         <hash>9ee963cb3fac6f48836fe6a9950ebcf042da2462012f3a2ab67148d545e3b542</hash>
+         <hash>94e982b06d6d43ee3a2aa59816a35373c462445b35994144ac4b66acf35180bb</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75_DFP\instance\mcan1.h</file>
@@ -5531,7 +5531,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\usb\usb_host_client_driver.h</file>
-         <hash>d11085e6a64f6b4551b1dc19aaee5b8a2555b7df649057bdb2ce8549c296a87d</hash>
+         <hash>38b5d7e5fee9b09db48b48b52d9b2773f458b09dc2d659c703a075fc90f32490</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75_DFP\component\flexcom.h</file>
@@ -5579,7 +5579,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\usb\usb_host_hub_interface.h</file>
-         <hash>9db9028cdb085f4ed90d06c8d0013e5b9d300be9b49f0933094c373552193645</hash>
+         <hash>bcd95afaa026ab8559047e85ac157597452ab0ceee4e96612e5273ec324f1ef9</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75_DFP\component\otpc.h</file>
@@ -5626,16 +5626,16 @@
          <hash>bab52b245ee3ee78ff26156c06ac67761ea78039030859fa772ece111fd5dab3</hash>
       </entry>
       <entry>
-         <file>..\src\packs\SAM9X75_DFP\instance\matrix.h</file>
-         <hash>41cc11fa62d646540a2aff17cc34a48d1a0d0590b4905153f8062e63fac6ce2c</hash>
-      </entry>
-      <entry>
          <file>..\src\config\sam_9x75_eb\usb\usb_chapter_9.h</file>
-         <hash>86a258d763c7f0f563122ccd4ec0bbef422fd4e2f523402bb89be10568cecf3f</hash>
+         <hash>e5e4a9cd868fa4b90113a0bd3ae76d176c7d21d791e7ea9891f1bf9d981da54c</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\usb\src\usb_external_dependencies.h</file>
-         <hash>5110f718908d8f79253ce5b4b44172288cc179ff61d18e387f9e90ae9afbb1b6</hash>
+         <hash>b12fd8f239e37735d34cbd777cd98b448b9ad8bc4fde516bf6ca8a5c1120163f</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X75_DFP\instance\matrix.h</file>
+         <hash>41cc11fa62d646540a2aff17cc34a48d1a0d0590b4905153f8062e63fac6ce2c</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75_DFP\component\syscwp.h</file>
@@ -5643,7 +5643,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\driver\usb\udphs\src\drv_usb_udphs.c</file>
-         <hash>64b4975fef5099ae67548a60d1499f9304cd6359f01bbc931105a92d2e546bb2</hash>
+         <hash>f3e6d18fc9c52d57280168ae03d65e8e31d3bf5c6efd81bc1c567e6bb95c4d03</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75_DFP\component\tdes.h</file>
@@ -5691,7 +5691,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\initialization.c</file>
-         <hash>fa679b6ce4fcfea42e442e7fab1477a6bd22f68c926c6da60f1ba4e39efca589</hash>
+         <hash>d5a08b2234266fb644f6e0e09ae51e9ad88a6b972112b4b467f362ac5f6cb90e</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75_DFP\instance\flexcom3.h</file>
@@ -5699,7 +5699,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\driver\usb\drv_usb.h</file>
-         <hash>dce0fe53973e23d87ee16fec7ef65f171b537ac80e14eaa2ca43962156f1c6e7</hash>
+         <hash>ee59efb38b1cf87e1c4bb6e833a9c9be0c106005daa6c1ccd90fca9fb5c17b44</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75_DFP\component\mpddrc.h</file>
@@ -5739,7 +5739,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\usb\usb_host.h</file>
-         <hash>4ec16dee42ae6b1bad8a7199b44750ccf0c5fa3aee5e44766e7b6dffc9979e83</hash>
+         <hash>1fd7a53f3b04f3a63013a3350d1f6b1c15aa9f162e9c5acf31b111c27987ad89</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\device_cache.h</file>
@@ -5755,11 +5755,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\usb\src\usb_device_hid.c</file>
-         <hash>03c05393f61bfed316ca2ead2c2291b2dd8643829d44b8fec193e0f2a0a57716</hash>
+         <hash>ff7b91f0adaf7b8c14a0f975baeabd46381f5b91b8c969f2ace2f3f4f1c99aee</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\configuration.h</file>
-         <hash>9242a7f4f8fdd57aeebf94b912c12b68d64f4a23e7d404542ad37ab14c812526</hash>
+         <hash>3fc66b6a6b7b05f952b9e4ef010bce580ac675feeff5c2c59747aa125451938c</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75_DFP\instance\shdwc.h</file>
@@ -5799,7 +5799,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\driver\usb\udphs\src\drv_usb_udphs_local.h</file>
-         <hash>cadaf0b99497e8e094867cfac4f909cc21a2ce1cad05f24f38870ff4cdf4e29f</hash>
+         <hash>7d6e1fe150866c3019321247bfdf4a139958e8f33b2911aa1a18d137bfc25035</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\peripheral\pio\plib_pio.c</file>
@@ -5839,7 +5839,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\usb\usb_common.h</file>
-         <hash>fc9f44df7ab465084d1522901685e5bfad10548e44563a7460d7e089e6276ded</hash>
+         <hash>8e8a0115a555330065b8569621173186a2a2815758125026b02596e0d0278c56</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\osal\osal_definitions.h</file>
@@ -5851,11 +5851,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\usb\usb_device_hid.h</file>
-         <hash>6233f5dbbfcada759111c6c9c5db54e381c7c26ebdb7e31aa7a8d7e71f4f5c67</hash>
+         <hash>b7da17b515e0f1dd803a1c6e8b97fc41b6c9f0b141c8911530ba6b027e4582b8</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\usb\usb_hid.h</file>
-         <hash>7bf5db6ff39b841993597cb91717a4b22d187f437863ae4c5da83b983217f249</hash>
+         <hash>c55841d2ce5c249f72306d11914abccede9a3084239d294612f0e902db98e628</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75_DFP\instance\flexcom4.h</file>
@@ -5879,7 +5879,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\tasks.c</file>
-         <hash>3be954c4abca314b5971cf835be26d9ea3cf4c74871ea085905db8ba85c58127</hash>
+         <hash>4b1649923bdd51e12ac748893b2c3274d04bbf7825226f7fdb59983a95f21d02</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75_DFP\instance\udphs.h</file>
@@ -5887,7 +5887,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\usb\src\usb_device.c</file>
-         <hash>e2299e7132aaf91acd6857a827520f8bd5ecdc40d8ba2e6c4018b8441064a6cb</hash>
+         <hash>7a4440af5b5231ce28d78053c499cf3f0be4d8bd400086d0b65d3b06b377ff2c</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75_DFP\component\tc.h</file>
@@ -5927,7 +5927,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\usb\src\usb_device_hid_local.h</file>
-         <hash>27ade42539241c6c5bcfaf02200801a891ab2ced10a00a8f3a8a465f75392a99</hash>
+         <hash>7e4feb6fd2512dc5923d675c97758b063ed461fab1a1b5ca4e58256d9472d626</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75_DFP\instance\flexcom11.h</file>
@@ -5943,7 +5943,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\driver\usb\udphs\src\drv_usb_udphs_device.c</file>
-         <hash>059f2399832f7226817d6c9cb6b21db3c657d73d68935c2772bb0af316090e18</hash>
+         <hash>a16421e3ea44daa6a748fb3a7510129ec6d36d0fb9dbd9e9167361552708d4c3</hash>
       </entry>
    </generatedFileHashHistoryMap>
 </config>
