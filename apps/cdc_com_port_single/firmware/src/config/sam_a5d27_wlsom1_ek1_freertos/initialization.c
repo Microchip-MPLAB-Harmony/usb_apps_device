@@ -88,18 +88,18 @@ SYSTEM_OBJECTS sysObj;
 static DRV_USB_VBUS_LEVEL DRV_USB_UDPHS_VBUS_Comparator(void)
 {
     DRV_USB_VBUS_LEVEL retVal = DRV_USB_VBUS_LEVEL_INVALID;
-    if(true == USB_VBUS_SENSE_Get())
+    if(1U == USB_VBUS_SENSE_Get())
     {
         retVal = DRV_USB_VBUS_LEVEL_VALID;
     }
-	return (retVal);
+    return (retVal);
 
 }
 
-const DRV_USB_UDPHS_INIT drvUSBInit =
+static const DRV_USB_UDPHS_INIT drvUSBInit =
 {
     /* Interrupt Source for USB module */
-    .interruptSource = UDPHS_IRQn,
+    .interruptSource = (INT_SOURCE)UDPHS_IRQn,
 
     /* System module initialization */
     .moduleInit = {0},
@@ -109,7 +109,7 @@ const DRV_USB_UDPHS_INIT drvUSBInit =
 
     /* Identifies peripheral (PLIB-level) ID */
     .usbID = UDPHS_REGS,
-	
+    
     /* Function to check for VBus */
     .vbusComparator = DRV_USB_UDPHS_VBUS_Comparator
 };
@@ -174,8 +174,8 @@ void SYS_Initialize ( void* data )
 
 
 
-	/* Initialize USB Driver */ 
-    sysObj.drvUSBUDPHSObject = DRV_USB_UDPHS_Initialize(DRV_USB_UDPHS_INDEX_0, (SYS_MODULE_INIT *) &drvUSBInit);	
+    /* Initialize USB Driver */ 
+    sysObj.drvUSBUDPHSObject = DRV_USB_UDPHS_Initialize(DRV_USB_UDPHS_INDEX_0, (SYS_MODULE_INIT *) &drvUSBInit);    
 
 
     /* Initialize the USB device layer */
