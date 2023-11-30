@@ -82,7 +82,7 @@ void SYS_Tasks ( void )
         /* USB Device layer tasks routine */ 
     USB_DEVICE_Tasks(sysObj.usbDevObject0);
 
-	/* USB HS Driver Task Routine */ 
+    /* USB HS Driver Task Routine */ 
     DRV_USBHSV1_Tasks(sysObj.drvUSBHSV1Object);
 
 
