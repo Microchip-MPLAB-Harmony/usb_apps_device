@@ -43,11 +43,12 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 
 //DOM-IGNORE-END
 
-#ifndef _USB_LASTENDPOINT_DEFAULT_H
-#define _USB_LASTENDPOINT_DEFAULT_H
+#ifndef USB_LASTENDPOINT_DEFAULT_H
+#define USB_LASTENDPOINT_DEFAULT_H
 
 #include "driver/usb/usbfs/src/templates/usbfs_registers.h"
 
+/* MISRA C-2012 Rule 11.7 deviated:2 Deviation record ID -  H3_MISRAC_2012_R_11_7_DR_1 */
 //******************************************************************************
 /* Function :  USB_LastTransactionEndPtGet_Default
 
@@ -61,7 +62,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 PLIB_TEMPLATE uint8_t USB_LastTransactionEndPtGet_Default( USB_MODULE_ID index )
 {
     volatile usb_registers_t   * usb = ((usb_registers_t *)(index)); 
-	return ( usb->UxSTAT.ENDPT);
+    return ( usb->UxSTAT.ENDPT);
 }
 
 //******************************************************************************
@@ -80,8 +81,9 @@ PLIB_TEMPLATE bool USB_ExistsLastEndpoint_Default( USB_MODULE_ID index )
     return true;
 }
 
+/* MISRAC 2012 deviation block end */
 
-#endif /*_USB_LASTENDPOINT_DEFAULT_H*/
+#endif /*USB_LASTENDPOINT_DEFAULT_H*/
 
 /******************************************************************************
  End of File
