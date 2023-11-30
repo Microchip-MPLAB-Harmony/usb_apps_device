@@ -44,10 +44,13 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 
 //DOM-IGNORE-END
 
-#ifndef _USBHS_RXEPSTATUS_DEFAULT_H
-#define _USBHS_RXEPSTATUS_DEFAULT_H
+#ifndef USBHS_RXEPSTATUS_DEFAULT_H
+#define USBHS_RXEPSTATUS_DEFAULT_H
 
 #include "usbhs_registers.h"
+
+/* MISRA C-2012 Rule 10.1, Rule 10.4, Rule 21.1 and Rule 21.2 Deviation record ID -  
+    H3_MISRAC_2012_R_10_1_DR_1,  H3_MISRAC_2012_R_10_4_DR_1 */
 
 //******************************************************************************
 /* Function :  USBHS_RxEPStatusGet_Default
@@ -128,8 +131,9 @@ PLIB_TEMPLATE bool USBHS_ExistsRxEPStatus_Default( USBHS_MODULE_ID index )
     return true;
 }
 
+/* MISRAC 2012 deviation block end */
 
-#endif /*_USBHS_RXEPSTATUS_DEFAULT_H*/
+#endif /*USBHS_RXEPSTATUS_DEFAULT_H*/
 
 /******************************************************************************
  End of File
