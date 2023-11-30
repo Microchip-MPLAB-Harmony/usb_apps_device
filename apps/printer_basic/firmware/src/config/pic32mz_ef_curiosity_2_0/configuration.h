@@ -103,7 +103,7 @@ extern "C" {
 /*** USB Driver Configuration ***/
 
 /* Maximum USB driver instances */
-#define DRV_USBHS_INSTANCES_NUMBER                        1
+#define DRV_USBHS_INSTANCES_NUMBER                        1U
 
 /* Interrupt mode enabled */
 #define DRV_USBHS_INTERRUPT_MODE                          true
@@ -124,30 +124,34 @@ extern "C" {
 
 
 /* Maximum instances of Printer function driver */
-#define USB_DEVICE_PRINTER_INSTANCES_NUMBER          1 
+#define USB_DEVICE_PRINTER_INSTANCES_NUMBER          1U 
 
 /* Printer Transfer Queue Size for both read and
    write. Applicable to all instances of the
    function driver */
-#define USB_DEVICE_PRINTER_QUEUE_DEPTH_COMBINED                 2
+#define USB_DEVICE_PRINTER_QUEUE_DEPTH_COMBINED                 2U
+
+/* MISRA C-2012 Rule 5.4 deviated:1, Deviation record ID -  H3_MISRAC_2012_R_5_4_DR_1 */
 
 /* Length of the Device ID string including length in the first two bytes */
-#define USB_DEVICE_PRINTER_DEVICE_ID_STRING_LENGTH    81
+#define USB_DEVICE_PRINTER_DEVICE_ID_STRING_LENGTH    81U
+
 
 /* Device ID string including length in the first two bytes */
 #define USB_DEVICE_PRINTER_DEVICE_ID_STRING  {0,81,'M','F','G',':','M','i','c','r','o','c','h','i','p',';','M','D','L',':','G','e','n','e','r','i','c',';','C','M','D',':','E','P','S','O','N',';','C','L','S',':','P','R','I','N','T','E','R',';','D','E','S',':','G','e','n','e','r','i','c','T','e','x','t','O','n','l','y','P','r','i','n','t','e','r','D','e','m','o',';'},
 
+
 /* Number of Endpoints used */
-#define DRV_USBHS_ENDPOINTS_NUMBER                        3
+#define DRV_USBHS_ENDPOINTS_NUMBER                        3U
 
 /* The USB Device Layer will not initialize the USB Driver */
 #define USB_DEVICE_DRIVER_INITIALIZE_EXPLICIT
 
 /* Maximum device layer instances */
-#define USB_DEVICE_INSTANCES_NUMBER                         1
+#define USB_DEVICE_INSTANCES_NUMBER                         1U
 
 /* EP0 size in bytes */
-#define USB_DEVICE_EP0_BUFFER_SIZE                          64
+#define USB_DEVICE_EP0_BUFFER_SIZE                          64U
 
 /* Enable SOF Events */
 #define USB_DEVICE_SOF_EVENT_ENABLE
