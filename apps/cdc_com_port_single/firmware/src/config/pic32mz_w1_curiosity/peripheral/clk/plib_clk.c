@@ -82,14 +82,11 @@
     function of the 'configuration bits' to configure the system oscillators.
 */
 
-#define EWPLLCON_MSK 0x0438080cU
-#define EWPLL_PWRON  0x808U
-
-static void  DelayMs ( uint32_t  delayMs)
+static void  DelayUs ( uint32_t  delayUs)
 {
     uint32_t startCount, endCount;
     /* Calculate the end count for the given delay */
-    endCount=((uint32_t)CORE_TIMER_FREQ/1000U)* delayMs;
+    endCount=((uint32_t)CORE_TIMER_FREQ/1000000U)* delayUs;
     startCount=_CP0_GET_COUNT();
     while((_CP0_GET_COUNT()-startCount)<endCount)
     {
@@ -130,137 +127,148 @@ void CLK_Initialize( void )
 {
     volatile unsigned int *PLLDBG = (unsigned int*) 0xBF8000E0U;
     volatile unsigned int *PMDRCLR = (unsigned int *) 0xBF8000B4U;
-	volatile unsigned int *RFSPICTL = (unsigned int *) 0xBF8C8028U;
-
-    uint8_t TempPOR = 0, TempEXTR = 0, TempSWR = 0;
+    volatile unsigned int *RFSPICTL = (unsigned int *) 0xBF8C8028U;
+    uint32_t device_id = DEVID;
 
     /* unlock system for clock configuration */
     SYSKEY = 0x00000000;
     SYSKEY = 0xAA996655U;
     SYSKEY = 0x556699AA;
 
-    if(((DEVID & 0x0FF00000U) >> 20) == (uint32_t)PIC32MZW1_B0)
+    if(((device_id & PART_NUM_MASK) >> PART_NUM_OFFSET == (uint32_t)PIC32MZW1_B0)
+            || ((device_id & PART_NUM_MASK) >> PART_NUM_OFFSET == (uint32_t)PIC32MZW1_G))
     {
-        TempPOR = RCONbits.POR;
-        TempEXTR = RCONbits.EXTR;
-        TempSWR = RCONbits.SWR;
+        if(SPLLCON_DEFAULT == SPLLCON)
+        {
+            EWPLLCON = PLL_PWROFF; // Start with PWR-OFF PLL
+            SPLLCON  = PLL_PWROFF; // Start with PWR-OFF PLL
+            DelayUs(300);
 
-        if(((CLKSTATbits.SPLLRDY == 0U) && (TempPOR == 1U) && (TempEXTR == 1U))
-            || ((1U == CLKSTATbits.SPLLRDY) && (0U == TempPOR) &&
-            ((1U == TempEXTR) || (1U == TempSWR))))
-		{
-			EWPLLCON = 0x808; // Start with PWR-OFF PLL
-			SPLLCON  = 0x808; // Start with PWR-OFF PLL
-			 DelayMs(5);
+            CFGCON2  |= POSC_DIS; // Start with POSC Turned OFF
+            /* if POSC was on give some time for POSC to shut off */
+            DelayUs(300);
+            /* make sure we properly reset SPI to a known state */
+            *RFSPICTL = 0x80000022U;
+            /* make sure we properly take out of reset */
+            *RFSPICTL = 0x80000002U;
 
-			CFGCON2  |= 0x300U; // Start with POSC Turned OFF
-			/* if POSC was on give some time for POSC to shut off */
-			 DelayMs(5);
-			/* make sure we properly reset SPI to a known state */
-			*RFSPICTL = 0x80000022U;
-			/* make sure we properly take out of reset */
-			*RFSPICTL = 0x80000002U;
-
-			if(1U == DEVIDbits.VER)
-			{
+            if((1U == DEVIDbits.VER) || (((device_id & PART_NUM_MASK) >> 20) == (uint32_t)PIC32MZW1_G))
+            {
                 wifi_spi_write(0x85, 0x00F2); /* MBIAS filter and A31 analog_test */
                 wifi_spi_write(0x84, 0x0001); /* A31 Analog test */
                 wifi_spi_write(0x1e, 0x510); /* MBIAS reference adjustment */
                 wifi_spi_write(0x82, 0x6000); /* XTAL LDO feedback divider (1.3+v) */
-			}
-			else
+            }
+            else
             {
                 wifi_spi_write(0x85, 0x00F0); /* MBIAS filter and A31 analog_test */
                 wifi_spi_write(0x84, 0x0001); /* A31 Analog test */
                 wifi_spi_write(0x1e, 0x510); /* MBIAS reference adjustment */
                 wifi_spi_write(0x82, 0x6400); /* XTAL LDO feedback divider (1.3+v) */
-			}
-             DelayMs(2);
-			/* Enable POSC */
-			CFGCON2  &= 0xFFFFFCFFU; // enable POSC
-			 DelayMs(5);
+            }
+             DelayUs(200);
+            /* Enable POSC */
+            CFGCON2  &= POSC_EN; // enable POSC
+             DelayUs(300);
 
-			/*Configure SPLL*/
-			CFGCON3 = 10;
-			CFGCON0bits.SPLLHWMD = 1;
+            /*Configure SPLL*/
+            CFGCON3 = 10;
+            CFGCON0bits.SPLLHWMD = 1;
 
-			/* SPLLBSWSEL   = 1   */
-			/* SPLLPWDN     = PLL_ON     */
-			/* SPLLPOSTDIV1 = 6 */
-			/* SPLLFLOCK    = NO_ASSERT    */
-			/* SPLLRST      = NO_ASSERT      */
-			/* SPLLFBDIV    = 150  */
-			/* SPLLREFDIV   = 5   */
-			/* SPLLICLK     = POSC     */
-			/* SPLL_BYP     = NO_BYPASS     */
-			SPLLCON = 0x1496061;
+            /* SPLLBSWSEL   = 1   */
+            /* SPLLPWDN     = PLL_ON     */
+            /* SPLLPOSTDIV1 = 6 */
+            /* SPLLFLOCK    = NO_ASSERT    */
+            /* SPLLRST      = NO_ASSERT      */
+            /* SPLLFBDIV    = 150  */
+            /* SPLLREFDIV   = 5   */
+            /* SPLLICLK     = POSC     */
+            /* SPLL_BYP     = NO_BYPASS     */
+            SPLLCON = 0x1496061;
 
-			/* OSWEN    = SWITCH_COMPLETE    */
-			/* SOSCEN   = OFF   */
-			/* UFRCEN   = USBCLK   */
-			/* CF       = NO_FAILDET       */
-			/* SLPEN    = IDLE    */
-			/* CLKLOCK  = UNLOCKED  */
-			/* NOSC     = SPLL     */
-			/* WAKE2SPD = SELECTED_CLK */
-			/* DRMEN    = NO_EFFECT    */
-			/* FRCDIV   = OSC_FRC_DIV_1   */
-			OSCCON = 0x100;
+            /* OSWEN    = SWITCH_COMPLETE    */
+            /* SOSCEN   = OFF   */
+            /* UFRCEN   = USBCLK   */
+            /* CF       = NO_FAILDET       */
+            /* SLPEN    = IDLE    */
+            /* CLKLOCK  = UNLOCKED  */
+            /* NOSC     = SPLL     */
+            /* WAKE2SPD = SELECTED_CLK */
+            /* DRMEN    = NO_EFFECT    */
+            /* FRCDIV   = OSC_FRC_DIV_1   */
+            OSCCON = 0x100;
 
-			OSCCONSET = _OSCCON_OSWEN_MASK;  /* request oscillator switch to occur */
+            OSCCONSET = _OSCCON_OSWEN_MASK;  /* request oscillator switch to occur */
 
-			while( OSCCONbits.OSWEN != 0U)
+            while( OSCCONbits.OSWEN != 0U)
             {
                 /* Nothing to do */
             }
-			/****************************************************************
-			* check to see if PLL locked; indicates POSC must have started
-			*****************************************************************/
-			if(0U == (*PLLDBG & 0x1U))
-			{
-				/*POSC failed to start!*/
-				while(true)
+            /****************************************************************
+             * check to see if PLL locked; indicates POSC must have started
+             * The recommendation is to use SPLL as the System Clock.
+             * Below code assumes that is the case in most practical use cases.
+            *****************************************************************/
+            if((OSCCONbits.COSC & 0x2U) != 0U)
+            {
+                if(0U == (CLKSTATbits.POSCRDY & 0x1U))
                 {
-                   /* Nothing to do */
+                    while(true)
+                    {
+                        /* Spin forever */
+                    }
                 }
-			}
-			if(1U == DEVIDbits.VER)
-			{
-				/*Disabling internal schmitt-trigger to increase noise immunity */
-				wifi_spi_write(0x85, 0x00F4);
-			}
-		}
-		/* Power down the EWPLL */
-		EWPLLCONbits.EWPLLPWDN = 1;
+            }
+            else if(0U == (*PLLDBG & 0x1U))
+            {
+                /*POSC failed to start!*/
+                while(true)
+                {
+                   /* Spin forever */
+                }
+            }
+            else
+            {
+                /* Nothing to do */
+            }
 
-		/* Configure UPLL */
-		/* UPLLBSWSEL   = 5 */
-		/* UPLLPWDN     = PLL_ON */
-		/* UPLLPOSTDIV1 = 10 */
-		/* UPLLFLOCK    = NOFORCE_LOCK */
-		/* UPLLRST      = DEASSERT_RST */
-		/* UPLLFBDIV    = 24 */
-		/* UPLLREFDIV   = 1 */
-		/* UPLL_BYP     = UPLL */
-		UPLLCON = 0x404180a5;
+            if(1U == DEVIDbits.VER || (((device_id & PART_NUM_MASK) >> PART_NUM_OFFSET) == (uint32_t)PIC32MZW1_G))
+            {
+                /*Disabling internal schmitt-trigger to increase noise immunity */
+                wifi_spi_write(0x85, 0x00F4);
+            }
+        }
+        /* Power down the EWPLL */
+        EWPLLCONbits.EWPLLPWDN = 1;
 
-		/* Power down the BTPLL */
-		BTPLLCONbits.BTPLLPWDN = 1;
+        /* Configure UPLL */
+        /* UPLLBSWSEL   = 5 */
+        /* UPLLPWDN     = PLL_ON */
+        /* UPLLPOSTDIV1 = 10 */
+        /* UPLLFLOCK    = NOFORCE_LOCK */
+        /* UPLLRST      = DEASSERT_RST */
+        /* UPLLFBDIV    = 24 */
+        /* UPLLREFDIV   = 1 */
+        /* UPLL_BYP     = UPLL */
+        UPLLCON = 0x404180a5;
+
+        /* Power down the BTPLL */
+        BTPLLCONbits.BTPLLPWDN = 1;
 
         *(PMDRCLR)  = 0x1000;
     }
-    else if(((DEVID & 0x0FF00000U) >> 20) == (uint32_t)PIC32MZW1_A1)
+    else if(((device_id & PART_NUM_MASK) >> PART_NUM_OFFSET) == (uint32_t)PIC32MZW1_A1)
     {
 
-		CFGCON2  |= 0x300U; // Start with POSC Turned OFF
-		 DelayMs(2);
+        CFGCON2  |= POSC_DIS; // Start with POSC Turned OFF
+         DelayUs(200);
 
-		/* make sure we properly reset SPI to a known state */
-		*RFSPICTL = 0x80000022U;
-		/* now wifi is properly reset enable POSC */
-		CFGCON2  &= 0xFFFFFCFFU; // enable POSC
+        /* make sure we properly reset SPI to a known state */
+        *RFSPICTL = 0x80000022U;
+        /* now wifi is properly reset enable POSC */
+        CFGCON2  &= POSC_EN; // enable POSC
 
-		 DelayMs(2);
+         DelayUs(200);
 
         /* make sure we properly take out of reset */
         *RFSPICTL = 0x80000002U;
@@ -270,73 +278,73 @@ void CLK_Initialize( void )
         wifi_spi_write(0x1e, 0x510); // MBIAS reference adjustment
         wifi_spi_write(0x82, 0x6000); // XTAL LDO feedback divider (1.3+v)
 
-		 /* Wait for POSC ready */
+         /* Wait for POSC ready */
         while((CLKSTAT & 0x00000004U) == 0U)
         {
             /* Nothing to do */
         }
 
-    	OSCCONbits.FRCDIV = 0;
+        OSCCONbits.FRCDIV = 0;
 
-		CFGCON3 = 10;
+        CFGCON3 = 10;
         CFGCON0bits.SPLLHWMD = 1;
-		/* SPLLCON = 0x01496869 */
-		/* SPLLBSWSEL   = 1   */
-		/* SPLLPWDN     = PLL_ON     */
-		/* SPLLPOSTDIV1 = 6 */
-		/* SPLLFLOCK    = NO_ASSERT    */
-		/* SPLLRST      = NO_ASSERT      */
-		/* SPLLFBDIV    = 150  */
-		/* SPLLREFDIV   = 5   */
-		/* SPLLICLK     = POSC     */
-		/* SPLL_BYP     = NO_BYPASS     */
-		SPLLCON = 0x1496061;
+        /* SPLLCON = 0x01496869 */
+        /* SPLLBSWSEL   = 1   */
+        /* SPLLPWDN     = PLL_ON     */
+        /* SPLLPOSTDIV1 = 6 */
+        /* SPLLFLOCK    = NO_ASSERT    */
+        /* SPLLRST      = NO_ASSERT      */
+        /* SPLLFBDIV    = 150  */
+        /* SPLLREFDIV   = 5   */
+        /* SPLLICLK     = POSC     */
+        /* SPLL_BYP     = NO_BYPASS     */
+        SPLLCON = 0x1496061;
 
 
-		/* Configure UPLL */
-		/* UPLLBSWSEL   = 5 */
-		/* UPLLPWDN     = PLL_ON */
-		/* UPLLPOSTDIV1 = 10 */
-		/* UPLLFLOCK    = NOFORCE_LOCK */
-		/* UPLLRST      = DEASSERT_RST */
-		/* UPLLFBDIV    = 24 */
-		/* UPLLREFDIV   = 1 */
-		/* UPLL_BYP     = UPLL */
-		UPLLCON = 0x404180a5;
+        /* Configure UPLL */
+        /* UPLLBSWSEL   = 5 */
+        /* UPLLPWDN     = PLL_ON */
+        /* UPLLPOSTDIV1 = 10 */
+        /* UPLLFLOCK    = NOFORCE_LOCK */
+        /* UPLLRST      = DEASSERT_RST */
+        /* UPLLFBDIV    = 24 */
+        /* UPLLREFDIV   = 1 */
+        /* UPLL_BYP     = UPLL */
+        UPLLCON = 0x404180a5;
 
-		/* Power down the EWPLL */
-		EWPLLCONbits.EWPLLPWDN = 1;
+        /* Power down the EWPLL */
+        EWPLLCONbits.EWPLLPWDN = 1;
 
-		/* Power down the BTPLL */
-		BTPLLCONbits.BTPLLPWDN = 1;
+        /* Power down the BTPLL */
+        BTPLLCONbits.BTPLLPWDN = 1;
 
-		/* ETHPLLPOSTDIV2 = a */
-		/* SPLLPOSTDIV2   = 0 */
-		/* BTPLLPOSTDIV2  = 0 */
-		CFGCON3 = 10;
+        /* ETHPLLPOSTDIV2 = a */
+        /* SPLLPOSTDIV2   = 0 */
+        /* BTPLLPOSTDIV2  = 0 */
+        CFGCON3 = 10;
 
-		/* OSWEN    = SWITCH_COMPLETE    */
-		/* SOSCEN   = OFF   */
-		/* UFRCEN   = USBCLK   */
-		/* CF       = NO_FAILDET       */
-		/* SLPEN    = IDLE    */
-		/* CLKLOCK  = UNLOCKED  */
-		/* NOSC     = SPLL     */
-		/* WAKE2SPD = SELECTED_CLK */
-		/* DRMEN    = NO_EFFECT    */
-		/* FRCDIV   = OSC_FRC_DIV_1   */
-		OSCCON = 0x100;
+        /* OSWEN    = SWITCH_COMPLETE    */
+        /* SOSCEN   = OFF   */
+        /* UFRCEN   = USBCLK   */
+        /* CF       = NO_FAILDET       */
+        /* SLPEN    = IDLE    */
+        /* CLKLOCK  = UNLOCKED  */
+        /* NOSC     = SPLL     */
+        /* WAKE2SPD = SELECTED_CLK */
+        /* DRMEN    = NO_EFFECT    */
+        /* FRCDIV   = OSC_FRC_DIV_1   */
+        OSCCON = 0x100;
 
-		OSCCONSET = _OSCCON_OSWEN_MASK;  /* request oscillator switch to occur */
+        OSCCONSET = _OSCCON_OSWEN_MASK;  /* request oscillator switch to occur */
 
-		Nop();
-		Nop();
+        Nop();
+        Nop();
 
-		while( OSCCONbits.OSWEN != 0U)        /* wait for indication of successful clock change before proceeding */
+        while( OSCCONbits.OSWEN != 0U)        /* wait for indication of successful clock change before proceeding */
         {
             /* Nothing to do */
         }
-	}
+    }
     else
     {
         /* Nothing to do */
@@ -357,18 +365,6 @@ void CLK_Initialize( void )
     PMD3 = 0x18031317;
 
     CFGCON0bits.PMDLOCK = 1;
-	if(1U == RCONbits.POR)
-    {
-		RCONbits.POR = 0;
-    }
-	if(1U == RCONbits.EXTR)
-    {
-		RCONbits.EXTR = 0;
-    }
-    if(1U == RCONbits.SWR)
-    {
-        RCONbits.SWR = 0;
-    }
 
     /* Lock system since done with clock configuration */
     SYSKEY = 0x33333333;
