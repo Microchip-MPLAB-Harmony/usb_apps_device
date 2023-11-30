@@ -59,9 +59,9 @@
 #include "bsp/bsp.h"
 #include "driver/sdspi/drv_sdspi.h"
 #include "system/time/sys_time.h"
-#include "driver/usb/usbhs/drv_usbhs.h"
 #include "usb/usb_device_cdc.h"
 #include "usb/usb_cdc.h"
+#include "driver/usb/usbhs/drv_usbhs.h"
 #include "peripheral/tmr1/plib_tmr1.h"
 #include "peripheral/spi/spi_master/plib_spi1_master.h"
 #include "system/int/sys_int.h"
@@ -206,7 +206,7 @@ typedef struct
     SYS_MODULE_OBJ  usbDevObject0;
 
     SYS_MODULE_OBJ  sysTime;
-	SYS_MODULE_OBJ  drvUSBHSObject;
+    SYS_MODULE_OBJ  drvUSBHSObject;
 
 
 } SYSTEM_OBJECTS;
