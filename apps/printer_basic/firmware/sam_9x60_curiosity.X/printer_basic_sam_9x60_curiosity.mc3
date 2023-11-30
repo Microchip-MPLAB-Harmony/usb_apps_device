@@ -5722,7 +5722,7 @@
    <generatedFileHashHistoryMap class="java.util.HashMap">
       <entry>
          <file>..\src\config\sam_9x60_curiosity\usb\usb_device.h</file>
-         <hash>06a4f4c06b4b32ab90474b522ddbfc4922fbad93ccf6975240148f1ce4b71b46</hash>
+         <hash>d65ea056c90c04440c30f615adff6e4d573ca17c75f78fc4fd6c755b90fe5572</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\adc.h</file>
@@ -5758,7 +5758,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\usb_device_init_data.c</file>
-         <hash>c29a7c0800cd8d7e2e91245104c287f8c89a9238214450385f56ff4f814cd2f9</hash>
+         <hash>cdec22555d5defb28878c253479168421ca6f08fd8a914df5938cce34ab722cb</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\interrupts.h</file>
@@ -5786,7 +5786,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\usb\usb_device_printer.h</file>
-         <hash>c534cb452b79c083d00c06b597061747a87c756bf2e7338abb4e712ab5f8bacd</hash>
+         <hash>bc3e3b781abb59f317ea17b82a9346bcb68267fb6dd60db638f02a211bf803eb</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\osal\osal.h</file>
@@ -5842,7 +5842,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\usb\src\usb_device_local.h</file>
-         <hash>3dc9e27b535edb31aa97aae04a0ce9ac12e5092ed3bae7ef6fd203bc1520ef33</hash>
+         <hash>935dceb5785f858042e7c2752e0a707b8be4f4edfa2bd8b8c0c93e3a51f3fc00</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\sfr.h</file>
@@ -5854,7 +5854,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\usb\usb_hub.h</file>
-         <hash>f07eb653a11355424adb96ff0fec6796f6b95c8924ac93fb9207f888d130bc7d</hash>
+         <hash>733473045c756b6184188c2cf000d8f187f530a9e048dabefaecee347c05e4db</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\component\qspi.h</file>
@@ -5898,7 +5898,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\usb\usb_host_hub_interface.h</file>
-         <hash>9db9028cdb085f4ed90d06c8d0013e5b9d300be9b49f0933094c373552193645</hash>
+         <hash>bcd95afaa026ab8559047e85ac157597452ab0ceee4e96612e5273ec324f1ef9</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\can1.h</file>
@@ -5918,7 +5918,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\driver\usb\udphs\src\drv_usb_udphs.c</file>
-         <hash>64b4975fef5099ae67548a60d1499f9304cd6359f01bbc931105a92d2e546bb2</hash>
+         <hash>f3e6d18fc9c52d57280168ae03d65e8e31d3bf5c6efd81bc1c567e6bb95c4d03</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\sckc.h</file>
@@ -5938,7 +5938,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\driver\usb\udphs\drv_usb_udphs.h</file>
-         <hash>9ee963cb3fac6f48836fe6a9950ebcf042da2462012f3a2ab67148d545e3b542</hash>
+         <hash>94e982b06d6d43ee3a2aa59816a35373c462445b35994144ac4b66acf35180bb</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\pio\sam9x60d1g.h</file>
@@ -5962,7 +5962,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\usb\src\usb_external_dependencies.h</file>
-         <hash>5110f718908d8f79253ce5b4b44172288cc179ff61d18e387f9e90ae9afbb1b6</hash>
+         <hash>b12fd8f239e37735d34cbd777cd98b448b9ad8bc4fde516bf6ca8a5c1120163f</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\component\syscwp.h</file>
@@ -6006,7 +6006,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\driver\usb\drv_usb.h</file>
-         <hash>dce0fe53973e23d87ee16fec7ef65f171b537ac80e14eaa2ca43962156f1c6e7</hash>
+         <hash>ee59efb38b1cf87e1c4bb6e833a9c9be0c106005daa6c1ccd90fca9fb5c17b44</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\flexcom12.h</file>
@@ -6014,11 +6014,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\usb\src\usb_device_printer.c</file>
-         <hash>64f6833c22a8148b7c1516401632512ae8070a6c6e8956aa6aed46ca38ec52b4</hash>
+         <hash>b8bf9d340b76f74439b1dc373e7da502967aaf74c4228c157411731d0529970a</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\driver\usb\udphs\src\drv_usb_udphs_variant_mapping.h</file>
-         <hash>4a113775685461132617e519899ab157185af830ce702c2d5ab9a41803ee9d81</hash>
+         <hash>b0404bd97932bfd81356027e714ec5dbc2b57633d0124ecd6c9c743827d7504f</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\flexcom3.h</file>
@@ -6046,7 +6046,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\usb\usb_printer.h</file>
-         <hash>8300b671eebf3ad23db0880f9c8d5a5fccffab87a102798a4134aa1ec3283dd1</hash>
+         <hash>a13d5a580f1989d1c1368822803fb12bedccff8e79c82b9e196e83bd4e2335c2</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\flexcom7.h</file>
@@ -6062,7 +6062,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\usb\usb_chapter_9.h</file>
-         <hash>86a258d763c7f0f563122ccd4ec0bbef422fd4e2f523402bb89be10568cecf3f</hash>
+         <hash>e5e4a9cd868fa4b90113a0bd3ae76d176c7d21d791e7ea9891f1bf9d981da54c</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\osal\osal_definitions.h</file>
@@ -6070,7 +6070,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\usb\src\usb_device_mapping.h</file>
-         <hash>3a5eee6b064c49fd7a495f574736eaec5838e63f7de457ff688d70aa80432ce6</hash>
+         <hash>25c83489e10ce6221df1b7a6bbfcabd3e012a452b6d2937f85cb3c594189f468</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\rtc.h</file>
@@ -6078,7 +6078,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\driver\usb\udphs\src\drv_usb_udphs_device.c</file>
-         <hash>059f2399832f7226817d6c9cb6b21db3c657d73d68935c2772bb0af316090e18</hash>
+         <hash>a16421e3ea44daa6a748fb3a7510129ec6d36d0fb9dbd9e9167361552708d4c3</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\toolchain_specifics.h</file>
@@ -6214,7 +6214,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\initialization.c</file>
-         <hash>2cd8de84a78ba79f25a0932a11edfce00d4952dce80642ab6b341d1c7d1d73bc</hash>
+         <hash>e1f7816738b577eff82e52c0b11f6d6fb5c1a242647301f2a1ebed95393863e7</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\isi.h</file>
@@ -6230,7 +6230,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\usb\usb_common.h</file>
-         <hash>fc9f44df7ab465084d1522901685e5bfad10548e44563a7460d7e089e6276ded</hash>
+         <hash>8e8a0115a555330065b8569621173186a2a2815758125026b02596e0d0278c56</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\flexcom6.h</file>
@@ -6250,7 +6250,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\usb\src\usb_device_printer_local.h</file>
-         <hash>56e4576c7b874b4cea071841092e0c135dca463161a3296db7b07e5b0f6bd182</hash>
+         <hash>6ddeb121a3c927a959b96ce65c0c38d8b8df159fe69e4129ea2d651616643d8d</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\component\sdmmc.h</file>
@@ -6262,7 +6262,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\usb\usb_host_client_driver.h</file>
-         <hash>d11085e6a64f6b4551b1dc19aaee5b8a2555b7df649057bdb2ce8549c296a87d</hash>
+         <hash>38b5d7e5fee9b09db48b48b52d9b2773f458b09dc2d659c703a075fc90f32490</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\component\can.h</file>
@@ -6282,7 +6282,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\usb\src\usb_device_function_driver.h</file>
-         <hash>5d7b7287898c95485fbfc37840b9bb3e6ace46ef7333413493137d0e40e50bec</hash>
+         <hash>176f78389b138ea9db6114bea85bb66799223dc7877daea10ed80f5589c5a940</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\driver\usart\src\drv_usart_local.h</file>
@@ -6302,7 +6302,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\usb\usb_host.h</file>
-         <hash>4ec16dee42ae6b1bad8a7199b44750ccf0c5fa3aee5e44766e7b6dffc9979e83</hash>
+         <hash>1fd7a53f3b04f3a63013a3350d1f6b1c15aa9f162e9c5acf31b111c27987ad89</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\peripheral\mmu\plib_mmu.h</file>
@@ -6326,7 +6326,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\usb\src\usb_device.c</file>
-         <hash>e2299e7132aaf91acd6857a827520f8bd5ecdc40d8ba2e6c4018b8441064a6cb</hash>
+         <hash>7a4440af5b5231ce28d78053c499cf3f0be4d8bd400086d0b65d3b06b377ff2c</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\peripheral\mmu\plib_mmu.c</file>
@@ -6378,7 +6378,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\definitions.h</file>
-         <hash>ffebe15a0bb78d27b310a923c5d8af1069c494a719618e6983a0d528a92d48d6</hash>
+         <hash>77db0a6a882b5e16ba84d1df0b8581cffff20483156011ae4d2d7e7dc77c08fc</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\component\uhpfs.h</file>
@@ -6398,7 +6398,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\driver\usb\udphs\src\drv_usb_udphs_local.h</file>
-         <hash>cadaf0b99497e8e094867cfac4f909cc21a2ce1cad05f24f38870ff4cdf4e29f</hash>
+         <hash>7d6e1fe150866c3019321247bfdf4a139958e8f33b2911aa1a18d137bfc25035</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\aic.h</file>
@@ -6410,7 +6410,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\tasks.c</file>
-         <hash>3be954c4abca314b5971cf835be26d9ea3cf4c74871ea085905db8ba85c58127</hash>
+         <hash>4b1649923bdd51e12ac748893b2c3274d04bbf7825226f7fdb59983a95f21d02</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\device_cache.h</file>
@@ -6430,7 +6430,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\configuration.h</file>
-         <hash>064bfff94057aadc8e546a58f31d2353712b9cbda5d9c0bc1bba3614d39b2082</hash>
+         <hash>28f1434134016d14de546687b3d091b4d81a7716a07a97823789e743ebf55fe6</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\component\adc.h</file>
