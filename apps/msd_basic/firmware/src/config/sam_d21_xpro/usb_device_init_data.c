@@ -49,23 +49,26 @@
 /**************************************************
  * USB Device Function Driver Init Data
  **************************************************/
+
+/* MISRA C-2012 Rule 10.3, 11.1 and 11.8 deviated below. Deviation record ID -  
+   H3_MISRAC_2012_R_10_3_DR_1, H3_MISRAC_2012_R_11_1_DR_1 & H3_MISRAC_2012_R_11_8_DR_1*/
 /***********************************************
  * Sector buffer needed by for the MSD LUN.
  ***********************************************/
-uint8_t sectorBuffer[512 * USB_DEVICE_MSD_NUM_SECTOR_BUFFERS] USB_ALIGN;
+static uint8_t sectorBuffer[512 * USB_DEVICE_MSD_NUM_SECTOR_BUFFERS] USB_ALIGN;
 
 /***********************************************
  * CBW and CSW structure needed by for the MSD
  * function driver instance.
  ***********************************************/
-uint8_t msdCBW0[64] USB_ALIGN; 
-USB_MSD_CSW msdCSW0 USB_ALIGN;
+static uint8_t msdCBW0[64] USB_ALIGN; 
+static USB_MSD_CSW msdCSW0 USB_ALIGN;
 
 
 /*******************************************
  * MSD Function Driver initialization
  *******************************************/
-USB_DEVICE_MSD_MEDIA_INIT_DATA USB_ALIGN  msdMediaInit0[1] =
+static USB_DEVICE_MSD_MEDIA_INIT_DATA USB_ALIGN  msdMediaInit0[1] =
 {
     /* LUN 0 */ 
     {
@@ -111,7 +114,7 @@ USB_DEVICE_MSD_MEDIA_INIT_DATA USB_ALIGN  msdMediaInit0[1] =
 /**************************************************
  * USB Device Function Driver Init Data
  **************************************************/
-const USB_DEVICE_MSD_INIT msdInit0 =
+static const USB_DEVICE_MSD_INIT msdInit0 =
 {
     .numberOfLogicalUnits = 1,
     .msdCBW = (USB_MSD_CBW*)&msdCBW0,
@@ -119,15 +122,19 @@ const USB_DEVICE_MSD_INIT msdInit0 =
     .mediaInit = &msdMediaInit0[0]
 };
 
+/* MISRAC 2012 deviation block end */
+
 
 /**************************************************
  * USB Device Layer Function Driver Registration
  * Table
  **************************************************/
-const USB_DEVICE_FUNCTION_REGISTRATION_TABLE funcRegistrationTable[1] =
+/* MISRA C-2012 Rule 10.3 deviated:2, 11.8 deviated:6 deviated below. Deviation record ID -  
+   H3_MISRAC_2012_R_10_3_DR_1 & H3_MISRAC_2012_R_11_8_DR_1*/
+static const USB_DEVICE_FUNCTION_REGISTRATION_TABLE funcRegistrationTable[1] =
 {
     
-	/* MSD Function 0 */
+    /* MSD Function 0 */
     { 
         .configurationValue = 1,    /* Configuration value */ 
         .interfaceNumber = 0,       /* First interfaceNumber of this function */ 
@@ -141,17 +148,17 @@ const USB_DEVICE_FUNCTION_REGISTRATION_TABLE funcRegistrationTable[1] =
 
 
 };
-
+/* MISRAC 2012 deviation block end */
 /*******************************************
  * USB Device Layer Descriptors
  *******************************************/
 /*******************************************
  *  USB Device Descriptor
  *******************************************/
-const USB_DEVICE_DESCRIPTOR deviceDescriptor =
+static const USB_DEVICE_DESCRIPTOR usbDeviceDescriptor =
 {
     0x12,                                                   // Size of this descriptor in bytes
-    USB_DESCRIPTOR_DEVICE,                                  // DEVICE descriptor type
+    (uint8_t)USB_DESCRIPTOR_DEVICE,                                  // DEVICE descriptor type
     0x0200,                                                 // USB Spec Release Number in BCD format
     0x00,                                    // Class Code
     0x00,                                    // Subclass code
@@ -172,19 +179,20 @@ const USB_DEVICE_DESCRIPTOR deviceDescriptor =
 /*******************************************
  *  USB Full Speed Configuration Descriptor
  *******************************************/
-const uint8_t fullSpeedConfigurationDescriptor[]=
+ /* MISRA C-2012 Rule 10.3 deviated:25 Deviation record ID -  H3_MISRAC_2012_R_10_3_DR_1 */
+static const uint8_t fullSpeedConfigurationDescriptor[]=
 {
     /* Configuration Descriptor */
 
     0x09,                                                   // Size of this descriptor in bytes
-    USB_DESCRIPTOR_CONFIGURATION,                           // Descriptor Type
+    (uint8_t)USB_DESCRIPTOR_CONFIGURATION,                           // Descriptor Type
     USB_DEVICE_16bitTo8bitArrange(32),                      //(32 Bytes)Size of the Configuration descriptor
     1,                                                      // Number of interfaces in this configuration
     0x01,                                                   // Index value of this configuration
     0x00,                                                   // Configuration string index
     USB_ATTRIBUTE_DEFAULT | USB_ATTRIBUTE_SELF_POWERED, // Attributes
     50,                                                 // Maximum power consumption (mA) /2
-	/* Descriptor for Function 1 - MSD     */ 
+    /* Descriptor for Function 1 - MSD     */ 
     
     /* Interface Descriptor */
 
@@ -203,7 +211,7 @@ const uint8_t fullSpeedConfigurationDescriptor[]=
     7,                          // Size of this descriptor in bytes
     USB_DESCRIPTOR_ENDPOINT,    // Endpoint Descriptor
     1  | USB_EP_DIRECTION_IN,    // EndpointAddress ( EP1 IN )
-    USB_TRANSFER_TYPE_BULK,     // Attributes type of EP (BULK)
+    (uint8_t)USB_TRANSFER_TYPE_BULK,     // Attributes type of EP (BULK)
     0x40,0x00,                  // Max packet size of this EP
     0x00,                       // Interval (in ms)
 
@@ -211,18 +219,18 @@ const uint8_t fullSpeedConfigurationDescriptor[]=
     7,                          // Size of this descriptor in bytes
     USB_DESCRIPTOR_ENDPOINT,    // Endpoint Descriptor
     1  | USB_EP_DIRECTION_OUT,   // EndpointAddress ( EP2 OUT )
-    USB_TRANSFER_TYPE_BULK,     // Attributes type of EP (BULK)
+    (uint8_t)USB_TRANSFER_TYPE_BULK,     // Attributes type of EP (BULK)
     0x40,0x00,                  // Max packet size of this EP
     0x00,                       // Interval (in ms)
 
 
 };
-
+/* MISRAC 2012 deviation block end */
 /*******************************************
  * Array of Full speed Configuration
  * descriptors
  *******************************************/
-USB_DEVICE_CONFIGURATION_DESCRIPTORS_TABLE fullSpeedConfigDescSet[1] =
+static USB_DEVICE_CONFIGURATION_DESCRIPTORS_TABLE fullSpeedConfigDescSet[1] =
 {
     fullSpeedConfigurationDescriptor
 };
@@ -240,15 +248,17 @@ const struct
     uint16_t string[1];
 }
 
-sd000 =
+static sd000 =
 {
-    sizeof(sd000),                                      // Size of this descriptor in bytes
-    USB_DESCRIPTOR_STRING,                              // STRING descriptor type
+    (uint8_t)sizeof(sd000),                                      // Size of this descriptor in bytes
+    (uint8_t)USB_DESCRIPTOR_STRING,                              // STRING descriptor type
     {0x0409}                                            // Language ID
 };
 /*******************************************
  *  Manufacturer string descriptor
  *******************************************/
+/* MISRA C-2012 Rule 10.3 deviated:43 Deviation record ID -  H3_MISRAC_2012_R_10_3_DR_1 */
+
 const struct
 {
     uint8_t bLength;                                    // Size of this descriptor in bytes
@@ -256,10 +266,10 @@ const struct
     uint16_t string[25];                                // String
 }
 
-sd001 =
+static sd001 =
 {
-    sizeof(sd001),
-    USB_DESCRIPTOR_STRING,
+    (uint8_t)sizeof(sd001),
+    (uint8_t)USB_DESCRIPTOR_STRING,
     {'M','i','c','r','o','c','h','i','p',' ','T','e','c','h','n','o','l','o','g','y',' ','I','n','c','.'}
 };
 
@@ -273,9 +283,9 @@ const struct
     uint16_t string[22];                                // String
 }
 
-sd002 =
+static sd002 =
 {
-    sizeof(sd002),
+    (uint8_t)sizeof(sd002),
     USB_DESCRIPTOR_STRING,
     {'S','i','m','p','l','e',' ','M','S','D',' ','D','e','v','i','c','e',' ','D','e','m','o'}
 };
@@ -294,7 +304,7 @@ const struct
     uint8_t bDscType;                                   // STRING descriptor type
     uint16_t string[12];                                // String
 }
-serialNumberStringDescriptor =
+static serialNumberStringDescriptor =
 {
     sizeof(serialNumberStringDescriptor),
     USB_DESCRIPTOR_STRING,
@@ -305,7 +315,7 @@ serialNumberStringDescriptor =
 /***************************************
  * Array of string descriptors
  ***************************************/
-USB_DEVICE_STRING_DESCRIPTORS_TABLE stringDescriptors[4]=
+static USB_DEVICE_STRING_DESCRIPTORS_TABLE stringDescriptors[4]=
 {
     (const uint8_t *const)&sd000,
     (const uint8_t *const)&sd001,
@@ -316,9 +326,9 @@ USB_DEVICE_STRING_DESCRIPTORS_TABLE stringDescriptors[4]=
 /*******************************************
  * USB Device Layer Master Descriptor Table
  *******************************************/
-const USB_DEVICE_MASTER_DESCRIPTOR usbMasterDescriptor =
+static const USB_DEVICE_MASTER_DESCRIPTOR usbMasterDescriptor =
 {
-    &deviceDescriptor,                                      // Full speed descriptor
+    &usbDeviceDescriptor,                                      // Full speed descriptor
     1,                                                      // Total number of full speed configurations available
     fullSpeedConfigDescSet,                                 // Pointer to array of full speed configurations descriptors
     NULL,
@@ -357,3 +367,5 @@ const USB_DEVICE_INIT usbDevInitData =
 
 };
 // </editor-fold>
+
+
