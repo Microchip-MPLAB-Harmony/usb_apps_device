@@ -35,12 +35,15 @@
     the USBHS library.
 *******************************************************************************/
 
-#ifndef __USBHS_REGISTERS_H__
-#define __USBHS_REGISTERS_H__
+#ifndef USBHS_REGISTERS_H__
+#define USBHS_REGISTERS_H__
 
 #include <p32xxxx.h>
 #include <stdint.h>
 
+/* MISRA C-2012 Rule 5.5, Rule 6.1, Rule 21.1 and Rule 21.2 Deviation record ID -  
+    H3_MISRAC_2012_R_6_1_DR_1, H3_MISRAC_2012_R_21_1_DR_1 
+    H3_MISRAC_2012_R_21_2_DR_1 and H3_MISRAC_2012_R_5_5_DR_1*/
 /*****************************************
  * Module Register Offsets.
  *****************************************/
@@ -928,5 +931,7 @@ typedef struct __attribute__((aligned(4),packed))
     volatile uint32_t               RQPKTXOUNT[16];
 
 } usbhs_registers_t;
+
+/* MISRAC 2012 deviation block end */
 
 #endif
