@@ -106,10 +106,10 @@ extern "C" {
 // Section: Middleware & Other Library Configuration
 // *****************************************************************************
 // *****************************************************************************
-#define USB_DEVICE_INSTANCES_NUMBER                         1
+#define USB_DEVICE_INSTANCES_NUMBER                         1U
 
 /* EP0 size in bytes */
-#define USB_DEVICE_EP0_BUFFER_SIZE                          64
+#define USB_DEVICE_EP0_BUFFER_SIZE                          64U
 
 /* The USB Device Layer will not initialize the USB Driver */
 #define USB_DEVICE_DRIVER_INITIALIZE_EXPLICIT
@@ -119,7 +119,7 @@ extern "C" {
 
 
 /* Number High Speed USB Driver instances */ 
-#define DRV_USBHS_INSTANCES_NUMBER                       1
+#define DRV_USBHS_INSTANCES_NUMBER                       1U
 
 /* Interrupt mode enabled */
 #define DRV_USBHS_INTERRUPT_MODE                          true
@@ -127,7 +127,7 @@ extern "C" {
 /* Enables Device Support */
 #define DRV_USBHS_DEVICE_SUPPORT                          true
 
-#define DRV_USBHS_ENDPOINTS_NUMBER                        4
+#define DRV_USBHS_ENDPOINTS_NUMBER                        4U
 
 /* Disable Host Support */
 #define DRV_USBHS_HOST_SUPPORT                            false
@@ -136,13 +136,13 @@ extern "C" {
 #define USB_ALIGN  CACHE_ALIGN
 
 /* Maximum instances of CDC function driver */
-#define USB_DEVICE_CDC_INSTANCES_NUMBER                     1
+#define USB_DEVICE_CDC_INSTANCES_NUMBER                     1U
 
 
 /* CDC Transfer Queue Size for both read and
    write. Applicable to all instances of the
    function driver */
-#define USB_DEVICE_CDC_QUEUE_DEPTH_COMBINED                 3
+#define USB_DEVICE_CDC_QUEUE_DEPTH_COMBINED                 3U
 
 /* Maximum instances of MSD function driver */
 #define USB_DEVICE_MSD_INSTANCES_NUMBER     1 

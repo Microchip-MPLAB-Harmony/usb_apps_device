@@ -40,8 +40,8 @@
  *******************************************************************************/
 // DOM-IGNORE-END
 
-#ifndef _USB_DEVICE_MSD_LOCAL_H_
-#define _USB_DEVICE_MSD_LOCAL_H_
+#ifndef USB_DEVICE_MSD_LOCAL_H
+#define USB_DEVICE_MSD_LOCAL_H
 
 #include "configuration.h"
 // *****************************************************************************
@@ -50,7 +50,7 @@
 // *****************************************************************************
 // *****************************************************************************
 
-#define _DRV_MSD_NUM_SECTORS_BUFFERING (USB_DEVICE_MSD_NUM_SECTOR_BUFFERS)
+#define M_DRV_MSD_NUM_SECTORS_BUFFERING (USB_DEVICE_MSD_NUM_SECTOR_BUFFERS)
 
 // *****************************************************************************
 // *****************************************************************************
@@ -73,19 +73,20 @@
 
 typedef enum
 {
-    USB_DEVICE_MSD_STATE_WAIT_FOR_CBW,        
-    USB_DEVICE_MSD_STATE_CBW,        
-    USB_DEVICE_MSD_STATE_PROCESS_CBW,        
+    USB_DEVICE_MSD_STATE_WAIT_FOR_CBW,
+    USB_DEVICE_MSD_STATE_CBW,
+    USB_DEVICE_MSD_STATE_PROCESS_CBW,
     USB_DEVICE_MSD_STATE_STALL_IN_OUT,
     USB_DEVICE_MSD_STATE_DATA_IN,
     USB_DEVICE_MSD_STATE_DATA_OUT,
     USB_DEVICE_MSD_STATE_CSW,
     USB_DEVICE_MSD_STATE_SEND_CSW,
     USB_DEVICE_MSD_STATE_IDLE
-	
+    
 } USB_DEVICE_MSD_STATE;
 
 // *****************************************************************************
+/* MISRA C-2012 Rule 5.2 deviated:3 Deviation record ID -  H3_MISRAC_2012_R_5_2_DR_1 */
 /* USB device MSD media operation state.
 
   Summary:
@@ -105,9 +106,10 @@ typedef enum
     USB_DEVICE_MSD_MEDIA_OPERATION_COMPLETE,
     USB_DEVICE_MSD_MEDIA_OPERATION_PENDING,
     USB_DEVICE_MSD_MEDIA_OPERATION_ERROR
-	
+    
 } USB_DEVICE_MSD_MEDIA_OPERATION;  
 
+/* MISRAC 2012 deviation block end */
 // *****************************************************************************
 /* Structure that carries all media info.
 
@@ -144,8 +146,6 @@ typedef struct
     
     /* Pointer to the media geometry */
     SYS_MEDIA_GEOMETRY * mediaGeometry;
-
-    	
 } USB_DEVICE_MSD_MEDIA_DYNAMIC_DATA;
 
 // *****************************************************************************
@@ -264,7 +264,7 @@ typedef union
 
 // *****************************************************************************
 /* Function:
-    void _USB_DEVICE_MSD_CallBackBulkRxTransfer
+    void F_USB_DEVICE_MSD_CallBackBulkRxTransfer
     (
         void *  hMsdInstance, 
         DRV_USB_PIPE_HANDLE hPipe,
@@ -287,16 +287,16 @@ typedef union
 
 */
 
-void _USB_DEVICE_MSD_CallBackBulkRxTransfer( USB_DEVICE_IRP *  hMsdInstance );
+void F_USB_DEVICE_MSD_CallBackBulkRxTransfer( USB_DEVICE_IRP *  handle  );
 
 
 // *****************************************************************************
 /* Function:
-   void _USB_DEVICE_MSD_ResetSenseData
-                                ( USB_DEVICE_MSD_SENSE_DATA *  msdSenseDataPtr )
+   void F_USB_DEVICE_MSD_ResetSenseData
+                                ( USB_DEVICE_MSD_SENSE_DATA *  senseData  )
 
   Summary:
-    Reset's sense data that is pointed by "msdSenseDataPtr".
+    Reset's sense data that is pointed by "senseData ".
 
   Description:
 
@@ -305,7 +305,7 @@ void _USB_DEVICE_MSD_CallBackBulkRxTransfer( USB_DEVICE_IRP *  hMsdInstance );
     None.
 
   Parameters:
-    msdSenseDataPtr       -   Pointer to sense data.
+    senseData        -   Pointer to sense data.
    
 
   Returns:
@@ -315,7 +315,7 @@ void _USB_DEVICE_MSD_CallBackBulkRxTransfer( USB_DEVICE_IRP *  hMsdInstance );
 
 */
 
-void _USB_DEVICE_MSD_ResetSenseData(SCSI_SENSE_DATA *  msdSenseDataPtr );
+void F_USB_DEVICE_MSD_ResetSenseData(SCSI_SENSE_DATA *  senseData  );
 
 
 // *****************************************************************************
@@ -346,18 +346,18 @@ void _USB_DEVICE_MSD_ResetSenseData(SCSI_SENSE_DATA *  msdSenseDataPtr );
 
 */
 
-USB_DEVICE_MSD_STATE _USB_DEVICE_MSD_ProcessNonRWCommand
+USB_DEVICE_MSD_STATE F_USB_DEVICE_MSD_ProcessNonRWCommand
 (
     SYS_MODULE_INDEX iMSD,
     uint8_t * commandStatus
 );
 
-USB_DEVICE_MSD_STATE _USB_DEVICE_MSD_ProcessRead
+USB_DEVICE_MSD_STATE F_USB_DEVICE_MSD_ProcessRead
 (
     SYS_MODULE_INDEX iMSD,
     uint8_t * commandStatus
 );
-USB_DEVICE_MSD_STATE _USB_DEVICE_MSD_ProcessWrite
+USB_DEVICE_MSD_STATE F_USB_DEVICE_MSD_ProcessWrite
 (
     SYS_MODULE_INDEX iMSD,
     uint8_t * commandStatus
@@ -365,7 +365,7 @@ USB_DEVICE_MSD_STATE _USB_DEVICE_MSD_ProcessWrite
 
 // *****************************************************************************
 /* Function:
-    USB_DEVICE_MSD_STATE _USB_DEVICE_MSD_VerifyCommand
+    USB_DEVICE_MSD_STATE F_USB_DEVICE_MSD_VerifyCommand
     (
         SYS_MODULE_INDEX iMSD,
         uint8_t *commandStatus
@@ -389,7 +389,7 @@ USB_DEVICE_MSD_STATE _USB_DEVICE_MSD_ProcessWrite
 
 */
 
-USB_DEVICE_MSD_STATE _USB_DEVICE_MSD_VerifyCommand(SYS_MODULE_INDEX iMSD, uint8_t *commandStatus);
+USB_DEVICE_MSD_STATE F_USB_DEVICE_MSD_VerifyCommand(SYS_MODULE_INDEX iMSD, uint8_t *commandStatus);
 
 
 // *****************************************************************************
@@ -423,14 +423,14 @@ USB_DEVICE_MSD_STATE _USB_DEVICE_MSD_VerifyCommand(SYS_MODULE_INDEX iMSD, uint8_
 
 */
 
-void _USB_DEVICE_MSD_InitializeByDescriptorType(SYS_MODULE_INDEX iMSD, DRV_HANDLE usbDeviceHandle,
+void F_USB_DEVICE_MSD_InitializeByDescriptorType(SYS_MODULE_INDEX iMSD, DRV_HANDLE usbDeviceHandle,
                                             void* funcDriverInit, uint8_t intfNumber, uint8_t altSetting,
                                             uint8_t descriptorType, uint8_t * pDescriptor);
 
 
 // *****************************************************************************
 /* Function:
-   USB_ERROR_STATUS _USB_DEVICE_MSD_Deinitialization ( SYS_MODULE_INDEX iMSD,
+   USB_ERROR_STATUS F_USB_DEVICE_MSD_Deinitialization ( SYS_MODULE_INDEX iMSD,
                                                  SYS_MODULE_INDEX iDriver,
                                                  SYS_MODULE_INDEX iUsbDevice,
                                                  void* funcDriverInit ,
@@ -459,12 +459,13 @@ void _USB_DEVICE_MSD_InitializeByDescriptorType(SYS_MODULE_INDEX iMSD, DRV_HANDL
 
 */
 
-void _USB_DEVICE_MSD_Deinitialization ( SYS_MODULE_INDEX iMSD );
+void F_USB_DEVICE_MSD_Deinitialization ( SYS_MODULE_INDEX iMSD );
 
 
 // *****************************************************************************
+/* MISRA C-2012 Rule 8.6 deviated:2 Deviation record ID -  H3_MISRAC_2012_R_8_6_DR_1 */
 /* Function:
-   USB_ERROR_STATUS _USB_DEVICE_MSD_CheckInterface ( SYS_MODULE_INDEX funcDriverIndex ,
+   USB_ERROR_STATUS F_USB_DEVICE_MSD_CheckInterface ( SYS_MODULE_INDEX funcDriverIndex ,
                                                  uint16_t interfaceNumber )
 
   Summary:
@@ -489,7 +490,7 @@ void _USB_DEVICE_MSD_Deinitialization ( SYS_MODULE_INDEX iMSD );
 
 */
 
-USB_ERROR _USB_DEVICE_MSD_CheckInterface ( SYS_MODULE_INDEX funcDriverIndex ,
+USB_ERROR F_USB_DEVICE_MSD_CheckInterface ( SYS_MODULE_INDEX funcDriverIndex ,
                                                  uint16_t interfaceNumber );
 
 
@@ -520,13 +521,15 @@ USB_ERROR _USB_DEVICE_MSD_CheckInterface ( SYS_MODULE_INDEX funcDriverIndex ,
 
 */
 
-void _USB_DEVICE_MSD_DescriptorNotification(SYS_MODULE_INDEX funcDriverIndex,
+void F_USB_DEVICE_MSD_DescriptorNotification(SYS_MODULE_INDEX funcDriverIndex,
                                  uint8_t descriptorType, uint8_t * pDescriptor);
 
 
+
+/* MISRAC 2012 deviation block end */
 // *****************************************************************************
 /* Function:
-   bool _USB_DEVICE_MSD_ControlTransferHandler ( SYS_MODULE_INDEX iMSD ,
+   bool F_USB_DEVICE_MSD_ControlTransferHandler ( SYS_MODULE_INDEX iMSD ,
             SETUP_PKT *setupPkt, USB_DEVICE_CONTROL_TRANSFER_DATA_OBJECT * controlDataObject )
 
   Summary:
@@ -552,17 +555,17 @@ void _USB_DEVICE_MSD_DescriptorNotification(SYS_MODULE_INDEX funcDriverIndex,
 
 */
 
-void _USB_DEVICE_MSD_ControlTransferHandler
+void F_USB_DEVICE_MSD_ControlTransferHandler
 (
     SYS_MODULE_INDEX MSDIndex,
-    USB_DEVICE_EVENT transferState,
+    USB_DEVICE_EVENT controlTransferEvent,
     USB_SETUP_PACKET * setupPkt
 );
 
 
 // *****************************************************************************
 /* Function:
-   void _USB_DEVICE_MSD_Tasks ( SYS_MODULE_INDEX iMSD )
+   void F_USB_DEVICE_MSD_Tasks ( SYS_MODULE_INDEX iMSD )
 
   Summary:
    MSD function driver tasks.
@@ -583,11 +586,11 @@ void _USB_DEVICE_MSD_ControlTransferHandler
 
 */
 
-void _USB_DEVICE_MSD_Tasks ( SYS_MODULE_INDEX iMSD );
+void F_USB_DEVICE_MSD_Tasks ( SYS_MODULE_INDEX iMSD );
 
 /******************************************************************************
   Function:
-    void _USB_DEVICE_MSD_CallBackBulkTxTransfer( void *  handle )
+    void F_USB_DEVICE_MSD_CallBackBulkTxTransfer( void *  handle )
 
   Summary:
     This is a callback function that gets called by controller driver,
@@ -613,8 +616,61 @@ void _USB_DEVICE_MSD_Tasks ( SYS_MODULE_INDEX iMSD );
     None
 */
 
-void _USB_DEVICE_MSD_CallBackBulkTxTransfer( USB_DEVICE_IRP *  handle );
+void F_USB_DEVICE_MSD_CallBackBulkTxTransfer( USB_DEVICE_IRP *  handle );
 
+void F_USB_DEVICE_MSD_InitializeEndpoint
+(
+    USB_DEVICE_MSD_INSTANCE * msdInstance,
+    DRV_HANDLE usbDevHandle,
+    USB_ENDPOINT_DESCRIPTOR * epDescriptor
+);
+
+void F_USB_DEVICE_MSD_InitializeInterface
+(
+    USB_DEVICE_MSD_INSTANCE * msdDeviceObj,
+    DRV_HANDLE usbDeviceHandle,
+    void * funcDriverInit,
+    USB_INTERFACE_DESCRIPTOR * intfDesc
+);
+
+bool F_USB_DEVICE_MSD_PostDataStageRoutine
+(
+    SYS_MODULE_INDEX iMSD
+);
+
+void F_USB_DEVICE_MSD_SendDataToUsb 
+(
+    SYS_MODULE_INDEX iMSD,
+    uint8_t *data,
+    uint16_t length
+);
+
+void F_USB_DEVICE_MSD_BlockEventHandler
+(
+    SYS_MEDIA_BLOCK_EVENT event,
+    SYS_MEDIA_BLOCK_COMMAND_HANDLE commandHandle,
+    uintptr_t context
+);
+
+void F_USB_DEVICE_MSD_CheckAndUpdateMediaState
+(
+    SYS_MODULE_INDEX iMSD,
+    uint8_t logicalUnit
+);
+
+void  F_USB_DEVICE_MSD_GetBlockAddressAndLength
+(
+    USB_MSD_CBW * lCBW,
+    USB_DEVICE_MSD_DWORD_VAL * logicalBlockAddress,
+    USB_DEVICE_MSD_DWORD_VAL * logicalBlockLength
+);
+
+void  F_USB_DEVICE_MSD_SaveBlockAddressAndLength
+(
+    USB_MSD_CBW * lCBW,
+    USB_DEVICE_MSD_DWORD_VAL * logicalBlockAddress,
+    USB_DEVICE_MSD_DWORD_VAL * logicalBlockLength
+);
 
 #endif
 
