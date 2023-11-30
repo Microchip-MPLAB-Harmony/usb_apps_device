@@ -57,8 +57,8 @@
 #include "usb/usb_chapter_9.h"
 #include "usb/usb_device.h"
 #include "bsp/bsp.h"
-#include "peripheral/nvm/plib_nvm.h"
 #include "peripheral/uart/plib_uart6.h"
+#include "peripheral/nvm/plib_nvm.h"
 #include "usb/usb_device_cdc.h"
 #include "usb/usb_cdc.h"
 #include "driver/usb/usbhs/drv_usbhs.h"
@@ -202,7 +202,7 @@ typedef struct
     SYS_MODULE_OBJ  usbDevObject0;
 
     SYS_MODULE_OBJ  drvUsart0;
-	SYS_MODULE_OBJ  drvUSBHSObject;
+    SYS_MODULE_OBJ  drvUSBHSObject;
 
     SYS_MODULE_OBJ  drvMemory0;
 

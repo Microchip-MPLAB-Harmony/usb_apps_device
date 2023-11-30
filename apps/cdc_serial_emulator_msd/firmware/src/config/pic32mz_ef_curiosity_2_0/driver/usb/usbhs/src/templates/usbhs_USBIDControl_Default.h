@@ -47,10 +47,15 @@
 
 //DOM-IGNORE-END
 
-#ifndef _USBHS_USBIDCONTROL_DEFAULT_H
-#define _USBHS_USBIDCONTROL_DEFAULT_H
+#ifndef USBHS_USBIDCONTROL_DEFAULT_H
+#define USBHS_USBIDCONTROL_DEFAULT_H
 
 #include "usbhs_registers.h"
+
+/* MISRA C-2012 Rule 11.7, Rule 21.1 and Rule 21.2 Deviation record ID -  
+    H3_MISRAC_2012_R_11_7_DR_1, H3_MISRAC_2012_R_21_1_DR_1 
+    H3_MISRAC_2012_R_10_1_DR_1, H3_MISRAC_2012_R_10_3_DR_1,
+    H3_MISRAC_2012_R_10_4_DR_1 and H3_MISRAC_2012_R_21_2_DR_1*/
 
 //******************************************************************************
 /* Function :  USBHS_ExistsUSBIDControl_Default
@@ -102,7 +107,7 @@ PLIB_TEMPLATE void USBHS_USBIDOverrideEnable_Default( USBHS_MODULE_ID index )
 
 PLIB_TEMPLATE void USBHS_USBIDOverrideDisable_Default( USBHS_MODULE_ID index )
 {
-	volatile __USBCRCONbits_t * usbcrcon = (__USBCRCONbits_t *)(index - 0x5F000);
+    volatile __USBCRCONbits_t * usbcrcon = (__USBCRCONbits_t *)(index - 0x5F000);
     usbcrcon->USBIDOVEN = 0;
 }
 
@@ -164,8 +169,9 @@ PLIB_TEMPLATE void USBHS_PhyIDMonitoringDisable_Default( USBHS_MODULE_ID index )
     usbcrcon->PHYIDEN = 0;
 }
 
+/* MISRAC 2012 deviation block end */
 
-#endif /*_USBHS_USBIDCONTROL_DEFAULT_H*/
+#endif /*USBHS_USBIDCONTROL_DEFAULT_H*/
 
 /******************************************************************************
  End of File
