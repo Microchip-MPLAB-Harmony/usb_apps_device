@@ -39,8 +39,8 @@
  *******************************************************************************/
 //DOM-IGNORE-END
 
-#ifndef _DRV_USBHSV1_LOCAL_H
-#define _DRV_USBHSV1_LOCAL_H
+#ifndef DRV_USBHSV1_LOCAL_H
+#define DRV_USBHSV1_LOCAL_H
 
 
 // *****************************************************************************
@@ -58,7 +58,10 @@
 #include "driver/usb/usbhsv1/src/drv_usbhsv1_variant_mapping.h"
 #include "osal/osal.h"
 
-#define DRV_USBHS_HOST_IRP_PER_FRAME_NUMBER 	            5
+/* MISRA C-2012 Rule 5.2, and 8.6 deviated below. Deviation record ID -  
+    H3_MISRAC_2012_R_5_2_DR_1, H3_MISRAC_2012_R_8_6_DR_1 */
+
+#define DRV_USBHS_HOST_IRP_PER_FRAME_NUMBER                 5
 #define DRV_USBHSV1_HOST_MAXIMUM_ENDPOINTS_NUMBER           10
 #define DRV_USBHSV1_MAX_DMA_CHANNELS                        7
 
@@ -98,13 +101,13 @@
  * This is an intermediate flag that is set by
  * the driver to indicate that a ZLP should be sent
  ***************************************************/
-#define USB_DEVICE_IRP_FLAG_SEND_ZLP 0x80
+#define M_USB_DEVICE_IRP_FLAG_SEND_ZLP 0x80
 
 /***************************************************
  * This object is used by the driver as IRP place
  * holder along with queueing feature.
  ***************************************************/
-typedef struct _USB_DEVICE_IRP_LOCAL 
+typedef struct S_USB_DEVICE_IRP_LOCAL 
 {
     /* Pointer to the data buffer */
     void * data;
@@ -117,7 +120,7 @@ typedef struct _USB_DEVICE_IRP_LOCAL
 
     /* IRP Callback. If this is NULL,
      * then there is no callback generated */
-    void (*callback)(struct _USB_DEVICE_IRP * irp);
+    void (*callback)(struct S_USB_DEVICE_IRP * irp);
 
     /* Request specific flags */
     USB_DEVICE_IRP_FLAG flags;
@@ -126,10 +129,10 @@ typedef struct _USB_DEVICE_IRP_LOCAL
     uintptr_t userData;
 
     /* This points to the next IRP in the queue */
-    struct _USB_DEVICE_IRP_LOCAL * next;
+    struct S_USB_DEVICE_IRP_LOCAL * next;
 
     /* This points to the previous IRP in the queue */
-    struct _USB_DEVICE_IRP_LOCAL * previous;
+    struct S_USB_DEVICE_IRP_LOCAL * previous;
 
     /* Pending bytes in the IRP */
     uint32_t nPendingBytes;
@@ -166,8 +169,8 @@ typedef struct
     /* Endpoint state bitmap */
     DRV_USBHSV1_DEVICE_ENDPOINT_STATE endpointState;
 
-	/* This gives the Endpoint Direction */
-	USB_DATA_DIRECTION endpointDirection;
+    /* This gives the Endpoint Direction */
+    USB_DATA_DIRECTION endpointDirection;
 
 }
 DRV_USBHSV1_DEVICE_ENDPOINT_OBJ;
@@ -194,7 +197,7 @@ DRV_USBHSV1_HOST_IRP_STATE;
 /*********************************************
  * This is the local USB Host IRP object
  ********************************************/
-typedef struct _USB_HOST_IRP_LOCAL
+typedef struct S_USB_HOST_IRP_LOCAL
 {
     /* Points to the 8 byte setup command
      * packet in case this is a IRP is 
@@ -221,7 +224,7 @@ typedef struct _USB_HOST_IRP_LOCAL
      * when IRP is terminated. Can be 
      * NULL, in which case the function
      * will not be called. */
-    void (*callback)(struct _USB_HOST_IRP * irp);
+    void (*callback)(struct S_USB_HOST_IRP * irp);
 
     /****************************************
      * These members of the IRP should not be
@@ -229,8 +232,8 @@ typedef struct _USB_HOST_IRP_LOCAL
      ****************************************/
     DRV_USBHSV1_HOST_IRP_STATE tempState;
     uint32_t completedBytes;
-    struct _USB_HOST_IRP_LOCAL * next;
-    struct _USB_HOST_IRP_LOCAL * previous;
+    struct S_USB_HOST_IRP_LOCAL * next;
+    struct S_USB_HOST_IRP_LOCAL * previous;
     DRV_USBHSV1_HOST_PIPE_HANDLE  pipe;
 }
 USB_HOST_IRP_LOCAL;
@@ -238,7 +241,7 @@ USB_HOST_IRP_LOCAL;
 /************************************************
  * This is the Host Pipe Object.
  ************************************************/
-typedef struct _DRV_USBHSV1_HOST_PIPE_OBJ
+typedef struct S_DRV_USBHSV1_HOST_PIPE_OBJ
 {
     /* This pipe object is in use */
     bool inUse;
@@ -276,8 +279,8 @@ typedef struct _DRV_USBHSV1_HOST_PIPE_OBJ
     unsigned int endpointSize;
 
     /* The next and previous pipe */
-    struct _DRV_USBHSV1_HOST_PIPE_OBJ * next;
-    struct _DRV_USBHSV1_HOST_PIPE_OBJ * previous;
+    struct S_DRV_USBHSV1_HOST_PIPE_OBJ * next;
+    struct S_DRV_USBHSV1_HOST_PIPE_OBJ * previous;
 
     /* Interval counter */
 
@@ -303,7 +306,7 @@ DRV_USBHSV1_HOST_PIPE_OBJ;
  * type.
  *********************************************/
 
-typedef struct _DRV_USBHSV1_HOST_TRANSFER_GROUP
+typedef struct S_DRV_USBHSV1_HOST_TRANSFER_GROUP
 {
     /* The first pipe in this transfer 
      * group */
@@ -335,7 +338,7 @@ typedef enum
     USB_TRANSACTION_STALL           = 0xE,
     USB_TRANSACTION_DATA0           = 0x3,
     USB_TRANSACTION_DATA1           = 0xB,
-    USB_TRANSACTION_BUS_TIME_OUT    = 0x0,
+    USB_TRANSACTION_BUS_TIME_OUT    = 0x1,
     USB_TRANSACTION_DATA_ERROR      = 0xF
 
 }
@@ -351,8 +354,8 @@ typedef enum
     DRV_USBHSV1_DEVICE_EP0_STATE_WAITING_FOR_RX_STATUS_IRP_FROM_CLIENT,
     DRV_USBHSV1_DEVICE_EP0_STATE_WAITING_FOR_TX_DATA_IRP_FROM_CLIENT,
     DRV_USBHSV1_DEVICE_EP0_STATE_WAITING_FOR_TX_STATUS_IRP_FROM_CLIENT,
-	DRV_USBHSV1_DEVICE_EP0_STATE_WAITING_FOR_RX_STATUS_COMPLETE,
-	DRV_USBHSV1_DEVICE_EP0_STATE_WAITING_FOR_TX_STATUS_COMPLETE,
+    DRV_USBHSV1_DEVICE_EP0_STATE_WAITING_FOR_RX_STATUS_COMPLETE,
+    DRV_USBHSV1_DEVICE_EP0_STATE_WAITING_FOR_TX_STATUS_COMPLETE,
     DRV_USBHSV1_DEVICE_EP0_STATE_TX_DATA_STAGE_IN_PROGRESS,
     DRV_USBHSV1_DEVICE_EP0_STATE_RX_DATA_STAGE_IN_PROGRESS,
 }
@@ -369,7 +372,7 @@ typedef struct
     bool inUse;
     DRV_USBHSV1_HOST_PIPE_OBJ * pipe;
 
-}_DRV_USBHSV1_HOST_ENDPOINT;
+}S_DRV_USBHSV1_HOST_ENDPOINT;
 
 
 typedef struct
@@ -377,7 +380,7 @@ typedef struct
     /* A combination of two structures for
      * each direction. */
 
-    _DRV_USBHSV1_HOST_ENDPOINT endpoint;
+    S_DRV_USBHSV1_HOST_ENDPOINT endpoint;
 
 }DRV_USBHSV1_HOST_ENDPOINT_OBJ;
 
@@ -399,7 +402,7 @@ typedef enum
 
 } DRV_USBHSV1_TASK_STATE;
 
-typedef struct _DRV_USBHSV1_DMA_POOL_STRUCT
+typedef struct S_DRV_USBHSV1_DMA_POOL_STRUCT
 {
     bool inUse;
     bool endpointDir;
@@ -465,7 +468,7 @@ typedef struct
  * hardware instance
  **********************************************/
 
-typedef struct _DRV_USBHSV1_OBJ_STRUCT
+typedef struct S_DRV_USBHSV1_OBJ_STRUCT
 {
     /* Indicates this object is in use */
     bool inUse;
@@ -507,7 +510,7 @@ typedef struct _DRV_USBHSV1_OBJ_STRUCT
 
     /* The object is current in an interrupt context */
     bool isInInterruptContext;
-	
+    
     /* Maintains the timer count value for host */
     uint32_t timerCount;
 
@@ -523,7 +526,7 @@ typedef struct _DRV_USBHSV1_OBJ_STRUCT
 
     /* Non ISR Task Routine state */
     DRV_USBHSV1_TASK_STATE state;
-	
+    
     /* Client data that will be returned at callback */
     uintptr_t  hClientArg;
 
@@ -533,8 +536,8 @@ typedef struct _DRV_USBHSV1_OBJ_STRUCT
     /* Current VBUS level when running in device mode */
     DRV_USB_VBUS_LEVEL vbusLevel;
 
-	/* Callback to determine the Vbus level */
-	DRV_USBHSV1_VBUS_COMPARATOR vbusComparator;
+    /* Callback to determine the Vbus level */
+    DRV_USBHSV1_VBUS_COMPARATOR vbusComparator;
 
     /* Sent session invalid event to the client */
     bool sessionInvalidEventSent;
@@ -562,13 +565,13 @@ typedef struct _DRV_USBHSV1_OBJ_STRUCT
 
     /* This counts the reset signal duration */
     DRV_USBHSV1_HOST_ROOT_HUB_INFO rootHubInfo;
-	
-	/* This is array of device endpoint objects pointers */ 
-	DRV_USBHSV1_DEVICE_ENDPOINT_OBJ * deviceEndpointObj[DRV_USBHSV1_ENDPOINTS_NUMBER];
+    
+    /* This is array of device endpoint objects pointers */ 
+    DRV_USBHSV1_DEVICE_ENDPOINT_OBJ * deviceEndpointObj[DRV_USBHSV1_ENDPOINTS_NUMBER];
     
     /* True if Root Hub Operation is enabled */
     bool operationEnabled;
-	
+    
 } DRV_USBHSV1_OBJ;
 
 /****************************************************************************
@@ -593,7 +596,7 @@ typedef struct _DRV_USBHSV1_OBJ_STRUCT
  * for pipe size bit-field.
  ****************************************************************************/
 #define drv_usbhsv1_format_pipe_size(size) \
-(32 - clz(((uint32_t)min(max(size, 8), 1024) << 1) - 1) - 1 - 3)
+((32U) - (clz(((uint32_t)min(max((size), (8U)), (1024U)) << 1U) - (1U))) - (1U) - (3U))
 
 
 /*! \brief Tests the bits of a value specified by a given bit-mask.
@@ -603,7 +606,7 @@ typedef struct _DRV_USBHSV1_OBJ_STRUCT
  *
  * \return \c 1 if at least one of the tested bits is set, else \c 0.
  */
-#define Tst_bits( value, mask)  (Rd_bits(value, mask) != 0)
+#define Tst_bits( value, mask)  (Rd_bits(value, mask) != 0U)
 
 /*! \brief Clears the bits of a C lvalue specified by a given bit-mask.
  *
@@ -662,7 +665,7 @@ typedef struct _DRV_USBHSV1_OBJ_STRUCT
  *
  * \note More optimized if only used with values unknown at compile time.
  */
-#define min(a, b)   (((a) < (b)) ?  (a) : (b))
+#define min(a, b)   ((((a) < (b)) != false) ?  (a) : (b))
 
 /*! \brief Takes the maximal value of \a a and \a b.
  *
@@ -673,7 +676,7 @@ typedef struct _DRV_USBHSV1_OBJ_STRUCT
  *
  * \note More optimized if only used with values unknown at compile time.
  */
-#define max(a, b)   (((a) > (b)) ?  (a) : (b))
+#define max(a, b)   ((((a) > (b)) != false) ?  (a) : (b))
 
 #if (defined __GNUC__) || (defined __CC_ARM)
     /*! \brief Counts the trailing zero bits of the given value considered as a 32-bit integer.
@@ -682,7 +685,7 @@ typedef struct _DRV_USBHSV1_OBJ_STRUCT
      *
      * \return The count of trailing zero bits in \a u.
      */
-    #define ctz(u)              ((u) ? __builtin_ctz(u) : 32)
+    #define ctz(u)              ((u != 0u) ? (uint32_t)__builtin_ctz(u) : 32U)
 
     /*! \brief Counts the leading zero bits of the given value considered as a 32-bit integer.
      *
@@ -690,7 +693,7 @@ typedef struct _DRV_USBHSV1_OBJ_STRUCT
      *
      * \return The count of leading zero bits in \a u.
      */
-    #define clz(u)              ((u) ? __builtin_clz(u) : 32)
+    #define clz(u)              ((u != 0U) ? (uint32_t)__builtin_clz(u) : 32U)
 #else
 
 #define clz(u) __iar_builtin_CLZ(u)
@@ -739,18 +742,66 @@ static __INLINE uint8_t ctz(uint32_t x)
 
 #endif
 
-void _DRV_USBHSV1_HOST_AttachDetachStateMachine (DRV_USBHSV1_OBJ * hDriver);
-void _DRV_USBHSV1_HOST_ResetStateMachine(DRV_USBHSV1_OBJ * hDriver);
-void _DRV_USBHSV1_DEVICE_Initialize(DRV_USBHSV1_OBJ * drvObj, SYS_MODULE_INDEX index);
-void _DRV_USBHSV1_DEVICE_Tasks_ISR(DRV_USBHSV1_OBJ * hDriver);
-void _DRV_USBHSV1_DEVICE_Tasks_ISR_USBDMA(DRV_USBHSV1_OBJ * hDriver);
-void _DRV_USBHSV1_HOST_Initialize(DRV_USBHSV1_OBJ * drvObj, SYS_MODULE_INDEX index);
-void _DRV_USBHSV1_HOST_Tasks_ISR(DRV_USBHSV1_OBJ * hDriver);
-uint8_t _DRV_USBHSV1_DEVICE_Get_FreeDMAChannel
+void F_DRV_USBHSV1_HOST_AttachDetachStateMachine (DRV_USBHSV1_OBJ * hDriver);
+void F_DRV_USBHSV1_HOST_ResetStateMachine(DRV_USBHSV1_OBJ * hDriver);
+void F_DRV_USBHSV1_DEVICE_Initialize(DRV_USBHSV1_OBJ * drvObj, SYS_MODULE_INDEX index);
+void F_DRV_USBHSV1_DEVICE_Tasks_ISR(DRV_USBHSV1_OBJ * hDriver);
+void F_DRV_USBHSV1_DEVICE_Tasks_ISR_USBDMA(DRV_USBHSV1_OBJ * hDriver);
+void F_DRV_USBHSV1_HOST_Initialize(DRV_USBHSV1_OBJ * drvObj, SYS_MODULE_INDEX index);
+void F_DRV_USBHSV1_HOST_Tasks_ISR(DRV_USBHSV1_OBJ * hDriver);
+uint8_t F_DRV_USBHSV1_DEVICE_Get_FreeDMAChannel
 (
     DRV_USBHSV1_OBJ * hDriver,
     bool endpointDir,
     uint8_t iEndpoint
 );
+void F_DRV_USBHSV1_DEVICE_IRPQueueFlush
+(
+    DRV_USBHSV1_DEVICE_ENDPOINT_OBJ * endpointObj,
+    USB_DEVICE_IRP_STATUS status
+);
+void F_DRV_USBHSV1_DEVICE_EndpointObjectEnable
+(
+    DRV_USBHSV1_DEVICE_ENDPOINT_OBJ * endpointObj,
+    uint16_t endpointSize,
+    USB_TRANSFER_TYPE endpointType,
+    USB_DATA_DIRECTION endpointDirection
+);
+
+void F_DRV_USBHSV1_HOST_IRPTransmitFIFOLoad
+(
+    volatile usbhs_registers_t * usbID, 
+    USB_HOST_IRP_LOCAL * irp,
+    uint8_t hPipe
+);
+
+void F_DRV_USBHSV1_HOST_IRPTransmitSetupPacket
+(
+    volatile usbhs_registers_t * usbID,
+    USB_HOST_IRP_LOCAL * irp
+);
+
+unsigned int F_DRV_USBHSV1_HOST_IRPReceiveFIFOUnload 
+(
+    volatile usbhs_registers_t * usbID,
+    USB_HOST_IRP_LOCAL * irp,
+    uint8_t hPipe,
+    bool * pisDMAUsed
+);
+
+void F_DRV_USBHSV1_HOST_ControlTransferProcess(DRV_USBHSV1_OBJ * hDriver);
+
+void F_DRV_USBHSV1_HOST_NonControlTransferProcess
+(
+    DRV_USBHSV1_OBJ * hDriver,
+    uint8_t hostPipe
+);
+
+
+void DRV_USBHSV1_HOST_StartOfFrameControl(DRV_HANDLE client, bool control);
+
+USB_SPEED DRV_USBHSV1_HOST_DeviceCurrentSpeedGet(DRV_HANDLE client);
+
+/* MISRAC 2012 deviation block end */
 
 #endif
