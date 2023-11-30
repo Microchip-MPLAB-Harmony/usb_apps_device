@@ -101,28 +101,15 @@ extern "C" {
    function driver */
 #define USB_DEVICE_HID_QUEUE_DEPTH_COMBINED                 2
 
-/* Number of Endpoints used */
-#define DRV_USBFSV1_ENDPOINTS_NUMBER                        2
-
-/* The USB Device Layer will not initialize the USB Driver */
-#define USB_DEVICE_DRIVER_INITIALIZE_EXPLICIT
-
-/* Maximum device layer instances */
-#define USB_DEVICE_INSTANCES_NUMBER                         1
-
-/* EP0 size in bytes */
-#define USB_DEVICE_EP0_BUFFER_SIZE                          64
-
-
 /*** USB Driver Configuration ***/
 
 /* Maximum USB driver instances */
-#define DRV_USBFSV1_INSTANCES_NUMBER                        1
+#define DRV_USBFSV1_INSTANCES_NUMBER                        1U
 
 
 /* Enables Device Support */
 #define DRV_USBFSV1_DEVICE_SUPPORT                          true
-	
+    
 /* Disable Host Support */
 #define DRV_USBFSV1_HOST_SUPPORT                            false
 
@@ -131,6 +118,19 @@ extern "C" {
 
 /* Alignment for buffers that are submitted to USB Driver*/ 
 #define USB_ALIGN  __ALIGNED(CACHE_LINE_SIZE)
+
+/* Number of Endpoints used */
+#define DRV_USBFSV1_ENDPOINTS_NUMBER                        2U
+
+/* The USB Device Layer will not initialize the USB Driver */
+#define USB_DEVICE_DRIVER_INITIALIZE_EXPLICIT
+
+/* Maximum device layer instances */
+#define USB_DEVICE_INSTANCES_NUMBER                         1U
+
+/* EP0 size in bytes */
+#define USB_DEVICE_EP0_BUFFER_SIZE                          64U
+
 
 
 
