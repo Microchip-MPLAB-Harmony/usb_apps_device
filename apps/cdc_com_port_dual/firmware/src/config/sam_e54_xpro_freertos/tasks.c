@@ -60,23 +60,23 @@
 // Section: RTOS "Tasks" Routine
 // *****************************************************************************
 // *****************************************************************************
-void _USB_DEVICE_Tasks(  void *pvParameters  )
+static void F_USB_DEVICE_Tasks(  void *pvParameters  )
 {
-    while(1)
+    while(true)
     {
                 /* USB Device layer tasks routine */
         USB_DEVICE_Tasks(sysObj.usbDevObject0);
-        vTaskDelay(10 / portTICK_PERIOD_MS);
+        vTaskDelay(10U / portTICK_PERIOD_MS);
     }
 }
 
-void _DRV_USBFSV1_Tasks(  void *pvParameters  )
+static void F_DRV_USBFSV1_Tasks(  void *pvParameters  )
 {
-    while(1)
+    while(true)
     {
-				 /* USB FS Driver Task Routine */
+                 /* USB FS Driver Task Routine */
         DRV_USBFSV1_Tasks(sysObj.drvUSBFSV1Object);
-        vTaskDelay(10 / portTICK_PERIOD_MS);
+        vTaskDelay(10U / portTICK_PERIOD_MS);
     }
 }
 
@@ -118,7 +118,7 @@ void SYS_Tasks ( void )
 
     /* Maintain Middleware & Other Libraries */
         /* Create OS Thread for USB_DEVICE_Tasks. */
-    xTaskCreate( _USB_DEVICE_Tasks,
+    (void) xTaskCreate( F_USB_DEVICE_Tasks,
         "USB_DEVICE_TASKS",
         1024,
         (void*)NULL,
@@ -126,8 +126,8 @@ void SYS_Tasks ( void )
         (TaskHandle_t*)NULL
     );
 
-	/* Create OS Thread for USB Driver Tasks. */
-    xTaskCreate( _DRV_USBFSV1_Tasks,
+    /* Create OS Thread for USB Driver Tasks. */
+    (void) xTaskCreate( F_DRV_USBFSV1_Tasks,
         "DRV_USBFSV1_TASKS",
         1024,
         (void*)NULL,
