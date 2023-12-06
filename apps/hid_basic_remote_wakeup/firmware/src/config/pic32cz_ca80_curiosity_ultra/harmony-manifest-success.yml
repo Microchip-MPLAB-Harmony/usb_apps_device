@@ -4,7 +4,7 @@
 
 
 project: hid_basic_remote_wakeup
-creation_date: 2023-11-30T08:55:39.904+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+creation_date: 2023-12-06T17:35:36.878+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
 operating_system: Windows 10
 mcc_mode: IDE            # [IDE|Standalone|Headless]
 mcc_version: v5.3.7
