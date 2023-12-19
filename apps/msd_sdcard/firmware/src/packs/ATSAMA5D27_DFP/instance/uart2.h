@@ -1,7 +1,7 @@
 /*
- * Instance header file for ATSAMA5D29
+ * Instance header file for ATSAMA5D29TA100
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,17 +20,17 @@
  *
  */
 
-/* file generated from device description version 2022-10-04T10:37:14Z */
+/* file generated from device description version 2022-11-18T13:40:01Z */
 #ifndef _SAMA5D_UART2_INSTANCE_
 #define _SAMA5D_UART2_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for UART2 peripheral ========== */
-#define UART2_INSTANCE_ID                        (26)       
-#define UART2_CLOCK_ID                           (26)       
-#define UART2_DMAC_ID_TX                         (39)       
-#define UART2_DMAC_ID_RX                         (40)       
-#define UART2_BRSRCCK_PERIPH_CLK                 (0)        /* MCK */
 #define UART2_BRSRCCK_GCLK                       (0)        /* GCLK */
+#define UART2_BRSRCCK_PERIPH_CLK                 (0)        /* MCK */
+#define UART2_CLOCK_ID                           (26)       
+#define UART2_DMAC_ID_RX                         (40)       
+#define UART2_DMAC_ID_TX                         (39)       
+#define UART2_INSTANCE_ID                        (26)       
 
 #endif /* _SAMA5D_UART2_INSTANCE_ */
