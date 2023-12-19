@@ -11,4 +11,4 @@ settings:
   TRUSTZONE: 'false'
   CMSISPath: .\dev_packs\arm\CMSIS\5.7.0
   MERGE_STRATEGY: USER_ALL
-  DFPPath: .\dev_packs\Microchip\SAMA5D2_DFP\1.5.53\atdf\ATSAMA5D27CD1G.atdf
+  DFPPath: SAMA5D2_DFP\1.10.211
