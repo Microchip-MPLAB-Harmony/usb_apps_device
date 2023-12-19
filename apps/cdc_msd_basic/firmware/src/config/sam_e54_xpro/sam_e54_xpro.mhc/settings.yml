@@ -1,6 +1,6 @@
-format_version: v1.0
 configName: sam_e54_xpro
 folderName: sam_e54_xpro
+format_version: v1.0
 frameworkPath: D:\USBR3.90_testing
 processor: ATSAME54P20A
 projectName: sam_e54_xpro
@@ -11,4 +11,4 @@ settings:
   TRUSTZONE: 'false'
   CMSISPath: dev_packs\arm\CMSIS\5.8.0
   MERGE_STRATEGY: USER_ALL
-  DFPPath: dev_packs\Microchip\SAME54_DFP\3.6.95\atdf\ATSAME54P20A.atdf
+  DFPPath: SAME54_DFP\3.8.234
