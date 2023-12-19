@@ -1,7 +1,7 @@
 /*
- * Instance header file for ATSAMA5D29
+ * Instance header file for ATSAMA5D29TA100
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,15 +20,15 @@
  *
  */
 
-/* file generated from device description version 2022-10-04T10:37:14Z */
+/* file generated from device description version 2022-11-18T13:40:01Z */
 #ifndef _SAMA5D_TDES_INSTANCE_
 #define _SAMA5D_TDES_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for TDES peripheral ========== */
-#define TDES_INSTANCE_ID                         (11)       
 #define TDES_CLOCK_ID                            (11)       
-#define TDES_DMAC_ID_TX                          (28)       
 #define TDES_DMAC_ID_RX                          (29)       
+#define TDES_DMAC_ID_TX                          (28)       
+#define TDES_INSTANCE_ID                         (11)       
 
 #endif /* _SAMA5D_TDES_INSTANCE_ */
