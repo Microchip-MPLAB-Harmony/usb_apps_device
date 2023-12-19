@@ -60,6 +60,7 @@
 // Section: RTOS "Tasks" Routine
 // *****************************************************************************
 // *****************************************************************************
+
 static void F_USB_DEVICE_Tasks(  void *pvParameters  )
 {
     while(true)
@@ -69,7 +70,6 @@ static void F_USB_DEVICE_Tasks(  void *pvParameters  )
         vTaskDelay(10U / portTICK_PERIOD_MS);
     }
 }
-
 
 /* Handle for the APP_FREERTOS_Tasks. */
 TaskHandle_t xAPP_FREERTOS_Tasks;
@@ -107,7 +107,8 @@ void SYS_Tasks ( void )
     
 
     /* Maintain Middleware & Other Libraries */
-        /* Create OS Thread for USB_DEVICE_Tasks. */
+    
+    /* Create OS Thread for USB_DEVICE_Tasks. */
     (void) xTaskCreate( F_USB_DEVICE_Tasks,
         "USB_DEVICE_TASKS",
         1024,
@@ -115,7 +116,6 @@ void SYS_Tasks ( void )
         1,
         (TaskHandle_t*)NULL
     );
-
 
 
 
