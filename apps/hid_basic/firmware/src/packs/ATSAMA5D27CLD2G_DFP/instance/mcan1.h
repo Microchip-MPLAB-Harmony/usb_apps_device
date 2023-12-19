@@ -1,7 +1,7 @@
 /*
- * Instance header file for ATSAMA5D29
+ * Instance header file for ATSAMA5D29TA100
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,15 +20,15 @@
  *
  */
 
-/* file generated from device description version 2022-10-04T10:37:14Z */
+/* file generated from device description version 2022-11-18T13:40:01Z */
 #ifndef _SAMA5D_MCAN1_INSTANCE_
 #define _SAMA5D_MCAN1_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for MCAN1 peripheral ========== */
-#define MCAN1_INSTANCE_ID                        (57)       
 #define MCAN1_CLOCK_ID                           (57)       
 #define MCAN1_ID_MCAN1_INT0                      (57)       
 #define MCAN1_ID_MCAN1_INT1                      (65)       
+#define MCAN1_INSTANCE_ID                        (57)       
 
 #endif /* _SAMA5D_MCAN1_INSTANCE_ */
