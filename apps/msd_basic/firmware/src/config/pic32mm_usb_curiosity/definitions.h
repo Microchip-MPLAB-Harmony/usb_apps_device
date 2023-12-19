@@ -59,10 +59,10 @@
 #include "driver/memory/drv_memory.h"
 #include "driver/usb/usbfs/drv_usbfs.h"
 #include "bsp/bsp.h"
-#include "peripheral/nvm/plib_nvm.h"
 #include "system/int/sys_int.h"
 #include "osal/osal.h"
 #include "system/debug/sys_debug.h"
+#include "peripheral/nvm/plib_nvm.h"
 #include "app.h"
 
 
