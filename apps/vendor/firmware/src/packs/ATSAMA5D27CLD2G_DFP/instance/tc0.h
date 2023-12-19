@@ -1,7 +1,7 @@
 /*
- * Instance header file for ATSAMA5D29
+ * Instance header file for ATSAMA5D29TA100
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,15 +20,16 @@
  *
  */
 
-/* file generated from device description version 2022-10-04T10:37:14Z */
+/* file generated from device description version 2022-11-18T13:40:01Z */
 #ifndef _SAMA5D_TC0_INSTANCE_
 #define _SAMA5D_TC0_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for TC0 peripheral ========== */
-#define TC0_INSTANCE_ID                          (35)       
 #define TC0_CLOCK_ID                             (35)       
 #define TC0_DMAC_ID_RX                           (45)       
+#define TC0_INSTANCE_ID                          (35)       
+#define TC0_NUM_INTERRUPT_LINES                  (1)        
 #define TC0_TCCLKS_                              (0)        /* MCK */
 #define TC0_TCCLKS_TIMER_CLOCK1                  (1)        /* GCLK */
 #define TC0_TCCLKS_TIMER_CLOCK2                  (2)        /* MCK/8 */
@@ -38,7 +39,6 @@
 #define TC0_TCCLKS_XC0                           (6)        /* XC0 */
 #define TC0_TCCLKS_XC1                           (7)        /* XC1 */
 #define TC0_TCCLKS_XC2                           (8)        /* XC2 */
-#define TC0_NUM_INTERRUPT_LINES                  (1)        
 #define TC0_TIMER_WIDTH                          (32)       
 
 #endif /* _SAMA5D_TC0_INSTANCE_ */
