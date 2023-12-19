@@ -66,7 +66,7 @@
 #define DRV_USBFSV1_READ_PADCAL_VALUE (*((uint32_t *) SW0_ADDR + 1))
 
 /* SAME5x Family Devices has Four interrupt vectors for USB module */ 
-#define DRV_USBFSV1_MULTIPLE_ISR_AVAILABLE true   // Need to add prototypes rule 8.4
+#define DRV_USBFSV1_MULTIPLE_ISR_AVAILABLE true
 
 void DRV_USBFSV1_USB_Handler(void);
 
