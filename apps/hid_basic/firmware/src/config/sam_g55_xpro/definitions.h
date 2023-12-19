@@ -49,9 +49,9 @@
 #include <stddef.h>
 #include <stdbool.h>
 #include "driver/usb/usbdp/drv_usbdp.h"
+#include "bsp/bsp.h"
 #include "usb/usb_device_hid.h"
 #include "usb/usb_hid.h"
-#include "bsp/bsp.h"
 #include "peripheral/pio/plib_pio.h"
 #include "peripheral/clock/plib_clock.h"
 #include "peripheral/nvic/plib_nvic.h"
