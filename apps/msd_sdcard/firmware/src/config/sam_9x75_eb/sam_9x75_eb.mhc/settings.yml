@@ -11,4 +11,4 @@ settings:
   TRUSTZONE: 'false'
   CMSISPath: dev_packs\arm\CMSIS\5.8.0
   MERGE_STRATEGY: USER_ALL
-  DFPPath: SAM9X7_DFP\1.2.128
+  DFPPath: SAM9X7_DFP\1.1.120
