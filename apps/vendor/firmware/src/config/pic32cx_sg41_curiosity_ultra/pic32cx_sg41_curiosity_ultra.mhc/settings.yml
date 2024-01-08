@@ -1,0 +1,13 @@
+configName: pic32cx_sg41_curiosity_ultra
+folderName: pic32cx_sg41_curiosity_ultra
+format_version: v1.0
+frameworkPath: C:\Harmony_dev_v3_12_0
+processor: PIC32CX1025SG41128
+projectName: pic32cx_sg41_curiosity_ultra
+settings:
+  PackageFilter: ''
+  FORCE_OPTIMIZATION: 'false'
+  GENERATE_BACKUP: 'true'
+  TRUSTZONE: 'false'
+  MERGE_STRATEGY: USER_ALL
+  DFPPath: PIC32CX-SG41_DFP\1.1.122
