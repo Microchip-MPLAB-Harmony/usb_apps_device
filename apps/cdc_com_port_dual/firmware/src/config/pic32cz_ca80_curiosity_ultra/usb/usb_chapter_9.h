@@ -187,9 +187,6 @@ typedef struct __attribute__ ((packed))
 } USB_INTERFACE_ASSOCIATION_DESCRIPTOR;
 
 /* MISRA C-2012 Rule 6.1 deviated:64 Deviation record ID -  H3_MISRAC_2012_R_6_1_DR_1 */
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wunknown-pragmas"
-#pragma coverity compliance block deviate:64 "MISRA C-2012 Rule 6.1" "H3_MISRAC_2012_R_6_1_DR_1" 
 // *****************************************************************************
 /* Endpoint descriptor structure
 
@@ -480,8 +477,6 @@ typedef union __attribute__((packed))
 
 } USB_DEVICE_GET_STATUS_RESPONSE;
 
-#pragma coverity compliance end_block "MISRA C-2012 Rule 6.1"
-#pragma GCC diagnostic pop
 /* MISRAC 2012 deviation block end */
 
 // *****************************************************************************

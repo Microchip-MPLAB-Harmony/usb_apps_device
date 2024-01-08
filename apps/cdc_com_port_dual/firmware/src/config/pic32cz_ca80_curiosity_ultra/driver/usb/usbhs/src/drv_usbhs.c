@@ -662,7 +662,6 @@ DRV_HANDLE DRV_USBHS_Open
 }
 
 
-#pragma coverity compliance end_block "MISRA C-2012 Rule 10.4"
 /* MISRAC 2012 deviation block end */
 
 // *****************************************************************************
@@ -1045,10 +1044,6 @@ void F_DRV_USBHS_Setup_Device_Mode( USBHS_MODULE_ID usbID )
     
 }
 
-#pragma coverity compliance end_block "MISRA C-2012 Rule 11.3"
-#pragma coverity compliance end_block "MISRA C-2012 Rule 11.7"
-#pragma coverity compliance end_block "MISRA C-2012 Rule 11.8"
-#pragma GCC diagnostic pop
 
 // *****************************************************************************
 /* Function:

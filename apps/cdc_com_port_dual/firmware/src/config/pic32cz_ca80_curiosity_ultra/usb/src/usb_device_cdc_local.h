@@ -387,10 +387,7 @@ void F_USB_DEVICE_CDC_WriteIRPCallback (USB_DEVICE_IRP * irp );
     Called by the controller driver
  */
 /* MISRA C-2012 Rule 8.6 deviated:1 Deviation record ID -  H3_MISRAC_2012_R_8_6_DR_1 */
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wunknown-pragmas"
 
-#pragma coverity compliance block deviate:1 "MISRA C-2012 Rule 8.6" "H3_MISRAC_2012_R_8_6_DR_1"
 
 void F_USB_DEVICE_CDC_ReadIRPCallback (USB_DEVICE_IRP * irp );
 
@@ -408,8 +405,6 @@ uint16_t USB_DEVICE_CDC_WritePacketSizeGet ( USB_DEVICE_CDC_INDEX iCDC );
 
 extern USB_DEVICE_FUNCTION_DRIVER cdcFuncDriver;
 
-#pragma coverity compliance end_block "MISRA C-2012 Rule 8.6"
-#pragma GCC diagnostic pop
 /* MISRAC 2012 deviation block end */
 
 #ifdef __cplusplus  // Provide C++ Compatibility

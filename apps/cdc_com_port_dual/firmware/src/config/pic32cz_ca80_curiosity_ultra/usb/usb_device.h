@@ -323,9 +323,6 @@ typedef enum
 // *****************************************************************************
 
 /* MISRA C-2012 Rule 3.1 deviated:34 Deviation record ID -  H3_MISRAC_2012_R_3_1_DR_1 */
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wunknown-pragmas"
-#pragma coverity compliance block deviate:34 "MISRA C-2012 Rule 3.1" "H3_MISRAC_2012_R_3_1_DR_1"    
 
 /* USB Device Layer Events.
 
@@ -560,7 +557,6 @@ typedef enum
 */
 
 /* MISRA C-2012 Rule 5.2 deviated:20 Deviation record ID -  H3_MISRAC_2012_R_5_2_DR_1 */
-#pragma coverity compliance block deviate:20 "MISRA C-2012 Rule 5.2" "H3_MISRAC_2012_R_5_2_DR_1" 
 
 typedef enum 
 {
@@ -1097,7 +1093,6 @@ typedef struct
 USB_DEVICE_EVENT_DATA_ENDPOINT_READ_COMPLETE, 
 USB_DEVICE_EVENT_DATA_ENDPOINT_WRITE_COMPLETE;
 
-#pragma coverity compliance end_block "MISRA C-2012 Rule 5.2"    
 /* MISRAC 2012 deviation block end */
 //*******************************************************************************
 /* USB Device Set Descriptor Event Data type.
@@ -2347,7 +2342,6 @@ void USB_DEVICE_RemoteWakeupStop ( USB_DEVICE_HANDLE usbDeviceHandle );
 */
 
 /* MISRA C-2012 Rule 8.6 deviated:4 Deviation record ID -  H3_MISRAC_2012_R_8_6_DR_1 */
-#pragma coverity compliance block deviate:4 "MISRA C-2012 Rule 8.6" "H3_MISRAC_2012_R_8_6_DR_1"    
 
 void USB_DEVICE_RemoteWakeupStartTimed ( USB_DEVICE_HANDLE usbDeviceHandle );
 
@@ -3494,10 +3488,6 @@ USB_DEVICE_RESULT USB_DEVICE_EndpointTransferCancel
     USB_DEVICE_TRANSFER_HANDLE transferHandle
 );
 
-#pragma coverity compliance end_block "MISRA C-2012 Rule 3.1"   
-#pragma coverity compliance end_block "MISRA C-2012 Rule 5.2"
-#pragma coverity compliance end_block "MISRA C-2012 Rule 8.6"
-#pragma GCC diagnostic pop
 /* MISRAC 2012 deviation block end */
 
 //DOM-IGNORE-BEGIN

@@ -520,10 +520,7 @@ typedef enum
 
 // *****************************************************************************
 /* MISRA C-2012 Rule 3.1 deviated:4 Deviation record ID -  H3_MISRAC_2012_R_3_1_DR_1 */
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wunknown-pragmas"
 
-#pragma coverity compliance block deviate:4 "MISRA C-2012 Rule 3.1" "H3_MISRAC_2012_R_3_1_DR_1"    
 
 /* USB Host Layer Target Peripheral List Entry Type
 
@@ -589,7 +586,6 @@ typedef enum
     entries (as shown in the code snippet) is recommended
 */
 /* MISRA C-2012 Rule 6.1 deviated:6 Deviation record ID -  H3_MISRAC_2012_R_6_1_DR_1 */
-#pragma coverity compliance block deviate:6 "MISRA C-2012 Rule 6.1" "H3_MISRAC_2012_R_6_1_DR_1"    
 
 typedef struct
 {
@@ -643,7 +639,6 @@ USB_HOST_TARGET_PERIPHERAL_LIST_ENTRY,
 USB_HOST_TPL_ENTRY;
 
 
-#pragma coverity compliance end_block "MISRA C-2012 Rule 6.1"
 /* MISRAC 2012 deviation block end */
 // *****************************************************************************
 /* USB Host Controller Driver Information
@@ -1291,7 +1286,6 @@ USB_HOST_RESULT USB_HOST_BusSuspend (USB_HOST_BUS bus);
 USB_HOST_RESULT USB_HOST_BusResume (USB_HOST_BUS bus);
 
 
-#pragma coverity compliance end_block "MISRA C-2012 Rule 3.1"
 /* MISRAC 2012 deviation block end */
 // *****************************************************************************
 /* Function:
@@ -1440,7 +1434,6 @@ USB_HOST_RESULT USB_HOST_DeviceGetNext (USB_HOST_DEVICE_INFO * deviceInfo);
 
 // *****************************************************************************
 /* MISRA C-2012 Rule 8.6 deviated:3 Deviation record ID -  H3_MISRAC_2012_R_8_6_DR_1 */
-#pragma coverity compliance block deviate:3 "MISRA C-2012 Rule 8.6" "H3_MISRAC_2012_R_8_6_DR_1"    
 
 /* Function:
     USB_HOST_RESULT USB_HOST_DeviceSuspend 
@@ -1613,8 +1606,6 @@ USB_HOST_RESULT USB_HOST_DeviceIsSuspended
     USB_HOST_DEVICE_OBJ_HANDLE deviceObjHandle
 );
 
-#pragma coverity compliance end_block "MISRA C-2012 Rule 8.6"
-#pragma GCC diagnostic pop
 /* MISRAC 2012 deviation block end */
 // *****************************************************************************
 /* Function:

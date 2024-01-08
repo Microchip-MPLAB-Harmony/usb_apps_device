@@ -170,9 +170,6 @@ typedef enum
 */
 
 /* MISRA C-2012 Rule 6.1 deviated:9 Deviation record ID -  H3_MISRAC_2012_R_6_1_DR_1 */
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wunknown-pragmas"
-#pragma coverity compliance block deviate:9 "MISRA C-2012 Rule 6.1" "H3_MISRAC_2012_R_6_1_DR_1"    
 
 typedef union
 {
@@ -192,7 +189,6 @@ typedef union
     };
 } USB_DEVICE_STATUS;
 
-#pragma coverity compliance end_block "MISRA C-2012 Rule 6.1"
 /* MISRAC 2012 deviation block end */
 
 // *****************************************************************************
@@ -407,9 +403,6 @@ void F_USB_DEVICE_ForwardControlXfrToFunction
 
 /* MISRA C-2012 Rule 5.5, 8.6 deviated below. Deviation record ID -  
    H3_MISRAC_2012_R_5_5_DR_1 & H3_MISRAC_2012_R_8_6_DR_1*/
-#pragma coverity compliance block \
-(deviate:1 "MISRA C-2012 Rule 5.5" "H3_MISRAC_2012_R_5_5_DR_1" )\
-(deviate:1 "MISRA C-2012 Rule 8.6" "H3_MISRAC_2012_R_8_6_DR_1" )   
 
 
 void F_USB_DEVICE_ProcessInterfaceRequests
@@ -474,9 +467,6 @@ void F_USB_DEVICE_DeInitializeAllFunctionDrivers
 
 void F_USB_DEVICE_ConfigureDevice( USB_DEVICE_OBJ* usbDeviceThisInstance );
 
-#pragma coverity compliance end_block "MISRA C-2012 Rule 5.5"
-#pragma coverity compliance end_block "MISRA C-2012 Rule 8.6"
-#pragma GCC diagnostic pop
 /* MISRAC 2012 deviation block end */
 
 #endif

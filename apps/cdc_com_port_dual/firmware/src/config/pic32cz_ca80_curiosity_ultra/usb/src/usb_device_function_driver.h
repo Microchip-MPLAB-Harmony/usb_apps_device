@@ -160,9 +160,6 @@ typedef struct
 
 // *****************************************************************************
 /* MISRA C-2012 Rule 3.1 Deviated:3 Deviation record ID -  H3_MISRAC_2012_R_3_1_DR_1 */
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wunknown-pragmas"
-#pragma coverity compliance block deviate:3 "MISRA C-2012 Rule 3.1" "H3_MISRAC_2012_R_3_1_DR_1"   
 /* Function:
     USB_ERROR USB_DEVICE_IRPSubmit
     (
@@ -488,7 +485,6 @@ USB_ERROR USB_DEVICE_IRPCancel
 );
 
 
-#pragma coverity compliance end_block "MISRA C-2012 Rule 3.1"
 /* MISRAC 2012 deviation block end */
 
 //DOM-IGNORE-BEGIN

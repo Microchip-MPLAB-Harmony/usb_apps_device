@@ -163,9 +163,6 @@ static USB_CDC_SERIAL_STATE_RESPONSE gUSBDeviceCDCSerialStateResponse[USB_DEVICE
 */
 
 /* MISRA C-2012 Rule 10.4 False Positive:10 Deviation record ID -  H3_MISRAC_2012_R_10_4_DR_1 */
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wunknown-pragmas"
-#pragma coverity compliance block fp:10 "MISRA C-2012 Rule 10.4" "H3_MISRAC_2012_R_10_4_DR_1"    
 
 void F_USB_DEVICE_CDC_GlobalInitialize (void)
 {
@@ -213,7 +210,6 @@ void F_USB_DEVICE_CDC_GlobalInitialize (void)
 */
 
 /* MISRA C-2012 Rule 11.3 deviated:3 Deviation record ID -  H3_MISRAC_2012_R_11_3_DR_1 */
-#pragma coverity compliance block deviate:3 "MISRA C-2012 Rule 11.3" "H3_MISRAC_2012_R_11_3_DR_1"    
 
 void F_USB_DEVICE_CDC_Initialization 
 ( 
@@ -362,7 +358,6 @@ void F_USB_DEVICE_CDC_Initialization
     }
 }
 
-#pragma coverity compliance end_block "MISRA C-2012 Rule 11.3"
 /* MISRAC 2012 deviation block end */
 
 // ******************************************************************************
@@ -464,9 +459,6 @@ void F_USB_DEVICE_CDC_Deinitialization ( SYS_MODULE_INDEX iCDC )
 */
 /* MISRA C-2012 Rule 16.1, 16.3 deviated below. Deviation record ID -  
    H3_MISRAC_2012_R_16_1_DR_1 & H3_MISRAC_2012_R_16_3_DR_1*/
-#pragma coverity compliance block \
-(deviate:1 "MISRA C-2012 Rule 16.1" "H3_MISRAC_2012_R_16_1_DR_1" )\
-(deviate:1 "MISRA C-2012 Rule 16.3" "H3_MISRAC_2012_R_16_3_DR_1" )   
 
 void F_USB_DEVICE_CDC_ControlTransferHandler 
 (
@@ -565,8 +557,6 @@ void F_USB_DEVICE_CDC_ControlTransferHandler
     }
 }
 
-#pragma coverity compliance end_block "MISRA C-2012 Rule 16.1"
-#pragma coverity compliance end_block "MISRA C-2012 Rule 16.3"
 /* MISRAC 2012 deviation block end */
 
 // ******************************************************************************
@@ -987,7 +977,6 @@ USB_DEVICE_CDC_RESULT USB_DEVICE_CDC_Read
 */
 
 /* MISRA C-2012 Rule 11.8 deviated:1 Deviation record ID -  H3_MISRAC_2012_R_11_8_DR_1 */
-#pragma coverity compliance block deviate:1 "MISRA C-2012 Rule 11.8" "H3_MISRAC_2012_R_11_8_DR_1"    
 
 USB_DEVICE_CDC_RESULT USB_DEVICE_CDC_Write 
 (
@@ -1141,7 +1130,6 @@ USB_DEVICE_CDC_RESULT USB_DEVICE_CDC_Write
     return(USB_DEVICE_CDC_RESULT_ERROR_TRANSFER_QUEUE_FULL);
 }
 
-#pragma coverity compliance end_block "MISRA C-2012 Rule 11.8"
 /* MISRAC 2012 deviation block end */
 
 USB_DEVICE_CDC_RESULT USB_DEVICE_CDC_EventHandlerSet 
@@ -1400,8 +1388,6 @@ USB_DEVICE_CDC_RESULT USB_DEVICE_CDC_SerialStateNotificationSend
 }
 
 
-#pragma coverity compliance end_block "MISRA C-2012 Rule 10.4"
-#pragma GCC diagnostic pop
 /* MISRAC 2012 deviation block end */
 
 /*******************************************************************************

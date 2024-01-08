@@ -68,16 +68,6 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
     H3_MISRAC_2012_R_10_4_DR_1, H3_MISRAC_2012_R_11_6_DR_1,
     H3_MISRAC_2012_R_11_8_DR_1, H3_MISRAC_2012_R_16_1_DR_1,   
     and H3_MISRAC_2012_R_16_3_DR_1 */
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wunknown-pragmas"
-#pragma coverity compliance block \
-(deviate:10 "MISRA C-2012 Rule 10.1" "H3_MISRAC_2012_R_10_1_DR_1" )\
-(deviate:10 "MISRA C-2012 Rule 10.3" "H3_MISRAC_2012_R_10_3_DR_1" )\
-(deviate:10 "MISRA C-2012 Rule 10.4" "H3_MISRAC_2012_R_10_4_DR_1" )\
-(deviate:1 "MISRA C-2012 Rule 11.6" "H3_MISRAC_2012_R_11_6_DR_1" )\
-(deviate:3 "MISRA C-2012 Rule 11.8" "H3_MISRAC_2012_R_11_8_DR_1" )\
-(deviate:2 "MISRA C-2012 Rule 16.1" "H3_MISRAC_2012_R_16_1_DR_1" )\
-(deviate:2 "MISRA C-2012 Rule 16.3" "H3_MISRAC_2012_R_16_3_DR_1" )
 
 /* This table maps the Test Mode values defined by the USB 2.0 specification
  * to values that can be written directly to the Test mode register. So for
@@ -503,16 +493,6 @@ PLIB_TEMPLATE bool USBHS_TestModeExit_Default( USBHS_MODULE_ID index , uint8_t t
     return result;
 }
 
-#pragma coverity compliance end_block "MISRA C-2012 Rule 10.1"
-#pragma coverity compliance end_block "MISRA C-2012 Rule 10.3"
-#pragma coverity compliance end_block "MISRA C-2012 Rule 10.4"
-#pragma coverity compliance end_block "MISRA C-2012 Rule 11.6"
-#pragma coverity compliance end_block "MISRA C-2012 Rule 11.8"
-#pragma coverity compliance end_block "MISRA C-2012 Rule 16.1"
-#pragma coverity compliance end_block "MISRA C-2012 Rule 16.3"
-#pragma coverity compliance end_block "MISRA C-2012 Rule 21.1"
-#pragma coverity compliance end_block "MISRA C-2012 Rule 21.2"
-#pragma GCC diagnostic pop
 /* MISRAC 2012 deviation block end */
 
 #endif /*USBHS_HIGHSPEEDSUPPORT_DEFAULT_H*/

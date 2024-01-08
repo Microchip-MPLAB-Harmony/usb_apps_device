@@ -54,12 +54,6 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 /* MISRA C-2012 Rule 10.1, Rule 10.3 and Rule 10.4. Deviation record ID -  
     H3_MISRAC_2012_R_10_1_DR_1, H3_MISRAC_2012_R_10_3_DR_1 and 
     H3_MISRAC_2012_R_10_4_DR_1 */
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wunknown-pragmas"
-#pragma coverity compliance block \
-(deviate:25 "MISRA C-2012 Rule 10.1" "H3_MISRAC_2012_R_10_1_DR_1" )\
-(deviate:25 "MISRA C-2012 Rule 10.3" "H3_MISRAC_2012_R_10_3_DR_1" )\
-(deviate:25 "MISRA C-2012 Rule 10.4" "H3_MISRAC_2012_R_10_4_DR_1" )
 
 //******************************************************************************
 /* Function :  USBHS_InterruptEnableSet_Default
@@ -267,10 +261,6 @@ PLIB_TEMPLATE bool USBHS_ExistsInterrupts_Default( USBHS_MODULE_ID index )
     return true;
 }
 
-#pragma coverity compliance end_block "MISRA C-2012 Rule 10.1"
-#pragma coverity compliance end_block "MISRA C-2012 Rule 10.3"
-#pragma coverity compliance end_block "MISRA C-2012 Rule 10.4"
-#pragma GCC diagnostic pop
 /* MISRAC 2012 deviation block end */
 
 #endif /*USBHS_INTERRUPTS_DEFAULT_H*/

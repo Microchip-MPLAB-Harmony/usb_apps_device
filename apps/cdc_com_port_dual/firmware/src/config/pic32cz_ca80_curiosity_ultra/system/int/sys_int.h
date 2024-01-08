@@ -213,11 +213,6 @@ bool SYS_INT_Disable( void );
 
 /* MISRA C-2012 Rule 5.5, 8.6 deviated below. Deviation record ID -  
    H3_MISRAC_2012_R_5_5_DR_1 & H3_MISRAC_2012_R_8_6_DR_1*/
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wunknown-pragmas"
-#pragma coverity compliance block \
-(deviate:6 "MISRA C-2012 Rule 5.5" "H3_MISRAC_2012_R_5_5_DR_1" )\
-(deviate:6 "MISRA C-2012 Rule 8.6" "H3_MISRAC_2012_R_8_6_DR_1" )   
 
 bool SYS_INT_IsEnabled( void );
 
@@ -502,9 +497,6 @@ void SYS_INT_SourceStatusSet( INT_SOURCE aSrcSelection  );
 
 void SYS_INT_SourceStatusClear( INT_SOURCE aSrcSelection  );
 
-#pragma coverity compliance end_block "MISRA C-2012 Rule 5.5"
-#pragma coverity compliance end_block "MISRA C-2012 Rule 8.6"
-#pragma GCC diagnostic pop
 /* MISRAC 2012 deviation block end */
 
 #include "sys_int_mapping.h"

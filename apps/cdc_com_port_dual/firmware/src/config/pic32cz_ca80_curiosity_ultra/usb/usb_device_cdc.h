@@ -127,9 +127,6 @@
 typedef uintptr_t USB_DEVICE_CDC_INDEX;
 
 /* MISRA C-2012 Rule 3.1 deviated:5 Deviation record ID -  H3_MISRAC_2012_R_3_1_DR_1 */
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wunknown-pragmas"
-#pragma coverity compliance block deviate:5 "MISRA C-2012 Rule 3.1" "H3_MISRAC_2012_R_3_1_DR_1"    
 
 // *****************************************************************************
 /* USB Device CDC Function Driver Events
@@ -298,7 +295,6 @@ typedef uintptr_t USB_DEVICE_CDC_INDEX;
     promptly if such time outs have to be avoided.
 */
 /* MISRA C-2012 Rule 5.2 deviated:15 Deviation record ID -  H3_MISRAC_2012_R_5_2_DR_1 */
-#pragma coverity compliance block deviate:15 "MISRA C-2012 Rule 5.2" "H3_MISRAC_2012_R_5_2_DR_1" 
 
 typedef enum
 {
@@ -608,7 +604,6 @@ typedef enum
 
 } USB_DEVICE_CDC_RESULT;
 
-#pragma coverity compliance end_block "MISRA C-2012 Rule 5.2"
 /* MISRAC 2012 deviation block end */
 // *****************************************************************************
 /* USB Device CDC Function Driver Send Break Event Data
@@ -1356,8 +1351,6 @@ USB_DEVICE_CDC_RESULT USB_DEVICE_CDC_SerialStateNotificationSend
     USB_CDC_SERIAL_STATE * notificationData
 );
 
-#pragma coverity compliance end_block "MISRA C-2012 Rule 3.1"
-#pragma GCC diagnostic pop
 /* MISRAC 2012 deviation block end */
 
 // *****************************************************************************

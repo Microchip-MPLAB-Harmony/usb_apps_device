@@ -473,9 +473,6 @@ uint16_t F_DRV_USBHS_ProcessIRPFIFO
 }
 
 /* MISRA C-2012 Rule 11.7 deviated:10 Deviation record ID -  H3_MISRAC_2012_R_11_7_DR_1 */
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wunknown-pragmas"
-#pragma coverity compliance block deviate:10 "MISRA C-2012 Rule 11.7" "H3_MISRAC_2012_R_11_7_DR_1" 
 
 
 void F_DRV_USBHS_DEVICE_Initialize
@@ -640,7 +637,6 @@ USB_SPEED DRV_USBHS_DEVICE_CurrentSpeedGet
 
 // *****************************************************************************
 /* MISRA C-2012 Rule 5.1 deviated:2 Deviation record ID -  H3_MISRAC_2012_R_5_1_DR_1 */
-#pragma coverity compliance block deviate:2 "MISRA C-2012 Rule 5.1" "H3_MISRAC_2012_R_5_1_DR_1"  
 /* Function:
       void DRV_USBHS_DEVICE_RemoteWakeupStart(DRV_HANDLE handle)
 
@@ -712,7 +708,6 @@ void DRV_USBHS_DEVICE_RemoteWakeupStop
 }
 
 
-#pragma coverity compliance end_block "MISRA C-2012 Rule 5.1"
 /* MISRAC 2012 deviation block end */
 // *****************************************************************************
 /* Function:
@@ -809,7 +804,6 @@ void F_DRV_USBHS_DEVICE_AttachStateMachine
 } 
 
 
-#pragma coverity compliance end_block "MISRA C-2012 Rule 11.7"
 /* MISRAC 2012 deviation block end */
 // *****************************************************************************
 /* Function:
@@ -1029,7 +1023,6 @@ uint16_t DRV_USBHS_DEVICE_SOFNumberGet
 
 // ****************************************************************************
 /* MISRA C-2012 Rule 10.4 False Positive:14 Deviation record ID -  H3_MISRAC_2012_R_10_4_DR_1 */
-#pragma coverity compliance block fp:14 "MISRA C-2012 Rule 10.4" "H3_MISRAC_2012_R_10_4_DR_1"   
 /* Function:
     USB_ERROR DRV_USBHS_DEVICE_EndpointEnable
     (
@@ -1575,7 +1568,6 @@ bool DRV_USBHS_DEVICE_EndpointIsStalled
 
 // ***********************************************************************************
 /* MISRA C-2012 Rule 11.3 deviated:23 Deviation record ID -  H3_MISRAC_2012_R_11_3_DR_1 */
-#pragma coverity compliance block deviate:23 "MISRA C-2012 Rule 11.3" "H3_MISRAC_2012_R_11_3_DR_1" 
 
 /* Function:
     USB_ERROR DRV_USBHS_DEVICE_IRPSubmit
@@ -2740,7 +2732,6 @@ USB_ERROR DRV_USBHS_DEVICE_EndpointStallClear
     return (returnValue);
 }
 
-#pragma coverity compliance end_block "MISRA C-2012 Rule 10.4"
 /* MISRAC 2012 deviation block end */
 // *****************************************************************************
 /* Function:
@@ -3884,6 +3875,4 @@ void F_DRV_USBHS_DEVICE_Tasks_ISR_USBDMA
     }
 }
 
-#pragma coverity compliance end_block "MISRA C-2012 Rule 11.3"
-#pragma GCC diagnostic pop
 /* MISRAC 2012 deviation block end */

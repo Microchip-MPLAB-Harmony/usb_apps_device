@@ -163,10 +163,7 @@
 // *****************************************************************************
 // *****************************************************************************
 /* MISRA C-2012 Rule 5.4 deviated:6 Deviation record ID -  H3_MISRAC_2012_R_5_4_DR_1 */
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wunknown-pragmas"
 
-#pragma coverity compliance block deviate:6 "MISRA C-2012 Rule 5.4" "H3_MISRAC_2012_R_5_4_DR_1"
 
 /* Following macros are needed to Support Other Speed Descriptor request */ 
 #if defined(DRV_USBHS_INSTANCES_NUMBER) || defined (DRV_USBHSV1_INSTANCES_NUMBER) || defined (DRV_USB_UDPHS_INSTANCES_NUMBER)
@@ -192,8 +189,6 @@
     #define M_USB_DEVICE_OtherSpeedDescriptorRequestIrpSubmit(mCDHandle,mEp,mIrp)        
 #endif 
 
-#pragma coverity compliance end_block "MISRA C-2012 Rule 5.4"
-#pragma GCC diagnostic pop
 /* MISRAC 2012 deviation block end */
 // *****************************************************************************
 // *****************************************************************************

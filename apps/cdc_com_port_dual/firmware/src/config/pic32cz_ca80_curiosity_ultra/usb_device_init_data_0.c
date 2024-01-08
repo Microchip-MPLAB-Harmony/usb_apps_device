@@ -50,32 +50,22 @@
  * USB Device Function Driver Init Data
  **************************************************/
 /* MISRA C-2012 Rule 10.3 deviated:4 Deviation record ID -  H3_MISRAC_2012_R_10_3_DR_1 */
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wunknown-pragmas"
-#pragma coverity compliance block deviate:4 "MISRA C-2012 Rule 10.3" "H3_MISRAC_2012_R_10_3_DR_1" 
 static const USB_DEVICE_CDC_INIT cdcInit0 =
 {
     .queueSizeRead = 1,
     .queueSizeWrite = 1,
     .queueSizeSerialStateNotification = 1
 };
-#pragma coverity compliance end_block "MISRA C-2012 Rule 10.3"
-#pragma GCC diagnostic pop
 /* MISRAC 2012 deviation block end */   
 
 
 /* MISRA C-2012 Rule 10.3 deviated:4 Deviation record ID -  H3_MISRAC_2012_R_10_3_DR_1 */
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wunknown-pragmas"
-#pragma coverity compliance block deviate:4 "MISRA C-2012 Rule 10.3" "H3_MISRAC_2012_R_10_3_DR_1" 
 static const USB_DEVICE_CDC_INIT cdcInit1 =
 {
     .queueSizeRead = 1,
     .queueSizeWrite = 1,
     .queueSizeSerialStateNotification = 1
 };
-#pragma coverity compliance end_block "MISRA C-2012 Rule 10.3"
-#pragma GCC diagnostic pop
 /* MISRAC 2012 deviation block end */   
 
 
@@ -88,12 +78,6 @@ static const USB_DEVICE_CDC_INIT cdcInit1 =
 
 /* MISRA C-2012 Rule 10.3, 11.8 deviated below. Deviation record ID -  
    H3_MISRAC_2012_R_10_3_DR_1 & H3_MISRAC_2012_R_11_8_DR_1*/
-
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wunknown-pragmas"
-#pragma coverity compliance block \
-(deviate:20 "MISRA C-2012 Rule 10.3" "H3_MISRAC_2012_R_10_3_DR_1" )\
-(deviate:5 "MISRA C-2012 Rule 11.8" "H3_MISRAC_2012_R_11_8_DR_1" )   
 
 static const USB_DEVICE_FUNCTION_REGISTRATION_TABLE funcRegistrationTable0[2] =
 {
@@ -367,9 +351,6 @@ static USB_DEVICE_CONFIGURATION_DESCRIPTORS_TABLE highSpeedConfigDescSet0[1] =
  *  USB Full Speed Configuration Descriptor
  *******************************************/
  /* MISRA C-2012 Rule 10.3 deviated:25 Deviation record ID -  H3_MISRAC_2012_R_10_3_DR_1 */
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wunknown-pragmas"
-#pragma coverity compliance block deviate:25 "MISRA C-2012 Rule 10.3" "H3_MISRAC_2012_R_10_3_DR_1"    
 static const uint8_t fullSpeedConfigurationDescriptor0[]=
 {
     /* Configuration Descriptor */
@@ -559,8 +540,6 @@ static const uint8_t fullSpeedConfigurationDescriptor0[]=
 
 };
 
-#pragma coverity compliance end_block "MISRA C-2012 Rule 10.3"
-#pragma GCC diagnostic pop
 /* MISRAC 2012 deviation block end */
 /*******************************************
  * Array of Full speed Configuration 
@@ -679,9 +658,6 @@ const USB_DEVICE_INIT usbDevInitData0 =
     
 };
 
-#pragma coverity compliance end_block "MISRA C-2012 Rule 10.3"
-#pragma coverity compliance end_block "MISRA C-2012 Rule 11.8"
-#pragma GCC diagnostic pop
 /* MISRAC 2012 deviation block end */
 
 // </editor-fold>

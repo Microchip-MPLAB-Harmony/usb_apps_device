@@ -119,9 +119,6 @@
 // *****************************************************************************
 // *****************************************************************************
 /* MISRA C-2012 Rule 5.4 deviated:11 Deviation record ID -  H3_MISRAC_2012_R_5_4_DR_1 */
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wunknown-pragmas"
-#pragma coverity compliance block deviate:4 "MISRA C-2012 Rule 5.4" "H3_MISRAC_2012_R_5_4_DR_1" 
 
 // *****************************************************************************
 /* Macro: M_DRV_USBHS_OBJ_MAKE_NAME(name)
@@ -333,8 +330,6 @@
 #define PLIB_PORTS_ChangeNoticePullDownPerPortDisable( PORTS_ID_0, PORT_CHANNEL_F, PORTS_BIT_POS_3 )  *(&CNPDBCLR + (PORT_CHANNEL_F - 1) * 0x40) = 1<<PORTS_BIT_POS_3
 
 
-#pragma coverity compliance end_block "MISRA C-2012 Rule 5.4"
-#pragma GCC diagnostic pop
 /* MISRAC 2012 deviation block end */
 
 #endif
