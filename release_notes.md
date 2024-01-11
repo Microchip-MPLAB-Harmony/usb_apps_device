@@ -52,7 +52,9 @@ Following table provides number of USB device demo applications available for di
 
 **Known Issues**
 
--   None
+-  After a power cycle, the reset button on the  PIC32CZ CA80 Curiosity Ultra board must be pressed to get the program running.
+-  USB Device MSD demos for PIC32CZ CA80 does not work if Data cache is enabled. This will be resolved in the next release.
+
 
 **Development Tools**
 
