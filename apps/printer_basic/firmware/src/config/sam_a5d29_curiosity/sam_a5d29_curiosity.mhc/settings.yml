@@ -1,0 +1,13 @@
+configName: sam_a5d29_curiosity
+folderName: sam_a5d29_curiosity
+format_version: v1.0
+frameworkPath: C:\Harmony_dev_v3_12_0
+processor: ATSAMA5D29
+projectName: sam_a5d29_curiosity
+settings:
+  PackageFilter: ''
+  FORCE_OPTIMIZATION: 'false'
+  GENERATE_BACKUP: 'true'
+  TRUSTZONE: 'false'
+  MERGE_STRATEGY: USER_ALL
+  DFPPath: SAMA5D2_DFP\1.9.106
