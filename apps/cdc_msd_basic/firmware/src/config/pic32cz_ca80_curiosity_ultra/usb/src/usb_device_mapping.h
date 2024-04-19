@@ -162,7 +162,7 @@
 // Section: Enabling Other Speed Descriptor request. 
 // *****************************************************************************
 // *****************************************************************************
-/* MISRA C-2012 Rule 5.4 deviated:6 Deviation record ID -  H3_MISRAC_2012_R_5_4_DR_1 */
+/* MISRA C-2012 Rule 5.4 deviated:6 Deviation record ID -  H3_USB_MISRAC_2012_R_5_4_DR_1 */
 
 
 /* Following macros are needed to Support Other Speed Descriptor request */ 

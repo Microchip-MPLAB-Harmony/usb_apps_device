@@ -54,7 +54,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #include "usbhs_registers.h"
 
 /* MISRA C-2012 Rule 10.1 and Rule 10.4. Deviation record ID -  
-    H3_MISRAC_2012_R_10_1_DR_1 and H3_MISRAC_2012_R_10_4_DR_1 */
+    H3_USB_MISRAC_2012_R_10_1_DR_1 and H3_USB_MISRAC_2012_R_10_4_DR_1 */
 
 //******************************************************************************
 /* Function :  USBHS_EP0StatusGet_Default

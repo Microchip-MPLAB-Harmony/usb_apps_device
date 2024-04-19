@@ -63,10 +63,10 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 
 /* MISRA C-2012 Rule 10.1, Rule 10.3, Rule 10.4, Rule 10.8, 
    Rule 15.6, Rule 4.3, Rule 21.1 and Rule 21.2. Deviation record ID -  
-    H3_MISRAC_2012_R_10_1_DR_1, H3_MISRAC_2012_R_10_3_DR_1 
-    H3_MISRAC_2012_R_10_4_DR_1, H3_MISRAC_2012_R_10_8_DR_1
-    H3_MISRAC_2012_R_15_6_DR_1, H3_MISRAC_2012_R_4_3_DR_1
-    H3_MISRAC_2012_R_21_2_DR_1 and H3_MISRAC_2012_R_21_1_DR_1 */
+    H3_USB_MISRAC_2012_R_10_1_DR_1, H3_USB_MISRAC_2012_R_10_3_DR_1 
+    H3_USB_MISRAC_2012_R_10_4_DR_1, H3_USB_MISRAC_2012_R_10_8_DR_1
+    H3_USB_MISRAC_2012_R_15_6_DR_1, H3_USB_MISRAC_2012_R_4_3_DR_1
+    H3_USB_MISRAC_2012_R_21_2_DR_1 and H3_USB_MISRAC_2012_R_21_1_DR_1 */
 
 //******************************************************************************
 /* Function :  USBHS_ResumeEnable_Default
@@ -319,13 +319,7 @@ PLIB_TEMPLATE void USBHS_DeviceAttach_Default( USBHS_MODULE_ID index, uint32_t s
   
     usbhs->INTRTXEbits.EP0IE = 0;
      
-    asm("NOP");
-    asm("NOP");
-    asm("NOP");
-    asm("NOP");
-    asm("NOP");
-    asm("NOP");
-    asm("NOP");
+
 }
 
 //******************************************************************************

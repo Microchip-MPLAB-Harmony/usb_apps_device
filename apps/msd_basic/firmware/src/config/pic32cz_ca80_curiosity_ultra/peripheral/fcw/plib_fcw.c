@@ -145,6 +145,10 @@ bool FCW_Read( uint32_t *data, uint32_t length, const uint32_t address )
 {
     /* Add this as per the misra rule 11.6 */
     uint32_t *xaddress = (uint32_t *)address;
+    if (DATA_CACHE_IS_ENABLED() != 0U)
+    {
+        DCACHE_INVALIDATE_BY_ADDR(xaddress, (int32_t)length);
+    }
     (void) memcpy(data, xaddress, length);
 
     return true;
