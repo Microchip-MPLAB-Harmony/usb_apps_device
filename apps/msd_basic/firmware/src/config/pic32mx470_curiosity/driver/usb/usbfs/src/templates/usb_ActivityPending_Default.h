@@ -49,8 +49,8 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #include "driver/usb/usbfs/src/templates/usbfs_registers.h"
 
 
-/* MISRA C-2012 Rule 10.3 , and 11.7. Deviation record ID -  
-    H3_MISRAC_2012_R_10_3_DR_1, H3_MISRAC_2012_R_11_7_DR_1 */
+/* MISRA C-2012 Rule 10.3. Deviation record ID -  
+    H3_USB_MISRAC_2012_R_10_3_DR_1 */
 //******************************************************************************
 /* Function :  USB_ActivityPending_Default
 
