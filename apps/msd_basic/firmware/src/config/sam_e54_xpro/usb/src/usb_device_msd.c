@@ -220,7 +220,7 @@ void F_USB_DEVICE_MSD_InitializeInterface
 }
 
 // ******************************************************************************
-/* MISRA C-2012 Rule 11.3 deviated:2 Deviation record ID -  H3_MISRAC_2012_R_11_3_DR_1 */
+/* MISRA C-2012 Rule 11.3 deviated:2 Deviation record ID -  H3_USB_MISRAC_2012_R_11_3_DR_1 */
 /* Function:
     void F_USB_DEVICE_MSD_InitializeByDescriptorType
     (
@@ -531,7 +531,7 @@ void F_USB_DEVICE_MSD_SendDataToUsb
 
 // ******************************************************************************
 /* MISRA C-2012 Rule 16.1, and 16.3 deviated below. Deviation record ID -  
-    H3_MISRAC_2012_R_16_1_DR_1, H3_MISRAC_2012_R_16_3_DR_1 */
+    H3_USB_MISRAC_2012_R_16_1_DR_1, H3_USB_MISRAC_2012_R_16_3_DR_1 */
 /* Function:
     void F_USB_DEVICE_MSD_Tasks ( SYS_MODULE_INDEX iMSD )
 
