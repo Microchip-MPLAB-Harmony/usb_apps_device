@@ -55,7 +55,7 @@ SUBSTITUTE  GOODS,  TECHNOLOGY,  SERVICES,  OR  ANY  CLAIMS  BY  THIRD   PARTIES
 /**********************************************
  * Macro Mapping
  **********************************************/
- /* MISRA C-2012 Rule 5.4 deviated:2 Deviation record ID -  H3_MISRAC_2012_R_5_4_DR_1 */
+ /* MISRA C-2012 Rule 5.4 deviated:2 Deviation record ID -  H3_USB_MISRAC_2012_R_5_4_DR_1 */
 
 /* With v1.04 the USB Driver implementation has been been split such
  * multiple USB Driver can be included in the same application. But to
