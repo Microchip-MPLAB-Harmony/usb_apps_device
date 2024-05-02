@@ -472,7 +472,7 @@ uint16_t F_DRV_USBHS_ProcessIRPFIFO
     return (uint16_t)(count);
 }
 
-/* MISRA C-2012 Rule 11.7 deviated:10 Deviation record ID -  H3_USB_MISRAC_2012_R_11_7_DR_1 */
+
 
 
 void F_DRV_USBHS_DEVICE_Initialize
@@ -804,7 +804,6 @@ void F_DRV_USBHS_DEVICE_AttachStateMachine
 } 
 
 
-/* MISRAC 2012 deviation block end */
 // *****************************************************************************
 /* Function:
     void DRV_USBHS_DEVICE_Detach(DRV_HANDLE handle);
