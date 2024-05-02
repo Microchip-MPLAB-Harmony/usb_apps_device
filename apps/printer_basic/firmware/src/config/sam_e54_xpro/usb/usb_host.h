@@ -519,7 +519,7 @@ typedef enum
 }
 
 // *****************************************************************************
-/* MISRA C-2012 Rule 3.1 deviated:4 Deviation record ID -  H3_MISRAC_2012_R_3_1_DR_1 */
+/* MISRA C-2012 Rule 3.1 deviated:4 Deviation record ID -  H3_USB_MISRAC_2012_R_3_1_DR_1 */
 
 
 /* USB Host Layer Target Peripheral List Entry Type
@@ -585,7 +585,7 @@ typedef enum
     directly to create a TPL entry, using the TPL help macros to setup TPL
     entries (as shown in the code snippet) is recommended
 */
-/* MISRA C-2012 Rule 6.1 deviated:6 Deviation record ID -  H3_MISRAC_2012_R_6_1_DR_1 */
+/* MISRA C-2012 Rule 6.1 deviated:6 Deviation record ID -  H3_USB_MISRAC_2012_R_6_1_DR_1 */
 
 typedef struct
 {
@@ -1433,7 +1433,7 @@ USB_HOST_RESULT USB_HOST_DeviceGetFirst
 USB_HOST_RESULT USB_HOST_DeviceGetNext (USB_HOST_DEVICE_INFO * deviceInfo);
 
 // *****************************************************************************
-/* MISRA C-2012 Rule 8.6 deviated:3 Deviation record ID -  H3_MISRAC_2012_R_8_6_DR_1 */
+/* MISRA C-2012 Rule 8.6 deviated:3 Deviation record ID -  H3_USB_MISRAC_2012_R_8_6_DR_1 */
 
 /* Function:
     USB_HOST_RESULT USB_HOST_DeviceSuspend 

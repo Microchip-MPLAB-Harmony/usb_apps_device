@@ -278,7 +278,7 @@ void DRV_USBFSV1_DEVICE_RemoteWakeupStart
 }
 
 // *****************************************************************************
-/* MISRA C-2012 Rule 5.1 deviated:2 Deviation record ID -  H3_MISRAC_2012_R_5_2_DR_1 */
+/* MISRA C-2012 Rule 5.1 deviated:2 Deviation record ID -  H3_USB_MISRAC_2012_R_5_2_DR_1 */
 /* Function:
     void DRV_USBFSV1_DEVICE_RemoteWakeupStop(DRV_HANDLE handle)
 
@@ -368,7 +368,7 @@ void DRV_USBFSV1_DEVICE_Attach
 
 // *****************************************************************************
 /* MISRA C-2012 Rule 10.4, and 20.7 deviated below. Deviation record ID -  
-    H3_MISRAC_2012_R_10_4_DR_1, H3_MISRAC_2012_R_20_7_DR_1 */
+    H3_USB_MISRAC_2012_R_10_4_DR_1, H3_USB_MISRAC_2012_R_20_7_DR_1 */
 /* Function:
       void DRV_USBFSV1_DEVICE_Detach(DRV_HANDLE handle)
 
@@ -507,7 +507,7 @@ uint16_t DRV_USBFSV1_DEVICE_SOFNumberGet
 
 // *****************************************************************************
 /* MISRA C-2012 Rule 11.3, and 11.6 deviated below. Deviation record ID -  
-    H3_MISRAC_2012_R_11_3_DR_1, H3_MISRAC_2012_R_11_6_DR_1 */
+    H3_USB_MISRAC_2012_R_11_3_DR_1, H3_USB_MISRAC_2012_R_11_6_DR_1 */
 /* Function:
     void F_DRV_USBFSV1_DEVICE_IRPQueueFlush
     (
