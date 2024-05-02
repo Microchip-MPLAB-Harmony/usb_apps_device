@@ -91,7 +91,7 @@
     None.
 */
 
-/* MISRA C-2012 Rule 8.6 deviated:20 Deviation record ID -  H3_MISRAC_2012_R_8_6_DR_1 */
+/* MISRA C-2012 Rule 8.6 deviated:20 Deviation record ID -  H3_USB_MISRAC_2012_R_8_6_DR_1 */
 
 
 
@@ -190,7 +190,7 @@ typedef uintptr_t DRV_USBHS_HOST_PIPE_HANDLE;
     None.
 */
 
-/* MISRA C-2012 Rule 5.2 deviated:4 Deviation record ID -  H3_MISRAC_2012_R_5_2_DR_1 */
+/* MISRA C-2012 Rule 5.2 deviated:4 Deviation record ID -  H3_USB_MISRAC_2012_R_5_2_DR_1 */
 
 
 typedef enum
@@ -440,7 +440,7 @@ typedef struct
 
 // ****************************************************************************
 
-/* MISRA C-2012 Rule 3.1 deviated:45 Deviation record ID -  H3_MISRAC_2012_R_3_1_DR_1 */
+/* MISRA C-2012 Rule 3.1 deviated:45 Deviation record ID -  H3_USB_MISRAC_2012_R_3_1_DR_1 */
 
 /* Function:
     void DRV_USBHS_HOST_EndpointToggleClear
@@ -1371,7 +1371,7 @@ USB_ERROR DRV_USBHS_DEVICE_EndpointDisable
     all endpoints upon detecting a bus reset.
 */
 
-/* MISRA C-2012 Rule 5.1 deviated:6 Deviation record ID -  H3_MISRAC_2012_R_5_1_DR_1 */
+/* MISRA C-2012 Rule 5.1 deviated:6 Deviation record ID -  H3_USB_MISRAC_2012_R_5_1_DR_1 */
 
 USB_ERROR DRV_USBHS_DEVICE_EndpointDisableAll(DRV_HANDLE handle); 
 

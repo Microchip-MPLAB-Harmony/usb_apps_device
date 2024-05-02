@@ -49,9 +49,8 @@
 
 #include "usbhs_registers.h"
 
-/* MISRA C-2012 Rule 10.1, Rule 10.4, Rule 21.1 and Rule 21.2 Deviation record ID -  
-    H3_MISRAC_2012_R_10_1_DR_1,  H3_MISRAC_2012_R_10_4_DR_1, H3_MISRAC_2012_R_11_7_DR_1,
-    H3_MISRAC_2012_R_21_1_DR_1, and H3_MISRAC_2012_R_21_2_DR_1*/
+/* MISRA C-2012  Rule 21.1 and Rule 21.2 Deviation record ID -  
+    H3_USB_MISRAC_2012_R_21_1_DR_1 and H3_USB_MISRAC_2012_R_21_2_DR_1*/
 //******************************************************************************
 /* Function :  USBHS_SoftResetEnable_Default
 
