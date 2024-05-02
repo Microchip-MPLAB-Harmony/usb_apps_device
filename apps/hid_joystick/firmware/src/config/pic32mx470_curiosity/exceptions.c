@@ -99,6 +99,7 @@ static unsigned int exception_address;
 /* Code identifying the cause of the exception (CP0 Cause register). */
 static uint32_t  exception_code;
 
+
 // </editor-fold>
 
 /*******************************************************************************
@@ -119,7 +120,7 @@ void __attribute__((noreturn, weak)) _general_exception_handler ( void )
     Refer to the MIPs Software User's manual */
     exception_code = ((_CP0_GET_CAUSE() & 0x0000007CU) >> 2U);
     exception_address = _CP0_GET_EPC();
-
+    
     while (true)
     {
         #if defined(__DEBUG) || defined(__DEBUG_D) && defined(__XC32)
@@ -127,7 +128,6 @@ void __attribute__((noreturn, weak)) _general_exception_handler ( void )
         #endif
     }
 }
-
 /*******************************************************************************
   Function:
     void _bootstrap_exception_handler ( void )
