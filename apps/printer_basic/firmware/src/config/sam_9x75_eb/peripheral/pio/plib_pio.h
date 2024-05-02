@@ -63,12 +63,12 @@
 
 
 /*** Macros for USB_VBUS_SENSE pin ***/
-#define USB_VBUS_SENSE_Set()               (PIOC_REGS->PIO_SODR = (1<<26))
-#define USB_VBUS_SENSE_Clear()             (PIOC_REGS->PIO_CODR = (1<<26))
-#define USB_VBUS_SENSE_Toggle()            (PIOC_REGS->PIO_ODSR ^= (1<<26))
-#define USB_VBUS_SENSE_OutputEnable()      (PIOC_REGS->PIO_OER = (1<<26))
-#define USB_VBUS_SENSE_InputEnable()       (PIOC_REGS->PIO_ODR = (1<<26))
-#define USB_VBUS_SENSE_Get()               ((PIOC_REGS->PIO_PDSR >> 26) & 0x1)
+#define USB_VBUS_SENSE_Set()               (PIOC_REGS->PIO_SODR = ((uint32_t)1U<<26U))
+#define USB_VBUS_SENSE_Clear()             (PIOC_REGS->PIO_CODR = ((uint32_t)1U<<26U))
+#define USB_VBUS_SENSE_Toggle()            (PIOC_REGS->PIO_ODSR ^= ((uint32_t)1U<<26U))
+#define USB_VBUS_SENSE_OutputEnable()      (PIOC_REGS->PIO_OER = ((uint32_t)1U<<26U))
+#define USB_VBUS_SENSE_InputEnable()       (PIOC_REGS->PIO_ODR = ((uint32_t)1U<<26U))
+#define USB_VBUS_SENSE_Get()               ((PIOC_REGS->PIO_PDSR >> 26U) & 0x1U)
 #define USB_VBUS_SENSE_PIN                  PIO_PIN_PC26
 
 
