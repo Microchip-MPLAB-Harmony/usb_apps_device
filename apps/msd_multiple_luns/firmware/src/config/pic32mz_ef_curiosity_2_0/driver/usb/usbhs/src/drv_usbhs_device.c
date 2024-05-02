@@ -649,7 +649,7 @@ void DRV_USBHS_DEVICE_RemoteWakeupStart
     }
 }
 
-/* MISRA C-2012 Rule 5.1 deviated:1 Deviation record ID -  H3_MISRAC_2012_R_5_1_DR_1 */
+/* MISRA C-2012 Rule 5.1 deviated:1 Deviation record ID -  H3_USB_MISRAC_2012_R_5_1_DR_1 */
 
 
 void DRV_USBHS_DEVICE_RemoteWakeupStop
@@ -1018,7 +1018,7 @@ uint16_t DRV_USBHS_DEVICE_SOFNumberGet
     See drv_usbhs.h for usage information.
 */
 
-/* MISRA C-2012 Rule 10.4 False Positive:14 Deviation record ID -  H3_MISRAC_2012_R_10_4_DR_1 */
+/* MISRA C-2012 Rule 10.4 False Positive:14 Deviation record ID -  H3_USB_MISRAC_2012_R_10_4_DR_1 */
 
 USB_ERROR DRV_USBHS_DEVICE_EndpointEnable
 (
@@ -1597,7 +1597,7 @@ bool DRV_USBHS_DEVICE_EndpointIsStalled
     See drv_usbhs.h for usage information.
 */
 
-/* MISRA C-2012 Rule 11.3 deviated:23 Deviation record ID -  H3_MISRAC_2012_R_11_3_DR_1 */
+/* MISRA C-2012 Rule 11.3 deviated:23 Deviation record ID -  H3_USB_MISRAC_2012_R_11_3_DR_1 */
 
 USB_ERROR DRV_USBHS_DEVICE_IRPSubmit
 (
