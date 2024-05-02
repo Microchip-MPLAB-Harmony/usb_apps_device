@@ -93,7 +93,7 @@ static const USB_DEVICE_DESCRIPTOR usbDeviceDescriptor =
 
     USB_DEVICE_EP0_BUFFER_SIZE,                             // Max packet size for EP0, see configuration.h
     0x04D8,                                                 // Vendor ID
-    0x0053,                                                 // Product ID
+    0x0000,                                                 // Product ID
     0x0100,                                                 // Device release number in BCD format
     0x01,                                                   // Manufacturer string index
     0x02,                                                   // Product string index
@@ -135,7 +135,7 @@ static const uint8_t highSpeedConfigurationDescriptor[]=
     0x01,                                               // Index value of this configuration
     0x00,                                               // Configuration string index
     USB_ATTRIBUTE_DEFAULT | USB_ATTRIBUTE_SELF_POWERED, // Attributes
-    50,                                                 // Maximum power consumption (mA) /2
+    50,                                                 // Maximum Power: 100mA
 
     /* Interface Descriptor */
 
@@ -194,7 +194,7 @@ static const uint8_t fullSpeedConfigurationDescriptor[]=
     0x01,                                                   // Index value of this configuration
     0x00,                                                   // Configuration string index
     USB_ATTRIBUTE_DEFAULT | USB_ATTRIBUTE_SELF_POWERED, // Attributes
-    50,                                                 // Maximum power consumption (mA) /2
+    50,                                                 // Maximum Power: 100mA
     /* Interface Descriptor */
 
     0x09,                       // Size of this descriptor in bytes
@@ -290,7 +290,7 @@ static sd002 =
 {
     (uint8_t)sizeof(sd002),
     USB_DESCRIPTOR_STRING,
-    {'S','i','m','p','l','e',' ','W','i','n','U','S','B',' ','D','e','v','i','c','e',' ','D','e','m','o'}
+    {'E','n','t','e','r',' ','P','r','o','d','u','c','t',' ','s','t','r','i','n','g',' ','h','e','r','e'}
 };
 
 /***************************************

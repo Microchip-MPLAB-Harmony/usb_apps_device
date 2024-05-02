@@ -25,72 +25,8 @@
 #include "plib_clk.h"
 
 #define PLL_ID_PLLA     0U
-#define PLL_ID_UPLL     1U
 #define PLL_ID_PLLADIV2 4U
 
-
-/*********************************************************************************
-Generate Software delay (in multiples of microsecond units)
-*********************************************************************************/
-static void swDelayUs(uint32_t delay)
-{
-    uint32_t i, count;
-
-    /* delay * (CPU_FREQ/1000000) / 6 */
-    count = delay *  (800000000U/1000000U)/6U;
-
-    /* 6 CPU cycles per iteration */
-    for (i = 0U; i < count; i++)
-    {
-        __NOP();
-    }
-}
-
-/*********************************************************************************
-Initialize UPLL
-*********************************************************************************/
-static void initUPLLCLK(void)
-{
-    /* STEP 1: PMC_PLL_UPDT to target UPLL, startup time of 150us and update disabled */
-    PMC_REGS->PMC_PLL_UPDT = PMC_PLL_UPDT_STUPTIM(0x6) |
-                             PMC_PLL_UPDT_UPDATE(0x0) |
-                             PMC_PLL_UPDT_ID(PLL_ID_UPLL);
-
-    /* STEP 2: Set the Analog controls to the values recommended by data sheet */
-    PMC_REGS->PMC_PLL_ACR = PMC_PLL_ACR_LOOP_FILTER(0x1B) |
-                            PMC_PLL_ACR_LOCK_THR(0x4) |
-                            PMC_PLL_ACR_CONTROL(0x10);
-
-    /* STEP 3: Set loop paramaters for the fractional PLL */
-    PMC_REGS->PMC_PLL_CTRL1 = PMC_PLL_CTRL1_MUL(39) |
-                              PMC_PLL_CTRL1_FRACR(0);
-
-    /* STEP 4: Enable UTMI Bandgap */
-    PMC_REGS->PMC_PLL_ACR |= PMC_PLL_ACR_UTMIBG_Msk;
-
-    /* STEP 5: Wait 10 us */
-    swDelayUs(10);
-
-    /* STEP 6: Enable UTMI Internal Regulator */
-    PMC_REGS->PMC_PLL_ACR |= PMC_PLL_ACR_UTMIVR_Msk;
-
-    /* STEP 7: Wait 10 us */
-    swDelayUs(10);
-
-    /* STEP 8: Update the PLL controls */
-    PMC_REGS->PMC_PLL_UPDT |= PMC_PLL_UPDT_UPDATE_Msk;
-
-    /* STEP 9: Enable UPLL, lock and PMC clock from UPLL */
-    PMC_REGS->PMC_PLL_CTRL0 = PMC_PLL_CTRL0_ENLOCK_Msk |
-                              PMC_PLL_CTRL0_ENPLL_Msk |
-                              PMC_PLL_CTRL0_ENPLLCK_Msk;
-
-    /* STEP 10: Wait for the lock bit to rise by polling the PMC_PLL_ISR0 */
-    while ((PMC_REGS->PMC_PLL_ISR0 & PMC_PLL_ISR0_LOCKU_Msk) != PMC_PLL_ISR0_LOCKU_Msk)
-    {
-        /* Wait */
-    }
-}
 
 
 
@@ -147,9 +83,6 @@ Clock Initialize
 *********************************************************************************/
 void CLK_Initialize( void )
 {
-
-    /* Initialize UPLLA clock generator */
-    initUPLLCLK();
 
     /* Initialize Programmable clock */
     initProgrammableClk();
