@@ -49,7 +49,6 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 
 #include "driver/usb/usbfs/src/templates/usbfs_registers.h"
 
-/* MISRA C-2012 Rule 11.7 deviated:2 Deviation record ID -  H3_MISRAC_2012_R_11_7_DR_1 */
 //******************************************************************************
 /* Function :  USB_EP0LSDirectConnectEnable_Default
 
@@ -100,9 +99,6 @@ PLIB_TEMPLATE bool USB_ExistsEP0LowSpeedConnect_Default( USB_MODULE_ID index )
 {
     return true;
 }
-
-
-/* MISRAC 2012 deviation block end */ 
 
 #endif /*USB_EP0LOWSPEEDCONNECT_DEFAULT_H*/
 

@@ -47,7 +47,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 
 
 
-/* MISRA C-2012 Rule 4.10 deviated:2 Deviation record ID -  H3_MISRAC_2012_R_4_10_DR_1 */
+
 /******************************************/
 
 typedef struct
@@ -248,7 +248,7 @@ typedef struct __attribute__((packed,aligned( 4 )))
 #define   UxADDR_DEVADDR_MASK           _U1ADDR_DEVADDR_MASK
 #define   UxCON_USBRST_MASK             _U1CON_USBRST_MASK
 
-/* MISRAC 2012 deviation block end */
+
 
 #endif /*USBFS_REGISTERS_HEADER_H*/
 

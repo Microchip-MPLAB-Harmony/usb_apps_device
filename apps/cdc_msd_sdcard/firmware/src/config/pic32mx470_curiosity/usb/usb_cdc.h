@@ -409,7 +409,7 @@ typedef struct __attribute__ ((packed))
     Need to be packed always.
 */
 
-/* MISRA C-2012 Rule 6.1 deviated:11 Deviation record ID -  H3_MISRAC_2012_R_6_1_DR_1 */
+/* MISRA C-2012 Rule 6.1 deviated:11 Deviation record ID -  H3_USB_MISRAC_2012_R_6_1_DR_1 */
 
 typedef struct __attribute__ ((packed))
 {
@@ -543,7 +543,7 @@ typedef struct __attribute__ ((packed))
     Need to be packed always.
 */
 
-/* MISRA C-2012 Rule 5.2 deviated:2 Deviation record ID -  H3_MISRAC_2012_R_5_2_DR_1 */
+/* MISRA C-2012 Rule 5.2 deviated:2 Deviation record ID -  H3_USB_MISRAC_2012_R_5_2_DR_1 */
 
 typedef struct __attribute__ ((packed))
 {
