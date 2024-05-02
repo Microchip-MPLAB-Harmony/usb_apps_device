@@ -86,7 +86,7 @@ typedef enum
 } USB_DEVICE_MSD_STATE;
 
 // *****************************************************************************
-/* MISRA C-2012 Rule 5.2 deviated:3 Deviation record ID -  H3_MISRAC_2012_R_5_2_DR_1 */
+/* MISRA C-2012 Rule 5.2 deviated:3 Deviation record ID -  H3_USB_MISRAC_2012_R_5_2_DR_1 */
 /* USB device MSD media operation state.
 
   Summary:
@@ -463,7 +463,7 @@ void F_USB_DEVICE_MSD_Deinitialization ( SYS_MODULE_INDEX iMSD );
 
 
 // *****************************************************************************
-/* MISRA C-2012 Rule 8.6 deviated:2 Deviation record ID -  H3_MISRAC_2012_R_8_6_DR_1 */
+/* MISRA C-2012 Rule 8.6 deviated:2 Deviation record ID -  H3_USB_MISRAC_2012_R_8_6_DR_1 */
 /* Function:
    USB_ERROR_STATUS F_USB_DEVICE_MSD_CheckInterface ( SYS_MODULE_INDEX funcDriverIndex ,
                                                  uint16_t interfaceNumber )
