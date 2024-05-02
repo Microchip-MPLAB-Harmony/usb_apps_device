@@ -49,9 +49,6 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 
 #include "driver/usb/usbfs/src/templates/usbfs_registers.h"
 
-/* MISRA C-2012 Rule 10.1, Rule 10.4 and Rule 11.7.
-   Deviation record ID - H3_MISRAC_2012_R_10_1_DR_1,  
-    H3_MISRAC_2012_R_10_4_DR_1 and H3_MISRAC_2012_R_11_7_DR_1 */
 
 //******************************************************************************
 /* Function :  USB_ResumeSignalingEnable_Default
@@ -105,7 +102,6 @@ PLIB_TEMPLATE bool USB_ExistsResumeSignaling_Default( USB_MODULE_ID index )
     return true;
 }
 
-/* MISRAC 2012 deviation block end */
 
 #endif /*USB_RESUMESIGNALING_DEFAULT_H*/
 
