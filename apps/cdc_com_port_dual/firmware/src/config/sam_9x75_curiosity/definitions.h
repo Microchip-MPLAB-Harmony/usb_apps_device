@@ -57,7 +57,6 @@
 #include "peripheral/aic/plib_aic.h"
 #include "usb/usb_chapter_9.h"
 #include "usb/usb_device.h"
-#include "bsp/bsp.h"
 #include "system/int/sys_int.h"
 #include "system/cache/sys_cache.h"
 #include "osal/osal.h"
