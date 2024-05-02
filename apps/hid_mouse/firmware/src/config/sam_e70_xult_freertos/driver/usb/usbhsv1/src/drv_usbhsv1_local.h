@@ -59,7 +59,7 @@
 #include "osal/osal.h"
 
 /* MISRA C-2012 Rule 5.2, and 8.6 deviated below. Deviation record ID -  
-    H3_MISRAC_2012_R_5_2_DR_1, H3_MISRAC_2012_R_8_6_DR_1 */
+    H3_USB_MISRAC_2012_R_5_2_DR_1, H3_USB_MISRAC_2012_R_8_6_DR_1 */
 
 #define DRV_USBHS_HOST_IRP_PER_FRAME_NUMBER                 5
 #define DRV_USBHSV1_HOST_MAXIMUM_ENDPOINTS_NUMBER           10
