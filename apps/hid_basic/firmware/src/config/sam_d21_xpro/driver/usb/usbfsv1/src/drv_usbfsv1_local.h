@@ -59,7 +59,7 @@
 #include "osal/osal.h"
 
 /* MISRA C-2012 Rule 5.1, 5.2, 5.4 and 8.6 deviated below. Deviation record ID -  
-    H3_MISRAC_2012_R_5_2_DR_1, H3_MISRAC_2012_R_5_4_DR_1 and H3_MISRAC_2012_R_8_6_DR_1*/
+    H3_USB_MISRAC_2012_R_5_2_DR_1, H3_USB_MISRAC_2012_R_5_4_DR_1 and H3_USB_MISRAC_2012_R_8_6_DR_1*/
 
 
 #define COMPILER_WORD_ALIGNED                               __attribute__((__aligned__(4)))
@@ -689,7 +689,6 @@ USB_SPEED DRV_USBFSV1_HOST_DeviceCurrentSpeedGet(DRV_HANDLE client);
 
 void DRV_USBFSV1_HOST_StartOfFrameControl(DRV_HANDLE client, bool control);
 
-void DRV_USBFSV1_Deinitialize ( const SYS_MODULE_OBJ  object );
 
 /* MISRAC 2012 deviation block end */
 
