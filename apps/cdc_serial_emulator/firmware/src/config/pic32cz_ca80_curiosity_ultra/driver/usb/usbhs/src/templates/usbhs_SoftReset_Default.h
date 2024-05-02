@@ -49,8 +49,8 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 
 #include "usbhs_registers.h"
 
-/* MISRA C-2012 Rule 10.1, Rule 10.4, Rule 21.1 and Rule 21.2 Deviation record ID -  
-    H3_MISRAC_2012_R_10_1_DR_1,  H3_MISRAC_2012_R_10_4_DR_1 */
+/* MISRA C-2012 Rule 10.4, Rule 21.1 and Rule 21.2 Deviation record ID -  
+      H3_USB_MISRAC_2012_R_10_4_DR_1 */
 
 //******************************************************************************
 /* Function :  USBHS_SoftResetEnable_Default
@@ -66,7 +66,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 PLIB_TEMPLATE void USBHS_SoftResetEnable_Default( USBHS_MODULE_ID index )
 {
     /* This function enables the soft reset bits */
-    volatile usbhs_registers_t * usbhs = (usbhs_registers_t *)(index + 0x1000);
+    volatile usbhs_registers_t * usbhs = (usbhs_registers_t *)((uint32_t)index + 0x1000U);
     usbhs->ENDPOINT0.USBHS_CTRLA |= USBHS_CTRLA_SWRST(1); 
 }
 
@@ -84,7 +84,7 @@ PLIB_TEMPLATE void USBHS_SoftResetEnable_Default( USBHS_MODULE_ID index )
 PLIB_TEMPLATE void USBHS_SoftResetDisable_Default( USBHS_MODULE_ID index )
 {   
     /* This function will clear the NRST and NRSTX bits. */
-    volatile usbhs_registers_sw_t * usbhs = (usbhs_registers_sw_t *)(index + 0x1000);
+    volatile usbhs_registers_sw_t * usbhs = (usbhs_registers_sw_t *)((uint32_t)index + 0x1000U);
     usbhs->SOFTRSTbits.w = 0;
 }
 
@@ -103,7 +103,7 @@ PLIB_TEMPLATE void USBHS_SoftResetNRSTXEnable_Default( USBHS_MODULE_ID index )
 {   
     /* This function sets the NRSTX bits. It is cleared automatically by
      * hardware. */
-    volatile usbhs_registers_sw_t * usbhs = (usbhs_registers_sw_t *)(index + 0x1000);
+    volatile usbhs_registers_sw_t * usbhs = (usbhs_registers_sw_t *)((uint32_t)index + 0x1000U);
     usbhs->SOFTRSTbits.NRSTX = 1;
 }
 
@@ -137,8 +137,8 @@ PLIB_TEMPLATE bool USBHS_ExistsSoftReset_Default( USBHS_MODULE_ID index )
 PLIB_TEMPLATE bool USBHS_SoftResetIsComplete_Default( USBHS_MODULE_ID index )
 {
     bool returnVal = false ;
-    volatile usbhs_registers_sw_t * usbhs = (usbhs_registers_sw_t *)(index + 0x1000);
-    if ( usbhs->SOFTRSTbits.w == 0 )
+    volatile usbhs_registers_sw_t * usbhs = (usbhs_registers_sw_t *)((uint32_t)index + 0x1000U);
+    if ( usbhs->SOFTRSTbits.w == 0U )
     {
         returnVal = true;
     }
