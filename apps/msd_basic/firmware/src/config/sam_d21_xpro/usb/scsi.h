@@ -266,7 +266,7 @@ typedef struct __attribute__((packed))
 
 // *****************************************************************************
 /* MISRA C-2012 Rule 6.1 deviated:10 and 21.2 deviate:1. 
-   Deviation record ID -  H3_MISRAC_2012_R_6_1_DR_1 and H3_MISRAC_2012_R_21_2_DR_1*/
+   Deviation record ID -  H3_USB_MISRAC_2012_R_6_1_DR_1 and H3_USB_MISRAC_2012_R_21_2_DR_1*/
 /* SCSI Sense Data structure.
 
   Summary:
