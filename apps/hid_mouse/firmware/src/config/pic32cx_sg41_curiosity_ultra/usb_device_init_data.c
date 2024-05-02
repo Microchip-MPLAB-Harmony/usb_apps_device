@@ -160,7 +160,7 @@ static const uint8_t fullSpeedConfigurationDescriptor[]=
     0x01,                                                   // Index value of this configuration
     0x00,                                                   // Configuration string index
     USB_ATTRIBUTE_DEFAULT | USB_ATTRIBUTE_SELF_POWERED, // Attributes
-    50,                                                 // Maximum power consumption (mA) /2
+    50,                                                 // Maximum Power: 100mA
 
     /* Interface Descriptor */
 
