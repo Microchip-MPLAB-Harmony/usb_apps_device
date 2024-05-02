@@ -1,7 +1,7 @@
 /*
  * Peripheral I/O description for SAMA5D29
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2022-10-04T10:37:14Z */
+/* file generated from device description version 2022-10-28T12:33:58Z */
 #ifndef _SAMA5D29_GPIO_H_
 #define _SAMA5D29_GPIO_H_
 
