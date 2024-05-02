@@ -51,7 +51,7 @@
  **************************************************/
 
 /* MISRA C-2012 Rule 10.3, 11.1 and 11.8 deviated below. Deviation record ID -  
-   H3_MISRAC_2012_R_10_3_DR_1, H3_MISRAC_2012_R_11_1_DR_1 & H3_MISRAC_2012_R_11_8_DR_1*/
+   H3_USB_MISRAC_2012_R_10_3_DR_1, H3_USB_MISRAC_2012_R_11_1_DR_1 & H3_USB_MISRAC_2012_R_11_8_DR_1*/
 /***********************************************
  * Sector buffer needed by for the MSD LUN.
  ***********************************************/
@@ -169,7 +169,7 @@ static const USB_DEVICE_MSD_INIT msdInit0 =
  * Table
  **************************************************/
 /* MISRA C-2012 Rule 10.3 deviated:2, 11.8 deviated:6 deviated below. Deviation record ID -  
-   H3_MISRAC_2012_R_10_3_DR_1 & H3_MISRAC_2012_R_11_8_DR_1*/
+   H3_USB_MISRAC_2012_R_10_3_DR_1 & H3_USB_MISRAC_2012_R_11_8_DR_1*/
 static const USB_DEVICE_FUNCTION_REGISTRATION_TABLE funcRegistrationTable[1] =
 {
     
@@ -218,7 +218,7 @@ static const USB_DEVICE_DESCRIPTOR usbDeviceDescriptor =
 /*******************************************
  *  USB Full Speed Configuration Descriptor
  *******************************************/
- /* MISRA C-2012 Rule 10.3 deviated:25 Deviation record ID -  H3_MISRAC_2012_R_10_3_DR_1 */
+ /* MISRA C-2012 Rule 10.3 deviated:25 Deviation record ID -  H3_USB_MISRAC_2012_R_10_3_DR_1 */
 static const uint8_t fullSpeedConfigurationDescriptor[]=
 {
     /* Configuration Descriptor */
@@ -230,7 +230,7 @@ static const uint8_t fullSpeedConfigurationDescriptor[]=
     0x01,                                                   // Index value of this configuration
     0x00,                                                   // Configuration string index
     USB_ATTRIBUTE_DEFAULT | USB_ATTRIBUTE_SELF_POWERED, // Attributes
-    50,                                                 // Maximum power consumption (mA) /2
+    50,                                                 // Maximum Power: 100mA
     /* Descriptor for Function 1 - MSD     */ 
     
     /* Interface Descriptor */
@@ -296,7 +296,7 @@ static sd000 =
 /*******************************************
  *  Manufacturer string descriptor
  *******************************************/
-/* MISRA C-2012 Rule 10.3 deviated:43 Deviation record ID -  H3_MISRAC_2012_R_10_3_DR_1 */
+/* MISRA C-2012 Rule 10.3 deviated:43 Deviation record ID -  H3_USB_MISRAC_2012_R_10_3_DR_1 */
 
 const struct
 {

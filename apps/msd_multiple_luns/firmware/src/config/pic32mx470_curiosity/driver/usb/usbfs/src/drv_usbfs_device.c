@@ -115,7 +115,7 @@ void F_DRV_USBFS_DEVICE_Initialize
 
 // *****************************************************************************
 /* MISRA C-2012 Rule 11.3 deviate:8, and 11.6 deviate:16. Deviation record ID -  
-    H3_MISRAC_2012_R_11_3_DR_1, H3_MISRAC_2012_R_11_6_DR_1 */
+    H3_USB_MISRAC_2012_R_11_3_DR_1, H3_USB_MISRAC_2012_R_11_6_DR_1 */
 
 /* Function:
     void DRV_USBFS_DEVICE_AddressSet(DRV_HANDLE handle, uint8_t address)
@@ -213,7 +213,7 @@ void DRV_USBFS_DEVICE_RemoteWakeupStart(DRV_HANDLE handle)
 }
 
 // *****************************************************************************
-/* MISRA C-2012 Rule 5.1 deviated:1 Deviation record ID -  H3_MISRAC_2012_R_5_1_DR_1 */
+/* MISRA C-2012 Rule 5.1 deviated:1 Deviation record ID -  H3_USB_MISRAC_2012_R_5_1_DR_1 */
 /* Function:
     void DRV_USBFS_DEVICE_RemoteWakeupStop(DRV_HANDLE handle)
 
@@ -834,8 +834,7 @@ bool DRV_USBFS_DEVICE_EndpointIsStalled
 }
 
 // *****************************************************************************
-/* MISRA C-2012 Rule 10.1 deviate: 2, and Rule 10.4 deviate:7. 
-   Deviation record ID - H3_MISRAC_2012_R_10_1_DR_1, H3_MISRAC_2012_R_10_4_DR_1 */
+
 /* Function:
     void F_DRV_USBFS_DEVICE_EndpointBDTEntryArm
     (
@@ -1800,7 +1799,7 @@ USB_ERROR DRV_USBFS_DEVICE_EndpointStallClear
     return(returnValue);
 }
 
-/* MISRAC 2012 deviation block end */
+
 // *****************************************************************************
 /* Function:
     uint16_t DRV_USBFS_DEVICE_SOFNumberGet(DRV_HANDLE handle)
@@ -2017,6 +2016,8 @@ void F_DRV_USBFS_DEVICE_Tasks_ISR(DRV_USBFS_OBJ * hDriver)
         readData = PLIB_USB_InterruptIsEnabled(usbID, USB_INT_IDLE_DETECT);
         if (PLIB_USB_InterruptFlagGet(usbID, USB_INT_IDLE_DETECT) && readData)
         {
+            /* Set the suspended flag */
+            hDriver->isSuspended = true;
             /* The bus is IDLE and is suspended. Send the event to the client. */
             if(hDriver->pEventCallBack != NULL)
             {
@@ -2030,12 +2031,13 @@ void F_DRV_USBFS_DEVICE_Tasks_ISR(DRV_USBFS_OBJ * hDriver)
 
             /* Enable the actvity interrupt */
             PLIB_USB_OTG_InterruptEnable(usbID, USB_OTG_INT_ACTIVITY_DETECT);
-
+            
+            /* Clear the resume flag */
+            PLIB_USB_InterruptFlagClear(usbID, USB_INT_RESUME);
             /* Enable the resume interrupt */
             PLIB_USB_InterruptEnable(usbID, USB_INT_RESUME);
 
-            /* Set the suspended flag */
-            hDriver->isSuspended = true;
+            
         }
 
         /* Check if an SOF was received */
