@@ -169,7 +169,7 @@ typedef enum
     None.
 */
 
-/* MISRA C-2012 Rule 6.1 deviated:9 Deviation record ID -  H3_MISRAC_2012_R_6_1_DR_1 */
+/* MISRA C-2012 Rule 6.1 deviated:9 Deviation record ID -  H3_USB_MISRAC_2012_R_6_1_DR_1 */
 
 typedef union
 {
@@ -402,7 +402,7 @@ void F_USB_DEVICE_ForwardControlXfrToFunction
 );
 
 /* MISRA C-2012 Rule 5.5, 8.6 deviated below. Deviation record ID -  
-   H3_MISRAC_2012_R_5_5_DR_1 & H3_MISRAC_2012_R_8_6_DR_1*/
+   H3_USB_MISRAC_2012_R_5_5_DR_1 & H3_USB_MISRAC_2012_R_8_6_DR_1*/
 
 
 void F_USB_DEVICE_ProcessInterfaceRequests

@@ -48,9 +48,8 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 
 #include "driver/usb/usbfs/src/templates/usbfs_registers.h"
 
-/* MISRA C-2012 Rule 10.6, Rule 11.7, and Rule 12.2.
-   Deviation record ID - H3_MISRAC_2012_R_10_6_DR_1, H3_MISRAC_2012_R_11_7_DR_1, 
-   and H3_MISRAC_2012_R_12_2_DR_1 */
+/* MISRA C-2012 Rule 10.6 and Rule 12.2.
+   Deviation record ID - H3_USB_MISRAC_2012_R_10_6_DR_1 and H3_USB_MISRAC_2012_R_12_2_DR_1 */
 //******************************************************************************
 /* Function :  USB_FrameNumberGet_Default
 
