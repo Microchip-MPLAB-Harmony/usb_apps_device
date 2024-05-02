@@ -58,8 +58,8 @@ static DRV_USB_UDPHS_OBJ gDrvUSBUDPHSObj[DRV_USB_UDPHS_INSTANCES_NUMBER];
 
 // *****************************************************************************
 /* MISRA C-2012 Rule 11.3 False Positive:2, Rule 11.3 deviate:1, and 11.8 deviate:1. 
-   Deviation record ID - H3_MISRAC_2012_R_10_4_DR_1, H3_MISRAC_2012_R_11_3_DR_1 and
-   H3_MISRAC_2012_R_11_8_DR_1 */
+   Deviation record ID - H3_USB_MISRAC_2012_R_10_4_DR_1, H3_USB_MISRAC_2012_R_11_3_DR_1 and
+   H3_USB_MISRAC_2012_R_11_8_DR_1 */
 /* Function:
     SYS_MODULE_OBJ DRV_USB_UDPHS_Initialize
     (
@@ -273,7 +273,7 @@ void DRV_USB_UDPHS_Tasks
 
 }/* end of DRV_USB_UDPHS_Tasks() */
 // *****************************************************************************
-/* MISRA C-2012 Rule 12.2 deviated:1 Deviation record ID -  H3_MISRAC_2012_R_12_2_DR_1 */
+/* MISRA C-2012 Rule 12.2 deviated:1 Deviation record ID -  H3_USB_MISRAC_2012_R_12_2_DR_1 */
 /* Function:
     void DRV_USB_UDPHS_Deinitialize( const SYS_MODULE_OBJ object )
 
