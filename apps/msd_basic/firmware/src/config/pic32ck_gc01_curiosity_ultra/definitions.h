@@ -48,8 +48,8 @@
 #include <stdint.h>
 #include <stddef.h>
 #include <stdbool.h>
-#include "driver/usb/usbhs/drv_usbhs.h"
 #include "peripheral/fcw/plib_fcw.h"
+#include "driver/usb/usbhs/drv_usbhs.h"
 #include "usb/usb_device_msd.h"
 #include "usb/usb_msd.h"
 #include "peripheral/evsys/plib_evsys.h"
