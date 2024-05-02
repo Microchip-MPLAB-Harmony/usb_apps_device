@@ -63,8 +63,8 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #include "usb/usb_host.h"
 
 /* MISRA C-2012 Rule 5.2 deviate:7, Rule 5.4 deviate:1 and Rule 8.6 deviate:10 
-   Deviation record ID - H3_MISRAC_2012_R_5_2_DR_1, H3_MISRAC_2012_R_5_4_DR_1 
-   and H3_MISRAC_2012_R_8_6_DR_1 */
+   Deviation record ID - H3_USB_MISRAC_2012_R_5_2_DR_1, H3_USB_MISRAC_2012_R_5_4_DR_1 
+   and H3_USB_MISRAC_2012_R_8_6_DR_1 */
 
 
 #define DRV_USBFS_HOST_IRP_PER_FRAME_NUMBER        5U
