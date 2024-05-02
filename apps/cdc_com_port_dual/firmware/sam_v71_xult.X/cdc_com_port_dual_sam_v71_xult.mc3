@@ -1,4 +1,4 @@
-<config configName="sam_v71_xult" projectName="cdc_com_port_dual_sam_v71_xult" configVersion="1.1" device="ATSAMV71Q21B" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.6.1">
+<config configName="sam_v71_xult" projectName="cdc_com_port_dual_sam_v71_xult" configVersion="1.1" device="ATSAMV71Q21B" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.7.1">
    <usedPackages class="java.util.ArrayList"/>
    <usedClasses class="java.util.TreeMap">
       <entry>
@@ -47,7 +47,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.4.0"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.2"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -8279,11 +8279,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\configuration.h</file>
-         <hash>caf63b3dfefc6f5a86d1bc5e4bc95ed8b5822331b91994f25a563aa5a3afa2ac</hash>
+         <hash>979d89c401659e312ec3b7b57bc86e3fbbf2443e9fa09b4fc081c8fbe82b4325</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\definitions.h</file>
-         <hash>3b9dbfd86fdf776855965e29a4e7085000964c375b14eba0864b3b1e76925733</hash>
+         <hash>6a17e85dbf5fcdce65df04dcf8022f42dfb01995c71ee0098073ebd19e1e1052</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\device.h</file>
@@ -8315,23 +8315,23 @@
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\driver\usb\usbhsv1\drv_usbhsv1.h</file>
-         <hash>32bbed573c170491321b4408fcd12ba43cc13d2f9eff78c400c378cfbfc24f69</hash>
+         <hash>ad8ca867c5802433797c3e6834fb5ca94cbdfafc39479d8d8105628f1b09b3f3</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\driver\usb\usbhsv1\src\drv_usbhsv1.c</file>
-         <hash>f64d7b8e5bc42e2f372faa367ac232c4670093c3112b8b068520a58a621da23a</hash>
+         <hash>1cab676d57e77fed1e7b34676150fc3ab59c232424473cdf6cbbe1637cec0138</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\driver\usb\usbhsv1\src\drv_usbhsv1_device.c</file>
-         <hash>ca8a9e59bf9fecce4d4d3b14eecca387cd935f38746441a6363f30b3a57d7322</hash>
+         <hash>7c6aecb6b6350b023849bc47f8e17befe789c8d65c6ae626ee623bf1309f34c1</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\driver\usb\usbhsv1\src\drv_usbhsv1_local.h</file>
-         <hash>5e074cecfb27f0e230921a21be59b0ef8a8e22b1365c2bf1b233b71cb047fbd6</hash>
+         <hash>a59d5383fca03e36f22e8a3cd4a9ed3b263509556caad4da3836a8652d5e59a4</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\driver\usb\usbhsv1\src\drv_usbhsv1_variant_mapping.h</file>
-         <hash>83d39994f551b0da2eeb97f344d861f034f1d49ade3c4cecddbcc4a192d3cd48</hash>
+         <hash>5b4fce5376a794696c8d5d582de5c97d0cb3fa81ffe6022ba83b042d893385b7</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\exceptions.c</file>
@@ -8395,7 +8395,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\peripheral\pio\plib_pio.h</file>
-         <hash>70f1b1182212fb9ff30a9b18710753b4e8481d367633603f6f470cc24fe2d4fc</hash>
+         <hash>901b9cd68bda52224f0cee8c9c8e8fe97e4f37cf77366f8b7642c87aee2fde5f</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\pin_configurations.csv</file>
@@ -8423,7 +8423,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\system\debug\sys_debug.h</file>
-         <hash>bc6fa321b0be542d074e4564065b7fd69f52556486ac3d892d315b51c434f9ec</hash>
+         <hash>4162d9e1fab93b8b33f6c8a24726f5dc287ea05c31e3ab984c3c920c725d0882</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\system\int\src\sys_int.c</file>
@@ -8459,31 +8459,31 @@
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\usb\src\usb_device.c</file>
-         <hash>7a4440af5b5231ce28d78053c499cf3f0be4d8bd400086d0b65d3b06b377ff2c</hash>
+         <hash>af8a74c998876da1c72e4c0ed30b11a3dc98b7577857d659652cd0a0cc3e7078</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\usb\src\usb_device_cdc.c</file>
-         <hash>e7177f3771364e7150a7401f397d37db0ad789a083f430c328fbed4bb77d722f</hash>
+         <hash>b97139f42ed16291e5325ae9a7948351f8be2ac4220b8c737892e063e1fc970f</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\usb\src\usb_device_cdc_acm.c</file>
-         <hash>06189d6aec9d7d3b250d4c494fa490e40dc9ace4712daaf0f36d8a9c90ab3242</hash>
+         <hash>5dc1329306d46c91fbcfb2876f274e10346a2cbcf6b2352cbe2dff7f9759463c</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\usb\src\usb_device_cdc_local.h</file>
-         <hash>071dc0c5c4a895b0651f8eadf6a6d90516686f64d70340955f51d6e5c77c73aa</hash>
+         <hash>b064eea84ddac7d6fc20c711ef1059da0de3e4a1e02d420d555deca4a44b1c6b</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\usb\src\usb_device_function_driver.h</file>
-         <hash>176f78389b138ea9db6114bea85bb66799223dc7877daea10ed80f5589c5a940</hash>
+         <hash>4c01cbdadca6973294d599811f0e06f51b4e6980fac4de25ccafd2742f6a5dd2</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\usb\src\usb_device_local.h</file>
-         <hash>935dceb5785f858042e7c2752e0a707b8be4f4edfa2bd8b8c0c93e3a51f3fc00</hash>
+         <hash>ebaab2a0356b25ac168e71f5ca84b8a0854a40de6efa8267d04aee1ca878a85e</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\usb\src\usb_device_mapping.h</file>
-         <hash>25c83489e10ce6221df1b7a6bbfcabd3e012a452b6d2937f85cb3c594189f468</hash>
+         <hash>8946c320acdb2ca965664fdf6830d839c8488cb0144d4430d9531fd4408d8df3</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\usb\src\usb_external_dependencies.h</file>
@@ -8491,31 +8491,31 @@
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\usb\usb_cdc.h</file>
-         <hash>f3fd49fd45b33391baed03778ce573afaaed4d21400f418ad5524000d99473be</hash>
+         <hash>7156ab509a99e1532639ce0826dd8cde6c77581bbe07951e71ec17428deca6c3</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\usb\usb_chapter_9.h</file>
-         <hash>e5e4a9cd868fa4b90113a0bd3ae76d176c7d21d791e7ea9891f1bf9d981da54c</hash>
+         <hash>3d61e683d79bb62694e1133023063da31853e924dd3a2f27abda159876cd6b9e</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\usb\usb_common.h</file>
-         <hash>8e8a0115a555330065b8569621173186a2a2815758125026b02596e0d0278c56</hash>
+         <hash>62970f187809ea73ea9bc418b9101ccc0ab77a47cb11149c778e06a49a83bb51</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\usb\usb_device.h</file>
-         <hash>d65ea056c90c04440c30f615adff6e4d573ca17c75f78fc4fd6c755b90fe5572</hash>
+         <hash>44c976f44c00f873133cd722cdd9565a87f5db68fa7d867ca9d1f717949aa81e</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\usb\usb_device_cdc.h</file>
-         <hash>9bd22e008e66b0a95c46996c0205df82183b2f4a23007587a654e77d3721db36</hash>
+         <hash>cd7f2dee131b1ef8d3cd4bc65094c9e06668ecc6329af8bc26f3cc5844c5ce0b</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\usb\usb_host.h</file>
-         <hash>1fd7a53f3b04f3a63013a3350d1f6b1c15aa9f162e9c5acf31b111c27987ad89</hash>
+         <hash>56c248da571d1a46c5d6b5b34e28a978b30b40ee1fb04fa4f2efdcb8a5a1039b</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\usb\usb_host_client_driver.h</file>
-         <hash>38b5d7e5fee9b09db48b48b52d9b2773f458b09dc2d659c703a075fc90f32490</hash>
+         <hash>274e72a8e34ccc3012d2bb4a100cec9d54ffd296091b35c0f7ec45b528cb34ac</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\usb\usb_host_hub_interface.h</file>
@@ -8523,11 +8523,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\usb\usb_hub.h</file>
-         <hash>733473045c756b6184188c2cf000d8f187f530a9e048dabefaecee347c05e4db</hash>
+         <hash>66a9362619640002d6c8fe6335e044dd7c9cd4fe834d1b2487aa172a08af644b</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\usb_device_init_data.c</file>
-         <hash>2c3884f49ed73fd82609d2f78900467843f6e296e5ea96a4c8fcddc8aab71de1</hash>
+         <hash>665c390db80ba73e8aa5df9c490d91dcb9d6311d28ef78cca17a9690709ae105</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\user.h</file>
