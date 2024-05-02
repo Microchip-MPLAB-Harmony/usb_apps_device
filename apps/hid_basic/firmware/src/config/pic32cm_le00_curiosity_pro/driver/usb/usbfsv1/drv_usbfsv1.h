@@ -75,8 +75,8 @@
 // *****************************************************************************
 
 /* MISRA C-2012 Rule 3.1, 5.1, 5.2 and 8.6 deviated below. Deviation record ID -  
-    H3_MISRAC_2012_R_3_1_DR_1, H3_MISRAC_2012_R_5_1_DR_1, H3_MISRAC_2012_R_5_2_DR_1 
-    and H3_MISRAC_2012_R_8_6_DR_1*/
+    H3_USB_MISRAC_2012_R_3_1_DR_1, H3_USB_MISRAC_2012_R_5_1_DR_1, H3_USB_MISRAC_2012_R_5_2_DR_1 
+    and H3_USB_MISRAC_2012_R_8_6_DR_1*/
 
 // *****************************************************************************
 /* USB Driver Endpoint Descriptor Table Entry Size in bytes.
@@ -643,6 +643,24 @@ SYS_MODULE_OBJ DRV_USBFSV1_Initialize
 (
     const SYS_MODULE_INDEX drvIndex,
     const SYS_MODULE_INIT * const init
+);
+// ****************************************************************************
+/* Function:
+    void DRV_USBFSV1_Deinitialize(const SYS_MODULE_OBJ object)
+
+  Summary:
+    This function deinitializes the USBFSV1 driver instance.
+
+  Description:
+    This function deinitializes the USBFSV1 driver instance.
+
+  Remarks:
+    A typical USB application may not call this function.
+*/
+
+void DRV_USBFSV1_Deinitialize
+(
+    const SYS_MODULE_OBJ  object
 );
 
 // *****************************************************************************
