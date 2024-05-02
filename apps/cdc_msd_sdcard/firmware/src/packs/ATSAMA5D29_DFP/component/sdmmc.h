@@ -1,7 +1,7 @@
 /*
  * Component description for SDMMC
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2022-10-04T10:37:14Z */
+/* file generated from device description version 2022-11-18T13:40:01Z */
 #ifndef _SAMA5D_SDMMC_COMPONENT_H_
 #define _SAMA5D_SDMMC_COMPONENT_H_
 
@@ -32,10 +32,13 @@
 #define SDMMC_SSAR_ADDR_Pos                   _UINT32_(0)                                          /* (SDMMC_SSAR) SDMA System Address Position */
 #define SDMMC_SSAR_ADDR_Msk                   (_UINT32_(0xFFFFFFFF) << SDMMC_SSAR_ADDR_Pos)        /* (SDMMC_SSAR) SDMA System Address Mask */
 #define SDMMC_SSAR_ADDR(value)                (SDMMC_SSAR_ADDR_Msk & (_UINT32_(value) << SDMMC_SSAR_ADDR_Pos)) /* Assigment of value for ADDR in the SDMMC_SSAR register */
-#define SDMMC_SSAR_ARG2_Pos                   _UINT32_(0)                                          /* (SDMMC_SSAR) Argument 2 Position */
-#define SDMMC_SSAR_ARG2_Msk                   (_UINT32_(0xFFFFFFFF) << SDMMC_SSAR_ARG2_Pos)        /* (SDMMC_SSAR) Argument 2 Mask */
-#define SDMMC_SSAR_ARG2(value)                (SDMMC_SSAR_ARG2_Msk & (_UINT32_(value) << SDMMC_SSAR_ARG2_Pos)) /* Assigment of value for ARG2 in the SDMMC_SSAR register */
 #define SDMMC_SSAR_Msk                        _UINT32_(0xFFFFFFFF)                                 /* (SDMMC_SSAR) Register Mask  */
+
+/* CMD23 mode */
+#define SDMMC_SSAR_CMD23_ARG2_Pos             _UINT32_(0)                                          /* (SDMMC_SSAR) Argument 2 Position */
+#define SDMMC_SSAR_CMD23_ARG2_Msk             (_UINT32_(0xFFFFFFFF) << SDMMC_SSAR_CMD23_ARG2_Pos)  /* (SDMMC_SSAR) Argument 2 Mask */
+#define SDMMC_SSAR_CMD23_ARG2(value)          (SDMMC_SSAR_CMD23_ARG2_Msk & (_UINT32_(value) << SDMMC_SSAR_CMD23_ARG2_Pos))
+#define SDMMC_SSAR_CMD23_Msk                  _UINT32_(0xFFFFFFFF)                                  /* (SDMMC_SSAR_CMD23) Register Mask  */
 
 
 /* -------- SDMMC_BSR : (SDMMC Offset: 0x04) (R/W 16) Block Size Register -------- */
