@@ -60,8 +60,8 @@
 // Section: BSP Macros
 // *****************************************************************************
 // *****************************************************************************
-#define sam_a5d2_curiosity
-#define BSP_NAME             "sam_a5d2_curiosity"
+#define sam_a5d29_curiosity
+#define BSP_NAME             "sam_a5d29_curiosity"
 
 /*PIOA base address */
 #define PIOA_REGS   ((pio_group_registers_t*)(&(PIO_REGS->PIO_GROUP[0])))
