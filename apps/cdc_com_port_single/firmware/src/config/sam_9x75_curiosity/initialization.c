@@ -222,7 +222,6 @@ void SYS_Initialize ( void* data )
     /* Disable WDT   */
     WDT_REGS->WDT_MR = WDT_MR_WDDIS_Msk;
 
-	BSP_Initialize();
 
 
     /* MISRAC 2012 deviation block start */

@@ -62,51 +62,6 @@
 // *****************************************************************************
 
 
-/*** Macros for LED_BLUE pin ***/
-#define LED_BLUE_Set()               (PIOC_REGS->PIO_SODR = (1<<20))
-#define LED_BLUE_Clear()             (PIOC_REGS->PIO_CODR = (1<<20))
-#define LED_BLUE_Toggle()            (PIOC_REGS->PIO_ODSR ^= (1<<20))
-#define LED_BLUE_OutputEnable()      (PIOC_REGS->PIO_OER = (1<<20))
-#define LED_BLUE_InputEnable()       (PIOC_REGS->PIO_ODR = (1<<20))
-#define LED_BLUE_Get()               ((PIOC_REGS->PIO_PDSR >> 20) & 0x1)
-#define LED_BLUE_PIN                  PIO_PIN_PC20
-
-/*** Macros for LED pin ***/
-#define LED_Set()               (PIOC_REGS->PIO_SODR = (1<<21))
-#define LED_Clear()             (PIOC_REGS->PIO_CODR = (1<<21))
-#define LED_Toggle()            (PIOC_REGS->PIO_ODSR ^= (1<<21))
-#define LED_OutputEnable()      (PIOC_REGS->PIO_OER = (1<<21))
-#define LED_InputEnable()       (PIOC_REGS->PIO_ODR = (1<<21))
-#define LED_Get()               ((PIOC_REGS->PIO_PDSR >> 21) & 0x1)
-#define LED_PIN                  PIO_PIN_PC21
-
-/*** Macros for USB_VBUS_SENSE pin ***/
-#define USB_VBUS_SENSE_Set()               (PIOC_REGS->PIO_SODR = (1<<8))
-#define USB_VBUS_SENSE_Clear()             (PIOC_REGS->PIO_CODR = (1<<8))
-#define USB_VBUS_SENSE_Toggle()            (PIOC_REGS->PIO_ODSR ^= (1<<8))
-#define USB_VBUS_SENSE_OutputEnable()      (PIOC_REGS->PIO_OER = (1<<8))
-#define USB_VBUS_SENSE_InputEnable()       (PIOC_REGS->PIO_ODR = (1<<8))
-#define USB_VBUS_SENSE_Get()               ((PIOC_REGS->PIO_PDSR >> 8) & 0x1)
-#define USB_VBUS_SENSE_PIN                  PIO_PIN_PC8
-
-/*** Macros for LED_RED pin ***/
-#define LED_RED_Set()               (PIOC_REGS->PIO_SODR = (1<<19))
-#define LED_RED_Clear()             (PIOC_REGS->PIO_CODR = (1<<19))
-#define LED_RED_Toggle()            (PIOC_REGS->PIO_ODSR ^= (1<<19))
-#define LED_RED_OutputEnable()      (PIOC_REGS->PIO_OER = (1<<19))
-#define LED_RED_InputEnable()       (PIOC_REGS->PIO_ODR = (1<<19))
-#define LED_RED_Get()               ((PIOC_REGS->PIO_PDSR >> 19) & 0x1)
-#define LED_RED_PIN                  PIO_PIN_PC19
-
-/*** Macros for SWITCH pin ***/
-#define SWITCH_Set()               (PIOC_REGS->PIO_SODR = (1<<9))
-#define SWITCH_Clear()             (PIOC_REGS->PIO_CODR = (1<<9))
-#define SWITCH_Toggle()            (PIOC_REGS->PIO_ODSR ^= (1<<9))
-#define SWITCH_OutputEnable()      (PIOC_REGS->PIO_OER = (1<<9))
-#define SWITCH_InputEnable()       (PIOC_REGS->PIO_ODR = (1<<9))
-#define SWITCH_Get()               ((PIOC_REGS->PIO_PDSR >> 9) & 0x1)
-#define SWITCH_PIN                  PIO_PIN_PC9
-
 
 // *****************************************************************************
 /* PIO Port
