@@ -689,7 +689,6 @@ USB_SPEED DRV_USBFSV1_HOST_DeviceCurrentSpeedGet(DRV_HANDLE client);
 
 void DRV_USBFSV1_HOST_StartOfFrameControl(DRV_HANDLE client, bool control);
 
-void DRV_USBFSV1_Deinitialize ( const SYS_MODULE_OBJ  object );
 
 /* MISRAC 2012 deviation block end */
 
