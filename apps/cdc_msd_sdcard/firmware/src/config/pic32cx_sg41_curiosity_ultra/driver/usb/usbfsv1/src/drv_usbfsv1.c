@@ -675,11 +675,6 @@ void DRV_USBFSV1_Tasks_ISR
     See drv_usbfsv1.h for usage information.
 */
 
-void DRV_USBFSV1_USB_Handler(void)
-{
-    M_DRV_USBFSV1_ISR_OTHER(sysObj.drvUSBFSV1Object);
-
-}/* end of USB_Handler() */
 
 #if defined (DRV_USBFSV1_MULTIPLE_ISR_AVAILABLE) && (DRV_USBFSV1_MULTIPLE_ISR_AVAILABLE == true)
 
