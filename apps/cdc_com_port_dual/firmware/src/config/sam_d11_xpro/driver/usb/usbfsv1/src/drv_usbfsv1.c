@@ -74,8 +74,8 @@ static DRV_USBFSV1_OBJ gDrvUSBObj [DRV_USBFSV1_INSTANCES_NUMBER];
 
 // *****************************************************************************
 /* MISRA C-2012 Rule 10.4 False Positive:1, Rule 11.3 deviate:1, and Rule 11.8 deviate:1. 
-   Deviation record ID - H3_MISRAC_2012_R_10_4_DR_1, H3_MISRAC_2012_R_11_3_DR_1 and 
-   H3_MISRAC_2012_R_11_8_DR_1 */
+   Deviation record ID - H3_USB_MISRAC_2012_R_10_4_DR_1, H3_USB_MISRAC_2012_R_11_3_DR_1 and 
+   H3_USB_MISRAC_2012_R_11_8_DR_1 */
 /* Function:
     SYS_MODULE_OBJ DRV_USBFSV1_Initialize
     (
