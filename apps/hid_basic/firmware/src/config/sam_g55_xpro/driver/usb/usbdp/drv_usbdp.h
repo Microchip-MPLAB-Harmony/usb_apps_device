@@ -69,8 +69,8 @@
 // *****************************************************************************
 
 /* MISRA C-2012 Rule 3.1 deviate:26, Rule 5.2 deviate:1 and Rule 8.6 deviate:4. 
-   Deviation record ID - H3_MISRAC_2012_R_3_1_DR_1, H3_MISRAC_2012_R_5_2_DR_1 
-   and H3_MISRAC_2012_R_8_6_DR_1 */
+   Deviation record ID - H3_USB_MISRAC_2012_R_3_1_DR_1, H3_USB_MISRAC_2012_R_5_2_DR_1 
+   and H3_USB_MISRAC_2012_R_8_6_DR_1 */
 
 // *****************************************************************************
 /* USB Driver Device Mode Interface Functions.
