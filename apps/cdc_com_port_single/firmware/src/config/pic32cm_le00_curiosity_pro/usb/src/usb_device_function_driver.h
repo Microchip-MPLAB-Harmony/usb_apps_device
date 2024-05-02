@@ -159,7 +159,7 @@ typedef struct
 
 
 // *****************************************************************************
-/* MISRA C-2012 Rule 3.1 Deviated:3 Deviation record ID -  H3_MISRAC_2012_R_3_1_DR_1 */
+/* MISRA C-2012 Rule 3.1 Deviated:3 Deviation record ID -  H3_USB_MISRAC_2012_R_3_1_DR_1 */
 /* Function:
     USB_ERROR USB_DEVICE_IRPSubmit
     (
