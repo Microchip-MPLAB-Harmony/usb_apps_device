@@ -238,7 +238,7 @@ USB_SPEED DRV_USBFSV1_DEVICE_CurrentSpeedGet
 }
 
 // *****************************************************************************
-/* MISRA C-2012 Rule 5.1 deviated:3 Deviation record ID -  H3_MISRAC_2012_R_11_3_DR_1 */
+/* MISRA C-2012 Rule 5.1 deviated:3 Deviation record ID -  H3_USB_MISRAC_2012_R_11_3_DR_1 */
 /* Function:
     void DRV_USBFSV1_DEVICE_RemoteWakeup_Start(DRV_HANDLE handle)
 
@@ -368,7 +368,7 @@ void DRV_USBFSV1_DEVICE_Attach
 
 // *****************************************************************************
 /* MISRA C-2012 Rule 10.4 False Positive:14, and Rule 20.7 deviate:7. 
-   Deviation record ID - H3_MISRAC_2012_R_10_4_DR_1, H3_MISRAC_2012_R_20_7_DR_1 */
+   Deviation record ID - H3_USB_MISRAC_2012_R_10_4_DR_1, H3_USB_MISRAC_2012_R_20_7_DR_1 */
 /* Function:
       void DRV_USBFSV1_DEVICE_Detach(DRV_HANDLE handle)
 
@@ -508,7 +508,7 @@ uint16_t DRV_USBFSV1_DEVICE_SOFNumberGet
 
 // *****************************************************************************
 /* MISRA C-2012 Rule 11.3 deviate:15 , and 11.6 deviate:3. Deviation record ID -  
-    H3_MISRAC_2012_R_11_3_DR_1, H3_MISRAC_2012_R_11_6_DR_1 */
+    H3_USB_MISRAC_2012_R_11_3_DR_1, H3_USB_MISRAC_2012_R_11_6_DR_1 */
 /* Function:
     void F_DRV_USBFSV1_DEVICE_IRPQueueFlush
     (

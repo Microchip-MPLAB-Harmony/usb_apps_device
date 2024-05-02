@@ -1,4 +1,4 @@
-<config configName="sam_l22_xpro" projectName="cdc_com_port_single_sam_l22_xpro" configVersion="1.1" device="ATSAML22N18A" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.6.1">
+<config configName="sam_l22_xpro" projectName="cdc_com_port_single_sam_l22_xpro" configVersion="1.1" device="ATSAML22N18A" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.7.1">
    <usedPackages class="java.util.ArrayList"/>
    <usedClasses class="java.util.TreeMap">
       <entry>
@@ -51,7 +51,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.4.0"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.2"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -2050,11 +2050,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_l22_xpro\configuration.h</file>
-         <hash>64e2ae88510a6447b65fa9d01cc361bb06abbcf5139e41f808171085243063ca</hash>
+         <hash>4206b6a4be1d1f7c550cd7bbcc19fcc3e8efff98b374f3ec274a865c69ea3e29</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l22_xpro\definitions.h</file>
-         <hash>9c8d91eeecd317481791a55cc49037d1f04e6ad448636312f7efaa8027327cea</hash>
+         <hash>1e4e151092596b4f8845ca092ba471aef2f0aed6ca0e4c7f006e294b95e18301</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l22_xpro\device.h</file>
@@ -2086,23 +2086,23 @@
       </entry>
       <entry>
          <file>..\src\config\sam_l22_xpro\driver\usb\usbfsv1\drv_usbfsv1.h</file>
-         <hash>3a0b191c01302c84c6a62c35227051955ddf289bd4e5a24bc40b5a808e924ee9</hash>
+         <hash>75119b99ea5bb2b599f491a9eeda31a66b8e8a3b43affc0623be9927afdd6af5</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l22_xpro\driver\usb\usbfsv1\src\drv_usbfsv1.c</file>
-         <hash>ffc63753f8a8ae2c639611c1f59d7bdd4014c326623e61a326c1e95e4e58b7ee</hash>
+         <hash>e0f3f349d4aa5733fb139b81959582bfa5702e8cfca1a1cfcd900066e69f6373</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l22_xpro\driver\usb\usbfsv1\src\drv_usbfsv1_device.c</file>
-         <hash>c85c26b8d2758de7d2a835143ec67d4cf76b2acb129edfc12997007db90afff3</hash>
+         <hash>dc41c57bfacf08ca39e35fac1515350e0337765ca75d20e1769c4f508f367eb4</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l22_xpro\driver\usb\usbfsv1\src\drv_usbfsv1_local.h</file>
-         <hash>c9e70f7addc2f794ef4f92e39297c58a37f3b90cd0f9a1b85c32d51996370491</hash>
+         <hash>56794023e1de03c80f87bbdd420ad9073a414c297da3a3d08dcc47a6ca24ce98</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l22_xpro\driver\usb\usbfsv1\src\drv_usbfsv1_variant_mapping.h</file>
-         <hash>ec14ac33cd715fe121992a1e25b8b52b0eac142bbbb9620ff2ed121807736969</hash>
+         <hash>759f5cf809bba7ba95b2570f997cf1564c0ea9c599abfbd4ac40d0cbf34d58f5</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l22_xpro\exceptions.c</file>
@@ -2110,7 +2110,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_l22_xpro\initialization.c</file>
-         <hash>f6b12baab80ef95bd42efcc7359652e162eb8d7e163e86612cfc4c2a37b2e701</hash>
+         <hash>46dde94520c09fddad43ca8534b4d0b23158699b82365d33ee7f436d7d69a76c</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l22_xpro\interrupts.c</file>
@@ -2202,7 +2202,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_l22_xpro\system\debug\sys_debug.h</file>
-         <hash>bc6fa321b0be542d074e4564065b7fd69f52556486ac3d892d315b51c434f9ec</hash>
+         <hash>4162d9e1fab93b8b33f6c8a24726f5dc287ea05c31e3ab984c3c920c725d0882</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l22_xpro\system\int\src\sys_int.c</file>
@@ -2230,7 +2230,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_l22_xpro\tasks.c</file>
-         <hash>413fa616e9746cd73cd2f8e0274d4a35ffe890d9c79f4f4a35a72995e56f9176</hash>
+         <hash>3582431498d57f4db302bf9bd433d1595735bfe1399b606ec2714cd7c739d2d6</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l22_xpro\toolchain_specifics.h</file>
@@ -2238,31 +2238,31 @@
       </entry>
       <entry>
          <file>..\src\config\sam_l22_xpro\usb\src\usb_device.c</file>
-         <hash>7a4440af5b5231ce28d78053c499cf3f0be4d8bd400086d0b65d3b06b377ff2c</hash>
+         <hash>af8a74c998876da1c72e4c0ed30b11a3dc98b7577857d659652cd0a0cc3e7078</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l22_xpro\usb\src\usb_device_cdc.c</file>
-         <hash>e7177f3771364e7150a7401f397d37db0ad789a083f430c328fbed4bb77d722f</hash>
+         <hash>b97139f42ed16291e5325ae9a7948351f8be2ac4220b8c737892e063e1fc970f</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l22_xpro\usb\src\usb_device_cdc_acm.c</file>
-         <hash>06189d6aec9d7d3b250d4c494fa490e40dc9ace4712daaf0f36d8a9c90ab3242</hash>
+         <hash>5dc1329306d46c91fbcfb2876f274e10346a2cbcf6b2352cbe2dff7f9759463c</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l22_xpro\usb\src\usb_device_cdc_local.h</file>
-         <hash>071dc0c5c4a895b0651f8eadf6a6d90516686f64d70340955f51d6e5c77c73aa</hash>
+         <hash>b064eea84ddac7d6fc20c711ef1059da0de3e4a1e02d420d555deca4a44b1c6b</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l22_xpro\usb\src\usb_device_function_driver.h</file>
-         <hash>176f78389b138ea9db6114bea85bb66799223dc7877daea10ed80f5589c5a940</hash>
+         <hash>4c01cbdadca6973294d599811f0e06f51b4e6980fac4de25ccafd2742f6a5dd2</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l22_xpro\usb\src\usb_device_local.h</file>
-         <hash>935dceb5785f858042e7c2752e0a707b8be4f4edfa2bd8b8c0c93e3a51f3fc00</hash>
+         <hash>ebaab2a0356b25ac168e71f5ca84b8a0854a40de6efa8267d04aee1ca878a85e</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l22_xpro\usb\src\usb_device_mapping.h</file>
-         <hash>25c83489e10ce6221df1b7a6bbfcabd3e012a452b6d2937f85cb3c594189f468</hash>
+         <hash>8946c320acdb2ca965664fdf6830d839c8488cb0144d4430d9531fd4408d8df3</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l22_xpro\usb\src\usb_external_dependencies.h</file>
@@ -2270,31 +2270,31 @@
       </entry>
       <entry>
          <file>..\src\config\sam_l22_xpro\usb\usb_cdc.h</file>
-         <hash>f3fd49fd45b33391baed03778ce573afaaed4d21400f418ad5524000d99473be</hash>
+         <hash>7156ab509a99e1532639ce0826dd8cde6c77581bbe07951e71ec17428deca6c3</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l22_xpro\usb\usb_chapter_9.h</file>
-         <hash>e5e4a9cd868fa4b90113a0bd3ae76d176c7d21d791e7ea9891f1bf9d981da54c</hash>
+         <hash>3d61e683d79bb62694e1133023063da31853e924dd3a2f27abda159876cd6b9e</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l22_xpro\usb\usb_common.h</file>
-         <hash>8e8a0115a555330065b8569621173186a2a2815758125026b02596e0d0278c56</hash>
+         <hash>62970f187809ea73ea9bc418b9101ccc0ab77a47cb11149c778e06a49a83bb51</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l22_xpro\usb\usb_device.h</file>
-         <hash>d65ea056c90c04440c30f615adff6e4d573ca17c75f78fc4fd6c755b90fe5572</hash>
+         <hash>44c976f44c00f873133cd722cdd9565a87f5db68fa7d867ca9d1f717949aa81e</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l22_xpro\usb\usb_device_cdc.h</file>
-         <hash>9bd22e008e66b0a95c46996c0205df82183b2f4a23007587a654e77d3721db36</hash>
+         <hash>cd7f2dee131b1ef8d3cd4bc65094c9e06668ecc6329af8bc26f3cc5844c5ce0b</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l22_xpro\usb\usb_host.h</file>
-         <hash>1fd7a53f3b04f3a63013a3350d1f6b1c15aa9f162e9c5acf31b111c27987ad89</hash>
+         <hash>56c248da571d1a46c5d6b5b34e28a978b30b40ee1fb04fa4f2efdcb8a5a1039b</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l22_xpro\usb\usb_host_client_driver.h</file>
-         <hash>38b5d7e5fee9b09db48b48b52d9b2773f458b09dc2d659c703a075fc90f32490</hash>
+         <hash>274e72a8e34ccc3012d2bb4a100cec9d54ffd296091b35c0f7ec45b528cb34ac</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l22_xpro\usb\usb_host_hub_interface.h</file>
@@ -2302,11 +2302,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_l22_xpro\usb\usb_hub.h</file>
-         <hash>733473045c756b6184188c2cf000d8f187f530a9e048dabefaecee347c05e4db</hash>
+         <hash>66a9362619640002d6c8fe6335e044dd7c9cd4fe834d1b2487aa172a08af644b</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l22_xpro\usb_device_init_data.c</file>
-         <hash>c1421cf3b831ac36bb2807eb1926a3e87cccdb1a169bbac3cf5415c01d29d105</hash>
+         <hash>fe1695916f98f929b45995fc0def349185af1395065d1048c14a1b5942831f3e</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l22_xpro\user.h</file>
