@@ -62,12 +62,11 @@
 #include "usbhs_registers.h"
 
 
-/* MISRA C-2012 Rule 10.1, Rule 10.3, Rule 10.4, Rule 11.6, 
+/* MISRA C-2012 Rule 10.3, Rule 11.6, 
    Rule 11.8, Rule 16.1, and Rule 16.3. Deviation record ID -  
-    H3_MISRAC_2012_R_10_1_DR_1, H3_MISRAC_2012_R_10_3_DR_1 
-    H3_MISRAC_2012_R_10_4_DR_1, H3_MISRAC_2012_R_11_6_DR_1,
-    H3_MISRAC_2012_R_11_7_DR_1, H3_MISRAC_2012_R_11_8_DR_1, 
-    H3_MISRAC_2012_R_16_1_DR_1,and H3_MISRAC_2012_R_16_3_DR_1 */
+    H3_USB_MISRAC_2012_R_10_3_DR_1, H3_USB_MISRAC_2012_R_11_6_DR_1,
+    H3_USB_MISRAC_2012_R_11_8_DR_1,H3_USB_MISRAC_2012_R_16_1_DR_1
+    and H3_USB_MISRAC_2012_R_16_3_DR_1 */
 
 /* This table maps the Test Mode values defined by the USB 2.0 specification
  * to values that can be written directly to the Test mode register. So for
