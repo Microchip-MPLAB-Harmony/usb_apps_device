@@ -84,7 +84,7 @@
 
 // *****************************************************************************
 /* MISRA C-2012 Rule 3.1 deviate:3, and 5.2 deviate:11. Deviation record ID -  
-    H3_MISRAC_2012_R_3_1_DR_1, H3_MISRAC_2012_R_5_2_DR_1 and H3_MISRAC_2012_R_5_5_DR_1*/
+    H3_USB_MISRAC_2012_R_3_1_DR_1, H3_USB_MISRAC_2012_R_5_2_DR_1 and H3_USB_MISRAC_2012_R_5_5_DR_1*/
 /* USB Device Printer Function Driver Index Constants
 
   Summary:

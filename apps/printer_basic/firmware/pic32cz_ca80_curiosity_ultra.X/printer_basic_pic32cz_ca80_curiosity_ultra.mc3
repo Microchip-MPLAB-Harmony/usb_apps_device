@@ -1,4 +1,4 @@
-<config configName="pic32cz_ca80_curiosity_ultra" projectName="pic32cz_ca80_curiosity_ultra" configVersion="1.1" device="PIC32CZ8110CA80208" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.6.1">
+<config configName="pic32cz_ca80_curiosity_ultra" projectName="pic32cz_ca80_curiosity_ultra" configVersion="1.1" device="PIC32CZ8110CA80208" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.7.1">
    <usedPackages class="java.util.ArrayList"/>
    <usedClasses class="java.util.TreeMap">
       <entry>
@@ -67,7 +67,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.4.0"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.2"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -3120,11 +3120,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\configuration.h</file>
-         <hash>e179a2f6d4f5e2929b40b42f10d4c352d79902f7d752376bea198009d55c9523</hash>
+         <hash>3780a62a21e5397948b0811707c7b15f28844e0b01dfe1010d73fea2bae1b5a6</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\definitions.h</file>
-         <hash>adec42936e74d65ce1356f41c408de8c1df3943d23eb1a75515c5da1183fd1f0</hash>
+         <hash>2491530bf6e2dd3115d96b72f5c1d60e25772938a6b17ab25ce8cbcda8f0c947</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\device.h</file>
@@ -3172,23 +3172,23 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\drv_usbhs.h</file>
-         <hash>f4aacd4bc0e0731e543045bf2c7e6e3e9ad0518059fe734f7178c9f8ac76b686</hash>
+         <hash>8eb044d61427cd08b8e490d330f13e03eb1c0019abd4a0cf1a275743b1662101</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\drv_usbhs.c</file>
-         <hash>9ce490685ef5df8e0eead451556673cf3a19570362deca5c983bdc5eaf4a3a39</hash>
+         <hash>1d40f5bb564b9c1b39b1fa07cdd23fc3de64c752f625b64da39d371644c68941</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\drv_usbhs_device.c</file>
-         <hash>49e61a90e8aeb191f0dd011600a5a486308fb5f42594ef853c49fe7b3b9d7c50</hash>
+         <hash>1c51c8db0c842dbf2a3ce36a76f28cb67edb3620f7956402f411b127a78082f0</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\drv_usbhs_local.h</file>
-         <hash>1f3160620f8af8eefecce2cc9301b1c4de3b81b4231237c43dba5f533d6c5aba</hash>
+         <hash>75267250c31977aed5e9aa567140d4511a3d2aaa38bbdadaee873444d1eb2eb3</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\drv_usbhs_variant_mapping.h</file>
-         <hash>a5e27b0b217bb06e0e356fef2c0799f19514054a49eb821e07d2527b1ff32002</hash>
+         <hash>5cdb20ae52b0790f84ed352d6c2682b940b58f480d38c249315adc4056abf57d</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\plib_usbhs.h</file>
@@ -3196,11 +3196,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\plib_usbhs_header.h</file>
-         <hash>d07ff9e28fe569ecfe04f9a7b037e270208d2d4d9835bdbdb8b2ba787749aac8</hash>
+         <hash>9b2eaae2a5eb6cc3e387f1a6a57ed996e8634c8e35e2201fd088ef55b9a480dc</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_ClockResetControl_Default.h</file>
-         <hash>b7d517148aefcc05eb357f67026a118ce7e38dad9ee33503fdce3a6087ae3625</hash>
+         <hash>aca667159ec8d5350cdd569380769364ba99a54f93485ee6de6377337922ad50</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_ClockResetControl_Unsupported.h</file>
@@ -3208,7 +3208,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_EP0Status_Default.h</file>
-         <hash>ad6056cf03f0089794091126ca37681904c4a8fe91c1d34f8364f288464cd06a</hash>
+         <hash>cb994f37b9d0edf5c091c497d908e14a1a80c9ea893c06afb9452ff2daf97e5f</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_EP0Status_Unsupported.h</file>
@@ -3216,7 +3216,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_EndpointFIFO_Default.h</file>
-         <hash>24481bac913831c6b2a95e214f7c140e921f690da95141a37f436c6a3d043ebc</hash>
+         <hash>98d522ae954124419b118a7e8782e063ce0b77a175c8b873e63a0b10607e0865</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_EndpointFIFO_Unsupported.h</file>
@@ -3224,7 +3224,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_EndpointOperations_Default.h</file>
-         <hash>6929e18dc7032286b813b9b4ae969b11a5a14eb13c3853101e0e3aa3b05ad603</hash>
+         <hash>ae3a765fd84b8fb0cdce9132a66cf5e1867a5775fb2724b413af2e645374b246</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_EndpointOperations_Unsupported.h</file>
@@ -3232,7 +3232,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_HighSpeedSupport_Default.h</file>
-         <hash>f95f104cc74da1b63205e2bdbfe35b345b5c38f12ae850d299fd862c38cc0e67</hash>
+         <hash>9eae3cf45107596365c5ea28207311be6ae0940e3f991d00280af42b2ce22a03</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_HighSpeedSupport_Unsupported.h</file>
@@ -3240,7 +3240,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_Interrupts_Default.h</file>
-         <hash>dd9c4c61ca0ccb66168b31fb3af4287f1fffe7614693887a4001e8d2703c0553</hash>
+         <hash>46e7b7d8493f6fd76636d634a526647d32d4c08fa4c1ada7c9971e4f62a73196</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_Interrupts_Unsupported.h</file>
@@ -3248,7 +3248,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_ModuleControl_Default.h</file>
-         <hash>33d5b41ef6d78e6579cb6074610d13d926ead4366b25f87efb809d26cafc324c</hash>
+         <hash>5d6ee61678f048370f943dc8ba26bbe89f05516faab712807cb8c11c69ea49da</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_ModuleControl_Unsupported.h</file>
@@ -3256,7 +3256,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_RxEPStatus_Default.h</file>
-         <hash>e64072ea4d07dc45209ee19607add63e26fd34ca14046ce6152b9ef862f4fdab</hash>
+         <hash>fc294b746f35631abed35b82daee9b6a7960165074db0d0750194025d5f055fc</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_RxEPStatus_Unsupported.h</file>
@@ -3264,7 +3264,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_SoftReset_Default.h</file>
-         <hash>3e9f1be4e988aca27cb1057fdf93e78684da6c5879f87e5ce858d9ca281135af</hash>
+         <hash>8024bea9ebe037ea8ff7c4e64a4c21b007c8df461ea64dbb28c387fb98284c7d</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_SoftReset_Unsupported.h</file>
@@ -3272,7 +3272,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_TxEPStatus_Default.h</file>
-         <hash>281331f9890a02ff24ff942c94fe0b69ce4782c41f8a0e8a754f086846dde213</hash>
+         <hash>431d2e81630dac8517195672c116285bf411d3e7e6534358b98d33bd73ccbb4d</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_TxEPStatus_Unsupported.h</file>
@@ -3280,7 +3280,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_USBIDControl_Default.h</file>
-         <hash>913e43b8418a15bede841466e3f2400ec178adb79fd92192158df551e201ccc9</hash>
+         <hash>8fb5d02b6a6f00ded8342578bd269801e162d0b0035ee568ba2cd8f8c8e97e89</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_USBIDControl_Unsupported.h</file>
@@ -3288,11 +3288,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\templates\usbhs_registers.h</file>
-         <hash>e472bcca204619e12e45bf519812b726d60ae0bcf4a5661a848fd7974969f2e7</hash>
+         <hash>008f29670b9bfe523923c1c10a3d44905310040d2fb7c606f519174afbdfb3b6</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\usbhs_registers.h</file>
-         <hash>207c8f185d0c45e59283a0fc3d2683b68447a9507db16a41fbf985184d6ad011</hash>
+         <hash>839ec8f6ad3d205938f55fd61905350d588d7aeead08165d29aca98c6ec9b174</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\exceptions.c</file>
@@ -3336,7 +3336,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\peripheral\evsys\plib_evsys.c</file>
-         <hash>b2e1a8004049e687fc5544133f3346f743ced50cdaf860c8e3c7f58df3cc163f</hash>
+         <hash>171913270aa095f1e8ff9192995129ff7bab22e5c793c4223f9046802e69d1e6</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\peripheral\evsys\plib_evsys.h</file>
@@ -3376,7 +3376,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\startup_xc32.c</file>
-         <hash>e2d9460ddd6b662bd743e38b8a87b586aa5ef981df6f472e265bdac6c04536ee</hash>
+         <hash>fe66331a8fdea9824325483bf6554927a0fbdd250ba7cc5616e75e9041aa277e</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\stdio\xc32_monitor.c</file>
@@ -3396,7 +3396,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\system\debug\sys_debug.h</file>
-         <hash>bc6fa321b0be542d074e4564065b7fd69f52556486ac3d892d315b51c434f9ec</hash>
+         <hash>4162d9e1fab93b8b33f6c8a24726f5dc287ea05c31e3ab984c3c920c725d0882</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\system\int\src\sys_int.c</file>
@@ -3432,23 +3432,23 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\usb\src\usb_device.c</file>
-         <hash>7a4440af5b5231ce28d78053c499cf3f0be4d8bd400086d0b65d3b06b377ff2c</hash>
+         <hash>af8a74c998876da1c72e4c0ed30b11a3dc98b7577857d659652cd0a0cc3e7078</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\usb\src\usb_device_function_driver.h</file>
-         <hash>176f78389b138ea9db6114bea85bb66799223dc7877daea10ed80f5589c5a940</hash>
+         <hash>4c01cbdadca6973294d599811f0e06f51b4e6980fac4de25ccafd2742f6a5dd2</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\usb\src\usb_device_local.h</file>
-         <hash>935dceb5785f858042e7c2752e0a707b8be4f4edfa2bd8b8c0c93e3a51f3fc00</hash>
+         <hash>ebaab2a0356b25ac168e71f5ca84b8a0854a40de6efa8267d04aee1ca878a85e</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\usb\src\usb_device_mapping.h</file>
-         <hash>25c83489e10ce6221df1b7a6bbfcabd3e012a452b6d2937f85cb3c594189f468</hash>
+         <hash>8946c320acdb2ca965664fdf6830d839c8488cb0144d4430d9531fd4408d8df3</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\usb\src\usb_device_printer.c</file>
-         <hash>b8bf9d340b76f74439b1dc373e7da502967aaf74c4228c157411731d0529970a</hash>
+         <hash>42631e00460c5937d29911c34f2530027f7a3374583ea79869f3fbfbccda4430</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\usb\src\usb_device_printer_local.h</file>
@@ -3460,27 +3460,27 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\usb\usb_chapter_9.h</file>
-         <hash>e5e4a9cd868fa4b90113a0bd3ae76d176c7d21d791e7ea9891f1bf9d981da54c</hash>
+         <hash>3d61e683d79bb62694e1133023063da31853e924dd3a2f27abda159876cd6b9e</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\usb\usb_common.h</file>
-         <hash>8e8a0115a555330065b8569621173186a2a2815758125026b02596e0d0278c56</hash>
+         <hash>62970f187809ea73ea9bc418b9101ccc0ab77a47cb11149c778e06a49a83bb51</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\usb\usb_device.h</file>
-         <hash>d65ea056c90c04440c30f615adff6e4d573ca17c75f78fc4fd6c755b90fe5572</hash>
+         <hash>44c976f44c00f873133cd722cdd9565a87f5db68fa7d867ca9d1f717949aa81e</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\usb\usb_device_printer.h</file>
-         <hash>bc3e3b781abb59f317ea17b82a9346bcb68267fb6dd60db638f02a211bf803eb</hash>
+         <hash>e87338a88b7ac7761d8d01c5834a087ad628c355e9fb7cbc46541956d5f1fd6c</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\usb\usb_host.h</file>
-         <hash>1fd7a53f3b04f3a63013a3350d1f6b1c15aa9f162e9c5acf31b111c27987ad89</hash>
+         <hash>56c248da571d1a46c5d6b5b34e28a978b30b40ee1fb04fa4f2efdcb8a5a1039b</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\usb\usb_host_client_driver.h</file>
-         <hash>38b5d7e5fee9b09db48b48b52d9b2773f458b09dc2d659c703a075fc90f32490</hash>
+         <hash>274e72a8e34ccc3012d2bb4a100cec9d54ffd296091b35c0f7ec45b528cb34ac</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\usb\usb_host_hub_interface.h</file>
@@ -3488,7 +3488,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\usb\usb_hub.h</file>
-         <hash>733473045c756b6184188c2cf000d8f187f530a9e048dabefaecee347c05e4db</hash>
+         <hash>66a9362619640002d6c8fe6335e044dd7c9cd4fe834d1b2487aa172a08af644b</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\usb\usb_printer.h</file>
@@ -3496,7 +3496,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\usb_device_init_data_0.c</file>
-         <hash>31993317ed06f2986d24815a6a62416c836818d5f9364c0acffaeb6d9aa3ad90</hash>
+         <hash>e4efbdee96cec54b48ff15c04b25bf2b5cbb6253d7c064ac778ce9a5dc43b521</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\user.h</file>
