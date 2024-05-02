@@ -48,8 +48,7 @@
 #define USBHS_CLOCKRESETCONTROL_DEFAULT_H
 
 
-/* MISRA C-2012 Rule 10.1, Rule 5.2, and Rule 10.4.Deviation record ID -  
-    H3_MISRAC_2012_R_10_1_DR_1, H3_MISRAC_2012_R_10_4_DR_1 */
+//******************************************************************************
 /* Function :  USBHS_ExistsClockResetControl_Default
 
   Summary:
@@ -104,7 +103,6 @@ PLIB_TEMPLATE void USBHS_GlobalInterruptDisable_Default( USBHS_MODULE_ID index )
     usbcrcon->USBIE = 0;
 }
 
-/* MISRAC 2012 deviation block end */
 
 #endif /*USBHS_CLOCKRESETCONTROL_DEFAULT_H*/
 
