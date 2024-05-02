@@ -49,8 +49,8 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 
 #include "usbhs_registers.h"
 
-/* MISRA C-2012 Rule 10.1, Rule 10.4, Rule 21.1 and Rule 21.2 Deviation record ID -  
-    H3_MISRAC_2012_R_10_1_DR_1,  H3_MISRAC_2012_R_10_4_DR_1 */
+/* MISRA C-2012 Rule Rule 10.4, Rule 21.1 and Rule 21.2 Deviation record ID -  
+    H3_USB_MISRAC_2012_R_10_4_DR_1 */
 
 //******************************************************************************
 /* Function :  USBHS_RxEPStatusGet_Default
@@ -70,7 +70,7 @@ PLIB_TEMPLATE uint8_t USBHS_RxEPStatusGet_Default
 )
 {
     /* Return the RX endpoint status */
-    volatile usbhs_registers_sw_t * usbhs = (usbhs_registers_sw_t *)(index + 0x1000);
+    volatile usbhs_registers_sw_t * usbhs = (usbhs_registers_sw_t *)((uint32_t)index + 0x1000U);
     return(usbhs->EPCSR[endpoint].RXCSRL_DEVICEbits.w);
 }
 
@@ -93,8 +93,8 @@ PLIB_TEMPLATE void USBHS_RxEPStatusClear_Default
 )
 {
     /* Clear the error in the status register */
-    volatile usbhs_registers_sw_t * usbhs = (usbhs_registers_sw_t *)(index + 0x1000);
-    usbhs->EPCSR[endpoint].RXCSRL_DEVICEbits.w &= (~(error)); 
+    volatile usbhs_registers_sw_t * usbhs = (usbhs_registers_sw_t *)((uint32_t)index + 0x1000U);
+    usbhs->EPCSR[endpoint].RXCSRL_DEVICEbits.w &= (~(uint8_t)(error)); 
 }
 
 //******************************************************************************
@@ -111,7 +111,7 @@ PLIB_TEMPLATE void USBHS_RxEPStatusClear_Default
 PLIB_TEMPLATE void USBHS_RxEPINTokenSend_Default( USBHS_MODULE_ID index, uint8_t endpoint )
 {
     /* Causes the module to send an IN Token in host mode */
-    volatile usbhs_registers_sw_t * usbhs = (usbhs_registers_sw_t *)(index + 0x1000);
+    volatile usbhs_registers_sw_t * usbhs = (usbhs_registers_sw_t *)((uint32_t)index + 0x1000U);
     usbhs->EPCSR[endpoint].RXCSRL_HOSTbits.REQPKT = 1; 
 }
 
