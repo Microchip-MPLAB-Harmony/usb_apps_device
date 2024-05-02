@@ -74,7 +74,7 @@ static DRV_USBFSV1_OBJ gDrvUSBFSV1Obj [DRV_USBFSV1_INSTANCES_NUMBER];
 
 // *****************************************************************************
 /* MISRA C-2012 Rule 11.3, and 11.8 deviated below. Deviation record ID -  
-    H3_MISRAC_2012_R_11_3_DR_1, H3_MISRAC_2012_R_11_8_DR_1 */
+    H3_USB_MISRAC_2012_R_11_3_DR_1, H3_USB_MISRAC_2012_R_11_8_DR_1 */
 /* Function:
     SYS_MODULE_OBJ DRV_USBFSV1_Initialize
     (
@@ -675,11 +675,6 @@ void DRV_USBFSV1_Tasks_ISR
     See drv_usbfsv1.h for usage information.
 */
 
-void DRV_USBFSV1_USB_Handler(void)
-{
-    M_DRV_USBFSV1_ISR_OTHER(sysObj.drvUSBFSV1Object);
-
-}/* end of USB_Handler() */
 
 #if defined (DRV_USBFSV1_MULTIPLE_ISR_AVAILABLE) && (DRV_USBFSV1_MULTIPLE_ISR_AVAILABLE == true)
 
