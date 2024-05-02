@@ -33,7 +33,7 @@
 #include <stdbool.h>
 
 /* MISRA C-2012 Rule 5.5 ,Rule 21.1 and Rule 21.2. Deviation record ID -  
-   H3_MISRAC_2012_R_5_5_DR_1, H3_MISRAC_2012_R_21_1_DR_1 and H3_MISRAC_2012_R_21_2_DR_1 */
+   H3_USB_MISRAC_2012_R_5_5_DR_1, H3_USB_MISRAC_2012_R_21_1_DR_1 and H3_USB_MISRAC_2012_R_21_2_DR_1 */
 
 /* Default definition used for all API dispatch functions */
 #ifndef PLIB_INLINE_API
@@ -58,12 +58,10 @@
     #define USB_BUSY_FLAG_DOES_NOT_EXIST   
 #endif
 
-typedef enum {
+typedef uint32_t USB_MODULE_ID;
+#define USB_ID_1 _USB_BASE_ADDRESS
+#define  USB_NUMBER_OF_MODULES 1U
 
-    USB_ID_1 = _USB_BASE_ADDRESS,
-    USB_NUMBER_OF_MODULES = 1
-
-} USB_MODULE_ID;
 
 typedef enum {
 
