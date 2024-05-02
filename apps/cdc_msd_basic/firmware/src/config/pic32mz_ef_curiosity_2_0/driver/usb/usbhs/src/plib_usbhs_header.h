@@ -49,18 +49,16 @@
     #define PLIB_ASSERT
 #endif 
 
-/* MISRA C-2012 Rule 4.10, Rule 5.2, Rule 5.5, Rule 10.3, 
+/* MISRA C-2012 Rule 5.2, Rule 5.5, Rule 10.3, 
    Rule 21.1, and Rule 21.2. Deviation record ID -  
-    H3_MISRAC_2012_R_4_10_DR_1, H3_MISRAC_2012_R_5_2_DR_1 
-    H3_MISRAC_2012_R_5_5_DR_1, H3_MISRAC_2012_R_10_3_DR_1
-    H3_MISRAC_2012_R_21_1_DR_1 and H3_MISRAC_2012_R_21_2_DR_1*/
+    H3_USB_MISRAC_2012_R_5_2_DR_1, H3_USB_MISRAC_2012_R_21_2_DR_1,
+    H3_USB_MISRAC_2012_R_5_5_DR_1, H3_USB_MISRAC_2012_R_10_3_DR_1 and
+    H3_USB_MISRAC_2012_R_21_1_DR_1  */
 
-typedef enum {
 
-    USBHS_ID_0 = _USB_BASE_ADDRESS,
-    USBHS_NUMBER_OF_MODULES = 1
-
-} USBHS_MODULE_ID;
+typedef uint32_t USBHS_MODULE_ID;
+#define USBHS_ID_0 _USB_BASE_ADDRESS
+#define USBHS_NUMBER_OF_MODULES 1U
 
 typedef enum {
 
