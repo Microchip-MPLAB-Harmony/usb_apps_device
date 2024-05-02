@@ -86,11 +86,11 @@ static DRV_USBHS_DEVICE_ENDPOINT_OBJ gDrvUSBEndpoints [DRV_USBHS_INSTANCES_NUMBE
   Remarks:
     See drv_usbhs.h for usage information.
 */
-/* MISRA C-2012 Rule 10.4 False Positive:3 Deviation record ID -  H3_MISRAC_2012_R_10_4_DR_1 */
+/* MISRA C-2012 Rule 10.4 False Positive:3 Deviation record ID -  H3_USB_MISRAC_2012_R_10_4_DR_1 */
 
 
 /* MISRA C-2012 Rule 11.3, 11.8 & 18.1 deviated below. Deviation record ID -  
-   H3_MISRAC_2012_R_11_3_DR_1, H3_MISRAC_2012_R_11_8_DR_1 & H3_MISRAC_2012_R_18_1_DR_1*/
+   H3_USB_MISRAC_2012_R_11_3_DR_1, H3_USB_MISRAC_2012_R_11_8_DR_1 & H3_USB_MISRAC_2012_R_18_1_DR_1*/
 
 
 
