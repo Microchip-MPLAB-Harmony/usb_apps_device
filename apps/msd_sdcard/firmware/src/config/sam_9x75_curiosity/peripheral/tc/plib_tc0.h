@@ -92,28 +92,6 @@ extern "C" {
 
  
 
-
-
-void TC0_CH0_TimerInitialize (void);
-
-void TC0_CH0_TimerStart (void);
-
-void TC0_CH0_TimerStop (void);
-
-void TC0_CH0_TimerPeriodSet (uint32_t period);
-
-void TC0_CH0_TimerCompareSet (uint32_t compare);
-
-uint32_t TC0_CH0_TimerFrequencyGet (void);
-
-uint32_t TC0_CH0_TimerPeriodGet (void);
-
-uint32_t TC0_CH0_TimerCounterGet (void);
-
-void TC0_CH0_TimerCallbackRegister(TC_TIMER_CALLBACK callback, uintptr_t context);
-
-
-
  
 
  
