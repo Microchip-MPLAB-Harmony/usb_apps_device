@@ -91,7 +91,7 @@ static const USB_ENDPOINT controlEndpointRx  = 0x00;
 */
 
 /* MISRA C-2012 Rule 11.3, 11.8 deviated below. Deviation record ID -  
-   H3_MISRAC_2012_R_11_3_DR_1 & H3_MISRAC_2012_R_11_8_DR_1*/
+   H3_USB_MISRAC_2012_R_11_3_DR_1 & H3_USB_MISRAC_2012_R_11_8_DR_1*/
 
 
 SYS_MODULE_OBJ USB_DEVICE_Initialize
@@ -156,8 +156,8 @@ SYS_MODULE_OBJ USB_DEVICE_Initialize
     usbDeviceThisInstance->remoteWakeupStatus = USB_DEVICE_REMOTE_WAKEUP_DISABLED;
 
     /* Initialize power source to bus power */
-    usbDeviceThisInstance->usbDeviceStatusStruct.powerState = USB_DEVICE_POWER_STATE_BUS_POWERED;
-    
+    usbDeviceThisInstance->usbDeviceStatusStruct.powerState = USB_DEVICE_POWER_STATE_SELF_POWERED;
+
     /* Reset set address flag.*/
     usbDeviceThisInstance->usbDeviceStatusStruct.setAddressPending = false;
     
@@ -1621,10 +1621,10 @@ USB_ERROR USB_DEVICE_IRPCancel
     This is local function. It should not be used directly by the client.
 */
 
-/* MISRA C-2012 Rule 8.2 deviated:12 Deviation record ID -  H3_MISRAC_2012_R_8_2_DR_1 */
+/* MISRA C-2012 Rule 8.2 deviated:12 Deviation record ID -  H3_USB_MISRAC_2012_R_8_2_DR_1 */
 
 
-/* MISRA C-2012 Rule 11.1 deviated:4 Deviation record ID -  H3_MISRAC_2012_R_11_1_DR_1 */
+/* MISRA C-2012 Rule 11.1 deviated:4 Deviation record ID -  H3_USB_MISRAC_2012_R_11_1_DR_1 */
 
 
 void F_USB_DEVICE_Ep0ReceiveCompleteCallback( USB_DEVICE_IRP * handle )
@@ -1891,8 +1891,6 @@ void F_USB_DEVICE_DeInitializeAllFunctionDrivers
   Remarks:
     This is a local function and should not be called directly by a client.
 */
-/* MISRA C-2012 Rule 14.3 deviated:2 Deviation record ID -  H3_MISRAC_2012_R_14_3_DR_1 */
-
 void F_USB_DEVICE_EventHandler
 (
     uintptr_t referenceHandle,
@@ -1995,15 +1993,11 @@ void F_USB_DEVICE_EventHandler
              * will sent to the application. Else the event will not be
              * processed. */
             usbDeviceThisInstance->usbDeviceStatusStruct.isSuspended = false;
-            eventType = (DRV_USB_EVENT)M_USB_DEVICE_SOFEventEnable(); 
-            if ((uint32_t)eventType != 0U)
-            {
-                eventType = (DRV_USB_EVENT)USB_DEVICE_EVENT_SOF;
-                /* Get the frame number */
-                SOFFrameNumber.frameNumber = usbDeviceThisInstance->driverInterface->deviceSOFNumberGet(usbDeviceThisInstance->usbCDHandle);
-                eventData = &SOFFrameNumber;
-            }
-
+            eventType = (DRV_USB_EVENT)M_USB_DEVICE_SOFEventEnable();
+            
+            /* Get the frame number */
+            SOFFrameNumber.frameNumber = M_USB_DEVICE_SofFrameNumberGet(usbDeviceThisInstance->usbCDHandle);
+            eventData = &SOFFrameNumber;
             break;
 
         case DRV_USB_EVENT_DEVICE_SESSION_VALID:
@@ -2221,7 +2215,7 @@ void  F_USB_DEVICE_ControlTransferHandler
   Remarks:
     This is local function. It should not be used directly by the client.
 */
-/* MISRA C-2012 Rule 11.1 deviated:2 Deviation record ID -  H3_MISRAC_2012_R_11_1_DR_1 */
+/* MISRA C-2012 Rule 11.1 deviated:2 Deviation record ID -  H3_USB_MISRAC_2012_R_11_1_DR_1 */
 
 void F_USB_DEVICE_ForwardControlXfrToFunction 
 (
@@ -2765,7 +2759,7 @@ bool F_USB_DEVICE_FindEndpoint
     This is a local function and should not be called directly by the client.
 */
 
-/* MISRA C-2012 Rule 5.1 deviated:2 Deviation record ID -  H3_MISRAC_2012_R_5_1_DR_1 */
+/* MISRA C-2012 Rule 5.1 deviated:2 Deviation record ID -  H3_USB_MISRAC_2012_R_5_1_DR_1 */
 
 void F_USB_DEVICE_ProcessStandardDeviceSetRequests
 (
@@ -3041,10 +3035,10 @@ USB_DEVICE_OBJ* F_USB_DEVICE_ClientHandleValidate(USB_DEVICE_HANDLE deviceHandle
     This is a local function and should not be called directly by the client.
 */
 
-/* MISRA C-2012 Rule 10.4 False Positive:2 Deviation record ID -  H3_MISRAC_2012_R_10_4_DR_1 */
+/* MISRA C-2012 Rule 10.4 False Positive:2 Deviation record ID -  H3_USB_MISRAC_2012_R_10_4_DR_1 */
 
 
-/* MISRA C-2012 Rule 5.5 deviated:4 Deviation record ID -  H3_MISRAC_2012_R_5_5_DR_1 */
+/* MISRA C-2012 Rule 5.5 deviated:4 Deviation record ID -  H3_USB_MISRAC_2012_R_5_5_DR_1 */
 
 void F_USB_DEVICE_EndpointMutexCreateFunction(USB_DEVICE_OBJ* usbDeviceThisInstance)
 {
