@@ -291,7 +291,7 @@ USB_SPEED DRV_USBHSV1_DEVICE_CurrentSpeedGet
 }/* end of DRV_USBHSV1_DEVICE_CurrentSpeedGet() */
 
 // *****************************************************************************
-/* MISRA C-2012 Rule 5.1 deviated:4 Deviation record ID -  H3_MISRAC_2012_R_5_1_DR_1 */
+/* MISRA C-2012 Rule 5.1 deviated:4 Deviation record ID -  H3_USB_MISRAC_2012_R_5_1_DR_1 */
 /* Function:
       void DRV_USBHSV1_DEVICE_RemoteWakeupStart(DRV_HANDLE handle)
 
@@ -352,7 +352,7 @@ void DRV_USBHSV1_DEVICE_RemoteWakeupStop(DRV_HANDLE handle)
 }/* end of DRV_USBHSV1_DEVICE_RemoteWakeupStop() */
 
 // *****************************************************************************
-/* MISRA C-2012 Rule 10.4 False Positive:8 Deviation record ID -  H3_MISRAC_2012_R_10_4_DR_1 */
+/* MISRA C-2012 Rule 10.4 False Positive:8 Deviation record ID -  H3_USB_MISRAC_2012_R_10_4_DR_1 */
 
 /* Function:
       void DRV_USBHSV1_DEVICE_Attach(DRV_HANDLE handle)
@@ -600,7 +600,7 @@ uint16_t DRV_USBHSV1_DEVICE_SOFNumberGet(DRV_HANDLE handle)
 }/* end of DRV_USBHSV1_DEVICE_SOFNumberGet() */
 
 // *****************************************************************************
-/* MISRA C-2012 Rule 11.3 deviated:31 Deviation record ID -  H3_MISRAC_2012_R_11_3_DR_1 */
+/* MISRA C-2012 Rule 11.3 deviated:31 Deviation record ID -  H3_USB_MISRAC_2012_R_11_3_DR_1 */
 /* Function:
     void F_DRV_USBHSV1_DEVICE_IRPQueueFlush
     (
