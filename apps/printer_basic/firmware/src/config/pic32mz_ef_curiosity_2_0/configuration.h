@@ -131,7 +131,7 @@ extern "C" {
    function driver */
 #define USB_DEVICE_PRINTER_QUEUE_DEPTH_COMBINED                 2U
 
-/* MISRA C-2012 Rule 5.4 deviated:1, Deviation record ID -  H3_MISRAC_2012_R_5_4_DR_1 */
+/* MISRA C-2012 Rule 5.4 deviated:1, Deviation record ID -  H3_USB_MISRAC_2012_R_5_4_DR_1 */
 
 /* Length of the Device ID string including length in the first two bytes */
 #define USB_DEVICE_PRINTER_DEVICE_ID_STRING_LENGTH    81U

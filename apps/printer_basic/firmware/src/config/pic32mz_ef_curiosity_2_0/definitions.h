@@ -58,11 +58,11 @@
 #include "usb/usb_chapter_9.h"
 #include "usb/usb_device.h"
 #include "bsp/bsp.h"
+#include "peripheral/uart/plib_uart6.h"
 #include "system/int/sys_int.h"
 #include "system/dma/sys_dma.h"
 #include "osal/osal.h"
 #include "system/debug/sys_debug.h"
-#include "peripheral/uart/plib_uart6.h"
 #include "app.h"
 
 
