@@ -113,8 +113,8 @@ DRV_USB_DEVICE_INTERFACE gDrvUSBDPInterface =
 
 // *****************************************************************************
 /* MISRA C-2012 Rule 10.4 False Positive:9 ,Rule 11.3 deviate:18, Rule 11.6 deviate:17 
-   and Rule 11.8 deviate:1.Deviation record ID - H3_MISRAC_2012_R_11_3_DR_1, 
-   H3_MISRAC_2012_R_11_6_DR_1 and H3_MISRAC_2012_R_11_8_DR_1 */
+   and Rule 11.8 deviate:1.Deviation record ID - H3_USB_MISRAC_2012_R_11_3_DR_1, 
+   H3_USB_MISRAC_2012_R_11_6_DR_1 and H3_USB_MISRAC_2012_R_11_8_DR_1 */
 /* Function:
     SYS_MODULE_OBJ DRV_USBDP_Initialize
     (
@@ -1052,7 +1052,7 @@ void F_DRV_USBDP_EndpointObjectEnable
 }/* end of F_DRV_USBDP_EndpointObjectEnable() */
 
 // *****************************************************************************
-/* MISRA C-2012 Rule 20.7 deviated:43 Deviation record ID -  H3_MISRAC_2012_R_20_7_DR_1 */
+/* MISRA C-2012 Rule 20.7 deviated:43 Deviation record ID -  H3_USB_MISRAC_2012_R_20_7_DR_1 */
 /* Function:
     USB_ERROR DRV_USBDP_EndpointEnable
     (

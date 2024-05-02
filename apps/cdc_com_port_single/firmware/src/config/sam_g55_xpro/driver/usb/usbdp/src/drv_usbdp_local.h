@@ -153,7 +153,7 @@
 // *****************************************************************************
 // *****************************************************************************
 /* MISRA C-2012 Rule 5.2 deviate:6, and Rule 8.6 deviate:1. 
-   Deviation record ID - H3_MISRAC_2012_R_5_2_DR_1, H3_MISRAC_2012_R_8_6_DR_1 */
+   Deviation record ID - H3_USB_MISRAC_2012_R_5_2_DR_1, H3_USB_MISRAC_2012_R_8_6_DR_1 */
 
 /*******************************************************************************
  * USB Device Endpoint Banks count. This data structures contains all 
