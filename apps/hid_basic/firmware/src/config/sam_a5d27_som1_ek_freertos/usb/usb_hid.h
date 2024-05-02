@@ -54,7 +54,7 @@
 #endif
 // DOM-IGNORE-END  
 
-/* MISRA C-2012 Rule 5.4 deviated:10 Deviation record ID -  H3_MISRAC_2012_R_5_4_DR_1 */
+/* MISRA C-2012 Rule 5.4 deviated:10 Deviation record ID -  H3_USB_MISRAC_2012_R_5_4_DR_1 */
 
 /* HID Class code */
 #define USB_HID_CLASS_CODE               0x03
@@ -294,7 +294,7 @@ typedef enum
     /* Reserved                                                         = 0x04-0xFF */
 } USB_HID_REPORT_TYPE;
 
-/* MISRA C-2012 Rule 5.2 deviated:57 Deviation record ID -  H3_MISRAC_2012_R_5_2_DR_1 */
+/* MISRA C-2012 Rule 5.2 deviated:57 Deviation record ID -  H3_USB_MISRAC_2012_R_5_2_DR_1 */
 
 
 typedef enum
@@ -322,7 +322,7 @@ typedef enum
     USB_HID_COLLECTION_USAGE_MODIFIER
 } USB_HID_COLLECTION_TYPE;
 
-/* MISRA C-2012 Rule 6.1 deviated:33 Deviation record ID -  H3_MISRAC_2012_R_6_1_DR_1 */
+/* MISRA C-2012 Rule 6.1 deviated:33 Deviation record ID -  H3_USB_MISRAC_2012_R_6_1_DR_1 */
 
 typedef struct
 {
