@@ -91,21 +91,21 @@
 
 
 /*** Macros for USB_VBUS_SENSE pin ***/
-#define USB_VBUS_SENSE_Set()               (PIOD_REGS->PIO_SODR = (1<<20))
-#define USB_VBUS_SENSE_Clear()             (PIOD_REGS->PIO_CODR = (1<<20))
+#define USB_VBUS_SENSE_Set()               (PIOD_REGS->PIO_SODR = ((uint32_t)1U<<20U))
+#define USB_VBUS_SENSE_Clear()             (PIOD_REGS->PIO_CODR = ((uint32_t)1U<<20U))
 #define USB_VBUS_SENSE_Toggle()            do {\
-                                            PIOD_REGS->PIO_MSKR = (1<<20); \
-                                            PIOD_REGS->PIO_ODSR ^= (1<<20);\
+                                            PIOD_REGS->PIO_MSKR = ((uint32_t)1U<<20U); \
+                                            PIOD_REGS->PIO_ODSR ^= ((uint32_t)1U<<20U);\
                                         } while (0)
 #define USB_VBUS_SENSE_OutputEnable()      do {\
-                                            PIOD_REGS->PIO_MSKR = (1<<20); \
-                                            PIOD_REGS->PIO_CFGR |=(1 << PIO_CFGR_DIR_Pos);\
+                                            PIOD_REGS->PIO_MSKR = ((uint32_t)1U<<20U); \
+                                            PIOD_REGS->PIO_CFGR |=((uint32_t)1U << PIO_CFGR_DIR_Pos);\
                                         }while(0)
 #define USB_VBUS_SENSE_InputEnable()       do { \
-                                            PIOD_REGS->PIO_MSKR = (1<<20); \
-                                            PIOD_REGS->PIO_CFGR &= ~(1 << PIO_CFGR_DIR_Pos);\
+                                            PIOD_REGS->PIO_MSKR = ((uint32_t)1U<<20U); \
+                                            PIOD_REGS->PIO_CFGR &= ~((uint32_t)1U << PIO_CFGR_DIR_Pos);\
                                         } while (0)
-#define USB_VBUS_SENSE_Get()               ((PIOD_REGS->PIO_PDSR >> 20) & 0x1)
+#define USB_VBUS_SENSE_Get()               ((PIOD_REGS->PIO_PDSR >> 20U) & 0x1U)
 #define USB_VBUS_SENSE_PIN                  PIO_PIN_PD20
 // *****************************************************************************
 /* PIO Ports
