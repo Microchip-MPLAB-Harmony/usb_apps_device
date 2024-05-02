@@ -60,9 +60,8 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 
 #include "usbhs_registers.h"
 
-/* MISRA C-2012 Rule 10.1 and Rule 10.4. Deviation record ID -  
-    H3_MISRAC_2012_R_10_1_DR_1, H3_MISRAC_2012_R_10_3_DR_1
-    and H3_MISRAC_2012_R_10_4_DR_1 */
+/* MISRA C-2012 Rule 10.4. Deviation record ID -  
+     H3_USB_MISRAC_2012_R_10_3_DR_1 and H3_USB_MISRAC_2012_R_10_4_DR_1 */
    
 
 //******************************************************************************
@@ -85,7 +84,7 @@ PLIB_TEMPLATE void USBHS_EndpointRxRequestEnable_Default
     /* Sets the Receive Packet Request bit causing an IN endpoint to send an IN
      * token. This function is to be called in the host mode operation. */
 
-    volatile usbhs_registers_sw_t * usbhs = (usbhs_registers_sw_t *)(index + 0x1000);
+    volatile usbhs_registers_sw_t * usbhs = (usbhs_registers_sw_t *)((uint32_t)index + 0x1000U);
     usbhs->EPCSR[endpoint].RXCSRL_HOSTbits.REQPKT = 1;
 }
 
@@ -109,7 +108,7 @@ PLIB_TEMPLATE void USBHS_EndpointRxRequestClear_Default
     /* This function clear the IN Request Packet bit. This function should be
      * called in host mode only. */
 
-    volatile usbhs_registers_sw_t * usbhs = (usbhs_registers_sw_t *)(index + 0x1000);
+    volatile usbhs_registers_sw_t * usbhs = (usbhs_registers_sw_t *)((uint32_t)index + 0x1000U);
     usbhs->EPCSR[endpoint].RXCSRL_HOSTbits.RXPKTRDY = 0;
 }
 
@@ -147,7 +146,7 @@ PLIB_TEMPLATE void USBHS_HostRxEndpointConfigure_Default
      * fifo if there is any stale data, nak interval and then finally enables
      * the interrupt */
     
-    volatile usbhs_registers_sw_t * usbhs = (usbhs_registers_sw_t *)(index + 0x1000);
+    volatile usbhs_registers_sw_t * usbhs = (usbhs_registers_sw_t *)((uint32_t)index + 0x1000U);
     uint8_t indexBackup;
 
     /* Backup the index register and set it to the host endpoint that is to be
@@ -182,7 +181,7 @@ PLIB_TEMPLATE void USBHS_HostRxEndpointConfigure_Default
     usbhs->INDEXED_EPCSR.RXCSRL_HOSTbits.CLRDT = 1;
 
     /* If there is stale data in the fifo, then flush the fifo */
-    if(usbhs->INDEXED_EPCSR.RXCSRL_HOSTbits.RXPKTRDY == 1)
+    if(usbhs->INDEXED_EPCSR.RXCSRL_HOSTbits.RXPKTRDY == 1U)
     {
         /* Flush the fifo */
         usbhs->INDEXED_EPCSR.RXCSRL_HOSTbits.FLUSH = 1; 
@@ -195,7 +194,9 @@ PLIB_TEMPLATE void USBHS_HostRxEndpointConfigure_Default
     usbhs->INDEXED_EPCSR.RXINTERVALbits.RXINTERV = nakInterval;
 
     /* Enable the RX endpoint interrupt */
-    usbhs->INTRRXEbits.w |= (1 << hostEndpoint);
+    uint8_t hostEp;
+    hostEp = (1U << hostEndpoint);
+    usbhs->INTRRXEbits.w |= (uint16_t)hostEp;
 
     /* Restore the index register before exiting */
     usbhs->INDEXbits.ENDPOINT = indexBackup;
@@ -229,7 +230,7 @@ PLIB_TEMPLATE void USBHS_HostTxEndpointConfigure_Default
     uint8_t  nakInterval
 )
 {
-    volatile usbhs_registers_sw_t * usbhs = (usbhs_registers_sw_t *)(index + 0x1000);
+    volatile usbhs_registers_sw_t * usbhs = (usbhs_registers_sw_t *)((uint32_t)index + 0x1000U);
     uint8_t indexBackup;
 
     /* Backup the index register and set it to the
@@ -264,7 +265,7 @@ PLIB_TEMPLATE void USBHS_HostTxEndpointConfigure_Default
     usbhs->INDEXED_EPCSR.TXCSRL_HOSTbits.CLRDT = 1;
 
     /* If there is stale data in the fifo, then flush the fifo */
-    if(usbhs->INDEXED_EPCSR.TXCSRL_HOSTbits.FIFONE == 1)
+    if(usbhs->INDEXED_EPCSR.TXCSRL_HOSTbits.FIFONE == 1U)
     {
         /* Flush the fifo */
         usbhs->INDEXED_EPCSR.TXCSRL_HOSTbits.FLUSH = 1;
@@ -277,7 +278,9 @@ PLIB_TEMPLATE void USBHS_HostTxEndpointConfigure_Default
     usbhs->INDEXED_EPCSR.TXINTERVALbits.TXINTERV = nakInterval;
 
     /* Enable the TX endpoint interrupt */
-    usbhs->INTRTXEbits.w |= (1 << hostEndpoint);
+    uint8_t hostEp;
+    hostEp = (1U << hostEndpoint);
+    usbhs->INTRTXEbits.w |= (uint16_t)hostEp;
 
     /* Restore the index register before exiting */
     usbhs->INDEXbits.ENDPOINT = indexBackup;
@@ -302,7 +305,7 @@ PLIB_TEMPLATE void USBHS_HostTxEndpointDataToggleClear_Default
 )
 {
     /* Clear the Data toggle on the TX endpoint in host mode. */
-    volatile usbhs_registers_sw_t * usbhs = (usbhs_registers_sw_t *)(index + 0x1000);
+    volatile usbhs_registers_sw_t * usbhs = (usbhs_registers_sw_t *)((uint32_t)index + 0x1000U);
     usbhs->EPCSR[hostEndpoint].TXCSRL_HOSTbits.CLRDT = 1;
 }
 
@@ -325,7 +328,7 @@ PLIB_TEMPLATE void USBHS_HostRxEndpointDataToggleClear_Default
 {
     /* Clear the Data toggle on the RX endpoint in host mode. Writing
      * a one to this bit will clear the data toggle. */
-    volatile usbhs_registers_sw_t * usbhs = (usbhs_registers_sw_t *)(index + 0x1000);
+    volatile usbhs_registers_sw_t * usbhs = (usbhs_registers_sw_t *)((uint32_t)index + 0x1000U);
     usbhs->EPCSR[hostEndpoint].RXCSRL_HOSTbits.CLRDT = 1;
 }
 
@@ -350,7 +353,7 @@ PLIB_TEMPLATE void USBHS_DeviceTxEndpointConfigure_Default
     uint32_t transferType
 )
 {
-    volatile usbhs_registers_sw_t * usbhs = (usbhs_registers_sw_t *)(index + 0x1000);
+    volatile usbhs_registers_sw_t * usbhs = (usbhs_registers_sw_t *)((uint32_t)index + 0x1000U);
     
     uint8_t indexBackup;
 
@@ -373,7 +376,7 @@ PLIB_TEMPLATE void USBHS_DeviceTxEndpointConfigure_Default
     /* Set up the FIFO size */
     usbhs->TXFIFOSZbits.TXFIFOSZ = fifoSize;
     
-    if(1 == transferType)
+    if(1U == transferType)
     {
         /* Enable ISOC operation */
         usbhs->INDEXED_EPCSR.TXCSRH_DEVICEbits.ISO = 1;
@@ -389,7 +392,9 @@ PLIB_TEMPLATE void USBHS_DeviceTxEndpointConfigure_Default
     usbhs->INDEXbits.ENDPOINT = indexBackup;
   
     /* Enable the interrupt */
-    usbhs->INTRTXEbits.w |=  (1 << endpoint);
+    uint8_t epTemp;
+    epTemp = (1U << endpoint);
+    usbhs->INTRTXEbits.w |= (uint16_t)epTemp;
     
 }
 
@@ -414,7 +419,7 @@ PLIB_TEMPLATE void USBHS_DeviceRxEndpointConfigure_Default
     uint32_t transferType
 )
 {
-    volatile usbhs_registers_sw_t * usbhs = (usbhs_registers_sw_t *)(index + 0x1000);
+    volatile usbhs_registers_sw_t * usbhs = (usbhs_registers_sw_t *)((uint32_t)index + 0x1000U);
     uint8_t indexBackup;
 
     /* This function configures the RX endpoint for device mode
@@ -436,7 +441,7 @@ PLIB_TEMPLATE void USBHS_DeviceRxEndpointConfigure_Default
     /* Set up the FIFO size */
     usbhs->RXFIFOSZbits.RXFIFOSZ = fifoSize;
     
-    if(transferType == 1)
+    if(transferType == 1U)
     {
         /* For Isochronous endpoints, handshaking must
          * be disabled*/
@@ -444,7 +449,7 @@ PLIB_TEMPLATE void USBHS_DeviceRxEndpointConfigure_Default
         usbhs->INDEXED_EPCSR.RXCSRH_DEVICEbits.ISO = 1;
 
     }
-    else if(transferType == 3)
+    else if(transferType == 3U)
     {
         /* For interrupt endpoints, handshaking must
          * be enabled by NYET should be disabled */
@@ -465,7 +470,9 @@ PLIB_TEMPLATE void USBHS_DeviceRxEndpointConfigure_Default
     usbhs->INDEXbits.ENDPOINT = indexBackup;
    
     /* Enable the endpoint interrupt */
-    usbhs->INTRRXEbits.w |= (1 << endpoint);
+    uint8_t epTemp;
+    epTemp = (1U << endpoint);
+    usbhs->INTRRXEbits.w |= (uint16_t)epTemp;
     
 }
 
@@ -487,7 +494,7 @@ PLIB_TEMPLATE void USBHS_DeviceRxEndpointStallEnable_Default
 )
 {
     /* Stalls the RX direction on specified endpoint. */
-    volatile usbhs_registers_sw_t * usbhs = (usbhs_registers_sw_t *)(index + 0x1000);
+    volatile usbhs_registers_sw_t * usbhs = (usbhs_registers_sw_t *)((uint32_t)index + 0x1000U);
     usbhs->EPCSR[endpoint].RXCSRL_DEVICEbits.SENDSTALL = 1;
 }
 
@@ -509,7 +516,7 @@ PLIB_TEMPLATE void USBHS_DeviceTxEndpointStallEnable_Default
 )
 {
     /* Stalls the TX direction on specified endpoint. */
-    volatile usbhs_registers_sw_t * usbhs = (usbhs_registers_sw_t *)(index + 0x1000);
+    volatile usbhs_registers_sw_t * usbhs = (usbhs_registers_sw_t *)((uint32_t)index + 0x1000U);
     usbhs->EPCSR[endpoint].TXCSRL_DEVICEbits.SENDSTALL = 1;
 }
 
@@ -531,7 +538,7 @@ PLIB_TEMPLATE void USBHS_DeviceRxEndpointStallDisable_Default
 )
 {
     /* Disable the stall and reset the data toggle */
-    volatile usbhs_registers_sw_t * usbhs = (usbhs_registers_sw_t *)(index + 0x1000);
+    volatile usbhs_registers_sw_t * usbhs = (usbhs_registers_sw_t *)((uint32_t)index + 0x1000U);
     usbhs->EPCSR[endpoint].RXCSRL_DEVICEbits.w &= (~(USBHS_EP_DEVICE_RX_SENT_STALL|USBHS_EP_DEVICE_RX_SEND_STALL));
     usbhs->EPCSR[endpoint].RXCSRL_DEVICEbits.CLRDT = 1;
 }
@@ -555,7 +562,7 @@ PLIB_TEMPLATE void USBHS_DeviceTxEndpointStallDisable_Default
 {
     /* Disable the stall and reset the data toggle */
          
-    volatile usbhs_registers_sw_t * usbhs = (usbhs_registers_sw_t *)(index + 0x1000);
+    volatile usbhs_registers_sw_t * usbhs = (usbhs_registers_sw_t *)((uint32_t)index + 0x1000U);
     usbhs->EPCSR[endpoint].TXCSRL_DEVICEbits.w &= (~(USBHS_EP_DEVICE_TX_SENT_STALL|USBHS_EP_DEVICE_TX_SEND_STALL));
     usbhs->EPCSR[endpoint].TXCSRL_DEVICEbits.CLRDT = 1;
 }
@@ -579,7 +586,7 @@ PLIB_TEMPLATE void USBHS_DeviceTxEndpointPacketReady_Default
 {
     /* Set the TX Packet Ready bit. */
     
-    volatile usbhs_registers_sw_t * usbhs = (usbhs_registers_sw_t *)(index + 0x1000);
+    volatile usbhs_registers_sw_t * usbhs = (usbhs_registers_sw_t *)((uint32_t)index + 0x1000U);
     usbhs->EPCSR[endpoint].TXCSRL_DEVICEbits.TXPKTRDY = 1;
 }
 

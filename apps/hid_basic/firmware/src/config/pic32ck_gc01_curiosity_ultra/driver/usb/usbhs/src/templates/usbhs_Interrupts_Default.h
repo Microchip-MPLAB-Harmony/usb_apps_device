@@ -51,9 +51,8 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 
 #include "usbhs_registers.h"
 
-/* MISRA C-2012 Rule 10.1, Rule 10.3 and Rule 10.4. Deviation record ID -  
-    H3_MISRAC_2012_R_10_1_DR_1, H3_MISRAC_2012_R_10_3_DR_1 and 
-    H3_MISRAC_2012_R_10_4_DR_1 */
+/* MISRA C-2012 Rule 10.3 and Rule 10.4. Deviation record ID -  
+    H3_USB_MISRAC_2012_R_10_3_DR_1 and H3_USB_MISRAC_2012_R_10_4_DR_1 */
 
 //******************************************************************************
 /* Function :  USBHS_InterruptEnableSet_Default
@@ -76,7 +75,7 @@ PLIB_TEMPLATE void USBHS_InterruptEnableSet_Default
     /* This function will update the general interrupt enable
      * endpoint interrupts enable registers */
     
-    volatile usbhs_registers_sw_t * usbhs = (usbhs_registers_sw_t *)(index + 0x1000);
+    volatile usbhs_registers_sw_t * usbhs = (usbhs_registers_sw_t *)((uint32_t)index + 0x1000U);
 
     /* Update the transmit interrupts */
     usbhs->INTRTXEbits.w = transmitInterrupts;
@@ -103,7 +102,7 @@ PLIB_TEMPLATE USBHS_EPTXRX_INTERRUPT USBHS_TxInterruptFlagsGet_Default
     /* Returns the status of the Transmit endpoint interrupts. The entire
      * register must read at once because this is a clear on read register. */
     
-    volatile usbhs_registers_sw_t * usbhs = (usbhs_registers_sw_t *)(index + 0x1000);
+    volatile usbhs_registers_sw_t * usbhs = (usbhs_registers_sw_t *)((uint32_t)index + 0x1000U);
     return((USBHS_EPTXRX_INTERRUPT)(usbhs->INTRTX));
 }
 
@@ -126,7 +125,7 @@ PLIB_TEMPLATE USBHS_EPTXRX_INTERRUPT USBHS_RxInterruptFlagsGet_Default
     /* Returns the status of the Receive endpoint interrupts. The entire
      * register must read at once because this is a clear on read register. */
     
-    volatile usbhs_registers_sw_t * usbhs = (usbhs_registers_sw_t *)(index + 0x1000);
+    volatile usbhs_registers_sw_t * usbhs = (usbhs_registers_sw_t *)((uint32_t)index + 0x1000U);
     return((USBHS_EPTXRX_INTERRUPT)(usbhs->INTRRX));
 }
 
@@ -148,7 +147,7 @@ PLIB_TEMPLATE USBHS_GEN_INTERRUPT USBHS_GenInterruptFlagsGet_Default
     /* Returns the status of the General endpoint interrupts. The entire
      * register must read at once because this is a clear on read register. */
     
-    volatile usbhs_registers_sw_t * usbhs = (usbhs_registers_sw_t *)(index + 0x1000);
+    volatile usbhs_registers_sw_t * usbhs = (usbhs_registers_sw_t *)((uint32_t)index + 0x1000U);
     return((USBHS_GEN_INTERRUPT)(usbhs->INTRUSB));
 }
 
@@ -169,7 +168,7 @@ PLIB_TEMPLATE void USBHS_TxInterruptEnable_Default
     USBHS_EPTXRX_INTERRUPT interrupt
 )
 {
-   volatile usbhs_registers_sw_t * usbhs = (usbhs_registers_sw_t *)(index + 0x1000);
+   volatile usbhs_registers_sw_t * usbhs = (usbhs_registers_sw_t *)((uint32_t)index + 0x1000U);
 
     /* Update the Transmit endpoint interrupts */
     usbhs->INTRTXEbits.w = interrupt;
@@ -193,7 +192,7 @@ PLIB_TEMPLATE void USBHS_RxInterruptEnable_Default
     USBHS_EPTXRX_INTERRUPT interrupt
 )
 {
-    volatile usbhs_registers_sw_t * usbhs = (usbhs_registers_sw_t *)(index + 0x1000);
+    volatile usbhs_registers_sw_t * usbhs = (usbhs_registers_sw_t *)((uint32_t)index + 0x1000U);
 
     /* Update the Receive endpoint interrupts */
     usbhs->INTRRXEbits.w = interrupt;
@@ -216,10 +215,10 @@ PLIB_TEMPLATE void USBHS_TxInterruptDisable_Default
     USBHS_EPTXRX_INTERRUPT interrupt
 )
 {
-    volatile usbhs_registers_sw_t * usbhs = (usbhs_registers_sw_t *)(index + 0x1000);
+    volatile usbhs_registers_sw_t * usbhs = (usbhs_registers_sw_t *)((uint32_t)index + 0x1000U);
 
     /* Disable the Transmit endpoint interrupts */
-    usbhs->INTRTXEbits.w &= (~(interrupt));
+    usbhs->INTRTXEbits.w &= (~(uint16_t)(interrupt));
 }
 
 
@@ -239,10 +238,10 @@ PLIB_TEMPLATE void USBHS_RxInterruptDisable_Default
     USBHS_EPTXRX_INTERRUPT interrupt
 )
 {
-    volatile usbhs_registers_sw_t * usbhs = (usbhs_registers_sw_t *)(index + 0x1000);
+    volatile usbhs_registers_sw_t * usbhs = (usbhs_registers_sw_t *)((uint32_t)index + 0x1000U);
 
     /* Disable the Receive endpoint interrupts */
-    usbhs->INTRRXEbits.w &= (~(interrupt));
+    usbhs->INTRRXEbits.w &= (~(uint16_t)(interrupt));
 }
 
 //******************************************************************************

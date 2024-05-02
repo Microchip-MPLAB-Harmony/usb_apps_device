@@ -118,7 +118,7 @@
 // Section: USB Driver Static Object Generation
 // *****************************************************************************
 // *****************************************************************************
-/* MISRA C-2012 Rule 5.4 deviated:11 Deviation record ID -  H3_MISRAC_2012_R_5_4_DR_1 */
+/* MISRA C-2012 Rule 5.4 deviated:11 Deviation record ID -  H3_USB_MISRAC_2012_R_5_4_DR_1 */
 
 // *****************************************************************************
 /* Macro: M_DRV_USBHS_OBJ_MAKE_NAME(name)
