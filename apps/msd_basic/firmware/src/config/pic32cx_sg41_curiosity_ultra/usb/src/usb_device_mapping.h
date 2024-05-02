@@ -70,8 +70,10 @@
 // *****************************************************************************
 #if defined USB_DEVICE_SOF_EVENT_ENABLE
     #define M_USB_DEVICE_SOFEventEnable()  eventType
+    #define M_USB_DEVICE_SofFrameNumberGet(drvHandle) usbDeviceThisInstance->driverInterface->deviceSOFNumberGet(drvHandle)
 #else
     #define M_USB_DEVICE_SOFEventEnable()  0
+    #define M_USB_DEVICE_SofFrameNumberGet(drvHandle) 0
 #endif
 
 // *****************************************************************************
@@ -162,7 +164,7 @@
 // Section: Enabling Other Speed Descriptor request. 
 // *****************************************************************************
 // *****************************************************************************
-/* MISRA C-2012 Rule 5.4 deviated:6 Deviation record ID -  H3_MISRAC_2012_R_5_4_DR_1 */
+/* MISRA C-2012 Rule 5.4 deviated:6 Deviation record ID -  H3_USB_MISRAC_2012_R_5_4_DR_1 */
 
 
 /* Following macros are needed to Support Other Speed Descriptor request */ 
