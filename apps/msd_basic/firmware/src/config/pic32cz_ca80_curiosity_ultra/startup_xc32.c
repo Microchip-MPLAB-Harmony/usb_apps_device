@@ -219,6 +219,9 @@ void __attribute__((optimize("-O1"), section(".text.Reset_Handler"), long_call, 
     /* Enable ICache (CMSIS-Core API) */
     SCB_EnableICache();
 
+    /* Enable DCache (CMSIS-Core API)*/
+    SCB_EnableDCache();
+
     /* Call the optional application-provided _on_bootstrap() function. */
     _on_bootstrap();
 
