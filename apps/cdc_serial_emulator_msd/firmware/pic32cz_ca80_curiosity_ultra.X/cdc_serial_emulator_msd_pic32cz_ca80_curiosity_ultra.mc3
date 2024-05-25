@@ -3648,7 +3648,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\definitions.h</file>
-         <hash>baf17c1f875b8bbcc25b134b1d14cf58c56e4e447e84a9a46adfcdcc669957ca</hash>
+         <hash>0984f5fd86c9b6f1b31229a91dd360af5b569fa5d71e6f7de2a1dc671ef482dd</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\device.h</file>
@@ -3852,7 +3852,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\initialization.c</file>
-         <hash>64845e009ec2607ce0802685f9729cbae39d7407ba8e10e1c20920b726ef31a4</hash>
+         <hash>7d2747756783075fa4a06c15ca2c2d3851a60a25a63ffd124a2066889807c758</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\interrupts.c</file>
