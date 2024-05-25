@@ -1,21 +1,18 @@
 /*******************************************************************************
-  TC Peripheral Library Interface Header File
+  Board Support Package Implementation
 
-  Company
+  Company:
     Microchip Technology Inc.
 
-  File Name
-    plib_tc0.h
+  File Name:
+    bsp.c
 
-  Summary
-    TC peripheral library interface.
+  Summary:
+    Board Support Package implementation.
 
-  Description
-    This file defines the interface to the TC peripheral library.  This
-    library provides access to and control of the associated peripheral
-    instance.
-
-******************************************************************************/
+  Description:
+    This file contains routines that implement the board support package
+*******************************************************************************/
 
 // DOM-IGNORE-BEGIN
 /*******************************************************************************
@@ -42,87 +39,49 @@
 *******************************************************************************/
 // DOM-IGNORE-END
 
-#ifndef PLIB_TC0_H    // Guards against multiple inclusion
-#define PLIB_TC0_H
-
-
 // *****************************************************************************
 // *****************************************************************************
 // Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
 
-/*  This section lists the other files that are included in this file.
-*/
-
-
-#include "plib_tc_common.h"
-
-// DOM-IGNORE-BEGIN
-#ifdef __cplusplus  // Provide C++ Compatibility
-
-extern "C" {
-
-#endif
-
-// DOM-IGNORE-END
+#include "bsp.h"
 
 // *****************************************************************************
-// *****************************************************************************
-// Section: Data Types
-// *****************************************************************************
-// *****************************************************************************
-/*  The following data type definitions are used by the functions in this
-    interface and should be considered part it.
-*/
-
 // *****************************************************************************
 // *****************************************************************************
 // Section: Interface Routines
 // *****************************************************************************
 // *****************************************************************************
-/* The following functions make up the methods (set of possible operations) of
-   this interface.
-*/
 
 // *****************************************************************************
+/* Function:
+    void BSP_Initialize(void)
 
-  
+  Summary:
+    Performs the necessary actions to initialize a board
 
+  Description:
+    This function initializes the LED, Switch and other ports on the board.
+    This function must be called by the user before using any APIs present in
+    this BSP.
 
- 
+  Remarks:
+    Refer to bsp.h for usage information.
+*/
 
-
-
-void TC0_CH0_TimerInitialize (void);
-
-void TC0_CH0_TimerStart (void);
-
-void TC0_CH0_TimerStop (void);
-
-void TC0_CH0_TimerPeriodSet (uint32_t period);
-
-void TC0_CH0_TimerCompareSet (uint32_t compare);
-
-uint32_t TC0_CH0_TimerFrequencyGet (void);
-
-uint32_t TC0_CH0_TimerPeriodGet (void);
-
-uint32_t TC0_CH0_TimerCounterGet (void);
-
-void TC0_CH0_TimerCallbackRegister(TC_TIMER_CALLBACK callback, uintptr_t context);
+void BSP_Initialize(void )
+{
 
 
+    /* Switch off LEDs */
+		LED_BLUE_Off(); 
+		LED_Off(); 
+		LED_RED_Off(); 
 
- 
 
- 
-
-
-#ifdef __cplusplus // Provide C++ Compatibility
 }
-#endif
 
-#endif //PLIB_TC0_H
-
-/* End of File */
+/*******************************************************************************
+ End of File
+*/

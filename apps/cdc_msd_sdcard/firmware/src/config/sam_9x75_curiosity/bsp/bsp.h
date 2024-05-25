@@ -1,21 +1,19 @@
 /*******************************************************************************
-  TC Peripheral Library Interface Header File
+  Board Support Package Header File.
 
-  Company
+  Company:
     Microchip Technology Inc.
 
-  File Name
-    plib_tc0.h
+  File Name:
+    bsp.h
 
-  Summary
-    TC peripheral library interface.
+  Summary:
+    Board Support Package Header File 
 
-  Description
-    This file defines the interface to the TC peripheral library.  This
-    library provides access to and control of the associated peripheral
-    instance.
-
-******************************************************************************/
+  Description:
+    This file contains constants, macros, type definitions and function
+    declarations 
+*******************************************************************************/
 
 // DOM-IGNORE-BEGIN
 /*******************************************************************************
@@ -42,9 +40,8 @@
 *******************************************************************************/
 // DOM-IGNORE-END
 
-#ifndef PLIB_TC0_H    // Guards against multiple inclusion
-#define PLIB_TC0_H
-
+#ifndef BSP_H
+#define BSP_H
 
 // *****************************************************************************
 // *****************************************************************************
@@ -52,77 +49,80 @@
 // *****************************************************************************
 // *****************************************************************************
 
-/*  This section lists the other files that are included in this file.
-*/
-
-
-#include "plib_tc_common.h"
-
-// DOM-IGNORE-BEGIN
-#ifdef __cplusplus  // Provide C++ Compatibility
-
-extern "C" {
-
-#endif
-
-// DOM-IGNORE-END
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
+#include <stdbool.h>
+#include "device.h"
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: Data Types
+// Section: BSP Macros
 // *****************************************************************************
 // *****************************************************************************
-/*  The following data type definitions are used by the functions in this
-    interface and should be considered part it.
-*/
+#define sam_9x75_curiosity
+#define BSP_NAME             "sam_9x75_curiosity"
+
+/*** LED Macros for LED_BLUE ***/
+#define LED_BLUE_Toggle() (PIOC_REGS->PIO_ODSR ^= (1UL<<20))
+#define LED_BLUE_On() (PIOC_REGS->PIO_SODR = (1UL<<20))
+#define LED_BLUE_Off() (PIOC_REGS->PIO_CODR = (1UL<<20))
+/*** LED Macros for LED ***/
+#define LED_Toggle() (PIOC_REGS->PIO_ODSR ^= (1UL<<21))
+#define LED_On() (PIOC_REGS->PIO_SODR = (1UL<<21))
+#define LED_Off() (PIOC_REGS->PIO_CODR = (1UL<<21))
+/*** LED Macros for LED_RED ***/
+#define LED_RED_Toggle() (PIOC_REGS->PIO_ODSR ^= (1UL<<19))
+#define LED_RED_On() (PIOC_REGS->PIO_SODR = (1UL<<19))
+#define LED_RED_Off() (PIOC_REGS->PIO_CODR = (1UL<<19))
+/*** SWITCH Macros for SWITCH ***/
+#define SWITCH_Get() ((PIOC_REGS->PIO_PDSR >> 9) & 0x1)
+#define SWITCH_STATE_PRESSED 0
+#define SWITCH_STATE_RELEASED 1
+
+
+
 
 // *****************************************************************************
 // *****************************************************************************
 // Section: Interface Routines
 // *****************************************************************************
 // *****************************************************************************
-/* The following functions make up the methods (set of possible operations) of
-   this interface.
-*/
 
 // *****************************************************************************
+/* Function:
+    void BSP_Initialize(void)
 
-  
+  Summary:
+    Performs the necessary actions to initialize a board
 
+  Description:
+    This function initializes the LED and Switch ports on the board.  This
+    function must be called by the user before using any APIs present on this
+    BSP.
 
- 
+  Precondition:
+    None.
 
+  Parameters:
+    None
 
+  Returns:
+    None.
 
-void TC0_CH0_TimerInitialize (void);
+  Example:
+    <code>
+    BSP_Initialize();
+    </code>
 
-void TC0_CH0_TimerStart (void);
+  Remarks:
+    None
+*/
 
-void TC0_CH0_TimerStop (void);
+void BSP_Initialize(void);
 
-void TC0_CH0_TimerPeriodSet (uint32_t period);
+#endif // BSP_H
 
-void TC0_CH0_TimerCompareSet (uint32_t compare);
-
-uint32_t TC0_CH0_TimerFrequencyGet (void);
-
-uint32_t TC0_CH0_TimerPeriodGet (void);
-
-uint32_t TC0_CH0_TimerCounterGet (void);
-
-void TC0_CH0_TimerCallbackRegister(TC_TIMER_CALLBACK callback, uintptr_t context);
-
-
-
- 
-
- 
-
-
-#ifdef __cplusplus // Provide C++ Compatibility
-}
-#endif
-
-#endif //PLIB_TC0_H
-
-/* End of File */
+/*******************************************************************************
+ End of File
+*/

@@ -1,23 +1,21 @@
 /*******************************************************************************
-  TC Peripheral Library Interface Header File
+  TIME System Service Definitions Header File
 
-  Company
+  Company:
     Microchip Technology Inc.
 
-  File Name
-    plib_tc0.h
+  File Name:
+    sys_time_definitions.h
 
-  Summary
-    TC peripheral library interface.
+  Summary:
+    TIME System Service Definitions Header File
 
-  Description
-    This file defines the interface to the TC peripheral library.  This
-    library provides access to and control of the associated peripheral
-    instance.
+  Description:
+    This file provides implementation-specific definitions for the TIME
+    system service's system interface.
+*******************************************************************************/
 
-******************************************************************************/
-
-// DOM-IGNORE-BEGIN
+//DOM-IGNORE-BEGIN
 /*******************************************************************************
 * Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
 *
@@ -40,31 +38,25 @@
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *******************************************************************************/
-// DOM-IGNORE-END
+//DOM-IGNORE-END
 
-#ifndef PLIB_TC0_H    // Guards against multiple inclusion
-#define PLIB_TC0_H
-
+#ifndef SYS_TIME_DEFINITIONS_H
+#define SYS_TIME_DEFINITIONS_H
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: Included Files
+// Section: File includes
 // *****************************************************************************
 // *****************************************************************************
-
-/*  This section lists the other files that are included in this file.
-*/
-
-
-#include "plib_tc_common.h"
+#include "system/int/sys_int.h"
+#include "configuration.h"
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
 
-extern "C" {
+    extern "C" {
 
 #endif
-
 // DOM-IGNORE-END
 
 // *****************************************************************************
@@ -72,57 +64,54 @@ extern "C" {
 // Section: Data Types
 // *****************************************************************************
 // *****************************************************************************
-/*  The following data type definitions are used by the functions in this
-    interface and should be considered part it.
-*/
 
 // *****************************************************************************
+/* TIME PLIB API Set needed by the system service */
+
+typedef void (*SYS_TIME_PLIB_CALLBACK)(uint32_t data, uintptr_t context);
+typedef void (*SYS_TIME_PLIB_CALLBACK_REGISTER)(SYS_TIME_PLIB_CALLBACK callback, uintptr_t context);
+typedef uint32_t (*SYS_TIME_PLIB_FREQUENCY_GET)(void);
+typedef void (*SYS_TIME_PLIB_START)(void);
+typedef void (*SYS_TIME_PLIB_STOP)(void);
+
+
+typedef void (*SYS_TIME_PLIB_PERIOD_SET)(uint32_t period);
+typedef void (*SYS_TIME_PLIB_COMPARE_SET) (uint32_t compare);
+typedef uint32_t (*SYS_TIME_PLIB_COUNTER_GET)(void);
+
+typedef struct
+{
+    SYS_TIME_PLIB_CALLBACK_REGISTER     timerCallbackSet;
+    SYS_TIME_PLIB_START                 timerStart;
+    SYS_TIME_PLIB_STOP                  timerStop;
+    SYS_TIME_PLIB_FREQUENCY_GET         timerFrequencyGet;
+    SYS_TIME_PLIB_PERIOD_SET            timerPeriodSet;
+    SYS_TIME_PLIB_COMPARE_SET           timerCompareSet;
+    SYS_TIME_PLIB_COUNTER_GET           timerCounterGet;
+} SYS_TIME_PLIB_INTERFACE;
+
+
 // *****************************************************************************
-// Section: Interface Routines
-// *****************************************************************************
-// *****************************************************************************
-/* The following functions make up the methods (set of possible operations) of
-   this interface.
-*/
+/* TIME system service Initialization Data Declaration */
 
-// *****************************************************************************
+struct SYS_TIME_INIT_
+{
+    /* Identifies the PLIB API set to be used by the system service to access
+     * the peripheral. */
+    const SYS_TIME_PLIB_INTERFACE*  timePlib;
 
-  
+    /* Interrupt source ID for the TIMER interrupt. */
+    INT_SOURCE                      hwTimerIntNum;
 
-
- 
-
+};
 
 
-void TC0_CH0_TimerInitialize (void);
-
-void TC0_CH0_TimerStart (void);
-
-void TC0_CH0_TimerStop (void);
-
-void TC0_CH0_TimerPeriodSet (uint32_t period);
-
-void TC0_CH0_TimerCompareSet (uint32_t compare);
-
-uint32_t TC0_CH0_TimerFrequencyGet (void);
-
-uint32_t TC0_CH0_TimerPeriodGet (void);
-
-uint32_t TC0_CH0_TimerCounterGet (void);
-
-void TC0_CH0_TimerCallbackRegister(TC_TIMER_CALLBACK callback, uintptr_t context);
-
-
-
- 
-
- 
-
-
-#ifdef __cplusplus // Provide C++ Compatibility
+//DOM-IGNORE-BEGIN
+#ifdef __cplusplus
 }
 #endif
+//DOM-IGNORE-END
 
-#endif //PLIB_TC0_H
 
-/* End of File */
+#endif // #ifndef SYS_TIME_DEFINITIONS_H
+
