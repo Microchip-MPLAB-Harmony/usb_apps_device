@@ -5073,7 +5073,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\usb_device_init_data_0.c</file>
-         <hash>7fdeffd1f64870401ccf5eaba5e975ddb81e6541935a30793badf05c75e5ccf6</hash>
+         <hash>afa7560544897edd150d373fdd7c19cdd86f294590d59f9b84a50c3be3d12a60</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\user.h</file>
