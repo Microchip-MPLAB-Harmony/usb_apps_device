@@ -1,21 +1,22 @@
 /*******************************************************************************
- System Interrupts File
-
-  Company:
-    Microchip Technology Inc.
+ System Tasks File
 
   File Name:
-    interrupt.c
+    tasks.c
 
   Summary:
-    Interrupt vectors mapping
+    This file contains source code necessary to maintain system's polled tasks.
 
   Description:
-    This file maps all the interrupt vectors to their corresponding
-    implementations. If a particular module interrupt is used, then its ISR
-    definition can be found in corresponding PLIB source file. If a module
-    interrupt is not used, then its ISR implementation is mapped to dummy
-    handler.
+    This file contains source code necessary to maintain system's polled tasks.
+    It implements the "SYS_Tasks" function that calls the individual "Tasks"
+    functions for all polled MPLAB Harmony modules in the system.
+
+  Remarks:
+    This file requires access to the systemObjects global data structure that
+    contains the object handles to all MPLAB Harmony module objects executing
+    polled in the system.  These handles are passed into the individual module
+    "Tasks" functions to identify the instance of the module to maintain.
  *******************************************************************************/
 
 // DOM-IGNORE-BEGIN
@@ -48,29 +49,54 @@
 // Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
+
 #include "configuration.h"
-#include "interrupts.h"
 #include "definitions.h"
+#include "sys_tasks.h"
+
 
 
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: System Interrupt Vector Functions
+// Section: System "Tasks" Routine
 // *****************************************************************************
 // *****************************************************************************
 
-/* Handlers for vectors that are shared by multiple interrupts */
+/*******************************************************************************
+  Function:
+    void SYS_Tasks ( void )
 
-
-/* Weak default handler for spurious interrupts */
-void __attribute__((weak)) SPURIOUS_INTERRUPT_Handler(void)
+  Remarks:
+    See prototype in system/common/sys_module.h.
+*/
+void SYS_Tasks ( void )
 {
-    static uint32_t spuriousEventCount = 0U;
-    ++spuriousEventCount;
-}
+    /* Maintain system services */
+    
 
+    /* Maintain Device Drivers */
+    
+
+    /* Maintain Middleware & Other Libraries */
+        /* USB UDPHS Driver Task Routine */ 
+    DRV_USB_UDPHS_Tasks(sysObj.drvUSBUDPHSObject);
+
+    /* USB Device layer tasks routine */ 
+    USB_DEVICE_Tasks(sysObj.usbDevObject0);
+
+
+
+    /* Maintain the application's state machine. */
+        /* Call Application task APP. */
+    APP_Tasks();
+
+
+
+
+}
 
 /*******************************************************************************
  End of File
-*/
+ */
+

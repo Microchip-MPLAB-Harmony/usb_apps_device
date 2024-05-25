@@ -43,6 +43,7 @@
 // Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
+#include "configuration.h"
 #include "definitions.h"
 #include "device.h"
 
@@ -72,6 +73,8 @@
 // Section: System Data
 // *****************************************************************************
 // *****************************************************************************
+/* Structure to hold the object handles for the modules in the system. */
+SYSTEM_OBJECTS sysObj;
 
 // *****************************************************************************
 // *****************************************************************************
@@ -219,6 +222,7 @@ void SYS_Initialize ( void* data )
     /* Disable WDT   */
     WDT_REGS->WDT_MR = WDT_MR_WDDIS_Msk;
 
+	BSP_Initialize();
 
 
     /* MISRAC 2012 deviation block start */
@@ -238,6 +242,9 @@ void SYS_Initialize ( void* data )
 
 
     /* MISRAC 2012 deviation block end */
+    APP_Initialize();
+
+
 
 
     /* MISRAC 2012 deviation block end */
