@@ -4861,11 +4861,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\configuration.h</file>
-         <hash>269ef8769aa31ce791593e056e88f40ddc05a97efde593a9b5f874a4ed236ed8</hash>
+         <hash>1219f1d3655a8b5d240815eedae5d5a9baf8216b7788467a7ef4b9ab2ecd21fe</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\definitions.h</file>
-         <hash>ece55f8f3196de4ef6db4732fdc2780205e8989019bd0f6fb3102126bb3b3a27</hash>
+         <hash>0658c097ad3f9d834c228e4a19025c737bec1e63e5305d49519fd85d362a2e13</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\device.h</file>
@@ -5025,7 +5025,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\initialization.c</file>
-         <hash>55069849e7a80ef3b78b5610374c3fafa341e2a3e10b31a3544d13e7c46e1293</hash>
+         <hash>1e28956b82b946bae480850e3f4d12f8179d90a0f2c7fa45b108cdd163af39dc</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\interrupts.c</file>
