@@ -117,19 +117,6 @@ extern "C" {
 
 
 
-/* Number of Endpoints used */
-#define DRV_USBFS_ENDPOINTS_NUMBER                        3U
-
-/* The USB Device Layer will not initialize the USB Driver */
-#define USB_DEVICE_DRIVER_INITIALIZE_EXPLICIT
-
-/* Maximum device layer instances */
-#define USB_DEVICE_INSTANCES_NUMBER                         1U
-
-/* EP0 size in bytes */
-#define USB_DEVICE_EP0_BUFFER_SIZE                          64U
-
-
 /*** USB Driver Configuration ***/
 
 /* Maximum USB driver instances */
@@ -150,6 +137,19 @@ extern "C" {
 
 /* Alignment for buffers that are submitted to USB Driver*/ 
 #define USB_ALIGN  CACHE_ALIGN
+
+/* Number of Endpoints used */
+#define DRV_USBFS_ENDPOINTS_NUMBER                        3U
+
+/* The USB Device Layer will not initialize the USB Driver */
+#define USB_DEVICE_DRIVER_INITIALIZE_EXPLICIT
+
+/* Maximum device layer instances */
+#define USB_DEVICE_INSTANCES_NUMBER                         1U
+
+/* EP0 size in bytes */
+#define USB_DEVICE_EP0_BUFFER_SIZE                          64U
+
 
 
 
