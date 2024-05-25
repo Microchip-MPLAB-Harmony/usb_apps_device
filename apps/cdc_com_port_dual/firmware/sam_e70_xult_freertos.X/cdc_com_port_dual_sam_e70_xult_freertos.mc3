@@ -8391,11 +8391,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult_freertos\configuration.h</file>
-         <hash>caf63b3dfefc6f5a86d1bc5e4bc95ed8b5822331b91994f25a563aa5a3afa2ac</hash>
+         <hash>979d89c401659e312ec3b7b57bc86e3fbbf2443e9fa09b4fc081c8fbe82b4325</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult_freertos\definitions.h</file>
-         <hash>dd4df9c27b78936b3f2f88a934d47acd87856f19f0c0a32de7574b6f154690a1</hash>
+         <hash>325cc177890d435a134c0f3cad2b8c52530548940fe125ee7a367947048f4fc2</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult_freertos\device.h</file>
@@ -8435,7 +8435,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult_freertos\driver\usb\usbhsv1\src\drv_usbhsv1_device.c</file>
-         <hash>7c6aecb6b6350b023849bc47f8e17befe789c8d65c6ae626ee623bf1309f34c1</hash>
+         <hash>9c28ef52eae94afffe9ec818e33c806d43abb221d099bc71e2fc2cd7d34c9090</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult_freertos\driver\usb\usbhsv1\src\drv_usbhsv1_local.h</file>
