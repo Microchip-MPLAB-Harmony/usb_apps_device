@@ -127,6 +127,9 @@ extern "C" {
 /* EP0 size in bytes */
 #define USB_DEVICE_EP0_BUFFER_SIZE                          64U
 
+/* Enable SOF Events */
+#define USB_DEVICE_SOF_EVENT_ENABLE
+
 
 
 
