@@ -9016,7 +9016,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro_freertos\definitions.h</file>
-         <hash>bf5b68767cf522c69478952fb6b054ccca952c9abc590bd47c8a9543a5f0d9d0</hash>
+         <hash>4012a523776ca49d1d9da585aa6429f79de6cace8067c693088eb275ca144121</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro_freertos\device.h</file>
