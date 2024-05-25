@@ -5548,7 +5548,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\definitions.h</file>
-         <hash>ff4dff0b536ff3ba4fbfbd1849767aa6a44c1057ade818482e9ff73ca1ec9d95</hash>
+         <hash>ae363d7d310b14b3b8bc77e85d3b007b962f08d5745d9884bf617fec005f209c</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\device.h</file>
