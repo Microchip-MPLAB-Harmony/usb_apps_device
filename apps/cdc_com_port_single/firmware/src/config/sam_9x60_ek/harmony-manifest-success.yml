@@ -4,7 +4,7 @@
 
 
 project: cdc_com_port_single
-creation_date: 2024-05-02T21:26:15.602+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+creation_date: 2024-05-25T12:05:24.103+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
 operating_system: Windows 10
 mcc_mode: IDE            # [IDE|Standalone|Headless]
 mcc_version: v5.5.1
@@ -16,5 +16,4 @@ compiler: XC32 (v4.40)
 modules:
     - {name: "csp", version: "v3.18.5"}
     - {name: "core", version: "v3.13.4"}
-    - {name: "usb", version: "v3.13.0"}
-    - {name: "bsp", version: "v3.18.0"}
+    - {name: "bsp", version: "v3.19.0"}
