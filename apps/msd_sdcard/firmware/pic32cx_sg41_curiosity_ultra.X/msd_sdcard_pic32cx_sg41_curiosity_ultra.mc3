@@ -7963,7 +7963,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_curiosity_ultra\definitions.h</file>
-         <hash>2422496ea732bd958b0f0c14c4a7858d4ca0337db9ba31e67056977c6afd3cdb</hash>
+         <hash>c0d4a375ae0f31f81d4bb3d563a53dfe907dac9ce515a34cb2aa0f8e318fee1b</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_curiosity_ultra\device.h</file>
@@ -8035,7 +8035,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_curiosity_ultra\initialization.c</file>
-         <hash>12311bd1a2cb00c0fbe2224ad511fe2247069963293f8e86d8b3c988c289dce7</hash>
+         <hash>75a2cce5077552d78df431f04cc5011158b0a9ee363f7542fa4cd710dfc041a6</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_curiosity_ultra\interrupts.c</file>
