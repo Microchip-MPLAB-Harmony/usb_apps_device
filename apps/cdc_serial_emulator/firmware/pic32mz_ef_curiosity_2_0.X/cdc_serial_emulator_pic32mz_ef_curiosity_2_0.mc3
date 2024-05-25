@@ -4748,11 +4748,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_curiosity_2_0\configuration.h</file>
-         <hash>ad87ae04334cc499d110fe68593b57300fe07252b41b7469f3807707a9ad9985</hash>
+         <hash>0d5facca6a8e355a784cec67b63d0a61dfa0759c4558a928c53d4f712baa7657</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_curiosity_2_0\definitions.h</file>
-         <hash>cabaa5d4c3addafd844c4293605e91253cefaa06f4551043b07fc6eb06de5a2c</hash>
+         <hash>991fa1508952dc006f9565cb7f0053e79916e2308b85ebcc5008f67744643d83</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_curiosity_2_0\device.h</file>
