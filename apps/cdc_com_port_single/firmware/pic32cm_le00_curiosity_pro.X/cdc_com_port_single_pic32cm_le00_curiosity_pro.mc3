@@ -2179,11 +2179,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cm_le00_curiosity_pro\configuration.h</file>
-         <hash>4206b6a4be1d1f7c550cd7bbcc19fcc3e8efff98b374f3ec274a865c69ea3e29</hash>
+         <hash>64e2ae88510a6447b65fa9d01cc361bb06abbcf5139e41f808171085243063ca</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cm_le00_curiosity_pro\definitions.h</file>
-         <hash>11c961a13015e552e8253e296488a659568d416c9407de296b83d2ddf4947d18</hash>
+         <hash>b1a479792ccdce64e8726b04554d420faf006a6500f876df0d13b82fd8f2f5d7</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cm_le00_curiosity_pro\device.h</file>
@@ -2239,7 +2239,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cm_le00_curiosity_pro\initialization.c</file>
-         <hash>bfb5b02367b049390fa1dc7509bc3fabaf94a8f4bdfd70108c275088f4583a55</hash>
+         <hash>2f409f87b526d4313d5ca21128f71bf71d62e8a329adf032323405200b4262b3</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cm_le00_curiosity_pro\interrupts.c</file>
@@ -2359,7 +2359,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cm_le00_curiosity_pro\tasks.c</file>
-         <hash>3582431498d57f4db302bf9bd433d1595735bfe1399b606ec2714cd7c739d2d6</hash>
+         <hash>413fa616e9746cd73cd2f8e0274d4a35ffe890d9c79f4f4a35a72995e56f9176</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cm_le00_curiosity_pro\toolchain_specifics.h</file>
