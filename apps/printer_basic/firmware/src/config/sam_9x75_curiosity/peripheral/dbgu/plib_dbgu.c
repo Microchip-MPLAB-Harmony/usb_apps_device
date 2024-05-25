@@ -197,7 +197,7 @@ void DBGU_Initialize(void)
     DBGU_REGS->DBGU_MR = (DBGU_MR_BRSRCCK(0U) | (DBGU_MR_PAR_NO) | (0U << DBGU_MR_FILTER_Pos));
 
     /* Configure DBGU Baud Rate */
-    DBGU_REGS->DBGU_BRGR = DBGU_BRGR_CD(0U);
+    DBGU_REGS->DBGU_BRGR = DBGU_BRGR_CD(144U);
 
     /* Initialize instance object */
     dbguObj.rxBuffer = NULL;

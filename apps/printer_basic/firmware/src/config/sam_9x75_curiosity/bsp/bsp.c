@@ -1,22 +1,22 @@
 /*******************************************************************************
-  DBGU PLIB
+  Board Support Package Implementation
 
   Company:
     Microchip Technology Inc.
 
   File Name:
-    plib_dbgu.h
+    bsp.c
 
   Summary:
-    DBGU PLIB Header File
+    Board Support Package implementation.
 
   Description:
-    None
-
+    This file contains routines that implement the board support package
 *******************************************************************************/
 
+// DOM-IGNORE-BEGIN
 /*******************************************************************************
-* Copyright (C) 2019 Microchip Technology Inc. and its subsidiaries.
+* Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -37,62 +37,51 @@
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *******************************************************************************/
-
-#ifndef PLIB_DBGU_H
-#define PLIB_DBGU_H
-
-#include "plib_dbgu_common.h"
-
-// DOM-IGNORE-BEGIN
-#ifdef __cplusplus  // Provide C++ Compatibility
-
-    extern "C" {
-
-#endif
 // DOM-IGNORE-END
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: Interface
+// Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
-#define DBGU_FrequencyGet()    (uint32_t)(266666666UL)
 
-/****************************** DBGU API *********************************/
+#include "bsp.h"
 
-void DBGU_Initialize(void);
+// *****************************************************************************
+// *****************************************************************************
+// *****************************************************************************
+// Section: Interface Routines
+// *****************************************************************************
+// *****************************************************************************
 
-DBGU_ERROR DBGU_ErrorGet(void);
+// *****************************************************************************
+/* Function:
+    void BSP_Initialize(void)
 
-bool DBGU_SerialSetup(DBGU_SERIAL_SETUP *setup, uint32_t srcClkFreq);
+  Summary:
+    Performs the necessary actions to initialize a board
 
-bool DBGU_Write(void *buffer, const size_t size);
+  Description:
+    This function initializes the LED, Switch and other ports on the board.
+    This function must be called by the user before using any APIs present in
+    this BSP.
 
-bool DBGU_Read(void *buffer, const size_t size);
+  Remarks:
+    Refer to bsp.h for usage information.
+*/
 
-
-bool DBGU_WriteIsBusy(void);
-
-bool DBGU_ReadIsBusy(void);
-
-size_t DBGU_WriteCountGet(void);
-
-size_t DBGU_ReadCountGet(void);
-
-void DBGU_WriteCallbackRegister(DBGU_CALLBACK callback, uintptr_t context);
-
-void DBGU_ReadCallbackRegister(DBGU_CALLBACK callback, uintptr_t context);
-
-bool DBGU_ReadAbort(void);
+void BSP_Initialize(void )
+{
 
 
-bool DBGU_TransmitComplete(void);
+    /* Switch off LEDs */
+		LED_BLUE_Off(); 
+		LED_Off(); 
+		LED_RED_Off(); 
 
-// DOM-IGNORE-BEGIN
-#ifdef __cplusplus  // Provide C++ Compatibility
 
-    }
+}
 
-#endif
-// DOM-IGNORE-END
-#endif // PLIB_DBGU_H
+/*******************************************************************************
+ End of File
+*/
