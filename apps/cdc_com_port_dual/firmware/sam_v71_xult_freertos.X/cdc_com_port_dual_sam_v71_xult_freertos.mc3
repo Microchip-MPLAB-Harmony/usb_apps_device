@@ -8539,7 +8539,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult_freertos\definitions.h</file>
-         <hash>ab251e89d43dfd9a57d725805bc2b8a086d5437a057e8baaca9cc157ef953746</hash>
+         <hash>14596996be2ffab0617cca4b7caa6f6fcc04c12c25dffd410391c3bf9106d011</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult_freertos\device.h</file>
@@ -8579,7 +8579,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult_freertos\driver\usb\usbhsv1\src\drv_usbhsv1_device.c</file>
-         <hash>7c6aecb6b6350b023849bc47f8e17befe789c8d65c6ae626ee623bf1309f34c1</hash>
+         <hash>9c28ef52eae94afffe9ec818e33c806d43abb221d099bc71e2fc2cd7d34c9090</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult_freertos\driver\usb\usbhsv1\src\drv_usbhsv1_local.h</file>
