@@ -48,8 +48,8 @@
 #include <stdint.h>
 #include <stddef.h>
 #include <stdbool.h>
-#include "bsp/bsp.h"
 #include "driver/usb/udphs/drv_usb_udphs.h"
+#include "bsp/bsp.h"
 #include "usb/usb_device_msd.h"
 #include "usb/usb_msd.h"
 #include "driver/sdmmc/drv_sdmmc.h"
