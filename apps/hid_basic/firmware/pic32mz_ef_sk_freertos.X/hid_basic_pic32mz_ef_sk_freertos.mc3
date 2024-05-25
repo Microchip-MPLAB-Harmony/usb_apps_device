@@ -5646,7 +5646,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk_freertos\definitions.h</file>
-         <hash>733497cba832d75f571a4caeeb8a33acaf38324c2b21eb325cda6898a22f295c</hash>
+         <hash>be7c32a5cb6ee68c306cb6505df5c2ee4bba93e3369bb9b5ef57960dadeb5838</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk_freertos\device.h</file>
