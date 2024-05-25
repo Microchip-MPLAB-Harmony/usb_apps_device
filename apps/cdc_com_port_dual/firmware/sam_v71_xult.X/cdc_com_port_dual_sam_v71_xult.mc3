@@ -8279,11 +8279,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\configuration.h</file>
-         <hash>979d89c401659e312ec3b7b57bc86e3fbbf2443e9fa09b4fc081c8fbe82b4325</hash>
+         <hash>caf63b3dfefc6f5a86d1bc5e4bc95ed8b5822331b91994f25a563aa5a3afa2ac</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\definitions.h</file>
-         <hash>6a17e85dbf5fcdce65df04dcf8022f42dfb01995c71ee0098073ebd19e1e1052</hash>
+         <hash>3b9dbfd86fdf776855965e29a4e7085000964c375b14eba0864b3b1e76925733</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\device.h</file>
@@ -8323,7 +8323,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\driver\usb\usbhsv1\src\drv_usbhsv1_device.c</file>
-         <hash>7c6aecb6b6350b023849bc47f8e17befe789c8d65c6ae626ee623bf1309f34c1</hash>
+         <hash>9c28ef52eae94afffe9ec818e33c806d43abb221d099bc71e2fc2cd7d34c9090</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult\driver\usb\usbhsv1\src\drv_usbhsv1_local.h</file>
