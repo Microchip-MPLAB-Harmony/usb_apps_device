@@ -8136,11 +8136,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\configuration.h</file>
-         <hash>979d89c401659e312ec3b7b57bc86e3fbbf2443e9fa09b4fc081c8fbe82b4325</hash>
+         <hash>caf63b3dfefc6f5a86d1bc5e4bc95ed8b5822331b91994f25a563aa5a3afa2ac</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\definitions.h</file>
-         <hash>758d2dfd07e541377d52891fcbddfbafdc675d8f24ca1407fdff70e7e13e6de5</hash>
+         <hash>b3c679e4102f7c390f3a95fb0f77a78cfc027a9b10c5379c7f89e77c527c4a05</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\device.h</file>
@@ -8180,7 +8180,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\driver\usb\usbhsv1\src\drv_usbhsv1_device.c</file>
-         <hash>7c6aecb6b6350b023849bc47f8e17befe789c8d65c6ae626ee623bf1309f34c1</hash>
+         <hash>9c28ef52eae94afffe9ec818e33c806d43abb221d099bc71e2fc2cd7d34c9090</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\driver\usb\usbhsv1\src\drv_usbhsv1_local.h</file>
