@@ -279,9 +279,9 @@ void SYS_Initialize ( void* data )
 
 
 
+	BSP_Initialize();
     EVSYS_Initialize();
 
-	BSP_Initialize();
     TC0_TimerInitialize();
 
 	SDHC1_Initialize();
