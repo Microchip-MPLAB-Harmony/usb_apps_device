@@ -1,22 +1,18 @@
 /*******************************************************************************
- System Interrupts File
+  Board Support Package Implementation
 
   Company:
     Microchip Technology Inc.
 
   File Name:
-    interrupt.c
+    bsp.c
 
   Summary:
-    Interrupt vectors mapping
+    Board Support Package implementation.
 
   Description:
-    This file maps all the interrupt vectors to their corresponding
-    implementations. If a particular module interrupt is used, then its ISR
-    definition can be found in corresponding PLIB source file. If a module
-    interrupt is not used, then its ISR implementation is mapped to dummy
-    handler.
- *******************************************************************************/
+    This file contains routines that implement the board support package
+*******************************************************************************/
 
 // DOM-IGNORE-BEGIN
 /*******************************************************************************
@@ -40,7 +36,7 @@
 * FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
- *******************************************************************************/
+*******************************************************************************/
 // DOM-IGNORE-END
 
 // *****************************************************************************
@@ -48,28 +44,43 @@
 // Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
-#include "configuration.h"
-#include "interrupts.h"
-#include "definitions.h"
 
-
+#include "bsp.h"
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: System Interrupt Vector Functions
+// *****************************************************************************
+// Section: Interface Routines
 // *****************************************************************************
 // *****************************************************************************
 
-/* Handlers for vectors that are shared by multiple interrupts */
+// *****************************************************************************
+/* Function:
+    void BSP_Initialize(void)
 
+  Summary:
+    Performs the necessary actions to initialize a board
 
-/* Weak default handler for spurious interrupts */
-void __attribute__((weak)) SPURIOUS_INTERRUPT_Handler(void)
+  Description:
+    This function initializes the LED, Switch and other ports on the board.
+    This function must be called by the user before using any APIs present in
+    this BSP.
+
+  Remarks:
+    Refer to bsp.h for usage information.
+*/
+
+void BSP_Initialize(void )
 {
-    static uint32_t spuriousEventCount = 0U;
-    ++spuriousEventCount;
-}
 
+
+    /* Switch off LEDs */
+		LED_BLUE_Off(); 
+		LED_Off(); 
+		LED_RED_Off(); 
+
+
+}
 
 /*******************************************************************************
  End of File

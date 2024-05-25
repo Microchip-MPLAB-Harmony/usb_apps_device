@@ -1,24 +1,28 @@
 /*******************************************************************************
- System Interrupts File
+  Driver Layer Interface Header
 
   Company:
     Microchip Technology Inc.
 
   File Name:
-    interrupt.c
+    driver.h
 
   Summary:
-    Interrupt vectors mapping
+    Driver layer data types and definitions.
 
   Description:
-    This file maps all the interrupt vectors to their corresponding
-    implementations. If a particular module interrupt is used, then its ISR
-    definition can be found in corresponding PLIB source file. If a module
-    interrupt is not used, then its ISR implementation is mapped to dummy
-    handler.
- *******************************************************************************/
+    This file defines the common macros and definitions for the driver layer
+    modules.
 
-// DOM-IGNORE-BEGIN
+  Remarks:
+    The parent directory to the "driver" directory should be added to the
+    compiler's search path for header files such that the following include
+    statement will successfully include this file.
+
+    #include "driver/driver.h"
+  *************************************************************************/
+
+//DOM-IGNORE-BEGIN
 /*******************************************************************************
 * Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
 *
@@ -41,36 +45,23 @@
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
  *******************************************************************************/
-// DOM-IGNORE-END
+//DOM-IGNORE-END
+
+#ifndef DRIVER_H
+#define DRIVER_H
+
 
 // *****************************************************************************
 // *****************************************************************************
 // Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
-#include "configuration.h"
-#include "interrupts.h"
-#include "definitions.h"
+
+#include "driver/driver_common.h"
 
 
-
-// *****************************************************************************
-// *****************************************************************************
-// Section: System Interrupt Vector Functions
-// *****************************************************************************
-// *****************************************************************************
-
-/* Handlers for vectors that are shared by multiple interrupts */
-
-
-/* Weak default handler for spurious interrupts */
-void __attribute__((weak)) SPURIOUS_INTERRUPT_Handler(void)
-{
-    static uint32_t spuriousEventCount = 0U;
-    ++spuriousEventCount;
-}
-
-
+#endif // DRIVER_H
 /*******************************************************************************
  End of File
 */
+

@@ -1,25 +1,23 @@
 /*******************************************************************************
- System Interrupts File
+  Interrupt System Service Mapping File
 
   Company:
     Microchip Technology Inc.
 
   File Name:
-    interrupt.c
+    sys_int_mapping.h
 
   Summary:
-    Interrupt vectors mapping
+    Interrupt System Service mapping file.
 
   Description:
-    This file maps all the interrupt vectors to their corresponding
-    implementations. If a particular module interrupt is used, then its ISR
-    definition can be found in corresponding PLIB source file. If a module
-    interrupt is not used, then its ISR implementation is mapped to dummy
-    handler.
- *******************************************************************************/
+    This header file contains the mapping of the APIs defined in the API header
+    to either the function implementations or macro implementation or the
+    specific variant implementation.
+*******************************************************************************/
 
-// DOM-IGNORE-BEGIN
-/*******************************************************************************
+//DOM-IGNORE-BEGIN
+/******************************************************************************
 * Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
@@ -40,37 +38,21 @@
 * FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
- *******************************************************************************/
-// DOM-IGNORE-END
+*******************************************************************************/
+//DOM-IGNORE-END
+
+#ifndef SYS_INT_MAPPING_H
+#define SYS_INT_MAPPING_H
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: Included Files
-// *****************************************************************************
-// *****************************************************************************
-#include "configuration.h"
-#include "interrupts.h"
-#include "definitions.h"
-
-
-
-// *****************************************************************************
-// *****************************************************************************
-// Section: System Interrupt Vector Functions
+// Section: Interrupt System Service Mapping
 // *****************************************************************************
 // *****************************************************************************
 
-/* Handlers for vectors that are shared by multiple interrupts */
+/* MISRA C-2012 Rule 5.8 deviated:6 Deviation record ID -  H3_MISRAC_2012_R_5_8_DR_1 */
 
 
-/* Weak default handler for spurious interrupts */
-void __attribute__((weak)) SPURIOUS_INTERRUPT_Handler(void)
-{
-    static uint32_t spuriousEventCount = 0U;
-    ++spuriousEventCount;
-}
+/* MISRAC 2012 deviation block end */
 
-
-/*******************************************************************************
- End of File
-*/
+#endif // SYS_INT_MAPPING_H
