@@ -52,8 +52,8 @@
 
 #define SDMMC0_DMA_NUM_DESCR_LINES              1U
 #define SDMMC0_HCLOCK_FREQUENCY                 266667000U
-#define SDMMC0_BASECLK_FREQUENCY                0U
-#define SDMMC0_MULTCLK_FREQUENCY                0U
+#define SDMMC0_BASECLK_FREQUENCY                66667000U
+#define SDMMC0_MULTCLK_FREQUENCY                133333000U
 #define SDMMC0_DMA_DESC_TABLE_SIZE	 (8 * 1)
 #define SDMMC0_DMA_DESC_TABLE_SIZE_CACHE_ALIGN	 (SDMMC0_DMA_DESC_TABLE_SIZE + ((SDMMC0_DMA_DESC_TABLE_SIZE % CACHE_LINE_SIZE)? (CACHE_LINE_SIZE - (SDMMC0_DMA_DESC_TABLE_SIZE % CACHE_LINE_SIZE)) : 0))
 
@@ -340,6 +340,11 @@ void SDMMC0_DmaSetup (
 bool SDMMC0_ClockSet ( uint32_t freq )
 {
     const uint32_t base_clk_freq = SDMMC0_BASECLK_FREQUENCY;
+    const uint32_t mult_clk_freq = SDMMC0_MULTCLK_FREQUENCY;
+    bool use_prog_mode = false;
+    uint32_t new_div_freq = 0;
+    uint32_t prog_div = 0;
+    uint32_t new_prog_freq = 0;
     uint32_t divs = 0;
     uint16_t reg_val = 0;
     bool hs_mode = freq > SDMMC_CLOCK_FREQ_DS_25_MHZ;
@@ -366,6 +371,40 @@ bool SDMMC0_ClockSet ( uint32_t freq )
         /* Do Nothing */
     }
 
+    /* target frequency if divider mode is used */
+    new_div_freq = base_clk_freq / ((divs == 0U) ? 1UL : (2U* divs));
+
+    /* Check if programmable clock is enabled */
+    if(((SDMMC0_REGS->SDMMC_CA1R & SDMMC_CA1R_CLKMULT_Msk) >> SDMMC_CA1R_CLKMULT_Pos) != 0U)
+    {
+      /*Find the divider in the programmable clock mode: DIV = (FMULTCLK / FSDCLK) - 1 */
+      prog_div = SDMMC0_CEIL_INT_DIV_U32(mult_clk_freq, freq);
+
+      /* Limit the divider to the maximum possible value */
+      if(prog_div > SDMMC0_MAX_SUPPORTED_DIVIDER)
+      {
+        prog_div = SDMMC0_MAX_SUPPORTED_DIVIDER;
+      }
+      /* IP limitation, if high speed mode is active divider must be non zero */
+      else if (hs_mode && (prog_div < 1U))
+      {
+          prog_div = 1U;
+      }
+      /* DIV counts from zero */
+      else if (prog_div > 0U)
+      {
+        prog_div = prog_div - 1U;
+      }
+      else
+      {
+          /* Do Nothing */
+      }
+      /* target frequency if programmable clock mode is used */
+      new_prog_freq = mult_clk_freq / (prog_div + 1U);
+
+      /* decide on what mode to use based on the least delta from target */
+      use_prog_mode = (SDMMC0_ABS_DIFF_U32(freq, new_prog_freq) < SDMMC0_ABS_DIFF_U32(freq, new_div_freq));
+    }
 
     /* Stop the output clock, so we can change the frequency.
     * Deviation from the SD Host Controller Specification: if the internal
@@ -384,12 +423,23 @@ bool SDMMC0_ClockSet ( uint32_t freq )
         SDMMC1_REGS->SDMMC_HC1R &= ~SDMMC_HC1R_SD_SDIO_HSEN_Msk;
     }
 
-    /* Select divided clock mode */
-    reg_val &= ~SDMMC_CCR_CLKGSEL_Msk;
-    reg_val =   (reg_val & ~SDMMC_CCR_USDCLKFSEL_Msk & ~SDMMC_CCR_SDCLKFSEL_Msk)
-                | SDMMC_CCR_USDCLKFSEL(divs >> 8)
-                | SDMMC_CCR_SDCLKFSEL(divs & 0xffU)
-                | SDMMC_CCR_INTCLKEN_Msk;
+    /* Select the clock mode and divider */
+    if (use_prog_mode)
+    {
+        reg_val |= SDMMC_CCR_CLKGSEL_Msk;
+        reg_val =   (reg_val & ~SDMMC_CCR_USDCLKFSEL_Msk & ~SDMMC_CCR_SDCLKFSEL_Msk)
+                    | SDMMC_CCR_USDCLKFSEL(prog_div >> 8)
+                    | SDMMC_CCR_SDCLKFSEL(prog_div & 0xffU)
+                    | SDMMC_CCR_INTCLKEN_Msk;
+    }
+    else
+    {
+        reg_val &= ~SDMMC_CCR_CLKGSEL_Msk;
+        reg_val =   (reg_val & ~SDMMC_CCR_USDCLKFSEL_Msk & ~SDMMC_CCR_SDCLKFSEL_Msk)
+                    | SDMMC_CCR_USDCLKFSEL(divs >> 8)
+                    | SDMMC_CCR_SDCLKFSEL(divs & 0xffU)
+                    | SDMMC_CCR_INTCLKEN_Msk;
+    }
 
     /* Start the internal clock (if not started already) and wait for it to stabilize */
     SDMMC0_REGS->SDMMC_CCR = reg_val;

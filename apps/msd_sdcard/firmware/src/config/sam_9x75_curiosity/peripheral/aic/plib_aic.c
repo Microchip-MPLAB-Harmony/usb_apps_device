@@ -67,6 +67,7 @@ static struct
 }irqData[] =
 {
     { 12U, SDMMC0_InterruptHandler,    AIC_SMR_SRCTYPE_INT_LEVEL_SENSITIVE_Val,  0x0U },
+    { 17U, TC0_InterruptHandler,       AIC_SMR_SRCTYPE_INT_LEVEL_SENSITIVE_Val,  0x0U },
     { 23U, DRV_USB_UDPHS_Handler,      AIC_SMR_SRCTYPE_INT_LEVEL_SENSITIVE_Val,  0x0U },
 };
 

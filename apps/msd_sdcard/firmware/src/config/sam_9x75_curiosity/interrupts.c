@@ -1,21 +1,22 @@
 /*******************************************************************************
-  TC Peripheral Library Interface Header File
+ System Interrupts File
 
-  Company
+  Company:
     Microchip Technology Inc.
 
-  File Name
-    plib_tc0.h
+  File Name:
+    interrupt.c
 
-  Summary
-    TC peripheral library interface.
+  Summary:
+    Interrupt vectors mapping
 
-  Description
-    This file defines the interface to the TC peripheral library.  This
-    library provides access to and control of the associated peripheral
-    instance.
-
-******************************************************************************/
+  Description:
+    This file maps all the interrupt vectors to their corresponding
+    implementations. If a particular module interrupt is used, then its ISR
+    definition can be found in corresponding PLIB source file. If a module
+    interrupt is not used, then its ISR implementation is mapped to dummy
+    handler.
+ *******************************************************************************/
 
 // DOM-IGNORE-BEGIN
 /*******************************************************************************
@@ -39,90 +40,37 @@
 * FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
-*******************************************************************************/
+ *******************************************************************************/
 // DOM-IGNORE-END
-
-#ifndef PLIB_TC0_H    // Guards against multiple inclusion
-#define PLIB_TC0_H
-
 
 // *****************************************************************************
 // *****************************************************************************
 // Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
+#include "configuration.h"
+#include "interrupts.h"
+#include "definitions.h"
 
-/*  This section lists the other files that are included in this file.
-*/
 
-
-#include "plib_tc_common.h"
-
-// DOM-IGNORE-BEGIN
-#ifdef __cplusplus  // Provide C++ Compatibility
-
-extern "C" {
-
-#endif
-
-// DOM-IGNORE-END
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: Data Types
+// Section: System Interrupt Vector Functions
 // *****************************************************************************
 // *****************************************************************************
-/*  The following data type definitions are used by the functions in this
-    interface and should be considered part it.
-*/
 
-// *****************************************************************************
-// *****************************************************************************
-// Section: Interface Routines
-// *****************************************************************************
-// *****************************************************************************
-/* The following functions make up the methods (set of possible operations) of
-   this interface.
-*/
-
-// *****************************************************************************
-
-  
+/* Handlers for vectors that are shared by multiple interrupts */
 
 
- 
-
-
-
-void TC0_CH0_TimerInitialize (void);
-
-void TC0_CH0_TimerStart (void);
-
-void TC0_CH0_TimerStop (void);
-
-void TC0_CH0_TimerPeriodSet (uint32_t period);
-
-void TC0_CH0_TimerCompareSet (uint32_t compare);
-
-uint32_t TC0_CH0_TimerFrequencyGet (void);
-
-uint32_t TC0_CH0_TimerPeriodGet (void);
-
-uint32_t TC0_CH0_TimerCounterGet (void);
-
-void TC0_CH0_TimerCallbackRegister(TC_TIMER_CALLBACK callback, uintptr_t context);
-
-
-
- 
-
- 
-
-
-#ifdef __cplusplus // Provide C++ Compatibility
+/* Weak default handler for spurious interrupts */
+void __attribute__((weak)) SPURIOUS_INTERRUPT_Handler(void)
+{
+    static uint32_t spuriousEventCount = 0U;
+    ++spuriousEventCount;
 }
-#endif
 
-#endif //PLIB_TC0_H
 
-/* End of File */
+/*******************************************************************************
+ End of File
+*/

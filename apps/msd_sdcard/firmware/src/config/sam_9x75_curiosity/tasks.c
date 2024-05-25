@@ -1,21 +1,23 @@
 /*******************************************************************************
-  TC Peripheral Library Interface Header File
+ System Tasks File
 
-  Company
-    Microchip Technology Inc.
+  File Name:
+    tasks.c
 
-  File Name
-    plib_tc0.h
+  Summary:
+    This file contains source code necessary to maintain system's polled tasks.
 
-  Summary
-    TC peripheral library interface.
+  Description:
+    This file contains source code necessary to maintain system's polled tasks.
+    It implements the "SYS_Tasks" function that calls the individual "Tasks"
+    functions for all polled MPLAB Harmony modules in the system.
 
-  Description
-    This file defines the interface to the TC peripheral library.  This
-    library provides access to and control of the associated peripheral
-    instance.
-
-******************************************************************************/
+  Remarks:
+    This file requires access to the systemObjects global data structure that
+    contains the object handles to all MPLAB Harmony module objects executing
+    polled in the system.  These handles are passed into the individual module
+    "Tasks" functions to identify the instance of the module to maintain.
+ *******************************************************************************/
 
 // DOM-IGNORE-BEGIN
 /*******************************************************************************
@@ -39,12 +41,8 @@
 * FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
-*******************************************************************************/
+ *******************************************************************************/
 // DOM-IGNORE-END
-
-#ifndef PLIB_TC0_H    // Guards against multiple inclusion
-#define PLIB_TC0_H
-
 
 // *****************************************************************************
 // *****************************************************************************
@@ -52,77 +50,57 @@
 // *****************************************************************************
 // *****************************************************************************
 
-/*  This section lists the other files that are included in this file.
+#include "configuration.h"
+#include "definitions.h"
+#include "sys_tasks.h"
+
+
+
+
+// *****************************************************************************
+// *****************************************************************************
+// Section: System "Tasks" Routine
+// *****************************************************************************
+// *****************************************************************************
+
+/*******************************************************************************
+  Function:
+    void SYS_Tasks ( void )
+
+  Remarks:
+    See prototype in system/common/sys_module.h.
 */
-
-
-#include "plib_tc_common.h"
-
-// DOM-IGNORE-BEGIN
-#ifdef __cplusplus  // Provide C++ Compatibility
-
-extern "C" {
-
-#endif
-
-// DOM-IGNORE-END
-
-// *****************************************************************************
-// *****************************************************************************
-// Section: Data Types
-// *****************************************************************************
-// *****************************************************************************
-/*  The following data type definitions are used by the functions in this
-    interface and should be considered part it.
-*/
-
-// *****************************************************************************
-// *****************************************************************************
-// Section: Interface Routines
-// *****************************************************************************
-// *****************************************************************************
-/* The following functions make up the methods (set of possible operations) of
-   this interface.
-*/
-
-// *****************************************************************************
-
-  
-
-
- 
+void SYS_Tasks ( void )
+{
+    /* Maintain system services */
+    DRV_SDMMC_Tasks(sysObj.drvSDMMC0);
 
 
 
-void TC0_CH0_TimerInitialize (void);
 
-void TC0_CH0_TimerStart (void);
 
-void TC0_CH0_TimerStop (void);
+    /* Maintain Device Drivers */
+    
 
-void TC0_CH0_TimerPeriodSet (uint32_t period);
+    /* Maintain Middleware & Other Libraries */
+        /* USB UDPHS Driver Task Routine */ 
+    DRV_USB_UDPHS_Tasks(sysObj.drvUSBUDPHSObject);
 
-void TC0_CH0_TimerCompareSet (uint32_t compare);
-
-uint32_t TC0_CH0_TimerFrequencyGet (void);
-
-uint32_t TC0_CH0_TimerPeriodGet (void);
-
-uint32_t TC0_CH0_TimerCounterGet (void);
-
-void TC0_CH0_TimerCallbackRegister(TC_TIMER_CALLBACK callback, uintptr_t context);
+    /* USB Device layer tasks routine */ 
+    USB_DEVICE_Tasks(sysObj.usbDevObject0);
 
 
 
- 
+    /* Maintain the application's state machine. */
+        /* Call Application task APP. */
+    APP_Tasks();
 
- 
 
 
-#ifdef __cplusplus // Provide C++ Compatibility
+
 }
-#endif
 
-#endif //PLIB_TC0_H
+/*******************************************************************************
+ End of File
+ */
 
-/* End of File */

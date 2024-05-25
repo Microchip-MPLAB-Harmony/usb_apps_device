@@ -1,4 +1,4 @@
-<config configName="sam_9x75_curiosity" projectName="msd_sdcard_sam_9x75_curiosity" configVersion="1.1" device="SAM9X75D2G" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.6.1">
+<config configName="sam_9x75_curiosity" projectName="msd_sdcard_sam_9x75_curiosity" configVersion="1.1" device="SAM9X75D2G" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.7.1">
    <usedPackages class="java.util.ArrayList"/>
    <usedClasses class="java.util.TreeMap">
       <entry>
@@ -55,7 +55,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.4.1"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.2"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -8401,7 +8401,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\driver\sdmmc\src\drv_sdmmc.c</file>
-         <hash>ef409309bba623086fdcbfd28a9b3f895235bb02b7a3c7a7ee986924c591fc18</hash>
+         <hash>144ed9854ff200d2129f15e02a6e2674bf909307d6acbd7678f300f729c4ee60</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\driver\sdmmc\src\drv_sdmmc_local.h</file>
@@ -8493,7 +8493,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\peripheral\pio\plib_pio.h</file>
-         <hash>8b586f60dccb8bf8faa2b0df0c50f1dc7aa7d293ea314d1205e97db1e774b528</hash>
+         <hash>da436f4f274796fa12b4595768422d9b5e1d3d3ba9f0cf397fc3645aee42f330</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\peripheral\sdmmc\plib_sdmmc0.c</file>
@@ -8541,7 +8541,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\system\debug\sys_debug.h</file>
-         <hash>bc6fa321b0be542d074e4564065b7fd69f52556486ac3d892d315b51c434f9ec</hash>
+         <hash>4162d9e1fab93b8b33f6c8a24726f5dc287ea05c31e3ab984c3c920c725d0882</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\system\int\src\sys_int.c</file>
@@ -8601,7 +8601,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\usb\src\usb_device.c</file>
-         <hash>14543b5fdeb97f5cbf15e9f4c58c237795d97bd5d60e7a6109f2af85cc550d1b</hash>
+         <hash>af8a74c998876da1c72e4c0ed30b11a3dc98b7577857d659652cd0a0cc3e7078</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\usb\src\usb_device_function_driver.h</file>
@@ -8613,7 +8613,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\usb\src\usb_device_mapping.h</file>
-         <hash>c73881cf22375ff35c1290a2e40055cb8e1d955610d11c904914ff347d5b753d</hash>
+         <hash>8946c320acdb2ca965664fdf6830d839c8488cb0144d4430d9531fd4408d8df3</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\usb\src\usb_device_msd.c</file>
@@ -8665,7 +8665,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\usb_device_init_data.c</file>
-         <hash>ab2a76364b1e0ee061fdb466552e76f643c1f2f402509267dfab640e71bc26b7</hash>
+         <hash>feb187e4c148f48128f08ad2593ad535a00f8f19e03e496a87136ee207b18b0c</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\user.h</file>
