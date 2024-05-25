@@ -4396,7 +4396,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult_freertos\definitions.h</file>
-         <hash>b98be2116c8f3ddea69ae9addb4561b5869af7d5ceaf0142d2eb86e9a405858f</hash>
+         <hash>ce3149ba392f9931dee37dcfe141e3e5913a973db2f60b1e932761422cd327cb</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult_freertos\device.h</file>
