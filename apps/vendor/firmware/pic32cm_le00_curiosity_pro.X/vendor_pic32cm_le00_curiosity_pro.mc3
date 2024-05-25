@@ -2117,7 +2117,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cm_le00_curiosity_pro\definitions.h</file>
-         <hash>a34ffaa762028b051fd797a71cdb77e2c446b9c948aa98a08f7b7f40eec7bdbe</hash>
+         <hash>1ed39e15697a7c2fcdd23dd340e425150bcc63b9bf4fc8834dc30c2aad630879</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cm_le00_curiosity_pro\device.h</file>
