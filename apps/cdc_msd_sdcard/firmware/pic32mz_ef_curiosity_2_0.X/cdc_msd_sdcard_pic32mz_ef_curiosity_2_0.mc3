@@ -4946,11 +4946,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_curiosity_2_0\configuration.h</file>
-         <hash>895f3d180d65c5839f00975403197708e84d1ba0e84b4034ef3744bcdb05a767</hash>
+         <hash>67cef35160a4adaf6e5ed89ef531cd8878f32488f50ab6d33a97daefff565cbb</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_curiosity_2_0\definitions.h</file>
-         <hash>95bb537fc6e905a0960556b417e086f66142533f8f627841baec6281f230117a</hash>
+         <hash>03d22fcf2e1c8e983f3a26ff3e2665e40fe626d1cfcf0ce14a09b420933174c6</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_curiosity_2_0\device.h</file>
