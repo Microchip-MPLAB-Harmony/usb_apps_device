@@ -66,7 +66,7 @@
  * present in the microcontroller.
  *********************************************/
 
-DRV_USBHS_OBJ gDrvUSBObj[DRV_USBHS_INSTANCES_NUMBER];
+DRV_USBHS_OBJ gDrvUSBHSObj[DRV_USBHS_INSTANCES_NUMBER];
 
 /***********************************
  * Array of USB endpoint objects. 
@@ -113,7 +113,7 @@ SYS_MODULE_OBJ DRV_USBHS_Initialize
 
     if ( drvIndex < DRV_USBHS_INSTANCES_NUMBER)
     {
-        if ( false == gDrvUSBObj[drvIndex].usbDrvCommonObj.inUse )
+        if ( false == gDrvUSBHSObj[drvIndex].usbDrvCommonObj.inUse )
         {
             usbInit = (DRV_USBHS_INIT *) init;
 
@@ -136,7 +136,7 @@ SYS_MODULE_OBJ DRV_USBHS_Initialize
                 usbID = usbInit->usbID;
             }
 
-            drvObj = &gDrvUSBObj[drvIndex];
+            drvObj = &gDrvUSBHSObj[drvIndex];
 
             if ( (OSAL_RESULT_TRUE == OSAL_MUTEX_Create(&drvObj->usbDrvCommonObj.mutexID)) )
             {
@@ -210,7 +210,7 @@ void DRV_USBHS_Tasks
     SYS_MODULE_OBJ object
 )
 {
-    DRV_USBHS_OBJ * hDriver = &gDrvUSBObj[object];
+    DRV_USBHS_OBJ * hDriver = &gDrvUSBHSObj[object];
     USBHS_MODULE_ID usbID = hDriver->usbDrvCommonObj.usbID;
     DRV_USBHS_CLIENT_OBJ * deviceModeClient = NULL;
     USBHS_VBUS_LEVEL vbusLevel = USBHS_VBUS_SESSION_END;
@@ -445,9 +445,9 @@ void DRV_USBHS_Deinitialize
     {
         if ( object < DRV_USBHS_INSTANCES_NUMBER)
         {
-            if (true == gDrvUSBObj[object].usbDrvCommonObj.inUse)
+            if (true == gDrvUSBHSObj[object].usbDrvCommonObj.inUse)
             {
-                drvObj = &gDrvUSBObj[object];
+                drvObj = &gDrvUSBHSObj[object];
 
                 /* Clear and disable the interrupts. Assigning to a value has
                  * been implemented to remove compiler warning in polling mode.*/
@@ -524,7 +524,7 @@ SYS_STATUS DRV_USBHS_Status
     if (SYS_MODULE_OBJ_INVALID != object)
     {
         /* Return the status of the driver object */
-        result = gDrvUSBObj[object].usbDrvCommonObj.status;
+        result = gDrvUSBHSObj[object].usbDrvCommonObj.status;
     }
     else
     {
@@ -576,7 +576,7 @@ DRV_HANDLE DRV_USBHS_Open
 
     if (drvIndex < DRV_USBHS_INSTANCES_NUMBER)
     {
-        drvObj = &gDrvUSBObj[drvIndex];
+        drvObj = &gDrvUSBHSObj[drvIndex];
 
         if ( SYS_STATUS_READY == drvObj->usbDrvCommonObj.status )
         {
@@ -722,7 +722,7 @@ void DRV_USBHS_Tasks_ISR
     USBHS_MODULE_ID usbID = USBHS_NUMBER_OF_MODULES;
     
 
-    hDriver = &gDrvUSBObj[object];
+    hDriver = &gDrvUSBHSObj[object];
     hDriver->usbDrvCommonObj.isInInterruptContext = true;
     usbID = hDriver->usbDrvCommonObj.usbID;
     
@@ -803,7 +803,7 @@ void DRV_USBHS_Tasks_ISR_USBDMA
 {
     DRV_USBHS_OBJ * hDriver =  NULL;
 
-    hDriver = &gDrvUSBObj[object];
+    hDriver = &gDrvUSBHSObj[object];
     hDriver->usbDrvCommonObj.isInInterruptContextUSBDMA = true;
     
     switch (hDriver->usbDrvCommonObj.operationMode)
