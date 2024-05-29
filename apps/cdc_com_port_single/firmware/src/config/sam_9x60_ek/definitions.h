@@ -50,8 +50,8 @@
 #include <stdbool.h>
 #include "usb/usb_device_cdc.h"
 #include "usb/usb_cdc.h"
-#include "bsp/bsp.h"
 #include "driver/usb/udphs/drv_usb_udphs.h"
+#include "bsp/bsp.h"
 #include "peripheral/mmu/plib_mmu.h"
 #include "peripheral/clk/plib_clk.h"
 #include "peripheral/pio/plib_pio.h"
