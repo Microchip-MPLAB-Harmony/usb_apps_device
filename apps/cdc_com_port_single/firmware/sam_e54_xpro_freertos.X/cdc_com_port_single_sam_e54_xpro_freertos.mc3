@@ -9117,11 +9117,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro_freertos\configuration.h</file>
-         <hash>64e2ae88510a6447b65fa9d01cc361bb06abbcf5139e41f808171085243063ca</hash>
+         <hash>4206b6a4be1d1f7c550cd7bbcc19fcc3e8efff98b374f3ec274a865c69ea3e29</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro_freertos\definitions.h</file>
-         <hash>7dbb9485703a6f3d44e656be05307226865e7504d1f9c0e31c9bddcdebdfd1a0</hash>
+         <hash>1c121805b3c18a37cd8408af8c92f31af29333e66e55cea1297e5bc77e25fe67</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro_freertos\device.h</file>
@@ -9161,11 +9161,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro_freertos\driver\usb\usbfsv1\src\drv_usbfsv1_device.c</file>
-         <hash>dbf2d6aa19442241be6d72b6d7b0ded495a04a39f488d079f4ff488103284013</hash>
+         <hash>0e20b93b7c5a0a472448aeb800769683c1e91e68da778510e04e4175500db8f4</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro_freertos\driver\usb\usbfsv1\src\drv_usbfsv1_local.h</file>
-         <hash>0834ca7f0d9b69a800638f56d7a01e445a0addcc84d97e2597309dfbb2861cb4</hash>
+         <hash>43e52ea3bd0e33fe3d272e9ef610d6b1b9d4cf3395a80fd9eba16ba6986d96ee</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro_freertos\driver\usb\usbfsv1\src\drv_usbfsv1_variant_mapping.h</file>
@@ -9181,7 +9181,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro_freertos\initialization.c</file>
-         <hash>8d6a8dd9091d67f712ddf70ba06aa20b259dd298a03afe81d07096e532f1df22</hash>
+         <hash>3ffa903c7ecb666fac7164908d5a3e560462a6448fa846761806b46c6f3904b5</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro_freertos\interrupts.c</file>
@@ -9313,7 +9313,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro_freertos\tasks.c</file>
-         <hash>2d113882f0c9db84e73325bf6e72c2a10de9c7c2bbc728bda7b2fa8d8b1e1749</hash>
+         <hash>539087e8b0b25e8bf255f5d21a34a54a1d84ced2ef05c963d67eee526308c25c</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro_freertos\toolchain_specifics.h</file>
