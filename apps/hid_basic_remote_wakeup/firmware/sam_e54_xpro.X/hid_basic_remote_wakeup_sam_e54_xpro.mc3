@@ -4730,11 +4730,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\configuration.h</file>
-         <hash>6cb197e84bc223850b2a8a25ba1c8fe70dd51976b8a78bc3c9543ddc8c1ec524</hash>
+         <hash>bc0bb7829f2e3823c11b2bf2a0f89ef377241f528d477a9209822fd9f1d97bef</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\definitions.h</file>
-         <hash>fd11e3bd5a703b2fee9a1db099c086038526b43fc84d1d9f0c4a9b89fb33c570</hash>
+         <hash>ff22927a5340a60ee5119b778c646a3a2ab37480a0a4a5b83426ad116da1929c</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\device.h</file>
@@ -4774,11 +4774,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\driver\usb\usbfsv1\src\drv_usbfsv1_device.c</file>
-         <hash>dbf2d6aa19442241be6d72b6d7b0ded495a04a39f488d079f4ff488103284013</hash>
+         <hash>0e20b93b7c5a0a472448aeb800769683c1e91e68da778510e04e4175500db8f4</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\driver\usb\usbfsv1\src\drv_usbfsv1_local.h</file>
-         <hash>0834ca7f0d9b69a800638f56d7a01e445a0addcc84d97e2597309dfbb2861cb4</hash>
+         <hash>43e52ea3bd0e33fe3d272e9ef610d6b1b9d4cf3395a80fd9eba16ba6986d96ee</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\driver\usb\usbfsv1\src\drv_usbfsv1_variant_mapping.h</file>
@@ -4790,7 +4790,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\initialization.c</file>
-         <hash>fd9466c580529ca6dd21bd0651879e183c6d072349383f017d98dfc16512cacb</hash>
+         <hash>89550a9df8c9368e215091422106e984f06542f531095cbb992424592d5bbb23</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\interrupts.c</file>
