@@ -5506,11 +5506,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro\configuration.h</file>
-         <hash>b2c2348c9f1652ace870f084d6e8dca4917262e8e1f0e25ff1faa4098018df22</hash>
+         <hash>e001e1fe487cbde7bdb8dbaa439cb4a0aeb03293d1298575e9715eebc3444df7</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro\definitions.h</file>
-         <hash>945cac8fa955f2d9b7f190319eb8d1e49c2e195373492e66d1ffb81f014c955a</hash>
+         <hash>87caea4e80191aeca4e6ffed7eeb6110ec8e668d0367fb2c61f4188f37e127fd</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro\device.h</file>
@@ -5550,11 +5550,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro\driver\usb\usbfsv1\src\drv_usbfsv1_device.c</file>
-         <hash>dbf2d6aa19442241be6d72b6d7b0ded495a04a39f488d079f4ff488103284013</hash>
+         <hash>0e20b93b7c5a0a472448aeb800769683c1e91e68da778510e04e4175500db8f4</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro\driver\usb\usbfsv1\src\drv_usbfsv1_local.h</file>
-         <hash>0834ca7f0d9b69a800638f56d7a01e445a0addcc84d97e2597309dfbb2861cb4</hash>
+         <hash>43e52ea3bd0e33fe3d272e9ef610d6b1b9d4cf3395a80fd9eba16ba6986d96ee</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro\driver\usb\usbfsv1\src\drv_usbfsv1_variant_mapping.h</file>
@@ -5566,7 +5566,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro\initialization.c</file>
-         <hash>0659f796eaa86b0f386b821f445e2148f3cebde57f421967f1c58338f650ef5c</hash>
+         <hash>00e076855786d208925b86eab4c4d8d4e54e9686c016f90bb616ec27cfec003e</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro\interrupts.c</file>
@@ -5678,7 +5678,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro\tasks.c</file>
-         <hash>3582431498d57f4db302bf9bd433d1595735bfe1399b606ec2714cd7c739d2d6</hash>
+         <hash>413fa616e9746cd73cd2f8e0274d4a35ffe890d9c79f4f4a35a72995e56f9176</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro\toolchain_specifics.h</file>
