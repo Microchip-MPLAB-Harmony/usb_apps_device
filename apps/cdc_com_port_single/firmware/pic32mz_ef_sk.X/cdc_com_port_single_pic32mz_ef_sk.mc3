@@ -8465,11 +8465,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk\configuration.h</file>
-         <hash>8a45def1b6eea771a16fc5819155d40ec98081736423cf5a8d3c4dd8f4a1db26</hash>
+         <hash>4ac9d723c0753f83d5047c68f8713c34bca1abbacc0c98cbaab719ce9ce6d631</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk\definitions.h</file>
-         <hash>2c333711aa009c1661ee913db5f3562e2822d42d75e5a3ae2ea635a86f5844b8</hash>
+         <hash>c9a81435f9ecc6f17d2c62ee70608a007d160460b93ff6ddfbb60ce895e38a94</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk\device.h</file>
