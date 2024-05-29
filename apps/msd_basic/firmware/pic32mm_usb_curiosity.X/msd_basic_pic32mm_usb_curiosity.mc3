@@ -2327,11 +2327,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mm_usb_curiosity\configuration.h</file>
-         <hash>6f36d33c5e9a2c7dcbfc8ef38a97026bfe06e2a2bea37a1e636f26e9e4d1cc01</hash>
+         <hash>3cb9901e8d5d8b622d3d03f5491ff41e5feb25154e2fa0f0d4eedd13423fe27e</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mm_usb_curiosity\definitions.h</file>
-         <hash>4c9f1a4ecaa38f109d42a50b707183b7c8549006cc92e01b44520cc63ffb31b2</hash>
+         <hash>204c16069e8993681dbca16dca003a621bd784f651e82f506c7c104569c40cda</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mm_usb_curiosity\device.h</file>
@@ -2859,7 +2859,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mm_usb_curiosity\initialization.c</file>
-         <hash>5c280d2af5390158570223b79a49064a2a8f68e384e006b86936c101bce018b2</hash>
+         <hash>86c14c9c14c6c732b6dd05aeae0177203da3475516af5ad5084996c91db76daa</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mm_usb_curiosity\interrupts.c</file>
@@ -2959,7 +2959,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mm_usb_curiosity\tasks.c</file>
-         <hash>4c1ba0c1b51ec545f17f946205113a973f04dd4efcb15831f5f1c5d16e255eb6</hash>
+         <hash>b10a0595a693dbc73193343cc2174c544fde16ec9c14b2ffc7fd634e980bb313</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mm_usb_curiosity\toolchain_specifics.h</file>
