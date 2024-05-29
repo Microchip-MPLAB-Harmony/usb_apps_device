@@ -4878,15 +4878,15 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\drv_usbhs.c</file>
-         <hash>1d40f5bb564b9c1b39b1fa07cdd23fc3de64c752f625b64da39d371644c68941</hash>
+         <hash>83cca8c7ef68e1222ab1380fbf416a2f9de410077ff423d95d4f29a37a8e972b</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\drv_usbhs_device.c</file>
-         <hash>1c51c8db0c842dbf2a3ce36a76f28cb67edb3620f7956402f411b127a78082f0</hash>
+         <hash>99cf2273c39cfe30625d930899d49eb5784a4845aa791463c6ff54e4ace6dce3</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\drv_usbhs_local.h</file>
-         <hash>75267250c31977aed5e9aa567140d4511a3d2aaa38bbdadaee873444d1eb2eb3</hash>
+         <hash>cbcd0b7f8369b86932e1510d79184a6509eb42e73b29c622c85e34460158393d</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\driver\usb\usbhs\src\drv_usbhs_variant_mapping.h</file>
