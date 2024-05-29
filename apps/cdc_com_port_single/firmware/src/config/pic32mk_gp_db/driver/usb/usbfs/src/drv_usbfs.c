@@ -572,7 +572,7 @@ void DRV_USBFS_Tasks(SYS_MODULE_OBJ object)
     M_DRV_USBFS_Tasks_ISR(object);
 }
 
-    // *****************************************************************************
+// *****************************************************************************
 /* Function:
     void DRV_USBFS_USB1_Handler(void)
 

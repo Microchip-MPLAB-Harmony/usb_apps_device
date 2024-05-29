@@ -2942,7 +2942,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\driver\usb\usbfs\src\drv_usbfs.c</file>
-         <hash>c8cbddb01b5fa6faef65b8494e1e0126ec24c8844d5a894f763054be1ebbd525</hash>
+         <hash>edf2b34dd53d05c3dbb79b174fecab5ccddf2b0df26429412fd67f368ef5aaf1</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\driver\usb\usbfs\src\drv_usbfs_device.c</file>
