@@ -5632,11 +5632,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk_freertos\configuration.h</file>
-         <hash>8a45def1b6eea771a16fc5819155d40ec98081736423cf5a8d3c4dd8f4a1db26</hash>
+         <hash>4ac9d723c0753f83d5047c68f8713c34bca1abbacc0c98cbaab719ce9ce6d631</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk_freertos\definitions.h</file>
-         <hash>6910f3846c31cc35fff39e8f2b400772459d313dce445726ce45221b6dbb504e</hash>
+         <hash>5f9a422774fc0e4e2877b92f880be78be1995f7bc40f954afa171fe75b04c75b</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk_freertos\device.h</file>
