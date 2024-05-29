@@ -2924,7 +2924,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_d11_xpro\definitions.h</file>
-         <hash>3954b3890159d5e55872280442862b6c3ceb49c86346ee8b90e688b3b5ef805e</hash>
+         <hash>e0d73b8a5bb14f8d3badd18a3a897949ddeacd7ca2e5c9817caf9a79f7cb03f5</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_d11_xpro\device.h</file>
@@ -2996,7 +2996,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_d11_xpro\initialization.c</file>
-         <hash>ce2c25cc572e63331eba78cf795927d90ebb504049dbe410359e1847cb8534bb</hash>
+         <hash>6c9a01ea13bbe36fcbe61511c236f8dbcc0b3e94eff62ae223985d16077a6c9b</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_d11_xpro\interrupts.c</file>
