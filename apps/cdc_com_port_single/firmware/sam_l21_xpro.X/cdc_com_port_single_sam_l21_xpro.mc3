@@ -1951,7 +1951,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_l21_xpro\definitions.h</file>
-         <hash>d751c6502f9c943fe2cbe245d93fb7dec293ef2bbec63f32b175acafe0a31b37</hash>
+         <hash>255051a8e8699ac4f5cefda1bedee819b8d6dc8aeffa48aee1abbe887f8f5a0a</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l21_xpro\device.h</file>
@@ -1991,11 +1991,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_l21_xpro\driver\usb\usbfsv1\src\drv_usbfsv1_device.c</file>
-         <hash>dbf2d6aa19442241be6d72b6d7b0ded495a04a39f488d079f4ff488103284013</hash>
+         <hash>0e20b93b7c5a0a472448aeb800769683c1e91e68da778510e04e4175500db8f4</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l21_xpro\driver\usb\usbfsv1\src\drv_usbfsv1_local.h</file>
-         <hash>0834ca7f0d9b69a800638f56d7a01e445a0addcc84d97e2597309dfbb2861cb4</hash>
+         <hash>43e52ea3bd0e33fe3d272e9ef610d6b1b9d4cf3395a80fd9eba16ba6986d96ee</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l21_xpro\driver\usb\usbfsv1\src\drv_usbfsv1_variant_mapping.h</file>
