@@ -8735,11 +8735,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\configuration.h</file>
-         <hash>c1d94857260e9c4c45e8b497110f9084d3edc4cb293ab636eb300a70ce02eb44</hash>
+         <hash>6b4cb985ba9f414f0c744740d43be5ca74ad635f11921ecb72efdda2bdfc7a03</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\definitions.h</file>
-         <hash>6d089bfd1b889b0f1726fa69c3106fbc90808d24566a92bbd81458750bc903ec</hash>
+         <hash>f4cfe02d174ae05e53ea2fbde89468f7deb6e0fe5388bbf4574b9e9335ffceb4</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\device.h</file>
@@ -8779,11 +8779,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\driver\usb\usbfsv1\src\drv_usbfsv1_device.c</file>
-         <hash>dbf2d6aa19442241be6d72b6d7b0ded495a04a39f488d079f4ff488103284013</hash>
+         <hash>0e20b93b7c5a0a472448aeb800769683c1e91e68da778510e04e4175500db8f4</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\driver\usb\usbfsv1\src\drv_usbfsv1_local.h</file>
-         <hash>0834ca7f0d9b69a800638f56d7a01e445a0addcc84d97e2597309dfbb2861cb4</hash>
+         <hash>43e52ea3bd0e33fe3d272e9ef610d6b1b9d4cf3395a80fd9eba16ba6986d96ee</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\driver\usb\usbfsv1\src\drv_usbfsv1_variant_mapping.h</file>
@@ -8795,7 +8795,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\initialization.c</file>
-         <hash>dea0687cba0c031c76357744de28c03ab12b3ca164d91cbbff859a56be9fb8f5</hash>
+         <hash>a03cff8a2f8a84f476a0b8e77c803b80e291807f0c301f408e1ad4ca2e9dca8d</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\interrupts.c</file>
@@ -8923,7 +8923,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\tasks.c</file>
-         <hash>413fa616e9746cd73cd2f8e0274d4a35ffe890d9c79f4f4a35a72995e56f9176</hash>
+         <hash>3582431498d57f4db302bf9bd433d1595735bfe1399b606ec2714cd7c739d2d6</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\toolchain_specifics.h</file>
