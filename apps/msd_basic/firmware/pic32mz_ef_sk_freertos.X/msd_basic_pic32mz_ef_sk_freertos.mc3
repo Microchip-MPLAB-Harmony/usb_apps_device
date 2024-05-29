@@ -6199,7 +6199,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk_freertos\definitions.h</file>
-         <hash>e39245c6e4f541b734a2ba5795cc63c80a557f7d57c4fed5a10d1f69446bf52c</hash>
+         <hash>693aa6dd30baebedac163d6551e74ec0870c17254793038c0b956a02b55c52fa</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk_freertos\device.h</file>
