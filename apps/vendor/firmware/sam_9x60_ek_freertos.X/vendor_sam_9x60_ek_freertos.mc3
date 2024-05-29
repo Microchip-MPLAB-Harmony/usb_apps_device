@@ -3507,7 +3507,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\definitions.h</file>
-         <hash>52ccc7b691ae46886d521ae775c5de1dbf8894c0e1b519f7cf9490a30364ad22</hash>
+         <hash>465ac97702bf7f239c435a5f75d10c89a2f63db42107a6a49321bc556f3ad57e</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\device.h</file>
