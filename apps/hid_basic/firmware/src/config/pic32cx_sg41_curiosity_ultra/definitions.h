@@ -49,9 +49,9 @@
 #include <stddef.h>
 #include <stdbool.h>
 #include "peripheral/nvmctrl/plib_nvmctrl.h"
+#include "bsp/bsp.h"
 #include "usb/usb_device_hid.h"
 #include "usb/usb_hid.h"
-#include "bsp/bsp.h"
 #include "peripheral/evsys/plib_evsys.h"
 #include "peripheral/port/plib_port.h"
 #include "peripheral/clock/plib_clock.h"
