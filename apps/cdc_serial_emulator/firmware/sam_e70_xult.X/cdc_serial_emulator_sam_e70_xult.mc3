@@ -8693,7 +8693,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\driver\usb\usbhsv1\src\drv_usbhsv1_device.c</file>
-         <hash>9c28ef52eae94afffe9ec818e33c806d43abb221d099bc71e2fc2cd7d34c9090</hash>
+         <hash>cb3da454b05b66e915bb44987941b692f02252e0121df769d48faadcdb924df9</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\driver\usb\usbhsv1\src\drv_usbhsv1_local.h</file>
