@@ -137,7 +137,7 @@
  * This object is used by the driver as IRP place
  * holder along with queueing feature.
  ***************************************************/
-typedef struct S_USB_DEVICE_IRP_LOCAL 
+typedef struct S_DRV_USBHS_DEVICE_IRP_LOCAL 
 {
     /* Pointer to the data buffer */
     void * data;
@@ -159,15 +159,15 @@ typedef struct S_USB_DEVICE_IRP_LOCAL
     uintptr_t userData;
 
     /* This points to the next IRP in the queue */
-    struct S_USB_DEVICE_IRP_LOCAL * next;
+    struct S_DRV_USBHS_DEVICE_IRP_LOCAL * next;
 
     /* This points to the previous IRP in the queue */
-    struct S_USB_DEVICE_IRP_LOCAL * previous;
+    struct S_DRV_USBHS_DEVICE_IRP_LOCAL * previous;
 
     /* Pending bytes in the IRP */
     uint32_t nPendingBytes;
 
-} USB_DEVICE_IRP_LOCAL;
+} DRV_USBHS_DEVICE_IRP_LOCAL;
 
 /************************************************
  * Endpoint state enumeration.
@@ -188,7 +188,7 @@ typedef struct
 {
     /* This is the IRP queue for 
      * the endpoint */
-    USB_DEVICE_IRP_LOCAL * irpQueue;
+    DRV_USBHS_DEVICE_IRP_LOCAL * irpQueue;
 
     /* Max packet size for the endpoint */
     uint16_t maxPacketSize;
@@ -226,7 +226,7 @@ typedef enum
 /*********************************************
  * This is the local USB Host IRP object
  ********************************************/
-typedef struct S_USB_HOST_IRP_LOCAL
+typedef struct S_DRV_USBHS_HOST_IRP_LOCAL 
 {
     /* Points to the 8 byte setup command packet in case this is a IRP is
      * scheduled on a CONTROL pipe. Should be NULL otherwise */
@@ -257,11 +257,11 @@ typedef struct S_USB_HOST_IRP_LOCAL
      ****************************************/
     DRV_USBHS_HOST_IRP_STATE tempState;
     uint32_t completedBytes;
-    struct S_USB_HOST_IRP_LOCAL * next;
-    struct S_USB_HOST_IRP_LOCAL * previous;
+    struct S_DRV_USBHS_HOST_IRP_LOCAL * next;
+    struct S_DRV_USBHS_HOST_IRP_LOCAL * previous;
     DRV_USBHS_HOST_PIPE_HANDLE  pipe;
 
-} USB_HOST_IRP_LOCAL;
+} DRV_USBHS_HOST_IRP_LOCAL ;
 
 /************************************************
  * This is the Host Pipe Object.
@@ -290,7 +290,7 @@ typedef struct S_DRV_USBHS_HOST_PIPE_OBJ
     USB_TRANSFER_TYPE pipeType;
 
     /* The IRP queue on this pipe */
-    USB_HOST_IRP_LOCAL * irpQueueHead;
+    DRV_USBHS_HOST_IRP_LOCAL * irpQueueHead;
 
     /* The NAK counter for the IRP being served on the pipe */
     uint32_t nakCounter;
@@ -683,7 +683,7 @@ typedef struct
 /******************************************************************************
  * The USB driver object. Has already been defined in drv_usbhs.c file.
  *****************************************************************************/
-extern DRV_USBHS_OBJ gDrvUSBObj[DRV_USBHS_INSTANCES_NUMBER];
+extern DRV_USBHS_OBJ gDrvUSBHSObj[DRV_USBHS_INSTANCES_NUMBER];
 
 void F_DRV_USBHS_HOST_AttachDetachStateMachine (DRV_USBHS_OBJ * hDriver);
 void F_DRV_USBHS_HOST_ResetStateMachine(DRV_USBHS_OBJ * hDriver);
@@ -733,7 +733,7 @@ uint16_t F_DRV_USBHS_ProcessIRPFIFO
     DRV_USBHS_DEVICE_ENDPOINT_OBJ * endpointObj,
     uint8_t endpoint,
     uint8_t direction,
-    USB_DEVICE_IRP_LOCAL * irp,
+    DRV_USBHS_DEVICE_IRP_LOCAL * irp,
     bool * pisDMAUsed,
     bool tryDma
 );
@@ -772,20 +772,20 @@ DRV_USBHS_HOST_PIPE_HANDLE F_DRV_USBHS_HOST_FifoTableAllocate
 void F_DRV_USBHS_HOST_IRPTransmitFIFOLoad
 (
     USBHS_MODULE_ID usbID, 
-    USB_HOST_IRP_LOCAL * irp,
+    DRV_USBHS_HOST_IRP_LOCAL * irp,
     uint8_t endpoint
 );
 
 void F_DRV_USBHS_HOST_IRPTransmitSetupPacket
 (
     USBHS_MODULE_ID usbID,
-    USB_HOST_IRP_LOCAL * irp
+    DRV_USBHS_HOST_IRP_LOCAL * irp
 );
 
 unsigned int F_DRV_USBHS_HOST_IRPReceiveFIFOUnload 
 (
     USBHS_MODULE_ID usbID,
-    USB_HOST_IRP_LOCAL * irp,
+    DRV_USBHS_HOST_IRP_LOCAL * irp,
     uint8_t endpoint,
     bool * pisDMAUsed
 );
