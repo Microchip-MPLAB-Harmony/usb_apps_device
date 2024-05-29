@@ -8575,7 +8575,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\definitions.h</file>
-         <hash>7c768ca9b48bc3114f0eac92758efca6671308fa46e6e38db7e7a479a9fe5233</hash>
+         <hash>96133b280220b51fe46149906b8358bd08cb593578157fc5c491e32aa124faf9</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\device.h</file>
