@@ -1836,11 +1836,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\configuration.h</file>
-         <hash>4fb7965b62c1560d2fbbf47a2ada3cd080dc41b8726f484054e536566ce124bc</hash>
+         <hash>7fa44fe672f84d2ad5c4280b9d64058a7454ecd8c4318a0e7909f922a11224b7</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\definitions.h</file>
-         <hash>df054fde72534de6092d86e0ad2f3f4128ea699cdb59e9e7b161e7115a37dab6</hash>
+         <hash>98c4dc0ee26a69479c2293fcb69f5192c1970e915178ef20276fb9f1583eb39f</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\device.h</file>
@@ -2340,7 +2340,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\initialization.c</file>
-         <hash>16b0503777a28f3541c99558f9ca20e1d31293c5393072f5f8cfd1db449b69f4</hash>
+         <hash>9ddf77e8429ac2077a9bd939957614991215a637c862d473de5d3ee5b1ea4866</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\interrupts.c</file>
@@ -2428,7 +2428,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\tasks.c</file>
-         <hash>c68e57e635fa50389a54cbe94cf7a25f16abf17e7e22b6ebfa75868737c73155</hash>
+         <hash>2e39cf49517830e5508fdda962752f8c78495bad0ffaf61b7a9a1b9f00976d69</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\toolchain_specifics.h</file>
