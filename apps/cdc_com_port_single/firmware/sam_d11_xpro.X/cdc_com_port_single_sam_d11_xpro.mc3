@@ -2193,11 +2193,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_d11_xpro\configuration.h</file>
-         <hash>64e2ae88510a6447b65fa9d01cc361bb06abbcf5139e41f808171085243063ca</hash>
+         <hash>4206b6a4be1d1f7c550cd7bbcc19fcc3e8efff98b374f3ec274a865c69ea3e29</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_d11_xpro\definitions.h</file>
-         <hash>4e7326bfbbbfcfd3c49e12c1b8d2e9737571bbd4c68671ad715fd9f197eb0dc3</hash>
+         <hash>7be7c46373d9fcc33758c69813e8c237b46b74c822fda524ebffc49c1bc1938e</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_d11_xpro\device.h</file>
@@ -2253,7 +2253,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_d11_xpro\initialization.c</file>
-         <hash>98dbcb5f2e50ec0ff03f4dc4c2d40bf991bac5e594bc020b948a5346a7b9b457</hash>
+         <hash>c36d691368228b66e51c1e2bc2a492f1c912ff4ec2062842a21a89492743e7fb</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_d11_xpro\interrupts.c</file>
@@ -2365,7 +2365,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_d11_xpro\tasks.c</file>
-         <hash>413fa616e9746cd73cd2f8e0274d4a35ffe890d9c79f4f4a35a72995e56f9176</hash>
+         <hash>3582431498d57f4db302bf9bd433d1595735bfe1399b606ec2714cd7c739d2d6</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_d11_xpro\toolchain_specifics.h</file>
