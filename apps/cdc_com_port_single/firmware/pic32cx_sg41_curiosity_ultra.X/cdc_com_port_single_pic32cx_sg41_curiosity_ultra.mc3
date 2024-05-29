@@ -5498,11 +5498,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_curiosity_ultra\configuration.h</file>
-         <hash>64e2ae88510a6447b65fa9d01cc361bb06abbcf5139e41f808171085243063ca</hash>
+         <hash>4206b6a4be1d1f7c550cd7bbcc19fcc3e8efff98b374f3ec274a865c69ea3e29</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_curiosity_ultra\definitions.h</file>
-         <hash>435bf9b1122d980bbc4f43f0395594306115260ce55ed67efc21ab392c2d32c7</hash>
+         <hash>3d4147906e88e780b7455c8c233c45c182cff2a17e5afc9ae8adbab61f4974c6</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_curiosity_ultra\device.h</file>
@@ -5542,11 +5542,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_curiosity_ultra\driver\usb\usbfsv1\src\drv_usbfsv1_device.c</file>
-         <hash>dbf2d6aa19442241be6d72b6d7b0ded495a04a39f488d079f4ff488103284013</hash>
+         <hash>0e20b93b7c5a0a472448aeb800769683c1e91e68da778510e04e4175500db8f4</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_curiosity_ultra\driver\usb\usbfsv1\src\drv_usbfsv1_local.h</file>
-         <hash>0834ca7f0d9b69a800638f56d7a01e445a0addcc84d97e2597309dfbb2861cb4</hash>
+         <hash>43e52ea3bd0e33fe3d272e9ef610d6b1b9d4cf3395a80fd9eba16ba6986d96ee</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_curiosity_ultra\driver\usb\usbfsv1\src\drv_usbfsv1_variant_mapping.h</file>
@@ -5558,7 +5558,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_curiosity_ultra\initialization.c</file>
-         <hash>dea0687cba0c031c76357744de28c03ab12b3ca164d91cbbff859a56be9fb8f5</hash>
+         <hash>0e2afbc05dbeda4bebf8984009483e16cb70a26a3c2ff546e2093b2bf1b9dc22</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_curiosity_ultra\interrupts.c</file>
@@ -5686,7 +5686,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_curiosity_ultra\tasks.c</file>
-         <hash>413fa616e9746cd73cd2f8e0274d4a35ffe890d9c79f4f4a35a72995e56f9176</hash>
+         <hash>3582431498d57f4db302bf9bd433d1595735bfe1399b606ec2714cd7c739d2d6</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_curiosity_ultra\toolchain_specifics.h</file>
