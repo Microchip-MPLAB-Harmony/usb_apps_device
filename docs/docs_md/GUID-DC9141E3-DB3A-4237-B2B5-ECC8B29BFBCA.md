@@ -33,6 +33,8 @@ Following table gives the details of project configurations, target device<br />
 |pic32cz\_ca80\_curiosity\_ultra.X|MPLABX|PIC32CZ8110CA80208|PIC32CZ CA80 Curiosity Ultra development board|
 |pic32ck\_gc01\_curiosity\_ultra.X|MPLABX|PIC32CK2051GC01144|PIC32CK GC Curiosity Ultra Development Board|
 |pic32cx\_sg41\_curiosity\_ultra.X|MPLABX|PIC32CX1025SG41128|PIC32CX SG41 Curiosity Ultra Evaluation Board|
+|sam\_a5d29\_curiosity.X|MPLABX|ATSAMA5D29|SAMA5D29 Curiosity Development Board|
+|sam\_9x75\_curiosity.X|MPLABX|SAM9X75D2G|SAM9X75-Curiosity Development Board|
 
 ## **Configuring the Hardware**
 
@@ -74,9 +76,9 @@ Following table gives the details of project configurations, target device<br />
 -   Use the USB Type-c connector \(J202\) to connect the USB Device to the USB Host PC.
 -   LED0 indicates USB Device Configuration Set Complete event \(The USB device functionality has been activated by the USB Host\).
 
-**[__PIC32CX SG41 Curiosity Ultra Evaluation Board__](https://www.microchip.com/en-us/development-tool/EV06X38A)**
+**[PIC32CX SG41 Curiosity Ultra Evaluation Board](https://www.microchip.com/en-us/development-tool/ev06x38a)**
 
--   Use the micro-B USB connector Target USB\( J200\) on the board to connect the USB Device to the USB Host PC.
+-   Use the micro-B USB connector TARGET USB\( J200\) on the board to connect the USB Device to the USB Host PC.
 -   LED1 indicates USB Device Configuration Set Complete event \(the USB device functionality has been activated by the USB Host\).
 
 **[Curiosity Pro PIC32CM LE00 Development Board](https://www.microchip.com/en-us/development-tool/EV80P12A)**
@@ -140,6 +142,32 @@ Following table gives the details of project configurations, target device<br />
 -   LED D1 indicates USB Device Configuration Set Complete event \(The USB device functionality has been activated by the USB Host\).
 
 ![](GUID-D7C919FA-1F75-4514-AECB-6E73D0CFEE22-low.png)
+
+**[SAMA5D29 Curiosity Development Board](https://www.microchip.com/en-us/development-tool/ev07r15a)**
+
+-   Setup the SD card \(Note: exFAT formatted SD Cards are not supported\)
+    -   Download harmony MPU bootstrap loader from this [location](https://github.com/Microchip-MPLAB-Harmony/usb_apps_device/tree/master/deps/at91bootstrap_sam_a5d29_binaries/boot.bin).
+    -   Copy the downloaded boot loader binary \(boot.bin\) and generated application binary \(harmony.bin\) into the SD card.
+    -   Insert the SD card into the μSD-CARD connector \(J6\) on the board.\(This connector is present on the bottom face of the board\)
+    -   Reset the board by pressing the Push Button RESET.
+-   Press the "START" button to activate board start-up.
+-   Connect the USB Type-C \(USB-A\) Connector \(J1\) on the board to the computer using a USB Type-C cable.
+-   RGB LED \(D5\) turning to Green indicates USB Device Configuration Set Complete event \(The USB device functionality has been activated by the USB Host\).
+
+![](GUID-345F639A-F2A9-4837-AEEE-B39FEC261EE4-low.png)
+
+**SAM9X75-Curiosity Development Board**
+
+-   Setup the SD card \(Note: exFAT formatted SD Cards are not supported\)
+    -   Download harmony MPU bootstrap loader from this [location](https://github.com/Microchip-MPLAB-Harmony/usb_apps_device/tree/master/deps/at91bootstrap_sam_9x75_curiosity_binaries/boot.bin).
+    -   Copy the downloaded boot loader binary \(boot.bin\) and generated application binary \(harmony.bin\) into the SD card.
+    -   Insert the SD card into the μSD-CARD connector \(J14\) on the board.
+    -   Reset the board by pressing the Push Button RESET.
+-   Press the "START" button to activate board start-up.
+-   Connect the USB Micro-B \(USB\_A\) Connector \(J2\) on the board to the computer using a USB cable.
+-   RGB LED \(LD1\) turning to Green indicates USB Device Configuration Set Complete event \(The USB device functionality has been activated by the USB Host\).
+
+![](GUID-C71AB60D-8800-4B73-8AFA-E74521ED5D7C-low.png)
 
 ## **Running the Application**
 
