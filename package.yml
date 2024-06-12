@@ -4,7 +4,7 @@ package:
   version: "v3.7.0"
   type: "application"
   status: "production"
-  required: true
+  required: false
 
   dependencies:
     - name: "usb"

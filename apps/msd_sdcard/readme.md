@@ -1,9 +1,3 @@
----
-parent: Harmony 3 USB Device application examples
-title: MSD SD Card Example 
-has_children: false
-has_toc: false
----
 
 [![MCHP](https://www.microchip.com/ResourcePackages/Microchip/assets/dist/images/logo.png)](https://www.microchip.com)
 

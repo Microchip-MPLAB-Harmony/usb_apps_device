@@ -1,8 +1,4 @@
-﻿---
-title: Harmony 3 USB Device application examples
-nav_order: 1
-has_toc: false
----
+﻿
 [![MCHP](https://www.microchip.com/ResourcePackages/Microchip/assets/dist/images/logo.png)](https://www.microchip.com)
 
 # Harmony 3 USB Device application examples
