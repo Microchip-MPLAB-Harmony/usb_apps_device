@@ -2,7 +2,7 @@
 
 manifest_file_version: 1.0.0
 project: vendor_sam_a7d65_curiosity
-creation_date: 2024-06-14T14:00:20.689+05:30[Asia/Calcutta]
+creation_date: 2024-06-28T16:33:00.217+05:30[Asia/Calcutta]
 operating_system: Windows 10
 mcc_mode: IDE
 mcc_mode_version: v6.20
@@ -11,15 +11,15 @@ compiler: XC32 4.40
 mcc_version: 5.5.1
 mcc_core_version: 5.7.1
 content_manager_version: 5.0.0
-is_mcc_offline: true
+is_mcc_offline: false
 is_using_prerelease_versions: false
 mcc_content_registries: https://registry.npmjs.org/
 device_library: {library_class: com.microchip.mcc.harmony.Harmony3Library, name: Harmony
     V3, version: 1.5.2}
 packs: {name: SAMA7D65_DFP, version: 1.0.30}
 modules:
-- {name: csp, type: HARMONY, version: v3.19.0}
-- {name: core, type: HARMONY, version: v3.13.4}
-- {name: CMSIS_5, type: HARMONY, version: develop}
-- {name: usb, type: HARMONY, version: usb_sama7d65_curiosity}
-- {name: bsp, type: HARMONY, version: v3.20.0}
+- {name: csp, type: HARMONY, version: v3.19.1}
+- {name: core, type: HARMONY, version: v3.13.5}
+- {name: CMSIS_5, type: HARMONY, version: 5.8.0}
+- {name: usb, type: HARMONY, version: v3.14.0}
+- {name: bsp, type: HARMONY, version: v3.20.1}
