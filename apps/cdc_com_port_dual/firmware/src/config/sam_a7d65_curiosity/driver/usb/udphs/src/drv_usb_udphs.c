@@ -155,12 +155,7 @@ SYS_MODULE_OBJ DRV_USB_UDPHS_Initialize
   Remarks:
     See drv_usbfsv1.h for usage information.
 */
-#if defined( _SAMA7G54_H_) || defined( _SAMA7D65_H_)
-
-	void DRV_USB_UDPHSA_Handler(void)
-#else 
-    void DRV_USB_UDPHS_Handler(void)
-#endif
+void DRV_USB_UDPHS_Handler(void)
 {
     DRV_USB_UDPHS_Tasks_ISR(sysObj.drvUSBUDPHSObject);
 }

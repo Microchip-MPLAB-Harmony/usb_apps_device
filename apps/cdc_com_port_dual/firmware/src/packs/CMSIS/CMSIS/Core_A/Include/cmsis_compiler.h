@@ -1,8 +1,8 @@
 /**************************************************************************//**
  * @file     cmsis_compiler.h
  * @brief    CMSIS compiler specific macros, functions, instructions
- * @version  V1.0.3
- * @date     13. November 2022
+ * @version  V1.0.2
+ * @date     10. January 2018
  ******************************************************************************/
 /*
  * Copyright (c) 2009-2018 Arm Limited. All rights reserved.
@@ -35,15 +35,9 @@
 
 
 /*
- * Arm Compiler 6.6 LTM (armclang)
+ * Arm Compiler 6 (armclang)
  */
-#elif defined (__ARMCC_VERSION) && (__ARMCC_VERSION >= 6010050) && (__ARMCC_VERSION < 6100100)
-  #include "cmsis_armclang_ltm.h"
-
-  /*
- * Arm Compiler above 6.10.1 (armclang)
- */
-#elif defined (__ARMCC_VERSION) && (__ARMCC_VERSION >= 6100100)
+#elif defined (__ARMCC_VERSION) && (__ARMCC_VERSION >= 6010050)
   #include "cmsis_armclang.h"
 
 
@@ -58,7 +52,7 @@
  * IAR Compiler
  */
 #elif defined ( __ICCARM__ )
-  #include <cmsis_iccarm.h>
+  #include "cmsis_iccarm.h"
 
 
 /*
@@ -72,6 +66,9 @@
   #endif
   #ifndef   __INLINE
     #define __INLINE                  inline
+  #endif
+  #ifndef   __STATIC_INLINE
+    #define __STATIC_INLINE           static inline
   #endif
   #ifndef   __STATIC_INLINE
     #define __STATIC_INLINE           static inline
@@ -91,24 +88,15 @@
   #ifndef   __WEAK
     #define __WEAK                    __attribute__((weak))
   #endif
-  #ifndef   __PACKED
-    #define __PACKED                               __attribute__((packed))
-  #endif
-  #ifndef   __PACKED_STRUCT
-    #define __PACKED_STRUCT                        struct __attribute__((packed))
-  #endif
-  #ifndef   __PACKED_UNION
-    #define __PACKED_UNION                         union __attribute__((packed))
-  #endif
-  #ifndef   __UNALIGNED_UINT32        /* deprecated */
+  #ifndef   __UNALIGNED_UINT32
     struct __attribute__((packed)) T_UINT32 { uint32_t v; };
     #define __UNALIGNED_UINT32(x)     (((struct T_UINT32 *)(x))->v)
   #endif
   #ifndef   __ALIGNED
     #define __ALIGNED(x)              __attribute__((aligned(x)))
   #endif
-  #ifndef   __RESTRICT
-    #define __RESTRICT                             __restrict
+  #ifndef   __PACKED
+    #define __PACKED                  __attribute__((packed))
   #endif
   #ifndef   __COMPILER_BARRIER
     #warning No compiler specific solution for __COMPILER_BARRIER. __COMPILER_BARRIER is ignored.
@@ -150,25 +138,15 @@
   #ifndef   __WEAK
     #define __WEAK                    __attribute__((weak))
   #endif
-  #ifndef   __PACKED
-    #define __PACKED                               __packed__
-  #endif
-  #ifndef   __PACKED_STRUCT
-    #define __PACKED_STRUCT                        struct __packed__
-  #endif
-  #ifndef   __PACKED_UNION
-    #define __PACKED_UNION                         union __packed__
-  #endif
-  #ifndef   __UNALIGNED_UINT32        /* deprecated */
+  #ifndef   __UNALIGNED_UINT32
     struct __packed__ T_UINT32 { uint32_t v; };
     #define __UNALIGNED_UINT32(x)     (((struct T_UINT32 *)(x))->v)
   #endif
   #ifndef   __ALIGNED
     #define __ALIGNED(x)              __align(x)
   #endif
-  #ifndef   __RESTRICT
-    #warning No compiler specific solution for __RESTRICT. __RESTRICT is ignored.
-    #define __RESTRICT
+  #ifndef   __PACKED
+    #define __PACKED                  __packed__
   #endif
   #ifndef   __COMPILER_BARRIER
     #warning No compiler specific solution for __COMPILER_BARRIER. __COMPILER_BARRIER is ignored.
@@ -209,16 +187,7 @@
   #ifndef   __WEAK
     #define __WEAK                    __weak
   #endif
-  #ifndef   __PACKED
-    #define __PACKED                               @packed
-  #endif
-  #ifndef   __PACKED_STRUCT
-    #define __PACKED_STRUCT                        @packed struct
-  #endif
-  #ifndef   __PACKED_UNION
-    #define __PACKED_UNION                         @packed union
-  #endif
-  #ifndef   __UNALIGNED_UINT32        /* deprecated */
+  #ifndef   __UNALIGNED_UINT32
     @packed struct T_UINT32 { uint32_t v; };
     #define __UNALIGNED_UINT32(x)     (((struct T_UINT32 *)(x))->v)
   #endif
@@ -226,9 +195,8 @@
     #warning No compiler specific solution for __ALIGNED. __ALIGNED is ignored.
     #define __ALIGNED(x)
   #endif
-  #ifndef   __RESTRICT
-    #warning No compiler specific solution for __RESTRICT. __RESTRICT is ignored.
-    #define __RESTRICT
+  #ifndef   __PACKED
+    #define __PACKED                  @packed
   #endif
   #ifndef   __COMPILER_BARRIER
     #warning No compiler specific solution for __COMPILER_BARRIER. __COMPILER_BARRIER is ignored.
