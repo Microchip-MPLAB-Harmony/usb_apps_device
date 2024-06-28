@@ -99,6 +99,7 @@ static DRV_USB_VBUS_LEVEL DRV_USB_UDPHS_VBUS_Comparator(void)
 static const DRV_USB_UDPHS_INIT drvUSBInit =
 {
 
+
     /* Interrupt Source for USB module */
     .interruptSource = (INT_SOURCE)UDPHSA_IRQn,
 

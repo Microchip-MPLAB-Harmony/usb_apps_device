@@ -68,15 +68,19 @@
 #define DRV_USB_UDPHS_NUMBER_OF_BANKS                         (DRV_USB_UDPHS_ENDPOINT_BANKS_ONE)
 
 /* Max size of the DMA FIFO */
-#define DMA_MAX_FIFO_SIZE                                   (65536)
+#define DMA_MAX_FIFO_SIZE                                   (65536U)
 
 /* FIFO space size in bytes */
 #define EPT_VIRTUAL_SIZE                                    (65536U)
-#if defined( _SAMA7G54_H_) || defined( _SAMA7D65_H_)
+#if defined(__CORTEX_A) && (__CORTEX_A == 7)                           
+    /* This device is Cortex A7 core */
     #define ENDPOINT_FIFO_ADDRESS(endpoint)                     (((uint8_t*) UDPHS_RAMA_ADDR) + EPT_VIRTUAL_SIZE * (endpoint))
+    #define DRV_USB_UDPHS_Handler                               DRV_USB_UDPHSA_Handler
+
 #else
-    #define ENDPOINT_FIFO_ADDRESS(endpoint)                     (((uint8_t*) UDPHS_RAM_ADDR) + EPT_VIRTUAL_SIZE * (endpoint))	
-#endif
+    #define ENDPOINT_FIFO_ADDRESS(endpoint)                     (((uint8_t*) UDPHS_RAM_ADDR) + EPT_VIRTUAL_SIZE * (endpoint))
+#endif	
+
 
 #define DRV_USB_UDPHS_AUTO_ZLP_ENABLE                         false
 
@@ -155,25 +159,15 @@
 #endif /* __CORTEX_A */
 
 #if defined (__CORTEX_A)
-    #ifdef _SAMA7D65_H_
-        /* The following bit field macro indicates DMA availability for each hardware
-        endpoint. For Cortex A devices, DMA is available for endpoints 1 to 7.*/  
-        #define DRV_USB_UDPHS_EPT_DMA              0x00000000U
+   
+    /* The following bit field macro indicates DMA availability for each hardware
+       endpoint. For Cortex A devices, DMA is available for endpoints 1 to 7.*/  
+    #define DRV_USB_UDPHS_EPT_DMA              0x000000FEU
 
-        /* The following bit field macro indicates 3-bank support for each hardware 
-        endpoint. For Cortex A devices, 3-bank support is available for 
-        endpoints 1 and 2.*/  
-        #define DRV_USB_UDPHS_EPT_BK               0x00060000U
-    #else
-        /* The following bit field macro indicates DMA availability for each hardware
-        endpoint. For Cortex A devices, DMA is available for endpoints 1 to 7.*/  
-        #define DRV_USB_UDPHS_EPT_DMA              0x000000FEU
-
-        /* The following bit field macro indicates 3-bank support for each hardware 
-        endpoint. For Cortex A devices, 3-bank support is available for 
-        endpoints 1 and 2.*/  
-        #define DRV_USB_UDPHS_EPT_BK               0x00060000U
-    #endif
+    /* The following bit field macro indicates 3-bank support for each hardware 
+       endpoint. For Cortex A devices, 3-bank support is available for 
+       endpoints 1 and 2.*/  
+    #define DRV_USB_UDPHS_EPT_BK               0x00060000U
 
 #else
     /* The following bit field macro indicates DMA availability for each hardware
@@ -186,6 +180,16 @@
     #define DRV_USB_UDPHS_EPT_BK               0x00780000U
 
 #endif
+
+#define M_DRV_UDPHS_DMA_OFFSET 0U
+
+#if DRV_USB_UDPHS_ENDPOINTS_NUMBER < UDPHS_DMA_NUMBER
+    #define DRV_USB_UDPHS_LOOP_COUNT_DMA DRV_USB_UDPHS_ENDPOINTS_NUMBER
+#else
+    #define DRV_USB_UDPHS_LOOP_COUNT_DMA UDPHS_DMA_NUMBER
+#endif	
+
+
 
 
 // *****************************************************************************
