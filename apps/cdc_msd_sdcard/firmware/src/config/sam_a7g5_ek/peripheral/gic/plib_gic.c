@@ -74,7 +74,7 @@ static const struct {
 {
     {SDMMC1_IRQn, SDMMC1_InterruptHandler, GIC_IRQ_CONFIG_LEVEL, 0, GIC_IRQ_GROUP_SECURE},
     {TC0_CH0_IRQn, TC0_CH0_InterruptHandler, GIC_IRQ_CONFIG_LEVEL, 0, GIC_IRQ_GROUP_SECURE},
-    {UDPHSA_IRQn, UDPHSA_Handler, GIC_IRQ_CONFIG_LEVEL, 0, GIC_IRQ_GROUP_SECURE},
+    {UDPHSA_IRQn, DRV_USB_UDPHSA_Handler, GIC_IRQ_CONFIG_LEVEL, 0, GIC_IRQ_GROUP_SECURE},
 };
 
 // *****************************************************************************
@@ -197,4 +197,29 @@ void GIC_INT_IrqRestore(bool state)
         __disable_irq();
         __DMB();
     }
+}
+
+bool GIC_INT_SourceDisable( IRQn_Type source )
+{
+    bool processorStatus;
+    bool intSrcStatus;
+
+    processorStatus = GIC_INT_IrqDisable();
+
+    intSrcStatus = (GIC_GetEnableIRQ(source) != 0U);
+
+    GIC_DisableIRQ( source );
+
+    GIC_INT_IrqRestore( processorStatus );
+
+    /* return the source status */
+    return intSrcStatus;
+}
+
+void GIC_INT_SourceRestore( IRQn_Type source, bool status )
+{
+    if( status ) {
+        GIC_EnableIRQ( source );
+    }
+    return;
 }
