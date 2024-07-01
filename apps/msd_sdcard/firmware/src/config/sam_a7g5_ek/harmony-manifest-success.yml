@@ -4,7 +4,7 @@
 
 
 project: msd_sdcard
-creation_date: 2024-05-29T18:47:35.764+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+creation_date: 2024-07-01T13:46:58.733+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
 operating_system: Windows 10
 mcc_mode: IDE            # [IDE|Standalone|Headless]
 mcc_version: v5.5.1
@@ -14,8 +14,12 @@ harmony_version: v1.5.2
 compiler: XC32 4.40
 
 modules:
-    - {name: "core", version: "v3.13.4"}
-    - {name: "csp", version: "v3.18.5"}
+    - {name: "core", version: "v3.13.5"}
+    - {name: "csp", version: "v3.19.1"}
     - {name: "CMSIS_5", version: "5.8.0"}
-    - {name: "usb", version: "v3.13.0"}
-    - {name: "bsp", version: "v3.19.0"}
+    - {name: "usb", version: "v3.14.0"}
+    - {name: "bsp", version: "v3.20.1"}
+
+packs:
+    - {name: "SAMA7G5_DFP", version: "1.2.178"}
+

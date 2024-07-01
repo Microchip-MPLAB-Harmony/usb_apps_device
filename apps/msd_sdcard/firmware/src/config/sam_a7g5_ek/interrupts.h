@@ -59,7 +59,7 @@
 
 void SDMMC1_InterruptHandler (void);
 void TC0_CH0_InterruptHandler (void);
-void UDPHSA_Handler (void);
+void DRV_USB_UDPHSA_Handler (void);
 
 
 
