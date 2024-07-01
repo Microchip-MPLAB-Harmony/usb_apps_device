@@ -1,26 +1,23 @@
 /*
  * Component description for CSI2DC
  *
- * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
  *
- * Subject to your compliance with these terms, you may use Microchip software and any derivatives
- * exclusively with Microchip products. It is your responsibility to comply with third party license
- * terms applicable to your use of third party software (including open source software) that may
- * accompany Microchip software.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY,
- * APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND
- * FITNESS FOR A PARTICULAR PURPOSE.
+ *   http://www.apache.org/licenses/LICENSE-2.0
  *
- * IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, INCIDENTAL OR CONSEQUENTIAL
- * LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF
- * MICROCHIP HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO THE FULLEST EXTENT
- * ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT
- * EXCEED THE AMOUNT OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  *
  */
 
-/* file generated from device description version 2023-01-20T08:33:42Z */
+/* file generated from device description file (ATDF) version 2024-04-05T08:36:56Z */
 #ifndef _SAM9X7_CSI2DC_COMPONENT_H_
 #define _SAM9X7_CSI2DC_COMPONENT_H_
 
@@ -153,7 +150,10 @@
 #define CSI2DC_GIER_DED_Pos                   _UINT32_(7)                                          /* (CSI2DC_GIER) Packet Header Double Bit Error Detected Enable Position */
 #define CSI2DC_GIER_DED_Msk                   (_UINT32_(0x1) << CSI2DC_GIER_DED_Pos)               /* (CSI2DC_GIER) Packet Header Double Bit Error Detected Enable Mask */
 #define CSI2DC_GIER_DED(value)                (CSI2DC_GIER_DED_Msk & (_UINT32_(value) << CSI2DC_GIER_DED_Pos)) /* Assigment of value for DED in the CSI2DC_GIER register */
-#define CSI2DC_GIER_Msk                       _UINT32_(0x000000FF)                                 /* (CSI2DC_GIER) Register Mask  */
+#define CSI2DC_GIER_FD_Pos                    _UINT32_(9)                                          /* (CSI2DC_GIER)  Position */
+#define CSI2DC_GIER_FD_Msk                    (_UINT32_(0x1) << CSI2DC_GIER_FD_Pos)                /* (CSI2DC_GIER)  Mask */
+#define CSI2DC_GIER_FD(value)                 (CSI2DC_GIER_FD_Msk & (_UINT32_(value) << CSI2DC_GIER_FD_Pos)) /* Assigment of value for FD in the CSI2DC_GIER register */
+#define CSI2DC_GIER_Msk                       _UINT32_(0x000002FF)                                 /* (CSI2DC_GIER) Register Mask  */
 
 
 /* -------- CSI2DC_GIDR : (CSI2DC Offset: 0x10) ( /W 32) Global Interrupt Disable Register -------- */
@@ -181,7 +181,10 @@
 #define CSI2DC_GIDR_DED_Pos                   _UINT32_(7)                                          /* (CSI2DC_GIDR) Double Bit Error Detected Interrupt Disable Position */
 #define CSI2DC_GIDR_DED_Msk                   (_UINT32_(0x1) << CSI2DC_GIDR_DED_Pos)               /* (CSI2DC_GIDR) Double Bit Error Detected Interrupt Disable Mask */
 #define CSI2DC_GIDR_DED(value)                (CSI2DC_GIDR_DED_Msk & (_UINT32_(value) << CSI2DC_GIDR_DED_Pos)) /* Assigment of value for DED in the CSI2DC_GIDR register */
-#define CSI2DC_GIDR_Msk                       _UINT32_(0x000000FF)                                 /* (CSI2DC_GIDR) Register Mask  */
+#define CSI2DC_GIDR_FD_Pos                    _UINT32_(9)                                          /* (CSI2DC_GIDR)  Position */
+#define CSI2DC_GIDR_FD_Msk                    (_UINT32_(0x1) << CSI2DC_GIDR_FD_Pos)                /* (CSI2DC_GIDR)  Mask */
+#define CSI2DC_GIDR_FD(value)                 (CSI2DC_GIDR_FD_Msk & (_UINT32_(value) << CSI2DC_GIDR_FD_Pos)) /* Assigment of value for FD in the CSI2DC_GIDR register */
+#define CSI2DC_GIDR_Msk                       _UINT32_(0x000002FF)                                 /* (CSI2DC_GIDR) Register Mask  */
 
 
 /* -------- CSI2DC_GIMR : (CSI2DC Offset: 0x14) ( R/ 32) Global Interrupt Mask Register -------- */
@@ -211,7 +214,10 @@
 #define CSI2DC_GIMR_DED_Pos                   _UINT32_(7)                                          /* (CSI2DC_GIMR) Double Error Detected Interrupt Disable Interrupt Mask Position */
 #define CSI2DC_GIMR_DED_Msk                   (_UINT32_(0x1) << CSI2DC_GIMR_DED_Pos)               /* (CSI2DC_GIMR) Double Error Detected Interrupt Disable Interrupt Mask Mask */
 #define CSI2DC_GIMR_DED(value)                (CSI2DC_GIMR_DED_Msk & (_UINT32_(value) << CSI2DC_GIMR_DED_Pos)) /* Assigment of value for DED in the CSI2DC_GIMR register */
-#define CSI2DC_GIMR_Msk                       _UINT32_(0x000000FF)                                 /* (CSI2DC_GIMR) Register Mask  */
+#define CSI2DC_GIMR_FD_Pos                    _UINT32_(9)                                          /* (CSI2DC_GIMR)  Position */
+#define CSI2DC_GIMR_FD_Msk                    (_UINT32_(0x1) << CSI2DC_GIMR_FD_Pos)                /* (CSI2DC_GIMR)  Mask */
+#define CSI2DC_GIMR_FD(value)                 (CSI2DC_GIMR_FD_Msk & (_UINT32_(value) << CSI2DC_GIMR_FD_Pos)) /* Assigment of value for FD in the CSI2DC_GIMR register */
+#define CSI2DC_GIMR_Msk                       _UINT32_(0x000002FF)                                 /* (CSI2DC_GIMR) Register Mask  */
 
 
 /* -------- CSI2DC_GISR : (CSI2DC Offset: 0x18) ( R/ 32) Global Interrupt Status Register -------- */
@@ -221,30 +227,30 @@
 #define CSI2DC_GISR_SSP_Msk                   (_UINT32_(0x1) << CSI2DC_GISR_SSP_Pos)               /* (CSI2DC_GISR) Synchronization Short Packet Interrupt Status Mask */
 #define CSI2DC_GISR_SSP(value)                (CSI2DC_GISR_SSP_Msk & (_UINT32_(value) << CSI2DC_GISR_SSP_Pos)) /* Assigment of value for SSP in the CSI2DC_GISR register */
 #define   CSI2DC_GISR_SSP_0_Val               _UINT32_(0x0)                                        /* (CSI2DC_GISR) Either the interrupt source is masked at the SSP level or no interrupt is pending for SSP.  */
-#define   CSI2DC_GISR_SSP_1_Val               _UINT32_(0x1)                                        /* (CSI2DC_GISR) A Synchronization Short Packet interrupt is pending.  */
+#define   CSI2DC_GISR_SSP_1_Val               _UINT32_(0x1)                                        /* (CSI2DC_GISR) A Synchronization Short packet interrupt is pending.  */
 #define CSI2DC_GISR_SSP_0                     (CSI2DC_GISR_SSP_0_Val << CSI2DC_GISR_SSP_Pos)       /* (CSI2DC_GISR) Either the interrupt source is masked at the SSP level or no interrupt is pending for SSP. Position  */
-#define CSI2DC_GISR_SSP_1                     (CSI2DC_GISR_SSP_1_Val << CSI2DC_GISR_SSP_Pos)       /* (CSI2DC_GISR) A Synchronization Short Packet interrupt is pending. Position  */
+#define CSI2DC_GISR_SSP_1                     (CSI2DC_GISR_SSP_1_Val << CSI2DC_GISR_SSP_Pos)       /* (CSI2DC_GISR) A Synchronization Short packet interrupt is pending. Position  */
 #define CSI2DC_GISR_GSP_Pos                   _UINT32_(1)                                          /* (CSI2DC_GISR) Generic Short Packet Interrupt Status Position */
 #define CSI2DC_GISR_GSP_Msk                   (_UINT32_(0x1) << CSI2DC_GISR_GSP_Pos)               /* (CSI2DC_GISR) Generic Short Packet Interrupt Status Mask */
 #define CSI2DC_GISR_GSP(value)                (CSI2DC_GISR_GSP_Msk & (_UINT32_(value) << CSI2DC_GISR_GSP_Pos)) /* Assigment of value for GSP in the CSI2DC_GISR register */
 #define   CSI2DC_GISR_GSP_0_Val               _UINT32_(0x0)                                        /* (CSI2DC_GISR) Either the interrupt source is masked at the GSP level or no interrupt is pending for GSP.  */
-#define   CSI2DC_GISR_GSP_1_Val               _UINT32_(0x1)                                        /* (CSI2DC_GISR) A Generic Short Packet interrupt is pending.  */
+#define   CSI2DC_GISR_GSP_1_Val               _UINT32_(0x1)                                        /* (CSI2DC_GISR) A Generic Short packet interrupt is pending.  */
 #define CSI2DC_GISR_GSP_0                     (CSI2DC_GISR_GSP_0_Val << CSI2DC_GISR_GSP_Pos)       /* (CSI2DC_GISR) Either the interrupt source is masked at the GSP level or no interrupt is pending for GSP. Position  */
-#define CSI2DC_GISR_GSP_1                     (CSI2DC_GISR_GSP_1_Val << CSI2DC_GISR_GSP_Pos)       /* (CSI2DC_GISR) A Generic Short Packet interrupt is pending. Position  */
+#define CSI2DC_GISR_GSP_1                     (CSI2DC_GISR_GSP_1_Val << CSI2DC_GISR_GSP_Pos)       /* (CSI2DC_GISR) A Generic Short packet interrupt is pending. Position  */
 #define CSI2DC_GISR_GLP_Pos                   _UINT32_(2)                                          /* (CSI2DC_GISR) Generic Long Packet Interrupt Status Position */
 #define CSI2DC_GISR_GLP_Msk                   (_UINT32_(0x1) << CSI2DC_GISR_GLP_Pos)               /* (CSI2DC_GISR) Generic Long Packet Interrupt Status Mask */
 #define CSI2DC_GISR_GLP(value)                (CSI2DC_GISR_GLP_Msk & (_UINT32_(value) << CSI2DC_GISR_GLP_Pos)) /* Assigment of value for GLP in the CSI2DC_GISR register */
 #define   CSI2DC_GISR_GLP_0_Val               _UINT32_(0x0)                                        /* (CSI2DC_GISR) Either the interrupt source is masked at the GLP level or no interrupt is pending for GLP.  */
-#define   CSI2DC_GISR_GLP_1_Val               _UINT32_(0x1)                                        /* (CSI2DC_GISR) A Generic Long Packet interrupt is pending.  */
+#define   CSI2DC_GISR_GLP_1_Val               _UINT32_(0x1)                                        /* (CSI2DC_GISR) A Generic Long packet interrupt is pending.  */
 #define CSI2DC_GISR_GLP_0                     (CSI2DC_GISR_GLP_0_Val << CSI2DC_GISR_GLP_Pos)       /* (CSI2DC_GISR) Either the interrupt source is masked at the GLP level or no interrupt is pending for GLP. Position  */
-#define CSI2DC_GISR_GLP_1                     (CSI2DC_GISR_GLP_1_Val << CSI2DC_GISR_GLP_Pos)       /* (CSI2DC_GISR) A Generic Long Packet interrupt is pending. Position  */
+#define CSI2DC_GISR_GLP_1                     (CSI2DC_GISR_GLP_1_Val << CSI2DC_GISR_GLP_Pos)       /* (CSI2DC_GISR) A Generic Long packet interrupt is pending. Position  */
 #define CSI2DC_GISR_IDS_Pos                   _UINT32_(3)                                          /* (CSI2DC_GISR) Image Data Packet Snoop Controller Interrupt Status Position */
 #define CSI2DC_GISR_IDS_Msk                   (_UINT32_(0x1) << CSI2DC_GISR_IDS_Pos)               /* (CSI2DC_GISR) Image Data Packet Snoop Controller Interrupt Status Mask */
 #define CSI2DC_GISR_IDS(value)                (CSI2DC_GISR_IDS_Msk & (_UINT32_(value) << CSI2DC_GISR_IDS_Pos)) /* Assigment of value for IDS in the CSI2DC_GISR register */
 #define   CSI2DC_GISR_IDS_0_Val               _UINT32_(0x0)                                        /* (CSI2DC_GISR) Either the interrupt source is masked at the IDS level or no interrupt is pending for IDS.  */
-#define   CSI2DC_GISR_IDS_1_Val               _UINT32_(0x1)                                        /* (CSI2DC_GISR) A new Image Data Packet interrupt is pending.  */
+#define   CSI2DC_GISR_IDS_1_Val               _UINT32_(0x1)                                        /* (CSI2DC_GISR) A new Image Data packet interrupt is pending.  */
 #define CSI2DC_GISR_IDS_0                     (CSI2DC_GISR_IDS_0_Val << CSI2DC_GISR_IDS_Pos)       /* (CSI2DC_GISR) Either the interrupt source is masked at the IDS level or no interrupt is pending for IDS. Position  */
-#define CSI2DC_GISR_IDS_1                     (CSI2DC_GISR_IDS_1_Val << CSI2DC_GISR_IDS_Pos)       /* (CSI2DC_GISR) A new Image Data Packet interrupt is pending. Position  */
+#define CSI2DC_GISR_IDS_1                     (CSI2DC_GISR_IDS_1_Val << CSI2DC_GISR_IDS_Pos)       /* (CSI2DC_GISR) A new Image Data packet interrupt is pending. Position  */
 #define CSI2DC_GISR_VP_Pos                    _UINT32_(4)                                          /* (CSI2DC_GISR) Video Pipe Interrupt Status Position */
 #define CSI2DC_GISR_VP_Msk                    (_UINT32_(0x1) << CSI2DC_GISR_VP_Pos)                /* (CSI2DC_GISR) Video Pipe Interrupt Status Mask */
 #define CSI2DC_GISR_VP(value)                 (CSI2DC_GISR_VP_Msk & (_UINT32_(value) << CSI2DC_GISR_VP_Pos)) /* Assigment of value for VP in the CSI2DC_GISR register */
@@ -273,7 +279,10 @@
 #define   CSI2DC_GISR_DED_1_Val               _UINT32_(0x1)                                        /* (CSI2DC_GISR) A double bit error has been detected in the packet header. This bit is reset after the register read operation.  */
 #define CSI2DC_GISR_DED_0                     (CSI2DC_GISR_DED_0_Val << CSI2DC_GISR_DED_Pos)       /* (CSI2DC_GISR) No double bit error detected is pending. Position  */
 #define CSI2DC_GISR_DED_1                     (CSI2DC_GISR_DED_1_Val << CSI2DC_GISR_DED_Pos)       /* (CSI2DC_GISR) A double bit error has been detected in the packet header. This bit is reset after the register read operation. Position  */
-#define CSI2DC_GISR_Msk                       _UINT32_(0x000000FF)                                 /* (CSI2DC_GISR) Register Mask  */
+#define CSI2DC_GISR_FD_Pos                    _UINT32_(9)                                          /* (CSI2DC_GISR)  Position */
+#define CSI2DC_GISR_FD_Msk                    (_UINT32_(0x1) << CSI2DC_GISR_FD_Pos)                /* (CSI2DC_GISR)  Mask */
+#define CSI2DC_GISR_FD(value)                 (CSI2DC_GISR_FD_Msk & (_UINT32_(value) << CSI2DC_GISR_FD_Pos)) /* Assigment of value for FD in the CSI2DC_GISR register */
+#define CSI2DC_GISR_Msk                       _UINT32_(0x000002FF)                                 /* (CSI2DC_GISR) Register Mask  */
 
 
 /* -------- CSI2DC_SSPIER : (CSI2DC Offset: 0x1C) ( /W 32) SSP Interrupt Enable Register -------- */
@@ -309,9 +318,9 @@
 #define CSI2DC_SSPIER_RE_Msk                  (_UINT32_(0xF) << CSI2DC_SSPIER_RE_Pos)              /* (CSI2DC_SSPIER) Reserved Short Packet Interrupt Enable Mask */
 #define CSI2DC_SSPIER_RE(value)               (CSI2DC_SSPIER_RE_Msk & (_UINT32_(value) << CSI2DC_SSPIER_RE_Pos)) /* Assigment of value for RE in the CSI2DC_SSPIER register */
 #define   CSI2DC_SSPIER_RE_0_Val              _UINT32_(0x0)                                        /* (CSI2DC_SSPIER) No effect.  */
-#define   CSI2DC_SSPIER_RE_1_Val              _UINT32_(0x1)                                        /* (CSI2DC_SSPIER) Setting a bit at position i in the RE field will set the interrupt mask bit for virtual channel i, and this virtual channel can generate an interrupt when a Reserved Short Packet is detected.  */
+#define   CSI2DC_SSPIER_RE_1_Val              _UINT32_(0x1)                                        /* (CSI2DC_SSPIER) Setting a bit at position i in the RE field will set the interrupt mask bit for virtual channel i, and this virtual channel can generate an interrupt when a Reserved Short packet is detected.  */
 #define CSI2DC_SSPIER_RE_0                    (CSI2DC_SSPIER_RE_0_Val << CSI2DC_SSPIER_RE_Pos)     /* (CSI2DC_SSPIER) No effect. Position  */
-#define CSI2DC_SSPIER_RE_1                    (CSI2DC_SSPIER_RE_1_Val << CSI2DC_SSPIER_RE_Pos)     /* (CSI2DC_SSPIER) Setting a bit at position i in the RE field will set the interrupt mask bit for virtual channel i, and this virtual channel can generate an interrupt when a Reserved Short Packet is detected. Position  */
+#define CSI2DC_SSPIER_RE_1                    (CSI2DC_SSPIER_RE_1_Val << CSI2DC_SSPIER_RE_Pos)     /* (CSI2DC_SSPIER) Setting a bit at position i in the RE field will set the interrupt mask bit for virtual channel i, and this virtual channel can generate an interrupt when a Reserved Short packet is detected. Position  */
 #define CSI2DC_SSPIER_Msk                     _UINT32_(0x000FFFFF)                                 /* (CSI2DC_SSPIER) Register Mask  */
 
 
@@ -368,51 +377,51 @@
 #define CSI2DC_SSPIMR_RE_Pos                  _UINT32_(16)                                         /* (CSI2DC_SSPIMR) Reserved Short Packet Interrupt Mask Position */
 #define CSI2DC_SSPIMR_RE_Msk                  (_UINT32_(0xF) << CSI2DC_SSPIMR_RE_Pos)              /* (CSI2DC_SSPIMR) Reserved Short Packet Interrupt Mask Mask */
 #define CSI2DC_SSPIMR_RE(value)               (CSI2DC_SSPIMR_RE_Msk & (_UINT32_(value) << CSI2DC_SSPIMR_RE_Pos)) /* Assigment of value for RE in the CSI2DC_SSPIMR register */
-#define   CSI2DC_SSPIMR_RE_0_Val              _UINT32_(0x0)                                        /* (CSI2DC_SSPIMR) A bit cleared at position i in the field RE indicates that the Reserved Packet interrupt is masked for virtual channel i.  */
-#define   CSI2DC_SSPIMR_RE_1_Val              _UINT32_(0x1)                                        /* (CSI2DC_SSPIMR) A bit set at position i in field RE indicates that Reserved Packet interrupt is activated for virtual channel i.  */
-#define CSI2DC_SSPIMR_RE_0                    (CSI2DC_SSPIMR_RE_0_Val << CSI2DC_SSPIMR_RE_Pos)     /* (CSI2DC_SSPIMR) A bit cleared at position i in the field RE indicates that the Reserved Packet interrupt is masked for virtual channel i. Position  */
-#define CSI2DC_SSPIMR_RE_1                    (CSI2DC_SSPIMR_RE_1_Val << CSI2DC_SSPIMR_RE_Pos)     /* (CSI2DC_SSPIMR) A bit set at position i in field RE indicates that Reserved Packet interrupt is activated for virtual channel i. Position  */
+#define   CSI2DC_SSPIMR_RE_0_Val              _UINT32_(0x0)                                        /* (CSI2DC_SSPIMR) A bit cleared at position i in the field RE indicates that the Reserved packet interrupt is masked for virtual channel i.  */
+#define   CSI2DC_SSPIMR_RE_1_Val              _UINT32_(0x1)                                        /* (CSI2DC_SSPIMR) A bit set at position i in field RE indicates that Reserved packet interrupt is activated for virtual channel i.  */
+#define CSI2DC_SSPIMR_RE_0                    (CSI2DC_SSPIMR_RE_0_Val << CSI2DC_SSPIMR_RE_Pos)     /* (CSI2DC_SSPIMR) A bit cleared at position i in the field RE indicates that the Reserved packet interrupt is masked for virtual channel i. Position  */
+#define CSI2DC_SSPIMR_RE_1                    (CSI2DC_SSPIMR_RE_1_Val << CSI2DC_SSPIMR_RE_Pos)     /* (CSI2DC_SSPIMR) A bit set at position i in field RE indicates that Reserved packet interrupt is activated for virtual channel i. Position  */
 #define CSI2DC_SSPIMR_Msk                     _UINT32_(0x000FFFFF)                                 /* (CSI2DC_SSPIMR) Register Mask  */
 
 
 /* -------- CSI2DC_SSPISR : (CSI2DC Offset: 0x28) ( R/ 32) SSP Interrupt Status Register -------- */
 #define CSI2DC_SSPISR_RESETVALUE              _UINT32_(0x00)                                       /*  (CSI2DC_SSPISR) SSP Interrupt Status Register  Reset Value */
 
-#define CSI2DC_SSPISR_FS_Pos                  _UINT32_(0)                                          /* (CSI2DC_SSPISR) Frame Start Interrupt Mask Position */
-#define CSI2DC_SSPISR_FS_Msk                  (_UINT32_(0xF) << CSI2DC_SSPISR_FS_Pos)              /* (CSI2DC_SSPISR) Frame Start Interrupt Mask Mask */
+#define CSI2DC_SSPISR_FS_Pos                  _UINT32_(0)                                          /* (CSI2DC_SSPISR) Frame Start Interrupt Status Position */
+#define CSI2DC_SSPISR_FS_Msk                  (_UINT32_(0xF) << CSI2DC_SSPISR_FS_Pos)              /* (CSI2DC_SSPISR) Frame Start Interrupt Status Mask */
 #define CSI2DC_SSPISR_FS(value)               (CSI2DC_SSPISR_FS_Msk & (_UINT32_(value) << CSI2DC_SSPISR_FS_Pos)) /* Assigment of value for FS in the CSI2DC_SSPISR register */
 #define   CSI2DC_SSPISR_FS_0_Val              _UINT32_(0x0)                                        /* (CSI2DC_SSPISR) A bit cleared at position i in the field FS indicates that no Frame Start interrupt is pending for virtual channel i.  */
-#define   CSI2DC_SSPISR_FS_1_Val              _UINT32_(0x1)                                        /* (CSI2DC_SSPISR) A bit set at position i in the field FS indicates that a Frame Start interrupt is pending for virtual channel i.  */
+#define   CSI2DC_SSPISR_FS_1_Val              _UINT32_(0x1)                                        /* (CSI2DC_SSPISR) A bit set at position i in the field FS indicates that a Frame Start interrupt is pending for virtual channel i. This bit is reset after the register read operation.  */
 #define CSI2DC_SSPISR_FS_0                    (CSI2DC_SSPISR_FS_0_Val << CSI2DC_SSPISR_FS_Pos)     /* (CSI2DC_SSPISR) A bit cleared at position i in the field FS indicates that no Frame Start interrupt is pending for virtual channel i. Position  */
-#define CSI2DC_SSPISR_FS_1                    (CSI2DC_SSPISR_FS_1_Val << CSI2DC_SSPISR_FS_Pos)     /* (CSI2DC_SSPISR) A bit set at position i in the field FS indicates that a Frame Start interrupt is pending for virtual channel i. Position  */
-#define CSI2DC_SSPISR_FE_Pos                  _UINT32_(4)                                          /* (CSI2DC_SSPISR) Frame End Interrupt Mask Position */
-#define CSI2DC_SSPISR_FE_Msk                  (_UINT32_(0xF) << CSI2DC_SSPISR_FE_Pos)              /* (CSI2DC_SSPISR) Frame End Interrupt Mask Mask */
+#define CSI2DC_SSPISR_FS_1                    (CSI2DC_SSPISR_FS_1_Val << CSI2DC_SSPISR_FS_Pos)     /* (CSI2DC_SSPISR) A bit set at position i in the field FS indicates that a Frame Start interrupt is pending for virtual channel i. This bit is reset after the register read operation. Position  */
+#define CSI2DC_SSPISR_FE_Pos                  _UINT32_(4)                                          /* (CSI2DC_SSPISR) Frame End Interrupt Status Position */
+#define CSI2DC_SSPISR_FE_Msk                  (_UINT32_(0xF) << CSI2DC_SSPISR_FE_Pos)              /* (CSI2DC_SSPISR) Frame End Interrupt Status Mask */
 #define CSI2DC_SSPISR_FE(value)               (CSI2DC_SSPISR_FE_Msk & (_UINT32_(value) << CSI2DC_SSPISR_FE_Pos)) /* Assigment of value for FE in the CSI2DC_SSPISR register */
 #define   CSI2DC_SSPISR_FE_0_Val              _UINT32_(0x0)                                        /* (CSI2DC_SSPISR) A bit cleared at position i in the field FE indicates that no Frame End interrupt is pending for virtual channel i.  */
-#define   CSI2DC_SSPISR_FE_1_Val              _UINT32_(0x1)                                        /* (CSI2DC_SSPISR) A bit set at position i in the field FE indicates that a Frame End interrupt is pending for virtual channel i.  */
+#define   CSI2DC_SSPISR_FE_1_Val              _UINT32_(0x1)                                        /* (CSI2DC_SSPISR) A bit set at position i in the field FE indicates that a Frame End interrupt is pending for virtual channel i. This bit is reset after the register read operation..  */
 #define CSI2DC_SSPISR_FE_0                    (CSI2DC_SSPISR_FE_0_Val << CSI2DC_SSPISR_FE_Pos)     /* (CSI2DC_SSPISR) A bit cleared at position i in the field FE indicates that no Frame End interrupt is pending for virtual channel i. Position  */
-#define CSI2DC_SSPISR_FE_1                    (CSI2DC_SSPISR_FE_1_Val << CSI2DC_SSPISR_FE_Pos)     /* (CSI2DC_SSPISR) A bit set at position i in the field FE indicates that a Frame End interrupt is pending for virtual channel i. Position  */
-#define CSI2DC_SSPISR_LS_Pos                  _UINT32_(8)                                          /* (CSI2DC_SSPISR) Line Start Interrupt Mask Position */
-#define CSI2DC_SSPISR_LS_Msk                  (_UINT32_(0xF) << CSI2DC_SSPISR_LS_Pos)              /* (CSI2DC_SSPISR) Line Start Interrupt Mask Mask */
+#define CSI2DC_SSPISR_FE_1                    (CSI2DC_SSPISR_FE_1_Val << CSI2DC_SSPISR_FE_Pos)     /* (CSI2DC_SSPISR) A bit set at position i in the field FE indicates that a Frame End interrupt is pending for virtual channel i. This bit is reset after the register read operation.. Position  */
+#define CSI2DC_SSPISR_LS_Pos                  _UINT32_(8)                                          /* (CSI2DC_SSPISR) Line Start Interrupt Status Position */
+#define CSI2DC_SSPISR_LS_Msk                  (_UINT32_(0xF) << CSI2DC_SSPISR_LS_Pos)              /* (CSI2DC_SSPISR) Line Start Interrupt Status Mask */
 #define CSI2DC_SSPISR_LS(value)               (CSI2DC_SSPISR_LS_Msk & (_UINT32_(value) << CSI2DC_SSPISR_LS_Pos)) /* Assigment of value for LS in the CSI2DC_SSPISR register */
 #define   CSI2DC_SSPISR_LS_0_Val              _UINT32_(0x0)                                        /* (CSI2DC_SSPISR) A bit cleared at position i in the field LS indicates that no Line Start interrupt is pending for virtual channel i.  */
-#define   CSI2DC_SSPISR_LS_1_Val              _UINT32_(0x1)                                        /* (CSI2DC_SSPISR) A bit set at position i in the field LS indicates that a Line Start interrupt is pending for virtual channel i.  */
+#define   CSI2DC_SSPISR_LS_1_Val              _UINT32_(0x1)                                        /* (CSI2DC_SSPISR) A bit set at position i in the field LS indicates that a Line Start interrupt is pending for virtual channel i. This bit is reset after the register read operation.  */
 #define CSI2DC_SSPISR_LS_0                    (CSI2DC_SSPISR_LS_0_Val << CSI2DC_SSPISR_LS_Pos)     /* (CSI2DC_SSPISR) A bit cleared at position i in the field LS indicates that no Line Start interrupt is pending for virtual channel i. Position  */
-#define CSI2DC_SSPISR_LS_1                    (CSI2DC_SSPISR_LS_1_Val << CSI2DC_SSPISR_LS_Pos)     /* (CSI2DC_SSPISR) A bit set at position i in the field LS indicates that a Line Start interrupt is pending for virtual channel i. Position  */
-#define CSI2DC_SSPISR_LE_Pos                  _UINT32_(12)                                         /* (CSI2DC_SSPISR) Line End Interrupt Mask Position */
-#define CSI2DC_SSPISR_LE_Msk                  (_UINT32_(0xF) << CSI2DC_SSPISR_LE_Pos)              /* (CSI2DC_SSPISR) Line End Interrupt Mask Mask */
+#define CSI2DC_SSPISR_LS_1                    (CSI2DC_SSPISR_LS_1_Val << CSI2DC_SSPISR_LS_Pos)     /* (CSI2DC_SSPISR) A bit set at position i in the field LS indicates that a Line Start interrupt is pending for virtual channel i. This bit is reset after the register read operation. Position  */
+#define CSI2DC_SSPISR_LE_Pos                  _UINT32_(12)                                         /* (CSI2DC_SSPISR) Line End Interrupt Status Position */
+#define CSI2DC_SSPISR_LE_Msk                  (_UINT32_(0xF) << CSI2DC_SSPISR_LE_Pos)              /* (CSI2DC_SSPISR) Line End Interrupt Status Mask */
 #define CSI2DC_SSPISR_LE(value)               (CSI2DC_SSPISR_LE_Msk & (_UINT32_(value) << CSI2DC_SSPISR_LE_Pos)) /* Assigment of value for LE in the CSI2DC_SSPISR register */
 #define   CSI2DC_SSPISR_LE_0_Val              _UINT32_(0x0)                                        /* (CSI2DC_SSPISR) A bit cleared at position i in the field LE indicates that no Line End interrupt is pending for virtual channel i.  */
-#define   CSI2DC_SSPISR_LE_1_Val              _UINT32_(0x1)                                        /* (CSI2DC_SSPISR) A bit set at position i in the field LE indicates that a Line End interrupt is pending for virtual channel i.  */
+#define   CSI2DC_SSPISR_LE_1_Val              _UINT32_(0x1)                                        /* (CSI2DC_SSPISR) A bit set at position i in the field LE indicates that a Line End interrupt is pending for virtual channel i. This bit is reset after the register read operation.  */
 #define CSI2DC_SSPISR_LE_0                    (CSI2DC_SSPISR_LE_0_Val << CSI2DC_SSPISR_LE_Pos)     /* (CSI2DC_SSPISR) A bit cleared at position i in the field LE indicates that no Line End interrupt is pending for virtual channel i. Position  */
-#define CSI2DC_SSPISR_LE_1                    (CSI2DC_SSPISR_LE_1_Val << CSI2DC_SSPISR_LE_Pos)     /* (CSI2DC_SSPISR) A bit set at position i in the field LE indicates that a Line End interrupt is pending for virtual channel i. Position  */
-#define CSI2DC_SSPISR_RE_Pos                  _UINT32_(16)                                         /* (CSI2DC_SSPISR) Reserved Short Packet Interrupt Mask Position */
-#define CSI2DC_SSPISR_RE_Msk                  (_UINT32_(0xF) << CSI2DC_SSPISR_RE_Pos)              /* (CSI2DC_SSPISR) Reserved Short Packet Interrupt Mask Mask */
+#define CSI2DC_SSPISR_LE_1                    (CSI2DC_SSPISR_LE_1_Val << CSI2DC_SSPISR_LE_Pos)     /* (CSI2DC_SSPISR) A bit set at position i in the field LE indicates that a Line End interrupt is pending for virtual channel i. This bit is reset after the register read operation. Position  */
+#define CSI2DC_SSPISR_RE_Pos                  _UINT32_(16)                                         /* (CSI2DC_SSPISR) Reserved Short Packet Interrupt Status Position */
+#define CSI2DC_SSPISR_RE_Msk                  (_UINT32_(0xF) << CSI2DC_SSPISR_RE_Pos)              /* (CSI2DC_SSPISR) Reserved Short Packet Interrupt Status Mask */
 #define CSI2DC_SSPISR_RE(value)               (CSI2DC_SSPISR_RE_Msk & (_UINT32_(value) << CSI2DC_SSPISR_RE_Pos)) /* Assigment of value for RE in the CSI2DC_SSPISR register */
-#define   CSI2DC_SSPISR_RE_0_Val              _UINT32_(0x0)                                        /* (CSI2DC_SSPISR) A bit cleared at position i in the field RE indicates that no Reserved Short Packet interrupt is pending for virtual channel i.  */
-#define   CSI2DC_SSPISR_RE_1_Val              _UINT32_(0x1)                                        /* (CSI2DC_SSPISR) A bit set at position i in the field RE indicates that no Reserved Short Packet interrupt is pending for virtual channel i.  */
-#define CSI2DC_SSPISR_RE_0                    (CSI2DC_SSPISR_RE_0_Val << CSI2DC_SSPISR_RE_Pos)     /* (CSI2DC_SSPISR) A bit cleared at position i in the field RE indicates that no Reserved Short Packet interrupt is pending for virtual channel i. Position  */
-#define CSI2DC_SSPISR_RE_1                    (CSI2DC_SSPISR_RE_1_Val << CSI2DC_SSPISR_RE_Pos)     /* (CSI2DC_SSPISR) A bit set at position i in the field RE indicates that no Reserved Short Packet interrupt is pending for virtual channel i. Position  */
+#define   CSI2DC_SSPISR_RE_0_Val              _UINT32_(0x0)                                        /* (CSI2DC_SSPISR) A bit cleared at position i in the field RE indicates that no Reserved Short packet interrupt is pending for virtual channel i.  */
+#define   CSI2DC_SSPISR_RE_1_Val              _UINT32_(0x1)                                        /* (CSI2DC_SSPISR) A bit set at position i in the field RE indicates that no Reserved Short packet interrupt is pending for virtual channel i. This bit is reset after the register read operation.  */
+#define CSI2DC_SSPISR_RE_0                    (CSI2DC_SSPISR_RE_0_Val << CSI2DC_SSPISR_RE_Pos)     /* (CSI2DC_SSPISR) A bit cleared at position i in the field RE indicates that no Reserved Short packet interrupt is pending for virtual channel i. Position  */
+#define CSI2DC_SSPISR_RE_1                    (CSI2DC_SSPISR_RE_1_Val << CSI2DC_SSPISR_RE_Pos)     /* (CSI2DC_SSPISR) A bit set at position i in the field RE indicates that no Reserved Short packet interrupt is pending for virtual channel i. This bit is reset after the register read operation. Position  */
 #define CSI2DC_SSPISR_Msk                     _UINT32_(0x000FFFFF)                                 /* (CSI2DC_SSPISR) Register Mask  */
 
 
@@ -493,9 +502,9 @@
 #define CSI2DC_GSPIER_GSPRDY_Msk              (_UINT32_(0xF) << CSI2DC_GSPIER_GSPRDY_Pos)          /* (CSI2DC_GSPIER) Generic Short Packet Ready Interrupt Enable Mask */
 #define CSI2DC_GSPIER_GSPRDY(value)           (CSI2DC_GSPIER_GSPRDY_Msk & (_UINT32_(value) << CSI2DC_GSPIER_GSPRDY_Pos)) /* Assigment of value for GSPRDY in the CSI2DC_GSPIER register */
 #define   CSI2DC_GSPIER_GSPRDY_0_Val          _UINT32_(0x0)                                        /* (CSI2DC_GSPIER) No effect.  */
-#define   CSI2DC_GSPIER_GSPRDY_1_Val          _UINT32_(0x1)                                        /* (CSI2DC_GSPIER) Setting a bit at position i in the GSPRDY field will set the interrupt mask bit, and virtual channel i can generate a Generic Short Packet interrupt.  */
+#define   CSI2DC_GSPIER_GSPRDY_1_Val          _UINT32_(0x1)                                        /* (CSI2DC_GSPIER) Setting a bit at position i in the GSPRDY field will set the interrupt mask bit, and virtual channel i can generate a Generic Short packet interrupt.  */
 #define CSI2DC_GSPIER_GSPRDY_0                (CSI2DC_GSPIER_GSPRDY_0_Val << CSI2DC_GSPIER_GSPRDY_Pos) /* (CSI2DC_GSPIER) No effect. Position  */
-#define CSI2DC_GSPIER_GSPRDY_1                (CSI2DC_GSPIER_GSPRDY_1_Val << CSI2DC_GSPIER_GSPRDY_Pos) /* (CSI2DC_GSPIER) Setting a bit at position i in the GSPRDY field will set the interrupt mask bit, and virtual channel i can generate a Generic Short Packet interrupt. Position  */
+#define CSI2DC_GSPIER_GSPRDY_1                (CSI2DC_GSPIER_GSPRDY_1_Val << CSI2DC_GSPIER_GSPRDY_Pos) /* (CSI2DC_GSPIER) Setting a bit at position i in the GSPRDY field will set the interrupt mask bit, and virtual channel i can generate a Generic Short packet interrupt. Position  */
 #define CSI2DC_GSPIER_GSPERR_Pos              _UINT32_(4)                                          /* (CSI2DC_GSPIER) Generic Short Packet Error Interrupt Enable Position */
 #define CSI2DC_GSPIER_GSPERR_Msk              (_UINT32_(0xF) << CSI2DC_GSPIER_GSPERR_Pos)          /* (CSI2DC_GSPIER) Generic Short Packet Error Interrupt Enable Mask */
 #define CSI2DC_GSPIER_GSPERR(value)           (CSI2DC_GSPIER_GSPERR_Msk & (_UINT32_(value) << CSI2DC_GSPIER_GSPERR_Pos)) /* Assigment of value for GSPERR in the CSI2DC_GSPIER register */
@@ -551,21 +560,21 @@
 #define CSI2DC_GSPISR_GSPRDY_Msk              (_UINT32_(0xF) << CSI2DC_GSPISR_GSPRDY_Pos)          /* (CSI2DC_GSPISR) Generic Short Packet Ready Interrupt Status Bit Mask */
 #define CSI2DC_GSPISR_GSPRDY(value)           (CSI2DC_GSPISR_GSPRDY_Msk & (_UINT32_(value) << CSI2DC_GSPISR_GSPRDY_Pos)) /* Assigment of value for GSPRDY in the CSI2DC_GSPISR register */
 #define   CSI2DC_GSPISR_GSPRDY_0_Val          _UINT32_(0x0)                                        /* (CSI2DC_GSPISR) A bit cleared at position i in the field GSPRDY indicates that no Generic Short Packet Ready interrupt is pending for virtual channel i.  */
-#define   CSI2DC_GSPISR_GSPRDY_1_Val          _UINT32_(0x1)                                        /* (CSI2DC_GSPISR) A bit set at position i in the field GSPRDY indicates that a Generic Short Packet Ready interrupt is pending for virtual channel i.  */
+#define   CSI2DC_GSPISR_GSPRDY_1_Val          _UINT32_(0x1)                                        /* (CSI2DC_GSPISR) A bit set at position i in the field GSPRDY indicates that a Generic Short Packet Ready interrupt is pending for virtual channel i. This bit is reset after the register read operation.  */
 #define CSI2DC_GSPISR_GSPRDY_0                (CSI2DC_GSPISR_GSPRDY_0_Val << CSI2DC_GSPISR_GSPRDY_Pos) /* (CSI2DC_GSPISR) A bit cleared at position i in the field GSPRDY indicates that no Generic Short Packet Ready interrupt is pending for virtual channel i. Position  */
-#define CSI2DC_GSPISR_GSPRDY_1                (CSI2DC_GSPISR_GSPRDY_1_Val << CSI2DC_GSPISR_GSPRDY_Pos) /* (CSI2DC_GSPISR) A bit set at position i in the field GSPRDY indicates that a Generic Short Packet Ready interrupt is pending for virtual channel i. Position  */
+#define CSI2DC_GSPISR_GSPRDY_1                (CSI2DC_GSPISR_GSPRDY_1_Val << CSI2DC_GSPISR_GSPRDY_Pos) /* (CSI2DC_GSPISR) A bit set at position i in the field GSPRDY indicates that a Generic Short Packet Ready interrupt is pending for virtual channel i. This bit is reset after the register read operation. Position  */
 #define CSI2DC_GSPISR_GSPERR_Pos              _UINT32_(4)                                          /* (CSI2DC_GSPISR) Generic Short Packet Error Interrupt Status Bit Position */
 #define CSI2DC_GSPISR_GSPERR_Msk              (_UINT32_(0xF) << CSI2DC_GSPISR_GSPERR_Pos)          /* (CSI2DC_GSPISR) Generic Short Packet Error Interrupt Status Bit Mask */
 #define CSI2DC_GSPISR_GSPERR(value)           (CSI2DC_GSPISR_GSPERR_Msk & (_UINT32_(value) << CSI2DC_GSPISR_GSPERR_Pos)) /* Assigment of value for GSPERR in the CSI2DC_GSPISR register */
 #define   CSI2DC_GSPISR_GSPERR_0_Val          _UINT32_(0x0)                                        /* (CSI2DC_GSPISR) A bit cleared at position i in the field GSPERR indicates that no Generic Short Packet Error interrupt is pending for virtual channel i.  */
-#define   CSI2DC_GSPISR_GSPERR_1_Val          _UINT32_(0x1)                                        /* (CSI2DC_GSPISR) A bit set at position i in the field GSPERR indicates that a Generic Short Packet Error overflow interrupt has occurred since the last read of the status register.  */
+#define   CSI2DC_GSPISR_GSPERR_1_Val          _UINT32_(0x1)                                        /* (CSI2DC_GSPISR) A bit set at position i in the field GSPERR indicates that a Generic Short Packet Error overflow interrupt has occurred since the last read of the status register. This bit is reset after the register read operation.  */
 #define CSI2DC_GSPISR_GSPERR_0                (CSI2DC_GSPISR_GSPERR_0_Val << CSI2DC_GSPISR_GSPERR_Pos) /* (CSI2DC_GSPISR) A bit cleared at position i in the field GSPERR indicates that no Generic Short Packet Error interrupt is pending for virtual channel i. Position  */
-#define CSI2DC_GSPISR_GSPERR_1                (CSI2DC_GSPISR_GSPERR_1_Val << CSI2DC_GSPISR_GSPERR_Pos) /* (CSI2DC_GSPISR) A bit set at position i in the field GSPERR indicates that a Generic Short Packet Error overflow interrupt has occurred since the last read of the status register. Position  */
+#define CSI2DC_GSPISR_GSPERR_1                (CSI2DC_GSPISR_GSPERR_1_Val << CSI2DC_GSPISR_GSPERR_Pos) /* (CSI2DC_GSPISR) A bit set at position i in the field GSPERR indicates that a Generic Short Packet Error overflow interrupt has occurred since the last read of the status register. This bit is reset after the register read operation. Position  */
 #define CSI2DC_GSPISR_Msk                     _UINT32_(0x000000FF)                                 /* (CSI2DC_GSPISR) Register Mask  */
 
 
 /* -------- CSI2DC_GSPS0R : (CSI2DC Offset: 0x6C) ( R/ 32) GSP Status 0 Register -------- */
-#define CSI2DC_GSPS0R_RESETVALUE              _UINT32_(0x00)                                       /*  (CSI2DC_GSPS0R) GSP Status 0 Register  Reset Value */
+#define CSI2DC_GSPS0R_RESETVALUE              _UINT32_(0x80000)                                    /*  (CSI2DC_GSPS0R) GSP Status 0 Register  Reset Value */
 
 #define CSI2DC_GSPS0R_VALUE_Pos               _UINT32_(0)                                          /* (CSI2DC_GSPS0R) Generic Short Packet 16-bit Data Value for Virtual Channel 0 Position */
 #define CSI2DC_GSPS0R_VALUE_Msk               (_UINT32_(0xFFFF) << CSI2DC_GSPS0R_VALUE_Pos)        /* (CSI2DC_GSPS0R) Generic Short Packet 16-bit Data Value for Virtual Channel 0 Mask */
@@ -577,7 +586,7 @@
 
 
 /* -------- CSI2DC_GSPS1R : (CSI2DC Offset: 0x70) ( R/ 32) GSP Status 1 Register -------- */
-#define CSI2DC_GSPS1R_RESETVALUE              _UINT32_(0x00)                                       /*  (CSI2DC_GSPS1R) GSP Status 1 Register  Reset Value */
+#define CSI2DC_GSPS1R_RESETVALUE              _UINT32_(0x80000)                                    /*  (CSI2DC_GSPS1R) GSP Status 1 Register  Reset Value */
 
 #define CSI2DC_GSPS1R_VALUE_Pos               _UINT32_(0)                                          /* (CSI2DC_GSPS1R) Generic Short Packet 16-bit Data Value for Virtual Channel 0 Position */
 #define CSI2DC_GSPS1R_VALUE_Msk               (_UINT32_(0xFFFF) << CSI2DC_GSPS1R_VALUE_Pos)        /* (CSI2DC_GSPS1R) Generic Short Packet 16-bit Data Value for Virtual Channel 0 Mask */
@@ -589,7 +598,7 @@
 
 
 /* -------- CSI2DC_GSPS2R : (CSI2DC Offset: 0x74) ( R/ 32) GSP Status 2 Register -------- */
-#define CSI2DC_GSPS2R_RESETVALUE              _UINT32_(0x00)                                       /*  (CSI2DC_GSPS2R) GSP Status 2 Register  Reset Value */
+#define CSI2DC_GSPS2R_RESETVALUE              _UINT32_(0x80000)                                    /*  (CSI2DC_GSPS2R) GSP Status 2 Register  Reset Value */
 
 #define CSI2DC_GSPS2R_VALUE_Pos               _UINT32_(0)                                          /* (CSI2DC_GSPS2R) Generic Short Packet 16-bit Data Value for Virtual Channel 0 Position */
 #define CSI2DC_GSPS2R_VALUE_Msk               (_UINT32_(0xFFFF) << CSI2DC_GSPS2R_VALUE_Pos)        /* (CSI2DC_GSPS2R) Generic Short Packet 16-bit Data Value for Virtual Channel 0 Mask */
@@ -601,7 +610,7 @@
 
 
 /* -------- CSI2DC_GSPS3R : (CSI2DC Offset: 0x78) ( R/ 32) GSP Status 3 Register -------- */
-#define CSI2DC_GSPS3R_RESETVALUE              _UINT32_(0x00)                                       /*  (CSI2DC_GSPS3R) GSP Status 3 Register  Reset Value */
+#define CSI2DC_GSPS3R_RESETVALUE              _UINT32_(0x80000)                                    /*  (CSI2DC_GSPS3R) GSP Status 3 Register  Reset Value */
 
 #define CSI2DC_GSPS3R_VALUE_Pos               _UINT32_(0)                                          /* (CSI2DC_GSPS3R) Generic Short Packet 16-bit Data Value for Virtual Channel 0 Position */
 #define CSI2DC_GSPS3R_VALUE_Msk               (_UINT32_(0xFFFF) << CSI2DC_GSPS3R_VALUE_Pos)        /* (CSI2DC_GSPS3R) Generic Short Packet 16-bit Data Value for Virtual Channel 0 Mask */
@@ -701,30 +710,30 @@
 #define CSI2DC_GLPISR_NU_Msk                  (_UINT32_(0xF) << CSI2DC_GLPISR_NU_Pos)              /* (CSI2DC_GLPISR) Null Generic Long Packet Ready Interrupt Status Bit Mask */
 #define CSI2DC_GLPISR_NU(value)               (CSI2DC_GLPISR_NU_Msk & (_UINT32_(value) << CSI2DC_GLPISR_NU_Pos)) /* Assigment of value for NU in the CSI2DC_GLPISR register */
 #define   CSI2DC_GLPISR_NU_0_Val              _UINT32_(0x0)                                        /* (CSI2DC_GLPISR) A bit cleared at position i in the field NU indicates that no null packet interrupt is pending for virtual channel i.  */
-#define   CSI2DC_GLPISR_NU_1_Val              _UINT32_(0x1)                                        /* (CSI2DC_GLPISR) A bit set at position i in the field NU indicates that a null packet interrupt is pending for virtual channel i.  */
+#define   CSI2DC_GLPISR_NU_1_Val              _UINT32_(0x1)                                        /* (CSI2DC_GLPISR) A bit set at position i in the field NU indicates that a null packet interrupt is pending for virtual channel i. This bit is reset after the register read operation.  */
 #define CSI2DC_GLPISR_NU_0                    (CSI2DC_GLPISR_NU_0_Val << CSI2DC_GLPISR_NU_Pos)     /* (CSI2DC_GLPISR) A bit cleared at position i in the field NU indicates that no null packet interrupt is pending for virtual channel i. Position  */
-#define CSI2DC_GLPISR_NU_1                    (CSI2DC_GLPISR_NU_1_Val << CSI2DC_GLPISR_NU_Pos)     /* (CSI2DC_GLPISR) A bit set at position i in the field NU indicates that a null packet interrupt is pending for virtual channel i. Position  */
+#define CSI2DC_GLPISR_NU_1                    (CSI2DC_GLPISR_NU_1_Val << CSI2DC_GLPISR_NU_Pos)     /* (CSI2DC_GLPISR) A bit set at position i in the field NU indicates that a null packet interrupt is pending for virtual channel i. This bit is reset after the register read operation. Position  */
 #define CSI2DC_GLPISR_BL_Pos                  _UINT32_(4)                                          /* (CSI2DC_GLPISR) Blanking Data Generic Long Packet Ready Interrupt Status Bit Position */
 #define CSI2DC_GLPISR_BL_Msk                  (_UINT32_(0xF) << CSI2DC_GLPISR_BL_Pos)              /* (CSI2DC_GLPISR) Blanking Data Generic Long Packet Ready Interrupt Status Bit Mask */
 #define CSI2DC_GLPISR_BL(value)               (CSI2DC_GLPISR_BL_Msk & (_UINT32_(value) << CSI2DC_GLPISR_BL_Pos)) /* Assigment of value for BL in the CSI2DC_GLPISR register */
 #define   CSI2DC_GLPISR_BL_0_Val              _UINT32_(0x0)                                        /* (CSI2DC_GLPISR) A bit cleared at position i in the field BL indicates that no blanking data packet interrupt is pending for virtual channel i.  */
-#define   CSI2DC_GLPISR_BL_1_Val              _UINT32_(0x1)                                        /* (CSI2DC_GLPISR) A bit set at position i in the field BL indicates that a blanking packet interrupt is pending for virtual channel i.  */
+#define   CSI2DC_GLPISR_BL_1_Val              _UINT32_(0x1)                                        /* (CSI2DC_GLPISR) A bit set at position i in the field BL indicates that a blanking packet interrupt is pending for virtual channel i. This bit is reset after the register read operation.  */
 #define CSI2DC_GLPISR_BL_0                    (CSI2DC_GLPISR_BL_0_Val << CSI2DC_GLPISR_BL_Pos)     /* (CSI2DC_GLPISR) A bit cleared at position i in the field BL indicates that no blanking data packet interrupt is pending for virtual channel i. Position  */
-#define CSI2DC_GLPISR_BL_1                    (CSI2DC_GLPISR_BL_1_Val << CSI2DC_GLPISR_BL_Pos)     /* (CSI2DC_GLPISR) A bit set at position i in the field BL indicates that a blanking packet interrupt is pending for virtual channel i. Position  */
+#define CSI2DC_GLPISR_BL_1                    (CSI2DC_GLPISR_BL_1_Val << CSI2DC_GLPISR_BL_Pos)     /* (CSI2DC_GLPISR) A bit set at position i in the field BL indicates that a blanking packet interrupt is pending for virtual channel i. This bit is reset after the register read operation. Position  */
 #define CSI2DC_GLPISR_EB_Pos                  _UINT32_(8)                                          /* (CSI2DC_GLPISR) Embedded 8-bit data Generic Long Packet Ready Interrupt Status Bit Position */
 #define CSI2DC_GLPISR_EB_Msk                  (_UINT32_(0xF) << CSI2DC_GLPISR_EB_Pos)              /* (CSI2DC_GLPISR) Embedded 8-bit data Generic Long Packet Ready Interrupt Status Bit Mask */
 #define CSI2DC_GLPISR_EB(value)               (CSI2DC_GLPISR_EB_Msk & (_UINT32_(value) << CSI2DC_GLPISR_EB_Pos)) /* Assigment of value for EB in the CSI2DC_GLPISR register */
 #define   CSI2DC_GLPISR_EB_0_Val              _UINT32_(0x0)                                        /* (CSI2DC_GLPISR) A bit cleared at position i in the field EB indicates that no embedded data packet interrupt is pending for virtual channel i.  */
-#define   CSI2DC_GLPISR_EB_1_Val              _UINT32_(0x1)                                        /* (CSI2DC_GLPISR) A bit set at position i in the field EB indicates that an embedded data packet interrupt is pending for virtual channel i.  */
+#define   CSI2DC_GLPISR_EB_1_Val              _UINT32_(0x1)                                        /* (CSI2DC_GLPISR) A bit set at position i in the field EB indicates that an embedded data packet interrupt is pending for virtual channel i. This bit is reset after the register read operation.  */
 #define CSI2DC_GLPISR_EB_0                    (CSI2DC_GLPISR_EB_0_Val << CSI2DC_GLPISR_EB_Pos)     /* (CSI2DC_GLPISR) A bit cleared at position i in the field EB indicates that no embedded data packet interrupt is pending for virtual channel i. Position  */
-#define CSI2DC_GLPISR_EB_1                    (CSI2DC_GLPISR_EB_1_Val << CSI2DC_GLPISR_EB_Pos)     /* (CSI2DC_GLPISR) A bit set at position i in the field EB indicates that an embedded data packet interrupt is pending for virtual channel i. Position  */
+#define CSI2DC_GLPISR_EB_1                    (CSI2DC_GLPISR_EB_1_Val << CSI2DC_GLPISR_EB_Pos)     /* (CSI2DC_GLPISR) A bit set at position i in the field EB indicates that an embedded data packet interrupt is pending for virtual channel i. This bit is reset after the register read operation. Position  */
 #define CSI2DC_GLPISR_RE_Pos                  _UINT32_(12)                                         /* (CSI2DC_GLPISR) Reserved Generic Long Packet Ready Interrupt Status Bit Position */
 #define CSI2DC_GLPISR_RE_Msk                  (_UINT32_(0xF) << CSI2DC_GLPISR_RE_Pos)              /* (CSI2DC_GLPISR) Reserved Generic Long Packet Ready Interrupt Status Bit Mask */
 #define CSI2DC_GLPISR_RE(value)               (CSI2DC_GLPISR_RE_Msk & (_UINT32_(value) << CSI2DC_GLPISR_RE_Pos)) /* Assigment of value for RE in the CSI2DC_GLPISR register */
 #define   CSI2DC_GLPISR_RE_0_Val              _UINT32_(0x0)                                        /* (CSI2DC_GLPISR) A bit cleared at position i in the field BL indicates that no reserved packet interrupt is pending for virtual channel i.  */
-#define   CSI2DC_GLPISR_RE_1_Val              _UINT32_(0x1)                                        /* (CSI2DC_GLPISR) A bit set at position i in the field BL indicates that a reserved packet interrupt is pending for virtual channel i.  */
+#define   CSI2DC_GLPISR_RE_1_Val              _UINT32_(0x1)                                        /* (CSI2DC_GLPISR) A bit set at position i in the field BL indicates that a reserved packet interrupt is pending for virtual channel i. This bit is reset after the register read operation.  */
 #define CSI2DC_GLPISR_RE_0                    (CSI2DC_GLPISR_RE_0_Val << CSI2DC_GLPISR_RE_Pos)     /* (CSI2DC_GLPISR) A bit cleared at position i in the field BL indicates that no reserved packet interrupt is pending for virtual channel i. Position  */
-#define CSI2DC_GLPISR_RE_1                    (CSI2DC_GLPISR_RE_1_Val << CSI2DC_GLPISR_RE_Pos)     /* (CSI2DC_GLPISR) A bit set at position i in the field BL indicates that a reserved packet interrupt is pending for virtual channel i. Position  */
+#define CSI2DC_GLPISR_RE_1                    (CSI2DC_GLPISR_RE_1_Val << CSI2DC_GLPISR_RE_Pos)     /* (CSI2DC_GLPISR) A bit set at position i in the field BL indicates that a reserved packet interrupt is pending for virtual channel i. This bit is reset after the register read operation. Position  */
 #define CSI2DC_GLPISR_Msk                     _UINT32_(0x0000FFFF)                                 /* (CSI2DC_GLPISR) Register Mask  */
 
 
@@ -802,16 +811,16 @@
 #define CSI2DC_IDSISR_IDS_Msk                 (_UINT32_(0xF) << CSI2DC_IDSISR_IDS_Pos)             /* (CSI2DC_IDSISR) Image Data Snoop Interrupt Status Bit Mask */
 #define CSI2DC_IDSISR_IDS(value)              (CSI2DC_IDSISR_IDS_Msk & (_UINT32_(value) << CSI2DC_IDSISR_IDS_Pos)) /* Assigment of value for IDS in the CSI2DC_IDSISR register */
 #define   CSI2DC_IDSISR_IDS_0_Val             _UINT32_(0x0)                                        /* (CSI2DC_IDSISR) A bit cleared at position i in the field IDS indicates that no Image Data Snoop interrupt is pending for virtual channel i.  */
-#define   CSI2DC_IDSISR_IDS_1_Val             _UINT32_(0x1)                                        /* (CSI2DC_IDSISR) A bit set at position i in the field IDS indicates that a new Image Data Snoop entry interrupt is pending for table entry i.  */
+#define   CSI2DC_IDSISR_IDS_1_Val             _UINT32_(0x1)                                        /* (CSI2DC_IDSISR) A bit set at position i in the field IDS indicates that a new Image Data Snoop entry interrupt is pending for table entry i. This bit is reset after the register read operation.  */
 #define CSI2DC_IDSISR_IDS_0                   (CSI2DC_IDSISR_IDS_0_Val << CSI2DC_IDSISR_IDS_Pos)   /* (CSI2DC_IDSISR) A bit cleared at position i in the field IDS indicates that no Image Data Snoop interrupt is pending for virtual channel i. Position  */
-#define CSI2DC_IDSISR_IDS_1                   (CSI2DC_IDSISR_IDS_1_Val << CSI2DC_IDSISR_IDS_Pos)   /* (CSI2DC_IDSISR) A bit set at position i in the field IDS indicates that a new Image Data Snoop entry interrupt is pending for table entry i. Position  */
+#define CSI2DC_IDSISR_IDS_1                   (CSI2DC_IDSISR_IDS_1_Val << CSI2DC_IDSISR_IDS_Pos)   /* (CSI2DC_IDSISR) A bit set at position i in the field IDS indicates that a new Image Data Snoop entry interrupt is pending for table entry i. This bit is reset after the register read operation. Position  */
 #define CSI2DC_IDSISR_OVF_Pos                 _UINT32_(4)                                          /* (CSI2DC_IDSISR) Image Data Snoop Overflow Interrupt Status Position */
 #define CSI2DC_IDSISR_OVF_Msk                 (_UINT32_(0x1) << CSI2DC_IDSISR_OVF_Pos)             /* (CSI2DC_IDSISR) Image Data Snoop Overflow Interrupt Status Mask */
 #define CSI2DC_IDSISR_OVF(value)              (CSI2DC_IDSISR_OVF_Msk & (_UINT32_(value) << CSI2DC_IDSISR_OVF_Pos)) /* Assigment of value for OVF in the CSI2DC_IDSISR register */
 #define   CSI2DC_IDSISR_OVF_0_Val             _UINT32_(0x0)                                        /* (CSI2DC_IDSISR) No effect.  */
-#define   CSI2DC_IDSISR_OVF_1_Val             _UINT32_(0x1)                                        /* (CSI2DC_IDSISR) Indicates that the IDS controller captured more than 4 entries.  */
+#define   CSI2DC_IDSISR_OVF_1_Val             _UINT32_(0x1)                                        /* (CSI2DC_IDSISR) Indicates that the IDS controller captured more than 4 entries. This bit is reset after the register read operation.  */
 #define CSI2DC_IDSISR_OVF_0                   (CSI2DC_IDSISR_OVF_0_Val << CSI2DC_IDSISR_OVF_Pos)   /* (CSI2DC_IDSISR) No effect. Position  */
-#define CSI2DC_IDSISR_OVF_1                   (CSI2DC_IDSISR_OVF_1_Val << CSI2DC_IDSISR_OVF_Pos)   /* (CSI2DC_IDSISR) Indicates that the IDS controller captured more than 4 entries. Position  */
+#define CSI2DC_IDSISR_OVF_1                   (CSI2DC_IDSISR_OVF_1_Val << CSI2DC_IDSISR_OVF_Pos)   /* (CSI2DC_IDSISR) Indicates that the IDS controller captured more than 4 entries. This bit is reset after the register read operation. Position  */
 #define CSI2DC_IDSISR_Msk                     _UINT32_(0x0000001F)                                 /* (CSI2DC_IDSISR) Register Mask  */
 
 
@@ -820,16 +829,16 @@
 #define CSI2DC_PUR_VP_Msk                     (_UINT32_(0x1) << CSI2DC_PUR_VP_Pos)                 /* (CSI2DC_PUR) Video Pipe Attributes Update Mask */
 #define CSI2DC_PUR_VP(value)                  (CSI2DC_PUR_VP_Msk & (_UINT32_(value) << CSI2DC_PUR_VP_Pos)) /* Assigment of value for VP in the CSI2DC_PUR register */
 #define   CSI2DC_PUR_VP_0_Val                 _UINT32_(0x0)                                        /* (CSI2DC_PUR) No effect.  */
-#define   CSI2DC_PUR_VP_1_Val                 _UINT32_(0x1)                                        /* (CSI2DC_PUR) Transfers current configuration to Video Pipe Configuration registers on the next Frame Start Packet detection if the FS packet virtual channel ID matches the CSI2DC_VPCFG.VC field. This field must be set after video pipe configuration, otherwise the settings will not be updated.  */
+#define   CSI2DC_PUR_VP_1_Val                 _UINT32_(0x1)                                        /* (CSI2DC_PUR) Transfers current configuration to Video Pipe Configuration registers on the next Frame Start packet detection if the FS packet virtual channel ID matches the CSI2DC_VPCFG.VC field. This field must be set after video pipe configuration, otherwise the settings will not be updated.  */
 #define CSI2DC_PUR_VP_0                       (CSI2DC_PUR_VP_0_Val << CSI2DC_PUR_VP_Pos)           /* (CSI2DC_PUR) No effect. Position  */
-#define CSI2DC_PUR_VP_1                       (CSI2DC_PUR_VP_1_Val << CSI2DC_PUR_VP_Pos)           /* (CSI2DC_PUR) Transfers current configuration to Video Pipe Configuration registers on the next Frame Start Packet detection if the FS packet virtual channel ID matches the CSI2DC_VPCFG.VC field. This field must be set after video pipe configuration, otherwise the settings will not be updated. Position  */
+#define CSI2DC_PUR_VP_1                       (CSI2DC_PUR_VP_1_Val << CSI2DC_PUR_VP_Pos)           /* (CSI2DC_PUR) Transfers current configuration to Video Pipe Configuration registers on the next Frame Start packet detection if the FS packet virtual channel ID matches the CSI2DC_VPCFG.VC field. This field must be set after video pipe configuration, otherwise the settings will not be updated. Position  */
 #define CSI2DC_PUR_DP_Pos                     _UINT32_(1)                                          /* (CSI2DC_PUR) Data Pipe Attributes Update Position */
 #define CSI2DC_PUR_DP_Msk                     (_UINT32_(0x1) << CSI2DC_PUR_DP_Pos)                 /* (CSI2DC_PUR) Data Pipe Attributes Update Mask */
 #define CSI2DC_PUR_DP(value)                  (CSI2DC_PUR_DP_Msk & (_UINT32_(value) << CSI2DC_PUR_DP_Pos)) /* Assigment of value for DP in the CSI2DC_PUR register */
 #define   CSI2DC_PUR_DP_0_Val                 _UINT32_(0x0)                                        /* (CSI2DC_PUR) No effect.  */
-#define   CSI2DC_PUR_DP_1_Val                 _UINT32_(0x1)                                        /* (CSI2DC_PUR) Transfers current configuration to Data Pipe Configuration registers on the next Frame Start Packet detection if the FS packet virtual channel ID matches the CSI2DC_DPCFG.VC field. This field must be set after data pipe configuration, otherwise the settings will not be updated.  */
+#define   CSI2DC_PUR_DP_1_Val                 _UINT32_(0x1)                                        /* (CSI2DC_PUR) Transfers current configuration to Data Pipe Configuration registers on the next Frame Start packet detection if the FS packet virtual channel ID matches the CSI2DC_DPCFG.VC field. This field must be set after data pipe configuration, otherwise the settings will not be updated.  */
 #define CSI2DC_PUR_DP_0                       (CSI2DC_PUR_DP_0_Val << CSI2DC_PUR_DP_Pos)           /* (CSI2DC_PUR) No effect. Position  */
-#define CSI2DC_PUR_DP_1                       (CSI2DC_PUR_DP_1_Val << CSI2DC_PUR_DP_Pos)           /* (CSI2DC_PUR) Transfers current configuration to Data Pipe Configuration registers on the next Frame Start Packet detection if the FS packet virtual channel ID matches the CSI2DC_DPCFG.VC field. This field must be set after data pipe configuration, otherwise the settings will not be updated. Position  */
+#define CSI2DC_PUR_DP_1                       (CSI2DC_PUR_DP_1_Val << CSI2DC_PUR_DP_Pos)           /* (CSI2DC_PUR) Transfers current configuration to Data Pipe Configuration registers on the next Frame Start packet detection if the FS packet virtual channel ID matches the CSI2DC_DPCFG.VC field. This field must be set after data pipe configuration, otherwise the settings will not be updated. Position  */
 #define CSI2DC_PUR_Msk                        _UINT32_(0x00000003)                                 /* (CSI2DC_PUR) Register Mask  */
 
 
@@ -840,16 +849,16 @@
 #define CSI2DC_PUSR_VP_Msk                    (_UINT32_(0x1) << CSI2DC_PUSR_VP_Pos)                /* (CSI2DC_PUSR) Video Pipe Update Mask */
 #define CSI2DC_PUSR_VP(value)                 (CSI2DC_PUSR_VP_Msk & (_UINT32_(value) << CSI2DC_PUSR_VP_Pos)) /* Assigment of value for VP in the CSI2DC_PUSR register */
 #define   CSI2DC_PUSR_VP_0_Val                _UINT32_(0x0)                                        /* (CSI2DC_PUSR) No video pipe in progress.  */
-#define   CSI2DC_PUSR_VP_1_Val                _UINT32_(0x1)                                        /* (CSI2DC_PUSR) Video pipe configuration is in progress. This bit is cleared at the next frame start packet if the virtual channel identifier matches the CSI2DC_VPCFG.VC field.  */
+#define   CSI2DC_PUSR_VP_1_Val                _UINT32_(0x1)                                        /* (CSI2DC_PUSR) Video pipe configuration is in progress. This bit is cleared at the next Frame Start packet if the virtual channel identifier matches the CSI2DC_VPCFG.VC field.  */
 #define CSI2DC_PUSR_VP_0                      (CSI2DC_PUSR_VP_0_Val << CSI2DC_PUSR_VP_Pos)         /* (CSI2DC_PUSR) No video pipe in progress. Position  */
-#define CSI2DC_PUSR_VP_1                      (CSI2DC_PUSR_VP_1_Val << CSI2DC_PUSR_VP_Pos)         /* (CSI2DC_PUSR) Video pipe configuration is in progress. This bit is cleared at the next frame start packet if the virtual channel identifier matches the CSI2DC_VPCFG.VC field. Position  */
+#define CSI2DC_PUSR_VP_1                      (CSI2DC_PUSR_VP_1_Val << CSI2DC_PUSR_VP_Pos)         /* (CSI2DC_PUSR) Video pipe configuration is in progress. This bit is cleared at the next Frame Start packet if the virtual channel identifier matches the CSI2DC_VPCFG.VC field. Position  */
 #define CSI2DC_PUSR_DP_Pos                    _UINT32_(1)                                          /* (CSI2DC_PUSR) Data Pipe Update Position */
 #define CSI2DC_PUSR_DP_Msk                    (_UINT32_(0x1) << CSI2DC_PUSR_DP_Pos)                /* (CSI2DC_PUSR) Data Pipe Update Mask */
 #define CSI2DC_PUSR_DP(value)                 (CSI2DC_PUSR_DP_Msk & (_UINT32_(value) << CSI2DC_PUSR_DP_Pos)) /* Assigment of value for DP in the CSI2DC_PUSR register */
 #define   CSI2DC_PUSR_DP_0_Val                _UINT32_(0x0)                                        /* (CSI2DC_PUSR) No data pipe in progress.  */
-#define   CSI2DC_PUSR_DP_1_Val                _UINT32_(0x1)                                        /* (CSI2DC_PUSR) Data pipe configuration is in progress. This bit is cleared at the next frame start packet if the virtual channel identifier matches the CSI2DC_DPCFG.VC field.  */
+#define   CSI2DC_PUSR_DP_1_Val                _UINT32_(0x1)                                        /* (CSI2DC_PUSR) Data pipe configuration is in progress. This bit is cleared at the next Frame Start packet if the virtual channel identifier matches the CSI2DC_DPCFG.VC field.  */
 #define CSI2DC_PUSR_DP_0                      (CSI2DC_PUSR_DP_0_Val << CSI2DC_PUSR_DP_Pos)         /* (CSI2DC_PUSR) No data pipe in progress. Position  */
-#define CSI2DC_PUSR_DP_1                      (CSI2DC_PUSR_DP_1_Val << CSI2DC_PUSR_DP_Pos)         /* (CSI2DC_PUSR) Data pipe configuration is in progress. This bit is cleared at the next frame start packet if the virtual channel identifier matches the CSI2DC_DPCFG.VC field. Position  */
+#define CSI2DC_PUSR_DP_1                      (CSI2DC_PUSR_DP_1_Val << CSI2DC_PUSR_DP_Pos)         /* (CSI2DC_PUSR) Data pipe configuration is in progress. This bit is cleared at the next Frame Start packet if the virtual channel identifier matches the CSI2DC_DPCFG.VC field. Position  */
 #define CSI2DC_PUSR_SIP_Pos                   _UINT32_(31)                                         /* (CSI2DC_PUSR) Synchronization In Progress Position */
 #define CSI2DC_PUSR_SIP_Msk                   (_UINT32_(0x1) << CSI2DC_PUSR_SIP_Pos)               /* (CSI2DC_PUSR) Synchronization In Progress Mask */
 #define CSI2DC_PUSR_SIP(value)                (CSI2DC_PUSR_SIP_Msk & (_UINT32_(value) << CSI2DC_PUSR_SIP_Pos)) /* Assigment of value for SIP in the CSI2DC_PUSR register */
@@ -991,37 +1000,37 @@
 #define CSI2DC_DPISR_RXOVF0_Pos               _UINT32_(3)                                          /* (CSI2DC_DPISR) Bank 0 Overflow Position */
 #define CSI2DC_DPISR_RXOVF0_Msk               (_UINT32_(0x1) << CSI2DC_DPISR_RXOVF0_Pos)           /* (CSI2DC_DPISR) Bank 0 Overflow Mask */
 #define CSI2DC_DPISR_RXOVF0(value)            (CSI2DC_DPISR_RXOVF0_Msk & (_UINT32_(value) << CSI2DC_DPISR_RXOVF0_Pos)) /* Assigment of value for RXOVF0 in the CSI2DC_DPISR register */
-#define   CSI2DC_DPISR_RXOVF0_0_Val           _UINT32_(0x0)                                        /* (CSI2DC_DPISR) No overflow detected.  */
+#define   CSI2DC_DPISR_RXOVF0_0_Val           _UINT32_(0x0)                                        /* (CSI2DC_DPISR) No overflow detected since the last clear operation of the register.  */
 #define   CSI2DC_DPISR_RXOVF0_1_Val           _UINT32_(0x1)                                        /* (CSI2DC_DPISR) An overflow occurred in bank 0.  */
-#define CSI2DC_DPISR_RXOVF0_0                 (CSI2DC_DPISR_RXOVF0_0_Val << CSI2DC_DPISR_RXOVF0_Pos) /* (CSI2DC_DPISR) No overflow detected. Position  */
+#define CSI2DC_DPISR_RXOVF0_0                 (CSI2DC_DPISR_RXOVF0_0_Val << CSI2DC_DPISR_RXOVF0_Pos) /* (CSI2DC_DPISR) No overflow detected since the last clear operation of the register. Position  */
 #define CSI2DC_DPISR_RXOVF0_1                 (CSI2DC_DPISR_RXOVF0_1_Val << CSI2DC_DPISR_RXOVF0_Pos) /* (CSI2DC_DPISR) An overflow occurred in bank 0. Position  */
 #define CSI2DC_DPISR_RXOVF1_Pos               _UINT32_(4)                                          /* (CSI2DC_DPISR) Bank 1 Overflow Position */
 #define CSI2DC_DPISR_RXOVF1_Msk               (_UINT32_(0x1) << CSI2DC_DPISR_RXOVF1_Pos)           /* (CSI2DC_DPISR) Bank 1 Overflow Mask */
 #define CSI2DC_DPISR_RXOVF1(value)            (CSI2DC_DPISR_RXOVF1_Msk & (_UINT32_(value) << CSI2DC_DPISR_RXOVF1_Pos)) /* Assigment of value for RXOVF1 in the CSI2DC_DPISR register */
-#define   CSI2DC_DPISR_RXOVF1_0_Val           _UINT32_(0x0)                                        /* (CSI2DC_DPISR) No overflow detected.  */
+#define   CSI2DC_DPISR_RXOVF1_0_Val           _UINT32_(0x0)                                        /* (CSI2DC_DPISR) No overflow detected since the last clear operation of the register.  */
 #define   CSI2DC_DPISR_RXOVF1_1_Val           _UINT32_(0x1)                                        /* (CSI2DC_DPISR) An overflow occurred in bank 1.  */
-#define CSI2DC_DPISR_RXOVF1_0                 (CSI2DC_DPISR_RXOVF1_0_Val << CSI2DC_DPISR_RXOVF1_Pos) /* (CSI2DC_DPISR) No overflow detected. Position  */
+#define CSI2DC_DPISR_RXOVF1_0                 (CSI2DC_DPISR_RXOVF1_0_Val << CSI2DC_DPISR_RXOVF1_Pos) /* (CSI2DC_DPISR) No overflow detected since the last clear operation of the register. Position  */
 #define CSI2DC_DPISR_RXOVF1_1                 (CSI2DC_DPISR_RXOVF1_1_Val << CSI2DC_DPISR_RXOVF1_Pos) /* (CSI2DC_DPISR) An overflow occurred in bank 1. Position  */
 #define CSI2DC_DPISR_DATOVF_Pos               _UINT32_(5)                                          /* (CSI2DC_DPISR) Data Overflow Position */
 #define CSI2DC_DPISR_DATOVF_Msk               (_UINT32_(0x1) << CSI2DC_DPISR_DATOVF_Pos)           /* (CSI2DC_DPISR) Data Overflow Mask */
 #define CSI2DC_DPISR_DATOVF(value)            (CSI2DC_DPISR_DATOVF_Msk & (_UINT32_(value) << CSI2DC_DPISR_DATOVF_Pos)) /* Assigment of value for DATOVF in the CSI2DC_DPISR register */
-#define   CSI2DC_DPISR_DATOVF_0_Val           _UINT32_(0x0)                                        /* (CSI2DC_DPISR) No overflow detected.  */
+#define   CSI2DC_DPISR_DATOVF_0_Val           _UINT32_(0x0)                                        /* (CSI2DC_DPISR) No overflow detected since the last clear operation of the register.  */
 #define   CSI2DC_DPISR_DATOVF_1_Val           _UINT32_(0x1)                                        /* (CSI2DC_DPISR) Data overflow in the clock domain crossing FIFO.  */
-#define CSI2DC_DPISR_DATOVF_0                 (CSI2DC_DPISR_DATOVF_0_Val << CSI2DC_DPISR_DATOVF_Pos) /* (CSI2DC_DPISR) No overflow detected. Position  */
+#define CSI2DC_DPISR_DATOVF_0                 (CSI2DC_DPISR_DATOVF_0_Val << CSI2DC_DPISR_DATOVF_Pos) /* (CSI2DC_DPISR) No overflow detected since the last clear operation of the register. Position  */
 #define CSI2DC_DPISR_DATOVF_1                 (CSI2DC_DPISR_DATOVF_1_Val << CSI2DC_DPISR_DATOVF_Pos) /* (CSI2DC_DPISR) Data overflow in the clock domain crossing FIFO. Position  */
 #define CSI2DC_DPISR_STE_Pos                  _UINT32_(6)                                          /* (CSI2DC_DPISR) Packet Shorter Than Expected Position */
 #define CSI2DC_DPISR_STE_Msk                  (_UINT32_(0x1) << CSI2DC_DPISR_STE_Pos)              /* (CSI2DC_DPISR) Packet Shorter Than Expected Mask */
 #define CSI2DC_DPISR_STE(value)               (CSI2DC_DPISR_STE_Msk & (_UINT32_(value) << CSI2DC_DPISR_STE_Pos)) /* Assigment of value for STE in the CSI2DC_DPISR register */
-#define   CSI2DC_DPISR_STE_0_Val              _UINT32_(0x0)                                        /* (CSI2DC_DPISR) No STE packet detected.  */
+#define   CSI2DC_DPISR_STE_0_Val              _UINT32_(0x0)                                        /* (CSI2DC_DPISR) No STE packet detected since the last clear operation of the register.  */
 #define   CSI2DC_DPISR_STE_1_Val              _UINT32_(0x1)                                        /* (CSI2DC_DPISR) A packet has been received but the actual length is shorter that the packet word count value.  */
-#define CSI2DC_DPISR_STE_0                    (CSI2DC_DPISR_STE_0_Val << CSI2DC_DPISR_STE_Pos)     /* (CSI2DC_DPISR) No STE packet detected. Position  */
+#define CSI2DC_DPISR_STE_0                    (CSI2DC_DPISR_STE_0_Val << CSI2DC_DPISR_STE_Pos)     /* (CSI2DC_DPISR) No STE packet detected since the last clear operation of the register. Position  */
 #define CSI2DC_DPISR_STE_1                    (CSI2DC_DPISR_STE_1_Val << CSI2DC_DPISR_STE_Pos)     /* (CSI2DC_DPISR) A packet has been received but the actual length is shorter that the packet word count value. Position  */
 #define CSI2DC_DPISR_LTE_Pos                  _UINT32_(7)                                          /* (CSI2DC_DPISR) Packet Longer Than Expected Position */
 #define CSI2DC_DPISR_LTE_Msk                  (_UINT32_(0x1) << CSI2DC_DPISR_LTE_Pos)              /* (CSI2DC_DPISR) Packet Longer Than Expected Mask */
 #define CSI2DC_DPISR_LTE(value)               (CSI2DC_DPISR_LTE_Msk & (_UINT32_(value) << CSI2DC_DPISR_LTE_Pos)) /* Assigment of value for LTE in the CSI2DC_DPISR register */
-#define   CSI2DC_DPISR_LTE_0_Val              _UINT32_(0x0)                                        /* (CSI2DC_DPISR) No LTE packet detected.  */
+#define   CSI2DC_DPISR_LTE_0_Val              _UINT32_(0x0)                                        /* (CSI2DC_DPISR) No LTE packet detected since the last clear operation of the register.  */
 #define   CSI2DC_DPISR_LTE_1_Val              _UINT32_(0x1)                                        /* (CSI2DC_DPISR) A packet has been received but the actual length is longer that the packet word count value.  */
-#define CSI2DC_DPISR_LTE_0                    (CSI2DC_DPISR_LTE_0_Val << CSI2DC_DPISR_LTE_Pos)     /* (CSI2DC_DPISR) No LTE packet detected. Position  */
+#define CSI2DC_DPISR_LTE_0                    (CSI2DC_DPISR_LTE_0_Val << CSI2DC_DPISR_LTE_Pos)     /* (CSI2DC_DPISR) No LTE packet detected since the last clear operation of the register. Position  */
 #define CSI2DC_DPISR_LTE_1                    (CSI2DC_DPISR_LTE_1_Val << CSI2DC_DPISR_LTE_Pos)     /* (CSI2DC_DPISR) A packet has been received but the actual length is longer that the packet word count value. Position  */
 #define CSI2DC_DPISR_Msk                      _UINT32_(0x000000FF)                                 /* (CSI2DC_DPISR) Register Mask  */
 
@@ -1132,10 +1141,10 @@
 #define CSI2DC_DPDCR_DMA_Pos                  _UINT32_(0)                                          /* (CSI2DC_DPDCR) DMA Mode Enabled Position */
 #define CSI2DC_DPDCR_DMA_Msk                  (_UINT32_(0x1) << CSI2DC_DPDCR_DMA_Pos)              /* (CSI2DC_DPDCR) DMA Mode Enabled Mask */
 #define CSI2DC_DPDCR_DMA(value)               (CSI2DC_DPDCR_DMA_Msk & (_UINT32_(value) << CSI2DC_DPDCR_DMA_Pos)) /* Assigment of value for DMA in the CSI2DC_DPDCR register */
-#define   CSI2DC_DPDCR_DMA_0_Val              _UINT32_(0x0)                                        /* (CSI2DC_DPDCR) DMA slave interface is disabled.  */
-#define   CSI2DC_DPDCR_DMA_1_Val              _UINT32_(0x1)                                        /* (CSI2DC_DPDCR) DMA slave interface is enabled.  */
-#define CSI2DC_DPDCR_DMA_0                    (CSI2DC_DPDCR_DMA_0_Val << CSI2DC_DPDCR_DMA_Pos)     /* (CSI2DC_DPDCR) DMA slave interface is disabled. Position  */
-#define CSI2DC_DPDCR_DMA_1                    (CSI2DC_DPDCR_DMA_1_Val << CSI2DC_DPDCR_DMA_Pos)     /* (CSI2DC_DPDCR) DMA slave interface is enabled. Position  */
+#define   CSI2DC_DPDCR_DMA_0_Val              _UINT32_(0x0)                                        /* (CSI2DC_DPDCR) DMA client interface is disabled.  */
+#define   CSI2DC_DPDCR_DMA_1_Val              _UINT32_(0x1)                                        /* (CSI2DC_DPDCR) DMA client interface is enabled.  */
+#define CSI2DC_DPDCR_DMA_0                    (CSI2DC_DPDCR_DMA_0_Val << CSI2DC_DPDCR_DMA_Pos)     /* (CSI2DC_DPDCR) DMA client interface is disabled. Position  */
+#define CSI2DC_DPDCR_DMA_1                    (CSI2DC_DPDCR_DMA_1_Val << CSI2DC_DPDCR_DMA_Pos)     /* (CSI2DC_DPDCR) DMA client interface is enabled. Position  */
 #define CSI2DC_DPDCR_CSIZE_Pos                _UINT32_(4)                                          /* (CSI2DC_DPDCR) DMA Chunk Size Position */
 #define CSI2DC_DPDCR_CSIZE_Msk                (_UINT32_(0x7) << CSI2DC_DPDCR_CSIZE_Pos)            /* (CSI2DC_DPDCR) DMA Chunk Size Mask */
 #define CSI2DC_DPDCR_CSIZE(value)             (CSI2DC_DPDCR_CSIZE_Msk & (_UINT32_(value) << CSI2DC_DPDCR_CSIZE_Pos)) /* Assigment of value for CSIZE in the CSI2DC_DPDCR register */
@@ -1233,41 +1242,41 @@
 #define   CSI2DC_VPISR_CAPTURE_1_Val          _UINT32_(0x1)                                        /* (CSI2DC_VPISR) A frame has been captured in the video pipeline.  */
 #define CSI2DC_VPISR_CAPTURE_0                (CSI2DC_VPISR_CAPTURE_0_Val << CSI2DC_VPISR_CAPTURE_Pos) /* (CSI2DC_VPISR) No frame capture since the last read of the register. Position  */
 #define CSI2DC_VPISR_CAPTURE_1                (CSI2DC_VPISR_CAPTURE_1_Val << CSI2DC_VPISR_CAPTURE_Pos) /* (CSI2DC_VPISR) A frame has been captured in the video pipeline. Position  */
-#define CSI2DC_VPISR_RATEOVF_Pos              _UINT32_(1)                                          /* (CSI2DC_VPISR) Rate Buffer Overflow Interrupt Mask Position */
-#define CSI2DC_VPISR_RATEOVF_Msk              (_UINT32_(0x1) << CSI2DC_VPISR_RATEOVF_Pos)          /* (CSI2DC_VPISR) Rate Buffer Overflow Interrupt Mask Mask */
+#define CSI2DC_VPISR_RATEOVF_Pos              _UINT32_(1)                                          /* (CSI2DC_VPISR) Rate Buffer Overflow Interrupt Status Position */
+#define CSI2DC_VPISR_RATEOVF_Msk              (_UINT32_(0x1) << CSI2DC_VPISR_RATEOVF_Pos)          /* (CSI2DC_VPISR) Rate Buffer Overflow Interrupt Status Mask */
 #define CSI2DC_VPISR_RATEOVF(value)           (CSI2DC_VPISR_RATEOVF_Msk & (_UINT32_(value) << CSI2DC_VPISR_RATEOVF_Pos)) /* Assigment of value for RATEOVF in the CSI2DC_VPISR register */
 #define   CSI2DC_VPISR_RATEOVF_0_Val          _UINT32_(0x0)                                        /* (CSI2DC_VPISR) No Rate Buffer Overflow since the last read of the register  */
 #define   CSI2DC_VPISR_RATEOVF_1_Val          _UINT32_(0x1)                                        /* (CSI2DC_VPISR) A Rate Buffer Overflow has been detected.  */
 #define CSI2DC_VPISR_RATEOVF_0                (CSI2DC_VPISR_RATEOVF_0_Val << CSI2DC_VPISR_RATEOVF_Pos) /* (CSI2DC_VPISR) No Rate Buffer Overflow since the last read of the register Position  */
 #define CSI2DC_VPISR_RATEOVF_1                (CSI2DC_VPISR_RATEOVF_1_Val << CSI2DC_VPISR_RATEOVF_Pos) /* (CSI2DC_VPISR) A Rate Buffer Overflow has been detected. Position  */
-#define CSI2DC_VPISR_CTLOVF_Pos               _UINT32_(2)                                          /* (CSI2DC_VPISR) Control Buffer Overflow Interrupt Mask Position */
-#define CSI2DC_VPISR_CTLOVF_Msk               (_UINT32_(0x1) << CSI2DC_VPISR_CTLOVF_Pos)           /* (CSI2DC_VPISR) Control Buffer Overflow Interrupt Mask Mask */
+#define CSI2DC_VPISR_CTLOVF_Pos               _UINT32_(2)                                          /* (CSI2DC_VPISR) Control Buffer Overflow Interrupt Status Position */
+#define CSI2DC_VPISR_CTLOVF_Msk               (_UINT32_(0x1) << CSI2DC_VPISR_CTLOVF_Pos)           /* (CSI2DC_VPISR) Control Buffer Overflow Interrupt Status Mask */
 #define CSI2DC_VPISR_CTLOVF(value)            (CSI2DC_VPISR_CTLOVF_Msk & (_UINT32_(value) << CSI2DC_VPISR_CTLOVF_Pos)) /* Assigment of value for CTLOVF in the CSI2DC_VPISR register */
 #define   CSI2DC_VPISR_CTLOVF_0_Val           _UINT32_(0x0)                                        /* (CSI2DC_VPISR) No Control Buffer Overflow since the last read of the register.  */
 #define   CSI2DC_VPISR_CTLOVF_1_Val           _UINT32_(0x1)                                        /* (CSI2DC_VPISR) A Control Buffer Overflow has been detected.  */
 #define CSI2DC_VPISR_CTLOVF_0                 (CSI2DC_VPISR_CTLOVF_0_Val << CSI2DC_VPISR_CTLOVF_Pos) /* (CSI2DC_VPISR) No Control Buffer Overflow since the last read of the register. Position  */
 #define CSI2DC_VPISR_CTLOVF_1                 (CSI2DC_VPISR_CTLOVF_1_Val << CSI2DC_VPISR_CTLOVF_Pos) /* (CSI2DC_VPISR) A Control Buffer Overflow has been detected. Position  */
-#define CSI2DC_VPISR_STE_Pos                  _UINT32_(3)                                          /* (CSI2DC_VPISR) Packet Shorter Than Expected Interrupt Mask Position */
-#define CSI2DC_VPISR_STE_Msk                  (_UINT32_(0x1) << CSI2DC_VPISR_STE_Pos)              /* (CSI2DC_VPISR) Packet Shorter Than Expected Interrupt Mask Mask */
+#define CSI2DC_VPISR_STE_Pos                  _UINT32_(3)                                          /* (CSI2DC_VPISR) Packet Shorter Than Expected Interrupt Status Position */
+#define CSI2DC_VPISR_STE_Msk                  (_UINT32_(0x1) << CSI2DC_VPISR_STE_Pos)              /* (CSI2DC_VPISR) Packet Shorter Than Expected Interrupt Status Mask */
 #define CSI2DC_VPISR_STE(value)               (CSI2DC_VPISR_STE_Msk & (_UINT32_(value) << CSI2DC_VPISR_STE_Pos)) /* Assigment of value for STE in the CSI2DC_VPISR register */
 #define   CSI2DC_VPISR_STE_0_Val              _UINT32_(0x0)                                        /* (CSI2DC_VPISR) No packet shorter than expected since the last read of the register.  */
-#define   CSI2DC_VPISR_STE_1_Val              _UINT32_(0x1)                                        /* (CSI2DC_VPISR) The Packet Shorter Than Expected interrupt is activated.  */
+#define   CSI2DC_VPISR_STE_1_Val              _UINT32_(0x1)                                        /* (CSI2DC_VPISR) A packet shorter than expected has been detected.  */
 #define CSI2DC_VPISR_STE_0                    (CSI2DC_VPISR_STE_0_Val << CSI2DC_VPISR_STE_Pos)     /* (CSI2DC_VPISR) No packet shorter than expected since the last read of the register. Position  */
-#define CSI2DC_VPISR_STE_1                    (CSI2DC_VPISR_STE_1_Val << CSI2DC_VPISR_STE_Pos)     /* (CSI2DC_VPISR) The Packet Shorter Than Expected interrupt is activated. Position  */
-#define CSI2DC_VPISR_LTE_Pos                  _UINT32_(4)                                          /* (CSI2DC_VPISR) Packet Longer Than Expected Interrupt Mask Position */
-#define CSI2DC_VPISR_LTE_Msk                  (_UINT32_(0x1) << CSI2DC_VPISR_LTE_Pos)              /* (CSI2DC_VPISR) Packet Longer Than Expected Interrupt Mask Mask */
+#define CSI2DC_VPISR_STE_1                    (CSI2DC_VPISR_STE_1_Val << CSI2DC_VPISR_STE_Pos)     /* (CSI2DC_VPISR) A packet shorter than expected has been detected. Position  */
+#define CSI2DC_VPISR_LTE_Pos                  _UINT32_(4)                                          /* (CSI2DC_VPISR) Packet Longer Than Expected Interrupt Status Position */
+#define CSI2DC_VPISR_LTE_Msk                  (_UINT32_(0x1) << CSI2DC_VPISR_LTE_Pos)              /* (CSI2DC_VPISR) Packet Longer Than Expected Interrupt Status Mask */
 #define CSI2DC_VPISR_LTE(value)               (CSI2DC_VPISR_LTE_Msk & (_UINT32_(value) << CSI2DC_VPISR_LTE_Pos)) /* Assigment of value for LTE in the CSI2DC_VPISR register */
-#define   CSI2DC_VPISR_LTE_0_Val              _UINT32_(0x0)                                        /* (CSI2DC_VPISR) Packet Longer Than Expected interrupt is masked.  */
-#define   CSI2DC_VPISR_LTE_1_Val              _UINT32_(0x1)                                        /* (CSI2DC_VPISR) Packet Longer Than Expected interrupt is activated.  */
-#define CSI2DC_VPISR_LTE_0                    (CSI2DC_VPISR_LTE_0_Val << CSI2DC_VPISR_LTE_Pos)     /* (CSI2DC_VPISR) Packet Longer Than Expected interrupt is masked. Position  */
-#define CSI2DC_VPISR_LTE_1                    (CSI2DC_VPISR_LTE_1_Val << CSI2DC_VPISR_LTE_Pos)     /* (CSI2DC_VPISR) Packet Longer Than Expected interrupt is activated. Position  */
-#define CSI2DC_VPISR_PKTOVF_Pos               _UINT32_(5)                                          /* (CSI2DC_VPISR) Packet Overflow For Video Pipe Interrupt Mask Position */
-#define CSI2DC_VPISR_PKTOVF_Msk               (_UINT32_(0x1) << CSI2DC_VPISR_PKTOVF_Pos)           /* (CSI2DC_VPISR) Packet Overflow For Video Pipe Interrupt Mask Mask */
+#define   CSI2DC_VPISR_LTE_0_Val              _UINT32_(0x0)                                        /* (CSI2DC_VPISR) No packet longer than expected since the last read of the register.  */
+#define   CSI2DC_VPISR_LTE_1_Val              _UINT32_(0x1)                                        /* (CSI2DC_VPISR) A packet longer than expected has been detected.  */
+#define CSI2DC_VPISR_LTE_0                    (CSI2DC_VPISR_LTE_0_Val << CSI2DC_VPISR_LTE_Pos)     /* (CSI2DC_VPISR) No packet longer than expected since the last read of the register. Position  */
+#define CSI2DC_VPISR_LTE_1                    (CSI2DC_VPISR_LTE_1_Val << CSI2DC_VPISR_LTE_Pos)     /* (CSI2DC_VPISR) A packet longer than expected has been detected. Position  */
+#define CSI2DC_VPISR_PKTOVF_Pos               _UINT32_(5)                                          /* (CSI2DC_VPISR) Packet Overflow For Video Pipe Interrupt Status Position */
+#define CSI2DC_VPISR_PKTOVF_Msk               (_UINT32_(0x1) << CSI2DC_VPISR_PKTOVF_Pos)           /* (CSI2DC_VPISR) Packet Overflow For Video Pipe Interrupt Status Mask */
 #define CSI2DC_VPISR_PKTOVF(value)            (CSI2DC_VPISR_PKTOVF_Msk & (_UINT32_(value) << CSI2DC_VPISR_PKTOVF_Pos)) /* Assigment of value for PKTOVF in the CSI2DC_VPISR register */
-#define   CSI2DC_VPISR_PKTOVF_0_Val           _UINT32_(0x0)                                        /* (CSI2DC_VPISR) Packet Overflow For Video Pipe interrupt is masked.  */
-#define   CSI2DC_VPISR_PKTOVF_1_Val           _UINT32_(0x1)                                        /* (CSI2DC_VPISR) Packet Overflow For Video Pipe interrupt is activated.  */
-#define CSI2DC_VPISR_PKTOVF_0                 (CSI2DC_VPISR_PKTOVF_0_Val << CSI2DC_VPISR_PKTOVF_Pos) /* (CSI2DC_VPISR) Packet Overflow For Video Pipe interrupt is masked. Position  */
-#define CSI2DC_VPISR_PKTOVF_1                 (CSI2DC_VPISR_PKTOVF_1_Val << CSI2DC_VPISR_PKTOVF_Pos) /* (CSI2DC_VPISR) Packet Overflow For Video Pipe interrupt is activated. Position  */
+#define   CSI2DC_VPISR_PKTOVF_0_Val           _UINT32_(0x0)                                        /* (CSI2DC_VPISR) No packet overflow since the last read of the register.  */
+#define   CSI2DC_VPISR_PKTOVF_1_Val           _UINT32_(0x1)                                        /* (CSI2DC_VPISR) A packet overflow has been detected.  */
+#define CSI2DC_VPISR_PKTOVF_0                 (CSI2DC_VPISR_PKTOVF_0_Val << CSI2DC_VPISR_PKTOVF_Pos) /* (CSI2DC_VPISR) No packet overflow since the last read of the register. Position  */
+#define CSI2DC_VPISR_PKTOVF_1                 (CSI2DC_VPISR_PKTOVF_1_Val << CSI2DC_VPISR_PKTOVF_Pos) /* (CSI2DC_VPISR) A packet overflow has been detected. Position  */
 #define CSI2DC_VPISR_Msk                      _UINT32_(0x0000003F)                                 /* (CSI2DC_VPISR) Register Mask  */
 
 
@@ -1367,7 +1376,7 @@
 #define CSI2DC_VPROWR_Msk                     _UINT32_(0x0000FFFF)                                 /* (CSI2DC_VPROWR) Register Mask  */
 
 
-/* -------- CSI2DC_VPDTRR : (CSI2DC Offset: 0x108) (R/W 32) Video Pipe Data Type Remap Register -------- */
+/* -------- CSI2DC_VPDTRR : (CSI2DC Offset: 0x108) ( /W 32) Video Pipe Data Type Remap Register -------- */
 #define CSI2DC_VPDTRR_RESETVALUE              _UINT32_(0x00)                                       /*  (CSI2DC_VPDTRR) Video Pipe Data Type Remap Register  Reset Value */
 
 #define CSI2DC_VPDTRR_ADT_Pos                 _UINT32_(0)                                          /* (CSI2DC_VPDTRR) Alternate Data Type Position */
@@ -1511,7 +1520,7 @@ typedef struct
   __IO  uint32_t                       CSI2DC_VPCFGR;      /**< Offset: 0xFC (R/W  32) Video Pipe Configuration Register */
   __I   uint32_t                       CSI2DC_VPCOLR;      /**< Offset: 0x100 (R/   32) Video Pipe Column Register */
   __I   uint32_t                       CSI2DC_VPROWR;      /**< Offset: 0x104 (R/   32) Video Pipe Row Register */
-  __IO  uint32_t                       CSI2DC_VPDTRR;      /**< Offset: 0x108 (R/W  32) Video Pipe Data Type Remap Register */
+  __O   uint32_t                       CSI2DC_VPDTRR;      /**< Offset: 0x108 ( /W  32) Video Pipe Data Type Remap Register */
 } csi2dc_registers_t;
 
 

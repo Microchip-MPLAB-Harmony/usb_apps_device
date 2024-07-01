@@ -1,26 +1,23 @@
 /*
  * Component description for RTC
  *
- * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
  *
- * Subject to your compliance with these terms, you may use Microchip software and any derivatives
- * exclusively with Microchip products. It is your responsibility to comply with third party license
- * terms applicable to your use of third party software (including open source software) that may
- * accompany Microchip software.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY,
- * APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND
- * FITNESS FOR A PARTICULAR PURPOSE.
+ *   http://www.apache.org/licenses/LICENSE-2.0
  *
- * IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, INCIDENTAL OR CONSEQUENTIAL
- * LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF
- * MICROCHIP HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO THE FULLEST EXTENT
- * ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT
- * EXCEED THE AMOUNT OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  *
  */
 
-/* file generated from device description version 2023-01-20T08:33:42Z */
+/* file generated from device description file (ATDF) version 2024-04-05T08:36:56Z */
 #ifndef _SAM9X7_RTC_COMPONENT_H_
 #define _SAM9X7_RTC_COMPONENT_H_
 
@@ -78,19 +75,12 @@
 #define   RTC_MR_HRMOD_AMPM_Val               _UINT32_(0x1)                                        /* (RTC_MR) 12-hour mode is selected.  */
 #define RTC_MR_HRMOD_24HOURS                  (RTC_MR_HRMOD_24HOURS_Val << RTC_MR_HRMOD_Pos)       /* (RTC_MR) 24-hour mode is selected. Position  */
 #define RTC_MR_HRMOD_AMPM                     (RTC_MR_HRMOD_AMPM_Val << RTC_MR_HRMOD_Pos)          /* (RTC_MR) 12-hour mode is selected. Position  */
-#define RTC_MR_PERSIAN_Pos                    _UINT32_(1)                                          /* (RTC_MR) PERSIAN Calendar Position */
-#define RTC_MR_PERSIAN_Msk                    (_UINT32_(0x1) << RTC_MR_PERSIAN_Pos)                /* (RTC_MR) PERSIAN Calendar Mask */
-#define RTC_MR_PERSIAN(value)                 (RTC_MR_PERSIAN_Msk & (_UINT32_(value) << RTC_MR_PERSIAN_Pos)) /* Assigment of value for PERSIAN in the RTC_MR register */
-#define   RTC_MR_PERSIAN_DISABLED_Val         _UINT32_(0x0)                                        /* (RTC_MR) Gregorian calendar.  */
-#define   RTC_MR_PERSIAN_ENABLED_Val          _UINT32_(0x1)                                        /* (RTC_MR) Persian calendar.  */
-#define RTC_MR_PERSIAN_DISABLED               (RTC_MR_PERSIAN_DISABLED_Val << RTC_MR_PERSIAN_Pos)  /* (RTC_MR) Gregorian calendar. Position  */
-#define RTC_MR_PERSIAN_ENABLED                (RTC_MR_PERSIAN_ENABLED_Val << RTC_MR_PERSIAN_Pos)   /* (RTC_MR) Persian calendar. Position  */
 #define RTC_MR_UTC_Pos                        _UINT32_(2)                                          /* (RTC_MR) UTC Time Format Position */
 #define RTC_MR_UTC_Msk                        (_UINT32_(0x1) << RTC_MR_UTC_Pos)                    /* (RTC_MR) UTC Time Format Mask */
 #define RTC_MR_UTC(value)                     (RTC_MR_UTC_Msk & (_UINT32_(value) << RTC_MR_UTC_Pos)) /* Assigment of value for UTC in the RTC_MR register */
-#define   RTC_MR_UTC_DISABLED_Val             _UINT32_(0x0)                                        /* (RTC_MR) Gregorian or Persian calendar.  */
+#define   RTC_MR_UTC_DISABLED_Val             _UINT32_(0x0)                                        /* (RTC_MR) Gregorian calendar.  */
 #define   RTC_MR_UTC_ENABLED_Val              _UINT32_(0x1)                                        /* (RTC_MR) UTC format.  */
-#define RTC_MR_UTC_DISABLED                   (RTC_MR_UTC_DISABLED_Val << RTC_MR_UTC_Pos)          /* (RTC_MR) Gregorian or Persian calendar. Position  */
+#define RTC_MR_UTC_DISABLED                   (RTC_MR_UTC_DISABLED_Val << RTC_MR_UTC_Pos)          /* (RTC_MR) Gregorian calendar. Position  */
 #define RTC_MR_UTC_ENABLED                    (RTC_MR_UTC_ENABLED_Val << RTC_MR_UTC_Pos)           /* (RTC_MR) UTC format. Position  */
 #define RTC_MR_NEGPPM_Pos                     _UINT32_(4)                                          /* (RTC_MR) NEGative PPM Correction Position */
 #define RTC_MR_NEGPPM_Msk                     (_UINT32_(0x1) << RTC_MR_NEGPPM_Pos)                 /* (RTC_MR) NEGative PPM Correction Mask */
@@ -179,7 +169,7 @@
 #define RTC_MR_TPERIOD_P_500MS                (RTC_MR_TPERIOD_P_500MS_Val << RTC_MR_TPERIOD_Pos)   /* (RTC_MR) 500 ms Position  */
 #define RTC_MR_TPERIOD_P_250MS                (RTC_MR_TPERIOD_P_250MS_Val << RTC_MR_TPERIOD_Pos)   /* (RTC_MR) 250 ms Position  */
 #define RTC_MR_TPERIOD_P_125MS                (RTC_MR_TPERIOD_P_125MS_Val << RTC_MR_TPERIOD_Pos)   /* (RTC_MR) 125 ms Position  */
-#define RTC_MR_Msk                            _UINT32_(0x3777FF17)                                 /* (RTC_MR) Register Mask  */
+#define RTC_MR_Msk                            _UINT32_(0x3777FF15)                                 /* (RTC_MR) Register Mask  */
 
 
 /* -------- RTC_TIMR : (RTC Offset: 0x08) (R/W 32) Time Register -------- */
@@ -319,7 +309,7 @@
 
 
 /* -------- RTC_SR : (RTC Offset: 0x18) ( R/ 32) Status Register -------- */
-#define RTC_SR_RESETVALUE                     _UINT32_(0x00)                                       /*  (RTC_SR) Status Register  Reset Value */
+#define RTC_SR_RESETVALUE                     _UINT32_(0x04)                                       /*  (RTC_SR) Status Register  Reset Value */
 
 #define RTC_SR_ACKUPD_Pos                     _UINT32_(0)                                          /* (RTC_SR) Acknowledge for Update Position */
 #define RTC_SR_ACKUPD_Msk                     (_UINT32_(0x1) << RTC_SR_ACKUPD_Pos)                 /* (RTC_SR) Acknowledge for Update Mask */
@@ -792,33 +782,33 @@
 /* -------- RTC_TSSR0 : (RTC Offset: 0xB8) ( R/ 32) Timestamp Source Register 0 -------- */
 #define RTC_TSSR0_RESETVALUE                  _UINT32_(0x00)                                       /*  (RTC_TSSR0) Timestamp Source Register 0  Reset Value */
 
-#define RTC_TSSR0_DET0_Pos                    _UINT32_(16)                                         /* (RTC_TSSR0) Tamper Detection on VDDCORE WKUP[8:1] (cleared on read) Position */
+#define RTC_TSSR0_DET0_Pos                    _UINT32_(0)                                          /* (RTC_TSSR0) Tamper Detection on VDDCORE WKUP[8:1] (cleared on read) Position */
 #define RTC_TSSR0_DET0_Msk                    (_UINT32_(0x1) << RTC_TSSR0_DET0_Pos)                /* (RTC_TSSR0) Tamper Detection on VDDCORE WKUP[8:1] (cleared on read) Mask */
 #define RTC_TSSR0_DET0(value)                 (RTC_TSSR0_DET0_Msk & (_UINT32_(value) << RTC_TSSR0_DET0_Pos)) /* Assigment of value for DET0 in the RTC_TSSR0 register */
-#define RTC_TSSR0_DET1_Pos                    _UINT32_(17)                                         /* (RTC_TSSR0) Tamper Detection on VDDCORE WKUP[8:1] (cleared on read) Position */
+#define RTC_TSSR0_DET1_Pos                    _UINT32_(1)                                          /* (RTC_TSSR0) Tamper Detection on VDDCORE WKUP[8:1] (cleared on read) Position */
 #define RTC_TSSR0_DET1_Msk                    (_UINT32_(0x1) << RTC_TSSR0_DET1_Pos)                /* (RTC_TSSR0) Tamper Detection on VDDCORE WKUP[8:1] (cleared on read) Mask */
 #define RTC_TSSR0_DET1(value)                 (RTC_TSSR0_DET1_Msk & (_UINT32_(value) << RTC_TSSR0_DET1_Pos)) /* Assigment of value for DET1 in the RTC_TSSR0 register */
-#define RTC_TSSR0_DET2_Pos                    _UINT32_(18)                                         /* (RTC_TSSR0) Tamper Detection on VDDCORE WKUP[8:1] (cleared on read) Position */
+#define RTC_TSSR0_DET2_Pos                    _UINT32_(2)                                          /* (RTC_TSSR0) Tamper Detection on VDDCORE WKUP[8:1] (cleared on read) Position */
 #define RTC_TSSR0_DET2_Msk                    (_UINT32_(0x1) << RTC_TSSR0_DET2_Pos)                /* (RTC_TSSR0) Tamper Detection on VDDCORE WKUP[8:1] (cleared on read) Mask */
 #define RTC_TSSR0_DET2(value)                 (RTC_TSSR0_DET2_Msk & (_UINT32_(value) << RTC_TSSR0_DET2_Pos)) /* Assigment of value for DET2 in the RTC_TSSR0 register */
-#define RTC_TSSR0_DET3_Pos                    _UINT32_(19)                                         /* (RTC_TSSR0) Tamper Detection on VDDCORE WKUP[8:1] (cleared on read) Position */
+#define RTC_TSSR0_DET3_Pos                    _UINT32_(3)                                          /* (RTC_TSSR0) Tamper Detection on VDDCORE WKUP[8:1] (cleared on read) Position */
 #define RTC_TSSR0_DET3_Msk                    (_UINT32_(0x1) << RTC_TSSR0_DET3_Pos)                /* (RTC_TSSR0) Tamper Detection on VDDCORE WKUP[8:1] (cleared on read) Mask */
 #define RTC_TSSR0_DET3(value)                 (RTC_TSSR0_DET3_Msk & (_UINT32_(value) << RTC_TSSR0_DET3_Pos)) /* Assigment of value for DET3 in the RTC_TSSR0 register */
-#define RTC_TSSR0_DET4_Pos                    _UINT32_(20)                                         /* (RTC_TSSR0) Tamper Detection on VDDCORE WKUP[8:1] (cleared on read) Position */
+#define RTC_TSSR0_DET4_Pos                    _UINT32_(4)                                          /* (RTC_TSSR0) Tamper Detection on VDDCORE WKUP[8:1] (cleared on read) Position */
 #define RTC_TSSR0_DET4_Msk                    (_UINT32_(0x1) << RTC_TSSR0_DET4_Pos)                /* (RTC_TSSR0) Tamper Detection on VDDCORE WKUP[8:1] (cleared on read) Mask */
 #define RTC_TSSR0_DET4(value)                 (RTC_TSSR0_DET4_Msk & (_UINT32_(value) << RTC_TSSR0_DET4_Pos)) /* Assigment of value for DET4 in the RTC_TSSR0 register */
-#define RTC_TSSR0_DET5_Pos                    _UINT32_(21)                                         /* (RTC_TSSR0) Tamper Detection on VDDCORE WKUP[8:1] (cleared on read) Position */
+#define RTC_TSSR0_DET5_Pos                    _UINT32_(5)                                          /* (RTC_TSSR0) Tamper Detection on VDDCORE WKUP[8:1] (cleared on read) Position */
 #define RTC_TSSR0_DET5_Msk                    (_UINT32_(0x1) << RTC_TSSR0_DET5_Pos)                /* (RTC_TSSR0) Tamper Detection on VDDCORE WKUP[8:1] (cleared on read) Mask */
 #define RTC_TSSR0_DET5(value)                 (RTC_TSSR0_DET5_Msk & (_UINT32_(value) << RTC_TSSR0_DET5_Pos)) /* Assigment of value for DET5 in the RTC_TSSR0 register */
-#define RTC_TSSR0_DET6_Pos                    _UINT32_(22)                                         /* (RTC_TSSR0) Tamper Detection on VDDCORE WKUP[8:1] (cleared on read) Position */
+#define RTC_TSSR0_DET6_Pos                    _UINT32_(6)                                          /* (RTC_TSSR0) Tamper Detection on VDDCORE WKUP[8:1] (cleared on read) Position */
 #define RTC_TSSR0_DET6_Msk                    (_UINT32_(0x1) << RTC_TSSR0_DET6_Pos)                /* (RTC_TSSR0) Tamper Detection on VDDCORE WKUP[8:1] (cleared on read) Mask */
 #define RTC_TSSR0_DET6(value)                 (RTC_TSSR0_DET6_Msk & (_UINT32_(value) << RTC_TSSR0_DET6_Pos)) /* Assigment of value for DET6 in the RTC_TSSR0 register */
-#define RTC_TSSR0_DET7_Pos                    _UINT32_(23)                                         /* (RTC_TSSR0) Tamper Detection on VDDCORE WKUP[8:1] (cleared on read) Position */
+#define RTC_TSSR0_DET7_Pos                    _UINT32_(7)                                          /* (RTC_TSSR0) Tamper Detection on VDDCORE WKUP[8:1] (cleared on read) Position */
 #define RTC_TSSR0_DET7_Msk                    (_UINT32_(0x1) << RTC_TSSR0_DET7_Pos)                /* (RTC_TSSR0) Tamper Detection on VDDCORE WKUP[8:1] (cleared on read) Mask */
 #define RTC_TSSR0_DET7(value)                 (RTC_TSSR0_DET7_Msk & (_UINT32_(value) << RTC_TSSR0_DET7_Pos)) /* Assigment of value for DET7 in the RTC_TSSR0 register */
-#define RTC_TSSR0_Msk                         _UINT32_(0x00FF0000)                                 /* (RTC_TSSR0) Register Mask  */
+#define RTC_TSSR0_Msk                         _UINT32_(0x000000FF)                                 /* (RTC_TSSR0) Register Mask  */
 
-#define RTC_TSSR0_DET_Pos                     _UINT32_(16)                                         /* (RTC_TSSR0 Position) Tamper Detection on VDDCORE WKUP[8:x] (cleared on read) */
+#define RTC_TSSR0_DET_Pos                     _UINT32_(0)                                          /* (RTC_TSSR0 Position) Tamper Detection on VDDCORE WKUP[8:x] (cleared on read) */
 #define RTC_TSSR0_DET_Msk                     (_UINT32_(0xFF) << RTC_TSSR0_DET_Pos)                /* (RTC_TSSR0 Mask) DET */
 #define RTC_TSSR0_DET(value)                  (RTC_TSSR0_DET_Msk & (_UINT32_(value) << RTC_TSSR0_DET_Pos)) 
 
@@ -880,33 +870,33 @@
 /* -------- RTC_TSSR1 : (RTC Offset: 0xC4) ( R/ 32) Timestamp Source Register 1 -------- */
 #define RTC_TSSR1_RESETVALUE                  _UINT32_(0x00)                                       /*  (RTC_TSSR1) Timestamp Source Register 1  Reset Value */
 
-#define RTC_TSSR1_DET0_Pos                    _UINT32_(16)                                         /* (RTC_TSSR1) Tamper Detection on VDDCORE WKUP[8:1] (cleared on read) Position */
+#define RTC_TSSR1_DET0_Pos                    _UINT32_(0)                                          /* (RTC_TSSR1) Tamper Detection on VDDCORE WKUP[8:1] (cleared on read) Position */
 #define RTC_TSSR1_DET0_Msk                    (_UINT32_(0x1) << RTC_TSSR1_DET0_Pos)                /* (RTC_TSSR1) Tamper Detection on VDDCORE WKUP[8:1] (cleared on read) Mask */
 #define RTC_TSSR1_DET0(value)                 (RTC_TSSR1_DET0_Msk & (_UINT32_(value) << RTC_TSSR1_DET0_Pos)) /* Assigment of value for DET0 in the RTC_TSSR1 register */
-#define RTC_TSSR1_DET1_Pos                    _UINT32_(17)                                         /* (RTC_TSSR1) Tamper Detection on VDDCORE WKUP[8:1] (cleared on read) Position */
+#define RTC_TSSR1_DET1_Pos                    _UINT32_(1)                                          /* (RTC_TSSR1) Tamper Detection on VDDCORE WKUP[8:1] (cleared on read) Position */
 #define RTC_TSSR1_DET1_Msk                    (_UINT32_(0x1) << RTC_TSSR1_DET1_Pos)                /* (RTC_TSSR1) Tamper Detection on VDDCORE WKUP[8:1] (cleared on read) Mask */
 #define RTC_TSSR1_DET1(value)                 (RTC_TSSR1_DET1_Msk & (_UINT32_(value) << RTC_TSSR1_DET1_Pos)) /* Assigment of value for DET1 in the RTC_TSSR1 register */
-#define RTC_TSSR1_DET2_Pos                    _UINT32_(18)                                         /* (RTC_TSSR1) Tamper Detection on VDDCORE WKUP[8:1] (cleared on read) Position */
+#define RTC_TSSR1_DET2_Pos                    _UINT32_(2)                                          /* (RTC_TSSR1) Tamper Detection on VDDCORE WKUP[8:1] (cleared on read) Position */
 #define RTC_TSSR1_DET2_Msk                    (_UINT32_(0x1) << RTC_TSSR1_DET2_Pos)                /* (RTC_TSSR1) Tamper Detection on VDDCORE WKUP[8:1] (cleared on read) Mask */
 #define RTC_TSSR1_DET2(value)                 (RTC_TSSR1_DET2_Msk & (_UINT32_(value) << RTC_TSSR1_DET2_Pos)) /* Assigment of value for DET2 in the RTC_TSSR1 register */
-#define RTC_TSSR1_DET3_Pos                    _UINT32_(19)                                         /* (RTC_TSSR1) Tamper Detection on VDDCORE WKUP[8:1] (cleared on read) Position */
+#define RTC_TSSR1_DET3_Pos                    _UINT32_(3)                                          /* (RTC_TSSR1) Tamper Detection on VDDCORE WKUP[8:1] (cleared on read) Position */
 #define RTC_TSSR1_DET3_Msk                    (_UINT32_(0x1) << RTC_TSSR1_DET3_Pos)                /* (RTC_TSSR1) Tamper Detection on VDDCORE WKUP[8:1] (cleared on read) Mask */
 #define RTC_TSSR1_DET3(value)                 (RTC_TSSR1_DET3_Msk & (_UINT32_(value) << RTC_TSSR1_DET3_Pos)) /* Assigment of value for DET3 in the RTC_TSSR1 register */
-#define RTC_TSSR1_DET4_Pos                    _UINT32_(20)                                         /* (RTC_TSSR1) Tamper Detection on VDDCORE WKUP[8:1] (cleared on read) Position */
+#define RTC_TSSR1_DET4_Pos                    _UINT32_(4)                                          /* (RTC_TSSR1) Tamper Detection on VDDCORE WKUP[8:1] (cleared on read) Position */
 #define RTC_TSSR1_DET4_Msk                    (_UINT32_(0x1) << RTC_TSSR1_DET4_Pos)                /* (RTC_TSSR1) Tamper Detection on VDDCORE WKUP[8:1] (cleared on read) Mask */
 #define RTC_TSSR1_DET4(value)                 (RTC_TSSR1_DET4_Msk & (_UINT32_(value) << RTC_TSSR1_DET4_Pos)) /* Assigment of value for DET4 in the RTC_TSSR1 register */
-#define RTC_TSSR1_DET5_Pos                    _UINT32_(21)                                         /* (RTC_TSSR1) Tamper Detection on VDDCORE WKUP[8:1] (cleared on read) Position */
+#define RTC_TSSR1_DET5_Pos                    _UINT32_(5)                                          /* (RTC_TSSR1) Tamper Detection on VDDCORE WKUP[8:1] (cleared on read) Position */
 #define RTC_TSSR1_DET5_Msk                    (_UINT32_(0x1) << RTC_TSSR1_DET5_Pos)                /* (RTC_TSSR1) Tamper Detection on VDDCORE WKUP[8:1] (cleared on read) Mask */
 #define RTC_TSSR1_DET5(value)                 (RTC_TSSR1_DET5_Msk & (_UINT32_(value) << RTC_TSSR1_DET5_Pos)) /* Assigment of value for DET5 in the RTC_TSSR1 register */
-#define RTC_TSSR1_DET6_Pos                    _UINT32_(22)                                         /* (RTC_TSSR1) Tamper Detection on VDDCORE WKUP[8:1] (cleared on read) Position */
+#define RTC_TSSR1_DET6_Pos                    _UINT32_(6)                                          /* (RTC_TSSR1) Tamper Detection on VDDCORE WKUP[8:1] (cleared on read) Position */
 #define RTC_TSSR1_DET6_Msk                    (_UINT32_(0x1) << RTC_TSSR1_DET6_Pos)                /* (RTC_TSSR1) Tamper Detection on VDDCORE WKUP[8:1] (cleared on read) Mask */
 #define RTC_TSSR1_DET6(value)                 (RTC_TSSR1_DET6_Msk & (_UINT32_(value) << RTC_TSSR1_DET6_Pos)) /* Assigment of value for DET6 in the RTC_TSSR1 register */
-#define RTC_TSSR1_DET7_Pos                    _UINT32_(23)                                         /* (RTC_TSSR1) Tamper Detection on VDDCORE WKUP[8:1] (cleared on read) Position */
+#define RTC_TSSR1_DET7_Pos                    _UINT32_(7)                                          /* (RTC_TSSR1) Tamper Detection on VDDCORE WKUP[8:1] (cleared on read) Position */
 #define RTC_TSSR1_DET7_Msk                    (_UINT32_(0x1) << RTC_TSSR1_DET7_Pos)                /* (RTC_TSSR1) Tamper Detection on VDDCORE WKUP[8:1] (cleared on read) Mask */
 #define RTC_TSSR1_DET7(value)                 (RTC_TSSR1_DET7_Msk & (_UINT32_(value) << RTC_TSSR1_DET7_Pos)) /* Assigment of value for DET7 in the RTC_TSSR1 register */
-#define RTC_TSSR1_Msk                         _UINT32_(0x00FF0000)                                 /* (RTC_TSSR1) Register Mask  */
+#define RTC_TSSR1_Msk                         _UINT32_(0x000000FF)                                 /* (RTC_TSSR1) Register Mask  */
 
-#define RTC_TSSR1_DET_Pos                     _UINT32_(16)                                         /* (RTC_TSSR1 Position) Tamper Detection on VDDCORE WKUP[8:x] (cleared on read) */
+#define RTC_TSSR1_DET_Pos                     _UINT32_(0)                                          /* (RTC_TSSR1 Position) Tamper Detection on VDDCORE WKUP[8:x] (cleared on read) */
 #define RTC_TSSR1_DET_Msk                     (_UINT32_(0xFF) << RTC_TSSR1_DET_Pos)                /* (RTC_TSSR1 Mask) DET */
 #define RTC_TSSR1_DET(value)                  (RTC_TSSR1_DET_Msk & (_UINT32_(value) << RTC_TSSR1_DET_Pos)) 
 

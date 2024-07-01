@@ -1,26 +1,23 @@
 /*
  * Component description for PMC
  *
- * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
  *
- * Subject to your compliance with these terms, you may use Microchip software and any derivatives
- * exclusively with Microchip products. It is your responsibility to comply with third party license
- * terms applicable to your use of third party software (including open source software) that may
- * accompany Microchip software.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY,
- * APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND
- * FITNESS FOR A PARTICULAR PURPOSE.
+ *   http://www.apache.org/licenses/LICENSE-2.0
  *
- * IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, INCIDENTAL OR CONSEQUENTIAL
- * LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF
- * MICROCHIP HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO THE FULLEST EXTENT
- * ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT
- * EXCEED THE AMOUNT OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  *
  */
 
-/* file generated from device description version 2023-01-20T08:33:42Z */
+/* file generated from device description file (ATDF) version 2024-04-05T08:36:56Z */
 #ifndef _SAM9X7_PMC_COMPONENT_H_
 #define _SAM9X7_PMC_COMPONENT_H_
 
@@ -29,13 +26,13 @@
 /* ************************************************************************** */
 
 /* -------- PMC_SCER : (PMC Offset: 0x00) ( /W 32) System Clock Enable Register -------- */
-#define PMC_SCER_DDRCK_Pos                    _UINT32_(2)                                          /* (PMC_SCER) MPDDRC/SDRAMC Clock Enable Position */
-#define PMC_SCER_DDRCK_Msk                    (_UINT32_(0x1) << PMC_SCER_DDRCK_Pos)                /* (PMC_SCER) MPDDRC/SDRAMC Clock Enable Mask */
+#define PMC_SCER_DDRCK_Pos                    _UINT32_(2)                                          /* (PMC_SCER) MPDDRC Clock Enable Position */
+#define PMC_SCER_DDRCK_Msk                    (_UINT32_(0x1) << PMC_SCER_DDRCK_Pos)                /* (PMC_SCER) MPDDRC Clock Enable Mask */
 #define PMC_SCER_DDRCK(value)                 (PMC_SCER_DDRCK_Msk & (_UINT32_(value) << PMC_SCER_DDRCK_Pos)) /* Assigment of value for DDRCK in the PMC_SCER register */
 #define   PMC_SCER_DDRCK_0_Val                _UINT32_(0x0)                                        /* (PMC_SCER) No effect.  */
-#define   PMC_SCER_DDRCK_1_Val                _UINT32_(0x1)                                        /* (PMC_SCER) Enables the MPDDRC or SDRAMC clock.  */
+#define   PMC_SCER_DDRCK_1_Val                _UINT32_(0x1)                                        /* (PMC_SCER) Enables the MPDDRC clock.  */
 #define PMC_SCER_DDRCK_0                      (PMC_SCER_DDRCK_0_Val << PMC_SCER_DDRCK_Pos)         /* (PMC_SCER) No effect. Position  */
-#define PMC_SCER_DDRCK_1                      (PMC_SCER_DDRCK_1_Val << PMC_SCER_DDRCK_Pos)         /* (PMC_SCER) Enables the MPDDRC or SDRAMC clock. Position  */
+#define PMC_SCER_DDRCK_1                      (PMC_SCER_DDRCK_1_Val << PMC_SCER_DDRCK_Pos)         /* (PMC_SCER) Enables the MPDDRC clock. Position  */
 #define PMC_SCER_UHP_Pos                      _UINT32_(6)                                          /* (PMC_SCER) USB Host OHCI Clocks Enable Position */
 #define PMC_SCER_UHP_Msk                      (_UINT32_(0x1) << PMC_SCER_UHP_Pos)                  /* (PMC_SCER) USB Host OHCI Clocks Enable Mask */
 #define PMC_SCER_UHP(value)                   (PMC_SCER_UHP_Msk & (_UINT32_(value) << PMC_SCER_UHP_Pos)) /* Assigment of value for UHP in the PMC_SCER register */
@@ -57,27 +54,20 @@
 #define   PMC_SCER_PCK1_1_Val                 _UINT32_(0x1)                                        /* (PMC_SCER) Enables the corresponding Programmable Clock output.  */
 #define PMC_SCER_PCK1_0                       (PMC_SCER_PCK1_0_Val << PMC_SCER_PCK1_Pos)           /* (PMC_SCER) No effect. Position  */
 #define PMC_SCER_PCK1_1                       (PMC_SCER_PCK1_1_Val << PMC_SCER_PCK1_Pos)           /* (PMC_SCER) Enables the corresponding Programmable Clock output. Position  */
-#define PMC_SCER_QSPICLK_Pos                  _UINT32_(19)                                         /* (PMC_SCER) QSPI 2x Clock Enable Position */
-#define PMC_SCER_QSPICLK_Msk                  (_UINT32_(0x1) << PMC_SCER_QSPICLK_Pos)              /* (PMC_SCER) QSPI 2x Clock Enable Mask */
-#define PMC_SCER_QSPICLK(value)               (PMC_SCER_QSPICLK_Msk & (_UINT32_(value) << PMC_SCER_QSPICLK_Pos)) /* Assigment of value for QSPICLK in the PMC_SCER register */
-#define   PMC_SCER_QSPICLK_0_Val              _UINT32_(0x0)                                        /* (PMC_SCER) No effect.  */
-#define   PMC_SCER_QSPICLK_1_Val              _UINT32_(0x1)                                        /* (PMC_SCER) Enables the QSPI 2x clock.  */
-#define PMC_SCER_QSPICLK_0                    (PMC_SCER_QSPICLK_0_Val << PMC_SCER_QSPICLK_Pos)     /* (PMC_SCER) No effect. Position  */
-#define PMC_SCER_QSPICLK_1                    (PMC_SCER_QSPICLK_1_Val << PMC_SCER_QSPICLK_Pos)     /* (PMC_SCER) Enables the QSPI 2x clock. Position  */
-#define PMC_SCER_Msk                          _UINT32_(0x00080344)                                 /* (PMC_SCER) Register Mask  */
+#define PMC_SCER_Msk                          _UINT32_(0x00000344)                                 /* (PMC_SCER) Register Mask  */
 
 #define PMC_SCER_PCK_Pos                      _UINT32_(8)                                          /* (PMC_SCER Position) Programmable Clock x Output Enable */
 #define PMC_SCER_PCK_Msk                      (_UINT32_(0x3) << PMC_SCER_PCK_Pos)                  /* (PMC_SCER Mask) PCK */
 #define PMC_SCER_PCK(value)                   (PMC_SCER_PCK_Msk & (_UINT32_(value) << PMC_SCER_PCK_Pos)) 
 
 /* -------- PMC_SCDR : (PMC Offset: 0x04) ( /W 32) System Clock Disable Register -------- */
-#define PMC_SCDR_DDRCK_Pos                    _UINT32_(2)                                          /* (PMC_SCDR) MPDDRC/SDRAMC Clock Disable Position */
-#define PMC_SCDR_DDRCK_Msk                    (_UINT32_(0x1) << PMC_SCDR_DDRCK_Pos)                /* (PMC_SCDR) MPDDRC/SDRAMC Clock Disable Mask */
+#define PMC_SCDR_DDRCK_Pos                    _UINT32_(2)                                          /* (PMC_SCDR) MPDDRC Clock Disable Position */
+#define PMC_SCDR_DDRCK_Msk                    (_UINT32_(0x1) << PMC_SCDR_DDRCK_Pos)                /* (PMC_SCDR) MPDDRC Clock Disable Mask */
 #define PMC_SCDR_DDRCK(value)                 (PMC_SCDR_DDRCK_Msk & (_UINT32_(value) << PMC_SCDR_DDRCK_Pos)) /* Assigment of value for DDRCK in the PMC_SCDR register */
 #define   PMC_SCDR_DDRCK_0_Val                _UINT32_(0x0)                                        /* (PMC_SCDR) No effect.  */
-#define   PMC_SCDR_DDRCK_1_Val                _UINT32_(0x1)                                        /* (PMC_SCDR) Disables the MPDDRC or SDRAMC clock.  */
+#define   PMC_SCDR_DDRCK_1_Val                _UINT32_(0x1)                                        /* (PMC_SCDR) Disables the MPDDRC clock.  */
 #define PMC_SCDR_DDRCK_0                      (PMC_SCDR_DDRCK_0_Val << PMC_SCDR_DDRCK_Pos)         /* (PMC_SCDR) No effect. Position  */
-#define PMC_SCDR_DDRCK_1                      (PMC_SCDR_DDRCK_1_Val << PMC_SCDR_DDRCK_Pos)         /* (PMC_SCDR) Disables the MPDDRC or SDRAMC clock. Position  */
+#define PMC_SCDR_DDRCK_1                      (PMC_SCDR_DDRCK_1_Val << PMC_SCDR_DDRCK_Pos)         /* (PMC_SCDR) Disables the MPDDRC clock. Position  */
 #define PMC_SCDR_UHP_Pos                      _UINT32_(6)                                          /* (PMC_SCDR) USB Host OHCI Clocks Disable Position */
 #define PMC_SCDR_UHP_Msk                      (_UINT32_(0x1) << PMC_SCDR_UHP_Pos)                  /* (PMC_SCDR) USB Host OHCI Clocks Disable Mask */
 #define PMC_SCDR_UHP(value)                   (PMC_SCDR_UHP_Msk & (_UINT32_(value) << PMC_SCDR_UHP_Pos)) /* Assigment of value for UHP in the PMC_SCDR register */
@@ -99,14 +89,7 @@
 #define   PMC_SCDR_PCK1_1_Val                 _UINT32_(0x1)                                        /* (PMC_SCDR) Disables the corresponding Programmable Clock output.  */
 #define PMC_SCDR_PCK1_0                       (PMC_SCDR_PCK1_0_Val << PMC_SCDR_PCK1_Pos)           /* (PMC_SCDR) No effect. Position  */
 #define PMC_SCDR_PCK1_1                       (PMC_SCDR_PCK1_1_Val << PMC_SCDR_PCK1_Pos)           /* (PMC_SCDR) Disables the corresponding Programmable Clock output. Position  */
-#define PMC_SCDR_QSPICLK_Pos                  _UINT32_(19)                                         /* (PMC_SCDR) QSPI 2x Clock Disable Position */
-#define PMC_SCDR_QSPICLK_Msk                  (_UINT32_(0x1) << PMC_SCDR_QSPICLK_Pos)              /* (PMC_SCDR) QSPI 2x Clock Disable Mask */
-#define PMC_SCDR_QSPICLK(value)               (PMC_SCDR_QSPICLK_Msk & (_UINT32_(value) << PMC_SCDR_QSPICLK_Pos)) /* Assigment of value for QSPICLK in the PMC_SCDR register */
-#define   PMC_SCDR_QSPICLK_0_Val              _UINT32_(0x0)                                        /* (PMC_SCDR) No effect.  */
-#define   PMC_SCDR_QSPICLK_1_Val              _UINT32_(0x1)                                        /* (PMC_SCDR) Disables the QSPI 2x clock.  */
-#define PMC_SCDR_QSPICLK_0                    (PMC_SCDR_QSPICLK_0_Val << PMC_SCDR_QSPICLK_Pos)     /* (PMC_SCDR) No effect. Position  */
-#define PMC_SCDR_QSPICLK_1                    (PMC_SCDR_QSPICLK_1_Val << PMC_SCDR_QSPICLK_Pos)     /* (PMC_SCDR) Disables the QSPI 2x clock. Position  */
-#define PMC_SCDR_Msk                          _UINT32_(0x00080344)                                 /* (PMC_SCDR) Register Mask  */
+#define PMC_SCDR_Msk                          _UINT32_(0x00000344)                                 /* (PMC_SCDR) Register Mask  */
 
 #define PMC_SCDR_PCK_Pos                      _UINT32_(8)                                          /* (PMC_SCDR Position) Programmable Clock x Output Disable */
 #define PMC_SCDR_PCK_Msk                      (_UINT32_(0x3) << PMC_SCDR_PCK_Pos)                  /* (PMC_SCDR Mask) PCK */
@@ -115,13 +98,13 @@
 /* -------- PMC_SCSR : (PMC Offset: 0x08) ( R/ 32) System Clock Status Register -------- */
 #define PMC_SCSR_RESETVALUE                   _UINT32_(0x01)                                       /*  (PMC_SCSR) System Clock Status Register  Reset Value */
 
-#define PMC_SCSR_DDRCK_Pos                    _UINT32_(2)                                          /* (PMC_SCSR) MPDDRC/SDRAMC Clock Status Position */
-#define PMC_SCSR_DDRCK_Msk                    (_UINT32_(0x1) << PMC_SCSR_DDRCK_Pos)                /* (PMC_SCSR) MPDDRC/SDRAMC Clock Status Mask */
+#define PMC_SCSR_DDRCK_Pos                    _UINT32_(2)                                          /* (PMC_SCSR) MPDDRC Clock Status Position */
+#define PMC_SCSR_DDRCK_Msk                    (_UINT32_(0x1) << PMC_SCSR_DDRCK_Pos)                /* (PMC_SCSR) MPDDRC Clock Status Mask */
 #define PMC_SCSR_DDRCK(value)                 (PMC_SCSR_DDRCK_Msk & (_UINT32_(value) << PMC_SCSR_DDRCK_Pos)) /* Assigment of value for DDRCK in the PMC_SCSR register */
-#define   PMC_SCSR_DDRCK_0_Val                _UINT32_(0x0)                                        /* (PMC_SCSR) The MPDDRC or SDRAMC clock is disabled.  */
-#define   PMC_SCSR_DDRCK_1_Val                _UINT32_(0x1)                                        /* (PMC_SCSR) The MPDDRC or SDRAMC clock is enabled.  */
-#define PMC_SCSR_DDRCK_0                      (PMC_SCSR_DDRCK_0_Val << PMC_SCSR_DDRCK_Pos)         /* (PMC_SCSR) The MPDDRC or SDRAMC clock is disabled. Position  */
-#define PMC_SCSR_DDRCK_1                      (PMC_SCSR_DDRCK_1_Val << PMC_SCSR_DDRCK_Pos)         /* (PMC_SCSR) The MPDDRC or SDRAMC clock is enabled. Position  */
+#define   PMC_SCSR_DDRCK_0_Val                _UINT32_(0x0)                                        /* (PMC_SCSR) The MPDDRC clock is disabled.  */
+#define   PMC_SCSR_DDRCK_1_Val                _UINT32_(0x1)                                        /* (PMC_SCSR) The MPDDRC clock is enabled.  */
+#define PMC_SCSR_DDRCK_0                      (PMC_SCSR_DDRCK_0_Val << PMC_SCSR_DDRCK_Pos)         /* (PMC_SCSR) The MPDDRC clock is disabled. Position  */
+#define PMC_SCSR_DDRCK_1                      (PMC_SCSR_DDRCK_1_Val << PMC_SCSR_DDRCK_Pos)         /* (PMC_SCSR) The MPDDRC clock is enabled. Position  */
 #define PMC_SCSR_UHP_Pos                      _UINT32_(6)                                          /* (PMC_SCSR) USB Host OHCI Clocks Status Position */
 #define PMC_SCSR_UHP_Msk                      (_UINT32_(0x1) << PMC_SCSR_UHP_Pos)                  /* (PMC_SCSR) USB Host OHCI Clocks Status Mask */
 #define PMC_SCSR_UHP(value)                   (PMC_SCSR_UHP_Msk & (_UINT32_(value) << PMC_SCSR_UHP_Pos)) /* Assigment of value for UHP in the PMC_SCSR register */
@@ -143,14 +126,7 @@
 #define   PMC_SCSR_PCK1_1_Val                 _UINT32_(0x1)                                        /* (PMC_SCSR) The corresponding Programmable Clock output is enabled.  */
 #define PMC_SCSR_PCK1_0                       (PMC_SCSR_PCK1_0_Val << PMC_SCSR_PCK1_Pos)           /* (PMC_SCSR) The corresponding Programmable Clock output is disabled. Position  */
 #define PMC_SCSR_PCK1_1                       (PMC_SCSR_PCK1_1_Val << PMC_SCSR_PCK1_Pos)           /* (PMC_SCSR) The corresponding Programmable Clock output is enabled. Position  */
-#define PMC_SCSR_QSPICLK_Pos                  _UINT32_(19)                                         /* (PMC_SCSR) QSPI 2x Clock Status Position */
-#define PMC_SCSR_QSPICLK_Msk                  (_UINT32_(0x1) << PMC_SCSR_QSPICLK_Pos)              /* (PMC_SCSR) QSPI 2x Clock Status Mask */
-#define PMC_SCSR_QSPICLK(value)               (PMC_SCSR_QSPICLK_Msk & (_UINT32_(value) << PMC_SCSR_QSPICLK_Pos)) /* Assigment of value for QSPICLK in the PMC_SCSR register */
-#define   PMC_SCSR_QSPICLK_0_Val              _UINT32_(0x0)                                        /* (PMC_SCSR) The QSPI 2x clock is disabled.  */
-#define   PMC_SCSR_QSPICLK_1_Val              _UINT32_(0x1)                                        /* (PMC_SCSR) The QSPI 2x clock is enabled.  */
-#define PMC_SCSR_QSPICLK_0                    (PMC_SCSR_QSPICLK_0_Val << PMC_SCSR_QSPICLK_Pos)     /* (PMC_SCSR) The QSPI 2x clock is disabled. Position  */
-#define PMC_SCSR_QSPICLK_1                    (PMC_SCSR_QSPICLK_1_Val << PMC_SCSR_QSPICLK_Pos)     /* (PMC_SCSR) The QSPI 2x clock is enabled. Position  */
-#define PMC_SCSR_Msk                          _UINT32_(0x00080344)                                 /* (PMC_SCSR) Register Mask  */
+#define PMC_SCSR_Msk                          _UINT32_(0x00000344)                                 /* (PMC_SCSR) Register Mask  */
 
 #define PMC_SCSR_PCK_Pos                      _UINT32_(8)                                          /* (PMC_SCSR Position) Programmable Clock x Output Status */
 #define PMC_SCSR_PCK_Msk                      (_UINT32_(0x3) << PMC_SCSR_PCK_Pos)                  /* (PMC_SCSR Mask) PCK */
@@ -182,9 +158,9 @@
 #define PMC_PLL_CTRL0_ENIOPLLCK_Pos           _UINT32_(30)                                         /* (PMC_PLL_CTRL0) Enable PLL Clock for IO Position */
 #define PMC_PLL_CTRL0_ENIOPLLCK_Msk           (_UINT32_(0x1) << PMC_PLL_CTRL0_ENIOPLLCK_Pos)       /* (PMC_PLL_CTRL0) Enable PLL Clock for IO Mask */
 #define PMC_PLL_CTRL0_ENIOPLLCK(value)        (PMC_PLL_CTRL0_ENIOPLLCK_Msk & (_UINT32_(value) << PMC_PLL_CTRL0_ENIOPLLCK_Pos)) /* Assigment of value for ENIOPLLCK in the PMC_PLL_CTRL0 register */
-#define   PMC_PLL_CTRL0_ENIOPLLCK_0_Val       _UINT32_(0x0)                                        /* (PMC_PLL_CTRL0) The clock generated by the PLL is not send to the IO.  */
+#define   PMC_PLL_CTRL0_ENIOPLLCK_0_Val       _UINT32_(0x0)                                        /* (PMC_PLL_CTRL0) The clock generated by the PLL is not sent to the IO.  */
 #define   PMC_PLL_CTRL0_ENIOPLLCK_1_Val       _UINT32_(0x1)                                        /* (PMC_PLL_CTRL0) The clock generated by the PLL is sent to the IO.  */
-#define PMC_PLL_CTRL0_ENIOPLLCK_0             (PMC_PLL_CTRL0_ENIOPLLCK_0_Val << PMC_PLL_CTRL0_ENIOPLLCK_Pos) /* (PMC_PLL_CTRL0) The clock generated by the PLL is not send to the IO. Position  */
+#define PMC_PLL_CTRL0_ENIOPLLCK_0             (PMC_PLL_CTRL0_ENIOPLLCK_0_Val << PMC_PLL_CTRL0_ENIOPLLCK_Pos) /* (PMC_PLL_CTRL0) The clock generated by the PLL is not sent to the IO. Position  */
 #define PMC_PLL_CTRL0_ENIOPLLCK_1             (PMC_PLL_CTRL0_ENIOPLLCK_1_Val << PMC_PLL_CTRL0_ENIOPLLCK_Pos) /* (PMC_PLL_CTRL0) The clock generated by the PLL is sent to the IO. Position  */
 #define PMC_PLL_CTRL0_ENLOCK_Pos              _UINT32_(31)                                         /* (PMC_PLL_CTRL0) Enable PLL Lock Position */
 #define PMC_PLL_CTRL0_ENLOCK_Msk              (_UINT32_(0x1) << PMC_PLL_CTRL0_ENLOCK_Pos)          /* (PMC_PLL_CTRL0) Enable PLL Lock Mask */
@@ -250,8 +226,8 @@
 #define PMC_PLL_ACR_LOCK_THR_Pos              _UINT32_(16)                                         /* (PMC_PLL_ACR) PLL Lock Threshold Value Selection Position */
 #define PMC_PLL_ACR_LOCK_THR_Msk              (_UINT32_(0x7) << PMC_PLL_ACR_LOCK_THR_Pos)          /* (PMC_PLL_ACR) PLL Lock Threshold Value Selection Mask */
 #define PMC_PLL_ACR_LOCK_THR(value)           (PMC_PLL_ACR_LOCK_THR_Msk & (_UINT32_(value) << PMC_PLL_ACR_LOCK_THR_Pos)) /* Assigment of value for LOCK_THR in the PMC_PLL_ACR register */
-#define PMC_PLL_ACR_LOOP_FILTER_Pos           _UINT32_(24)                                         /* (PMC_PLL_ACR) LOOP Filter Selection Position */
-#define PMC_PLL_ACR_LOOP_FILTER_Msk           (_UINT32_(0x3F) << PMC_PLL_ACR_LOOP_FILTER_Pos)      /* (PMC_PLL_ACR) LOOP Filter Selection Mask */
+#define PMC_PLL_ACR_LOOP_FILTER_Pos           _UINT32_(24)                                         /* (PMC_PLL_ACR) Loop Filter Selection Position */
+#define PMC_PLL_ACR_LOOP_FILTER_Msk           (_UINT32_(0x3F) << PMC_PLL_ACR_LOOP_FILTER_Pos)      /* (PMC_PLL_ACR) Loop Filter Selection Mask */
 #define PMC_PLL_ACR_LOOP_FILTER(value)        (PMC_PLL_ACR_LOOP_FILTER_Msk & (_UINT32_(value) << PMC_PLL_ACR_LOOP_FILTER_Pos)) /* Assigment of value for LOOP_FILTER in the PMC_PLL_ACR register */
 #define PMC_PLL_ACR_Msk                       _UINT32_(0x3F073FFF)                                 /* (PMC_PLL_ACR) Register Mask  */
 
@@ -260,7 +236,7 @@
 #define PMC_PLL_UPDT_RESETVALUE               _UINT32_(0x30000)                                    /*  (PMC_PLL_UPDT) PLL Update Register  Reset Value */
 
 #define PMC_PLL_UPDT_ID_Pos                   _UINT32_(0)                                          /* (PMC_PLL_UPDT) PLL ID Position */
-#define PMC_PLL_UPDT_ID_Msk                   (_UINT32_(0x3) << PMC_PLL_UPDT_ID_Pos)               /* (PMC_PLL_UPDT) PLL ID Mask */
+#define PMC_PLL_UPDT_ID_Msk                   (_UINT32_(0x7) << PMC_PLL_UPDT_ID_Pos)               /* (PMC_PLL_UPDT) PLL ID Mask */
 #define PMC_PLL_UPDT_ID(value)                (PMC_PLL_UPDT_ID_Msk & (_UINT32_(value) << PMC_PLL_UPDT_ID_Pos)) /* Assigment of value for ID in the PMC_PLL_UPDT register */
 #define PMC_PLL_UPDT_UPDATE_Pos               _UINT32_(8)                                          /* (PMC_PLL_UPDT) PLL Setting Update (write-only) Position */
 #define PMC_PLL_UPDT_UPDATE_Msk               (_UINT32_(0x1) << PMC_PLL_UPDT_UPDATE_Pos)           /* (PMC_PLL_UPDT) PLL Setting Update (write-only) Mask */
@@ -274,11 +250,11 @@
 #define PMC_PLL_UPDT_STUPTIM(value)           (PMC_PLL_UPDT_STUPTIM_Msk & (_UINT32_(value) << PMC_PLL_UPDT_STUPTIM_Pos)) /* Assigment of value for STUPTIM in the PMC_PLL_UPDT register */
 #define   PMC_PLL_UPDT_STUPTIM_0_Val          _UINT32_(0x0)                                        /* (PMC_PLL_UPDT) Only the lock of the PLL is considered to know the lock status of the PLL. If the lock of the PLL is not enabled, the lock never rises.  */
 #define PMC_PLL_UPDT_STUPTIM_0                (PMC_PLL_UPDT_STUPTIM_0_Val << PMC_PLL_UPDT_STUPTIM_Pos) /* (PMC_PLL_UPDT) Only the lock of the PLL is considered to know the lock status of the PLL. If the lock of the PLL is not enabled, the lock never rises. Position  */
-#define PMC_PLL_UPDT_Msk                      _UINT32_(0x003F0103)                                 /* (PMC_PLL_UPDT) Register Mask  */
+#define PMC_PLL_UPDT_Msk                      _UINT32_(0x003F0107)                                 /* (PMC_PLL_UPDT) Register Mask  */
 
 
 /* -------- CKGR_MOR : (PMC Offset: 0x20) (R/W 32) Main Oscillator Register -------- */
-#define CKGR_MOR_RESETVALUE                   _UINT32_(0x08)                                       /*  (CKGR_MOR) Main Oscillator Register  Reset Value */
+#define CKGR_MOR_RESETVALUE                   _UINT32_(0x28)                                       /*  (CKGR_MOR) Main Oscillator Register  Reset Value */
 
 #define CKGR_MOR_MOSCXTEN_Pos                 _UINT32_(0)                                          /* (CKGR_MOR) Main Crystal Oscillator Enable Position */
 #define CKGR_MOR_MOSCXTEN_Msk                 (_UINT32_(0x1) << CKGR_MOR_MOSCXTEN_Pos)             /* (CKGR_MOR) Main Crystal Oscillator Enable Mask */
@@ -287,13 +263,13 @@
 #define   CKGR_MOR_MOSCXTEN_1_Val             _UINT32_(0x1)                                        /* (CKGR_MOR) The main crystal oscillator is enabled or in bypass.  */
 #define CKGR_MOR_MOSCXTEN_0                   (CKGR_MOR_MOSCXTEN_0_Val << CKGR_MOR_MOSCXTEN_Pos)   /* (CKGR_MOR) The main crystal oscillator is disabled. Position  */
 #define CKGR_MOR_MOSCXTEN_1                   (CKGR_MOR_MOSCXTEN_1_Val << CKGR_MOR_MOSCXTEN_Pos)   /* (CKGR_MOR) The main crystal oscillator is enabled or in bypass. Position  */
-#define CKGR_MOR_ULP1_Pos                     _UINT32_(2)                                          /* (CKGR_MOR) ULP Mode 1 Command (write-only) Position */
-#define CKGR_MOR_ULP1_Msk                     (_UINT32_(0x1) << CKGR_MOR_ULP1_Pos)                 /* (CKGR_MOR) ULP Mode 1 Command (write-only) Mask */
+#define CKGR_MOR_ULP1_Pos                     _UINT32_(2)                                          /* (CKGR_MOR) ULP1 Mode Command (write-only) Position */
+#define CKGR_MOR_ULP1_Msk                     (_UINT32_(0x1) << CKGR_MOR_ULP1_Pos)                 /* (CKGR_MOR) ULP1 Mode Command (write-only) Mask */
 #define CKGR_MOR_ULP1(value)                  (CKGR_MOR_ULP1_Msk & (_UINT32_(value) << CKGR_MOR_ULP1_Pos)) /* Assigment of value for ULP1 in the CKGR_MOR register */
 #define   CKGR_MOR_ULP1_0_Val                 _UINT32_(0x0)                                        /* (CKGR_MOR) No effect.  */
-#define   CKGR_MOR_ULP1_1_Val                 _UINT32_(0x1)                                        /* (CKGR_MOR) Puts the device in ULP mode 1.  */
+#define   CKGR_MOR_ULP1_1_Val                 _UINT32_(0x1)                                        /* (CKGR_MOR) Puts the device in ULP1 mode.  */
 #define CKGR_MOR_ULP1_0                       (CKGR_MOR_ULP1_0_Val << CKGR_MOR_ULP1_Pos)           /* (CKGR_MOR) No effect. Position  */
-#define CKGR_MOR_ULP1_1                       (CKGR_MOR_ULP1_1_Val << CKGR_MOR_ULP1_Pos)           /* (CKGR_MOR) Puts the device in ULP mode 1. Position  */
+#define CKGR_MOR_ULP1_1                       (CKGR_MOR_ULP1_1_Val << CKGR_MOR_ULP1_Pos)           /* (CKGR_MOR) Puts the device in ULP1 mode. Position  */
 #define CKGR_MOR_MOSCRCEN_Pos                 _UINT32_(3)                                          /* (CKGR_MOR) Main RC Oscillator Enable Position */
 #define CKGR_MOR_MOSCRCEN_Msk                 (_UINT32_(0x1) << CKGR_MOR_MOSCRCEN_Pos)             /* (CKGR_MOR) Main RC Oscillator Enable Mask */
 #define CKGR_MOR_MOSCRCEN(value)              (CKGR_MOR_MOSCRCEN_Msk & (_UINT32_(value) << CKGR_MOR_MOSCRCEN_Pos)) /* Assigment of value for MOSCRCEN in the CKGR_MOR register */
@@ -346,7 +322,7 @@
 #define CKGR_MOR_AUTOCPUSW_1                  (CKGR_MOR_AUTOCPUSW_1_Val << CKGR_MOR_AUTOCPUSW_Pos) /* (CKGR_MOR) If a main crystal oscillator failure is detected, the processor clock source selection automatically switches to the main clock. Position  */
 #define CKGR_MOR_Msk                          _UINT32_(0x67FFFF0D)                                 /* (CKGR_MOR) Register Mask  */
 
-#define CKGR_MOR_ULP_Pos                      _UINT32_(2)                                          /* (CKGR_MOR Position) ULP Mode x Command (write-only) */
+#define CKGR_MOR_ULP_Pos                      _UINT32_(2)                                          /* (CKGR_MOR Position) ULPx Mode Command (write-only) */
 #define CKGR_MOR_ULP_Msk                      (_UINT32_(0x1) << CKGR_MOR_ULP_Pos)                  /* (CKGR_MOR Mask) ULP */
 #define CKGR_MOR_ULP(value)                   (CKGR_MOR_ULP_Msk & (_UINT32_(value) << CKGR_MOR_ULP_Pos)) 
 
@@ -359,10 +335,10 @@
 #define CKGR_MCFR_MAINFRDY_Pos                _UINT32_(16)                                         /* (CKGR_MCFR) Main Clock Frequency Measure Ready Position */
 #define CKGR_MCFR_MAINFRDY_Msk                (_UINT32_(0x1) << CKGR_MCFR_MAINFRDY_Pos)            /* (CKGR_MCFR) Main Clock Frequency Measure Ready Mask */
 #define CKGR_MCFR_MAINFRDY(value)             (CKGR_MCFR_MAINFRDY_Msk & (_UINT32_(value) << CKGR_MCFR_MAINFRDY_Pos)) /* Assigment of value for MAINFRDY in the CKGR_MCFR register */
-#define   CKGR_MCFR_MAINFRDY_0_Val            _UINT32_(0x0)                                        /* (CKGR_MCFR) MAINF value is not valid or the measured oscillator is disabled or a measure has just been started by means of RCMEAS.  */
-#define   CKGR_MCFR_MAINFRDY_1_Val            _UINT32_(0x1)                                        /* (CKGR_MCFR) The measured oscillator has been enabled previously and MAINF value is available.  */
-#define CKGR_MCFR_MAINFRDY_0                  (CKGR_MCFR_MAINFRDY_0_Val << CKGR_MCFR_MAINFRDY_Pos) /* (CKGR_MCFR) MAINF value is not valid or the measured oscillator is disabled or a measure has just been started by means of RCMEAS. Position  */
-#define CKGR_MCFR_MAINFRDY_1                  (CKGR_MCFR_MAINFRDY_1_Val << CKGR_MCFR_MAINFRDY_Pos) /* (CKGR_MCFR) The measured oscillator has been enabled previously and MAINF value is available. Position  */
+#define   CKGR_MCFR_MAINFRDY_0_Val            _UINT32_(0x0)                                        /* (CKGR_MCFR) The MAINF value is not valid or the measured oscillator is disabled or a measure has just been started by means of RCMEAS.  */
+#define   CKGR_MCFR_MAINFRDY_1_Val            _UINT32_(0x1)                                        /* (CKGR_MCFR) The measured oscillator has been enabled previously and the MAINF value is available.  */
+#define CKGR_MCFR_MAINFRDY_0                  (CKGR_MCFR_MAINFRDY_0_Val << CKGR_MCFR_MAINFRDY_Pos) /* (CKGR_MCFR) The MAINF value is not valid or the measured oscillator is disabled or a measure has just been started by means of RCMEAS. Position  */
+#define CKGR_MCFR_MAINFRDY_1                  (CKGR_MCFR_MAINFRDY_1_Val << CKGR_MCFR_MAINFRDY_Pos) /* (CKGR_MCFR) The measured oscillator has been enabled previously and the MAINF value is available. Position  */
 #define CKGR_MCFR_RCMEAS_Pos                  _UINT32_(20)                                         /* (CKGR_MCFR) RC Oscillator Frequency Measure (write-only) Position */
 #define CKGR_MCFR_RCMEAS_Msk                  (_UINT32_(0x1) << CKGR_MCFR_RCMEAS_Pos)              /* (CKGR_MCFR) RC Oscillator Frequency Measure (write-only) Mask */
 #define CKGR_MCFR_RCMEAS(value)               (CKGR_MCFR_RCMEAS_Msk & (_UINT32_(value) << CKGR_MCFR_RCMEAS_Pos)) /* Assigment of value for RCMEAS in the CKGR_MCFR register */
@@ -386,14 +362,14 @@
 #define PMC_CPU_CKR_CSS_Pos                   _UINT32_(0)                                          /* (PMC_CPU_CKR) MCK Source Selection Position */
 #define PMC_CPU_CKR_CSS_Msk                   (_UINT32_(0x3) << PMC_CPU_CKR_CSS_Pos)               /* (PMC_CPU_CKR) MCK Source Selection Mask */
 #define PMC_CPU_CKR_CSS(value)                (PMC_CPU_CKR_CSS_Msk & (_UINT32_(value) << PMC_CPU_CKR_CSS_Pos)) /* Assigment of value for CSS in the PMC_CPU_CKR register */
-#define   PMC_CPU_CKR_CSS_SLOW_CLK_Val        _UINT32_(0x0)                                        /* (PMC_CPU_CKR) MD_SLCK is selected  */
-#define   PMC_CPU_CKR_CSS_MAIN_CLK_Val        _UINT32_(0x1)                                        /* (PMC_CPU_CKR) MAINCK is selected  */
-#define   PMC_CPU_CKR_CSS_PLLACK_Val          _UINT32_(0x2)                                        /* (PMC_CPU_CKR) PLLACK is selected  */
-#define   PMC_CPU_CKR_CSS_UPLLCK_Val          _UINT32_(0x3)                                        /* (PMC_CPU_CKR) UPLL is selected  */
-#define PMC_CPU_CKR_CSS_SLOW_CLK              (PMC_CPU_CKR_CSS_SLOW_CLK_Val << PMC_CPU_CKR_CSS_Pos) /* (PMC_CPU_CKR) MD_SLCK is selected Position  */
-#define PMC_CPU_CKR_CSS_MAIN_CLK              (PMC_CPU_CKR_CSS_MAIN_CLK_Val << PMC_CPU_CKR_CSS_Pos) /* (PMC_CPU_CKR) MAINCK is selected Position  */
-#define PMC_CPU_CKR_CSS_PLLACK                (PMC_CPU_CKR_CSS_PLLACK_Val << PMC_CPU_CKR_CSS_Pos)  /* (PMC_CPU_CKR) PLLACK is selected Position  */
-#define PMC_CPU_CKR_CSS_UPLLCK                (PMC_CPU_CKR_CSS_UPLLCK_Val << PMC_CPU_CKR_CSS_Pos)  /* (PMC_CPU_CKR) UPLL is selected Position  */
+#define   PMC_CPU_CKR_CSS_SLOW_CLK_Val        _UINT32_(0x0)                                        /* (PMC_CPU_CKR) MD_SLCK is selected.  */
+#define   PMC_CPU_CKR_CSS_MAIN_CLK_Val        _UINT32_(0x1)                                        /* (PMC_CPU_CKR) MAINCK is selected.  */
+#define   PMC_CPU_CKR_CSS_PLLACK_Val          _UINT32_(0x2)                                        /* (PMC_CPU_CKR) PLLACK is selected.  */
+#define   PMC_CPU_CKR_CSS_UPLLCK_Val          _UINT32_(0x3)                                        /* (PMC_CPU_CKR) UPLLCK is selected.  */
+#define PMC_CPU_CKR_CSS_SLOW_CLK              (PMC_CPU_CKR_CSS_SLOW_CLK_Val << PMC_CPU_CKR_CSS_Pos) /* (PMC_CPU_CKR) MD_SLCK is selected. Position  */
+#define PMC_CPU_CKR_CSS_MAIN_CLK              (PMC_CPU_CKR_CSS_MAIN_CLK_Val << PMC_CPU_CKR_CSS_Pos) /* (PMC_CPU_CKR) MAINCK is selected. Position  */
+#define PMC_CPU_CKR_CSS_PLLACK                (PMC_CPU_CKR_CSS_PLLACK_Val << PMC_CPU_CKR_CSS_Pos)  /* (PMC_CPU_CKR) PLLACK is selected. Position  */
+#define PMC_CPU_CKR_CSS_UPLLCK                (PMC_CPU_CKR_CSS_UPLLCK_Val << PMC_CPU_CKR_CSS_Pos)  /* (PMC_CPU_CKR) UPLLCK is selected. Position  */
 #define PMC_CPU_CKR_PRES_Pos                  _UINT32_(4)                                          /* (PMC_CPU_CKR) Processor Clock Prescaler Position */
 #define PMC_CPU_CKR_PRES_Msk                  (_UINT32_(0x7) << PMC_CPU_CKR_PRES_Pos)              /* (PMC_CPU_CKR) Processor Clock Prescaler Mask */
 #define PMC_CPU_CKR_PRES(value)               (PMC_CPU_CKR_PRES_Msk & (_UINT32_(value) << PMC_CPU_CKR_PRES_Pos)) /* Assigment of value for PRES in the PMC_CPU_CKR register */
@@ -435,12 +411,10 @@
 #define PMC_USB_USBS_Pos                      _UINT32_(0)                                          /* (PMC_USB) USB OHCI/EHCI Input Clock Selection Position */
 #define PMC_USB_USBS_Msk                      (_UINT32_(0x3) << PMC_USB_USBS_Pos)                  /* (PMC_USB) USB OHCI/EHCI Input Clock Selection Mask */
 #define PMC_USB_USBS(value)                   (PMC_USB_USBS_Msk & (_UINT32_(value) << PMC_USB_USBS_Pos)) /* Assigment of value for USBS in the PMC_USB register */
-#define   PMC_USB_USBS_PLLA_Val               _UINT32_(0x0)                                        /* (PMC_USB) USB Clock Input is PLLACK.  */
-#define   PMC_USB_USBS_UPLL_Val               _UINT32_(0x1)                                        /* (PMC_USB) USB Clock Input is UPLLCK.  */
-#define   PMC_USB_USBS_MAINXTAL_Val           _UINT32_(0x2)                                        /* (PMC_USB) USB Clock Input is MAINXTALCK.  */
-#define PMC_USB_USBS_PLLA                     (PMC_USB_USBS_PLLA_Val << PMC_USB_USBS_Pos)          /* (PMC_USB) USB Clock Input is PLLACK. Position  */
-#define PMC_USB_USBS_UPLL                     (PMC_USB_USBS_UPLL_Val << PMC_USB_USBS_Pos)          /* (PMC_USB) USB Clock Input is UPLLCK. Position  */
-#define PMC_USB_USBS_MAINXTAL                 (PMC_USB_USBS_MAINXTAL_Val << PMC_USB_USBS_Pos)      /* (PMC_USB) USB Clock Input is MAINXTALCK. Position  */
+#define   PMC_USB_USBS_PLLA_Val               _UINT32_(0x0)                                        /* (PMC_USB) The USB clock input is PLLACK.  */
+#define   PMC_USB_USBS_UPLL_Val               _UINT32_(0x1)                                        /* (PMC_USB) The USB clock input is UPLLCK.  */
+#define PMC_USB_USBS_PLLA                     (PMC_USB_USBS_PLLA_Val << PMC_USB_USBS_Pos)          /* (PMC_USB) The USB clock input is PLLACK. Position  */
+#define PMC_USB_USBS_UPLL                     (PMC_USB_USBS_UPLL_Val << PMC_USB_USBS_Pos)          /* (PMC_USB) The USB clock input is UPLLCK. Position  */
 #define PMC_USB_USBDIV_Pos                    _UINT32_(8)                                          /* (PMC_USB) Divider for USB OHCI Clock Position */
 #define PMC_USB_USBDIV_Msk                    (_UINT32_(0xF) << PMC_USB_USBDIV_Pos)                /* (PMC_USB) Divider for USB OHCI Clock Mask */
 #define PMC_USB_USBDIV(value)                 (PMC_USB_USBDIV_Msk & (_UINT32_(value) << PMC_USB_USBDIV_Pos)) /* Assigment of value for USBDIV in the PMC_USB register */
@@ -453,17 +427,17 @@
 #define PMC_PCK_CSS_Pos                       _UINT32_(0)                                          /* (PMC_PCK) Programmable Clock Source Selection Position */
 #define PMC_PCK_CSS_Msk                       (_UINT32_(0x1F) << PMC_PCK_CSS_Pos)                  /* (PMC_PCK) Programmable Clock Source Selection Mask */
 #define PMC_PCK_CSS(value)                    (PMC_PCK_CSS_Msk & (_UINT32_(value) << PMC_PCK_CSS_Pos)) /* Assigment of value for CSS in the PMC_PCK register */
-#define   PMC_PCK_CSS_MD_SLOW_CLK_Val         _UINT32_(0x0)                                        /* (PMC_PCK) MD_SLCK is selected  */
-#define   PMC_PCK_CSS_TD_SLOW_CLOCK_Val       _UINT32_(0x1)                                        /* (PMC_PCK) TD_SLCK is selected  */
-#define   PMC_PCK_CSS_MAINCK_Val              _UINT32_(0x2)                                        /* (PMC_PCK) MAINCK is selected  */
-#define   PMC_PCK_CSS_MCK_Val                 _UINT32_(0x3)                                        /* (PMC_PCK) MCK is selected  */
+#define   PMC_PCK_CSS_MD_SLOW_CLK_Val         _UINT32_(0x0)                                        /* (PMC_PCK) MD_SLCK is selected.  */
+#define   PMC_PCK_CSS_TD_SLOW_CLOCK_Val       _UINT32_(0x1)                                        /* (PMC_PCK) TD_SLCK is selected.  */
+#define   PMC_PCK_CSS_MAINCK_Val              _UINT32_(0x2)                                        /* (PMC_PCK) MAINCK is selected.  */
+#define   PMC_PCK_CSS_MCK_Val                 _UINT32_(0x3)                                        /* (PMC_PCK) MCK is selected.  */
 #define   PMC_PCK_CSS_PLLA_Val                _UINT32_(0x4)                                        /* (PMC_PCK) PLLA is selected.  */
 #define   PMC_PCK_CSS_UPLL_Val                _UINT32_(0x5)                                        /* (PMC_PCK) UPLL is selected.  */
 #define   PMC_PCK_CSS_AUDIOPLL_Val            _UINT32_(0x6)                                        /* (PMC_PCK) Audio PLL is selected.  */
-#define PMC_PCK_CSS_MD_SLOW_CLK               (PMC_PCK_CSS_MD_SLOW_CLK_Val << PMC_PCK_CSS_Pos)     /* (PMC_PCK) MD_SLCK is selected Position  */
-#define PMC_PCK_CSS_TD_SLOW_CLOCK             (PMC_PCK_CSS_TD_SLOW_CLOCK_Val << PMC_PCK_CSS_Pos)   /* (PMC_PCK) TD_SLCK is selected Position  */
-#define PMC_PCK_CSS_MAINCK                    (PMC_PCK_CSS_MAINCK_Val << PMC_PCK_CSS_Pos)          /* (PMC_PCK) MAINCK is selected Position  */
-#define PMC_PCK_CSS_MCK                       (PMC_PCK_CSS_MCK_Val << PMC_PCK_CSS_Pos)             /* (PMC_PCK) MCK is selected Position  */
+#define PMC_PCK_CSS_MD_SLOW_CLK               (PMC_PCK_CSS_MD_SLOW_CLK_Val << PMC_PCK_CSS_Pos)     /* (PMC_PCK) MD_SLCK is selected. Position  */
+#define PMC_PCK_CSS_TD_SLOW_CLOCK             (PMC_PCK_CSS_TD_SLOW_CLOCK_Val << PMC_PCK_CSS_Pos)   /* (PMC_PCK) TD_SLCK is selected. Position  */
+#define PMC_PCK_CSS_MAINCK                    (PMC_PCK_CSS_MAINCK_Val << PMC_PCK_CSS_Pos)          /* (PMC_PCK) MAINCK is selected. Position  */
+#define PMC_PCK_CSS_MCK                       (PMC_PCK_CSS_MCK_Val << PMC_PCK_CSS_Pos)             /* (PMC_PCK) MCK is selected. Position  */
 #define PMC_PCK_CSS_PLLA                      (PMC_PCK_CSS_PLLA_Val << PMC_PCK_CSS_Pos)            /* (PMC_PCK) PLLA is selected. Position  */
 #define PMC_PCK_CSS_UPLL                      (PMC_PCK_CSS_UPLL_Val << PMC_PCK_CSS_Pos)            /* (PMC_PCK) UPLL is selected. Position  */
 #define PMC_PCK_CSS_AUDIOPLL                  (PMC_PCK_CSS_AUDIOPLL_Val << PMC_PCK_CSS_Pos)        /* (PMC_PCK) Audio PLL is selected. Position  */
@@ -498,8 +472,8 @@
 #define PMC_IER_XT32KERR_Pos                  _UINT32_(21)                                         /* (PMC_IER) 32.768 kHz Crystal Oscillator Error Interrupt Enable Position */
 #define PMC_IER_XT32KERR_Msk                  (_UINT32_(0x1) << PMC_IER_XT32KERR_Pos)              /* (PMC_IER) 32.768 kHz Crystal Oscillator Error Interrupt Enable Mask */
 #define PMC_IER_XT32KERR(value)               (PMC_IER_XT32KERR_Msk & (_UINT32_(value) << PMC_IER_XT32KERR_Pos)) /* Assigment of value for XT32KERR in the PMC_IER register */
-#define PMC_IER_MCKMON_Pos                    _UINT32_(23)                                         /* (PMC_IER) Main System Bus Clock  Clock Monitor Interrupt Enable Position */
-#define PMC_IER_MCKMON_Msk                    (_UINT32_(0x1) << PMC_IER_MCKMON_Pos)                /* (PMC_IER) Main System Bus Clock  Clock Monitor Interrupt Enable Mask */
+#define PMC_IER_MCKMON_Pos                    _UINT32_(23)                                         /* (PMC_IER) Main System Bus Clock Clock Monitor Interrupt Enable Position */
+#define PMC_IER_MCKMON_Msk                    (_UINT32_(0x1) << PMC_IER_MCKMON_Pos)                /* (PMC_IER) Main System Bus Clock Clock Monitor Interrupt Enable Mask */
 #define PMC_IER_MCKMON(value)                 (PMC_IER_MCKMON_Msk & (_UINT32_(value) << PMC_IER_MCKMON_Pos)) /* Assigment of value for MCKMON in the PMC_IER register */
 #define PMC_IER_PLL_INT_Pos                   _UINT32_(25)                                         /* (PMC_IER) PLL Interrupt Enable Position */
 #define PMC_IER_PLL_INT_Msk                   (_UINT32_(0x1) << PMC_IER_PLL_INT_Pos)               /* (PMC_IER) PLL Interrupt Enable Mask */
@@ -535,8 +509,8 @@
 #define PMC_IDR_XT32KERR_Pos                  _UINT32_(21)                                         /* (PMC_IDR) 32.768 kHz Crystal Oscillator Error Interrupt Disable Position */
 #define PMC_IDR_XT32KERR_Msk                  (_UINT32_(0x1) << PMC_IDR_XT32KERR_Pos)              /* (PMC_IDR) 32.768 kHz Crystal Oscillator Error Interrupt Disable Mask */
 #define PMC_IDR_XT32KERR(value)               (PMC_IDR_XT32KERR_Msk & (_UINT32_(value) << PMC_IDR_XT32KERR_Pos)) /* Assigment of value for XT32KERR in the PMC_IDR register */
-#define PMC_IDR_MCKMON_Pos                    _UINT32_(23)                                         /* (PMC_IDR) Main System Bus Clock  Clock Monitor Interrupt Disable Position */
-#define PMC_IDR_MCKMON_Msk                    (_UINT32_(0x1) << PMC_IDR_MCKMON_Pos)                /* (PMC_IDR) Main System Bus Clock  Clock Monitor Interrupt Disable Mask */
+#define PMC_IDR_MCKMON_Pos                    _UINT32_(23)                                         /* (PMC_IDR) Main System Bus Clock Clock Monitor Interrupt Disable Position */
+#define PMC_IDR_MCKMON_Msk                    (_UINT32_(0x1) << PMC_IDR_MCKMON_Pos)                /* (PMC_IDR) Main System Bus Clock Clock Monitor Interrupt Disable Mask */
 #define PMC_IDR_MCKMON(value)                 (PMC_IDR_MCKMON_Msk & (_UINT32_(value) << PMC_IDR_MCKMON_Pos)) /* Assigment of value for MCKMON in the PMC_IDR register */
 #define PMC_IDR_PLL_INT_Pos                   _UINT32_(25)                                         /* (PMC_IDR) PLL Interrupt Disable Position */
 #define PMC_IDR_PLL_INT_Msk                   (_UINT32_(0x1) << PMC_IDR_PLL_INT_Pos)               /* (PMC_IDR) PLL Interrupt Disable Mask */
@@ -553,10 +527,10 @@
 #define PMC_SR_MOSCXTS_Pos                    _UINT32_(0)                                          /* (PMC_SR) Main Crystal Oscillator Status Position */
 #define PMC_SR_MOSCXTS_Msk                    (_UINT32_(0x1) << PMC_SR_MOSCXTS_Pos)                /* (PMC_SR) Main Crystal Oscillator Status Mask */
 #define PMC_SR_MOSCXTS(value)                 (PMC_SR_MOSCXTS_Msk & (_UINT32_(value) << PMC_SR_MOSCXTS_Pos)) /* Assigment of value for MOSCXTS in the PMC_SR register */
-#define   PMC_SR_MOSCXTS_0_Val                _UINT32_(0x0)                                        /* (PMC_SR) Main crystal oscillator is not stabilized.  */
-#define   PMC_SR_MOSCXTS_1_Val                _UINT32_(0x1)                                        /* (PMC_SR) Main crystal oscillator is stabilized.  */
-#define PMC_SR_MOSCXTS_0                      (PMC_SR_MOSCXTS_0_Val << PMC_SR_MOSCXTS_Pos)         /* (PMC_SR) Main crystal oscillator is not stabilized. Position  */
-#define PMC_SR_MOSCXTS_1                      (PMC_SR_MOSCXTS_1_Val << PMC_SR_MOSCXTS_Pos)         /* (PMC_SR) Main crystal oscillator is stabilized. Position  */
+#define   PMC_SR_MOSCXTS_0_Val                _UINT32_(0x0)                                        /* (PMC_SR) The main crystal oscillator is not stabilized.  */
+#define   PMC_SR_MOSCXTS_1_Val                _UINT32_(0x1)                                        /* (PMC_SR) The main crystal oscillator is stabilized.  */
+#define PMC_SR_MOSCXTS_0                      (PMC_SR_MOSCXTS_0_Val << PMC_SR_MOSCXTS_Pos)         /* (PMC_SR) The main crystal oscillator is not stabilized. Position  */
+#define PMC_SR_MOSCXTS_1                      (PMC_SR_MOSCXTS_1_Val << PMC_SR_MOSCXTS_Pos)         /* (PMC_SR) The main crystal oscillator is stabilized. Position  */
 #define PMC_SR_MCKRDY_Pos                     _UINT32_(3)                                          /* (PMC_SR) Main System Bus Clock Status Position */
 #define PMC_SR_MCKRDY_Msk                     (_UINT32_(0x1) << PMC_SR_MCKRDY_Pos)                 /* (PMC_SR) Main System Bus Clock Status Mask */
 #define PMC_SR_MCKRDY(value)                  (PMC_SR_MCKRDY_Msk & (_UINT32_(value) << PMC_SR_MCKRDY_Pos)) /* Assigment of value for MCKRDY in the PMC_SR register */
@@ -588,10 +562,10 @@
 #define PMC_SR_MOSCRCS_Pos                    _UINT32_(17)                                         /* (PMC_SR) Main RC Oscillator Status Position */
 #define PMC_SR_MOSCRCS_Msk                    (_UINT32_(0x1) << PMC_SR_MOSCRCS_Pos)                /* (PMC_SR) Main RC Oscillator Status Mask */
 #define PMC_SR_MOSCRCS(value)                 (PMC_SR_MOSCRCS_Msk & (_UINT32_(value) << PMC_SR_MOSCRCS_Pos)) /* Assigment of value for MOSCRCS in the PMC_SR register */
-#define   PMC_SR_MOSCRCS_0_Val                _UINT32_(0x0)                                        /* (PMC_SR) Main RC oscillator is not stabilized.  */
-#define   PMC_SR_MOSCRCS_1_Val                _UINT32_(0x1)                                        /* (PMC_SR) Main RC oscillator is stabilized.  */
-#define PMC_SR_MOSCRCS_0                      (PMC_SR_MOSCRCS_0_Val << PMC_SR_MOSCRCS_Pos)         /* (PMC_SR) Main RC oscillator is not stabilized. Position  */
-#define PMC_SR_MOSCRCS_1                      (PMC_SR_MOSCRCS_1_Val << PMC_SR_MOSCRCS_Pos)         /* (PMC_SR) Main RC oscillator is stabilized. Position  */
+#define   PMC_SR_MOSCRCS_0_Val                _UINT32_(0x0)                                        /* (PMC_SR) The main RC oscillator is not stabilized.  */
+#define   PMC_SR_MOSCRCS_1_Val                _UINT32_(0x1)                                        /* (PMC_SR) The main RC oscillator is stabilized.  */
+#define PMC_SR_MOSCRCS_0                      (PMC_SR_MOSCRCS_0_Val << PMC_SR_MOSCRCS_Pos)         /* (PMC_SR) The main RC oscillator is not stabilized. Position  */
+#define PMC_SR_MOSCRCS_1                      (PMC_SR_MOSCRCS_1_Val << PMC_SR_MOSCRCS_Pos)         /* (PMC_SR) The main RC oscillator is stabilized. Position  */
 #define PMC_SR_CFDEV_Pos                      _UINT32_(18)                                         /* (PMC_SR) Clock Failure Detector Event Position */
 #define PMC_SR_CFDEV_Msk                      (_UINT32_(0x1) << PMC_SR_CFDEV_Pos)                  /* (PMC_SR) Clock Failure Detector Event Mask */
 #define PMC_SR_CFDEV(value)                   (PMC_SR_CFDEV_Msk & (_UINT32_(value) << PMC_SR_CFDEV_Pos)) /* Assigment of value for CFDEV in the PMC_SR register */
@@ -674,8 +648,8 @@
 #define PMC_IMR_XT32KERR_Pos                  _UINT32_(21)                                         /* (PMC_IMR) 32.768 kHz Crystal Oscillator Error Interrupt Mask Position */
 #define PMC_IMR_XT32KERR_Msk                  (_UINT32_(0x1) << PMC_IMR_XT32KERR_Pos)              /* (PMC_IMR) 32.768 kHz Crystal Oscillator Error Interrupt Mask Mask */
 #define PMC_IMR_XT32KERR(value)               (PMC_IMR_XT32KERR_Msk & (_UINT32_(value) << PMC_IMR_XT32KERR_Pos)) /* Assigment of value for XT32KERR in the PMC_IMR register */
-#define PMC_IMR_MCKMON_Pos                    _UINT32_(23)                                         /* (PMC_IMR) Main System Bus Clock  Monitor Error Interrupt Mask Position */
-#define PMC_IMR_MCKMON_Msk                    (_UINT32_(0x1) << PMC_IMR_MCKMON_Pos)                /* (PMC_IMR) Main System Bus Clock  Monitor Error Interrupt Mask Mask */
+#define PMC_IMR_MCKMON_Pos                    _UINT32_(23)                                         /* (PMC_IMR) Main System Bus Clock Monitor Error Interrupt Mask Position */
+#define PMC_IMR_MCKMON_Msk                    (_UINT32_(0x1) << PMC_IMR_MCKMON_Pos)                /* (PMC_IMR) Main System Bus Clock Monitor Error Interrupt Mask Mask */
 #define PMC_IMR_MCKMON(value)                 (PMC_IMR_MCKMON_Msk & (_UINT32_(value) << PMC_IMR_MCKMON_Pos)) /* Assigment of value for MCKMON in the PMC_IMR register */
 #define PMC_IMR_PLL_INT_Pos                   _UINT32_(25)                                         /* (PMC_IMR) PLL Interrupt Mask Position */
 #define PMC_IMR_PLL_INT_Msk                   (_UINT32_(0x1) << PMC_IMR_PLL_INT_Pos)               /* (PMC_IMR) PLL Interrupt Mask Mask */
@@ -686,8 +660,8 @@
 #define PMC_IMR_PCKRDY_Msk                    (_UINT32_(0x3) << PMC_IMR_PCKRDY_Pos)                /* (PMC_IMR Mask) PCKRDY */
 #define PMC_IMR_PCKRDY(value)                 (PMC_IMR_PCKRDY_Msk & (_UINT32_(value) << PMC_IMR_PCKRDY_Pos)) 
 
-/* -------- PMC_FSMR : (PMC Offset: 0x70) (R/W 32) Fast Startup Mode Register -------- */
-#define PMC_FSMR_RESETVALUE                   _UINT32_(0x00)                                       /*  (PMC_FSMR) Fast Startup Mode Register  Reset Value */
+/* -------- PMC_FSMR : (PMC Offset: 0x70) (R/W 32) Fast Start-Up Mode Register -------- */
+#define PMC_FSMR_RESETVALUE                   _UINT32_(0x00)                                       /*  (PMC_FSMR) Fast Start-Up Mode Register  Reset Value */
 
 #define PMC_FSMR_RTTAL_Pos                    _UINT32_(16)                                         /* (PMC_FSMR) RTT Alarm Enable Position */
 #define PMC_FSMR_RTTAL_Msk                    (_UINT32_(0x1) << PMC_FSMR_RTTAL_Pos)                /* (PMC_FSMR) RTT Alarm Enable Mask */
@@ -710,42 +684,39 @@
 #define   PMC_FSMR_USBAL_1_Val                _UINT32_(0x1)                                        /* (PMC_FSMR) The USB alarm enables a fast restart signal to the IP_Acronym.  */
 #define PMC_FSMR_USBAL_0                      (PMC_FSMR_USBAL_0_Val << PMC_FSMR_USBAL_Pos)         /* (PMC_FSMR) The USB alarm has no effect on the IP_Acronym. Position  */
 #define PMC_FSMR_USBAL_1                      (PMC_FSMR_USBAL_1_Val << PMC_FSMR_USBAL_Pos)         /* (PMC_FSMR) The USB alarm enables a fast restart signal to the IP_Acronym. Position  */
-#define PMC_FSMR_WLAN0_Pos                    _UINT32_(24)                                         /* (PMC_FSMR) Wakeup on LAN[x] Position */
-#define PMC_FSMR_WLAN0_Msk                    (_UINT32_(0x1) << PMC_FSMR_WLAN0_Pos)                /* (PMC_FSMR) Wakeup on LAN[x] Mask */
+#define PMC_FSMR_WLAN0_Pos                    _UINT32_(24)                                         /* (PMC_FSMR) Wake-Up on LAN[x] Enable Position */
+#define PMC_FSMR_WLAN0_Msk                    (_UINT32_(0x1) << PMC_FSMR_WLAN0_Pos)                /* (PMC_FSMR) Wake-Up on LAN[x] Enable Mask */
 #define PMC_FSMR_WLAN0(value)                 (PMC_FSMR_WLAN0_Msk & (_UINT32_(value) << PMC_FSMR_WLAN0_Pos)) /* Assigment of value for WLAN0 in the PMC_FSMR register */
-#define   PMC_FSMR_WLAN0_0_Val                _UINT32_(0x0)                                        /* (PMC_FSMR) The Wakeup on LAN[x] alarm has no effect on the PMC.  */
-#define   PMC_FSMR_WLAN0_1_Val                _UINT32_(0x1)                                        /* (PMC_FSMR) The Wakeup on LAN[x] alarm enables a fast restart signal to the PMC.  */
-#define PMC_FSMR_WLAN0_0                      (PMC_FSMR_WLAN0_0_Val << PMC_FSMR_WLAN0_Pos)         /* (PMC_FSMR) The Wakeup on LAN[x] alarm has no effect on the PMC. Position  */
-#define PMC_FSMR_WLAN0_1                      (PMC_FSMR_WLAN0_1_Val << PMC_FSMR_WLAN0_Pos)         /* (PMC_FSMR) The Wakeup on LAN[x] alarm enables a fast restart signal to the PMC. Position  */
-#define PMC_FSMR_WLAN1_Pos                    _UINT32_(25)                                         /* (PMC_FSMR) Wakeup on LAN[x] Position */
-#define PMC_FSMR_WLAN1_Msk                    (_UINT32_(0x1) << PMC_FSMR_WLAN1_Pos)                /* (PMC_FSMR) Wakeup on LAN[x] Mask */
-#define PMC_FSMR_WLAN1(value)                 (PMC_FSMR_WLAN1_Msk & (_UINT32_(value) << PMC_FSMR_WLAN1_Pos)) /* Assigment of value for WLAN1 in the PMC_FSMR register */
-#define   PMC_FSMR_WLAN1_0_Val                _UINT32_(0x0)                                        /* (PMC_FSMR) The Wakeup on LAN[x] alarm has no effect on the PMC.  */
-#define   PMC_FSMR_WLAN1_1_Val                _UINT32_(0x1)                                        /* (PMC_FSMR) The Wakeup on LAN[x] alarm enables a fast restart signal to the PMC.  */
-#define PMC_FSMR_WLAN1_0                      (PMC_FSMR_WLAN1_0_Val << PMC_FSMR_WLAN1_Pos)         /* (PMC_FSMR) The Wakeup on LAN[x] alarm has no effect on the PMC. Position  */
-#define PMC_FSMR_WLAN1_1                      (PMC_FSMR_WLAN1_1_Val << PMC_FSMR_WLAN1_Pos)         /* (PMC_FSMR) The Wakeup on LAN[x] alarm enables a fast restart signal to the PMC. Position  */
-#define PMC_FSMR_Msk                          _UINT32_(0x03070000)                                 /* (PMC_FSMR) Register Mask  */
+#define   PMC_FSMR_WLAN0_0_Val                _UINT32_(0x0)                                        /* (PMC_FSMR) The Wake-up on LAN[x] alarm has no effect on the PMC.  */
+#define   PMC_FSMR_WLAN0_1_Val                _UINT32_(0x1)                                        /* (PMC_FSMR) The Wake-up on LAN[x] alarm enables a fast restart signal to the PMC.  */
+#define PMC_FSMR_WLAN0_0                      (PMC_FSMR_WLAN0_0_Val << PMC_FSMR_WLAN0_Pos)         /* (PMC_FSMR) The Wake-up on LAN[x] alarm has no effect on the PMC. Position  */
+#define PMC_FSMR_WLAN0_1                      (PMC_FSMR_WLAN0_1_Val << PMC_FSMR_WLAN0_Pos)         /* (PMC_FSMR) The Wake-up on LAN[x] alarm enables a fast restart signal to the PMC. Position  */
+#define PMC_FSMR_Msk                          _UINT32_(0x01070000)                                 /* (PMC_FSMR) Register Mask  */
 
-#define PMC_FSMR_WLAN_Pos                     _UINT32_(24)                                         /* (PMC_FSMR Position) Wakeup on LAN[x] */
-#define PMC_FSMR_WLAN_Msk                     (_UINT32_(0x3) << PMC_FSMR_WLAN_Pos)                 /* (PMC_FSMR Mask) WLAN */
+#define PMC_FSMR_WLAN_Pos                     _UINT32_(24)                                         /* (PMC_FSMR Position) Wake-Up on LAN[x] Enable */
+#define PMC_FSMR_WLAN_Msk                     (_UINT32_(0x1) << PMC_FSMR_WLAN_Pos)                 /* (PMC_FSMR Mask) WLAN */
 #define PMC_FSMR_WLAN(value)                  (PMC_FSMR_WLAN_Msk & (_UINT32_(value) << PMC_FSMR_WLAN_Pos)) 
 
-/* -------- PMC_WCR : (PMC Offset: 0x74) (R/W 32) Wakeup Control Register -------- */
-#define PMC_WCR_RESETVALUE                    _UINT32_(0x00)                                       /*  (PMC_WCR) Wakeup Control Register  Reset Value */
+/* -------- PMC_WCR : (PMC Offset: 0x74) (R/W 32) Wake-Up Control Register -------- */
+#define PMC_WCR_RESETVALUE                    _UINT32_(0x00)                                       /*  (PMC_WCR) Wake-Up Control Register  Reset Value */
 
-#define PMC_WCR_WKPIONB_Pos                   _UINT32_(0)                                          /* (PMC_WCR) Wakeup Input Number Position */
-#define PMC_WCR_WKPIONB_Msk                   (_UINT32_(0xF) << PMC_WCR_WKPIONB_Pos)               /* (PMC_WCR) Wakeup Input Number Mask */
+#define PMC_WCR_WKPIONB_Pos                   _UINT32_(0)                                          /* (PMC_WCR) Wake-Up Input Number Position */
+#define PMC_WCR_WKPIONB_Msk                   (_UINT32_(0xF) << PMC_WCR_WKPIONB_Pos)               /* (PMC_WCR) Wake-Up Input Number Mask */
 #define PMC_WCR_WKPIONB(value)                (PMC_WCR_WKPIONB_Msk & (_UINT32_(value) << PMC_WCR_WKPIONB_Pos)) /* Assigment of value for WKPIONB in the PMC_WCR register */
-#define PMC_WCR_EN_Pos                        _UINT32_(16)                                         /* (PMC_WCR) Wakeup Input Enable Position */
-#define PMC_WCR_EN_Msk                        (_UINT32_(0x1) << PMC_WCR_EN_Pos)                    /* (PMC_WCR) Wakeup Input Enable Mask */
+#define PMC_WCR_EN_Pos                        _UINT32_(16)                                         /* (PMC_WCR) Wake-Up Input Enable Position */
+#define PMC_WCR_EN_Msk                        (_UINT32_(0x1) << PMC_WCR_EN_Pos)                    /* (PMC_WCR) Wake-Up Input Enable Mask */
 #define PMC_WCR_EN(value)                     (PMC_WCR_EN_Msk & (_UINT32_(value) << PMC_WCR_EN_Pos)) /* Assigment of value for EN in the PMC_WCR register */
-#define   PMC_WCR_EN_0_Val                    _UINT32_(0x0)                                        /* (PMC_WCR) The selected wakeup input has no effect on the IP_Acronym.  */
-#define   PMC_WCR_EN_1_Val                    _UINT32_(0x1)                                        /* (PMC_WCR) The selected wakeup input enables a fast restart signal to the IP_Acronym.  */
-#define PMC_WCR_EN_0                          (PMC_WCR_EN_0_Val << PMC_WCR_EN_Pos)                 /* (PMC_WCR) The selected wakeup input has no effect on the IP_Acronym. Position  */
-#define PMC_WCR_EN_1                          (PMC_WCR_EN_1_Val << PMC_WCR_EN_Pos)                 /* (PMC_WCR) The selected wakeup input enables a fast restart signal to the IP_Acronym. Position  */
-#define PMC_WCR_WIP_Pos                       _UINT32_(17)                                         /* (PMC_WCR) Wakeup Input Polarity Position */
-#define PMC_WCR_WIP_Msk                       (_UINT32_(0x1) << PMC_WCR_WIP_Pos)                   /* (PMC_WCR) Wakeup Input Polarity Mask */
+#define   PMC_WCR_EN_0_Val                    _UINT32_(0x0)                                        /* (PMC_WCR) The selected wake-up input has no effect on the IP_Acronym.  */
+#define   PMC_WCR_EN_1_Val                    _UINT32_(0x1)                                        /* (PMC_WCR) The selected wake-up input enables a fast restart signal to the IP_Acronym.  */
+#define PMC_WCR_EN_0                          (PMC_WCR_EN_0_Val << PMC_WCR_EN_Pos)                 /* (PMC_WCR) The selected wake-up input has no effect on the IP_Acronym. Position  */
+#define PMC_WCR_EN_1                          (PMC_WCR_EN_1_Val << PMC_WCR_EN_Pos)                 /* (PMC_WCR) The selected wake-up input enables a fast restart signal to the IP_Acronym. Position  */
+#define PMC_WCR_WIP_Pos                       _UINT32_(17)                                         /* (PMC_WCR) Wake-Up Input Polarity Position */
+#define PMC_WCR_WIP_Msk                       (_UINT32_(0x1) << PMC_WCR_WIP_Pos)                   /* (PMC_WCR) Wake-Up Input Polarity Mask */
 #define PMC_WCR_WIP(value)                    (PMC_WCR_WIP_Msk & (_UINT32_(value) << PMC_WCR_WIP_Pos)) /* Assigment of value for WIP in the PMC_WCR register */
+#define   PMC_WCR_WIP_0_Val                   _UINT32_(0x0)                                        /* (PMC_WCR) Active polarity is low.  */
+#define   PMC_WCR_WIP_1_Val                   _UINT32_(0x1)                                        /* (PMC_WCR) Active polarity is high.  */
+#define PMC_WCR_WIP_0                         (PMC_WCR_WIP_0_Val << PMC_WCR_WIP_Pos)               /* (PMC_WCR) Active polarity is low. Position  */
+#define PMC_WCR_WIP_1                         (PMC_WCR_WIP_1_Val << PMC_WCR_WIP_Pos)               /* (PMC_WCR) Active polarity is high. Position  */
 #define PMC_WCR_CMD_Pos                       _UINT32_(24)                                         /* (PMC_WCR) Command Position */
 #define PMC_WCR_CMD_Msk                       (_UINT32_(0x1) << PMC_WCR_CMD_Pos)                   /* (PMC_WCR) Command Mask */
 #define PMC_WCR_CMD(value)                    (PMC_WCR_CMD_Msk & (_UINT32_(value) << PMC_WCR_CMD_Pos)) /* Assigment of value for CMD in the PMC_WCR register */
@@ -817,20 +788,18 @@
 #define   PMC_PCR_GCLKCSS_TD_SLOW_CLOCK_Val   _UINT32_(0x1)                                        /* (PMC_PCR) TD_SLCK is selected  */
 #define   PMC_PCR_GCLKCSS_MAINCK_Val          _UINT32_(0x2)                                        /* (PMC_PCR) MAINCK is selected  */
 #define   PMC_PCR_GCLKCSS_MCK_Val             _UINT32_(0x3)                                        /* (PMC_PCR) MCK is selected  */
-#define   PMC_PCR_GCLKCSS_PLLA_Val            _UINT32_(0x4)                                        /* (PMC_PCR) PLLA is selected.  */
-#define   PMC_PCR_GCLKCSS_UPLL_Val            _UINT32_(0x5)                                        /* (PMC_PCR) UPLL is selected.  */
-#define   PMC_PCR_GCLKCSS_AUDIOPLL_Val        _UINT32_(0x6)                                        /* (PMC_PCR) Audio PLL is selected.  */
+#define   PMC_PCR_GCLKCSS_UPLL_Val            _UINT32_(0x5)                                        /* (PMC_PCR) UPLLCK is selected.  */
+#define   PMC_PCR_GCLKCSS_AUDIOPLL_Val        _UINT32_(0x6)                                        /* (PMC_PCR) AUDIOPLLCK is selected.  */
 #define   PMC_PCR_GCLKCSS_PLLADIV2CLK_Val     _UINT32_(0x8)                                        /* (PMC_PCR) PLLADIV2CLK is selected.  */
 #define PMC_PCR_GCLKCSS_MD_SLOW_CLK           (PMC_PCR_GCLKCSS_MD_SLOW_CLK_Val << PMC_PCR_GCLKCSS_Pos) /* (PMC_PCR) MD_SLCK is selected Position  */
 #define PMC_PCR_GCLKCSS_TD_SLOW_CLOCK         (PMC_PCR_GCLKCSS_TD_SLOW_CLOCK_Val << PMC_PCR_GCLKCSS_Pos) /* (PMC_PCR) TD_SLCK is selected Position  */
 #define PMC_PCR_GCLKCSS_MAINCK                (PMC_PCR_GCLKCSS_MAINCK_Val << PMC_PCR_GCLKCSS_Pos)  /* (PMC_PCR) MAINCK is selected Position  */
 #define PMC_PCR_GCLKCSS_MCK                   (PMC_PCR_GCLKCSS_MCK_Val << PMC_PCR_GCLKCSS_Pos)     /* (PMC_PCR) MCK is selected Position  */
-#define PMC_PCR_GCLKCSS_PLLA                  (PMC_PCR_GCLKCSS_PLLA_Val << PMC_PCR_GCLKCSS_Pos)    /* (PMC_PCR) PLLA is selected. Position  */
-#define PMC_PCR_GCLKCSS_UPLL                  (PMC_PCR_GCLKCSS_UPLL_Val << PMC_PCR_GCLKCSS_Pos)    /* (PMC_PCR) UPLL is selected. Position  */
-#define PMC_PCR_GCLKCSS_AUDIOPLL              (PMC_PCR_GCLKCSS_AUDIOPLL_Val << PMC_PCR_GCLKCSS_Pos) /* (PMC_PCR) Audio PLL is selected. Position  */
+#define PMC_PCR_GCLKCSS_UPLL                  (PMC_PCR_GCLKCSS_UPLL_Val << PMC_PCR_GCLKCSS_Pos)    /* (PMC_PCR) UPLLCK is selected. Position  */
+#define PMC_PCR_GCLKCSS_AUDIOPLL              (PMC_PCR_GCLKCSS_AUDIOPLL_Val << PMC_PCR_GCLKCSS_Pos) /* (PMC_PCR) AUDIOPLLCK is selected. Position  */
 #define PMC_PCR_GCLKCSS_PLLADIV2CLK           (PMC_PCR_GCLKCSS_PLLADIV2CLK_Val << PMC_PCR_GCLKCSS_Pos) /* (PMC_PCR) PLLADIV2CLK is selected. Position  */
-#define PMC_PCR_GCLKDIV_Pos                   _UINT32_(16)                                         /* (PMC_PCR) Generic Clock Division Ratio Position */
-#define PMC_PCR_GCLKDIV_Msk                   (_UINT32_(0xFFF) << PMC_PCR_GCLKDIV_Pos)             /* (PMC_PCR) Generic Clock Division Ratio Mask */
+#define PMC_PCR_GCLKDIV_Pos                   _UINT32_(20)                                         /* (PMC_PCR) Generic Clock Division Ratio Position */
+#define PMC_PCR_GCLKDIV_Msk                   (_UINT32_(0xFF) << PMC_PCR_GCLKDIV_Pos)              /* (PMC_PCR) Generic Clock Division Ratio Mask */
 #define PMC_PCR_GCLKDIV(value)                (PMC_PCR_GCLKDIV_Msk & (_UINT32_(value) << PMC_PCR_GCLKDIV_Pos)) /* Assigment of value for GCLKDIV in the PMC_PCR register */
 #define PMC_PCR_EN_Pos                        _UINT32_(28)                                         /* (PMC_PCR) Enable Position */
 #define PMC_PCR_EN_Msk                        (_UINT32_(0x1) << PMC_PCR_EN_Pos)                    /* (PMC_PCR) Enable Mask */
@@ -853,7 +822,7 @@
 #define   PMC_PCR_CMD_1_Val                   _UINT32_(0x1)                                        /* (PMC_PCR) Write mode.  */
 #define PMC_PCR_CMD_0                         (PMC_PCR_CMD_0_Val << PMC_PCR_CMD_Pos)               /* (PMC_PCR) Read mode. Position  */
 #define PMC_PCR_CMD_1                         (PMC_PCR_CMD_1_Val << PMC_PCR_CMD_Pos)               /* (PMC_PCR) Write mode. Position  */
-#define PMC_PCR_Msk                           _UINT32_(0xBFFF1F7F)                                 /* (PMC_PCR) Register Mask  */
+#define PMC_PCR_Msk                           _UINT32_(0xBFF01F7F)                                 /* (PMC_PCR) Register Mask  */
 
 
 /* -------- PMC_MCKLIM : (PMC Offset: 0x9C) (R/W 32) MCK Monitor Limits Register -------- */
@@ -1216,20 +1185,6 @@
 #define   PMC_CSR1_PID54_1_Val                _UINT32_(0x1)                                        /* (PMC_CSR1) The corresponding peripheral clock is enabled.  */
 #define PMC_CSR1_PID54_0                      (PMC_CSR1_PID54_0_Val << PMC_CSR1_PID54_Pos)         /* (PMC_CSR1) The corresponding peripheral clock is disabled. Position  */
 #define PMC_CSR1_PID54_1                      (PMC_CSR1_PID54_1_Val << PMC_CSR1_PID54_Pos)         /* (PMC_CSR1) The corresponding peripheral clock is enabled. Position  */
-#define PMC_CSR1_PID56_Pos                    _UINT32_(24)                                         /* (PMC_CSR1) Peripheral Clock 56 Status Position */
-#define PMC_CSR1_PID56_Msk                    (_UINT32_(0x1) << PMC_CSR1_PID56_Pos)                /* (PMC_CSR1) Peripheral Clock 56 Status Mask */
-#define PMC_CSR1_PID56(value)                 (PMC_CSR1_PID56_Msk & (_UINT32_(value) << PMC_CSR1_PID56_Pos)) /* Assigment of value for PID56 in the PMC_CSR1 register */
-#define   PMC_CSR1_PID56_0_Val                _UINT32_(0x0)                                        /* (PMC_CSR1) The corresponding peripheral clock is disabled.  */
-#define   PMC_CSR1_PID56_1_Val                _UINT32_(0x1)                                        /* (PMC_CSR1) The corresponding peripheral clock is enabled.  */
-#define PMC_CSR1_PID56_0                      (PMC_CSR1_PID56_0_Val << PMC_CSR1_PID56_Pos)         /* (PMC_CSR1) The corresponding peripheral clock is disabled. Position  */
-#define PMC_CSR1_PID56_1                      (PMC_CSR1_PID56_1_Val << PMC_CSR1_PID56_Pos)         /* (PMC_CSR1) The corresponding peripheral clock is enabled. Position  */
-#define PMC_CSR1_PID58_Pos                    _UINT32_(26)                                         /* (PMC_CSR1) Peripheral Clock 58 Status Position */
-#define PMC_CSR1_PID58_Msk                    (_UINT32_(0x1) << PMC_CSR1_PID58_Pos)                /* (PMC_CSR1) Peripheral Clock 58 Status Mask */
-#define PMC_CSR1_PID58(value)                 (PMC_CSR1_PID58_Msk & (_UINT32_(value) << PMC_CSR1_PID58_Pos)) /* Assigment of value for PID58 in the PMC_CSR1 register */
-#define   PMC_CSR1_PID58_0_Val                _UINT32_(0x0)                                        /* (PMC_CSR1) The corresponding peripheral clock is disabled.  */
-#define   PMC_CSR1_PID58_1_Val                _UINT32_(0x1)                                        /* (PMC_CSR1) The corresponding peripheral clock is enabled.  */
-#define PMC_CSR1_PID58_0                      (PMC_CSR1_PID58_0_Val << PMC_CSR1_PID58_Pos)         /* (PMC_CSR1) The corresponding peripheral clock is disabled. Position  */
-#define PMC_CSR1_PID58_1                      (PMC_CSR1_PID58_1_Val << PMC_CSR1_PID58_Pos)         /* (PMC_CSR1) The corresponding peripheral clock is enabled. Position  */
 #define PMC_CSR1_PID59_Pos                    _UINT32_(27)                                         /* (PMC_CSR1) Peripheral Clock 59 Status Position */
 #define PMC_CSR1_PID59_Msk                    (_UINT32_(0x1) << PMC_CSR1_PID59_Pos)                /* (PMC_CSR1) Peripheral Clock 59 Status Mask */
 #define PMC_CSR1_PID59(value)                 (PMC_CSR1_PID59_Msk & (_UINT32_(value) << PMC_CSR1_PID59_Pos)) /* Assigment of value for PID59 in the PMC_CSR1 register */
@@ -1237,10 +1192,10 @@
 #define   PMC_CSR1_PID59_1_Val                _UINT32_(0x1)                                        /* (PMC_CSR1) The corresponding peripheral clock is enabled.  */
 #define PMC_CSR1_PID59_0                      (PMC_CSR1_PID59_0_Val << PMC_CSR1_PID59_Pos)         /* (PMC_CSR1) The corresponding peripheral clock is disabled. Position  */
 #define PMC_CSR1_PID59_1                      (PMC_CSR1_PID59_1_Val << PMC_CSR1_PID59_Pos)         /* (PMC_CSR1) The corresponding peripheral clock is enabled. Position  */
-#define PMC_CSR1_Msk                          _UINT32_(0x0D7BBFFF)                                 /* (PMC_CSR1) Register Mask  */
+#define PMC_CSR1_Msk                          _UINT32_(0x087BBFFF)                                 /* (PMC_CSR1) Register Mask  */
 
 #define PMC_CSR1_PID_Pos                      _UINT32_(0)                                          /* (PMC_CSR1 Position) Peripheral Clock 59 Status */
-#define PMC_CSR1_PID_Msk                      (_UINT32_(0xFFFFFF) << PMC_CSR1_PID_Pos)             /* (PMC_CSR1 Mask) PID */
+#define PMC_CSR1_PID_Msk                      (_UINT32_(0x3FFFFF) << PMC_CSR1_PID_Pos)             /* (PMC_CSR1 Mask) PID */
 #define PMC_CSR1_PID(value)                   (PMC_CSR1_PID_Msk & (_UINT32_(value) << PMC_CSR1_PID_Pos)) 
 
 /* -------- PMC_GCSR0 : (PMC Offset: 0xC0) ( R/ 32) Generic Clock Status Register 0 -------- */
@@ -1618,16 +1573,16 @@
 #define PMC_PLL_ISR1_UDRAU_Pos                _UINT32_(2)                                          /* (PMC_PLL_ISR1) AUDIO PLL Underflow Position */
 #define PMC_PLL_ISR1_UDRAU_Msk                (_UINT32_(0x1) << PMC_PLL_ISR1_UDRAU_Pos)            /* (PMC_PLL_ISR1) AUDIO PLL Underflow Mask */
 #define PMC_PLL_ISR1_UDRAU(value)             (PMC_PLL_ISR1_UDRAU_Msk & (_UINT32_(value) << PMC_PLL_ISR1_UDRAU_Pos)) /* Assigment of value for UDRAU in the PMC_PLL_ISR1 register */
-#define   PMC_PLL_ISR1_UDRAU_0_Val            _UINT32_(0x0)                                        /* (PMC_PLL_ISR1) AUDIO PLL is not in underflow state.  */
+#define   PMC_PLL_ISR1_UDRAU_0_Val            _UINT32_(0x0)                                        /* (PMC_PLL_ISR1) AUDIO PLL is not in Underflow state.  */
 #define   PMC_PLL_ISR1_UDRAU_1_Val            _UINT32_(0x1)                                        /* (PMC_PLL_ISR1) AUDIO PLL encountered an underflow.  */
-#define PMC_PLL_ISR1_UDRAU_0                  (PMC_PLL_ISR1_UDRAU_0_Val << PMC_PLL_ISR1_UDRAU_Pos) /* (PMC_PLL_ISR1) AUDIO PLL is not in underflow state. Position  */
+#define PMC_PLL_ISR1_UDRAU_0                  (PMC_PLL_ISR1_UDRAU_0_Val << PMC_PLL_ISR1_UDRAU_Pos) /* (PMC_PLL_ISR1) AUDIO PLL is not in Underflow state. Position  */
 #define PMC_PLL_ISR1_UDRAU_1                  (PMC_PLL_ISR1_UDRAU_1_Val << PMC_PLL_ISR1_UDRAU_Pos) /* (PMC_PLL_ISR1) AUDIO PLL encountered an underflow. Position  */
 #define PMC_PLL_ISR1_OVRAU_Pos                _UINT32_(18)                                         /* (PMC_PLL_ISR1) AUDIO PLL Overflow Position */
 #define PMC_PLL_ISR1_OVRAU_Msk                (_UINT32_(0x1) << PMC_PLL_ISR1_OVRAU_Pos)            /* (PMC_PLL_ISR1) AUDIO PLL Overflow Mask */
 #define PMC_PLL_ISR1_OVRAU(value)             (PMC_PLL_ISR1_OVRAU_Msk & (_UINT32_(value) << PMC_PLL_ISR1_OVRAU_Pos)) /* Assigment of value for OVRAU in the PMC_PLL_ISR1 register */
-#define   PMC_PLL_ISR1_OVRAU_0_Val            _UINT32_(0x0)                                        /* (PMC_PLL_ISR1) AUDIO PLL is not in overflow state.  */
+#define   PMC_PLL_ISR1_OVRAU_0_Val            _UINT32_(0x0)                                        /* (PMC_PLL_ISR1) AUDIO PLL is not in Overflow state.  */
 #define   PMC_PLL_ISR1_OVRAU_1_Val            _UINT32_(0x1)                                        /* (PMC_PLL_ISR1) AUDIO PLL encountered an overflow.  */
-#define PMC_PLL_ISR1_OVRAU_0                  (PMC_PLL_ISR1_OVRAU_0_Val << PMC_PLL_ISR1_OVRAU_Pos) /* (PMC_PLL_ISR1) AUDIO PLL is not in overflow state. Position  */
+#define PMC_PLL_ISR1_OVRAU_0                  (PMC_PLL_ISR1_OVRAU_0_Val << PMC_PLL_ISR1_OVRAU_Pos) /* (PMC_PLL_ISR1) AUDIO PLL is not in Overflow state. Position  */
 #define PMC_PLL_ISR1_OVRAU_1                  (PMC_PLL_ISR1_OVRAU_1_Val << PMC_PLL_ISR1_OVRAU_Pos) /* (PMC_PLL_ISR1) AUDIO PLL encountered an overflow. Position  */
 #define PMC_PLL_ISR1_Msk                      _UINT32_(0x00040004)                                 /* (PMC_PLL_ISR1) Register Mask  */
 
@@ -1652,8 +1607,8 @@
 #define PMC_IDR_REG_OFST               _UINT32_(0x64)      /* (PMC_IDR) Interrupt Disable Register Offset */
 #define PMC_SR_REG_OFST                _UINT32_(0x68)      /* (PMC_SR) Status Register Offset */
 #define PMC_IMR_REG_OFST               _UINT32_(0x6C)      /* (PMC_IMR) Interrupt Mask Register Offset */
-#define PMC_FSMR_REG_OFST              _UINT32_(0x70)      /* (PMC_FSMR) Fast Startup Mode Register Offset */
-#define PMC_WCR_REG_OFST               _UINT32_(0x74)      /* (PMC_WCR) Wakeup Control Register Offset */
+#define PMC_FSMR_REG_OFST              _UINT32_(0x70)      /* (PMC_FSMR) Fast Start-Up Mode Register Offset */
+#define PMC_WCR_REG_OFST               _UINT32_(0x74)      /* (PMC_WCR) Wake-Up Control Register Offset */
 #define PMC_FOCR_REG_OFST              _UINT32_(0x78)      /* (PMC_FOCR) Fault Output Clear Register Offset */
 #define PMC_WPMR_REG_OFST              _UINT32_(0x80)      /* (PMC_WPMR) Write Protection Mode Register Offset */
 #define PMC_WPSR_REG_OFST              _UINT32_(0x84)      /* (PMC_WPSR) Write Protection Status Register Offset */
@@ -1693,8 +1648,8 @@ typedef struct
   __O   uint32_t                       PMC_IDR;            /**< Offset: 0x64 ( /W  32) Interrupt Disable Register */
   __I   uint32_t                       PMC_SR;             /**< Offset: 0x68 (R/   32) Status Register */
   __I   uint32_t                       PMC_IMR;            /**< Offset: 0x6C (R/   32) Interrupt Mask Register */
-  __IO  uint32_t                       PMC_FSMR;           /**< Offset: 0x70 (R/W  32) Fast Startup Mode Register */
-  __IO  uint32_t                       PMC_WCR;            /**< Offset: 0x74 (R/W  32) Wakeup Control Register */
+  __IO  uint32_t                       PMC_FSMR;           /**< Offset: 0x70 (R/W  32) Fast Start-Up Mode Register */
+  __IO  uint32_t                       PMC_WCR;            /**< Offset: 0x74 (R/W  32) Wake-Up Control Register */
   __O   uint32_t                       PMC_FOCR;           /**< Offset: 0x78 ( /W  32) Fault Output Clear Register */
   __I   uint8_t                        Reserved4[0x04];
   __IO  uint32_t                       PMC_WPMR;           /**< Offset: 0x80 (R/W  32) Write Protection Mode Register */

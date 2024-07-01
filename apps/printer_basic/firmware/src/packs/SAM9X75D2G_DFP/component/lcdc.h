@@ -1,26 +1,23 @@
 /*
  * Component description for LCDC
  *
- * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
  *
- * Subject to your compliance with these terms, you may use Microchip software and any derivatives
- * exclusively with Microchip products. It is your responsibility to comply with third party license
- * terms applicable to your use of third party software (including open source software) that may
- * accompany Microchip software.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY,
- * APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND
- * FITNESS FOR A PARTICULAR PURPOSE.
+ *   http://www.apache.org/licenses/LICENSE-2.0
  *
- * IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, INCIDENTAL OR CONSEQUENTIAL
- * LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF
- * MICROCHIP HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO THE FULLEST EXTENT
- * ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT
- * EXCEED THE AMOUNT OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  *
  */
 
-/* file generated from device description version 2023-01-20T08:33:42Z */
+/* file generated from device description file (ATDF) version 2024-04-05T08:36:56Z */
 #ifndef _SAM9X7_LCDC_COMPONENT_H_
 #define _SAM9X7_LCDC_COMPONENT_H_
 
@@ -124,9 +121,9 @@
 #define LCDC_LCDCFG0_CLKPWMSEL_Msk            (_UINT32_(0x1) << LCDC_LCDCFG0_CLKPWMSEL_Pos)        /* (LCDC_LCDCFG0) LCDC PWM Clock Source Selection Mask */
 #define LCDC_LCDCFG0_CLKPWMSEL(value)         (LCDC_LCDCFG0_CLKPWMSEL_Msk & (_UINT32_(value) << LCDC_LCDCFG0_CLKPWMSEL_Pos)) /* Assigment of value for CLKPWMSEL in the LCDC_LCDCFG0 register */
 #define   LCDC_LCDCFG0_CLKPWMSEL_0_Val        _UINT32_(0x0)                                        /* (LCDC_LCDCFG0) The slow clock is selected and feeds the PWM module.  */
-#define   LCDC_LCDCFG0_CLKPWMSEL_1_Val        _UINT32_(0x1)                                        /* (LCDC_LCDCFG0) The system clock is selected and feeds the PWM module.  */
+#define   LCDC_LCDCFG0_CLKPWMSEL_1_Val        _UINT32_(0x1)                                        /* (LCDC_LCDCFG0) The peripheral clock (MCK) is selected and feeds the PWM module.  */
 #define LCDC_LCDCFG0_CLKPWMSEL_0              (LCDC_LCDCFG0_CLKPWMSEL_0_Val << LCDC_LCDCFG0_CLKPWMSEL_Pos) /* (LCDC_LCDCFG0) The slow clock is selected and feeds the PWM module. Position  */
-#define LCDC_LCDCFG0_CLKPWMSEL_1              (LCDC_LCDCFG0_CLKPWMSEL_1_Val << LCDC_LCDCFG0_CLKPWMSEL_Pos) /* (LCDC_LCDCFG0) The system clock is selected and feeds the PWM module. Position  */
+#define LCDC_LCDCFG0_CLKPWMSEL_1              (LCDC_LCDCFG0_CLKPWMSEL_1_Val << LCDC_LCDCFG0_CLKPWMSEL_Pos) /* (LCDC_LCDCFG0) The peripheral clock (MCK) is selected and feeds the PWM module. Position  */
 #define LCDC_LCDCFG0_CLKDIV_Pos               _UINT32_(16)                                         /* (LCDC_LCDCFG0) LCDC Clock Divider Position */
 #define LCDC_LCDCFG0_CLKDIV_Msk               (_UINT32_(0xFF) << LCDC_LCDCFG0_CLKDIV_Pos)          /* (LCDC_LCDCFG0) LCDC Clock Divider Mask */
 #define LCDC_LCDCFG0_CLKDIV(value)            (LCDC_LCDCFG0_CLKDIV_Msk & (_UINT32_(value) << LCDC_LCDCFG0_CLKDIV_Pos)) /* Assigment of value for CLKDIV in the LCDC_LCDCFG0 register */
@@ -260,9 +257,9 @@
 #define LCDC_LCDCFG5_DPI_Msk                  (_UINT32_(0x1) << LCDC_LCDCFG5_DPI_Pos)              /* (LCDC_LCDCFG5) Display Pixel Interface Compatible Mode Mask */
 #define LCDC_LCDCFG5_DPI(value)               (LCDC_LCDCFG5_DPI_Msk & (_UINT32_(value) << LCDC_LCDCFG5_DPI_Pos)) /* Assigment of value for DPI in the LCDC_LCDCFG5 register */
 #define   LCDC_LCDCFG5_DPI_0_Val              _UINT32_(0x0)                                        /* (LCDC_LCDCFG5) Legacy pixel mapping.  */
-#define   LCDC_LCDCFG5_DPI_1_Val              _UINT32_(0x1)                                        /* (LCDC_LCDCFG5) Activates the DPI compliant pixel stream. Refer to field MODE: LCDC Output Mode  */
+#define   LCDC_LCDCFG5_DPI_1_Val              _UINT32_(0x1)                                        /* (LCDC_LCDCFG5) Activates the DPI compliant pixel stream. See field MODE: LCDC Output Mode  */
 #define LCDC_LCDCFG5_DPI_0                    (LCDC_LCDCFG5_DPI_0_Val << LCDC_LCDCFG5_DPI_Pos)     /* (LCDC_LCDCFG5) Legacy pixel mapping. Position  */
-#define LCDC_LCDCFG5_DPI_1                    (LCDC_LCDCFG5_DPI_1_Val << LCDC_LCDCFG5_DPI_Pos)     /* (LCDC_LCDCFG5) Activates the DPI compliant pixel stream. Refer to field MODE: LCDC Output Mode Position  */
+#define LCDC_LCDCFG5_DPI_1                    (LCDC_LCDCFG5_DPI_1_Val << LCDC_LCDCFG5_DPI_Pos)     /* (LCDC_LCDCFG5) Activates the DPI compliant pixel stream. See field MODE: LCDC Output Mode Position  */
 #define LCDC_LCDCFG5_VSPSU_Pos                _UINT32_(12)                                         /* (LCDC_LCDCFG5) LCDC Vertical Synchronization Pulse Setup Configuration Position */
 #define LCDC_LCDCFG5_VSPSU_Msk                (_UINT32_(0x1) << LCDC_LCDCFG5_VSPSU_Pos)            /* (LCDC_LCDCFG5) LCDC Vertical Synchronization Pulse Setup Configuration Mask */
 #define LCDC_LCDCFG5_VSPSU(value)             (LCDC_LCDCFG5_VSPSU_Msk & (_UINT32_(value) << LCDC_LCDCFG5_VSPSU_Pos)) /* Assigment of value for VSPSU in the LCDC_LCDCFG5 register */
@@ -376,9 +373,9 @@
 #define LCDC_LCDEN_SDEN_Msk                   (_UINT32_(0x1) << LCDC_LCDEN_SDEN_Pos)               /* (LCDC_LCDEN) Shutdown Signal Enable Mask */
 #define LCDC_LCDEN_SDEN(value)                (LCDC_LCDEN_SDEN_Msk & (_UINT32_(value) << LCDC_LCDEN_SDEN_Pos)) /* Assigment of value for SDEN in the LCDC_LCDEN register */
 #define   LCDC_LCDEN_SDEN_0_Val               _UINT32_(0x0)                                        /* (LCDC_LCDEN) No effect.  */
-#define   LCDC_LCDEN_SDEN_1_Val               _UINT32_(0x1)                                        /* (LCDC_LCDEN) Sets the shutdown signal (lcd_sd) to one. If a rising edge is generated, signals the MIPI DSI host to send a "Shutdown Peripheral" command to the LCD screen when the MIPI output interface is selected.  */
+#define   LCDC_LCDEN_SDEN_1_Val               _UINT32_(0x1)                                        /* (LCDC_LCDEN) Sets the shutdown signal (lcd_sd) to zero (turns on the display).  */
 #define LCDC_LCDEN_SDEN_0                     (LCDC_LCDEN_SDEN_0_Val << LCDC_LCDEN_SDEN_Pos)       /* (LCDC_LCDEN) No effect. Position  */
-#define LCDC_LCDEN_SDEN_1                     (LCDC_LCDEN_SDEN_1_Val << LCDC_LCDEN_SDEN_Pos)       /* (LCDC_LCDEN) Sets the shutdown signal (lcd_sd) to one. If a rising edge is generated, signals the MIPI DSI host to send a "Shutdown Peripheral" command to the LCD screen when the MIPI output interface is selected. Position  */
+#define LCDC_LCDEN_SDEN_1                     (LCDC_LCDEN_SDEN_1_Val << LCDC_LCDEN_SDEN_Pos)       /* (LCDC_LCDEN) Sets the shutdown signal (lcd_sd) to zero (turns on the display). Position  */
 #define LCDC_LCDEN_CMEN_Pos                   _UINT32_(6)                                          /* (LCDC_LCDEN) Color Mode Signal Enable Position */
 #define LCDC_LCDEN_CMEN_Msk                   (_UINT32_(0x1) << LCDC_LCDEN_CMEN_Pos)               /* (LCDC_LCDEN) Color Mode Signal Enable Mask */
 #define LCDC_LCDEN_CMEN(value)                (LCDC_LCDEN_CMEN_Msk & (_UINT32_(value) << LCDC_LCDEN_CMEN_Pos)) /* Assigment of value for CMEN in the LCDC_LCDEN register */
@@ -422,9 +419,9 @@
 #define LCDC_LCDDIS_SDDIS_Msk                 (_UINT32_(0x1) << LCDC_LCDDIS_SDDIS_Pos)             /* (LCDC_LCDDIS) Shutdown Signal Disable Mask */
 #define LCDC_LCDDIS_SDDIS(value)              (LCDC_LCDDIS_SDDIS_Msk & (_UINT32_(value) << LCDC_LCDDIS_SDDIS_Pos)) /* Assigment of value for SDDIS in the LCDC_LCDDIS register */
 #define   LCDC_LCDDIS_SDDIS_0_Val             _UINT32_(0x0)                                        /* (LCDC_LCDDIS) No effect.  */
-#define   LCDC_LCDDIS_SDDIS_1_Val             _UINT32_(0x1)                                        /* (LCDC_LCDDIS) Sets the shutdown signal (lcd_sd) to zero. If a falling edge is generated, signals the MIPI DSI host to send a "Turn On Peripheral" command to the LCD screen when the MIPI output interface is selected).  */
+#define   LCDC_LCDDIS_SDDIS_1_Val             _UINT32_(0x1)                                        /* (LCDC_LCDDIS) Sets the shutdown signal (lcd_sd) to one (turns off the display).  */
 #define LCDC_LCDDIS_SDDIS_0                   (LCDC_LCDDIS_SDDIS_0_Val << LCDC_LCDDIS_SDDIS_Pos)   /* (LCDC_LCDDIS) No effect. Position  */
-#define LCDC_LCDDIS_SDDIS_1                   (LCDC_LCDDIS_SDDIS_1_Val << LCDC_LCDDIS_SDDIS_Pos)   /* (LCDC_LCDDIS) Sets the shutdown signal (lcd_sd) to zero. If a falling edge is generated, signals the MIPI DSI host to send a "Turn On Peripheral" command to the LCD screen when the MIPI output interface is selected). Position  */
+#define LCDC_LCDDIS_SDDIS_1                   (LCDC_LCDDIS_SDDIS_1_Val << LCDC_LCDDIS_SDDIS_Pos)   /* (LCDC_LCDDIS) Sets the shutdown signal (lcd_sd) to one (turns off the display). Position  */
 #define LCDC_LCDDIS_CMDIS_Pos                 _UINT32_(6)                                          /* (LCDC_LCDDIS) Color Mode Signal Disable Position */
 #define LCDC_LCDDIS_CMDIS_Msk                 (_UINT32_(0x1) << LCDC_LCDDIS_CMDIS_Pos)             /* (LCDC_LCDDIS) Color Mode Signal Disable Mask */
 #define LCDC_LCDDIS_CMDIS(value)              (LCDC_LCDDIS_CMDIS_Msk & (_UINT32_(value) << LCDC_LCDDIS_CMDIS_Pos)) /* Assigment of value for CMDIS in the LCDC_LCDDIS register */
@@ -450,9 +447,9 @@
 #define LCDC_LCDDIS_DISPRST_Msk               (_UINT32_(0x1) << LCDC_LCDDIS_DISPRST_Pos)           /* (LCDC_LCDDIS) LCDC DISP Signal Reset Mask */
 #define LCDC_LCDDIS_DISPRST(value)            (LCDC_LCDDIS_DISPRST_Msk & (_UINT32_(value) << LCDC_LCDDIS_DISPRST_Pos)) /* Assigment of value for DISPRST in the LCDC_LCDDIS register */
 #define   LCDC_LCDDIS_DISPRST_0_Val           _UINT32_(0x0)                                        /* (LCDC_LCDDIS) No effect.  */
-#define   LCDC_LCDDIS_DISPRST_1_Val           _UINT32_(0x1)                                        /* (LCDC_LCDDIS) Resets the DISP signa immediatelyl.  */
+#define   LCDC_LCDDIS_DISPRST_1_Val           _UINT32_(0x1)                                        /* (LCDC_LCDDIS) Resets the DISP signal immediately.  */
 #define LCDC_LCDDIS_DISPRST_0                 (LCDC_LCDDIS_DISPRST_0_Val << LCDC_LCDDIS_DISPRST_Pos) /* (LCDC_LCDDIS) No effect. Position  */
-#define LCDC_LCDDIS_DISPRST_1                 (LCDC_LCDDIS_DISPRST_1_Val << LCDC_LCDDIS_DISPRST_Pos) /* (LCDC_LCDDIS) Resets the DISP signa immediatelyl. Position  */
+#define LCDC_LCDDIS_DISPRST_1                 (LCDC_LCDDIS_DISPRST_1_Val << LCDC_LCDDIS_DISPRST_Pos) /* (LCDC_LCDDIS) Resets the DISP signal immediately. Position  */
 #define LCDC_LCDDIS_PWMRST_Pos                _UINT32_(11)                                         /* (LCDC_LCDDIS) LCDC PWM Reset Position */
 #define LCDC_LCDDIS_PWMRST_Msk                (_UINT32_(0x1) << LCDC_LCDDIS_PWMRST_Pos)            /* (LCDC_LCDDIS) LCDC PWM Reset Mask */
 #define LCDC_LCDDIS_PWMRST(value)             (LCDC_LCDDIS_PWMRST_Msk & (_UINT32_(value) << LCDC_LCDDIS_PWMRST_Pos)) /* Assigment of value for PWMRST in the LCDC_LCDDIS register */
@@ -691,10 +688,10 @@
 #define LCDC_LCDISR_WP_Pos                    _UINT32_(31)                                         /* (LCDC_LCDISR) Write Protection Interrupt Status Position */
 #define LCDC_LCDISR_WP_Msk                    (_UINT32_(0x1) << LCDC_LCDISR_WP_Pos)                /* (LCDC_LCDISR) Write Protection Interrupt Status Mask */
 #define LCDC_LCDISR_WP(value)                 (LCDC_LCDISR_WP_Msk & (_UINT32_(value) << LCDC_LCDISR_WP_Pos)) /* Assigment of value for WP in the LCDC_LCDISR register */
-#define   LCDC_LCDISR_WP_0_Val                _UINT32_(0x0)                                        /* (LCDC_LCDISR) No Write Protection interrupt detected since last read of LCDC_WPSR  */
-#define   LCDC_LCDISR_WP_1_Val                _UINT32_(0x1)                                        /* (LCDC_LCDISR) Indicates that Write Protection interrupt is pending. This flag is reset as soon as the LCDC_WPSR is read.  */
-#define LCDC_LCDISR_WP_0                      (LCDC_LCDISR_WP_0_Val << LCDC_LCDISR_WP_Pos)         /* (LCDC_LCDISR) No Write Protection interrupt detected since last read of LCDC_WPSR Position  */
-#define LCDC_LCDISR_WP_1                      (LCDC_LCDISR_WP_1_Val << LCDC_LCDISR_WP_Pos)         /* (LCDC_LCDISR) Indicates that Write Protection interrupt is pending. This flag is reset as soon as the LCDC_WPSR is read. Position  */
+#define   LCDC_LCDISR_WP_0_Val                _UINT32_(0x0)                                        /* (LCDC_LCDISR) No Write Protection interrupt detected since last read of LCDC_LCDISR.  */
+#define   LCDC_LCDISR_WP_1_Val                _UINT32_(0x1)                                        /* (LCDC_LCDISR) Indicates that Write Protection error has been detected. This flag is reset after a read operation.  */
+#define LCDC_LCDISR_WP_0                      (LCDC_LCDISR_WP_0_Val << LCDC_LCDISR_WP_Pos)         /* (LCDC_LCDISR) No Write Protection interrupt detected since last read of LCDC_LCDISR. Position  */
+#define LCDC_LCDISR_WP_1                      (LCDC_LCDISR_WP_1_Val << LCDC_LCDISR_WP_Pos)         /* (LCDC_LCDISR) Indicates that Write Protection error has been detected. This flag is reset after a read operation. Position  */
 #define LCDC_LCDISR_Msk                       _UINT32_(0x80000F1F)                                 /* (LCDC_LCDISR) Register Mask  */
 
 #define LCDC_LCDISR_OVR_Pos                   _UINT32_(9)                                          /* (LCDC_LCDISR Position) Overlay x Raw Interrupt Status */
@@ -1202,8 +1199,8 @@
 #define LCDC_WPMR_WPKEY_Pos                   _UINT32_(24)                                         /* (LCDC_WPMR) Write Protection Key Password Position */
 #define LCDC_WPMR_WPKEY_Msk                   (_UINT32_(0xFF) << LCDC_WPMR_WPKEY_Pos)              /* (LCDC_WPMR) Write Protection Key Password Mask */
 #define LCDC_WPMR_WPKEY(value)                (LCDC_WPMR_WPKEY_Msk & (_UINT32_(value) << LCDC_WPMR_WPKEY_Pos)) /* Assigment of value for WPKEY in the LCDC_WPMR register */
-#define   LCDC_WPMR_WPKEY_PASSWD_Val          _UINT32_(0x58)                                       /* (LCDC_WPMR) Writing any other value in this field aborts the write operation of the WPCFGEN, WPITEN, WPCREN bits.  Always reads as 0.  */
-#define LCDC_WPMR_WPKEY_PASSWD                (LCDC_WPMR_WPKEY_PASSWD_Val << LCDC_WPMR_WPKEY_Pos)  /* (LCDC_WPMR) Writing any other value in this field aborts the write operation of the WPCFGEN, WPITEN, WPCREN bits.  Always reads as 0. Position  */
+#define   LCDC_WPMR_WPKEY_PASSWD_Val          _UINT32_(0x58)                                       /* (LCDC_WPMR) Writing any other value in this field aborts the write operation of the WPCFGE, WPITE, WPCRE bits.  Always reads as 0.  */
+#define LCDC_WPMR_WPKEY_PASSWD                (LCDC_WPMR_WPKEY_PASSWD_Val << LCDC_WPMR_WPKEY_Pos)  /* (LCDC_WPMR) Writing any other value in this field aborts the write operation of the WPCFGE, WPITE, WPCRE bits.  Always reads as 0. Position  */
 #define LCDC_WPMR_Msk                         _UINT32_(0xFF007FFF)                                 /* (LCDC_WPMR) Register Mask  */
 
 
@@ -1467,7 +1464,10 @@
 #define LCDC_OVR1CFG6_RDEF_Pos                _UINT32_(16)                                         /* (LCDC_OVR1CFG6) Red Default Position */
 #define LCDC_OVR1CFG6_RDEF_Msk                (_UINT32_(0xFF) << LCDC_OVR1CFG6_RDEF_Pos)           /* (LCDC_OVR1CFG6) Red Default Mask */
 #define LCDC_OVR1CFG6_RDEF(value)             (LCDC_OVR1CFG6_RDEF_Msk & (_UINT32_(value) << LCDC_OVR1CFG6_RDEF_Pos)) /* Assigment of value for RDEF in the LCDC_OVR1CFG6 register */
-#define LCDC_OVR1CFG6_Msk                     _UINT32_(0x00FFFFFF)                                 /* (LCDC_OVR1CFG6) Register Mask  */
+#define LCDC_OVR1CFG6_ADEF_Pos                _UINT32_(24)                                         /* (LCDC_OVR1CFG6) Alpha Default Position */
+#define LCDC_OVR1CFG6_ADEF_Msk                (_UINT32_(0xFF) << LCDC_OVR1CFG6_ADEF_Pos)           /* (LCDC_OVR1CFG6) Alpha Default Mask */
+#define LCDC_OVR1CFG6_ADEF(value)             (LCDC_OVR1CFG6_ADEF_Msk & (_UINT32_(value) << LCDC_OVR1CFG6_ADEF_Pos)) /* Assigment of value for ADEF in the LCDC_OVR1CFG6 register */
+#define LCDC_OVR1CFG6_Msk                     _UINT32_(0xFFFFFFFF)                                 /* (LCDC_OVR1CFG6) Register Mask  */
 
 
 /* -------- LCDC_OVR1CFG7 : (LCDC Offset: 0x198) (R/W 32) Overlay 1 Configuration Register 7 -------- */
@@ -1535,13 +1535,24 @@
 #define   LCDC_OVR1CFG9_SFACTC_A0_Val         _UINT32_(0x2)                                        /* (LCDC_OVR1CFG9) Sets the factor to A0/255.  */
 #define   LCDC_OVR1CFG9_SFACTC_A0_MULT_AD_Val _UINT32_(0x3)                                        /* (LCDC_OVR1CFG9) Sets the factor to A0 multiplied by Destination Alpha.  */
 #define   LCDC_OVR1CFG9_SFACTC_A0_MUL_AS_Val  _UINT32_(0x4)                                        /* (LCDC_OVR1CFG9) Sets the factor to A0 multiplied by Source Alpha.  */
-#define   LCDC_OVR1CFG9_SFACTC_M_A0_MUL_AD_Val _UINT32_(0x5)                                        /* (LCDC_OVR1CFG9) Computes A0 multiplied by Destination Alpha, then sets the factor to minus the result .  */
+#define   LCDC_OVR1CFG9_SFACTC_M_A0_MUL_AD_Val _UINT32_(0x5)                                        /* (LCDC_OVR1CFG9) Computes A0 multiplied by Destination Alpha, then sets the factor to minus the result.  */
 #define LCDC_OVR1CFG9_SFACTC_ONE              (LCDC_OVR1CFG9_SFACTC_ONE_Val << LCDC_OVR1CFG9_SFACTC_Pos) /* (LCDC_OVR1CFG9) Sets the factor to 1.0. Position  */
 #define LCDC_OVR1CFG9_SFACTC_ZERO             (LCDC_OVR1CFG9_SFACTC_ZERO_Val << LCDC_OVR1CFG9_SFACTC_Pos) /* (LCDC_OVR1CFG9) Sets the factor to 0.0. Position  */
 #define LCDC_OVR1CFG9_SFACTC_A0               (LCDC_OVR1CFG9_SFACTC_A0_Val << LCDC_OVR1CFG9_SFACTC_Pos) /* (LCDC_OVR1CFG9) Sets the factor to A0/255. Position  */
 #define LCDC_OVR1CFG9_SFACTC_A0_MULT_AD       (LCDC_OVR1CFG9_SFACTC_A0_MULT_AD_Val << LCDC_OVR1CFG9_SFACTC_Pos) /* (LCDC_OVR1CFG9) Sets the factor to A0 multiplied by Destination Alpha. Position  */
 #define LCDC_OVR1CFG9_SFACTC_A0_MUL_AS        (LCDC_OVR1CFG9_SFACTC_A0_MUL_AS_Val << LCDC_OVR1CFG9_SFACTC_Pos) /* (LCDC_OVR1CFG9) Sets the factor to A0 multiplied by Source Alpha. Position  */
-#define LCDC_OVR1CFG9_SFACTC_M_A0_MUL_AD      (LCDC_OVR1CFG9_SFACTC_M_A0_MUL_AD_Val << LCDC_OVR1CFG9_SFACTC_Pos) /* (LCDC_OVR1CFG9) Computes A0 multiplied by Destination Alpha, then sets the factor to minus the result . Position  */
+#define LCDC_OVR1CFG9_SFACTC_M_A0_MUL_AD      (LCDC_OVR1CFG9_SFACTC_M_A0_MUL_AD_Val << LCDC_OVR1CFG9_SFACTC_Pos) /* (LCDC_OVR1CFG9) Computes A0 multiplied by Destination Alpha, then sets the factor to minus the result. Position  */
+#define LCDC_OVR1CFG9_SFACTA_Pos              _UINT32_(9)                                          /* (LCDC_OVR1CFG9) Source Factor for the Blending Equation of the Alpha Component Position */
+#define LCDC_OVR1CFG9_SFACTA_Msk              (_UINT32_(0x3) << LCDC_OVR1CFG9_SFACTA_Pos)          /* (LCDC_OVR1CFG9) Source Factor for the Blending Equation of the Alpha Component Mask */
+#define LCDC_OVR1CFG9_SFACTA(value)           (LCDC_OVR1CFG9_SFACTA_Msk & (_UINT32_(value) << LCDC_OVR1CFG9_SFACTA_Pos)) /* Assigment of value for SFACTA in the LCDC_OVR1CFG9 register */
+#define   LCDC_OVR1CFG9_SFACTA_ZERO_Val       _UINT32_(0x0)                                        /* (LCDC_OVR1CFG9) Sets the factor to 0.0.  */
+#define   LCDC_OVR1CFG9_SFACTA_ONE_Val        _UINT32_(0x1)                                        /* (LCDC_OVR1CFG9) Sets the factor to 1.0.  */
+#define   LCDC_OVR1CFG9_SFACTA_A0_Val         _UINT32_(0x2)                                        /* (LCDC_OVR1CFG9) Sets the factor to A0/255.  */
+#define   LCDC_OVR1CFG9_SFACTA_A1_Val         _UINT32_(0x3)                                        /* (LCDC_OVR1CFG9) Sets the factor to A1/255.  */
+#define LCDC_OVR1CFG9_SFACTA_ZERO             (LCDC_OVR1CFG9_SFACTA_ZERO_Val << LCDC_OVR1CFG9_SFACTA_Pos) /* (LCDC_OVR1CFG9) Sets the factor to 0.0. Position  */
+#define LCDC_OVR1CFG9_SFACTA_ONE              (LCDC_OVR1CFG9_SFACTA_ONE_Val << LCDC_OVR1CFG9_SFACTA_Pos) /* (LCDC_OVR1CFG9) Sets the factor to 1.0. Position  */
+#define LCDC_OVR1CFG9_SFACTA_A0               (LCDC_OVR1CFG9_SFACTA_A0_Val << LCDC_OVR1CFG9_SFACTA_Pos) /* (LCDC_OVR1CFG9) Sets the factor to A0/255. Position  */
+#define LCDC_OVR1CFG9_SFACTA_A1               (LCDC_OVR1CFG9_SFACTA_A1_Val << LCDC_OVR1CFG9_SFACTA_Pos) /* (LCDC_OVR1CFG9) Sets the factor to A1/255. Position  */
 #define LCDC_OVR1CFG9_DFACTC_Pos              _UINT32_(11)                                         /* (LCDC_OVR1CFG9) Destination Factor for the Blending Equation of the Color Component Position */
 #define LCDC_OVR1CFG9_DFACTC_Msk              (_UINT32_(0x7) << LCDC_OVR1CFG9_DFACTC_Pos)          /* (LCDC_OVR1CFG9) Destination Factor for the Blending Equation of the Color Component Mask */
 #define LCDC_OVR1CFG9_DFACTC(value)           (LCDC_OVR1CFG9_DFACTC_Msk & (_UINT32_(value) << LCDC_OVR1CFG9_DFACTC_Pos)) /* Assigment of value for DFACTC in the LCDC_OVR1CFG9 register */
@@ -1561,13 +1572,24 @@
 #define LCDC_OVR1CFG9_DFACTC_M_A0_MULT_AD     (LCDC_OVR1CFG9_DFACTC_M_A0_MULT_AD_Val << LCDC_OVR1CFG9_DFACTC_Pos) /* (LCDC_OVR1CFG9) Sets the factor to A0 multiplied by Destination Alpha, then sets the factor to one minus the result. Position  */
 #define LCDC_OVR1CFG9_DFACTC_M_A0_MUL_AS      (LCDC_OVR1CFG9_DFACTC_M_A0_MUL_AS_Val << LCDC_OVR1CFG9_DFACTC_Pos) /* (LCDC_OVR1CFG9) Computes A0 multiplied by source alpha0, then sets the factor to one minus the result. Position  */
 #define LCDC_OVR1CFG9_DFACTC_M_A0             (LCDC_OVR1CFG9_DFACTC_M_A0_Val << LCDC_OVR1CFG9_DFACTC_Pos) /* (LCDC_OVR1CFG9) Computes one minus A0, then sets the factor to one minus the result. Position  */
+#define LCDC_OVR1CFG9_DFACTA_Pos              _UINT32_(14)                                         /* (LCDC_OVR1CFG9) Destination Factor for the Blending Equation of the Alpha Component Position */
+#define LCDC_OVR1CFG9_DFACTA_Msk              (_UINT32_(0x3) << LCDC_OVR1CFG9_DFACTA_Pos)          /* (LCDC_OVR1CFG9) Destination Factor for the Blending Equation of the Alpha Component Mask */
+#define LCDC_OVR1CFG9_DFACTA(value)           (LCDC_OVR1CFG9_DFACTA_Msk & (_UINT32_(value) << LCDC_OVR1CFG9_DFACTA_Pos)) /* Assigment of value for DFACTA in the LCDC_OVR1CFG9 register */
+#define   LCDC_OVR1CFG9_DFACTA_ZERO_Val       _UINT32_(0x0)                                        /* (LCDC_OVR1CFG9) Sets the factor to 0.0.  */
+#define   LCDC_OVR1CFG9_DFACTA_ONE_Val        _UINT32_(0x1)                                        /* (LCDC_OVR1CFG9) Sets the factor to 1.0.  */
+#define   LCDC_OVR1CFG9_DFACTA_M_A0_MUL_AS_Val _UINT32_(0x2)                                        /* (LCDC_OVR1CFG9) Computes A0 multiplied by source alpha, then sets the factor to one minus the result.  */
+#define   LCDC_OVR1CFG9_DFACTA_A1_Val         _UINT32_(0x3)                                        /* (LCDC_OVR1CFG9) Sets the factor to A1/255.  */
+#define LCDC_OVR1CFG9_DFACTA_ZERO             (LCDC_OVR1CFG9_DFACTA_ZERO_Val << LCDC_OVR1CFG9_DFACTA_Pos) /* (LCDC_OVR1CFG9) Sets the factor to 0.0. Position  */
+#define LCDC_OVR1CFG9_DFACTA_ONE              (LCDC_OVR1CFG9_DFACTA_ONE_Val << LCDC_OVR1CFG9_DFACTA_Pos) /* (LCDC_OVR1CFG9) Sets the factor to 1.0. Position  */
+#define LCDC_OVR1CFG9_DFACTA_M_A0_MUL_AS      (LCDC_OVR1CFG9_DFACTA_M_A0_MUL_AS_Val << LCDC_OVR1CFG9_DFACTA_Pos) /* (LCDC_OVR1CFG9) Computes A0 multiplied by source alpha, then sets the factor to one minus the result. Position  */
+#define LCDC_OVR1CFG9_DFACTA_A1               (LCDC_OVR1CFG9_DFACTA_A1_Val << LCDC_OVR1CFG9_DFACTA_Pos) /* (LCDC_OVR1CFG9) Sets the factor to A1/255. Position  */
 #define LCDC_OVR1CFG9_A0_Pos                  _UINT32_(16)                                         /* (LCDC_OVR1CFG9) Alpha 0 Value Position */
 #define LCDC_OVR1CFG9_A0_Msk                  (_UINT32_(0xFF) << LCDC_OVR1CFG9_A0_Pos)             /* (LCDC_OVR1CFG9) Alpha 0 Value Mask */
 #define LCDC_OVR1CFG9_A0(value)               (LCDC_OVR1CFG9_A0_Msk & (_UINT32_(value) << LCDC_OVR1CFG9_A0_Pos)) /* Assigment of value for A0 in the LCDC_OVR1CFG9 register */
 #define LCDC_OVR1CFG9_A1_Pos                  _UINT32_(24)                                         /* (LCDC_OVR1CFG9) Alpha 1 Value Position */
 #define LCDC_OVR1CFG9_A1_Msk                  (_UINT32_(0xFF) << LCDC_OVR1CFG9_A1_Pos)             /* (LCDC_OVR1CFG9) Alpha 1 Value Mask */
 #define LCDC_OVR1CFG9_A1(value)               (LCDC_OVR1CFG9_A1_Msk & (_UINT32_(value) << LCDC_OVR1CFG9_A1_Pos)) /* Assigment of value for A1 in the LCDC_OVR1CFG9 register */
-#define LCDC_OVR1CFG9_Msk                     _UINT32_(0xFFFF39CF)                                 /* (LCDC_OVR1CFG9) Register Mask  */
+#define LCDC_OVR1CFG9_Msk                     _UINT32_(0xFFFFFFCF)                                 /* (LCDC_OVR1CFG9) Register Mask  */
 
 
 /* -------- LCDC_OVR2IER : (LCDC Offset: 0x260) ( /W 32) Overlay 2 Interrupt Enable Register -------- */
@@ -1804,7 +1826,10 @@
 #define LCDC_OVR2CFG6_RDEF_Pos                _UINT32_(16)                                         /* (LCDC_OVR2CFG6) Red Default Position */
 #define LCDC_OVR2CFG6_RDEF_Msk                (_UINT32_(0xFF) << LCDC_OVR2CFG6_RDEF_Pos)           /* (LCDC_OVR2CFG6) Red Default Mask */
 #define LCDC_OVR2CFG6_RDEF(value)             (LCDC_OVR2CFG6_RDEF_Msk & (_UINT32_(value) << LCDC_OVR2CFG6_RDEF_Pos)) /* Assigment of value for RDEF in the LCDC_OVR2CFG6 register */
-#define LCDC_OVR2CFG6_Msk                     _UINT32_(0x00FFFFFF)                                 /* (LCDC_OVR2CFG6) Register Mask  */
+#define LCDC_OVR2CFG6_ADEF_Pos                _UINT32_(24)                                         /* (LCDC_OVR2CFG6) Alpha Default Position */
+#define LCDC_OVR2CFG6_ADEF_Msk                (_UINT32_(0xFF) << LCDC_OVR2CFG6_ADEF_Pos)           /* (LCDC_OVR2CFG6) Alpha Default Mask */
+#define LCDC_OVR2CFG6_ADEF(value)             (LCDC_OVR2CFG6_ADEF_Msk & (_UINT32_(value) << LCDC_OVR2CFG6_ADEF_Pos)) /* Assigment of value for ADEF in the LCDC_OVR2CFG6 register */
+#define LCDC_OVR2CFG6_Msk                     _UINT32_(0xFFFFFFFF)                                 /* (LCDC_OVR2CFG6) Register Mask  */
 
 
 /* -------- LCDC_OVR2CFG7 : (LCDC Offset: 0x298) (R/W 32) Overlay 2 Configuration Register 7 -------- */
@@ -1879,6 +1904,17 @@
 #define LCDC_OVR2CFG9_SFACTC_A0_MULT_AD       (LCDC_OVR2CFG9_SFACTC_A0_MULT_AD_Val << LCDC_OVR2CFG9_SFACTC_Pos) /* (LCDC_OVR2CFG9) Sets the factor to A0 multiplied by Destination Alpha. Position  */
 #define LCDC_OVR2CFG9_SFACTC_A0_MUL_AS        (LCDC_OVR2CFG9_SFACTC_A0_MUL_AS_Val << LCDC_OVR2CFG9_SFACTC_Pos) /* (LCDC_OVR2CFG9) Sets the factor to A0 multiplied by Source Alpha. Position  */
 #define LCDC_OVR2CFG9_SFACTC_M_A0_MUL_AD      (LCDC_OVR2CFG9_SFACTC_M_A0_MUL_AD_Val << LCDC_OVR2CFG9_SFACTC_Pos) /* (LCDC_OVR2CFG9) Computes A0 multiplied by Destination Alpha, then sets the factor to minus the result. Position  */
+#define LCDC_OVR2CFG9_SFACTA_Pos              _UINT32_(9)                                          /* (LCDC_OVR2CFG9) Source Factor for the Blending Equation of the Alpha Component Position */
+#define LCDC_OVR2CFG9_SFACTA_Msk              (_UINT32_(0x3) << LCDC_OVR2CFG9_SFACTA_Pos)          /* (LCDC_OVR2CFG9) Source Factor for the Blending Equation of the Alpha Component Mask */
+#define LCDC_OVR2CFG9_SFACTA(value)           (LCDC_OVR2CFG9_SFACTA_Msk & (_UINT32_(value) << LCDC_OVR2CFG9_SFACTA_Pos)) /* Assigment of value for SFACTA in the LCDC_OVR2CFG9 register */
+#define   LCDC_OVR2CFG9_SFACTA_ZERO_Val       _UINT32_(0x0)                                        /* (LCDC_OVR2CFG9) Sets the factor to 0.0.  */
+#define   LCDC_OVR2CFG9_SFACTA_ONE_Val        _UINT32_(0x1)                                        /* (LCDC_OVR2CFG9) Sets the factor to 1.0.  */
+#define   LCDC_OVR2CFG9_SFACTA_A0_Val         _UINT32_(0x2)                                        /* (LCDC_OVR2CFG9) Sets the factor to A0/255.  */
+#define   LCDC_OVR2CFG9_SFACTA_A1_Val         _UINT32_(0x3)                                        /* (LCDC_OVR2CFG9) Sets the factor to A1/255.  */
+#define LCDC_OVR2CFG9_SFACTA_ZERO             (LCDC_OVR2CFG9_SFACTA_ZERO_Val << LCDC_OVR2CFG9_SFACTA_Pos) /* (LCDC_OVR2CFG9) Sets the factor to 0.0. Position  */
+#define LCDC_OVR2CFG9_SFACTA_ONE              (LCDC_OVR2CFG9_SFACTA_ONE_Val << LCDC_OVR2CFG9_SFACTA_Pos) /* (LCDC_OVR2CFG9) Sets the factor to 1.0. Position  */
+#define LCDC_OVR2CFG9_SFACTA_A0               (LCDC_OVR2CFG9_SFACTA_A0_Val << LCDC_OVR2CFG9_SFACTA_Pos) /* (LCDC_OVR2CFG9) Sets the factor to A0/255. Position  */
+#define LCDC_OVR2CFG9_SFACTA_A1               (LCDC_OVR2CFG9_SFACTA_A1_Val << LCDC_OVR2CFG9_SFACTA_Pos) /* (LCDC_OVR2CFG9) Sets the factor to A1/255. Position  */
 #define LCDC_OVR2CFG9_DFACTC_Pos              _UINT32_(11)                                         /* (LCDC_OVR2CFG9) Destination Factor for the Blending Equation of the Color Component Position */
 #define LCDC_OVR2CFG9_DFACTC_Msk              (_UINT32_(0x7) << LCDC_OVR2CFG9_DFACTC_Pos)          /* (LCDC_OVR2CFG9) Destination Factor for the Blending Equation of the Color Component Mask */
 #define LCDC_OVR2CFG9_DFACTC(value)           (LCDC_OVR2CFG9_DFACTC_Msk & (_UINT32_(value) << LCDC_OVR2CFG9_DFACTC_Pos)) /* Assigment of value for DFACTC in the LCDC_OVR2CFG9 register */
@@ -1898,13 +1934,24 @@
 #define LCDC_OVR2CFG9_DFACTC_M_A0_MULT_AD     (LCDC_OVR2CFG9_DFACTC_M_A0_MULT_AD_Val << LCDC_OVR2CFG9_DFACTC_Pos) /* (LCDC_OVR2CFG9) Sets the factor to A0 multiplied by Destination Alpha, then set the factor one minus the result. Position  */
 #define LCDC_OVR2CFG9_DFACTC_M_A0_MUL_AS      (LCDC_OVR2CFG9_DFACTC_M_A0_MUL_AS_Val << LCDC_OVR2CFG9_DFACTC_Pos) /* (LCDC_OVR2CFG9) Computes A0 multiplied by source alpha0, then sets the factor to one minus the result. Position  */
 #define LCDC_OVR2CFG9_DFACTC_M_A0             (LCDC_OVR2CFG9_DFACTC_M_A0_Val << LCDC_OVR2CFG9_DFACTC_Pos) /* (LCDC_OVR2CFG9) Computes one minus A0, then sets the factor to one minus the result. Position  */
+#define LCDC_OVR2CFG9_DFACTA_Pos              _UINT32_(14)                                         /* (LCDC_OVR2CFG9) Destination Factor for the Blending Equation of the Alpha Component Position */
+#define LCDC_OVR2CFG9_DFACTA_Msk              (_UINT32_(0x3) << LCDC_OVR2CFG9_DFACTA_Pos)          /* (LCDC_OVR2CFG9) Destination Factor for the Blending Equation of the Alpha Component Mask */
+#define LCDC_OVR2CFG9_DFACTA(value)           (LCDC_OVR2CFG9_DFACTA_Msk & (_UINT32_(value) << LCDC_OVR2CFG9_DFACTA_Pos)) /* Assigment of value for DFACTA in the LCDC_OVR2CFG9 register */
+#define   LCDC_OVR2CFG9_DFACTA_ZERO_Val       _UINT32_(0x0)                                        /* (LCDC_OVR2CFG9) Sets the factor to 0.0.  */
+#define   LCDC_OVR2CFG9_DFACTA_ONE_Val        _UINT32_(0x1)                                        /* (LCDC_OVR2CFG9) Sets the factor to 1.0.  */
+#define   LCDC_OVR2CFG9_DFACTA_M_A0_MUL_AS_Val _UINT32_(0x2)                                        /* (LCDC_OVR2CFG9) Computes A0 multiplied by source alpha, then sets the factor to one minus the result.  */
+#define   LCDC_OVR2CFG9_DFACTA_A1_Val         _UINT32_(0x3)                                        /* (LCDC_OVR2CFG9) Sets the factor to A1/255.  */
+#define LCDC_OVR2CFG9_DFACTA_ZERO             (LCDC_OVR2CFG9_DFACTA_ZERO_Val << LCDC_OVR2CFG9_DFACTA_Pos) /* (LCDC_OVR2CFG9) Sets the factor to 0.0. Position  */
+#define LCDC_OVR2CFG9_DFACTA_ONE              (LCDC_OVR2CFG9_DFACTA_ONE_Val << LCDC_OVR2CFG9_DFACTA_Pos) /* (LCDC_OVR2CFG9) Sets the factor to 1.0. Position  */
+#define LCDC_OVR2CFG9_DFACTA_M_A0_MUL_AS      (LCDC_OVR2CFG9_DFACTA_M_A0_MUL_AS_Val << LCDC_OVR2CFG9_DFACTA_Pos) /* (LCDC_OVR2CFG9) Computes A0 multiplied by source alpha, then sets the factor to one minus the result. Position  */
+#define LCDC_OVR2CFG9_DFACTA_A1               (LCDC_OVR2CFG9_DFACTA_A1_Val << LCDC_OVR2CFG9_DFACTA_Pos) /* (LCDC_OVR2CFG9) Sets the factor to A1/255. Position  */
 #define LCDC_OVR2CFG9_A0_Pos                  _UINT32_(16)                                         /* (LCDC_OVR2CFG9) Alpha 0 Value Position */
 #define LCDC_OVR2CFG9_A0_Msk                  (_UINT32_(0xFF) << LCDC_OVR2CFG9_A0_Pos)             /* (LCDC_OVR2CFG9) Alpha 0 Value Mask */
 #define LCDC_OVR2CFG9_A0(value)               (LCDC_OVR2CFG9_A0_Msk & (_UINT32_(value) << LCDC_OVR2CFG9_A0_Pos)) /* Assigment of value for A0 in the LCDC_OVR2CFG9 register */
 #define LCDC_OVR2CFG9_A1_Pos                  _UINT32_(24)                                         /* (LCDC_OVR2CFG9) Alpha 1 Value Position */
 #define LCDC_OVR2CFG9_A1_Msk                  (_UINT32_(0xFF) << LCDC_OVR2CFG9_A1_Pos)             /* (LCDC_OVR2CFG9) Alpha 1 Value Mask */
 #define LCDC_OVR2CFG9_A1(value)               (LCDC_OVR2CFG9_A1_Msk & (_UINT32_(value) << LCDC_OVR2CFG9_A1_Pos)) /* Assigment of value for A1 in the LCDC_OVR2CFG9 register */
-#define LCDC_OVR2CFG9_Msk                     _UINT32_(0xFFFF39CF)                                 /* (LCDC_OVR2CFG9) Register Mask  */
+#define LCDC_OVR2CFG9_Msk                     _UINT32_(0xFFFFFFCF)                                 /* (LCDC_OVR2CFG9) Register Mask  */
 
 
 /* -------- LCDC_HEOIER : (LCDC Offset: 0x360) ( /W 32) High-End Overlay Interrupt Enable Register -------- */
@@ -1917,23 +1964,23 @@
 #define LCDC_HEOIER_OVF_Pos                   _UINT32_(2)                                          /* (LCDC_HEOIER) Overflow Interrupt Enable Position */
 #define LCDC_HEOIER_OVF_Msk                   (_UINT32_(0x1) << LCDC_HEOIER_OVF_Pos)               /* (LCDC_HEOIER) Overflow Interrupt Enable Mask */
 #define LCDC_HEOIER_OVF(value)                (LCDC_HEOIER_OVF_Msk & (_UINT32_(value) << LCDC_HEOIER_OVF_Pos)) /* Assigment of value for OVF in the LCDC_HEOIER register */
-#define LCDC_HEOIER_CBEND_Pos                 _UINT32_(8)                                          /* (LCDC_HEOIER) End of Frame DMA Transfer for Cb or CbCr Chroma Plane Interrupt Enable Position */
-#define LCDC_HEOIER_CBEND_Msk                 (_UINT32_(0x1) << LCDC_HEOIER_CBEND_Pos)             /* (LCDC_HEOIER) End of Frame DMA Transfer for Cb or CbCr Chroma Plane Interrupt Enable Mask */
+#define LCDC_HEOIER_CBEND_Pos                 _UINT32_(8)                                          /* (LCDC_HEOIER)  Position */
+#define LCDC_HEOIER_CBEND_Msk                 (_UINT32_(0x1) << LCDC_HEOIER_CBEND_Pos)             /* (LCDC_HEOIER)  Mask */
 #define LCDC_HEOIER_CBEND(value)              (LCDC_HEOIER_CBEND_Msk & (_UINT32_(value) << LCDC_HEOIER_CBEND_Pos)) /* Assigment of value for CBEND in the LCDC_HEOIER register */
-#define LCDC_HEOIER_CBERROR_Pos               _UINT32_(9)                                          /* (LCDC_HEOIER) Bus Transfer Error Detected for Cb or CbCr Chroma Plane Interrupt Enable Position */
-#define LCDC_HEOIER_CBERROR_Msk               (_UINT32_(0x1) << LCDC_HEOIER_CBERROR_Pos)           /* (LCDC_HEOIER) Bus Transfer Error Detected for Cb or CbCr Chroma Plane Interrupt Enable Mask */
+#define LCDC_HEOIER_CBERROR_Pos               _UINT32_(9)                                          /* (LCDC_HEOIER)  Position */
+#define LCDC_HEOIER_CBERROR_Msk               (_UINT32_(0x1) << LCDC_HEOIER_CBERROR_Pos)           /* (LCDC_HEOIER)  Mask */
 #define LCDC_HEOIER_CBERROR(value)            (LCDC_HEOIER_CBERROR_Msk & (_UINT32_(value) << LCDC_HEOIER_CBERROR_Pos)) /* Assigment of value for CBERROR in the LCDC_HEOIER register */
-#define LCDC_HEOIER_CBOVF_Pos                 _UINT32_(10)                                         /* (LCDC_HEOIER) Overflow for Cb or CbCr Chroma Plane Interrupt Enable Position */
-#define LCDC_HEOIER_CBOVF_Msk                 (_UINT32_(0x1) << LCDC_HEOIER_CBOVF_Pos)             /* (LCDC_HEOIER) Overflow for Cb or CbCr Chroma Plane Interrupt Enable Mask */
+#define LCDC_HEOIER_CBOVF_Pos                 _UINT32_(10)                                         /* (LCDC_HEOIER)  Position */
+#define LCDC_HEOIER_CBOVF_Msk                 (_UINT32_(0x1) << LCDC_HEOIER_CBOVF_Pos)             /* (LCDC_HEOIER)  Mask */
 #define LCDC_HEOIER_CBOVF(value)              (LCDC_HEOIER_CBOVF_Msk & (_UINT32_(value) << LCDC_HEOIER_CBOVF_Pos)) /* Assigment of value for CBOVF in the LCDC_HEOIER register */
-#define LCDC_HEOIER_CREND_Pos                 _UINT32_(16)                                         /* (LCDC_HEOIER) End of Frame DMA for Cr Chroma Plane Transfer Interrupt Enable Position */
-#define LCDC_HEOIER_CREND_Msk                 (_UINT32_(0x1) << LCDC_HEOIER_CREND_Pos)             /* (LCDC_HEOIER) End of Frame DMA for Cr Chroma Plane Transfer Interrupt Enable Mask */
+#define LCDC_HEOIER_CREND_Pos                 _UINT32_(16)                                         /* (LCDC_HEOIER)  Position */
+#define LCDC_HEOIER_CREND_Msk                 (_UINT32_(0x1) << LCDC_HEOIER_CREND_Pos)             /* (LCDC_HEOIER)  Mask */
 #define LCDC_HEOIER_CREND(value)              (LCDC_HEOIER_CREND_Msk & (_UINT32_(value) << LCDC_HEOIER_CREND_Pos)) /* Assigment of value for CREND in the LCDC_HEOIER register */
-#define LCDC_HEOIER_CRERROR_Pos               _UINT32_(17)                                         /* (LCDC_HEOIER) Bus Transfer Error Detected for Cr Chroma Plane Interrupt Enable Position */
-#define LCDC_HEOIER_CRERROR_Msk               (_UINT32_(0x1) << LCDC_HEOIER_CRERROR_Pos)           /* (LCDC_HEOIER) Bus Transfer Error Detected for Cr Chroma Plane Interrupt Enable Mask */
+#define LCDC_HEOIER_CRERROR_Pos               _UINT32_(17)                                         /* (LCDC_HEOIER)  Position */
+#define LCDC_HEOIER_CRERROR_Msk               (_UINT32_(0x1) << LCDC_HEOIER_CRERROR_Pos)           /* (LCDC_HEOIER)  Mask */
 #define LCDC_HEOIER_CRERROR(value)            (LCDC_HEOIER_CRERROR_Msk & (_UINT32_(value) << LCDC_HEOIER_CRERROR_Pos)) /* Assigment of value for CRERROR in the LCDC_HEOIER register */
-#define LCDC_HEOIER_CROVF_Pos                 _UINT32_(18)                                         /* (LCDC_HEOIER) Overflow for Cr Chroma Plane Interrupt Enable Position */
-#define LCDC_HEOIER_CROVF_Msk                 (_UINT32_(0x1) << LCDC_HEOIER_CROVF_Pos)             /* (LCDC_HEOIER) Overflow for Cr Chroma Plane Interrupt Enable Mask */
+#define LCDC_HEOIER_CROVF_Pos                 _UINT32_(18)                                         /* (LCDC_HEOIER)  Position */
+#define LCDC_HEOIER_CROVF_Msk                 (_UINT32_(0x1) << LCDC_HEOIER_CROVF_Pos)             /* (LCDC_HEOIER)  Mask */
 #define LCDC_HEOIER_CROVF(value)              (LCDC_HEOIER_CROVF_Msk & (_UINT32_(value) << LCDC_HEOIER_CROVF_Pos)) /* Assigment of value for CROVF in the LCDC_HEOIER register */
 #define LCDC_HEOIER_Msk                       _UINT32_(0x00070707)                                 /* (LCDC_HEOIER) Register Mask  */
 
@@ -2287,7 +2334,10 @@
 #define LCDC_HEOCFG9_RDEF_Pos                 _UINT32_(16)                                         /* (LCDC_HEOCFG9) Red Default Position */
 #define LCDC_HEOCFG9_RDEF_Msk                 (_UINT32_(0xFF) << LCDC_HEOCFG9_RDEF_Pos)            /* (LCDC_HEOCFG9) Red Default Mask */
 #define LCDC_HEOCFG9_RDEF(value)              (LCDC_HEOCFG9_RDEF_Msk & (_UINT32_(value) << LCDC_HEOCFG9_RDEF_Pos)) /* Assigment of value for RDEF in the LCDC_HEOCFG9 register */
-#define LCDC_HEOCFG9_Msk                      _UINT32_(0x00FFFFFF)                                 /* (LCDC_HEOCFG9) Register Mask  */
+#define LCDC_HEOCFG9_ADEF_Pos                 _UINT32_(24)                                         /* (LCDC_HEOCFG9) Alpha Default Position */
+#define LCDC_HEOCFG9_ADEF_Msk                 (_UINT32_(0xFF) << LCDC_HEOCFG9_ADEF_Pos)            /* (LCDC_HEOCFG9) Alpha Default Mask */
+#define LCDC_HEOCFG9_ADEF(value)              (LCDC_HEOCFG9_ADEF_Msk & (_UINT32_(value) << LCDC_HEOCFG9_ADEF_Pos)) /* Assigment of value for ADEF in the LCDC_HEOCFG9 register */
+#define LCDC_HEOCFG9_Msk                      _UINT32_(0xFFFFFFFF)                                 /* (LCDC_HEOCFG9) Register Mask  */
 
 
 /* -------- LCDC_HEOCFG10 : (LCDC Offset: 0x3B8) (R/W 32) High-End Overlay Configuration Register 10 -------- */
@@ -2354,8 +2404,8 @@
 #define   LCDC_HEOCFG12_VIDPRI_1_Val          _UINT32_(0x1)                                        /* (LCDC_HEOCFG12) HEO is located above OVR1.  */
 #define LCDC_HEOCFG12_VIDPRI_0                (LCDC_HEOCFG12_VIDPRI_0_Val << LCDC_HEOCFG12_VIDPRI_Pos) /* (LCDC_HEOCFG12) HEO is located below OVR1. Position  */
 #define LCDC_HEOCFG12_VIDPRI_1                (LCDC_HEOCFG12_VIDPRI_1_Val << LCDC_HEOCFG12_VIDPRI_Pos) /* (LCDC_HEOCFG12) HEO is located above OVR1. Position  */
-#define LCDC_HEOCFG12_SFACTC_Pos              _UINT32_(8)                                          /* (LCDC_HEOCFG12) Source Factor for the Blending Equation of the Color Component Position */
-#define LCDC_HEOCFG12_SFACTC_Msk              (_UINT32_(0x1) << LCDC_HEOCFG12_SFACTC_Pos)          /* (LCDC_HEOCFG12) Source Factor for the Blending Equation of the Color Component Mask */
+#define LCDC_HEOCFG12_SFACTC_Pos              _UINT32_(6)                                          /* (LCDC_HEOCFG12) Source Factor for the Blending Equation of the Color Component Position */
+#define LCDC_HEOCFG12_SFACTC_Msk              (_UINT32_(0x7) << LCDC_HEOCFG12_SFACTC_Pos)          /* (LCDC_HEOCFG12) Source Factor for the Blending Equation of the Color Component Mask */
 #define LCDC_HEOCFG12_SFACTC(value)           (LCDC_HEOCFG12_SFACTC_Msk & (_UINT32_(value) << LCDC_HEOCFG12_SFACTC_Pos)) /* Assigment of value for SFACTC in the LCDC_HEOCFG12 register */
 #define   LCDC_HEOCFG12_SFACTC_ONE_Val        _UINT32_(0x0)                                        /* (LCDC_HEOCFG12) Sets the factor to 1.0.  */
 #define   LCDC_HEOCFG12_SFACTC_ZERO_Val       _UINT32_(0x1)                                        /* (LCDC_HEOCFG12) Sets the factor to 0.0.  */
@@ -2369,9 +2419,17 @@
 #define LCDC_HEOCFG12_SFACTC_A0_MULT_AD       (LCDC_HEOCFG12_SFACTC_A0_MULT_AD_Val << LCDC_HEOCFG12_SFACTC_Pos) /* (LCDC_HEOCFG12) Sets the factor to A0 multiplied by Destination Alpha. Position  */
 #define LCDC_HEOCFG12_SFACTC_A0_MUL_AS        (LCDC_HEOCFG12_SFACTC_A0_MUL_AS_Val << LCDC_HEOCFG12_SFACTC_Pos) /* (LCDC_HEOCFG12) Sets the factor to A0 multiplied by Source Alpha. Position  */
 #define LCDC_HEOCFG12_SFACTC_M_A0_MUL_AD      (LCDC_HEOCFG12_SFACTC_M_A0_MUL_AD_Val << LCDC_HEOCFG12_SFACTC_Pos) /* (LCDC_HEOCFG12) Computes A0 multiplied by Destination Alpha, then sets the factor to minus the result. Position  */
-#define LCDC_HEOCFG12_SFACTA_Pos              _UINT32_(9)                                          /* (LCDC_HEOCFG12)  Position */
-#define LCDC_HEOCFG12_SFACTA_Msk              (_UINT32_(0x3) << LCDC_HEOCFG12_SFACTA_Pos)          /* (LCDC_HEOCFG12)  Mask */
+#define LCDC_HEOCFG12_SFACTA_Pos              _UINT32_(9)                                          /* (LCDC_HEOCFG12) Source Factor for the Blending Equation of the Alpha Component Position */
+#define LCDC_HEOCFG12_SFACTA_Msk              (_UINT32_(0x3) << LCDC_HEOCFG12_SFACTA_Pos)          /* (LCDC_HEOCFG12) Source Factor for the Blending Equation of the Alpha Component Mask */
 #define LCDC_HEOCFG12_SFACTA(value)           (LCDC_HEOCFG12_SFACTA_Msk & (_UINT32_(value) << LCDC_HEOCFG12_SFACTA_Pos)) /* Assigment of value for SFACTA in the LCDC_HEOCFG12 register */
+#define   LCDC_HEOCFG12_SFACTA_ZERO_Val       _UINT32_(0x0)                                        /* (LCDC_HEOCFG12) Sets the factor to 0.0.  */
+#define   LCDC_HEOCFG12_SFACTA_ONE_Val        _UINT32_(0x1)                                        /* (LCDC_HEOCFG12) Sets the factor to 1.0.  */
+#define   LCDC_HEOCFG12_SFACTA_A0_Val         _UINT32_(0x2)                                        /* (LCDC_HEOCFG12) Sets the factor to A0/255.  */
+#define   LCDC_HEOCFG12_SFACTA_A1_Val         _UINT32_(0x3)                                        /* (LCDC_HEOCFG12) Sets the factor to A1/255.  */
+#define LCDC_HEOCFG12_SFACTA_ZERO             (LCDC_HEOCFG12_SFACTA_ZERO_Val << LCDC_HEOCFG12_SFACTA_Pos) /* (LCDC_HEOCFG12) Sets the factor to 0.0. Position  */
+#define LCDC_HEOCFG12_SFACTA_ONE              (LCDC_HEOCFG12_SFACTA_ONE_Val << LCDC_HEOCFG12_SFACTA_Pos) /* (LCDC_HEOCFG12) Sets the factor to 1.0. Position  */
+#define LCDC_HEOCFG12_SFACTA_A0               (LCDC_HEOCFG12_SFACTA_A0_Val << LCDC_HEOCFG12_SFACTA_Pos) /* (LCDC_HEOCFG12) Sets the factor to A0/255. Position  */
+#define LCDC_HEOCFG12_SFACTA_A1               (LCDC_HEOCFG12_SFACTA_A1_Val << LCDC_HEOCFG12_SFACTA_Pos) /* (LCDC_HEOCFG12) Sets the factor to A1/255. Position  */
 #define LCDC_HEOCFG12_DFACTC_Pos              _UINT32_(11)                                         /* (LCDC_HEOCFG12) Destination Factor for the Blending Equation of the Color Component Position */
 #define LCDC_HEOCFG12_DFACTC_Msk              (_UINT32_(0x7) << LCDC_HEOCFG12_DFACTC_Pos)          /* (LCDC_HEOCFG12) Destination Factor for the Blending Equation of the Color Component Mask */
 #define LCDC_HEOCFG12_DFACTC(value)           (LCDC_HEOCFG12_DFACTC_Msk & (_UINT32_(value) << LCDC_HEOCFG12_DFACTC_Pos)) /* Assigment of value for DFACTC in the LCDC_HEOCFG12 register */
@@ -2391,16 +2449,24 @@
 #define LCDC_HEOCFG12_DFACTC_M_A0_MULT_AD     (LCDC_HEOCFG12_DFACTC_M_A0_MULT_AD_Val << LCDC_HEOCFG12_DFACTC_Pos) /* (LCDC_HEOCFG12) Sets the factor to A0 multiplied by Destination Alpha, then sets the factor one minus the result. Position  */
 #define LCDC_HEOCFG12_DFACTC_M_A0_MUL_AS      (LCDC_HEOCFG12_DFACTC_M_A0_MUL_AS_Val << LCDC_HEOCFG12_DFACTC_Pos) /* (LCDC_HEOCFG12) Computes A0 multiplied by source alpha0, then set the factor to one minus the result. Position  */
 #define LCDC_HEOCFG12_DFACTC_M_A0             (LCDC_HEOCFG12_DFACTC_M_A0_Val << LCDC_HEOCFG12_DFACTC_Pos) /* (LCDC_HEOCFG12) Computes one minus A0, then set the factor to one minus the result. Position  */
-#define LCDC_HEOCFG12_DFACTA_Pos              _UINT32_(14)                                         /* (LCDC_HEOCFG12)  Position */
-#define LCDC_HEOCFG12_DFACTA_Msk              (_UINT32_(0x3) << LCDC_HEOCFG12_DFACTA_Pos)          /* (LCDC_HEOCFG12)  Mask */
+#define LCDC_HEOCFG12_DFACTA_Pos              _UINT32_(14)                                         /* (LCDC_HEOCFG12) Destination Factor for the Blending Equation of the Alpha Component Position */
+#define LCDC_HEOCFG12_DFACTA_Msk              (_UINT32_(0x3) << LCDC_HEOCFG12_DFACTA_Pos)          /* (LCDC_HEOCFG12) Destination Factor for the Blending Equation of the Alpha Component Mask */
 #define LCDC_HEOCFG12_DFACTA(value)           (LCDC_HEOCFG12_DFACTA_Msk & (_UINT32_(value) << LCDC_HEOCFG12_DFACTA_Pos)) /* Assigment of value for DFACTA in the LCDC_HEOCFG12 register */
+#define   LCDC_HEOCFG12_DFACTA_ZERO_Val       _UINT32_(0x0)                                        /* (LCDC_HEOCFG12) Sets the factor to 0.0.  */
+#define   LCDC_HEOCFG12_DFACTA_ONE_Val        _UINT32_(0x1)                                        /* (LCDC_HEOCFG12) Sets the factor to 1.0.  */
+#define   LCDC_HEOCFG12_DFACTA_M_A0_MUL_AS_Val _UINT32_(0x2)                                        /* (LCDC_HEOCFG12) Computes A0 multiplied by source alpha, then set the factor to one minus the result.  */
+#define   LCDC_HEOCFG12_DFACTA_A1_Val         _UINT32_(0x3)                                        /* (LCDC_HEOCFG12) Sets the factor to A1/255.  */
+#define LCDC_HEOCFG12_DFACTA_ZERO             (LCDC_HEOCFG12_DFACTA_ZERO_Val << LCDC_HEOCFG12_DFACTA_Pos) /* (LCDC_HEOCFG12) Sets the factor to 0.0. Position  */
+#define LCDC_HEOCFG12_DFACTA_ONE              (LCDC_HEOCFG12_DFACTA_ONE_Val << LCDC_HEOCFG12_DFACTA_Pos) /* (LCDC_HEOCFG12) Sets the factor to 1.0. Position  */
+#define LCDC_HEOCFG12_DFACTA_M_A0_MUL_AS      (LCDC_HEOCFG12_DFACTA_M_A0_MUL_AS_Val << LCDC_HEOCFG12_DFACTA_Pos) /* (LCDC_HEOCFG12) Computes A0 multiplied by source alpha, then set the factor to one minus the result. Position  */
+#define LCDC_HEOCFG12_DFACTA_A1               (LCDC_HEOCFG12_DFACTA_A1_Val << LCDC_HEOCFG12_DFACTA_Pos) /* (LCDC_HEOCFG12) Sets the factor to A1/255. Position  */
 #define LCDC_HEOCFG12_A0_Pos                  _UINT32_(16)                                         /* (LCDC_HEOCFG12) Alpha 0 Value Position */
 #define LCDC_HEOCFG12_A0_Msk                  (_UINT32_(0xFF) << LCDC_HEOCFG12_A0_Pos)             /* (LCDC_HEOCFG12) Alpha 0 Value Mask */
 #define LCDC_HEOCFG12_A0(value)               (LCDC_HEOCFG12_A0_Msk & (_UINT32_(value) << LCDC_HEOCFG12_A0_Pos)) /* Assigment of value for A0 in the LCDC_HEOCFG12 register */
 #define LCDC_HEOCFG12_A1_Pos                  _UINT32_(24)                                         /* (LCDC_HEOCFG12) Alpha 1 Value Position */
 #define LCDC_HEOCFG12_A1_Msk                  (_UINT32_(0xFF) << LCDC_HEOCFG12_A1_Pos)             /* (LCDC_HEOCFG12) Alpha 1 Value Mask */
 #define LCDC_HEOCFG12_A1(value)               (LCDC_HEOCFG12_A1_Msk & (_UINT32_(value) << LCDC_HEOCFG12_A1_Pos)) /* Assigment of value for A1 in the LCDC_HEOCFG12 register */
-#define LCDC_HEOCFG12_Msk                     _UINT32_(0xFFFFFF2F)                                 /* (LCDC_HEOCFG12) Register Mask  */
+#define LCDC_HEOCFG12_Msk                     _UINT32_(0xFFFFFFEF)                                 /* (LCDC_HEOCFG12) Register Mask  */
 
 
 /* -------- LCDC_HEOCFG13 : (LCDC Offset: 0x3C4) (R/W 32) High-End Overlay Configuration Register 13 -------- */
@@ -2722,8 +2788,6 @@
 #define LCDC_HEOCFG31_HXSCTAP(value)          (LCDC_HEOCFG31_HXSCTAP_Msk & (_UINT32_(value) << LCDC_HEOCFG31_HXSCTAP_Pos)) 
 
 /* -------- LCDC_BASECLUT : (LCDC Offset: 0x700) (R/W 32) Base Layer CLUT Register x -------- */
-#define LCDC_BASECLUT_RESETVALUE              _UINT32_(0x00)                                       /*  (LCDC_BASECLUT) Base Layer CLUT Register x  Reset Value */
-
 #define LCDC_BASECLUT_BCLUT_Pos               _UINT32_(0)                                          /* (LCDC_BASECLUT) Blue Color Entry Position */
 #define LCDC_BASECLUT_BCLUT_Msk               (_UINT32_(0xFF) << LCDC_BASECLUT_BCLUT_Pos)          /* (LCDC_BASECLUT) Blue Color Entry Mask */
 #define LCDC_BASECLUT_BCLUT(value)            (LCDC_BASECLUT_BCLUT_Msk & (_UINT32_(value) << LCDC_BASECLUT_BCLUT_Pos)) /* Assigment of value for BCLUT in the LCDC_BASECLUT register */
@@ -2740,8 +2804,6 @@
 
 
 /* -------- LCDC_OVR1CLUT : (LCDC Offset: 0xB00) (R/W 32) Overlay 1 CLUT Register x -------- */
-#define LCDC_OVR1CLUT_RESETVALUE              _UINT32_(0x00)                                       /*  (LCDC_OVR1CLUT) Overlay 1 CLUT Register x  Reset Value */
-
 #define LCDC_OVR1CLUT_BCLUT_Pos               _UINT32_(0)                                          /* (LCDC_OVR1CLUT) Blue Color Entry Position */
 #define LCDC_OVR1CLUT_BCLUT_Msk               (_UINT32_(0xFF) << LCDC_OVR1CLUT_BCLUT_Pos)          /* (LCDC_OVR1CLUT) Blue Color Entry Mask */
 #define LCDC_OVR1CLUT_BCLUT(value)            (LCDC_OVR1CLUT_BCLUT_Msk & (_UINT32_(value) << LCDC_OVR1CLUT_BCLUT_Pos)) /* Assigment of value for BCLUT in the LCDC_OVR1CLUT register */
@@ -2758,8 +2820,6 @@
 
 
 /* -------- LCDC_OVR2CLUT : (LCDC Offset: 0xF00) (R/W 32) Overlay 2 CLUT Register x -------- */
-#define LCDC_OVR2CLUT_RESETVALUE              _UINT32_(0x00)                                       /*  (LCDC_OVR2CLUT) Overlay 2 CLUT Register x  Reset Value */
-
 #define LCDC_OVR2CLUT_BCLUT_Pos               _UINT32_(0)                                          /* (LCDC_OVR2CLUT) Blue Color Entry Position */
 #define LCDC_OVR2CLUT_BCLUT_Msk               (_UINT32_(0xFF) << LCDC_OVR2CLUT_BCLUT_Pos)          /* (LCDC_OVR2CLUT) Blue Color Entry Mask */
 #define LCDC_OVR2CLUT_BCLUT(value)            (LCDC_OVR2CLUT_BCLUT_Msk & (_UINT32_(value) << LCDC_OVR2CLUT_BCLUT_Pos)) /* Assigment of value for BCLUT in the LCDC_OVR2CLUT register */
@@ -2776,8 +2836,6 @@
 
 
 /* -------- LCDC_HEOCLUT : (LCDC Offset: 0x1300) (R/W 32) High-End Overlay CLUT Register x -------- */
-#define LCDC_HEOCLUT_RESETVALUE               _UINT32_(0x00)                                       /*  (LCDC_HEOCLUT) High-End Overlay CLUT Register x  Reset Value */
-
 #define LCDC_HEOCLUT_BCLUT_Pos                _UINT32_(0)                                          /* (LCDC_HEOCLUT) Blue Color Entry Position */
 #define LCDC_HEOCLUT_BCLUT_Msk                (_UINT32_(0xFF) << LCDC_HEOCLUT_BCLUT_Pos)           /* (LCDC_HEOCLUT) Blue Color Entry Mask */
 #define LCDC_HEOCLUT_BCLUT(value)             (LCDC_HEOCLUT_BCLUT_Msk & (_UINT32_(value) << LCDC_HEOCLUT_BCLUT_Pos)) /* Assigment of value for BCLUT in the LCDC_HEOCLUT register */

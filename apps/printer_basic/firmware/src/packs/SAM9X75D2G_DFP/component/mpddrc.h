@@ -1,26 +1,23 @@
 /*
  * Component description for MPDDRC
  *
- * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
  *
- * Subject to your compliance with these terms, you may use Microchip software and any derivatives
- * exclusively with Microchip products. It is your responsibility to comply with third party license
- * terms applicable to your use of third party software (including open source software) that may
- * accompany Microchip software.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY,
- * APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND
- * FITNESS FOR A PARTICULAR PURPOSE.
+ *   http://www.apache.org/licenses/LICENSE-2.0
  *
- * IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, INCIDENTAL OR CONSEQUENTIAL
- * LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF
- * MICROCHIP HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO THE FULLEST EXTENT
- * ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT
- * EXCEED THE AMOUNT OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  *
  */
 
-/* file generated from device description version 2023-01-20T08:33:42Z */
+/* file generated from device description file (ATDF) version 2024-04-05T08:36:56Z */
 #ifndef _SAM9X7_MPDDRC_COMPONENT_H_
 #define _SAM9X7_MPDDRC_COMPONENT_H_
 
@@ -88,16 +85,14 @@
 #define MPDDRC_CR_CAS_Pos                     _UINT32_(4)                                          /* (MPDDRC_CR) CAS Latency Position */
 #define MPDDRC_CR_CAS_Msk                     (_UINT32_(0x7) << MPDDRC_CR_CAS_Pos)                 /* (MPDDRC_CR) CAS Latency Mask */
 #define MPDDRC_CR_CAS(value)                  (MPDDRC_CR_CAS_Msk & (_UINT32_(value) << MPDDRC_CR_CAS_Pos)) /* Assigment of value for CAS in the MPDDRC_CR register */
-#define   MPDDRC_CR_CAS_DDR_CAS2_Val          _UINT32_(0x2)                                        /* (MPDDRC_CR) LPDDR1 CAS Latency 2  */
-#define   MPDDRC_CR_CAS_DDR_CAS3_Val          _UINT32_(0x3)                                        /* (MPDDRC_CR) DDR2/LPDDR1 CAS Latency 3  */
+#define   MPDDRC_CR_CAS_DDR_CAS3_Val          _UINT32_(0x3)                                        /* (MPDDRC_CR) DDR2 CAS Latency 3  */
 #define   MPDDRC_CR_CAS_DDR_CAS4_Val          _UINT32_(0x4)                                        /* (MPDDRC_CR) DDR2 CAS Latency 4  */
 #define   MPDDRC_CR_CAS_DDR_CAS5_Val          _UINT32_(0x5)                                        /* (MPDDRC_CR) DDR2/DDR3 CAS Latency 5  */
-#define   MPDDRC_CR_CAS_DDR_CAS6_Val          _UINT32_(0x6)                                        /* (MPDDRC_CR) DDR2/DDR3 CAS Latency 6  */
-#define MPDDRC_CR_CAS_DDR_CAS2                (MPDDRC_CR_CAS_DDR_CAS2_Val << MPDDRC_CR_CAS_Pos)    /* (MPDDRC_CR) LPDDR1 CAS Latency 2 Position  */
-#define MPDDRC_CR_CAS_DDR_CAS3                (MPDDRC_CR_CAS_DDR_CAS3_Val << MPDDRC_CR_CAS_Pos)    /* (MPDDRC_CR) DDR2/LPDDR1 CAS Latency 3 Position  */
+#define   MPDDRC_CR_CAS_DDR_CAS6_Val          _UINT32_(0x6)                                        /* (MPDDRC_CR) DDR3 CAS Latency 6  */
+#define MPDDRC_CR_CAS_DDR_CAS3                (MPDDRC_CR_CAS_DDR_CAS3_Val << MPDDRC_CR_CAS_Pos)    /* (MPDDRC_CR) DDR2 CAS Latency 3 Position  */
 #define MPDDRC_CR_CAS_DDR_CAS4                (MPDDRC_CR_CAS_DDR_CAS4_Val << MPDDRC_CR_CAS_Pos)    /* (MPDDRC_CR) DDR2 CAS Latency 4 Position  */
 #define MPDDRC_CR_CAS_DDR_CAS5                (MPDDRC_CR_CAS_DDR_CAS5_Val << MPDDRC_CR_CAS_Pos)    /* (MPDDRC_CR) DDR2/DDR3 CAS Latency 5 Position  */
-#define MPDDRC_CR_CAS_DDR_CAS6                (MPDDRC_CR_CAS_DDR_CAS6_Val << MPDDRC_CR_CAS_Pos)    /* (MPDDRC_CR) DDR2/DDR3 CAS Latency 6 Position  */
+#define MPDDRC_CR_CAS_DDR_CAS6                (MPDDRC_CR_CAS_DDR_CAS6_Val << MPDDRC_CR_CAS_Pos)    /* (MPDDRC_CR) DDR3 CAS Latency 6 Position  */
 #define MPDDRC_CR_DLL_Pos                     _UINT32_(7)                                          /* (MPDDRC_CR) Reset DLL Position */
 #define MPDDRC_CR_DLL_Msk                     (_UINT32_(0x1) << MPDDRC_CR_DLL_Pos)                 /* (MPDDRC_CR) Reset DLL Mask */
 #define MPDDRC_CR_DLL(value)                  (MPDDRC_CR_DLL_Msk & (_UINT32_(value) << MPDDRC_CR_DLL_Pos)) /* Assigment of value for DLL in the MPDDRC_CR register */
@@ -140,13 +135,6 @@
 #define   MPDDRC_CR_DQMS_SHARED_Val           _UINT32_(0x1)                                        /* (MPDDRC_CR) DQM is shared with another controller  */
 #define MPDDRC_CR_DQMS_NOT_SHARED             (MPDDRC_CR_DQMS_NOT_SHARED_Val << MPDDRC_CR_DQMS_Pos) /* (MPDDRC_CR) DQM is not shared with another controller Position  */
 #define MPDDRC_CR_DQMS_SHARED                 (MPDDRC_CR_DQMS_SHARED_Val << MPDDRC_CR_DQMS_Pos)    /* (MPDDRC_CR) DQM is shared with another controller Position  */
-#define MPDDRC_CR_LC_LPDDR1_Pos               _UINT32_(19)                                         /* (MPDDRC_CR) Low-cost Low-power DDR1 Position */
-#define MPDDRC_CR_LC_LPDDR1_Msk               (_UINT32_(0x1) << MPDDRC_CR_LC_LPDDR1_Pos)           /* (MPDDRC_CR) Low-cost Low-power DDR1 Mask */
-#define MPDDRC_CR_LC_LPDDR1(value)            (MPDDRC_CR_LC_LPDDR1_Msk & (_UINT32_(value) << MPDDRC_CR_LC_LPDDR1_Pos)) /* Assigment of value for LC_LPDDR1 in the MPDDRC_CR register */
-#define   MPDDRC_CR_LC_LPDDR1_NOT_2_BANKS_Val _UINT32_(0x0)                                        /* (MPDDRC_CR) Any type of memory devices except of low cost, low density Low Power DDR1.  */
-#define   MPDDRC_CR_LC_LPDDR1_2_BANKS_LPDDR1_Val _UINT32_(0x1)                                        /* (MPDDRC_CR) Low-cost and low-density low-power DDR1. These devices have a density of 32 Mbits and are organized as two internal banks. To use this feature, the user has to define the type of memory and the data bus width (see Section 8.8 "MPDDRC Memory Device Register"). The 16-bit memory device is organized as 2 banks, 9 columns and 11 rows.  */
-#define MPDDRC_CR_LC_LPDDR1_NOT_2_BANKS       (MPDDRC_CR_LC_LPDDR1_NOT_2_BANKS_Val << MPDDRC_CR_LC_LPDDR1_Pos) /* (MPDDRC_CR) Any type of memory devices except of low cost, low density Low Power DDR1. Position  */
-#define MPDDRC_CR_LC_LPDDR1_2_BANKS_LPDDR1    (MPDDRC_CR_LC_LPDDR1_2_BANKS_LPDDR1_Val << MPDDRC_CR_LC_LPDDR1_Pos) /* (MPDDRC_CR) Low-cost and low-density low-power DDR1. These devices have a density of 32 Mbits and are organized as two internal banks. To use this feature, the user has to define the type of memory and the data bus width (see Section 8.8 "MPDDRC Memory Device Register"). The 16-bit memory device is organized as 2 banks, 9 columns and 11 rows. Position  */
 #define MPDDRC_CR_NB_Pos                      _UINT32_(20)                                         /* (MPDDRC_CR) Number of Banks Position */
 #define MPDDRC_CR_NB_Msk                      (_UINT32_(0x1) << MPDDRC_CR_NB_Pos)                  /* (MPDDRC_CR) Number of Banks Mask */
 #define MPDDRC_CR_NB(value)                   (MPDDRC_CR_NB_Msk & (_UINT32_(value) << MPDDRC_CR_NB_Pos)) /* Assigment of value for NB in the MPDDRC_CR register */
@@ -178,14 +166,11 @@
 #define   MPDDRC_CR_CAS_WR_DDR3_CAS6_Val      _UINT32_(0x6)                                        /* (MPDDRC_CR) DDR3 CAS write latency 6, DLL enabled or not, DLL On/Off mode  */
 #define MPDDRC_CR_CAS_WR_DDR3_CAS5            (MPDDRC_CR_CAS_WR_DDR3_CAS5_Val << MPDDRC_CR_CAS_WR_Pos) /* (MPDDRC_CR) DDR3 CAS write latency 5, DLL must be enabled, DLL On mode Position  */
 #define MPDDRC_CR_CAS_WR_DDR3_CAS6            (MPDDRC_CR_CAS_WR_DDR3_CAS6_Val << MPDDRC_CR_CAS_WR_Pos) /* (MPDDRC_CR) DDR3 CAS write latency 6, DLL enabled or not, DLL On/Off mode Position  */
-#define MPDDRC_CR_Msk                         _UINT32_(0x1CF9F3FF)                                 /* (MPDDRC_CR) Register Mask  */
+#define MPDDRC_CR_Msk                         _UINT32_(0x1CF1F3FF)                                 /* (MPDDRC_CR) Register Mask  */
 
 #define MPDDRC_CR_SUP_DDR_Pos                 _UINT32_(15)                                         /* (MPDDRC_CR Position) Supply DDR3-SDRAM or DDR3L-SDRAM */
 #define MPDDRC_CR_SUP_DDR_Msk                 (_UINT32_(0x1) << MPDDRC_CR_SUP_DDR_Pos)             /* (MPDDRC_CR Mask) SUP_DDR */
 #define MPDDRC_CR_SUP_DDR(value)              (MPDDRC_CR_SUP_DDR_Msk & (_UINT32_(value) << MPDDRC_CR_SUP_DDR_Pos)) 
-#define MPDDRC_CR_LC_LPDDR_Pos                _UINT32_(19)                                         /* (MPDDRC_CR Position) Low-cost Low-power DDRx */
-#define MPDDRC_CR_LC_LPDDR_Msk                (_UINT32_(0x1) << MPDDRC_CR_LC_LPDDR_Pos)            /* (MPDDRC_CR Mask) LC_LPDDR */
-#define MPDDRC_CR_LC_LPDDR(value)             (MPDDRC_CR_LC_LPDDR_Msk & (_UINT32_(value) << MPDDRC_CR_LC_LPDDR_Pos)) 
 
 /* -------- MPDDRC_TPR0 : (MPDDRC Offset: 0x0C) (R/W 32) Timing Parameter 0 Register -------- */
 #define MPDDRC_TPR0_RESETVALUE                _UINT32_(0x20227225)                                 /*  (MPDDRC_TPR0) Timing Parameter 0 Register  Reset Value */
@@ -268,11 +253,9 @@
 #define   MPDDRC_LPR_LPCB_NOLOWPOWER_Val      _UINT32_(0x0)                                        /* (MPDDRC_LPR) Low-power feature is inhibited. No Powerdown, Self-refresh and Deep power modes are issued to the DDR-SDRAM device.  */
 #define   MPDDRC_LPR_LPCB_SELFREFRESH_Val     _UINT32_(0x1)                                        /* (MPDDRC_LPR) The MPDDRC issues a self-refresh command to the DDR-SDRAM device, the clock(s) is/are deactivated and the CKE signal is set low. The DDR-SDRAM device leaves the Self-refresh mode when accessed and reenters it after the access.  */
 #define   MPDDRC_LPR_LPCB_POWERDOWN_Val       _UINT32_(0x2)                                        /* (MPDDRC_LPR) The MPDDRC issues a Powerdown command to the DDR-SDRAM device after each access, the CKE signal is set low. The DDR-SDRAM device leaves the Powerdown mode when accessed and reenters it after the access.  */
-#define   MPDDRC_LPR_LPCB_DEEPPOWERDOWN_Val   _UINT32_(0x3)                                        /* (MPDDRC_LPR) The MPDDRC issues a Deep Powerdown command to the low-power DDR-SDRAM device.  */
 #define MPDDRC_LPR_LPCB_NOLOWPOWER            (MPDDRC_LPR_LPCB_NOLOWPOWER_Val << MPDDRC_LPR_LPCB_Pos) /* (MPDDRC_LPR) Low-power feature is inhibited. No Powerdown, Self-refresh and Deep power modes are issued to the DDR-SDRAM device. Position  */
 #define MPDDRC_LPR_LPCB_SELFREFRESH           (MPDDRC_LPR_LPCB_SELFREFRESH_Val << MPDDRC_LPR_LPCB_Pos) /* (MPDDRC_LPR) The MPDDRC issues a self-refresh command to the DDR-SDRAM device, the clock(s) is/are deactivated and the CKE signal is set low. The DDR-SDRAM device leaves the Self-refresh mode when accessed and reenters it after the access. Position  */
 #define MPDDRC_LPR_LPCB_POWERDOWN             (MPDDRC_LPR_LPCB_POWERDOWN_Val << MPDDRC_LPR_LPCB_Pos) /* (MPDDRC_LPR) The MPDDRC issues a Powerdown command to the DDR-SDRAM device after each access, the CKE signal is set low. The DDR-SDRAM device leaves the Powerdown mode when accessed and reenters it after the access. Position  */
-#define MPDDRC_LPR_LPCB_DEEPPOWERDOWN         (MPDDRC_LPR_LPCB_DEEPPOWERDOWN_Val << MPDDRC_LPR_LPCB_Pos) /* (MPDDRC_LPR) The MPDDRC issues a Deep Powerdown command to the low-power DDR-SDRAM device. Position  */
 #define MPDDRC_LPR_CLK_FR_Pos                 _UINT32_(2)                                          /* (MPDDRC_LPR) Clock Frozen Command Bit Position */
 #define MPDDRC_LPR_CLK_FR_Msk                 (_UINT32_(0x1) << MPDDRC_LPR_CLK_FR_Pos)             /* (MPDDRC_LPR) Clock Frozen Command Bit Mask */
 #define MPDDRC_LPR_CLK_FR(value)              (MPDDRC_LPR_CLK_FR_Msk & (_UINT32_(value) << MPDDRC_LPR_CLK_FR_Pos)) /* Assigment of value for CLK_FR in the MPDDRC_LPR register */
@@ -280,20 +263,6 @@
 #define   MPDDRC_LPR_CLK_FR_ENABLED_Val       _UINT32_(0x1)                                        /* (MPDDRC_LPR) Clock(s) is/are frozen.  */
 #define MPDDRC_LPR_CLK_FR_DISABLED            (MPDDRC_LPR_CLK_FR_DISABLED_Val << MPDDRC_LPR_CLK_FR_Pos) /* (MPDDRC_LPR) Clock(s) is/are not frozen. Position  */
 #define MPDDRC_LPR_CLK_FR_ENABLED             (MPDDRC_LPR_CLK_FR_ENABLED_Val << MPDDRC_LPR_CLK_FR_Pos) /* (MPDDRC_LPR) Clock(s) is/are frozen. Position  */
-#define MPDDRC_LPR_PASR_Pos                   _UINT32_(4)                                          /* (MPDDRC_LPR) Partial Array Self-refresh Position */
-#define MPDDRC_LPR_PASR_Msk                   (_UINT32_(0x7) << MPDDRC_LPR_PASR_Pos)               /* (MPDDRC_LPR) Partial Array Self-refresh Mask */
-#define MPDDRC_LPR_PASR(value)                (MPDDRC_LPR_PASR_Msk & (_UINT32_(value) << MPDDRC_LPR_PASR_Pos)) /* Assigment of value for PASR in the MPDDRC_LPR register */
-#define MPDDRC_LPR_DS_Pos                     _UINT32_(8)                                          /* (MPDDRC_LPR) Drive Strength Position */
-#define MPDDRC_LPR_DS_Msk                     (_UINT32_(0x7) << MPDDRC_LPR_DS_Pos)                 /* (MPDDRC_LPR) Drive Strength Mask */
-#define MPDDRC_LPR_DS(value)                  (MPDDRC_LPR_DS_Msk & (_UINT32_(value) << MPDDRC_LPR_DS_Pos)) /* Assigment of value for DS in the MPDDRC_LPR register */
-#define   MPDDRC_LPR_DS_DS_FULL_Val           _UINT32_(0x0)                                        /* (MPDDRC_LPR) Full drive strength  */
-#define   MPDDRC_LPR_DS_DS_HALF_Val           _UINT32_(0x1)                                        /* (MPDDRC_LPR) Half drive strength  */
-#define   MPDDRC_LPR_DS_DS_QUARTER_Val        _UINT32_(0x2)                                        /* (MPDDRC_LPR) Quarter drive strength  */
-#define   MPDDRC_LPR_DS_DS_OCTANT_Val         _UINT32_(0x3)                                        /* (MPDDRC_LPR) Octant drive strength  */
-#define MPDDRC_LPR_DS_DS_FULL                 (MPDDRC_LPR_DS_DS_FULL_Val << MPDDRC_LPR_DS_Pos)     /* (MPDDRC_LPR) Full drive strength Position  */
-#define MPDDRC_LPR_DS_DS_HALF                 (MPDDRC_LPR_DS_DS_HALF_Val << MPDDRC_LPR_DS_Pos)     /* (MPDDRC_LPR) Half drive strength Position  */
-#define MPDDRC_LPR_DS_DS_QUARTER              (MPDDRC_LPR_DS_DS_QUARTER_Val << MPDDRC_LPR_DS_Pos)  /* (MPDDRC_LPR) Quarter drive strength Position  */
-#define MPDDRC_LPR_DS_DS_OCTANT               (MPDDRC_LPR_DS_DS_OCTANT_Val << MPDDRC_LPR_DS_Pos)   /* (MPDDRC_LPR) Octant drive strength Position  */
 #define MPDDRC_LPR_TIMEOUT_Pos                _UINT32_(12)                                         /* (MPDDRC_LPR) Time Between Last Transfer and Low-Power Mode Position */
 #define MPDDRC_LPR_TIMEOUT_Msk                (_UINT32_(0x3) << MPDDRC_LPR_TIMEOUT_Pos)            /* (MPDDRC_LPR) Time Between Last Transfer and Low-Power Mode Mask */
 #define MPDDRC_LPR_TIMEOUT(value)             (MPDDRC_LPR_TIMEOUT_Msk & (_UINT32_(value) << MPDDRC_LPR_TIMEOUT_Pos)) /* Assigment of value for TIMEOUT in the MPDDRC_LPR register */
@@ -349,7 +318,7 @@
 #define MPDDRC_LPR_DISTOEN_DONE_Pos           _UINT32_(26)                                         /* (MPDDRC_LPR) DLL Disabled to DLL Enabled is Done (read-only) Position */
 #define MPDDRC_LPR_DISTOEN_DONE_Msk           (_UINT32_(0x1) << MPDDRC_LPR_DISTOEN_DONE_Pos)       /* (MPDDRC_LPR) DLL Disabled to DLL Enabled is Done (read-only) Mask */
 #define MPDDRC_LPR_DISTOEN_DONE(value)        (MPDDRC_LPR_DISTOEN_DONE_Msk & (_UINT32_(value) << MPDDRC_LPR_DISTOEN_DONE_Pos)) /* Assigment of value for DISTOEN_DONE in the MPDDRC_LPR register */
-#define MPDDRC_LPR_Msk                        _UINT32_(0x0733F777)                                 /* (MPDDRC_LPR) Register Mask  */
+#define MPDDRC_LPR_Msk                        _UINT32_(0x0733F007)                                 /* (MPDDRC_LPR) Register Mask  */
 
 
 /* -------- MPDDRC_MD : (MPDDRC Offset: 0x20) (R/W 32) Memory Device Register -------- */
@@ -358,10 +327,8 @@
 #define MPDDRC_MD_MD_Pos                      _UINT32_(0)                                          /* (MPDDRC_MD) Memory Device Position */
 #define MPDDRC_MD_MD_Msk                      (_UINT32_(0x7) << MPDDRC_MD_MD_Pos)                  /* (MPDDRC_MD) Memory Device Mask */
 #define MPDDRC_MD_MD(value)                   (MPDDRC_MD_MD_Msk & (_UINT32_(value) << MPDDRC_MD_MD_Pos)) /* Assigment of value for MD in the MPDDRC_MD register */
-#define   MPDDRC_MD_MD_LPDDR_SDRAM_Val        _UINT32_(0x3)                                        /* (MPDDRC_MD) Low-power DDR1-SDRAM  */
 #define   MPDDRC_MD_MD_DDR3_SDRAM_Val         _UINT32_(0x4)                                        /* (MPDDRC_MD) DDR3-SDRAM  */
 #define   MPDDRC_MD_MD_DDR2_SDRAM_Val         _UINT32_(0x6)                                        /* (MPDDRC_MD) DDR2-SDRAM  */
-#define MPDDRC_MD_MD_LPDDR_SDRAM              (MPDDRC_MD_MD_LPDDR_SDRAM_Val << MPDDRC_MD_MD_Pos)   /* (MPDDRC_MD) Low-power DDR1-SDRAM Position  */
 #define MPDDRC_MD_MD_DDR3_SDRAM               (MPDDRC_MD_MD_DDR3_SDRAM_Val << MPDDRC_MD_MD_Pos)    /* (MPDDRC_MD) DDR3-SDRAM Position  */
 #define MPDDRC_MD_MD_DDR2_SDRAM               (MPDDRC_MD_MD_DDR2_SDRAM_Val << MPDDRC_MD_MD_Pos)    /* (MPDDRC_MD) DDR2-SDRAM Position  */
 #define MPDDRC_MD_DBW_Pos                     _UINT32_(4)                                          /* (MPDDRC_MD) Data Bus Width Position */
@@ -393,8 +360,8 @@
 /* -------- MPDDRC_IO_CALIBR : (MPDDRC Offset: 0x34) (R/W 32) I/O Calibration Register -------- */
 #define MPDDRC_IO_CALIBR_RESETVALUE           _UINT32_(0x870000)                                   /*  (MPDDRC_IO_CALIBR) I/O Calibration Register  Reset Value */
 
-#define MPDDRC_IO_CALIBR_CK_F_RANGE_Pos       _UINT32_(0)                                          /* (MPDDRC_IO_CALIBR) DDRCK Maximum Clock Frequency Range Indicator Position */
-#define MPDDRC_IO_CALIBR_CK_F_RANGE_Msk       (_UINT32_(0x1F) << MPDDRC_IO_CALIBR_CK_F_RANGE_Pos)  /* (MPDDRC_IO_CALIBR) DDRCK Maximum Clock Frequency Range Indicator Mask */
+#define MPDDRC_IO_CALIBR_CK_F_RANGE_Pos       _UINT32_(0)                                          /* (MPDDRC_IO_CALIBR) DDRCK Maximum Clock Frequency Range Position */
+#define MPDDRC_IO_CALIBR_CK_F_RANGE_Msk       (_UINT32_(0x1F) << MPDDRC_IO_CALIBR_CK_F_RANGE_Pos)  /* (MPDDRC_IO_CALIBR) DDRCK Maximum Clock Frequency Range Mask */
 #define MPDDRC_IO_CALIBR_CK_F_RANGE(value)    (MPDDRC_IO_CALIBR_CK_F_RANGE_Msk & (_UINT32_(value) << MPDDRC_IO_CALIBR_CK_F_RANGE_Pos)) /* Assigment of value for CK_F_RANGE in the MPDDRC_IO_CALIBR register */
 #define MPDDRC_IO_CALIBR_EN_CALIB_Pos         _UINT32_(5)                                          /* (MPDDRC_IO_CALIBR) Enable Calibration Position */
 #define MPDDRC_IO_CALIBR_EN_CALIB_Msk         (_UINT32_(0x1) << MPDDRC_IO_CALIBR_EN_CALIB_Pos)     /* (MPDDRC_IO_CALIBR) Enable Calibration Mask */
@@ -738,11 +705,11 @@
 #define   MPDDRC_RD_DATA_PATH_SHIFT_SAMPLING_NO_SHIFT_Val _UINT32_(0x0)                                        /* (MPDDRC_RD_DATA_PATH) Initial sampling point.  */
 #define   MPDDRC_RD_DATA_PATH_SHIFT_SAMPLING_SHIFT_ONE_CYCLE_Val _UINT32_(0x1)                                        /* (MPDDRC_RD_DATA_PATH) Sampling point is shifted by one cycle.  */
 #define   MPDDRC_RD_DATA_PATH_SHIFT_SAMPLING_SHIFT_TWO_CYCLES_Val _UINT32_(0x2)                                        /* (MPDDRC_RD_DATA_PATH) Sampling point is shifted by two cycles.  */
-#define   MPDDRC_RD_DATA_PATH_SHIFT_SAMPLING_SHIFT_THREE_CYCLES_Val _UINT32_(0x3)                                        /* (MPDDRC_RD_DATA_PATH) Sampling point is shifted by three cycles, unique for DDR2 and DDR3. Not applicable for LPDDR1devices  */
+#define   MPDDRC_RD_DATA_PATH_SHIFT_SAMPLING_SHIFT_THREE_CYCLES_Val _UINT32_(0x3)                                        /* (MPDDRC_RD_DATA_PATH) Sampling point is shifted by three cycles, unique for DDR2 and DDR3.  */
 #define MPDDRC_RD_DATA_PATH_SHIFT_SAMPLING_NO_SHIFT (MPDDRC_RD_DATA_PATH_SHIFT_SAMPLING_NO_SHIFT_Val << MPDDRC_RD_DATA_PATH_SHIFT_SAMPLING_Pos) /* (MPDDRC_RD_DATA_PATH) Initial sampling point. Position  */
 #define MPDDRC_RD_DATA_PATH_SHIFT_SAMPLING_SHIFT_ONE_CYCLE (MPDDRC_RD_DATA_PATH_SHIFT_SAMPLING_SHIFT_ONE_CYCLE_Val << MPDDRC_RD_DATA_PATH_SHIFT_SAMPLING_Pos) /* (MPDDRC_RD_DATA_PATH) Sampling point is shifted by one cycle. Position  */
 #define MPDDRC_RD_DATA_PATH_SHIFT_SAMPLING_SHIFT_TWO_CYCLES (MPDDRC_RD_DATA_PATH_SHIFT_SAMPLING_SHIFT_TWO_CYCLES_Val << MPDDRC_RD_DATA_PATH_SHIFT_SAMPLING_Pos) /* (MPDDRC_RD_DATA_PATH) Sampling point is shifted by two cycles. Position  */
-#define MPDDRC_RD_DATA_PATH_SHIFT_SAMPLING_SHIFT_THREE_CYCLES (MPDDRC_RD_DATA_PATH_SHIFT_SAMPLING_SHIFT_THREE_CYCLES_Val << MPDDRC_RD_DATA_PATH_SHIFT_SAMPLING_Pos) /* (MPDDRC_RD_DATA_PATH) Sampling point is shifted by three cycles, unique for DDR2 and DDR3. Not applicable for LPDDR1devices Position  */
+#define MPDDRC_RD_DATA_PATH_SHIFT_SAMPLING_SHIFT_THREE_CYCLES (MPDDRC_RD_DATA_PATH_SHIFT_SAMPLING_SHIFT_THREE_CYCLES_Val << MPDDRC_RD_DATA_PATH_SHIFT_SAMPLING_Pos) /* (MPDDRC_RD_DATA_PATH) Sampling point is shifted by three cycles, unique for DDR2 and DDR3. Position  */
 #define MPDDRC_RD_DATA_PATH_Msk               _UINT32_(0x00000003)                                 /* (MPDDRC_RD_DATA_PATH) Register Mask  */
 
 
@@ -1759,7 +1726,7 @@
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief MPDDRC register API structure */
 typedef struct
-{  /* AHB Multiport DDR-SDRAM Controller */
+{  /* DDR-SDRAM Controller */
   __IO  uint32_t                       MPDDRC_MR;          /**< Offset: 0x00 (R/W  32) Mode Register */
   __IO  uint32_t                       MPDDRC_RTR;         /**< Offset: 0x04 (R/W  32) Refresh Timer Register */
   __IO  uint32_t                       MPDDRC_CR;          /**< Offset: 0x08 (R/W  32) Configuration Register */
