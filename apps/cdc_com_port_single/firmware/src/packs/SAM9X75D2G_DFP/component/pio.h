@@ -1,26 +1,23 @@
 /*
  * Component description for PIO
  *
- * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
  *
- * Subject to your compliance with these terms, you may use Microchip software and any derivatives
- * exclusively with Microchip products. It is your responsibility to comply with third party license
- * terms applicable to your use of third party software (including open source software) that may
- * accompany Microchip software.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY,
- * APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND
- * FITNESS FOR A PARTICULAR PURPOSE.
+ *   http://www.apache.org/licenses/LICENSE-2.0
  *
- * IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, INCIDENTAL OR CONSEQUENTIAL
- * LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF
- * MICROCHIP HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO THE FULLEST EXTENT
- * ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT
- * EXCEED THE AMOUNT OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  *
  */
 
-/* file generated from device description version 2023-01-20T08:33:42Z */
+/* file generated from device description file (ATDF) version 2024-04-05T08:36:56Z */
 #ifndef _SAM9X7_PIO_COMPONENT_H_
 #define _SAM9X7_PIO_COMPONENT_H_
 
@@ -5357,355 +5354,227 @@
 #define PIO_ABCDSR_P0_Pos                     _UINT32_(0)                                          /* (PIO_ABCDSR) Peripheral Select Position */
 #define PIO_ABCDSR_P0_Msk                     (_UINT32_(0x1) << PIO_ABCDSR_P0_Pos)                 /* (PIO_ABCDSR) Peripheral Select Mask */
 #define PIO_ABCDSR_P0(value)                  (PIO_ABCDSR_P0_Msk & (_UINT32_(value) << PIO_ABCDSR_P0_Pos)) /* Assigment of value for P0 in the PIO_ABCDSR register */
-#define   PIO_ABCDSR_P0_0_Val                 _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function.  */
-#define   PIO_ABCDSR_P0_0_Val                 _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function.  */
-#define   PIO_ABCDSR_P0_1_Val                 _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function.  */
-#define   PIO_ABCDSR_P0_1_Val                 _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function.  */
-#define PIO_ABCDSR_P0_0                       (PIO_ABCDSR_P0_0_Val << PIO_ABCDSR_P0_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function. Position  */
-#define PIO_ABCDSR_P0_0                       (PIO_ABCDSR_P0_0_Val << PIO_ABCDSR_P0_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function. Position  */
-#define PIO_ABCDSR_P0_1                       (PIO_ABCDSR_P0_1_Val << PIO_ABCDSR_P0_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function. Position  */
-#define PIO_ABCDSR_P0_1                       (PIO_ABCDSR_P0_1_Val << PIO_ABCDSR_P0_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function. Position  */
+#define   PIO_ABCDSR_P0_0_Val                 _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function.  */
+#define   PIO_ABCDSR_P0_1_Val                 _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function.  */
+#define PIO_ABCDSR_P0_0                       (PIO_ABCDSR_P0_0_Val << PIO_ABCDSR_P0_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function. Position  */
+#define PIO_ABCDSR_P0_1                       (PIO_ABCDSR_P0_1_Val << PIO_ABCDSR_P0_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function. Position  */
 #define PIO_ABCDSR_P1_Pos                     _UINT32_(1)                                          /* (PIO_ABCDSR) Peripheral Select Position */
 #define PIO_ABCDSR_P1_Msk                     (_UINT32_(0x1) << PIO_ABCDSR_P1_Pos)                 /* (PIO_ABCDSR) Peripheral Select Mask */
 #define PIO_ABCDSR_P1(value)                  (PIO_ABCDSR_P1_Msk & (_UINT32_(value) << PIO_ABCDSR_P1_Pos)) /* Assigment of value for P1 in the PIO_ABCDSR register */
-#define   PIO_ABCDSR_P1_0_Val                 _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function.  */
-#define   PIO_ABCDSR_P1_0_Val                 _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function.  */
-#define   PIO_ABCDSR_P1_1_Val                 _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function.  */
-#define   PIO_ABCDSR_P1_1_Val                 _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function.  */
-#define PIO_ABCDSR_P1_0                       (PIO_ABCDSR_P1_0_Val << PIO_ABCDSR_P1_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function. Position  */
-#define PIO_ABCDSR_P1_0                       (PIO_ABCDSR_P1_0_Val << PIO_ABCDSR_P1_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function. Position  */
-#define PIO_ABCDSR_P1_1                       (PIO_ABCDSR_P1_1_Val << PIO_ABCDSR_P1_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function. Position  */
-#define PIO_ABCDSR_P1_1                       (PIO_ABCDSR_P1_1_Val << PIO_ABCDSR_P1_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function. Position  */
+#define   PIO_ABCDSR_P1_0_Val                 _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function.  */
+#define   PIO_ABCDSR_P1_1_Val                 _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function.  */
+#define PIO_ABCDSR_P1_0                       (PIO_ABCDSR_P1_0_Val << PIO_ABCDSR_P1_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function. Position  */
+#define PIO_ABCDSR_P1_1                       (PIO_ABCDSR_P1_1_Val << PIO_ABCDSR_P1_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function. Position  */
 #define PIO_ABCDSR_P2_Pos                     _UINT32_(2)                                          /* (PIO_ABCDSR) Peripheral Select Position */
 #define PIO_ABCDSR_P2_Msk                     (_UINT32_(0x1) << PIO_ABCDSR_P2_Pos)                 /* (PIO_ABCDSR) Peripheral Select Mask */
 #define PIO_ABCDSR_P2(value)                  (PIO_ABCDSR_P2_Msk & (_UINT32_(value) << PIO_ABCDSR_P2_Pos)) /* Assigment of value for P2 in the PIO_ABCDSR register */
-#define   PIO_ABCDSR_P2_0_Val                 _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function.  */
-#define   PIO_ABCDSR_P2_0_Val                 _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function.  */
-#define   PIO_ABCDSR_P2_1_Val                 _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function.  */
-#define   PIO_ABCDSR_P2_1_Val                 _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function.  */
-#define PIO_ABCDSR_P2_0                       (PIO_ABCDSR_P2_0_Val << PIO_ABCDSR_P2_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function. Position  */
-#define PIO_ABCDSR_P2_0                       (PIO_ABCDSR_P2_0_Val << PIO_ABCDSR_P2_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function. Position  */
-#define PIO_ABCDSR_P2_1                       (PIO_ABCDSR_P2_1_Val << PIO_ABCDSR_P2_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function. Position  */
-#define PIO_ABCDSR_P2_1                       (PIO_ABCDSR_P2_1_Val << PIO_ABCDSR_P2_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function. Position  */
+#define   PIO_ABCDSR_P2_0_Val                 _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function.  */
+#define   PIO_ABCDSR_P2_1_Val                 _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function.  */
+#define PIO_ABCDSR_P2_0                       (PIO_ABCDSR_P2_0_Val << PIO_ABCDSR_P2_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function. Position  */
+#define PIO_ABCDSR_P2_1                       (PIO_ABCDSR_P2_1_Val << PIO_ABCDSR_P2_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function. Position  */
 #define PIO_ABCDSR_P3_Pos                     _UINT32_(3)                                          /* (PIO_ABCDSR) Peripheral Select Position */
 #define PIO_ABCDSR_P3_Msk                     (_UINT32_(0x1) << PIO_ABCDSR_P3_Pos)                 /* (PIO_ABCDSR) Peripheral Select Mask */
 #define PIO_ABCDSR_P3(value)                  (PIO_ABCDSR_P3_Msk & (_UINT32_(value) << PIO_ABCDSR_P3_Pos)) /* Assigment of value for P3 in the PIO_ABCDSR register */
-#define   PIO_ABCDSR_P3_0_Val                 _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function.  */
-#define   PIO_ABCDSR_P3_0_Val                 _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function.  */
-#define   PIO_ABCDSR_P3_1_Val                 _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function.  */
-#define   PIO_ABCDSR_P3_1_Val                 _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function.  */
-#define PIO_ABCDSR_P3_0                       (PIO_ABCDSR_P3_0_Val << PIO_ABCDSR_P3_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function. Position  */
-#define PIO_ABCDSR_P3_0                       (PIO_ABCDSR_P3_0_Val << PIO_ABCDSR_P3_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function. Position  */
-#define PIO_ABCDSR_P3_1                       (PIO_ABCDSR_P3_1_Val << PIO_ABCDSR_P3_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function. Position  */
-#define PIO_ABCDSR_P3_1                       (PIO_ABCDSR_P3_1_Val << PIO_ABCDSR_P3_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function. Position  */
+#define   PIO_ABCDSR_P3_0_Val                 _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function.  */
+#define   PIO_ABCDSR_P3_1_Val                 _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function.  */
+#define PIO_ABCDSR_P3_0                       (PIO_ABCDSR_P3_0_Val << PIO_ABCDSR_P3_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function. Position  */
+#define PIO_ABCDSR_P3_1                       (PIO_ABCDSR_P3_1_Val << PIO_ABCDSR_P3_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function. Position  */
 #define PIO_ABCDSR_P4_Pos                     _UINT32_(4)                                          /* (PIO_ABCDSR) Peripheral Select Position */
 #define PIO_ABCDSR_P4_Msk                     (_UINT32_(0x1) << PIO_ABCDSR_P4_Pos)                 /* (PIO_ABCDSR) Peripheral Select Mask */
 #define PIO_ABCDSR_P4(value)                  (PIO_ABCDSR_P4_Msk & (_UINT32_(value) << PIO_ABCDSR_P4_Pos)) /* Assigment of value for P4 in the PIO_ABCDSR register */
-#define   PIO_ABCDSR_P4_0_Val                 _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function.  */
-#define   PIO_ABCDSR_P4_0_Val                 _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function.  */
-#define   PIO_ABCDSR_P4_1_Val                 _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function.  */
-#define   PIO_ABCDSR_P4_1_Val                 _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function.  */
-#define PIO_ABCDSR_P4_0                       (PIO_ABCDSR_P4_0_Val << PIO_ABCDSR_P4_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function. Position  */
-#define PIO_ABCDSR_P4_0                       (PIO_ABCDSR_P4_0_Val << PIO_ABCDSR_P4_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function. Position  */
-#define PIO_ABCDSR_P4_1                       (PIO_ABCDSR_P4_1_Val << PIO_ABCDSR_P4_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function. Position  */
-#define PIO_ABCDSR_P4_1                       (PIO_ABCDSR_P4_1_Val << PIO_ABCDSR_P4_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function. Position  */
+#define   PIO_ABCDSR_P4_0_Val                 _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function.  */
+#define   PIO_ABCDSR_P4_1_Val                 _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function.  */
+#define PIO_ABCDSR_P4_0                       (PIO_ABCDSR_P4_0_Val << PIO_ABCDSR_P4_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function. Position  */
+#define PIO_ABCDSR_P4_1                       (PIO_ABCDSR_P4_1_Val << PIO_ABCDSR_P4_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function. Position  */
 #define PIO_ABCDSR_P5_Pos                     _UINT32_(5)                                          /* (PIO_ABCDSR) Peripheral Select Position */
 #define PIO_ABCDSR_P5_Msk                     (_UINT32_(0x1) << PIO_ABCDSR_P5_Pos)                 /* (PIO_ABCDSR) Peripheral Select Mask */
 #define PIO_ABCDSR_P5(value)                  (PIO_ABCDSR_P5_Msk & (_UINT32_(value) << PIO_ABCDSR_P5_Pos)) /* Assigment of value for P5 in the PIO_ABCDSR register */
-#define   PIO_ABCDSR_P5_0_Val                 _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function.  */
-#define   PIO_ABCDSR_P5_0_Val                 _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function.  */
-#define   PIO_ABCDSR_P5_1_Val                 _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function.  */
-#define   PIO_ABCDSR_P5_1_Val                 _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function.  */
-#define PIO_ABCDSR_P5_0                       (PIO_ABCDSR_P5_0_Val << PIO_ABCDSR_P5_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function. Position  */
-#define PIO_ABCDSR_P5_0                       (PIO_ABCDSR_P5_0_Val << PIO_ABCDSR_P5_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function. Position  */
-#define PIO_ABCDSR_P5_1                       (PIO_ABCDSR_P5_1_Val << PIO_ABCDSR_P5_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function. Position  */
-#define PIO_ABCDSR_P5_1                       (PIO_ABCDSR_P5_1_Val << PIO_ABCDSR_P5_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function. Position  */
+#define   PIO_ABCDSR_P5_0_Val                 _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function.  */
+#define   PIO_ABCDSR_P5_1_Val                 _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function.  */
+#define PIO_ABCDSR_P5_0                       (PIO_ABCDSR_P5_0_Val << PIO_ABCDSR_P5_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function. Position  */
+#define PIO_ABCDSR_P5_1                       (PIO_ABCDSR_P5_1_Val << PIO_ABCDSR_P5_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function. Position  */
 #define PIO_ABCDSR_P6_Pos                     _UINT32_(6)                                          /* (PIO_ABCDSR) Peripheral Select Position */
 #define PIO_ABCDSR_P6_Msk                     (_UINT32_(0x1) << PIO_ABCDSR_P6_Pos)                 /* (PIO_ABCDSR) Peripheral Select Mask */
 #define PIO_ABCDSR_P6(value)                  (PIO_ABCDSR_P6_Msk & (_UINT32_(value) << PIO_ABCDSR_P6_Pos)) /* Assigment of value for P6 in the PIO_ABCDSR register */
-#define   PIO_ABCDSR_P6_0_Val                 _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function.  */
-#define   PIO_ABCDSR_P6_0_Val                 _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function.  */
-#define   PIO_ABCDSR_P6_1_Val                 _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function.  */
-#define   PIO_ABCDSR_P6_1_Val                 _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function.  */
-#define PIO_ABCDSR_P6_0                       (PIO_ABCDSR_P6_0_Val << PIO_ABCDSR_P6_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function. Position  */
-#define PIO_ABCDSR_P6_0                       (PIO_ABCDSR_P6_0_Val << PIO_ABCDSR_P6_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function. Position  */
-#define PIO_ABCDSR_P6_1                       (PIO_ABCDSR_P6_1_Val << PIO_ABCDSR_P6_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function. Position  */
-#define PIO_ABCDSR_P6_1                       (PIO_ABCDSR_P6_1_Val << PIO_ABCDSR_P6_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function. Position  */
+#define   PIO_ABCDSR_P6_0_Val                 _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function.  */
+#define   PIO_ABCDSR_P6_1_Val                 _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function.  */
+#define PIO_ABCDSR_P6_0                       (PIO_ABCDSR_P6_0_Val << PIO_ABCDSR_P6_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function. Position  */
+#define PIO_ABCDSR_P6_1                       (PIO_ABCDSR_P6_1_Val << PIO_ABCDSR_P6_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function. Position  */
 #define PIO_ABCDSR_P7_Pos                     _UINT32_(7)                                          /* (PIO_ABCDSR) Peripheral Select Position */
 #define PIO_ABCDSR_P7_Msk                     (_UINT32_(0x1) << PIO_ABCDSR_P7_Pos)                 /* (PIO_ABCDSR) Peripheral Select Mask */
 #define PIO_ABCDSR_P7(value)                  (PIO_ABCDSR_P7_Msk & (_UINT32_(value) << PIO_ABCDSR_P7_Pos)) /* Assigment of value for P7 in the PIO_ABCDSR register */
-#define   PIO_ABCDSR_P7_0_Val                 _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function.  */
-#define   PIO_ABCDSR_P7_0_Val                 _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function.  */
-#define   PIO_ABCDSR_P7_1_Val                 _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function.  */
-#define   PIO_ABCDSR_P7_1_Val                 _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function.  */
-#define PIO_ABCDSR_P7_0                       (PIO_ABCDSR_P7_0_Val << PIO_ABCDSR_P7_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function. Position  */
-#define PIO_ABCDSR_P7_0                       (PIO_ABCDSR_P7_0_Val << PIO_ABCDSR_P7_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function. Position  */
-#define PIO_ABCDSR_P7_1                       (PIO_ABCDSR_P7_1_Val << PIO_ABCDSR_P7_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function. Position  */
-#define PIO_ABCDSR_P7_1                       (PIO_ABCDSR_P7_1_Val << PIO_ABCDSR_P7_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function. Position  */
+#define   PIO_ABCDSR_P7_0_Val                 _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function.  */
+#define   PIO_ABCDSR_P7_1_Val                 _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function.  */
+#define PIO_ABCDSR_P7_0                       (PIO_ABCDSR_P7_0_Val << PIO_ABCDSR_P7_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function. Position  */
+#define PIO_ABCDSR_P7_1                       (PIO_ABCDSR_P7_1_Val << PIO_ABCDSR_P7_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function. Position  */
 #define PIO_ABCDSR_P8_Pos                     _UINT32_(8)                                          /* (PIO_ABCDSR) Peripheral Select Position */
 #define PIO_ABCDSR_P8_Msk                     (_UINT32_(0x1) << PIO_ABCDSR_P8_Pos)                 /* (PIO_ABCDSR) Peripheral Select Mask */
 #define PIO_ABCDSR_P8(value)                  (PIO_ABCDSR_P8_Msk & (_UINT32_(value) << PIO_ABCDSR_P8_Pos)) /* Assigment of value for P8 in the PIO_ABCDSR register */
-#define   PIO_ABCDSR_P8_0_Val                 _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function.  */
-#define   PIO_ABCDSR_P8_0_Val                 _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function.  */
-#define   PIO_ABCDSR_P8_1_Val                 _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function.  */
-#define   PIO_ABCDSR_P8_1_Val                 _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function.  */
-#define PIO_ABCDSR_P8_0                       (PIO_ABCDSR_P8_0_Val << PIO_ABCDSR_P8_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function. Position  */
-#define PIO_ABCDSR_P8_0                       (PIO_ABCDSR_P8_0_Val << PIO_ABCDSR_P8_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function. Position  */
-#define PIO_ABCDSR_P8_1                       (PIO_ABCDSR_P8_1_Val << PIO_ABCDSR_P8_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function. Position  */
-#define PIO_ABCDSR_P8_1                       (PIO_ABCDSR_P8_1_Val << PIO_ABCDSR_P8_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function. Position  */
+#define   PIO_ABCDSR_P8_0_Val                 _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function.  */
+#define   PIO_ABCDSR_P8_1_Val                 _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function.  */
+#define PIO_ABCDSR_P8_0                       (PIO_ABCDSR_P8_0_Val << PIO_ABCDSR_P8_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function. Position  */
+#define PIO_ABCDSR_P8_1                       (PIO_ABCDSR_P8_1_Val << PIO_ABCDSR_P8_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function. Position  */
 #define PIO_ABCDSR_P9_Pos                     _UINT32_(9)                                          /* (PIO_ABCDSR) Peripheral Select Position */
 #define PIO_ABCDSR_P9_Msk                     (_UINT32_(0x1) << PIO_ABCDSR_P9_Pos)                 /* (PIO_ABCDSR) Peripheral Select Mask */
 #define PIO_ABCDSR_P9(value)                  (PIO_ABCDSR_P9_Msk & (_UINT32_(value) << PIO_ABCDSR_P9_Pos)) /* Assigment of value for P9 in the PIO_ABCDSR register */
-#define   PIO_ABCDSR_P9_0_Val                 _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function.  */
-#define   PIO_ABCDSR_P9_0_Val                 _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function.  */
-#define   PIO_ABCDSR_P9_1_Val                 _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function.  */
-#define   PIO_ABCDSR_P9_1_Val                 _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function.  */
-#define PIO_ABCDSR_P9_0                       (PIO_ABCDSR_P9_0_Val << PIO_ABCDSR_P9_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function. Position  */
-#define PIO_ABCDSR_P9_0                       (PIO_ABCDSR_P9_0_Val << PIO_ABCDSR_P9_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function. Position  */
-#define PIO_ABCDSR_P9_1                       (PIO_ABCDSR_P9_1_Val << PIO_ABCDSR_P9_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function. Position  */
-#define PIO_ABCDSR_P9_1                       (PIO_ABCDSR_P9_1_Val << PIO_ABCDSR_P9_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function. Position  */
+#define   PIO_ABCDSR_P9_0_Val                 _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function.  */
+#define   PIO_ABCDSR_P9_1_Val                 _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function.  */
+#define PIO_ABCDSR_P9_0                       (PIO_ABCDSR_P9_0_Val << PIO_ABCDSR_P9_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function. Position  */
+#define PIO_ABCDSR_P9_1                       (PIO_ABCDSR_P9_1_Val << PIO_ABCDSR_P9_Pos)           /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function. Position  */
 #define PIO_ABCDSR_P10_Pos                    _UINT32_(10)                                         /* (PIO_ABCDSR) Peripheral Select Position */
 #define PIO_ABCDSR_P10_Msk                    (_UINT32_(0x1) << PIO_ABCDSR_P10_Pos)                /* (PIO_ABCDSR) Peripheral Select Mask */
 #define PIO_ABCDSR_P10(value)                 (PIO_ABCDSR_P10_Msk & (_UINT32_(value) << PIO_ABCDSR_P10_Pos)) /* Assigment of value for P10 in the PIO_ABCDSR register */
-#define   PIO_ABCDSR_P10_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function.  */
-#define   PIO_ABCDSR_P10_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function.  */
-#define   PIO_ABCDSR_P10_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function.  */
-#define   PIO_ABCDSR_P10_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function.  */
-#define PIO_ABCDSR_P10_0                      (PIO_ABCDSR_P10_0_Val << PIO_ABCDSR_P10_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function. Position  */
-#define PIO_ABCDSR_P10_0                      (PIO_ABCDSR_P10_0_Val << PIO_ABCDSR_P10_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function. Position  */
-#define PIO_ABCDSR_P10_1                      (PIO_ABCDSR_P10_1_Val << PIO_ABCDSR_P10_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function. Position  */
-#define PIO_ABCDSR_P10_1                      (PIO_ABCDSR_P10_1_Val << PIO_ABCDSR_P10_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function. Position  */
+#define   PIO_ABCDSR_P10_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function.  */
+#define   PIO_ABCDSR_P10_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function.  */
+#define PIO_ABCDSR_P10_0                      (PIO_ABCDSR_P10_0_Val << PIO_ABCDSR_P10_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function. Position  */
+#define PIO_ABCDSR_P10_1                      (PIO_ABCDSR_P10_1_Val << PIO_ABCDSR_P10_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function. Position  */
 #define PIO_ABCDSR_P11_Pos                    _UINT32_(11)                                         /* (PIO_ABCDSR) Peripheral Select Position */
 #define PIO_ABCDSR_P11_Msk                    (_UINT32_(0x1) << PIO_ABCDSR_P11_Pos)                /* (PIO_ABCDSR) Peripheral Select Mask */
 #define PIO_ABCDSR_P11(value)                 (PIO_ABCDSR_P11_Msk & (_UINT32_(value) << PIO_ABCDSR_P11_Pos)) /* Assigment of value for P11 in the PIO_ABCDSR register */
-#define   PIO_ABCDSR_P11_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function.  */
-#define   PIO_ABCDSR_P11_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function.  */
-#define   PIO_ABCDSR_P11_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function.  */
-#define   PIO_ABCDSR_P11_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function.  */
-#define PIO_ABCDSR_P11_0                      (PIO_ABCDSR_P11_0_Val << PIO_ABCDSR_P11_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function. Position  */
-#define PIO_ABCDSR_P11_0                      (PIO_ABCDSR_P11_0_Val << PIO_ABCDSR_P11_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function. Position  */
-#define PIO_ABCDSR_P11_1                      (PIO_ABCDSR_P11_1_Val << PIO_ABCDSR_P11_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function. Position  */
-#define PIO_ABCDSR_P11_1                      (PIO_ABCDSR_P11_1_Val << PIO_ABCDSR_P11_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function. Position  */
+#define   PIO_ABCDSR_P11_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function.  */
+#define   PIO_ABCDSR_P11_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function.  */
+#define PIO_ABCDSR_P11_0                      (PIO_ABCDSR_P11_0_Val << PIO_ABCDSR_P11_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function. Position  */
+#define PIO_ABCDSR_P11_1                      (PIO_ABCDSR_P11_1_Val << PIO_ABCDSR_P11_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function. Position  */
 #define PIO_ABCDSR_P12_Pos                    _UINT32_(12)                                         /* (PIO_ABCDSR) Peripheral Select Position */
 #define PIO_ABCDSR_P12_Msk                    (_UINT32_(0x1) << PIO_ABCDSR_P12_Pos)                /* (PIO_ABCDSR) Peripheral Select Mask */
 #define PIO_ABCDSR_P12(value)                 (PIO_ABCDSR_P12_Msk & (_UINT32_(value) << PIO_ABCDSR_P12_Pos)) /* Assigment of value for P12 in the PIO_ABCDSR register */
-#define   PIO_ABCDSR_P12_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function.  */
-#define   PIO_ABCDSR_P12_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function.  */
-#define   PIO_ABCDSR_P12_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function.  */
-#define   PIO_ABCDSR_P12_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function.  */
-#define PIO_ABCDSR_P12_0                      (PIO_ABCDSR_P12_0_Val << PIO_ABCDSR_P12_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function. Position  */
-#define PIO_ABCDSR_P12_0                      (PIO_ABCDSR_P12_0_Val << PIO_ABCDSR_P12_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function. Position  */
-#define PIO_ABCDSR_P12_1                      (PIO_ABCDSR_P12_1_Val << PIO_ABCDSR_P12_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function. Position  */
-#define PIO_ABCDSR_P12_1                      (PIO_ABCDSR_P12_1_Val << PIO_ABCDSR_P12_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function. Position  */
+#define   PIO_ABCDSR_P12_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function.  */
+#define   PIO_ABCDSR_P12_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function.  */
+#define PIO_ABCDSR_P12_0                      (PIO_ABCDSR_P12_0_Val << PIO_ABCDSR_P12_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function. Position  */
+#define PIO_ABCDSR_P12_1                      (PIO_ABCDSR_P12_1_Val << PIO_ABCDSR_P12_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function. Position  */
 #define PIO_ABCDSR_P13_Pos                    _UINT32_(13)                                         /* (PIO_ABCDSR) Peripheral Select Position */
 #define PIO_ABCDSR_P13_Msk                    (_UINT32_(0x1) << PIO_ABCDSR_P13_Pos)                /* (PIO_ABCDSR) Peripheral Select Mask */
 #define PIO_ABCDSR_P13(value)                 (PIO_ABCDSR_P13_Msk & (_UINT32_(value) << PIO_ABCDSR_P13_Pos)) /* Assigment of value for P13 in the PIO_ABCDSR register */
-#define   PIO_ABCDSR_P13_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function.  */
-#define   PIO_ABCDSR_P13_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function.  */
-#define   PIO_ABCDSR_P13_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function.  */
-#define   PIO_ABCDSR_P13_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function.  */
-#define PIO_ABCDSR_P13_0                      (PIO_ABCDSR_P13_0_Val << PIO_ABCDSR_P13_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function. Position  */
-#define PIO_ABCDSR_P13_0                      (PIO_ABCDSR_P13_0_Val << PIO_ABCDSR_P13_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function. Position  */
-#define PIO_ABCDSR_P13_1                      (PIO_ABCDSR_P13_1_Val << PIO_ABCDSR_P13_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function. Position  */
-#define PIO_ABCDSR_P13_1                      (PIO_ABCDSR_P13_1_Val << PIO_ABCDSR_P13_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function. Position  */
+#define   PIO_ABCDSR_P13_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function.  */
+#define   PIO_ABCDSR_P13_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function.  */
+#define PIO_ABCDSR_P13_0                      (PIO_ABCDSR_P13_0_Val << PIO_ABCDSR_P13_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function. Position  */
+#define PIO_ABCDSR_P13_1                      (PIO_ABCDSR_P13_1_Val << PIO_ABCDSR_P13_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function. Position  */
 #define PIO_ABCDSR_P14_Pos                    _UINT32_(14)                                         /* (PIO_ABCDSR) Peripheral Select Position */
 #define PIO_ABCDSR_P14_Msk                    (_UINT32_(0x1) << PIO_ABCDSR_P14_Pos)                /* (PIO_ABCDSR) Peripheral Select Mask */
 #define PIO_ABCDSR_P14(value)                 (PIO_ABCDSR_P14_Msk & (_UINT32_(value) << PIO_ABCDSR_P14_Pos)) /* Assigment of value for P14 in the PIO_ABCDSR register */
-#define   PIO_ABCDSR_P14_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function.  */
-#define   PIO_ABCDSR_P14_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function.  */
-#define   PIO_ABCDSR_P14_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function.  */
-#define   PIO_ABCDSR_P14_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function.  */
-#define PIO_ABCDSR_P14_0                      (PIO_ABCDSR_P14_0_Val << PIO_ABCDSR_P14_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function. Position  */
-#define PIO_ABCDSR_P14_0                      (PIO_ABCDSR_P14_0_Val << PIO_ABCDSR_P14_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function. Position  */
-#define PIO_ABCDSR_P14_1                      (PIO_ABCDSR_P14_1_Val << PIO_ABCDSR_P14_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function. Position  */
-#define PIO_ABCDSR_P14_1                      (PIO_ABCDSR_P14_1_Val << PIO_ABCDSR_P14_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function. Position  */
+#define   PIO_ABCDSR_P14_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function.  */
+#define   PIO_ABCDSR_P14_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function.  */
+#define PIO_ABCDSR_P14_0                      (PIO_ABCDSR_P14_0_Val << PIO_ABCDSR_P14_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function. Position  */
+#define PIO_ABCDSR_P14_1                      (PIO_ABCDSR_P14_1_Val << PIO_ABCDSR_P14_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function. Position  */
 #define PIO_ABCDSR_P15_Pos                    _UINT32_(15)                                         /* (PIO_ABCDSR) Peripheral Select Position */
 #define PIO_ABCDSR_P15_Msk                    (_UINT32_(0x1) << PIO_ABCDSR_P15_Pos)                /* (PIO_ABCDSR) Peripheral Select Mask */
 #define PIO_ABCDSR_P15(value)                 (PIO_ABCDSR_P15_Msk & (_UINT32_(value) << PIO_ABCDSR_P15_Pos)) /* Assigment of value for P15 in the PIO_ABCDSR register */
-#define   PIO_ABCDSR_P15_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function.  */
-#define   PIO_ABCDSR_P15_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function.  */
-#define   PIO_ABCDSR_P15_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function.  */
-#define   PIO_ABCDSR_P15_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function.  */
-#define PIO_ABCDSR_P15_0                      (PIO_ABCDSR_P15_0_Val << PIO_ABCDSR_P15_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function. Position  */
-#define PIO_ABCDSR_P15_0                      (PIO_ABCDSR_P15_0_Val << PIO_ABCDSR_P15_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function. Position  */
-#define PIO_ABCDSR_P15_1                      (PIO_ABCDSR_P15_1_Val << PIO_ABCDSR_P15_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function. Position  */
-#define PIO_ABCDSR_P15_1                      (PIO_ABCDSR_P15_1_Val << PIO_ABCDSR_P15_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function. Position  */
+#define   PIO_ABCDSR_P15_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function.  */
+#define   PIO_ABCDSR_P15_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function.  */
+#define PIO_ABCDSR_P15_0                      (PIO_ABCDSR_P15_0_Val << PIO_ABCDSR_P15_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function. Position  */
+#define PIO_ABCDSR_P15_1                      (PIO_ABCDSR_P15_1_Val << PIO_ABCDSR_P15_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function. Position  */
 #define PIO_ABCDSR_P16_Pos                    _UINT32_(16)                                         /* (PIO_ABCDSR) Peripheral Select Position */
 #define PIO_ABCDSR_P16_Msk                    (_UINT32_(0x1) << PIO_ABCDSR_P16_Pos)                /* (PIO_ABCDSR) Peripheral Select Mask */
 #define PIO_ABCDSR_P16(value)                 (PIO_ABCDSR_P16_Msk & (_UINT32_(value) << PIO_ABCDSR_P16_Pos)) /* Assigment of value for P16 in the PIO_ABCDSR register */
-#define   PIO_ABCDSR_P16_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function.  */
-#define   PIO_ABCDSR_P16_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function.  */
-#define   PIO_ABCDSR_P16_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function.  */
-#define   PIO_ABCDSR_P16_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function.  */
-#define PIO_ABCDSR_P16_0                      (PIO_ABCDSR_P16_0_Val << PIO_ABCDSR_P16_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function. Position  */
-#define PIO_ABCDSR_P16_0                      (PIO_ABCDSR_P16_0_Val << PIO_ABCDSR_P16_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function. Position  */
-#define PIO_ABCDSR_P16_1                      (PIO_ABCDSR_P16_1_Val << PIO_ABCDSR_P16_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function. Position  */
-#define PIO_ABCDSR_P16_1                      (PIO_ABCDSR_P16_1_Val << PIO_ABCDSR_P16_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function. Position  */
+#define   PIO_ABCDSR_P16_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function.  */
+#define   PIO_ABCDSR_P16_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function.  */
+#define PIO_ABCDSR_P16_0                      (PIO_ABCDSR_P16_0_Val << PIO_ABCDSR_P16_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function. Position  */
+#define PIO_ABCDSR_P16_1                      (PIO_ABCDSR_P16_1_Val << PIO_ABCDSR_P16_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function. Position  */
 #define PIO_ABCDSR_P17_Pos                    _UINT32_(17)                                         /* (PIO_ABCDSR) Peripheral Select Position */
 #define PIO_ABCDSR_P17_Msk                    (_UINT32_(0x1) << PIO_ABCDSR_P17_Pos)                /* (PIO_ABCDSR) Peripheral Select Mask */
 #define PIO_ABCDSR_P17(value)                 (PIO_ABCDSR_P17_Msk & (_UINT32_(value) << PIO_ABCDSR_P17_Pos)) /* Assigment of value for P17 in the PIO_ABCDSR register */
-#define   PIO_ABCDSR_P17_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function.  */
-#define   PIO_ABCDSR_P17_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function.  */
-#define   PIO_ABCDSR_P17_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function.  */
-#define   PIO_ABCDSR_P17_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function.  */
-#define PIO_ABCDSR_P17_0                      (PIO_ABCDSR_P17_0_Val << PIO_ABCDSR_P17_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function. Position  */
-#define PIO_ABCDSR_P17_0                      (PIO_ABCDSR_P17_0_Val << PIO_ABCDSR_P17_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function. Position  */
-#define PIO_ABCDSR_P17_1                      (PIO_ABCDSR_P17_1_Val << PIO_ABCDSR_P17_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function. Position  */
-#define PIO_ABCDSR_P17_1                      (PIO_ABCDSR_P17_1_Val << PIO_ABCDSR_P17_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function. Position  */
+#define   PIO_ABCDSR_P17_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function.  */
+#define   PIO_ABCDSR_P17_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function.  */
+#define PIO_ABCDSR_P17_0                      (PIO_ABCDSR_P17_0_Val << PIO_ABCDSR_P17_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function. Position  */
+#define PIO_ABCDSR_P17_1                      (PIO_ABCDSR_P17_1_Val << PIO_ABCDSR_P17_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function. Position  */
 #define PIO_ABCDSR_P18_Pos                    _UINT32_(18)                                         /* (PIO_ABCDSR) Peripheral Select Position */
 #define PIO_ABCDSR_P18_Msk                    (_UINT32_(0x1) << PIO_ABCDSR_P18_Pos)                /* (PIO_ABCDSR) Peripheral Select Mask */
 #define PIO_ABCDSR_P18(value)                 (PIO_ABCDSR_P18_Msk & (_UINT32_(value) << PIO_ABCDSR_P18_Pos)) /* Assigment of value for P18 in the PIO_ABCDSR register */
-#define   PIO_ABCDSR_P18_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function.  */
-#define   PIO_ABCDSR_P18_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function.  */
-#define   PIO_ABCDSR_P18_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function.  */
-#define   PIO_ABCDSR_P18_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function.  */
-#define PIO_ABCDSR_P18_0                      (PIO_ABCDSR_P18_0_Val << PIO_ABCDSR_P18_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function. Position  */
-#define PIO_ABCDSR_P18_0                      (PIO_ABCDSR_P18_0_Val << PIO_ABCDSR_P18_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function. Position  */
-#define PIO_ABCDSR_P18_1                      (PIO_ABCDSR_P18_1_Val << PIO_ABCDSR_P18_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function. Position  */
-#define PIO_ABCDSR_P18_1                      (PIO_ABCDSR_P18_1_Val << PIO_ABCDSR_P18_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function. Position  */
+#define   PIO_ABCDSR_P18_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function.  */
+#define   PIO_ABCDSR_P18_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function.  */
+#define PIO_ABCDSR_P18_0                      (PIO_ABCDSR_P18_0_Val << PIO_ABCDSR_P18_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function. Position  */
+#define PIO_ABCDSR_P18_1                      (PIO_ABCDSR_P18_1_Val << PIO_ABCDSR_P18_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function. Position  */
 #define PIO_ABCDSR_P19_Pos                    _UINT32_(19)                                         /* (PIO_ABCDSR) Peripheral Select Position */
 #define PIO_ABCDSR_P19_Msk                    (_UINT32_(0x1) << PIO_ABCDSR_P19_Pos)                /* (PIO_ABCDSR) Peripheral Select Mask */
 #define PIO_ABCDSR_P19(value)                 (PIO_ABCDSR_P19_Msk & (_UINT32_(value) << PIO_ABCDSR_P19_Pos)) /* Assigment of value for P19 in the PIO_ABCDSR register */
-#define   PIO_ABCDSR_P19_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function.  */
-#define   PIO_ABCDSR_P19_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function.  */
-#define   PIO_ABCDSR_P19_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function.  */
-#define   PIO_ABCDSR_P19_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function.  */
-#define PIO_ABCDSR_P19_0                      (PIO_ABCDSR_P19_0_Val << PIO_ABCDSR_P19_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function. Position  */
-#define PIO_ABCDSR_P19_0                      (PIO_ABCDSR_P19_0_Val << PIO_ABCDSR_P19_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function. Position  */
-#define PIO_ABCDSR_P19_1                      (PIO_ABCDSR_P19_1_Val << PIO_ABCDSR_P19_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function. Position  */
-#define PIO_ABCDSR_P19_1                      (PIO_ABCDSR_P19_1_Val << PIO_ABCDSR_P19_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function. Position  */
+#define   PIO_ABCDSR_P19_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function.  */
+#define   PIO_ABCDSR_P19_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function.  */
+#define PIO_ABCDSR_P19_0                      (PIO_ABCDSR_P19_0_Val << PIO_ABCDSR_P19_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function. Position  */
+#define PIO_ABCDSR_P19_1                      (PIO_ABCDSR_P19_1_Val << PIO_ABCDSR_P19_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function. Position  */
 #define PIO_ABCDSR_P20_Pos                    _UINT32_(20)                                         /* (PIO_ABCDSR) Peripheral Select Position */
 #define PIO_ABCDSR_P20_Msk                    (_UINT32_(0x1) << PIO_ABCDSR_P20_Pos)                /* (PIO_ABCDSR) Peripheral Select Mask */
 #define PIO_ABCDSR_P20(value)                 (PIO_ABCDSR_P20_Msk & (_UINT32_(value) << PIO_ABCDSR_P20_Pos)) /* Assigment of value for P20 in the PIO_ABCDSR register */
-#define   PIO_ABCDSR_P20_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function.  */
-#define   PIO_ABCDSR_P20_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function.  */
-#define   PIO_ABCDSR_P20_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function.  */
-#define   PIO_ABCDSR_P20_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function.  */
-#define PIO_ABCDSR_P20_0                      (PIO_ABCDSR_P20_0_Val << PIO_ABCDSR_P20_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function. Position  */
-#define PIO_ABCDSR_P20_0                      (PIO_ABCDSR_P20_0_Val << PIO_ABCDSR_P20_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function. Position  */
-#define PIO_ABCDSR_P20_1                      (PIO_ABCDSR_P20_1_Val << PIO_ABCDSR_P20_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function. Position  */
-#define PIO_ABCDSR_P20_1                      (PIO_ABCDSR_P20_1_Val << PIO_ABCDSR_P20_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function. Position  */
+#define   PIO_ABCDSR_P20_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function.  */
+#define   PIO_ABCDSR_P20_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function.  */
+#define PIO_ABCDSR_P20_0                      (PIO_ABCDSR_P20_0_Val << PIO_ABCDSR_P20_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function. Position  */
+#define PIO_ABCDSR_P20_1                      (PIO_ABCDSR_P20_1_Val << PIO_ABCDSR_P20_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function. Position  */
 #define PIO_ABCDSR_P21_Pos                    _UINT32_(21)                                         /* (PIO_ABCDSR) Peripheral Select Position */
 #define PIO_ABCDSR_P21_Msk                    (_UINT32_(0x1) << PIO_ABCDSR_P21_Pos)                /* (PIO_ABCDSR) Peripheral Select Mask */
 #define PIO_ABCDSR_P21(value)                 (PIO_ABCDSR_P21_Msk & (_UINT32_(value) << PIO_ABCDSR_P21_Pos)) /* Assigment of value for P21 in the PIO_ABCDSR register */
-#define   PIO_ABCDSR_P21_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function.  */
-#define   PIO_ABCDSR_P21_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function.  */
-#define   PIO_ABCDSR_P21_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function.  */
-#define   PIO_ABCDSR_P21_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function.  */
-#define PIO_ABCDSR_P21_0                      (PIO_ABCDSR_P21_0_Val << PIO_ABCDSR_P21_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function. Position  */
-#define PIO_ABCDSR_P21_0                      (PIO_ABCDSR_P21_0_Val << PIO_ABCDSR_P21_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function. Position  */
-#define PIO_ABCDSR_P21_1                      (PIO_ABCDSR_P21_1_Val << PIO_ABCDSR_P21_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function. Position  */
-#define PIO_ABCDSR_P21_1                      (PIO_ABCDSR_P21_1_Val << PIO_ABCDSR_P21_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function. Position  */
+#define   PIO_ABCDSR_P21_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function.  */
+#define   PIO_ABCDSR_P21_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function.  */
+#define PIO_ABCDSR_P21_0                      (PIO_ABCDSR_P21_0_Val << PIO_ABCDSR_P21_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function. Position  */
+#define PIO_ABCDSR_P21_1                      (PIO_ABCDSR_P21_1_Val << PIO_ABCDSR_P21_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function. Position  */
 #define PIO_ABCDSR_P22_Pos                    _UINT32_(22)                                         /* (PIO_ABCDSR) Peripheral Select Position */
 #define PIO_ABCDSR_P22_Msk                    (_UINT32_(0x1) << PIO_ABCDSR_P22_Pos)                /* (PIO_ABCDSR) Peripheral Select Mask */
 #define PIO_ABCDSR_P22(value)                 (PIO_ABCDSR_P22_Msk & (_UINT32_(value) << PIO_ABCDSR_P22_Pos)) /* Assigment of value for P22 in the PIO_ABCDSR register */
-#define   PIO_ABCDSR_P22_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function.  */
-#define   PIO_ABCDSR_P22_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function.  */
-#define   PIO_ABCDSR_P22_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function.  */
-#define   PIO_ABCDSR_P22_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function.  */
-#define PIO_ABCDSR_P22_0                      (PIO_ABCDSR_P22_0_Val << PIO_ABCDSR_P22_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function. Position  */
-#define PIO_ABCDSR_P22_0                      (PIO_ABCDSR_P22_0_Val << PIO_ABCDSR_P22_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function. Position  */
-#define PIO_ABCDSR_P22_1                      (PIO_ABCDSR_P22_1_Val << PIO_ABCDSR_P22_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function. Position  */
-#define PIO_ABCDSR_P22_1                      (PIO_ABCDSR_P22_1_Val << PIO_ABCDSR_P22_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function. Position  */
+#define   PIO_ABCDSR_P22_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function.  */
+#define   PIO_ABCDSR_P22_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function.  */
+#define PIO_ABCDSR_P22_0                      (PIO_ABCDSR_P22_0_Val << PIO_ABCDSR_P22_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function. Position  */
+#define PIO_ABCDSR_P22_1                      (PIO_ABCDSR_P22_1_Val << PIO_ABCDSR_P22_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function. Position  */
 #define PIO_ABCDSR_P23_Pos                    _UINT32_(23)                                         /* (PIO_ABCDSR) Peripheral Select Position */
 #define PIO_ABCDSR_P23_Msk                    (_UINT32_(0x1) << PIO_ABCDSR_P23_Pos)                /* (PIO_ABCDSR) Peripheral Select Mask */
 #define PIO_ABCDSR_P23(value)                 (PIO_ABCDSR_P23_Msk & (_UINT32_(value) << PIO_ABCDSR_P23_Pos)) /* Assigment of value for P23 in the PIO_ABCDSR register */
-#define   PIO_ABCDSR_P23_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function.  */
-#define   PIO_ABCDSR_P23_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function.  */
-#define   PIO_ABCDSR_P23_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function.  */
-#define   PIO_ABCDSR_P23_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function.  */
-#define PIO_ABCDSR_P23_0                      (PIO_ABCDSR_P23_0_Val << PIO_ABCDSR_P23_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function. Position  */
-#define PIO_ABCDSR_P23_0                      (PIO_ABCDSR_P23_0_Val << PIO_ABCDSR_P23_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function. Position  */
-#define PIO_ABCDSR_P23_1                      (PIO_ABCDSR_P23_1_Val << PIO_ABCDSR_P23_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function. Position  */
-#define PIO_ABCDSR_P23_1                      (PIO_ABCDSR_P23_1_Val << PIO_ABCDSR_P23_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function. Position  */
+#define   PIO_ABCDSR_P23_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function.  */
+#define   PIO_ABCDSR_P23_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function.  */
+#define PIO_ABCDSR_P23_0                      (PIO_ABCDSR_P23_0_Val << PIO_ABCDSR_P23_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function. Position  */
+#define PIO_ABCDSR_P23_1                      (PIO_ABCDSR_P23_1_Val << PIO_ABCDSR_P23_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function. Position  */
 #define PIO_ABCDSR_P24_Pos                    _UINT32_(24)                                         /* (PIO_ABCDSR) Peripheral Select Position */
 #define PIO_ABCDSR_P24_Msk                    (_UINT32_(0x1) << PIO_ABCDSR_P24_Pos)                /* (PIO_ABCDSR) Peripheral Select Mask */
 #define PIO_ABCDSR_P24(value)                 (PIO_ABCDSR_P24_Msk & (_UINT32_(value) << PIO_ABCDSR_P24_Pos)) /* Assigment of value for P24 in the PIO_ABCDSR register */
-#define   PIO_ABCDSR_P24_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function.  */
-#define   PIO_ABCDSR_P24_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function.  */
-#define   PIO_ABCDSR_P24_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function.  */
-#define   PIO_ABCDSR_P24_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function.  */
-#define PIO_ABCDSR_P24_0                      (PIO_ABCDSR_P24_0_Val << PIO_ABCDSR_P24_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function. Position  */
-#define PIO_ABCDSR_P24_0                      (PIO_ABCDSR_P24_0_Val << PIO_ABCDSR_P24_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function. Position  */
-#define PIO_ABCDSR_P24_1                      (PIO_ABCDSR_P24_1_Val << PIO_ABCDSR_P24_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function. Position  */
-#define PIO_ABCDSR_P24_1                      (PIO_ABCDSR_P24_1_Val << PIO_ABCDSR_P24_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function. Position  */
+#define   PIO_ABCDSR_P24_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function.  */
+#define   PIO_ABCDSR_P24_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function.  */
+#define PIO_ABCDSR_P24_0                      (PIO_ABCDSR_P24_0_Val << PIO_ABCDSR_P24_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function. Position  */
+#define PIO_ABCDSR_P24_1                      (PIO_ABCDSR_P24_1_Val << PIO_ABCDSR_P24_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function. Position  */
 #define PIO_ABCDSR_P25_Pos                    _UINT32_(25)                                         /* (PIO_ABCDSR) Peripheral Select Position */
 #define PIO_ABCDSR_P25_Msk                    (_UINT32_(0x1) << PIO_ABCDSR_P25_Pos)                /* (PIO_ABCDSR) Peripheral Select Mask */
 #define PIO_ABCDSR_P25(value)                 (PIO_ABCDSR_P25_Msk & (_UINT32_(value) << PIO_ABCDSR_P25_Pos)) /* Assigment of value for P25 in the PIO_ABCDSR register */
-#define   PIO_ABCDSR_P25_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function.  */
-#define   PIO_ABCDSR_P25_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function.  */
-#define   PIO_ABCDSR_P25_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function.  */
-#define   PIO_ABCDSR_P25_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function.  */
-#define PIO_ABCDSR_P25_0                      (PIO_ABCDSR_P25_0_Val << PIO_ABCDSR_P25_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function. Position  */
-#define PIO_ABCDSR_P25_0                      (PIO_ABCDSR_P25_0_Val << PIO_ABCDSR_P25_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function. Position  */
-#define PIO_ABCDSR_P25_1                      (PIO_ABCDSR_P25_1_Val << PIO_ABCDSR_P25_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function. Position  */
-#define PIO_ABCDSR_P25_1                      (PIO_ABCDSR_P25_1_Val << PIO_ABCDSR_P25_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function. Position  */
+#define   PIO_ABCDSR_P25_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function.  */
+#define   PIO_ABCDSR_P25_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function.  */
+#define PIO_ABCDSR_P25_0                      (PIO_ABCDSR_P25_0_Val << PIO_ABCDSR_P25_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function. Position  */
+#define PIO_ABCDSR_P25_1                      (PIO_ABCDSR_P25_1_Val << PIO_ABCDSR_P25_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function. Position  */
 #define PIO_ABCDSR_P26_Pos                    _UINT32_(26)                                         /* (PIO_ABCDSR) Peripheral Select Position */
 #define PIO_ABCDSR_P26_Msk                    (_UINT32_(0x1) << PIO_ABCDSR_P26_Pos)                /* (PIO_ABCDSR) Peripheral Select Mask */
 #define PIO_ABCDSR_P26(value)                 (PIO_ABCDSR_P26_Msk & (_UINT32_(value) << PIO_ABCDSR_P26_Pos)) /* Assigment of value for P26 in the PIO_ABCDSR register */
-#define   PIO_ABCDSR_P26_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function.  */
-#define   PIO_ABCDSR_P26_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function.  */
-#define   PIO_ABCDSR_P26_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function.  */
-#define   PIO_ABCDSR_P26_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function.  */
-#define PIO_ABCDSR_P26_0                      (PIO_ABCDSR_P26_0_Val << PIO_ABCDSR_P26_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function. Position  */
-#define PIO_ABCDSR_P26_0                      (PIO_ABCDSR_P26_0_Val << PIO_ABCDSR_P26_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function. Position  */
-#define PIO_ABCDSR_P26_1                      (PIO_ABCDSR_P26_1_Val << PIO_ABCDSR_P26_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function. Position  */
-#define PIO_ABCDSR_P26_1                      (PIO_ABCDSR_P26_1_Val << PIO_ABCDSR_P26_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function. Position  */
+#define   PIO_ABCDSR_P26_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function.  */
+#define   PIO_ABCDSR_P26_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function.  */
+#define PIO_ABCDSR_P26_0                      (PIO_ABCDSR_P26_0_Val << PIO_ABCDSR_P26_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function. Position  */
+#define PIO_ABCDSR_P26_1                      (PIO_ABCDSR_P26_1_Val << PIO_ABCDSR_P26_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function. Position  */
 #define PIO_ABCDSR_P27_Pos                    _UINT32_(27)                                         /* (PIO_ABCDSR) Peripheral Select Position */
 #define PIO_ABCDSR_P27_Msk                    (_UINT32_(0x1) << PIO_ABCDSR_P27_Pos)                /* (PIO_ABCDSR) Peripheral Select Mask */
 #define PIO_ABCDSR_P27(value)                 (PIO_ABCDSR_P27_Msk & (_UINT32_(value) << PIO_ABCDSR_P27_Pos)) /* Assigment of value for P27 in the PIO_ABCDSR register */
-#define   PIO_ABCDSR_P27_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function.  */
-#define   PIO_ABCDSR_P27_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function.  */
-#define   PIO_ABCDSR_P27_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function.  */
-#define   PIO_ABCDSR_P27_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function.  */
-#define PIO_ABCDSR_P27_0                      (PIO_ABCDSR_P27_0_Val << PIO_ABCDSR_P27_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function. Position  */
-#define PIO_ABCDSR_P27_0                      (PIO_ABCDSR_P27_0_Val << PIO_ABCDSR_P27_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function. Position  */
-#define PIO_ABCDSR_P27_1                      (PIO_ABCDSR_P27_1_Val << PIO_ABCDSR_P27_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function. Position  */
-#define PIO_ABCDSR_P27_1                      (PIO_ABCDSR_P27_1_Val << PIO_ABCDSR_P27_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function. Position  */
+#define   PIO_ABCDSR_P27_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function.  */
+#define   PIO_ABCDSR_P27_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function.  */
+#define PIO_ABCDSR_P27_0                      (PIO_ABCDSR_P27_0_Val << PIO_ABCDSR_P27_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function. Position  */
+#define PIO_ABCDSR_P27_1                      (PIO_ABCDSR_P27_1_Val << PIO_ABCDSR_P27_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function. Position  */
 #define PIO_ABCDSR_P28_Pos                    _UINT32_(28)                                         /* (PIO_ABCDSR) Peripheral Select Position */
 #define PIO_ABCDSR_P28_Msk                    (_UINT32_(0x1) << PIO_ABCDSR_P28_Pos)                /* (PIO_ABCDSR) Peripheral Select Mask */
 #define PIO_ABCDSR_P28(value)                 (PIO_ABCDSR_P28_Msk & (_UINT32_(value) << PIO_ABCDSR_P28_Pos)) /* Assigment of value for P28 in the PIO_ABCDSR register */
-#define   PIO_ABCDSR_P28_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function.  */
-#define   PIO_ABCDSR_P28_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function.  */
-#define   PIO_ABCDSR_P28_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function.  */
-#define   PIO_ABCDSR_P28_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function.  */
-#define PIO_ABCDSR_P28_0                      (PIO_ABCDSR_P28_0_Val << PIO_ABCDSR_P28_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function. Position  */
-#define PIO_ABCDSR_P28_0                      (PIO_ABCDSR_P28_0_Val << PIO_ABCDSR_P28_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function. Position  */
-#define PIO_ABCDSR_P28_1                      (PIO_ABCDSR_P28_1_Val << PIO_ABCDSR_P28_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function. Position  */
-#define PIO_ABCDSR_P28_1                      (PIO_ABCDSR_P28_1_Val << PIO_ABCDSR_P28_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function. Position  */
+#define   PIO_ABCDSR_P28_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function.  */
+#define   PIO_ABCDSR_P28_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function.  */
+#define PIO_ABCDSR_P28_0                      (PIO_ABCDSR_P28_0_Val << PIO_ABCDSR_P28_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function. Position  */
+#define PIO_ABCDSR_P28_1                      (PIO_ABCDSR_P28_1_Val << PIO_ABCDSR_P28_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function. Position  */
 #define PIO_ABCDSR_P29_Pos                    _UINT32_(29)                                         /* (PIO_ABCDSR) Peripheral Select Position */
 #define PIO_ABCDSR_P29_Msk                    (_UINT32_(0x1) << PIO_ABCDSR_P29_Pos)                /* (PIO_ABCDSR) Peripheral Select Mask */
 #define PIO_ABCDSR_P29(value)                 (PIO_ABCDSR_P29_Msk & (_UINT32_(value) << PIO_ABCDSR_P29_Pos)) /* Assigment of value for P29 in the PIO_ABCDSR register */
-#define   PIO_ABCDSR_P29_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function.  */
-#define   PIO_ABCDSR_P29_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function.  */
-#define   PIO_ABCDSR_P29_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function.  */
-#define   PIO_ABCDSR_P29_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function.  */
-#define PIO_ABCDSR_P29_0                      (PIO_ABCDSR_P29_0_Val << PIO_ABCDSR_P29_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function. Position  */
-#define PIO_ABCDSR_P29_0                      (PIO_ABCDSR_P29_0_Val << PIO_ABCDSR_P29_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function. Position  */
-#define PIO_ABCDSR_P29_1                      (PIO_ABCDSR_P29_1_Val << PIO_ABCDSR_P29_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function. Position  */
-#define PIO_ABCDSR_P29_1                      (PIO_ABCDSR_P29_1_Val << PIO_ABCDSR_P29_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function. Position  */
+#define   PIO_ABCDSR_P29_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function.  */
+#define   PIO_ABCDSR_P29_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function.  */
+#define PIO_ABCDSR_P29_0                      (PIO_ABCDSR_P29_0_Val << PIO_ABCDSR_P29_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function. Position  */
+#define PIO_ABCDSR_P29_1                      (PIO_ABCDSR_P29_1_Val << PIO_ABCDSR_P29_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function. Position  */
 #define PIO_ABCDSR_P30_Pos                    _UINT32_(30)                                         /* (PIO_ABCDSR) Peripheral Select Position */
 #define PIO_ABCDSR_P30_Msk                    (_UINT32_(0x1) << PIO_ABCDSR_P30_Pos)                /* (PIO_ABCDSR) Peripheral Select Mask */
 #define PIO_ABCDSR_P30(value)                 (PIO_ABCDSR_P30_Msk & (_UINT32_(value) << PIO_ABCDSR_P30_Pos)) /* Assigment of value for P30 in the PIO_ABCDSR register */
-#define   PIO_ABCDSR_P30_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function.  */
-#define   PIO_ABCDSR_P30_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function.  */
-#define   PIO_ABCDSR_P30_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function.  */
-#define   PIO_ABCDSR_P30_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function.  */
-#define PIO_ABCDSR_P30_0                      (PIO_ABCDSR_P30_0_Val << PIO_ABCDSR_P30_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function. Position  */
-#define PIO_ABCDSR_P30_0                      (PIO_ABCDSR_P30_0_Val << PIO_ABCDSR_P30_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function. Position  */
-#define PIO_ABCDSR_P30_1                      (PIO_ABCDSR_P30_1_Val << PIO_ABCDSR_P30_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function. Position  */
-#define PIO_ABCDSR_P30_1                      (PIO_ABCDSR_P30_1_Val << PIO_ABCDSR_P30_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function. Position  */
+#define   PIO_ABCDSR_P30_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function.  */
+#define   PIO_ABCDSR_P30_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function.  */
+#define PIO_ABCDSR_P30_0                      (PIO_ABCDSR_P30_0_Val << PIO_ABCDSR_P30_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function. Position  */
+#define PIO_ABCDSR_P30_1                      (PIO_ABCDSR_P30_1_Val << PIO_ABCDSR_P30_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function. Position  */
 #define PIO_ABCDSR_P31_Pos                    _UINT32_(31)                                         /* (PIO_ABCDSR) Peripheral Select Position */
 #define PIO_ABCDSR_P31_Msk                    (_UINT32_(0x1) << PIO_ABCDSR_P31_Pos)                /* (PIO_ABCDSR) Peripheral Select Mask */
 #define PIO_ABCDSR_P31(value)                 (PIO_ABCDSR_P31_Msk & (_UINT32_(value) << PIO_ABCDSR_P31_Pos)) /* Assigment of value for P31 in the PIO_ABCDSR register */
-#define   PIO_ABCDSR_P31_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function.  */
-#define   PIO_ABCDSR_P31_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function.  */
-#define   PIO_ABCDSR_P31_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function.  */
-#define   PIO_ABCDSR_P31_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function.  */
-#define PIO_ABCDSR_P31_0                      (PIO_ABCDSR_P31_0_Val << PIO_ABCDSR_P31_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A function. Position  */
-#define PIO_ABCDSR_P31_0                      (PIO_ABCDSR_P31_0_Val << PIO_ABCDSR_P31_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral C function. Position  */
-#define PIO_ABCDSR_P31_1                      (PIO_ABCDSR_P31_1_Val << PIO_ABCDSR_P31_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B function. Position  */
-#define PIO_ABCDSR_P31_1                      (PIO_ABCDSR_P31_1_Val << PIO_ABCDSR_P31_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral D function. Position  */
+#define   PIO_ABCDSR_P31_0_Val                _UINT32_(0x0)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function.  */
+#define   PIO_ABCDSR_P31_1_Val                _UINT32_(0x1)                                        /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function.  */
+#define PIO_ABCDSR_P31_0                      (PIO_ABCDSR_P31_0_Val << PIO_ABCDSR_P31_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral A or C function. Position  */
+#define PIO_ABCDSR_P31_1                      (PIO_ABCDSR_P31_1_Val << PIO_ABCDSR_P31_Pos)         /* (PIO_ABCDSR) Assigns the I/O line to the Peripheral B or D function. Position  */
 #define PIO_ABCDSR_Msk                        _UINT32_(0xFFFFFFFF)                                 /* (PIO_ABCDSR) Register Mask  */
 
 #define PIO_ABCDSR_P_Pos                      _UINT32_(0)                                          /* (PIO_ABCDSR Position) Peripheral Select */

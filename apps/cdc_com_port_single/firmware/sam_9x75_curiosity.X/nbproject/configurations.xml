@@ -1,9 +1,13 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <configurationDescriptor version="65">
   <logicalFolder name="root" displayName="root" projectFiles="true">
-    <logicalFolder name="HeaderFiles" displayName="Header Files" projectFiles="true">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
       <logicalFolder name="config" displayName="config" projectFiles="true">
-        <logicalFolder name="sam_9x75_curiosity" displayName="sam_9x75_curiosity" projectFiles="true">
+        <logicalFolder name="sam_9x75_curiosity"
+                       displayName="sam_9x75_curiosity"
+                       projectFiles="true">
           <logicalFolder name="bsp" displayName="bsp" projectFiles="true">
             <itemPath>../src/config/sam_9x75_curiosity/bsp/bsp.h</itemPath>
           </logicalFolder>
@@ -85,7 +89,9 @@
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="packs" displayName="packs" projectFiles="true">
-        <logicalFolder name="SAM9X75D2G_DFP" displayName="SAM9X75D2G_DFP" projectFiles="true">
+        <logicalFolder name="SAM9X75D2G_DFP"
+                       displayName="SAM9X75D2G_DFP"
+                       projectFiles="true">
           <logicalFolder name="component" displayName="component" projectFiles="true">
             <itemPath>../src/packs/SAM9X75D2G_DFP/component/dbgu.h</itemPath>
             <itemPath>../src/packs/SAM9X75D2G_DFP/component/sckc.h</itemPath>
@@ -135,6 +141,7 @@
             <itemPath>../src/packs/SAM9X75D2G_DFP/component/tc.h</itemPath>
             <itemPath>../src/packs/SAM9X75D2G_DFP/component/gpbr.h</itemPath>
             <itemPath>../src/packs/SAM9X75D2G_DFP/component/udphs.h</itemPath>
+            <itemPath>../src/packs/SAM9X75D2G_DFP/component/uhpfs.h</itemPath>
           </logicalFolder>
           <logicalFolder name="instance" displayName="instance" projectFiles="true">
             <itemPath>../src/packs/SAM9X75D2G_DFP/instance/i2smcc.h</itemPath>
@@ -204,6 +211,8 @@
             <itemPath>../src/packs/SAM9X75D2G_DFP/instance/pit64b0.h</itemPath>
             <itemPath>../src/packs/SAM9X75D2G_DFP/instance/pmerrloc.h</itemPath>
             <itemPath>../src/packs/SAM9X75D2G_DFP/instance/mpddrc.h</itemPath>
+            <itemPath>../src/packs/SAM9X75D2G_DFP/instance/uhphs_ohci.h</itemPath>
+            <itemPath>../src/packs/SAM9X75D2G_DFP/instance/uhphs.h</itemPath>
           </logicalFolder>
           <logicalFolder name="pio" displayName="pio" projectFiles="true">
             <itemPath>../src/packs/SAM9X75D2G_DFP/pio/sam9x75d2g.h</itemPath>
@@ -213,20 +222,30 @@
       </logicalFolder>
       <itemPath>../src/app.h</itemPath>
     </logicalFolder>
-    <logicalFolder name="ExternalFiles" displayName="Important Files" projectFiles="true">
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="true">
       <itemPath>Makefile</itemPath>
       <itemPath>cdc_com_port_single_sam_9x75_curiosity.mc3</itemPath>
     </logicalFolder>
-    <logicalFolder name="LinkerScript" displayName="Linker Files" projectFiles="true">
+    <logicalFolder name="LinkerScript"
+                   displayName="Linker Files"
+                   projectFiles="true">
       <logicalFolder name="config" displayName="config" projectFiles="true">
-        <logicalFolder name="sam_9x75_curiosity" displayName="sam_9x75_curiosity" projectFiles="true">
+        <logicalFolder name="sam_9x75_curiosity"
+                       displayName="sam_9x75_curiosity"
+                       projectFiles="true">
           <itemPath>../src/config/sam_9x75_curiosity/ddram.ld</itemPath>
         </logicalFolder>
       </logicalFolder>
     </logicalFolder>
-    <logicalFolder name="SourceFiles" displayName="Source Files" projectFiles="true">
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
       <logicalFolder name="config" displayName="config" projectFiles="true">
-        <logicalFolder name="sam_9x75_curiosity" displayName="sam_9x75_curiosity" projectFiles="true">
+        <logicalFolder name="sam_9x75_curiosity"
+                       displayName="sam_9x75_curiosity"
+                       projectFiles="true">
           <logicalFolder name="bsp" displayName="bsp" projectFiles="true">
             <itemPath>../src/config/sam_9x75_curiosity/bsp/bsp.c</itemPath>
           </logicalFolder>
@@ -291,21 +310,22 @@
       <toolsSet>
         <developmentServer>localhost</developmentServer>
         <targetDevice>SAM9X75D2G</targetDevice>
-        <targetHeader/>
-        <targetPluginBoard/>
-        <platformTool>j32</platformTool>
+        <targetHeader></targetHeader>
+        <targetPluginBoard></targetPluginBoard>
+        <platformTool>noID</platformTool>
         <languageToolchain>XC32</languageToolchain>
         <languageToolchainVersion>4.40</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="SAM9X7_DFP" vendor="Microchip" version="1.1.120"/>
+        <pack name="SAM9X7_DFP" vendor="Microchip" version="1.3.149"/>
       </packs>
       <ScriptingSettings>
         <ScriptingSetting key="boot.load_adr" value=""/>
         <ScriptingSetting key="boot.use" value="true"/>
         <ScriptingSetting key="boot.entry_adr" value=""/>
-        <ScriptingSetting key="boot.path" value="${ProjectDir}\..\..\..\..\deps\at91bootstrap_sam_9x75_curiosity_binaries\at91bootstrap.elf"/>
+        <ScriptingSetting key="boot.path"
+                          value="${ProjectDir}\..\..\..\..\deps\at91bootstrap_sam_9x75_curiosity_binaries\at91bootstrap.elf"/>
         <ScriptingSetting key="boot.prj" value=""/>
       </ScriptingSettings>
       <compileType>
@@ -318,7 +338,7 @@
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
           <parseOnProdLoad>false</parseOnProdLoad>
-          <alternateLoadableFile/>
+          <alternateLoadableFile></alternateLoadableFile>
         </loading>
         <subordinates>
         </subordinates>
@@ -326,7 +346,7 @@
       <makeCustomizationType>
         <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
         <makeUseCleanTarget>false</makeUseCleanTarget>
-        <makeCustomizationPreStep/>
+        <makeCustomizationPreStep></makeCustomizationPreStep>
         <makeCustomizationPostStepEnabled>true</makeCustomizationPostStepEnabled>
         <makeCustomizationPostStep>${MP_CC_DIR}/xc32-objcopy -O binary ${ImageDir}/${ConfName}.X.${IMAGE_TYPE}.elf ${ImageDir}/harmony.bin</makeCustomizationPostStep>
         <makeCustomizationPutChecksumInUserID>false</makeCustomizationPutChecksumInUserID>
@@ -336,12 +356,15 @@
       <C32>
         <property key="additional-warnings" value="true"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe"
+                  value="-Wundef -Wshadow -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wno-deprecated-declarations -Wredundant-decls -Wnested-externs -Wlong-long -Wunreachable-code -Wmissing-noreturn"/>
         <property key="enable-app-io" value="false"/>
         <property key="enable-omit-frame-pointer" value="false"/>
         <property key="enable-symbols" value="true"/>
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
-        <property key="extra-include-directories" value="../src;../src/config/sam_9x75_curiosity;../src/packs/SAM9X75D2G_DFP"/>
+        <property key="extra-include-directories"
+                  value="../src;../src/config/sam_9x75_curiosity;../src/packs/SAM9X75D2G_DFP"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -359,7 +382,7 @@
         <property key="use-cci" value="false"/>
         <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
-        <appendMe value="-Wundef -Wshadow -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wno-deprecated-declarations -Wredundant-decls -Wnested-externs -Wlong-long -Wunreachable-code -Wmissing-noreturn"/>
+        <appendMe value="-Waggregate-return -Wbad-function-cast -Wlong-long -Wmissing-noreturn -Wnested-externs -Wno-deprecated-declarations -Wpointer-arith -Wredundant-decls -Wshadow -Wstrict-prototypes -Wundef -Wunreachable-code -Wwrite-strings -marm"/>
       </C32>
       <C32-AR>
         <property key="additional-options-chop-files" value="false"/>
@@ -392,6 +415,7 @@
         <property key="additional-options-use-response-files" value="false"/>
         <property key="additional-options-write-sla" value="false"/>
         <property key="allocate-dinit" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="code-dinit" value="false"/>
         <property key="ebase-addr" value=""/>
         <property key="enable-check-sections" value="false"/>
@@ -431,6 +455,7 @@
       <C32CPP>
         <property key="additional-warnings" value="false"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="check-new" value="false"/>
         <property key="eh-specs" value="true"/>
         <property key="enable-app-io" value="false"/>
@@ -439,7 +464,8 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
-        <property key="extra-include-directories" value="../src;../src/config/sam_9x75_curiosity;../src/packs/SAM9X75D2G_DFP"/>
+        <property key="extra-include-directories"
+                  value="../src;../src/config/sam_9x75_curiosity;../src/packs/SAM9X75D2G_DFP"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -490,14 +516,17 @@
         <property key="memories.eeprom" value="true"/>
         <property key="memories.id" value="true"/>
         <property key="memories.instruction.ram" value="true"/>
-        <property key="memories.instruction.ram.ranges" value="${memories.instruction.ram.ranges.default}"/>
+        <property key="memories.instruction.ram.ranges"
+                  value="${memories.instruction.ram.ranges.default}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0x300000-0xeff00fff"/>
         <property key="programoptions.eraseb4program" value="false"/>
         <property key="programoptions.preservebootflash" value="false"/>
         <property key="programoptions.preserveprogrammemory" value="false"/>
-        <property key="programoptions.preserveprogrammemory.ranges" value="0x300000-0xeff00fff"/>
-        <property key="programoptions.preserveprogramrange.ranges" value="0x300000-0xeff00fff"/>
+        <property key="programoptions.preserveprogrammemory.ranges"
+                  value="0x300000-0xeff00fff"/>
+        <property key="programoptions.preserveprogramrange.ranges"
+                  value="0x300000-0xeff00fff"/>
         <property key="programoptions.resetafterprogram" value="true"/>
         <property key="script.has_reset" value="true"/>
         <property key="script.log_level" value="1"/>
@@ -512,6 +541,7 @@
         <property key="communication.speed" value="4"/>
         <property key="debugoptions.debug-startup" value="Use system settings"/>
         <property key="debugoptions.reset-behaviour" value="Use system settings"/>
+        <property key="event.recorder.debugger.behavior" value="Running"/>
         <property key="event.recorder.enabled" value="false"/>
         <property key="event.recorder.scvd.files" value=""/>
         <property key="jlink.override" value=""/>
@@ -522,13 +552,15 @@
         <property key="memories.eeprom" value="true"/>
         <property key="memories.id" value="true"/>
         <property key="memories.instruction.ram" value="true"/>
-        <property key="memories.instruction.ram.ranges" value="${memories.instruction.ram.ranges.default}"/>
+        <property key="memories.instruction.ram.ranges"
+                  value="${memories.instruction.ram.ranges.default}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0x300000-0xeff00fff"/>
         <property key="programoptions.eraseb4program" value="false"/>
         <property key="programoptions.preservebootflash" value="false"/>
         <property key="programoptions.preserveprogrammemory" value="false"/>
-        <property key="programoptions.preserveprogramrange.ranges" value="0x300000-0xeff00fff"/>
+        <property key="programoptions.preserveprogrammemory.ranges"
+                  value="0x300000-0xeff00fff"/>
         <property key="programoptions.resetafterprogram" value="true"/>
         <property key="script.has_reset" value="true"/>
         <property key="script.log_level" value="1"/>

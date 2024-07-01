@@ -1,26 +1,23 @@
 /*
  * Component description for UDPHS
  *
- * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
  *
- * Subject to your compliance with these terms, you may use Microchip software and any derivatives
- * exclusively with Microchip products. It is your responsibility to comply with third party license
- * terms applicable to your use of third party software (including open source software) that may
- * accompany Microchip software.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY,
- * APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND
- * FITNESS FOR A PARTICULAR PURPOSE.
+ *   http://www.apache.org/licenses/LICENSE-2.0
  *
- * IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, INCIDENTAL OR CONSEQUENTIAL
- * LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF
- * MICROCHIP HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO THE FULLEST EXTENT
- * ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT
- * EXCEED THE AMOUNT OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  *
  */
 
-/* file generated from device description version 2023-01-20T08:33:42Z */
+/* file generated from device description file (ATDF) version 2024-04-05T08:36:56Z */
 #ifndef _SAM9X7_UDPHS_COMPONENT_H_
 #define _SAM9X7_UDPHS_COMPONENT_H_
 
@@ -102,9 +99,9 @@
 #define UDPHS_DMACONTROL_BURST_LCK_Msk        (_UINT32_(0x1) << UDPHS_DMACONTROL_BURST_LCK_Pos)    /* (UDPHS_DMACONTROL) Burst Lock Enable Mask */
 #define UDPHS_DMACONTROL_BURST_LCK(value)     (UDPHS_DMACONTROL_BURST_LCK_Msk & (_UINT32_(value) << UDPHS_DMACONTROL_BURST_LCK_Pos)) /* Assigment of value for BURST_LCK in the UDPHS_DMACONTROL register */
 #define   UDPHS_DMACONTROL_BURST_LCK_0_Val    _UINT32_(0x0)                                        /* (UDPHS_DMACONTROL) The DMA never locks bus access.  */
-#define   UDPHS_DMACONTROL_BURST_LCK_1_Val    _UINT32_(0x1)                                        /* (UDPHS_DMACONTROL) USB packets AHB data bursts are locked for maximum optimization of the bus bandwidth usage and maximization of fly-by AHB burst duration.  */
+#define   UDPHS_DMACONTROL_BURST_LCK_1_Val    _UINT32_(0x1)                                        /* (UDPHS_DMACONTROL) USB packets system bus data bursts are locked for maximum optimization of the bus bandwidth usage and maximization of fly-by system bus burst duration.  */
 #define UDPHS_DMACONTROL_BURST_LCK_0          (UDPHS_DMACONTROL_BURST_LCK_0_Val << UDPHS_DMACONTROL_BURST_LCK_Pos) /* (UDPHS_DMACONTROL) The DMA never locks bus access. Position  */
-#define UDPHS_DMACONTROL_BURST_LCK_1          (UDPHS_DMACONTROL_BURST_LCK_1_Val << UDPHS_DMACONTROL_BURST_LCK_Pos) /* (UDPHS_DMACONTROL) USB packets AHB data bursts are locked for maximum optimization of the bus bandwidth usage and maximization of fly-by AHB burst duration. Position  */
+#define UDPHS_DMACONTROL_BURST_LCK_1          (UDPHS_DMACONTROL_BURST_LCK_1_Val << UDPHS_DMACONTROL_BURST_LCK_Pos) /* (UDPHS_DMACONTROL) USB packets system bus data bursts are locked for maximum optimization of the bus bandwidth usage and maximization of fly-by system bus burst duration. Position  */
 #define UDPHS_DMACONTROL_BUFF_LENGTH_Pos      _UINT32_(16)                                         /* (UDPHS_DMACONTROL) Buffer Byte Length (Write-only) Position */
 #define UDPHS_DMACONTROL_BUFF_LENGTH_Msk      (_UINT32_(0xFFFF) << UDPHS_DMACONTROL_BUFF_LENGTH_Pos) /* (UDPHS_DMACONTROL) Buffer Byte Length (Write-only) Mask */
 #define UDPHS_DMACONTROL_BUFF_LENGTH(value)   (UDPHS_DMACONTROL_BUFF_LENGTH_Msk & (_UINT32_(value) << UDPHS_DMACONTROL_BUFF_LENGTH_Pos)) /* Assigment of value for BUFF_LENGTH in the UDPHS_DMACONTROL register */
@@ -825,15 +822,9 @@
 #define UDPHS_EPTSTA_CURBK_CTLDIR_Msk         (_UINT32_(0x3) << UDPHS_EPTSTA_CURBK_CTLDIR_Pos)     /* (UDPHS_EPTSTA) Current Bank/Control Direction (cleared upon USB reset) Mask */
 #define UDPHS_EPTSTA_CURBK_CTLDIR(value)      (UDPHS_EPTSTA_CURBK_CTLDIR_Msk & (_UINT32_(value) << UDPHS_EPTSTA_CURBK_CTLDIR_Pos)) /* Assigment of value for CURBK_CTLDIR in the UDPHS_EPTSTA register */
 #define   UDPHS_EPTSTA_CURBK_CTLDIR_0_Val     _UINT32_(0x0)                                        /* (UDPHS_EPTSTA) A Control Write is requested by the Host.  */
-#define   UDPHS_EPTSTA_CURBK_CTLDIR_BANK0_Val _UINT32_(0x0)                                        /* (UDPHS_EPTSTA) Bank 0 (or single bank)  */
 #define   UDPHS_EPTSTA_CURBK_CTLDIR_1_Val     _UINT32_(0x1)                                        /* (UDPHS_EPTSTA) A Control Read is requested by the Host.  */
-#define   UDPHS_EPTSTA_CURBK_CTLDIR_BANK1_Val _UINT32_(0x1)                                        /* (UDPHS_EPTSTA) Bank 1  */
-#define   UDPHS_EPTSTA_CURBK_CTLDIR_BANK2_Val _UINT32_(0x2)                                        /* (UDPHS_EPTSTA) Bank 2  */
 #define UDPHS_EPTSTA_CURBK_CTLDIR_0           (UDPHS_EPTSTA_CURBK_CTLDIR_0_Val << UDPHS_EPTSTA_CURBK_CTLDIR_Pos) /* (UDPHS_EPTSTA) A Control Write is requested by the Host. Position  */
-#define UDPHS_EPTSTA_CURBK_CTLDIR_BANK0       (UDPHS_EPTSTA_CURBK_CTLDIR_BANK0_Val << UDPHS_EPTSTA_CURBK_CTLDIR_Pos) /* (UDPHS_EPTSTA) Bank 0 (or single bank) Position  */
 #define UDPHS_EPTSTA_CURBK_CTLDIR_1           (UDPHS_EPTSTA_CURBK_CTLDIR_1_Val << UDPHS_EPTSTA_CURBK_CTLDIR_Pos) /* (UDPHS_EPTSTA) A Control Read is requested by the Host. Position  */
-#define UDPHS_EPTSTA_CURBK_CTLDIR_BANK1       (UDPHS_EPTSTA_CURBK_CTLDIR_BANK1_Val << UDPHS_EPTSTA_CURBK_CTLDIR_Pos) /* (UDPHS_EPTSTA) Bank 1 Position  */
-#define UDPHS_EPTSTA_CURBK_CTLDIR_BANK2       (UDPHS_EPTSTA_CURBK_CTLDIR_BANK2_Val << UDPHS_EPTSTA_CURBK_CTLDIR_Pos) /* (UDPHS_EPTSTA) Bank 2 Position  */
 #define UDPHS_EPTSTA_BUSY_BANK_STA_Pos        _UINT32_(18)                                         /* (UDPHS_EPTSTA) Busy Bank Number (cleared upon USB reset) Position */
 #define UDPHS_EPTSTA_BUSY_BANK_STA_Msk        (_UINT32_(0x3) << UDPHS_EPTSTA_BUSY_BANK_STA_Pos)    /* (UDPHS_EPTSTA) Busy Bank Number (cleared upon USB reset) Mask */
 #define UDPHS_EPTSTA_BUSY_BANK_STA(value)     (UDPHS_EPTSTA_BUSY_BANK_STA_Msk & (_UINT32_(value) << UDPHS_EPTSTA_BUSY_BANK_STA_Pos)) /* Assigment of value for BUSY_BANK_STA in the UDPHS_EPTSTA register */
@@ -905,10 +896,10 @@
 #define UDPHS_CTRL_EN_UDPHS_Pos               _UINT32_(8)                                          /* (UDPHS_CTRL) UDPHS Enable Position */
 #define UDPHS_CTRL_EN_UDPHS_Msk               (_UINT32_(0x1) << UDPHS_CTRL_EN_UDPHS_Pos)           /* (UDPHS_CTRL) UDPHS Enable Mask */
 #define UDPHS_CTRL_EN_UDPHS(value)            (UDPHS_CTRL_EN_UDPHS_Msk & (_UINT32_(value) << UDPHS_CTRL_EN_UDPHS_Pos)) /* Assigment of value for EN_UDPHS in the UDPHS_CTRL register */
-#define   UDPHS_CTRL_EN_UDPHS_0_Val           _UINT32_(0x0)                                        /* (UDPHS_CTRL) UDPHS is disabled (read), or this bit disables and resets the UDPHS controller (write). Switch the host to UTMI.  */
-#define   UDPHS_CTRL_EN_UDPHS_1_Val           _UINT32_(0x1)                                        /* (UDPHS_CTRL) UDPHS is enabled (read), or this bit enables the UDPHS controller (write). Switch the host to UTMI.  */
-#define UDPHS_CTRL_EN_UDPHS_0                 (UDPHS_CTRL_EN_UDPHS_0_Val << UDPHS_CTRL_EN_UDPHS_Pos) /* (UDPHS_CTRL) UDPHS is disabled (read), or this bit disables and resets the UDPHS controller (write). Switch the host to UTMI. Position  */
-#define UDPHS_CTRL_EN_UDPHS_1                 (UDPHS_CTRL_EN_UDPHS_1_Val << UDPHS_CTRL_EN_UDPHS_Pos) /* (UDPHS_CTRL) UDPHS is enabled (read), or this bit enables the UDPHS controller (write). Switch the host to UTMI. Position  */
+#define   UDPHS_CTRL_EN_UDPHS_0_Val           _UINT32_(0x0)                                        /* (UDPHS_CTRL) UDPHS is disabled (read), or this bit disables and resets the UDPHS controller (write). Switch the UHPHS to UTMI.  */
+#define   UDPHS_CTRL_EN_UDPHS_1_Val           _UINT32_(0x1)                                        /* (UDPHS_CTRL) UDPHS is enabled (read), or this bit enables the UDPHS controller (write). Switch the UDPHS to UTMI.  */
+#define UDPHS_CTRL_EN_UDPHS_0                 (UDPHS_CTRL_EN_UDPHS_0_Val << UDPHS_CTRL_EN_UDPHS_Pos) /* (UDPHS_CTRL) UDPHS is disabled (read), or this bit disables and resets the UDPHS controller (write). Switch the UHPHS to UTMI. Position  */
+#define UDPHS_CTRL_EN_UDPHS_1                 (UDPHS_CTRL_EN_UDPHS_1_Val << UDPHS_CTRL_EN_UDPHS_Pos) /* (UDPHS_CTRL) UDPHS is enabled (read), or this bit enables the UDPHS controller (write). Switch the UDPHS to UTMI. Position  */
 #define UDPHS_CTRL_DETACH_Pos                 _UINT32_(9)                                          /* (UDPHS_CTRL) Detach Command Position */
 #define UDPHS_CTRL_DETACH_Msk                 (_UINT32_(0x1) << UDPHS_CTRL_DETACH_Pos)             /* (UDPHS_CTRL) Detach Command Mask */
 #define UDPHS_CTRL_DETACH(value)              (UDPHS_CTRL_DETACH_Msk & (_UINT32_(value) << UDPHS_CTRL_DETACH_Pos)) /* Assigment of value for DETACH in the UDPHS_CTRL register */
@@ -916,13 +907,13 @@
 #define   UDPHS_CTRL_DETACH_1_Val             _UINT32_(0x1)                                        /* (UDPHS_CTRL) UDPHS is detached, UTMI transceiver is suspended (read), or this bit simulates a detach on the UDPHS line and forces the UTMI transceiver into Suspend state (Suspend M = 0) (write).  */
 #define UDPHS_CTRL_DETACH_0                   (UDPHS_CTRL_DETACH_0_Val << UDPHS_CTRL_DETACH_Pos)   /* (UDPHS_CTRL) UDPHS is attached (read), or this bit pulls up the DP line (attach command) (write). Position  */
 #define UDPHS_CTRL_DETACH_1                   (UDPHS_CTRL_DETACH_1_Val << UDPHS_CTRL_DETACH_Pos)   /* (UDPHS_CTRL) UDPHS is detached, UTMI transceiver is suspended (read), or this bit simulates a detach on the UDPHS line and forces the UTMI transceiver into Suspend state (Suspend M = 0) (write). Position  */
-#define UDPHS_CTRL_REWAKEUP_Pos               _UINT32_(10)                                         /* (UDPHS_CTRL) Send Remote Wakeup (cleared upon USB reset) Position */
-#define UDPHS_CTRL_REWAKEUP_Msk               (_UINT32_(0x1) << UDPHS_CTRL_REWAKEUP_Pos)           /* (UDPHS_CTRL) Send Remote Wakeup (cleared upon USB reset) Mask */
+#define UDPHS_CTRL_REWAKEUP_Pos               _UINT32_(10)                                         /* (UDPHS_CTRL) Send Remote Wake-up (cleared upon USB reset) Position */
+#define UDPHS_CTRL_REWAKEUP_Msk               (_UINT32_(0x1) << UDPHS_CTRL_REWAKEUP_Pos)           /* (UDPHS_CTRL) Send Remote Wake-up (cleared upon USB reset) Mask */
 #define UDPHS_CTRL_REWAKEUP(value)            (UDPHS_CTRL_REWAKEUP_Msk & (_UINT32_(value) << UDPHS_CTRL_REWAKEUP_Pos)) /* Assigment of value for REWAKEUP in the UDPHS_CTRL register */
-#define   UDPHS_CTRL_REWAKEUP_0_Val           _UINT32_(0x0)                                        /* (UDPHS_CTRL) Remote Wakeup is disabled (read), or this bit has no effect (write).  */
-#define   UDPHS_CTRL_REWAKEUP_1_Val           _UINT32_(0x1)                                        /* (UDPHS_CTRL) Remote Wakeup is enabled (read), or this bit forces an external interrupt on the UDPHS controller for Remote Wakeup purposes.  */
-#define UDPHS_CTRL_REWAKEUP_0                 (UDPHS_CTRL_REWAKEUP_0_Val << UDPHS_CTRL_REWAKEUP_Pos) /* (UDPHS_CTRL) Remote Wakeup is disabled (read), or this bit has no effect (write). Position  */
-#define UDPHS_CTRL_REWAKEUP_1                 (UDPHS_CTRL_REWAKEUP_1_Val << UDPHS_CTRL_REWAKEUP_Pos) /* (UDPHS_CTRL) Remote Wakeup is enabled (read), or this bit forces an external interrupt on the UDPHS controller for Remote Wakeup purposes. Position  */
+#define   UDPHS_CTRL_REWAKEUP_0_Val           _UINT32_(0x0)                                        /* (UDPHS_CTRL) Remote Wake-up is disabled (read), or this bit has no effect (write).  */
+#define   UDPHS_CTRL_REWAKEUP_1_Val           _UINT32_(0x1)                                        /* (UDPHS_CTRL) Remote Wake-up is enabled (read), or this bit forces an external interrupt on the UDPHS controller for Remote Wake-up purposes.  */
+#define UDPHS_CTRL_REWAKEUP_0                 (UDPHS_CTRL_REWAKEUP_0_Val << UDPHS_CTRL_REWAKEUP_Pos) /* (UDPHS_CTRL) Remote Wake-up is disabled (read), or this bit has no effect (write). Position  */
+#define UDPHS_CTRL_REWAKEUP_1                 (UDPHS_CTRL_REWAKEUP_1_Val << UDPHS_CTRL_REWAKEUP_Pos) /* (UDPHS_CTRL) Remote Wake-up is enabled (read), or this bit forces an external interrupt on the UDPHS controller for Remote Wake-up purposes. Position  */
 #define UDPHS_CTRL_PULLD_DIS_Pos              _UINT32_(11)                                         /* (UDPHS_CTRL) Pulldown Disable (cleared upon USB reset) Position */
 #define UDPHS_CTRL_PULLD_DIS_Msk              (_UINT32_(0x1) << UDPHS_CTRL_PULLD_DIS_Pos)          /* (UDPHS_CTRL) Pulldown Disable (cleared upon USB reset) Mask */
 #define UDPHS_CTRL_PULLD_DIS(value)           (UDPHS_CTRL_PULLD_DIS_Msk & (_UINT32_(value) << UDPHS_CTRL_PULLD_DIS_Pos)) /* Assigment of value for PULLD_DIS in the UDPHS_CTRL register */
@@ -978,10 +969,10 @@
 #define UDPHS_IEN_WAKE_UP_Pos                 _UINT32_(5)                                          /* (UDPHS_IEN) Wake Up CPU Interrupt Enable (cleared upon USB reset) Position */
 #define UDPHS_IEN_WAKE_UP_Msk                 (_UINT32_(0x1) << UDPHS_IEN_WAKE_UP_Pos)             /* (UDPHS_IEN) Wake Up CPU Interrupt Enable (cleared upon USB reset) Mask */
 #define UDPHS_IEN_WAKE_UP(value)              (UDPHS_IEN_WAKE_UP_Msk & (_UINT32_(value) << UDPHS_IEN_WAKE_UP_Pos)) /* Assigment of value for WAKE_UP in the UDPHS_IEN register */
-#define   UDPHS_IEN_WAKE_UP_0_Val             _UINT32_(0x0)                                        /* (UDPHS_IEN) Disable Wakeup CPU Interrupt.  */
-#define   UDPHS_IEN_WAKE_UP_1_Val             _UINT32_(0x1)                                        /* (UDPHS_IEN) Enable Wakeup CPU Interrupt.  */
-#define UDPHS_IEN_WAKE_UP_0                   (UDPHS_IEN_WAKE_UP_0_Val << UDPHS_IEN_WAKE_UP_Pos)   /* (UDPHS_IEN) Disable Wakeup CPU Interrupt. Position  */
-#define UDPHS_IEN_WAKE_UP_1                   (UDPHS_IEN_WAKE_UP_1_Val << UDPHS_IEN_WAKE_UP_Pos)   /* (UDPHS_IEN) Enable Wakeup CPU Interrupt. Position  */
+#define   UDPHS_IEN_WAKE_UP_0_Val             _UINT32_(0x0)                                        /* (UDPHS_IEN) Disable Wake-up CPU Interrupt.  */
+#define   UDPHS_IEN_WAKE_UP_1_Val             _UINT32_(0x1)                                        /* (UDPHS_IEN) Enable Wake-up CPU Interrupt.  */
+#define UDPHS_IEN_WAKE_UP_0                   (UDPHS_IEN_WAKE_UP_0_Val << UDPHS_IEN_WAKE_UP_Pos)   /* (UDPHS_IEN) Disable Wake-up CPU Interrupt. Position  */
+#define UDPHS_IEN_WAKE_UP_1                   (UDPHS_IEN_WAKE_UP_1_Val << UDPHS_IEN_WAKE_UP_Pos)   /* (UDPHS_IEN) Enable Wake-up CPU Interrupt. Position  */
 #define UDPHS_IEN_ENDOFRSM_Pos                _UINT32_(6)                                          /* (UDPHS_IEN) End Of Resume Interrupt Enable (cleared upon USB reset) Position */
 #define UDPHS_IEN_ENDOFRSM_Msk                (_UINT32_(0x1) << UDPHS_IEN_ENDOFRSM_Pos)            /* (UDPHS_IEN) End Of Resume Interrupt Enable (cleared upon USB reset) Mask */
 #define UDPHS_IEN_ENDOFRSM(value)             (UDPHS_IEN_ENDOFRSM_Msk & (_UINT32_(value) << UDPHS_IEN_ENDOFRSM_Pos)) /* Assigment of value for ENDOFRSM in the UDPHS_IEN register */
@@ -1087,20 +1078,13 @@
 #define   UDPHS_IEN_DMA_6_1_Val               _UINT32_(0x1)                                        /* (UDPHS_IEN) Enable the interrupts for this channel.  */
 #define UDPHS_IEN_DMA_6_0                     (UDPHS_IEN_DMA_6_0_Val << UDPHS_IEN_DMA_6_Pos)       /* (UDPHS_IEN) Disable the interrupts for this channel. Position  */
 #define UDPHS_IEN_DMA_6_1                     (UDPHS_IEN_DMA_6_1_Val << UDPHS_IEN_DMA_6_Pos)       /* (UDPHS_IEN) Enable the interrupts for this channel. Position  */
-#define UDPHS_IEN_DMA_7_Pos                   _UINT32_(31)                                         /* (UDPHS_IEN) DMA Channel 7 Interrupt Enable (cleared upon USB reset) Position */
-#define UDPHS_IEN_DMA_7_Msk                   (_UINT32_(0x1) << UDPHS_IEN_DMA_7_Pos)               /* (UDPHS_IEN) DMA Channel 7 Interrupt Enable (cleared upon USB reset) Mask */
-#define UDPHS_IEN_DMA_7(value)                (UDPHS_IEN_DMA_7_Msk & (_UINT32_(value) << UDPHS_IEN_DMA_7_Pos)) /* Assigment of value for DMA_7 in the UDPHS_IEN register */
-#define   UDPHS_IEN_DMA_7_0_Val               _UINT32_(0x0)                                        /* (UDPHS_IEN) Disable the interrupts for this channel.  */
-#define   UDPHS_IEN_DMA_7_1_Val               _UINT32_(0x1)                                        /* (UDPHS_IEN) Enable the interrupts for this channel.  */
-#define UDPHS_IEN_DMA_7_0                     (UDPHS_IEN_DMA_7_0_Val << UDPHS_IEN_DMA_7_Pos)       /* (UDPHS_IEN) Disable the interrupts for this channel. Position  */
-#define UDPHS_IEN_DMA_7_1                     (UDPHS_IEN_DMA_7_1_Val << UDPHS_IEN_DMA_7_Pos)       /* (UDPHS_IEN) Enable the interrupts for this channel. Position  */
-#define UDPHS_IEN_Msk                         _UINT32_(0xFE007FFE)                                 /* (UDPHS_IEN) Register Mask  */
+#define UDPHS_IEN_Msk                         _UINT32_(0x7E007FFE)                                 /* (UDPHS_IEN) Register Mask  */
 
 #define UDPHS_IEN_EPT__Pos                    _UINT32_(8)                                          /* (UDPHS_IEN Position) Endpoint x Interrupt Enable (cleared upon USB reset) */
 #define UDPHS_IEN_EPT__Msk                    (_UINT32_(0x7F) << UDPHS_IEN_EPT__Pos)               /* (UDPHS_IEN Mask) EPT_ */
 #define UDPHS_IEN_EPT_(value)                 (UDPHS_IEN_EPT__Msk & (_UINT32_(value) << UDPHS_IEN_EPT__Pos)) 
-#define UDPHS_IEN_DMA__Pos                    _UINT32_(25)                                         /* (UDPHS_IEN Position) DMA Channel 7 Interrupt Enable (cleared upon USB reset) */
-#define UDPHS_IEN_DMA__Msk                    (_UINT32_(0x7F) << UDPHS_IEN_DMA__Pos)               /* (UDPHS_IEN Mask) DMA_ */
+#define UDPHS_IEN_DMA__Pos                    _UINT32_(25)                                         /* (UDPHS_IEN Position) DMA Channel 6 Interrupt Enable (cleared upon USB reset) */
+#define UDPHS_IEN_DMA__Msk                    (_UINT32_(0x3F) << UDPHS_IEN_DMA__Pos)               /* (UDPHS_IEN Mask) DMA_ */
 #define UDPHS_IEN_DMA_(value)                 (UDPHS_IEN_DMA__Msk & (_UINT32_(value) << UDPHS_IEN_DMA__Pos)) 
 
 /* -------- UDPHS_INTSTA : (UDPHS Offset: 0x14) ( R/ 32) UDPHS Interrupt Status Register -------- */
@@ -1124,16 +1108,16 @@
 #define UDPHS_INTSTA_MICRO_SOF_Msk            (_UINT32_(0x1) << UDPHS_INTSTA_MICRO_SOF_Pos)        /* (UDPHS_INTSTA) Micro Start Of Frame Interrupt Mask */
 #define UDPHS_INTSTA_MICRO_SOF(value)         (UDPHS_INTSTA_MICRO_SOF_Msk & (_UINT32_(value) << UDPHS_INTSTA_MICRO_SOF_Pos)) /* Assigment of value for MICRO_SOF in the UDPHS_INTSTA register */
 #define   UDPHS_INTSTA_MICRO_SOF_0_Val        _UINT32_(0x0)                                        /* (UDPHS_INTSTA) Cleared by setting the MICRO_SOF bit in UDPHS_CLRINT register.  */
-#define   UDPHS_INTSTA_MICRO_SOF_1_Val        _UINT32_(0x1)                                        /* (UDPHS_INTSTA) Set by hardware when an UDPHS micro start of frame PID (SOF) has been detected (every 125 us) or synthesized by the macro. This triggers a UDPHS interrupt when the MICRO_SOF bit is set in UDPHS_IEN. In case of detected SOF, the MICRO_FRAME_NUM field in UDPHS_FNUM register is incremented and the FRAME_NUMBER field does not change.  */
+#define   UDPHS_INTSTA_MICRO_SOF_1_Val        _UINT32_(0x1)                                        /* (UDPHS_INTSTA) Set by hardware when an UDPHS micro start of frame PID (SOF) has been detected (every 125 us) or synthesized by UDPHS. This triggers a UDPHS interrupt when the MICRO_SOF bit is set in UDPHS_IEN. In case of detected SOF, the MICRO_FRAME_NUM field in UDPHS_FNUM register is incremented and the FRAME_NUMBER field does not change.  */
 #define UDPHS_INTSTA_MICRO_SOF_0              (UDPHS_INTSTA_MICRO_SOF_0_Val << UDPHS_INTSTA_MICRO_SOF_Pos) /* (UDPHS_INTSTA) Cleared by setting the MICRO_SOF bit in UDPHS_CLRINT register. Position  */
-#define UDPHS_INTSTA_MICRO_SOF_1              (UDPHS_INTSTA_MICRO_SOF_1_Val << UDPHS_INTSTA_MICRO_SOF_Pos) /* (UDPHS_INTSTA) Set by hardware when an UDPHS micro start of frame PID (SOF) has been detected (every 125 us) or synthesized by the macro. This triggers a UDPHS interrupt when the MICRO_SOF bit is set in UDPHS_IEN. In case of detected SOF, the MICRO_FRAME_NUM field in UDPHS_FNUM register is incremented and the FRAME_NUMBER field does not change. Position  */
+#define UDPHS_INTSTA_MICRO_SOF_1              (UDPHS_INTSTA_MICRO_SOF_1_Val << UDPHS_INTSTA_MICRO_SOF_Pos) /* (UDPHS_INTSTA) Set by hardware when an UDPHS micro start of frame PID (SOF) has been detected (every 125 us) or synthesized by UDPHS. This triggers a UDPHS interrupt when the MICRO_SOF bit is set in UDPHS_IEN. In case of detected SOF, the MICRO_FRAME_NUM field in UDPHS_FNUM register is incremented and the FRAME_NUMBER field does not change. Position  */
 #define UDPHS_INTSTA_INT_SOF_Pos              _UINT32_(3)                                          /* (UDPHS_INTSTA) Start Of Frame Interrupt Position */
 #define UDPHS_INTSTA_INT_SOF_Msk              (_UINT32_(0x1) << UDPHS_INTSTA_INT_SOF_Pos)          /* (UDPHS_INTSTA) Start Of Frame Interrupt Mask */
 #define UDPHS_INTSTA_INT_SOF(value)           (UDPHS_INTSTA_INT_SOF_Msk & (_UINT32_(value) << UDPHS_INTSTA_INT_SOF_Pos)) /* Assigment of value for INT_SOF in the UDPHS_INTSTA register */
 #define   UDPHS_INTSTA_INT_SOF_0_Val          _UINT32_(0x0)                                        /* (UDPHS_INTSTA) Cleared by setting the INT_SOF bit in UDPHS_CLRINT.  */
-#define   UDPHS_INTSTA_INT_SOF_1_Val          _UINT32_(0x1)                                        /* (UDPHS_INTSTA) Set by hardware when an UDPHS Start Of Frame PID (SOF) has been detected (every 1 ms) or synthesized by the macro. This triggers a UDPHS interrupt when the INT_SOF bit is set in UDPHS_IEN register. In case of detected SOF, in High Speed mode, the MICRO_FRAME_NUMBER field is cleared in UDPHS_FNUM register and the FRAME_NUMBER field is updated.  */
+#define   UDPHS_INTSTA_INT_SOF_1_Val          _UINT32_(0x1)                                        /* (UDPHS_INTSTA) Set by hardware when an UDPHS Start Of Frame PID (SOF) has been detected (every 1 ms) or synthesized by UDPHS. This triggers a UDPHS interrupt when the INT_SOF bit is set in UDPHS_IEN register. In case of detected SOF, in High Speed mode, the MICRO_FRAME_NUMBER field is cleared in UDPHS_FNUM register and the FRAME_NUMBER field is updated.  */
 #define UDPHS_INTSTA_INT_SOF_0                (UDPHS_INTSTA_INT_SOF_0_Val << UDPHS_INTSTA_INT_SOF_Pos) /* (UDPHS_INTSTA) Cleared by setting the INT_SOF bit in UDPHS_CLRINT. Position  */
-#define UDPHS_INTSTA_INT_SOF_1                (UDPHS_INTSTA_INT_SOF_1_Val << UDPHS_INTSTA_INT_SOF_Pos) /* (UDPHS_INTSTA) Set by hardware when an UDPHS Start Of Frame PID (SOF) has been detected (every 1 ms) or synthesized by the macro. This triggers a UDPHS interrupt when the INT_SOF bit is set in UDPHS_IEN register. In case of detected SOF, in High Speed mode, the MICRO_FRAME_NUMBER field is cleared in UDPHS_FNUM register and the FRAME_NUMBER field is updated. Position  */
+#define UDPHS_INTSTA_INT_SOF_1                (UDPHS_INTSTA_INT_SOF_1_Val << UDPHS_INTSTA_INT_SOF_Pos) /* (UDPHS_INTSTA) Set by hardware when an UDPHS Start Of Frame PID (SOF) has been detected (every 1 ms) or synthesized by UDPHS. This triggers a UDPHS interrupt when the INT_SOF bit is set in UDPHS_IEN register. In case of detected SOF, in High Speed mode, the MICRO_FRAME_NUMBER field is cleared in UDPHS_FNUM register and the FRAME_NUMBER field is updated. Position  */
 #define UDPHS_INTSTA_ENDRESET_Pos             _UINT32_(4)                                          /* (UDPHS_INTSTA) End Of Reset Interrupt Position */
 #define UDPHS_INTSTA_ENDRESET_Msk             (_UINT32_(0x1) << UDPHS_INTSTA_ENDRESET_Pos)         /* (UDPHS_INTSTA) End Of Reset Interrupt Mask */
 #define UDPHS_INTSTA_ENDRESET(value)          (UDPHS_INTSTA_ENDRESET_Msk & (_UINT32_(value) << UDPHS_INTSTA_ENDRESET_Pos)) /* Assigment of value for ENDRESET in the UDPHS_INTSTA register */
@@ -1253,20 +1237,13 @@
 #define   UDPHS_INTSTA_DMA_6_1_Val            _UINT32_(0x1)                                        /* (UDPHS_INTSTA) Set by hardware when an interrupt is triggered by the DMA Channelx and this endpoint interrupt is enabled by the DMA_x bit in UDPHS_IEN.  */
 #define UDPHS_INTSTA_DMA_6_0                  (UDPHS_INTSTA_DMA_6_0_Val << UDPHS_INTSTA_DMA_6_Pos) /* (UDPHS_INTSTA) Reset when the UDPHS_DMASTATUSx interrupt source is cleared. Position  */
 #define UDPHS_INTSTA_DMA_6_1                  (UDPHS_INTSTA_DMA_6_1_Val << UDPHS_INTSTA_DMA_6_Pos) /* (UDPHS_INTSTA) Set by hardware when an interrupt is triggered by the DMA Channelx and this endpoint interrupt is enabled by the DMA_x bit in UDPHS_IEN. Position  */
-#define UDPHS_INTSTA_DMA_7_Pos                _UINT32_(31)                                         /* (UDPHS_INTSTA) DMA Channel 7 Interrupt Position */
-#define UDPHS_INTSTA_DMA_7_Msk                (_UINT32_(0x1) << UDPHS_INTSTA_DMA_7_Pos)            /* (UDPHS_INTSTA) DMA Channel 7 Interrupt Mask */
-#define UDPHS_INTSTA_DMA_7(value)             (UDPHS_INTSTA_DMA_7_Msk & (_UINT32_(value) << UDPHS_INTSTA_DMA_7_Pos)) /* Assigment of value for DMA_7 in the UDPHS_INTSTA register */
-#define   UDPHS_INTSTA_DMA_7_0_Val            _UINT32_(0x0)                                        /* (UDPHS_INTSTA) Reset when the UDPHS_DMASTATUSx interrupt source is cleared.  */
-#define   UDPHS_INTSTA_DMA_7_1_Val            _UINT32_(0x1)                                        /* (UDPHS_INTSTA) Set by hardware when an interrupt is triggered by the DMA Channelx and this endpoint interrupt is enabled by the DMA_x bit in UDPHS_IEN.  */
-#define UDPHS_INTSTA_DMA_7_0                  (UDPHS_INTSTA_DMA_7_0_Val << UDPHS_INTSTA_DMA_7_Pos) /* (UDPHS_INTSTA) Reset when the UDPHS_DMASTATUSx interrupt source is cleared. Position  */
-#define UDPHS_INTSTA_DMA_7_1                  (UDPHS_INTSTA_DMA_7_1_Val << UDPHS_INTSTA_DMA_7_Pos) /* (UDPHS_INTSTA) Set by hardware when an interrupt is triggered by the DMA Channelx and this endpoint interrupt is enabled by the DMA_x bit in UDPHS_IEN. Position  */
-#define UDPHS_INTSTA_Msk                      _UINT32_(0xFE007FFF)                                 /* (UDPHS_INTSTA) Register Mask  */
+#define UDPHS_INTSTA_Msk                      _UINT32_(0x7E007FFF)                                 /* (UDPHS_INTSTA) Register Mask  */
 
 #define UDPHS_INTSTA_EPT__Pos                 _UINT32_(8)                                          /* (UDPHS_INTSTA Position) Endpoint x Interrupt (cleared upon USB reset) */
 #define UDPHS_INTSTA_EPT__Msk                 (_UINT32_(0x7F) << UDPHS_INTSTA_EPT__Pos)            /* (UDPHS_INTSTA Mask) EPT_ */
 #define UDPHS_INTSTA_EPT_(value)              (UDPHS_INTSTA_EPT__Msk & (_UINT32_(value) << UDPHS_INTSTA_EPT__Pos)) 
-#define UDPHS_INTSTA_DMA__Pos                 _UINT32_(25)                                         /* (UDPHS_INTSTA Position) DMA Channel 7 Interrupt */
-#define UDPHS_INTSTA_DMA__Msk                 (_UINT32_(0x7F) << UDPHS_INTSTA_DMA__Pos)            /* (UDPHS_INTSTA Mask) DMA_ */
+#define UDPHS_INTSTA_DMA__Pos                 _UINT32_(25)                                         /* (UDPHS_INTSTA Position) DMA Channel 6 Interrupt */
+#define UDPHS_INTSTA_DMA__Msk                 (_UINT32_(0x3F) << UDPHS_INTSTA_DMA__Pos)            /* (UDPHS_INTSTA Mask) DMA_ */
 #define UDPHS_INTSTA_DMA_(value)              (UDPHS_INTSTA_DMA__Msk & (_UINT32_(value) << UDPHS_INTSTA_DMA__Pos)) 
 
 /* -------- UDPHS_CLRINT : (UDPHS Offset: 0x18) ( /W 32) UDPHS Clear Interrupt Register -------- */
@@ -1378,63 +1355,18 @@
 #define UDPHS_EPTRST_EPT__Msk                 (_UINT32_(0x7F) << UDPHS_EPTRST_EPT__Pos)            /* (UDPHS_EPTRST Mask) EPT_ */
 #define UDPHS_EPTRST_EPT_(value)              (UDPHS_EPTRST_EPT__Msk & (_UINT32_(value) << UDPHS_EPTRST_EPT__Pos)) 
 
-/* -------- UDPHS_TSTSOFCNT : (UDPHS Offset: 0xD0) (R/W 32) UDPHS Test SOF Counter Register -------- */
-#define UDPHS_TSTSOFCNT_RESETVALUE            _UINT32_(0x00)                                       /*  (UDPHS_TSTSOFCNT) UDPHS Test SOF Counter Register  Reset Value */
-
-#define UDPHS_TSTSOFCNT_SOFCNTMAX_Pos         _UINT32_(0)                                          /* (UDPHS_TSTSOFCNT) SOF Counter Max Value Position */
-#define UDPHS_TSTSOFCNT_SOFCNTMAX_Msk         (_UINT32_(0x7F) << UDPHS_TSTSOFCNT_SOFCNTMAX_Pos)    /* (UDPHS_TSTSOFCNT) SOF Counter Max Value Mask */
-#define UDPHS_TSTSOFCNT_SOFCNTMAX(value)      (UDPHS_TSTSOFCNT_SOFCNTMAX_Msk & (_UINT32_(value) << UDPHS_TSTSOFCNT_SOFCNTMAX_Pos)) /* Assigment of value for SOFCNTMAX in the UDPHS_TSTSOFCNT register */
-#define UDPHS_TSTSOFCNT_SOFCTLOAD_Pos         _UINT32_(7)                                          /* (UDPHS_TSTSOFCNT) SOF Counter Load Position */
-#define UDPHS_TSTSOFCNT_SOFCTLOAD_Msk         (_UINT32_(0x1) << UDPHS_TSTSOFCNT_SOFCTLOAD_Pos)     /* (UDPHS_TSTSOFCNT) SOF Counter Load Mask */
-#define UDPHS_TSTSOFCNT_SOFCTLOAD(value)      (UDPHS_TSTSOFCNT_SOFCTLOAD_Msk & (_UINT32_(value) << UDPHS_TSTSOFCNT_SOFCTLOAD_Pos)) /* Assigment of value for SOFCTLOAD in the UDPHS_TSTSOFCNT register */
-#define UDPHS_TSTSOFCNT_Msk                   _UINT32_(0x000000FF)                                 /* (UDPHS_TSTSOFCNT) Register Mask  */
-
-
-/* -------- UDPHS_TSTCNTA : (UDPHS Offset: 0xD4) (R/W 32) UDPHS Test A Counter Register -------- */
-#define UDPHS_TSTCNTA_RESETVALUE              _UINT32_(0x00)                                       /*  (UDPHS_TSTCNTA) UDPHS Test A Counter Register  Reset Value */
-
-#define UDPHS_TSTCNTA_CNTAMAX_Pos             _UINT32_(0)                                          /* (UDPHS_TSTCNTA) A Counter Max Value Position */
-#define UDPHS_TSTCNTA_CNTAMAX_Msk             (_UINT32_(0x7FFF) << UDPHS_TSTCNTA_CNTAMAX_Pos)      /* (UDPHS_TSTCNTA) A Counter Max Value Mask */
-#define UDPHS_TSTCNTA_CNTAMAX(value)          (UDPHS_TSTCNTA_CNTAMAX_Msk & (_UINT32_(value) << UDPHS_TSTCNTA_CNTAMAX_Pos)) /* Assigment of value for CNTAMAX in the UDPHS_TSTCNTA register */
-#define UDPHS_TSTCNTA_CNTALOAD_Pos            _UINT32_(15)                                         /* (UDPHS_TSTCNTA) A Counter Load Position */
-#define UDPHS_TSTCNTA_CNTALOAD_Msk            (_UINT32_(0x1) << UDPHS_TSTCNTA_CNTALOAD_Pos)        /* (UDPHS_TSTCNTA) A Counter Load Mask */
-#define UDPHS_TSTCNTA_CNTALOAD(value)         (UDPHS_TSTCNTA_CNTALOAD_Msk & (_UINT32_(value) << UDPHS_TSTCNTA_CNTALOAD_Pos)) /* Assigment of value for CNTALOAD in the UDPHS_TSTCNTA register */
-#define UDPHS_TSTCNTA_Msk                     _UINT32_(0x0000FFFF)                                 /* (UDPHS_TSTCNTA) Register Mask  */
-
-
-/* -------- UDPHS_TSTCNTB : (UDPHS Offset: 0xD8) (R/W 32) UDPHS Test B Counter Register -------- */
-#define UDPHS_TSTCNTB_RESETVALUE              _UINT32_(0x00)                                       /*  (UDPHS_TSTCNTB) UDPHS Test B Counter Register  Reset Value */
-
-#define UDPHS_TSTCNTB_CNTBMAX_Pos             _UINT32_(0)                                          /* (UDPHS_TSTCNTB) B Counter Max Value Position */
-#define UDPHS_TSTCNTB_CNTBMAX_Msk             (_UINT32_(0x7FFF) << UDPHS_TSTCNTB_CNTBMAX_Pos)      /* (UDPHS_TSTCNTB) B Counter Max Value Mask */
-#define UDPHS_TSTCNTB_CNTBMAX(value)          (UDPHS_TSTCNTB_CNTBMAX_Msk & (_UINT32_(value) << UDPHS_TSTCNTB_CNTBMAX_Pos)) /* Assigment of value for CNTBMAX in the UDPHS_TSTCNTB register */
-#define UDPHS_TSTCNTB_CNTBLOAD_Pos            _UINT32_(15)                                         /* (UDPHS_TSTCNTB) B Counter Load Position */
-#define UDPHS_TSTCNTB_CNTBLOAD_Msk            (_UINT32_(0x1) << UDPHS_TSTCNTB_CNTBLOAD_Pos)        /* (UDPHS_TSTCNTB) B Counter Load Mask */
-#define UDPHS_TSTCNTB_CNTBLOAD(value)         (UDPHS_TSTCNTB_CNTBLOAD_Msk & (_UINT32_(value) << UDPHS_TSTCNTB_CNTBLOAD_Pos)) /* Assigment of value for CNTBLOAD in the UDPHS_TSTCNTB register */
-#define UDPHS_TSTCNTB_Msk                     _UINT32_(0x0000FFFF)                                 /* (UDPHS_TSTCNTB) Register Mask  */
-
-
-/* -------- UDPHS_TSTMODEREG : (UDPHS Offset: 0xDC) (R/W 32) UDPHS Test Mode Register -------- */
-#define UDPHS_TSTMODEREG_RESETVALUE           _UINT32_(0x00)                                       /*  (UDPHS_TSTMODEREG) UDPHS Test Mode Register  Reset Value */
-
-#define UDPHS_TSTMODEREG_TSTMODE_Pos          _UINT32_(1)                                          /* (UDPHS_TSTMODEREG) UDPHS Core TestModeReg Position */
-#define UDPHS_TSTMODEREG_TSTMODE_Msk          (_UINT32_(0x1F) << UDPHS_TSTMODEREG_TSTMODE_Pos)     /* (UDPHS_TSTMODEREG) UDPHS Core TestModeReg Mask */
-#define UDPHS_TSTMODEREG_TSTMODE(value)       (UDPHS_TSTMODEREG_TSTMODE_Msk & (_UINT32_(value) << UDPHS_TSTMODEREG_TSTMODE_Pos)) /* Assigment of value for TSTMODE in the UDPHS_TSTMODEREG register */
-#define UDPHS_TSTMODEREG_Msk                  _UINT32_(0x0000003E)                                 /* (UDPHS_TSTMODEREG) Register Mask  */
-
-
 /* -------- UDPHS_TST : (UDPHS Offset: 0xE0) (R/W 32) UDPHS Test Register -------- */
 #define UDPHS_TST_RESETVALUE                  _UINT32_(0x00)                                       /*  (UDPHS_TST) UDPHS Test Register  Reset Value */
 
 #define UDPHS_TST_SPEED_CFG_Pos               _UINT32_(0)                                          /* (UDPHS_TST) Speed Configuration Position */
 #define UDPHS_TST_SPEED_CFG_Msk               (_UINT32_(0x3) << UDPHS_TST_SPEED_CFG_Pos)           /* (UDPHS_TST) Speed Configuration Mask */
 #define UDPHS_TST_SPEED_CFG(value)            (UDPHS_TST_SPEED_CFG_Msk & (_UINT32_(value) << UDPHS_TST_SPEED_CFG_Pos)) /* Assigment of value for SPEED_CFG in the UDPHS_TST register */
-#define   UDPHS_TST_SPEED_CFG_NORMAL_Val      _UINT32_(0x0)                                        /* (UDPHS_TST) Normal mode: The macro is in Full Speed mode, ready to make a High Speed identification, if the host supports it and then to automatically switch to High Speed mode.  */
+#define   UDPHS_TST_SPEED_CFG_NORMAL_Val      _UINT32_(0x0)                                        /* (UDPHS_TST) Normal mode: UDPHS is in Full Speed mode, ready to make a High Speed identification, if the host supports it and then to automatically switch to High Speed mode.  */
 #define   UDPHS_TST_SPEED_CFG_HIGH_SPEED_Val  _UINT32_(0x2)                                        /* (UDPHS_TST) Force High Speed: Set this value to force the hardware to work in High Speed mode. Only for debug or test purpose.  */
-#define   UDPHS_TST_SPEED_CFG_FULL_SPEED_Val  _UINT32_(0x3)                                        /* (UDPHS_TST) Force Full Speed: Set this value to force the hardware to work only in Full Speed mode. In this configuration, the macro will not respond to a High Speed reset handshake.  */
-#define UDPHS_TST_SPEED_CFG_NORMAL            (UDPHS_TST_SPEED_CFG_NORMAL_Val << UDPHS_TST_SPEED_CFG_Pos) /* (UDPHS_TST) Normal mode: The macro is in Full Speed mode, ready to make a High Speed identification, if the host supports it and then to automatically switch to High Speed mode. Position  */
+#define   UDPHS_TST_SPEED_CFG_FULL_SPEED_Val  _UINT32_(0x3)                                        /* (UDPHS_TST) Force Full Speed: Set this value to force the hardware to work only in Full Speed mode. In this configuration, UDPHS will not respond to a High Speed reset handshake.  */
+#define UDPHS_TST_SPEED_CFG_NORMAL            (UDPHS_TST_SPEED_CFG_NORMAL_Val << UDPHS_TST_SPEED_CFG_Pos) /* (UDPHS_TST) Normal mode: UDPHS is in Full Speed mode, ready to make a High Speed identification, if the host supports it and then to automatically switch to High Speed mode. Position  */
 #define UDPHS_TST_SPEED_CFG_HIGH_SPEED        (UDPHS_TST_SPEED_CFG_HIGH_SPEED_Val << UDPHS_TST_SPEED_CFG_Pos) /* (UDPHS_TST) Force High Speed: Set this value to force the hardware to work in High Speed mode. Only for debug or test purpose. Position  */
-#define UDPHS_TST_SPEED_CFG_FULL_SPEED        (UDPHS_TST_SPEED_CFG_FULL_SPEED_Val << UDPHS_TST_SPEED_CFG_Pos) /* (UDPHS_TST) Force Full Speed: Set this value to force the hardware to work only in Full Speed mode. In this configuration, the macro will not respond to a High Speed reset handshake. Position  */
+#define UDPHS_TST_SPEED_CFG_FULL_SPEED        (UDPHS_TST_SPEED_CFG_FULL_SPEED_Val << UDPHS_TST_SPEED_CFG_Pos) /* (UDPHS_TST) Force Full Speed: Set this value to force the hardware to work only in Full Speed mode. In this configuration, UDPHS will not respond to a High Speed reset handshake. Position  */
 #define UDPHS_TST_TST_J_Pos                   _UINT32_(2)                                          /* (UDPHS_TST) Test J Mode Position */
 #define UDPHS_TST_TST_J_Msk                   (_UINT32_(0x1) << UDPHS_TST_TST_J_Pos)               /* (UDPHS_TST) Test J Mode Mask */
 #define UDPHS_TST_TST_J(value)                (UDPHS_TST_TST_J_Msk & (_UINT32_(value) << UDPHS_TST_TST_J_Pos)) /* Assigment of value for TST_J in the UDPHS_TST register */
@@ -1487,10 +1419,6 @@
 #define UDPHS_INTSTA_REG_OFST          _UINT32_(0x14)      /* (UDPHS_INTSTA) UDPHS Interrupt Status Register Offset */
 #define UDPHS_CLRINT_REG_OFST          _UINT32_(0x18)      /* (UDPHS_CLRINT) UDPHS Clear Interrupt Register Offset */
 #define UDPHS_EPTRST_REG_OFST          _UINT32_(0x1C)      /* (UDPHS_EPTRST) UDPHS Endpoints Reset Register Offset */
-#define UDPHS_TSTSOFCNT_REG_OFST       _UINT32_(0xD0)      /* (UDPHS_TSTSOFCNT) UDPHS Test SOF Counter Register Offset */
-#define UDPHS_TSTCNTA_REG_OFST         _UINT32_(0xD4)      /* (UDPHS_TSTCNTA) UDPHS Test A Counter Register Offset */
-#define UDPHS_TSTCNTB_REG_OFST         _UINT32_(0xD8)      /* (UDPHS_TSTCNTB) UDPHS Test B Counter Register Offset */
-#define UDPHS_TSTMODEREG_REG_OFST      _UINT32_(0xDC)      /* (UDPHS_TSTMODEREG) UDPHS Test Mode Register Offset */
 #define UDPHS_TST_REG_OFST             _UINT32_(0xE0)      /* (UDPHS_TST) UDPHS Test Register Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
@@ -1518,7 +1446,7 @@ typedef struct
 
 #define UDPHS_EPT_NUMBER 7
 
-#define UDPHS_DMA_NUMBER 7
+#define UDPHS_DMA_NUMBER 6
 
 /** \brief UDPHS register API structure */
 typedef struct
@@ -1530,16 +1458,12 @@ typedef struct
   __I   uint32_t                       UDPHS_INTSTA;       /**< Offset: 0x14 (R/   32) UDPHS Interrupt Status Register */
   __O   uint32_t                       UDPHS_CLRINT;       /**< Offset: 0x18 ( /W  32) UDPHS Clear Interrupt Register */
   __O   uint32_t                       UDPHS_EPTRST;       /**< Offset: 0x1C ( /W  32) UDPHS Endpoints Reset Register */
-  __I   uint8_t                        Reserved2[0xB0];
-  __IO  uint32_t                       UDPHS_TSTSOFCNT;    /**< Offset: 0xD0 (R/W  32) UDPHS Test SOF Counter Register */
-  __IO  uint32_t                       UDPHS_TSTCNTA;      /**< Offset: 0xD4 (R/W  32) UDPHS Test A Counter Register */
-  __IO  uint32_t                       UDPHS_TSTCNTB;      /**< Offset: 0xD8 (R/W  32) UDPHS Test B Counter Register */
-  __IO  uint32_t                       UDPHS_TSTMODEREG;   /**< Offset: 0xDC (R/W  32) UDPHS Test Mode Register */
+  __I   uint8_t                        Reserved2[0xC0];
   __IO  uint32_t                       UDPHS_TST;          /**< Offset: 0xE0 (R/W  32) UDPHS Test Register */
   __I   uint8_t                        Reserved3[0x1C];
         udphs_ept_registers_t          UDPHS_EPT[UDPHS_EPT_NUMBER]; /**< Offset: 0x100  */
-  __I   uint8_t                        Reserved4[0x120];
-        udphs_dma_registers_t          UDPHS_DMA[UDPHS_DMA_NUMBER]; /**< Offset: 0x300  */
+  __I   uint8_t                        Reserved4[0x130];
+        udphs_dma_registers_t          UDPHS_DMA[UDPHS_DMA_NUMBER]; /**< Offset: 0x310  */
 } udphs_registers_t;
 
 

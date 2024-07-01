@@ -63,7 +63,10 @@
 #define sam_9x75_curiosity
 #define BSP_NAME             "sam_9x75_curiosity"
 
-
+/*** LED Macros for LED_RED ***/
+#define LED_RED_Toggle() (PIOC_REGS->PIO_ODSR ^= (1UL<<14))
+#define LED_RED_On() (PIOC_REGS->PIO_SODR = (1UL<<14))
+#define LED_RED_Off() (PIOC_REGS->PIO_CODR = (1UL<<14))
 
 
 

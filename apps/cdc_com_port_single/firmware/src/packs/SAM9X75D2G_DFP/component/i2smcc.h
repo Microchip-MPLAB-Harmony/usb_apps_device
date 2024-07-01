@@ -1,26 +1,23 @@
 /*
  * Component description for I2SMCC
  *
- * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
  *
- * Subject to your compliance with these terms, you may use Microchip software and any derivatives
- * exclusively with Microchip products. It is your responsibility to comply with third party license
- * terms applicable to your use of third party software (including open source software) that may
- * accompany Microchip software.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY,
- * APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND
- * FITNESS FOR A PARTICULAR PURPOSE.
+ *   http://www.apache.org/licenses/LICENSE-2.0
  *
- * IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, INCIDENTAL OR CONSEQUENTIAL
- * LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF
- * MICROCHIP HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO THE FULLEST EXTENT
- * ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT
- * EXCEED THE AMOUNT OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  *
  */
 
-/* file generated from device description version 2023-01-20T08:33:42Z */
+/* file generated from device description file (ATDF) version 2024-04-05T08:36:56Z */
 #ifndef _SAM9X7_I2SMCC_COMPONENT_H_
 #define _SAM9X7_I2SMCC_COMPONENT_H_
 
@@ -200,14 +197,14 @@
 #define I2SMCC_MRB_DMACHUNK_Pos               _UINT32_(8)                                          /* (I2SMCC_MRB) DMA Chunk Size Position */
 #define I2SMCC_MRB_DMACHUNK_Msk               (_UINT32_(0x3) << I2SMCC_MRB_DMACHUNK_Pos)           /* (I2SMCC_MRB) DMA Chunk Size Mask */
 #define I2SMCC_MRB_DMACHUNK(value)            (I2SMCC_MRB_DMACHUNK_Msk & (_UINT32_(value) << I2SMCC_MRB_DMACHUNK_Pos)) /* Assigment of value for DMACHUNK in the I2SMCC_MRB register */
-#define   I2SMCC_MRB_DMACHUNK_1_WORD_Val      _UINT32_(0x0)                                        /* (I2SMCC_MRB) Each DMA transfer contains 1 word.  */
-#define   I2SMCC_MRB_DMACHUNK_2_WORDS_Val     _UINT32_(0x1)                                        /* (I2SMCC_MRB) Each DMA transfer contains 2 words.  */
-#define   I2SMCC_MRB_DMACHUNK_4_WORDS_Val     _UINT32_(0x2)                                        /* (I2SMCC_MRB) Each DMA transfer contains 4 words.  */
-#define   I2SMCC_MRB_DMACHUNK_8_WORDS_Val     _UINT32_(0x3)                                        /* (I2SMCC_MRB) Each DMA transfer contains 8 words.  */
-#define I2SMCC_MRB_DMACHUNK_1_WORD            (I2SMCC_MRB_DMACHUNK_1_WORD_Val << I2SMCC_MRB_DMACHUNK_Pos) /* (I2SMCC_MRB) Each DMA transfer contains 1 word. Position  */
-#define I2SMCC_MRB_DMACHUNK_2_WORDS           (I2SMCC_MRB_DMACHUNK_2_WORDS_Val << I2SMCC_MRB_DMACHUNK_Pos) /* (I2SMCC_MRB) Each DMA transfer contains 2 words. Position  */
-#define I2SMCC_MRB_DMACHUNK_4_WORDS           (I2SMCC_MRB_DMACHUNK_4_WORDS_Val << I2SMCC_MRB_DMACHUNK_Pos) /* (I2SMCC_MRB) Each DMA transfer contains 4 words. Position  */
-#define I2SMCC_MRB_DMACHUNK_8_WORDS           (I2SMCC_MRB_DMACHUNK_8_WORDS_Val << I2SMCC_MRB_DMACHUNK_Pos) /* (I2SMCC_MRB) Each DMA transfer contains 8 words. Position  */
+#define   I2SMCC_MRB_DMACHUNK_1_WORD_Val      _UINT32_(0x0)                                        /* (I2SMCC_MRB) A DMA transfer request is issued when at least 1 word is empty in the FIFO.  */
+#define   I2SMCC_MRB_DMACHUNK_2_WORDS_Val     _UINT32_(0x1)                                        /* (I2SMCC_MRB) A DMA transfer request is issued when at least 2 words are empty in the FIFO.  */
+#define   I2SMCC_MRB_DMACHUNK_4_WORDS_Val     _UINT32_(0x2)                                        /* (I2SMCC_MRB) A DMA transfer request is issued when at least 4 words are empty in the FIFO. Limitations exist when operating in Mono or TDM. See Table 7-7 "TX DMA Chunk Configurations" and Table 7-8 "RX DMA Chunk Configurations".  */
+#define   I2SMCC_MRB_DMACHUNK_8_WORDS_Val     _UINT32_(0x3)                                        /* (I2SMCC_MRB) A DMA transfer request is issued when at least 8 words are empty in the FIFO. Limitations exist when operating in Mono or TDM. See Table 7-7 "TX DMA Chunk Configurations" and Table 7-8 "RX DMA Chunk Configurations".  */
+#define I2SMCC_MRB_DMACHUNK_1_WORD            (I2SMCC_MRB_DMACHUNK_1_WORD_Val << I2SMCC_MRB_DMACHUNK_Pos) /* (I2SMCC_MRB) A DMA transfer request is issued when at least 1 word is empty in the FIFO. Position  */
+#define I2SMCC_MRB_DMACHUNK_2_WORDS           (I2SMCC_MRB_DMACHUNK_2_WORDS_Val << I2SMCC_MRB_DMACHUNK_Pos) /* (I2SMCC_MRB) A DMA transfer request is issued when at least 2 words are empty in the FIFO. Position  */
+#define I2SMCC_MRB_DMACHUNK_4_WORDS           (I2SMCC_MRB_DMACHUNK_4_WORDS_Val << I2SMCC_MRB_DMACHUNK_Pos) /* (I2SMCC_MRB) A DMA transfer request is issued when at least 4 words are empty in the FIFO. Limitations exist when operating in Mono or TDM. See Table 7-7 "TX DMA Chunk Configurations" and Table 7-8 "RX DMA Chunk Configurations". Position  */
+#define I2SMCC_MRB_DMACHUNK_8_WORDS           (I2SMCC_MRB_DMACHUNK_8_WORDS_Val << I2SMCC_MRB_DMACHUNK_Pos) /* (I2SMCC_MRB) A DMA transfer request is issued when at least 8 words are empty in the FIFO. Limitations exist when operating in Mono or TDM. See Table 7-7 "TX DMA Chunk Configurations" and Table 7-8 "RX DMA Chunk Configurations". Position  */
 #define I2SMCC_MRB_Msk                        _UINT32_(0x00000300)                                 /* (I2SMCC_MRB) Register Mask  */
 
 
@@ -658,9 +655,9 @@
 #define I2SMCC_ISRA_RXRRDY0_Pos               _UINT32_(17)                                         /* (I2SMCC_ISRA) I2S Receive Right 0 (x=0 only) or TDM Channel [2x]+1 Ready Flag (Cleared by reading I2SMCC_RHR) Position */
 #define I2SMCC_ISRA_RXRRDY0_Msk               (_UINT32_(0x1) << I2SMCC_ISRA_RXRRDY0_Pos)           /* (I2SMCC_ISRA) I2S Receive Right 0 (x=0 only) or TDM Channel [2x]+1 Ready Flag (Cleared by reading I2SMCC_RHR) Mask */
 #define I2SMCC_ISRA_RXRRDY0(value)            (I2SMCC_ISRA_RXRRDY0_Msk & (_UINT32_(value) << I2SMCC_ISRA_RXRRDY0_Pos)) /* Assigment of value for RXRRDY0 in the I2SMCC_ISRA register */
-#define   I2SMCC_ISRA_RXRRDY0_0_Val           _UINT32_(0x0)                                        /* (I2SMCC_ISRA) Cleared when a predefined number of read accesses are performed in I2SMCC_RHR. The predefined number depends on the configuration of I2SMCC_MRA.WIRECFG / FORMAT and varies from 1 to 8.  */
+#define   I2SMCC_ISRA_RXRRDY0_0_Val           _UINT32_(0x0)                                        /* (I2SMCC_ISRA) Cleared when a predefined number of read accesses is performed in I2SMCC_RHR. The predefined number depends on the configuration of I2SMCC_MRA.WIRECFG / FORMAT and varies from 1 to 8.  */
 #define   I2SMCC_ISRA_RXRRDY0_1_Val           _UINT32_(0x1)                                        /* (I2SMCC_ISRA) Set when received data is available in I2SMCC_RHR.  */
-#define I2SMCC_ISRA_RXRRDY0_0                 (I2SMCC_ISRA_RXRRDY0_0_Val << I2SMCC_ISRA_RXRRDY0_Pos) /* (I2SMCC_ISRA) Cleared when a predefined number of read accesses are performed in I2SMCC_RHR. The predefined number depends on the configuration of I2SMCC_MRA.WIRECFG / FORMAT and varies from 1 to 8. Position  */
+#define I2SMCC_ISRA_RXRRDY0_0                 (I2SMCC_ISRA_RXRRDY0_0_Val << I2SMCC_ISRA_RXRRDY0_Pos) /* (I2SMCC_ISRA) Cleared when a predefined number of read accesses is performed in I2SMCC_RHR. The predefined number depends on the configuration of I2SMCC_MRA.WIRECFG / FORMAT and varies from 1 to 8. Position  */
 #define I2SMCC_ISRA_RXRRDY0_1                 (I2SMCC_ISRA_RXRRDY0_1_Val << I2SMCC_ISRA_RXRRDY0_Pos) /* (I2SMCC_ISRA) Set when received data is available in I2SMCC_RHR. Position  */
 #define I2SMCC_ISRA_RXLRDY1_Pos               _UINT32_(18)                                         /* (I2SMCC_ISRA) I2S Receive Left 1 (x=0 only) or TDM Channel 2x Ready Flag (Cleared by reading I2SMCC_RHR) Position */
 #define I2SMCC_ISRA_RXLRDY1_Msk               (_UINT32_(0x1) << I2SMCC_ISRA_RXLRDY1_Pos)           /* (I2SMCC_ISRA) I2S Receive Left 1 (x=0 only) or TDM Channel 2x Ready Flag (Cleared by reading I2SMCC_RHR) Mask */
@@ -672,9 +669,9 @@
 #define I2SMCC_ISRA_RXRRDY1_Pos               _UINT32_(19)                                         /* (I2SMCC_ISRA) I2S Receive Right 1 (x=0 only) or TDM Channel [2x]+1 Ready Flag (Cleared by reading I2SMCC_RHR) Position */
 #define I2SMCC_ISRA_RXRRDY1_Msk               (_UINT32_(0x1) << I2SMCC_ISRA_RXRRDY1_Pos)           /* (I2SMCC_ISRA) I2S Receive Right 1 (x=0 only) or TDM Channel [2x]+1 Ready Flag (Cleared by reading I2SMCC_RHR) Mask */
 #define I2SMCC_ISRA_RXRRDY1(value)            (I2SMCC_ISRA_RXRRDY1_Msk & (_UINT32_(value) << I2SMCC_ISRA_RXRRDY1_Pos)) /* Assigment of value for RXRRDY1 in the I2SMCC_ISRA register */
-#define   I2SMCC_ISRA_RXRRDY1_0_Val           _UINT32_(0x0)                                        /* (I2SMCC_ISRA) Cleared when a predefined number of read accesses are performed in I2SMCC_RHR. The predefined number depends on the configuration of I2SMCC_MRA.WIRECFG / FORMAT and varies from 1 to 8.  */
+#define   I2SMCC_ISRA_RXRRDY1_0_Val           _UINT32_(0x0)                                        /* (I2SMCC_ISRA) Cleared when a predefined number of read accesses is performed in I2SMCC_RHR. The predefined number depends on the configuration of I2SMCC_MRA.WIRECFG / FORMAT and varies from 1 to 8.  */
 #define   I2SMCC_ISRA_RXRRDY1_1_Val           _UINT32_(0x1)                                        /* (I2SMCC_ISRA) Set when received data is available in I2SMCC_RHR.  */
-#define I2SMCC_ISRA_RXRRDY1_0                 (I2SMCC_ISRA_RXRRDY1_0_Val << I2SMCC_ISRA_RXRRDY1_Pos) /* (I2SMCC_ISRA) Cleared when a predefined number of read accesses are performed in I2SMCC_RHR. The predefined number depends on the configuration of I2SMCC_MRA.WIRECFG / FORMAT and varies from 1 to 8. Position  */
+#define I2SMCC_ISRA_RXRRDY1_0                 (I2SMCC_ISRA_RXRRDY1_0_Val << I2SMCC_ISRA_RXRRDY1_Pos) /* (I2SMCC_ISRA) Cleared when a predefined number of read accesses is performed in I2SMCC_RHR. The predefined number depends on the configuration of I2SMCC_MRA.WIRECFG / FORMAT and varies from 1 to 8. Position  */
 #define I2SMCC_ISRA_RXRRDY1_1                 (I2SMCC_ISRA_RXRRDY1_1_Val << I2SMCC_ISRA_RXRRDY1_Pos) /* (I2SMCC_ISRA) Set when received data is available in I2SMCC_RHR. Position  */
 #define I2SMCC_ISRA_RXLRDY2_Pos               _UINT32_(20)                                         /* (I2SMCC_ISRA) I2S Receive Left 2 (x=0 only) or TDM Channel 2x Ready Flag (Cleared by reading I2SMCC_RHR) Position */
 #define I2SMCC_ISRA_RXLRDY2_Msk               (_UINT32_(0x1) << I2SMCC_ISRA_RXLRDY2_Pos)           /* (I2SMCC_ISRA) I2S Receive Left 2 (x=0 only) or TDM Channel 2x Ready Flag (Cleared by reading I2SMCC_RHR) Mask */
@@ -686,9 +683,9 @@
 #define I2SMCC_ISRA_RXRRDY2_Pos               _UINT32_(21)                                         /* (I2SMCC_ISRA) I2S Receive Right 2 (x=0 only) or TDM Channel [2x]+1 Ready Flag (Cleared by reading I2SMCC_RHR) Position */
 #define I2SMCC_ISRA_RXRRDY2_Msk               (_UINT32_(0x1) << I2SMCC_ISRA_RXRRDY2_Pos)           /* (I2SMCC_ISRA) I2S Receive Right 2 (x=0 only) or TDM Channel [2x]+1 Ready Flag (Cleared by reading I2SMCC_RHR) Mask */
 #define I2SMCC_ISRA_RXRRDY2(value)            (I2SMCC_ISRA_RXRRDY2_Msk & (_UINT32_(value) << I2SMCC_ISRA_RXRRDY2_Pos)) /* Assigment of value for RXRRDY2 in the I2SMCC_ISRA register */
-#define   I2SMCC_ISRA_RXRRDY2_0_Val           _UINT32_(0x0)                                        /* (I2SMCC_ISRA) Cleared when a predefined number of read accesses are performed in I2SMCC_RHR. The predefined number depends on the configuration of I2SMCC_MRA.WIRECFG / FORMAT and varies from 1 to 8.  */
+#define   I2SMCC_ISRA_RXRRDY2_0_Val           _UINT32_(0x0)                                        /* (I2SMCC_ISRA) Cleared when a predefined number of read accesses is performed in I2SMCC_RHR. The predefined number depends on the configuration of I2SMCC_MRA.WIRECFG / FORMAT and varies from 1 to 8.  */
 #define   I2SMCC_ISRA_RXRRDY2_1_Val           _UINT32_(0x1)                                        /* (I2SMCC_ISRA) Set when received data is available in I2SMCC_RHR.  */
-#define I2SMCC_ISRA_RXRRDY2_0                 (I2SMCC_ISRA_RXRRDY2_0_Val << I2SMCC_ISRA_RXRRDY2_Pos) /* (I2SMCC_ISRA) Cleared when a predefined number of read accesses are performed in I2SMCC_RHR. The predefined number depends on the configuration of I2SMCC_MRA.WIRECFG / FORMAT and varies from 1 to 8. Position  */
+#define I2SMCC_ISRA_RXRRDY2_0                 (I2SMCC_ISRA_RXRRDY2_0_Val << I2SMCC_ISRA_RXRRDY2_Pos) /* (I2SMCC_ISRA) Cleared when a predefined number of read accesses is performed in I2SMCC_RHR. The predefined number depends on the configuration of I2SMCC_MRA.WIRECFG / FORMAT and varies from 1 to 8. Position  */
 #define I2SMCC_ISRA_RXRRDY2_1                 (I2SMCC_ISRA_RXRRDY2_1_Val << I2SMCC_ISRA_RXRRDY2_Pos) /* (I2SMCC_ISRA) Set when received data is available in I2SMCC_RHR. Position  */
 #define I2SMCC_ISRA_RXLRDY3_Pos               _UINT32_(22)                                         /* (I2SMCC_ISRA) I2S Receive Left 3 (x=0 only) or TDM Channel 2x Ready Flag (Cleared by reading I2SMCC_RHR) Position */
 #define I2SMCC_ISRA_RXLRDY3_Msk               (_UINT32_(0x1) << I2SMCC_ISRA_RXLRDY3_Pos)           /* (I2SMCC_ISRA) I2S Receive Left 3 (x=0 only) or TDM Channel 2x Ready Flag (Cleared by reading I2SMCC_RHR) Mask */
@@ -700,9 +697,9 @@
 #define I2SMCC_ISRA_RXRRDY3_Pos               _UINT32_(23)                                         /* (I2SMCC_ISRA) I2S Receive Right 3 (x=0 only) or TDM Channel [2x]+1 Ready Flag (Cleared by reading I2SMCC_RHR) Position */
 #define I2SMCC_ISRA_RXRRDY3_Msk               (_UINT32_(0x1) << I2SMCC_ISRA_RXRRDY3_Pos)           /* (I2SMCC_ISRA) I2S Receive Right 3 (x=0 only) or TDM Channel [2x]+1 Ready Flag (Cleared by reading I2SMCC_RHR) Mask */
 #define I2SMCC_ISRA_RXRRDY3(value)            (I2SMCC_ISRA_RXRRDY3_Msk & (_UINT32_(value) << I2SMCC_ISRA_RXRRDY3_Pos)) /* Assigment of value for RXRRDY3 in the I2SMCC_ISRA register */
-#define   I2SMCC_ISRA_RXRRDY3_0_Val           _UINT32_(0x0)                                        /* (I2SMCC_ISRA) Cleared when a predefined number of read accesses are performed in I2SMCC_RHR. The predefined number depends on the configuration of I2SMCC_MRA.WIRECFG / FORMAT and varies from 1 to 8.  */
+#define   I2SMCC_ISRA_RXRRDY3_0_Val           _UINT32_(0x0)                                        /* (I2SMCC_ISRA) Cleared when a predefined number of read accesses is performed in I2SMCC_RHR. The predefined number depends on the configuration of I2SMCC_MRA.WIRECFG / FORMAT and varies from 1 to 8.  */
 #define   I2SMCC_ISRA_RXRRDY3_1_Val           _UINT32_(0x1)                                        /* (I2SMCC_ISRA) Set when received data is available in I2SMCC_RHR.  */
-#define I2SMCC_ISRA_RXRRDY3_0                 (I2SMCC_ISRA_RXRRDY3_0_Val << I2SMCC_ISRA_RXRRDY3_Pos) /* (I2SMCC_ISRA) Cleared when a predefined number of read accesses are performed in I2SMCC_RHR. The predefined number depends on the configuration of I2SMCC_MRA.WIRECFG / FORMAT and varies from 1 to 8. Position  */
+#define I2SMCC_ISRA_RXRRDY3_0                 (I2SMCC_ISRA_RXRRDY3_0_Val << I2SMCC_ISRA_RXRRDY3_Pos) /* (I2SMCC_ISRA) Cleared when a predefined number of read accesses is performed in I2SMCC_RHR. The predefined number depends on the configuration of I2SMCC_MRA.WIRECFG / FORMAT and varies from 1 to 8. Position  */
 #define I2SMCC_ISRA_RXRRDY3_1                 (I2SMCC_ISRA_RXRRDY3_1_Val << I2SMCC_ISRA_RXRRDY3_Pos) /* (I2SMCC_ISRA) Set when received data is available in I2SMCC_RHR. Position  */
 #define I2SMCC_ISRA_RXLOVF0_Pos               _UINT32_(24)                                         /* (I2SMCC_ISRA) I2S Receive Left 0 (x=0 only) or TDM Channel 2x Overrun Flag (Cleared on read) Position */
 #define I2SMCC_ISRA_RXLOVF0_Msk               (_UINT32_(0x1) << I2SMCC_ISRA_RXLOVF0_Pos)           /* (I2SMCC_ISRA) I2S Receive Left 0 (x=0 only) or TDM Channel 2x Overrun Flag (Cleared on read) Mask */

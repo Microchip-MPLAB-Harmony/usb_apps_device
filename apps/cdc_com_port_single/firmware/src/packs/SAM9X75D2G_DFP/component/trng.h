@@ -1,26 +1,23 @@
 /*
  * Component description for TRNG
  *
- * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
  *
- * Subject to your compliance with these terms, you may use Microchip software and any derivatives
- * exclusively with Microchip products. It is your responsibility to comply with third party license
- * terms applicable to your use of third party software (including open source software) that may
- * accompany Microchip software.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY,
- * APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND
- * FITNESS FOR A PARTICULAR PURPOSE.
+ *   http://www.apache.org/licenses/LICENSE-2.0
  *
- * IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, INCIDENTAL OR CONSEQUENTIAL
- * LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF
- * MICROCHIP HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO THE FULLEST EXTENT
- * ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT
- * EXCEED THE AMOUNT OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  *
  */
 
-/* file generated from device description version 2023-01-20T08:33:42Z */
+/* file generated from device description file (ATDF) version 2024-04-05T08:36:56Z */
 #ifndef _SAM9X7_TRNG_COMPONENT_H_
 #define _SAM9X7_TRNG_COMPONENT_H_
 
@@ -280,11 +277,13 @@
 #define   TRNG_WPSR_SWETYP_UNDEF_RW_Val       _UINT32_(0x2)                                        /* (TRNG_WPSR) Access to an undefined address.  */
 #define   TRNG_WPSR_SWETYP_TRNG_DIS_Val       _UINT32_(0x3)                                        /* (TRNG_WPSR) The TRNG_ODATA register was read when TRNG was disabled or TRNG used for private key bus transfer (Error).  */
 #define   TRNG_WPSR_SWETYP_PKB_BUSY_Val       _UINT32_(0x4)                                        /* (TRNG_WPSR) A write access to TRNG_PKBCR has been attempted during a private key bus transfer (Error).  */
+#define   TRNG_WPSR_SWETYP_LOCK_ERR_Val       _UINT32_(0x5)                                        /* (TRNG_WPSR) A write access to TRNG_WPMR has been attempted when one of the write protection bits is already locked and its corresponding lock control bit is set and the corresponding write protection bit is cleared which looks like an unlock tentative (Warning).  */
 #define TRNG_WPSR_SWETYP_READ_WO              (TRNG_WPSR_SWETYP_READ_WO_Val << TRNG_WPSR_SWETYP_Pos) /* (TRNG_WPSR) TRNG is enabled and a write-only register has been read (Warning). Position  */
 #define TRNG_WPSR_SWETYP_WRITE_RO             (TRNG_WPSR_SWETYP_WRITE_RO_Val << TRNG_WPSR_SWETYP_Pos) /* (TRNG_WPSR) TRNG is enabled and a write access has been performed on a read-only register (Warning). Position  */
 #define TRNG_WPSR_SWETYP_UNDEF_RW             (TRNG_WPSR_SWETYP_UNDEF_RW_Val << TRNG_WPSR_SWETYP_Pos) /* (TRNG_WPSR) Access to an undefined address. Position  */
 #define TRNG_WPSR_SWETYP_TRNG_DIS             (TRNG_WPSR_SWETYP_TRNG_DIS_Val << TRNG_WPSR_SWETYP_Pos) /* (TRNG_WPSR) The TRNG_ODATA register was read when TRNG was disabled or TRNG used for private key bus transfer (Error). Position  */
 #define TRNG_WPSR_SWETYP_PKB_BUSY             (TRNG_WPSR_SWETYP_PKB_BUSY_Val << TRNG_WPSR_SWETYP_Pos) /* (TRNG_WPSR) A write access to TRNG_PKBCR has been attempted during a private key bus transfer (Error). Position  */
+#define TRNG_WPSR_SWETYP_LOCK_ERR             (TRNG_WPSR_SWETYP_LOCK_ERR_Val << TRNG_WPSR_SWETYP_Pos) /* (TRNG_WPSR) A write access to TRNG_WPMR has been attempted when one of the write protection bits is already locked and its corresponding lock control bit is set and the corresponding write protection bit is cleared which looks like an unlock tentative (Warning). Position  */
 #define TRNG_WPSR_ECLASS_Pos                  _UINT32_(31)                                         /* (TRNG_WPSR) Software Error Class (cleared on read) Position */
 #define TRNG_WPSR_ECLASS_Msk                  (_UINT32_(0x1) << TRNG_WPSR_ECLASS_Pos)              /* (TRNG_WPSR) Software Error Class (cleared on read) Mask */
 #define TRNG_WPSR_ECLASS(value)               (TRNG_WPSR_ECLASS_Msk & (_UINT32_(value) << TRNG_WPSR_ECLASS_Pos)) /* Assigment of value for ECLASS in the TRNG_WPSR register */

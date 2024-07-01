@@ -98,8 +98,10 @@ static DRV_USB_VBUS_LEVEL DRV_USB_UDPHS_VBUS_Comparator(void)
 
 static const DRV_USB_UDPHS_INIT drvUSBInit =
 {
-    /* Interrupt Source for USB module */
+
+
     .interruptSource = (INT_SOURCE)UDPHS_IRQn,
+
 
     /* System module initialization */
     .moduleInit = {0},
@@ -109,6 +111,7 @@ static const DRV_USB_UDPHS_INIT drvUSBInit =
 
     /* Identifies peripheral (PLIB-level) ID */
     .usbID = UDPHS_REGS,
+
     
     /* Function to check for VBus */
     .vbusComparator = DRV_USB_UDPHS_VBUS_Comparator

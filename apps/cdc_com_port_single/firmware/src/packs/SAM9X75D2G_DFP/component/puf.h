@@ -1,26 +1,23 @@
 /*
  * Component description for PUF
  *
- * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
  *
- * Subject to your compliance with these terms, you may use Microchip software and any derivatives
- * exclusively with Microchip products. It is your responsibility to comply with third party license
- * terms applicable to your use of third party software (including open source software) that may
- * accompany Microchip software.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY,
- * APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND
- * FITNESS FOR A PARTICULAR PURPOSE.
+ *   http://www.apache.org/licenses/LICENSE-2.0
  *
- * IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, INCIDENTAL OR CONSEQUENTIAL
- * LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF
- * MICROCHIP HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO THE FULLEST EXTENT
- * ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT
- * EXCEED THE AMOUNT OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  *
  */
 
-/* file generated from device description version 2023-01-20T08:33:42Z */
+/* file generated from device description file (ATDF) version 2024-04-05T08:36:56Z */
 #ifndef _SAM9X7_PUF_COMPONENT_H_
 #define _SAM9X7_PUF_COMPONENT_H_
 
@@ -359,14 +356,7 @@
 #define   PUF_DATA_DEST_DO_DO_VIA_DOR_Val     _UINT32_(0x1)                                        /* (PUF_DATA_DEST) PUF_DOR is enabled to read data from PUF operations.  */
 #define PUF_DATA_DEST_DO_DISABLED             (PUF_DATA_DEST_DO_DISABLED_Val << PUF_DATA_DEST_DO_Pos) /* (PUF_DATA_DEST) PUF_DOR cannot be used to read data from PUF operations. Position  */
 #define PUF_DATA_DEST_DO_DO_VIA_DOR           (PUF_DATA_DEST_DO_DO_VIA_DOR_Val << PUF_DATA_DEST_DO_Pos) /* (PUF_DATA_DEST) PUF_DOR is enabled to read data from PUF operations. Position  */
-#define PUF_DATA_DEST_SO_Pos                  _UINT32_(1)                                          /* (PUF_DATA_DEST) Data Output on Private Key Bus Position */
-#define PUF_DATA_DEST_SO_Msk                  (_UINT32_(0x1) << PUF_DATA_DEST_SO_Pos)              /* (PUF_DATA_DEST) Data Output on Private Key Bus Mask */
-#define PUF_DATA_DEST_SO(value)               (PUF_DATA_DEST_SO_Msk & (_UINT32_(value) << PUF_DATA_DEST_SO_Pos)) /* Assigment of value for SO in the PUF_DATA_DEST register */
-#define   PUF_DATA_DEST_SO_DISABLED_Val       _UINT32_(0x0)                                        /* (PUF_DATA_DEST) Private Key Bus cannot transfer PUF data.  */
-#define   PUF_DATA_DEST_SO_VIA_KEYBUS_Val     _UINT32_(0x1)                                        /* (PUF_DATA_DEST) Private Key Bus is enabled to transfer PUF data.  */
-#define PUF_DATA_DEST_SO_DISABLED             (PUF_DATA_DEST_SO_DISABLED_Val << PUF_DATA_DEST_SO_Pos) /* (PUF_DATA_DEST) Private Key Bus cannot transfer PUF data. Position  */
-#define PUF_DATA_DEST_SO_VIA_KEYBUS           (PUF_DATA_DEST_SO_VIA_KEYBUS_Val << PUF_DATA_DEST_SO_Pos) /* (PUF_DATA_DEST) Private Key Bus is enabled to transfer PUF data. Position  */
-#define PUF_DATA_DEST_Msk                     _UINT32_(0x00000003)                                 /* (PUF_DATA_DEST) Register Mask  */
+#define PUF_DATA_DEST_Msk                     _UINT32_(0x00000001)                                 /* (PUF_DATA_DEST) Register Mask  */
 
 
 /* -------- PUF_DATA_SRC : (PUF Offset: 0x24) (R/W 32) Data Source Register -------- */
@@ -775,115 +765,6 @@
 #define PUF_HW_SETTINGS_Msk                   _UINT32_(0xEB0183EE)                                 /* (PUF_HW_SETTINGS) Register Mask  */
 
 
-/* -------- PUF_ASIER : (PUF Offset: 0x1D0) (R/W 32) Access Security Interrupt Enable Register -------- */
-#define PUF_ASIER_RESETVALUE                  _UINT32_(0x00)                                       /*  (PUF_ASIER) Access Security Interrupt Enable Register  Reset Value */
-
-#define PUF_ASIER_SECE_Pos                    _UINT32_(0)                                          /* (PUF_ASIER) Security Error Interrupt Enable Position */
-#define PUF_ASIER_SECE_Msk                    (_UINT32_(0x1) << PUF_ASIER_SECE_Pos)                /* (PUF_ASIER) Security Error Interrupt Enable Mask */
-#define PUF_ASIER_SECE(value)                 (PUF_ASIER_SECE_Msk & (_UINT32_(value) << PUF_ASIER_SECE_Pos)) /* Assigment of value for SECE in the PUF_ASIER register */
-#define   PUF_ASIER_SECE_0_Val                _UINT32_(0x0)                                        /* (PUF_ASIER) Disables triggering of the interrupt line on incorrect/abnormal access to the PUF user interface.  */
-#define   PUF_ASIER_SECE_1_Val                _UINT32_(0x1)                                        /* (PUF_ASIER) Enables triggering of the interrupt line on incorrect/abnormal access to the PUF user interface.  */
-#define PUF_ASIER_SECE_0                      (PUF_ASIER_SECE_0_Val << PUF_ASIER_SECE_Pos)         /* (PUF_ASIER) Disables triggering of the interrupt line on incorrect/abnormal access to the PUF user interface. Position  */
-#define PUF_ASIER_SECE_1                      (PUF_ASIER_SECE_1_Val << PUF_ASIER_SECE_Pos)         /* (PUF_ASIER) Enables triggering of the interrupt line on incorrect/abnormal access to the PUF user interface. Position  */
-#define PUF_ASIER_Msk                         _UINT32_(0x00000001)                                 /* (PUF_ASIER) Register Mask  */
-
-
-/* -------- PUF_ASISR : (PUF Offset: 0x1D4) ( R/ 32) Access Security Interrupt Status Register -------- */
-#define PUF_ASISR_RESETVALUE                  _UINT32_(0x00)                                       /*  (PUF_ASISR) Access Security Interrupt Status Register  Reset Value */
-
-#define PUF_ASISR_SECE_Pos                    _UINT32_(0)                                          /* (PUF_ASISR) Access Security Error Interrupt Enable Position */
-#define PUF_ASISR_SECE_Msk                    (_UINT32_(0x1) << PUF_ASISR_SECE_Pos)                /* (PUF_ASISR) Access Security Error Interrupt Enable Mask */
-#define PUF_ASISR_SECE(value)                 (PUF_ASISR_SECE_Msk & (_UINT32_(value) << PUF_ASISR_SECE_Pos)) /* Assigment of value for SECE in the PUF_ASISR register */
-#define   PUF_ASISR_SECE_0_Val                _UINT32_(0x0)                                        /* (PUF_ASISR) Disables triggering of the interrupt line on incorrect/abnormal access to user interface.  */
-#define   PUF_ASISR_SECE_1_Val                _UINT32_(0x1)                                        /* (PUF_ASISR) Enables triggering of the interrupt line on incorrect/abnormal access to user interface.  */
-#define PUF_ASISR_SECE_0                      (PUF_ASISR_SECE_0_Val << PUF_ASISR_SECE_Pos)         /* (PUF_ASISR) Disables triggering of the interrupt line on incorrect/abnormal access to user interface. Position  */
-#define PUF_ASISR_SECE_1                      (PUF_ASISR_SECE_1_Val << PUF_ASISR_SECE_Pos)         /* (PUF_ASISR) Enables triggering of the interrupt line on incorrect/abnormal access to user interface. Position  */
-#define PUF_ASISR_Msk                         _UINT32_(0x00000001)                                 /* (PUF_ASISR) Register Mask  */
-
-
-/* -------- PUF_WPMR : (PUF Offset: 0x1E4) (R/W 32) Write Protection Mode Register -------- */
-#define PUF_WPMR_RESETVALUE                   _UINT32_(0x00)                                       /*  (PUF_WPMR) Write Protection Mode Register  Reset Value */
-
-#define PUF_WPMR_WPEN_Pos                     _UINT32_(0)                                          /* (PUF_WPMR) Write Protection Configuration Enable Position */
-#define PUF_WPMR_WPEN_Msk                     (_UINT32_(0x1) << PUF_WPMR_WPEN_Pos)                 /* (PUF_WPMR) Write Protection Configuration Enable Mask */
-#define PUF_WPMR_WPEN(value)                  (PUF_WPMR_WPEN_Msk & (_UINT32_(value) << PUF_WPMR_WPEN_Pos)) /* Assigment of value for WPEN in the PUF_WPMR register */
-#define   PUF_WPMR_WPEN_0_Val                 _UINT32_(0x0)                                        /* (PUF_WPMR) Disables the write protection if WPKEY corresponds to 0x505546 ("PUF" in ASCII).  */
-#define   PUF_WPMR_WPEN_1_Val                 _UINT32_(0x1)                                        /* (PUF_WPMR) Enables the write protection if WPKEY corresponds to 0x505546 ("PUF" in ASCII).  */
-#define PUF_WPMR_WPEN_0                       (PUF_WPMR_WPEN_0_Val << PUF_WPMR_WPEN_Pos)           /* (PUF_WPMR) Disables the write protection if WPKEY corresponds to 0x505546 ("PUF" in ASCII). Position  */
-#define PUF_WPMR_WPEN_1                       (PUF_WPMR_WPEN_1_Val << PUF_WPMR_WPEN_Pos)           /* (PUF_WPMR) Enables the write protection if WPKEY corresponds to 0x505546 ("PUF" in ASCII). Position  */
-#define PUF_WPMR_WPITEN_Pos                   _UINT32_(1)                                          /* (PUF_WPMR) Write Protection Enable for Interrupt Position */
-#define PUF_WPMR_WPITEN_Msk                   (_UINT32_(0x1) << PUF_WPMR_WPITEN_Pos)               /* (PUF_WPMR) Write Protection Enable for Interrupt Mask */
-#define PUF_WPMR_WPITEN(value)                (PUF_WPMR_WPITEN_Msk & (_UINT32_(value) << PUF_WPMR_WPITEN_Pos)) /* Assigment of value for WPITEN in the PUF_WPMR register */
-#define   PUF_WPMR_WPITEN_0_Val               _UINT32_(0x0)                                        /* (PUF_WPMR) Disables the write protection on interrupt registers if WPKEY corresponds to 0x505546 ("PUF" in ASCII).  */
-#define   PUF_WPMR_WPITEN_1_Val               _UINT32_(0x1)                                        /* (PUF_WPMR) Enables the write protection on interrupt registers if WPKEY corresponds to 0x505546 ("PUF" in ASCII).  */
-#define PUF_WPMR_WPITEN_0                     (PUF_WPMR_WPITEN_0_Val << PUF_WPMR_WPITEN_Pos)       /* (PUF_WPMR) Disables the write protection on interrupt registers if WPKEY corresponds to 0x505546 ("PUF" in ASCII). Position  */
-#define PUF_WPMR_WPITEN_1                     (PUF_WPMR_WPITEN_1_Val << PUF_WPMR_WPITEN_Pos)       /* (PUF_WPMR) Enables the write protection on interrupt registers if WPKEY corresponds to 0x505546 ("PUF" in ASCII). Position  */
-#define PUF_WPMR_WPCREN_Pos                   _UINT32_(2)                                          /* (PUF_WPMR)  Position */
-#define PUF_WPMR_WPCREN_Msk                   (_UINT32_(0x1) << PUF_WPMR_WPCREN_Pos)               /* (PUF_WPMR)  Mask */
-#define PUF_WPMR_WPCREN(value)                (PUF_WPMR_WPCREN_Msk & (_UINT32_(value) << PUF_WPMR_WPCREN_Pos)) /* Assigment of value for WPCREN in the PUF_WPMR register */
-#define PUF_WPMR_FIRSTE_Pos                   _UINT32_(4)                                          /* (PUF_WPMR) First Error Report Enable Position */
-#define PUF_WPMR_FIRSTE_Msk                   (_UINT32_(0x1) << PUF_WPMR_FIRSTE_Pos)               /* (PUF_WPMR) First Error Report Enable Mask */
-#define PUF_WPMR_FIRSTE(value)                (PUF_WPMR_FIRSTE_Msk & (_UINT32_(value) << PUF_WPMR_FIRSTE_Pos)) /* Assigment of value for FIRSTE in the PUF_WPMR register */
-#define   PUF_WPMR_FIRSTE_0_Val               _UINT32_(0x0)                                        /* (PUF_WPMR) The last write protection violation source is reported in PUF_WPSR.WPSRC and the last software control error type is reported in PUF_WPSR.SWETYP. The PUF_ISR.SECE flag is set at the first error occurrence within a series.  */
-#define   PUF_WPMR_FIRSTE_1_Val               _UINT32_(0x1)                                        /* (PUF_WPMR) Only the first write protection violation source is reported in PUF_WPSR.WPSRC and only the first software control error type is reported in PUF_WPSR.SWETYP. The PUF_ISR.SECE flag is set at the first error occurrence within a series.  */
-#define PUF_WPMR_FIRSTE_0                     (PUF_WPMR_FIRSTE_0_Val << PUF_WPMR_FIRSTE_Pos)       /* (PUF_WPMR) The last write protection violation source is reported in PUF_WPSR.WPSRC and the last software control error type is reported in PUF_WPSR.SWETYP. The PUF_ISR.SECE flag is set at the first error occurrence within a series. Position  */
-#define PUF_WPMR_FIRSTE_1                     (PUF_WPMR_FIRSTE_1_Val << PUF_WPMR_FIRSTE_Pos)       /* (PUF_WPMR) Only the first write protection violation source is reported in PUF_WPSR.WPSRC and only the first software control error type is reported in PUF_WPSR.SWETYP. The PUF_ISR.SECE flag is set at the first error occurrence within a series. Position  */
-#define PUF_WPMR_LCKWPEN_Pos                  _UINT32_(5)                                          /* (PUF_WPMR) Write Protection Lock Enable for Configuration Register Position */
-#define PUF_WPMR_LCKWPEN_Msk                  (_UINT32_(0x1) << PUF_WPMR_LCKWPEN_Pos)              /* (PUF_WPMR) Write Protection Lock Enable for Configuration Register Mask */
-#define PUF_WPMR_LCKWPEN(value)               (PUF_WPMR_LCKWPEN_Msk & (_UINT32_(value) << PUF_WPMR_LCKWPEN_Pos)) /* Assigment of value for LCKWPEN in the PUF_WPMR register */
-#define   PUF_WPMR_LCKWPEN_0_Val              _UINT32_(0x0)                                        /* (PUF_WPMR) No effect.  */
-#define   PUF_WPMR_LCKWPEN_1_Val              _UINT32_(0x1)                                        /* (PUF_WPMR) Locks the write access to the WPEN bit until the next system reset. WPEN must be set in the same access to perform the action.  */
-#define PUF_WPMR_LCKWPEN_0                    (PUF_WPMR_LCKWPEN_0_Val << PUF_WPMR_LCKWPEN_Pos)     /* (PUF_WPMR) No effect. Position  */
-#define PUF_WPMR_LCKWPEN_1                    (PUF_WPMR_LCKWPEN_1_Val << PUF_WPMR_LCKWPEN_Pos)     /* (PUF_WPMR) Locks the write access to the WPEN bit until the next system reset. WPEN must be set in the same access to perform the action. Position  */
-#define PUF_WPMR_LCKWPITEN_Pos                _UINT32_(6)                                          /* (PUF_WPMR) Write Protection Lock Enable for Interrupt Register Position */
-#define PUF_WPMR_LCKWPITEN_Msk                (_UINT32_(0x1) << PUF_WPMR_LCKWPITEN_Pos)            /* (PUF_WPMR) Write Protection Lock Enable for Interrupt Register Mask */
-#define PUF_WPMR_LCKWPITEN(value)             (PUF_WPMR_LCKWPITEN_Msk & (_UINT32_(value) << PUF_WPMR_LCKWPITEN_Pos)) /* Assigment of value for LCKWPITEN in the PUF_WPMR register */
-#define   PUF_WPMR_LCKWPITEN_0_Val            _UINT32_(0x0)                                        /* (PUF_WPMR) No effect.  */
-#define   PUF_WPMR_LCKWPITEN_1_Val            _UINT32_(0x1)                                        /* (PUF_WPMR) Locks the write access to the WPITEN bit until the next system reset. WPITEN must be set in the same access to perform the action.  */
-#define PUF_WPMR_LCKWPITEN_0                  (PUF_WPMR_LCKWPITEN_0_Val << PUF_WPMR_LCKWPITEN_Pos) /* (PUF_WPMR) No effect. Position  */
-#define PUF_WPMR_LCKWPITEN_1                  (PUF_WPMR_LCKWPITEN_1_Val << PUF_WPMR_LCKWPITEN_Pos) /* (PUF_WPMR) Locks the write access to the WPITEN bit until the next system reset. WPITEN must be set in the same access to perform the action. Position  */
-#define PUF_WPMR_WPKEY_Pos                    _UINT32_(8)                                          /* (PUF_WPMR) Write Protection Key Position */
-#define PUF_WPMR_WPKEY_Msk                    (_UINT32_(0xFFFFFF) << PUF_WPMR_WPKEY_Pos)           /* (PUF_WPMR) Write Protection Key Mask */
-#define PUF_WPMR_WPKEY(value)                 (PUF_WPMR_WPKEY_Msk & (_UINT32_(value) << PUF_WPMR_WPKEY_Pos)) /* Assigment of value for WPKEY in the PUF_WPMR register */
-#define   PUF_WPMR_WPKEY_PASSWD_Val           _UINT32_(0x505546)                                   /* (PUF_WPMR) Writing any other value in this field aborts the write operation. Always reads as 0.  */
-#define PUF_WPMR_WPKEY_PASSWD                 (PUF_WPMR_WPKEY_PASSWD_Val << PUF_WPMR_WPKEY_Pos)    /* (PUF_WPMR) Writing any other value in this field aborts the write operation. Always reads as 0. Position  */
-#define PUF_WPMR_Msk                          _UINT32_(0xFFFFFF77)                                 /* (PUF_WPMR) Register Mask  */
-
-
-/* -------- PUF_WPSR : (PUF Offset: 0x1E8) ( R/ 32) Write Protection Status Register -------- */
-#define PUF_WPSR_RESETVALUE                   _UINT32_(0x00)                                       /*  (PUF_WPSR) Write Protection Status Register  Reset Value */
-
-#define PUF_WPSR_WPVS_Pos                     _UINT32_(0)                                          /* (PUF_WPSR) Write Protection Violation Status (cleared on read) Position */
-#define PUF_WPSR_WPVS_Msk                     (_UINT32_(0x1) << PUF_WPSR_WPVS_Pos)                 /* (PUF_WPSR) Write Protection Violation Status (cleared on read) Mask */
-#define PUF_WPSR_WPVS(value)                  (PUF_WPSR_WPVS_Msk & (_UINT32_(value) << PUF_WPSR_WPVS_Pos)) /* Assigment of value for WPVS in the PUF_WPSR register */
-#define   PUF_WPSR_WPVS_0_Val                 _UINT32_(0x0)                                        /* (PUF_WPSR) No write protection violation has occurred since the last read of PUF_WPSR.  */
-#define   PUF_WPSR_WPVS_1_Val                 _UINT32_(0x1)                                        /* (PUF_WPSR) Violation of a write protection (PUF_WPMR.WPEN=1 or WPITEN=1) has occurred since the last read of PUF_WPSR.  */
-#define PUF_WPSR_WPVS_0                       (PUF_WPSR_WPVS_0_Val << PUF_WPSR_WPVS_Pos)           /* (PUF_WPSR) No write protection violation has occurred since the last read of PUF_WPSR. Position  */
-#define PUF_WPSR_WPVS_1                       (PUF_WPSR_WPVS_1_Val << PUF_WPSR_WPVS_Pos)           /* (PUF_WPSR) Violation of a write protection (PUF_WPMR.WPEN=1 or WPITEN=1) has occurred since the last read of PUF_WPSR. Position  */
-#define PUF_WPSR_SWE_Pos                      _UINT32_(3)                                          /* (PUF_WPSR) Software Control Error (cleared on read) Position */
-#define PUF_WPSR_SWE_Msk                      (_UINT32_(0x1) << PUF_WPSR_SWE_Pos)                  /* (PUF_WPSR) Software Control Error (cleared on read) Mask */
-#define PUF_WPSR_SWE(value)                   (PUF_WPSR_SWE_Msk & (_UINT32_(value) << PUF_WPSR_SWE_Pos)) /* Assigment of value for SWE in the PUF_WPSR register */
-#define   PUF_WPSR_SWE_0_Val                  _UINT32_(0x0)                                        /* (PUF_WPSR) No software error has occurred since the last read of PUF_WPSR.  */
-#define   PUF_WPSR_SWE_1_Val                  _UINT32_(0x1)                                        /* (PUF_WPSR) A software error has occurred since the last read of PUF_WPSR. The field SWETYP details the type of error. The associated incorrect software access is reported in the field WPSRC (if WPVS=0).  */
-#define PUF_WPSR_SWE_0                        (PUF_WPSR_SWE_0_Val << PUF_WPSR_SWE_Pos)             /* (PUF_WPSR) No software error has occurred since the last read of PUF_WPSR. Position  */
-#define PUF_WPSR_SWE_1                        (PUF_WPSR_SWE_1_Val << PUF_WPSR_SWE_Pos)             /* (PUF_WPSR) A software error has occurred since the last read of PUF_WPSR. The field SWETYP details the type of error. The associated incorrect software access is reported in the field WPSRC (if WPVS=0). Position  */
-#define PUF_WPSR_WPSRC_Pos                    _UINT32_(8)                                          /* (PUF_WPSR) Write Protection Source Position */
-#define PUF_WPSR_WPSRC_Msk                    (_UINT32_(0xFFFF) << PUF_WPSR_WPSRC_Pos)             /* (PUF_WPSR) Write Protection Source Mask */
-#define PUF_WPSR_WPSRC(value)                 (PUF_WPSR_WPSRC_Msk & (_UINT32_(value) << PUF_WPSR_WPSRC_Pos)) /* Assigment of value for WPSRC in the PUF_WPSR register */
-#define PUF_WPSR_SWETYP_Pos                   _UINT32_(24)                                         /* (PUF_WPSR) Software Error Type (cleared on read) Position */
-#define PUF_WPSR_SWETYP_Msk                   (_UINT32_(0x3) << PUF_WPSR_SWETYP_Pos)               /* (PUF_WPSR) Software Error Type (cleared on read) Mask */
-#define PUF_WPSR_SWETYP(value)                (PUF_WPSR_SWETYP_Msk & (_UINT32_(value) << PUF_WPSR_SWETYP_Pos)) /* Assigment of value for SWETYP in the PUF_WPSR register */
-#define   PUF_WPSR_SWETYP_READ_WO_Val         _UINT32_(0x0)                                        /* (PUF_WPSR) A write-only register has been read.  */
-#define   PUF_WPSR_SWETYP_WRITE_RO_Val        _UINT32_(0x1)                                        /* (PUF_WPSR) A write access has been performed on a read-only register.  */
-#define   PUF_WPSR_SWETYP_UNDEF_RW_Val        _UINT32_(0x2)                                        /* (PUF_WPSR) Access to an undefined address.  */
-#define   PUF_WPSR_SWETYP_BAD_DXR_Val         _UINT32_(0x3)                                        /* (PUF_WPSR) Unexpected access to PUF_DIR/PUF_DOR.  */
-#define PUF_WPSR_SWETYP_READ_WO               (PUF_WPSR_SWETYP_READ_WO_Val << PUF_WPSR_SWETYP_Pos) /* (PUF_WPSR) A write-only register has been read. Position  */
-#define PUF_WPSR_SWETYP_WRITE_RO              (PUF_WPSR_SWETYP_WRITE_RO_Val << PUF_WPSR_SWETYP_Pos) /* (PUF_WPSR) A write access has been performed on a read-only register. Position  */
-#define PUF_WPSR_SWETYP_UNDEF_RW              (PUF_WPSR_SWETYP_UNDEF_RW_Val << PUF_WPSR_SWETYP_Pos) /* (PUF_WPSR) Access to an undefined address. Position  */
-#define PUF_WPSR_SWETYP_BAD_DXR               (PUF_WPSR_SWETYP_BAD_DXR_Val << PUF_WPSR_SWETYP_Pos) /* (PUF_WPSR) Unexpected access to PUF_DIR/PUF_DOR. Position  */
-#define PUF_WPSR_Msk                          _UINT32_(0x03FFFF09)                                 /* (PUF_WPSR) Register Mask  */
-
-
 /** \brief PUF register offsets definitions */
 #define PUF_CR_REG_OFST                _UINT32_(0x00)      /* (PUF_CR) Control Register Offset */
 #define PUF_ORR_REG_OFST               _UINT32_(0x04)      /* (PUF_ORR) Operation Result Register Offset */
@@ -905,15 +786,11 @@
 #define PUF_HW_RUC0_REG_OFST           _UINT32_(0xE0)      /* (PUF_HW_RUC0) Hardware Restrict User Context x Register Offset */
 #define PUF_HW_RUC1_REG_OFST           _UINT32_(0xE4)      /* (PUF_HW_RUC1) Hardware Restrict User Context x Register Offset */
 #define PUF_HW_SETTINGS_REG_OFST       _UINT32_(0xF0)      /* (PUF_HW_SETTINGS) Hardware Settings Register Offset */
-#define PUF_ASIER_REG_OFST             _UINT32_(0x1D0)     /* (PUF_ASIER) Access Security Interrupt Enable Register Offset */
-#define PUF_ASISR_REG_OFST             _UINT32_(0x1D4)     /* (PUF_ASISR) Access Security Interrupt Status Register Offset */
-#define PUF_WPMR_REG_OFST              _UINT32_(0x1E4)     /* (PUF_WPMR) Write Protection Mode Register Offset */
-#define PUF_WPSR_REG_OFST              _UINT32_(0x1E8)     /* (PUF_WPSR) Write Protection Status Register Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief PUF register API structure */
 typedef struct
-{  /* Physically Unclonable Function */
+{  /* Physical Unclonable Functions */
   __IO  uint32_t                       PUF_CR;             /**< Offset: 0x00 (R/W  32) Control Register */
   __I   uint32_t                       PUF_ORR;            /**< Offset: 0x04 (R/   32) Operation Result Register */
   __IO  uint32_t                       PUF_SR;             /**< Offset: 0x08 (R/W  32) Status Register */
@@ -939,12 +816,6 @@ typedef struct
   __I   uint32_t                       PUF_HW_RUC[2];      /**< Offset: 0xE0 (R/   32) Hardware Restrict User Context x Register */
   __I   uint8_t                        Reserved7[0x08];
   __I   uint32_t                       PUF_HW_SETTINGS;    /**< Offset: 0xF0 (R/   32) Hardware Settings Register */
-  __I   uint8_t                        Reserved8[0xDC];
-  __IO  uint32_t                       PUF_ASIER;          /**< Offset: 0x1D0 (R/W  32) Access Security Interrupt Enable Register */
-  __I   uint32_t                       PUF_ASISR;          /**< Offset: 0x1D4 (R/   32) Access Security Interrupt Status Register */
-  __I   uint8_t                        Reserved9[0x0C];
-  __IO  uint32_t                       PUF_WPMR;           /**< Offset: 0x1E4 (R/W  32) Write Protection Mode Register */
-  __I   uint32_t                       PUF_WPSR;           /**< Offset: 0x1E8 (R/   32) Write Protection Status Register */
 } puf_registers_t;
 
 

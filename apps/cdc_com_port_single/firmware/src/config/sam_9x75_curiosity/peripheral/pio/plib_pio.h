@@ -89,15 +89,6 @@
 #define USB_VBUS_SENSE_Get()               ((PIOC_REGS->PIO_PDSR >> 8U) & 0x1U)
 #define USB_VBUS_SENSE_PIN                  PIO_PIN_PC8
 
-/*** Macros for LED_RED pin ***/
-#define LED_RED_Set()               (PIOC_REGS->PIO_SODR = ((uint32_t)1U<<19U))
-#define LED_RED_Clear()             (PIOC_REGS->PIO_CODR = ((uint32_t)1U<<19U))
-#define LED_RED_Toggle()            (PIOC_REGS->PIO_ODSR ^= ((uint32_t)1U<<19U))
-#define LED_RED_OutputEnable()      (PIOC_REGS->PIO_OER = ((uint32_t)1U<<19U))
-#define LED_RED_InputEnable()       (PIOC_REGS->PIO_ODR = ((uint32_t)1U<<19U))
-#define LED_RED_Get()               ((PIOC_REGS->PIO_PDSR >> 19U) & 0x1U)
-#define LED_RED_PIN                  PIO_PIN_PC19
-
 /*** Macros for SWITCH pin ***/
 #define SWITCH_Set()               (PIOC_REGS->PIO_SODR = ((uint32_t)1U<<9U))
 #define SWITCH_Clear()             (PIOC_REGS->PIO_CODR = ((uint32_t)1U<<9U))

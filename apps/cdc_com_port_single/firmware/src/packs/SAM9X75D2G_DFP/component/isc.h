@@ -1,26 +1,23 @@
 /*
  * Component description for ISC
  *
- * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
  *
- * Subject to your compliance with these terms, you may use Microchip software and any derivatives
- * exclusively with Microchip products. It is your responsibility to comply with third party license
- * terms applicable to your use of third party software (including open source software) that may
- * accompany Microchip software.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY,
- * APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND
- * FITNESS FOR A PARTICULAR PURPOSE.
+ *   http://www.apache.org/licenses/LICENSE-2.0
  *
- * IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, INCIDENTAL OR CONSEQUENTIAL
- * LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF
- * MICROCHIP HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO THE FULLEST EXTENT
- * ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT
- * EXCEED THE AMOUNT OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  *
  */
 
-/* file generated from device description version 2023-01-20T08:33:42Z */
+/* file generated from device description file (ATDF) version 2024-04-05T08:36:56Z */
 #ifndef _SAM9X7_ISC_COMPONENT_H_
 #define _SAM9X7_ISC_COMPONENT_H_
 
@@ -246,10 +243,10 @@
 #define ISC_PFE_CFG0_MIPI_Pos                 _UINT32_(14)                                         /* (ISC_PFE_CFG0) MIPI Interface Connection Position */
 #define ISC_PFE_CFG0_MIPI_Msk                 (_UINT32_(0x1) << ISC_PFE_CFG0_MIPI_Pos)             /* (ISC_PFE_CFG0) MIPI Interface Connection Mask */
 #define ISC_PFE_CFG0_MIPI(value)              (ISC_PFE_CFG0_MIPI_Msk & (_UINT32_(value) << ISC_PFE_CFG0_MIPI_Pos)) /* Assigment of value for MIPI in the ISC_PFE_CFG0 register */
-#define   ISC_PFE_CFG0_MIPI_0_Val             _UINT32_(0x0)                                        /* (ISC_PFE_CFG0) Input Data are coming from the physical Parallel interface.  */
-#define   ISC_PFE_CFG0_MIPI_1_Val             _UINT32_(0x1)                                        /* (ISC_PFE_CFG0) Input Data are coming from the physical MIPI interface.  */
-#define ISC_PFE_CFG0_MIPI_0                   (ISC_PFE_CFG0_MIPI_0_Val << ISC_PFE_CFG0_MIPI_Pos)   /* (ISC_PFE_CFG0) Input Data are coming from the physical Parallel interface. Position  */
-#define ISC_PFE_CFG0_MIPI_1                   (ISC_PFE_CFG0_MIPI_1_Val << ISC_PFE_CFG0_MIPI_Pos)   /* (ISC_PFE_CFG0) Input Data are coming from the physical MIPI interface. Position  */
+#define   ISC_PFE_CFG0_MIPI_0_Val             _UINT32_(0x0)                                        /* (ISC_PFE_CFG0) Input data come from the physical parallel interface.  */
+#define   ISC_PFE_CFG0_MIPI_1_Val             _UINT32_(0x1)                                        /* (ISC_PFE_CFG0) Input data come from the physical MIPI interface.  */
+#define ISC_PFE_CFG0_MIPI_0                   (ISC_PFE_CFG0_MIPI_0_Val << ISC_PFE_CFG0_MIPI_Pos)   /* (ISC_PFE_CFG0) Input data come from the physical parallel interface. Position  */
+#define ISC_PFE_CFG0_MIPI_1                   (ISC_PFE_CFG0_MIPI_1_Val << ISC_PFE_CFG0_MIPI_Pos)   /* (ISC_PFE_CFG0) Input data come from the physical MIPI interface. Position  */
 #define ISC_PFE_CFG0_SKIPCNT_Pos              _UINT32_(16)                                         /* (ISC_PFE_CFG0) Frame Skipping Counter Position */
 #define ISC_PFE_CFG0_SKIPCNT_Msk              (_UINT32_(0xFF) << ISC_PFE_CFG0_SKIPCNT_Pos)         /* (ISC_PFE_CFG0) Frame Skipping Counter Mask */
 #define ISC_PFE_CFG0_SKIPCNT(value)           (ISC_PFE_CFG0_SKIPCNT_Msk & (_UINT32_(value) << ISC_PFE_CFG0_SKIPCNT_Pos)) /* Assigment of value for SKIPCNT in the ISC_PFE_CFG0 register */
@@ -347,7 +344,7 @@
 
 
 /* -------- ISC_CLKSR : (ISC Offset: 0x20) ( R/ 32) Clock Status Register -------- */
-#define ISC_CLKSR_RESETVALUE                  _UINT32_(0x00)                                       /*  (ISC_CLKSR) Clock Status Register  Reset Value */
+#define ISC_CLKSR_RESETVALUE                  _UINT32_(0x01)                                       /*  (ISC_CLKSR) Clock Status Register  Reset Value */
 
 #define ISC_CLKSR_ICSR_Pos                    _UINT32_(0)                                          /* (ISC_CLKSR) ISP Clock Status Register Position */
 #define ISC_CLKSR_ICSR_Msk                    (_UINT32_(0x1) << ISC_CLKSR_ICSR_Pos)                /* (ISC_CLKSR) ISP Clock Status Register Mask */
@@ -398,8 +395,8 @@
 #define ISC_INTEN_DDONE_Pos                   _UINT32_(8)                                          /* (ISC_INTEN) DMA Done Interrupt Enable Position */
 #define ISC_INTEN_DDONE_Msk                   (_UINT32_(0x1) << ISC_INTEN_DDONE_Pos)               /* (ISC_INTEN) DMA Done Interrupt Enable Mask */
 #define ISC_INTEN_DDONE(value)                (ISC_INTEN_DDONE_Msk & (_UINT32_(value) << ISC_INTEN_DDONE_Pos)) /* Assigment of value for DDONE in the ISC_INTEN register */
-#define ISC_INTEN_LDONE_Pos                   _UINT32_(9)                                          /* (ISC_INTEN) DMA List Done Interrupt Enable Position */
-#define ISC_INTEN_LDONE_Msk                   (_UINT32_(0x1) << ISC_INTEN_LDONE_Pos)               /* (ISC_INTEN) DMA List Done Interrupt Enable Mask */
+#define ISC_INTEN_LDONE_Pos                   _UINT32_(9)                                          /* (ISC_INTEN) DMA  List Done Interrupt Enable Position */
+#define ISC_INTEN_LDONE_Msk                   (_UINT32_(0x1) << ISC_INTEN_LDONE_Pos)               /* (ISC_INTEN) DMA  List Done Interrupt Enable Mask */
 #define ISC_INTEN_LDONE(value)                (ISC_INTEN_LDONE_Msk & (_UINT32_(value) << ISC_INTEN_LDONE_Pos)) /* Assigment of value for LDONE in the ISC_INTEN register */
 #define ISC_INTEN_HISDONE_Pos                 _UINT32_(12)                                         /* (ISC_INTEN) Histogram Completed Interrupt Enable Position */
 #define ISC_INTEN_HISDONE_Msk                 (_UINT32_(0x1) << ISC_INTEN_HISDONE_Pos)             /* (ISC_INTEN) Histogram Completed Interrupt Enable Mask */
@@ -431,7 +428,10 @@
 #define ISC_INTEN_GFOV_Pos                    _UINT32_(29)                                         /* (ISC_INTEN) Input FIFO Overflow Interrupt Enable Position */
 #define ISC_INTEN_GFOV_Msk                    (_UINT32_(0x1) << ISC_INTEN_GFOV_Pos)                /* (ISC_INTEN) Input FIFO Overflow Interrupt Enable Mask */
 #define ISC_INTEN_GFOV(value)                 (ISC_INTEN_GFOV_Msk & (_UINT32_(value) << ISC_INTEN_GFOV_Pos)) /* Assigment of value for GFOV in the ISC_INTEN register */
-#define ISC_INTEN_Msk                         _UINT32_(0x3F113333)                                 /* (ISC_INTEN) Register Mask  */
+#define ISC_INTEN_WPE_Pos                     _UINT32_(30)                                         /* (ISC_INTEN) Write Protection Error Enable Position */
+#define ISC_INTEN_WPE_Msk                     (_UINT32_(0x1) << ISC_INTEN_WPE_Pos)                 /* (ISC_INTEN) Write Protection Error Enable Mask */
+#define ISC_INTEN_WPE(value)                  (ISC_INTEN_WPE_Msk & (_UINT32_(value) << ISC_INTEN_WPE_Pos)) /* Assigment of value for WPE in the ISC_INTEN register */
+#define ISC_INTEN_Msk                         _UINT32_(0x7F113333)                                 /* (ISC_INTEN) Register Mask  */
 
 
 /* -------- ISC_INTDIS : (ISC Offset: 0x2C) ( /W 32) Interrupt Disable Register -------- */
@@ -450,8 +450,8 @@
 #define ISC_INTDIS_DDONE_Pos                  _UINT32_(8)                                          /* (ISC_INTDIS) DMA Done Interrupt Disable Position */
 #define ISC_INTDIS_DDONE_Msk                  (_UINT32_(0x1) << ISC_INTDIS_DDONE_Pos)              /* (ISC_INTDIS) DMA Done Interrupt Disable Mask */
 #define ISC_INTDIS_DDONE(value)               (ISC_INTDIS_DDONE_Msk & (_UINT32_(value) << ISC_INTDIS_DDONE_Pos)) /* Assigment of value for DDONE in the ISC_INTDIS register */
-#define ISC_INTDIS_LDONE_Pos                  _UINT32_(9)                                          /* (ISC_INTDIS) DMA List Done Interrupt Disable Position */
-#define ISC_INTDIS_LDONE_Msk                  (_UINT32_(0x1) << ISC_INTDIS_LDONE_Pos)              /* (ISC_INTDIS) DMA List Done Interrupt Disable Mask */
+#define ISC_INTDIS_LDONE_Pos                  _UINT32_(9)                                          /* (ISC_INTDIS) DMA  List Done Interrupt Disable Position */
+#define ISC_INTDIS_LDONE_Msk                  (_UINT32_(0x1) << ISC_INTDIS_LDONE_Pos)              /* (ISC_INTDIS) DMA  List Done Interrupt Disable Mask */
 #define ISC_INTDIS_LDONE(value)               (ISC_INTDIS_LDONE_Msk & (_UINT32_(value) << ISC_INTDIS_LDONE_Pos)) /* Assigment of value for LDONE in the ISC_INTDIS register */
 #define ISC_INTDIS_HISDONE_Pos                _UINT32_(12)                                         /* (ISC_INTDIS) Histogram Completed Interrupt Disable Position */
 #define ISC_INTDIS_HISDONE_Msk                (_UINT32_(0x1) << ISC_INTDIS_HISDONE_Pos)            /* (ISC_INTDIS) Histogram Completed Interrupt Disable Mask */
@@ -483,7 +483,10 @@
 #define ISC_INTDIS_GFOV_Pos                   _UINT32_(29)                                         /* (ISC_INTDIS) FIFO Overflow Interrupt Disable Position */
 #define ISC_INTDIS_GFOV_Msk                   (_UINT32_(0x1) << ISC_INTDIS_GFOV_Pos)               /* (ISC_INTDIS) FIFO Overflow Interrupt Disable Mask */
 #define ISC_INTDIS_GFOV(value)                (ISC_INTDIS_GFOV_Msk & (_UINT32_(value) << ISC_INTDIS_GFOV_Pos)) /* Assigment of value for GFOV in the ISC_INTDIS register */
-#define ISC_INTDIS_Msk                        _UINT32_(0x3F113333)                                 /* (ISC_INTDIS) Register Mask  */
+#define ISC_INTDIS_WPE_Pos                    _UINT32_(30)                                         /* (ISC_INTDIS) Write Protection Error Disable Position */
+#define ISC_INTDIS_WPE_Msk                    (_UINT32_(0x1) << ISC_INTDIS_WPE_Pos)                /* (ISC_INTDIS) Write Protection Error Disable Mask */
+#define ISC_INTDIS_WPE(value)                 (ISC_INTDIS_WPE_Msk & (_UINT32_(value) << ISC_INTDIS_WPE_Pos)) /* Assigment of value for WPE in the ISC_INTDIS register */
+#define ISC_INTDIS_Msk                        _UINT32_(0x7F113333)                                 /* (ISC_INTDIS) Register Mask  */
 
 
 /* -------- ISC_INTMASK : (ISC Offset: 0x30) ( R/ 32) Interrupt Mask Register -------- */
@@ -504,8 +507,8 @@
 #define ISC_INTMASK_DDONE_Pos                 _UINT32_(8)                                          /* (ISC_INTMASK) DMA Done Interrupt Mask Position */
 #define ISC_INTMASK_DDONE_Msk                 (_UINT32_(0x1) << ISC_INTMASK_DDONE_Pos)             /* (ISC_INTMASK) DMA Done Interrupt Mask Mask */
 #define ISC_INTMASK_DDONE(value)              (ISC_INTMASK_DDONE_Msk & (_UINT32_(value) << ISC_INTMASK_DDONE_Pos)) /* Assigment of value for DDONE in the ISC_INTMASK register */
-#define ISC_INTMASK_LDONE_Pos                 _UINT32_(9)                                          /* (ISC_INTMASK) DMA List Done Interrupt Mask Position */
-#define ISC_INTMASK_LDONE_Msk                 (_UINT32_(0x1) << ISC_INTMASK_LDONE_Pos)             /* (ISC_INTMASK) DMA List Done Interrupt Mask Mask */
+#define ISC_INTMASK_LDONE_Pos                 _UINT32_(9)                                          /* (ISC_INTMASK) DMA  List Done Interrupt Mask Position */
+#define ISC_INTMASK_LDONE_Msk                 (_UINT32_(0x1) << ISC_INTMASK_LDONE_Pos)             /* (ISC_INTMASK) DMA  List Done Interrupt Mask Mask */
 #define ISC_INTMASK_LDONE(value)              (ISC_INTMASK_LDONE_Msk & (_UINT32_(value) << ISC_INTMASK_LDONE_Pos)) /* Assigment of value for LDONE in the ISC_INTMASK register */
 #define ISC_INTMASK_HISDONE_Pos               _UINT32_(12)                                         /* (ISC_INTMASK) Histogram Completed Interrupt Mask Position */
 #define ISC_INTMASK_HISDONE_Msk               (_UINT32_(0x1) << ISC_INTMASK_HISDONE_Pos)           /* (ISC_INTMASK) Histogram Completed Interrupt Mask Mask */
@@ -537,7 +540,10 @@
 #define ISC_INTMASK_GFOV_Pos                  _UINT32_(29)                                         /* (ISC_INTMASK) FIFO Overflow Interrupt Mask Position */
 #define ISC_INTMASK_GFOV_Msk                  (_UINT32_(0x1) << ISC_INTMASK_GFOV_Pos)              /* (ISC_INTMASK) FIFO Overflow Interrupt Mask Mask */
 #define ISC_INTMASK_GFOV(value)               (ISC_INTMASK_GFOV_Msk & (_UINT32_(value) << ISC_INTMASK_GFOV_Pos)) /* Assigment of value for GFOV in the ISC_INTMASK register */
-#define ISC_INTMASK_Msk                       _UINT32_(0x3F113333)                                 /* (ISC_INTMASK) Register Mask  */
+#define ISC_INTMASK_WPE_Pos                   _UINT32_(30)                                         /* (ISC_INTMASK) Write Protection Error Mask Position */
+#define ISC_INTMASK_WPE_Msk                   (_UINT32_(0x1) << ISC_INTMASK_WPE_Pos)               /* (ISC_INTMASK) Write Protection Error Mask Mask */
+#define ISC_INTMASK_WPE(value)                (ISC_INTMASK_WPE_Msk & (_UINT32_(value) << ISC_INTMASK_WPE_Pos)) /* Assigment of value for WPE in the ISC_INTMASK register */
+#define ISC_INTMASK_Msk                       _UINT32_(0x7F113333)                                 /* (ISC_INTMASK) Register Mask  */
 
 
 /* -------- ISC_INTSR : (ISC Offset: 0x34) ( R/ 32) Interrupt Status Register -------- */
@@ -578,8 +584,8 @@
 #define   ISC_INTSR_DDONE_1_Val               _UINT32_(0x1)                                        /* (ISC_INTSR) The DMA Transfer Done interrupt has occurred.  */
 #define ISC_INTSR_DDONE_0                     (ISC_INTSR_DDONE_0_Val << ISC_INTSR_DDONE_Pos)       /* (ISC_INTSR) No DMA Transfer Done interrupt has occurred since the last read of the Interrupt Status register. Position  */
 #define ISC_INTSR_DDONE_1                     (ISC_INTSR_DDONE_1_Val << ISC_INTSR_DDONE_Pos)       /* (ISC_INTSR) The DMA Transfer Done interrupt has occurred. Position  */
-#define ISC_INTSR_LDONE_Pos                   _UINT32_(9)                                          /* (ISC_INTSR) DMA List Done Interrupt (cleared on read) Position */
-#define ISC_INTSR_LDONE_Msk                   (_UINT32_(0x1) << ISC_INTSR_LDONE_Pos)               /* (ISC_INTSR) DMA List Done Interrupt (cleared on read) Mask */
+#define ISC_INTSR_LDONE_Pos                   _UINT32_(9)                                          /* (ISC_INTSR) DMA  List Done Interrupt (cleared on read) Position */
+#define ISC_INTSR_LDONE_Msk                   (_UINT32_(0x1) << ISC_INTSR_LDONE_Pos)               /* (ISC_INTSR) DMA  List Done Interrupt (cleared on read) Mask */
 #define ISC_INTSR_LDONE(value)                (ISC_INTSR_LDONE_Msk & (_UINT32_(value) << ISC_INTSR_LDONE_Pos)) /* Assigment of value for LDONE in the ISC_INTSR register */
 #define   ISC_INTSR_LDONE_0_Val               _UINT32_(0x0)                                        /* (ISC_INTSR) No DMA List Done interrupt has occurred since the last read of the Interrupt Status register.  */
 #define   ISC_INTSR_LDONE_1_Val               _UINT32_(0x1)                                        /* (ISC_INTSR) The DMA List Done interrupt has occurred.  */
@@ -666,7 +672,14 @@
 #define   ISC_INTSR_GFOV_1_Val                _UINT32_(0x1)                                        /* (ISC_INTSR) A FIFO overflow has been detected.  */
 #define ISC_INTSR_GFOV_0                      (ISC_INTSR_GFOV_0_Val << ISC_INTSR_GFOV_Pos)         /* (ISC_INTSR) No FIFO overflow detected since the last read of the Interrupt Status register. Position  */
 #define ISC_INTSR_GFOV_1                      (ISC_INTSR_GFOV_1_Val << ISC_INTSR_GFOV_Pos)         /* (ISC_INTSR) A FIFO overflow has been detected. Position  */
-#define ISC_INTSR_Msk                         _UINT32_(0x3F173333)                                 /* (ISC_INTSR) Register Mask  */
+#define ISC_INTSR_WPE_Pos                     _UINT32_(30)                                         /* (ISC_INTSR) Write Protection Error Interrupt (cleared on read) Position */
+#define ISC_INTSR_WPE_Msk                     (_UINT32_(0x1) << ISC_INTSR_WPE_Pos)                 /* (ISC_INTSR) Write Protection Error Interrupt (cleared on read) Mask */
+#define ISC_INTSR_WPE(value)                  (ISC_INTSR_WPE_Msk & (_UINT32_(value) << ISC_INTSR_WPE_Pos)) /* Assigment of value for WPE in the ISC_INTSR register */
+#define   ISC_INTSR_WPE_0_Val                 _UINT32_(0x0)                                        /* (ISC_INTSR) No Write Protection error detected since the last read of the Interrupt Status register.  */
+#define   ISC_INTSR_WPE_1_Val                 _UINT32_(0x1)                                        /* (ISC_INTSR) A Write Protection error has been detected.  */
+#define ISC_INTSR_WPE_0                       (ISC_INTSR_WPE_0_Val << ISC_INTSR_WPE_Pos)           /* (ISC_INTSR) No Write Protection error detected since the last read of the Interrupt Status register. Position  */
+#define ISC_INTSR_WPE_1                       (ISC_INTSR_WPE_1_Val << ISC_INTSR_WPE_Pos)           /* (ISC_INTSR) A Write Protection error has been detected. Position  */
+#define ISC_INTSR_Msk                         _UINT32_(0x7F173333)                                 /* (ISC_INTSR) Register Mask  */
 
 
 /* -------- ISC_DPC_CTRL : (ISC Offset: 0x40) (R/W 32) Defective Pixel Correction Control Register -------- */
@@ -1121,8 +1134,8 @@
 #define ISC_VHXS_DS_XD_Pos                    _UINT32_(0)                                          /* (ISC_VHXS_DS) Destination Image Horizontal Size Position */
 #define ISC_VHXS_DS_XD_Msk                    (_UINT32_(0xFFF) << ISC_VHXS_DS_XD_Pos)              /* (ISC_VHXS_DS) Destination Image Horizontal Size Mask */
 #define ISC_VHXS_DS_XD(value)                 (ISC_VHXS_DS_XD_Msk & (_UINT32_(value) << ISC_VHXS_DS_XD_Pos)) /* Assigment of value for XD in the ISC_VHXS_DS register */
-#define ISC_VHXS_DS_YD_Pos                    _UINT32_(16)                                         /* (ISC_VHXS_DS) Destination Image Horizontal Size Position */
-#define ISC_VHXS_DS_YD_Msk                    (_UINT32_(0xFFF) << ISC_VHXS_DS_YD_Pos)              /* (ISC_VHXS_DS) Destination Image Horizontal Size Mask */
+#define ISC_VHXS_DS_YD_Pos                    _UINT32_(16)                                         /* (ISC_VHXS_DS) Destination Image Vertical Size Position */
+#define ISC_VHXS_DS_YD_Msk                    (_UINT32_(0xFFF) << ISC_VHXS_DS_YD_Pos)              /* (ISC_VHXS_DS) Destination Image Vertical Size Mask */
 #define ISC_VHXS_DS_YD(value)                 (ISC_VHXS_DS_YD_Msk & (_UINT32_(value) << ISC_VHXS_DS_YD_Pos)) /* Assigment of value for YD in the ISC_VHXS_DS register */
 #define ISC_VHXS_DS_Msk                       _UINT32_(0x0FFF0FFF)                                 /* (ISC_VHXS_DS) Register Mask  */
 
@@ -1154,9 +1167,9 @@
 #define ISC_VXS_CFG_TAP2_Pos                  _UINT32_(4)                                          /* (ISC_VXS_CFG) Bilinear Interpolation Position */
 #define ISC_VXS_CFG_TAP2_Msk                  (_UINT32_(0x1) << ISC_VXS_CFG_TAP2_Pos)              /* (ISC_VXS_CFG) Bilinear Interpolation Mask */
 #define ISC_VXS_CFG_TAP2(value)               (ISC_VXS_CFG_TAP2_Msk & (_UINT32_(value) << ISC_VXS_CFG_TAP2_Pos)) /* Assigment of value for TAP2 in the ISC_VXS_CFG register */
-#define   ISC_VXS_CFG_TAP2_0_Val              _UINT32_(0x0)                                        /* (ISC_VXS_CFG) Bicubic interpolation is used.  */
+#define   ISC_VXS_CFG_TAP2_0_Val              _UINT32_(0x0)                                        /* (ISC_VXS_CFG) Custom tap values are used (see Section 8.47 "ISC VXS TAP10 Phase x [x = 0..15] Register").  */
 #define   ISC_VXS_CFG_TAP2_1_Val              _UINT32_(0x1)                                        /* (ISC_VXS_CFG) Bilinear interpolation is used.  */
-#define ISC_VXS_CFG_TAP2_0                    (ISC_VXS_CFG_TAP2_0_Val << ISC_VXS_CFG_TAP2_Pos)     /* (ISC_VXS_CFG) Bicubic interpolation is used. Position  */
+#define ISC_VXS_CFG_TAP2_0                    (ISC_VXS_CFG_TAP2_0_Val << ISC_VXS_CFG_TAP2_Pos)     /* (ISC_VXS_CFG) Custom tap values are used (see Section 8.47 "ISC VXS TAP10 Phase x [x = 0..15] Register"). Position  */
 #define ISC_VXS_CFG_TAP2_1                    (ISC_VXS_CFG_TAP2_1_Val << ISC_VXS_CFG_TAP2_Pos)     /* (ISC_VXS_CFG) Bilinear interpolation is used. Position  */
 #define ISC_VXS_CFG_OFFSET_Pos                _UINT32_(8)                                          /* (ISC_VXS_CFG) Resampling Default Phase Position */
 #define ISC_VXS_CFG_OFFSET_Msk                (_UINT32_(0xF) << ISC_VXS_CFG_OFFSET_Pos)            /* (ISC_VXS_CFG) Resampling Default Phase Mask */
@@ -1182,9 +1195,9 @@
 #define ISC_HXS_CFG_TAP2_Pos                  _UINT32_(4)                                          /* (ISC_HXS_CFG) Bilinear Interpolation Position */
 #define ISC_HXS_CFG_TAP2_Msk                  (_UINT32_(0x1) << ISC_HXS_CFG_TAP2_Pos)              /* (ISC_HXS_CFG) Bilinear Interpolation Mask */
 #define ISC_HXS_CFG_TAP2(value)               (ISC_HXS_CFG_TAP2_Msk & (_UINT32_(value) << ISC_HXS_CFG_TAP2_Pos)) /* Assigment of value for TAP2 in the ISC_HXS_CFG register */
-#define   ISC_HXS_CFG_TAP2_0_Val              _UINT32_(0x0)                                        /* (ISC_HXS_CFG) Bicubic interpolation is used.  */
+#define   ISC_HXS_CFG_TAP2_0_Val              _UINT32_(0x0)                                        /* (ISC_HXS_CFG) Custom tap values are used (see Section 8.49 "ISC HXS TAP10 Phase x [x = 0..15] Register").  */
 #define   ISC_HXS_CFG_TAP2_1_Val              _UINT32_(0x1)                                        /* (ISC_HXS_CFG) Bilinear interpolation is used.  */
-#define ISC_HXS_CFG_TAP2_0                    (ISC_HXS_CFG_TAP2_0_Val << ISC_HXS_CFG_TAP2_Pos)     /* (ISC_HXS_CFG) Bicubic interpolation is used. Position  */
+#define ISC_HXS_CFG_TAP2_0                    (ISC_HXS_CFG_TAP2_0_Val << ISC_HXS_CFG_TAP2_Pos)     /* (ISC_HXS_CFG) Custom tap values are used (see Section 8.49 "ISC HXS TAP10 Phase x [x = 0..15] Register"). Position  */
 #define ISC_HXS_CFG_TAP2_1                    (ISC_HXS_CFG_TAP2_1_Val << ISC_HXS_CFG_TAP2_Pos)     /* (ISC_HXS_CFG) Bilinear interpolation is used. Position  */
 #define ISC_HXS_CFG_OFFSET_Pos                _UINT32_(8)                                          /* (ISC_HXS_CFG) Resampling Default Phase Position */
 #define ISC_HXS_CFG_OFFSET_Msk                (_UINT32_(0xF) << ISC_HXS_CFG_OFFSET_Pos)            /* (ISC_HXS_CFG) Resampling Default Phase Mask */
@@ -1550,10 +1563,10 @@
 #define ISC_HIS_CFG_RAR_Pos                   _UINT32_(8)                                          /* (ISC_HIS_CFG) Histogram Reset After Read Position */
 #define ISC_HIS_CFG_RAR_Msk                   (_UINT32_(0x1) << ISC_HIS_CFG_RAR_Pos)               /* (ISC_HIS_CFG) Histogram Reset After Read Mask */
 #define ISC_HIS_CFG_RAR(value)                (ISC_HIS_CFG_RAR_Msk & (_UINT32_(value) << ISC_HIS_CFG_RAR_Pos)) /* Assigment of value for RAR in the ISC_HIS_CFG register */
-#define   ISC_HIS_CFG_RAR_0_Val               _UINT32_(0x0)                                        /* (ISC_HIS_CFG) Reset after read mode is disabled.  */
-#define   ISC_HIS_CFG_RAR_1_Val               _UINT32_(0x1)                                        /* (ISC_HIS_CFG) Reset after read mode is enabled.  */
-#define ISC_HIS_CFG_RAR_0                     (ISC_HIS_CFG_RAR_0_Val << ISC_HIS_CFG_RAR_Pos)       /* (ISC_HIS_CFG) Reset after read mode is disabled. Position  */
-#define ISC_HIS_CFG_RAR_1                     (ISC_HIS_CFG_RAR_1_Val << ISC_HIS_CFG_RAR_Pos)       /* (ISC_HIS_CFG) Reset after read mode is enabled. Position  */
+#define   ISC_HIS_CFG_RAR_0_Val               _UINT32_(0x0)                                        /* (ISC_HIS_CFG) Reset after Read mode is disabled.  */
+#define   ISC_HIS_CFG_RAR_1_Val               _UINT32_(0x1)                                        /* (ISC_HIS_CFG) Reset after Read mode is enabled.  */
+#define ISC_HIS_CFG_RAR_0                     (ISC_HIS_CFG_RAR_0_Val << ISC_HIS_CFG_RAR_Pos)       /* (ISC_HIS_CFG) Reset after Read mode is disabled. Position  */
+#define ISC_HIS_CFG_RAR_1                     (ISC_HIS_CFG_RAR_1_Val << ISC_HIS_CFG_RAR_Pos)       /* (ISC_HIS_CFG) Reset after Read mode is enabled. Position  */
 #define ISC_HIS_CFG_Msk                       _UINT32_(0x00000137)                                 /* (ISC_HIS_CFG) Register Mask  */
 
 
@@ -1625,12 +1638,12 @@
 #define ISC_DCTRL_DVIEW_Pos                   _UINT32_(1)                                          /* (ISC_DCTRL) Descriptor View Position */
 #define ISC_DCTRL_DVIEW_Msk                   (_UINT32_(0x3) << ISC_DCTRL_DVIEW_Pos)               /* (ISC_DCTRL) Descriptor View Mask */
 #define ISC_DCTRL_DVIEW(value)                (ISC_DCTRL_DVIEW_Msk & (_UINT32_(value) << ISC_DCTRL_DVIEW_Pos)) /* Assigment of value for DVIEW in the ISC_DCTRL register */
-#define   ISC_DCTRL_DVIEW_PACKED_Val          _UINT32_(0x0)                                        /* (ISC_DCTRL) Address {0} Stride {0} are updated  */
-#define   ISC_DCTRL_DVIEW_SEMIPLANAR_Val      _UINT32_(0x1)                                        /* (ISC_DCTRL) Address {0,1} Stride {0,1} are updated  */
-#define   ISC_DCTRL_DVIEW_PLANAR_Val          _UINT32_(0x2)                                        /* (ISC_DCTRL) Address {0,1,2} Stride {0,1,2} are updated  */
-#define ISC_DCTRL_DVIEW_PACKED                (ISC_DCTRL_DVIEW_PACKED_Val << ISC_DCTRL_DVIEW_Pos)  /* (ISC_DCTRL) Address {0} Stride {0} are updated Position  */
-#define ISC_DCTRL_DVIEW_SEMIPLANAR            (ISC_DCTRL_DVIEW_SEMIPLANAR_Val << ISC_DCTRL_DVIEW_Pos) /* (ISC_DCTRL) Address {0,1} Stride {0,1} are updated Position  */
-#define ISC_DCTRL_DVIEW_PLANAR                (ISC_DCTRL_DVIEW_PLANAR_Val << ISC_DCTRL_DVIEW_Pos)  /* (ISC_DCTRL) Address {0,1,2} Stride {0,1,2} are updated Position  */
+#define   ISC_DCTRL_DVIEW_PACKED_Val          _UINT32_(0x0)                                        /* (ISC_DCTRL) Packed frame buffer (see Table 7-3)  */
+#define   ISC_DCTRL_DVIEW_SEMIPLANAR_Val      _UINT32_(0x1)                                        /* (ISC_DCTRL) Semi planar frame buffer (see Table 7-4)  */
+#define   ISC_DCTRL_DVIEW_PLANAR_Val          _UINT32_(0x2)                                        /* (ISC_DCTRL) Planar frame buffer (see Table 7-5)  */
+#define ISC_DCTRL_DVIEW_PACKED                (ISC_DCTRL_DVIEW_PACKED_Val << ISC_DCTRL_DVIEW_Pos)  /* (ISC_DCTRL) Packed frame buffer (see Table 7-3) Position  */
+#define ISC_DCTRL_DVIEW_SEMIPLANAR            (ISC_DCTRL_DVIEW_SEMIPLANAR_Val << ISC_DCTRL_DVIEW_Pos) /* (ISC_DCTRL) Semi planar frame buffer (see Table 7-4) Position  */
+#define ISC_DCTRL_DVIEW_PLANAR                (ISC_DCTRL_DVIEW_PLANAR_Val << ISC_DCTRL_DVIEW_Pos)  /* (ISC_DCTRL) Planar frame buffer (see Table 7-5) Position  */
 #define ISC_DCTRL_IE_Pos                      _UINT32_(4)                                          /* (ISC_DCTRL) Interrupt Enable Position */
 #define ISC_DCTRL_IE_Msk                      (_UINT32_(0x1) << ISC_DCTRL_IE_Pos)                  /* (ISC_DCTRL) Interrupt Enable Mask */
 #define ISC_DCTRL_IE(value)                   (ISC_DCTRL_IE_Msk & (_UINT32_(value) << ISC_DCTRL_IE_Pos)) /* Assigment of value for IE in the ISC_DCTRL register */
@@ -1684,9 +1697,9 @@
 #define ISC_DST0_RESETVALUE                   _UINT32_(0x00)                                       /*  (ISC_DST0) DMA Stride 0 Register  Reset Value */
 
 #define ISC_DST0_ST0_Pos                      _UINT32_(0)                                          /* (ISC_DST0) Channel 0 Stride Position */
-#define ISC_DST0_ST0_Msk                      (_UINT32_(0xFFFFFFFF) << ISC_DST0_ST0_Pos)           /* (ISC_DST0) Channel 0 Stride Mask */
+#define ISC_DST0_ST0_Msk                      (_UINT32_(0xFFFF) << ISC_DST0_ST0_Pos)               /* (ISC_DST0) Channel 0 Stride Mask */
 #define ISC_DST0_ST0(value)                   (ISC_DST0_ST0_Msk & (_UINT32_(value) << ISC_DST0_ST0_Pos)) /* Assigment of value for ST0 in the ISC_DST0 register */
-#define ISC_DST0_Msk                          _UINT32_(0xFFFFFFFF)                                 /* (ISC_DST0) Register Mask  */
+#define ISC_DST0_Msk                          _UINT32_(0x0000FFFF)                                 /* (ISC_DST0) Register Mask  */
 
 
 /* -------- ISC_DAD1 : (ISC Offset: 0x530) (R/W 32) DMA Address 1 Register -------- */
@@ -1702,9 +1715,9 @@
 #define ISC_DST1_RESETVALUE                   _UINT32_(0x00)                                       /*  (ISC_DST1) DMA Stride 1 Register  Reset Value */
 
 #define ISC_DST1_ST1_Pos                      _UINT32_(0)                                          /* (ISC_DST1) Channel 1 Stride Position */
-#define ISC_DST1_ST1_Msk                      (_UINT32_(0xFFFFFFFF) << ISC_DST1_ST1_Pos)           /* (ISC_DST1) Channel 1 Stride Mask */
+#define ISC_DST1_ST1_Msk                      (_UINT32_(0xFFFF) << ISC_DST1_ST1_Pos)               /* (ISC_DST1) Channel 1 Stride Mask */
 #define ISC_DST1_ST1(value)                   (ISC_DST1_ST1_Msk & (_UINT32_(value) << ISC_DST1_ST1_Pos)) /* Assigment of value for ST1 in the ISC_DST1 register */
-#define ISC_DST1_Msk                          _UINT32_(0xFFFFFFFF)                                 /* (ISC_DST1) Register Mask  */
+#define ISC_DST1_Msk                          _UINT32_(0x0000FFFF)                                 /* (ISC_DST1) Register Mask  */
 
 
 /* -------- ISC_DAD2 : (ISC Offset: 0x538) (R/W 32) DMA Address 2 Register -------- */
@@ -1720,9 +1733,9 @@
 #define ISC_DST2_RESETVALUE                   _UINT32_(0x00)                                       /*  (ISC_DST2) DMA Stride 2 Register  Reset Value */
 
 #define ISC_DST2_ST2_Pos                      _UINT32_(0)                                          /* (ISC_DST2) Channel 2 Stride Position */
-#define ISC_DST2_ST2_Msk                      (_UINT32_(0xFFFFFFFF) << ISC_DST2_ST2_Pos)           /* (ISC_DST2) Channel 2 Stride Mask */
+#define ISC_DST2_ST2_Msk                      (_UINT32_(0xFFFF) << ISC_DST2_ST2_Pos)               /* (ISC_DST2) Channel 2 Stride Mask */
 #define ISC_DST2_ST2(value)                   (ISC_DST2_ST2_Msk & (_UINT32_(value) << ISC_DST2_ST2_Pos)) /* Assigment of value for ST2 in the ISC_DST2 register */
-#define ISC_DST2_Msk                          _UINT32_(0xFFFFFFFF)                                 /* (ISC_DST2) Register Mask  */
+#define ISC_DST2_Msk                          _UINT32_(0x0000FFFF)                                 /* (ISC_DST2) Register Mask  */
 
 
 /* -------- ISC_WPMR : (ISC Offset: 0x540) (R/W 32) Write protection Mode Register -------- */

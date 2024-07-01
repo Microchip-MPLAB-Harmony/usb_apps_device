@@ -1,26 +1,23 @@
 /*
  * Component description for SHA
  *
- * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
  *
- * Subject to your compliance with these terms, you may use Microchip software and any derivatives
- * exclusively with Microchip products. It is your responsibility to comply with third party license
- * terms applicable to your use of third party software (including open source software) that may
- * accompany Microchip software.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY,
- * APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND
- * FITNESS FOR A PARTICULAR PURPOSE.
+ *   http://www.apache.org/licenses/LICENSE-2.0
  *
- * IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, INCIDENTAL OR CONSEQUENTIAL
- * LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF
- * MICROCHIP HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO THE FULLEST EXTENT
- * ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT
- * EXCEED THE AMOUNT OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  *
  */
 
-/* file generated from device description version 2023-01-20T08:33:42Z */
+/* file generated from device description file (ATDF) version 2024-04-05T08:36:56Z */
 #ifndef _SAM9X7_SHA_COMPONENT_H_
 #define _SAM9X7_SHA_COMPONENT_H_
 
@@ -40,9 +37,9 @@
 #define SHA_CR_FIRST_Msk                      (_UINT32_(0x1) << SHA_CR_FIRST_Pos)                  /* (SHA_CR) First Block of a Message Mask */
 #define SHA_CR_FIRST(value)                   (SHA_CR_FIRST_Msk & (_UINT32_(value) << SHA_CR_FIRST_Pos)) /* Assigment of value for FIRST in the SHA_CR register */
 #define   SHA_CR_FIRST_0_Val                  _UINT32_(0x0)                                        /* (SHA_CR) No effect.  */
-#define   SHA_CR_FIRST_1_Val                  _UINT32_(0x1)                                        /* (SHA_CR) Indicates that the next block to process is the first one of a message.  */
+#define   SHA_CR_FIRST_1_Val                  _UINT32_(0x1)                                        /* (SHA_CR) Indicates that the next block to process is the first one of a message or the first block of a fragment of a message.  */
 #define SHA_CR_FIRST_0                        (SHA_CR_FIRST_0_Val << SHA_CR_FIRST_Pos)             /* (SHA_CR) No effect. Position  */
-#define SHA_CR_FIRST_1                        (SHA_CR_FIRST_1_Val << SHA_CR_FIRST_Pos)             /* (SHA_CR) Indicates that the next block to process is the first one of a message. Position  */
+#define SHA_CR_FIRST_1                        (SHA_CR_FIRST_1_Val << SHA_CR_FIRST_Pos)             /* (SHA_CR) Indicates that the next block to process is the first one of a message or the first block of a fragment of a message. Position  */
 #define SHA_CR_SWRST_Pos                      _UINT32_(8)                                          /* (SHA_CR) Software Reset Position */
 #define SHA_CR_SWRST_Msk                      (_UINT32_(0x1) << SHA_CR_SWRST_Pos)                  /* (SHA_CR) Software Reset Mask */
 #define SHA_CR_SWRST(value)                   (SHA_CR_SWRST_Msk & (_UINT32_(value) << SHA_CR_SWRST_Pos)) /* Assigment of value for SWRST in the SHA_CR register */
@@ -103,16 +100,16 @@
 #define SHA_MR_UIHV_Pos                       _UINT32_(5)                                          /* (SHA_MR) User Initial Hash Value Registers Position */
 #define SHA_MR_UIHV_Msk                       (_UINT32_(0x1) << SHA_MR_UIHV_Pos)                   /* (SHA_MR) User Initial Hash Value Registers Mask */
 #define SHA_MR_UIHV(value)                    (SHA_MR_UIHV_Msk & (_UINT32_(value) << SHA_MR_UIHV_Pos)) /* Assigment of value for UIHV in the SHA_MR register */
-#define   SHA_MR_UIHV_0_Val                   _UINT32_(0x0)                                        /* (SHA_MR) The SHA algorithm is started with the standard initial values as defined in the FIPS180-2 specification.  */
+#define   SHA_MR_UIHV_0_Val                   _UINT32_(0x0)                                        /* (SHA_MR) The SHA algorithm is started with the standard initial values as defined in the FIPS180 specification.  */
 #define   SHA_MR_UIHV_1_Val                   _UINT32_(0x1)                                        /* (SHA_MR) The SHA algorithm is started with the user initial hash values stored in the internal register 0 (IR0). If HMAC is configured, UIHV has no effect (i.e. IR0 is selected).  */
-#define SHA_MR_UIHV_0                         (SHA_MR_UIHV_0_Val << SHA_MR_UIHV_Pos)               /* (SHA_MR) The SHA algorithm is started with the standard initial values as defined in the FIPS180-2 specification. Position  */
+#define SHA_MR_UIHV_0                         (SHA_MR_UIHV_0_Val << SHA_MR_UIHV_Pos)               /* (SHA_MR) The SHA algorithm is started with the standard initial values as defined in the FIPS180 specification. Position  */
 #define SHA_MR_UIHV_1                         (SHA_MR_UIHV_1_Val << SHA_MR_UIHV_Pos)               /* (SHA_MR) The SHA algorithm is started with the user initial hash values stored in the internal register 0 (IR0). If HMAC is configured, UIHV has no effect (i.e. IR0 is selected). Position  */
 #define SHA_MR_UIEHV_Pos                      _UINT32_(6)                                          /* (SHA_MR) User Initial or Expected Hash Value Registers Position */
 #define SHA_MR_UIEHV_Msk                      (_UINT32_(0x1) << SHA_MR_UIEHV_Pos)                  /* (SHA_MR) User Initial or Expected Hash Value Registers Mask */
 #define SHA_MR_UIEHV(value)                   (SHA_MR_UIEHV_Msk & (_UINT32_(value) << SHA_MR_UIEHV_Pos)) /* Assigment of value for UIEHV in the SHA_MR register */
-#define   SHA_MR_UIEHV_0_Val                  _UINT32_(0x0)                                        /* (SHA_MR) The SHA algorithm is started with the standard initial values as defined in the FIPS180-2 specification.  */
+#define   SHA_MR_UIEHV_0_Val                  _UINT32_(0x0)                                        /* (SHA_MR) The SHA algorithm is started with the standard initial values as defined in the FIPS180 specification.  */
 #define   SHA_MR_UIEHV_1_Val                  _UINT32_(0x1)                                        /* (SHA_MR) The SHA algorithm is started with the user initial hash values stored in the internal register 1 (IR1). If HMAC is configured, UIEHV has no effect (i.e. IR1 is always selected).  */
-#define SHA_MR_UIEHV_0                        (SHA_MR_UIEHV_0_Val << SHA_MR_UIEHV_Pos)             /* (SHA_MR) The SHA algorithm is started with the standard initial values as defined in the FIPS180-2 specification. Position  */
+#define SHA_MR_UIEHV_0                        (SHA_MR_UIEHV_0_Val << SHA_MR_UIEHV_Pos)             /* (SHA_MR) The SHA algorithm is started with the standard initial values as defined in the FIPS180 specification. Position  */
 #define SHA_MR_UIEHV_1                        (SHA_MR_UIEHV_1_Val << SHA_MR_UIEHV_Pos)             /* (SHA_MR) The SHA algorithm is started with the user initial hash values stored in the internal register 1 (IR1). If HMAC is configured, UIEHV has no effect (i.e. IR1 is always selected). Position  */
 #define SHA_MR_BPE_Pos                        _UINT32_(7)                                          /* (SHA_MR) Block Processing End Position */
 #define SHA_MR_BPE_Msk                        (_UINT32_(0x1) << SHA_MR_BPE_Pos)                    /* (SHA_MR) Block Processing End Mask */
@@ -129,29 +126,21 @@
 #define   SHA_MR_ALGO_SHA384_Val              _UINT32_(0x2)                                        /* (SHA_MR) SHA384 algorithm processed  */
 #define   SHA_MR_ALGO_SHA512_Val              _UINT32_(0x3)                                        /* (SHA_MR) SHA512 algorithm processed  */
 #define   SHA_MR_ALGO_SHA224_Val              _UINT32_(0x4)                                        /* (SHA_MR) SHA224 algorithm processed  */
-#define   SHA_MR_ALGO_SHA512_224_Val          _UINT32_(0x5)                                        /* (SHA_MR) SHA512/224 algorithm processed  */
-#define   SHA_MR_ALGO_SHA512_256_Val          _UINT32_(0x6)                                        /* (SHA_MR) SHA512/256 algorithm processed  */
 #define   SHA_MR_ALGO_HMAC_SHA1_Val           _UINT32_(0x8)                                        /* (SHA_MR) HMAC algorithm with SHA1 Hash processed  */
 #define   SHA_MR_ALGO_HMAC_SHA256_Val         _UINT32_(0x9)                                        /* (SHA_MR) HMAC algorithm with SHA256 Hash processed  */
 #define   SHA_MR_ALGO_HMAC_SHA384_Val         _UINT32_(0xA)                                        /* (SHA_MR) HMAC algorithm with SHA384 Hash processed  */
 #define   SHA_MR_ALGO_HMAC_SHA512_Val         _UINT32_(0xB)                                        /* (SHA_MR) HMAC algorithm with SHA512 Hash processed  */
 #define   SHA_MR_ALGO_HMAC_SHA224_Val         _UINT32_(0xC)                                        /* (SHA_MR) HMAC algorithm with SHA224 Hash processed  */
-#define   SHA_MR_ALGO_HMAC_SHA512_224_Val     _UINT32_(0xD)                                        /* (SHA_MR) HMAC algorithm with SHA512/224 Hash processed  */
-#define   SHA_MR_ALGO_HMAC_SHA512_256_Val     _UINT32_(0xE)                                        /* (SHA_MR) HMAC algorithm with SHA512/256 Hash processed  */
 #define SHA_MR_ALGO_SHA1                      (SHA_MR_ALGO_SHA1_Val << SHA_MR_ALGO_Pos)            /* (SHA_MR) SHA1 algorithm processed Position  */
 #define SHA_MR_ALGO_SHA256                    (SHA_MR_ALGO_SHA256_Val << SHA_MR_ALGO_Pos)          /* (SHA_MR) SHA256 algorithm processed Position  */
 #define SHA_MR_ALGO_SHA384                    (SHA_MR_ALGO_SHA384_Val << SHA_MR_ALGO_Pos)          /* (SHA_MR) SHA384 algorithm processed Position  */
 #define SHA_MR_ALGO_SHA512                    (SHA_MR_ALGO_SHA512_Val << SHA_MR_ALGO_Pos)          /* (SHA_MR) SHA512 algorithm processed Position  */
 #define SHA_MR_ALGO_SHA224                    (SHA_MR_ALGO_SHA224_Val << SHA_MR_ALGO_Pos)          /* (SHA_MR) SHA224 algorithm processed Position  */
-#define SHA_MR_ALGO_SHA512_224                (SHA_MR_ALGO_SHA512_224_Val << SHA_MR_ALGO_Pos)      /* (SHA_MR) SHA512/224 algorithm processed Position  */
-#define SHA_MR_ALGO_SHA512_256                (SHA_MR_ALGO_SHA512_256_Val << SHA_MR_ALGO_Pos)      /* (SHA_MR) SHA512/256 algorithm processed Position  */
 #define SHA_MR_ALGO_HMAC_SHA1                 (SHA_MR_ALGO_HMAC_SHA1_Val << SHA_MR_ALGO_Pos)       /* (SHA_MR) HMAC algorithm with SHA1 Hash processed Position  */
 #define SHA_MR_ALGO_HMAC_SHA256               (SHA_MR_ALGO_HMAC_SHA256_Val << SHA_MR_ALGO_Pos)     /* (SHA_MR) HMAC algorithm with SHA256 Hash processed Position  */
 #define SHA_MR_ALGO_HMAC_SHA384               (SHA_MR_ALGO_HMAC_SHA384_Val << SHA_MR_ALGO_Pos)     /* (SHA_MR) HMAC algorithm with SHA384 Hash processed Position  */
 #define SHA_MR_ALGO_HMAC_SHA512               (SHA_MR_ALGO_HMAC_SHA512_Val << SHA_MR_ALGO_Pos)     /* (SHA_MR) HMAC algorithm with SHA512 Hash processed Position  */
 #define SHA_MR_ALGO_HMAC_SHA224               (SHA_MR_ALGO_HMAC_SHA224_Val << SHA_MR_ALGO_Pos)     /* (SHA_MR) HMAC algorithm with SHA224 Hash processed Position  */
-#define SHA_MR_ALGO_HMAC_SHA512_224           (SHA_MR_ALGO_HMAC_SHA512_224_Val << SHA_MR_ALGO_Pos) /* (SHA_MR) HMAC algorithm with SHA512/224 Hash processed Position  */
-#define SHA_MR_ALGO_HMAC_SHA512_256           (SHA_MR_ALGO_HMAC_SHA512_256_Val << SHA_MR_ALGO_Pos) /* (SHA_MR) HMAC algorithm with SHA512/256 Hash processed Position  */
 #define SHA_MR_TMPLCK_Pos                     _UINT32_(15)                                         /* (SHA_MR) Tamper Lock Enable Position */
 #define SHA_MR_TMPLCK_Msk                     (_UINT32_(0x1) << SHA_MR_TMPLCK_Pos)                 /* (SHA_MR) Tamper Lock Enable Mask */
 #define SHA_MR_TMPLCK(value)                  (SHA_MR_TMPLCK_Msk & (_UINT32_(value) << SHA_MR_TMPLCK_Pos)) /* Assigment of value for TMPLCK in the SHA_MR register */
