@@ -71,10 +71,10 @@
 #define LED_Toggle() (PIOC_REGS->PIO_ODSR ^= (1UL<<21))
 #define LED_On() (PIOC_REGS->PIO_SODR = (1UL<<21))
 #define LED_Off() (PIOC_REGS->PIO_CODR = (1UL<<21))
-/*** LED Macros for LED_READ ***/
-#define LED_READ_Toggle() (PIOC_REGS->PIO_ODSR ^= (1UL<<19))
-#define LED_READ_On() (PIOC_REGS->PIO_SODR = (1UL<<19))
-#define LED_READ_Off() (PIOC_REGS->PIO_CODR = (1UL<<19))
+/*** LED Macros for LED_RED ***/
+#define LED_RED_Toggle() (PIOC_REGS->PIO_ODSR ^= (1UL<<14))
+#define LED_RED_On() (PIOC_REGS->PIO_SODR = (1UL<<14))
+#define LED_RED_Off() (PIOC_REGS->PIO_CODR = (1UL<<14))
 /*** SWITCH Macros for SWITCH ***/
 #define SWITCH_Get() ((PIOC_REGS->PIO_PDSR >> 9) & 0x1)
 #define SWITCH_STATE_PRESSED 0

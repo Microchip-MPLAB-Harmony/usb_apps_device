@@ -18,7 +18,12 @@
  */
 
 /* file generated from device description file (ATDF) version 2024-04-05T08:36:56Z */
-#ifndef _SAM9X7_RSTC_INSTANCE_
-#define _SAM9X7_RSTC_INSTANCE_
+#ifndef _SAM9X7_UHPHS_INSTANCE_
+#define _SAM9X7_UHPHS_INSTANCE_
 
-#endif /* _SAM9X7_RSTC_INSTANCE_ */
+
+/* ========== Instance Parameter definitions for UHPHS peripheral ========== */
+#define UHPHS_CLOCK_ID                           (22)       
+#define UHPHS_INSTANCE_ID                        (22)       /* USB Host High Speed */
+
+#endif /* _SAM9X7_UHPHS_INSTANCE_ */

@@ -77,7 +77,7 @@ void BSP_Initialize(void )
     /* Switch off LEDs */
 		LED_BLUE_Off(); 
 		LED_Off(); 
-		LED_READ_Off(); 
+		LED_RED_Off(); 
 
 
 }

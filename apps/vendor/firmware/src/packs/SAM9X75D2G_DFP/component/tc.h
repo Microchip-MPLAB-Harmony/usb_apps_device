@@ -1,26 +1,23 @@
 /*
  * Component description for TC
  *
- * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
  *
- * Subject to your compliance with these terms, you may use Microchip software and any derivatives
- * exclusively with Microchip products. It is your responsibility to comply with third party license
- * terms applicable to your use of third party software (including open source software) that may
- * accompany Microchip software.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY,
- * APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND
- * FITNESS FOR A PARTICULAR PURPOSE.
+ *   http://www.apache.org/licenses/LICENSE-2.0
  *
- * IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, INCIDENTAL OR CONSEQUENTIAL
- * LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF
- * MICROCHIP HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO THE FULLEST EXTENT
- * ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT
- * EXCEED THE AMOUNT OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  *
  */
 
-/* file generated from device description version 2023-01-20T08:33:42Z */
+/* file generated from device description file (ATDF) version 2024-04-05T08:36:56Z */
 #ifndef _SAM9X7_TC_COMPONENT_H_
 #define _SAM9X7_TC_COMPONENT_H_
 
@@ -93,14 +90,7 @@
 #define TC_CMR_BURST_XC0                      (TC_CMR_BURST_XC0_Val << TC_CMR_BURST_Pos)           /* (TC_CMR) XC0 is ANDed with the selected clock. Position  */
 #define TC_CMR_BURST_XC1                      (TC_CMR_BURST_XC1_Val << TC_CMR_BURST_Pos)           /* (TC_CMR) XC1 is ANDed with the selected clock. Position  */
 #define TC_CMR_BURST_XC2                      (TC_CMR_BURST_XC2_Val << TC_CMR_BURST_Pos)           /* (TC_CMR) XC2 is ANDed with the selected clock. Position  */
-#define TC_CMR_WAVE_Pos                       _UINT32_(15)                                         /* (TC_CMR) Waveform Mode Position */
-#define TC_CMR_WAVE_Msk                       (_UINT32_(0x1) << TC_CMR_WAVE_Pos)                   /* (TC_CMR) Waveform Mode Mask */
-#define TC_CMR_WAVE(value)                    (TC_CMR_WAVE_Msk & (_UINT32_(value) << TC_CMR_WAVE_Pos)) /* Assigment of value for WAVE in the TC_CMR register */
-#define   TC_CMR_WAVE_0_Val                   _UINT32_(0x0)                                        /* (TC_CMR) Waveform mode is disabled (Capture mode is enabled).  */
-#define   TC_CMR_WAVE_1_Val                   _UINT32_(0x1)                                        /* (TC_CMR) Waveform mode is enabled.  */
-#define TC_CMR_WAVE_0                         (TC_CMR_WAVE_0_Val << TC_CMR_WAVE_Pos)               /* (TC_CMR) Waveform mode is disabled (Capture mode is enabled). Position  */
-#define TC_CMR_WAVE_1                         (TC_CMR_WAVE_1_Val << TC_CMR_WAVE_Pos)               /* (TC_CMR) Waveform mode is enabled. Position  */
-#define TC_CMR_Msk                            _UINT32_(0x0000803F)                                 /* (TC_CMR) Register Mask  */
+#define TC_CMR_Msk                            _UINT32_(0x0000003F)                                 /* (TC_CMR) Register Mask  */
 
 /* CAPTURE mode */
 #define TC_CMR_CAPTURE_LDBSTOP_Pos            _UINT32_(6)                                          /* (TC_CMR) Counter Clock Stopped with RB Loading Position */
@@ -142,8 +132,8 @@
 #define   TC_CMR_CAPTURE_CPCTRG_1_Val         _UINT32_(0x1)                                        /* (TC_CMR) RC Compare resets the counter and starts the counter clock.  */
 #define TC_CMR_CAPTURE_CPCTRG_0               (TC_CMR_CAPTURE_CPCTRG_0_Val << TC_CMR_CAPTURE_CPCTRG_Pos) /* (TC_CMR) RC Compare has no effect on the counter and its clock. Position  */
 #define TC_CMR_CAPTURE_CPCTRG_1               (TC_CMR_CAPTURE_CPCTRG_1_Val << TC_CMR_CAPTURE_CPCTRG_Pos) /* (TC_CMR) RC Compare resets the counter and starts the counter clock. Position  */
-#define TC_CMR_CAPTURE_WAVE_Pos               _UINT32_(15)                                         /* (TC_CMR) Waveform Mode Position */
-#define TC_CMR_CAPTURE_WAVE_Msk               (_UINT32_(0x1) << TC_CMR_CAPTURE_WAVE_Pos)           /* (TC_CMR) Waveform Mode Mask */
+#define TC_CMR_CAPTURE_WAVE_Pos               _UINT32_(15)                                         /* (TC_CMR) Capture Mode Position */
+#define TC_CMR_CAPTURE_WAVE_Msk               (_UINT32_(0x1) << TC_CMR_CAPTURE_WAVE_Pos)           /* (TC_CMR) Capture Mode Mask */
 #define TC_CMR_CAPTURE_WAVE(value)            (TC_CMR_CAPTURE_WAVE_Msk & (_UINT32_(value) << TC_CMR_CAPTURE_WAVE_Pos))
 #define   TC_CMR_CAPTURE_WAVE_0_Val           _UINT32_(0x0)                                        /* (TC_CMR) Capture mode is enabled.  */
 #define   TC_CMR_CAPTURE_WAVE_1_Val           _UINT32_(0x1)                                        /* (TC_CMR) Capture mode is disabled (Waveform mode is enabled).  */
@@ -241,6 +231,13 @@
 #define TC_CMR_WAVEFORM_WAVSEL_UPDOWN         (TC_CMR_WAVEFORM_WAVSEL_UPDOWN_Val << TC_CMR_WAVEFORM_WAVSEL_Pos) /* (TC_CMR) UPDOWN mode without automatic trigger on RC Compare Position  */
 #define TC_CMR_WAVEFORM_WAVSEL_UP_RC          (TC_CMR_WAVEFORM_WAVSEL_UP_RC_Val << TC_CMR_WAVEFORM_WAVSEL_Pos) /* (TC_CMR) UP mode with automatic trigger on RC Compare Position  */
 #define TC_CMR_WAVEFORM_WAVSEL_UPDOWN_RC      (TC_CMR_WAVEFORM_WAVSEL_UPDOWN_RC_Val << TC_CMR_WAVEFORM_WAVSEL_Pos) /* (TC_CMR) UPDOWN mode with automatic trigger on RC Compare Position  */
+#define TC_CMR_WAVEFORM_WAVE_Pos              _UINT32_(15)                                         /* (TC_CMR) Waveform Mode Position */
+#define TC_CMR_WAVEFORM_WAVE_Msk              (_UINT32_(0x1) << TC_CMR_WAVEFORM_WAVE_Pos)          /* (TC_CMR) Waveform Mode Mask */
+#define TC_CMR_WAVEFORM_WAVE(value)           (TC_CMR_WAVEFORM_WAVE_Msk & (_UINT32_(value) << TC_CMR_WAVEFORM_WAVE_Pos))
+#define   TC_CMR_WAVEFORM_WAVE_0_Val          _UINT32_(0x0)                                        /* (TC_CMR) Waveform mode is disabled (Capture mode is enabled).  */
+#define   TC_CMR_WAVEFORM_WAVE_1_Val          _UINT32_(0x1)                                        /* (TC_CMR) Waveform mode is enabled.  */
+#define TC_CMR_WAVEFORM_WAVE_0                (TC_CMR_WAVEFORM_WAVE_0_Val << TC_CMR_WAVEFORM_WAVE_Pos) /* (TC_CMR) Waveform mode is disabled (Capture mode is enabled). Position  */
+#define TC_CMR_WAVEFORM_WAVE_1                (TC_CMR_WAVEFORM_WAVE_1_Val << TC_CMR_WAVEFORM_WAVE_Pos) /* (TC_CMR) Waveform mode is enabled. Position  */
 #define TC_CMR_WAVEFORM_ACPA_Pos              _UINT32_(16)                                         /* (TC_CMR) RA Compare Effect on TIOAx Position */
 #define TC_CMR_WAVEFORM_ACPA_Msk              (_UINT32_(0x3) << TC_CMR_WAVEFORM_ACPA_Pos)          /* (TC_CMR) RA Compare Effect on TIOAx Mask */
 #define TC_CMR_WAVEFORM_ACPA(value)           (TC_CMR_WAVEFORM_ACPA_Msk & (_UINT32_(value) << TC_CMR_WAVEFORM_ACPA_Pos))
@@ -329,7 +326,7 @@
 #define TC_CMR_WAVEFORM_BSWTRG_SET            (TC_CMR_WAVEFORM_BSWTRG_SET_Val << TC_CMR_WAVEFORM_BSWTRG_Pos) /* (TC_CMR) Set Position  */
 #define TC_CMR_WAVEFORM_BSWTRG_CLEAR          (TC_CMR_WAVEFORM_BSWTRG_CLEAR_Val << TC_CMR_WAVEFORM_BSWTRG_Pos) /* (TC_CMR) Clear Position  */
 #define TC_CMR_WAVEFORM_BSWTRG_TOGGLE         (TC_CMR_WAVEFORM_BSWTRG_TOGGLE_Val << TC_CMR_WAVEFORM_BSWTRG_Pos) /* (TC_CMR) Toggle Position  */
-#define TC_CMR_WAVEFORM_Msk                   _UINT32_(0xFFFF7FC0)                                  /* (TC_CMR_WAVEFORM) Register Mask  */
+#define TC_CMR_WAVEFORM_Msk                   _UINT32_(0xFFFFFFC0)                                  /* (TC_CMR_WAVEFORM) Register Mask  */
 
 
 /* -------- TC_SMMR : (TC Offset: 0x08) (R/W 32) Stepper Motor Mode Register  -------- */
@@ -403,59 +400,59 @@
 #define TC_SR_COVFS_Pos                       _UINT32_(0)                                          /* (TC_SR) Counter Overflow Status (cleared on read) Position */
 #define TC_SR_COVFS_Msk                       (_UINT32_(0x1) << TC_SR_COVFS_Pos)                   /* (TC_SR) Counter Overflow Status (cleared on read) Mask */
 #define TC_SR_COVFS(value)                    (TC_SR_COVFS_Msk & (_UINT32_(value) << TC_SR_COVFS_Pos)) /* Assigment of value for COVFS in the TC_SR register */
-#define   TC_SR_COVFS_0_Val                   _UINT32_(0x0)                                        /* (TC_SR) No counter overflow has occurred since the last read of the Status Register.  */
-#define   TC_SR_COVFS_1_Val                   _UINT32_(0x1)                                        /* (TC_SR) A counter overflow has occurred since the last read of the Status Register.  */
-#define TC_SR_COVFS_0                         (TC_SR_COVFS_0_Val << TC_SR_COVFS_Pos)               /* (TC_SR) No counter overflow has occurred since the last read of the Status Register. Position  */
-#define TC_SR_COVFS_1                         (TC_SR_COVFS_1_Val << TC_SR_COVFS_Pos)               /* (TC_SR) A counter overflow has occurred since the last read of the Status Register. Position  */
+#define   TC_SR_COVFS_0_Val                   _UINT32_(0x0)                                        /* (TC_SR) No counter overflow has occurred since the last read of the Status register.  */
+#define   TC_SR_COVFS_1_Val                   _UINT32_(0x1)                                        /* (TC_SR) A counter overflow has occurred since the last read of the Status register.  */
+#define TC_SR_COVFS_0                         (TC_SR_COVFS_0_Val << TC_SR_COVFS_Pos)               /* (TC_SR) No counter overflow has occurred since the last read of the Status register. Position  */
+#define TC_SR_COVFS_1                         (TC_SR_COVFS_1_Val << TC_SR_COVFS_Pos)               /* (TC_SR) A counter overflow has occurred since the last read of the Status register. Position  */
 #define TC_SR_LOVRS_Pos                       _UINT32_(1)                                          /* (TC_SR) Load Overrun Status (cleared on read) Position */
 #define TC_SR_LOVRS_Msk                       (_UINT32_(0x1) << TC_SR_LOVRS_Pos)                   /* (TC_SR) Load Overrun Status (cleared on read) Mask */
 #define TC_SR_LOVRS(value)                    (TC_SR_LOVRS_Msk & (_UINT32_(value) << TC_SR_LOVRS_Pos)) /* Assigment of value for LOVRS in the TC_SR register */
-#define   TC_SR_LOVRS_0_Val                   _UINT32_(0x0)                                        /* (TC_SR) Load overrun has not occurred since the last read of the Status Register or TC_CMRx.WAVE = 1.  */
-#define   TC_SR_LOVRS_1_Val                   _UINT32_(0x1)                                        /* (TC_SR) RA or RB have been loaded at least twice without any read of the corresponding register since the last read of the Status Register, if TC_CMRx.WAVE = 0.  */
-#define TC_SR_LOVRS_0                         (TC_SR_LOVRS_0_Val << TC_SR_LOVRS_Pos)               /* (TC_SR) Load overrun has not occurred since the last read of the Status Register or TC_CMRx.WAVE = 1. Position  */
-#define TC_SR_LOVRS_1                         (TC_SR_LOVRS_1_Val << TC_SR_LOVRS_Pos)               /* (TC_SR) RA or RB have been loaded at least twice without any read of the corresponding register since the last read of the Status Register, if TC_CMRx.WAVE = 0. Position  */
+#define   TC_SR_LOVRS_0_Val                   _UINT32_(0x0)                                        /* (TC_SR) Load overrun has not occurred since the last read of the Status register or TC_CMRx.WAVE = 1.  */
+#define   TC_SR_LOVRS_1_Val                   _UINT32_(0x1)                                        /* (TC_SR) RA or RB have been loaded at least twice without any read of the corresponding register since the last read of the Status register, if TC_CMRx.WAVE = 0.  */
+#define TC_SR_LOVRS_0                         (TC_SR_LOVRS_0_Val << TC_SR_LOVRS_Pos)               /* (TC_SR) Load overrun has not occurred since the last read of the Status register or TC_CMRx.WAVE = 1. Position  */
+#define TC_SR_LOVRS_1                         (TC_SR_LOVRS_1_Val << TC_SR_LOVRS_Pos)               /* (TC_SR) RA or RB have been loaded at least twice without any read of the corresponding register since the last read of the Status register, if TC_CMRx.WAVE = 0. Position  */
 #define TC_SR_CPAS_Pos                        _UINT32_(2)                                          /* (TC_SR) RA Compare Status (cleared on read) Position */
 #define TC_SR_CPAS_Msk                        (_UINT32_(0x1) << TC_SR_CPAS_Pos)                    /* (TC_SR) RA Compare Status (cleared on read) Mask */
 #define TC_SR_CPAS(value)                     (TC_SR_CPAS_Msk & (_UINT32_(value) << TC_SR_CPAS_Pos)) /* Assigment of value for CPAS in the TC_SR register */
-#define   TC_SR_CPAS_0_Val                    _UINT32_(0x0)                                        /* (TC_SR) RA Compare has not occurred since the last read of the Status Register or TC_CMRx.WAVE = 0.  */
-#define   TC_SR_CPAS_1_Val                    _UINT32_(0x1)                                        /* (TC_SR) RA Compare has occurred since the last read of the Status Register, if TC_CMRx.WAVE = 1.  */
-#define TC_SR_CPAS_0                          (TC_SR_CPAS_0_Val << TC_SR_CPAS_Pos)                 /* (TC_SR) RA Compare has not occurred since the last read of the Status Register or TC_CMRx.WAVE = 0. Position  */
-#define TC_SR_CPAS_1                          (TC_SR_CPAS_1_Val << TC_SR_CPAS_Pos)                 /* (TC_SR) RA Compare has occurred since the last read of the Status Register, if TC_CMRx.WAVE = 1. Position  */
+#define   TC_SR_CPAS_0_Val                    _UINT32_(0x0)                                        /* (TC_SR) RA Compare has not occurred since the last read of the Status register or TC_CMRx.WAVE = 0.  */
+#define   TC_SR_CPAS_1_Val                    _UINT32_(0x1)                                        /* (TC_SR) RA Compare has occurred since the last read of the Status register, if TC_CMRx.WAVE = 1.  */
+#define TC_SR_CPAS_0                          (TC_SR_CPAS_0_Val << TC_SR_CPAS_Pos)                 /* (TC_SR) RA Compare has not occurred since the last read of the Status register or TC_CMRx.WAVE = 0. Position  */
+#define TC_SR_CPAS_1                          (TC_SR_CPAS_1_Val << TC_SR_CPAS_Pos)                 /* (TC_SR) RA Compare has occurred since the last read of the Status register, if TC_CMRx.WAVE = 1. Position  */
 #define TC_SR_CPBS_Pos                        _UINT32_(3)                                          /* (TC_SR) RB Compare Status (cleared on read) Position */
 #define TC_SR_CPBS_Msk                        (_UINT32_(0x1) << TC_SR_CPBS_Pos)                    /* (TC_SR) RB Compare Status (cleared on read) Mask */
 #define TC_SR_CPBS(value)                     (TC_SR_CPBS_Msk & (_UINT32_(value) << TC_SR_CPBS_Pos)) /* Assigment of value for CPBS in the TC_SR register */
-#define   TC_SR_CPBS_0_Val                    _UINT32_(0x0)                                        /* (TC_SR) RB Compare has not occurred since the last read of the Status Register or TC_CMRx.WAVE = 0.  */
-#define   TC_SR_CPBS_1_Val                    _UINT32_(0x1)                                        /* (TC_SR) RB Compare has occurred since the last read of the Status Register, if TC_CMRx.WAVE = 1.  */
-#define TC_SR_CPBS_0                          (TC_SR_CPBS_0_Val << TC_SR_CPBS_Pos)                 /* (TC_SR) RB Compare has not occurred since the last read of the Status Register or TC_CMRx.WAVE = 0. Position  */
-#define TC_SR_CPBS_1                          (TC_SR_CPBS_1_Val << TC_SR_CPBS_Pos)                 /* (TC_SR) RB Compare has occurred since the last read of the Status Register, if TC_CMRx.WAVE = 1. Position  */
+#define   TC_SR_CPBS_0_Val                    _UINT32_(0x0)                                        /* (TC_SR) RB Compare has not occurred since the last read of the Status register or TC_CMRx.WAVE = 0.  */
+#define   TC_SR_CPBS_1_Val                    _UINT32_(0x1)                                        /* (TC_SR) RB Compare has occurred since the last read of the Status register, if TC_CMRx.WAVE = 1.  */
+#define TC_SR_CPBS_0                          (TC_SR_CPBS_0_Val << TC_SR_CPBS_Pos)                 /* (TC_SR) RB Compare has not occurred since the last read of the Status register or TC_CMRx.WAVE = 0. Position  */
+#define TC_SR_CPBS_1                          (TC_SR_CPBS_1_Val << TC_SR_CPBS_Pos)                 /* (TC_SR) RB Compare has occurred since the last read of the Status register, if TC_CMRx.WAVE = 1. Position  */
 #define TC_SR_CPCS_Pos                        _UINT32_(4)                                          /* (TC_SR) RC Compare Status (cleared on read) Position */
 #define TC_SR_CPCS_Msk                        (_UINT32_(0x1) << TC_SR_CPCS_Pos)                    /* (TC_SR) RC Compare Status (cleared on read) Mask */
 #define TC_SR_CPCS(value)                     (TC_SR_CPCS_Msk & (_UINT32_(value) << TC_SR_CPCS_Pos)) /* Assigment of value for CPCS in the TC_SR register */
-#define   TC_SR_CPCS_0_Val                    _UINT32_(0x0)                                        /* (TC_SR) RC Compare has not occurred since the last read of the Status Register.  */
-#define   TC_SR_CPCS_1_Val                    _UINT32_(0x1)                                        /* (TC_SR) RC Compare has occurred since the last read of the Status Register.  */
-#define TC_SR_CPCS_0                          (TC_SR_CPCS_0_Val << TC_SR_CPCS_Pos)                 /* (TC_SR) RC Compare has not occurred since the last read of the Status Register. Position  */
-#define TC_SR_CPCS_1                          (TC_SR_CPCS_1_Val << TC_SR_CPCS_Pos)                 /* (TC_SR) RC Compare has occurred since the last read of the Status Register. Position  */
+#define   TC_SR_CPCS_0_Val                    _UINT32_(0x0)                                        /* (TC_SR) RC Compare has not occurred since the last read of the Status register.  */
+#define   TC_SR_CPCS_1_Val                    _UINT32_(0x1)                                        /* (TC_SR) RC Compare has occurred since the last read of the Status register.  */
+#define TC_SR_CPCS_0                          (TC_SR_CPCS_0_Val << TC_SR_CPCS_Pos)                 /* (TC_SR) RC Compare has not occurred since the last read of the Status register. Position  */
+#define TC_SR_CPCS_1                          (TC_SR_CPCS_1_Val << TC_SR_CPCS_Pos)                 /* (TC_SR) RC Compare has occurred since the last read of the Status register. Position  */
 #define TC_SR_LDRAS_Pos                       _UINT32_(5)                                          /* (TC_SR) RA Loading Status (cleared on read) Position */
 #define TC_SR_LDRAS_Msk                       (_UINT32_(0x1) << TC_SR_LDRAS_Pos)                   /* (TC_SR) RA Loading Status (cleared on read) Mask */
 #define TC_SR_LDRAS(value)                    (TC_SR_LDRAS_Msk & (_UINT32_(value) << TC_SR_LDRAS_Pos)) /* Assigment of value for LDRAS in the TC_SR register */
-#define   TC_SR_LDRAS_0_Val                   _UINT32_(0x0)                                        /* (TC_SR) RA Load has not occurred since the last read of the Status Register or TC_CMRx.WAVE = 1.  */
-#define   TC_SR_LDRAS_1_Val                   _UINT32_(0x1)                                        /* (TC_SR) RA Load has occurred since the last read of the Status Register, if TC_CMRx.WAVE = 0.  */
-#define TC_SR_LDRAS_0                         (TC_SR_LDRAS_0_Val << TC_SR_LDRAS_Pos)               /* (TC_SR) RA Load has not occurred since the last read of the Status Register or TC_CMRx.WAVE = 1. Position  */
-#define TC_SR_LDRAS_1                         (TC_SR_LDRAS_1_Val << TC_SR_LDRAS_Pos)               /* (TC_SR) RA Load has occurred since the last read of the Status Register, if TC_CMRx.WAVE = 0. Position  */
+#define   TC_SR_LDRAS_0_Val                   _UINT32_(0x0)                                        /* (TC_SR) RA Load has not occurred since the last read of the Status register or TC_CMRx.WAVE = 1.  */
+#define   TC_SR_LDRAS_1_Val                   _UINT32_(0x1)                                        /* (TC_SR) RA Load has occurred since the last read of the Status register, if TC_CMRx.WAVE = 0.  */
+#define TC_SR_LDRAS_0                         (TC_SR_LDRAS_0_Val << TC_SR_LDRAS_Pos)               /* (TC_SR) RA Load has not occurred since the last read of the Status register or TC_CMRx.WAVE = 1. Position  */
+#define TC_SR_LDRAS_1                         (TC_SR_LDRAS_1_Val << TC_SR_LDRAS_Pos)               /* (TC_SR) RA Load has occurred since the last read of the Status register, if TC_CMRx.WAVE = 0. Position  */
 #define TC_SR_LDRBS_Pos                       _UINT32_(6)                                          /* (TC_SR) RB Loading Status (cleared on read) Position */
 #define TC_SR_LDRBS_Msk                       (_UINT32_(0x1) << TC_SR_LDRBS_Pos)                   /* (TC_SR) RB Loading Status (cleared on read) Mask */
 #define TC_SR_LDRBS(value)                    (TC_SR_LDRBS_Msk & (_UINT32_(value) << TC_SR_LDRBS_Pos)) /* Assigment of value for LDRBS in the TC_SR register */
-#define   TC_SR_LDRBS_0_Val                   _UINT32_(0x0)                                        /* (TC_SR) RB Load has not occurred since the last read of the Status Register or TC_CMRx.WAVE = 1.  */
-#define   TC_SR_LDRBS_1_Val                   _UINT32_(0x1)                                        /* (TC_SR) RB Load has occurred since the last read of the Status Register, if TC_CMRx.WAVE = 0.  */
-#define TC_SR_LDRBS_0                         (TC_SR_LDRBS_0_Val << TC_SR_LDRBS_Pos)               /* (TC_SR) RB Load has not occurred since the last read of the Status Register or TC_CMRx.WAVE = 1. Position  */
-#define TC_SR_LDRBS_1                         (TC_SR_LDRBS_1_Val << TC_SR_LDRBS_Pos)               /* (TC_SR) RB Load has occurred since the last read of the Status Register, if TC_CMRx.WAVE = 0. Position  */
+#define   TC_SR_LDRBS_0_Val                   _UINT32_(0x0)                                        /* (TC_SR) RB Load has not occurred since the last read of the Status register or TC_CMRx.WAVE = 1.  */
+#define   TC_SR_LDRBS_1_Val                   _UINT32_(0x1)                                        /* (TC_SR) RB Load has occurred since the last read of the Status register, if TC_CMRx.WAVE = 0.  */
+#define TC_SR_LDRBS_0                         (TC_SR_LDRBS_0_Val << TC_SR_LDRBS_Pos)               /* (TC_SR) RB Load has not occurred since the last read of the Status register or TC_CMRx.WAVE = 1. Position  */
+#define TC_SR_LDRBS_1                         (TC_SR_LDRBS_1_Val << TC_SR_LDRBS_Pos)               /* (TC_SR) RB Load has occurred since the last read of the Status register, if TC_CMRx.WAVE = 0. Position  */
 #define TC_SR_ETRGS_Pos                       _UINT32_(7)                                          /* (TC_SR) External Trigger Status (cleared on read) Position */
 #define TC_SR_ETRGS_Msk                       (_UINT32_(0x1) << TC_SR_ETRGS_Pos)                   /* (TC_SR) External Trigger Status (cleared on read) Mask */
 #define TC_SR_ETRGS(value)                    (TC_SR_ETRGS_Msk & (_UINT32_(value) << TC_SR_ETRGS_Pos)) /* Assigment of value for ETRGS in the TC_SR register */
-#define   TC_SR_ETRGS_0_Val                   _UINT32_(0x0)                                        /* (TC_SR) External trigger has not occurred since the last read of the Status Register.  */
-#define   TC_SR_ETRGS_1_Val                   _UINT32_(0x1)                                        /* (TC_SR) External trigger has occurred since the last read of the Status Register.  */
-#define TC_SR_ETRGS_0                         (TC_SR_ETRGS_0_Val << TC_SR_ETRGS_Pos)               /* (TC_SR) External trigger has not occurred since the last read of the Status Register. Position  */
-#define TC_SR_ETRGS_1                         (TC_SR_ETRGS_1_Val << TC_SR_ETRGS_Pos)               /* (TC_SR) External trigger has occurred since the last read of the Status Register. Position  */
+#define   TC_SR_ETRGS_0_Val                   _UINT32_(0x0)                                        /* (TC_SR) External trigger has not occurred since the last read of the Status register.  */
+#define   TC_SR_ETRGS_1_Val                   _UINT32_(0x1)                                        /* (TC_SR) External trigger has occurred since the last read of the Status register.  */
+#define TC_SR_ETRGS_0                         (TC_SR_ETRGS_0_Val << TC_SR_ETRGS_Pos)               /* (TC_SR) External trigger has not occurred since the last read of the Status register. Position  */
+#define TC_SR_ETRGS_1                         (TC_SR_ETRGS_1_Val << TC_SR_ETRGS_Pos)               /* (TC_SR) External trigger has occurred since the last read of the Status register. Position  */
 #define TC_SR_SECE_Pos                        _UINT32_(8)                                          /* (TC_SR) Security and/or Safety Event (cleared on read) Position */
 #define TC_SR_SECE_Msk                        (_UINT32_(0x1) << TC_SR_SECE_Pos)                    /* (TC_SR) Security and/or Safety Event (cleared on read) Mask */
 #define TC_SR_SECE(value)                     (TC_SR_SECE_Msk & (_UINT32_(value) << TC_SR_SECE_Pos)) /* Assigment of value for SECE in the TC_SR register */
@@ -589,16 +586,16 @@
 #define TC_EMR_TRIGSRCA_Msk                   (_UINT32_(0x3) << TC_EMR_TRIGSRCA_Pos)               /* (TC_EMR) Trigger Source for Input A Mask */
 #define TC_EMR_TRIGSRCA(value)                (TC_EMR_TRIGSRCA_Msk & (_UINT32_(value) << TC_EMR_TRIGSRCA_Pos)) /* Assigment of value for TRIGSRCA in the TC_EMR register */
 #define   TC_EMR_TRIGSRCA_EXTERNAL_TIOAx_Val  _UINT32_(0x0)                                        /* (TC_EMR) The trigger/capture input A is driven by external pin TIOAx  */
-#define   TC_EMR_TRIGSRCA_PWMx_Val            _UINT32_(0x1)                                        /* (TC_EMR) The trigger/capture input A is driven internally by PWMx  */
+#define   TC_EMR_TRIGSRCA_PWMx_Val            _UINT32_(0x1)                                        /* (TC_EMR) For TC0, TC1.TIOA0, TC1.TIOA2: The trigger/capture input A is driven internally by PWMx. For TC1.TIOA1: The trigger/capture input A is driven internally by the GTSUCOMP signal of the Ethernet MAC (GMAC).  */
 #define TC_EMR_TRIGSRCA_EXTERNAL_TIOAx        (TC_EMR_TRIGSRCA_EXTERNAL_TIOAx_Val << TC_EMR_TRIGSRCA_Pos) /* (TC_EMR) The trigger/capture input A is driven by external pin TIOAx Position  */
-#define TC_EMR_TRIGSRCA_PWMx                  (TC_EMR_TRIGSRCA_PWMx_Val << TC_EMR_TRIGSRCA_Pos)    /* (TC_EMR) The trigger/capture input A is driven internally by PWMx Position  */
+#define TC_EMR_TRIGSRCA_PWMx                  (TC_EMR_TRIGSRCA_PWMx_Val << TC_EMR_TRIGSRCA_Pos)    /* (TC_EMR) For TC0, TC1.TIOA0, TC1.TIOA2: The trigger/capture input A is driven internally by PWMx. For TC1.TIOA1: The trigger/capture input A is driven internally by the GTSUCOMP signal of the Ethernet MAC (GMAC). Position  */
 #define TC_EMR_TRIGSRCB_Pos                   _UINT32_(4)                                          /* (TC_EMR) Trigger Source for Input B Position */
 #define TC_EMR_TRIGSRCB_Msk                   (_UINT32_(0x3) << TC_EMR_TRIGSRCB_Pos)               /* (TC_EMR) Trigger Source for Input B Mask */
 #define TC_EMR_TRIGSRCB(value)                (TC_EMR_TRIGSRCB_Msk & (_UINT32_(value) << TC_EMR_TRIGSRCB_Pos)) /* Assigment of value for TRIGSRCB in the TC_EMR register */
 #define   TC_EMR_TRIGSRCB_EXTERNAL_TIOBx_Val  _UINT32_(0x0)                                        /* (TC_EMR) The trigger/capture input B is driven by external pin TIOBx  */
-#define   TC_EMR_TRIGSRCB_PWMx_Val            _UINT32_(0x1)                                        /* (TC_EMR) The trigger/capture input B is driven internally by the comparator output (see Figure 7-16) of the PWMx.  */
+#define   TC_EMR_TRIGSRCB_PWMx_Val            _UINT32_(0x1)                                        /* (TC_EMR) For all channels: The trigger/capture input B is driven internally by the comparator output (see Figure 7-17) of the PWMx.  */
 #define TC_EMR_TRIGSRCB_EXTERNAL_TIOBx        (TC_EMR_TRIGSRCB_EXTERNAL_TIOBx_Val << TC_EMR_TRIGSRCB_Pos) /* (TC_EMR) The trigger/capture input B is driven by external pin TIOBx Position  */
-#define TC_EMR_TRIGSRCB_PWMx                  (TC_EMR_TRIGSRCB_PWMx_Val << TC_EMR_TRIGSRCB_Pos)    /* (TC_EMR) The trigger/capture input B is driven internally by the comparator output (see Figure 7-16) of the PWMx. Position  */
+#define TC_EMR_TRIGSRCB_PWMx                  (TC_EMR_TRIGSRCB_PWMx_Val << TC_EMR_TRIGSRCB_Pos)    /* (TC_EMR) For all channels: The trigger/capture input B is driven internally by the comparator output (see Figure 7-17) of the PWMx. Position  */
 #define TC_EMR_NODIVCLK_Pos                   _UINT32_(8)                                          /* (TC_EMR) No Divided Clock Position */
 #define TC_EMR_NODIVCLK_Msk                   (_UINT32_(0x1) << TC_EMR_NODIVCLK_Pos)               /* (TC_EMR) No Divided Clock Mask */
 #define TC_EMR_NODIVCLK(value)                (TC_EMR_NODIVCLK_Msk & (_UINT32_(value) << TC_EMR_NODIVCLK_Pos)) /* Assigment of value for NODIVCLK in the TC_EMR register */
@@ -705,33 +702,33 @@
 /* -------- TC_BMR : (TC Offset: 0xC4) (R/W 32) Block Mode Register -------- */
 #define TC_BMR_RESETVALUE                     _UINT32_(0x00)                                       /*  (TC_BMR) Block Mode Register  Reset Value */
 
-#define TC_BMR_TC0XC0S_Pos                    _UINT32_(0)                                          /* (TC_BMR) External Clock Signal 0 Selection Position */
-#define TC_BMR_TC0XC0S_Msk                    (_UINT32_(0x3) << TC_BMR_TC0XC0S_Pos)                /* (TC_BMR) External Clock Signal 0 Selection Mask */
+#define TC_BMR_TC0XC0S_Pos                    _UINT32_(0)                                          /* (TC_BMR) External Clock Signal 0 (XC0) Selection Position */
+#define TC_BMR_TC0XC0S_Msk                    (_UINT32_(0x3) << TC_BMR_TC0XC0S_Pos)                /* (TC_BMR) External Clock Signal 0 (XC0) Selection Mask */
 #define TC_BMR_TC0XC0S(value)                 (TC_BMR_TC0XC0S_Msk & (_UINT32_(value) << TC_BMR_TC0XC0S_Pos)) /* Assigment of value for TC0XC0S in the TC_BMR register */
 #define   TC_BMR_TC0XC0S_TCLK0_Val            _UINT32_(0x0)                                        /* (TC_BMR) Signal connected to XC0: TCLK0  */
-#define   TC_BMR_TC0XC0S_TIOA1_Val            _UINT32_(0x2)                                        /* (TC_BMR) Signal connected to XC0: TIOA1  */
-#define   TC_BMR_TC0XC0S_TIOA2_Val            _UINT32_(0x3)                                        /* (TC_BMR) Signal connected to XC0: TIOA2  */
+#define   TC_BMR_TC0XC0S_TIOA1_Val            _UINT32_(0x2)                                        /* (TC_BMR) Signal connected to XC0: internal TIOA1 for chaining  */
+#define   TC_BMR_TC0XC0S_TIOA2_Val            _UINT32_(0x3)                                        /* (TC_BMR) Signal connected to XC0: internal TIOA2 for chaining  */
 #define TC_BMR_TC0XC0S_TCLK0                  (TC_BMR_TC0XC0S_TCLK0_Val << TC_BMR_TC0XC0S_Pos)     /* (TC_BMR) Signal connected to XC0: TCLK0 Position  */
-#define TC_BMR_TC0XC0S_TIOA1                  (TC_BMR_TC0XC0S_TIOA1_Val << TC_BMR_TC0XC0S_Pos)     /* (TC_BMR) Signal connected to XC0: TIOA1 Position  */
-#define TC_BMR_TC0XC0S_TIOA2                  (TC_BMR_TC0XC0S_TIOA2_Val << TC_BMR_TC0XC0S_Pos)     /* (TC_BMR) Signal connected to XC0: TIOA2 Position  */
-#define TC_BMR_TC1XC1S_Pos                    _UINT32_(2)                                          /* (TC_BMR) External Clock Signal 1 Selection Position */
-#define TC_BMR_TC1XC1S_Msk                    (_UINT32_(0x3) << TC_BMR_TC1XC1S_Pos)                /* (TC_BMR) External Clock Signal 1 Selection Mask */
+#define TC_BMR_TC0XC0S_TIOA1                  (TC_BMR_TC0XC0S_TIOA1_Val << TC_BMR_TC0XC0S_Pos)     /* (TC_BMR) Signal connected to XC0: internal TIOA1 for chaining Position  */
+#define TC_BMR_TC0XC0S_TIOA2                  (TC_BMR_TC0XC0S_TIOA2_Val << TC_BMR_TC0XC0S_Pos)     /* (TC_BMR) Signal connected to XC0: internal TIOA2 for chaining Position  */
+#define TC_BMR_TC1XC1S_Pos                    _UINT32_(2)                                          /* (TC_BMR) External Clock Signal 1 (XC1) Selection Position */
+#define TC_BMR_TC1XC1S_Msk                    (_UINT32_(0x3) << TC_BMR_TC1XC1S_Pos)                /* (TC_BMR) External Clock Signal 1 (XC1) Selection Mask */
 #define TC_BMR_TC1XC1S(value)                 (TC_BMR_TC1XC1S_Msk & (_UINT32_(value) << TC_BMR_TC1XC1S_Pos)) /* Assigment of value for TC1XC1S in the TC_BMR register */
 #define   TC_BMR_TC1XC1S_TCLK1_Val            _UINT32_(0x0)                                        /* (TC_BMR) Signal connected to XC1: TCLK1  */
-#define   TC_BMR_TC1XC1S_TIOA0_Val            _UINT32_(0x2)                                        /* (TC_BMR) Signal connected to XC1: TIOA0  */
-#define   TC_BMR_TC1XC1S_TIOA2_Val            _UINT32_(0x3)                                        /* (TC_BMR) Signal connected to XC1: TIOA2  */
+#define   TC_BMR_TC1XC1S_TIOA0_Val            _UINT32_(0x2)                                        /* (TC_BMR) Signal connected to XC1: internal TIOA0 for chaining  */
+#define   TC_BMR_TC1XC1S_TIOA2_Val            _UINT32_(0x3)                                        /* (TC_BMR) Signal connected to XC1: internal TIOA2 for chaining  */
 #define TC_BMR_TC1XC1S_TCLK1                  (TC_BMR_TC1XC1S_TCLK1_Val << TC_BMR_TC1XC1S_Pos)     /* (TC_BMR) Signal connected to XC1: TCLK1 Position  */
-#define TC_BMR_TC1XC1S_TIOA0                  (TC_BMR_TC1XC1S_TIOA0_Val << TC_BMR_TC1XC1S_Pos)     /* (TC_BMR) Signal connected to XC1: TIOA0 Position  */
-#define TC_BMR_TC1XC1S_TIOA2                  (TC_BMR_TC1XC1S_TIOA2_Val << TC_BMR_TC1XC1S_Pos)     /* (TC_BMR) Signal connected to XC1: TIOA2 Position  */
-#define TC_BMR_TC2XC2S_Pos                    _UINT32_(4)                                          /* (TC_BMR) External Clock Signal 2 Selection Position */
-#define TC_BMR_TC2XC2S_Msk                    (_UINT32_(0x3) << TC_BMR_TC2XC2S_Pos)                /* (TC_BMR) External Clock Signal 2 Selection Mask */
+#define TC_BMR_TC1XC1S_TIOA0                  (TC_BMR_TC1XC1S_TIOA0_Val << TC_BMR_TC1XC1S_Pos)     /* (TC_BMR) Signal connected to XC1: internal TIOA0 for chaining Position  */
+#define TC_BMR_TC1XC1S_TIOA2                  (TC_BMR_TC1XC1S_TIOA2_Val << TC_BMR_TC1XC1S_Pos)     /* (TC_BMR) Signal connected to XC1: internal TIOA2 for chaining Position  */
+#define TC_BMR_TC2XC2S_Pos                    _UINT32_(4)                                          /* (TC_BMR) External Clock Signal 2 (XC2) Selection Position */
+#define TC_BMR_TC2XC2S_Msk                    (_UINT32_(0x3) << TC_BMR_TC2XC2S_Pos)                /* (TC_BMR) External Clock Signal 2 (XC2) Selection Mask */
 #define TC_BMR_TC2XC2S(value)                 (TC_BMR_TC2XC2S_Msk & (_UINT32_(value) << TC_BMR_TC2XC2S_Pos)) /* Assigment of value for TC2XC2S in the TC_BMR register */
 #define   TC_BMR_TC2XC2S_TCLK2_Val            _UINT32_(0x0)                                        /* (TC_BMR) Signal connected to XC2: TCLK2  */
-#define   TC_BMR_TC2XC2S_TIOA0_Val            _UINT32_(0x2)                                        /* (TC_BMR) Signal connected to XC2: TIOA0  */
-#define   TC_BMR_TC2XC2S_TIOA1_Val            _UINT32_(0x3)                                        /* (TC_BMR) Signal connected to XC2: TIOA1  */
+#define   TC_BMR_TC2XC2S_TIOA0_Val            _UINT32_(0x2)                                        /* (TC_BMR) Signal connected to XC2: internal TIOA0 for chaining  */
+#define   TC_BMR_TC2XC2S_TIOA1_Val            _UINT32_(0x3)                                        /* (TC_BMR) Signal connected to XC2: internal TIOA1 for chaining  */
 #define TC_BMR_TC2XC2S_TCLK2                  (TC_BMR_TC2XC2S_TCLK2_Val << TC_BMR_TC2XC2S_Pos)     /* (TC_BMR) Signal connected to XC2: TCLK2 Position  */
-#define TC_BMR_TC2XC2S_TIOA0                  (TC_BMR_TC2XC2S_TIOA0_Val << TC_BMR_TC2XC2S_Pos)     /* (TC_BMR) Signal connected to XC2: TIOA0 Position  */
-#define TC_BMR_TC2XC2S_TIOA1                  (TC_BMR_TC2XC2S_TIOA1_Val << TC_BMR_TC2XC2S_Pos)     /* (TC_BMR) Signal connected to XC2: TIOA1 Position  */
+#define TC_BMR_TC2XC2S_TIOA0                  (TC_BMR_TC2XC2S_TIOA0_Val << TC_BMR_TC2XC2S_Pos)     /* (TC_BMR) Signal connected to XC2: internal TIOA0 for chaining Position  */
+#define TC_BMR_TC2XC2S_TIOA1                  (TC_BMR_TC2XC2S_TIOA1_Val << TC_BMR_TC2XC2S_Pos)     /* (TC_BMR) Signal connected to XC2: internal TIOA1 for chaining Position  */
 #define TC_BMR_QDEN_Pos                       _UINT32_(8)                                          /* (TC_BMR) Quadrature Decoder Enabled Position */
 #define TC_BMR_QDEN_Msk                       (_UINT32_(0x1) << TC_BMR_QDEN_Pos)                   /* (TC_BMR) Quadrature Decoder Enabled Mask */
 #define TC_BMR_QDEN(value)                    (TC_BMR_QDEN_Msk & (_UINT32_(value) << TC_BMR_QDEN_Pos)) /* Assigment of value for QDEN in the TC_BMR register */
