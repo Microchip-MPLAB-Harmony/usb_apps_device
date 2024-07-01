@@ -1,26 +1,23 @@
 /*
  * Component description for QSPI
  *
- * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
  *
- * Subject to your compliance with these terms, you may use Microchip software and any derivatives
- * exclusively with Microchip products. It is your responsibility to comply with third party license
- * terms applicable to your use of third party software (including open source software) that may
- * accompany Microchip software.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY,
- * APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND
- * FITNESS FOR A PARTICULAR PURPOSE.
+ *   http://www.apache.org/licenses/LICENSE-2.0
  *
- * IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, INCIDENTAL OR CONSEQUENTIAL
- * LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF
- * MICROCHIP HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO THE FULLEST EXTENT
- * ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT
- * EXCEED THE AMOUNT OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  *
  */
 
-/* file generated from device description version 2023-01-20T08:33:42Z */
+/* file generated from device description file (ATDF) version 2024-04-05T08:36:56Z */
 #ifndef _SAM9X7_QSPI_COMPONENT_H_
 #define _SAM9X7_QSPI_COMPONENT_H_
 
@@ -33,9 +30,9 @@
 #define QSPI_CR_QSPIEN_Msk                    (_UINT32_(0x1) << QSPI_CR_QSPIEN_Pos)                /* (QSPI_CR) QSPI Enable Mask */
 #define QSPI_CR_QSPIEN(value)                 (QSPI_CR_QSPIEN_Msk & (_UINT32_(value) << QSPI_CR_QSPIEN_Pos)) /* Assigment of value for QSPIEN in the QSPI_CR register */
 #define   QSPI_CR_QSPIEN_0_Val                _UINT32_(0x0)                                        /* (QSPI_CR) No effect.  */
-#define   QSPI_CR_QSPIEN_1_Val                _UINT32_(0x1)                                        /* (QSPI_CR) Enables the QSPI to transfer and receive data.  */
+#define   QSPI_CR_QSPIEN_1_Val                _UINT32_(0x1)                                        /* (QSPI_CR) Enables the QSPI.  */
 #define QSPI_CR_QSPIEN_0                      (QSPI_CR_QSPIEN_0_Val << QSPI_CR_QSPIEN_Pos)         /* (QSPI_CR) No effect. Position  */
-#define QSPI_CR_QSPIEN_1                      (QSPI_CR_QSPIEN_1_Val << QSPI_CR_QSPIEN_Pos)         /* (QSPI_CR) Enables the QSPI to transfer and receive data. Position  */
+#define QSPI_CR_QSPIEN_1                      (QSPI_CR_QSPIEN_1_Val << QSPI_CR_QSPIEN_Pos)         /* (QSPI_CR) Enables the QSPI. Position  */
 #define QSPI_CR_QSPIDIS_Pos                   _UINT32_(1)                                          /* (QSPI_CR) QSPI Disable Position */
 #define QSPI_CR_QSPIDIS_Msk                   (_UINT32_(0x1) << QSPI_CR_QSPIDIS_Pos)               /* (QSPI_CR) QSPI Disable Mask */
 #define QSPI_CR_QSPIDIS(value)                (QSPI_CR_QSPIDIS_Msk & (_UINT32_(value) << QSPI_CR_QSPIDIS_Pos)) /* Assigment of value for QSPIDIS in the QSPI_CR register */
@@ -43,8 +40,8 @@
 #define   QSPI_CR_QSPIDIS_1_Val               _UINT32_(0x1)                                        /* (QSPI_CR) Disables the QSPI.  */
 #define QSPI_CR_QSPIDIS_0                     (QSPI_CR_QSPIDIS_0_Val << QSPI_CR_QSPIDIS_Pos)       /* (QSPI_CR) No effect. Position  */
 #define QSPI_CR_QSPIDIS_1                     (QSPI_CR_QSPIDIS_1_Val << QSPI_CR_QSPIDIS_Pos)       /* (QSPI_CR) Disables the QSPI. Position  */
-#define QSPI_CR_SRFRSH_Pos                    _UINT32_(5)                                          /* (QSPI_CR) Start REFRESH Position */
-#define QSPI_CR_SRFRSH_Msk                    (_UINT32_(0x1) << QSPI_CR_SRFRSH_Pos)                /* (QSPI_CR) Start REFRESH Mask */
+#define QSPI_CR_SRFRSH_Pos                    _UINT32_(5)                                          /* (QSPI_CR) Start Refresh Position */
+#define QSPI_CR_SRFRSH_Msk                    (_UINT32_(0x1) << QSPI_CR_SRFRSH_Pos)                /* (QSPI_CR) Start Refresh Mask */
 #define QSPI_CR_SRFRSH(value)                 (QSPI_CR_SRFRSH_Msk & (_UINT32_(value) << QSPI_CR_SRFRSH_Pos)) /* Assigment of value for SRFRSH in the QSPI_CR register */
 #define   QSPI_CR_SRFRSH_0_Val                _UINT32_(0x0)                                        /* (QSPI_CR) No effect.  */
 #define   QSPI_CR_SRFRSH_1_Val                _UINT32_(0x1)                                        /* (QSPI_CR) Starts a refresh sequence. QSPI_ISR.RFRSHD indicates when the refresh sequence is over.  */
@@ -54,9 +51,9 @@
 #define QSPI_CR_SWRST_Msk                     (_UINT32_(0x1) << QSPI_CR_SWRST_Pos)                 /* (QSPI_CR) QSPI Software Reset Mask */
 #define QSPI_CR_SWRST(value)                  (QSPI_CR_SWRST_Msk & (_UINT32_(value) << QSPI_CR_SWRST_Pos)) /* Assigment of value for SWRST in the QSPI_CR register */
 #define   QSPI_CR_SWRST_0_Val                 _UINT32_(0x0)                                        /* (QSPI_CR) No effect.  */
-#define   QSPI_CR_SWRST_1_Val                 _UINT32_(0x1)                                        /* (QSPI_CR) Resets the QSPI. A software-triggered hardware reset of the QSPI interface is performed.  */
+#define   QSPI_CR_SWRST_1_Val                 _UINT32_(0x1)                                        /* (QSPI_CR) Resets the QSPI. A software reset of the QSPI interface is performed.  */
 #define QSPI_CR_SWRST_0                       (QSPI_CR_SWRST_0_Val << QSPI_CR_SWRST_Pos)           /* (QSPI_CR) No effect. Position  */
-#define QSPI_CR_SWRST_1                       (QSPI_CR_SWRST_1_Val << QSPI_CR_SWRST_Pos)           /* (QSPI_CR) Resets the QSPI. A software-triggered hardware reset of the QSPI interface is performed. Position  */
+#define QSPI_CR_SWRST_1                       (QSPI_CR_SWRST_1_Val << QSPI_CR_SWRST_Pos)           /* (QSPI_CR) Resets the QSPI. A software reset of the QSPI interface is performed. Position  */
 #define QSPI_CR_UPDCFG_Pos                    _UINT32_(8)                                          /* (QSPI_CR) Update Configuration Position */
 #define QSPI_CR_UPDCFG_Msk                    (_UINT32_(0x1) << QSPI_CR_UPDCFG_Pos)                /* (QSPI_CR) Update Configuration Mask */
 #define QSPI_CR_UPDCFG(value)                 (QSPI_CR_UPDCFG_Msk & (_UINT32_(value) << QSPI_CR_UPDCFG_Pos)) /* Assigment of value for UPDCFG in the QSPI_CR register */
@@ -68,9 +65,9 @@
 #define QSPI_CR_STTFR_Msk                     (_UINT32_(0x1) << QSPI_CR_STTFR_Pos)                 /* (QSPI_CR) Start Transfer Mask */
 #define QSPI_CR_STTFR(value)                  (QSPI_CR_STTFR_Msk & (_UINT32_(value) << QSPI_CR_STTFR_Pos)) /* Assigment of value for STTFR in the QSPI_CR register */
 #define   QSPI_CR_STTFR_0_Val                 _UINT32_(0x0)                                        /* (QSPI_CR) No effect.  */
-#define   QSPI_CR_STTFR_1_Val                 _UINT32_(0x1)                                        /* (QSPI_CR) Starts the transfer when TFRTYP = 0 and SMRM = 1 or when DATAEN = 0.  */
+#define   QSPI_CR_STTFR_1_Val                 _UINT32_(0x1)                                        /* (QSPI_CR) Starts the transfer when TFRTYP=0 and SMRM=1 or when DATAEN=0.  */
 #define QSPI_CR_STTFR_0                       (QSPI_CR_STTFR_0_Val << QSPI_CR_STTFR_Pos)           /* (QSPI_CR) No effect. Position  */
-#define QSPI_CR_STTFR_1                       (QSPI_CR_STTFR_1_Val << QSPI_CR_STTFR_Pos)           /* (QSPI_CR) Starts the transfer when TFRTYP = 0 and SMRM = 1 or when DATAEN = 0. Position  */
+#define QSPI_CR_STTFR_1                       (QSPI_CR_STTFR_1_Val << QSPI_CR_STTFR_Pos)           /* (QSPI_CR) Starts the transfer when TFRTYP=0 and SMRM=1 or when DATAEN=0. Position  */
 #define QSPI_CR_RTOUT_Pos                     _UINT32_(10)                                         /* (QSPI_CR) Reset Time-out Position */
 #define QSPI_CR_RTOUT_Msk                     (_UINT32_(0x1) << QSPI_CR_RTOUT_Pos)                 /* (QSPI_CR) Reset Time-out Mask */
 #define QSPI_CR_RTOUT(value)                  (QSPI_CR_RTOUT_Msk & (_UINT32_(value) << QSPI_CR_RTOUT_Pos)) /* Assigment of value for RTOUT in the QSPI_CR register */
@@ -98,8 +95,8 @@
 #define   QSPI_MR_SMM_MEMORY_Val              _UINT32_(0x1)                                        /* (QSPI_MR) The QSPI is in Serial Memory mode.  */
 #define QSPI_MR_SMM_SPI                       (QSPI_MR_SMM_SPI_Val << QSPI_MR_SMM_Pos)             /* (QSPI_MR) The QSPI is in SPI mode. Position  */
 #define QSPI_MR_SMM_MEMORY                    (QSPI_MR_SMM_MEMORY_Val << QSPI_MR_SMM_Pos)          /* (QSPI_MR) The QSPI is in Serial Memory mode. Position  */
-#define QSPI_MR_WDRBT_Pos                     _UINT32_(2)                                          /* (QSPI_MR) Wait Data Read Before Transfer Position */
-#define QSPI_MR_WDRBT_Msk                     (_UINT32_(0x1) << QSPI_MR_WDRBT_Pos)                 /* (QSPI_MR) Wait Data Read Before Transfer Mask */
+#define QSPI_MR_WDRBT_Pos                     _UINT32_(2)                                          /* (QSPI_MR) Wait for Data Read Before Transfer Position */
+#define QSPI_MR_WDRBT_Msk                     (_UINT32_(0x1) << QSPI_MR_WDRBT_Pos)                 /* (QSPI_MR) Wait for Data Read Before Transfer Mask */
 #define QSPI_MR_WDRBT(value)                  (QSPI_MR_WDRBT_Msk & (_UINT32_(value) << QSPI_MR_WDRBT_Pos)) /* Assigment of value for WDRBT in the QSPI_MR register */
 #define   QSPI_MR_WDRBT_DISABLED_Val          _UINT32_(0x0)                                        /* (QSPI_MR) No effect. In SPI mode, a transfer can be initiated whatever the state of QSPI_RDR is.  */
 #define   QSPI_MR_WDRBT_ENABLED_Val           _UINT32_(0x1)                                        /* (QSPI_MR) In SPI mode, a transfer can start only if QSPI_RDR is empty, i.e., does not contain any unread data. This mode prevents overrun error in reception.  */
@@ -108,18 +105,18 @@
 #define QSPI_MR_DQSDLYEN_Pos                  _UINT32_(3)                                          /* (QSPI_MR) DQS Delay Enable Position */
 #define QSPI_MR_DQSDLYEN_Msk                  (_UINT32_(0x1) << QSPI_MR_DQSDLYEN_Pos)              /* (QSPI_MR) DQS Delay Enable Mask */
 #define QSPI_MR_DQSDLYEN(value)               (QSPI_MR_DQSDLYEN_Msk & (_UINT32_(value) << QSPI_MR_DQSDLYEN_Pos)) /* Assigment of value for DQSDLYEN in the QSPI_MR register */
-#define   QSPI_MR_DQSDLYEN_DISABLED_Val       _UINT32_(0x0)                                        /* (QSPI_MR) DQS Delay cell is disabled.  */
-#define   QSPI_MR_DQSDLYEN_ENABLED_Val        _UINT32_(0x1)                                        /* (QSPI_MR) DQS Delay cell is enabled. The DQS Delay cell automatic refresh is triggered according to the configuration of QSPI_REFRESH.  */
-#define QSPI_MR_DQSDLYEN_DISABLED             (QSPI_MR_DQSDLYEN_DISABLED_Val << QSPI_MR_DQSDLYEN_Pos) /* (QSPI_MR) DQS Delay cell is disabled. Position  */
-#define QSPI_MR_DQSDLYEN_ENABLED              (QSPI_MR_DQSDLYEN_ENABLED_Val << QSPI_MR_DQSDLYEN_Pos) /* (QSPI_MR) DQS Delay cell is enabled. The DQS Delay cell automatic refresh is triggered according to the configuration of QSPI_REFRESH. Position  */
+#define   QSPI_MR_DQSDLYEN_DISABLED_Val       _UINT32_(0x0)                                        /* (QSPI_MR) The DQS Delay cell is disabled.  */
+#define   QSPI_MR_DQSDLYEN_ENABLED_Val        _UINT32_(0x1)                                        /* (QSPI_MR) The DQS Delay cell is enabled. The DQS Delay cell automatic refresh is triggered according to the QSPI_REFRESH configuration.  */
+#define QSPI_MR_DQSDLYEN_DISABLED             (QSPI_MR_DQSDLYEN_DISABLED_Val << QSPI_MR_DQSDLYEN_Pos) /* (QSPI_MR) The DQS Delay cell is disabled. Position  */
+#define QSPI_MR_DQSDLYEN_ENABLED              (QSPI_MR_DQSDLYEN_ENABLED_Val << QSPI_MR_DQSDLYEN_Pos) /* (QSPI_MR) The DQS Delay cell is enabled. The DQS Delay cell automatic refresh is triggered according to the QSPI_REFRESH configuration. Position  */
 #define QSPI_MR_CSMODE_Pos                    _UINT32_(4)                                          /* (QSPI_MR) Chip Select Mode Position */
 #define QSPI_MR_CSMODE_Msk                    (_UINT32_(0x3) << QSPI_MR_CSMODE_Pos)                /* (QSPI_MR) Chip Select Mode Mask */
 #define QSPI_MR_CSMODE(value)                 (QSPI_MR_CSMODE_Msk & (_UINT32_(value) << QSPI_MR_CSMODE_Pos)) /* Assigment of value for CSMODE in the QSPI_MR register */
 #define   QSPI_MR_CSMODE_NOT_RELOADED_Val     _UINT32_(0x0)                                        /* (QSPI_MR) The chip select is deasserted if QSPI_TDR.TD has not been reloaded before the end of the current transfer.  */
-#define   QSPI_MR_CSMODE_LASTXFER_Val         _UINT32_(0x1)                                        /* (QSPI_MR) The chip select is deasserted when the bit LASTXFER is written to '1' and the character written in QSPI_TDR.TD has been transferred.  */
+#define   QSPI_MR_CSMODE_LASTXFER_Val         _UINT32_(0x1)                                        /* (QSPI_MR) The chip select is deasserted when the bit LASTXFER is written to 1 and the character written in QSPI_TDR.TD has been transferred.  */
 #define   QSPI_MR_CSMODE_SYSTEMATICALLY_Val   _UINT32_(0x2)                                        /* (QSPI_MR) The chip select is deasserted systematically after each transfer.  */
 #define QSPI_MR_CSMODE_NOT_RELOADED           (QSPI_MR_CSMODE_NOT_RELOADED_Val << QSPI_MR_CSMODE_Pos) /* (QSPI_MR) The chip select is deasserted if QSPI_TDR.TD has not been reloaded before the end of the current transfer. Position  */
-#define QSPI_MR_CSMODE_LASTXFER               (QSPI_MR_CSMODE_LASTXFER_Val << QSPI_MR_CSMODE_Pos)  /* (QSPI_MR) The chip select is deasserted when the bit LASTXFER is written to '1' and the character written in QSPI_TDR.TD has been transferred. Position  */
+#define QSPI_MR_CSMODE_LASTXFER               (QSPI_MR_CSMODE_LASTXFER_Val << QSPI_MR_CSMODE_Pos)  /* (QSPI_MR) The chip select is deasserted when the bit LASTXFER is written to 1 and the character written in QSPI_TDR.TD has been transferred. Position  */
 #define QSPI_MR_CSMODE_SYSTEMATICALLY         (QSPI_MR_CSMODE_SYSTEMATICALLY_Val << QSPI_MR_CSMODE_Pos) /* (QSPI_MR) The chip select is deasserted systematically after each transfer. Position  */
 #define QSPI_MR_TAMPCLR_Pos                   _UINT32_(7)                                          /* (QSPI_MR) Tamper Clear Enable Position */
 #define QSPI_MR_TAMPCLR_Msk                   (_UINT32_(0x1) << QSPI_MR_TAMPCLR_Pos)               /* (QSPI_MR) Tamper Clear Enable Mask */
@@ -128,34 +125,27 @@
 #define   QSPI_MR_TAMPCLR_1_Val               _UINT32_(0x1)                                        /* (QSPI_MR) A tamper detection event immediately clears QSPI scrambling keys.  */
 #define QSPI_MR_TAMPCLR_0                     (QSPI_MR_TAMPCLR_0_Val << QSPI_MR_TAMPCLR_Pos)       /* (QSPI_MR) A tamper detection event has no effect on QSPI scrambling keys. Position  */
 #define QSPI_MR_TAMPCLR_1                     (QSPI_MR_TAMPCLR_1_Val << QSPI_MR_TAMPCLR_Pos)       /* (QSPI_MR) A tamper detection event immediately clears QSPI scrambling keys. Position  */
-#define QSPI_MR_NBBITS_Pos                    _UINT32_(8)                                          /* (QSPI_MR) Number Of Bits Per Transfer Position */
-#define QSPI_MR_NBBITS_Msk                    (_UINT32_(0xF) << QSPI_MR_NBBITS_Pos)                /* (QSPI_MR) Number Of Bits Per Transfer Mask */
+#define QSPI_MR_NBBITS_Pos                    _UINT32_(8)                                          /* (QSPI_MR) Number of Bits per Transfer Position */
+#define QSPI_MR_NBBITS_Msk                    (_UINT32_(0xF) << QSPI_MR_NBBITS_Pos)                /* (QSPI_MR) Number of Bits per Transfer Mask */
 #define QSPI_MR_NBBITS(value)                 (QSPI_MR_NBBITS_Msk & (_UINT32_(value) << QSPI_MR_NBBITS_Pos)) /* Assigment of value for NBBITS in the QSPI_MR register */
 #define   QSPI_MR_NBBITS_8_BIT_Val            _UINT32_(0x0)                                        /* (QSPI_MR) 8 bits for transfer  */
 #define   QSPI_MR_NBBITS_16_BIT_Val           _UINT32_(0x8)                                        /* (QSPI_MR) 16 bits for transfer  */
 #define QSPI_MR_NBBITS_8_BIT                  (QSPI_MR_NBBITS_8_BIT_Val << QSPI_MR_NBBITS_Pos)     /* (QSPI_MR) 8 bits for transfer Position  */
 #define QSPI_MR_NBBITS_16_BIT                 (QSPI_MR_NBBITS_16_BIT_Val << QSPI_MR_NBBITS_Pos)    /* (QSPI_MR) 16 bits for transfer Position  */
-#define QSPI_MR_QICMEN_Pos                    _UINT32_(13)                                         /* (QSPI_MR) QSPI Inter-chip Mode Enable Position */
-#define QSPI_MR_QICMEN_Msk                    (_UINT32_(0x1) << QSPI_MR_QICMEN_Pos)                /* (QSPI_MR) QSPI Inter-chip Mode Enable Mask */
-#define QSPI_MR_QICMEN(value)                 (QSPI_MR_QICMEN_Msk & (_UINT32_(value) << QSPI_MR_QICMEN_Pos)) /* Assigment of value for QICMEN in the QSPI_MR register */
-#define   QSPI_MR_QICMEN_DISABLED_Val         _UINT32_(0x0)                                        /* (QSPI_MR) QSPI_WICR.WROPT and QSPI_RICR.RDOPT define the transfer options and QSPI_IFR.NBDUM defines the number of dummy cycles.  */
-#define   QSPI_MR_QICMEN_ENABLED_Val          _UINT32_(0x1)                                        /* (QSPI_MR) No dummy cycles are inserted for write accesses, whatever the value configured in QSPI_IFR.NBDUM. The option field of the frame is automatically generated by the QSPI depending on the type of system bus transfer (the fields QSPI_RICR.RDOPT and QSPI_WICR.WROPT have no effect).  */
-#define QSPI_MR_QICMEN_DISABLED               (QSPI_MR_QICMEN_DISABLED_Val << QSPI_MR_QICMEN_Pos)  /* (QSPI_MR) QSPI_WICR.WROPT and QSPI_RICR.RDOPT define the transfer options and QSPI_IFR.NBDUM defines the number of dummy cycles. Position  */
-#define QSPI_MR_QICMEN_ENABLED                (QSPI_MR_QICMEN_ENABLED_Val << QSPI_MR_QICMEN_Pos)   /* (QSPI_MR) No dummy cycles are inserted for write accesses, whatever the value configured in QSPI_IFR.NBDUM. The option field of the frame is automatically generated by the QSPI depending on the type of system bus transfer (the fields QSPI_RICR.RDOPT and QSPI_WICR.WROPT have no effect). Position  */
-#define QSPI_MR_OENSD_Pos                     _UINT32_(15)                                         /* (QSPI_MR) Output Enable Shift Disabled Position */
-#define QSPI_MR_OENSD_Msk                     (_UINT32_(0x1) << QSPI_MR_OENSD_Pos)                 /* (QSPI_MR) Output Enable Shift Disabled Mask */
-#define QSPI_MR_OENSD(value)                  (QSPI_MR_OENSD_Msk & (_UINT32_(value) << QSPI_MR_OENSD_Pos)) /* Assigment of value for OENSD in the QSPI_MR register */
-#define   QSPI_MR_OENSD_0_Val                 _UINT32_(0x0)                                        /* (QSPI_MR) By default, the pad output enable signal is held for one QSCK period during the dummy cycles if QSPI.IFR_NBDUM is not equal to '0'.  */
-#define   QSPI_MR_OENSD_1_Val                 _UINT32_(0x1)                                        /* (QSPI_MR) The pad output enable signal is not held for one QSCK period during the dummy cycles.  */
-#define QSPI_MR_OENSD_0                       (QSPI_MR_OENSD_0_Val << QSPI_MR_OENSD_Pos)           /* (QSPI_MR) By default, the pad output enable signal is held for one QSCK period during the dummy cycles if QSPI.IFR_NBDUM is not equal to '0'. Position  */
-#define QSPI_MR_OENSD_1                       (QSPI_MR_OENSD_1_Val << QSPI_MR_OENSD_Pos)           /* (QSPI_MR) The pad output enable signal is not held for one QSCK period during the dummy cycles. Position  */
+#define QSPI_MR_AQICMEN_Pos                   _UINT32_(13)                                         /* (QSPI_MR) QSPI Inter-Chip Communication Mode Enable All Position */
+#define QSPI_MR_AQICMEN_Msk                   (_UINT32_(0x1) << QSPI_MR_AQICMEN_Pos)               /* (QSPI_MR) QSPI Inter-Chip Communication Mode Enable All Mask */
+#define QSPI_MR_AQICMEN(value)                (QSPI_MR_AQICMEN_Msk & (_UINT32_(value) << QSPI_MR_AQICMEN_Pos)) /* Assigment of value for AQICMEN in the QSPI_MR register */
+#define   QSPI_MR_AQICMEN_DISABLED_Val        _UINT32_(0x0)                                        /* (QSPI_MR) The QSPI Inter-Chip mode is disabled.  */
+#define   QSPI_MR_AQICMEN_ENABLED_Val         _UINT32_(0x1)                                        /* (QSPI_MR) The QSPI Inter-Chip mode is enabled.  */
+#define QSPI_MR_AQICMEN_DISABLED              (QSPI_MR_AQICMEN_DISABLED_Val << QSPI_MR_AQICMEN_Pos) /* (QSPI_MR) The QSPI Inter-Chip mode is disabled. Position  */
+#define QSPI_MR_AQICMEN_ENABLED               (QSPI_MR_AQICMEN_ENABLED_Val << QSPI_MR_AQICMEN_Pos) /* (QSPI_MR) The QSPI Inter-Chip mode is enabled. Position  */
 #define QSPI_MR_DLYBCT_Pos                    _UINT32_(16)                                         /* (QSPI_MR) Delay Between Consecutive Transfers Position */
 #define QSPI_MR_DLYBCT_Msk                    (_UINT32_(0xFF) << QSPI_MR_DLYBCT_Pos)               /* (QSPI_MR) Delay Between Consecutive Transfers Mask */
 #define QSPI_MR_DLYBCT(value)                 (QSPI_MR_DLYBCT_Msk & (_UINT32_(value) << QSPI_MR_DLYBCT_Pos)) /* Assigment of value for DLYBCT in the QSPI_MR register */
 #define QSPI_MR_DLYCS_Pos                     _UINT32_(24)                                         /* (QSPI_MR) Minimum Inactive QCS Delay Position */
 #define QSPI_MR_DLYCS_Msk                     (_UINT32_(0xFF) << QSPI_MR_DLYCS_Pos)                /* (QSPI_MR) Minimum Inactive QCS Delay Mask */
 #define QSPI_MR_DLYCS(value)                  (QSPI_MR_DLYCS_Msk & (_UINT32_(value) << QSPI_MR_DLYCS_Pos)) /* Assigment of value for DLYCS in the QSPI_MR register */
-#define QSPI_MR_Msk                           _UINT32_(0xFFFFAFBD)                                 /* (QSPI_MR) Register Mask  */
+#define QSPI_MR_Msk                           _UINT32_(0xFFFF2FBD)                                 /* (QSPI_MR) Register Mask  */
 
 
 /* -------- QSPI_RDR : (QSPI Offset: 0x08) ( R/ 32) Receive Data Register -------- */
@@ -208,33 +198,40 @@
 #define QSPI_ISR_CSR_Pos                      _UINT32_(8)                                          /* (QSPI_ISR) Chip Select Rise (cleared on read) Position */
 #define QSPI_ISR_CSR_Msk                      (_UINT32_(0x1) << QSPI_ISR_CSR_Pos)                  /* (QSPI_ISR) Chip Select Rise (cleared on read) Mask */
 #define QSPI_ISR_CSR(value)                   (QSPI_ISR_CSR_Msk & (_UINT32_(value) << QSPI_ISR_CSR_Pos)) /* Assigment of value for CSR in the QSPI_ISR register */
-#define   QSPI_ISR_CSR_0_Val                  _UINT32_(0x0)                                        /* (QSPI_ISR) No chip select rise has been detected since the last read of QSPI_SR.  */
-#define   QSPI_ISR_CSR_1_Val                  _UINT32_(0x1)                                        /* (QSPI_ISR) At least one chip select rise has been detected since the last read of QSPI_SR.  */
-#define QSPI_ISR_CSR_0                        (QSPI_ISR_CSR_0_Val << QSPI_ISR_CSR_Pos)             /* (QSPI_ISR) No chip select rise has been detected since the last read of QSPI_SR. Position  */
-#define QSPI_ISR_CSR_1                        (QSPI_ISR_CSR_1_Val << QSPI_ISR_CSR_Pos)             /* (QSPI_ISR) At least one chip select rise has been detected since the last read of QSPI_SR. Position  */
+#define   QSPI_ISR_CSR_0_Val                  _UINT32_(0x0)                                        /* (QSPI_ISR) No chip select rise has been detected since the last read of QSPI_ISR.  */
+#define   QSPI_ISR_CSR_1_Val                  _UINT32_(0x1)                                        /* (QSPI_ISR) At least one chip select rise has been detected since the last read of QSPI_ISR.  */
+#define QSPI_ISR_CSR_0                        (QSPI_ISR_CSR_0_Val << QSPI_ISR_CSR_Pos)             /* (QSPI_ISR) No chip select rise has been detected since the last read of QSPI_ISR. Position  */
+#define QSPI_ISR_CSR_1                        (QSPI_ISR_CSR_1_Val << QSPI_ISR_CSR_Pos)             /* (QSPI_ISR) At least one chip select rise has been detected since the last read of QSPI_ISR. Position  */
+#define QSPI_ISR_CSF_Pos                      _UINT32_(9)                                          /* (QSPI_ISR) Chip Select Fall (cleared on read) Position */
+#define QSPI_ISR_CSF_Msk                      (_UINT32_(0x1) << QSPI_ISR_CSF_Pos)                  /* (QSPI_ISR) Chip Select Fall (cleared on read) Mask */
+#define QSPI_ISR_CSF(value)                   (QSPI_ISR_CSF_Msk & (_UINT32_(value) << QSPI_ISR_CSF_Pos)) /* Assigment of value for CSF in the QSPI_ISR register */
+#define   QSPI_ISR_CSF_0_Val                  _UINT32_(0x0)                                        /* (QSPI_ISR) No chip select rise has been detected since the last read of QSPI_ISR.  */
+#define   QSPI_ISR_CSF_1_Val                  _UINT32_(0x1)                                        /* (QSPI_ISR) At least one chip select rise has been detected since the last read of QSPI_ISR.  */
+#define QSPI_ISR_CSF_0                        (QSPI_ISR_CSF_0_Val << QSPI_ISR_CSF_Pos)             /* (QSPI_ISR) No chip select rise has been detected since the last read of QSPI_ISR. Position  */
+#define QSPI_ISR_CSF_1                        (QSPI_ISR_CSF_1_Val << QSPI_ISR_CSF_Pos)             /* (QSPI_ISR) At least one chip select rise has been detected since the last read of QSPI_ISR. Position  */
 #define QSPI_ISR_INSTRE_Pos                   _UINT32_(10)                                         /* (QSPI_ISR) Instruction End Status (cleared on read) Position */
 #define QSPI_ISR_INSTRE_Msk                   (_UINT32_(0x1) << QSPI_ISR_INSTRE_Pos)               /* (QSPI_ISR) Instruction End Status (cleared on read) Mask */
 #define QSPI_ISR_INSTRE(value)                (QSPI_ISR_INSTRE_Msk & (_UINT32_(value) << QSPI_ISR_INSTRE_Pos)) /* Assigment of value for INSTRE in the QSPI_ISR register */
-#define   QSPI_ISR_INSTRE_0_Val               _UINT32_(0x0)                                        /* (QSPI_ISR) No instruction end has been detected since the last read of QSPI_SR.  */
-#define   QSPI_ISR_INSTRE_1_Val               _UINT32_(0x1)                                        /* (QSPI_ISR) At least one instruction end has been detected since the last read of QSPI_SR.  */
-#define QSPI_ISR_INSTRE_0                     (QSPI_ISR_INSTRE_0_Val << QSPI_ISR_INSTRE_Pos)       /* (QSPI_ISR) No instruction end has been detected since the last read of QSPI_SR. Position  */
-#define QSPI_ISR_INSTRE_1                     (QSPI_ISR_INSTRE_1_Val << QSPI_ISR_INSTRE_Pos)       /* (QSPI_ISR) At least one instruction end has been detected since the last read of QSPI_SR. Position  */
+#define   QSPI_ISR_INSTRE_0_Val               _UINT32_(0x0)                                        /* (QSPI_ISR) No instruction end has been detected since the last read of QSPI_ISR.  */
+#define   QSPI_ISR_INSTRE_1_Val               _UINT32_(0x1)                                        /* (QSPI_ISR) At least one instruction end has been detected since the last read of QSPI_ISR.  */
+#define QSPI_ISR_INSTRE_0                     (QSPI_ISR_INSTRE_0_Val << QSPI_ISR_INSTRE_Pos)       /* (QSPI_ISR) No instruction end has been detected since the last read of QSPI_ISR. Position  */
+#define QSPI_ISR_INSTRE_1                     (QSPI_ISR_INSTRE_1_Val << QSPI_ISR_INSTRE_Pos)       /* (QSPI_ISR) At least one instruction end has been detected since the last read of QSPI_ISR. Position  */
 #define QSPI_ISR_LWRA_Pos                     _UINT32_(11)                                         /* (QSPI_ISR) Last Write Access (cleared on read) Position */
 #define QSPI_ISR_LWRA_Msk                     (_UINT32_(0x1) << QSPI_ISR_LWRA_Pos)                 /* (QSPI_ISR) Last Write Access (cleared on read) Mask */
 #define QSPI_ISR_LWRA(value)                  (QSPI_ISR_LWRA_Msk & (_UINT32_(value) << QSPI_ISR_LWRA_Pos)) /* Assigment of value for LWRA in the QSPI_ISR register */
-#define   QSPI_ISR_LWRA_0_Val                 _UINT32_(0x0)                                        /* (QSPI_ISR) Last write access has not been sent since the last read of QSPI_SR or NBWRA = 0.  */
-#define   QSPI_ISR_LWRA_1_Val                 _UINT32_(0x1)                                        /* (QSPI_ISR) At least one last write access has been sent since the last read of QSPI_SR.  */
-#define QSPI_ISR_LWRA_0                       (QSPI_ISR_LWRA_0_Val << QSPI_ISR_LWRA_Pos)           /* (QSPI_ISR) Last write access has not been sent since the last read of QSPI_SR or NBWRA = 0. Position  */
-#define QSPI_ISR_LWRA_1                       (QSPI_ISR_LWRA_1_Val << QSPI_ISR_LWRA_Pos)           /* (QSPI_ISR) At least one last write access has been sent since the last read of QSPI_SR. Position  */
-#define QSPI_ISR_QITF_Pos                     _UINT32_(12)                                         /* (QSPI_ISR) QSPI Interrupt Fall Position */
-#define QSPI_ISR_QITF_Msk                     (_UINT32_(0x1) << QSPI_ISR_QITF_Pos)                 /* (QSPI_ISR) QSPI Interrupt Fall Mask */
+#define   QSPI_ISR_LWRA_0_Val                 _UINT32_(0x0)                                        /* (QSPI_ISR) Last write access has not been sent since the last read of QSPI_ISR or NBWRA=0.  */
+#define   QSPI_ISR_LWRA_1_Val                 _UINT32_(0x1)                                        /* (QSPI_ISR) At least one last write access has been sent since the last read of QSPI_ISR.  */
+#define QSPI_ISR_LWRA_0                       (QSPI_ISR_LWRA_0_Val << QSPI_ISR_LWRA_Pos)           /* (QSPI_ISR) Last write access has not been sent since the last read of QSPI_ISR or NBWRA=0. Position  */
+#define QSPI_ISR_LWRA_1                       (QSPI_ISR_LWRA_1_Val << QSPI_ISR_LWRA_Pos)           /* (QSPI_ISR) At least one last write access has been sent since the last read of QSPI_ISR. Position  */
+#define QSPI_ISR_QITF_Pos                     _UINT32_(12)                                         /* (QSPI_ISR) QSPI Interrupt Fall (cleared on read) Position */
+#define QSPI_ISR_QITF_Msk                     (_UINT32_(0x1) << QSPI_ISR_QITF_Pos)                 /* (QSPI_ISR) QSPI Interrupt Fall (cleared on read) Mask */
 #define QSPI_ISR_QITF(value)                  (QSPI_ISR_QITF_Msk & (_UINT32_(value) << QSPI_ISR_QITF_Pos)) /* Assigment of value for QITF in the QSPI_ISR register */
 #define   QSPI_ISR_QITF_0_Val                 _UINT32_(0x0)                                        /* (QSPI_ISR) No falling of the QSPI memory interrupt line has been detected since the last read of QSPI_ISR.  */
 #define   QSPI_ISR_QITF_1_Val                 _UINT32_(0x1)                                        /* (QSPI_ISR) At least one QSPI memory interrupt line falling edge occurred since the last read of QSPI_ISR.  */
 #define QSPI_ISR_QITF_0                       (QSPI_ISR_QITF_0_Val << QSPI_ISR_QITF_Pos)           /* (QSPI_ISR) No falling of the QSPI memory interrupt line has been detected since the last read of QSPI_ISR. Position  */
 #define QSPI_ISR_QITF_1                       (QSPI_ISR_QITF_1_Val << QSPI_ISR_QITF_Pos)           /* (QSPI_ISR) At least one QSPI memory interrupt line falling edge occurred since the last read of QSPI_ISR. Position  */
-#define QSPI_ISR_QITR_Pos                     _UINT32_(13)                                         /* (QSPI_ISR) QSPI Interrupt Rise Position */
-#define QSPI_ISR_QITR_Msk                     (_UINT32_(0x1) << QSPI_ISR_QITR_Pos)                 /* (QSPI_ISR) QSPI Interrupt Rise Mask */
+#define QSPI_ISR_QITR_Pos                     _UINT32_(13)                                         /* (QSPI_ISR) QSPI Interrupt Rise (cleared on read) Position */
+#define QSPI_ISR_QITR_Msk                     (_UINT32_(0x1) << QSPI_ISR_QITR_Pos)                 /* (QSPI_ISR) QSPI Interrupt Rise (cleared on read) Mask */
 #define QSPI_ISR_QITR(value)                  (QSPI_ISR_QITR_Msk & (_UINT32_(value) << QSPI_ISR_QITR_Pos)) /* Assigment of value for QITR in the QSPI_ISR register */
 #define   QSPI_ISR_QITR_0_Val                 _UINT32_(0x0)                                        /* (QSPI_ISR) No rising of the QSPI memory interrupt line has been detected since the last read of QSPI_ISR.  */
 #define   QSPI_ISR_QITR_1_Val                 _UINT32_(0x1)                                        /* (QSPI_ISR) At least one QSPI memory interrupt line rising edge occurred since the last read of QSPI_ISR.  */
@@ -254,21 +251,21 @@
 #define   QSPI_ISR_CSRA_1_Val                 _UINT32_(0x1)                                        /* (QSPI_ISR) One chip select rise has been detected since the beginning of the last command or the last read of QSPI_ISR.  */
 #define QSPI_ISR_CSRA_0                       (QSPI_ISR_CSRA_0_Val << QSPI_ISR_CSRA_Pos)           /* (QSPI_ISR) No chip select rise has been detected since beginning of the last command or the last read of QSPI_ISR. Position  */
 #define QSPI_ISR_CSRA_1                       (QSPI_ISR_CSRA_1_Val << QSPI_ISR_CSRA_Pos)           /* (QSPI_ISR) One chip select rise has been detected since the beginning of the last command or the last read of QSPI_ISR. Position  */
-#define QSPI_ISR_RFRSHD_Pos                   _UINT32_(16)                                         /* (QSPI_ISR) Refresh Done Position */
-#define QSPI_ISR_RFRSHD_Msk                   (_UINT32_(0x1) << QSPI_ISR_RFRSHD_Pos)               /* (QSPI_ISR) Refresh Done Mask */
+#define QSPI_ISR_RFRSHD_Pos                   _UINT32_(16)                                         /* (QSPI_ISR) Refresh Done (cleared on read) Position */
+#define QSPI_ISR_RFRSHD_Msk                   (_UINT32_(0x1) << QSPI_ISR_RFRSHD_Pos)               /* (QSPI_ISR) Refresh Done (cleared on read) Mask */
 #define QSPI_ISR_RFRSHD(value)                (QSPI_ISR_RFRSHD_Msk & (_UINT32_(value) << QSPI_ISR_RFRSHD_Pos)) /* Assigment of value for RFRSHD in the QSPI_ISR register */
-#define   QSPI_ISR_RFRSHD_0_Val               _UINT32_(0x0)                                        /* (QSPI_ISR) No refresh done event occurred since the last read of QSPI_ISR.  */
-#define   QSPI_ISR_RFRSHD_1_Val               _UINT32_(0x1)                                        /* (QSPI_ISR) One refresh done event has been detected since the end of the last refresh command or the last read of QSPI_ISR.  */
-#define QSPI_ISR_RFRSHD_0                     (QSPI_ISR_RFRSHD_0_Val << QSPI_ISR_RFRSHD_Pos)       /* (QSPI_ISR) No refresh done event occurred since the last read of QSPI_ISR. Position  */
-#define QSPI_ISR_RFRSHD_1                     (QSPI_ISR_RFRSHD_1_Val << QSPI_ISR_RFRSHD_Pos)       /* (QSPI_ISR) One refresh done event has been detected since the end of the last refresh command or the last read of QSPI_ISR. Position  */
-#define QSPI_ISR_TOUT_Pos                     _UINT32_(17)                                         /* (QSPI_ISR) QSPI Time-out Position */
-#define QSPI_ISR_TOUT_Msk                     (_UINT32_(0x1) << QSPI_ISR_TOUT_Pos)                 /* (QSPI_ISR) QSPI Time-out Mask */
+#define   QSPI_ISR_RFRSHD_0_Val               _UINT32_(0x0)                                        /* (QSPI_ISR) No 'refresh done' event occurred since the last read of QSPI_ISR.  */
+#define   QSPI_ISR_RFRSHD_1_Val               _UINT32_(0x1)                                        /* (QSPI_ISR) One 'refresh done' event has been detected since the end of the last refresh command or the last read of QSPI_ISR.  */
+#define QSPI_ISR_RFRSHD_0                     (QSPI_ISR_RFRSHD_0_Val << QSPI_ISR_RFRSHD_Pos)       /* (QSPI_ISR) No 'refresh done' event occurred since the last read of QSPI_ISR. Position  */
+#define QSPI_ISR_RFRSHD_1                     (QSPI_ISR_RFRSHD_1_Val << QSPI_ISR_RFRSHD_Pos)       /* (QSPI_ISR) One 'refresh done' event has been detected since the end of the last refresh command or the last read of QSPI_ISR. Position  */
+#define QSPI_ISR_TOUT_Pos                     _UINT32_(17)                                         /* (QSPI_ISR) QSPI Time-out (cleared by writing QSPI_CR.RTOUT) Position */
+#define QSPI_ISR_TOUT_Msk                     (_UINT32_(0x1) << QSPI_ISR_TOUT_Pos)                 /* (QSPI_ISR) QSPI Time-out (cleared by writing QSPI_CR.RTOUT) Mask */
 #define QSPI_ISR_TOUT(value)                  (QSPI_ISR_TOUT_Msk & (_UINT32_(value) << QSPI_ISR_TOUT_Pos)) /* Assigment of value for TOUT in the QSPI_ISR register */
-#define   QSPI_ISR_TOUT_0_Val                 _UINT32_(0x0)                                        /* (QSPI_ISR) No QSPI time-out occurred since the last write of RTOUT bit on QSPI_CR.  */
-#define   QSPI_ISR_TOUT_1_Val                 _UINT32_(0x1)                                        /* (QSPI_ISR) At least one QSPI time-out occurred since the last write of RTOUT bit on QSPI_CR.  */
-#define QSPI_ISR_TOUT_0                       (QSPI_ISR_TOUT_0_Val << QSPI_ISR_TOUT_Pos)           /* (QSPI_ISR) No QSPI time-out occurred since the last write of RTOUT bit on QSPI_CR. Position  */
-#define QSPI_ISR_TOUT_1                       (QSPI_ISR_TOUT_1_Val << QSPI_ISR_TOUT_Pos)           /* (QSPI_ISR) At least one QSPI time-out occurred since the last write of RTOUT bit on QSPI_CR. Position  */
-#define QSPI_ISR_Msk                          _UINT32_(0x0003FD0F)                                 /* (QSPI_ISR) Register Mask  */
+#define   QSPI_ISR_TOUT_0_Val                 _UINT32_(0x0)                                        /* (QSPI_ISR) No QSPI time-out occurred.  */
+#define   QSPI_ISR_TOUT_1_Val                 _UINT32_(0x1)                                        /* (QSPI_ISR) At least one QSPI time-out occurred.  */
+#define QSPI_ISR_TOUT_0                       (QSPI_ISR_TOUT_0_Val << QSPI_ISR_TOUT_Pos)           /* (QSPI_ISR) No QSPI time-out occurred. Position  */
+#define QSPI_ISR_TOUT_1                       (QSPI_ISR_TOUT_1_Val << QSPI_ISR_TOUT_Pos)           /* (QSPI_ISR) At least one QSPI time-out occurred. Position  */
+#define QSPI_ISR_Msk                          _UINT32_(0x0003FF0F)                                 /* (QSPI_ISR) Register Mask  */
 
 
 /* -------- QSPI_IER : (QSPI Offset: 0x14) ( /W 32) Interrupt Enable Register -------- */
@@ -425,16 +422,16 @@
 #define QSPI_SCR_Msk                          _UINT32_(0x00FF0003)                                 /* (QSPI_SCR) Register Mask  */
 
 
-/* -------- QSPI_SR : (QSPI Offset: 0x24) (R/W 32) Status Register -------- */
+/* -------- QSPI_SR : (QSPI Offset: 0x24) ( R/ 32) Status Register -------- */
 #define QSPI_SR_RESETVALUE                    _UINT32_(0x00)                                       /*  (QSPI_SR) Status Register  Reset Value */
 
 #define QSPI_SR_SYNCBSY_Pos                   _UINT32_(0)                                          /* (QSPI_SR) Synchronization Busy Position */
 #define QSPI_SR_SYNCBSY_Msk                   (_UINT32_(0x1) << QSPI_SR_SYNCBSY_Pos)               /* (QSPI_SR) Synchronization Busy Mask */
 #define QSPI_SR_SYNCBSY(value)                (QSPI_SR_SYNCBSY_Msk & (_UINT32_(value) << QSPI_SR_SYNCBSY_Pos)) /* Assigment of value for SYNCBSY in the QSPI_SR register */
-#define   QSPI_SR_SYNCBSY_0_Val               _UINT32_(0x0)                                        /* (QSPI_SR) No event synchronization between the QSPI Controller interface and QSPI Controller core is ongoing. Register accesses requiring synchronization are allowed, see Register Synchronization.  */
-#define   QSPI_SR_SYNCBSY_1_Val               _UINT32_(0x1)                                        /* (QSPI_SR) Event synchronization between the QSPI Controller interface and QSPI Controller core is ongoing. Register accesses requiring synchronization are not allowed, see Register Synchronization.  */
-#define QSPI_SR_SYNCBSY_0                     (QSPI_SR_SYNCBSY_0_Val << QSPI_SR_SYNCBSY_Pos)       /* (QSPI_SR) No event synchronization between the QSPI Controller interface and QSPI Controller core is ongoing. Register accesses requiring synchronization are allowed, see Register Synchronization. Position  */
-#define QSPI_SR_SYNCBSY_1                     (QSPI_SR_SYNCBSY_1_Val << QSPI_SR_SYNCBSY_Pos)       /* (QSPI_SR) Event synchronization between the QSPI Controller interface and QSPI Controller core is ongoing. Register accesses requiring synchronization are not allowed, see Register Synchronization. Position  */
+#define   QSPI_SR_SYNCBSY_0_Val               _UINT32_(0x0)                                        /* (QSPI_SR) Allows access to any register.  */
+#define   QSPI_SR_SYNCBSY_1_Val               _UINT32_(0x1)                                        /* (QSPI_SR) Some register accesses must not be accessed. See Register Synchronization.  */
+#define QSPI_SR_SYNCBSY_0                     (QSPI_SR_SYNCBSY_0_Val << QSPI_SR_SYNCBSY_Pos)       /* (QSPI_SR) Allows access to any register. Position  */
+#define QSPI_SR_SYNCBSY_1                     (QSPI_SR_SYNCBSY_1_Val << QSPI_SR_SYNCBSY_Pos)       /* (QSPI_SR) Some register accesses must not be accessed. See Register Synchronization. Position  */
 #define QSPI_SR_QSPIENS_Pos                   _UINT32_(1)                                          /* (QSPI_SR) QSPI Enable Status Position */
 #define QSPI_SR_QSPIENS_Msk                   (_UINT32_(0x1) << QSPI_SR_QSPIENS_Pos)               /* (QSPI_SR) QSPI Enable Status Mask */
 #define QSPI_SR_QSPIENS(value)                (QSPI_SR_QSPIENS_Msk & (_UINT32_(value) << QSPI_SR_QSPIENS_Pos)) /* Assigment of value for QSPIENS in the QSPI_SR register */
@@ -452,17 +449,17 @@
 #define QSPI_SR_RBUSY_Pos                     _UINT32_(3)                                          /* (QSPI_SR) Read Busy Position */
 #define QSPI_SR_RBUSY_Msk                     (_UINT32_(0x1) << QSPI_SR_RBUSY_Pos)                 /* (QSPI_SR) Read Busy Mask */
 #define QSPI_SR_RBUSY(value)                  (QSPI_SR_RBUSY_Msk & (_UINT32_(value) << QSPI_SR_RBUSY_Pos)) /* Assigment of value for RBUSY in the QSPI_SR register */
-#define   QSPI_SR_RBUSY_0_Val                 _UINT32_(0x0)                                        /* (QSPI_SR) The system bus interface has no activity.  */
-#define   QSPI_SR_RBUSY_1_Val                 _UINT32_(0x1)                                        /* (QSPI_SR) The system bus interface is currently processing accesses.  */
-#define QSPI_SR_RBUSY_0                       (QSPI_SR_RBUSY_0_Val << QSPI_SR_RBUSY_Pos)           /* (QSPI_SR) The system bus interface has no activity. Position  */
-#define QSPI_SR_RBUSY_1                       (QSPI_SR_RBUSY_1_Val << QSPI_SR_RBUSY_Pos)           /* (QSPI_SR) The system bus interface is currently processing accesses. Position  */
+#define   QSPI_SR_RBUSY_0_Val                 _UINT32_(0x0)                                        /* (QSPI_SR) The client bus interface has no activity.  */
+#define   QSPI_SR_RBUSY_1_Val                 _UINT32_(0x1)                                        /* (QSPI_SR) The client bus interface is currently processing accesses.  */
+#define QSPI_SR_RBUSY_0                       (QSPI_SR_RBUSY_0_Val << QSPI_SR_RBUSY_Pos)           /* (QSPI_SR) The client bus interface has no activity. Position  */
+#define QSPI_SR_RBUSY_1                       (QSPI_SR_RBUSY_1_Val << QSPI_SR_RBUSY_Pos)           /* (QSPI_SR) The client bus interface is currently processing accesses. Position  */
 #define QSPI_SR_HIDLE_Pos                     _UINT32_(4)                                          /* (QSPI_SR) QSPI Idle Position */
 #define QSPI_SR_HIDLE_Msk                     (_UINT32_(0x1) << QSPI_SR_HIDLE_Pos)                 /* (QSPI_SR) QSPI Idle Mask */
 #define QSPI_SR_HIDLE(value)                  (QSPI_SR_HIDLE_Msk & (_UINT32_(value) << QSPI_SR_HIDLE_Pos)) /* Assigment of value for HIDLE in the QSPI_SR register */
-#define   QSPI_SR_HIDLE_0_Val                 _UINT32_(0x0)                                        /* (QSPI_SR) The QSPI is not in Idle state (either transmitting or Chip Select is active).  */
-#define   QSPI_SR_HIDLE_1_Val                 _UINT32_(0x1)                                        /* (QSPI_SR) The QSPI is in Idle state (not transmitting and Chip Select is inactive).  */
-#define QSPI_SR_HIDLE_0                       (QSPI_SR_HIDLE_0_Val << QSPI_SR_HIDLE_Pos)           /* (QSPI_SR) The QSPI is not in Idle state (either transmitting or Chip Select is active). Position  */
-#define QSPI_SR_HIDLE_1                       (QSPI_SR_HIDLE_1_Val << QSPI_SR_HIDLE_Pos)           /* (QSPI_SR) The QSPI is in Idle state (not transmitting and Chip Select is inactive). Position  */
+#define   QSPI_SR_HIDLE_0_Val                 _UINT32_(0x0)                                        /* (QSPI_SR) The QSPI is not in Idle state (either transmitting or chip select is active).  */
+#define   QSPI_SR_HIDLE_1_Val                 _UINT32_(0x1)                                        /* (QSPI_SR) The QSPI is in Idle state (not transmitting and chip select is inactive).  */
+#define QSPI_SR_HIDLE_0                       (QSPI_SR_HIDLE_0_Val << QSPI_SR_HIDLE_Pos)           /* (QSPI_SR) The QSPI is not in Idle state (either transmitting or chip select is active). Position  */
+#define QSPI_SR_HIDLE_1                       (QSPI_SR_HIDLE_1_Val << QSPI_SR_HIDLE_Pos)           /* (QSPI_SR) The QSPI is in Idle state (not transmitting and chip select is inactive). Position  */
 #define QSPI_SR_Msk                           _UINT32_(0x0000001F)                                 /* (QSPI_SR) Register Mask  */
 
 
@@ -566,10 +563,10 @@
 #define QSPI_IFR_TFRTYP_Pos                   _UINT32_(12)                                         /* (QSPI_IFR) Data Transfer Type Position */
 #define QSPI_IFR_TFRTYP_Msk                   (_UINT32_(0x1) << QSPI_IFR_TFRTYP_Pos)               /* (QSPI_IFR) Data Transfer Type Mask */
 #define QSPI_IFR_TFRTYP(value)                (QSPI_IFR_TFRTYP_Msk & (_UINT32_(value) << QSPI_IFR_TFRTYP_Pos)) /* Assigment of value for TFRTYP in the QSPI_IFR register */
-#define   QSPI_IFR_TFRTYP_TRSFR_REGISTER_Val  _UINT32_(0x0)                                        /* (QSPI_IFR) Read/Write of memory register, write of memory page buffer. This configuration implies the following: Either the AHB or the APB interface can be used to initiate the transfer (SMRM bit). Returned data represents the memory register value. If the APB interface is used, the RDRF and TDRE flags help to control the frame. Scrambling is possible only if the APB interface is used. For HyperFlash memories the "target" bit is set to register space in the HyperFlash header.  */
-#define   QSPI_IFR_TFRTYP_TRSFR_MEMORY_Val    _UINT32_(0x1)                                        /* (QSPI_IFR) Read/Write accesses to the memory space. This configuration implies the following: Only the System Bus interface can be used to trigger accesses. Access to random location is possible. Address mask is applied and full size accesses only are performed. Internal optimization algorithm is enabled to minimize latency. Data are returned in a system bus protocol compliant way. Seamless scrambling is enabled. Seamless handling of HyperFlash Write Buffer programming command (one command for each data) Seamless protocol-specific page boundary handling Address shift is handled seamlessly (e.g. halfword memories).  */
-#define QSPI_IFR_TFRTYP_TRSFR_REGISTER        (QSPI_IFR_TFRTYP_TRSFR_REGISTER_Val << QSPI_IFR_TFRTYP_Pos) /* (QSPI_IFR) Read/Write of memory register, write of memory page buffer. This configuration implies the following: Either the AHB or the APB interface can be used to initiate the transfer (SMRM bit). Returned data represents the memory register value. If the APB interface is used, the RDRF and TDRE flags help to control the frame. Scrambling is possible only if the APB interface is used. For HyperFlash memories the "target" bit is set to register space in the HyperFlash header. Position  */
-#define QSPI_IFR_TFRTYP_TRSFR_MEMORY          (QSPI_IFR_TFRTYP_TRSFR_MEMORY_Val << QSPI_IFR_TFRTYP_Pos) /* (QSPI_IFR) Read/Write accesses to the memory space. This configuration implies the following: Only the System Bus interface can be used to trigger accesses. Access to random location is possible. Address mask is applied and full size accesses only are performed. Internal optimization algorithm is enabled to minimize latency. Data are returned in a system bus protocol compliant way. Seamless scrambling is enabled. Seamless handling of HyperFlash Write Buffer programming command (one command for each data) Seamless protocol-specific page boundary handling Address shift is handled seamlessly (e.g. halfword memories). Position  */
+#define   QSPI_IFR_TFRTYP_TRSFR_REGISTER_Val  _UINT32_(0x0)                                        /* (QSPI_IFR) Read/Write of memory register, write of memory page buffer. This configuration implies the following: Either the system bus or the peripheral bus can be used to initiate the transfer (SMRM bit). If the peripheral bus is used, the RDRF and TDRE flags help to control the frame. Scrambling is possible only for write accesses and if the peripheral bus is used. For HyperFlash memories the "target" bit is set to register space in the HyperFlash header.  */
+#define   QSPI_IFR_TFRTYP_TRSFR_MEMORY_Val    _UINT32_(0x1)                                        /* (QSPI_IFR) Read/Write accesses to the memory space. This configuration implies the following: Only the System Bus interface can be used to trigger accesses. Access to random location is possible. Address mask is applied and full system bus size accesses only are performed. The internal optimization algorithm is enabled to minimize latency, and protocol specificities are handled automatically. Seamless scrambling is possible. Seamless handling of HyperFlash Write Buffer programming command (one command for each data) Address shift is handled seamlessly (halfword memories, for example).  */
+#define QSPI_IFR_TFRTYP_TRSFR_REGISTER        (QSPI_IFR_TFRTYP_TRSFR_REGISTER_Val << QSPI_IFR_TFRTYP_Pos) /* (QSPI_IFR) Read/Write of memory register, write of memory page buffer. This configuration implies the following: Either the system bus or the peripheral bus can be used to initiate the transfer (SMRM bit). If the peripheral bus is used, the RDRF and TDRE flags help to control the frame. Scrambling is possible only for write accesses and if the peripheral bus is used. For HyperFlash memories the "target" bit is set to register space in the HyperFlash header. Position  */
+#define QSPI_IFR_TFRTYP_TRSFR_MEMORY          (QSPI_IFR_TFRTYP_TRSFR_MEMORY_Val << QSPI_IFR_TFRTYP_Pos) /* (QSPI_IFR) Read/Write accesses to the memory space. This configuration implies the following: Only the System Bus interface can be used to trigger accesses. Access to random location is possible. Address mask is applied and full system bus size accesses only are performed. The internal optimization algorithm is enabled to minimize latency, and protocol specificities are handled automatically. Seamless scrambling is possible. Seamless handling of HyperFlash Write Buffer programming command (one command for each data) Address shift is handled seamlessly (halfword memories, for example). Position  */
 #define QSPI_IFR_CRM_Pos                      _UINT32_(14)                                         /* (QSPI_IFR) Continuous Read Mode Position */
 #define QSPI_IFR_CRM_Msk                      (_UINT32_(0x1) << QSPI_IFR_CRM_Pos)                  /* (QSPI_IFR) Continuous Read Mode Mask */
 #define QSPI_IFR_CRM(value)                   (QSPI_IFR_CRM_Msk & (_UINT32_(value) << QSPI_IFR_CRM_Pos)) /* Assigment of value for CRM in the QSPI_IFR register */
@@ -585,7 +582,7 @@
 #define QSPI_IFR_DDREN_DISABLED               (QSPI_IFR_DDREN_DISABLED_Val << QSPI_IFR_DDREN_Pos)  /* (QSPI_IFR) Transfers are performed in Single Data Rate mode. Position  */
 #define QSPI_IFR_DDREN_ENABLED                (QSPI_IFR_DDREN_ENABLED_Val << QSPI_IFR_DDREN_Pos)   /* (QSPI_IFR) Transfers are performed in Double Data Rate mode, whereas the instruction field is still transferred in Single Data Rate mode. Position  */
 #define QSPI_IFR_NBDUM_Pos                    _UINT32_(16)                                         /* (QSPI_IFR) Number Of Dummy Cycles Position */
-#define QSPI_IFR_NBDUM_Msk                    (_UINT32_(0x1F) << QSPI_IFR_NBDUM_Pos)               /* (QSPI_IFR) Number Of Dummy Cycles Mask */
+#define QSPI_IFR_NBDUM_Msk                    (_UINT32_(0x3F) << QSPI_IFR_NBDUM_Pos)               /* (QSPI_IFR) Number Of Dummy Cycles Mask */
 #define QSPI_IFR_NBDUM(value)                 (QSPI_IFR_NBDUM_Msk & (_UINT32_(value) << QSPI_IFR_NBDUM_Pos)) /* Assigment of value for NBDUM in the QSPI_IFR register */
 #define QSPI_IFR_END_Pos                      _UINT32_(22)                                         /* (QSPI_IFR) Endianness Position */
 #define QSPI_IFR_END_Msk                      (_UINT32_(0x1) << QSPI_IFR_END_Pos)                  /* (QSPI_IFR) Endianness Mask */
@@ -597,50 +594,50 @@
 #define QSPI_IFR_SMRM_Pos                     _UINT32_(23)                                         /* (QSPI_IFR) Serial Memory Register Mode Position */
 #define QSPI_IFR_SMRM_Msk                     (_UINT32_(0x1) << QSPI_IFR_SMRM_Pos)                 /* (QSPI_IFR) Serial Memory Register Mode Mask */
 #define QSPI_IFR_SMRM(value)                  (QSPI_IFR_SMRM_Msk & (_UINT32_(value) << QSPI_IFR_SMRM_Pos)) /* Assigment of value for SMRM in the QSPI_IFR register */
-#define   QSPI_IFR_SMRM_0_Val                 _UINT32_(0x0)                                        /* (QSPI_IFR) Serial Memory registers are written via AHB access. See Instruction Frame Transmission for details.  */
-#define   QSPI_IFR_SMRM_1_Val                 _UINT32_(0x1)                                        /* (QSPI_IFR) Serial Memory registers are written via APB access. See Instruction Frame Transmission for details.  */
-#define QSPI_IFR_SMRM_0                       (QSPI_IFR_SMRM_0_Val << QSPI_IFR_SMRM_Pos)           /* (QSPI_IFR) Serial Memory registers are written via AHB access. See Instruction Frame Transmission for details. Position  */
-#define QSPI_IFR_SMRM_1                       (QSPI_IFR_SMRM_1_Val << QSPI_IFR_SMRM_Pos)           /* (QSPI_IFR) Serial Memory registers are written via APB access. See Instruction Frame Transmission for details. Position  */
-#define QSPI_IFR_APBTFRTYP_Pos                _UINT32_(24)                                         /* (QSPI_IFR) Peripheral BusTransfer Type Position */
-#define QSPI_IFR_APBTFRTYP_Msk                (_UINT32_(0x1) << QSPI_IFR_APBTFRTYP_Pos)            /* (QSPI_IFR) Peripheral BusTransfer Type Mask */
+#define   QSPI_IFR_SMRM_0_Val                 _UINT32_(0x0)                                        /* (QSPI_IFR) Serial Memory registers are written via system bus access.  */
+#define   QSPI_IFR_SMRM_1_Val                 _UINT32_(0x1)                                        /* (QSPI_IFR) Serial Memory registers are written via peripheral bus access.  */
+#define QSPI_IFR_SMRM_0                       (QSPI_IFR_SMRM_0_Val << QSPI_IFR_SMRM_Pos)           /* (QSPI_IFR) Serial Memory registers are written via system bus access. Position  */
+#define QSPI_IFR_SMRM_1                       (QSPI_IFR_SMRM_1_Val << QSPI_IFR_SMRM_Pos)           /* (QSPI_IFR) Serial Memory registers are written via peripheral bus access. Position  */
+#define QSPI_IFR_APBTFRTYP_Pos                _UINT32_(24)                                         /* (QSPI_IFR) Peripheral Bus Transfer Type Position */
+#define QSPI_IFR_APBTFRTYP_Msk                (_UINT32_(0x1) << QSPI_IFR_APBTFRTYP_Pos)            /* (QSPI_IFR) Peripheral Bus Transfer Type Mask */
 #define QSPI_IFR_APBTFRTYP(value)             (QSPI_IFR_APBTFRTYP_Msk & (_UINT32_(value) << QSPI_IFR_APBTFRTYP_Pos)) /* Assigment of value for APBTFRTYP in the QSPI_IFR register */
-#define   QSPI_IFR_APBTFRTYP_0_Val            _UINT32_(0x0)                                        /* (QSPI_IFR) Peripheral bus register transfer to the memory is a write transfer. Used when TRFTYP is written to '0' and SMRM to '1'.  */
-#define   QSPI_IFR_APBTFRTYP_1_Val            _UINT32_(0x1)                                        /* (QSPI_IFR) Peripheral bus register transfer to the memory is a read transfer. Used when TRFTYP is written to '0' and SMRM to '1'.  */
-#define QSPI_IFR_APBTFRTYP_0                  (QSPI_IFR_APBTFRTYP_0_Val << QSPI_IFR_APBTFRTYP_Pos) /* (QSPI_IFR) Peripheral bus register transfer to the memory is a write transfer. Used when TRFTYP is written to '0' and SMRM to '1'. Position  */
-#define QSPI_IFR_APBTFRTYP_1                  (QSPI_IFR_APBTFRTYP_1_Val << QSPI_IFR_APBTFRTYP_Pos) /* (QSPI_IFR) Peripheral bus register transfer to the memory is a read transfer. Used when TRFTYP is written to '0' and SMRM to '1'. Position  */
+#define   QSPI_IFR_APBTFRTYP_0_Val            _UINT32_(0x0)                                        /* (QSPI_IFR) Register transfer to the memory is a write transfer. Used when TRFTYP is written to 0 and SMRM to 1.  */
+#define   QSPI_IFR_APBTFRTYP_1_Val            _UINT32_(0x1)                                        /* (QSPI_IFR) Register transfer to the memory is a read transfer. Used when TRFTYP is written to 0 and SMRM to 1.  */
+#define QSPI_IFR_APBTFRTYP_0                  (QSPI_IFR_APBTFRTYP_0_Val << QSPI_IFR_APBTFRTYP_Pos) /* (QSPI_IFR) Register transfer to the memory is a write transfer. Used when TRFTYP is written to 0 and SMRM to 1. Position  */
+#define QSPI_IFR_APBTFRTYP_1                  (QSPI_IFR_APBTFRTYP_1_Val << QSPI_IFR_APBTFRTYP_Pos) /* (QSPI_IFR) Register transfer to the memory is a read transfer. Used when TRFTYP is written to 0 and SMRM to 1. Position  */
 #define QSPI_IFR_DQSEN_Pos                    _UINT32_(25)                                         /* (QSPI_IFR) DQS Sampling Enable Position */
 #define QSPI_IFR_DQSEN_Msk                    (_UINT32_(0x1) << QSPI_IFR_DQSEN_Pos)                /* (QSPI_IFR) DQS Sampling Enable Mask */
 #define QSPI_IFR_DQSEN(value)                 (QSPI_IFR_DQSEN_Msk & (_UINT32_(value) << QSPI_IFR_DQSEN_Pos)) /* Assigment of value for DQSEN in the QSPI_IFR register */
-#define   QSPI_IFR_DQSEN_0_Val                _UINT32_(0x0)                                        /* (QSPI_IFR) Data from the memory are not sampled with DQS signal.  */
-#define   QSPI_IFR_DQSEN_1_Val                _UINT32_(0x1)                                        /* (QSPI_IFR) Data from the memory are sampled with DQS signal.  */
-#define QSPI_IFR_DQSEN_0                      (QSPI_IFR_DQSEN_0_Val << QSPI_IFR_DQSEN_Pos)         /* (QSPI_IFR) Data from the memory are not sampled with DQS signal. Position  */
-#define QSPI_IFR_DQSEN_1                      (QSPI_IFR_DQSEN_1_Val << QSPI_IFR_DQSEN_Pos)         /* (QSPI_IFR) Data from the memory are sampled with DQS signal. Position  */
+#define   QSPI_IFR_DQSEN_0_Val                _UINT32_(0x0)                                        /* (QSPI_IFR) Data from the memory are not sampled with the DQS signal.  */
+#define   QSPI_IFR_DQSEN_1_Val                _UINT32_(0x1)                                        /* (QSPI_IFR) Data from the memory are sampled with the DQS signal.  */
+#define QSPI_IFR_DQSEN_0                      (QSPI_IFR_DQSEN_0_Val << QSPI_IFR_DQSEN_Pos)         /* (QSPI_IFR) Data from the memory are not sampled with the DQS signal. Position  */
+#define QSPI_IFR_DQSEN_1                      (QSPI_IFR_DQSEN_1_Val << QSPI_IFR_DQSEN_Pos)         /* (QSPI_IFR) Data from the memory are sampled with the DQS signal. Position  */
 #define QSPI_IFR_DDRCMDEN_Pos                 _UINT32_(26)                                         /* (QSPI_IFR) DDR Mode Command Enable Position */
 #define QSPI_IFR_DDRCMDEN_Msk                 (_UINT32_(0x1) << QSPI_IFR_DDRCMDEN_Pos)             /* (QSPI_IFR) DDR Mode Command Enable Mask */
 #define QSPI_IFR_DDRCMDEN(value)              (QSPI_IFR_DDRCMDEN_Msk & (_UINT32_(value) << QSPI_IFR_DDRCMDEN_Pos)) /* Assigment of value for DDRCMDEN in the QSPI_IFR register */
-#define   QSPI_IFR_DDRCMDEN_DISABLED_Val      _UINT32_(0x0)                                        /* (QSPI_IFR) Transfer of instruction field is performed in Single Data Rate mode even if DDREN is written to '1'.  */
-#define   QSPI_IFR_DDRCMDEN_ENABLED_Val       _UINT32_(0x1)                                        /* (QSPI_IFR) Transfer of instruction field is performed in Double Data Rate mode if DDREN bit is written to '1'. If DDREN is written to '0', the instruction field is sent in Single Data Rate mode.  */
-#define QSPI_IFR_DDRCMDEN_DISABLED            (QSPI_IFR_DDRCMDEN_DISABLED_Val << QSPI_IFR_DDRCMDEN_Pos) /* (QSPI_IFR) Transfer of instruction field is performed in Single Data Rate mode even if DDREN is written to '1'. Position  */
-#define QSPI_IFR_DDRCMDEN_ENABLED             (QSPI_IFR_DDRCMDEN_ENABLED_Val << QSPI_IFR_DDRCMDEN_Pos) /* (QSPI_IFR) Transfer of instruction field is performed in Double Data Rate mode if DDREN bit is written to '1'. If DDREN is written to '0', the instruction field is sent in Single Data Rate mode. Position  */
+#define   QSPI_IFR_DDRCMDEN_DISABLED_Val      _UINT32_(0x0)                                        /* (QSPI_IFR) Transfer of instruction field is performed in Single Data Rate mode even if DDREN is written to 1.  */
+#define   QSPI_IFR_DDRCMDEN_ENABLED_Val       _UINT32_(0x1)                                        /* (QSPI_IFR) Transfer of instruction field is performed in Double Data Rate mode if DDREN bit is written to 1. If DDREN is written to 0, the instruction field is sent in Single Data Rate mode.  */
+#define QSPI_IFR_DDRCMDEN_DISABLED            (QSPI_IFR_DDRCMDEN_DISABLED_Val << QSPI_IFR_DDRCMDEN_Pos) /* (QSPI_IFR) Transfer of instruction field is performed in Single Data Rate mode even if DDREN is written to 1. Position  */
+#define QSPI_IFR_DDRCMDEN_ENABLED             (QSPI_IFR_DDRCMDEN_ENABLED_Val << QSPI_IFR_DDRCMDEN_Pos) /* (QSPI_IFR) Transfer of instruction field is performed in Double Data Rate mode if DDREN bit is written to 1. If DDREN is written to 0, the instruction field is sent in Single Data Rate mode. Position  */
 #define QSPI_IFR_HFWBEN_Pos                   _UINT32_(27)                                         /* (QSPI_IFR) HyperFlash Write Buffer Enable Position */
 #define QSPI_IFR_HFWBEN_Msk                   (_UINT32_(0x1) << QSPI_IFR_HFWBEN_Pos)               /* (QSPI_IFR) HyperFlash Write Buffer Enable Mask */
 #define QSPI_IFR_HFWBEN(value)                (QSPI_IFR_HFWBEN_Msk & (_UINT32_(value) << QSPI_IFR_HFWBEN_Pos)) /* Assigment of value for HFWBEN in the QSPI_IFR register */
 #define   QSPI_IFR_HFWBEN_0_Val               _UINT32_(0x0)                                        /* (QSPI_IFR) No effect.  */
-#define   QSPI_IFR_HFWBEN_1_Val               _UINT32_(0x1)                                        /* (QSPI_IFR) Each write access received on the system bus interface generates a new command. IMPORTANT: Mandatory if HyperFlash Write Buffer feature is used.  */
+#define   QSPI_IFR_HFWBEN_1_Val               _UINT32_(0x1)                                        /* (QSPI_IFR) Each write access received on the system bus interface generates a new command. IMPORTANT: Mandatory if the HyperFlash Write Buffer feature is used.  */
 #define QSPI_IFR_HFWBEN_0                     (QSPI_IFR_HFWBEN_0_Val << QSPI_IFR_HFWBEN_Pos)       /* (QSPI_IFR) No effect. Position  */
-#define QSPI_IFR_HFWBEN_1                     (QSPI_IFR_HFWBEN_1_Val << QSPI_IFR_HFWBEN_Pos)       /* (QSPI_IFR) Each write access received on the system bus interface generates a new command. IMPORTANT: Mandatory if HyperFlash Write Buffer feature is used. Position  */
+#define QSPI_IFR_HFWBEN_1                     (QSPI_IFR_HFWBEN_1_Val << QSPI_IFR_HFWBEN_Pos)       /* (QSPI_IFR) Each write access received on the system bus interface generates a new command. IMPORTANT: Mandatory if the HyperFlash Write Buffer feature is used. Position  */
 #define QSPI_IFR_PROTTYP_Pos                  _UINT32_(28)                                         /* (QSPI_IFR) Protocol Type Position */
-#define QSPI_IFR_PROTTYP_Msk                  (_UINT32_(0x3) << QSPI_IFR_PROTTYP_Pos)              /* (QSPI_IFR) Protocol Type Mask */
+#define QSPI_IFR_PROTTYP_Msk                  (_UINT32_(0x7) << QSPI_IFR_PROTTYP_Pos)              /* (QSPI_IFR) Protocol Type Mask */
 #define QSPI_IFR_PROTTYP(value)               (QSPI_IFR_PROTTYP_Msk & (_UINT32_(value) << QSPI_IFR_PROTTYP_Pos)) /* Assigment of value for PROTTYP in the QSPI_IFR register */
-#define   QSPI_IFR_PROTTYP_STD_SPI_Val        _UINT32_(0x0)                                        /* (QSPI_IFR) Standard (Q)SPI Protocol  */
-#define   QSPI_IFR_PROTTYP_TWIN_QUAD_Val      _UINT32_(0x1)                                        /* (QSPI_IFR) Twin-Quad Protocol  */
-#define   QSPI_IFR_PROTTYP_OCTAFLASH_Val      _UINT32_(0x2)                                        /* (QSPI_IFR) OctaFlash Protocol  */
-#define   QSPI_IFR_PROTTYP_HYPERFLASH_Val     _UINT32_(0x3)                                        /* (QSPI_IFR) HyperFlash Protocol  */
-#define QSPI_IFR_PROTTYP_STD_SPI              (QSPI_IFR_PROTTYP_STD_SPI_Val << QSPI_IFR_PROTTYP_Pos) /* (QSPI_IFR) Standard (Q)SPI Protocol Position  */
-#define QSPI_IFR_PROTTYP_TWIN_QUAD            (QSPI_IFR_PROTTYP_TWIN_QUAD_Val << QSPI_IFR_PROTTYP_Pos) /* (QSPI_IFR) Twin-Quad Protocol Position  */
-#define QSPI_IFR_PROTTYP_OCTAFLASH            (QSPI_IFR_PROTTYP_OCTAFLASH_Val << QSPI_IFR_PROTTYP_Pos) /* (QSPI_IFR) OctaFlash Protocol Position  */
-#define QSPI_IFR_PROTTYP_HYPERFLASH           (QSPI_IFR_PROTTYP_HYPERFLASH_Val << QSPI_IFR_PROTTYP_Pos) /* (QSPI_IFR) HyperFlash Protocol Position  */
-#define QSPI_IFR_Msk                          _UINT32_(0x3FDFDFFF)                                 /* (QSPI_IFR) Register Mask  */
+#define   QSPI_IFR_PROTTYP_STD_SPI_Val        _UINT32_(0x0)                                        /* (QSPI_IFR) Standard (Q)SPI protocol (to be selected if no other value matches the device)  */
+#define   QSPI_IFR_PROTTYP_TWIN_QUAD_Val      _UINT32_(0x1)                                        /* (QSPI_IFR) Twin-Quad protocol  */
+#define   QSPI_IFR_PROTTYP_OCTAFLASH_Val      _UINT32_(0x2)                                        /* (QSPI_IFR) OctaFlash protocol  */
+#define   QSPI_IFR_PROTTYP_HYPERFLASH_Val     _UINT32_(0x3)                                        /* (QSPI_IFR) HyperFlash protocol  */
+#define QSPI_IFR_PROTTYP_STD_SPI              (QSPI_IFR_PROTTYP_STD_SPI_Val << QSPI_IFR_PROTTYP_Pos) /* (QSPI_IFR) Standard (Q)SPI protocol (to be selected if no other value matches the device) Position  */
+#define QSPI_IFR_PROTTYP_TWIN_QUAD            (QSPI_IFR_PROTTYP_TWIN_QUAD_Val << QSPI_IFR_PROTTYP_Pos) /* (QSPI_IFR) Twin-Quad protocol Position  */
+#define QSPI_IFR_PROTTYP_OCTAFLASH            (QSPI_IFR_PROTTYP_OCTAFLASH_Val << QSPI_IFR_PROTTYP_Pos) /* (QSPI_IFR) OctaFlash protocol Position  */
+#define QSPI_IFR_PROTTYP_HYPERFLASH           (QSPI_IFR_PROTTYP_HYPERFLASH_Val << QSPI_IFR_PROTTYP_Pos) /* (QSPI_IFR) HyperFlash protocol Position  */
+#define QSPI_IFR_Msk                          _UINT32_(0x7FFFDFFF)                                 /* (QSPI_IFR) Register Mask  */
 
 
 /* -------- QSPI_RICR : (QSPI Offset: 0x3C) (R/W 32) Read Instruction Code Register -------- */
@@ -661,10 +658,10 @@
 #define QSPI_SMR_SCREN_Pos                    _UINT32_(0)                                          /* (QSPI_SMR) Scrambling/Unscrambling Enable Position */
 #define QSPI_SMR_SCREN_Msk                    (_UINT32_(0x1) << QSPI_SMR_SCREN_Pos)                /* (QSPI_SMR) Scrambling/Unscrambling Enable Mask */
 #define QSPI_SMR_SCREN(value)                 (QSPI_SMR_SCREN_Msk & (_UINT32_(value) << QSPI_SMR_SCREN_Pos)) /* Assigment of value for SCREN in the QSPI_SMR register */
-#define   QSPI_SMR_SCREN_DISABLED_Val         _UINT32_(0x0)                                        /* (QSPI_SMR) The scrambling/unscrambling is disabled.  */
-#define   QSPI_SMR_SCREN_ENABLED_Val          _UINT32_(0x1)                                        /* (QSPI_SMR) The scrambling/unscrambling is enabled.  */
-#define QSPI_SMR_SCREN_DISABLED               (QSPI_SMR_SCREN_DISABLED_Val << QSPI_SMR_SCREN_Pos)  /* (QSPI_SMR) The scrambling/unscrambling is disabled. Position  */
-#define QSPI_SMR_SCREN_ENABLED                (QSPI_SMR_SCREN_ENABLED_Val << QSPI_SMR_SCREN_Pos)   /* (QSPI_SMR) The scrambling/unscrambling is enabled. Position  */
+#define   QSPI_SMR_SCREN_DISABLED_Val         _UINT32_(0x0)                                        /* (QSPI_SMR) Scrambling/unscrambling is disabled.  */
+#define   QSPI_SMR_SCREN_ENABLED_Val          _UINT32_(0x1)                                        /* (QSPI_SMR) Scrambling/unscrambling is enabled.  */
+#define QSPI_SMR_SCREN_DISABLED               (QSPI_SMR_SCREN_DISABLED_Val << QSPI_SMR_SCREN_Pos)  /* (QSPI_SMR) Scrambling/unscrambling is disabled. Position  */
+#define QSPI_SMR_SCREN_ENABLED                (QSPI_SMR_SCREN_ENABLED_Val << QSPI_SMR_SCREN_Pos)   /* (QSPI_SMR) Scrambling/unscrambling is enabled. Position  */
 #define QSPI_SMR_RVDIS_Pos                    _UINT32_(1)                                          /* (QSPI_SMR) Scrambling/Unscrambling Random Value Disable Position */
 #define QSPI_SMR_RVDIS_Msk                    (_UINT32_(0x1) << QSPI_SMR_RVDIS_Pos)                /* (QSPI_SMR) Scrambling/Unscrambling Random Value Disable Mask */
 #define QSPI_SMR_RVDIS(value)                 (QSPI_SMR_RVDIS_Msk & (_UINT32_(value) << QSPI_SMR_RVDIS_Pos)) /* Assigment of value for RVDIS in the QSPI_SMR register */
@@ -692,8 +689,8 @@
 /* -------- QSPI_REFRESH : (QSPI Offset: 0x50) (R/W 32) Refresh Register -------- */
 #define QSPI_REFRESH_RESETVALUE               _UINT32_(0x00)                                       /*  (QSPI_REFRESH) Refresh Register  Reset Value */
 
-#define QSPI_REFRESH_REFRESH_Pos              _UINT32_(0)                                          /* (QSPI_REFRESH) REFRESH Delay Counter Position */
-#define QSPI_REFRESH_REFRESH_Msk              (_UINT32_(0xFFFFFFFF) << QSPI_REFRESH_REFRESH_Pos)   /* (QSPI_REFRESH) REFRESH Delay Counter Mask */
+#define QSPI_REFRESH_REFRESH_Pos              _UINT32_(0)                                          /* (QSPI_REFRESH) Refresh Delay Counter Position */
+#define QSPI_REFRESH_REFRESH_Msk              (_UINT32_(0xFFFFFFFF) << QSPI_REFRESH_REFRESH_Pos)   /* (QSPI_REFRESH) Refresh Delay Counter Mask */
 #define QSPI_REFRESH_REFRESH(value)           (QSPI_REFRESH_REFRESH_Msk & (_UINT32_(value) << QSPI_REFRESH_REFRESH_Pos)) /* Assigment of value for REFRESH in the QSPI_REFRESH register */
 #define QSPI_REFRESH_Msk                      _UINT32_(0xFFFFFFFF)                                 /* (QSPI_REFRESH) Register Mask  */
 
@@ -705,19 +702,6 @@
 #define QSPI_WRACNT_NBWRA_Msk                 (_UINT32_(0xFFFFFFFF) << QSPI_WRACNT_NBWRA_Pos)      /* (QSPI_WRACNT) Number of Write Accesses Mask */
 #define QSPI_WRACNT_NBWRA(value)              (QSPI_WRACNT_NBWRA_Msk & (_UINT32_(value) << QSPI_WRACNT_NBWRA_Pos)) /* Assigment of value for NBWRA in the QSPI_WRACNT register */
 #define QSPI_WRACNT_Msk                       _UINT32_(0xFFFFFFFF)                                 /* (QSPI_WRACNT) Register Mask  */
-
-
-/* -------- QSPI_PCALCFG : (QSPI Offset: 0x5C) (R/W 32) Pad Calibration Configuration Register -------- */
-#define QSPI_PCALCFG_RESETVALUE               _UINT32_(0x70)                                       /*  (QSPI_PCALCFG) Pad Calibration Configuration Register  Reset Value */
-
-#define QSPI_PCALCFG_DIFFPM_Pos               _UINT32_(2)                                          /* (QSPI_PCALCFG) Differential Pad Mode Position */
-#define QSPI_PCALCFG_DIFFPM_Msk               (_UINT32_(0x1) << QSPI_PCALCFG_DIFFPM_Pos)           /* (QSPI_PCALCFG) Differential Pad Mode Mask */
-#define QSPI_PCALCFG_DIFFPM(value)            (QSPI_PCALCFG_DIFFPM_Msk & (_UINT32_(value) << QSPI_PCALCFG_DIFFPM_Pos)) /* Assigment of value for DIFFPM in the QSPI_PCALCFG register */
-#define   QSPI_PCALCFG_DIFFPM_0_Val           _UINT32_(0x0)                                        /* (QSPI_PCALCFG) Pad differential mode is not enabled.  */
-#define   QSPI_PCALCFG_DIFFPM_1_Val           _UINT32_(0x1)                                        /* (QSPI_PCALCFG) Pad differential mode is enabled.  */
-#define QSPI_PCALCFG_DIFFPM_0                 (QSPI_PCALCFG_DIFFPM_0_Val << QSPI_PCALCFG_DIFFPM_Pos) /* (QSPI_PCALCFG) Pad differential mode is not enabled. Position  */
-#define QSPI_PCALCFG_DIFFPM_1                 (QSPI_PCALCFG_DIFFPM_1_Val << QSPI_PCALCFG_DIFFPM_Pos) /* (QSPI_PCALCFG) Pad differential mode is enabled. Position  */
-#define QSPI_PCALCFG_Msk                      _UINT32_(0x00000004)                                 /* (QSPI_PCALCFG) Register Mask  */
 
 
 /* -------- QSPI_TOUT : (QSPI Offset: 0x64) (R/W 32) Timeout Register -------- */
@@ -764,8 +748,8 @@
 /* -------- QSPI_WPSR : (QSPI Offset: 0xE8) ( R/ 32) Write Protection Status Register -------- */
 #define QSPI_WPSR_RESETVALUE                  _UINT32_(0x00)                                       /*  (QSPI_WPSR) Write Protection Status Register  Reset Value */
 
-#define QSPI_WPSR_WPVS_Pos                    _UINT32_(0)                                          /* (QSPI_WPSR) Write Protection Violation Status Position */
-#define QSPI_WPSR_WPVS_Msk                    (_UINT32_(0x1) << QSPI_WPSR_WPVS_Pos)                /* (QSPI_WPSR) Write Protection Violation Status Mask */
+#define QSPI_WPSR_WPVS_Pos                    _UINT32_(0)                                          /* (QSPI_WPSR) Write Protection Violation Status (cleared on read) Position */
+#define QSPI_WPSR_WPVS_Msk                    (_UINT32_(0x1) << QSPI_WPSR_WPVS_Pos)                /* (QSPI_WPSR) Write Protection Violation Status (cleared on read) Mask */
 #define QSPI_WPSR_WPVS(value)                 (QSPI_WPSR_WPVS_Msk & (_UINT32_(value) << QSPI_WPSR_WPVS_Pos)) /* Assigment of value for WPVS in the QSPI_WPSR register */
 #define   QSPI_WPSR_WPVS_0_Val                _UINT32_(0x0)                                        /* (QSPI_WPSR) No write protection violation has occurred since the last read of the QSPI_WPSR.  */
 #define   QSPI_WPSR_WPVS_1_Val                _UINT32_(0x1)                                        /* (QSPI_WPSR) A write protection violation has occurred since the last read of the QSPI_WPSR. If this violation is an unauthorized attempt to write a protected register, the associated violation is reported into field WPVSRC.  */
@@ -775,241 +759,6 @@
 #define QSPI_WPSR_WPVSRC_Msk                  (_UINT32_(0xFF) << QSPI_WPSR_WPVSRC_Pos)             /* (QSPI_WPSR) Write Protection Violation Source Mask */
 #define QSPI_WPSR_WPVSRC(value)               (QSPI_WPSR_WPVSRC_Msk & (_UINT32_(value) << QSPI_WPSR_WPVSRC_Pos)) /* Assigment of value for WPVSRC in the QSPI_WPSR register */
 #define QSPI_WPSR_Msk                         _UINT32_(0x0000FF01)                                 /* (QSPI_WPSR) Register Mask  */
-
-
-/* -------- QSPI_DLL_OS : (QSPI Offset: 0x300) (R/W 32) QSPI DLL Offset Selection Register -------- */
-#define QSPI_DLL_OS_RESETVALUE                _UINT32_(0x00)                                       /*  (QSPI_DLL_OS) QSPI DLL Offset Selection Register  Reset Value */
-
-#define QSPI_DLL_OS_SELOFF_Pos                _UINT32_(0)                                          /* (QSPI_DLL_OS) Offset Selection Position */
-#define QSPI_DLL_OS_SELOFF_Msk                (_UINT32_(0x1) << QSPI_DLL_OS_SELOFF_Pos)            /* (QSPI_DLL_OS) Offset Selection Mask */
-#define QSPI_DLL_OS_SELOFF(value)             (QSPI_DLL_OS_SELOFF_Msk & (_UINT32_(value) << QSPI_DLL_OS_SELOFF_Pos)) /* Assigment of value for SELOFF in the QSPI_DLL_OS register */
-#define   QSPI_DLL_OS_SELOFF_0_Val            _UINT32_(0x0)                                        /* (QSPI_DLL_OS) The hardcoded offsets are selected.  */
-#define   QSPI_DLL_OS_SELOFF_1_Val            _UINT32_(0x1)                                        /* (QSPI_DLL_OS) The programmable offsets are selected.  */
-#define QSPI_DLL_OS_SELOFF_0                  (QSPI_DLL_OS_SELOFF_0_Val << QSPI_DLL_OS_SELOFF_Pos) /* (QSPI_DLL_OS) The hardcoded offsets are selected. Position  */
-#define QSPI_DLL_OS_SELOFF_1                  (QSPI_DLL_OS_SELOFF_1_Val << QSPI_DLL_OS_SELOFF_Pos) /* (QSPI_DLL_OS) The programmable offsets are selected. Position  */
-#define QSPI_DLL_OS_Msk                       _UINT32_(0x00000001)                                 /* (QSPI_DLL_OS) Register Mask  */
-
-
-/* -------- QSPI_DLL_MAO : (QSPI Offset: 0x304) (R/W 32) QSPI DLL Host Offset Register -------- */
-#define QSPI_DLL_MAO_RESETVALUE               _UINT32_(0x00)                                       /*  (QSPI_DLL_MAO) QSPI DLL Host Offset Register  Reset Value */
-
-#define QSPI_DLL_MAO_MAOFF_Pos                _UINT32_(0)                                          /* (QSPI_DLL_MAO) Host Delay Line Offset Position */
-#define QSPI_DLL_MAO_MAOFF_Msk                (_UINT32_(0xFF) << QSPI_DLL_MAO_MAOFF_Pos)           /* (QSPI_DLL_MAO) Host Delay Line Offset Mask */
-#define QSPI_DLL_MAO_MAOFF(value)             (QSPI_DLL_MAO_MAOFF_Msk & (_UINT32_(value) << QSPI_DLL_MAO_MAOFF_Pos)) /* Assigment of value for MAOFF in the QSPI_DLL_MAO register */
-#define QSPI_DLL_MAO_Msk                      _UINT32_(0x000000FF)                                 /* (QSPI_DLL_MAO) Register Mask  */
-
-
-/* -------- QSPI_DLL_SO0 : (QSPI Offset: 0x308) (R/W 32) QSPI DLL Client Offset 0 Register -------- */
-#define QSPI_DLL_SO0_RESETVALUE               _UINT32_(0x00)                                       /*  (QSPI_DLL_SO0) QSPI DLL Client Offset 0 Register  Reset Value */
-
-#define QSPI_DLL_SO0_S0OFF_Pos                _UINT32_(0)                                          /* (QSPI_DLL_SO0) SLAVEx Delay Line Offset Position */
-#define QSPI_DLL_SO0_S0OFF_Msk                (_UINT32_(0xFF) << QSPI_DLL_SO0_S0OFF_Pos)           /* (QSPI_DLL_SO0) SLAVEx Delay Line Offset Mask */
-#define QSPI_DLL_SO0_S0OFF(value)             (QSPI_DLL_SO0_S0OFF_Msk & (_UINT32_(value) << QSPI_DLL_SO0_S0OFF_Pos)) /* Assigment of value for S0OFF in the QSPI_DLL_SO0 register */
-#define QSPI_DLL_SO0_S1OFF_Pos                _UINT32_(8)                                          /* (QSPI_DLL_SO0) SLAVEx Delay Line Offset Position */
-#define QSPI_DLL_SO0_S1OFF_Msk                (_UINT32_(0xFF) << QSPI_DLL_SO0_S1OFF_Pos)           /* (QSPI_DLL_SO0) SLAVEx Delay Line Offset Mask */
-#define QSPI_DLL_SO0_S1OFF(value)             (QSPI_DLL_SO0_S1OFF_Msk & (_UINT32_(value) << QSPI_DLL_SO0_S1OFF_Pos)) /* Assigment of value for S1OFF in the QSPI_DLL_SO0 register */
-#define QSPI_DLL_SO0_S2OFF_Pos                _UINT32_(16)                                         /* (QSPI_DLL_SO0) SLAVEx Delay Line Offset Position */
-#define QSPI_DLL_SO0_S2OFF_Msk                (_UINT32_(0xFF) << QSPI_DLL_SO0_S2OFF_Pos)           /* (QSPI_DLL_SO0) SLAVEx Delay Line Offset Mask */
-#define QSPI_DLL_SO0_S2OFF(value)             (QSPI_DLL_SO0_S2OFF_Msk & (_UINT32_(value) << QSPI_DLL_SO0_S2OFF_Pos)) /* Assigment of value for S2OFF in the QSPI_DLL_SO0 register */
-#define QSPI_DLL_SO0_S3OFF_Pos                _UINT32_(24)                                         /* (QSPI_DLL_SO0) SLAVEx Delay Line Offset Position */
-#define QSPI_DLL_SO0_S3OFF_Msk                (_UINT32_(0xFF) << QSPI_DLL_SO0_S3OFF_Pos)           /* (QSPI_DLL_SO0) SLAVEx Delay Line Offset Mask */
-#define QSPI_DLL_SO0_S3OFF(value)             (QSPI_DLL_SO0_S3OFF_Msk & (_UINT32_(value) << QSPI_DLL_SO0_S3OFF_Pos)) /* Assigment of value for S3OFF in the QSPI_DLL_SO0 register */
-#define QSPI_DLL_SO0_Msk                      _UINT32_(0xFFFFFFFF)                                 /* (QSPI_DLL_SO0) Register Mask  */
-
-
-/* -------- QSPI_DLL_SO1 : (QSPI Offset: 0x30C) (R/W 32) QSPI DLL Client Offset 1 Register -------- */
-#define QSPI_DLL_SO1_RESETVALUE               _UINT32_(0x00)                                       /*  (QSPI_DLL_SO1) QSPI DLL Client Offset 1 Register  Reset Value */
-
-#define QSPI_DLL_SO1_S4OFF_Pos                _UINT32_(0)                                          /* (QSPI_DLL_SO1) SLAVEx Delay Line Offset Position */
-#define QSPI_DLL_SO1_S4OFF_Msk                (_UINT32_(0xFF) << QSPI_DLL_SO1_S4OFF_Pos)           /* (QSPI_DLL_SO1) SLAVEx Delay Line Offset Mask */
-#define QSPI_DLL_SO1_S4OFF(value)             (QSPI_DLL_SO1_S4OFF_Msk & (_UINT32_(value) << QSPI_DLL_SO1_S4OFF_Pos)) /* Assigment of value for S4OFF in the QSPI_DLL_SO1 register */
-#define QSPI_DLL_SO1_S5OFF_Pos                _UINT32_(8)                                          /* (QSPI_DLL_SO1) SLAVEx Delay Line Offset Position */
-#define QSPI_DLL_SO1_S5OFF_Msk                (_UINT32_(0xFF) << QSPI_DLL_SO1_S5OFF_Pos)           /* (QSPI_DLL_SO1) SLAVEx Delay Line Offset Mask */
-#define QSPI_DLL_SO1_S5OFF(value)             (QSPI_DLL_SO1_S5OFF_Msk & (_UINT32_(value) << QSPI_DLL_SO1_S5OFF_Pos)) /* Assigment of value for S5OFF in the QSPI_DLL_SO1 register */
-#define QSPI_DLL_SO1_S6OFF_Pos                _UINT32_(16)                                         /* (QSPI_DLL_SO1) SLAVEx Delay Line Offset Position */
-#define QSPI_DLL_SO1_S6OFF_Msk                (_UINT32_(0xFF) << QSPI_DLL_SO1_S6OFF_Pos)           /* (QSPI_DLL_SO1) SLAVEx Delay Line Offset Mask */
-#define QSPI_DLL_SO1_S6OFF(value)             (QSPI_DLL_SO1_S6OFF_Msk & (_UINT32_(value) << QSPI_DLL_SO1_S6OFF_Pos)) /* Assigment of value for S6OFF in the QSPI_DLL_SO1 register */
-#define QSPI_DLL_SO1_S7OFF_Pos                _UINT32_(24)                                         /* (QSPI_DLL_SO1) SLAVEx Delay Line Offset Position */
-#define QSPI_DLL_SO1_S7OFF_Msk                (_UINT32_(0xFF) << QSPI_DLL_SO1_S7OFF_Pos)           /* (QSPI_DLL_SO1) SLAVEx Delay Line Offset Mask */
-#define QSPI_DLL_SO1_S7OFF(value)             (QSPI_DLL_SO1_S7OFF_Msk & (_UINT32_(value) << QSPI_DLL_SO1_S7OFF_Pos)) /* Assigment of value for S7OFF in the QSPI_DLL_SO1 register */
-#define QSPI_DLL_SO1_Msk                      _UINT32_(0xFFFFFFFF)                                 /* (QSPI_DLL_SO1) Register Mask  */
-
-
-/* -------- QSPI_DLL_SM0 : (QSPI Offset: 0x318) ( R/ 32) QSPI DLL Status Host 0 Register -------- */
-#define QSPI_DLL_SM0_RESETVALUE               _UINT32_(0x00)                                       /*  (QSPI_DLL_SM0) QSPI DLL Status Host 0 Register  Reset Value */
-
-#define QSPI_DLL_SM0_MDINC_Pos                _UINT32_(0)                                          /* (QSPI_DLL_SM0) MASTER0 Delay Increment Position */
-#define QSPI_DLL_SM0_MDINC_Msk                (_UINT32_(0x1) << QSPI_DLL_SM0_MDINC_Pos)            /* (QSPI_DLL_SM0) MASTER0 Delay Increment Mask */
-#define QSPI_DLL_SM0_MDINC(value)             (QSPI_DLL_SM0_MDINC_Msk & (_UINT32_(value) << QSPI_DLL_SM0_MDINC_Pos)) /* Assigment of value for MDINC in the QSPI_DLL_SM0 register */
-#define   QSPI_DLL_SM0_MDINC_0_Val            _UINT32_(0x0)                                        /* (QSPI_DLL_SM0) The DQSDELAY is not incrementing the MASTER0 delay counter.  */
-#define   QSPI_DLL_SM0_MDINC_1_Val            _UINT32_(0x1)                                        /* (QSPI_DLL_SM0) The DQSDELAY is incrementing the MASTER0 delay counter.  */
-#define QSPI_DLL_SM0_MDINC_0                  (QSPI_DLL_SM0_MDINC_0_Val << QSPI_DLL_SM0_MDINC_Pos) /* (QSPI_DLL_SM0) The DQSDELAY is not incrementing the MASTER0 delay counter. Position  */
-#define QSPI_DLL_SM0_MDINC_1                  (QSPI_DLL_SM0_MDINC_1_Val << QSPI_DLL_SM0_MDINC_Pos) /* (QSPI_DLL_SM0) The DQSDELAY is incrementing the MASTER0 delay counter. Position  */
-#define QSPI_DLL_SM0_MDDEC_Pos                _UINT32_(1)                                          /* (QSPI_DLL_SM0) MASTER0 Delay Decrement Position */
-#define QSPI_DLL_SM0_MDDEC_Msk                (_UINT32_(0x1) << QSPI_DLL_SM0_MDDEC_Pos)            /* (QSPI_DLL_SM0) MASTER0 Delay Decrement Mask */
-#define QSPI_DLL_SM0_MDDEC(value)             (QSPI_DLL_SM0_MDDEC_Msk & (_UINT32_(value) << QSPI_DLL_SM0_MDDEC_Pos)) /* Assigment of value for MDDEC in the QSPI_DLL_SM0 register */
-#define   QSPI_DLL_SM0_MDDEC_0_Val            _UINT32_(0x0)                                        /* (QSPI_DLL_SM0) The DQSDELAY is not decrementing the MASTER0 delay counter.  */
-#define   QSPI_DLL_SM0_MDDEC_1_Val            _UINT32_(0x1)                                        /* (QSPI_DLL_SM0) The DQSDELAY is decrementing the MASTER0 delay counter.  */
-#define QSPI_DLL_SM0_MDDEC_0                  (QSPI_DLL_SM0_MDDEC_0_Val << QSPI_DLL_SM0_MDDEC_Pos) /* (QSPI_DLL_SM0) The DQSDELAY is not decrementing the MASTER0 delay counter. Position  */
-#define QSPI_DLL_SM0_MDDEC_1                  (QSPI_DLL_SM0_MDDEC_1_Val << QSPI_DLL_SM0_MDDEC_Pos) /* (QSPI_DLL_SM0) The DQSDELAY is decrementing the MASTER0 delay counter. Position  */
-#define QSPI_DLL_SM0_MDOVF_Pos                _UINT32_(2)                                          /* (QSPI_DLL_SM0) MASTER0 Delay Overflow Flag Position */
-#define QSPI_DLL_SM0_MDOVF_Msk                (_UINT32_(0x1) << QSPI_DLL_SM0_MDOVF_Pos)            /* (QSPI_DLL_SM0) MASTER0 Delay Overflow Flag Mask */
-#define QSPI_DLL_SM0_MDOVF(value)             (QSPI_DLL_SM0_MDOVF_Msk & (_UINT32_(value) << QSPI_DLL_SM0_MDOVF_Pos)) /* Assigment of value for MDOVF in the QSPI_DLL_SM0 register */
-#define   QSPI_DLL_SM0_MDOVF_0_Val            _UINT32_(0x0)                                        /* (QSPI_DLL_SM0) The MASTER0 delay counter has not reached its maximum value, or MASTER0 is not locked yet.  */
-#define   QSPI_DLL_SM0_MDOVF_1_Val            _UINT32_(0x1)                                        /* (QSPI_DLL_SM0) The MASTER0 delay counter has reached its maximum value, the MASTER0 delay counter increment is stopped and the DQSDELAY forces the MASTER0 clock. If this flag is set, it means the DDR-SDRAM controller clock frequency is too low compared to MASTER0 delay line number of elements.  */
-#define QSPI_DLL_SM0_MDOVF_0                  (QSPI_DLL_SM0_MDOVF_0_Val << QSPI_DLL_SM0_MDOVF_Pos) /* (QSPI_DLL_SM0) The MASTER0 delay counter has not reached its maximum value, or MASTER0 is not locked yet. Position  */
-#define QSPI_DLL_SM0_MDOVF_1                  (QSPI_DLL_SM0_MDOVF_1_Val << QSPI_DLL_SM0_MDOVF_Pos) /* (QSPI_DLL_SM0) The MASTER0 delay counter has reached its maximum value, the MASTER0 delay counter increment is stopped and the DQSDELAY forces the MASTER0 clock. If this flag is set, it means the DDR-SDRAM controller clock frequency is too low compared to MASTER0 delay line number of elements. Position  */
-#define QSPI_DLL_SM0_MDLVAL_Pos               _UINT32_(8)                                          /* (QSPI_DLL_SM0) MASTER0 Delay Lock Value Position */
-#define QSPI_DLL_SM0_MDLVAL_Msk               (_UINT32_(0xFF) << QSPI_DLL_SM0_MDLVAL_Pos)          /* (QSPI_DLL_SM0) MASTER0 Delay Lock Value Mask */
-#define QSPI_DLL_SM0_MDLVAL(value)            (QSPI_DLL_SM0_MDLVAL_Msk & (_UINT32_(value) << QSPI_DLL_SM0_MDLVAL_Pos)) /* Assigment of value for MDLVAL in the QSPI_DLL_SM0 register */
-#define QSPI_DLL_SM0_MDCNT_Pos                _UINT32_(20)                                         /* (QSPI_DLL_SM0) MASTER0 Delay Counter Value Position */
-#define QSPI_DLL_SM0_MDCNT_Msk                (_UINT32_(0xFF) << QSPI_DLL_SM0_MDCNT_Pos)           /* (QSPI_DLL_SM0) MASTER0 Delay Counter Value Mask */
-#define QSPI_DLL_SM0_MDCNT(value)             (QSPI_DLL_SM0_MDCNT_Msk & (_UINT32_(value) << QSPI_DLL_SM0_MDCNT_Pos)) /* Assigment of value for MDCNT in the QSPI_DLL_SM0 register */
-#define QSPI_DLL_SM0_Msk                      _UINT32_(0x0FF0FF07)                                 /* (QSPI_DLL_SM0) Register Mask  */
-
-
-/* -------- QSPI_DLL_SSL : (QSPI Offset: 0x328) ( R/ 32) QSPI DLL Status Client x Register -------- */
-#define QSPI_DLL_SSL_RESETVALUE               _UINT32_(0x00)                                       /*  (QSPI_DLL_SSL) QSPI DLL Status Client x Register  Reset Value */
-
-#define QSPI_DLL_SSL_SDCOVF_Pos               _UINT32_(0)                                          /* (QSPI_DLL_SSL) SLAVE0 Delay Correction Overflow Flag Position */
-#define QSPI_DLL_SSL_SDCOVF_Msk               (_UINT32_(0x1) << QSPI_DLL_SSL_SDCOVF_Pos)           /* (QSPI_DLL_SSL) SLAVE0 Delay Correction Overflow Flag Mask */
-#define QSPI_DLL_SSL_SDCOVF(value)            (QSPI_DLL_SSL_SDCOVF_Msk & (_UINT32_(value) << QSPI_DLL_SSL_SDCOVF_Pos)) /* Assigment of value for SDCOVF in the QSPI_DLL_SSL register */
-#define   QSPI_DLL_SSL_SDCOVF_0_Val           _UINT32_(0x0)                                        /* (QSPI_DLL_SSL) Due to the correction, the SLAVE0 delay counter has not reached its maximum value, or SLAVE0 is not locked yet.  */
-#define   QSPI_DLL_SSL_SDCOVF_1_Val           _UINT32_(0x1)                                        /* (QSPI_DLL_SSL) Due to the correction, the SLAVE0 delay counter has reached its maximum value. The correction is not optimal because it is not applied entirely.  */
-#define QSPI_DLL_SSL_SDCOVF_0                 (QSPI_DLL_SSL_SDCOVF_0_Val << QSPI_DLL_SSL_SDCOVF_Pos) /* (QSPI_DLL_SSL) Due to the correction, the SLAVE0 delay counter has not reached its maximum value, or SLAVE0 is not locked yet. Position  */
-#define QSPI_DLL_SSL_SDCOVF_1                 (QSPI_DLL_SSL_SDCOVF_1_Val << QSPI_DLL_SSL_SDCOVF_Pos) /* (QSPI_DLL_SSL) Due to the correction, the SLAVE0 delay counter has reached its maximum value. The correction is not optimal because it is not applied entirely. Position  */
-#define QSPI_DLL_SSL_SDCUDF_Pos               _UINT32_(1)                                          /* (QSPI_DLL_SSL) SLAVE0 Delay Correction Underflow Flag Position */
-#define QSPI_DLL_SSL_SDCUDF_Msk               (_UINT32_(0x1) << QSPI_DLL_SSL_SDCUDF_Pos)           /* (QSPI_DLL_SSL) SLAVE0 Delay Correction Underflow Flag Mask */
-#define QSPI_DLL_SSL_SDCUDF(value)            (QSPI_DLL_SSL_SDCUDF_Msk & (_UINT32_(value) << QSPI_DLL_SSL_SDCUDF_Pos)) /* Assigment of value for SDCUDF in the QSPI_DLL_SSL register */
-#define   QSPI_DLL_SSL_SDCUDF_0_Val           _UINT32_(0x0)                                        /* (QSPI_DLL_SSL) Due to the correction, the SLAVE0 delay counter has not reached its minimum value, or SLAVE0 is not locked yet.  */
-#define   QSPI_DLL_SSL_SDCUDF_1_Val           _UINT32_(0x1)                                        /* (QSPI_DLL_SSL) Due to the correction, the SLAVE0 delay counter has reached its minimum value. The correction is not optimal because it has not been applied entirely.  */
-#define QSPI_DLL_SSL_SDCUDF_0                 (QSPI_DLL_SSL_SDCUDF_0_Val << QSPI_DLL_SSL_SDCUDF_Pos) /* (QSPI_DLL_SSL) Due to the correction, the SLAVE0 delay counter has not reached its minimum value, or SLAVE0 is not locked yet. Position  */
-#define QSPI_DLL_SSL_SDCUDF_1                 (QSPI_DLL_SSL_SDCUDF_1_Val << QSPI_DLL_SSL_SDCUDF_Pos) /* (QSPI_DLL_SSL) Due to the correction, the SLAVE0 delay counter has reached its minimum value. The correction is not optimal because it has not been applied entirely. Position  */
-#define QSPI_DLL_SSL_SDERF_Pos                _UINT32_(2)                                          /* (QSPI_DLL_SSL) SLAVE0 Delay Correction Error Flag Position */
-#define QSPI_DLL_SSL_SDERF_Msk                (_UINT32_(0x1) << QSPI_DLL_SSL_SDERF_Pos)            /* (QSPI_DLL_SSL) SLAVE0 Delay Correction Error Flag Mask */
-#define QSPI_DLL_SSL_SDERF(value)             (QSPI_DLL_SSL_SDERF_Msk & (_UINT32_(value) << QSPI_DLL_SSL_SDERF_Pos)) /* Assigment of value for SDERF in the QSPI_DLL_SSL register */
-#define   QSPI_DLL_SSL_SDERF_0_Val            _UINT32_(0x0)                                        /* (QSPI_DLL_SSL) The DQSDELAY has succeeded in computing the SLAVE0 delay correction, or the client is not locked yet.  */
-#define   QSPI_DLL_SSL_SDERF_1_Val            _UINT32_(0x1)                                        /* (QSPI_DLL_SSL) The DQSDELAY has not succeeded in computing the SLAVE0 delay correction.  */
-#define QSPI_DLL_SSL_SDERF_0                  (QSPI_DLL_SSL_SDERF_0_Val << QSPI_DLL_SSL_SDERF_Pos) /* (QSPI_DLL_SSL) The DQSDELAY has succeeded in computing the SLAVE0 delay correction, or the client is not locked yet. Position  */
-#define QSPI_DLL_SSL_SDERF_1                  (QSPI_DLL_SSL_SDERF_1_Val << QSPI_DLL_SSL_SDERF_Pos) /* (QSPI_DLL_SSL) The DQSDELAY has not succeeded in computing the SLAVE0 delay correction. Position  */
-#define QSPI_DLL_SSL_SDCNT_Pos                _UINT32_(8)                                          /* (QSPI_DLL_SSL) SLAVE0 Delay Counter Value Position */
-#define QSPI_DLL_SSL_SDCNT_Msk                (_UINT32_(0xFF) << QSPI_DLL_SSL_SDCNT_Pos)           /* (QSPI_DLL_SSL) SLAVE0 Delay Counter Value Mask */
-#define QSPI_DLL_SSL_SDCNT(value)             (QSPI_DLL_SSL_SDCNT_Msk & (_UINT32_(value) << QSPI_DLL_SSL_SDCNT_Pos)) /* Assigment of value for SDCNT in the QSPI_DLL_SSL register */
-#define QSPI_DLL_SSL_SDCVAL_Pos               _UINT32_(20)                                         /* (QSPI_DLL_SSL) SLAVE0 Delay Correction Value Position */
-#define QSPI_DLL_SSL_SDCVAL_Msk               (_UINT32_(0xFF) << QSPI_DLL_SSL_SDCVAL_Pos)          /* (QSPI_DLL_SSL) SLAVE0 Delay Correction Value Mask */
-#define QSPI_DLL_SSL_SDCVAL(value)            (QSPI_DLL_SSL_SDCVAL_Msk & (_UINT32_(value) << QSPI_DLL_SSL_SDCVAL_Pos)) /* Assigment of value for SDCVAL in the QSPI_DLL_SSL register */
-#define QSPI_DLL_SSL_Msk                      _UINT32_(0x0FF0FF07)                                 /* (QSPI_DLL_SSL) Register Mask  */
-
-
-/* -------- QSPI_DLL_BCR : (QSPI Offset: 0x3D0) (R/W 32) QSPI DLL BIST Control Register -------- */
-#define QSPI_DLL_BCR_RESETVALUE               _UINT32_(0x00)                                       /*  (QSPI_DLL_BCR) QSPI DLL BIST Control Register  Reset Value */
-
-#define QSPI_DLL_BCR_BMOD_Pos                 _UINT32_(0)                                          /* (QSPI_DLL_BCR) BIST Mode Position */
-#define QSPI_DLL_BCR_BMOD_Msk                 (_UINT32_(0x1) << QSPI_DLL_BCR_BMOD_Pos)             /* (QSPI_DLL_BCR) BIST Mode Mask */
-#define QSPI_DLL_BCR_BMOD(value)              (QSPI_DLL_BCR_BMOD_Msk & (_UINT32_(value) << QSPI_DLL_BCR_BMOD_Pos)) /* Assigment of value for BMOD in the QSPI_DLL_BCR register */
-#define QSPI_DLL_BCR_BMOD2_Pos                _UINT32_(1)                                          /* (QSPI_DLL_BCR) BIST Mode 2 Position */
-#define QSPI_DLL_BCR_BMOD2_Msk                (_UINT32_(0x1) << QSPI_DLL_BCR_BMOD2_Pos)            /* (QSPI_DLL_BCR) BIST Mode 2 Mask */
-#define QSPI_DLL_BCR_BMOD2(value)             (QSPI_DLL_BCR_BMOD2_Msk & (_UINT32_(value) << QSPI_DLL_BCR_BMOD2_Pos)) /* Assigment of value for BMOD2 in the QSPI_DLL_BCR register */
-#define QSPI_DLL_BCR_BISTKEY_Pos              _UINT32_(8)                                          /* (QSPI_DLL_BCR) BIST Key Position */
-#define QSPI_DLL_BCR_BISTKEY_Msk              (_UINT32_(0xFFFFFF) << QSPI_DLL_BCR_BISTKEY_Pos)     /* (QSPI_DLL_BCR) BIST Key Mask */
-#define QSPI_DLL_BCR_BISTKEY(value)           (QSPI_DLL_BCR_BISTKEY_Msk & (_UINT32_(value) << QSPI_DLL_BCR_BISTKEY_Pos)) /* Assigment of value for BISTKEY in the QSPI_DLL_BCR register */
-#define   QSPI_DLL_BCR_BISTKEY_VALUE_Val      _UINT32_(0xDD3313)                                   /* (QSPI_DLL_BCR) Write to 0xDD3313 to enable modification of BMOD or BMOD2 state.  */
-#define QSPI_DLL_BCR_BISTKEY_VALUE            (QSPI_DLL_BCR_BISTKEY_VALUE_Val << QSPI_DLL_BCR_BISTKEY_Pos) /* (QSPI_DLL_BCR) Write to 0xDD3313 to enable modification of BMOD or BMOD2 state. Position  */
-#define QSPI_DLL_BCR_Msk                      _UINT32_(0xFFFFFF03)                                 /* (QSPI_DLL_BCR) Register Mask  */
-
-
-/* -------- QSPI_DLL_BSR : (QSPI Offset: 0x3D4) ( R/ 32) QSPI DLL BIST Status Register -------- */
-#define QSPI_DLL_BSR_RESETVALUE               _UINT32_(0x00)                                       /*  (QSPI_DLL_BSR) QSPI DLL BIST Status Register  Reset Value */
-
-#define QSPI_DLL_BSR_BEND_Pos                 _UINT32_(0)                                          /* (QSPI_DLL_BSR) BIST End Position */
-#define QSPI_DLL_BSR_BEND_Msk                 (_UINT32_(0x1) << QSPI_DLL_BSR_BEND_Pos)             /* (QSPI_DLL_BSR) BIST End Mask */
-#define QSPI_DLL_BSR_BEND(value)              (QSPI_DLL_BSR_BEND_Msk & (_UINT32_(value) << QSPI_DLL_BSR_BEND_Pos)) /* Assigment of value for BEND in the QSPI_DLL_BSR register */
-#define   QSPI_DLL_BSR_BEND_0_Val             _UINT32_(0x0)                                        /* (QSPI_DLL_BSR) BIST test has not started or is in progress.  */
-#define   QSPI_DLL_BSR_BEND_1_Val             _UINT32_(0x1)                                        /* (QSPI_DLL_BSR) BIST test is finished.  */
-#define QSPI_DLL_BSR_BEND_0                   (QSPI_DLL_BSR_BEND_0_Val << QSPI_DLL_BSR_BEND_Pos)   /* (QSPI_DLL_BSR) BIST test has not started or is in progress. Position  */
-#define QSPI_DLL_BSR_BEND_1                   (QSPI_DLL_BSR_BEND_1_Val << QSPI_DLL_BSR_BEND_Pos)   /* (QSPI_DLL_BSR) BIST test is finished. Position  */
-#define QSPI_DLL_BSR_B2END_Pos                _UINT32_(1)                                          /* (QSPI_DLL_BSR) BIST 2 End Position */
-#define QSPI_DLL_BSR_B2END_Msk                (_UINT32_(0x1) << QSPI_DLL_BSR_B2END_Pos)            /* (QSPI_DLL_BSR) BIST 2 End Mask */
-#define QSPI_DLL_BSR_B2END(value)             (QSPI_DLL_BSR_B2END_Msk & (_UINT32_(value) << QSPI_DLL_BSR_B2END_Pos)) /* Assigment of value for B2END in the QSPI_DLL_BSR register */
-#define   QSPI_DLL_BSR_B2END_0_Val            _UINT32_(0x0)                                        /* (QSPI_DLL_BSR) BIST 2 test has not started or in progress.  */
-#define   QSPI_DLL_BSR_B2END_1_Val            _UINT32_(0x1)                                        /* (QSPI_DLL_BSR) BIST 2 test is finished.  */
-#define QSPI_DLL_BSR_B2END_0                  (QSPI_DLL_BSR_B2END_0_Val << QSPI_DLL_BSR_B2END_Pos) /* (QSPI_DLL_BSR) BIST 2 test has not started or in progress. Position  */
-#define QSPI_DLL_BSR_B2END_1                  (QSPI_DLL_BSR_B2END_1_Val << QSPI_DLL_BSR_B2END_Pos) /* (QSPI_DLL_BSR) BIST 2 test is finished. Position  */
-#define QSPI_DLL_BSR_B2PASS_Pos               _UINT32_(2)                                          /* (QSPI_DLL_BSR) BIST 2 Pass Position */
-#define QSPI_DLL_BSR_B2PASS_Msk               (_UINT32_(0x1) << QSPI_DLL_BSR_B2PASS_Pos)           /* (QSPI_DLL_BSR) BIST 2 Pass Mask */
-#define QSPI_DLL_BSR_B2PASS(value)            (QSPI_DLL_BSR_B2PASS_Msk & (_UINT32_(value) << QSPI_DLL_BSR_B2PASS_Pos)) /* Assigment of value for B2PASS in the QSPI_DLL_BSR register */
-#define   QSPI_DLL_BSR_B2PASS_0_Val           _UINT32_(0x0)                                        /* (QSPI_DLL_BSR) The BIST 2 test has not finished or failed.  */
-#define   QSPI_DLL_BSR_B2PASS_1_Val           _UINT32_(0x1)                                        /* (QSPI_DLL_BSR) The BIST 2 test ended successfully.  */
-#define QSPI_DLL_BSR_B2PASS_0                 (QSPI_DLL_BSR_B2PASS_0_Val << QSPI_DLL_BSR_B2PASS_Pos) /* (QSPI_DLL_BSR) The BIST 2 test has not finished or failed. Position  */
-#define QSPI_DLL_BSR_B2PASS_1                 (QSPI_DLL_BSR_B2PASS_1_Val << QSPI_DLL_BSR_B2PASS_Pos) /* (QSPI_DLL_BSR) The BIST 2 test ended successfully. Position  */
-#define QSPI_DLL_BSR_B2FAIL_Pos               _UINT32_(3)                                          /* (QSPI_DLL_BSR) BIST 2 Fail Position */
-#define QSPI_DLL_BSR_B2FAIL_Msk               (_UINT32_(0x1) << QSPI_DLL_BSR_B2FAIL_Pos)           /* (QSPI_DLL_BSR) BIST 2 Fail Mask */
-#define QSPI_DLL_BSR_B2FAIL(value)            (QSPI_DLL_BSR_B2FAIL_Msk & (_UINT32_(value) << QSPI_DLL_BSR_B2FAIL_Pos)) /* Assigment of value for B2FAIL in the QSPI_DLL_BSR register */
-#define   QSPI_DLL_BSR_B2FAIL_0_Val           _UINT32_(0x0)                                        /* (QSPI_DLL_BSR) The BIST 2 test has not finished or succeeded.  */
-#define   QSPI_DLL_BSR_B2FAIL_1_Val           _UINT32_(0x1)                                        /* (QSPI_DLL_BSR) The BIST 2 test failed. Check DLB2FAILx bits to identify the corrupted delay lines.  */
-#define QSPI_DLL_BSR_B2FAIL_0                 (QSPI_DLL_BSR_B2FAIL_0_Val << QSPI_DLL_BSR_B2FAIL_Pos) /* (QSPI_DLL_BSR) The BIST 2 test has not finished or succeeded. Position  */
-#define QSPI_DLL_BSR_B2FAIL_1                 (QSPI_DLL_BSR_B2FAIL_1_Val << QSPI_DLL_BSR_B2FAIL_Pos) /* (QSPI_DLL_BSR) The BIST 2 test failed. Check DLB2FAILx bits to identify the corrupted delay lines. Position  */
-#define QSPI_DLL_BSR_DLB2FAIL0_Pos            _UINT32_(8)                                          /* (QSPI_DLL_BSR) Delay Line BIST 2 Fail for Delay Line 0 Position */
-#define QSPI_DLL_BSR_DLB2FAIL0_Msk            (_UINT32_(0x1) << QSPI_DLL_BSR_DLB2FAIL0_Pos)        /* (QSPI_DLL_BSR) Delay Line BIST 2 Fail for Delay Line 0 Mask */
-#define QSPI_DLL_BSR_DLB2FAIL0(value)         (QSPI_DLL_BSR_DLB2FAIL0_Msk & (_UINT32_(value) << QSPI_DLL_BSR_DLB2FAIL0_Pos)) /* Assigment of value for DLB2FAIL0 in the QSPI_DLL_BSR register */
-#define   QSPI_DLL_BSR_DLB2FAIL0_0_Val        _UINT32_(0x0)                                        /* (QSPI_DLL_BSR) The BIST 2 test did not fail.  */
-#define   QSPI_DLL_BSR_DLB2FAIL0_1_Val        _UINT32_(0x1)                                        /* (QSPI_DLL_BSR) The BIST 2 test failed for delay line x.  */
-#define QSPI_DLL_BSR_DLB2FAIL0_0              (QSPI_DLL_BSR_DLB2FAIL0_0_Val << QSPI_DLL_BSR_DLB2FAIL0_Pos) /* (QSPI_DLL_BSR) The BIST 2 test did not fail. Position  */
-#define QSPI_DLL_BSR_DLB2FAIL0_1              (QSPI_DLL_BSR_DLB2FAIL0_1_Val << QSPI_DLL_BSR_DLB2FAIL0_Pos) /* (QSPI_DLL_BSR) The BIST 2 test failed for delay line x. Position  */
-#define QSPI_DLL_BSR_DLB2FAIL1_Pos            _UINT32_(9)                                          /* (QSPI_DLL_BSR) Delay Line BIST 2 Fail for Delay Line 1 Position */
-#define QSPI_DLL_BSR_DLB2FAIL1_Msk            (_UINT32_(0x1) << QSPI_DLL_BSR_DLB2FAIL1_Pos)        /* (QSPI_DLL_BSR) Delay Line BIST 2 Fail for Delay Line 1 Mask */
-#define QSPI_DLL_BSR_DLB2FAIL1(value)         (QSPI_DLL_BSR_DLB2FAIL1_Msk & (_UINT32_(value) << QSPI_DLL_BSR_DLB2FAIL1_Pos)) /* Assigment of value for DLB2FAIL1 in the QSPI_DLL_BSR register */
-#define   QSPI_DLL_BSR_DLB2FAIL1_0_Val        _UINT32_(0x0)                                        /* (QSPI_DLL_BSR) The BIST 2 test did not fail.  */
-#define   QSPI_DLL_BSR_DLB2FAIL1_1_Val        _UINT32_(0x1)                                        /* (QSPI_DLL_BSR) The BIST 2 test failed for delay line x.  */
-#define QSPI_DLL_BSR_DLB2FAIL1_0              (QSPI_DLL_BSR_DLB2FAIL1_0_Val << QSPI_DLL_BSR_DLB2FAIL1_Pos) /* (QSPI_DLL_BSR) The BIST 2 test did not fail. Position  */
-#define QSPI_DLL_BSR_DLB2FAIL1_1              (QSPI_DLL_BSR_DLB2FAIL1_1_Val << QSPI_DLL_BSR_DLB2FAIL1_Pos) /* (QSPI_DLL_BSR) The BIST 2 test failed for delay line x. Position  */
-#define QSPI_DLL_BSR_DLB2FAIL2_Pos            _UINT32_(10)                                         /* (QSPI_DLL_BSR) Delay Line BIST 2 Fail for Delay Line 2 Position */
-#define QSPI_DLL_BSR_DLB2FAIL2_Msk            (_UINT32_(0x1) << QSPI_DLL_BSR_DLB2FAIL2_Pos)        /* (QSPI_DLL_BSR) Delay Line BIST 2 Fail for Delay Line 2 Mask */
-#define QSPI_DLL_BSR_DLB2FAIL2(value)         (QSPI_DLL_BSR_DLB2FAIL2_Msk & (_UINT32_(value) << QSPI_DLL_BSR_DLB2FAIL2_Pos)) /* Assigment of value for DLB2FAIL2 in the QSPI_DLL_BSR register */
-#define   QSPI_DLL_BSR_DLB2FAIL2_0_Val        _UINT32_(0x0)                                        /* (QSPI_DLL_BSR) The BIST 2 test did not fail.  */
-#define   QSPI_DLL_BSR_DLB2FAIL2_1_Val        _UINT32_(0x1)                                        /* (QSPI_DLL_BSR) The BIST 2 test failed for delay line x.  */
-#define QSPI_DLL_BSR_DLB2FAIL2_0              (QSPI_DLL_BSR_DLB2FAIL2_0_Val << QSPI_DLL_BSR_DLB2FAIL2_Pos) /* (QSPI_DLL_BSR) The BIST 2 test did not fail. Position  */
-#define QSPI_DLL_BSR_DLB2FAIL2_1              (QSPI_DLL_BSR_DLB2FAIL2_1_Val << QSPI_DLL_BSR_DLB2FAIL2_Pos) /* (QSPI_DLL_BSR) The BIST 2 test failed for delay line x. Position  */
-#define QSPI_DLL_BSR_DLB2FAIL3_Pos            _UINT32_(11)                                         /* (QSPI_DLL_BSR) Delay Line BIST 2 Fail for Delay Line 3 Position */
-#define QSPI_DLL_BSR_DLB2FAIL3_Msk            (_UINT32_(0x1) << QSPI_DLL_BSR_DLB2FAIL3_Pos)        /* (QSPI_DLL_BSR) Delay Line BIST 2 Fail for Delay Line 3 Mask */
-#define QSPI_DLL_BSR_DLB2FAIL3(value)         (QSPI_DLL_BSR_DLB2FAIL3_Msk & (_UINT32_(value) << QSPI_DLL_BSR_DLB2FAIL3_Pos)) /* Assigment of value for DLB2FAIL3 in the QSPI_DLL_BSR register */
-#define   QSPI_DLL_BSR_DLB2FAIL3_0_Val        _UINT32_(0x0)                                        /* (QSPI_DLL_BSR) The BIST 2 test did not fail.  */
-#define   QSPI_DLL_BSR_DLB2FAIL3_1_Val        _UINT32_(0x1)                                        /* (QSPI_DLL_BSR) The BIST 2 test failed for delay line x.  */
-#define QSPI_DLL_BSR_DLB2FAIL3_0              (QSPI_DLL_BSR_DLB2FAIL3_0_Val << QSPI_DLL_BSR_DLB2FAIL3_Pos) /* (QSPI_DLL_BSR) The BIST 2 test did not fail. Position  */
-#define QSPI_DLL_BSR_DLB2FAIL3_1              (QSPI_DLL_BSR_DLB2FAIL3_1_Val << QSPI_DLL_BSR_DLB2FAIL3_Pos) /* (QSPI_DLL_BSR) The BIST 2 test failed for delay line x. Position  */
-#define QSPI_DLL_BSR_Msk                      _UINT32_(0x00000F0F)                                 /* (QSPI_DLL_BSR) Register Mask  */
-
-#define QSPI_DLL_BSR_DLB2FAIL_Pos             _UINT32_(8)                                          /* (QSPI_DLL_BSR Position) Delay Line BIST 2 Fail for Delay Line 3 */
-#define QSPI_DLL_BSR_DLB2FAIL_Msk             (_UINT32_(0xF) << QSPI_DLL_BSR_DLB2FAIL_Pos)         /* (QSPI_DLL_BSR Mask) DLB2FAIL */
-#define QSPI_DLL_BSR_DLB2FAIL(value)          (QSPI_DLL_BSR_DLB2FAIL_Msk & (_UINT32_(value) << QSPI_DLL_BSR_DLB2FAIL_Pos)) 
-
-/* -------- QSPI_DLL_SYNCR : (QSPI Offset: 0x3E0) (R/W 32) QSPI DLL Synchro Register -------- */
-#define QSPI_DLL_SYNCR_RESETVALUE             _UINT32_(0x00)                                       /*  (QSPI_DLL_SYNCR) QSPI DLL Synchro Register  Reset Value */
-
-#define QSPI_DLL_SYNCR_UPDT_Pos               _UINT32_(0)                                          /* (QSPI_DLL_SYNCR) Update configuration Position */
-#define QSPI_DLL_SYNCR_UPDT_Msk               (_UINT32_(0x1) << QSPI_DLL_SYNCR_UPDT_Pos)           /* (QSPI_DLL_SYNCR) Update configuration Mask */
-#define QSPI_DLL_SYNCR_UPDT(value)            (QSPI_DLL_SYNCR_UPDT_Msk & (_UINT32_(value) << QSPI_DLL_SYNCR_UPDT_Pos)) /* Assigment of value for UPDT in the QSPI_DLL_SYNCR register */
-#define   QSPI_DLL_SYNCR_UPDT_0_Val           _UINT32_(0x0)                                        /* (QSPI_DLL_SYNCR) No effect.  */
-#define   QSPI_DLL_SYNCR_UPDT_0_Val           _UINT32_(0x0)                                        /* (QSPI_DLL_SYNCR) Configuration is up to date.  */
-#define   QSPI_DLL_SYNCR_UPDT_1_Val           _UINT32_(0x1)                                        /* (QSPI_DLL_SYNCR) Initiates the configuration update.  */
-#define   QSPI_DLL_SYNCR_UPDT_1_Val           _UINT32_(0x1)                                        /* (QSPI_DLL_SYNCR) Configuration is being updated.  */
-#define QSPI_DLL_SYNCR_UPDT_0                 (QSPI_DLL_SYNCR_UPDT_0_Val << QSPI_DLL_SYNCR_UPDT_Pos) /* (QSPI_DLL_SYNCR) No effect. Position  */
-#define QSPI_DLL_SYNCR_UPDT_0                 (QSPI_DLL_SYNCR_UPDT_0_Val << QSPI_DLL_SYNCR_UPDT_Pos) /* (QSPI_DLL_SYNCR) Configuration is up to date. Position  */
-#define QSPI_DLL_SYNCR_UPDT_1                 (QSPI_DLL_SYNCR_UPDT_1_Val << QSPI_DLL_SYNCR_UPDT_Pos) /* (QSPI_DLL_SYNCR) Initiates the configuration update. Position  */
-#define QSPI_DLL_SYNCR_UPDT_1                 (QSPI_DLL_SYNCR_UPDT_1_Val << QSPI_DLL_SYNCR_UPDT_Pos) /* (QSPI_DLL_SYNCR) Configuration is being updated. Position  */
-#define QSPI_DLL_SYNCR_Msk                    _UINT32_(0x00000001)                                 /* (QSPI_DLL_SYNCR) Register Mask  */
-
-
-/* -------- QSPI_DLL_REVISION : (QSPI Offset: 0x3FC) ( R/ 32) QSPI DQSDELAY Revision Register -------- */
-#define QSPI_DLL_REVISION_RESETVALUE          _UINT32_(0x00)                                       /*  (QSPI_DLL_REVISION) QSPI DQSDELAY Revision Register  Reset Value */
-
-#define QSPI_DLL_REVISION_VERSION_Pos         _UINT32_(0)                                          /* (QSPI_DLL_REVISION) Hardware Module Version Position */
-#define QSPI_DLL_REVISION_VERSION_Msk         (_UINT32_(0xFFF) << QSPI_DLL_REVISION_VERSION_Pos)   /* (QSPI_DLL_REVISION) Hardware Module Version Mask */
-#define QSPI_DLL_REVISION_VERSION(value)      (QSPI_DLL_REVISION_VERSION_Msk & (_UINT32_(value) << QSPI_DLL_REVISION_VERSION_Pos)) /* Assigment of value for VERSION in the QSPI_DLL_REVISION register */
-#define QSPI_DLL_REVISION_MFN_Pos             _UINT32_(16)                                         /* (QSPI_DLL_REVISION) Metal Fix Number Position */
-#define QSPI_DLL_REVISION_MFN_Msk             (_UINT32_(0x7) << QSPI_DLL_REVISION_MFN_Pos)         /* (QSPI_DLL_REVISION) Metal Fix Number Mask */
-#define QSPI_DLL_REVISION_MFN(value)          (QSPI_DLL_REVISION_MFN_Msk & (_UINT32_(value) << QSPI_DLL_REVISION_MFN_Pos)) /* Assigment of value for MFN in the QSPI_DLL_REVISION register */
-#define QSPI_DLL_REVISION_Msk                 _UINT32_(0x00070FFF)                                 /* (QSPI_DLL_REVISION) Register Mask  */
 
 
 /** \brief QSPI register offsets definitions */
@@ -1031,23 +780,9 @@
 #define QSPI_SKR_REG_OFST              _UINT32_(0x44)      /* (QSPI_SKR) Scrambling Key Register Offset */
 #define QSPI_REFRESH_REG_OFST          _UINT32_(0x50)      /* (QSPI_REFRESH) Refresh Register Offset */
 #define QSPI_WRACNT_REG_OFST           _UINT32_(0x54)      /* (QSPI_WRACNT) Write Access Counter Register Offset */
-#define QSPI_PCALCFG_REG_OFST          _UINT32_(0x5C)      /* (QSPI_PCALCFG) Pad Calibration Configuration Register Offset */
 #define QSPI_TOUT_REG_OFST             _UINT32_(0x64)      /* (QSPI_TOUT) Timeout Register Offset */
 #define QSPI_WPMR_REG_OFST             _UINT32_(0xE4)      /* (QSPI_WPMR) Write Protection Mode Register Offset */
 #define QSPI_WPSR_REG_OFST             _UINT32_(0xE8)      /* (QSPI_WPSR) Write Protection Status Register Offset */
-#define QSPI_DLL_OS_REG_OFST           _UINT32_(0x300)     /* (QSPI_DLL_OS) QSPI DLL Offset Selection Register Offset */
-#define QSPI_DLL_MAO_REG_OFST          _UINT32_(0x304)     /* (QSPI_DLL_MAO) QSPI DLL Host Offset Register Offset */
-#define QSPI_DLL_SO0_REG_OFST          _UINT32_(0x308)     /* (QSPI_DLL_SO0) QSPI DLL Client Offset 0 Register Offset */
-#define QSPI_DLL_SO1_REG_OFST          _UINT32_(0x30C)     /* (QSPI_DLL_SO1) QSPI DLL Client Offset 1 Register Offset */
-#define QSPI_DLL_SM0_REG_OFST          _UINT32_(0x318)     /* (QSPI_DLL_SM0) QSPI DLL Status Host 0 Register Offset */
-#define QSPI_DLL_SSL_REG_OFST          _UINT32_(0x328)     /* (QSPI_DLL_SSL) QSPI DLL Status Client x Register Offset */
-#define QSPI_DLL_SSL0_REG_OFST         _UINT32_(0x328)     /* (QSPI_DLL_SSL0) QSPI DLL Status Client x Register Offset */
-#define QSPI_DLL_SSL1_REG_OFST         _UINT32_(0x32C)     /* (QSPI_DLL_SSL1) QSPI DLL Status Client x Register Offset */
-#define QSPI_DLL_SSL2_REG_OFST         _UINT32_(0x330)     /* (QSPI_DLL_SSL2) QSPI DLL Status Client x Register Offset */
-#define QSPI_DLL_BCR_REG_OFST          _UINT32_(0x3D0)     /* (QSPI_DLL_BCR) QSPI DLL BIST Control Register Offset */
-#define QSPI_DLL_BSR_REG_OFST          _UINT32_(0x3D4)     /* (QSPI_DLL_BSR) QSPI DLL BIST Status Register Offset */
-#define QSPI_DLL_SYNCR_REG_OFST        _UINT32_(0x3E0)     /* (QSPI_DLL_SYNCR) QSPI DLL Synchro Register Offset */
-#define QSPI_DLL_REVISION_REG_OFST     _UINT32_(0x3FC)     /* (QSPI_DLL_REVISION) QSPI DQSDELAY Revision Register Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief QSPI register API structure */
@@ -1062,7 +797,7 @@ typedef struct
   __O   uint32_t                       QSPI_IDR;           /**< Offset: 0x18 ( /W  32) Interrupt Disable Register */
   __I   uint32_t                       QSPI_IMR;           /**< Offset: 0x1C (R/   32) Interrupt Mask Register */
   __IO  uint32_t                       QSPI_SCR;           /**< Offset: 0x20 (R/W  32) Serial Clock Register */
-  __IO  uint32_t                       QSPI_SR;            /**< Offset: 0x24 (R/W  32) Status Register */
+  __I   uint32_t                       QSPI_SR;            /**< Offset: 0x24 (R/   32) Status Register */
   __I   uint8_t                        Reserved1[0x08];
   __IO  uint32_t                       QSPI_IAR;           /**< Offset: 0x30 (R/W  32) Instruction Address Register */
   __IO  uint32_t                       QSPI_WICR;          /**< Offset: 0x34 (R/W  32) Write Instruction Code Register */
@@ -1073,29 +808,11 @@ typedef struct
   __I   uint8_t                        Reserved2[0x08];
   __IO  uint32_t                       QSPI_REFRESH;       /**< Offset: 0x50 (R/W  32) Refresh Register */
   __IO  uint32_t                       QSPI_WRACNT;        /**< Offset: 0x54 (R/W  32) Write Access Counter Register */
-  __I   uint8_t                        Reserved3[0x04];
-  __IO  uint32_t                       QSPI_PCALCFG;       /**< Offset: 0x5C (R/W  32) Pad Calibration Configuration Register */
-  __I   uint8_t                        Reserved4[0x04];
+  __I   uint8_t                        Reserved3[0x0C];
   __IO  uint32_t                       QSPI_TOUT;          /**< Offset: 0x64 (R/W  32) Timeout Register */
-  __I   uint8_t                        Reserved5[0x7C];
+  __I   uint8_t                        Reserved4[0x7C];
   __IO  uint32_t                       QSPI_WPMR;          /**< Offset: 0xE4 (R/W  32) Write Protection Mode Register */
   __I   uint32_t                       QSPI_WPSR;          /**< Offset: 0xE8 (R/   32) Write Protection Status Register */
-  __I   uint8_t                        Reserved6[0x214];
-  __IO  uint32_t                       QSPI_DLL_OS;        /**< Offset: 0x300 (R/W  32) QSPI DLL Offset Selection Register */
-  __IO  uint32_t                       QSPI_DLL_MAO;       /**< Offset: 0x304 (R/W  32) QSPI DLL Host Offset Register */
-  __IO  uint32_t                       QSPI_DLL_SO0;       /**< Offset: 0x308 (R/W  32) QSPI DLL Client Offset 0 Register */
-  __IO  uint32_t                       QSPI_DLL_SO1;       /**< Offset: 0x30C (R/W  32) QSPI DLL Client Offset 1 Register */
-  __I   uint8_t                        Reserved7[0x08];
-  __I   uint32_t                       QSPI_DLL_SM0;       /**< Offset: 0x318 (R/   32) QSPI DLL Status Host 0 Register */
-  __I   uint8_t                        Reserved8[0x0C];
-  __I   uint32_t                       QSPI_DLL_SSL[3];    /**< Offset: 0x328 (R/   32) QSPI DLL Status Client x Register */
-  __I   uint8_t                        Reserved9[0x9C];
-  __IO  uint32_t                       QSPI_DLL_BCR;       /**< Offset: 0x3D0 (R/W  32) QSPI DLL BIST Control Register */
-  __I   uint32_t                       QSPI_DLL_BSR;       /**< Offset: 0x3D4 (R/   32) QSPI DLL BIST Status Register */
-  __I   uint8_t                        Reserved10[0x08];
-  __IO  uint32_t                       QSPI_DLL_SYNCR;     /**< Offset: 0x3E0 (R/W  32) QSPI DLL Synchro Register */
-  __I   uint8_t                        Reserved11[0x18];
-  __I   uint32_t                       QSPI_DLL_REVISION;  /**< Offset: 0x3FC (R/   32) QSPI DQSDELAY Revision Register */
 } qspi_registers_t;
 
 

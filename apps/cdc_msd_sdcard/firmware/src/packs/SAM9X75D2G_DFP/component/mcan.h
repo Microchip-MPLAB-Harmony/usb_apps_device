@@ -1,26 +1,23 @@
 /*
  * Component description for MCAN
  *
- * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
  *
- * Subject to your compliance with these terms, you may use Microchip software and any derivatives
- * exclusively with Microchip products. It is your responsibility to comply with third party license
- * terms applicable to your use of third party software (including open source software) that may
- * accompany Microchip software.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY,
- * APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND
- * FITNESS FOR A PARTICULAR PURPOSE.
+ *   http://www.apache.org/licenses/LICENSE-2.0
  *
- * IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, INCIDENTAL OR CONSEQUENTIAL
- * LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF
- * MICROCHIP HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO THE FULLEST EXTENT
- * ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT
- * EXCEED THE AMOUNT OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  *
  */
 
-/* file generated from device description version 2023-01-20T08:33:42Z */
+/* file generated from device description file (ATDF) version 2024-04-05T08:36:56Z */
 #ifndef _SAM9X7_MCAN_COMPONENT_H_
 #define _SAM9X7_MCAN_COMPONENT_H_
 
@@ -540,10 +537,10 @@
 #define MCAN_CCCR_UTSU_Pos                    _UINT32_(10)                                         /* (MCAN_CCCR) Use Timestamping Unit (read/write, write protection) Position */
 #define MCAN_CCCR_UTSU_Msk                    (_UINT32_(0x1) << MCAN_CCCR_UTSU_Pos)                /* (MCAN_CCCR) Use Timestamping Unit (read/write, write protection) Mask */
 #define MCAN_CCCR_UTSU(value)                 (MCAN_CCCR_UTSU_Msk & (_UINT32_(value) << MCAN_CCCR_UTSU_Pos)) /* Assigment of value for UTSU in the MCAN_CCCR register */
-#define   MCAN_CCCR_UTSU_DISABLED_Val         _UINT32_(0x0)                                        /* (MCAN_CCCR) Internal time stamping.  */
-#define   MCAN_CCCR_UTSU_ENABLED_Val          _UINT32_(0x1)                                        /* (MCAN_CCCR) External time stamping by TSU.  */
-#define MCAN_CCCR_UTSU_DISABLED               (MCAN_CCCR_UTSU_DISABLED_Val << MCAN_CCCR_UTSU_Pos)  /* (MCAN_CCCR) Internal time stamping. Position  */
-#define MCAN_CCCR_UTSU_ENABLED                (MCAN_CCCR_UTSU_ENABLED_Val << MCAN_CCCR_UTSU_Pos)   /* (MCAN_CCCR) External time stamping by TSU. Position  */
+#define   MCAN_CCCR_UTSU_DISABLED_Val         _UINT32_(0x0)                                        /* (MCAN_CCCR) Internal timestamping.  */
+#define   MCAN_CCCR_UTSU_ENABLED_Val          _UINT32_(0x1)                                        /* (MCAN_CCCR) External timestamping by TSU.  */
+#define MCAN_CCCR_UTSU_DISABLED               (MCAN_CCCR_UTSU_DISABLED_Val << MCAN_CCCR_UTSU_Pos)  /* (MCAN_CCCR) Internal timestamping. Position  */
+#define MCAN_CCCR_UTSU_ENABLED                (MCAN_CCCR_UTSU_ENABLED_Val << MCAN_CCCR_UTSU_Pos)   /* (MCAN_CCCR) External timestamping by TSU. Position  */
 #define MCAN_CCCR_WMM_Pos                     _UINT32_(11)                                         /* (MCAN_CCCR) Wide Message Marker (read/write, write protection) Position */
 #define MCAN_CCCR_WMM_Msk                     (_UINT32_(0x1) << MCAN_CCCR_WMM_Pos)                 /* (MCAN_CCCR) Wide Message Marker (read/write, write protection) Mask */
 #define MCAN_CCCR_WMM(value)                  (MCAN_CCCR_WMM_Msk & (_UINT32_(value) << MCAN_CCCR_WMM_Pos)) /* Assigment of value for WMM in the MCAN_CCCR register */

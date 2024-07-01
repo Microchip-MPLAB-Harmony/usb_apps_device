@@ -1,26 +1,23 @@
 /*
  * Component description for CSI
  *
- * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
  *
- * Subject to your compliance with these terms, you may use Microchip software and any derivatives
- * exclusively with Microchip products. It is your responsibility to comply with third party license
- * terms applicable to your use of third party software (including open source software) that may
- * accompany Microchip software.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY,
- * APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND
- * FITNESS FOR A PARTICULAR PURPOSE.
+ *   http://www.apache.org/licenses/LICENSE-2.0
  *
- * IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, INCIDENTAL OR CONSEQUENTIAL
- * LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF
- * MICROCHIP HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO THE FULLEST EXTENT
- * ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT
- * EXCEED THE AMOUNT OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  *
  */
 
-/* file generated from device description version 2023-01-20T08:33:42Z */
+/* file generated from device description file (ATDF) version 2024-04-05T08:36:56Z */
 #ifndef _SAM9X7_CSI_COMPONENT_H_
 #define _SAM9X7_CSI_COMPONENT_H_
 
@@ -32,9 +29,9 @@
 #define CSI_N_LANES_RESETVALUE                _UINT32_(0x01)                                       /*  (CSI_N_LANES) CSI Lane Configuration Register  Reset Value */
 
 #define CSI_N_LANES_N_LANES_Pos               _UINT32_(0)                                          /* (CSI_N_LANES) Number of active data lanes Position */
-#define CSI_N_LANES_N_LANES_Msk               (_UINT32_(0x1) << CSI_N_LANES_N_LANES_Pos)           /* (CSI_N_LANES) Number of active data lanes Mask */
+#define CSI_N_LANES_N_LANES_Msk               (_UINT32_(0x3) << CSI_N_LANES_N_LANES_Pos)           /* (CSI_N_LANES) Number of active data lanes Mask */
 #define CSI_N_LANES_N_LANES(value)            (CSI_N_LANES_N_LANES_Msk & (_UINT32_(value) << CSI_N_LANES_N_LANES_Pos)) /* Assigment of value for N_LANES in the CSI_N_LANES register */
-#define CSI_N_LANES_Msk                       _UINT32_(0x00000001)                                 /* (CSI_N_LANES) Register Mask  */
+#define CSI_N_LANES_Msk                       _UINT32_(0x00000003)                                 /* (CSI_N_LANES) Register Mask  */
 
 
 /* -------- CSI_CSI2_RESETN : (CSI Offset: 0x08) (R/W 32) CSI Reset Control Register -------- */
@@ -88,74 +85,7 @@
 #define   CSI_INT_ST_MAIN_STATUS_INT_PKT_1_Val _UINT32_(0x1)                                        /* (CSI_INT_ST_MAIN) Indicates if an event occurred in the CSI_INT_ST_PKT register since the last CSI_INT_ST_MAIN read.  */
 #define CSI_INT_ST_MAIN_STATUS_INT_PKT_0      (CSI_INT_ST_MAIN_STATUS_INT_PKT_0_Val << CSI_INT_ST_MAIN_STATUS_INT_PKT_Pos) /* (CSI_INT_ST_MAIN) No event occurred in the CSI_INT_ST_PKT register since the last CSI_INT_ST_MAIN read. Position  */
 #define CSI_INT_ST_MAIN_STATUS_INT_PKT_1      (CSI_INT_ST_MAIN_STATUS_INT_PKT_1_Val << CSI_INT_ST_MAIN_STATUS_INT_PKT_Pos) /* (CSI_INT_ST_MAIN) Indicates if an event occurred in the CSI_INT_ST_PKT register since the last CSI_INT_ST_MAIN read. Position  */
-#define CSI_INT_ST_MAIN_STATUS_INT_LINE_Pos   _UINT32_(18)                                         /* (CSI_INT_ST_MAIN) CSI_INT_LINE Register Event (Cleared on Read) Position */
-#define CSI_INT_ST_MAIN_STATUS_INT_LINE_Msk   (_UINT32_(0x1) << CSI_INT_ST_MAIN_STATUS_INT_LINE_Pos) /* (CSI_INT_ST_MAIN) CSI_INT_LINE Register Event (Cleared on Read) Mask */
-#define CSI_INT_ST_MAIN_STATUS_INT_LINE(value) (CSI_INT_ST_MAIN_STATUS_INT_LINE_Msk & (_UINT32_(value) << CSI_INT_ST_MAIN_STATUS_INT_LINE_Pos)) /* Assigment of value for STATUS_INT_LINE in the CSI_INT_ST_MAIN register */
-#define   CSI_INT_ST_MAIN_STATUS_INT_LINE_0_Val _UINT32_(0x0)                                        /* (CSI_INT_ST_MAIN) No event occurred in the CSI_INT_ST_LINE register since the last CSI_INT_ST_MAIN read.  */
-#define   CSI_INT_ST_MAIN_STATUS_INT_LINE_1_Val _UINT32_(0x1)                                        /* (CSI_INT_ST_MAIN) Indicates if an event occurred in the CSI_INT_ST_LINE register since the last CSI_INT_ST_MAIN read.  */
-#define CSI_INT_ST_MAIN_STATUS_INT_LINE_0     (CSI_INT_ST_MAIN_STATUS_INT_LINE_0_Val << CSI_INT_ST_MAIN_STATUS_INT_LINE_Pos) /* (CSI_INT_ST_MAIN) No event occurred in the CSI_INT_ST_LINE register since the last CSI_INT_ST_MAIN read. Position  */
-#define CSI_INT_ST_MAIN_STATUS_INT_LINE_1     (CSI_INT_ST_MAIN_STATUS_INT_LINE_1_Val << CSI_INT_ST_MAIN_STATUS_INT_LINE_Pos) /* (CSI_INT_ST_MAIN) Indicates if an event occurred in the CSI_INT_ST_LINE register since the last CSI_INT_ST_MAIN read. Position  */
-#define CSI_INT_ST_MAIN_Msk                   _UINT32_(0x00070007)                                 /* (CSI_INT_ST_MAIN) Register Mask  */
-
-
-/* -------- CSI_DATA_IDS_1 : (CSI Offset: 0x10) (R/W 32) CSI Data Identifier Register 1 -------- */
-#define CSI_DATA_IDS_1_RESETVALUE             _UINT32_(0x00)                                       /*  (CSI_DATA_IDS_1) CSI Data Identifier Register 1  Reset Value */
-
-#define CSI_DATA_IDS_1_DI0_DT_Pos             _UINT32_(0)                                          /* (CSI_DATA_IDS_1) Data Type for Programmed data ID 0 Position */
-#define CSI_DATA_IDS_1_DI0_DT_Msk             (_UINT32_(0x3F) << CSI_DATA_IDS_1_DI0_DT_Pos)        /* (CSI_DATA_IDS_1) Data Type for Programmed data ID 0 Mask */
-#define CSI_DATA_IDS_1_DI0_DT(value)          (CSI_DATA_IDS_1_DI0_DT_Msk & (_UINT32_(value) << CSI_DATA_IDS_1_DI0_DT_Pos)) /* Assigment of value for DI0_DT in the CSI_DATA_IDS_1 register */
-#define CSI_DATA_IDS_1_DI0_VC_Pos             _UINT32_(6)                                          /* (CSI_DATA_IDS_1) Virtual Channel for Programmed data ID 0 Position */
-#define CSI_DATA_IDS_1_DI0_VC_Msk             (_UINT32_(0x3) << CSI_DATA_IDS_1_DI0_VC_Pos)         /* (CSI_DATA_IDS_1) Virtual Channel for Programmed data ID 0 Mask */
-#define CSI_DATA_IDS_1_DI0_VC(value)          (CSI_DATA_IDS_1_DI0_VC_Msk & (_UINT32_(value) << CSI_DATA_IDS_1_DI0_VC_Pos)) /* Assigment of value for DI0_VC in the CSI_DATA_IDS_1 register */
-#define CSI_DATA_IDS_1_DI1_DT_Pos             _UINT32_(8)                                          /* (CSI_DATA_IDS_1) Data Type for Programmed data ID 1 Position */
-#define CSI_DATA_IDS_1_DI1_DT_Msk             (_UINT32_(0x3F) << CSI_DATA_IDS_1_DI1_DT_Pos)        /* (CSI_DATA_IDS_1) Data Type for Programmed data ID 1 Mask */
-#define CSI_DATA_IDS_1_DI1_DT(value)          (CSI_DATA_IDS_1_DI1_DT_Msk & (_UINT32_(value) << CSI_DATA_IDS_1_DI1_DT_Pos)) /* Assigment of value for DI1_DT in the CSI_DATA_IDS_1 register */
-#define CSI_DATA_IDS_1_DI1_VC_Pos             _UINT32_(14)                                         /* (CSI_DATA_IDS_1) Virtual Channel for Programmed data ID 1 Position */
-#define CSI_DATA_IDS_1_DI1_VC_Msk             (_UINT32_(0x3) << CSI_DATA_IDS_1_DI1_VC_Pos)         /* (CSI_DATA_IDS_1) Virtual Channel for Programmed data ID 1 Mask */
-#define CSI_DATA_IDS_1_DI1_VC(value)          (CSI_DATA_IDS_1_DI1_VC_Msk & (_UINT32_(value) << CSI_DATA_IDS_1_DI1_VC_Pos)) /* Assigment of value for DI1_VC in the CSI_DATA_IDS_1 register */
-#define CSI_DATA_IDS_1_DI2_DT_Pos             _UINT32_(16)                                         /* (CSI_DATA_IDS_1) Data Type for Programmed data ID 2 Position */
-#define CSI_DATA_IDS_1_DI2_DT_Msk             (_UINT32_(0x3F) << CSI_DATA_IDS_1_DI2_DT_Pos)        /* (CSI_DATA_IDS_1) Data Type for Programmed data ID 2 Mask */
-#define CSI_DATA_IDS_1_DI2_DT(value)          (CSI_DATA_IDS_1_DI2_DT_Msk & (_UINT32_(value) << CSI_DATA_IDS_1_DI2_DT_Pos)) /* Assigment of value for DI2_DT in the CSI_DATA_IDS_1 register */
-#define CSI_DATA_IDS_1_DI2_VC_Pos             _UINT32_(22)                                         /* (CSI_DATA_IDS_1) Virtual Channel for Programmed data ID 2 Position */
-#define CSI_DATA_IDS_1_DI2_VC_Msk             (_UINT32_(0x3) << CSI_DATA_IDS_1_DI2_VC_Pos)         /* (CSI_DATA_IDS_1) Virtual Channel for Programmed data ID 2 Mask */
-#define CSI_DATA_IDS_1_DI2_VC(value)          (CSI_DATA_IDS_1_DI2_VC_Msk & (_UINT32_(value) << CSI_DATA_IDS_1_DI2_VC_Pos)) /* Assigment of value for DI2_VC in the CSI_DATA_IDS_1 register */
-#define CSI_DATA_IDS_1_DI3_DT_Pos             _UINT32_(24)                                         /* (CSI_DATA_IDS_1) Data Type for Programmed data ID 3 Position */
-#define CSI_DATA_IDS_1_DI3_DT_Msk             (_UINT32_(0x3F) << CSI_DATA_IDS_1_DI3_DT_Pos)        /* (CSI_DATA_IDS_1) Data Type for Programmed data ID 3 Mask */
-#define CSI_DATA_IDS_1_DI3_DT(value)          (CSI_DATA_IDS_1_DI3_DT_Msk & (_UINT32_(value) << CSI_DATA_IDS_1_DI3_DT_Pos)) /* Assigment of value for DI3_DT in the CSI_DATA_IDS_1 register */
-#define CSI_DATA_IDS_1_DI3_VC_Pos             _UINT32_(30)                                         /* (CSI_DATA_IDS_1) Virtual Channel for Programmed data ID 3 Position */
-#define CSI_DATA_IDS_1_DI3_VC_Msk             (_UINT32_(0x3) << CSI_DATA_IDS_1_DI3_VC_Pos)         /* (CSI_DATA_IDS_1) Virtual Channel for Programmed data ID 3 Mask */
-#define CSI_DATA_IDS_1_DI3_VC(value)          (CSI_DATA_IDS_1_DI3_VC_Msk & (_UINT32_(value) << CSI_DATA_IDS_1_DI3_VC_Pos)) /* Assigment of value for DI3_VC in the CSI_DATA_IDS_1 register */
-#define CSI_DATA_IDS_1_Msk                    _UINT32_(0xFFFFFFFF)                                 /* (CSI_DATA_IDS_1) Register Mask  */
-
-
-/* -------- CSI_DATA_IDS_2 : (CSI Offset: 0x14) (R/W 32) CSI Data Identifier Register 2 -------- */
-#define CSI_DATA_IDS_2_RESETVALUE             _UINT32_(0x00)                                       /*  (CSI_DATA_IDS_2) CSI Data Identifier Register 2  Reset Value */
-
-#define CSI_DATA_IDS_2_DI4_DT_Pos             _UINT32_(0)                                          /* (CSI_DATA_IDS_2) Data Type for Programmed data ID 4 Position */
-#define CSI_DATA_IDS_2_DI4_DT_Msk             (_UINT32_(0x3F) << CSI_DATA_IDS_2_DI4_DT_Pos)        /* (CSI_DATA_IDS_2) Data Type for Programmed data ID 4 Mask */
-#define CSI_DATA_IDS_2_DI4_DT(value)          (CSI_DATA_IDS_2_DI4_DT_Msk & (_UINT32_(value) << CSI_DATA_IDS_2_DI4_DT_Pos)) /* Assigment of value for DI4_DT in the CSI_DATA_IDS_2 register */
-#define CSI_DATA_IDS_2_DI4_VC_Pos             _UINT32_(6)                                          /* (CSI_DATA_IDS_2) Virtual Channel for Programmed data ID 4 Position */
-#define CSI_DATA_IDS_2_DI4_VC_Msk             (_UINT32_(0x3) << CSI_DATA_IDS_2_DI4_VC_Pos)         /* (CSI_DATA_IDS_2) Virtual Channel for Programmed data ID 4 Mask */
-#define CSI_DATA_IDS_2_DI4_VC(value)          (CSI_DATA_IDS_2_DI4_VC_Msk & (_UINT32_(value) << CSI_DATA_IDS_2_DI4_VC_Pos)) /* Assigment of value for DI4_VC in the CSI_DATA_IDS_2 register */
-#define CSI_DATA_IDS_2_DI5_DT_Pos             _UINT32_(8)                                          /* (CSI_DATA_IDS_2) Data Type for Programmed data ID 5 Position */
-#define CSI_DATA_IDS_2_DI5_DT_Msk             (_UINT32_(0x3F) << CSI_DATA_IDS_2_DI5_DT_Pos)        /* (CSI_DATA_IDS_2) Data Type for Programmed data ID 5 Mask */
-#define CSI_DATA_IDS_2_DI5_DT(value)          (CSI_DATA_IDS_2_DI5_DT_Msk & (_UINT32_(value) << CSI_DATA_IDS_2_DI5_DT_Pos)) /* Assigment of value for DI5_DT in the CSI_DATA_IDS_2 register */
-#define CSI_DATA_IDS_2_DI5_VC_Pos             _UINT32_(14)                                         /* (CSI_DATA_IDS_2) Virtual Channel for Programmed data ID 5 Position */
-#define CSI_DATA_IDS_2_DI5_VC_Msk             (_UINT32_(0x3) << CSI_DATA_IDS_2_DI5_VC_Pos)         /* (CSI_DATA_IDS_2) Virtual Channel for Programmed data ID 5 Mask */
-#define CSI_DATA_IDS_2_DI5_VC(value)          (CSI_DATA_IDS_2_DI5_VC_Msk & (_UINT32_(value) << CSI_DATA_IDS_2_DI5_VC_Pos)) /* Assigment of value for DI5_VC in the CSI_DATA_IDS_2 register */
-#define CSI_DATA_IDS_2_DI6_DT_Pos             _UINT32_(16)                                         /* (CSI_DATA_IDS_2) Data Type for Programmed data ID 6 Position */
-#define CSI_DATA_IDS_2_DI6_DT_Msk             (_UINT32_(0x3F) << CSI_DATA_IDS_2_DI6_DT_Pos)        /* (CSI_DATA_IDS_2) Data Type for Programmed data ID 6 Mask */
-#define CSI_DATA_IDS_2_DI6_DT(value)          (CSI_DATA_IDS_2_DI6_DT_Msk & (_UINT32_(value) << CSI_DATA_IDS_2_DI6_DT_Pos)) /* Assigment of value for DI6_DT in the CSI_DATA_IDS_2 register */
-#define CSI_DATA_IDS_2_DI6_VC_Pos             _UINT32_(22)                                         /* (CSI_DATA_IDS_2) Virtual Channel for Programmed data ID 6 Position */
-#define CSI_DATA_IDS_2_DI6_VC_Msk             (_UINT32_(0x3) << CSI_DATA_IDS_2_DI6_VC_Pos)         /* (CSI_DATA_IDS_2) Virtual Channel for Programmed data ID 6 Mask */
-#define CSI_DATA_IDS_2_DI6_VC(value)          (CSI_DATA_IDS_2_DI6_VC_Msk & (_UINT32_(value) << CSI_DATA_IDS_2_DI6_VC_Pos)) /* Assigment of value for DI6_VC in the CSI_DATA_IDS_2 register */
-#define CSI_DATA_IDS_2_DI7_DT_Pos             _UINT32_(24)                                         /* (CSI_DATA_IDS_2) Data Type for Programmed data ID 7 Position */
-#define CSI_DATA_IDS_2_DI7_DT_Msk             (_UINT32_(0x3F) << CSI_DATA_IDS_2_DI7_DT_Pos)        /* (CSI_DATA_IDS_2) Data Type for Programmed data ID 7 Mask */
-#define CSI_DATA_IDS_2_DI7_DT(value)          (CSI_DATA_IDS_2_DI7_DT_Msk & (_UINT32_(value) << CSI_DATA_IDS_2_DI7_DT_Pos)) /* Assigment of value for DI7_DT in the CSI_DATA_IDS_2 register */
-#define CSI_DATA_IDS_2_DI7_VC_Pos             _UINT32_(30)                                         /* (CSI_DATA_IDS_2) Virtual Channel for Programmed data ID 7 Position */
-#define CSI_DATA_IDS_2_DI7_VC_Msk             (_UINT32_(0x3) << CSI_DATA_IDS_2_DI7_VC_Pos)         /* (CSI_DATA_IDS_2) Virtual Channel for Programmed data ID 7 Mask */
-#define CSI_DATA_IDS_2_DI7_VC(value)          (CSI_DATA_IDS_2_DI7_VC_Msk & (_UINT32_(value) << CSI_DATA_IDS_2_DI7_VC_Pos)) /* Assigment of value for DI7_VC in the CSI_DATA_IDS_2 register */
-#define CSI_DATA_IDS_2_Msk                    _UINT32_(0xFFFFFFFF)                                 /* (CSI_DATA_IDS_2) Register Mask  */
+#define CSI_INT_ST_MAIN_Msk                   _UINT32_(0x00030007)                                 /* (CSI_INT_ST_MAIN) Register Mask  */
 
 
 /* -------- CSI_PHY_SHUTDOWNZ : (CSI Offset: 0x40) (R/W 32) CSI D-PHY Shutdown Register -------- */
@@ -380,12 +310,12 @@
 #define CSI_INT_MSK_PHY_FATAL_MASK_ERRSOTSYNCHS_2_Pos _UINT32_(2)                                          /* (CSI_INT_MSK_PHY_FATAL) Data Lane 2 Start Of Transmission Error Interrupt Mask Position */
 #define CSI_INT_MSK_PHY_FATAL_MASK_ERRSOTSYNCHS_2_Msk (_UINT32_(0x1) << CSI_INT_MSK_PHY_FATAL_MASK_ERRSOTSYNCHS_2_Pos) /* (CSI_INT_MSK_PHY_FATAL) Data Lane 2 Start Of Transmission Error Interrupt Mask Mask */
 #define CSI_INT_MSK_PHY_FATAL_MASK_ERRSOTSYNCHS_2(value) (CSI_INT_MSK_PHY_FATAL_MASK_ERRSOTSYNCHS_2_Msk & (_UINT32_(value) << CSI_INT_MSK_PHY_FATAL_MASK_ERRSOTSYNCHS_2_Pos)) /* Assigment of value for MASK_ERRSOTSYNCHS_2 in the CSI_INT_MSK_PHY_FATAL register */
-#define CSI_INT_MSK_PHY_FATAL_MASK_ERRSOTSYNCHS_3_Pos _UINT32_(3)                                          /* (CSI_INT_MSK_PHY_FATAL) Lane 3 Start Of Transmission Error Error Interrupt Mask Position */
-#define CSI_INT_MSK_PHY_FATAL_MASK_ERRSOTSYNCHS_3_Msk (_UINT32_(0x1) << CSI_INT_MSK_PHY_FATAL_MASK_ERRSOTSYNCHS_3_Pos) /* (CSI_INT_MSK_PHY_FATAL) Lane 3 Start Of Transmission Error Error Interrupt Mask Mask */
+#define CSI_INT_MSK_PHY_FATAL_MASK_ERRSOTSYNCHS_3_Pos _UINT32_(3)                                          /* (CSI_INT_MSK_PHY_FATAL) Lane 3 Start Of Transmission Error Interrupt Mask Position */
+#define CSI_INT_MSK_PHY_FATAL_MASK_ERRSOTSYNCHS_3_Msk (_UINT32_(0x1) << CSI_INT_MSK_PHY_FATAL_MASK_ERRSOTSYNCHS_3_Pos) /* (CSI_INT_MSK_PHY_FATAL) Lane 3 Start Of Transmission Error Interrupt Mask Mask */
 #define CSI_INT_MSK_PHY_FATAL_MASK_ERRSOTSYNCHS_3(value) (CSI_INT_MSK_PHY_FATAL_MASK_ERRSOTSYNCHS_3_Msk & (_UINT32_(value) << CSI_INT_MSK_PHY_FATAL_MASK_ERRSOTSYNCHS_3_Pos)) /* Assigment of value for MASK_ERRSOTSYNCHS_3 in the CSI_INT_MSK_PHY_FATAL register */
 #define CSI_INT_MSK_PHY_FATAL_Msk             _UINT32_(0x0000000F)                                 /* (CSI_INT_MSK_PHY_FATAL) Register Mask  */
 
-#define CSI_INT_MSK_PHY_FATAL_MASK_ERRSOTSYNCHS__Pos _UINT32_(0)                                          /* (CSI_INT_MSK_PHY_FATAL Position) Lane 3 Start Of Transmission Error Error Interrupt Mask */
+#define CSI_INT_MSK_PHY_FATAL_MASK_ERRSOTSYNCHS__Pos _UINT32_(0)                                          /* (CSI_INT_MSK_PHY_FATAL Position) Lane 3 Start Of Transmission Error Interrupt Mask */
 #define CSI_INT_MSK_PHY_FATAL_MASK_ERRSOTSYNCHS__Msk (_UINT32_(0xF) << CSI_INT_MSK_PHY_FATAL_MASK_ERRSOTSYNCHS__Pos) /* (CSI_INT_MSK_PHY_FATAL Mask) MASK_ERRSOTSYNCHS_ */
 #define CSI_INT_MSK_PHY_FATAL_MASK_ERRSOTSYNCHS_(value) (CSI_INT_MSK_PHY_FATAL_MASK_ERRSOTSYNCHS__Msk & (_UINT32_(value) << CSI_INT_MSK_PHY_FATAL_MASK_ERRSOTSYNCHS__Pos)) 
 
@@ -833,186 +763,6 @@
 #define CSI_INT_FORCE_PKT_FORCE_ERR_ID_VC_Msk (_UINT32_(0xF) << CSI_INT_FORCE_PKT_FORCE_ERR_ID_VC_Pos) /* (CSI_INT_FORCE_PKT Mask) FORCE_ERR_ID_VC */
 #define CSI_INT_FORCE_PKT_FORCE_ERR_ID_VC(value) (CSI_INT_FORCE_PKT_FORCE_ERR_ID_VC_Msk & (_UINT32_(value) << CSI_INT_FORCE_PKT_FORCE_ERR_ID_VC_Pos)) 
 
-/* -------- CSI_INT_ST_LINE : (CSI Offset: 0x130) ( R/ 32) CSI Line Error Interrupt Status Register -------- */
-#define CSI_INT_ST_LINE_RESETVALUE            _UINT32_(0x00)                                       /*  (CSI_INT_ST_LINE) CSI Line Error Interrupt Status Register  Reset Value */
-
-#define CSI_INT_ST_LINE_ERR_L_BNDRY_MATCH_DI0_Pos _UINT32_(0)                                          /* (CSI_INT_ST_LINE) Error Matching Line Start with Line End for VC0 and DT0 (cleared on read) Position */
-#define CSI_INT_ST_LINE_ERR_L_BNDRY_MATCH_DI0_Msk (_UINT32_(0x1) << CSI_INT_ST_LINE_ERR_L_BNDRY_MATCH_DI0_Pos) /* (CSI_INT_ST_LINE) Error Matching Line Start with Line End for VC0 and DT0 (cleared on read) Mask */
-#define CSI_INT_ST_LINE_ERR_L_BNDRY_MATCH_DI0(value) (CSI_INT_ST_LINE_ERR_L_BNDRY_MATCH_DI0_Msk & (_UINT32_(value) << CSI_INT_ST_LINE_ERR_L_BNDRY_MATCH_DI0_Pos)) /* Assigment of value for ERR_L_BNDRY_MATCH_DI0 in the CSI_INT_ST_LINE register */
-#define CSI_INT_ST_LINE_ERR_L_BNDRY_MATCH_DI1_Pos _UINT32_(1)                                          /* (CSI_INT_ST_LINE) Error Matching Line Start with Line End for VC1 and DT1 (cleared on read) Position */
-#define CSI_INT_ST_LINE_ERR_L_BNDRY_MATCH_DI1_Msk (_UINT32_(0x1) << CSI_INT_ST_LINE_ERR_L_BNDRY_MATCH_DI1_Pos) /* (CSI_INT_ST_LINE) Error Matching Line Start with Line End for VC1 and DT1 (cleared on read) Mask */
-#define CSI_INT_ST_LINE_ERR_L_BNDRY_MATCH_DI1(value) (CSI_INT_ST_LINE_ERR_L_BNDRY_MATCH_DI1_Msk & (_UINT32_(value) << CSI_INT_ST_LINE_ERR_L_BNDRY_MATCH_DI1_Pos)) /* Assigment of value for ERR_L_BNDRY_MATCH_DI1 in the CSI_INT_ST_LINE register */
-#define CSI_INT_ST_LINE_ERR_L_BNDRY_MATCH_DI2_Pos _UINT32_(2)                                          /* (CSI_INT_ST_LINE) Error Matching Line Start with Line End for VC2 and DT2 (cleared on read) Position */
-#define CSI_INT_ST_LINE_ERR_L_BNDRY_MATCH_DI2_Msk (_UINT32_(0x1) << CSI_INT_ST_LINE_ERR_L_BNDRY_MATCH_DI2_Pos) /* (CSI_INT_ST_LINE) Error Matching Line Start with Line End for VC2 and DT2 (cleared on read) Mask */
-#define CSI_INT_ST_LINE_ERR_L_BNDRY_MATCH_DI2(value) (CSI_INT_ST_LINE_ERR_L_BNDRY_MATCH_DI2_Msk & (_UINT32_(value) << CSI_INT_ST_LINE_ERR_L_BNDRY_MATCH_DI2_Pos)) /* Assigment of value for ERR_L_BNDRY_MATCH_DI2 in the CSI_INT_ST_LINE register */
-#define CSI_INT_ST_LINE_ERR_L_BNDRY_MATCH_DI3_Pos _UINT32_(3)                                          /* (CSI_INT_ST_LINE) Error Matching Line Start with Line End for VC3 and DT3 (cleared on read) Position */
-#define CSI_INT_ST_LINE_ERR_L_BNDRY_MATCH_DI3_Msk (_UINT32_(0x1) << CSI_INT_ST_LINE_ERR_L_BNDRY_MATCH_DI3_Pos) /* (CSI_INT_ST_LINE) Error Matching Line Start with Line End for VC3 and DT3 (cleared on read) Mask */
-#define CSI_INT_ST_LINE_ERR_L_BNDRY_MATCH_DI3(value) (CSI_INT_ST_LINE_ERR_L_BNDRY_MATCH_DI3_Msk & (_UINT32_(value) << CSI_INT_ST_LINE_ERR_L_BNDRY_MATCH_DI3_Pos)) /* Assigment of value for ERR_L_BNDRY_MATCH_DI3 in the CSI_INT_ST_LINE register */
-#define CSI_INT_ST_LINE_ERR_L_BNDRY_MATCH_DI4_Pos _UINT32_(4)                                          /* (CSI_INT_ST_LINE) Error Matching Line Start with Line End for VC4 and DT4 (cleared on read) Position */
-#define CSI_INT_ST_LINE_ERR_L_BNDRY_MATCH_DI4_Msk (_UINT32_(0x1) << CSI_INT_ST_LINE_ERR_L_BNDRY_MATCH_DI4_Pos) /* (CSI_INT_ST_LINE) Error Matching Line Start with Line End for VC4 and DT4 (cleared on read) Mask */
-#define CSI_INT_ST_LINE_ERR_L_BNDRY_MATCH_DI4(value) (CSI_INT_ST_LINE_ERR_L_BNDRY_MATCH_DI4_Msk & (_UINT32_(value) << CSI_INT_ST_LINE_ERR_L_BNDRY_MATCH_DI4_Pos)) /* Assigment of value for ERR_L_BNDRY_MATCH_DI4 in the CSI_INT_ST_LINE register */
-#define CSI_INT_ST_LINE_ERR_L_BNDRY_MATCH_DI5_Pos _UINT32_(5)                                          /* (CSI_INT_ST_LINE) Error Matching Line Start with Line End for VC5 and DT5 (cleared on read) Position */
-#define CSI_INT_ST_LINE_ERR_L_BNDRY_MATCH_DI5_Msk (_UINT32_(0x1) << CSI_INT_ST_LINE_ERR_L_BNDRY_MATCH_DI5_Pos) /* (CSI_INT_ST_LINE) Error Matching Line Start with Line End for VC5 and DT5 (cleared on read) Mask */
-#define CSI_INT_ST_LINE_ERR_L_BNDRY_MATCH_DI5(value) (CSI_INT_ST_LINE_ERR_L_BNDRY_MATCH_DI5_Msk & (_UINT32_(value) << CSI_INT_ST_LINE_ERR_L_BNDRY_MATCH_DI5_Pos)) /* Assigment of value for ERR_L_BNDRY_MATCH_DI5 in the CSI_INT_ST_LINE register */
-#define CSI_INT_ST_LINE_ERR_L_BNDRY_MATCH_DI6_Pos _UINT32_(6)                                          /* (CSI_INT_ST_LINE) Error Matching Line Start with Line End for VC6 and DT6 (cleared on read) Position */
-#define CSI_INT_ST_LINE_ERR_L_BNDRY_MATCH_DI6_Msk (_UINT32_(0x1) << CSI_INT_ST_LINE_ERR_L_BNDRY_MATCH_DI6_Pos) /* (CSI_INT_ST_LINE) Error Matching Line Start with Line End for VC6 and DT6 (cleared on read) Mask */
-#define CSI_INT_ST_LINE_ERR_L_BNDRY_MATCH_DI6(value) (CSI_INT_ST_LINE_ERR_L_BNDRY_MATCH_DI6_Msk & (_UINT32_(value) << CSI_INT_ST_LINE_ERR_L_BNDRY_MATCH_DI6_Pos)) /* Assigment of value for ERR_L_BNDRY_MATCH_DI6 in the CSI_INT_ST_LINE register */
-#define CSI_INT_ST_LINE_ERR_L_BNDRY_MATCH_DI7_Pos _UINT32_(7)                                          /* (CSI_INT_ST_LINE) Error Matching Line Start with Line End for VC7 and DT7 (cleared on read) Position */
-#define CSI_INT_ST_LINE_ERR_L_BNDRY_MATCH_DI7_Msk (_UINT32_(0x1) << CSI_INT_ST_LINE_ERR_L_BNDRY_MATCH_DI7_Pos) /* (CSI_INT_ST_LINE) Error Matching Line Start with Line End for VC7 and DT7 (cleared on read) Mask */
-#define CSI_INT_ST_LINE_ERR_L_BNDRY_MATCH_DI7(value) (CSI_INT_ST_LINE_ERR_L_BNDRY_MATCH_DI7_Msk & (_UINT32_(value) << CSI_INT_ST_LINE_ERR_L_BNDRY_MATCH_DI7_Pos)) /* Assigment of value for ERR_L_BNDRY_MATCH_DI7 in the CSI_INT_ST_LINE register */
-#define CSI_INT_ST_LINE_ERR_L_SEQ_DI0_Pos     _UINT32_(16)                                         /* (CSI_INT_ST_LINE) Error in the Sequence of Lines for VC0 and DT0 (cleared on read) Position */
-#define CSI_INT_ST_LINE_ERR_L_SEQ_DI0_Msk     (_UINT32_(0x1) << CSI_INT_ST_LINE_ERR_L_SEQ_DI0_Pos) /* (CSI_INT_ST_LINE) Error in the Sequence of Lines for VC0 and DT0 (cleared on read) Mask */
-#define CSI_INT_ST_LINE_ERR_L_SEQ_DI0(value)  (CSI_INT_ST_LINE_ERR_L_SEQ_DI0_Msk & (_UINT32_(value) << CSI_INT_ST_LINE_ERR_L_SEQ_DI0_Pos)) /* Assigment of value for ERR_L_SEQ_DI0 in the CSI_INT_ST_LINE register */
-#define CSI_INT_ST_LINE_ERR_L_SEQ_DI1_Pos     _UINT32_(17)                                         /* (CSI_INT_ST_LINE) Error in the Sequence of Lines for VC1 and DT1 (cleared on read) Position */
-#define CSI_INT_ST_LINE_ERR_L_SEQ_DI1_Msk     (_UINT32_(0x1) << CSI_INT_ST_LINE_ERR_L_SEQ_DI1_Pos) /* (CSI_INT_ST_LINE) Error in the Sequence of Lines for VC1 and DT1 (cleared on read) Mask */
-#define CSI_INT_ST_LINE_ERR_L_SEQ_DI1(value)  (CSI_INT_ST_LINE_ERR_L_SEQ_DI1_Msk & (_UINT32_(value) << CSI_INT_ST_LINE_ERR_L_SEQ_DI1_Pos)) /* Assigment of value for ERR_L_SEQ_DI1 in the CSI_INT_ST_LINE register */
-#define CSI_INT_ST_LINE_ERR_L_SEQ_DI2_Pos     _UINT32_(18)                                         /* (CSI_INT_ST_LINE) Error in the Sequence of Lines for VC2 and DT2 (cleared on read) Position */
-#define CSI_INT_ST_LINE_ERR_L_SEQ_DI2_Msk     (_UINT32_(0x1) << CSI_INT_ST_LINE_ERR_L_SEQ_DI2_Pos) /* (CSI_INT_ST_LINE) Error in the Sequence of Lines for VC2 and DT2 (cleared on read) Mask */
-#define CSI_INT_ST_LINE_ERR_L_SEQ_DI2(value)  (CSI_INT_ST_LINE_ERR_L_SEQ_DI2_Msk & (_UINT32_(value) << CSI_INT_ST_LINE_ERR_L_SEQ_DI2_Pos)) /* Assigment of value for ERR_L_SEQ_DI2 in the CSI_INT_ST_LINE register */
-#define CSI_INT_ST_LINE_ERR_L_SEQ_DI3_Pos     _UINT32_(19)                                         /* (CSI_INT_ST_LINE) Error in the Sequence of Lines for VC3 and DT3 (cleared on read) Position */
-#define CSI_INT_ST_LINE_ERR_L_SEQ_DI3_Msk     (_UINT32_(0x1) << CSI_INT_ST_LINE_ERR_L_SEQ_DI3_Pos) /* (CSI_INT_ST_LINE) Error in the Sequence of Lines for VC3 and DT3 (cleared on read) Mask */
-#define CSI_INT_ST_LINE_ERR_L_SEQ_DI3(value)  (CSI_INT_ST_LINE_ERR_L_SEQ_DI3_Msk & (_UINT32_(value) << CSI_INT_ST_LINE_ERR_L_SEQ_DI3_Pos)) /* Assigment of value for ERR_L_SEQ_DI3 in the CSI_INT_ST_LINE register */
-#define CSI_INT_ST_LINE_ERR_L_SEQ_DI4_Pos     _UINT32_(20)                                         /* (CSI_INT_ST_LINE) Error in the Sequence of Lines for VC4 and DT4 (cleared on read) Position */
-#define CSI_INT_ST_LINE_ERR_L_SEQ_DI4_Msk     (_UINT32_(0x1) << CSI_INT_ST_LINE_ERR_L_SEQ_DI4_Pos) /* (CSI_INT_ST_LINE) Error in the Sequence of Lines for VC4 and DT4 (cleared on read) Mask */
-#define CSI_INT_ST_LINE_ERR_L_SEQ_DI4(value)  (CSI_INT_ST_LINE_ERR_L_SEQ_DI4_Msk & (_UINT32_(value) << CSI_INT_ST_LINE_ERR_L_SEQ_DI4_Pos)) /* Assigment of value for ERR_L_SEQ_DI4 in the CSI_INT_ST_LINE register */
-#define CSI_INT_ST_LINE_ERR_L_SEQ_DI5_Pos     _UINT32_(21)                                         /* (CSI_INT_ST_LINE) Error in the Sequence of Lines for VC5 and DT5 (cleared on read) Position */
-#define CSI_INT_ST_LINE_ERR_L_SEQ_DI5_Msk     (_UINT32_(0x1) << CSI_INT_ST_LINE_ERR_L_SEQ_DI5_Pos) /* (CSI_INT_ST_LINE) Error in the Sequence of Lines for VC5 and DT5 (cleared on read) Mask */
-#define CSI_INT_ST_LINE_ERR_L_SEQ_DI5(value)  (CSI_INT_ST_LINE_ERR_L_SEQ_DI5_Msk & (_UINT32_(value) << CSI_INT_ST_LINE_ERR_L_SEQ_DI5_Pos)) /* Assigment of value for ERR_L_SEQ_DI5 in the CSI_INT_ST_LINE register */
-#define CSI_INT_ST_LINE_ERR_L_SEQ_DI6_Pos     _UINT32_(22)                                         /* (CSI_INT_ST_LINE) Error in the Sequence of Lines for VC6 and DT6 (cleared on read) Position */
-#define CSI_INT_ST_LINE_ERR_L_SEQ_DI6_Msk     (_UINT32_(0x1) << CSI_INT_ST_LINE_ERR_L_SEQ_DI6_Pos) /* (CSI_INT_ST_LINE) Error in the Sequence of Lines for VC6 and DT6 (cleared on read) Mask */
-#define CSI_INT_ST_LINE_ERR_L_SEQ_DI6(value)  (CSI_INT_ST_LINE_ERR_L_SEQ_DI6_Msk & (_UINT32_(value) << CSI_INT_ST_LINE_ERR_L_SEQ_DI6_Pos)) /* Assigment of value for ERR_L_SEQ_DI6 in the CSI_INT_ST_LINE register */
-#define CSI_INT_ST_LINE_ERR_L_SEQ_DI7_Pos     _UINT32_(23)                                         /* (CSI_INT_ST_LINE) Error in the Sequence of Lines for VC7 and DT7 (cleared on read) Position */
-#define CSI_INT_ST_LINE_ERR_L_SEQ_DI7_Msk     (_UINT32_(0x1) << CSI_INT_ST_LINE_ERR_L_SEQ_DI7_Pos) /* (CSI_INT_ST_LINE) Error in the Sequence of Lines for VC7 and DT7 (cleared on read) Mask */
-#define CSI_INT_ST_LINE_ERR_L_SEQ_DI7(value)  (CSI_INT_ST_LINE_ERR_L_SEQ_DI7_Msk & (_UINT32_(value) << CSI_INT_ST_LINE_ERR_L_SEQ_DI7_Pos)) /* Assigment of value for ERR_L_SEQ_DI7 in the CSI_INT_ST_LINE register */
-#define CSI_INT_ST_LINE_Msk                   _UINT32_(0x00FF00FF)                                 /* (CSI_INT_ST_LINE) Register Mask  */
-
-#define CSI_INT_ST_LINE_ERR_L_BNDRY_MATCH_DI_Pos _UINT32_(0)                                          /* (CSI_INT_ST_LINE Position) Error Matching Line Start with Line End for VCx and DTx (cleared on read) */
-#define CSI_INT_ST_LINE_ERR_L_BNDRY_MATCH_DI_Msk (_UINT32_(0xFF) << CSI_INT_ST_LINE_ERR_L_BNDRY_MATCH_DI_Pos) /* (CSI_INT_ST_LINE Mask) ERR_L_BNDRY_MATCH_DI */
-#define CSI_INT_ST_LINE_ERR_L_BNDRY_MATCH_DI(value) (CSI_INT_ST_LINE_ERR_L_BNDRY_MATCH_DI_Msk & (_UINT32_(value) << CSI_INT_ST_LINE_ERR_L_BNDRY_MATCH_DI_Pos)) 
-#define CSI_INT_ST_LINE_ERR_L_SEQ_DI_Pos      _UINT32_(16)                                         /* (CSI_INT_ST_LINE Position) Error in the Sequence of Lines for VC7 and DT7 (cleared on read) */
-#define CSI_INT_ST_LINE_ERR_L_SEQ_DI_Msk      (_UINT32_(0xFF) << CSI_INT_ST_LINE_ERR_L_SEQ_DI_Pos) /* (CSI_INT_ST_LINE Mask) ERR_L_SEQ_DI */
-#define CSI_INT_ST_LINE_ERR_L_SEQ_DI(value)   (CSI_INT_ST_LINE_ERR_L_SEQ_DI_Msk & (_UINT32_(value) << CSI_INT_ST_LINE_ERR_L_SEQ_DI_Pos)) 
-
-/* -------- CSI_INT_MSK_LINE : (CSI Offset: 0x134) (R/W 32) CSI Line Error Interrupt Mask Register -------- */
-#define CSI_INT_MSK_LINE_RESETVALUE           _UINT32_(0x00)                                       /*  (CSI_INT_MSK_LINE) CSI Line Error Interrupt Mask Register  Reset Value */
-
-#define CSI_INT_MSK_LINE_MASK_ERR_L_BNDRY_MATCH_DI0_Pos _UINT32_(0)                                          /* (CSI_INT_MSK_LINE) Error Matching Line Start with Line End for VC0 and DT0 Interrupt Mask Position */
-#define CSI_INT_MSK_LINE_MASK_ERR_L_BNDRY_MATCH_DI0_Msk (_UINT32_(0x1) << CSI_INT_MSK_LINE_MASK_ERR_L_BNDRY_MATCH_DI0_Pos) /* (CSI_INT_MSK_LINE) Error Matching Line Start with Line End for VC0 and DT0 Interrupt Mask Mask */
-#define CSI_INT_MSK_LINE_MASK_ERR_L_BNDRY_MATCH_DI0(value) (CSI_INT_MSK_LINE_MASK_ERR_L_BNDRY_MATCH_DI0_Msk & (_UINT32_(value) << CSI_INT_MSK_LINE_MASK_ERR_L_BNDRY_MATCH_DI0_Pos)) /* Assigment of value for MASK_ERR_L_BNDRY_MATCH_DI0 in the CSI_INT_MSK_LINE register */
-#define CSI_INT_MSK_LINE_MASK_ERR_L_BNDRY_MATCH_DI1_Pos _UINT32_(1)                                          /* (CSI_INT_MSK_LINE) Error Matching Line Start with Line End for VC1 and DT1 Interrupt Mask Position */
-#define CSI_INT_MSK_LINE_MASK_ERR_L_BNDRY_MATCH_DI1_Msk (_UINT32_(0x1) << CSI_INT_MSK_LINE_MASK_ERR_L_BNDRY_MATCH_DI1_Pos) /* (CSI_INT_MSK_LINE) Error Matching Line Start with Line End for VC1 and DT1 Interrupt Mask Mask */
-#define CSI_INT_MSK_LINE_MASK_ERR_L_BNDRY_MATCH_DI1(value) (CSI_INT_MSK_LINE_MASK_ERR_L_BNDRY_MATCH_DI1_Msk & (_UINT32_(value) << CSI_INT_MSK_LINE_MASK_ERR_L_BNDRY_MATCH_DI1_Pos)) /* Assigment of value for MASK_ERR_L_BNDRY_MATCH_DI1 in the CSI_INT_MSK_LINE register */
-#define CSI_INT_MSK_LINE_MASK_ERR_L_BNDRY_MATCH_DI2_Pos _UINT32_(2)                                          /* (CSI_INT_MSK_LINE) Error Matching Line Start with Line End for VC2 and DT2 Interrupt Mask Position */
-#define CSI_INT_MSK_LINE_MASK_ERR_L_BNDRY_MATCH_DI2_Msk (_UINT32_(0x1) << CSI_INT_MSK_LINE_MASK_ERR_L_BNDRY_MATCH_DI2_Pos) /* (CSI_INT_MSK_LINE) Error Matching Line Start with Line End for VC2 and DT2 Interrupt Mask Mask */
-#define CSI_INT_MSK_LINE_MASK_ERR_L_BNDRY_MATCH_DI2(value) (CSI_INT_MSK_LINE_MASK_ERR_L_BNDRY_MATCH_DI2_Msk & (_UINT32_(value) << CSI_INT_MSK_LINE_MASK_ERR_L_BNDRY_MATCH_DI2_Pos)) /* Assigment of value for MASK_ERR_L_BNDRY_MATCH_DI2 in the CSI_INT_MSK_LINE register */
-#define CSI_INT_MSK_LINE_MASK_ERR_L_BNDRY_MATCH_DI3_Pos _UINT32_(3)                                          /* (CSI_INT_MSK_LINE) Error Matching Line Start with Line End for VC3 and DT3 Interrupt Mask Position */
-#define CSI_INT_MSK_LINE_MASK_ERR_L_BNDRY_MATCH_DI3_Msk (_UINT32_(0x1) << CSI_INT_MSK_LINE_MASK_ERR_L_BNDRY_MATCH_DI3_Pos) /* (CSI_INT_MSK_LINE) Error Matching Line Start with Line End for VC3 and DT3 Interrupt Mask Mask */
-#define CSI_INT_MSK_LINE_MASK_ERR_L_BNDRY_MATCH_DI3(value) (CSI_INT_MSK_LINE_MASK_ERR_L_BNDRY_MATCH_DI3_Msk & (_UINT32_(value) << CSI_INT_MSK_LINE_MASK_ERR_L_BNDRY_MATCH_DI3_Pos)) /* Assigment of value for MASK_ERR_L_BNDRY_MATCH_DI3 in the CSI_INT_MSK_LINE register */
-#define CSI_INT_MSK_LINE_MASK_ERR_L_BNDRY_MATCH_DI4_Pos _UINT32_(4)                                          /* (CSI_INT_MSK_LINE) Error Matching Line Start with Line End for VC4 and DT4 Interrupt Mask Position */
-#define CSI_INT_MSK_LINE_MASK_ERR_L_BNDRY_MATCH_DI4_Msk (_UINT32_(0x1) << CSI_INT_MSK_LINE_MASK_ERR_L_BNDRY_MATCH_DI4_Pos) /* (CSI_INT_MSK_LINE) Error Matching Line Start with Line End for VC4 and DT4 Interrupt Mask Mask */
-#define CSI_INT_MSK_LINE_MASK_ERR_L_BNDRY_MATCH_DI4(value) (CSI_INT_MSK_LINE_MASK_ERR_L_BNDRY_MATCH_DI4_Msk & (_UINT32_(value) << CSI_INT_MSK_LINE_MASK_ERR_L_BNDRY_MATCH_DI4_Pos)) /* Assigment of value for MASK_ERR_L_BNDRY_MATCH_DI4 in the CSI_INT_MSK_LINE register */
-#define CSI_INT_MSK_LINE_MASK_ERR_L_BNDRY_MATCH_DI5_Pos _UINT32_(5)                                          /* (CSI_INT_MSK_LINE) Error Matching Line Start with Line End for VC5 and DT5 Interrupt Mask Position */
-#define CSI_INT_MSK_LINE_MASK_ERR_L_BNDRY_MATCH_DI5_Msk (_UINT32_(0x1) << CSI_INT_MSK_LINE_MASK_ERR_L_BNDRY_MATCH_DI5_Pos) /* (CSI_INT_MSK_LINE) Error Matching Line Start with Line End for VC5 and DT5 Interrupt Mask Mask */
-#define CSI_INT_MSK_LINE_MASK_ERR_L_BNDRY_MATCH_DI5(value) (CSI_INT_MSK_LINE_MASK_ERR_L_BNDRY_MATCH_DI5_Msk & (_UINT32_(value) << CSI_INT_MSK_LINE_MASK_ERR_L_BNDRY_MATCH_DI5_Pos)) /* Assigment of value for MASK_ERR_L_BNDRY_MATCH_DI5 in the CSI_INT_MSK_LINE register */
-#define CSI_INT_MSK_LINE_MASK_ERR_L_BNDRY_MATCH_DI6_Pos _UINT32_(6)                                          /* (CSI_INT_MSK_LINE) Error Matching Line Start with Line End for VC6 and DT6 Interrupt Mask Position */
-#define CSI_INT_MSK_LINE_MASK_ERR_L_BNDRY_MATCH_DI6_Msk (_UINT32_(0x1) << CSI_INT_MSK_LINE_MASK_ERR_L_BNDRY_MATCH_DI6_Pos) /* (CSI_INT_MSK_LINE) Error Matching Line Start with Line End for VC6 and DT6 Interrupt Mask Mask */
-#define CSI_INT_MSK_LINE_MASK_ERR_L_BNDRY_MATCH_DI6(value) (CSI_INT_MSK_LINE_MASK_ERR_L_BNDRY_MATCH_DI6_Msk & (_UINT32_(value) << CSI_INT_MSK_LINE_MASK_ERR_L_BNDRY_MATCH_DI6_Pos)) /* Assigment of value for MASK_ERR_L_BNDRY_MATCH_DI6 in the CSI_INT_MSK_LINE register */
-#define CSI_INT_MSK_LINE_MASK_ERR_L_BNDRY_MATCH_DI7_Pos _UINT32_(7)                                          /* (CSI_INT_MSK_LINE) Error Matching Line Start with Line End for VC7 and DT7 Interrupt Mask Position */
-#define CSI_INT_MSK_LINE_MASK_ERR_L_BNDRY_MATCH_DI7_Msk (_UINT32_(0x1) << CSI_INT_MSK_LINE_MASK_ERR_L_BNDRY_MATCH_DI7_Pos) /* (CSI_INT_MSK_LINE) Error Matching Line Start with Line End for VC7 and DT7 Interrupt Mask Mask */
-#define CSI_INT_MSK_LINE_MASK_ERR_L_BNDRY_MATCH_DI7(value) (CSI_INT_MSK_LINE_MASK_ERR_L_BNDRY_MATCH_DI7_Msk & (_UINT32_(value) << CSI_INT_MSK_LINE_MASK_ERR_L_BNDRY_MATCH_DI7_Pos)) /* Assigment of value for MASK_ERR_L_BNDRY_MATCH_DI7 in the CSI_INT_MSK_LINE register */
-#define CSI_INT_MSK_LINE_MASK_ERR_L_SEQ_DI0_Pos _UINT32_(16)                                         /* (CSI_INT_MSK_LINE) Error in the Sequence of Lines for VC0 and DT0 Interrupt Mask Position */
-#define CSI_INT_MSK_LINE_MASK_ERR_L_SEQ_DI0_Msk (_UINT32_(0x1) << CSI_INT_MSK_LINE_MASK_ERR_L_SEQ_DI0_Pos) /* (CSI_INT_MSK_LINE) Error in the Sequence of Lines for VC0 and DT0 Interrupt Mask Mask */
-#define CSI_INT_MSK_LINE_MASK_ERR_L_SEQ_DI0(value) (CSI_INT_MSK_LINE_MASK_ERR_L_SEQ_DI0_Msk & (_UINT32_(value) << CSI_INT_MSK_LINE_MASK_ERR_L_SEQ_DI0_Pos)) /* Assigment of value for MASK_ERR_L_SEQ_DI0 in the CSI_INT_MSK_LINE register */
-#define CSI_INT_MSK_LINE_MASK_ERR_L_SEQ_DI1_Pos _UINT32_(17)                                         /* (CSI_INT_MSK_LINE) Error in the Sequence of Lines for VC1 and DT1 Interrupt Mask Position */
-#define CSI_INT_MSK_LINE_MASK_ERR_L_SEQ_DI1_Msk (_UINT32_(0x1) << CSI_INT_MSK_LINE_MASK_ERR_L_SEQ_DI1_Pos) /* (CSI_INT_MSK_LINE) Error in the Sequence of Lines for VC1 and DT1 Interrupt Mask Mask */
-#define CSI_INT_MSK_LINE_MASK_ERR_L_SEQ_DI1(value) (CSI_INT_MSK_LINE_MASK_ERR_L_SEQ_DI1_Msk & (_UINT32_(value) << CSI_INT_MSK_LINE_MASK_ERR_L_SEQ_DI1_Pos)) /* Assigment of value for MASK_ERR_L_SEQ_DI1 in the CSI_INT_MSK_LINE register */
-#define CSI_INT_MSK_LINE_MASK_ERR_L_SEQ_DI2_Pos _UINT32_(18)                                         /* (CSI_INT_MSK_LINE) Error in the Sequence of Lines for VC2 and DT2 Interrupt Mask Position */
-#define CSI_INT_MSK_LINE_MASK_ERR_L_SEQ_DI2_Msk (_UINT32_(0x1) << CSI_INT_MSK_LINE_MASK_ERR_L_SEQ_DI2_Pos) /* (CSI_INT_MSK_LINE) Error in the Sequence of Lines for VC2 and DT2 Interrupt Mask Mask */
-#define CSI_INT_MSK_LINE_MASK_ERR_L_SEQ_DI2(value) (CSI_INT_MSK_LINE_MASK_ERR_L_SEQ_DI2_Msk & (_UINT32_(value) << CSI_INT_MSK_LINE_MASK_ERR_L_SEQ_DI2_Pos)) /* Assigment of value for MASK_ERR_L_SEQ_DI2 in the CSI_INT_MSK_LINE register */
-#define CSI_INT_MSK_LINE_MASK_ERR_L_SEQ_DI3_Pos _UINT32_(19)                                         /* (CSI_INT_MSK_LINE) Error in the Sequence of Lines for VC3 and DT3 Interrupt Mask Position */
-#define CSI_INT_MSK_LINE_MASK_ERR_L_SEQ_DI3_Msk (_UINT32_(0x1) << CSI_INT_MSK_LINE_MASK_ERR_L_SEQ_DI3_Pos) /* (CSI_INT_MSK_LINE) Error in the Sequence of Lines for VC3 and DT3 Interrupt Mask Mask */
-#define CSI_INT_MSK_LINE_MASK_ERR_L_SEQ_DI3(value) (CSI_INT_MSK_LINE_MASK_ERR_L_SEQ_DI3_Msk & (_UINT32_(value) << CSI_INT_MSK_LINE_MASK_ERR_L_SEQ_DI3_Pos)) /* Assigment of value for MASK_ERR_L_SEQ_DI3 in the CSI_INT_MSK_LINE register */
-#define CSI_INT_MSK_LINE_MASK_ERR_L_SEQ_DI4_Pos _UINT32_(20)                                         /* (CSI_INT_MSK_LINE) Error in the Sequence of Lines for VC4 and DT4 Interrupt Mask Position */
-#define CSI_INT_MSK_LINE_MASK_ERR_L_SEQ_DI4_Msk (_UINT32_(0x1) << CSI_INT_MSK_LINE_MASK_ERR_L_SEQ_DI4_Pos) /* (CSI_INT_MSK_LINE) Error in the Sequence of Lines for VC4 and DT4 Interrupt Mask Mask */
-#define CSI_INT_MSK_LINE_MASK_ERR_L_SEQ_DI4(value) (CSI_INT_MSK_LINE_MASK_ERR_L_SEQ_DI4_Msk & (_UINT32_(value) << CSI_INT_MSK_LINE_MASK_ERR_L_SEQ_DI4_Pos)) /* Assigment of value for MASK_ERR_L_SEQ_DI4 in the CSI_INT_MSK_LINE register */
-#define CSI_INT_MSK_LINE_MASK_ERR_L_SEQ_DI5_Pos _UINT32_(21)                                         /* (CSI_INT_MSK_LINE) Error in the Sequence of Lines for VC5 and DT5 Interrupt Mask Position */
-#define CSI_INT_MSK_LINE_MASK_ERR_L_SEQ_DI5_Msk (_UINT32_(0x1) << CSI_INT_MSK_LINE_MASK_ERR_L_SEQ_DI5_Pos) /* (CSI_INT_MSK_LINE) Error in the Sequence of Lines for VC5 and DT5 Interrupt Mask Mask */
-#define CSI_INT_MSK_LINE_MASK_ERR_L_SEQ_DI5(value) (CSI_INT_MSK_LINE_MASK_ERR_L_SEQ_DI5_Msk & (_UINT32_(value) << CSI_INT_MSK_LINE_MASK_ERR_L_SEQ_DI5_Pos)) /* Assigment of value for MASK_ERR_L_SEQ_DI5 in the CSI_INT_MSK_LINE register */
-#define CSI_INT_MSK_LINE_MASK_ERR_L_SEQ_DI6_Pos _UINT32_(22)                                         /* (CSI_INT_MSK_LINE) Error in the Sequence of Lines for VC6 and DT6 Interrupt Mask Position */
-#define CSI_INT_MSK_LINE_MASK_ERR_L_SEQ_DI6_Msk (_UINT32_(0x1) << CSI_INT_MSK_LINE_MASK_ERR_L_SEQ_DI6_Pos) /* (CSI_INT_MSK_LINE) Error in the Sequence of Lines for VC6 and DT6 Interrupt Mask Mask */
-#define CSI_INT_MSK_LINE_MASK_ERR_L_SEQ_DI6(value) (CSI_INT_MSK_LINE_MASK_ERR_L_SEQ_DI6_Msk & (_UINT32_(value) << CSI_INT_MSK_LINE_MASK_ERR_L_SEQ_DI6_Pos)) /* Assigment of value for MASK_ERR_L_SEQ_DI6 in the CSI_INT_MSK_LINE register */
-#define CSI_INT_MSK_LINE_MASK_ERR_L_SEQ_DI7_Pos _UINT32_(23)                                         /* (CSI_INT_MSK_LINE) Error in the Sequence of Lines for VC7 and DT7 Interrupt Mask Position */
-#define CSI_INT_MSK_LINE_MASK_ERR_L_SEQ_DI7_Msk (_UINT32_(0x1) << CSI_INT_MSK_LINE_MASK_ERR_L_SEQ_DI7_Pos) /* (CSI_INT_MSK_LINE) Error in the Sequence of Lines for VC7 and DT7 Interrupt Mask Mask */
-#define CSI_INT_MSK_LINE_MASK_ERR_L_SEQ_DI7(value) (CSI_INT_MSK_LINE_MASK_ERR_L_SEQ_DI7_Msk & (_UINT32_(value) << CSI_INT_MSK_LINE_MASK_ERR_L_SEQ_DI7_Pos)) /* Assigment of value for MASK_ERR_L_SEQ_DI7 in the CSI_INT_MSK_LINE register */
-#define CSI_INT_MSK_LINE_Msk                  _UINT32_(0x00FF00FF)                                 /* (CSI_INT_MSK_LINE) Register Mask  */
-
-#define CSI_INT_MSK_LINE_MASK_ERR_L_BNDRY_MATCH_DI_Pos _UINT32_(0)                                          /* (CSI_INT_MSK_LINE Position) Error Matching Line Start with Line End for VCx and DTx Interrupt Mask */
-#define CSI_INT_MSK_LINE_MASK_ERR_L_BNDRY_MATCH_DI_Msk (_UINT32_(0xFF) << CSI_INT_MSK_LINE_MASK_ERR_L_BNDRY_MATCH_DI_Pos) /* (CSI_INT_MSK_LINE Mask) MASK_ERR_L_BNDRY_MATCH_DI */
-#define CSI_INT_MSK_LINE_MASK_ERR_L_BNDRY_MATCH_DI(value) (CSI_INT_MSK_LINE_MASK_ERR_L_BNDRY_MATCH_DI_Msk & (_UINT32_(value) << CSI_INT_MSK_LINE_MASK_ERR_L_BNDRY_MATCH_DI_Pos)) 
-#define CSI_INT_MSK_LINE_MASK_ERR_L_SEQ_DI_Pos _UINT32_(16)                                         /* (CSI_INT_MSK_LINE Position) Error in the Sequence of Lines for VC7 and DT7 Interrupt Mask */
-#define CSI_INT_MSK_LINE_MASK_ERR_L_SEQ_DI_Msk (_UINT32_(0xFF) << CSI_INT_MSK_LINE_MASK_ERR_L_SEQ_DI_Pos) /* (CSI_INT_MSK_LINE Mask) MASK_ERR_L_SEQ_DI */
-#define CSI_INT_MSK_LINE_MASK_ERR_L_SEQ_DI(value) (CSI_INT_MSK_LINE_MASK_ERR_L_SEQ_DI_Msk & (_UINT32_(value) << CSI_INT_MSK_LINE_MASK_ERR_L_SEQ_DI_Pos)) 
-
-/* -------- CSI_INT_FORCE_LINE : (CSI Offset: 0x138) (R/W 32) CSI Line Error Interrupt Force Register -------- */
-#define CSI_INT_FORCE_LINE_RESETVALUE         _UINT32_(0x00)                                       /*  (CSI_INT_FORCE_LINE) CSI Line Error Interrupt Force Register  Reset Value */
-
-#define CSI_INT_FORCE_LINE_FORCE_ERR_L_BNDRY_MATCH_DI0_Pos _UINT32_(0)                                          /* (CSI_INT_FORCE_LINE) Force Error Matching Line Start with Line End for VC0 and DT0 Interrupt Position */
-#define CSI_INT_FORCE_LINE_FORCE_ERR_L_BNDRY_MATCH_DI0_Msk (_UINT32_(0x1) << CSI_INT_FORCE_LINE_FORCE_ERR_L_BNDRY_MATCH_DI0_Pos) /* (CSI_INT_FORCE_LINE) Force Error Matching Line Start with Line End for VC0 and DT0 Interrupt Mask */
-#define CSI_INT_FORCE_LINE_FORCE_ERR_L_BNDRY_MATCH_DI0(value) (CSI_INT_FORCE_LINE_FORCE_ERR_L_BNDRY_MATCH_DI0_Msk & (_UINT32_(value) << CSI_INT_FORCE_LINE_FORCE_ERR_L_BNDRY_MATCH_DI0_Pos)) /* Assigment of value for FORCE_ERR_L_BNDRY_MATCH_DI0 in the CSI_INT_FORCE_LINE register */
-#define CSI_INT_FORCE_LINE_FORCE_ERR_L_BNDRY_MATCH_DI1_Pos _UINT32_(1)                                          /* (CSI_INT_FORCE_LINE) Force Error Matching Line Start with Line End for VC1 and DT1 Interrupt Position */
-#define CSI_INT_FORCE_LINE_FORCE_ERR_L_BNDRY_MATCH_DI1_Msk (_UINT32_(0x1) << CSI_INT_FORCE_LINE_FORCE_ERR_L_BNDRY_MATCH_DI1_Pos) /* (CSI_INT_FORCE_LINE) Force Error Matching Line Start with Line End for VC1 and DT1 Interrupt Mask */
-#define CSI_INT_FORCE_LINE_FORCE_ERR_L_BNDRY_MATCH_DI1(value) (CSI_INT_FORCE_LINE_FORCE_ERR_L_BNDRY_MATCH_DI1_Msk & (_UINT32_(value) << CSI_INT_FORCE_LINE_FORCE_ERR_L_BNDRY_MATCH_DI1_Pos)) /* Assigment of value for FORCE_ERR_L_BNDRY_MATCH_DI1 in the CSI_INT_FORCE_LINE register */
-#define CSI_INT_FORCE_LINE_FORCE_ERR_L_BNDRY_MATCH_DI2_Pos _UINT32_(2)                                          /* (CSI_INT_FORCE_LINE) Force Error Matching Line Start with Line End for VC2 and DT2 Interrupt Position */
-#define CSI_INT_FORCE_LINE_FORCE_ERR_L_BNDRY_MATCH_DI2_Msk (_UINT32_(0x1) << CSI_INT_FORCE_LINE_FORCE_ERR_L_BNDRY_MATCH_DI2_Pos) /* (CSI_INT_FORCE_LINE) Force Error Matching Line Start with Line End for VC2 and DT2 Interrupt Mask */
-#define CSI_INT_FORCE_LINE_FORCE_ERR_L_BNDRY_MATCH_DI2(value) (CSI_INT_FORCE_LINE_FORCE_ERR_L_BNDRY_MATCH_DI2_Msk & (_UINT32_(value) << CSI_INT_FORCE_LINE_FORCE_ERR_L_BNDRY_MATCH_DI2_Pos)) /* Assigment of value for FORCE_ERR_L_BNDRY_MATCH_DI2 in the CSI_INT_FORCE_LINE register */
-#define CSI_INT_FORCE_LINE_FORCE_ERR_L_BNDRY_MATCH_DI3_Pos _UINT32_(3)                                          /* (CSI_INT_FORCE_LINE) Force Error Matching Line Start with Line End for VC3 and DT3 Interrupt Position */
-#define CSI_INT_FORCE_LINE_FORCE_ERR_L_BNDRY_MATCH_DI3_Msk (_UINT32_(0x1) << CSI_INT_FORCE_LINE_FORCE_ERR_L_BNDRY_MATCH_DI3_Pos) /* (CSI_INT_FORCE_LINE) Force Error Matching Line Start with Line End for VC3 and DT3 Interrupt Mask */
-#define CSI_INT_FORCE_LINE_FORCE_ERR_L_BNDRY_MATCH_DI3(value) (CSI_INT_FORCE_LINE_FORCE_ERR_L_BNDRY_MATCH_DI3_Msk & (_UINT32_(value) << CSI_INT_FORCE_LINE_FORCE_ERR_L_BNDRY_MATCH_DI3_Pos)) /* Assigment of value for FORCE_ERR_L_BNDRY_MATCH_DI3 in the CSI_INT_FORCE_LINE register */
-#define CSI_INT_FORCE_LINE_FORCE_ERR_L_BNDRY_MATCH_DI4_Pos _UINT32_(4)                                          /* (CSI_INT_FORCE_LINE) Force Error Matching Line Start with Line End for VC4 and DT4 Interrupt Position */
-#define CSI_INT_FORCE_LINE_FORCE_ERR_L_BNDRY_MATCH_DI4_Msk (_UINT32_(0x1) << CSI_INT_FORCE_LINE_FORCE_ERR_L_BNDRY_MATCH_DI4_Pos) /* (CSI_INT_FORCE_LINE) Force Error Matching Line Start with Line End for VC4 and DT4 Interrupt Mask */
-#define CSI_INT_FORCE_LINE_FORCE_ERR_L_BNDRY_MATCH_DI4(value) (CSI_INT_FORCE_LINE_FORCE_ERR_L_BNDRY_MATCH_DI4_Msk & (_UINT32_(value) << CSI_INT_FORCE_LINE_FORCE_ERR_L_BNDRY_MATCH_DI4_Pos)) /* Assigment of value for FORCE_ERR_L_BNDRY_MATCH_DI4 in the CSI_INT_FORCE_LINE register */
-#define CSI_INT_FORCE_LINE_FORCE_ERR_L_BNDRY_MATCH_DI5_Pos _UINT32_(5)                                          /* (CSI_INT_FORCE_LINE) Force Error Matching Line Start with Line End for VC5 and DT5 Interrupt Position */
-#define CSI_INT_FORCE_LINE_FORCE_ERR_L_BNDRY_MATCH_DI5_Msk (_UINT32_(0x1) << CSI_INT_FORCE_LINE_FORCE_ERR_L_BNDRY_MATCH_DI5_Pos) /* (CSI_INT_FORCE_LINE) Force Error Matching Line Start with Line End for VC5 and DT5 Interrupt Mask */
-#define CSI_INT_FORCE_LINE_FORCE_ERR_L_BNDRY_MATCH_DI5(value) (CSI_INT_FORCE_LINE_FORCE_ERR_L_BNDRY_MATCH_DI5_Msk & (_UINT32_(value) << CSI_INT_FORCE_LINE_FORCE_ERR_L_BNDRY_MATCH_DI5_Pos)) /* Assigment of value for FORCE_ERR_L_BNDRY_MATCH_DI5 in the CSI_INT_FORCE_LINE register */
-#define CSI_INT_FORCE_LINE_FORCE_ERR_L_BNDRY_MATCH_DI6_Pos _UINT32_(6)                                          /* (CSI_INT_FORCE_LINE) Force Error Matching Line Start with Line End for VC6 and DT6 Interrupt Position */
-#define CSI_INT_FORCE_LINE_FORCE_ERR_L_BNDRY_MATCH_DI6_Msk (_UINT32_(0x1) << CSI_INT_FORCE_LINE_FORCE_ERR_L_BNDRY_MATCH_DI6_Pos) /* (CSI_INT_FORCE_LINE) Force Error Matching Line Start with Line End for VC6 and DT6 Interrupt Mask */
-#define CSI_INT_FORCE_LINE_FORCE_ERR_L_BNDRY_MATCH_DI6(value) (CSI_INT_FORCE_LINE_FORCE_ERR_L_BNDRY_MATCH_DI6_Msk & (_UINT32_(value) << CSI_INT_FORCE_LINE_FORCE_ERR_L_BNDRY_MATCH_DI6_Pos)) /* Assigment of value for FORCE_ERR_L_BNDRY_MATCH_DI6 in the CSI_INT_FORCE_LINE register */
-#define CSI_INT_FORCE_LINE_FORCE_ERR_L_BNDRY_MATCH_DI7_Pos _UINT32_(7)                                          /* (CSI_INT_FORCE_LINE) Force Error Matching Line Start with Line End for VC7 and DT7 Interrupt Position */
-#define CSI_INT_FORCE_LINE_FORCE_ERR_L_BNDRY_MATCH_DI7_Msk (_UINT32_(0x1) << CSI_INT_FORCE_LINE_FORCE_ERR_L_BNDRY_MATCH_DI7_Pos) /* (CSI_INT_FORCE_LINE) Force Error Matching Line Start with Line End for VC7 and DT7 Interrupt Mask */
-#define CSI_INT_FORCE_LINE_FORCE_ERR_L_BNDRY_MATCH_DI7(value) (CSI_INT_FORCE_LINE_FORCE_ERR_L_BNDRY_MATCH_DI7_Msk & (_UINT32_(value) << CSI_INT_FORCE_LINE_FORCE_ERR_L_BNDRY_MATCH_DI7_Pos)) /* Assigment of value for FORCE_ERR_L_BNDRY_MATCH_DI7 in the CSI_INT_FORCE_LINE register */
-#define CSI_INT_FORCE_LINE_FORCE_ERR_L_SEQ_DI0_Pos _UINT32_(16)                                         /* (CSI_INT_FORCE_LINE) Force Error in the Sequence of Lines for VC0 and DT0 Interrupt Position */
-#define CSI_INT_FORCE_LINE_FORCE_ERR_L_SEQ_DI0_Msk (_UINT32_(0x1) << CSI_INT_FORCE_LINE_FORCE_ERR_L_SEQ_DI0_Pos) /* (CSI_INT_FORCE_LINE) Force Error in the Sequence of Lines for VC0 and DT0 Interrupt Mask */
-#define CSI_INT_FORCE_LINE_FORCE_ERR_L_SEQ_DI0(value) (CSI_INT_FORCE_LINE_FORCE_ERR_L_SEQ_DI0_Msk & (_UINT32_(value) << CSI_INT_FORCE_LINE_FORCE_ERR_L_SEQ_DI0_Pos)) /* Assigment of value for FORCE_ERR_L_SEQ_DI0 in the CSI_INT_FORCE_LINE register */
-#define CSI_INT_FORCE_LINE_FORCE_ERR_L_SEQ_DI1_Pos _UINT32_(17)                                         /* (CSI_INT_FORCE_LINE) Force Error in the Sequence of Lines for VC1 and DT1 Interrupt Position */
-#define CSI_INT_FORCE_LINE_FORCE_ERR_L_SEQ_DI1_Msk (_UINT32_(0x1) << CSI_INT_FORCE_LINE_FORCE_ERR_L_SEQ_DI1_Pos) /* (CSI_INT_FORCE_LINE) Force Error in the Sequence of Lines for VC1 and DT1 Interrupt Mask */
-#define CSI_INT_FORCE_LINE_FORCE_ERR_L_SEQ_DI1(value) (CSI_INT_FORCE_LINE_FORCE_ERR_L_SEQ_DI1_Msk & (_UINT32_(value) << CSI_INT_FORCE_LINE_FORCE_ERR_L_SEQ_DI1_Pos)) /* Assigment of value for FORCE_ERR_L_SEQ_DI1 in the CSI_INT_FORCE_LINE register */
-#define CSI_INT_FORCE_LINE_FORCE_ERR_L_SEQ_DI2_Pos _UINT32_(18)                                         /* (CSI_INT_FORCE_LINE) Force Error in the Sequence of Lines for VC2 and DT2 Interrupt Position */
-#define CSI_INT_FORCE_LINE_FORCE_ERR_L_SEQ_DI2_Msk (_UINT32_(0x1) << CSI_INT_FORCE_LINE_FORCE_ERR_L_SEQ_DI2_Pos) /* (CSI_INT_FORCE_LINE) Force Error in the Sequence of Lines for VC2 and DT2 Interrupt Mask */
-#define CSI_INT_FORCE_LINE_FORCE_ERR_L_SEQ_DI2(value) (CSI_INT_FORCE_LINE_FORCE_ERR_L_SEQ_DI2_Msk & (_UINT32_(value) << CSI_INT_FORCE_LINE_FORCE_ERR_L_SEQ_DI2_Pos)) /* Assigment of value for FORCE_ERR_L_SEQ_DI2 in the CSI_INT_FORCE_LINE register */
-#define CSI_INT_FORCE_LINE_FORCE_ERR_L_SEQ_DI3_Pos _UINT32_(19)                                         /* (CSI_INT_FORCE_LINE) Force Error in the Sequence of Lines for VC3 and DT3 Interrupt Position */
-#define CSI_INT_FORCE_LINE_FORCE_ERR_L_SEQ_DI3_Msk (_UINT32_(0x1) << CSI_INT_FORCE_LINE_FORCE_ERR_L_SEQ_DI3_Pos) /* (CSI_INT_FORCE_LINE) Force Error in the Sequence of Lines for VC3 and DT3 Interrupt Mask */
-#define CSI_INT_FORCE_LINE_FORCE_ERR_L_SEQ_DI3(value) (CSI_INT_FORCE_LINE_FORCE_ERR_L_SEQ_DI3_Msk & (_UINT32_(value) << CSI_INT_FORCE_LINE_FORCE_ERR_L_SEQ_DI3_Pos)) /* Assigment of value for FORCE_ERR_L_SEQ_DI3 in the CSI_INT_FORCE_LINE register */
-#define CSI_INT_FORCE_LINE_FORCE_ERR_L_SEQ_DI4_Pos _UINT32_(20)                                         /* (CSI_INT_FORCE_LINE) Force Error in the Sequence of Lines for VC4 and DT4 Interrupt Position */
-#define CSI_INT_FORCE_LINE_FORCE_ERR_L_SEQ_DI4_Msk (_UINT32_(0x1) << CSI_INT_FORCE_LINE_FORCE_ERR_L_SEQ_DI4_Pos) /* (CSI_INT_FORCE_LINE) Force Error in the Sequence of Lines for VC4 and DT4 Interrupt Mask */
-#define CSI_INT_FORCE_LINE_FORCE_ERR_L_SEQ_DI4(value) (CSI_INT_FORCE_LINE_FORCE_ERR_L_SEQ_DI4_Msk & (_UINT32_(value) << CSI_INT_FORCE_LINE_FORCE_ERR_L_SEQ_DI4_Pos)) /* Assigment of value for FORCE_ERR_L_SEQ_DI4 in the CSI_INT_FORCE_LINE register */
-#define CSI_INT_FORCE_LINE_FORCE_ERR_L_SEQ_DI5_Pos _UINT32_(21)                                         /* (CSI_INT_FORCE_LINE) Force Error in the Sequence of Lines for VC5 and DT5 Interrupt Position */
-#define CSI_INT_FORCE_LINE_FORCE_ERR_L_SEQ_DI5_Msk (_UINT32_(0x1) << CSI_INT_FORCE_LINE_FORCE_ERR_L_SEQ_DI5_Pos) /* (CSI_INT_FORCE_LINE) Force Error in the Sequence of Lines for VC5 and DT5 Interrupt Mask */
-#define CSI_INT_FORCE_LINE_FORCE_ERR_L_SEQ_DI5(value) (CSI_INT_FORCE_LINE_FORCE_ERR_L_SEQ_DI5_Msk & (_UINT32_(value) << CSI_INT_FORCE_LINE_FORCE_ERR_L_SEQ_DI5_Pos)) /* Assigment of value for FORCE_ERR_L_SEQ_DI5 in the CSI_INT_FORCE_LINE register */
-#define CSI_INT_FORCE_LINE_FORCE_ERR_L_SEQ_DI6_Pos _UINT32_(22)                                         /* (CSI_INT_FORCE_LINE) Force Error in the Sequence of Lines for VC6 and DT6 Interrupt Position */
-#define CSI_INT_FORCE_LINE_FORCE_ERR_L_SEQ_DI6_Msk (_UINT32_(0x1) << CSI_INT_FORCE_LINE_FORCE_ERR_L_SEQ_DI6_Pos) /* (CSI_INT_FORCE_LINE) Force Error in the Sequence of Lines for VC6 and DT6 Interrupt Mask */
-#define CSI_INT_FORCE_LINE_FORCE_ERR_L_SEQ_DI6(value) (CSI_INT_FORCE_LINE_FORCE_ERR_L_SEQ_DI6_Msk & (_UINT32_(value) << CSI_INT_FORCE_LINE_FORCE_ERR_L_SEQ_DI6_Pos)) /* Assigment of value for FORCE_ERR_L_SEQ_DI6 in the CSI_INT_FORCE_LINE register */
-#define CSI_INT_FORCE_LINE_FORCE_ERR_L_SEQ_DI7_Pos _UINT32_(23)                                         /* (CSI_INT_FORCE_LINE) Force Error in the Sequence of Lines for VC7 and DT7 Interrupt Position */
-#define CSI_INT_FORCE_LINE_FORCE_ERR_L_SEQ_DI7_Msk (_UINT32_(0x1) << CSI_INT_FORCE_LINE_FORCE_ERR_L_SEQ_DI7_Pos) /* (CSI_INT_FORCE_LINE) Force Error in the Sequence of Lines for VC7 and DT7 Interrupt Mask */
-#define CSI_INT_FORCE_LINE_FORCE_ERR_L_SEQ_DI7(value) (CSI_INT_FORCE_LINE_FORCE_ERR_L_SEQ_DI7_Msk & (_UINT32_(value) << CSI_INT_FORCE_LINE_FORCE_ERR_L_SEQ_DI7_Pos)) /* Assigment of value for FORCE_ERR_L_SEQ_DI7 in the CSI_INT_FORCE_LINE register */
-#define CSI_INT_FORCE_LINE_Msk                _UINT32_(0x00FF00FF)                                 /* (CSI_INT_FORCE_LINE) Register Mask  */
-
-#define CSI_INT_FORCE_LINE_FORCE_ERR_L_BNDRY_MATCH_DI_Pos _UINT32_(0)                                          /* (CSI_INT_FORCE_LINE Position) Force Error Matching Line Start with Line End for VCx and DTx Interrupt */
-#define CSI_INT_FORCE_LINE_FORCE_ERR_L_BNDRY_MATCH_DI_Msk (_UINT32_(0xFF) << CSI_INT_FORCE_LINE_FORCE_ERR_L_BNDRY_MATCH_DI_Pos) /* (CSI_INT_FORCE_LINE Mask) FORCE_ERR_L_BNDRY_MATCH_DI */
-#define CSI_INT_FORCE_LINE_FORCE_ERR_L_BNDRY_MATCH_DI(value) (CSI_INT_FORCE_LINE_FORCE_ERR_L_BNDRY_MATCH_DI_Msk & (_UINT32_(value) << CSI_INT_FORCE_LINE_FORCE_ERR_L_BNDRY_MATCH_DI_Pos)) 
-#define CSI_INT_FORCE_LINE_FORCE_ERR_L_SEQ_DI_Pos _UINT32_(16)                                         /* (CSI_INT_FORCE_LINE Position) Force Error in the Sequence of Lines for VC7 and DT7 Interrupt */
-#define CSI_INT_FORCE_LINE_FORCE_ERR_L_SEQ_DI_Msk (_UINT32_(0xFF) << CSI_INT_FORCE_LINE_FORCE_ERR_L_SEQ_DI_Pos) /* (CSI_INT_FORCE_LINE Mask) FORCE_ERR_L_SEQ_DI */
-#define CSI_INT_FORCE_LINE_FORCE_ERR_L_SEQ_DI(value) (CSI_INT_FORCE_LINE_FORCE_ERR_L_SEQ_DI_Msk & (_UINT32_(value) << CSI_INT_FORCE_LINE_FORCE_ERR_L_SEQ_DI_Pos)) 
-
 /* -------- CSI_SCRAMBLING : (CSI Offset: 0x300) ( R/ 32) CSI Descrambler Configuration Register -------- */
 #define CSI_SCRAMBLING_RESETVALUE             _UINT32_(0x00)                                       /*  (CSI_SCRAMBLING) CSI Descrambler Configuration Register  Reset Value */
 
@@ -1066,8 +816,6 @@
 #define CSI_N_LANES_REG_OFST           _UINT32_(0x04)      /* (CSI_N_LANES) CSI Lane Configuration Register Offset */
 #define CSI_CSI2_RESETN_REG_OFST       _UINT32_(0x08)      /* (CSI_CSI2_RESETN) CSI Reset Control Register Offset */
 #define CSI_INT_ST_MAIN_REG_OFST       _UINT32_(0x0C)      /* (CSI_INT_ST_MAIN) CSI Main Interrupt Status Register Offset */
-#define CSI_DATA_IDS_1_REG_OFST        _UINT32_(0x10)      /* (CSI_DATA_IDS_1) CSI Data Identifier Register 1 Offset */
-#define CSI_DATA_IDS_2_REG_OFST        _UINT32_(0x14)      /* (CSI_DATA_IDS_2) CSI Data Identifier Register 2 Offset */
 #define CSI_PHY_SHUTDOWNZ_REG_OFST     _UINT32_(0x40)      /* (CSI_PHY_SHUTDOWNZ) CSI D-PHY Shutdown Register Offset */
 #define CSI_DPHY_RSTZ_REG_OFST         _UINT32_(0x44)      /* (CSI_DPHY_RSTZ) CSI D-PHY Reset Register Offset */
 #define CSI_PHY_RX_REG_OFST            _UINT32_(0x48)      /* (CSI_PHY_RX) CSI D-PHY Receive Status Register Offset */
@@ -1090,9 +838,6 @@
 #define CSI_INT_ST_PKT_REG_OFST        _UINT32_(0x120)     /* (CSI_INT_ST_PKT) CSI Packet Interrupt Status Register Offset */
 #define CSI_INT_MSK_PKT_REG_OFST       _UINT32_(0x124)     /* (CSI_INT_MSK_PKT) CSI Packet Interrupt Mask Register Offset */
 #define CSI_INT_FORCE_PKT_REG_OFST     _UINT32_(0x128)     /* (CSI_INT_FORCE_PKT) CSI Packet Interrupt Force Register Offset */
-#define CSI_INT_ST_LINE_REG_OFST       _UINT32_(0x130)     /* (CSI_INT_ST_LINE) CSI Line Error Interrupt Status Register Offset */
-#define CSI_INT_MSK_LINE_REG_OFST      _UINT32_(0x134)     /* (CSI_INT_MSK_LINE) CSI Line Error Interrupt Mask Register Offset */
-#define CSI_INT_FORCE_LINE_REG_OFST    _UINT32_(0x138)     /* (CSI_INT_FORCE_LINE) CSI Line Error Interrupt Force Register Offset */
 #define CSI_SCRAMBLING_REG_OFST        _UINT32_(0x300)     /* (CSI_SCRAMBLING) CSI Descrambler Configuration Register Offset */
 #define CSI_SCRAMBLING_SEED0_REG_OFST  _UINT32_(0x304)     /* (CSI_SCRAMBLING_SEED0) CSI Lane 0 Scrambling Seed Register Offset */
 #define CSI_SCRAMBLING_SEED1_REG_OFST  _UINT32_(0x308)     /* (CSI_SCRAMBLING_SEED1) CSI Lane 1 Scrambling Seed Register Offset */
@@ -1107,9 +852,7 @@ typedef struct
   __IO  uint32_t                       CSI_N_LANES;        /**< Offset: 0x04 (R/W  32) CSI Lane Configuration Register */
   __IO  uint32_t                       CSI_CSI2_RESETN;    /**< Offset: 0x08 (R/W  32) CSI Reset Control Register */
   __I   uint32_t                       CSI_INT_ST_MAIN;    /**< Offset: 0x0C (R/   32) CSI Main Interrupt Status Register */
-  __IO  uint32_t                       CSI_DATA_IDS_1;     /**< Offset: 0x10 (R/W  32) CSI Data Identifier Register 1 */
-  __IO  uint32_t                       CSI_DATA_IDS_2;     /**< Offset: 0x14 (R/W  32) CSI Data Identifier Register 2 */
-  __I   uint8_t                        Reserved2[0x28];
+  __I   uint8_t                        Reserved2[0x30];
   __IO  uint32_t                       CSI_PHY_SHUTDOWNZ;  /**< Offset: 0x40 (R/W  32) CSI D-PHY Shutdown Register */
   __IO  uint32_t                       CSI_DPHY_RSTZ;      /**< Offset: 0x44 (R/W  32) CSI D-PHY Reset Register */
   __I   uint32_t                       CSI_PHY_RX;         /**< Offset: 0x48 (R/   32) CSI D-PHY Receive Status Register */
@@ -1138,11 +881,7 @@ typedef struct
   __I   uint32_t                       CSI_INT_ST_PKT;     /**< Offset: 0x120 (R/   32) CSI Packet Interrupt Status Register */
   __IO  uint32_t                       CSI_INT_MSK_PKT;    /**< Offset: 0x124 (R/W  32) CSI Packet Interrupt Mask Register */
   __IO  uint32_t                       CSI_INT_FORCE_PKT;  /**< Offset: 0x128 (R/W  32) CSI Packet Interrupt Force Register */
-  __I   uint8_t                        Reserved9[0x04];
-  __I   uint32_t                       CSI_INT_ST_LINE;    /**< Offset: 0x130 (R/   32) CSI Line Error Interrupt Status Register */
-  __IO  uint32_t                       CSI_INT_MSK_LINE;   /**< Offset: 0x134 (R/W  32) CSI Line Error Interrupt Mask Register */
-  __IO  uint32_t                       CSI_INT_FORCE_LINE; /**< Offset: 0x138 (R/W  32) CSI Line Error Interrupt Force Register */
-  __I   uint8_t                        Reserved10[0x1C4];
+  __I   uint8_t                        Reserved9[0x1D4];
   __I   uint32_t                       CSI_SCRAMBLING;     /**< Offset: 0x300 (R/   32) CSI Descrambler Configuration Register */
   __IO  uint32_t                       CSI_SCRAMBLING_SEED0; /**< Offset: 0x304 (R/W  32) CSI Lane 0 Scrambling Seed Register */
   __IO  uint32_t                       CSI_SCRAMBLING_SEED1; /**< Offset: 0x308 (R/W  32) CSI Lane 1 Scrambling Seed Register */

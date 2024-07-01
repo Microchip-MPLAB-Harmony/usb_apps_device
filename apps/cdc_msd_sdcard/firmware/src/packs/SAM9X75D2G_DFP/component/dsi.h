@@ -1,26 +1,23 @@
 /*
  * Component description for DSI
  *
- * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
  *
- * Subject to your compliance with these terms, you may use Microchip software and any derivatives
- * exclusively with Microchip products. It is your responsibility to comply with third party license
- * terms applicable to your use of third party software (including open source software) that may
- * accompany Microchip software.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY,
- * APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND
- * FITNESS FOR A PARTICULAR PURPOSE.
+ *   http://www.apache.org/licenses/LICENSE-2.0
  *
- * IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, INCIDENTAL OR CONSEQUENTIAL
- * LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF
- * MICROCHIP HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO THE FULLEST EXTENT
- * ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT
- * EXCEED THE AMOUNT OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  *
  */
 
-/* file generated from device description version 2023-01-20T08:33:42Z */
+/* file generated from device description file (ATDF) version 2024-04-05T08:36:56Z */
 #ifndef _SAM9X7_DSI_COMPONENT_H_
 #define _SAM9X7_DSI_COMPONENT_H_
 
@@ -174,7 +171,14 @@
 #define   DSI_PCKHDL_CFG_CRC_RX_EN_1_Val      _UINT32_(0x1)                                        /* (DSI_PCKHDL_CFG) Enables the CRC reception and error reporting.  */
 #define DSI_PCKHDL_CFG_CRC_RX_EN_0            (DSI_PCKHDL_CFG_CRC_RX_EN_0_Val << DSI_PCKHDL_CFG_CRC_RX_EN_Pos) /* (DSI_PCKHDL_CFG) Disables the CRC reception and error reporting. Position  */
 #define DSI_PCKHDL_CFG_CRC_RX_EN_1            (DSI_PCKHDL_CFG_CRC_RX_EN_1_Val << DSI_PCKHDL_CFG_CRC_RX_EN_Pos) /* (DSI_PCKHDL_CFG) Enables the CRC reception and error reporting. Position  */
-#define DSI_PCKHDL_CFG_Msk                    _UINT32_(0x0000001F)                                 /* (DSI_PCKHDL_CFG) Register Mask  */
+#define DSI_PCKHDL_CFG_EOTP_TX_LP_EN_Pos      _UINT32_(5)                                          /* (DSI_PCKHDL_CFG) End Of Transmission Packet Low Power Enable Position */
+#define DSI_PCKHDL_CFG_EOTP_TX_LP_EN_Msk      (_UINT32_(0x1) << DSI_PCKHDL_CFG_EOTP_TX_LP_EN_Pos)  /* (DSI_PCKHDL_CFG) End Of Transmission Packet Low Power Enable Mask */
+#define DSI_PCKHDL_CFG_EOTP_TX_LP_EN(value)   (DSI_PCKHDL_CFG_EOTP_TX_LP_EN_Msk & (_UINT32_(value) << DSI_PCKHDL_CFG_EOTP_TX_LP_EN_Pos)) /* Assigment of value for EOTP_TX_LP_EN in the DSI_PCKHDL_CFG register */
+#define   DSI_PCKHDL_CFG_EOTP_TX_LP_EN_0_Val  _UINT32_(0x0)                                        /* (DSI_PCKHDL_CFG) Disables the EoTp transmission in low power.  */
+#define   DSI_PCKHDL_CFG_EOTP_TX_LP_EN_1_Val  _UINT32_(0x1)                                        /* (DSI_PCKHDL_CFG) Enables the EoTp transmission in low power.  */
+#define DSI_PCKHDL_CFG_EOTP_TX_LP_EN_0        (DSI_PCKHDL_CFG_EOTP_TX_LP_EN_0_Val << DSI_PCKHDL_CFG_EOTP_TX_LP_EN_Pos) /* (DSI_PCKHDL_CFG) Disables the EoTp transmission in low power. Position  */
+#define DSI_PCKHDL_CFG_EOTP_TX_LP_EN_1        (DSI_PCKHDL_CFG_EOTP_TX_LP_EN_1_Val << DSI_PCKHDL_CFG_EOTP_TX_LP_EN_Pos) /* (DSI_PCKHDL_CFG) Enables the EoTp transmission in low power. Position  */
+#define DSI_PCKHDL_CFG_Msk                    _UINT32_(0x0000003F)                                 /* (DSI_PCKHDL_CFG) Register Mask  */
 
 
 /* -------- DSI_GEN_VCID : (DSI Offset: 0x30) (R/W 32) Read Generic Virtual Channel ID Configuration Register -------- */
@@ -183,11 +187,17 @@
 #define DSI_GEN_VCID_GEN_VCID_RX_Pos          _UINT32_(0)                                          /* (DSI_GEN_VCID) Generic Reception Virtual Channel Identifier Position */
 #define DSI_GEN_VCID_GEN_VCID_RX_Msk          (_UINT32_(0x3) << DSI_GEN_VCID_GEN_VCID_RX_Pos)      /* (DSI_GEN_VCID) Generic Reception Virtual Channel Identifier Mask */
 #define DSI_GEN_VCID_GEN_VCID_RX(value)       (DSI_GEN_VCID_GEN_VCID_RX_Msk & (_UINT32_(value) << DSI_GEN_VCID_GEN_VCID_RX_Pos)) /* Assigment of value for GEN_VCID_RX in the DSI_GEN_VCID register */
-#define DSI_GEN_VCID_Msk                      _UINT32_(0x00000003)                                 /* (DSI_GEN_VCID) Register Mask  */
+#define DSI_GEN_VCID_GEN_VCID_TEAR_AUTO_Pos   _UINT32_(8)                                          /* (DSI_GEN_VCID) Generic Tearing Effect Virtual Channel Identifier Position */
+#define DSI_GEN_VCID_GEN_VCID_TEAR_AUTO_Msk   (_UINT32_(0x3) << DSI_GEN_VCID_GEN_VCID_TEAR_AUTO_Pos) /* (DSI_GEN_VCID) Generic Tearing Effect Virtual Channel Identifier Mask */
+#define DSI_GEN_VCID_GEN_VCID_TEAR_AUTO(value) (DSI_GEN_VCID_GEN_VCID_TEAR_AUTO_Msk & (_UINT32_(value) << DSI_GEN_VCID_GEN_VCID_TEAR_AUTO_Pos)) /* Assigment of value for GEN_VCID_TEAR_AUTO in the DSI_GEN_VCID register */
+#define DSI_GEN_VCID_GEN_VCID_TX_AUTO_Pos     _UINT32_(16)                                         /* (DSI_GEN_VCID) Generic Transmission Virtual Channel Identifier Position */
+#define DSI_GEN_VCID_GEN_VCID_TX_AUTO_Msk     (_UINT32_(0x3) << DSI_GEN_VCID_GEN_VCID_TX_AUTO_Pos) /* (DSI_GEN_VCID) Generic Transmission Virtual Channel Identifier Mask */
+#define DSI_GEN_VCID_GEN_VCID_TX_AUTO(value)  (DSI_GEN_VCID_GEN_VCID_TX_AUTO_Msk & (_UINT32_(value) << DSI_GEN_VCID_GEN_VCID_TX_AUTO_Pos)) /* Assigment of value for GEN_VCID_TX_AUTO in the DSI_GEN_VCID register */
+#define DSI_GEN_VCID_Msk                      _UINT32_(0x00030303)                                 /* (DSI_GEN_VCID) Register Mask  */
 
 
 /* -------- DSI_MODE_CFG : (DSI Offset: 0x34) (R/W 32) Mode of Operation Configuration Register -------- */
-#define DSI_MODE_CFG_RESETVALUE               _UINT32_(0x00)                                       /*  (DSI_MODE_CFG) Mode of Operation Configuration Register  Reset Value */
+#define DSI_MODE_CFG_RESETVALUE               _UINT32_(0x01)                                       /*  (DSI_MODE_CFG) Mode of Operation Configuration Register  Reset Value */
 
 #define DSI_MODE_CFG_CMD_VIDEO_MODE_Pos       _UINT32_(0)                                          /* (DSI_MODE_CFG) Command/Video Mode Position */
 #define DSI_MODE_CFG_CMD_VIDEO_MODE_Msk       (_UINT32_(0x1) << DSI_MODE_CFG_CMD_VIDEO_MODE_Pos)   /* (DSI_MODE_CFG) Command/Video Mode Mask */
@@ -524,7 +534,7 @@
 
 
 /* -------- DSI_CMD_PKT_STATUS : (DSI Offset: 0x74) ( R/ 32) Command Packet Status Register -------- */
-#define DSI_CMD_PKT_STATUS_RESETVALUE         _UINT32_(0x00)                                       /*  (DSI_CMD_PKT_STATUS) Command Packet Status Register  Reset Value */
+#define DSI_CMD_PKT_STATUS_RESETVALUE         _UINT32_(0x50015)                                    /*  (DSI_CMD_PKT_STATUS) Command Packet Status Register  Reset Value */
 
 #define DSI_CMD_PKT_STATUS_GEN_CMD_EMPTY_Pos  _UINT32_(0)                                          /* (DSI_CMD_PKT_STATUS) Generic Interface Command FIFO Empty Position */
 #define DSI_CMD_PKT_STATUS_GEN_CMD_EMPTY_Msk  (_UINT32_(0x1) << DSI_CMD_PKT_STATUS_GEN_CMD_EMPTY_Pos) /* (DSI_CMD_PKT_STATUS) Generic Interface Command FIFO Empty Mask */
@@ -741,7 +751,7 @@
 
 
 /* -------- DSI_DPHY_IF_CFG : (DSI Offset: 0xA4) (R/W 32) D-PHY Interface Configuration Register -------- */
-#define DSI_DPHY_IF_CFG_RESETVALUE            _UINT32_(0x00)                                       /*  (DSI_DPHY_IF_CFG) D-PHY Interface Configuration Register  Reset Value */
+#define DSI_DPHY_IF_CFG_RESETVALUE            _UINT32_(0x03)                                       /*  (DSI_DPHY_IF_CFG) D-PHY Interface Configuration Register  Reset Value */
 
 #define DSI_DPHY_IF_CFG_N_LANES_Pos           _UINT32_(0)                                          /* (DSI_DPHY_IF_CFG) Number of Active Data Lanes Position */
 #define DSI_DPHY_IF_CFG_N_LANES_Msk           (_UINT32_(0x3) << DSI_DPHY_IF_CFG_N_LANES_Pos)       /* (DSI_DPHY_IF_CFG) Number of Active Data Lanes Mask */
@@ -804,8 +814,6 @@
 
 
 /* -------- DSI_DPHY_STATUS : (DSI Offset: 0xB0) ( R/ 32) D-PHY Status Register -------- */
-#define DSI_DPHY_STATUS_RESETVALUE            _UINT32_(0x00)                                       /*  (DSI_DPHY_STATUS) D-PHY Status Register  Reset Value */
-
 #define DSI_DPHY_STATUS_PHY_LOCK_Pos          _UINT32_(0)                                          /* (DSI_DPHY_STATUS) D-PHY Lock Status Position */
 #define DSI_DPHY_STATUS_PHY_LOCK_Msk          (_UINT32_(0x1) << DSI_DPHY_STATUS_PHY_LOCK_Pos)      /* (DSI_DPHY_STATUS) D-PHY Lock Status Mask */
 #define DSI_DPHY_STATUS_PHY_LOCK(value)       (DSI_DPHY_STATUS_PHY_LOCK_Msk & (_UINT32_(value) << DSI_DPHY_STATUS_PHY_LOCK_Pos)) /* Assigment of value for PHY_LOCK in the DSI_DPHY_STATUS register */
@@ -897,7 +905,7 @@
 
 
 /* -------- DSI_DPHY_TST_CTRL0 : (DSI Offset: 0xB4) (R/W 32) D-PHY Control Register 0 -------- */
-#define DSI_DPHY_TST_CTRL0_RESETVALUE         _UINT32_(0x00)                                       /*  (DSI_DPHY_TST_CTRL0) D-PHY Control Register 0  Reset Value */
+#define DSI_DPHY_TST_CTRL0_RESETVALUE         _UINT32_(0x01)                                       /*  (DSI_DPHY_TST_CTRL0) D-PHY Control Register 0  Reset Value */
 
 #define DSI_DPHY_TST_CTRL0_PHY_TESTCLR_Pos    _UINT32_(0)                                          /* (DSI_DPHY_TST_CTRL0) D-PHY Test Interface Clear Position */
 #define DSI_DPHY_TST_CTRL0_PHY_TESTCLR_Msk    (_UINT32_(0x1) << DSI_DPHY_TST_CTRL0_PHY_TESTCLR_Pos) /* (DSI_DPHY_TST_CTRL0) D-PHY Test Interface Clear Mask */
@@ -1048,7 +1056,10 @@
 #define DSI_INT_ST1_GEN_PLD_RECEV_ERR_Pos     _UINT32_(12)                                         /* (DSI_INT_ST1) Generic Interface Payload Receive Error Status Position */
 #define DSI_INT_ST1_GEN_PLD_RECEV_ERR_Msk     (_UINT32_(0x1) << DSI_INT_ST1_GEN_PLD_RECEV_ERR_Pos) /* (DSI_INT_ST1) Generic Interface Payload Receive Error Status Mask */
 #define DSI_INT_ST1_GEN_PLD_RECEV_ERR(value)  (DSI_INT_ST1_GEN_PLD_RECEV_ERR_Msk & (_UINT32_(value) << DSI_INT_ST1_GEN_PLD_RECEV_ERR_Pos)) /* Assigment of value for GEN_PLD_RECEV_ERR in the DSI_INT_ST1 register */
-#define DSI_INT_ST1_Msk                       _UINT32_(0x00001FFF)                                 /* (DSI_INT_ST1) Register Mask  */
+#define DSI_INT_ST1_DPI_BUFF_PLD_UNDER_Pos    _UINT32_(19)                                         /* (DSI_INT_ST1) Input Video Interface Payload Buffer Underflow Status Position */
+#define DSI_INT_ST1_DPI_BUFF_PLD_UNDER_Msk    (_UINT32_(0x1) << DSI_INT_ST1_DPI_BUFF_PLD_UNDER_Pos) /* (DSI_INT_ST1) Input Video Interface Payload Buffer Underflow Status Mask */
+#define DSI_INT_ST1_DPI_BUFF_PLD_UNDER(value) (DSI_INT_ST1_DPI_BUFF_PLD_UNDER_Msk & (_UINT32_(value) << DSI_INT_ST1_DPI_BUFF_PLD_UNDER_Pos)) /* Assigment of value for DPI_BUFF_PLD_UNDER in the DSI_INT_ST1 register */
+#define DSI_INT_ST1_Msk                       _UINT32_(0x00081FFF)                                 /* (DSI_INT_ST1) Register Mask  */
 
 
 /* -------- DSI_INT_MSK0 : (DSI Offset: 0xC4) (R/W 32) Interrupt Mask Configuration Register 0 -------- */
@@ -1168,7 +1179,10 @@
 #define DSI_INT_MSK1_GEN_PLD_RECEV_ERR_Pos    _UINT32_(12)                                         /* (DSI_INT_MSK1) Generic Interface Payload Receive Error Mask Position */
 #define DSI_INT_MSK1_GEN_PLD_RECEV_ERR_Msk    (_UINT32_(0x1) << DSI_INT_MSK1_GEN_PLD_RECEV_ERR_Pos) /* (DSI_INT_MSK1) Generic Interface Payload Receive Error Mask Mask */
 #define DSI_INT_MSK1_GEN_PLD_RECEV_ERR(value) (DSI_INT_MSK1_GEN_PLD_RECEV_ERR_Msk & (_UINT32_(value) << DSI_INT_MSK1_GEN_PLD_RECEV_ERR_Pos)) /* Assigment of value for GEN_PLD_RECEV_ERR in the DSI_INT_MSK1 register */
-#define DSI_INT_MSK1_Msk                      _UINT32_(0x00001FFF)                                 /* (DSI_INT_MSK1) Register Mask  */
+#define DSI_INT_MSK1_DPI_BUFF_PLD_UNDER_Pos   _UINT32_(19)                                         /* (DSI_INT_MSK1) Input Video Interface Payload Buffer Underflow Mask Position */
+#define DSI_INT_MSK1_DPI_BUFF_PLD_UNDER_Msk   (_UINT32_(0x1) << DSI_INT_MSK1_DPI_BUFF_PLD_UNDER_Pos) /* (DSI_INT_MSK1) Input Video Interface Payload Buffer Underflow Mask Mask */
+#define DSI_INT_MSK1_DPI_BUFF_PLD_UNDER(value) (DSI_INT_MSK1_DPI_BUFF_PLD_UNDER_Msk & (_UINT32_(value) << DSI_INT_MSK1_DPI_BUFF_PLD_UNDER_Pos)) /* Assigment of value for DPI_BUFF_PLD_UNDER in the DSI_INT_MSK1 register */
+#define DSI_INT_MSK1_Msk                      _UINT32_(0x00081FFF)                                 /* (DSI_INT_MSK1) Register Mask  */
 
 
 /* -------- DSI_DPHY_CAL : (DSI Offset: 0xCC) (R/W 32) D-PHY Calibration Control Register -------- */
@@ -1180,7 +1194,7 @@
 #define DSI_DPHY_CAL_Msk                      _UINT32_(0x00000001)                                 /* (DSI_DPHY_CAL) Register Mask  */
 
 
-/* -------- DSI_INT_FORCE0 : (DSI Offset: 0xD8) (R/W 32) Interrupt Force Control Register 0 -------- */
+/* -------- DSI_INT_FORCE0 : (DSI Offset: 0xD8) ( /W 32) Interrupt Force Control Register 0 -------- */
 #define DSI_INT_FORCE0_RESETVALUE             _UINT32_(0x00)                                       /*  (DSI_INT_FORCE0) Interrupt Force Control Register 0  Reset Value */
 
 #define DSI_INT_FORCE0_ACK_WITH_ERR_0_Pos     _UINT32_(0)                                          /* (DSI_INT_FORCE0) Acknowledge With Error 0 Force Position */
@@ -1255,7 +1269,7 @@
 #define DSI_INT_FORCE0_DPHY_ERRORS__Msk       (_UINT32_(0x1F) << DSI_INT_FORCE0_DPHY_ERRORS__Pos)  /* (DSI_INT_FORCE0 Mask) DPHY_ERRORS_ */
 #define DSI_INT_FORCE0_DPHY_ERRORS_(value)    (DSI_INT_FORCE0_DPHY_ERRORS__Msk & (_UINT32_(value) << DSI_INT_FORCE0_DPHY_ERRORS__Pos)) 
 
-/* -------- DSI_INT_FORCE1 : (DSI Offset: 0xDC) (R/W 32) Interrupt Force Control Register 1 -------- */
+/* -------- DSI_INT_FORCE1 : (DSI Offset: 0xDC) ( /W 32) Interrupt Force Control Register 1 -------- */
 #define DSI_INT_FORCE1_RESETVALUE             _UINT32_(0x00)                                       /*  (DSI_INT_FORCE1) Interrupt Force Control Register 1  Reset Value */
 
 #define DSI_INT_FORCE1_TO_HS_TX_Pos           _UINT32_(0)                                          /* (DSI_INT_FORCE1) Timeout High-Speed Transmission Force Position */
@@ -1297,73 +1311,19 @@
 #define DSI_INT_FORCE1_GEN_PLD_RECEV_ERR_Pos  _UINT32_(12)                                         /* (DSI_INT_FORCE1) Generic Interface Payload Receive Error Force Position */
 #define DSI_INT_FORCE1_GEN_PLD_RECEV_ERR_Msk  (_UINT32_(0x1) << DSI_INT_FORCE1_GEN_PLD_RECEV_ERR_Pos) /* (DSI_INT_FORCE1) Generic Interface Payload Receive Error Force Mask */
 #define DSI_INT_FORCE1_GEN_PLD_RECEV_ERR(value) (DSI_INT_FORCE1_GEN_PLD_RECEV_ERR_Msk & (_UINT32_(value) << DSI_INT_FORCE1_GEN_PLD_RECEV_ERR_Pos)) /* Assigment of value for GEN_PLD_RECEV_ERR in the DSI_INT_FORCE1 register */
-#define DSI_INT_FORCE1_Msk                    _UINT32_(0x00001FFF)                                 /* (DSI_INT_FORCE1) Register Mask  */
-
-
-/* -------- DSI_AUTO_ULPS_MODE : (DSI Offset: 0xE0) (R/W 32) Automatic Ultra-Low-Power Mode Register -------- */
-#define DSI_AUTO_ULPS_MODE_RESETVALUE         _UINT32_(0x00)                                       /*  (DSI_AUTO_ULPS_MODE) Automatic Ultra-Low-Power Mode Register  Reset Value */
-
-#define DSI_AUTO_ULPS_MODE_AUTO_ULPS_Pos      _UINT32_(0)                                          /* (DSI_AUTO_ULPS_MODE) Automatic Ultra-Low-Power Enable Position */
-#define DSI_AUTO_ULPS_MODE_AUTO_ULPS_Msk      (_UINT32_(0x1) << DSI_AUTO_ULPS_MODE_AUTO_ULPS_Pos)  /* (DSI_AUTO_ULPS_MODE) Automatic Ultra-Low-Power Enable Mask */
-#define DSI_AUTO_ULPS_MODE_AUTO_ULPS(value)   (DSI_AUTO_ULPS_MODE_AUTO_ULPS_Msk & (_UINT32_(value) << DSI_AUTO_ULPS_MODE_AUTO_ULPS_Pos)) /* Assigment of value for AUTO_ULPS in the DSI_AUTO_ULPS_MODE register */
-#define   DSI_AUTO_ULPS_MODE_AUTO_ULPS_0_Val  _UINT32_(0x0)                                        /* (DSI_AUTO_ULPS_MODE) Disables the automatic mechanism to enter and exit ULPS.  */
-#define   DSI_AUTO_ULPS_MODE_AUTO_ULPS_1_Val  _UINT32_(0x1)                                        /* (DSI_AUTO_ULPS_MODE) Enables the automatic mechanism to enter and exit ULPS.  */
-#define DSI_AUTO_ULPS_MODE_AUTO_ULPS_0        (DSI_AUTO_ULPS_MODE_AUTO_ULPS_0_Val << DSI_AUTO_ULPS_MODE_AUTO_ULPS_Pos) /* (DSI_AUTO_ULPS_MODE) Disables the automatic mechanism to enter and exit ULPS. Position  */
-#define DSI_AUTO_ULPS_MODE_AUTO_ULPS_1        (DSI_AUTO_ULPS_MODE_AUTO_ULPS_1_Val << DSI_AUTO_ULPS_MODE_AUTO_ULPS_Pos) /* (DSI_AUTO_ULPS_MODE) Enables the automatic mechanism to enter and exit ULPS. Position  */
-#define DSI_AUTO_ULPS_MODE_PLL_OFF_ULPS_Pos   _UINT32_(16)                                         /* (DSI_AUTO_ULPS_MODE) PLL Turned OFF During Ultra-Low-Power Position */
-#define DSI_AUTO_ULPS_MODE_PLL_OFF_ULPS_Msk   (_UINT32_(0x1) << DSI_AUTO_ULPS_MODE_PLL_OFF_ULPS_Pos) /* (DSI_AUTO_ULPS_MODE) PLL Turned OFF During Ultra-Low-Power Mask */
-#define DSI_AUTO_ULPS_MODE_PLL_OFF_ULPS(value) (DSI_AUTO_ULPS_MODE_PLL_OFF_ULPS_Msk & (_UINT32_(value) << DSI_AUTO_ULPS_MODE_PLL_OFF_ULPS_Pos)) /* Assigment of value for PLL_OFF_ULPS in the DSI_AUTO_ULPS_MODE register */
-#define   DSI_AUTO_ULPS_MODE_PLL_OFF_ULPS_0_Val _UINT32_(0x0)                                        /* (DSI_AUTO_ULPS_MODE) Prevents turning off the D-PHY PLL during ULPS.  */
-#define   DSI_AUTO_ULPS_MODE_PLL_OFF_ULPS_1_Val _UINT32_(0x1)                                        /* (DSI_AUTO_ULPS_MODE) Turns off the D-PHY PLL during ULPS.  */
-#define DSI_AUTO_ULPS_MODE_PLL_OFF_ULPS_0     (DSI_AUTO_ULPS_MODE_PLL_OFF_ULPS_0_Val << DSI_AUTO_ULPS_MODE_PLL_OFF_ULPS_Pos) /* (DSI_AUTO_ULPS_MODE) Prevents turning off the D-PHY PLL during ULPS. Position  */
-#define DSI_AUTO_ULPS_MODE_PLL_OFF_ULPS_1     (DSI_AUTO_ULPS_MODE_PLL_OFF_ULPS_1_Val << DSI_AUTO_ULPS_MODE_PLL_OFF_ULPS_Pos) /* (DSI_AUTO_ULPS_MODE) Turns off the D-PHY PLL during ULPS. Position  */
-#define DSI_AUTO_ULPS_MODE_PRE_PLL_OFF_REQ_Pos _UINT32_(17)                                         /* (DSI_AUTO_ULPS_MODE) Automatic Ultra-Low-Power Enable Position */
-#define DSI_AUTO_ULPS_MODE_PRE_PLL_OFF_REQ_Msk (_UINT32_(0x1) << DSI_AUTO_ULPS_MODE_PRE_PLL_OFF_REQ_Pos) /* (DSI_AUTO_ULPS_MODE) Automatic Ultra-Low-Power Enable Mask */
-#define DSI_AUTO_ULPS_MODE_PRE_PLL_OFF_REQ(value) (DSI_AUTO_ULPS_MODE_PRE_PLL_OFF_REQ_Msk & (_UINT32_(value) << DSI_AUTO_ULPS_MODE_PRE_PLL_OFF_REQ_Pos)) /* Assigment of value for PRE_PLL_OFF_REQ in the DSI_AUTO_ULPS_MODE register */
-#define   DSI_AUTO_ULPS_MODE_PRE_PLL_OFF_REQ_0_Val _UINT32_(0x0)                                        /* (DSI_AUTO_ULPS_MODE) No effect.  */
-#define   DSI_AUTO_ULPS_MODE_PRE_PLL_OFF_REQ_1_Val _UINT32_(0x1)                                        /* (DSI_AUTO_ULPS_MODE) When pll_off_ulps is active, allows to turn off PLL before the request to enter ULPS.  */
-#define DSI_AUTO_ULPS_MODE_PRE_PLL_OFF_REQ_0  (DSI_AUTO_ULPS_MODE_PRE_PLL_OFF_REQ_0_Val << DSI_AUTO_ULPS_MODE_PRE_PLL_OFF_REQ_Pos) /* (DSI_AUTO_ULPS_MODE) No effect. Position  */
-#define DSI_AUTO_ULPS_MODE_PRE_PLL_OFF_REQ_1  (DSI_AUTO_ULPS_MODE_PRE_PLL_OFF_REQ_1_Val << DSI_AUTO_ULPS_MODE_PRE_PLL_OFF_REQ_Pos) /* (DSI_AUTO_ULPS_MODE) When pll_off_ulps is active, allows to turn off PLL before the request to enter ULPS. Position  */
-#define DSI_AUTO_ULPS_MODE_Msk                _UINT32_(0x00030001)                                 /* (DSI_AUTO_ULPS_MODE) Register Mask  */
-
-
-/* -------- DSI_AUTO_ULPS_ENTRY_DELAY : (DSI Offset: 0xE4) (R/W 32) Automatic Ultra-Low-Power Entry Delay Register -------- */
-#define DSI_AUTO_ULPS_ENTRY_DELAY_RESETVALUE  _UINT32_(0x00)                                       /*  (DSI_AUTO_ULPS_ENTRY_DELAY) Automatic Ultra-Low-Power Entry Delay Register  Reset Value */
-
-#define DSI_AUTO_ULPS_ENTRY_DELAY_ULPS_ENTRY_DELAY_Pos _UINT32_(0)                                          /* (DSI_AUTO_ULPS_ENTRY_DELAY) Ultra-Low-Power Enable Entry Delay Position */
-#define DSI_AUTO_ULPS_ENTRY_DELAY_ULPS_ENTRY_DELAY_Msk (_UINT32_(0xFFFFFFFF) << DSI_AUTO_ULPS_ENTRY_DELAY_ULPS_ENTRY_DELAY_Pos) /* (DSI_AUTO_ULPS_ENTRY_DELAY) Ultra-Low-Power Enable Entry Delay Mask */
-#define DSI_AUTO_ULPS_ENTRY_DELAY_ULPS_ENTRY_DELAY(value) (DSI_AUTO_ULPS_ENTRY_DELAY_ULPS_ENTRY_DELAY_Msk & (_UINT32_(value) << DSI_AUTO_ULPS_ENTRY_DELAY_ULPS_ENTRY_DELAY_Pos)) /* Assigment of value for ULPS_ENTRY_DELAY in the DSI_AUTO_ULPS_ENTRY_DELAY register */
-#define DSI_AUTO_ULPS_ENTRY_DELAY_Msk         _UINT32_(0xFFFFFFFF)                                 /* (DSI_AUTO_ULPS_ENTRY_DELAY) Register Mask  */
-
-
-/* -------- DSI_AUTO_ULPS_WAKEUP_TIME : (DSI Offset: 0xE8) (R/W 32) Automatic Ultra-Low-Power Wake-Up Time Register -------- */
-#define DSI_AUTO_ULPS_WAKEUP_TIME_RESETVALUE  _UINT32_(0x00)                                       /*  (DSI_AUTO_ULPS_WAKEUP_TIME) Automatic Ultra-Low-Power Wake-Up Time Register  Reset Value */
-
-#define DSI_AUTO_ULPS_WAKEUP_TIME_TWAKEUP_CLK_DIV_Pos _UINT32_(0)                                          /* (DSI_AUTO_ULPS_WAKEUP_TIME) Wake-Up Time Clock Divider Position */
-#define DSI_AUTO_ULPS_WAKEUP_TIME_TWAKEUP_CLK_DIV_Msk (_UINT32_(0xFFFF) << DSI_AUTO_ULPS_WAKEUP_TIME_TWAKEUP_CLK_DIV_Pos) /* (DSI_AUTO_ULPS_WAKEUP_TIME) Wake-Up Time Clock Divider Mask */
-#define DSI_AUTO_ULPS_WAKEUP_TIME_TWAKEUP_CLK_DIV(value) (DSI_AUTO_ULPS_WAKEUP_TIME_TWAKEUP_CLK_DIV_Msk & (_UINT32_(value) << DSI_AUTO_ULPS_WAKEUP_TIME_TWAKEUP_CLK_DIV_Pos)) /* Assigment of value for TWAKEUP_CLK_DIV in the DSI_AUTO_ULPS_WAKEUP_TIME register */
-#define DSI_AUTO_ULPS_WAKEUP_TIME_TWAKEUP_ENTRY_DELAY_Pos _UINT32_(16)                                         /* (DSI_AUTO_ULPS_WAKEUP_TIME) Wake-Up Time Entry Delay Position */
-#define DSI_AUTO_ULPS_WAKEUP_TIME_TWAKEUP_ENTRY_DELAY_Msk (_UINT32_(0xFFFF) << DSI_AUTO_ULPS_WAKEUP_TIME_TWAKEUP_ENTRY_DELAY_Pos) /* (DSI_AUTO_ULPS_WAKEUP_TIME) Wake-Up Time Entry Delay Mask */
-#define DSI_AUTO_ULPS_WAKEUP_TIME_TWAKEUP_ENTRY_DELAY(value) (DSI_AUTO_ULPS_WAKEUP_TIME_TWAKEUP_ENTRY_DELAY_Msk & (_UINT32_(value) << DSI_AUTO_ULPS_WAKEUP_TIME_TWAKEUP_ENTRY_DELAY_Pos)) /* Assigment of value for TWAKEUP_ENTRY_DELAY in the DSI_AUTO_ULPS_WAKEUP_TIME register */
-#define DSI_AUTO_ULPS_WAKEUP_TIME_Msk         _UINT32_(0xFFFFFFFF)                                 /* (DSI_AUTO_ULPS_WAKEUP_TIME) Register Mask  */
+#define DSI_INT_FORCE1_DPI_BUFF_PLD_UNDER_Pos _UINT32_(19)                                         /* (DSI_INT_FORCE1) Input Video Interface Payload Buffer Underflow Force Position */
+#define DSI_INT_FORCE1_DPI_BUFF_PLD_UNDER_Msk (_UINT32_(0x1) << DSI_INT_FORCE1_DPI_BUFF_PLD_UNDER_Pos) /* (DSI_INT_FORCE1) Input Video Interface Payload Buffer Underflow Force Mask */
+#define DSI_INT_FORCE1_DPI_BUFF_PLD_UNDER(value) (DSI_INT_FORCE1_DPI_BUFF_PLD_UNDER_Msk & (_UINT32_(value) << DSI_INT_FORCE1_DPI_BUFF_PLD_UNDER_Pos)) /* Assigment of value for DPI_BUFF_PLD_UNDER in the DSI_INT_FORCE1 register */
+#define DSI_INT_FORCE1_Msk                    _UINT32_(0x00081FFF)                                 /* (DSI_INT_FORCE1) Register Mask  */
 
 
 /* -------- DSI_DPHY_TMR_RD_CFG : (DSI Offset: 0xF4) (R/W 32) DHY Read Timing Configuration Register -------- */
 #define DSI_DPHY_TMR_RD_CFG_RESETVALUE        _UINT32_(0x00)                                       /*  (DSI_DPHY_TMR_RD_CFG) DHY Read Timing Configuration Register  Reset Value */
 
 #define DSI_DPHY_TMR_RD_CFG_MAX_RD_TIME_Pos   _UINT32_(0)                                          /* (DSI_DPHY_TMR_RD_CFG) Maximum Read Time Position */
-#define DSI_DPHY_TMR_RD_CFG_MAX_RD_TIME_Msk   (_UINT32_(0xFFFF) << DSI_DPHY_TMR_RD_CFG_MAX_RD_TIME_Pos) /* (DSI_DPHY_TMR_RD_CFG) Maximum Read Time Mask */
+#define DSI_DPHY_TMR_RD_CFG_MAX_RD_TIME_Msk   (_UINT32_(0x7FFF) << DSI_DPHY_TMR_RD_CFG_MAX_RD_TIME_Pos) /* (DSI_DPHY_TMR_RD_CFG) Maximum Read Time Mask */
 #define DSI_DPHY_TMR_RD_CFG_MAX_RD_TIME(value) (DSI_DPHY_TMR_RD_CFG_MAX_RD_TIME_Msk & (_UINT32_(value) << DSI_DPHY_TMR_RD_CFG_MAX_RD_TIME_Pos)) /* Assigment of value for MAX_RD_TIME in the DSI_DPHY_TMR_RD_CFG register */
-#define DSI_DPHY_TMR_RD_CFG_Msk               _UINT32_(0x0000FFFF)                                 /* (DSI_DPHY_TMR_RD_CFG) Register Mask  */
-
-
-/* -------- DSI_AUTO_ULPS_MIN_TIME : (DSI Offset: 0xF8) (R/W 32) Automatic Ultra-Low-Power Minimum Time Register -------- */
-#define DSI_AUTO_ULPS_MIN_TIME_RESETVALUE     _UINT32_(0x00)                                       /*  (DSI_AUTO_ULPS_MIN_TIME) Automatic Ultra-Low-Power Minimum Time Register  Reset Value */
-
-#define DSI_AUTO_ULPS_MIN_TIME_ULPS_MIN_TIME_Pos _UINT32_(0)                                          /* (DSI_AUTO_ULPS_MIN_TIME) Ultra-Low-Power Minimum Time Position */
-#define DSI_AUTO_ULPS_MIN_TIME_ULPS_MIN_TIME_Msk (_UINT32_(0xFFF) << DSI_AUTO_ULPS_MIN_TIME_ULPS_MIN_TIME_Pos) /* (DSI_AUTO_ULPS_MIN_TIME) Ultra-Low-Power Minimum Time Mask */
-#define DSI_AUTO_ULPS_MIN_TIME_ULPS_MIN_TIME(value) (DSI_AUTO_ULPS_MIN_TIME_ULPS_MIN_TIME_Msk & (_UINT32_(value) << DSI_AUTO_ULPS_MIN_TIME_ULPS_MIN_TIME_Pos)) /* Assigment of value for ULPS_MIN_TIME in the DSI_AUTO_ULPS_MIN_TIME register */
-#define DSI_AUTO_ULPS_MIN_TIME_Msk            _UINT32_(0x00000FFF)                                 /* (DSI_AUTO_ULPS_MIN_TIME) Register Mask  */
+#define DSI_DPHY_TMR_RD_CFG_Msk               _UINT32_(0x00007FFF)                                 /* (DSI_DPHY_TMR_RD_CFG) Register Mask  */
 
 
 /* -------- DSI_VID_SHADOW_CTRL : (DSI Offset: 0x100) (R/W 32) Video Mode Shadow Feature Control Register -------- */
@@ -1429,10 +1389,10 @@
 #define DSI_DPI_LP_CMD_TIM_ACT_INVACT_LPCMD_TIME_Pos _UINT32_(0)                                          /* (DSI_DPI_LP_CMD_TIM_ACT) Input Vertical Active Low-Power Command Time Position */
 #define DSI_DPI_LP_CMD_TIM_ACT_INVACT_LPCMD_TIME_Msk (_UINT32_(0xFF) << DSI_DPI_LP_CMD_TIM_ACT_INVACT_LPCMD_TIME_Pos) /* (DSI_DPI_LP_CMD_TIM_ACT) Input Vertical Active Low-Power Command Time Mask */
 #define DSI_DPI_LP_CMD_TIM_ACT_INVACT_LPCMD_TIME(value) (DSI_DPI_LP_CMD_TIM_ACT_INVACT_LPCMD_TIME_Msk & (_UINT32_(value) << DSI_DPI_LP_CMD_TIM_ACT_INVACT_LPCMD_TIME_Pos)) /* Assigment of value for INVACT_LPCMD_TIME in the DSI_DPI_LP_CMD_TIM_ACT register */
-#define DSI_DPI_LP_CMD_TIM_ACT_OUTVACT_LPCMD_TIME_Pos _UINT32_(8)                                          /* (DSI_DPI_LP_CMD_TIM_ACT) Output Vertical Active Low-Power Command Time Position */
+#define DSI_DPI_LP_CMD_TIM_ACT_OUTVACT_LPCMD_TIME_Pos _UINT32_(16)                                         /* (DSI_DPI_LP_CMD_TIM_ACT) Output Vertical Active Low-Power Command Time Position */
 #define DSI_DPI_LP_CMD_TIM_ACT_OUTVACT_LPCMD_TIME_Msk (_UINT32_(0xFF) << DSI_DPI_LP_CMD_TIM_ACT_OUTVACT_LPCMD_TIME_Pos) /* (DSI_DPI_LP_CMD_TIM_ACT) Output Vertical Active Low-Power Command Time Mask */
 #define DSI_DPI_LP_CMD_TIM_ACT_OUTVACT_LPCMD_TIME(value) (DSI_DPI_LP_CMD_TIM_ACT_OUTVACT_LPCMD_TIME_Msk & (_UINT32_(value) << DSI_DPI_LP_CMD_TIM_ACT_OUTVACT_LPCMD_TIME_Pos)) /* Assigment of value for OUTVACT_LPCMD_TIME in the DSI_DPI_LP_CMD_TIM_ACT register */
-#define DSI_DPI_LP_CMD_TIM_ACT_Msk            _UINT32_(0x0000FFFF)                                 /* (DSI_DPI_LP_CMD_TIM_ACT) Register Mask  */
+#define DSI_DPI_LP_CMD_TIM_ACT_Msk            _UINT32_(0x00FF00FF)                                 /* (DSI_DPI_LP_CMD_TIM_ACT) Register Mask  */
 
 
 /* -------- DSI_VID_MODE_CFG_ACT : (DSI Offset: 0x138) ( R/ 32) Video Mode Active Value Register -------- */
@@ -1557,9 +1517,9 @@
 #define DSI_VID_HLINE_TIME_ACT_RESETVALUE     _UINT32_(0x00)                                       /*  (DSI_VID_HLINE_TIME_ACT) Video Mode HLINE Time Active Value Register  Reset Value */
 
 #define DSI_VID_HLINE_TIME_ACT_VID_HLINE_TIME_Pos _UINT32_(0)                                          /* (DSI_VID_HLINE_TIME_ACT) Video Mode Horizontal Line Time Position */
-#define DSI_VID_HLINE_TIME_ACT_VID_HLINE_TIME_Msk (_UINT32_(0xFFFF) << DSI_VID_HLINE_TIME_ACT_VID_HLINE_TIME_Pos) /* (DSI_VID_HLINE_TIME_ACT) Video Mode Horizontal Line Time Mask */
+#define DSI_VID_HLINE_TIME_ACT_VID_HLINE_TIME_Msk (_UINT32_(0x7FFF) << DSI_VID_HLINE_TIME_ACT_VID_HLINE_TIME_Pos) /* (DSI_VID_HLINE_TIME_ACT) Video Mode Horizontal Line Time Mask */
 #define DSI_VID_HLINE_TIME_ACT_VID_HLINE_TIME(value) (DSI_VID_HLINE_TIME_ACT_VID_HLINE_TIME_Msk & (_UINT32_(value) << DSI_VID_HLINE_TIME_ACT_VID_HLINE_TIME_Pos)) /* Assigment of value for VID_HLINE_TIME in the DSI_VID_HLINE_TIME_ACT register */
-#define DSI_VID_HLINE_TIME_ACT_Msk            _UINT32_(0x0000FFFF)                                 /* (DSI_VID_HLINE_TIME_ACT) Register Mask  */
+#define DSI_VID_HLINE_TIME_ACT_Msk            _UINT32_(0x00007FFF)                                 /* (DSI_VID_HLINE_TIME_ACT) Register Mask  */
 
 
 /* -------- DSI_VID_VSA_LINES_ACT : (DSI Offset: 0x154) ( R/ 32) Video Mode VSA Lines Active Value Register -------- */
@@ -1599,25 +1559,25 @@
 
 
 /* -------- DSI_VID_PKT_STATUS : (DSI Offset: 0x168) ( R/ 32) Video Mode Packet Status Register -------- */
-#define DSI_VID_PKT_STATUS_RESETVALUE         _UINT32_(0x00)                                       /*  (DSI_VID_PKT_STATUS) Video Mode Packet Status Register  Reset Value */
+#define DSI_VID_PKT_STATUS_RESETVALUE         _UINT32_(0x10005)                                    /*  (DSI_VID_PKT_STATUS) Video Mode Packet Status Register  Reset Value */
 
-#define DSI_VID_PKT_STATUS_DPI_CMD_W_EMPTY_Pos _UINT32_(0)                                          /* (DSI_VID_PKT_STATUS) Input Video Interface Command Fifo Empty Position */
-#define DSI_VID_PKT_STATUS_DPI_CMD_W_EMPTY_Msk (_UINT32_(0x1) << DSI_VID_PKT_STATUS_DPI_CMD_W_EMPTY_Pos) /* (DSI_VID_PKT_STATUS) Input Video Interface Command Fifo Empty Mask */
+#define DSI_VID_PKT_STATUS_DPI_CMD_W_EMPTY_Pos _UINT32_(0)                                          /* (DSI_VID_PKT_STATUS) Input Video Interface Command FIFO Empty Position */
+#define DSI_VID_PKT_STATUS_DPI_CMD_W_EMPTY_Msk (_UINT32_(0x1) << DSI_VID_PKT_STATUS_DPI_CMD_W_EMPTY_Pos) /* (DSI_VID_PKT_STATUS) Input Video Interface Command FIFO Empty Mask */
 #define DSI_VID_PKT_STATUS_DPI_CMD_W_EMPTY(value) (DSI_VID_PKT_STATUS_DPI_CMD_W_EMPTY_Msk & (_UINT32_(value) << DSI_VID_PKT_STATUS_DPI_CMD_W_EMPTY_Pos)) /* Assigment of value for DPI_CMD_W_EMPTY in the DSI_VID_PKT_STATUS register */
-#define DSI_VID_PKT_STATUS_DPI_CMD_W_FULL_Pos _UINT32_(1)                                          /* (DSI_VID_PKT_STATUS) Input Video Interface Command Fifo Full Position */
-#define DSI_VID_PKT_STATUS_DPI_CMD_W_FULL_Msk (_UINT32_(0x1) << DSI_VID_PKT_STATUS_DPI_CMD_W_FULL_Pos) /* (DSI_VID_PKT_STATUS) Input Video Interface Command Fifo Full Mask */
+#define DSI_VID_PKT_STATUS_DPI_CMD_W_FULL_Pos _UINT32_(1)                                          /* (DSI_VID_PKT_STATUS) Input Video Interface Command FIFO Full Position */
+#define DSI_VID_PKT_STATUS_DPI_CMD_W_FULL_Msk (_UINT32_(0x1) << DSI_VID_PKT_STATUS_DPI_CMD_W_FULL_Pos) /* (DSI_VID_PKT_STATUS) Input Video Interface Command FIFO Full Mask */
 #define DSI_VID_PKT_STATUS_DPI_CMD_W_FULL(value) (DSI_VID_PKT_STATUS_DPI_CMD_W_FULL_Msk & (_UINT32_(value) << DSI_VID_PKT_STATUS_DPI_CMD_W_FULL_Pos)) /* Assigment of value for DPI_CMD_W_FULL in the DSI_VID_PKT_STATUS register */
-#define DSI_VID_PKT_STATUS_DPI_PLD_W_EMPTY_Pos _UINT32_(2)                                          /* (DSI_VID_PKT_STATUS) Input Video Interface Write Payload Fifo Empty Position */
-#define DSI_VID_PKT_STATUS_DPI_PLD_W_EMPTY_Msk (_UINT32_(0x1) << DSI_VID_PKT_STATUS_DPI_PLD_W_EMPTY_Pos) /* (DSI_VID_PKT_STATUS) Input Video Interface Write Payload Fifo Empty Mask */
+#define DSI_VID_PKT_STATUS_DPI_PLD_W_EMPTY_Pos _UINT32_(2)                                          /* (DSI_VID_PKT_STATUS) Input Video Interface Write Payload FIFO Empty Position */
+#define DSI_VID_PKT_STATUS_DPI_PLD_W_EMPTY_Msk (_UINT32_(0x1) << DSI_VID_PKT_STATUS_DPI_PLD_W_EMPTY_Pos) /* (DSI_VID_PKT_STATUS) Input Video Interface Write Payload FIFO Empty Mask */
 #define DSI_VID_PKT_STATUS_DPI_PLD_W_EMPTY(value) (DSI_VID_PKT_STATUS_DPI_PLD_W_EMPTY_Msk & (_UINT32_(value) << DSI_VID_PKT_STATUS_DPI_PLD_W_EMPTY_Pos)) /* Assigment of value for DPI_PLD_W_EMPTY in the DSI_VID_PKT_STATUS register */
-#define DSI_VID_PKT_STATUS_DPI_PLD_W_FULL_Pos _UINT32_(3)                                          /* (DSI_VID_PKT_STATUS) Input Video Interface Write Payload Fifo Full Position */
-#define DSI_VID_PKT_STATUS_DPI_PLD_W_FULL_Msk (_UINT32_(0x1) << DSI_VID_PKT_STATUS_DPI_PLD_W_FULL_Pos) /* (DSI_VID_PKT_STATUS) Input Video Interface Write Payload Fifo Full Mask */
+#define DSI_VID_PKT_STATUS_DPI_PLD_W_FULL_Pos _UINT32_(3)                                          /* (DSI_VID_PKT_STATUS) Input Video Interface Write Payload FIFO Full Position */
+#define DSI_VID_PKT_STATUS_DPI_PLD_W_FULL_Msk (_UINT32_(0x1) << DSI_VID_PKT_STATUS_DPI_PLD_W_FULL_Pos) /* (DSI_VID_PKT_STATUS) Input Video Interface Write Payload FIFO Full Mask */
 #define DSI_VID_PKT_STATUS_DPI_PLD_W_FULL(value) (DSI_VID_PKT_STATUS_DPI_PLD_W_FULL_Msk & (_UINT32_(value) << DSI_VID_PKT_STATUS_DPI_PLD_W_FULL_Pos)) /* Assigment of value for DPI_PLD_W_FULL in the DSI_VID_PKT_STATUS register */
-#define DSI_VID_PKT_STATUS_DPI_BUFF_PLD_EMPTY_Pos _UINT32_(16)                                         /* (DSI_VID_PKT_STATUS) Input Video Interface Write Payload Fifo Empty Position */
-#define DSI_VID_PKT_STATUS_DPI_BUFF_PLD_EMPTY_Msk (_UINT32_(0x1) << DSI_VID_PKT_STATUS_DPI_BUFF_PLD_EMPTY_Pos) /* (DSI_VID_PKT_STATUS) Input Video Interface Write Payload Fifo Empty Mask */
+#define DSI_VID_PKT_STATUS_DPI_BUFF_PLD_EMPTY_Pos _UINT32_(16)                                         /* (DSI_VID_PKT_STATUS) Input Video Interface Write Payload FIFO Empty Position */
+#define DSI_VID_PKT_STATUS_DPI_BUFF_PLD_EMPTY_Msk (_UINT32_(0x1) << DSI_VID_PKT_STATUS_DPI_BUFF_PLD_EMPTY_Pos) /* (DSI_VID_PKT_STATUS) Input Video Interface Write Payload FIFO Empty Mask */
 #define DSI_VID_PKT_STATUS_DPI_BUFF_PLD_EMPTY(value) (DSI_VID_PKT_STATUS_DPI_BUFF_PLD_EMPTY_Msk & (_UINT32_(value) << DSI_VID_PKT_STATUS_DPI_BUFF_PLD_EMPTY_Pos)) /* Assigment of value for DPI_BUFF_PLD_EMPTY in the DSI_VID_PKT_STATUS register */
-#define DSI_VID_PKT_STATUS_DPI_BUFF_PLD_FULL_Pos _UINT32_(17)                                         /* (DSI_VID_PKT_STATUS) Input Video Interface Write Payload Fifo Full Position */
-#define DSI_VID_PKT_STATUS_DPI_BUFF_PLD_FULL_Msk (_UINT32_(0x1) << DSI_VID_PKT_STATUS_DPI_BUFF_PLD_FULL_Pos) /* (DSI_VID_PKT_STATUS) Input Video Interface Write Payload Fifo Full Mask */
+#define DSI_VID_PKT_STATUS_DPI_BUFF_PLD_FULL_Pos _UINT32_(17)                                         /* (DSI_VID_PKT_STATUS) Input Video Interface Write Payload FIFO Full Position */
+#define DSI_VID_PKT_STATUS_DPI_BUFF_PLD_FULL_Msk (_UINT32_(0x1) << DSI_VID_PKT_STATUS_DPI_BUFF_PLD_FULL_Pos) /* (DSI_VID_PKT_STATUS) Input Video Interface Write Payload FIFO Full Mask */
 #define DSI_VID_PKT_STATUS_DPI_BUFF_PLD_FULL(value) (DSI_VID_PKT_STATUS_DPI_BUFF_PLD_FULL_Msk & (_UINT32_(value) << DSI_VID_PKT_STATUS_DPI_BUFF_PLD_FULL_Pos)) /* Assigment of value for DPI_BUFF_PLD_FULL in the DSI_VID_PKT_STATUS register */
 #define DSI_VID_PKT_STATUS_Msk                _UINT32_(0x0003000F)                                 /* (DSI_VID_PKT_STATUS) Register Mask  */
 
@@ -1714,11 +1674,7 @@
 #define DSI_DPHY_CAL_REG_OFST          _UINT32_(0xCC)      /* (DSI_DPHY_CAL) D-PHY Calibration Control Register Offset */
 #define DSI_INT_FORCE0_REG_OFST        _UINT32_(0xD8)      /* (DSI_INT_FORCE0) Interrupt Force Control Register 0 Offset */
 #define DSI_INT_FORCE1_REG_OFST        _UINT32_(0xDC)      /* (DSI_INT_FORCE1) Interrupt Force Control Register 1 Offset */
-#define DSI_AUTO_ULPS_MODE_REG_OFST    _UINT32_(0xE0)      /* (DSI_AUTO_ULPS_MODE) Automatic Ultra-Low-Power Mode Register Offset */
-#define DSI_AUTO_ULPS_ENTRY_DELAY_REG_OFST _UINT32_(0xE4)      /* (DSI_AUTO_ULPS_ENTRY_DELAY) Automatic Ultra-Low-Power Entry Delay Register Offset */
-#define DSI_AUTO_ULPS_WAKEUP_TIME_REG_OFST _UINT32_(0xE8)      /* (DSI_AUTO_ULPS_WAKEUP_TIME) Automatic Ultra-Low-Power Wake-Up Time Register Offset */
 #define DSI_DPHY_TMR_RD_CFG_REG_OFST   _UINT32_(0xF4)      /* (DSI_DPHY_TMR_RD_CFG) DHY Read Timing Configuration Register Offset */
-#define DSI_AUTO_ULPS_MIN_TIME_REG_OFST _UINT32_(0xF8)      /* (DSI_AUTO_ULPS_MIN_TIME) Automatic Ultra-Low-Power Minimum Time Register Offset */
 #define DSI_VID_SHADOW_CTRL_REG_OFST   _UINT32_(0x100)     /* (DSI_VID_SHADOW_CTRL) Video Mode Shadow Feature Control Register Offset */
 #define DSI_DPI_VCID_ACT_REG_OFST      _UINT32_(0x10C)     /* (DSI_DPI_VCID_ACT) Input Video Virtual Channel ID Active Value Register Offset */
 #define DSI_DPI_COLOR_CODING_ACT_REG_OFST _UINT32_(0x110)     /* (DSI_DPI_COLOR_CODING_ACT) Input Video Color Coding Active Value Register Offset */
@@ -1740,7 +1696,7 @@
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief DSI register API structure */
 typedef struct
-{  /* LCD Controller */
+{  /* Display Serial Interface */
   __I   uint8_t                        Reserved1[0x04];
   __IO  uint32_t                       DSI_PWR_UP;         /**< Offset: 0x04 (R/W  32) Power-Up Control Register */
   __IO  uint32_t                       DSI_CLKMGR_CFG;     /**< Offset: 0x08 (R/W  32) Clock Management Configuration Register */
@@ -1791,15 +1747,11 @@ typedef struct
   __IO  uint32_t                       DSI_INT_MSK1;       /**< Offset: 0xC8 (R/W  32) Interrupt Mask Configuration Register 1 */
   __IO  uint32_t                       DSI_DPHY_CAL;       /**< Offset: 0xCC (R/W  32) D-PHY Calibration Control Register */
   __I   uint8_t                        Reserved4[0x08];
-  __IO  uint32_t                       DSI_INT_FORCE0;     /**< Offset: 0xD8 (R/W  32) Interrupt Force Control Register 0 */
-  __IO  uint32_t                       DSI_INT_FORCE1;     /**< Offset: 0xDC (R/W  32) Interrupt Force Control Register 1 */
-  __IO  uint32_t                       DSI_AUTO_ULPS_MODE; /**< Offset: 0xE0 (R/W  32) Automatic Ultra-Low-Power Mode Register */
-  __IO  uint32_t                       DSI_AUTO_ULPS_ENTRY_DELAY; /**< Offset: 0xE4 (R/W  32) Automatic Ultra-Low-Power Entry Delay Register */
-  __IO  uint32_t                       DSI_AUTO_ULPS_WAKEUP_TIME; /**< Offset: 0xE8 (R/W  32) Automatic Ultra-Low-Power Wake-Up Time Register */
-  __I   uint8_t                        Reserved5[0x08];
+  __O   uint32_t                       DSI_INT_FORCE0;     /**< Offset: 0xD8 ( /W  32) Interrupt Force Control Register 0 */
+  __O   uint32_t                       DSI_INT_FORCE1;     /**< Offset: 0xDC ( /W  32) Interrupt Force Control Register 1 */
+  __I   uint8_t                        Reserved5[0x14];
   __IO  uint32_t                       DSI_DPHY_TMR_RD_CFG; /**< Offset: 0xF4 (R/W  32) DHY Read Timing Configuration Register */
-  __IO  uint32_t                       DSI_AUTO_ULPS_MIN_TIME; /**< Offset: 0xF8 (R/W  32) Automatic Ultra-Low-Power Minimum Time Register */
-  __I   uint8_t                        Reserved6[0x04];
+  __I   uint8_t                        Reserved6[0x08];
   __IO  uint32_t                       DSI_VID_SHADOW_CTRL; /**< Offset: 0x100 (R/W  32) Video Mode Shadow Feature Control Register */
   __I   uint8_t                        Reserved7[0x08];
   __I   uint32_t                       DSI_DPI_VCID_ACT;   /**< Offset: 0x10C (R/   32) Input Video Virtual Channel ID Active Value Register */

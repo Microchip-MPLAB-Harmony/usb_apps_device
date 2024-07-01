@@ -18,7 +18,7 @@
  */
 
 /* file generated from device description file (ATDF) version 2024-04-05T08:36:56Z */
-#ifndef _SAM9X7_RSTC_INSTANCE_
-#define _SAM9X7_RSTC_INSTANCE_
+#ifndef _SAM9X7_UHPHS_OHCI_INSTANCE_
+#define _SAM9X7_UHPHS_OHCI_INSTANCE_
 
-#endif /* _SAM9X7_RSTC_INSTANCE_ */
+#endif /* _SAM9X7_UHPHS_OHCI_INSTANCE_ */
