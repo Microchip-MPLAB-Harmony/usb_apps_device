@@ -1,26 +1,23 @@
 /*
  * Component description for ADC
  *
- * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
  *
- * Subject to your compliance with these terms, you may use Microchip software and any derivatives
- * exclusively with Microchip products. It is your responsibility to comply with third party license
- * terms applicable to your use of third party software (including open source software) that may
- * accompany Microchip software.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY,
- * APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND
- * FITNESS FOR A PARTICULAR PURPOSE.
+ *   http://www.apache.org/licenses/LICENSE-2.0
  *
- * IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, INCIDENTAL OR CONSEQUENTIAL
- * LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF
- * MICROCHIP HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO THE FULLEST EXTENT
- * ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT
- * EXCEED THE AMOUNT OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  *
  */
 
-/* file generated from device description version 2023-01-20T08:33:42Z */
+/* file generated from device description file (ATDF) version 2024-04-05T08:36:56Z */
 #ifndef _SAM9X7_ADC_COMPONENT_H_
 #define _SAM9X7_ADC_COMPONENT_H_
 
@@ -61,7 +58,7 @@
 
 
 /* -------- ADC_MR : (ADC Offset: 0x04) (R/W 32) Mode Register -------- */
-#define ADC_MR_RESETVALUE                     _UINT32_(0x00)                                       /*  (ADC_MR) Mode Register  Reset Value */
+#define ADC_MR_RESETVALUE                     _UINT32_(0x20000000)                                 /*  (ADC_MR) Mode Register  Reset Value */
 
 #define ADC_MR_TRGSEL_Pos                     _UINT32_(1)                                          /* (ADC_MR) Trigger Selection Position */
 #define ADC_MR_TRGSEL_Msk                     (_UINT32_(0x7) << ADC_MR_TRGSEL_Pos)                 /* (ADC_MR) Trigger Selection Mask */
@@ -70,37 +67,31 @@
 #define   ADC_MR_TRGSEL_ADC_TRIG1_Val         _UINT32_(0x1)                                        /* (ADC_MR) TIOA0  */
 #define   ADC_MR_TRGSEL_ADC_TRIG2_Val         _UINT32_(0x2)                                        /* (ADC_MR) TIOA1  */
 #define   ADC_MR_TRGSEL_ADC_TRIG3_Val         _UINT32_(0x3)                                        /* (ADC_MR) TIOA2  */
-#define   ADC_MR_TRGSEL_ADC_TRIG4_Val         _UINT32_(0x4)                                        /* (ADC_MR) PWM event line 0  */
-#define   ADC_MR_TRGSEL_ADC_TRIG5_Val         _UINT32_(0x5)                                        /* (ADC_MR) PWM event line 1  */
-#define   ADC_MR_TRGSEL_ADC_TRIG6_Val         _UINT32_(0x6)                                        /* (ADC_MR) TIOA3  */
-#define   ADC_MR_TRGSEL_ADC_TRIG7_Val         _UINT32_(0x7)                                        /* (ADC_MR) RTCOUT1  */
+#define   ADC_MR_TRGSEL_ADC_TRIG4_Val         _UINT32_(0x4)                                        /* (ADC_MR) RTCOUT1  */
 #define ADC_MR_TRGSEL_ADC_TRIG0               (ADC_MR_TRGSEL_ADC_TRIG0_Val << ADC_MR_TRGSEL_Pos)   /* (ADC_MR) ADTRG Position  */
 #define ADC_MR_TRGSEL_ADC_TRIG1               (ADC_MR_TRGSEL_ADC_TRIG1_Val << ADC_MR_TRGSEL_Pos)   /* (ADC_MR) TIOA0 Position  */
 #define ADC_MR_TRGSEL_ADC_TRIG2               (ADC_MR_TRGSEL_ADC_TRIG2_Val << ADC_MR_TRGSEL_Pos)   /* (ADC_MR) TIOA1 Position  */
 #define ADC_MR_TRGSEL_ADC_TRIG3               (ADC_MR_TRGSEL_ADC_TRIG3_Val << ADC_MR_TRGSEL_Pos)   /* (ADC_MR) TIOA2 Position  */
-#define ADC_MR_TRGSEL_ADC_TRIG4               (ADC_MR_TRGSEL_ADC_TRIG4_Val << ADC_MR_TRGSEL_Pos)   /* (ADC_MR) PWM event line 0 Position  */
-#define ADC_MR_TRGSEL_ADC_TRIG5               (ADC_MR_TRGSEL_ADC_TRIG5_Val << ADC_MR_TRGSEL_Pos)   /* (ADC_MR) PWM event line 1 Position  */
-#define ADC_MR_TRGSEL_ADC_TRIG6               (ADC_MR_TRGSEL_ADC_TRIG6_Val << ADC_MR_TRGSEL_Pos)   /* (ADC_MR) TIOA3 Position  */
-#define ADC_MR_TRGSEL_ADC_TRIG7               (ADC_MR_TRGSEL_ADC_TRIG7_Val << ADC_MR_TRGSEL_Pos)   /* (ADC_MR) RTCOUT1 Position  */
+#define ADC_MR_TRGSEL_ADC_TRIG4               (ADC_MR_TRGSEL_ADC_TRIG4_Val << ADC_MR_TRGSEL_Pos)   /* (ADC_MR) RTCOUT1 Position  */
 #define ADC_MR_SLEEP_Pos                      _UINT32_(5)                                          /* (ADC_MR) Sleep Mode Position */
 #define ADC_MR_SLEEP_Msk                      (_UINT32_(0x1) << ADC_MR_SLEEP_Pos)                  /* (ADC_MR) Sleep Mode Mask */
 #define ADC_MR_SLEEP(value)                   (ADC_MR_SLEEP_Msk & (_UINT32_(value) << ADC_MR_SLEEP_Pos)) /* Assigment of value for SLEEP in the ADC_MR register */
 #define   ADC_MR_SLEEP_NORMAL_Val             _UINT32_(0x0)                                        /* (ADC_MR) Normal Mode: The ADC core and reference voltage circuitry are kept ON between conversions.  */
-#define   ADC_MR_SLEEP_SLEEP_Val              _UINT32_(0x1)                                        /* (ADC_MR) Sleep Mode: The wakeup time can be modified by programming the FWUP bit.  */
+#define   ADC_MR_SLEEP_SLEEP_Val              _UINT32_(0x1)                                        /* (ADC_MR) Sleep Mode: The wake-up time can be modified by programming the FWUP bit.  */
 #define ADC_MR_SLEEP_NORMAL                   (ADC_MR_SLEEP_NORMAL_Val << ADC_MR_SLEEP_Pos)        /* (ADC_MR) Normal Mode: The ADC core and reference voltage circuitry are kept ON between conversions. Position  */
-#define ADC_MR_SLEEP_SLEEP                    (ADC_MR_SLEEP_SLEEP_Val << ADC_MR_SLEEP_Pos)         /* (ADC_MR) Sleep Mode: The wakeup time can be modified by programming the FWUP bit. Position  */
-#define ADC_MR_FWUP_Pos                       _UINT32_(6)                                          /* (ADC_MR) Fast Wakeup Position */
-#define ADC_MR_FWUP_Msk                       (_UINT32_(0x1) << ADC_MR_FWUP_Pos)                   /* (ADC_MR) Fast Wakeup Mask */
+#define ADC_MR_SLEEP_SLEEP                    (ADC_MR_SLEEP_SLEEP_Val << ADC_MR_SLEEP_Pos)         /* (ADC_MR) Sleep Mode: The wake-up time can be modified by programming the FWUP bit. Position  */
+#define ADC_MR_FWUP_Pos                       _UINT32_(6)                                          /* (ADC_MR) Fast Wake-Up Position */
+#define ADC_MR_FWUP_Msk                       (_UINT32_(0x1) << ADC_MR_FWUP_Pos)                   /* (ADC_MR) Fast Wake-Up Mask */
 #define ADC_MR_FWUP(value)                    (ADC_MR_FWUP_Msk & (_UINT32_(value) << ADC_MR_FWUP_Pos)) /* Assigment of value for FWUP in the ADC_MR register */
-#define   ADC_MR_FWUP_OFF_Val                 _UINT32_(0x0)                                        /* (ADC_MR) If SLEEP is 1, then both ADC core and reference voltage circuitry are OFF between conversions  */
-#define   ADC_MR_FWUP_ON_Val                  _UINT32_(0x1)                                        /* (ADC_MR) If SLEEP is 1, then Fast Wakeup Sleep mode: The voltage reference is ON between conversions and ADC core is OFF  */
-#define ADC_MR_FWUP_OFF                       (ADC_MR_FWUP_OFF_Val << ADC_MR_FWUP_Pos)             /* (ADC_MR) If SLEEP is 1, then both ADC core and reference voltage circuitry are OFF between conversions Position  */
-#define ADC_MR_FWUP_ON                        (ADC_MR_FWUP_ON_Val << ADC_MR_FWUP_Pos)              /* (ADC_MR) If SLEEP is 1, then Fast Wakeup Sleep mode: The voltage reference is ON between conversions and ADC core is OFF Position  */
+#define   ADC_MR_FWUP_OFF_Val                 _UINT32_(0x0)                                        /* (ADC_MR) If SLEEP is 1, then both ADC core and reference voltage circuitry are off between conversions  */
+#define   ADC_MR_FWUP_ON_Val                  _UINT32_(0x1)                                        /* (ADC_MR) If SLEEP is 1, then Fast Wake-Up Sleep mode: The voltage reference is on between conversions and ADC core is off.  */
+#define ADC_MR_FWUP_OFF                       (ADC_MR_FWUP_OFF_Val << ADC_MR_FWUP_Pos)             /* (ADC_MR) If SLEEP is 1, then both ADC core and reference voltage circuitry are off between conversions Position  */
+#define ADC_MR_FWUP_ON                        (ADC_MR_FWUP_ON_Val << ADC_MR_FWUP_Pos)              /* (ADC_MR) If SLEEP is 1, then Fast Wake-Up Sleep mode: The voltage reference is on between conversions and ADC core is off. Position  */
 #define ADC_MR_PRESCAL_Pos                    _UINT32_(8)                                          /* (ADC_MR) Prescaler Rate Selection Position */
 #define ADC_MR_PRESCAL_Msk                    (_UINT32_(0xFF) << ADC_MR_PRESCAL_Pos)               /* (ADC_MR) Prescaler Rate Selection Mask */
 #define ADC_MR_PRESCAL(value)                 (ADC_MR_PRESCAL_Msk & (_UINT32_(value) << ADC_MR_PRESCAL_Pos)) /* Assigment of value for PRESCAL in the ADC_MR register */
-#define ADC_MR_STARTUP_Pos                    _UINT32_(16)                                         /* (ADC_MR) Startup Time Position */
-#define ADC_MR_STARTUP_Msk                    (_UINT32_(0xF) << ADC_MR_STARTUP_Pos)                /* (ADC_MR) Startup Time Mask */
+#define ADC_MR_STARTUP_Pos                    _UINT32_(16)                                         /* (ADC_MR) Start-Up Time Position */
+#define ADC_MR_STARTUP_Msk                    (_UINT32_(0xF) << ADC_MR_STARTUP_Pos)                /* (ADC_MR) Start-Up Time Mask */
 #define ADC_MR_STARTUP(value)                 (ADC_MR_STARTUP_Msk & (_UINT32_(value) << ADC_MR_STARTUP_Pos)) /* Assigment of value for STARTUP in the ADC_MR register */
 #define   ADC_MR_STARTUP_SUT0_Val             _UINT32_(0x0)                                        /* (ADC_MR) 0 periods of ADCCLK  */
 #define   ADC_MR_STARTUP_SUT8_Val             _UINT32_(0x1)                                        /* (ADC_MR) 8 periods of ADCCLK  */
@@ -154,9 +145,9 @@
 #define ADC_MR_USEQ_Msk                       (_UINT32_(0x1) << ADC_MR_USEQ_Pos)                   /* (ADC_MR) User Sequence Enable Mask */
 #define ADC_MR_USEQ(value)                    (ADC_MR_USEQ_Msk & (_UINT32_(value) << ADC_MR_USEQ_Pos)) /* Assigment of value for USEQ in the ADC_MR register */
 #define   ADC_MR_USEQ_NUM_ORDER_Val           _UINT32_(0x0)                                        /* (ADC_MR) Normal mode: The controller converts channels in a simple numeric order depending only on the channel index.  */
-#define   ADC_MR_USEQ_REG_ORDER_Val           _UINT32_(0x1)                                        /* (ADC_MR) User Sequence mode: The sequence respects what is defined in ADC_SEQR1 and ADC_SEQR2 registers and can be used to convert the same channel several times.  */
+#define   ADC_MR_USEQ_REG_ORDER_Val           _UINT32_(0x1)                                        /* (ADC_MR) User Sequence mode: The sequence respects what is defined in ADC_SEQR1 and can be used to convert the same channel several times.  */
 #define ADC_MR_USEQ_NUM_ORDER                 (ADC_MR_USEQ_NUM_ORDER_Val << ADC_MR_USEQ_Pos)       /* (ADC_MR) Normal mode: The controller converts channels in a simple numeric order depending only on the channel index. Position  */
-#define ADC_MR_USEQ_REG_ORDER                 (ADC_MR_USEQ_REG_ORDER_Val << ADC_MR_USEQ_Pos)       /* (ADC_MR) User Sequence mode: The sequence respects what is defined in ADC_SEQR1 and ADC_SEQR2 registers and can be used to convert the same channel several times. Position  */
+#define ADC_MR_USEQ_REG_ORDER                 (ADC_MR_USEQ_REG_ORDER_Val << ADC_MR_USEQ_Pos)       /* (ADC_MR) User Sequence mode: The sequence respects what is defined in ADC_SEQR1 and can be used to convert the same channel several times. Position  */
 #define ADC_MR_Msk                            _UINT32_(0xFF8FFF6E)                                 /* (ADC_MR) Register Mask  */
 
 
@@ -188,21 +179,6 @@
 #define ADC_SEQR1_USCH8_Msk                   (_UINT32_(0xF) << ADC_SEQR1_USCH8_Pos)               /* (ADC_SEQR1) User Sequence Number 8 Mask */
 #define ADC_SEQR1_USCH8(value)                (ADC_SEQR1_USCH8_Msk & (_UINT32_(value) << ADC_SEQR1_USCH8_Pos)) /* Assigment of value for USCH8 in the ADC_SEQR1 register */
 #define ADC_SEQR1_Msk                         _UINT32_(0xFFFFFFFF)                                 /* (ADC_SEQR1) Register Mask  */
-
-
-/* -------- ADC_SEQR2 : (ADC Offset: 0x0C) (R/W 32) Channel Sequence Register 2 -------- */
-#define ADC_SEQR2_RESETVALUE                  _UINT32_(0x00)                                       /*  (ADC_SEQR2) Channel Sequence Register 2  Reset Value */
-
-#define ADC_SEQR2_USCH9_Pos                   _UINT32_(0)                                          /* (ADC_SEQR2) User Sequence Number 9 Position */
-#define ADC_SEQR2_USCH9_Msk                   (_UINT32_(0xF) << ADC_SEQR2_USCH9_Pos)               /* (ADC_SEQR2) User Sequence Number 9 Mask */
-#define ADC_SEQR2_USCH9(value)                (ADC_SEQR2_USCH9_Msk & (_UINT32_(value) << ADC_SEQR2_USCH9_Pos)) /* Assigment of value for USCH9 in the ADC_SEQR2 register */
-#define ADC_SEQR2_USCH10_Pos                  _UINT32_(4)                                          /* (ADC_SEQR2) User Sequence Number 10 Position */
-#define ADC_SEQR2_USCH10_Msk                  (_UINT32_(0xF) << ADC_SEQR2_USCH10_Pos)              /* (ADC_SEQR2) User Sequence Number 10 Mask */
-#define ADC_SEQR2_USCH10(value)               (ADC_SEQR2_USCH10_Msk & (_UINT32_(value) << ADC_SEQR2_USCH10_Pos)) /* Assigment of value for USCH10 in the ADC_SEQR2 register */
-#define ADC_SEQR2_USCH11_Pos                  _UINT32_(8)                                          /* (ADC_SEQR2) User Sequence Number 11 Position */
-#define ADC_SEQR2_USCH11_Msk                  (_UINT32_(0xF) << ADC_SEQR2_USCH11_Pos)              /* (ADC_SEQR2) User Sequence Number 11 Mask */
-#define ADC_SEQR2_USCH11(value)               (ADC_SEQR2_USCH11_Msk & (_UINT32_(value) << ADC_SEQR2_USCH11_Pos)) /* Assigment of value for USCH11 in the ADC_SEQR2 register */
-#define ADC_SEQR2_Msk                         _UINT32_(0x00000FFF)                                 /* (ADC_SEQR2) Register Mask  */
 
 
 /* -------- ADC_CHER : (ADC Offset: 0x10) ( /W 32) Channel Enable Register -------- */
@@ -262,38 +238,10 @@
 #define   ADC_CHER_CH7_1_Val                  _UINT32_(0x1)                                        /* (ADC_CHER) Enables the corresponding channel.  */
 #define ADC_CHER_CH7_0                        (ADC_CHER_CH7_0_Val << ADC_CHER_CH7_Pos)             /* (ADC_CHER) No effect. Position  */
 #define ADC_CHER_CH7_1                        (ADC_CHER_CH7_1_Val << ADC_CHER_CH7_Pos)             /* (ADC_CHER) Enables the corresponding channel. Position  */
-#define ADC_CHER_CH8_Pos                      _UINT32_(8)                                          /* (ADC_CHER) Channel 8 Enable Position */
-#define ADC_CHER_CH8_Msk                      (_UINT32_(0x1) << ADC_CHER_CH8_Pos)                  /* (ADC_CHER) Channel 8 Enable Mask */
-#define ADC_CHER_CH8(value)                   (ADC_CHER_CH8_Msk & (_UINT32_(value) << ADC_CHER_CH8_Pos)) /* Assigment of value for CH8 in the ADC_CHER register */
-#define   ADC_CHER_CH8_0_Val                  _UINT32_(0x0)                                        /* (ADC_CHER) No effect.  */
-#define   ADC_CHER_CH8_1_Val                  _UINT32_(0x1)                                        /* (ADC_CHER) Enables the corresponding channel.  */
-#define ADC_CHER_CH8_0                        (ADC_CHER_CH8_0_Val << ADC_CHER_CH8_Pos)             /* (ADC_CHER) No effect. Position  */
-#define ADC_CHER_CH8_1                        (ADC_CHER_CH8_1_Val << ADC_CHER_CH8_Pos)             /* (ADC_CHER) Enables the corresponding channel. Position  */
-#define ADC_CHER_CH9_Pos                      _UINT32_(9)                                          /* (ADC_CHER) Channel 9 Enable Position */
-#define ADC_CHER_CH9_Msk                      (_UINT32_(0x1) << ADC_CHER_CH9_Pos)                  /* (ADC_CHER) Channel 9 Enable Mask */
-#define ADC_CHER_CH9(value)                   (ADC_CHER_CH9_Msk & (_UINT32_(value) << ADC_CHER_CH9_Pos)) /* Assigment of value for CH9 in the ADC_CHER register */
-#define   ADC_CHER_CH9_0_Val                  _UINT32_(0x0)                                        /* (ADC_CHER) No effect.  */
-#define   ADC_CHER_CH9_1_Val                  _UINT32_(0x1)                                        /* (ADC_CHER) Enables the corresponding channel.  */
-#define ADC_CHER_CH9_0                        (ADC_CHER_CH9_0_Val << ADC_CHER_CH9_Pos)             /* (ADC_CHER) No effect. Position  */
-#define ADC_CHER_CH9_1                        (ADC_CHER_CH9_1_Val << ADC_CHER_CH9_Pos)             /* (ADC_CHER) Enables the corresponding channel. Position  */
-#define ADC_CHER_CH10_Pos                     _UINT32_(10)                                         /* (ADC_CHER) Channel 10 Enable Position */
-#define ADC_CHER_CH10_Msk                     (_UINT32_(0x1) << ADC_CHER_CH10_Pos)                 /* (ADC_CHER) Channel 10 Enable Mask */
-#define ADC_CHER_CH10(value)                  (ADC_CHER_CH10_Msk & (_UINT32_(value) << ADC_CHER_CH10_Pos)) /* Assigment of value for CH10 in the ADC_CHER register */
-#define   ADC_CHER_CH10_0_Val                 _UINT32_(0x0)                                        /* (ADC_CHER) No effect.  */
-#define   ADC_CHER_CH10_1_Val                 _UINT32_(0x1)                                        /* (ADC_CHER) Enables the corresponding channel.  */
-#define ADC_CHER_CH10_0                       (ADC_CHER_CH10_0_Val << ADC_CHER_CH10_Pos)           /* (ADC_CHER) No effect. Position  */
-#define ADC_CHER_CH10_1                       (ADC_CHER_CH10_1_Val << ADC_CHER_CH10_Pos)           /* (ADC_CHER) Enables the corresponding channel. Position  */
-#define ADC_CHER_CH11_Pos                     _UINT32_(11)                                         /* (ADC_CHER) Channel 11 Enable Position */
-#define ADC_CHER_CH11_Msk                     (_UINT32_(0x1) << ADC_CHER_CH11_Pos)                 /* (ADC_CHER) Channel 11 Enable Mask */
-#define ADC_CHER_CH11(value)                  (ADC_CHER_CH11_Msk & (_UINT32_(value) << ADC_CHER_CH11_Pos)) /* Assigment of value for CH11 in the ADC_CHER register */
-#define   ADC_CHER_CH11_0_Val                 _UINT32_(0x0)                                        /* (ADC_CHER) No effect.  */
-#define   ADC_CHER_CH11_1_Val                 _UINT32_(0x1)                                        /* (ADC_CHER) Enables the corresponding channel.  */
-#define ADC_CHER_CH11_0                       (ADC_CHER_CH11_0_Val << ADC_CHER_CH11_Pos)           /* (ADC_CHER) No effect. Position  */
-#define ADC_CHER_CH11_1                       (ADC_CHER_CH11_1_Val << ADC_CHER_CH11_Pos)           /* (ADC_CHER) Enables the corresponding channel. Position  */
-#define ADC_CHER_Msk                          _UINT32_(0x00000FFF)                                 /* (ADC_CHER) Register Mask  */
+#define ADC_CHER_Msk                          _UINT32_(0x000000FF)                                 /* (ADC_CHER) Register Mask  */
 
-#define ADC_CHER_CH_Pos                       _UINT32_(0)                                          /* (ADC_CHER Position) Channel xx Enable */
-#define ADC_CHER_CH_Msk                       (_UINT32_(0xFFF) << ADC_CHER_CH_Pos)                 /* (ADC_CHER Mask) CH */
+#define ADC_CHER_CH_Pos                       _UINT32_(0)                                          /* (ADC_CHER Position) Channel 7 Enable */
+#define ADC_CHER_CH_Msk                       (_UINT32_(0xFF) << ADC_CHER_CH_Pos)                  /* (ADC_CHER Mask) CH */
 #define ADC_CHER_CH(value)                    (ADC_CHER_CH_Msk & (_UINT32_(value) << ADC_CHER_CH_Pos)) 
 
 /* -------- ADC_CHDR : (ADC Offset: 0x14) ( /W 32) Channel Disable Register -------- */
@@ -353,38 +301,10 @@
 #define   ADC_CHDR_CH7_1_Val                  _UINT32_(0x1)                                        /* (ADC_CHDR) Disables the corresponding channel.  */
 #define ADC_CHDR_CH7_0                        (ADC_CHDR_CH7_0_Val << ADC_CHDR_CH7_Pos)             /* (ADC_CHDR) No effect. Position  */
 #define ADC_CHDR_CH7_1                        (ADC_CHDR_CH7_1_Val << ADC_CHDR_CH7_Pos)             /* (ADC_CHDR) Disables the corresponding channel. Position  */
-#define ADC_CHDR_CH8_Pos                      _UINT32_(8)                                          /* (ADC_CHDR) Channel 8 Disable Position */
-#define ADC_CHDR_CH8_Msk                      (_UINT32_(0x1) << ADC_CHDR_CH8_Pos)                  /* (ADC_CHDR) Channel 8 Disable Mask */
-#define ADC_CHDR_CH8(value)                   (ADC_CHDR_CH8_Msk & (_UINT32_(value) << ADC_CHDR_CH8_Pos)) /* Assigment of value for CH8 in the ADC_CHDR register */
-#define   ADC_CHDR_CH8_0_Val                  _UINT32_(0x0)                                        /* (ADC_CHDR) No effect.  */
-#define   ADC_CHDR_CH8_1_Val                  _UINT32_(0x1)                                        /* (ADC_CHDR) Disables the corresponding channel.  */
-#define ADC_CHDR_CH8_0                        (ADC_CHDR_CH8_0_Val << ADC_CHDR_CH8_Pos)             /* (ADC_CHDR) No effect. Position  */
-#define ADC_CHDR_CH8_1                        (ADC_CHDR_CH8_1_Val << ADC_CHDR_CH8_Pos)             /* (ADC_CHDR) Disables the corresponding channel. Position  */
-#define ADC_CHDR_CH9_Pos                      _UINT32_(9)                                          /* (ADC_CHDR) Channel 9 Disable Position */
-#define ADC_CHDR_CH9_Msk                      (_UINT32_(0x1) << ADC_CHDR_CH9_Pos)                  /* (ADC_CHDR) Channel 9 Disable Mask */
-#define ADC_CHDR_CH9(value)                   (ADC_CHDR_CH9_Msk & (_UINT32_(value) << ADC_CHDR_CH9_Pos)) /* Assigment of value for CH9 in the ADC_CHDR register */
-#define   ADC_CHDR_CH9_0_Val                  _UINT32_(0x0)                                        /* (ADC_CHDR) No effect.  */
-#define   ADC_CHDR_CH9_1_Val                  _UINT32_(0x1)                                        /* (ADC_CHDR) Disables the corresponding channel.  */
-#define ADC_CHDR_CH9_0                        (ADC_CHDR_CH9_0_Val << ADC_CHDR_CH9_Pos)             /* (ADC_CHDR) No effect. Position  */
-#define ADC_CHDR_CH9_1                        (ADC_CHDR_CH9_1_Val << ADC_CHDR_CH9_Pos)             /* (ADC_CHDR) Disables the corresponding channel. Position  */
-#define ADC_CHDR_CH10_Pos                     _UINT32_(10)                                         /* (ADC_CHDR) Channel 10 Disable Position */
-#define ADC_CHDR_CH10_Msk                     (_UINT32_(0x1) << ADC_CHDR_CH10_Pos)                 /* (ADC_CHDR) Channel 10 Disable Mask */
-#define ADC_CHDR_CH10(value)                  (ADC_CHDR_CH10_Msk & (_UINT32_(value) << ADC_CHDR_CH10_Pos)) /* Assigment of value for CH10 in the ADC_CHDR register */
-#define   ADC_CHDR_CH10_0_Val                 _UINT32_(0x0)                                        /* (ADC_CHDR) No effect.  */
-#define   ADC_CHDR_CH10_1_Val                 _UINT32_(0x1)                                        /* (ADC_CHDR) Disables the corresponding channel.  */
-#define ADC_CHDR_CH10_0                       (ADC_CHDR_CH10_0_Val << ADC_CHDR_CH10_Pos)           /* (ADC_CHDR) No effect. Position  */
-#define ADC_CHDR_CH10_1                       (ADC_CHDR_CH10_1_Val << ADC_CHDR_CH10_Pos)           /* (ADC_CHDR) Disables the corresponding channel. Position  */
-#define ADC_CHDR_CH11_Pos                     _UINT32_(11)                                         /* (ADC_CHDR) Channel 11 Disable Position */
-#define ADC_CHDR_CH11_Msk                     (_UINT32_(0x1) << ADC_CHDR_CH11_Pos)                 /* (ADC_CHDR) Channel 11 Disable Mask */
-#define ADC_CHDR_CH11(value)                  (ADC_CHDR_CH11_Msk & (_UINT32_(value) << ADC_CHDR_CH11_Pos)) /* Assigment of value for CH11 in the ADC_CHDR register */
-#define   ADC_CHDR_CH11_0_Val                 _UINT32_(0x0)                                        /* (ADC_CHDR) No effect.  */
-#define   ADC_CHDR_CH11_1_Val                 _UINT32_(0x1)                                        /* (ADC_CHDR) Disables the corresponding channel.  */
-#define ADC_CHDR_CH11_0                       (ADC_CHDR_CH11_0_Val << ADC_CHDR_CH11_Pos)           /* (ADC_CHDR) No effect. Position  */
-#define ADC_CHDR_CH11_1                       (ADC_CHDR_CH11_1_Val << ADC_CHDR_CH11_Pos)           /* (ADC_CHDR) Disables the corresponding channel. Position  */
-#define ADC_CHDR_Msk                          _UINT32_(0x00000FFF)                                 /* (ADC_CHDR) Register Mask  */
+#define ADC_CHDR_Msk                          _UINT32_(0x000000FF)                                 /* (ADC_CHDR) Register Mask  */
 
-#define ADC_CHDR_CH_Pos                       _UINT32_(0)                                          /* (ADC_CHDR Position) Channel xx Disable */
-#define ADC_CHDR_CH_Msk                       (_UINT32_(0xFFF) << ADC_CHDR_CH_Pos)                 /* (ADC_CHDR Mask) CH */
+#define ADC_CHDR_CH_Pos                       _UINT32_(0)                                          /* (ADC_CHDR Position) Channel 7 Disable */
+#define ADC_CHDR_CH_Msk                       (_UINT32_(0xFF) << ADC_CHDR_CH_Pos)                  /* (ADC_CHDR Mask) CH */
 #define ADC_CHDR_CH(value)                    (ADC_CHDR_CH_Msk & (_UINT32_(value) << ADC_CHDR_CH_Pos)) 
 
 /* -------- ADC_CHSR : (ADC Offset: 0x18) ( R/ 32) Channel Status Register -------- */
@@ -393,91 +313,63 @@
 #define ADC_CHSR_CH0_Pos                      _UINT32_(0)                                          /* (ADC_CHSR) Channel 0 Status Position */
 #define ADC_CHSR_CH0_Msk                      (_UINT32_(0x1) << ADC_CHSR_CH0_Pos)                  /* (ADC_CHSR) Channel 0 Status Mask */
 #define ADC_CHSR_CH0(value)                   (ADC_CHSR_CH0_Msk & (_UINT32_(value) << ADC_CHSR_CH0_Pos)) /* Assigment of value for CH0 in the ADC_CHSR register */
-#define   ADC_CHSR_CH0_0_Val                  _UINT32_(0x0)                                        /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx field) is disabled.  */
-#define   ADC_CHSR_CH0_1_Val                  _UINT32_(0x1)                                        /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx field) is enabled.  */
-#define ADC_CHSR_CH0_0                        (ADC_CHSR_CH0_0_Val << ADC_CHSR_CH0_Pos)             /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx field) is disabled. Position  */
-#define ADC_CHSR_CH0_1                        (ADC_CHSR_CH0_1_Val << ADC_CHSR_CH0_Pos)             /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx field) is enabled. Position  */
+#define   ADC_CHSR_CH0_0_Val                  _UINT32_(0x0)                                        /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx) is disabled.  */
+#define   ADC_CHSR_CH0_1_Val                  _UINT32_(0x1)                                        /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx) is enabled.  */
+#define ADC_CHSR_CH0_0                        (ADC_CHSR_CH0_0_Val << ADC_CHSR_CH0_Pos)             /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx) is disabled. Position  */
+#define ADC_CHSR_CH0_1                        (ADC_CHSR_CH0_1_Val << ADC_CHSR_CH0_Pos)             /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx) is enabled. Position  */
 #define ADC_CHSR_CH1_Pos                      _UINT32_(1)                                          /* (ADC_CHSR) Channel 1 Status Position */
 #define ADC_CHSR_CH1_Msk                      (_UINT32_(0x1) << ADC_CHSR_CH1_Pos)                  /* (ADC_CHSR) Channel 1 Status Mask */
 #define ADC_CHSR_CH1(value)                   (ADC_CHSR_CH1_Msk & (_UINT32_(value) << ADC_CHSR_CH1_Pos)) /* Assigment of value for CH1 in the ADC_CHSR register */
-#define   ADC_CHSR_CH1_0_Val                  _UINT32_(0x0)                                        /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx field) is disabled.  */
-#define   ADC_CHSR_CH1_1_Val                  _UINT32_(0x1)                                        /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx field) is enabled.  */
-#define ADC_CHSR_CH1_0                        (ADC_CHSR_CH1_0_Val << ADC_CHSR_CH1_Pos)             /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx field) is disabled. Position  */
-#define ADC_CHSR_CH1_1                        (ADC_CHSR_CH1_1_Val << ADC_CHSR_CH1_Pos)             /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx field) is enabled. Position  */
+#define   ADC_CHSR_CH1_0_Val                  _UINT32_(0x0)                                        /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx) is disabled.  */
+#define   ADC_CHSR_CH1_1_Val                  _UINT32_(0x1)                                        /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx) is enabled.  */
+#define ADC_CHSR_CH1_0                        (ADC_CHSR_CH1_0_Val << ADC_CHSR_CH1_Pos)             /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx) is disabled. Position  */
+#define ADC_CHSR_CH1_1                        (ADC_CHSR_CH1_1_Val << ADC_CHSR_CH1_Pos)             /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx) is enabled. Position  */
 #define ADC_CHSR_CH2_Pos                      _UINT32_(2)                                          /* (ADC_CHSR) Channel 2 Status Position */
 #define ADC_CHSR_CH2_Msk                      (_UINT32_(0x1) << ADC_CHSR_CH2_Pos)                  /* (ADC_CHSR) Channel 2 Status Mask */
 #define ADC_CHSR_CH2(value)                   (ADC_CHSR_CH2_Msk & (_UINT32_(value) << ADC_CHSR_CH2_Pos)) /* Assigment of value for CH2 in the ADC_CHSR register */
-#define   ADC_CHSR_CH2_0_Val                  _UINT32_(0x0)                                        /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx field) is disabled.  */
-#define   ADC_CHSR_CH2_1_Val                  _UINT32_(0x1)                                        /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx field) is enabled.  */
-#define ADC_CHSR_CH2_0                        (ADC_CHSR_CH2_0_Val << ADC_CHSR_CH2_Pos)             /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx field) is disabled. Position  */
-#define ADC_CHSR_CH2_1                        (ADC_CHSR_CH2_1_Val << ADC_CHSR_CH2_Pos)             /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx field) is enabled. Position  */
+#define   ADC_CHSR_CH2_0_Val                  _UINT32_(0x0)                                        /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx) is disabled.  */
+#define   ADC_CHSR_CH2_1_Val                  _UINT32_(0x1)                                        /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx) is enabled.  */
+#define ADC_CHSR_CH2_0                        (ADC_CHSR_CH2_0_Val << ADC_CHSR_CH2_Pos)             /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx) is disabled. Position  */
+#define ADC_CHSR_CH2_1                        (ADC_CHSR_CH2_1_Val << ADC_CHSR_CH2_Pos)             /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx) is enabled. Position  */
 #define ADC_CHSR_CH3_Pos                      _UINT32_(3)                                          /* (ADC_CHSR) Channel 3 Status Position */
 #define ADC_CHSR_CH3_Msk                      (_UINT32_(0x1) << ADC_CHSR_CH3_Pos)                  /* (ADC_CHSR) Channel 3 Status Mask */
 #define ADC_CHSR_CH3(value)                   (ADC_CHSR_CH3_Msk & (_UINT32_(value) << ADC_CHSR_CH3_Pos)) /* Assigment of value for CH3 in the ADC_CHSR register */
-#define   ADC_CHSR_CH3_0_Val                  _UINT32_(0x0)                                        /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx field) is disabled.  */
-#define   ADC_CHSR_CH3_1_Val                  _UINT32_(0x1)                                        /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx field) is enabled.  */
-#define ADC_CHSR_CH3_0                        (ADC_CHSR_CH3_0_Val << ADC_CHSR_CH3_Pos)             /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx field) is disabled. Position  */
-#define ADC_CHSR_CH3_1                        (ADC_CHSR_CH3_1_Val << ADC_CHSR_CH3_Pos)             /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx field) is enabled. Position  */
+#define   ADC_CHSR_CH3_0_Val                  _UINT32_(0x0)                                        /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx) is disabled.  */
+#define   ADC_CHSR_CH3_1_Val                  _UINT32_(0x1)                                        /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx) is enabled.  */
+#define ADC_CHSR_CH3_0                        (ADC_CHSR_CH3_0_Val << ADC_CHSR_CH3_Pos)             /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx) is disabled. Position  */
+#define ADC_CHSR_CH3_1                        (ADC_CHSR_CH3_1_Val << ADC_CHSR_CH3_Pos)             /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx) is enabled. Position  */
 #define ADC_CHSR_CH4_Pos                      _UINT32_(4)                                          /* (ADC_CHSR) Channel 4 Status Position */
 #define ADC_CHSR_CH4_Msk                      (_UINT32_(0x1) << ADC_CHSR_CH4_Pos)                  /* (ADC_CHSR) Channel 4 Status Mask */
 #define ADC_CHSR_CH4(value)                   (ADC_CHSR_CH4_Msk & (_UINT32_(value) << ADC_CHSR_CH4_Pos)) /* Assigment of value for CH4 in the ADC_CHSR register */
-#define   ADC_CHSR_CH4_0_Val                  _UINT32_(0x0)                                        /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx field) is disabled.  */
-#define   ADC_CHSR_CH4_1_Val                  _UINT32_(0x1)                                        /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx field) is enabled.  */
-#define ADC_CHSR_CH4_0                        (ADC_CHSR_CH4_0_Val << ADC_CHSR_CH4_Pos)             /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx field) is disabled. Position  */
-#define ADC_CHSR_CH4_1                        (ADC_CHSR_CH4_1_Val << ADC_CHSR_CH4_Pos)             /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx field) is enabled. Position  */
+#define   ADC_CHSR_CH4_0_Val                  _UINT32_(0x0)                                        /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx) is disabled.  */
+#define   ADC_CHSR_CH4_1_Val                  _UINT32_(0x1)                                        /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx) is enabled.  */
+#define ADC_CHSR_CH4_0                        (ADC_CHSR_CH4_0_Val << ADC_CHSR_CH4_Pos)             /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx) is disabled. Position  */
+#define ADC_CHSR_CH4_1                        (ADC_CHSR_CH4_1_Val << ADC_CHSR_CH4_Pos)             /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx) is enabled. Position  */
 #define ADC_CHSR_CH5_Pos                      _UINT32_(5)                                          /* (ADC_CHSR) Channel 5 Status Position */
 #define ADC_CHSR_CH5_Msk                      (_UINT32_(0x1) << ADC_CHSR_CH5_Pos)                  /* (ADC_CHSR) Channel 5 Status Mask */
 #define ADC_CHSR_CH5(value)                   (ADC_CHSR_CH5_Msk & (_UINT32_(value) << ADC_CHSR_CH5_Pos)) /* Assigment of value for CH5 in the ADC_CHSR register */
-#define   ADC_CHSR_CH5_0_Val                  _UINT32_(0x0)                                        /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx field) is disabled.  */
-#define   ADC_CHSR_CH5_1_Val                  _UINT32_(0x1)                                        /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx field) is enabled.  */
-#define ADC_CHSR_CH5_0                        (ADC_CHSR_CH5_0_Val << ADC_CHSR_CH5_Pos)             /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx field) is disabled. Position  */
-#define ADC_CHSR_CH5_1                        (ADC_CHSR_CH5_1_Val << ADC_CHSR_CH5_Pos)             /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx field) is enabled. Position  */
+#define   ADC_CHSR_CH5_0_Val                  _UINT32_(0x0)                                        /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx) is disabled.  */
+#define   ADC_CHSR_CH5_1_Val                  _UINT32_(0x1)                                        /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx) is enabled.  */
+#define ADC_CHSR_CH5_0                        (ADC_CHSR_CH5_0_Val << ADC_CHSR_CH5_Pos)             /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx) is disabled. Position  */
+#define ADC_CHSR_CH5_1                        (ADC_CHSR_CH5_1_Val << ADC_CHSR_CH5_Pos)             /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx) is enabled. Position  */
 #define ADC_CHSR_CH6_Pos                      _UINT32_(6)                                          /* (ADC_CHSR) Channel 6 Status Position */
 #define ADC_CHSR_CH6_Msk                      (_UINT32_(0x1) << ADC_CHSR_CH6_Pos)                  /* (ADC_CHSR) Channel 6 Status Mask */
 #define ADC_CHSR_CH6(value)                   (ADC_CHSR_CH6_Msk & (_UINT32_(value) << ADC_CHSR_CH6_Pos)) /* Assigment of value for CH6 in the ADC_CHSR register */
-#define   ADC_CHSR_CH6_0_Val                  _UINT32_(0x0)                                        /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx field) is disabled.  */
-#define   ADC_CHSR_CH6_1_Val                  _UINT32_(0x1)                                        /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx field) is enabled.  */
-#define ADC_CHSR_CH6_0                        (ADC_CHSR_CH6_0_Val << ADC_CHSR_CH6_Pos)             /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx field) is disabled. Position  */
-#define ADC_CHSR_CH6_1                        (ADC_CHSR_CH6_1_Val << ADC_CHSR_CH6_Pos)             /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx field) is enabled. Position  */
+#define   ADC_CHSR_CH6_0_Val                  _UINT32_(0x0)                                        /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx) is disabled.  */
+#define   ADC_CHSR_CH6_1_Val                  _UINT32_(0x1)                                        /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx) is enabled.  */
+#define ADC_CHSR_CH6_0                        (ADC_CHSR_CH6_0_Val << ADC_CHSR_CH6_Pos)             /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx) is disabled. Position  */
+#define ADC_CHSR_CH6_1                        (ADC_CHSR_CH6_1_Val << ADC_CHSR_CH6_Pos)             /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx) is enabled. Position  */
 #define ADC_CHSR_CH7_Pos                      _UINT32_(7)                                          /* (ADC_CHSR) Channel 7 Status Position */
 #define ADC_CHSR_CH7_Msk                      (_UINT32_(0x1) << ADC_CHSR_CH7_Pos)                  /* (ADC_CHSR) Channel 7 Status Mask */
 #define ADC_CHSR_CH7(value)                   (ADC_CHSR_CH7_Msk & (_UINT32_(value) << ADC_CHSR_CH7_Pos)) /* Assigment of value for CH7 in the ADC_CHSR register */
-#define   ADC_CHSR_CH7_0_Val                  _UINT32_(0x0)                                        /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx field) is disabled.  */
-#define   ADC_CHSR_CH7_1_Val                  _UINT32_(0x1)                                        /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx field) is enabled.  */
-#define ADC_CHSR_CH7_0                        (ADC_CHSR_CH7_0_Val << ADC_CHSR_CH7_Pos)             /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx field) is disabled. Position  */
-#define ADC_CHSR_CH7_1                        (ADC_CHSR_CH7_1_Val << ADC_CHSR_CH7_Pos)             /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx field) is enabled. Position  */
-#define ADC_CHSR_CH8_Pos                      _UINT32_(8)                                          /* (ADC_CHSR) Channel 8 Status Position */
-#define ADC_CHSR_CH8_Msk                      (_UINT32_(0x1) << ADC_CHSR_CH8_Pos)                  /* (ADC_CHSR) Channel 8 Status Mask */
-#define ADC_CHSR_CH8(value)                   (ADC_CHSR_CH8_Msk & (_UINT32_(value) << ADC_CHSR_CH8_Pos)) /* Assigment of value for CH8 in the ADC_CHSR register */
-#define   ADC_CHSR_CH8_0_Val                  _UINT32_(0x0)                                        /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx field) is disabled.  */
-#define   ADC_CHSR_CH8_1_Val                  _UINT32_(0x1)                                        /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx field) is enabled.  */
-#define ADC_CHSR_CH8_0                        (ADC_CHSR_CH8_0_Val << ADC_CHSR_CH8_Pos)             /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx field) is disabled. Position  */
-#define ADC_CHSR_CH8_1                        (ADC_CHSR_CH8_1_Val << ADC_CHSR_CH8_Pos)             /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx field) is enabled. Position  */
-#define ADC_CHSR_CH9_Pos                      _UINT32_(9)                                          /* (ADC_CHSR) Channel 9 Status Position */
-#define ADC_CHSR_CH9_Msk                      (_UINT32_(0x1) << ADC_CHSR_CH9_Pos)                  /* (ADC_CHSR) Channel 9 Status Mask */
-#define ADC_CHSR_CH9(value)                   (ADC_CHSR_CH9_Msk & (_UINT32_(value) << ADC_CHSR_CH9_Pos)) /* Assigment of value for CH9 in the ADC_CHSR register */
-#define   ADC_CHSR_CH9_0_Val                  _UINT32_(0x0)                                        /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx field) is disabled.  */
-#define   ADC_CHSR_CH9_1_Val                  _UINT32_(0x1)                                        /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx field) is enabled.  */
-#define ADC_CHSR_CH9_0                        (ADC_CHSR_CH9_0_Val << ADC_CHSR_CH9_Pos)             /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx field) is disabled. Position  */
-#define ADC_CHSR_CH9_1                        (ADC_CHSR_CH9_1_Val << ADC_CHSR_CH9_Pos)             /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx field) is enabled. Position  */
-#define ADC_CHSR_CH10_Pos                     _UINT32_(10)                                         /* (ADC_CHSR) Channel 10 Status Position */
-#define ADC_CHSR_CH10_Msk                     (_UINT32_(0x1) << ADC_CHSR_CH10_Pos)                 /* (ADC_CHSR) Channel 10 Status Mask */
-#define ADC_CHSR_CH10(value)                  (ADC_CHSR_CH10_Msk & (_UINT32_(value) << ADC_CHSR_CH10_Pos)) /* Assigment of value for CH10 in the ADC_CHSR register */
-#define   ADC_CHSR_CH10_0_Val                 _UINT32_(0x0)                                        /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx field) is disabled.  */
-#define   ADC_CHSR_CH10_1_Val                 _UINT32_(0x1)                                        /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx field) is enabled.  */
-#define ADC_CHSR_CH10_0                       (ADC_CHSR_CH10_0_Val << ADC_CHSR_CH10_Pos)           /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx field) is disabled. Position  */
-#define ADC_CHSR_CH10_1                       (ADC_CHSR_CH10_1_Val << ADC_CHSR_CH10_Pos)           /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx field) is enabled. Position  */
-#define ADC_CHSR_CH11_Pos                     _UINT32_(11)                                         /* (ADC_CHSR) Channel 11 Status Position */
-#define ADC_CHSR_CH11_Msk                     (_UINT32_(0x1) << ADC_CHSR_CH11_Pos)                 /* (ADC_CHSR) Channel 11 Status Mask */
-#define ADC_CHSR_CH11(value)                  (ADC_CHSR_CH11_Msk & (_UINT32_(value) << ADC_CHSR_CH11_Pos)) /* Assigment of value for CH11 in the ADC_CHSR register */
-#define   ADC_CHSR_CH11_0_Val                 _UINT32_(0x0)                                        /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx field) is disabled.  */
-#define   ADC_CHSR_CH11_1_Val                 _UINT32_(0x1)                                        /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx field) is enabled.  */
-#define ADC_CHSR_CH11_0                       (ADC_CHSR_CH11_0_Val << ADC_CHSR_CH11_Pos)           /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx field) is disabled. Position  */
-#define ADC_CHSR_CH11_1                       (ADC_CHSR_CH11_1_Val << ADC_CHSR_CH11_Pos)           /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx field) is enabled. Position  */
-#define ADC_CHSR_Msk                          _UINT32_(0x00000FFF)                                 /* (ADC_CHSR) Register Mask  */
+#define   ADC_CHSR_CH7_0_Val                  _UINT32_(0x0)                                        /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx) is disabled.  */
+#define   ADC_CHSR_CH7_1_Val                  _UINT32_(0x1)                                        /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx) is enabled.  */
+#define ADC_CHSR_CH7_0                        (ADC_CHSR_CH7_0_Val << ADC_CHSR_CH7_Pos)             /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx) is disabled. Position  */
+#define ADC_CHSR_CH7_1                        (ADC_CHSR_CH7_1_Val << ADC_CHSR_CH7_Pos)             /* (ADC_CHSR) The corresponding channel (or part of sequence, see ADC_SEQyR.USCHx) is enabled. Position  */
+#define ADC_CHSR_Msk                          _UINT32_(0x000000FF)                                 /* (ADC_CHSR) Register Mask  */
 
-#define ADC_CHSR_CH_Pos                       _UINT32_(0)                                          /* (ADC_CHSR Position) Channel xx Status */
-#define ADC_CHSR_CH_Msk                       (_UINT32_(0xFFF) << ADC_CHSR_CH_Pos)                 /* (ADC_CHSR Mask) CH */
+#define ADC_CHSR_CH_Pos                       _UINT32_(0)                                          /* (ADC_CHSR Position) Channel 7 Status */
+#define ADC_CHSR_CH_Msk                       (_UINT32_(0xFF) << ADC_CHSR_CH_Pos)                  /* (ADC_CHSR Mask) CH */
 #define ADC_CHSR_CH(value)                    (ADC_CHSR_CH_Msk & (_UINT32_(value) << ADC_CHSR_CH_Pos)) 
 
 /* -------- ADC_LCDR : (ADC Offset: 0x20) ( R/ 32) Last Converted Data Register -------- */
@@ -517,18 +409,6 @@
 #define ADC_IER_EOC7_Pos                      _UINT32_(7)                                          /* (ADC_IER) End of Conversion Interrupt Enable 7 Position */
 #define ADC_IER_EOC7_Msk                      (_UINT32_(0x1) << ADC_IER_EOC7_Pos)                  /* (ADC_IER) End of Conversion Interrupt Enable 7 Mask */
 #define ADC_IER_EOC7(value)                   (ADC_IER_EOC7_Msk & (_UINT32_(value) << ADC_IER_EOC7_Pos)) /* Assigment of value for EOC7 in the ADC_IER register */
-#define ADC_IER_EOC8_Pos                      _UINT32_(8)                                          /* (ADC_IER) End of Conversion Interrupt Enable 8 Position */
-#define ADC_IER_EOC8_Msk                      (_UINT32_(0x1) << ADC_IER_EOC8_Pos)                  /* (ADC_IER) End of Conversion Interrupt Enable 8 Mask */
-#define ADC_IER_EOC8(value)                   (ADC_IER_EOC8_Msk & (_UINT32_(value) << ADC_IER_EOC8_Pos)) /* Assigment of value for EOC8 in the ADC_IER register */
-#define ADC_IER_EOC9_Pos                      _UINT32_(9)                                          /* (ADC_IER) End of Conversion Interrupt Enable 9 Position */
-#define ADC_IER_EOC9_Msk                      (_UINT32_(0x1) << ADC_IER_EOC9_Pos)                  /* (ADC_IER) End of Conversion Interrupt Enable 9 Mask */
-#define ADC_IER_EOC9(value)                   (ADC_IER_EOC9_Msk & (_UINT32_(value) << ADC_IER_EOC9_Pos)) /* Assigment of value for EOC9 in the ADC_IER register */
-#define ADC_IER_EOC10_Pos                     _UINT32_(10)                                         /* (ADC_IER) End of Conversion Interrupt Enable 10 Position */
-#define ADC_IER_EOC10_Msk                     (_UINT32_(0x1) << ADC_IER_EOC10_Pos)                 /* (ADC_IER) End of Conversion Interrupt Enable 10 Mask */
-#define ADC_IER_EOC10(value)                  (ADC_IER_EOC10_Msk & (_UINT32_(value) << ADC_IER_EOC10_Pos)) /* Assigment of value for EOC10 in the ADC_IER register */
-#define ADC_IER_EOC11_Pos                     _UINT32_(11)                                         /* (ADC_IER) End of Conversion Interrupt Enable 11 Position */
-#define ADC_IER_EOC11_Msk                     (_UINT32_(0x1) << ADC_IER_EOC11_Pos)                 /* (ADC_IER) End of Conversion Interrupt Enable 11 Mask */
-#define ADC_IER_EOC11(value)                  (ADC_IER_EOC11_Msk & (_UINT32_(value) << ADC_IER_EOC11_Pos)) /* Assigment of value for EOC11 in the ADC_IER register */
 #define ADC_IER_LCCHG_Pos                     _UINT32_(19)                                         /* (ADC_IER) Last Channel Change Interrupt Enable Position */
 #define ADC_IER_LCCHG_Msk                     (_UINT32_(0x1) << ADC_IER_LCCHG_Pos)                 /* (ADC_IER) Last Channel Change Interrupt Enable Mask */
 #define ADC_IER_LCCHG(value)                  (ADC_IER_LCCHG_Msk & (_UINT32_(value) << ADC_IER_LCCHG_Pos)) /* Assigment of value for LCCHG in the ADC_IER register */
@@ -556,10 +436,10 @@
 #define ADC_IER_NOPEN_Pos                     _UINT32_(30)                                         /* (ADC_IER) No Pen Contact Interrupt Enable Position */
 #define ADC_IER_NOPEN_Msk                     (_UINT32_(0x1) << ADC_IER_NOPEN_Pos)                 /* (ADC_IER) No Pen Contact Interrupt Enable Mask */
 #define ADC_IER_NOPEN(value)                  (ADC_IER_NOPEN_Msk & (_UINT32_(value) << ADC_IER_NOPEN_Pos)) /* Assigment of value for NOPEN in the ADC_IER register */
-#define ADC_IER_Msk                           _UINT32_(0x67780FFF)                                 /* (ADC_IER) Register Mask  */
+#define ADC_IER_Msk                           _UINT32_(0x677800FF)                                 /* (ADC_IER) Register Mask  */
 
 #define ADC_IER_EOC_Pos                       _UINT32_(0)                                          /* (ADC_IER Position) End of Conversion Interrupt Enable x */
-#define ADC_IER_EOC_Msk                       (_UINT32_(0xFFF) << ADC_IER_EOC_Pos)                 /* (ADC_IER Mask) EOC */
+#define ADC_IER_EOC_Msk                       (_UINT32_(0xFF) << ADC_IER_EOC_Pos)                  /* (ADC_IER Mask) EOC */
 #define ADC_IER_EOC(value)                    (ADC_IER_EOC_Msk & (_UINT32_(value) << ADC_IER_EOC_Pos)) 
 
 /* -------- ADC_IDR : (ADC Offset: 0x28) ( /W 32) Interrupt Disable Register -------- */
@@ -587,18 +467,6 @@
 #define ADC_IDR_EOC7_Pos                      _UINT32_(7)                                          /* (ADC_IDR) End of Conversion Interrupt Disable 7 Position */
 #define ADC_IDR_EOC7_Msk                      (_UINT32_(0x1) << ADC_IDR_EOC7_Pos)                  /* (ADC_IDR) End of Conversion Interrupt Disable 7 Mask */
 #define ADC_IDR_EOC7(value)                   (ADC_IDR_EOC7_Msk & (_UINT32_(value) << ADC_IDR_EOC7_Pos)) /* Assigment of value for EOC7 in the ADC_IDR register */
-#define ADC_IDR_EOC8_Pos                      _UINT32_(8)                                          /* (ADC_IDR) End of Conversion Interrupt Disable 8 Position */
-#define ADC_IDR_EOC8_Msk                      (_UINT32_(0x1) << ADC_IDR_EOC8_Pos)                  /* (ADC_IDR) End of Conversion Interrupt Disable 8 Mask */
-#define ADC_IDR_EOC8(value)                   (ADC_IDR_EOC8_Msk & (_UINT32_(value) << ADC_IDR_EOC8_Pos)) /* Assigment of value for EOC8 in the ADC_IDR register */
-#define ADC_IDR_EOC9_Pos                      _UINT32_(9)                                          /* (ADC_IDR) End of Conversion Interrupt Disable 9 Position */
-#define ADC_IDR_EOC9_Msk                      (_UINT32_(0x1) << ADC_IDR_EOC9_Pos)                  /* (ADC_IDR) End of Conversion Interrupt Disable 9 Mask */
-#define ADC_IDR_EOC9(value)                   (ADC_IDR_EOC9_Msk & (_UINT32_(value) << ADC_IDR_EOC9_Pos)) /* Assigment of value for EOC9 in the ADC_IDR register */
-#define ADC_IDR_EOC10_Pos                     _UINT32_(10)                                         /* (ADC_IDR) End of Conversion Interrupt Disable 10 Position */
-#define ADC_IDR_EOC10_Msk                     (_UINT32_(0x1) << ADC_IDR_EOC10_Pos)                 /* (ADC_IDR) End of Conversion Interrupt Disable 10 Mask */
-#define ADC_IDR_EOC10(value)                  (ADC_IDR_EOC10_Msk & (_UINT32_(value) << ADC_IDR_EOC10_Pos)) /* Assigment of value for EOC10 in the ADC_IDR register */
-#define ADC_IDR_EOC11_Pos                     _UINT32_(11)                                         /* (ADC_IDR) End of Conversion Interrupt Disable 11 Position */
-#define ADC_IDR_EOC11_Msk                     (_UINT32_(0x1) << ADC_IDR_EOC11_Pos)                 /* (ADC_IDR) End of Conversion Interrupt Disable 11 Mask */
-#define ADC_IDR_EOC11(value)                  (ADC_IDR_EOC11_Msk & (_UINT32_(value) << ADC_IDR_EOC11_Pos)) /* Assigment of value for EOC11 in the ADC_IDR register */
 #define ADC_IDR_LCCHG_Pos                     _UINT32_(19)                                         /* (ADC_IDR) Last Channel Change Interrupt Disable Position */
 #define ADC_IDR_LCCHG_Msk                     (_UINT32_(0x1) << ADC_IDR_LCCHG_Pos)                 /* (ADC_IDR) Last Channel Change Interrupt Disable Mask */
 #define ADC_IDR_LCCHG(value)                  (ADC_IDR_LCCHG_Msk & (_UINT32_(value) << ADC_IDR_LCCHG_Pos)) /* Assigment of value for LCCHG in the ADC_IDR register */
@@ -626,10 +494,10 @@
 #define ADC_IDR_NOPEN_Pos                     _UINT32_(30)                                         /* (ADC_IDR) No Pen Contact Interrupt Disable Position */
 #define ADC_IDR_NOPEN_Msk                     (_UINT32_(0x1) << ADC_IDR_NOPEN_Pos)                 /* (ADC_IDR) No Pen Contact Interrupt Disable Mask */
 #define ADC_IDR_NOPEN(value)                  (ADC_IDR_NOPEN_Msk & (_UINT32_(value) << ADC_IDR_NOPEN_Pos)) /* Assigment of value for NOPEN in the ADC_IDR register */
-#define ADC_IDR_Msk                           _UINT32_(0x67780FFF)                                 /* (ADC_IDR) Register Mask  */
+#define ADC_IDR_Msk                           _UINT32_(0x677800FF)                                 /* (ADC_IDR) Register Mask  */
 
 #define ADC_IDR_EOC_Pos                       _UINT32_(0)                                          /* (ADC_IDR Position) End of Conversion Interrupt Disable x */
-#define ADC_IDR_EOC_Msk                       (_UINT32_(0xFFF) << ADC_IDR_EOC_Pos)                 /* (ADC_IDR Mask) EOC */
+#define ADC_IDR_EOC_Msk                       (_UINT32_(0xFF) << ADC_IDR_EOC_Pos)                  /* (ADC_IDR Mask) EOC */
 #define ADC_IDR_EOC(value)                    (ADC_IDR_EOC_Msk & (_UINT32_(value) << ADC_IDR_EOC_Pos)) 
 
 /* -------- ADC_IMR : (ADC Offset: 0x2C) ( R/ 32) Interrupt Mask Register -------- */
@@ -659,18 +527,6 @@
 #define ADC_IMR_EOC7_Pos                      _UINT32_(7)                                          /* (ADC_IMR) End of Conversion Interrupt Mask 7 Position */
 #define ADC_IMR_EOC7_Msk                      (_UINT32_(0x1) << ADC_IMR_EOC7_Pos)                  /* (ADC_IMR) End of Conversion Interrupt Mask 7 Mask */
 #define ADC_IMR_EOC7(value)                   (ADC_IMR_EOC7_Msk & (_UINT32_(value) << ADC_IMR_EOC7_Pos)) /* Assigment of value for EOC7 in the ADC_IMR register */
-#define ADC_IMR_EOC8_Pos                      _UINT32_(8)                                          /* (ADC_IMR) End of Conversion Interrupt Mask 8 Position */
-#define ADC_IMR_EOC8_Msk                      (_UINT32_(0x1) << ADC_IMR_EOC8_Pos)                  /* (ADC_IMR) End of Conversion Interrupt Mask 8 Mask */
-#define ADC_IMR_EOC8(value)                   (ADC_IMR_EOC8_Msk & (_UINT32_(value) << ADC_IMR_EOC8_Pos)) /* Assigment of value for EOC8 in the ADC_IMR register */
-#define ADC_IMR_EOC9_Pos                      _UINT32_(9)                                          /* (ADC_IMR) End of Conversion Interrupt Mask 9 Position */
-#define ADC_IMR_EOC9_Msk                      (_UINT32_(0x1) << ADC_IMR_EOC9_Pos)                  /* (ADC_IMR) End of Conversion Interrupt Mask 9 Mask */
-#define ADC_IMR_EOC9(value)                   (ADC_IMR_EOC9_Msk & (_UINT32_(value) << ADC_IMR_EOC9_Pos)) /* Assigment of value for EOC9 in the ADC_IMR register */
-#define ADC_IMR_EOC10_Pos                     _UINT32_(10)                                         /* (ADC_IMR) End of Conversion Interrupt Mask 10 Position */
-#define ADC_IMR_EOC10_Msk                     (_UINT32_(0x1) << ADC_IMR_EOC10_Pos)                 /* (ADC_IMR) End of Conversion Interrupt Mask 10 Mask */
-#define ADC_IMR_EOC10(value)                  (ADC_IMR_EOC10_Msk & (_UINT32_(value) << ADC_IMR_EOC10_Pos)) /* Assigment of value for EOC10 in the ADC_IMR register */
-#define ADC_IMR_EOC11_Pos                     _UINT32_(11)                                         /* (ADC_IMR) End of Conversion Interrupt Mask 11 Position */
-#define ADC_IMR_EOC11_Msk                     (_UINT32_(0x1) << ADC_IMR_EOC11_Pos)                 /* (ADC_IMR) End of Conversion Interrupt Mask 11 Mask */
-#define ADC_IMR_EOC11(value)                  (ADC_IMR_EOC11_Msk & (_UINT32_(value) << ADC_IMR_EOC11_Pos)) /* Assigment of value for EOC11 in the ADC_IMR register */
 #define ADC_IMR_LCCHG_Pos                     _UINT32_(19)                                         /* (ADC_IMR) Last Channel Change Interrupt Disable Position */
 #define ADC_IMR_LCCHG_Msk                     (_UINT32_(0x1) << ADC_IMR_LCCHG_Pos)                 /* (ADC_IMR) Last Channel Change Interrupt Disable Mask */
 #define ADC_IMR_LCCHG(value)                  (ADC_IMR_LCCHG_Msk & (_UINT32_(value) << ADC_IMR_LCCHG_Pos)) /* Assigment of value for LCCHG in the ADC_IMR register */
@@ -698,10 +554,10 @@
 #define ADC_IMR_NOPEN_Pos                     _UINT32_(30)                                         /* (ADC_IMR) No Pen Contact Interrupt Mask Position */
 #define ADC_IMR_NOPEN_Msk                     (_UINT32_(0x1) << ADC_IMR_NOPEN_Pos)                 /* (ADC_IMR) No Pen Contact Interrupt Mask Mask */
 #define ADC_IMR_NOPEN(value)                  (ADC_IMR_NOPEN_Msk & (_UINT32_(value) << ADC_IMR_NOPEN_Pos)) /* Assigment of value for NOPEN in the ADC_IMR register */
-#define ADC_IMR_Msk                           _UINT32_(0x67780FFF)                                 /* (ADC_IMR) Register Mask  */
+#define ADC_IMR_Msk                           _UINT32_(0x677800FF)                                 /* (ADC_IMR) Register Mask  */
 
 #define ADC_IMR_EOC_Pos                       _UINT32_(0)                                          /* (ADC_IMR Position) End of Conversion Interrupt Mask x */
-#define ADC_IMR_EOC_Msk                       (_UINT32_(0xFFF) << ADC_IMR_EOC_Pos)                 /* (ADC_IMR Mask) EOC */
+#define ADC_IMR_EOC_Msk                       (_UINT32_(0xFF) << ADC_IMR_EOC_Pos)                  /* (ADC_IMR Mask) EOC */
 #define ADC_IMR_EOC(value)                    (ADC_IMR_EOC_Msk & (_UINT32_(value) << ADC_IMR_EOC_Pos)) 
 
 /* -------- ADC_ISR : (ADC Offset: 0x30) ( R/ 32) Interrupt Status Register -------- */
@@ -763,41 +619,13 @@
 #define   ADC_ISR_EOC7_1_Val                  _UINT32_(0x1)                                        /* (ADC_ISR) The corresponding analog channel is enabled and conversion is complete.  */
 #define ADC_ISR_EOC7_0                        (ADC_ISR_EOC7_0_Val << ADC_ISR_EOC7_Pos)             /* (ADC_ISR) The corresponding analog channel is disabled, or the conversion is not finished. This flag is cleared when reading the corresponding ADC_CDRx registers. Position  */
 #define ADC_ISR_EOC7_1                        (ADC_ISR_EOC7_1_Val << ADC_ISR_EOC7_Pos)             /* (ADC_ISR) The corresponding analog channel is enabled and conversion is complete. Position  */
-#define ADC_ISR_EOC8_Pos                      _UINT32_(8)                                          /* (ADC_ISR) End of Conversion 8 (automatically set / cleared) Position */
-#define ADC_ISR_EOC8_Msk                      (_UINT32_(0x1) << ADC_ISR_EOC8_Pos)                  /* (ADC_ISR) End of Conversion 8 (automatically set / cleared) Mask */
-#define ADC_ISR_EOC8(value)                   (ADC_ISR_EOC8_Msk & (_UINT32_(value) << ADC_ISR_EOC8_Pos)) /* Assigment of value for EOC8 in the ADC_ISR register */
-#define   ADC_ISR_EOC8_0_Val                  _UINT32_(0x0)                                        /* (ADC_ISR) The corresponding analog channel is disabled, or the conversion is not finished. This flag is cleared when reading the corresponding ADC_CDRx registers.  */
-#define   ADC_ISR_EOC8_1_Val                  _UINT32_(0x1)                                        /* (ADC_ISR) The corresponding analog channel is enabled and conversion is complete.  */
-#define ADC_ISR_EOC8_0                        (ADC_ISR_EOC8_0_Val << ADC_ISR_EOC8_Pos)             /* (ADC_ISR) The corresponding analog channel is disabled, or the conversion is not finished. This flag is cleared when reading the corresponding ADC_CDRx registers. Position  */
-#define ADC_ISR_EOC8_1                        (ADC_ISR_EOC8_1_Val << ADC_ISR_EOC8_Pos)             /* (ADC_ISR) The corresponding analog channel is enabled and conversion is complete. Position  */
-#define ADC_ISR_EOC9_Pos                      _UINT32_(9)                                          /* (ADC_ISR) End of Conversion 9 (automatically set / cleared) Position */
-#define ADC_ISR_EOC9_Msk                      (_UINT32_(0x1) << ADC_ISR_EOC9_Pos)                  /* (ADC_ISR) End of Conversion 9 (automatically set / cleared) Mask */
-#define ADC_ISR_EOC9(value)                   (ADC_ISR_EOC9_Msk & (_UINT32_(value) << ADC_ISR_EOC9_Pos)) /* Assigment of value for EOC9 in the ADC_ISR register */
-#define   ADC_ISR_EOC9_0_Val                  _UINT32_(0x0)                                        /* (ADC_ISR) The corresponding analog channel is disabled, or the conversion is not finished. This flag is cleared when reading the corresponding ADC_CDRx registers.  */
-#define   ADC_ISR_EOC9_1_Val                  _UINT32_(0x1)                                        /* (ADC_ISR) The corresponding analog channel is enabled and conversion is complete.  */
-#define ADC_ISR_EOC9_0                        (ADC_ISR_EOC9_0_Val << ADC_ISR_EOC9_Pos)             /* (ADC_ISR) The corresponding analog channel is disabled, or the conversion is not finished. This flag is cleared when reading the corresponding ADC_CDRx registers. Position  */
-#define ADC_ISR_EOC9_1                        (ADC_ISR_EOC9_1_Val << ADC_ISR_EOC9_Pos)             /* (ADC_ISR) The corresponding analog channel is enabled and conversion is complete. Position  */
-#define ADC_ISR_EOC10_Pos                     _UINT32_(10)                                         /* (ADC_ISR) End of Conversion 10 (automatically set / cleared) Position */
-#define ADC_ISR_EOC10_Msk                     (_UINT32_(0x1) << ADC_ISR_EOC10_Pos)                 /* (ADC_ISR) End of Conversion 10 (automatically set / cleared) Mask */
-#define ADC_ISR_EOC10(value)                  (ADC_ISR_EOC10_Msk & (_UINT32_(value) << ADC_ISR_EOC10_Pos)) /* Assigment of value for EOC10 in the ADC_ISR register */
-#define   ADC_ISR_EOC10_0_Val                 _UINT32_(0x0)                                        /* (ADC_ISR) The corresponding analog channel is disabled, or the conversion is not finished. This flag is cleared when reading the corresponding ADC_CDRx registers.  */
-#define   ADC_ISR_EOC10_1_Val                 _UINT32_(0x1)                                        /* (ADC_ISR) The corresponding analog channel is enabled and conversion is complete.  */
-#define ADC_ISR_EOC10_0                       (ADC_ISR_EOC10_0_Val << ADC_ISR_EOC10_Pos)           /* (ADC_ISR) The corresponding analog channel is disabled, or the conversion is not finished. This flag is cleared when reading the corresponding ADC_CDRx registers. Position  */
-#define ADC_ISR_EOC10_1                       (ADC_ISR_EOC10_1_Val << ADC_ISR_EOC10_Pos)           /* (ADC_ISR) The corresponding analog channel is enabled and conversion is complete. Position  */
-#define ADC_ISR_EOC11_Pos                     _UINT32_(11)                                         /* (ADC_ISR) End of Conversion 11 (automatically set / cleared) Position */
-#define ADC_ISR_EOC11_Msk                     (_UINT32_(0x1) << ADC_ISR_EOC11_Pos)                 /* (ADC_ISR) End of Conversion 11 (automatically set / cleared) Mask */
-#define ADC_ISR_EOC11(value)                  (ADC_ISR_EOC11_Msk & (_UINT32_(value) << ADC_ISR_EOC11_Pos)) /* Assigment of value for EOC11 in the ADC_ISR register */
-#define   ADC_ISR_EOC11_0_Val                 _UINT32_(0x0)                                        /* (ADC_ISR) The corresponding analog channel is disabled, or the conversion is not finished. This flag is cleared when reading the corresponding ADC_CDRx registers.  */
-#define   ADC_ISR_EOC11_1_Val                 _UINT32_(0x1)                                        /* (ADC_ISR) The corresponding analog channel is enabled and conversion is complete.  */
-#define ADC_ISR_EOC11_0                       (ADC_ISR_EOC11_0_Val << ADC_ISR_EOC11_Pos)           /* (ADC_ISR) The corresponding analog channel is disabled, or the conversion is not finished. This flag is cleared when reading the corresponding ADC_CDRx registers. Position  */
-#define ADC_ISR_EOC11_1                       (ADC_ISR_EOC11_1_Val << ADC_ISR_EOC11_Pos)           /* (ADC_ISR) The corresponding analog channel is enabled and conversion is complete. Position  */
 #define ADC_ISR_LCCHG_Pos                     _UINT32_(19)                                         /* (ADC_ISR) Last Channel Change (cleared on read) Position */
 #define ADC_ISR_LCCHG_Msk                     (_UINT32_(0x1) << ADC_ISR_LCCHG_Pos)                 /* (ADC_ISR) Last Channel Change (cleared on read) Mask */
 #define ADC_ISR_LCCHG(value)                  (ADC_ISR_LCCHG_Msk & (_UINT32_(value) << ADC_ISR_LCCHG_Pos)) /* Assigment of value for LCCHG in the ADC_ISR register */
 #define   ADC_ISR_LCCHG_0_Val                 _UINT32_(0x0)                                        /* (ADC_ISR) There is no comparison match (defined in the Last Channel Compare Window register (ADC_LCCWR) since the last read of ADC_ISR.  */
-#define   ADC_ISR_LCCHG_1_Val                 _UINT32_(0x1)                                        /* (ADC_ISR) The converted value reported on ADC_CDRNB_CHANNEL-1 has changed since the last read of ADC_ISR, according to what is defined in ADC_LCTMR and ADC_LCCWR.  */
+#define   ADC_ISR_LCCHG_1_Val                 _UINT32_(0x1)                                        /* (ADC_ISR) The converted value reported on ADC_CDR7 has changed since the last read of ADC_ISR, according to what is defined in ADC_LCTMR and ADC_LCCWR.  */
 #define ADC_ISR_LCCHG_0                       (ADC_ISR_LCCHG_0_Val << ADC_ISR_LCCHG_Pos)           /* (ADC_ISR) There is no comparison match (defined in the Last Channel Compare Window register (ADC_LCCWR) since the last read of ADC_ISR. Position  */
-#define ADC_ISR_LCCHG_1                       (ADC_ISR_LCCHG_1_Val << ADC_ISR_LCCHG_Pos)           /* (ADC_ISR) The converted value reported on ADC_CDRNB_CHANNEL-1 has changed since the last read of ADC_ISR, according to what is defined in ADC_LCTMR and ADC_LCCWR. Position  */
+#define ADC_ISR_LCCHG_1                       (ADC_ISR_LCCHG_1_Val << ADC_ISR_LCCHG_Pos)           /* (ADC_ISR) The converted value reported on ADC_CDR7 has changed since the last read of ADC_ISR, according to what is defined in ADC_LCTMR and ADC_LCCWR. Position  */
 #define ADC_ISR_XRDY_Pos                      _UINT32_(20)                                         /* (ADC_ISR) Touchscreen XPOS Measure Ready (cleared on read) Position */
 #define ADC_ISR_XRDY_Msk                      (_UINT32_(0x1) << ADC_ISR_XRDY_Pos)                  /* (ADC_ISR) Touchscreen XPOS Measure Ready (cleared on read) Mask */
 #define ADC_ISR_XRDY(value)                   (ADC_ISR_XRDY_Msk & (_UINT32_(value) << ADC_ISR_XRDY_Pos)) /* Assigment of value for XRDY in the ADC_ISR register */
@@ -861,10 +689,10 @@
 #define   ADC_ISR_PENS_1_Val                  _UINT32_(0x1)                                        /* (ADC_ISR) The pen presses the screen.  */
 #define ADC_ISR_PENS_0                        (ADC_ISR_PENS_0_Val << ADC_ISR_PENS_Pos)             /* (ADC_ISR) The pen does not press the screen. Position  */
 #define ADC_ISR_PENS_1                        (ADC_ISR_PENS_1_Val << ADC_ISR_PENS_Pos)             /* (ADC_ISR) The pen presses the screen. Position  */
-#define ADC_ISR_Msk                           _UINT32_(0xE7780FFF)                                 /* (ADC_ISR) Register Mask  */
+#define ADC_ISR_Msk                           _UINT32_(0xE77800FF)                                 /* (ADC_ISR) Register Mask  */
 
 #define ADC_ISR_EOC_Pos                       _UINT32_(0)                                          /* (ADC_ISR Position) End of Conversion x (automatically set / cleared) */
-#define ADC_ISR_EOC_Msk                       (_UINT32_(0xFFF) << ADC_ISR_EOC_Pos)                 /* (ADC_ISR Mask) EOC */
+#define ADC_ISR_EOC_Msk                       (_UINT32_(0xFF) << ADC_ISR_EOC_Pos)                  /* (ADC_ISR Mask) EOC */
 #define ADC_ISR_EOC(value)                    (ADC_ISR_EOC_Msk & (_UINT32_(value) << ADC_ISR_EOC_Pos)) 
 
 /* -------- ADC_LCTMR : (ADC Offset: 0x34) (R/W 32) Last Channel Trigger Mode Register -------- */
@@ -962,38 +790,10 @@
 #define   ADC_OVER_OVRE7_1_Val                _UINT32_(0x1)                                        /* (ADC_OVER) An overrun error has occurred on the corresponding channel since the last read of ADC_OVER.  */
 #define ADC_OVER_OVRE7_0                      (ADC_OVER_OVRE7_0_Val << ADC_OVER_OVRE7_Pos)         /* (ADC_OVER) No overrun error on the corresponding channel since the last read of ADC_OVER. Position  */
 #define ADC_OVER_OVRE7_1                      (ADC_OVER_OVRE7_1_Val << ADC_OVER_OVRE7_Pos)         /* (ADC_OVER) An overrun error has occurred on the corresponding channel since the last read of ADC_OVER. Position  */
-#define ADC_OVER_OVRE8_Pos                    _UINT32_(8)                                          /* (ADC_OVER) Overrun Error 8 Position */
-#define ADC_OVER_OVRE8_Msk                    (_UINT32_(0x1) << ADC_OVER_OVRE8_Pos)                /* (ADC_OVER) Overrun Error 8 Mask */
-#define ADC_OVER_OVRE8(value)                 (ADC_OVER_OVRE8_Msk & (_UINT32_(value) << ADC_OVER_OVRE8_Pos)) /* Assigment of value for OVRE8 in the ADC_OVER register */
-#define   ADC_OVER_OVRE8_0_Val                _UINT32_(0x0)                                        /* (ADC_OVER) No overrun error on the corresponding channel since the last read of ADC_OVER.  */
-#define   ADC_OVER_OVRE8_1_Val                _UINT32_(0x1)                                        /* (ADC_OVER) An overrun error has occurred on the corresponding channel since the last read of ADC_OVER.  */
-#define ADC_OVER_OVRE8_0                      (ADC_OVER_OVRE8_0_Val << ADC_OVER_OVRE8_Pos)         /* (ADC_OVER) No overrun error on the corresponding channel since the last read of ADC_OVER. Position  */
-#define ADC_OVER_OVRE8_1                      (ADC_OVER_OVRE8_1_Val << ADC_OVER_OVRE8_Pos)         /* (ADC_OVER) An overrun error has occurred on the corresponding channel since the last read of ADC_OVER. Position  */
-#define ADC_OVER_OVRE9_Pos                    _UINT32_(9)                                          /* (ADC_OVER) Overrun Error 9 Position */
-#define ADC_OVER_OVRE9_Msk                    (_UINT32_(0x1) << ADC_OVER_OVRE9_Pos)                /* (ADC_OVER) Overrun Error 9 Mask */
-#define ADC_OVER_OVRE9(value)                 (ADC_OVER_OVRE9_Msk & (_UINT32_(value) << ADC_OVER_OVRE9_Pos)) /* Assigment of value for OVRE9 in the ADC_OVER register */
-#define   ADC_OVER_OVRE9_0_Val                _UINT32_(0x0)                                        /* (ADC_OVER) No overrun error on the corresponding channel since the last read of ADC_OVER.  */
-#define   ADC_OVER_OVRE9_1_Val                _UINT32_(0x1)                                        /* (ADC_OVER) An overrun error has occurred on the corresponding channel since the last read of ADC_OVER.  */
-#define ADC_OVER_OVRE9_0                      (ADC_OVER_OVRE9_0_Val << ADC_OVER_OVRE9_Pos)         /* (ADC_OVER) No overrun error on the corresponding channel since the last read of ADC_OVER. Position  */
-#define ADC_OVER_OVRE9_1                      (ADC_OVER_OVRE9_1_Val << ADC_OVER_OVRE9_Pos)         /* (ADC_OVER) An overrun error has occurred on the corresponding channel since the last read of ADC_OVER. Position  */
-#define ADC_OVER_OVRE10_Pos                   _UINT32_(10)                                         /* (ADC_OVER) Overrun Error 10 Position */
-#define ADC_OVER_OVRE10_Msk                   (_UINT32_(0x1) << ADC_OVER_OVRE10_Pos)               /* (ADC_OVER) Overrun Error 10 Mask */
-#define ADC_OVER_OVRE10(value)                (ADC_OVER_OVRE10_Msk & (_UINT32_(value) << ADC_OVER_OVRE10_Pos)) /* Assigment of value for OVRE10 in the ADC_OVER register */
-#define   ADC_OVER_OVRE10_0_Val               _UINT32_(0x0)                                        /* (ADC_OVER) No overrun error on the corresponding channel since the last read of ADC_OVER.  */
-#define   ADC_OVER_OVRE10_1_Val               _UINT32_(0x1)                                        /* (ADC_OVER) An overrun error has occurred on the corresponding channel since the last read of ADC_OVER.  */
-#define ADC_OVER_OVRE10_0                     (ADC_OVER_OVRE10_0_Val << ADC_OVER_OVRE10_Pos)       /* (ADC_OVER) No overrun error on the corresponding channel since the last read of ADC_OVER. Position  */
-#define ADC_OVER_OVRE10_1                     (ADC_OVER_OVRE10_1_Val << ADC_OVER_OVRE10_Pos)       /* (ADC_OVER) An overrun error has occurred on the corresponding channel since the last read of ADC_OVER. Position  */
-#define ADC_OVER_OVRE11_Pos                   _UINT32_(11)                                         /* (ADC_OVER) Overrun Error 11 Position */
-#define ADC_OVER_OVRE11_Msk                   (_UINT32_(0x1) << ADC_OVER_OVRE11_Pos)               /* (ADC_OVER) Overrun Error 11 Mask */
-#define ADC_OVER_OVRE11(value)                (ADC_OVER_OVRE11_Msk & (_UINT32_(value) << ADC_OVER_OVRE11_Pos)) /* Assigment of value for OVRE11 in the ADC_OVER register */
-#define   ADC_OVER_OVRE11_0_Val               _UINT32_(0x0)                                        /* (ADC_OVER) No overrun error on the corresponding channel since the last read of ADC_OVER.  */
-#define   ADC_OVER_OVRE11_1_Val               _UINT32_(0x1)                                        /* (ADC_OVER) An overrun error has occurred on the corresponding channel since the last read of ADC_OVER.  */
-#define ADC_OVER_OVRE11_0                     (ADC_OVER_OVRE11_0_Val << ADC_OVER_OVRE11_Pos)       /* (ADC_OVER) No overrun error on the corresponding channel since the last read of ADC_OVER. Position  */
-#define ADC_OVER_OVRE11_1                     (ADC_OVER_OVRE11_1_Val << ADC_OVER_OVRE11_Pos)       /* (ADC_OVER) An overrun error has occurred on the corresponding channel since the last read of ADC_OVER. Position  */
-#define ADC_OVER_Msk                          _UINT32_(0x00000FFF)                                 /* (ADC_OVER) Register Mask  */
+#define ADC_OVER_Msk                          _UINT32_(0x000000FF)                                 /* (ADC_OVER) Register Mask  */
 
-#define ADC_OVER_OVRE_Pos                     _UINT32_(0)                                          /* (ADC_OVER Position) Overrun Error xx */
-#define ADC_OVER_OVRE_Msk                     (_UINT32_(0xFFF) << ADC_OVER_OVRE_Pos)               /* (ADC_OVER Mask) OVRE */
+#define ADC_OVER_OVRE_Pos                     _UINT32_(0)                                          /* (ADC_OVER Position) Overrun Error 7 */
+#define ADC_OVER_OVRE_Msk                     (_UINT32_(0xFF) << ADC_OVER_OVRE_Pos)                /* (ADC_OVER Mask) OVRE */
 #define ADC_OVER_OVRE(value)                  (ADC_OVER_OVRE_Msk & (_UINT32_(value) << ADC_OVER_OVRE_Pos)) 
 
 /* -------- ADC_EMR : (ADC Offset: 0x40) (R/W 32) Extended Mode Register -------- */
@@ -1014,18 +814,18 @@
 #define ADC_EMR_CMPTYPE_Msk                   (_UINT32_(0x1) << ADC_EMR_CMPTYPE_Pos)               /* (ADC_EMR) Comparison Type Mask */
 #define ADC_EMR_CMPTYPE(value)                (ADC_EMR_CMPTYPE_Msk & (_UINT32_(value) << ADC_EMR_CMPTYPE_Pos)) /* Assigment of value for CMPTYPE in the ADC_EMR register */
 #define   ADC_EMR_CMPTYPE_FLAG_ONLY_Val       _UINT32_(0x0)                                        /* (ADC_EMR) Any conversion is performed and comparison function drives the ADC_ISR.COMPE flag.  */
-#define   ADC_EMR_CMPTYPE_START_CONDITION_Val _UINT32_(0x1)                                        /* (ADC_EMR) Comparison conditions must be met to start the storage of all conversions until the ADC_CR.CMPRST bit is set.  */
+#define   ADC_EMR_CMPTYPE_START_CONDITION_Val _UINT32_(0x1)                                        /* (ADC_EMR) Comparison conditions must be met to start the storage of all conversions until ADC_CR.CMPRST is set.  */
 #define ADC_EMR_CMPTYPE_FLAG_ONLY             (ADC_EMR_CMPTYPE_FLAG_ONLY_Val << ADC_EMR_CMPTYPE_Pos) /* (ADC_EMR) Any conversion is performed and comparison function drives the ADC_ISR.COMPE flag. Position  */
-#define ADC_EMR_CMPTYPE_START_CONDITION       (ADC_EMR_CMPTYPE_START_CONDITION_Val << ADC_EMR_CMPTYPE_Pos) /* (ADC_EMR) Comparison conditions must be met to start the storage of all conversions until the ADC_CR.CMPRST bit is set. Position  */
+#define ADC_EMR_CMPTYPE_START_CONDITION       (ADC_EMR_CMPTYPE_START_CONDITION_Val << ADC_EMR_CMPTYPE_Pos) /* (ADC_EMR) Comparison conditions must be met to start the storage of all conversions until ADC_CR.CMPRST is set. Position  */
 #define ADC_EMR_CMPSEL_Pos                    _UINT32_(4)                                          /* (ADC_EMR) Comparison Selected Channel Position */
 #define ADC_EMR_CMPSEL_Msk                    (_UINT32_(0xF) << ADC_EMR_CMPSEL_Pos)                /* (ADC_EMR) Comparison Selected Channel Mask */
 #define ADC_EMR_CMPSEL(value)                 (ADC_EMR_CMPSEL_Msk & (_UINT32_(value) << ADC_EMR_CMPSEL_Pos)) /* Assigment of value for CMPSEL in the ADC_EMR register */
 #define ADC_EMR_CMPALL_Pos                    _UINT32_(9)                                          /* (ADC_EMR) Compare All Channels Position */
 #define ADC_EMR_CMPALL_Msk                    (_UINT32_(0x1) << ADC_EMR_CMPALL_Pos)                /* (ADC_EMR) Compare All Channels Mask */
 #define ADC_EMR_CMPALL(value)                 (ADC_EMR_CMPALL_Msk & (_UINT32_(value) << ADC_EMR_CMPALL_Pos)) /* Assigment of value for CMPALL in the ADC_EMR register */
-#define   ADC_EMR_CMPALL_0_Val                _UINT32_(0x0)                                        /* (ADC_EMR) Only channel indicated in CMPSEL field is compared.  */
+#define   ADC_EMR_CMPALL_0_Val                _UINT32_(0x0)                                        /* (ADC_EMR) Only channel indicated in CMPSEL is compared.  */
 #define   ADC_EMR_CMPALL_1_Val                _UINT32_(0x1)                                        /* (ADC_EMR) All channels are compared.  */
-#define ADC_EMR_CMPALL_0                      (ADC_EMR_CMPALL_0_Val << ADC_EMR_CMPALL_Pos)         /* (ADC_EMR) Only channel indicated in CMPSEL field is compared. Position  */
+#define ADC_EMR_CMPALL_0                      (ADC_EMR_CMPALL_0_Val << ADC_EMR_CMPALL_Pos)         /* (ADC_EMR) Only channel indicated in CMPSEL is compared. Position  */
 #define ADC_EMR_CMPALL_1                      (ADC_EMR_CMPALL_1_Val << ADC_EMR_CMPALL_Pos)         /* (ADC_EMR) All channels are compared. Position  */
 #define ADC_EMR_CMPFILTER_Pos                 _UINT32_(12)                                         /* (ADC_EMR) Compare Event Filtering Position */
 #define ADC_EMR_CMPFILTER_Msk                 (_UINT32_(0x3) << ADC_EMR_CMPFILTER_Pos)             /* (ADC_EMR) Compare Event Filtering Mask */
@@ -1060,16 +860,16 @@
 #define ADC_EMR_TRACKX4_Pos                   _UINT32_(22)                                         /* (ADC_EMR) Tracking Time x4 Position */
 #define ADC_EMR_TRACKX4_Msk                   (_UINT32_(0x1) << ADC_EMR_TRACKX4_Pos)               /* (ADC_EMR) Tracking Time x4 Mask */
 #define ADC_EMR_TRACKX4(value)                (ADC_EMR_TRACKX4_Msk & (_UINT32_(value) << ADC_EMR_TRACKX4_Pos)) /* Assigment of value for TRACKX4 in the ADC_EMR register */
-#define   ADC_EMR_TRACKX4_0_Val               _UINT32_(0x0)                                        /* (ADC_EMR) The ADC_MR.TRACKTIM field effect is multiplied by 1.  */
-#define   ADC_EMR_TRACKX4_1_Val               _UINT32_(0x1)                                        /* (ADC_EMR) The ADC_MR.TRACKTIM field effect is multiplied by 4.  */
-#define ADC_EMR_TRACKX4_0                     (ADC_EMR_TRACKX4_0_Val << ADC_EMR_TRACKX4_Pos)       /* (ADC_EMR) The ADC_MR.TRACKTIM field effect is multiplied by 1. Position  */
-#define ADC_EMR_TRACKX4_1                     (ADC_EMR_TRACKX4_1_Val << ADC_EMR_TRACKX4_Pos)       /* (ADC_EMR) The ADC_MR.TRACKTIM field effect is multiplied by 4. Position  */
+#define   ADC_EMR_TRACKX4_0_Val               _UINT32_(0x0)                                        /* (ADC_EMR) The ADC_MR.TRACKTIM effect is multiplied by 1.  */
+#define   ADC_EMR_TRACKX4_1_Val               _UINT32_(0x1)                                        /* (ADC_EMR) The ADC_MR.TRACKTIM effect is multiplied by 4.  */
+#define ADC_EMR_TRACKX4_0                     (ADC_EMR_TRACKX4_0_Val << ADC_EMR_TRACKX4_Pos)       /* (ADC_EMR) The ADC_MR.TRACKTIM effect is multiplied by 1. Position  */
+#define ADC_EMR_TRACKX4_1                     (ADC_EMR_TRACKX4_1_Val << ADC_EMR_TRACKX4_Pos)       /* (ADC_EMR) The ADC_MR.TRACKTIM effect is multiplied by 4. Position  */
 #define ADC_EMR_TAG_Pos                       _UINT32_(24)                                         /* (ADC_EMR) Tag of ADC_LCDR Position */
 #define ADC_EMR_TAG_Msk                       (_UINT32_(0x1) << ADC_EMR_TAG_Pos)                   /* (ADC_EMR) Tag of ADC_LCDR Mask */
 #define ADC_EMR_TAG(value)                    (ADC_EMR_TAG_Msk & (_UINT32_(value) << ADC_EMR_TAG_Pos)) /* Assigment of value for TAG in the ADC_EMR register */
-#define   ADC_EMR_TAG_0_Val                   _UINT32_(0x0)                                        /* (ADC_EMR) Sets ADC_LCDR.CHNB field to zero.  */
+#define   ADC_EMR_TAG_0_Val                   _UINT32_(0x0)                                        /* (ADC_EMR) Sets ADC_LCDR.CHNB to zero.  */
 #define   ADC_EMR_TAG_1_Val                   _UINT32_(0x1)                                        /* (ADC_EMR) Appends the channel number to the conversion result in ADC_LCDR.  */
-#define ADC_EMR_TAG_0                         (ADC_EMR_TAG_0_Val << ADC_EMR_TAG_Pos)               /* (ADC_EMR) Sets ADC_LCDR.CHNB field to zero. Position  */
+#define ADC_EMR_TAG_0                         (ADC_EMR_TAG_0_Val << ADC_EMR_TAG_Pos)               /* (ADC_EMR) Sets ADC_LCDR.CHNB to zero. Position  */
 #define ADC_EMR_TAG_1                         (ADC_EMR_TAG_1_Val << ADC_EMR_TAG_Pos)               /* (ADC_EMR) Appends the channel number to the conversion result in ADC_LCDR. Position  */
 #define ADC_EMR_SIGNMODE_Pos                  _UINT32_(25)                                         /* (ADC_EMR) Sign Mode Position */
 #define ADC_EMR_SIGNMODE_Msk                  (_UINT32_(0x3) << ADC_EMR_SIGNMODE_Pos)              /* (ADC_EMR) Sign Mode Mask */
@@ -1086,13 +886,13 @@
 #define ADC_EMR_ADCMODE_Msk                   (_UINT32_(0x3) << ADC_EMR_ADCMODE_Pos)               /* (ADC_EMR) ADC Running Mode Mask */
 #define ADC_EMR_ADCMODE(value)                (ADC_EMR_ADCMODE_Msk & (_UINT32_(value) << ADC_EMR_ADCMODE_Pos)) /* Assigment of value for ADCMODE in the ADC_EMR register */
 #define   ADC_EMR_ADCMODE_NORMAL_Val          _UINT32_(0x0)                                        /* (ADC_EMR) Normal mode of operation.  */
-#define   ADC_EMR_ADCMODE_OFFSET_ERROR_Val    _UINT32_(0x1)                                        /* (ADC_EMR) Offset Error mode to measure the offset error. See Table 7-6.  */
-#define   ADC_EMR_ADCMODE_GAIN_ERROR_HIGH_Val _UINT32_(0x2)                                        /* (ADC_EMR) Gain Error mode to measure the gain error. See Table 7-6.  */
-#define   ADC_EMR_ADCMODE_GAIN_ERROR_LOW_Val  _UINT32_(0x3)                                        /* (ADC_EMR) Gain Error mode to measure the gain error. See Table 7-6.  */
+#define   ADC_EMR_ADCMODE_OFFSET_ERROR_Val    _UINT32_(0x1)                                        /* (ADC_EMR) Offset Error mode to measure the offset error. See Table 7-8.  */
+#define   ADC_EMR_ADCMODE_GAIN_ERROR_HIGH_Val _UINT32_(0x2)                                        /* (ADC_EMR) Gain Error mode to measure the gain error. See Table 7-8.  */
+#define   ADC_EMR_ADCMODE_GAIN_ERROR_LOW_Val  _UINT32_(0x3)                                        /* (ADC_EMR) Gain Error mode to measure the gain error. See Table 7-8.  */
 #define ADC_EMR_ADCMODE_NORMAL                (ADC_EMR_ADCMODE_NORMAL_Val << ADC_EMR_ADCMODE_Pos)  /* (ADC_EMR) Normal mode of operation. Position  */
-#define ADC_EMR_ADCMODE_OFFSET_ERROR          (ADC_EMR_ADCMODE_OFFSET_ERROR_Val << ADC_EMR_ADCMODE_Pos) /* (ADC_EMR) Offset Error mode to measure the offset error. See Table 7-6. Position  */
-#define ADC_EMR_ADCMODE_GAIN_ERROR_HIGH       (ADC_EMR_ADCMODE_GAIN_ERROR_HIGH_Val << ADC_EMR_ADCMODE_Pos) /* (ADC_EMR) Gain Error mode to measure the gain error. See Table 7-6. Position  */
-#define ADC_EMR_ADCMODE_GAIN_ERROR_LOW        (ADC_EMR_ADCMODE_GAIN_ERROR_LOW_Val << ADC_EMR_ADCMODE_Pos) /* (ADC_EMR) Gain Error mode to measure the gain error. See Table 7-6. Position  */
+#define ADC_EMR_ADCMODE_OFFSET_ERROR          (ADC_EMR_ADCMODE_OFFSET_ERROR_Val << ADC_EMR_ADCMODE_Pos) /* (ADC_EMR) Offset Error mode to measure the offset error. See Table 7-8. Position  */
+#define ADC_EMR_ADCMODE_GAIN_ERROR_HIGH       (ADC_EMR_ADCMODE_GAIN_ERROR_HIGH_Val << ADC_EMR_ADCMODE_Pos) /* (ADC_EMR) Gain Error mode to measure the gain error. See Table 7-8. Position  */
+#define ADC_EMR_ADCMODE_GAIN_ERROR_LOW        (ADC_EMR_ADCMODE_GAIN_ERROR_LOW_Val << ADC_EMR_ADCMODE_Pos) /* (ADC_EMR) Gain Error mode to measure the gain error. See Table 7-8. Position  */
 #define ADC_EMR_Msk                           _UINT32_(0x377732F7)                                 /* (ADC_EMR) Register Mask  */
 
 #define ADC_EMR_TRACKX_Pos                    _UINT32_(22)                                         /* (ADC_EMR Position) Tracking Time x4 */
@@ -1170,38 +970,10 @@
 #define   ADC_CCR_DIFF7_1_Val                 _UINT32_(0x1)                                        /* (ADC_CCR) Corresponding channel is set in Differential mode.  */
 #define ADC_CCR_DIFF7_0                       (ADC_CCR_DIFF7_0_Val << ADC_CCR_DIFF7_Pos)           /* (ADC_CCR) Corresponding channel is set in Single-ended mode. Position  */
 #define ADC_CCR_DIFF7_1                       (ADC_CCR_DIFF7_1_Val << ADC_CCR_DIFF7_Pos)           /* (ADC_CCR) Corresponding channel is set in Differential mode. Position  */
-#define ADC_CCR_DIFF8_Pos                     _UINT32_(24)                                         /* (ADC_CCR) Differential Inputs for Channel 8 Position */
-#define ADC_CCR_DIFF8_Msk                     (_UINT32_(0x1) << ADC_CCR_DIFF8_Pos)                 /* (ADC_CCR) Differential Inputs for Channel 8 Mask */
-#define ADC_CCR_DIFF8(value)                  (ADC_CCR_DIFF8_Msk & (_UINT32_(value) << ADC_CCR_DIFF8_Pos)) /* Assigment of value for DIFF8 in the ADC_CCR register */
-#define   ADC_CCR_DIFF8_0_Val                 _UINT32_(0x0)                                        /* (ADC_CCR) Corresponding channel is set in Single-ended mode.  */
-#define   ADC_CCR_DIFF8_1_Val                 _UINT32_(0x1)                                        /* (ADC_CCR) Corresponding channel is set in Differential mode.  */
-#define ADC_CCR_DIFF8_0                       (ADC_CCR_DIFF8_0_Val << ADC_CCR_DIFF8_Pos)           /* (ADC_CCR) Corresponding channel is set in Single-ended mode. Position  */
-#define ADC_CCR_DIFF8_1                       (ADC_CCR_DIFF8_1_Val << ADC_CCR_DIFF8_Pos)           /* (ADC_CCR) Corresponding channel is set in Differential mode. Position  */
-#define ADC_CCR_DIFF9_Pos                     _UINT32_(25)                                         /* (ADC_CCR) Differential Inputs for Channel 9 Position */
-#define ADC_CCR_DIFF9_Msk                     (_UINT32_(0x1) << ADC_CCR_DIFF9_Pos)                 /* (ADC_CCR) Differential Inputs for Channel 9 Mask */
-#define ADC_CCR_DIFF9(value)                  (ADC_CCR_DIFF9_Msk & (_UINT32_(value) << ADC_CCR_DIFF9_Pos)) /* Assigment of value for DIFF9 in the ADC_CCR register */
-#define   ADC_CCR_DIFF9_0_Val                 _UINT32_(0x0)                                        /* (ADC_CCR) Corresponding channel is set in Single-ended mode.  */
-#define   ADC_CCR_DIFF9_1_Val                 _UINT32_(0x1)                                        /* (ADC_CCR) Corresponding channel is set in Differential mode.  */
-#define ADC_CCR_DIFF9_0                       (ADC_CCR_DIFF9_0_Val << ADC_CCR_DIFF9_Pos)           /* (ADC_CCR) Corresponding channel is set in Single-ended mode. Position  */
-#define ADC_CCR_DIFF9_1                       (ADC_CCR_DIFF9_1_Val << ADC_CCR_DIFF9_Pos)           /* (ADC_CCR) Corresponding channel is set in Differential mode. Position  */
-#define ADC_CCR_DIFF10_Pos                    _UINT32_(26)                                         /* (ADC_CCR) Differential Inputs for Channel 10 Position */
-#define ADC_CCR_DIFF10_Msk                    (_UINT32_(0x1) << ADC_CCR_DIFF10_Pos)                /* (ADC_CCR) Differential Inputs for Channel 10 Mask */
-#define ADC_CCR_DIFF10(value)                 (ADC_CCR_DIFF10_Msk & (_UINT32_(value) << ADC_CCR_DIFF10_Pos)) /* Assigment of value for DIFF10 in the ADC_CCR register */
-#define   ADC_CCR_DIFF10_0_Val                _UINT32_(0x0)                                        /* (ADC_CCR) Corresponding channel is set in Single-ended mode.  */
-#define   ADC_CCR_DIFF10_1_Val                _UINT32_(0x1)                                        /* (ADC_CCR) Corresponding channel is set in Differential mode.  */
-#define ADC_CCR_DIFF10_0                      (ADC_CCR_DIFF10_0_Val << ADC_CCR_DIFF10_Pos)         /* (ADC_CCR) Corresponding channel is set in Single-ended mode. Position  */
-#define ADC_CCR_DIFF10_1                      (ADC_CCR_DIFF10_1_Val << ADC_CCR_DIFF10_Pos)         /* (ADC_CCR) Corresponding channel is set in Differential mode. Position  */
-#define ADC_CCR_DIFF11_Pos                    _UINT32_(27)                                         /* (ADC_CCR) Differential Inputs for Channel 11 Position */
-#define ADC_CCR_DIFF11_Msk                    (_UINT32_(0x1) << ADC_CCR_DIFF11_Pos)                /* (ADC_CCR) Differential Inputs for Channel 11 Mask */
-#define ADC_CCR_DIFF11(value)                 (ADC_CCR_DIFF11_Msk & (_UINT32_(value) << ADC_CCR_DIFF11_Pos)) /* Assigment of value for DIFF11 in the ADC_CCR register */
-#define   ADC_CCR_DIFF11_0_Val                _UINT32_(0x0)                                        /* (ADC_CCR) Corresponding channel is set in Single-ended mode.  */
-#define   ADC_CCR_DIFF11_1_Val                _UINT32_(0x1)                                        /* (ADC_CCR) Corresponding channel is set in Differential mode.  */
-#define ADC_CCR_DIFF11_0                      (ADC_CCR_DIFF11_0_Val << ADC_CCR_DIFF11_Pos)         /* (ADC_CCR) Corresponding channel is set in Single-ended mode. Position  */
-#define ADC_CCR_DIFF11_1                      (ADC_CCR_DIFF11_1_Val << ADC_CCR_DIFF11_Pos)         /* (ADC_CCR) Corresponding channel is set in Differential mode. Position  */
-#define ADC_CCR_Msk                           _UINT32_(0x0FFF0000)                                 /* (ADC_CCR) Register Mask  */
+#define ADC_CCR_Msk                           _UINT32_(0x00FF0000)                                 /* (ADC_CCR) Register Mask  */
 
-#define ADC_CCR_DIFF_Pos                      _UINT32_(16)                                         /* (ADC_CCR Position) Differential Inputs for Channel xx */
-#define ADC_CCR_DIFF_Msk                      (_UINT32_(0xFFF) << ADC_CCR_DIFF_Pos)                /* (ADC_CCR Mask) DIFF */
+#define ADC_CCR_DIFF_Pos                      _UINT32_(16)                                         /* (ADC_CCR Position) Differential Inputs for Channel 7 */
+#define ADC_CCR_DIFF_Msk                      (_UINT32_(0xFF) << ADC_CCR_DIFF_Pos)                 /* (ADC_CCR Mask) DIFF */
 #define ADC_CCR_DIFF(value)                   (ADC_CCR_DIFF_Msk & (_UINT32_(value) << ADC_CCR_DIFF_Pos)) 
 
 /* -------- ADC_CDR : (ADC Offset: 0x50) ( R/ 32) Channel Data Register x -------- */
@@ -1214,7 +986,7 @@
 
 
 /* -------- ADC_ACR : (ADC Offset: 0x94) (R/W 32) Analog Control Register -------- */
-#define ADC_ACR_RESETVALUE                    _UINT32_(0x1200)                                     /*  (ADC_ACR) Analog Control Register  Reset Value */
+#define ADC_ACR_RESETVALUE                    _UINT32_(0x101)                                      /*  (ADC_ACR) Analog Control Register  Reset Value */
 
 #define ADC_ACR_PENDETSENS_Pos                _UINT32_(0)                                          /* (ADC_ACR) Pen Detection Sensitivity Position */
 #define ADC_ACR_PENDETSENS_Msk                (_UINT32_(0x3) << ADC_ACR_PENDETSENS_Pos)            /* (ADC_ACR) Pen Detection Sensitivity Mask */
@@ -1284,66 +1056,10 @@
 #define   ADC_PDR_PDIFF7_1_Val                _UINT32_(0x1)                                        /* (ADC_PDR) The channel is configured in pseudo-differential mode.  */
 #define ADC_PDR_PDIFF7_0                      (ADC_PDR_PDIFF7_0_Val << ADC_PDR_PDIFF7_Pos)         /* (ADC_PDR) The channel is configured as defined by ADC_CCR.DIFFx bit. Position  */
 #define ADC_PDR_PDIFF7_1                      (ADC_PDR_PDIFF7_1_Val << ADC_PDR_PDIFF7_Pos)         /* (ADC_PDR) The channel is configured in pseudo-differential mode. Position  */
-#define ADC_PDR_PDIFF8_Pos                    _UINT32_(8)                                          /* (ADC_PDR) Pseudo-Differential Inputs for Channel 8 Position */
-#define ADC_PDR_PDIFF8_Msk                    (_UINT32_(0x1) << ADC_PDR_PDIFF8_Pos)                /* (ADC_PDR) Pseudo-Differential Inputs for Channel 8 Mask */
-#define ADC_PDR_PDIFF8(value)                 (ADC_PDR_PDIFF8_Msk & (_UINT32_(value) << ADC_PDR_PDIFF8_Pos)) /* Assigment of value for PDIFF8 in the ADC_PDR register */
-#define   ADC_PDR_PDIFF8_0_Val                _UINT32_(0x0)                                        /* (ADC_PDR) The channel is configured as defined by ADC_CCR.DIFFx bit.  */
-#define   ADC_PDR_PDIFF8_1_Val                _UINT32_(0x1)                                        /* (ADC_PDR) The channel is configured in pseudo-differential mode.  */
-#define ADC_PDR_PDIFF8_0                      (ADC_PDR_PDIFF8_0_Val << ADC_PDR_PDIFF8_Pos)         /* (ADC_PDR) The channel is configured as defined by ADC_CCR.DIFFx bit. Position  */
-#define ADC_PDR_PDIFF8_1                      (ADC_PDR_PDIFF8_1_Val << ADC_PDR_PDIFF8_Pos)         /* (ADC_PDR) The channel is configured in pseudo-differential mode. Position  */
-#define ADC_PDR_PDIFF9_Pos                    _UINT32_(9)                                          /* (ADC_PDR) Pseudo-Differential Inputs for Channel 9 Position */
-#define ADC_PDR_PDIFF9_Msk                    (_UINT32_(0x1) << ADC_PDR_PDIFF9_Pos)                /* (ADC_PDR) Pseudo-Differential Inputs for Channel 9 Mask */
-#define ADC_PDR_PDIFF9(value)                 (ADC_PDR_PDIFF9_Msk & (_UINT32_(value) << ADC_PDR_PDIFF9_Pos)) /* Assigment of value for PDIFF9 in the ADC_PDR register */
-#define   ADC_PDR_PDIFF9_0_Val                _UINT32_(0x0)                                        /* (ADC_PDR) The channel is configured as defined by ADC_CCR.DIFFx bit.  */
-#define   ADC_PDR_PDIFF9_1_Val                _UINT32_(0x1)                                        /* (ADC_PDR) The channel is configured in pseudo-differential mode.  */
-#define ADC_PDR_PDIFF9_0                      (ADC_PDR_PDIFF9_0_Val << ADC_PDR_PDIFF9_Pos)         /* (ADC_PDR) The channel is configured as defined by ADC_CCR.DIFFx bit. Position  */
-#define ADC_PDR_PDIFF9_1                      (ADC_PDR_PDIFF9_1_Val << ADC_PDR_PDIFF9_Pos)         /* (ADC_PDR) The channel is configured in pseudo-differential mode. Position  */
-#define ADC_PDR_PDIFF10_Pos                   _UINT32_(10)                                         /* (ADC_PDR) Pseudo-Differential Inputs for Channel 10 Position */
-#define ADC_PDR_PDIFF10_Msk                   (_UINT32_(0x1) << ADC_PDR_PDIFF10_Pos)               /* (ADC_PDR) Pseudo-Differential Inputs for Channel 10 Mask */
-#define ADC_PDR_PDIFF10(value)                (ADC_PDR_PDIFF10_Msk & (_UINT32_(value) << ADC_PDR_PDIFF10_Pos)) /* Assigment of value for PDIFF10 in the ADC_PDR register */
-#define   ADC_PDR_PDIFF10_0_Val               _UINT32_(0x0)                                        /* (ADC_PDR) The channel is configured as defined by ADC_CCR.DIFFx bit.  */
-#define   ADC_PDR_PDIFF10_1_Val               _UINT32_(0x1)                                        /* (ADC_PDR) The channel is configured in pseudo-differential mode.  */
-#define ADC_PDR_PDIFF10_0                     (ADC_PDR_PDIFF10_0_Val << ADC_PDR_PDIFF10_Pos)       /* (ADC_PDR) The channel is configured as defined by ADC_CCR.DIFFx bit. Position  */
-#define ADC_PDR_PDIFF10_1                     (ADC_PDR_PDIFF10_1_Val << ADC_PDR_PDIFF10_Pos)       /* (ADC_PDR) The channel is configured in pseudo-differential mode. Position  */
-#define ADC_PDR_PDIFF11_Pos                   _UINT32_(11)                                         /* (ADC_PDR) Pseudo-Differential Inputs for Channel 11 Position */
-#define ADC_PDR_PDIFF11_Msk                   (_UINT32_(0x1) << ADC_PDR_PDIFF11_Pos)               /* (ADC_PDR) Pseudo-Differential Inputs for Channel 11 Mask */
-#define ADC_PDR_PDIFF11(value)                (ADC_PDR_PDIFF11_Msk & (_UINT32_(value) << ADC_PDR_PDIFF11_Pos)) /* Assigment of value for PDIFF11 in the ADC_PDR register */
-#define   ADC_PDR_PDIFF11_0_Val               _UINT32_(0x0)                                        /* (ADC_PDR) The channel is configured as defined by ADC_CCR.DIFFx bit.  */
-#define   ADC_PDR_PDIFF11_1_Val               _UINT32_(0x1)                                        /* (ADC_PDR) The channel is configured in pseudo-differential mode.  */
-#define ADC_PDR_PDIFF11_0                     (ADC_PDR_PDIFF11_0_Val << ADC_PDR_PDIFF11_Pos)       /* (ADC_PDR) The channel is configured as defined by ADC_CCR.DIFFx bit. Position  */
-#define ADC_PDR_PDIFF11_1                     (ADC_PDR_PDIFF11_1_Val << ADC_PDR_PDIFF11_Pos)       /* (ADC_PDR) The channel is configured in pseudo-differential mode. Position  */
-#define ADC_PDR_PDIFF12_Pos                   _UINT32_(12)                                         /* (ADC_PDR) Pseudo-Differential Inputs for Channel 12 Position */
-#define ADC_PDR_PDIFF12_Msk                   (_UINT32_(0x1) << ADC_PDR_PDIFF12_Pos)               /* (ADC_PDR) Pseudo-Differential Inputs for Channel 12 Mask */
-#define ADC_PDR_PDIFF12(value)                (ADC_PDR_PDIFF12_Msk & (_UINT32_(value) << ADC_PDR_PDIFF12_Pos)) /* Assigment of value for PDIFF12 in the ADC_PDR register */
-#define   ADC_PDR_PDIFF12_0_Val               _UINT32_(0x0)                                        /* (ADC_PDR) The channel is configured as defined by ADC_CCR.DIFFx bit.  */
-#define   ADC_PDR_PDIFF12_1_Val               _UINT32_(0x1)                                        /* (ADC_PDR) The channel is configured in pseudo-differential mode.  */
-#define ADC_PDR_PDIFF12_0                     (ADC_PDR_PDIFF12_0_Val << ADC_PDR_PDIFF12_Pos)       /* (ADC_PDR) The channel is configured as defined by ADC_CCR.DIFFx bit. Position  */
-#define ADC_PDR_PDIFF12_1                     (ADC_PDR_PDIFF12_1_Val << ADC_PDR_PDIFF12_Pos)       /* (ADC_PDR) The channel is configured in pseudo-differential mode. Position  */
-#define ADC_PDR_PDIFF13_Pos                   _UINT32_(13)                                         /* (ADC_PDR) Pseudo-Differential Inputs for Channel 13 Position */
-#define ADC_PDR_PDIFF13_Msk                   (_UINT32_(0x1) << ADC_PDR_PDIFF13_Pos)               /* (ADC_PDR) Pseudo-Differential Inputs for Channel 13 Mask */
-#define ADC_PDR_PDIFF13(value)                (ADC_PDR_PDIFF13_Msk & (_UINT32_(value) << ADC_PDR_PDIFF13_Pos)) /* Assigment of value for PDIFF13 in the ADC_PDR register */
-#define   ADC_PDR_PDIFF13_0_Val               _UINT32_(0x0)                                        /* (ADC_PDR) The channel is configured as defined by ADC_CCR.DIFFx bit.  */
-#define   ADC_PDR_PDIFF13_1_Val               _UINT32_(0x1)                                        /* (ADC_PDR) The channel is configured in pseudo-differential mode.  */
-#define ADC_PDR_PDIFF13_0                     (ADC_PDR_PDIFF13_0_Val << ADC_PDR_PDIFF13_Pos)       /* (ADC_PDR) The channel is configured as defined by ADC_CCR.DIFFx bit. Position  */
-#define ADC_PDR_PDIFF13_1                     (ADC_PDR_PDIFF13_1_Val << ADC_PDR_PDIFF13_Pos)       /* (ADC_PDR) The channel is configured in pseudo-differential mode. Position  */
-#define ADC_PDR_PDIFF14_Pos                   _UINT32_(14)                                         /* (ADC_PDR) Pseudo-Differential Inputs for Channel 14 Position */
-#define ADC_PDR_PDIFF14_Msk                   (_UINT32_(0x1) << ADC_PDR_PDIFF14_Pos)               /* (ADC_PDR) Pseudo-Differential Inputs for Channel 14 Mask */
-#define ADC_PDR_PDIFF14(value)                (ADC_PDR_PDIFF14_Msk & (_UINT32_(value) << ADC_PDR_PDIFF14_Pos)) /* Assigment of value for PDIFF14 in the ADC_PDR register */
-#define   ADC_PDR_PDIFF14_0_Val               _UINT32_(0x0)                                        /* (ADC_PDR) The channel is configured as defined by ADC_CCR.DIFFx bit.  */
-#define   ADC_PDR_PDIFF14_1_Val               _UINT32_(0x1)                                        /* (ADC_PDR) The channel is configured in pseudo-differential mode.  */
-#define ADC_PDR_PDIFF14_0                     (ADC_PDR_PDIFF14_0_Val << ADC_PDR_PDIFF14_Pos)       /* (ADC_PDR) The channel is configured as defined by ADC_CCR.DIFFx bit. Position  */
-#define ADC_PDR_PDIFF14_1                     (ADC_PDR_PDIFF14_1_Val << ADC_PDR_PDIFF14_Pos)       /* (ADC_PDR) The channel is configured in pseudo-differential mode. Position  */
-#define ADC_PDR_PDIFF15_Pos                   _UINT32_(15)                                         /* (ADC_PDR) Pseudo-Differential Inputs for Channel 15 Position */
-#define ADC_PDR_PDIFF15_Msk                   (_UINT32_(0x1) << ADC_PDR_PDIFF15_Pos)               /* (ADC_PDR) Pseudo-Differential Inputs for Channel 15 Mask */
-#define ADC_PDR_PDIFF15(value)                (ADC_PDR_PDIFF15_Msk & (_UINT32_(value) << ADC_PDR_PDIFF15_Pos)) /* Assigment of value for PDIFF15 in the ADC_PDR register */
-#define   ADC_PDR_PDIFF15_0_Val               _UINT32_(0x0)                                        /* (ADC_PDR) The channel is configured as defined by ADC_CCR.DIFFx bit.  */
-#define   ADC_PDR_PDIFF15_1_Val               _UINT32_(0x1)                                        /* (ADC_PDR) The channel is configured in pseudo-differential mode.  */
-#define ADC_PDR_PDIFF15_0                     (ADC_PDR_PDIFF15_0_Val << ADC_PDR_PDIFF15_Pos)       /* (ADC_PDR) The channel is configured as defined by ADC_CCR.DIFFx bit. Position  */
-#define ADC_PDR_PDIFF15_1                     (ADC_PDR_PDIFF15_1_Val << ADC_PDR_PDIFF15_Pos)       /* (ADC_PDR) The channel is configured in pseudo-differential mode. Position  */
-#define ADC_PDR_Msk                           _UINT32_(0x0000FFFF)                                 /* (ADC_PDR) Register Mask  */
+#define ADC_PDR_Msk                           _UINT32_(0x000000FF)                                 /* (ADC_PDR) Register Mask  */
 
-#define ADC_PDR_PDIFF_Pos                     _UINT32_(0)                                          /* (ADC_PDR Position) Pseudo-Differential Inputs for Channel x5 */
-#define ADC_PDR_PDIFF_Msk                     (_UINT32_(0xFFFF) << ADC_PDR_PDIFF_Pos)              /* (ADC_PDR Mask) PDIFF */
+#define ADC_PDR_PDIFF_Pos                     _UINT32_(0)                                          /* (ADC_PDR Position) Pseudo-Differential Inputs for Channel 7 */
+#define ADC_PDR_PDIFF_Msk                     (_UINT32_(0xFF) << ADC_PDR_PDIFF_Pos)                /* (ADC_PDR Mask) PDIFF */
 #define ADC_PDR_PDIFF(value)                  (ADC_PDR_PDIFF_Msk & (_UINT32_(value) << ADC_PDR_PDIFF_Pos)) 
 
 /* -------- ADC_TSMR : (ADC Offset: 0xB0) (R/W 32) Touchscreen Mode Register -------- */
@@ -1530,38 +1246,10 @@
 #define   ADC_CECR_ECORR7_1_Val               _UINT32_(0x1)                                        /* (ADC_CECR) Automatic error correction is enabled for channel x.  */
 #define ADC_CECR_ECORR7_0                     (ADC_CECR_ECORR7_0_Val << ADC_CECR_ECORR7_Pos)       /* (ADC_CECR) Automatic error correction is disabled for channel x. Position  */
 #define ADC_CECR_ECORR7_1                     (ADC_CECR_ECORR7_1_Val << ADC_CECR_ECORR7_Pos)       /* (ADC_CECR) Automatic error correction is enabled for channel x. Position  */
-#define ADC_CECR_ECORR8_Pos                   _UINT32_(8)                                          /* (ADC_CECR) Error Correction Enable for channel 8 Position */
-#define ADC_CECR_ECORR8_Msk                   (_UINT32_(0x1) << ADC_CECR_ECORR8_Pos)               /* (ADC_CECR) Error Correction Enable for channel 8 Mask */
-#define ADC_CECR_ECORR8(value)                (ADC_CECR_ECORR8_Msk & (_UINT32_(value) << ADC_CECR_ECORR8_Pos)) /* Assigment of value for ECORR8 in the ADC_CECR register */
-#define   ADC_CECR_ECORR8_0_Val               _UINT32_(0x0)                                        /* (ADC_CECR) Automatic error correction is disabled for channel x.  */
-#define   ADC_CECR_ECORR8_1_Val               _UINT32_(0x1)                                        /* (ADC_CECR) Automatic error correction is enabled for channel x.  */
-#define ADC_CECR_ECORR8_0                     (ADC_CECR_ECORR8_0_Val << ADC_CECR_ECORR8_Pos)       /* (ADC_CECR) Automatic error correction is disabled for channel x. Position  */
-#define ADC_CECR_ECORR8_1                     (ADC_CECR_ECORR8_1_Val << ADC_CECR_ECORR8_Pos)       /* (ADC_CECR) Automatic error correction is enabled for channel x. Position  */
-#define ADC_CECR_ECORR9_Pos                   _UINT32_(9)                                          /* (ADC_CECR) Error Correction Enable for channel 9 Position */
-#define ADC_CECR_ECORR9_Msk                   (_UINT32_(0x1) << ADC_CECR_ECORR9_Pos)               /* (ADC_CECR) Error Correction Enable for channel 9 Mask */
-#define ADC_CECR_ECORR9(value)                (ADC_CECR_ECORR9_Msk & (_UINT32_(value) << ADC_CECR_ECORR9_Pos)) /* Assigment of value for ECORR9 in the ADC_CECR register */
-#define   ADC_CECR_ECORR9_0_Val               _UINT32_(0x0)                                        /* (ADC_CECR) Automatic error correction is disabled for channel x.  */
-#define   ADC_CECR_ECORR9_1_Val               _UINT32_(0x1)                                        /* (ADC_CECR) Automatic error correction is enabled for channel x.  */
-#define ADC_CECR_ECORR9_0                     (ADC_CECR_ECORR9_0_Val << ADC_CECR_ECORR9_Pos)       /* (ADC_CECR) Automatic error correction is disabled for channel x. Position  */
-#define ADC_CECR_ECORR9_1                     (ADC_CECR_ECORR9_1_Val << ADC_CECR_ECORR9_Pos)       /* (ADC_CECR) Automatic error correction is enabled for channel x. Position  */
-#define ADC_CECR_ECORR10_Pos                  _UINT32_(10)                                         /* (ADC_CECR) Error Correction Enable for channel 10 Position */
-#define ADC_CECR_ECORR10_Msk                  (_UINT32_(0x1) << ADC_CECR_ECORR10_Pos)              /* (ADC_CECR) Error Correction Enable for channel 10 Mask */
-#define ADC_CECR_ECORR10(value)               (ADC_CECR_ECORR10_Msk & (_UINT32_(value) << ADC_CECR_ECORR10_Pos)) /* Assigment of value for ECORR10 in the ADC_CECR register */
-#define   ADC_CECR_ECORR10_0_Val              _UINT32_(0x0)                                        /* (ADC_CECR) Automatic error correction is disabled for channel x.  */
-#define   ADC_CECR_ECORR10_1_Val              _UINT32_(0x1)                                        /* (ADC_CECR) Automatic error correction is enabled for channel x.  */
-#define ADC_CECR_ECORR10_0                    (ADC_CECR_ECORR10_0_Val << ADC_CECR_ECORR10_Pos)     /* (ADC_CECR) Automatic error correction is disabled for channel x. Position  */
-#define ADC_CECR_ECORR10_1                    (ADC_CECR_ECORR10_1_Val << ADC_CECR_ECORR10_Pos)     /* (ADC_CECR) Automatic error correction is enabled for channel x. Position  */
-#define ADC_CECR_ECORR11_Pos                  _UINT32_(11)                                         /* (ADC_CECR) Error Correction Enable for channel 11 Position */
-#define ADC_CECR_ECORR11_Msk                  (_UINT32_(0x1) << ADC_CECR_ECORR11_Pos)              /* (ADC_CECR) Error Correction Enable for channel 11 Mask */
-#define ADC_CECR_ECORR11(value)               (ADC_CECR_ECORR11_Msk & (_UINT32_(value) << ADC_CECR_ECORR11_Pos)) /* Assigment of value for ECORR11 in the ADC_CECR register */
-#define   ADC_CECR_ECORR11_0_Val              _UINT32_(0x0)                                        /* (ADC_CECR) Automatic error correction is disabled for channel x.  */
-#define   ADC_CECR_ECORR11_1_Val              _UINT32_(0x1)                                        /* (ADC_CECR) Automatic error correction is enabled for channel x.  */
-#define ADC_CECR_ECORR11_0                    (ADC_CECR_ECORR11_0_Val << ADC_CECR_ECORR11_Pos)     /* (ADC_CECR) Automatic error correction is disabled for channel x. Position  */
-#define ADC_CECR_ECORR11_1                    (ADC_CECR_ECORR11_1_Val << ADC_CECR_ECORR11_Pos)     /* (ADC_CECR) Automatic error correction is enabled for channel x. Position  */
-#define ADC_CECR_Msk                          _UINT32_(0x00000FFF)                                 /* (ADC_CECR) Register Mask  */
+#define ADC_CECR_Msk                          _UINT32_(0x000000FF)                                 /* (ADC_CECR) Register Mask  */
 
-#define ADC_CECR_ECORR_Pos                    _UINT32_(0)                                          /* (ADC_CECR Position) Error Correction Enable for channel xx */
-#define ADC_CECR_ECORR_Msk                    (_UINT32_(0xFFF) << ADC_CECR_ECORR_Pos)              /* (ADC_CECR Mask) ECORR */
+#define ADC_CECR_ECORR_Pos                    _UINT32_(0)                                          /* (ADC_CECR Position) Error Correction Enable for channel 7 */
+#define ADC_CECR_ECORR_Msk                    (_UINT32_(0xFF) << ADC_CECR_ECORR_Pos)               /* (ADC_CECR Mask) ECORR */
 #define ADC_CECR_ECORR(value)                 (ADC_CECR_ECORR_Msk & (_UINT32_(value) << ADC_CECR_ECORR_Pos)) 
 
 /* -------- ADC_TSCVR : (ADC Offset: 0xDC) (R/W 32) Touchscreen Correction Values Register -------- */
@@ -1603,8 +1291,8 @@
 #define ADC_WPMR_WPKEY_Pos                    _UINT32_(8)                                          /* (ADC_WPMR) Write Protection Key Position */
 #define ADC_WPMR_WPKEY_Msk                    (_UINT32_(0xFFFFFF) << ADC_WPMR_WPKEY_Pos)           /* (ADC_WPMR) Write Protection Key Mask */
 #define ADC_WPMR_WPKEY(value)                 (ADC_WPMR_WPKEY_Msk & (_UINT32_(value) << ADC_WPMR_WPKEY_Pos)) /* Assigment of value for WPKEY in the ADC_WPMR register */
-#define   ADC_WPMR_WPKEY_PASSWD_Val           _UINT32_(0x414443)                                   /* (ADC_WPMR) Writing any other value in this field aborts the write operation of the WPEN bit.  Always reads as 0  */
-#define ADC_WPMR_WPKEY_PASSWD                 (ADC_WPMR_WPKEY_PASSWD_Val << ADC_WPMR_WPKEY_Pos)    /* (ADC_WPMR) Writing any other value in this field aborts the write operation of the WPEN bit.  Always reads as 0 Position  */
+#define   ADC_WPMR_WPKEY_PASSWD_Val           _UINT32_(0x414443)                                   /* (ADC_WPMR) Writing any other value in this field aborts the write operation of WPEN.  Always reads as 0  */
+#define ADC_WPMR_WPKEY_PASSWD                 (ADC_WPMR_WPKEY_PASSWD_Val << ADC_WPMR_WPKEY_Pos)    /* (ADC_WPMR) Writing any other value in this field aborts the write operation of WPEN.  Always reads as 0 Position  */
 #define ADC_WPMR_Msk                          _UINT32_(0xFFFFFF07)                                 /* (ADC_WPMR) Register Mask  */
 
 
@@ -1615,9 +1303,9 @@
 #define ADC_WPSR_WPVS_Msk                     (_UINT32_(0x1) << ADC_WPSR_WPVS_Pos)                 /* (ADC_WPSR) Write Protection Violation Status Mask */
 #define ADC_WPSR_WPVS(value)                  (ADC_WPSR_WPVS_Msk & (_UINT32_(value) << ADC_WPSR_WPVS_Pos)) /* Assigment of value for WPVS in the ADC_WPSR register */
 #define   ADC_WPSR_WPVS_0_Val                 _UINT32_(0x0)                                        /* (ADC_WPSR) No write protection violation has occurred since the last read of ADC_WPSR.  */
-#define   ADC_WPSR_WPVS_1_Val                 _UINT32_(0x1)                                        /* (ADC_WPSR) A write protection violation has occurred since the last read of ADC_WPSR. If this violation is an unauthorized attempt to write a protected register, the associated violation is reported into field WPVSRC.  */
+#define   ADC_WPSR_WPVS_1_Val                 _UINT32_(0x1)                                        /* (ADC_WPSR) A write protection violation has occurred since the last read of ADC_WPSR. If this violation is an unauthorized attempt to write a protected register, the associated violation is reported in WPVSRC.  */
 #define ADC_WPSR_WPVS_0                       (ADC_WPSR_WPVS_0_Val << ADC_WPSR_WPVS_Pos)           /* (ADC_WPSR) No write protection violation has occurred since the last read of ADC_WPSR. Position  */
-#define ADC_WPSR_WPVS_1                       (ADC_WPSR_WPVS_1_Val << ADC_WPSR_WPVS_Pos)           /* (ADC_WPSR) A write protection violation has occurred since the last read of ADC_WPSR. If this violation is an unauthorized attempt to write a protected register, the associated violation is reported into field WPVSRC. Position  */
+#define ADC_WPSR_WPVS_1                       (ADC_WPSR_WPVS_1_Val << ADC_WPSR_WPVS_Pos)           /* (ADC_WPSR) A write protection violation has occurred since the last read of ADC_WPSR. If this violation is an unauthorized attempt to write a protected register, the associated violation is reported in WPVSRC. Position  */
 #define ADC_WPSR_WPVSRC_Pos                   _UINT32_(8)                                          /* (ADC_WPSR) Write Protection Violation Source Position */
 #define ADC_WPSR_WPVSRC_Msk                   (_UINT32_(0xFFFF) << ADC_WPSR_WPVSRC_Pos)            /* (ADC_WPSR) Write Protection Violation Source Mask */
 #define ADC_WPSR_WPVSRC(value)                (ADC_WPSR_WPVSRC_Msk & (_UINT32_(value) << ADC_WPSR_WPVSRC_Pos)) /* Assigment of value for WPVSRC in the ADC_WPSR register */
@@ -1628,7 +1316,6 @@
 #define ADC_CR_REG_OFST                _UINT32_(0x00)      /* (ADC_CR) Control Register Offset */
 #define ADC_MR_REG_OFST                _UINT32_(0x04)      /* (ADC_MR) Mode Register Offset */
 #define ADC_SEQR1_REG_OFST             _UINT32_(0x08)      /* (ADC_SEQR1) Channel Sequence Register 1 Offset */
-#define ADC_SEQR2_REG_OFST             _UINT32_(0x0C)      /* (ADC_SEQR2) Channel Sequence Register 2 Offset */
 #define ADC_CHER_REG_OFST              _UINT32_(0x10)      /* (ADC_CHER) Channel Enable Register Offset */
 #define ADC_CHDR_REG_OFST              _UINT32_(0x14)      /* (ADC_CHDR) Channel Disable Register Offset */
 #define ADC_CHSR_REG_OFST              _UINT32_(0x18)      /* (ADC_CHSR) Channel Status Register Offset */
@@ -1652,10 +1339,6 @@
 #define ADC_CDR5_REG_OFST              _UINT32_(0x64)      /* (ADC_CDR5) Channel Data Register x Offset */
 #define ADC_CDR6_REG_OFST              _UINT32_(0x68)      /* (ADC_CDR6) Channel Data Register x Offset */
 #define ADC_CDR7_REG_OFST              _UINT32_(0x6C)      /* (ADC_CDR7) Channel Data Register x Offset */
-#define ADC_CDR8_REG_OFST              _UINT32_(0x70)      /* (ADC_CDR8) Channel Data Register x Offset */
-#define ADC_CDR9_REG_OFST              _UINT32_(0x74)      /* (ADC_CDR9) Channel Data Register x Offset */
-#define ADC_CDR10_REG_OFST             _UINT32_(0x78)      /* (ADC_CDR10) Channel Data Register x Offset */
-#define ADC_CDR11_REG_OFST             _UINT32_(0x7C)      /* (ADC_CDR11) Channel Data Register x Offset */
 #define ADC_ACR_REG_OFST               _UINT32_(0x94)      /* (ADC_ACR) Analog Control Register Offset */
 #define ADC_PDR_REG_OFST               _UINT32_(0xA0)      /* (ADC_PDR) Pseudo-Differential Register Offset */
 #define ADC_TSMR_REG_OFST              _UINT32_(0xB0)      /* (ADC_TSMR) Touchscreen Mode Register Offset */
@@ -1676,11 +1359,11 @@ typedef struct
   __O   uint32_t                       ADC_CR;             /**< Offset: 0x00 ( /W  32) Control Register */
   __IO  uint32_t                       ADC_MR;             /**< Offset: 0x04 (R/W  32) Mode Register */
   __IO  uint32_t                       ADC_SEQR1;          /**< Offset: 0x08 (R/W  32) Channel Sequence Register 1 */
-  __IO  uint32_t                       ADC_SEQR2;          /**< Offset: 0x0C (R/W  32) Channel Sequence Register 2 */
+  __I   uint8_t                        Reserved1[0x04];
   __O   uint32_t                       ADC_CHER;           /**< Offset: 0x10 ( /W  32) Channel Enable Register */
   __O   uint32_t                       ADC_CHDR;           /**< Offset: 0x14 ( /W  32) Channel Disable Register */
   __I   uint32_t                       ADC_CHSR;           /**< Offset: 0x18 (R/   32) Channel Status Register */
-  __I   uint8_t                        Reserved1[0x04];
+  __I   uint8_t                        Reserved2[0x04];
   __I   uint32_t                       ADC_LCDR;           /**< Offset: 0x20 (R/   32) Last Converted Data Register */
   __O   uint32_t                       ADC_IER;            /**< Offset: 0x24 ( /W  32) Interrupt Enable Register */
   __O   uint32_t                       ADC_IDR;            /**< Offset: 0x28 ( /W  32) Interrupt Disable Register */
@@ -1691,24 +1374,24 @@ typedef struct
   __I   uint32_t                       ADC_OVER;           /**< Offset: 0x3C (R/   32) Overrun Status Register */
   __IO  uint32_t                       ADC_EMR;            /**< Offset: 0x40 (R/W  32) Extended Mode Register */
   __IO  uint32_t                       ADC_CWR;            /**< Offset: 0x44 (R/W  32) Compare Window Register */
-  __I   uint8_t                        Reserved2[0x04];
+  __I   uint8_t                        Reserved3[0x04];
   __IO  uint32_t                       ADC_CCR;            /**< Offset: 0x4C (R/W  32) Channel Configuration Register */
-  __I   uint32_t                       ADC_CDR[12];        /**< Offset: 0x50 (R/   32) Channel Data Register x */
-  __I   uint8_t                        Reserved3[0x14];
+  __I   uint32_t                       ADC_CDR[8];         /**< Offset: 0x50 (R/   32) Channel Data Register x */
+  __I   uint8_t                        Reserved4[0x24];
   __IO  uint32_t                       ADC_ACR;            /**< Offset: 0x94 (R/W  32) Analog Control Register */
-  __I   uint8_t                        Reserved4[0x08];
+  __I   uint8_t                        Reserved5[0x08];
   __IO  uint32_t                       ADC_PDR;            /**< Offset: 0xA0 (R/W  32) Pseudo-Differential Register */
-  __I   uint8_t                        Reserved5[0x0C];
+  __I   uint8_t                        Reserved6[0x0C];
   __IO  uint32_t                       ADC_TSMR;           /**< Offset: 0xB0 (R/W  32) Touchscreen Mode Register */
   __I   uint32_t                       ADC_XPOSR;          /**< Offset: 0xB4 (R/   32) Touchscreen X Position Register */
   __I   uint32_t                       ADC_YPOSR;          /**< Offset: 0xB8 (R/   32) Touchscreen Y Position Register */
   __I   uint32_t                       ADC_PRESSR;         /**< Offset: 0xBC (R/   32) Touchscreen Pressure Register */
   __IO  uint32_t                       ADC_TRGR;           /**< Offset: 0xC0 (R/W  32) Trigger Register */
-  __I   uint8_t                        Reserved6[0x10];
+  __I   uint8_t                        Reserved7[0x10];
   __IO  uint32_t                       ADC_CVR;            /**< Offset: 0xD4 (R/W  32) Correction Values Register */
   __IO  uint32_t                       ADC_CECR;           /**< Offset: 0xD8 (R/W  32) Channel Error Correction Register */
   __IO  uint32_t                       ADC_TSCVR;          /**< Offset: 0xDC (R/W  32) Touchscreen Correction Values Register */
-  __I   uint8_t                        Reserved7[0x04];
+  __I   uint8_t                        Reserved8[0x04];
   __IO  uint32_t                       ADC_WPMR;           /**< Offset: 0xE4 (R/W  32) Write Protection Mode Register */
   __I   uint32_t                       ADC_WPSR;           /**< Offset: 0xE8 (R/   32) Write Protection Status Register */
 } adc_registers_t;
