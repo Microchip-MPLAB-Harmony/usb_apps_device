@@ -1,26 +1,23 @@
 /*
  * Component description for SFR
  *
- * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
  *
- * Subject to your compliance with these terms, you may use Microchip software and any derivatives
- * exclusively with Microchip products. It is your responsibility to comply with third party license
- * terms applicable to your use of third party software (including open source software) that may
- * accompany Microchip software.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY,
- * APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND
- * FITNESS FOR A PARTICULAR PURPOSE.
+ *   http://www.apache.org/licenses/LICENSE-2.0
  *
- * IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, INCIDENTAL OR CONSEQUENTIAL
- * LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF
- * MICROCHIP HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO THE FULLEST EXTENT
- * ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT
- * EXCEED THE AMOUNT OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  *
  */
 
-/* file generated from device description version 2023-01-20T08:33:42Z */
+/* file generated from device description file (ATDF) version 2024-04-05T08:36:56Z */
 #ifndef _SAM9X7_SFR_COMPONENT_H_
 #define _SAM9X7_SFR_COMPONENT_H_
 
@@ -73,13 +70,13 @@
 #define   SFR_CCFG_EBICSA_NFD0_ON_D16_1_Val   _UINT32_(0x1)                                        /* (SFR_CCFG_EBICSA) NAND Flash I/Os are connected to D16-D23.  */
 #define SFR_CCFG_EBICSA_NFD0_ON_D16_0         (SFR_CCFG_EBICSA_NFD0_ON_D16_0_Val << SFR_CCFG_EBICSA_NFD0_ON_D16_Pos) /* (SFR_CCFG_EBICSA) NAND Flash I/Os are connected to D0-D7 (default). Position  */
 #define SFR_CCFG_EBICSA_NFD0_ON_D16_1         (SFR_CCFG_EBICSA_NFD0_ON_D16_1_Val << SFR_CCFG_EBICSA_NFD0_ON_D16_Pos) /* (SFR_CCFG_EBICSA) NAND Flash I/Os are connected to D16-D23. Position  */
-#define SFR_CCFG_EBICSA_DDR_MP_EN_Pos         _UINT32_(25)                                         /* (SFR_CCFG_EBICSA) DDR Multi-port Enable Position */
-#define SFR_CCFG_EBICSA_DDR_MP_EN_Msk         (_UINT32_(0x1) << SFR_CCFG_EBICSA_DDR_MP_EN_Pos)     /* (SFR_CCFG_EBICSA) DDR Multi-port Enable Mask */
+#define SFR_CCFG_EBICSA_DDR_MP_EN_Pos         _UINT32_(25)                                         /* (SFR_CCFG_EBICSA) DDR Multiport Enable Position */
+#define SFR_CCFG_EBICSA_DDR_MP_EN_Msk         (_UINT32_(0x1) << SFR_CCFG_EBICSA_DDR_MP_EN_Pos)     /* (SFR_CCFG_EBICSA) DDR Multiport Enable Mask */
 #define SFR_CCFG_EBICSA_DDR_MP_EN(value)      (SFR_CCFG_EBICSA_DDR_MP_EN_Msk & (_UINT32_(value) << SFR_CCFG_EBICSA_DDR_MP_EN_Pos)) /* Assigment of value for DDR_MP_EN in the SFR_CCFG_EBICSA register */
-#define   SFR_CCFG_EBICSA_DDR_MP_EN_0_Val     _UINT32_(0x0)                                        /* (SFR_CCFG_EBICSA) DDR Multi-port is disabled (default).  */
-#define   SFR_CCFG_EBICSA_DDR_MP_EN_1_Val     _UINT32_(0x1)                                        /* (SFR_CCFG_EBICSA) DDR Multi-port is enabled, performance is increased.  */
-#define SFR_CCFG_EBICSA_DDR_MP_EN_0           (SFR_CCFG_EBICSA_DDR_MP_EN_0_Val << SFR_CCFG_EBICSA_DDR_MP_EN_Pos) /* (SFR_CCFG_EBICSA) DDR Multi-port is disabled (default). Position  */
-#define SFR_CCFG_EBICSA_DDR_MP_EN_1           (SFR_CCFG_EBICSA_DDR_MP_EN_1_Val << SFR_CCFG_EBICSA_DDR_MP_EN_Pos) /* (SFR_CCFG_EBICSA) DDR Multi-port is enabled, performance is increased. Position  */
+#define   SFR_CCFG_EBICSA_DDR_MP_EN_0_Val     _UINT32_(0x0)                                        /* (SFR_CCFG_EBICSA) DDR Multiport is disabled (default).  */
+#define   SFR_CCFG_EBICSA_DDR_MP_EN_1_Val     _UINT32_(0x1)                                        /* (SFR_CCFG_EBICSA) DDR Multiport is enabled, performance is increased.  */
+#define SFR_CCFG_EBICSA_DDR_MP_EN_0           (SFR_CCFG_EBICSA_DDR_MP_EN_0_Val << SFR_CCFG_EBICSA_DDR_MP_EN_Pos) /* (SFR_CCFG_EBICSA) DDR Multiport is disabled (default). Position  */
+#define SFR_CCFG_EBICSA_DDR_MP_EN_1           (SFR_CCFG_EBICSA_DDR_MP_EN_1_Val << SFR_CCFG_EBICSA_DDR_MP_EN_Pos) /* (SFR_CCFG_EBICSA) DDR Multiport is enabled, performance is increased. Position  */
 #define SFR_CCFG_EBICSA_Msk                   _UINT32_(0x03100306)                                 /* (SFR_CCFG_EBICSA) Register Mask  */
 
 #define SFR_CCFG_EBICSA_NFD0_ON_D_Pos         _UINT32_(24)                                         /* (SFR_CCFG_EBICSA Position) NAND Flash Databus Selection */
@@ -256,8 +253,8 @@
 #define SFR_LS_LS0_Pos                        _UINT32_(0)                                          /* (SFR_LS) Light Sleep Value (GFX2D) Position */
 #define SFR_LS_LS0_Msk                        (_UINT32_(0x1) << SFR_LS_LS0_Pos)                    /* (SFR_LS) Light Sleep Value (GFX2D) Mask */
 #define SFR_LS_LS0(value)                     (SFR_LS_LS0_Msk & (_UINT32_(value) << SFR_LS_LS0_Pos)) /* Assigment of value for LS0 in the SFR_LS register */
-#define SFR_LS_LS1_Pos                        _UINT32_(1)                                          /* (SFR_LS) Light Sleep Value (XLCDC) Position */
-#define SFR_LS_LS1_Msk                        (_UINT32_(0x1) << SFR_LS_LS1_Pos)                    /* (SFR_LS) Light Sleep Value (XLCDC) Mask */
+#define SFR_LS_LS1_Pos                        _UINT32_(1)                                          /* (SFR_LS) Light Sleep Value (LCDC) Position */
+#define SFR_LS_LS1_Msk                        (_UINT32_(0x1) << SFR_LS_LS1_Pos)                    /* (SFR_LS) Light Sleep Value (LCDC) Mask */
 #define SFR_LS_LS1(value)                     (SFR_LS_LS1_Msk & (_UINT32_(value) << SFR_LS_LS1_Pos)) /* Assigment of value for LS1 in the SFR_LS register */
 #define SFR_LS_LS2_Pos                        _UINT32_(2)                                          /* (SFR_LS) Light Sleep Value (SDMMC) Position */
 #define SFR_LS_LS2_Msk                        (_UINT32_(0x1) << SFR_LS_LS2_Pos)                    /* (SFR_LS) Light Sleep Value (SDMMC) Mask */
@@ -341,8 +338,118 @@
 #define SFR_WPMR_Msk                          _UINT32_(0xFFFFFF01)                                 /* (SFR_WPMR) Register Mask  */
 
 
-/* -------- SFR_PUFRUCR0 : (SFR Offset: 0x20C) (R/W 32) Quidikkey Restrict User Context 0 Register -------- */
-#define SFR_PUFRUCR0_RESETVALUE               _UINT32_(0x00)                                       /*  (SFR_PUFRUCR0) Quidikkey Restrict User Context 0 Register  Reset Value */
+/* -------- SFR_PUFCTL : (SFR Offset: 0x200) (R/W 32) Control Register for PUFSRAM domain -------- */
+#define SFR_PUFCTL_RESETVALUE                 _UINT32_(0x148)                                      /*  (SFR_PUFCTL) Control Register for PUFSRAM domain  Reset Value */
+
+#define SFR_PUFCTL_PONOFFM_Pos                _UINT32_(0)                                          /* (SFR_PUFCTL) PUFSRAM Power Switches Controlled Manually Position */
+#define SFR_PUFCTL_PONOFFM_Msk                (_UINT32_(0x1) << SFR_PUFCTL_PONOFFM_Pos)            /* (SFR_PUFCTL) PUFSRAM Power Switches Controlled Manually Mask */
+#define SFR_PUFCTL_PONOFFM(value)             (SFR_PUFCTL_PONOFFM_Msk & (_UINT32_(value) << SFR_PUFCTL_PONOFFM_Pos)) /* Assigment of value for PONOFFM in the SFR_PUFCTL register */
+#define   SFR_PUFCTL_PONOFFM_0_Val            _UINT32_(0x0)                                        /* (SFR_PUFCTL) Power switches are automatically controlled by SYSC at startup.  */
+#define   SFR_PUFCTL_PONOFFM_1_Val            _UINT32_(0x1)                                        /* (SFR_PUFCTL) Power switches are manually controlled by the PONOFFLZ and PONOFFHZ bits.  */
+#define SFR_PUFCTL_PONOFFM_0                  (SFR_PUFCTL_PONOFFM_0_Val << SFR_PUFCTL_PONOFFM_Pos) /* (SFR_PUFCTL) Power switches are automatically controlled by SYSC at startup. Position  */
+#define SFR_PUFCTL_PONOFFM_1                  (SFR_PUFCTL_PONOFFM_1_Val << SFR_PUFCTL_PONOFFM_Pos) /* (SFR_PUFCTL) Power switches are manually controlled by the PONOFFLZ and PONOFFHZ bits. Position  */
+#define SFR_PUFCTL_PONOFFHZ_Pos               _UINT32_(1)                                          /* (SFR_PUFCTL) Controls Power Switch High Z if PONOFFM=1 Position */
+#define SFR_PUFCTL_PONOFFHZ_Msk               (_UINT32_(0x1) << SFR_PUFCTL_PONOFFHZ_Pos)           /* (SFR_PUFCTL) Controls Power Switch High Z if PONOFFM=1 Mask */
+#define SFR_PUFCTL_PONOFFHZ(value)            (SFR_PUFCTL_PONOFFHZ_Msk & (_UINT32_(value) << SFR_PUFCTL_PONOFFHZ_Pos)) /* Assigment of value for PONOFFHZ in the SFR_PUFCTL register */
+#define   SFR_PUFCTL_PONOFFHZ_0_Val           _UINT32_(0x0)                                        /* (SFR_PUFCTL) Power switch High Z is off.  */
+#define   SFR_PUFCTL_PONOFFHZ_1_Val           _UINT32_(0x1)                                        /* (SFR_PUFCTL) Power switch High Z is on.  */
+#define SFR_PUFCTL_PONOFFHZ_0                 (SFR_PUFCTL_PONOFFHZ_0_Val << SFR_PUFCTL_PONOFFHZ_Pos) /* (SFR_PUFCTL) Power switch High Z is off. Position  */
+#define SFR_PUFCTL_PONOFFHZ_1                 (SFR_PUFCTL_PONOFFHZ_1_Val << SFR_PUFCTL_PONOFFHZ_Pos) /* (SFR_PUFCTL) Power switch High Z is on. Position  */
+#define SFR_PUFCTL_PONOFFLZ_Pos               _UINT32_(2)                                          /* (SFR_PUFCTL) Controls Power Switch Low Z if PONOFFM=1 Position */
+#define SFR_PUFCTL_PONOFFLZ_Msk               (_UINT32_(0x1) << SFR_PUFCTL_PONOFFLZ_Pos)           /* (SFR_PUFCTL) Controls Power Switch Low Z if PONOFFM=1 Mask */
+#define SFR_PUFCTL_PONOFFLZ(value)            (SFR_PUFCTL_PONOFFLZ_Msk & (_UINT32_(value) << SFR_PUFCTL_PONOFFLZ_Pos)) /* Assigment of value for PONOFFLZ in the SFR_PUFCTL register */
+#define   SFR_PUFCTL_PONOFFLZ_0_Val           _UINT32_(0x0)                                        /* (SFR_PUFCTL) Power switch Low Z is off.  */
+#define   SFR_PUFCTL_PONOFFLZ_1_Val           _UINT32_(0x1)                                        /* (SFR_PUFCTL) Power switch Low Z is on.  */
+#define SFR_PUFCTL_PONOFFLZ_0                 (SFR_PUFCTL_PONOFFLZ_0_Val << SFR_PUFCTL_PONOFFLZ_Pos) /* (SFR_PUFCTL) Power switch Low Z is off. Position  */
+#define SFR_PUFCTL_PONOFFLZ_1                 (SFR_PUFCTL_PONOFFLZ_1_Val << SFR_PUFCTL_PONOFFLZ_Pos) /* (SFR_PUFCTL) Power switch Low Z is on. Position  */
+#define SFR_PUFCTL_PUFRST_Pos                 _UINT32_(3)                                          /* (SFR_PUFCTL) Reset for PUF IP Position */
+#define SFR_PUFCTL_PUFRST_Msk                 (_UINT32_(0x1) << SFR_PUFCTL_PUFRST_Pos)             /* (SFR_PUFCTL) Reset for PUF IP Mask */
+#define SFR_PUFCTL_PUFRST(value)              (SFR_PUFCTL_PUFRST_Msk & (_UINT32_(value) << SFR_PUFCTL_PUFRST_Pos)) /* Assigment of value for PUFRST in the SFR_PUFCTL register */
+#define   SFR_PUFCTL_PUFRST_0_Val             _UINT32_(0x0)                                        /* (SFR_PUFCTL) PUF is active.  */
+#define   SFR_PUFCTL_PUFRST_1_Val             _UINT32_(0x1)                                        /* (SFR_PUFCTL) PUF is in Reset mode.  */
+#define SFR_PUFCTL_PUFRST_0                   (SFR_PUFCTL_PUFRST_0_Val << SFR_PUFCTL_PUFRST_Pos)   /* (SFR_PUFCTL) PUF is active. Position  */
+#define SFR_PUFCTL_PUFRST_1                   (SFR_PUFCTL_PUFRST_1_Val << SFR_PUFCTL_PUFRST_Pos)   /* (SFR_PUFCTL) PUF is in Reset mode. Position  */
+#define SFR_PUFCTL_PUFDIS_Pos                 _UINT32_(4)                                          /* (SFR_PUFCTL) Disable the PUF Position */
+#define SFR_PUFCTL_PUFDIS_Msk                 (_UINT32_(0x1) << SFR_PUFCTL_PUFDIS_Pos)             /* (SFR_PUFCTL) Disable the PUF Mask */
+#define SFR_PUFCTL_PUFDIS(value)              (SFR_PUFCTL_PUFDIS_Msk & (_UINT32_(value) << SFR_PUFCTL_PUFDIS_Pos)) /* Assigment of value for PUFDIS in the SFR_PUFCTL register */
+#define   SFR_PUFCTL_PUFDIS_0_Val             _UINT32_(0x0)                                        /* (SFR_PUFCTL) No effect  */
+#define   SFR_PUFCTL_PUFDIS_1_Val             _UINT32_(0x1)                                        /* (SFR_PUFCTL) PUF clock and psel signals are disabled by HW and PUFSRAM domain is off.  */
+#define SFR_PUFCTL_PUFDIS_0                   (SFR_PUFCTL_PUFDIS_0_Val << SFR_PUFCTL_PUFDIS_Pos)   /* (SFR_PUFCTL) No effect Position  */
+#define SFR_PUFCTL_PUFDIS_1                   (SFR_PUFCTL_PUFDIS_1_Val << SFR_PUFCTL_PUFDIS_Pos)   /* (SFR_PUFCTL) PUF clock and psel signals are disabled by HW and PUFSRAM domain is off. Position  */
+#define SFR_PUFCTL_PUFLTM_Pos                 _UINT32_(5)                                          /* (SFR_PUFCTL) PUF Lab Test Mode Position */
+#define SFR_PUFCTL_PUFLTM_Msk                 (_UINT32_(0x1) << SFR_PUFCTL_PUFLTM_Pos)             /* (SFR_PUFCTL) PUF Lab Test Mode Mask */
+#define SFR_PUFCTL_PUFLTM(value)              (SFR_PUFCTL_PUFLTM_Msk & (_UINT32_(value) << SFR_PUFCTL_PUFLTM_Pos)) /* Assigment of value for PUFLTM in the SFR_PUFCTL register */
+#define   SFR_PUFCTL_PUFLTM_0_Val             _UINT32_(0x0)                                        /* (SFR_PUFCTL) No effect  */
+#define   SFR_PUFCTL_PUFLTM_1_Val             _UINT32_(0x1)                                        /* (SFR_PUFCTL) Enters Test mode when PUFRST=0.  */
+#define SFR_PUFCTL_PUFLTM_0                   (SFR_PUFCTL_PUFLTM_0_Val << SFR_PUFCTL_PUFLTM_Pos)   /* (SFR_PUFCTL) No effect Position  */
+#define SFR_PUFCTL_PUFLTM_1                   (SFR_PUFCTL_PUFLTM_1_Val << SFR_PUFCTL_PUFLTM_Pos)   /* (SFR_PUFCTL) Enters Test mode when PUFRST=0. Position  */
+#define SFR_PUFCTL_ALWAYSONE_Pos              _UINT32_(6)                                          /* (SFR_PUFCTL) Must always be programmed to 1 Position */
+#define SFR_PUFCTL_ALWAYSONE_Msk              (_UINT32_(0x1) << SFR_PUFCTL_ALWAYSONE_Pos)          /* (SFR_PUFCTL) Must always be programmed to 1 Mask */
+#define SFR_PUFCTL_ALWAYSONE(value)           (SFR_PUFCTL_ALWAYSONE_Msk & (_UINT32_(value) << SFR_PUFCTL_ALWAYSONE_Pos)) /* Assigment of value for ALWAYSONE in the SFR_PUFCTL register */
+#define SFR_PUFCTL_PLG_Pos                    _UINT32_(8)                                          /* (SFR_PUFCTL) PUFSRAM Power Low Status (read-only) Position */
+#define SFR_PUFCTL_PLG_Msk                    (_UINT32_(0x1) << SFR_PUFCTL_PLG_Pos)                /* (SFR_PUFCTL) PUFSRAM Power Low Status (read-only) Mask */
+#define SFR_PUFCTL_PLG(value)                 (SFR_PUFCTL_PLG_Msk & (_UINT32_(value) << SFR_PUFCTL_PLG_Pos)) /* Assigment of value for PLG in the SFR_PUFCTL register */
+#define   SFR_PUFCTL_PLG_0_Val                _UINT32_(0x0)                                        /* (SFR_PUFCTL) PUFSRAM domain is powered.  */
+#define   SFR_PUFCTL_PLG_1_Val                _UINT32_(0x1)                                        /* (SFR_PUFCTL) PUFSRAM domain is not powered.  */
+#define SFR_PUFCTL_PLG_0                      (SFR_PUFCTL_PLG_0_Val << SFR_PUFCTL_PLG_Pos)         /* (SFR_PUFCTL) PUFSRAM domain is powered. Position  */
+#define SFR_PUFCTL_PLG_1                      (SFR_PUFCTL_PLG_1_Val << SFR_PUFCTL_PLG_Pos)         /* (SFR_PUFCTL) PUFSRAM domain is not powered. Position  */
+#define SFR_PUFCTL_PHG_Pos                    _UINT32_(9)                                          /* (SFR_PUFCTL) PUFSRAM Power High Status (read-only) Position */
+#define SFR_PUFCTL_PHG_Msk                    (_UINT32_(0x1) << SFR_PUFCTL_PHG_Pos)                /* (SFR_PUFCTL) PUFSRAM Power High Status (read-only) Mask */
+#define SFR_PUFCTL_PHG(value)                 (SFR_PUFCTL_PHG_Msk & (_UINT32_(value) << SFR_PUFCTL_PHG_Pos)) /* Assigment of value for PHG in the SFR_PUFCTL register */
+#define   SFR_PUFCTL_PHG_0_Val                _UINT32_(0x0)                                        /* (SFR_PUFCTL) PUFSRAM domain is not powered.  */
+#define   SFR_PUFCTL_PHG_1_Val                _UINT32_(0x1)                                        /* (SFR_PUFCTL) PUFSRAM domain is powered.  */
+#define SFR_PUFCTL_PHG_0                      (SFR_PUFCTL_PHG_0_Val << SFR_PUFCTL_PHG_Pos)         /* (SFR_PUFCTL) PUFSRAM domain is not powered. Position  */
+#define SFR_PUFCTL_PHG_1                      (SFR_PUFCTL_PHG_1_Val << SFR_PUFCTL_PHG_Pos)         /* (SFR_PUFCTL) PUFSRAM domain is powered. Position  */
+#define SFR_PUFCTL_Msk                        _UINT32_(0x0000037F)                                 /* (SFR_PUFCTL) Register Mask  */
+
+
+/* -------- SFR_PUFDIS : (SFR Offset: 0x208) (R/W 32) PUF Disable Functions Register -------- */
+#define SFR_PUFDIS_RESETVALUE                 _UINT32_(0x00)                                       /*  (SFR_PUFDIS) PUF Disable Functions Register  Reset Value */
+
+#define SFR_PUFDIS_ENROLL_Pos                 _UINT32_(0)                                          /* (SFR_PUFDIS) Connected to qk_disable_enroll input for QK Position */
+#define SFR_PUFDIS_ENROLL_Msk                 (_UINT32_(0x1) << SFR_PUFDIS_ENROLL_Pos)             /* (SFR_PUFDIS) Connected to qk_disable_enroll input for QK Mask */
+#define SFR_PUFDIS_ENROLL(value)              (SFR_PUFDIS_ENROLL_Msk & (_UINT32_(value) << SFR_PUFDIS_ENROLL_Pos)) /* Assigment of value for ENROLL in the SFR_PUFDIS register */
+#define SFR_PUFDIS_GENERATE_RANDOM_Pos        _UINT32_(1)                                          /* (SFR_PUFDIS) Connected to qk_disable_generate_random input for QK Position */
+#define SFR_PUFDIS_GENERATE_RANDOM_Msk        (_UINT32_(0x1) << SFR_PUFDIS_GENERATE_RANDOM_Pos)    /* (SFR_PUFDIS) Connected to qk_disable_generate_random input for QK Mask */
+#define SFR_PUFDIS_GENERATE_RANDOM(value)     (SFR_PUFDIS_GENERATE_RANDOM_Msk & (_UINT32_(value) << SFR_PUFDIS_GENERATE_RANDOM_Pos)) /* Assigment of value for GENERATE_RANDOM in the SFR_PUFDIS register */
+#define SFR_PUFDIS_GET_KEY_Pos                _UINT32_(2)                                          /* (SFR_PUFDIS) Connected to qk_disable_get_key input for QK Position */
+#define SFR_PUFDIS_GET_KEY_Msk                (_UINT32_(0x1) << SFR_PUFDIS_GET_KEY_Pos)            /* (SFR_PUFDIS) Connected to qk_disable_get_key input for QK Mask */
+#define SFR_PUFDIS_GET_KEY(value)             (SFR_PUFDIS_GET_KEY_Msk & (_UINT32_(value) << SFR_PUFDIS_GET_KEY_Pos)) /* Assigment of value for GET_KEY in the SFR_PUFDIS register */
+#define SFR_PUFDIS_START_Pos                  _UINT32_(3)                                          /* (SFR_PUFDIS) Connected to qk_disable_start input for QK Position */
+#define SFR_PUFDIS_START_Msk                  (_UINT32_(0x1) << SFR_PUFDIS_START_Pos)              /* (SFR_PUFDIS) Connected to qk_disable_start input for QK Mask */
+#define SFR_PUFDIS_START(value)               (SFR_PUFDIS_START_Msk & (_UINT32_(value) << SFR_PUFDIS_START_Pos)) /* Assigment of value for START in the SFR_PUFDIS register */
+#define SFR_PUFDIS_STOP_Pos                   _UINT32_(4)                                          /* (SFR_PUFDIS) Connected to qk_disable_stop input for QK Position */
+#define SFR_PUFDIS_STOP_Msk                   (_UINT32_(0x1) << SFR_PUFDIS_STOP_Pos)               /* (SFR_PUFDIS) Connected to qk_disable_stop input for QK Mask */
+#define SFR_PUFDIS_STOP(value)                (SFR_PUFDIS_STOP_Msk & (_UINT32_(value) << SFR_PUFDIS_STOP_Pos)) /* Assigment of value for STOP in the SFR_PUFDIS register */
+#define SFR_PUFDIS_TEST_PUF_Pos               _UINT32_(5)                                          /* (SFR_PUFDIS) Connected to qk_disable_test_puf input for QK Position */
+#define SFR_PUFDIS_TEST_PUF_Msk               (_UINT32_(0x1) << SFR_PUFDIS_TEST_PUF_Pos)           /* (SFR_PUFDIS) Connected to qk_disable_test_puf input for QK Mask */
+#define SFR_PUFDIS_TEST_PUF(value)            (SFR_PUFDIS_TEST_PUF_Msk & (_UINT32_(value) << SFR_PUFDIS_TEST_PUF_Pos)) /* Assigment of value for TEST_PUF in the SFR_PUFDIS register */
+#define SFR_PUFDIS_UNWRAP_Pos                 _UINT32_(6)                                          /* (SFR_PUFDIS) Connected to qk_disable_unwrap input for QK Position */
+#define SFR_PUFDIS_UNWRAP_Msk                 (_UINT32_(0x1) << SFR_PUFDIS_UNWRAP_Pos)             /* (SFR_PUFDIS) Connected to qk_disable_unwrap input for QK Mask */
+#define SFR_PUFDIS_UNWRAP(value)              (SFR_PUFDIS_UNWRAP_Msk & (_UINT32_(value) << SFR_PUFDIS_UNWRAP_Pos)) /* Assigment of value for UNWRAP in the SFR_PUFDIS register */
+#define SFR_PUFDIS_WRAP_Pos                   _UINT32_(7)                                          /* (SFR_PUFDIS) Connected to qk_disable_wrap input for QK Position */
+#define SFR_PUFDIS_WRAP_Msk                   (_UINT32_(0x1) << SFR_PUFDIS_WRAP_Pos)               /* (SFR_PUFDIS) Connected to qk_disable_wrap input for QK Mask */
+#define SFR_PUFDIS_WRAP(value)                (SFR_PUFDIS_WRAP_Msk & (_UINT32_(value) << SFR_PUFDIS_WRAP_Pos)) /* Assigment of value for WRAP in the SFR_PUFDIS register */
+#define SFR_PUFDIS_WRAP_GENERATED_RANDOM_Pos  _UINT32_(8)                                          /* (SFR_PUFDIS) Connected to qk_disable_wrap_generated_random input for QK Position */
+#define SFR_PUFDIS_WRAP_GENERATED_RANDOM_Msk  (_UINT32_(0x1) << SFR_PUFDIS_WRAP_GENERATED_RANDOM_Pos) /* (SFR_PUFDIS) Connected to qk_disable_wrap_generated_random input for QK Mask */
+#define SFR_PUFDIS_WRAP_GENERATED_RANDOM(value) (SFR_PUFDIS_WRAP_GENERATED_RANDOM_Msk & (_UINT32_(value) << SFR_PUFDIS_WRAP_GENERATED_RANDOM_Pos)) /* Assigment of value for WRAP_GENERATED_RANDOM in the SFR_PUFDIS register */
+#define SFR_PUFDIS_RECONSTRUCT_Pos            _UINT32_(9)                                          /* (SFR_PUFDIS) Connected to qk_disable_reconstruct input for QK Position */
+#define SFR_PUFDIS_RECONSTRUCT_Msk            (_UINT32_(0x1) << SFR_PUFDIS_RECONSTRUCT_Pos)        /* (SFR_PUFDIS) Connected to qk_disable_reconstruct input for QK Mask */
+#define SFR_PUFDIS_RECONSTRUCT(value)         (SFR_PUFDIS_RECONSTRUCT_Msk & (_UINT32_(value) << SFR_PUFDIS_RECONSTRUCT_Pos)) /* Assigment of value for RECONSTRUCT in the SFR_PUFDIS register */
+#define SFR_PUFDIS_TEST_MEMORY_Pos            _UINT32_(10)                                         /* (SFR_PUFDIS) Connected to qk_disable_test_memory input for QK Position */
+#define SFR_PUFDIS_TEST_MEMORY_Msk            (_UINT32_(0x1) << SFR_PUFDIS_TEST_MEMORY_Pos)        /* (SFR_PUFDIS) Connected to qk_disable_test_memory input for QK Mask */
+#define SFR_PUFDIS_TEST_MEMORY(value)         (SFR_PUFDIS_TEST_MEMORY_Msk & (_UINT32_(value) << SFR_PUFDIS_TEST_MEMORY_Pos)) /* Assigment of value for TEST_MEMORY in the SFR_PUFDIS register */
+#define SFR_PUFDIS_LAB_TEST_MODE_Pos          _UINT32_(11)                                         /* (SFR_PUFDIS) Connected to qk_disable_lab_test_mode input for QK Position */
+#define SFR_PUFDIS_LAB_TEST_MODE_Msk          (_UINT32_(0x1) << SFR_PUFDIS_LAB_TEST_MODE_Pos)      /* (SFR_PUFDIS) Connected to qk_disable_lab_test_mode input for QK Mask */
+#define SFR_PUFDIS_LAB_TEST_MODE(value)       (SFR_PUFDIS_LAB_TEST_MODE_Msk & (_UINT32_(value) << SFR_PUFDIS_LAB_TEST_MODE_Pos)) /* Assigment of value for LAB_TEST_MODE in the SFR_PUFDIS register */
+#define SFR_PUFDIS_RESEED_Pos                 _UINT32_(12)                                         /* (SFR_PUFDIS) Connected to qk_disable_reseed input for QK Position */
+#define SFR_PUFDIS_RESEED_Msk                 (_UINT32_(0x1) << SFR_PUFDIS_RESEED_Pos)             /* (SFR_PUFDIS) Connected to qk_disable_reseed input for QK Mask */
+#define SFR_PUFDIS_RESEED(value)              (SFR_PUFDIS_RESEED_Msk & (_UINT32_(value) << SFR_PUFDIS_RESEED_Pos)) /* Assigment of value for RESEED in the SFR_PUFDIS register */
+#define SFR_PUFDIS_Msk                        _UINT32_(0x00001FFF)                                 /* (SFR_PUFDIS) Register Mask  */
+
+
+/* -------- SFR_PUFRUCR0 : (SFR Offset: 0x20C) (R/W 32) PUF Restrict User Context 0 Register -------- */
+#define SFR_PUFRUCR0_RESETVALUE               _UINT32_(0x00)                                       /*  (SFR_PUFRUCR0) PUF Restrict User Context 0 Register  Reset Value */
 
 #define SFR_PUFRUCR0_RESTRICT_USER_CONTEXT_0_Pos _UINT32_(0)                                          /* (SFR_PUFRUCR0) Value Connected to qk_restrict_user_context_0 input for QK Position */
 #define SFR_PUFRUCR0_RESTRICT_USER_CONTEXT_0_Msk (_UINT32_(0xFFFFFFFF) << SFR_PUFRUCR0_RESTRICT_USER_CONTEXT_0_Pos) /* (SFR_PUFRUCR0) Value Connected to qk_restrict_user_context_0 input for QK Mask */
@@ -350,8 +457,8 @@
 #define SFR_PUFRUCR0_Msk                      _UINT32_(0xFFFFFFFF)                                 /* (SFR_PUFRUCR0) Register Mask  */
 
 
-/* -------- SFR_PUFRUCR1 : (SFR Offset: 0x210) (R/W 32) Quidikkey Restrict User Context 1 Register -------- */
-#define SFR_PUFRUCR1_RESETVALUE               _UINT32_(0x00)                                       /*  (SFR_PUFRUCR1) Quidikkey Restrict User Context 1 Register  Reset Value */
+/* -------- SFR_PUFRUCR1 : (SFR Offset: 0x210) (R/W 32) PUF Restrict User Context 1 Register -------- */
+#define SFR_PUFRUCR1_RESETVALUE               _UINT32_(0x00)                                       /*  (SFR_PUFRUCR1) PUF Restrict User Context 1 Register  Reset Value */
 
 #define SFR_PUFRUCR1_RESTRICT_USER_CONTEXT_1_Pos _UINT32_(0)                                          /* (SFR_PUFRUCR1) Value Connected to qk_restrict_user_context_1 input for QK Position */
 #define SFR_PUFRUCR1_RESTRICT_USER_CONTEXT_1_Msk (_UINT32_(0xFFFFFFFF) << SFR_PUFRUCR1_RESTRICT_USER_CONTEXT_1_Pos) /* (SFR_PUFRUCR1) Value Connected to qk_restrict_user_context_1 input for QK Mask */
@@ -359,8 +466,8 @@
 #define SFR_PUFRUCR1_Msk                      _UINT32_(0xFFFFFFFF)                                 /* (SFR_PUFRUCR1) Register Mask  */
 
 
-/* -------- SFR_PUFWORUCR0 : (SFR Offset: 0x214) (R/W 32) Quidikkey Restrict User Context 0 Write Ones Register -------- */
-#define SFR_PUFWORUCR0_RESETVALUE             _UINT32_(0x00)                                       /*  (SFR_PUFWORUCR0) Quidikkey Restrict User Context 0 Write Ones Register  Reset Value */
+/* -------- SFR_PUFWORUCR0 : (SFR Offset: 0x214) (R/W 32) PUF Restrict User Context 0 Write Ones Register -------- */
+#define SFR_PUFWORUCR0_RESETVALUE             _UINT32_(0x00)                                       /*  (SFR_PUFWORUCR0) PUF Restrict User Context 0 Write Ones Register  Reset Value */
 
 #define SFR_PUFWORUCR0_RESTRICT_USER_CONTEXT_0_WO_Pos _UINT32_(0)                                          /* (SFR_PUFWORUCR0) Value Connected to qk_restrict_user_context_0 input for QK Position */
 #define SFR_PUFWORUCR0_RESTRICT_USER_CONTEXT_0_WO_Msk (_UINT32_(0xFFFFFFFF) << SFR_PUFWORUCR0_RESTRICT_USER_CONTEXT_0_WO_Pos) /* (SFR_PUFWORUCR0) Value Connected to qk_restrict_user_context_0 input for QK Mask */
@@ -368,8 +475,8 @@
 #define SFR_PUFWORUCR0_Msk                    _UINT32_(0xFFFFFFFF)                                 /* (SFR_PUFWORUCR0) Register Mask  */
 
 
-/* -------- SFR_PUFWORUCR1 : (SFR Offset: 0x218) (R/W 32) Quidikkey Restrict User Context 1 Write Ones Register -------- */
-#define SFR_PUFWORUCR1_RESETVALUE             _UINT32_(0x00)                                       /*  (SFR_PUFWORUCR1) Quidikkey Restrict User Context 1 Write Ones Register  Reset Value */
+/* -------- SFR_PUFWORUCR1 : (SFR Offset: 0x218) (R/W 32) PUF Restrict User Context 1 Write Ones Register -------- */
+#define SFR_PUFWORUCR1_RESETVALUE             _UINT32_(0x00)                                       /*  (SFR_PUFWORUCR1) PUF Restrict User Context 1 Write Ones Register  Reset Value */
 
 #define SFR_PUFWORUCR1_RESTRICT_USER_CONTEXT_1_WO_Pos _UINT32_(0)                                          /* (SFR_PUFWORUCR1) Value Connected to qk_restrict_user_context_1 input for QK Position */
 #define SFR_PUFWORUCR1_RESTRICT_USER_CONTEXT_1_WO_Msk (_UINT32_(0xFFFFFFFF) << SFR_PUFWORUCR1_RESTRICT_USER_CONTEXT_1_WO_Pos) /* (SFR_PUFWORUCR1) Value Connected to qk_restrict_user_context_1 input for QK Mask */
@@ -435,10 +542,12 @@
 #define SFR_LS_REG_OFST                _UINT32_(0xA0)      /* (SFR_LS) Light Sleep Register Offset */
 #define SFR_CAL1_REG_OFST              _UINT32_(0xB4)      /* (SFR_CAL1) I/O Calibration 1 Register Offset */
 #define SFR_WPMR_REG_OFST              _UINT32_(0xE4)      /* (SFR_WPMR) Write Protection Mode Register Offset */
-#define SFR_PUFRUCR0_REG_OFST          _UINT32_(0x20C)     /* (SFR_PUFRUCR0) Quidikkey Restrict User Context 0 Register Offset */
-#define SFR_PUFRUCR1_REG_OFST          _UINT32_(0x210)     /* (SFR_PUFRUCR1) Quidikkey Restrict User Context 1 Register Offset */
-#define SFR_PUFWORUCR0_REG_OFST        _UINT32_(0x214)     /* (SFR_PUFWORUCR0) Quidikkey Restrict User Context 0 Write Ones Register Offset */
-#define SFR_PUFWORUCR1_REG_OFST        _UINT32_(0x218)     /* (SFR_PUFWORUCR1) Quidikkey Restrict User Context 1 Write Ones Register Offset */
+#define SFR_PUFCTL_REG_OFST            _UINT32_(0x200)     /* (SFR_PUFCTL) Control Register for PUFSRAM domain Offset */
+#define SFR_PUFDIS_REG_OFST            _UINT32_(0x208)     /* (SFR_PUFDIS) PUF Disable Functions Register Offset */
+#define SFR_PUFRUCR0_REG_OFST          _UINT32_(0x20C)     /* (SFR_PUFRUCR0) PUF Restrict User Context 0 Register Offset */
+#define SFR_PUFRUCR1_REG_OFST          _UINT32_(0x210)     /* (SFR_PUFRUCR1) PUF Restrict User Context 1 Register Offset */
+#define SFR_PUFWORUCR0_REG_OFST        _UINT32_(0x214)     /* (SFR_PUFWORUCR0) PUF Restrict User Context 0 Write Ones Register Offset */
+#define SFR_PUFWORUCR1_REG_OFST        _UINT32_(0x218)     /* (SFR_PUFWORUCR1) PUF Restrict User Context 1 Write Ones Register Offset */
 #define SFR_FLEXRAMS_CLKG_DIS_REG_OFST _UINT32_(0x220)     /* (SFR_FLEXRAMS_CLKG_DIS) FLEXRAMS Clock Gating Disable Register Offset */
 #define SFR_ISS_CFG_REG_OFST           _UINT32_(0x240)     /* (SFR_ISS_CFG) ISS Configuration Register Offset */
 #define SFR_TSU_CFG_REG_OFST           _UINT32_(0x250)     /* (SFR_TSU_CFG) TSU Configuration Register Offset */
@@ -463,18 +572,21 @@ typedef struct
   __IO  uint32_t                       SFR_CAL1;           /**< Offset: 0xB4 (R/W  32) I/O Calibration 1 Register */
   __I   uint8_t                        Reserved6[0x2C];
   __IO  uint32_t                       SFR_WPMR;           /**< Offset: 0xE4 (R/W  32) Write Protection Mode Register */
-  __I   uint8_t                        Reserved7[0x124];
-  __IO  uint32_t                       SFR_PUFRUCR0;       /**< Offset: 0x20C (R/W  32) Quidikkey Restrict User Context 0 Register */
-  __IO  uint32_t                       SFR_PUFRUCR1;       /**< Offset: 0x210 (R/W  32) Quidikkey Restrict User Context 1 Register */
-  __IO  uint32_t                       SFR_PUFWORUCR0;     /**< Offset: 0x214 (R/W  32) Quidikkey Restrict User Context 0 Write Ones Register */
-  __IO  uint32_t                       SFR_PUFWORUCR1;     /**< Offset: 0x218 (R/W  32) Quidikkey Restrict User Context 1 Write Ones Register */
+  __I   uint8_t                        Reserved7[0x118];
+  __IO  uint32_t                       SFR_PUFCTL;         /**< Offset: 0x200 (R/W  32) Control Register for PUFSRAM domain */
   __I   uint8_t                        Reserved8[0x04];
+  __IO  uint32_t                       SFR_PUFDIS;         /**< Offset: 0x208 (R/W  32) PUF Disable Functions Register */
+  __IO  uint32_t                       SFR_PUFRUCR0;       /**< Offset: 0x20C (R/W  32) PUF Restrict User Context 0 Register */
+  __IO  uint32_t                       SFR_PUFRUCR1;       /**< Offset: 0x210 (R/W  32) PUF Restrict User Context 1 Register */
+  __IO  uint32_t                       SFR_PUFWORUCR0;     /**< Offset: 0x214 (R/W  32) PUF Restrict User Context 0 Write Ones Register */
+  __IO  uint32_t                       SFR_PUFWORUCR1;     /**< Offset: 0x218 (R/W  32) PUF Restrict User Context 1 Write Ones Register */
+  __I   uint8_t                        Reserved9[0x04];
   __IO  uint32_t                       SFR_FLEXRAMS_CLKG_DIS; /**< Offset: 0x220 (R/W  32) FLEXRAMS Clock Gating Disable Register */
-  __I   uint8_t                        Reserved9[0x1C];
+  __I   uint8_t                        Reserved10[0x1C];
   __IO  uint32_t                       SFR_ISS_CFG;        /**< Offset: 0x240 (R/W  32) ISS Configuration Register */
-  __I   uint8_t                        Reserved10[0x0C];
-  __IO  uint32_t                       SFR_TSU_CFG;        /**< Offset: 0x250 (R/W  32) TSU Configuration Register */
   __I   uint8_t                        Reserved11[0x0C];
+  __IO  uint32_t                       SFR_TSU_CFG;        /**< Offset: 0x250 (R/W  32) TSU Configuration Register */
+  __I   uint8_t                        Reserved12[0x0C];
   __IO  uint32_t                       SFR_REMAP_MP_DDR;   /**< Offset: 0x260 (R/W  32) Remap Multiport DDR Register */
 } sfr_registers_t;
 

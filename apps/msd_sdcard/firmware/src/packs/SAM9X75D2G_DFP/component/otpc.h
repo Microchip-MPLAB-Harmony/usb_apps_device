@@ -1,26 +1,23 @@
 /*
  * Component description for OTPC
  *
- * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
  *
- * Subject to your compliance with these terms, you may use Microchip software and any derivatives
- * exclusively with Microchip products. It is your responsibility to comply with third party license
- * terms applicable to your use of third party software (including open source software) that may
- * accompany Microchip software.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY,
- * APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND
- * FITNESS FOR A PARTICULAR PURPOSE.
+ *   http://www.apache.org/licenses/LICENSE-2.0
  *
- * IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, INCIDENTAL OR CONSEQUENTIAL
- * LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF
- * MICROCHIP HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO THE FULLEST EXTENT
- * ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT
- * EXCEED THE AMOUNT OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  *
  */
 
-/* file generated from device description version 2023-01-20T08:33:42Z */
+/* file generated from device description file (ATDF) version 2024-04-05T08:36:56Z */
 #ifndef _SAM9X7_OTPC_COMPONENT_H_
 #define _SAM9X7_OTPC_COMPONENT_H_
 
@@ -75,16 +72,16 @@
 #define OTPC_CR_KBSTART_Msk                   (_UINT32_(0x1) << OTPC_CR_KBSTART_Pos)               /* (OTPC_CR) Key Bus Transfer Start Mask */
 #define OTPC_CR_KBSTART(value)                (OTPC_CR_KBSTART_Msk & (_UINT32_(value) << OTPC_CR_KBSTART_Pos)) /* Assigment of value for KBSTART in the OTPC_CR register */
 #define   OTPC_CR_KBSTART_0_Val               _UINT32_(0x0)                                        /* (OTPC_CR) No effect.  */
-#define   OTPC_CR_KBSTART_1_Val               _UINT32_(0x1)                                        /* (OTPC_CR) Starts a transfer through the Master Key bus.  */
+#define   OTPC_CR_KBSTART_1_Val               _UINT32_(0x1)                                        /* (OTPC_CR) Starts a transfer through the Host Key bus.  */
 #define OTPC_CR_KBSTART_0                     (OTPC_CR_KBSTART_0_Val << OTPC_CR_KBSTART_Pos)       /* (OTPC_CR) No effect. Position  */
-#define OTPC_CR_KBSTART_1                     (OTPC_CR_KBSTART_1_Val << OTPC_CR_KBSTART_Pos)       /* (OTPC_CR) Starts a transfer through the Master Key bus. Position  */
+#define OTPC_CR_KBSTART_1                     (OTPC_CR_KBSTART_1_Val << OTPC_CR_KBSTART_Pos)       /* (OTPC_CR) Starts a transfer through the Host Key bus. Position  */
 #define OTPC_CR_KBSTOP_Pos                    _UINT32_(9)                                          /* (OTPC_CR) Key Bus Transfer Stop Position */
 #define OTPC_CR_KBSTOP_Msk                    (_UINT32_(0x1) << OTPC_CR_KBSTOP_Pos)                /* (OTPC_CR) Key Bus Transfer Stop Mask */
 #define OTPC_CR_KBSTOP(value)                 (OTPC_CR_KBSTOP_Msk & (_UINT32_(value) << OTPC_CR_KBSTOP_Pos)) /* Assigment of value for KBSTOP in the OTPC_CR register */
 #define   OTPC_CR_KBSTOP_0_Val                _UINT32_(0x0)                                        /* (OTPC_CR) No effect.  */
-#define   OTPC_CR_KBSTOP_1_Val                _UINT32_(0x1)                                        /* (OTPC_CR) Stops an on-going transfer on the Master Key bus.  */
+#define   OTPC_CR_KBSTOP_1_Val                _UINT32_(0x1)                                        /* (OTPC_CR) Stops an on-going transfer on the Host Key bus.  */
 #define OTPC_CR_KBSTOP_0                      (OTPC_CR_KBSTOP_0_Val << OTPC_CR_KBSTOP_Pos)         /* (OTPC_CR) No effect. Position  */
-#define OTPC_CR_KBSTOP_1                      (OTPC_CR_KBSTOP_1_Val << OTPC_CR_KBSTOP_Pos)         /* (OTPC_CR) Stops an on-going transfer on the Master Key bus. Position  */
+#define OTPC_CR_KBSTOP_1                      (OTPC_CR_KBSTOP_1_Val << OTPC_CR_KBSTOP_Pos)         /* (OTPC_CR) Stops an on-going transfer on the Host Key bus. Position  */
 #define OTPC_CR_REPAIR_Pos                    _UINT32_(12)                                         /* (OTPC_CR) Live Repair Position */
 #define OTPC_CR_REPAIR_Msk                    (_UINT32_(0x1) << OTPC_CR_REPAIR_Pos)                /* (OTPC_CR) Live Repair Mask */
 #define OTPC_CR_REPAIR(value)                 (OTPC_CR_REPAIR_Msk & (_UINT32_(value) << OTPC_CR_REPAIR_Pos)) /* Assigment of value for REPAIR in the OTPC_CR register */
@@ -210,20 +207,20 @@
 #define   OTPC_SR_EMUL_1_Val                  _UINT32_(0x1)                                        /* (OTPC_SR) The User area Emulation mode is enabled.  */
 #define OTPC_SR_EMUL_0                        (OTPC_SR_EMUL_0_Val << OTPC_SR_EMUL_Pos)             /* (OTPC_SR) The User area Emulation mode is disabled. Position  */
 #define OTPC_SR_EMUL_1                        (OTPC_SR_EMUL_1_Val << OTPC_SR_EMUL_Pos)             /* (OTPC_SR) The User area Emulation mode is enabled. Position  */
-#define OTPC_SR_MKBB_Pos                      _UINT32_(4)                                          /* (OTPC_SR) Master Key Bus Busy Position */
-#define OTPC_SR_MKBB_Msk                      (_UINT32_(0x1) << OTPC_SR_MKBB_Pos)                  /* (OTPC_SR) Master Key Bus Busy Mask */
+#define OTPC_SR_MKBB_Pos                      _UINT32_(4)                                          /* (OTPC_SR) Host Key Bus Busy Position */
+#define OTPC_SR_MKBB_Msk                      (_UINT32_(0x1) << OTPC_SR_MKBB_Pos)                  /* (OTPC_SR) Host Key Bus Busy Mask */
 #define OTPC_SR_MKBB(value)                   (OTPC_SR_MKBB_Msk & (_UINT32_(value) << OTPC_SR_MKBB_Pos)) /* Assigment of value for MKBB in the OTPC_SR register */
-#define   OTPC_SR_MKBB_0_Val                  _UINT32_(0x0)                                        /* (OTPC_SR) The Master Key bus is not busy.  */
-#define   OTPC_SR_MKBB_1_Val                  _UINT32_(0x1)                                        /* (OTPC_SR) The Master Key bus is busy.  */
-#define OTPC_SR_MKBB_0                        (OTPC_SR_MKBB_0_Val << OTPC_SR_MKBB_Pos)             /* (OTPC_SR) The Master Key bus is not busy. Position  */
-#define OTPC_SR_MKBB_1                        (OTPC_SR_MKBB_1_Val << OTPC_SR_MKBB_Pos)             /* (OTPC_SR) The Master Key bus is busy. Position  */
-#define OTPC_SR_SKBB_Pos                      _UINT32_(5)                                          /* (OTPC_SR) Slave Key Bus Busy Position */
-#define OTPC_SR_SKBB_Msk                      (_UINT32_(0x1) << OTPC_SR_SKBB_Pos)                  /* (OTPC_SR) Slave Key Bus Busy Mask */
+#define   OTPC_SR_MKBB_0_Val                  _UINT32_(0x0)                                        /* (OTPC_SR) The Host Key bus is not busy.  */
+#define   OTPC_SR_MKBB_1_Val                  _UINT32_(0x1)                                        /* (OTPC_SR) The Host Key bus is busy.  */
+#define OTPC_SR_MKBB_0                        (OTPC_SR_MKBB_0_Val << OTPC_SR_MKBB_Pos)             /* (OTPC_SR) The Host Key bus is not busy. Position  */
+#define OTPC_SR_MKBB_1                        (OTPC_SR_MKBB_1_Val << OTPC_SR_MKBB_Pos)             /* (OTPC_SR) The Host Key bus is busy. Position  */
+#define OTPC_SR_SKBB_Pos                      _UINT32_(5)                                          /* (OTPC_SR) Client Key Bus Busy Position */
+#define OTPC_SR_SKBB_Msk                      (_UINT32_(0x1) << OTPC_SR_SKBB_Pos)                  /* (OTPC_SR) Client Key Bus Busy Mask */
 #define OTPC_SR_SKBB(value)                   (OTPC_SR_SKBB_Msk & (_UINT32_(value) << OTPC_SR_SKBB_Pos)) /* Assigment of value for SKBB in the OTPC_SR register */
-#define   OTPC_SR_SKBB_0_Val                  _UINT32_(0x0)                                        /* (OTPC_SR) The Slave Key bus is not busy.  */
-#define   OTPC_SR_SKBB_1_Val                  _UINT32_(0x1)                                        /* (OTPC_SR) The Slave Key bus is busy.  */
-#define OTPC_SR_SKBB_0                        (OTPC_SR_SKBB_0_Val << OTPC_SR_SKBB_Pos)             /* (OTPC_SR) The Slave Key bus is not busy. Position  */
-#define OTPC_SR_SKBB_1                        (OTPC_SR_SKBB_1_Val << OTPC_SR_SKBB_Pos)             /* (OTPC_SR) The Slave Key bus is busy. Position  */
+#define   OTPC_SR_SKBB_0_Val                  _UINT32_(0x0)                                        /* (OTPC_SR) The Client Key bus is not busy.  */
+#define   OTPC_SR_SKBB_1_Val                  _UINT32_(0x1)                                        /* (OTPC_SR) The Client Key bus is busy.  */
+#define OTPC_SR_SKBB_0                        (OTPC_SR_SKBB_0_Val << OTPC_SR_SKBB_Pos)             /* (OTPC_SR) The Client Key bus is not busy. Position  */
+#define OTPC_SR_SKBB_1                        (OTPC_SR_SKBB_1_Val << OTPC_SR_SKBB_Pos)             /* (OTPC_SR) The Client Key bus is busy. Position  */
 #define OTPC_SR_READ_Pos                      _UINT32_(6)                                          /* (OTPC_SR) Read On-Going Position */
 #define OTPC_SR_READ_Msk                      (_UINT32_(0x1) << OTPC_SR_READ_Pos)                  /* (OTPC_SR) Read On-Going Mask */
 #define OTPC_SR_READ(value)                   (OTPC_SR_READ_Msk & (_UINT32_(value) << OTPC_SR_READ_Pos)) /* Assigment of value for READ in the OTPC_SR register */
@@ -457,9 +454,9 @@
 #define OTPC_ISR_EOKT_Msk                     (_UINT32_(0x1) << OTPC_ISR_EOKT_Pos)                 /* (OTPC_ISR) End Of Key Transfer (cleared on read) Mask */
 #define OTPC_ISR_EOKT(value)                  (OTPC_ISR_EOKT_Msk & (_UINT32_(value) << OTPC_ISR_EOKT_Pos)) /* Assigment of value for EOKT in the OTPC_ISR register */
 #define   OTPC_ISR_EOKT_0_Val                 _UINT32_(0x0)                                        /* (OTPC_ISR) No key transfer completion since the last read of OTPC_ISR.  */
-#define   OTPC_ISR_EOKT_1_Val                 _UINT32_(0x1)                                        /* (OTPC_ISR) At least one key transfer has been completed on the Master Key bus since the last read of OTPC_ISR.  */
+#define   OTPC_ISR_EOKT_1_Val                 _UINT32_(0x1)                                        /* (OTPC_ISR) At least one key transfer has been completed on the Host Key bus since the last read of OTPC_ISR.  */
 #define OTPC_ISR_EOKT_0                       (OTPC_ISR_EOKT_0_Val << OTPC_ISR_EOKT_Pos)           /* (OTPC_ISR) No key transfer completion since the last read of OTPC_ISR. Position  */
-#define OTPC_ISR_EOKT_1                       (OTPC_ISR_EOKT_1_Val << OTPC_ISR_EOKT_Pos)           /* (OTPC_ISR) At least one key transfer has been completed on the Master Key bus since the last read of OTPC_ISR. Position  */
+#define OTPC_ISR_EOKT_1                       (OTPC_ISR_EOKT_1_Val << OTPC_ISR_EOKT_Pos)           /* (OTPC_ISR) At least one key transfer has been completed on the Host Key bus since the last read of OTPC_ISR. Position  */
 #define OTPC_ISR_PGERR_Pos                    _UINT32_(4)                                          /* (OTPC_ISR) Programming Error (cleared on read) Position */
 #define OTPC_ISR_PGERR_Msk                    (_UINT32_(0x1) << OTPC_ISR_PGERR_Pos)                /* (OTPC_ISR) Programming Error (cleared on read) Mask */
 #define OTPC_ISR_PGERR(value)                 (OTPC_ISR_PGERR_Msk & (_UINT32_(value) << OTPC_ISR_PGERR_Pos)) /* Assigment of value for PGERR in the OTPC_ISR register */
@@ -548,9 +545,9 @@
 #define OTPC_ISR_SECE_Msk                     (_UINT32_(0x1) << OTPC_ISR_SECE_Pos)                 /* (OTPC_ISR) Security and/or Safety Event (cleared on read) Mask */
 #define OTPC_ISR_SECE(value)                  (OTPC_ISR_SECE_Msk & (_UINT32_(value) << OTPC_ISR_SECE_Pos)) /* Assigment of value for SECE in the OTPC_ISR register */
 #define   OTPC_ISR_SECE_0_Val                 _UINT32_(0x0)                                        /* (OTPC_ISR) No security or safety event occurred since the last read of OTPC_ISR.  */
-#define   OTPC_ISR_SECE_1_Val                 _UINT32_(0x1)                                        /* (OTPC_ISR) One or more safety or security event occurred since the last read of OTPC_ISR. For details on the event, refer to OTPC_WPSR.  */
+#define   OTPC_ISR_SECE_1_Val                 _UINT32_(0x1)                                        /* (OTPC_ISR) One or more safety or security event occurred since the last read of OTPC_ISR. For details on the event, see OTPC_WPSR.  */
 #define OTPC_ISR_SECE_0                       (OTPC_ISR_SECE_0_Val << OTPC_ISR_SECE_Pos)           /* (OTPC_ISR) No security or safety event occurred since the last read of OTPC_ISR. Position  */
-#define OTPC_ISR_SECE_1                       (OTPC_ISR_SECE_1_Val << OTPC_ISR_SECE_Pos)           /* (OTPC_ISR) One or more safety or security event occurred since the last read of OTPC_ISR. For details on the event, refer to OTPC_WPSR. Position  */
+#define OTPC_ISR_SECE_1                       (OTPC_ISR_SECE_1_Val << OTPC_ISR_SECE_Pos)           /* (OTPC_ISR) One or more safety or security event occurred since the last read of OTPC_ISR. For details on the event, see OTPC_WPSR. Position  */
 #define OTPC_ISR_Msk                          _UINT32_(0x10017FFF)                                 /* (OTPC_ISR) Register Mask  */
 
 

@@ -1,26 +1,23 @@
 /*
  * Component description for LVDSC
  *
- * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
  *
- * Subject to your compliance with these terms, you may use Microchip software and any derivatives
- * exclusively with Microchip products. It is your responsibility to comply with third party license
- * terms applicable to your use of third party software (including open source software) that may
- * accompany Microchip software.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY,
- * APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND
- * FITNESS FOR A PARTICULAR PURPOSE.
+ *   http://www.apache.org/licenses/LICENSE-2.0
  *
- * IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, INCIDENTAL OR CONSEQUENTIAL
- * LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF
- * MICROCHIP HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO THE FULLEST EXTENT
- * ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT
- * EXCEED THE AMOUNT OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  *
  */
 
-/* file generated from device description version 2023-01-20T08:33:42Z */
+/* file generated from device description file (ATDF) version 2024-04-05T08:36:56Z */
 #ifndef _SAM9X7_LVDSC_COMPONENT_H_
 #define _SAM9X7_LVDSC_COMPONENT_H_
 
@@ -105,25 +102,25 @@
 
 
 /* -------- LVDSC_ACR : (LVDSC Offset: 0x14) (R/W 32) Analog Control Register -------- */
-#define LVDSC_ACR_RESETVALUE                  _UINT32_(0x00)                                       /*  (LVDSC_ACR) Analog Control Register  Reset Value */
+#define LVDSC_ACR_RESETVALUE                  _UINT32_(0x0B)                                       /*  (LVDSC_ACR) Analog Control Register  Reset Value */
 
-#define LVDSC_ACR_DCBIAS_Pos                  _UINT32_(0)                                          /* (LVDSC_ACR) Common DC-bias Control for LVDS lanes Position */
-#define LVDSC_ACR_DCBIAS_Msk                  (_UINT32_(0x1F) << LVDSC_ACR_DCBIAS_Pos)             /* (LVDSC_ACR) Common DC-bias Control for LVDS lanes Mask */
+#define LVDSC_ACR_DCBIAS_Pos                  _UINT32_(0)                                          /* (LVDSC_ACR) Common DC Bias Control for LVDS Lanes Position */
+#define LVDSC_ACR_DCBIAS_Msk                  (_UINT32_(0x1F) << LVDSC_ACR_DCBIAS_Pos)             /* (LVDSC_ACR) Common DC Bias Control for LVDS Lanes Mask */
 #define LVDSC_ACR_DCBIAS(value)               (LVDSC_ACR_DCBIAS_Msk & (_UINT32_(value) << LVDSC_ACR_DCBIAS_Pos)) /* Assigment of value for DCBIAS in the LVDSC_ACR register */
-#define LVDSC_ACR_PREEMP_A0_Pos               _UINT32_(8)                                          /* (LVDSC_ACR) Pre-Emphasis Control for A0 LVDS lane Position */
-#define LVDSC_ACR_PREEMP_A0_Msk               (_UINT32_(0x7) << LVDSC_ACR_PREEMP_A0_Pos)           /* (LVDSC_ACR) Pre-Emphasis Control for A0 LVDS lane Mask */
+#define LVDSC_ACR_PREEMP_A0_Pos               _UINT32_(8)                                          /* (LVDSC_ACR) Pre-Emphasis Control for Ax LVDS Lane Position */
+#define LVDSC_ACR_PREEMP_A0_Msk               (_UINT32_(0x7) << LVDSC_ACR_PREEMP_A0_Pos)           /* (LVDSC_ACR) Pre-Emphasis Control for Ax LVDS Lane Mask */
 #define LVDSC_ACR_PREEMP_A0(value)            (LVDSC_ACR_PREEMP_A0_Msk & (_UINT32_(value) << LVDSC_ACR_PREEMP_A0_Pos)) /* Assigment of value for PREEMP_A0 in the LVDSC_ACR register */
-#define LVDSC_ACR_PREEMP_A1_Pos               _UINT32_(12)                                         /* (LVDSC_ACR) Pre-Emphasis Control for A1 LVDS lane Position */
-#define LVDSC_ACR_PREEMP_A1_Msk               (_UINT32_(0x7) << LVDSC_ACR_PREEMP_A1_Pos)           /* (LVDSC_ACR) Pre-Emphasis Control for A1 LVDS lane Mask */
+#define LVDSC_ACR_PREEMP_A1_Pos               _UINT32_(12)                                         /* (LVDSC_ACR) Pre-Emphasis Control for Ax LVDS Lane Position */
+#define LVDSC_ACR_PREEMP_A1_Msk               (_UINT32_(0x7) << LVDSC_ACR_PREEMP_A1_Pos)           /* (LVDSC_ACR) Pre-Emphasis Control for Ax LVDS Lane Mask */
 #define LVDSC_ACR_PREEMP_A1(value)            (LVDSC_ACR_PREEMP_A1_Msk & (_UINT32_(value) << LVDSC_ACR_PREEMP_A1_Pos)) /* Assigment of value for PREEMP_A1 in the LVDSC_ACR register */
-#define LVDSC_ACR_PREEMP_A2_Pos               _UINT32_(16)                                         /* (LVDSC_ACR) Pre-Emphasis Control for A2 LVDS lane Position */
-#define LVDSC_ACR_PREEMP_A2_Msk               (_UINT32_(0x7) << LVDSC_ACR_PREEMP_A2_Pos)           /* (LVDSC_ACR) Pre-Emphasis Control for A2 LVDS lane Mask */
+#define LVDSC_ACR_PREEMP_A2_Pos               _UINT32_(16)                                         /* (LVDSC_ACR) Pre-Emphasis Control for Ax LVDS Lane Position */
+#define LVDSC_ACR_PREEMP_A2_Msk               (_UINT32_(0x7) << LVDSC_ACR_PREEMP_A2_Pos)           /* (LVDSC_ACR) Pre-Emphasis Control for Ax LVDS Lane Mask */
 #define LVDSC_ACR_PREEMP_A2(value)            (LVDSC_ACR_PREEMP_A2_Msk & (_UINT32_(value) << LVDSC_ACR_PREEMP_A2_Pos)) /* Assigment of value for PREEMP_A2 in the LVDSC_ACR register */
-#define LVDSC_ACR_PREEMP_A3_Pos               _UINT32_(20)                                         /* (LVDSC_ACR) Pre-Emphasis Control for A3 LVDS lane Position */
-#define LVDSC_ACR_PREEMP_A3_Msk               (_UINT32_(0x7) << LVDSC_ACR_PREEMP_A3_Pos)           /* (LVDSC_ACR) Pre-Emphasis Control for A3 LVDS lane Mask */
+#define LVDSC_ACR_PREEMP_A3_Pos               _UINT32_(20)                                         /* (LVDSC_ACR) Pre-Emphasis Control for Ax LVDS Lane Position */
+#define LVDSC_ACR_PREEMP_A3_Msk               (_UINT32_(0x7) << LVDSC_ACR_PREEMP_A3_Pos)           /* (LVDSC_ACR) Pre-Emphasis Control for Ax LVDS Lane Mask */
 #define LVDSC_ACR_PREEMP_A3(value)            (LVDSC_ACR_PREEMP_A3_Msk & (_UINT32_(value) << LVDSC_ACR_PREEMP_A3_Pos)) /* Assigment of value for PREEMP_A3 in the LVDSC_ACR register */
-#define LVDSC_ACR_PREEMP_CLK1_Pos             _UINT32_(24)                                         /* (LVDSC_ACR)  Position */
-#define LVDSC_ACR_PREEMP_CLK1_Msk             (_UINT32_(0x7) << LVDSC_ACR_PREEMP_CLK1_Pos)         /* (LVDSC_ACR)  Mask */
+#define LVDSC_ACR_PREEMP_CLK1_Pos             _UINT32_(24)                                         /* (LVDSC_ACR) Pre-Emphasis Control for CLK LVDS Lane Position */
+#define LVDSC_ACR_PREEMP_CLK1_Msk             (_UINT32_(0x7) << LVDSC_ACR_PREEMP_CLK1_Pos)         /* (LVDSC_ACR) Pre-Emphasis Control for CLK LVDS Lane Mask */
 #define LVDSC_ACR_PREEMP_CLK1(value)          (LVDSC_ACR_PREEMP_CLK1_Msk & (_UINT32_(value) << LVDSC_ACR_PREEMP_CLK1_Pos)) /* Assigment of value for PREEMP_CLK1 in the LVDSC_ACR register */
 #define LVDSC_ACR_Msk                         _UINT32_(0x0777771F)                                 /* (LVDSC_ACR) Register Mask  */
 
