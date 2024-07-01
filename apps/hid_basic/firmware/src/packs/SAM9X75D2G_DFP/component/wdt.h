@@ -1,26 +1,23 @@
 /*
  * Component description for WDT
  *
- * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
  *
- * Subject to your compliance with these terms, you may use Microchip software and any derivatives
- * exclusively with Microchip products. It is your responsibility to comply with third party license
- * terms applicable to your use of third party software (including open source software) that may
- * accompany Microchip software.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY,
- * APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND
- * FITNESS FOR A PARTICULAR PURPOSE.
+ *   http://www.apache.org/licenses/LICENSE-2.0
  *
- * IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, INCIDENTAL OR CONSEQUENTIAL
- * LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF
- * MICROCHIP HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO THE FULLEST EXTENT
- * ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT
- * EXCEED THE AMOUNT OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  *
  */
 
-/* file generated from device description version 2023-01-20T08:33:42Z */
+/* file generated from device description file (ATDF) version 2024-04-05T08:36:56Z */
 #ifndef _SAM9X7_WDT_COMPONENT_H_
 #define _SAM9X7_WDT_COMPONENT_H_
 
@@ -75,20 +72,20 @@
 #define   WDT_MR_WDDIS_1_Val                  _UINT32_(0x1)                                        /* (WDT_MR) Disables the WDT.  */
 #define WDT_MR_WDDIS_0                        (WDT_MR_WDDIS_0_Val << WDT_MR_WDDIS_Pos)             /* (WDT_MR) Enables the WDT. Position  */
 #define WDT_MR_WDDIS_1                        (WDT_MR_WDDIS_1_Val << WDT_MR_WDDIS_Pos)             /* (WDT_MR) Disables the WDT. Position  */
-#define WDT_MR_WDDBGHLT_Pos                   _UINT32_(28)                                         /* (WDT_MR) Watchdog Debug Halt Position */
-#define WDT_MR_WDDBGHLT_Msk                   (_UINT32_(0x1) << WDT_MR_WDDBGHLT_Pos)               /* (WDT_MR) Watchdog Debug Halt Mask */
-#define WDT_MR_WDDBGHLT(value)                (WDT_MR_WDDBGHLT_Msk & (_UINT32_(value) << WDT_MR_WDDBGHLT_Pos)) /* Assigment of value for WDDBGHLT in the WDT_MR register */
-#define   WDT_MR_WDDBGHLT_0_Val               _UINT32_(0x0)                                        /* (WDT_MR) The WDT runs when the processor is in debug state.  */
-#define   WDT_MR_WDDBGHLT_1_Val               _UINT32_(0x1)                                        /* (WDT_MR) The WDT stops when the processor is in debug state.  */
-#define WDT_MR_WDDBGHLT_0                     (WDT_MR_WDDBGHLT_0_Val << WDT_MR_WDDBGHLT_Pos)       /* (WDT_MR) The WDT runs when the processor is in debug state. Position  */
-#define WDT_MR_WDDBGHLT_1                     (WDT_MR_WDDBGHLT_1_Val << WDT_MR_WDDBGHLT_Pos)       /* (WDT_MR) The WDT stops when the processor is in debug state. Position  */
-#define WDT_MR_WDIDLEHLT_Pos                  _UINT32_(29)                                         /* (WDT_MR) Watchdog Idle Halt Position */
+#define WDT_MR_WDIDLEHLT_Pos                  _UINT32_(28)                                         /* (WDT_MR) Watchdog Idle Halt Position */
 #define WDT_MR_WDIDLEHLT_Msk                  (_UINT32_(0x1) << WDT_MR_WDIDLEHLT_Pos)              /* (WDT_MR) Watchdog Idle Halt Mask */
 #define WDT_MR_WDIDLEHLT(value)               (WDT_MR_WDIDLEHLT_Msk & (_UINT32_(value) << WDT_MR_WDIDLEHLT_Pos)) /* Assigment of value for WDIDLEHLT in the WDT_MR register */
-#define   WDT_MR_WDIDLEHLT_0_Val              _UINT32_(0x0)                                        /* (WDT_MR) The WDT runs when the system is in idle state.  */
-#define   WDT_MR_WDIDLEHLT_1_Val              _UINT32_(0x1)                                        /* (WDT_MR) The WDT stops when the system is in idle state.  */
-#define WDT_MR_WDIDLEHLT_0                    (WDT_MR_WDIDLEHLT_0_Val << WDT_MR_WDIDLEHLT_Pos)     /* (WDT_MR) The WDT runs when the system is in idle state. Position  */
-#define WDT_MR_WDIDLEHLT_1                    (WDT_MR_WDIDLEHLT_1_Val << WDT_MR_WDIDLEHLT_Pos)     /* (WDT_MR) The WDT stops when the system is in idle state. Position  */
+#define   WDT_MR_WDIDLEHLT_0_Val              _UINT32_(0x0)                                        /* (WDT_MR) The WDT runs when the system is in Idle state.  */
+#define   WDT_MR_WDIDLEHLT_1_Val              _UINT32_(0x1)                                        /* (WDT_MR) The WDT stops when the system is in Idle state.  */
+#define WDT_MR_WDIDLEHLT_0                    (WDT_MR_WDIDLEHLT_0_Val << WDT_MR_WDIDLEHLT_Pos)     /* (WDT_MR) The WDT runs when the system is in Idle state. Position  */
+#define WDT_MR_WDIDLEHLT_1                    (WDT_MR_WDIDLEHLT_1_Val << WDT_MR_WDIDLEHLT_Pos)     /* (WDT_MR) The WDT stops when the system is in Idle state. Position  */
+#define WDT_MR_WDDBGHLT_Pos                   _UINT32_(29)                                         /* (WDT_MR) Watchdog Debug Halt Position */
+#define WDT_MR_WDDBGHLT_Msk                   (_UINT32_(0x1) << WDT_MR_WDDBGHLT_Pos)               /* (WDT_MR) Watchdog Debug Halt Mask */
+#define WDT_MR_WDDBGHLT(value)                (WDT_MR_WDDBGHLT_Msk & (_UINT32_(value) << WDT_MR_WDDBGHLT_Pos)) /* Assigment of value for WDDBGHLT in the WDT_MR register */
+#define   WDT_MR_WDDBGHLT_0_Val               _UINT32_(0x0)                                        /* (WDT_MR) The WDT runs when the processor is in Debug state.  */
+#define   WDT_MR_WDDBGHLT_1_Val               _UINT32_(0x1)                                        /* (WDT_MR) The WDT stops when the processor is in Debug state.  */
+#define WDT_MR_WDDBGHLT_0                     (WDT_MR_WDDBGHLT_0_Val << WDT_MR_WDDBGHLT_Pos)       /* (WDT_MR) The WDT runs when the processor is in Debug state. Position  */
+#define WDT_MR_WDDBGHLT_1                     (WDT_MR_WDDBGHLT_1_Val << WDT_MR_WDDBGHLT_Pos)       /* (WDT_MR) The WDT stops when the processor is in Debug state. Position  */
 #define WDT_MR_Msk                            _UINT32_(0x30001030)                                 /* (WDT_MR) Register Mask  */
 
 

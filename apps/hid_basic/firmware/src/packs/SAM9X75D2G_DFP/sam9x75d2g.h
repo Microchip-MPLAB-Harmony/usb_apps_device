@@ -1,35 +1,32 @@
 /*
  * Header file for ATSAM9X75D2G
  *
- * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
  *
- * Subject to your compliance with these terms, you may use Microchip software and any derivatives
- * exclusively with Microchip products. It is your responsibility to comply with third party license
- * terms applicable to your use of third party software (including open source software) that may
- * accompany Microchip software.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY,
- * APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND
- * FITNESS FOR A PARTICULAR PURPOSE.
+ *   http://www.apache.org/licenses/LICENSE-2.0
  *
- * IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, INCIDENTAL OR CONSEQUENTIAL
- * LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF
- * MICROCHIP HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO THE FULLEST EXTENT
- * ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT
- * EXCEED THE AMOUNT OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  *
  */
 
-/* File generated from device description version 2023-01-20T08:33:41Z */
+/* File generated from device description file (ATDF) version 2024-04-05T08:36:56Z */
 #ifndef _SAM9X75D2G_H_
 #define _SAM9X75D2G_H_
 
 /* Header version uses Semantic Versioning 2.0.0 (https://semver.org/) */
-#define HEADER_FORMAT_VERSION "2.1.0"
+#define HEADER_FORMAT_VERSION "2.1.1"
 
 #define HEADER_FORMAT_VERSION_MAJOR (2)
 #define HEADER_FORMAT_VERSION_MINOR (1)
-#define HEADER_FORMAT_VERSION_PATCH (0)
+#define HEADER_FORMAT_VERSION_PATCH (1)
 
 /* SAM9X75D2G definitions
   This file defines all structures and symbols for SAM9X75D2G:
@@ -100,7 +97,7 @@ typedef enum IRQn
   PWM_IRQn                  =  18, /* 18  Pulse Width Modulation Controller (PWM) */
   ADC_IRQn                  =  19, /* 19  Analog-to-Digital Converter (ADC)   */
   XDMAC_IRQn                =  20, /* 20  Extensible DMA Controller (XDMAC)   */
-  MATRIX_IRQn               =  21, /* 21  AHB Bus Matrix (MATRIX)             */
+  MATRIX_IRQn               =  21, /* 21  AHB Bus Matrix (MATRIX2) (MATRIX)   */
   UHPHS_IRQn                =  22, /* 22  USB Host High Speed Port (UHPHS)    */
   UDPHS_IRQn                =  23, /* 23  IP_Name (UDPHS)                     */
   GMAC_IRQn                 =  24, /* 24  Gigabit Ethernet MAC (GMAC)         */
@@ -132,7 +129,7 @@ typedef enum IRQn
   SMC_IRQn                  =  49, /* 49  Shared between MPDDRC SMC (SMC)     */
   CSI2DC_IRQn               =  52, /* 52  CSI-2 Demultiplexer Controller (CSI2DC) */
   CSI_IRQn                  =  53, /* 53  CSI Host Controller (CSI)           */
-  DSI_IRQn                  =  54, /* 54  LCD Controller (DSI)                */
+  DSI_IRQn                  =  54, /* 54  Display Serial Interface (DSI)      */
   MIPIPHY_IRQn              =  55, /* 55   (MIPIPHY)                          */
   LVDSC_IRQn                =  56, /* 56  LVDS Controller (LVDSC)             */
   LVDSPHY_IRQn              =  57, /* 57   (LVDSPHY)                          */
@@ -144,7 +141,6 @@ typedef enum IRQn
   GMAC_Q5_IRQn              =  64, /* 64  Gigabit Ethernet MAC (GMAC)         */
   GMAC_EMAC_IRQn            =  65, /* 65  Gigabit Ethernet MAC (GMAC)         */
   GMAC_MMSL_IRQn            =  66, /* 66  Gigabit Ethernet MAC (GMAC)         */
-  GMAC_TSU_IRQn             =  67, /* 67  Gigabit Ethernet MAC (GMAC)         */
   MCAN0_INT1_IRQn           =  68, /* 68  Controller Area Network (MCAN0)     */
   MCAN1_INT1_IRQn           =  69, /* 69  Controller Area Network (MCAN1)     */
 
@@ -212,6 +208,7 @@ typedef enum IRQn
 #include "component/tdes.h"
 #include "component/trng.h"
 #include "component/udphs.h"
+#include "component/uhpfs.h"
 #include "component/uhphs.h"
 #include "component/wdt.h"
 #include "component/xdmac.h"
@@ -282,7 +279,9 @@ typedef enum IRQn
 #include "instance/tdes.h"
 #include "instance/trng.h"
 #include "instance/udphs.h"
+#include "instance/uhphs.h"
 #include "instance/uhphs_ehci.h"
+#include "instance/uhphs_ohci.h"
 #include "instance/wdt.h"
 #include "instance/xdmac.h"
 #include "instance/xlcdc.h"
@@ -425,6 +424,8 @@ typedef enum IRQn
 #define TDES_REGS                        ((tdes_registers_t*)0xf0038000)               /* TDES Registers Address       */
 #define TRNG_REGS                        ((trng_registers_t*)0xf0030000)               /* TRNG Registers Address       */
 #define UDPHS_REGS                       ((udphs_registers_t*)0xf803c000)              /* UDPHS Registers Address      */
+#define UHPHS_OHCI_REGS                  ((uhpfs_registers_t*)0x00600000)              /* UHPHS_OHCI Registers Address */
+#define UHPHS_REGS                       ((uhphs_registers_t*)0x00700000)              /* UHPHS Registers Address      */
 #define UHPHS_EHCI_REGS                  ((uhphs_registers_t*)0x00700000)              /* UHPHS_EHCI Registers Address */
 #define WDT_REGS                         ((wdt_registers_t*)0xffffff80)                /* WDT Registers Address        */
 #define XDMAC_REGS                       ((xdmac_registers_t*)0xf0008000)              /* XDMAC Registers Address      */
@@ -497,6 +498,8 @@ typedef enum IRQn
 #define TDES_BASE_ADDRESS                _UINT32_(0xf0038000)                          /* TDES Base Address */
 #define TRNG_BASE_ADDRESS                _UINT32_(0xf0030000)                          /* TRNG Base Address */
 #define UDPHS_BASE_ADDRESS               _UINT32_(0xf803c000)                          /* UDPHS Base Address */
+#define UHPHS_OHCI_BASE_ADDRESS          _UINT32_(0x00600000)                          /* UHPHS_OHCI Base Address */
+#define UHPHS_BASE_ADDRESS               _UINT32_(0x00700000)                          /* UHPHS Base Address */
 #define UHPHS_EHCI_BASE_ADDRESS          _UINT32_(0x00700000)                          /* UHPHS_EHCI Base Address */
 #define WDT_BASE_ADDRESS                 _UINT32_(0xffffff80)                          /* WDT Base Address */
 #define XDMAC_BASE_ADDRESS               _UINT32_(0xf0008000)                          /* XDMAC Base Address */
@@ -526,6 +529,7 @@ typedef enum IRQn
 #define SDMMC1_SIZE                    _UINT32_(0x10000000)    /* 262144kB Memory segment type: ram */
 #define CSI2DC_META_SIZE               _UINT32_(0x00100000)    /* 1024kB Memory segment type: ram */
 #define OTPC_SIZE                      _UINT32_(0x00001000)    /*    4kB Memory segment type: ram */
+#define PERIPHERALS_SIZE               _UINT32_(0x10000000)    /* 262144kB Memory segment type: io */
 
 #define ECC_ROM_ADDR                   _UINT32_(0x00100000)    /* ECC_ROM base address (type: rom)*/
 #define SRAM0_ADDR                     _UINT32_(0x00300000)    /* SRAM0 base address (type: ram)*/
@@ -544,6 +548,7 @@ typedef enum IRQn
 #define SDMMC1_ADDR                    _UINT32_(0x90000000)    /* SDMMC1 base address (type: ram)*/
 #define CSI2DC_META_ADDR               _UINT32_(0xd0000000)    /* CSI2DC_META base address (type: ram)*/
 #define OTPC_ADDR                      _UINT32_(0xeff00000)    /* OTPC base address (type: ram)*/
+#define PERIPHERALS_ADDR               _UINT32_(0xf0000000)    /* PERIPHERALS base address (type: io)*/
 
 /* ************************************************************************** */
 /*   DEVICE SIGNATURES FOR SAM9X75D2G                                         */

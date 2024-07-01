@@ -4534,6 +4534,28 @@
 </value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_79_LAT"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_79_LAT&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_79_PERIPHERAL_FUNCTION"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_79_PERIPHERAL_FUNCTION&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;LED_AH&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_92_FUNCTION_NAME"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_92_FUNCTION_NAME&quot;&gt;
@@ -4582,7 +4604,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_94_DIR&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;Out&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -4593,7 +4615,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_94_FUNCTION_NAME&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;LED_RED&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -4604,7 +4626,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_94_FUNCTION_TYPE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;LED_AH&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -4626,7 +4648,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_94_PERIPHERAL_FUNCTION&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;LED_AH&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -4780,7 +4802,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PIOC_OER_VALUE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;3670016&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;3145728&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -5868,7 +5890,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\bsp\bsp.h</file>
-         <hash>40b8e627600ef6f41981de3f27baaa8061de4a28865d92db682303c11d16834f</hash>
+         <hash>aa232740cd7b5e46b34f890a709b8df05b1b0a49081b9639979193a63a633e23</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\configuration.h</file>
@@ -5916,11 +5938,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\driver\usb\udphs\src\drv_usb_udphs_device.c</file>
-         <hash>50895ffabc12172e78609a6775b03270374e7cd2ebefa727be74b1b57893ef40</hash>
+         <hash>6e9256deabe4011fe49b9cfeb95646dddcb13ccd41d5f25061aa1ec0066daed9</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\driver\usb\udphs\src\drv_usb_udphs_local.h</file>
-         <hash>63c655b77dee399ff612fb1637e008735d2cb7527eb916008974a8136a0c1561</hash>
+         <hash>4a376e3cb2e11cc5603f7436f9e25e6c79e3db572830a2162064302a6f60ef12</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\driver\usb\udphs\src\drv_usb_udphs_variant_mapping.h</file>
@@ -5932,7 +5954,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\initialization.c</file>
-         <hash>d5a08b2234266fb644f6e0e09ae51e9ad88a6b972112b4b467f362ac5f6cb90e</hash>
+         <hash>7c94feed5f43d873374342edf0b26e36215f736e8cd746d0cbd91f16a710bd9f</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\interrupts.c</file>
@@ -5956,11 +5978,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\peripheral\aic\plib_aic.c</file>
-         <hash>5c10a0b14969e9ef45eca5ccf77fa52fd8543430a278f330885e39b9f708eb08</hash>
+         <hash>28f4471423f411e8381328b53e52ef2f8f400e0fe9143a7287756fc718d455ca</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\peripheral\aic\plib_aic.h</file>
-         <hash>9ff729f3819887a6769c1a4386db9727e6e88fe6bee25960985d9ccd09229a7d</hash>
+         <hash>150e39620b72b62d7b11a7338040d2c28c888d8714bbaa7462063932076b9081</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\peripheral\clk\plib_clk.c</file>
@@ -5984,7 +6006,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\peripheral\pio\plib_pio.c</file>
-         <hash>f602af2c8938c4132432d112feb01123b05b6e0057993223c9fe3d9a683ba226</hash>
+         <hash>3361dd8331389766da6c72a1d5844df55d1635604fff0f2aea8ed4f16219f921</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\peripheral\pio\plib_pio.h</file>
@@ -5992,7 +6014,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\pin_configurations.csv</file>
-         <hash>4af5bf30aaa08c0320a1b5a3f9b39e3effbb2cd0944ff854a68bd64a051170df</hash>
+         <hash>6f3e9a7d0b780f9c490a34affcd5a0de8efcd4fefc7469bf3220f6b29389329f</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\stdio\xc32_monitor.c</file>
@@ -6124,471 +6146,483 @@
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\component\adc.h</file>
-         <hash>8bce6f911d6fdcdd9fbcf52a8e77a3bc30c017328742f815011ef8375d245d70</hash>
+         <hash>b60b2f165393ab3f42707f49adb32c005df7c848e8a14d32669c753a35f338e3</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\component\aes.h</file>
-         <hash>e733cac110fcee7d634edc23aa160246249cd1a3b22c38fcc344fb45edbf1c20</hash>
+         <hash>124c46f3c4844a0edbdbaafb203a2eb2a761af5fbd48199a78fa583e8eec8f92</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\component\aic.h</file>
-         <hash>085d54203b25dcb0f4afcf1a6aafec09cb2694b4a1899d7c2995a9ef8bf2cef8</hash>
+         <hash>938762458b1d7036dec4d8abe8c9d17e2b7d3ef49929bd68aca8eae5cc551aec</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\component\bsc.h</file>
-         <hash>d69623cefc13d25b5bea0a279cb0be548373edc35c11b3cb3b578bc5e1c78144</hash>
+         <hash>9e0dd64fd37417f295dce546ff60cd42327047eff75b90eed17671ba3c3f666d</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\component\classd.h</file>
-         <hash>01863db85f8f3391181d929c55e48250c321a0176f28b3807df8899b837e7492</hash>
+         <hash>8ef0f764d9ef3775f7655fd910fe1d91b3c4dc9111786297d5506822c3ec31fd</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\component\csi.h</file>
-         <hash>cde1c8d3077127f55ff2b5354085c4866a1e49b2984b9bb339f171f271980e1e</hash>
+         <hash>aab546f7545ebcdb9c6b8c421ef72f3eaf995154f778e6f92a0fa00eb3463ac0</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\component\csi2dc.h</file>
-         <hash>34a274bf2afefd33cc33106a7f959a0082770922ce8878530ec94e89028c51d3</hash>
+         <hash>5a1bdbc305d44e45d9417cb86fd17851381465726c8afb0c8494a941d0ac04a0</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\component\dbgu.h</file>
-         <hash>cc77bf9135834a1fe14af10dfee1eba12fdebb8ec43af4f9e766600b52b78d25</hash>
+         <hash>ef984b61d5f250c6bf90b663b1001d311800d604501feed2b94514b25690d408</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\component\dsi.h</file>
-         <hash>bcad76efa0f36db2beb4bccdc043ddf290351173858255b65a15bcfa0cebf46b</hash>
+         <hash>623778d25d4548fe9d06b4b91ea27eccc44358cf76d6c9451716196dd82f1972</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\component\flexcom.h</file>
-         <hash>4974095cb8e6e3217f212a0847fe75c3f76adea91ed52cd72ae0be3ff356706d</hash>
+         <hash>428275fb11850d721030b16cdc5b0b87e5a56f90ea249c12fe1fb2c3feac2dc7</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\component\gfx2d.h</file>
-         <hash>266e7bac4071810996729f7209540e6fc1b36dc53999164e55b67cec3f27c9ea</hash>
+         <hash>887997e99cd3ca4fb8f6b534a071214e58181778a2d955e7643ec6a7b06cb1e2</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\component\gmac.h</file>
-         <hash>316c652a7a83d2c3c02754c1e915dbf5873894a3b61697d6373a154abe9dcc05</hash>
+         <hash>dd698ebc1a5396958628042b62b49d4472d156cfa1b96380d94fd6d059ba871e</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\component\gpbr.h</file>
-         <hash>6dfc6f63cd81ed132ebcde8ede5c8ff9c144a297e52a62248cd160ff46945430</hash>
+         <hash>04469ebb04d40dc002922b8321d9263abc51117642d27a99c7074e39e3f91bf2</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\component\i2smcc.h</file>
-         <hash>0f03cede6d5f34480482484b85b09a5ee6233a15a07e3c4d3db04e189df12890</hash>
+         <hash>022ba79fefdf657528a93bab75839218d20f64a4dd330811098cc519d9f67697</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\component\isc.h</file>
-         <hash>d491a2c22e69db4237674c291eb4014aadbfddadc9bfd2c8b22e517d80e38827</hash>
+         <hash>cfe11e61ffdc2389f9fe306061df210e4f00da9bfd1147db4a5b7ad2cbe2d86a</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\component\lcdc.h</file>
-         <hash>a9bdefe7e29e7299e21a55b18d16c22c9a3825ebf06c2011ccf4ff98cc3094cf</hash>
+         <hash>6b3415bc5eadfce4e9ec1f6bffa48ebeece8e56e7ee8f50696a5388556de1971</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\component\lvdsc.h</file>
-         <hash>0d6a652f6f37e1e0345dafcefd7e6cf3add80f8df8797d7c2cc364f792cf7dde</hash>
+         <hash>3e5307ccb910aff5e5097f1523beb07a1bd4a4024bab8bf4eed1e4fc98d700fd</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\component\matrix.h</file>
-         <hash>a9ea1f7ba9a4d0f98b3206a07db3bffe08853020b21ae4a6d861f23f34ddfa53</hash>
+         <hash>2b4231d6b429524cc36c9b2eb4c6525a3fe77a63ac9b38078ebce86947c106ad</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\component\mcan.h</file>
-         <hash>bced2b765f40aa70396899da4154397b40a73abb3fe7412ff40cfa9ee3ac493c</hash>
+         <hash>089e8e400af8261f02179ca6de109b7798cf1a540d49ee937bd0e06530e07896</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\component\mpddrc.h</file>
-         <hash>f55f6526f49bd07905bcd65fc68380ad1ceb57211b8c800f91f41919cb87a53a</hash>
+         <hash>addb79c47dadc44771a78e2c5c93d17026889abd3cd486becc6d5fe64db8127b</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\component\otpc.h</file>
-         <hash>d6c1d4e231ac6a8a913a88ff9ebcd6f1f979cfd634af9a2d057f5d4b2ce64c9a</hash>
+         <hash>a07486c590a409d636f34f738b8ea5e01e08ddf1003c846efd9f6198fef0c367</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\component\pio.h</file>
-         <hash>5b567e7b40d38a3dfbf12447c8ae1a709d96eb4d1145440eb7cfec6ddb0fa1bf</hash>
+         <hash>10087563460351aadde4e4bf578672f3783df0721dd4f945e8419fcbf4701e03</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\component\pit.h</file>
-         <hash>ad806a0ee621da3fcdf9c8fcbbe3f1a1c4a59f7bd8bfa690a30007a6beb474d9</hash>
+         <hash>7ffbd9a98b27f08851df89b176b586cb30028212b8f9f349fcacc8ee2c4a1d6f</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\component\pit64b.h</file>
-         <hash>6d19c66e3f0bb44af8513b937fa323adeb4269dcfa648afbac4c929887cb1479</hash>
+         <hash>276e176cb1b8def6d3853f256a4c8be29882fbcd7bcb941fb20201d973edc5f5</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\component\pmc.h</file>
-         <hash>86d394357b0d5cc139cffc50a95e2b1e70cc7c6497186dab6bc38592080ffadc</hash>
+         <hash>84dddd8b4108d38a5d01b95cdd45e5b4d8eb81a6bad560011876483dd53111ca</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\component\pmecc.h</file>
-         <hash>3bd7cfebc6a519393f3bd679b93c21cd4d435aa49aa571ad23cb03affffd6170</hash>
+         <hash>6c89730678107994e8344f81dafcfcb35d76849df94239e27829174a6a1b37ef</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\component\pmerrloc.h</file>
-         <hash>e9ad34422c5354dd8f5b704b7481d12e074a6b55fe1a8a13693559bd56f21e04</hash>
+         <hash>74473f145a4c1b762a2e21a05fc5235cb0cc9001572b1ba4bfa6b3e23b211395</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\component\puf.h</file>
-         <hash>0bead037b54bb8503981224de743de87c17753a390f1aade93c5404ed0b11455</hash>
+         <hash>8e40c918bf8ea56943f0df598e12a619a1e9ad71dfdb4ae1681b6df016eaee90</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\component\pwm.h</file>
-         <hash>8c23467c19cd31ae9eccf18dae626b928689a32bebb45990044a76b08c8dcb51</hash>
+         <hash>63029fff6987be0a9596819d0ca599cf1ab44d6aaf0f2b121f1eaf1f9d3b5e6e</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\component\qspi.h</file>
-         <hash>fd2951dd40f259c3165b22353a0a66a9733d3e0ea3cbf8254668e743f8e104f1</hash>
+         <hash>aac5e61967196eaa0e2c2f01741e5e63299c55f21ac1f251be6eba4561e6e743</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\component\rstc.h</file>
-         <hash>1529a90c435bda1fe41d79945b6616336e20de267c85759ffd82321997a4b216</hash>
+         <hash>f2a59bab135e1f0e7d1a42b9b079a527ece243998692f6ef82ca09e5c9c62955</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\component\rtc.h</file>
-         <hash>8603c3c41cbed0606b9a3ba48b4b350452493112d412034137065251f20fb26a</hash>
+         <hash>e5389fcc59ad561e11c6b25790ed455a2fe13e26d0d7d8527977de365271e5a7</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\component\rtt.h</file>
-         <hash>520923b9f3a5b05c5c1505607031d27a9cfd50a637bcd213ce2956b750d25afa</hash>
+         <hash>633ea344bd569ec6cbe430a00c9fa9b61381f523ec715c7474573ec1e6c2179b</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\component\sckc.h</file>
-         <hash>bdfa5fba54652990df861f123373a7a1979c8b40a551e983c45ddb521ee26799</hash>
+         <hash>0cf4a818e3ef770f6dbd2595403b7aa16ae5fdd4c327a62405b2fc0f7473d125</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\component\sdmmc.h</file>
-         <hash>0758a1c78f37178bc9b801e90a53f3702638f2ea933599aedfe00853c62a5113</hash>
+         <hash>9235d63ca7f7beb79e1bd3749db1a8a622e28526501c20e9b3eca7420d0608d4</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\component\sfr.h</file>
-         <hash>b61cb4ab584132e762d90f3c4f264098c1655f777dc231f23689ae75fdb31e5e</hash>
+         <hash>bdaba198689df37544fbdfae3d3cbb50775d0343e3222e60cfb2cc5fdcf66a16</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\component\sha.h</file>
-         <hash>956998eb7bb00011e12acdb3a43eb4e1c388c42776c101e49bd64bb8bc3f665a</hash>
+         <hash>58b5c49ad70895b9e542b17782215cf3bdce515afea304dc346979d6ce6ab2cb</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\component\shdwc.h</file>
-         <hash>b66796252f237b1676bac0f913682fa08732e5316559ee01637a1b602c3b3f38</hash>
+         <hash>1a930b66b84a12317e2a423826868079fa6c695099f2b2959f4e12e5af2ed3fa</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\component\smc.h</file>
-         <hash>c93a002eab22e9d1e988073dbf973a31b816e74fdbb4bb20b46c7f87d6775452</hash>
+         <hash>59f94ac3eca27039e7cf51b7a6e2548eddadfb1ca6f17e9e9124aad211d014f0</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\component\ssc.h</file>
-         <hash>7223217db4c502d920e1991c5369b58dfaa16a9913848628fcc3083a4be692a2</hash>
+         <hash>489f0282ea1803ff883698794c434d518284656b32e4e328a2b8ebd8bda24ae8</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\component\syscwp.h</file>
-         <hash>edf4d5899fc7d76b0a54103f7a71bdea77cd073e7e9a6f6245718e23921c170c</hash>
+         <hash>891ee410fe02d831379b296d769f0a0ca661499bb5ae7d8727612fb066817698</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\component\tc.h</file>
-         <hash>0aeffd08c981bbe4ca4218648ba5ec3425b290f075f5c51b4305541d38eb708a</hash>
+         <hash>e258050dfd8e679a735ff9b680bf02a139669470511ebda131d5cd6973fa9f70</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\component\tdes.h</file>
-         <hash>d512e4c26abfba037da506cae12187d1c908b04c9dbd9bfab3840c4cba857b4a</hash>
+         <hash>95d8c0a3c3a816cd1bddda1264acdf989f0b386beae39cd28f0a3eece19972a3</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\component\trng.h</file>
-         <hash>220acbbbd2fe69c0ff45da552a7605da79d73d93125695364afd80a10e8a8068</hash>
+         <hash>899c696d01f48015e4909d85650723624f1b8ed0ae4555fe83bcd296bb495f81</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\component\udphs.h</file>
-         <hash>3fcfe2cb51179aab870703a3985526b30b5e1ba0886874ad31bf226a7854c0b9</hash>
+         <hash>2ce9686c9149e9952bb91cdd3c937c4c734381e1053f6d4813526b13b0e7a8e3</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X75D2G_DFP\component\uhpfs.h</file>
+         <hash>da42f69fec56e733c294f41531ba844b15e66840f5a76ac9af0e95b34552a4d0</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\component\uhphs.h</file>
-         <hash>2e20a43bc2c7bbaf2215d8df0e15a056bfbbb20277bc6facd227c8f5f94a594d</hash>
+         <hash>52f065b52699d27a0170468b3f768258840b2a7380eaffb33942002f40af2e49</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\component\wdt.h</file>
-         <hash>310598cfec2b2714a17acbba450fd86b78e75b9fc557e94a0b1ea11b02690833</hash>
+         <hash>d41441ff13fb649c2691ed31c3a1a9014058e5c46db1b82cfe50b874bd7dd372</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\component\xdmac.h</file>
-         <hash>6642fad739d10dddb85180e06116d68ef307d25a39e8ab555f7f5c2de41231a1</hash>
+         <hash>7f89a58e79bc034b06eaed2686fe5799711640272280932e5d61ba76e84b9804</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\adc.h</file>
-         <hash>0e367daf5ba95049a7d0e692e2ba3c481f5a0aed3c03c1a4cdae423a15bfac57</hash>
+         <hash>9840488dbef1945a62e34124f1e61ad9ba9a142174f06b9e89e4e9eabe6cc5b7</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\aes.h</file>
-         <hash>bac97ef0bfbe80daf827ba322c899a5d3246e34b63870319c7f3d7bd86ab83e8</hash>
+         <hash>5664f39682aade106fcce48774789c645ab6f1443c04ef7fe2b874df3c665e53</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\aic.h</file>
-         <hash>aeeaca2d8dbf42f6fefd3f299f4b65773013e20e0a1b36c662deb00791294900</hash>
+         <hash>87e973903c85004352912b58c007b91e70dfe73ec8a8e0a93f22ee9ee57eef99</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\bsc.h</file>
-         <hash>c4048ffce0fb609408d0969665d0131ad6b79322ee0bf41561d9fd9af234adfd</hash>
+         <hash>6baafc921ae03fa0f6ccd10e5269ed3f491124db6849e7fe457065d7bd009f44</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\classd.h</file>
-         <hash>9ec60aa55db26e23da6cb056d0440a719f55bfa6e14b97b28bc4739a7881659d</hash>
+         <hash>3d337db8cbd4ef2ab7fe4425c0869c7dfa034a8e8f912358607ab0c30a42db8e</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\csi.h</file>
-         <hash>da653b03d994d02e3c508dbfc8bcd30cb468e136865943274ebe47876943d8e9</hash>
+         <hash>28dc1b1e46de7cc3542fd1243abdc3b3a1582fb1e9a186c6bd763b63b02f374f</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\csi2dc.h</file>
-         <hash>70ad1e9820b2039092219c0d2ed2b908da281e2aab6e4a8879ada6b50dfe6eb4</hash>
+         <hash>bbee299c15d480086d3793f85dcaeeb001f381ba296ecbc015c1abb1f503d8fb</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\dbgu.h</file>
-         <hash>f625b4d2cceae8a1a5b41041668262251fb3071b4cfd9385f631df9f1559b8ec</hash>
+         <hash>7b88ef5c33f28b183fee56aee03b8129c94b6cdd5a419490aec25913b2c39388</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\dsi.h</file>
-         <hash>2e87d1a9a78891b2876484238a07457de3efec67888b5f42229794dd69a3830f</hash>
+         <hash>a46759ff04d685e6994b85700147767482c90352b0378ff3110d5a6808306af0</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\flexcom0.h</file>
-         <hash>c69c9e81e1b7225c2697631ab249c63b7c7362de18db2c09b7858ddf9c63110b</hash>
+         <hash>2c90951ecac042ec1e8e2cc85b66ef2fc8ca8b4d9b50b5c0db0977f225c18287</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\flexcom1.h</file>
-         <hash>7e46f33c0f15b83be796f841c1902248ccbcfd19f1f92c2f7818f5c09fdd5398</hash>
+         <hash>b5f71f74708b9d995143114891a0df125c218befa0c45d9041cacfd50d14a485</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\flexcom10.h</file>
-         <hash>0e7dd320adc64f8199e1cc713ba3244aa98a1ac672702def232c1d89809bdcc6</hash>
+         <hash>4bf1c9f1b817acfbde08ab504b1a9690e1ee9e175805d7b2b13734542d2b33f6</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\flexcom11.h</file>
-         <hash>d863f27294d3b5fa9902b0cd762bc3ca6a1e8f66e85be0c4830314e03bffa6e9</hash>
+         <hash>4f84714de8361c8f513ffdc8a7e6dce270ed50f0de63f92a86700f2710cce9c9</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\flexcom12.h</file>
-         <hash>324f9ac6b5344428bafcd9c47998af018bbcf015d646a78aa840abc65e119ef2</hash>
+         <hash>c788deb7676426374155cb8da4e8d742a08b86e3715449c04c3f786dd2191fb9</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\flexcom2.h</file>
-         <hash>b2658cdda18f68c5ae2536b61db6df98c8c5adb2c9df59c93ed24b6d55f4d1ab</hash>
+         <hash>7f7f79f668acc1207b37477ad186c2b898dd81dd91dc408ae13f11107b552db6</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\flexcom3.h</file>
-         <hash>53540ff2839891903c5f21b52637c7653581ac2dac4b084d0f9c1468154f6c16</hash>
+         <hash>0bb85415da46bb9857172a9d832f417aeb0a10994fb4f1174bc07b4ed8dfcf4d</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\flexcom4.h</file>
-         <hash>898b4c8a0ccbd0de434c2b72bd4baf800afa5efab6fa5f56ba0acabda5b935ee</hash>
+         <hash>6cdaa4d6c26f82d6863d8a3ece85cb86671f49d07c9b23e07371294bec8ba12a</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\flexcom5.h</file>
-         <hash>9641794166255bd1fa8cf2fda18611416e205d726eadd84cb8440d482f010284</hash>
+         <hash>66833c8238870041ecd3717d76e2bf29006b2007122c5a99b4d05acf4cd6538d</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\flexcom6.h</file>
-         <hash>292c92b8415bc5ab5ad71a44928a416122a03000de9ce570fa1aa029e10ef3aa</hash>
+         <hash>5ae19dbf7448f2e2980a6a4cdf598527cd5d988db55fe9120fc0183e350b4e00</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\flexcom7.h</file>
-         <hash>c53a3a679e281039ef3e54f30d13c45bd20a9a02a01995bb3cc54696d8ed0ba9</hash>
+         <hash>0066df7d592616d3c85bdac88b99f1716ff3cb28bf320d2825269aee780a7ea4</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\flexcom8.h</file>
-         <hash>941fa5b9d56c3ecdaca99fc00293fad188c3f71f83ba96e6bbe42e4b59dc537f</hash>
+         <hash>fcefe30b711d99ef2502398f0016ea2ea8e5ea914275afe043a5156ba047de22</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\flexcom9.h</file>
-         <hash>f3b2828183ebe88c1ab7f9051455450aa5e2258037b24cb2fc294054570270c8</hash>
+         <hash>dd82a80216862bd58a149544b2e16c3e4e9e403e8ab7d4ec6bd4c1a57608f913</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\gfx2d.h</file>
-         <hash>13c07210123c8de0906e004fb5d915c0d6f749d626f48e1f3c66966fd8d27533</hash>
+         <hash>eef2a2828b1a796fc7376b1bc9039f5d485d45ce3b4b43107e7ff4fe9db38c7a</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\gmac.h</file>
-         <hash>f7ac00b460581f8a180d6b20f57bafab46f172bbaec4e4c8670e49ae0c5b3437</hash>
+         <hash>b21584dad5d9bbe7764a8cf4f3c105e7aaba13c9c465cab2c11f7bf2713cebe1</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\gpbr.h</file>
-         <hash>668d59dd8ca821b72388a84ec9cba2ef70646fef6b6b89c004b49c3d59b378d4</hash>
+         <hash>32bffdf5cb422964ba50ffd88b28a60de6d5b9a732940fb87f81bd78fd7cbe12</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\i2smcc.h</file>
-         <hash>bf0000f20e3ad71cc0ef6e781bf11cdb4dd18a177f4db178eb9053d2b6c105e2</hash>
+         <hash>e8fb4e71398e9b17b15dec3f275d90e8461acbe157365721e3fcfde092c2ce3d</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\isc.h</file>
-         <hash>d9d0fd310b28695b309e63e9bf1a41f16a3f7b4d6af0041a2e1348cb2ac1f0cf</hash>
+         <hash>f4c536da125a42b51c3c53d1e84c175b9cb356fb6273fb21fa9963260113d830</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\lvdsc.h</file>
-         <hash>527d13c40c4136f4d6042616b853b76b23775eca4fffdf5481b14301017f3a6a</hash>
+         <hash>e743649fc183a62905a3cdc5724e4e20377bc7fd688af9998c1bf49b7abe2d8c</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\matrix.h</file>
-         <hash>41cc11fa62d646540a2aff17cc34a48d1a0d0590b4905153f8062e63fac6ce2c</hash>
+         <hash>30dba162e426b2b26144056cd79d771bb49a61ca91975d6c65b4955153ae121a</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\mcan0.h</file>
-         <hash>b15568c835d39a693e7d0dba54d03fb61aca3f7441b155911105c33f085bf6cb</hash>
+         <hash>a9e85ece2ead9e8784a592db7f127bbb7b05c52ddecd3a433cd33d96f1841701</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\mcan1.h</file>
-         <hash>70fce175158ee5be73b0a7197af20b89f3e45a386bfa58d4c9b68c0e3b49459f</hash>
+         <hash>d0d7d17ca4464db974fdcf3116b8cfd071086f01fea7ce11cdb7b1dcaa5bac92</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\mpddrc.h</file>
-         <hash>360a8a1e00a39bf7083badb34e8a0ebec382ae40e9a2728472d0de2fd1d74532</hash>
+         <hash>1efbbbd0185ee8afb0274ee190365259c54fcd37d28782515d1c74c785195c97</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\otpc.h</file>
-         <hash>ee3e330618a6f4bce93a3e2f7af1a410e0bb1b0e5c5c1f700db4626e8efa76fa</hash>
+         <hash>3fe7f7c60d48b987523cfb0e7de7b0d856839a7ee116ff632090815dbbc05993</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\pioa.h</file>
-         <hash>deea5d148e83726b359455ddc1b36ae45b706886bea92048f62b9519366f9f43</hash>
+         <hash>b4712ac0687acd7f56f6f2f771e6db01931ca6f29b7cf97db05079f144e5fb02</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\piob.h</file>
-         <hash>de271e1fb1cab022be2c59344e5472662391e6f454277be8a018c49ecb3c172d</hash>
+         <hash>01bae2ae4bce2392c782fd0bef4635ee12f9181d7ccf403929edbd6f00ddb98b</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\pioc.h</file>
-         <hash>46b9562e5abcd48cddde8cc87039bf06e256a4d58a97a9dff21b887cb8c306e9</hash>
+         <hash>b8fc2d7fc8d85c1f3bd25dc0e9a3af45bdcda7f05d51647637a477f64d5c5eb7</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\piod.h</file>
-         <hash>0ffde5571b7b9e7d2d9c1885fc1e805aff772a4f8fdf7a117a88799cca66a3ff</hash>
+         <hash>989423be406a4ed5082a57898af8951dd24a1418156e53a965ea3c25f04d54c7</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\pit.h</file>
-         <hash>20cd1ccfc21e5056237ba567e8538d57b0badd84cc89f8f68715a44731ef8f34</hash>
+         <hash>d65a8ea6893a1d5274dff32be91786ac9437974f9c146170c7bf78106ea9b727</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\pit64b0.h</file>
-         <hash>d930db749f66bf2124fe3f54c2f767dbca1fdd8c1c0acf62dd6a122905bd0137</hash>
+         <hash>4deb1926ad9405130f6e06c4766ff169d67818d7672d7ffdc21b1a21e6ceb734</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\pit64b1.h</file>
-         <hash>b8b5710c5f726cba9e3bceac29b301c8827969618c530d4ab125d915950eef2c</hash>
+         <hash>e10a8fd885e97e0ab4ef66d804288ecad0235cf11c8435d7ecbe11b333e45f88</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\pmc.h</file>
-         <hash>9817e5b01c6ca7336e3a7ba0503915dbaa03ea4b5888f906b27d062070a4558f</hash>
+         <hash>155ba2ce76b2b3d61b739d56e237d224dd49be73e9fd240a36f9cbe88c5ad907</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\pmecc.h</file>
-         <hash>5c42587df5814fea24f24c8b25ea65ff1e1b644776916ef13ab89608f74668d8</hash>
+         <hash>97696cf3752352db5faa9424e0f69ac105a0b21b645f2abf33b887dcb79bf68d</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\pmerrloc.h</file>
-         <hash>b057bb3e5de600fbcc6cd93ff8aa0e22516f02cf1a3d7f424bb28ba29b94e68c</hash>
+         <hash>ef104037921094508008e9b8650d035fbb1a62579632f8c2fca3779e7a4adb3d</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\puf.h</file>
-         <hash>bf23706b3e3bb1d0a5d9e39e6df6c6605d42da44d12ea7529b6e460c25ee3586</hash>
+         <hash>fc26d162736bcfbd2cf588a3fc7290993a9ab8b1337be1f417809a81fcc7596a</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\pwm.h</file>
-         <hash>f04044d1db5b4653f8acf63e7e5add18d73846a6295122d99a34faffb80dc09d</hash>
+         <hash>76d3a1942c203f15c553b68cd55edf4fa22057b64e8eb4c1876b6f5855de21ed</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\qspi.h</file>
-         <hash>05fa892a445987ec3f7f14110f6b3e024efded63fcd8767211d31437bb385ec4</hash>
+         <hash>9e487b8b5fb79c71ad2b554fb97db7a09126debb0a7ec6155f88941193a52e28</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\rstc.h</file>
-         <hash>80cd384320b7779515628a484c4fe9c568486b0ae071eec2f195b63564860d84</hash>
+         <hash>9c5403d6b44330a5cf774a9bd5b5710f76054e7d1c7336257c7339f61169bf66</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\rtc.h</file>
-         <hash>541f31582d9304249c253b266ae5a4b6b924196fc5b5cfede5b88fadd4779f90</hash>
+         <hash>313862948d990215b2391c80645914659de6f566a0e8746479fb54b8a1d1e8ce</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\rtt.h</file>
-         <hash>ca5852998c17423572d241210d450e6d88073c3fba9914641f4e4467ffdc36cd</hash>
+         <hash>fdd902ae2dfd65ff4f622683987631ea2b2f0305857ee292f91dc57daee752bc</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\sckc.h</file>
-         <hash>3f2d697f95a8f55f27f3f44c9fa08586848d7099dacc65eae82f9a2d91590c98</hash>
+         <hash>5268f88e7868d193e30bef41fa017a777112e9fae8f1a5b269d01fe8567cfe25</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\sdmmc0.h</file>
-         <hash>f49cf34c008692d2617c29375659c475476630e1cac230c922058544a0af2c51</hash>
+         <hash>387458a409a09e82e3cff8f4b242898fa626f2019d0c67b6d3b081e42c64950b</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\sdmmc1.h</file>
-         <hash>9b928fd3428b6c53f54a6af7051f254b5e7f80dde1a9d0695c0a5edfb4f0eac6</hash>
+         <hash>ca8ddfcca69ebfd570f04cae9cec2b76a49523c2aaddeabb5d785eca187275d6</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\sfr.h</file>
-         <hash>d1359e4596aaa9b3f8c4c0aff7742c9853685a335c14a0242c91df35e35d7d86</hash>
+         <hash>68364bd4e36d660d3c2414ddd73e6de18a6770b76d415f53ece74f9752e23afe</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\sha.h</file>
-         <hash>8cbc84a9e6a41d91f4de384e5db742bb2e1b2e361fbb5d9939503316f28aa700</hash>
+         <hash>e1dfd2ae613889f640d29f30d2a19bac133c775e60e28852f8034774682e7020</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\shdwc.h</file>
-         <hash>967d683730aceb8292e78b8b07934745038cb2a691a7dc08c83daa835600dccf</hash>
+         <hash>507ef046cda12f27ed95041270dc03802ff15ca87d32da4689d2a0aaf67b639f</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\smc.h</file>
-         <hash>f5acb165c5bfe8a3ac7152e7e5a13601e137e6dadd4794d59e3d83df151e9287</hash>
+         <hash>6b3df2369f86440c364649bd163ce854fa7a02e06d79027ffd1b82ddc1d83e3e</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\ssc.h</file>
-         <hash>6e35a41ee94fa7aa0b41a36024711eff7988fccd775c4dfcf5e93f1520878a21</hash>
+         <hash>a7b429572fda41a3139dbd78ea91f244f05b2b3aefa5fa725cdfa911595f8e69</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\syscwp.h</file>
-         <hash>83365e7e74accf967eccb3b19f913655dad9212faa32b9db9ef170c8b9a4b10e</hash>
+         <hash>fd7ac64937be62b072ab0bb927b6b175e11f5c97548cf05db971bedc1220918d</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\tc0.h</file>
-         <hash>5e19b1952ba0283a197cddaded128cd9b12bdb869df59d9f6f7c030917cc5bae</hash>
+         <hash>2a4ed5ac897fc3dca6e8004d4f2fa10c375fefb4f0d44d1049a34816c889429e</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\tc1.h</file>
-         <hash>035174d92d456bf8c036deecd6c14b0a63bf94775deff1ba9d1f51b33777d59f</hash>
+         <hash>f2c2dde6b69f96c5aaac3006f6299f7590c995cc190889fd4267b2a5adf81b5a</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\tdes.h</file>
-         <hash>7ebfae6eccbe30dfe9ef7b64f1f9c4ae8773653825c3167b87c35d417a2df389</hash>
+         <hash>6b1379bfb39091b926a67104d0d4ff34920e67550d2834d964ff037bd806cc7a</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\trng.h</file>
-         <hash>7bd0513e695357f07787837d539397ff3f1baed9875aeb0cd8b11f806ae70a5f</hash>
+         <hash>a649af0644506a8edc440d37d4262a454e660d8bded76d5d168203aff32ab3c3</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\udphs.h</file>
-         <hash>5d7d7a490f68fdc4c2eafb25228f7935418e66237f3f09169f02e09bc04efd3c</hash>
+         <hash>e30c1836b9e975b0e65a16482fed008cb95e47413faea162d42e52f501814da7</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X75D2G_DFP\instance\uhphs.h</file>
+         <hash>aef86754a7641dc8607fdc5b1043f2fc896505a10ff28d6187936e709ca2e533</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\uhphs_ehci.h</file>
-         <hash>a21fced66e81f4a3a4e6071092cf17534fcec7b064ddc93d14a3db7b135dd932</hash>
+         <hash>80323560e8248f519eee37b0232bfac92fb570ab870c8b0397abae71e16aa9cf</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X75D2G_DFP\instance\uhphs_ohci.h</file>
+         <hash>2ed0d2939561cece5956595b6a40cfb05adb840e4ab8d6f385fc64eae04b6f62</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\wdt.h</file>
-         <hash>947492b30227c10c4ca3dd05f93f2bcb186d544a8219625c8ac115503d80212d</hash>
+         <hash>705fbb3689bd3a17489b27bfce32fa5427279ecc24ba90387a1e590b4d550244</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\xdmac.h</file>
-         <hash>b85f9647403eef0484d33df78a5fda01ff8e194e688e2125ff48ea1562181822</hash>
+         <hash>35def5ceee5a734a6bec606113ddbe588f85cb34a8ca5b65b4ee7b57bc21f5a5</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\instance\xlcdc.h</file>
-         <hash>ccd042fcfb3cfcdc0a422b6964cf5bfe61f9144d8ea870ebe5f19433f48361a5</hash>
+         <hash>e7b2118a5a063aa5f418502fc16f524ba9f16997f4d66602032d39194d5ceb3a</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\pio\sam9x75d2g.h</file>
-         <hash>af97762c8615cbae46e7c9f56d5251b542af0dece1418b1fab7833788809538b</hash>
+         <hash>acbdbd83d92ab5bb27485b07aad7fa7ba94e15605defd1cbe738445f6111ec70</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75D2G_DFP\sam9x75d2g.h</file>
-         <hash>2bf5656ffc56810c3c40ca43bf5ee03ab1b3cfc946e990290a21015e08a32168</hash>
+         <hash>883ec3f3e378b54af3fbbd1bbb917b9be22fcd5b19b72d4f9d724717a0a7fa61</hash>
       </entry>
    </generatedFileHashHistoryMap>
 </config>

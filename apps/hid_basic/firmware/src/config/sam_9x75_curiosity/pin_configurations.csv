@@ -41,11 +41,11 @@ E3,PC15,,Available,In,,,,,,,,
 E4,PC23,,Available,In,,,,,,,,
 E16,PD14,,Available,In,,,,,,,,
 E17,PB14,,Available,In,,,,,,,,
-F2,PC14,,Available,In,,,,,,,,
+F2,PC14,LED_RED,LED_AH,n/a,n/a,No,Disabled,No,No,Disabled,No,Low
 F16,PB6,,Available,In,,,,,,,,
 G1,PC8,USB_VBUS_SENSE,GPIO,In,n/a,No,Disabled,No,Yes,Disabled,No,Low
 G2,PC0,,Available,In,,,,,,,,
-G3,PC19,LED_RED,LED_AH,n/a,n/a,No,Disabled,No,No,Disabled,No,Low
+G3,PC19,,Available,In,,,,,,,,
 G4,PC17,,Available,In,,,,,,,,
 G15,PD3,,Available,In,,,,,,,,
 G16,PB0,,Available,In,,,,,,,,

@@ -1,26 +1,23 @@
 /*
  * Component description for SSC
  *
- * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
  *
- * Subject to your compliance with these terms, you may use Microchip software and any derivatives
- * exclusively with Microchip products. It is your responsibility to comply with third party license
- * terms applicable to your use of third party software (including open source software) that may
- * accompany Microchip software.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY,
- * APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND
- * FITNESS FOR A PARTICULAR PURPOSE.
+ *   http://www.apache.org/licenses/LICENSE-2.0
  *
- * IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, INCIDENTAL OR CONSEQUENTIAL
- * LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF
- * MICROCHIP HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO THE FULLEST EXTENT
- * ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT
- * EXCEED THE AMOUNT OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  *
  */
 
-/* file generated from device description version 2023-01-20T08:33:42Z */
+/* file generated from device description file (ATDF) version 2024-04-05T08:36:56Z */
 #ifndef _SAM9X7_SSC_COMPONENT_H_
 #define _SAM9X7_SSC_COMPONENT_H_
 
@@ -385,7 +382,7 @@
 
 
 /* -------- SSC_SR : (SSC Offset: 0x40) ( R/ 32) Status Register -------- */
-#define SSC_SR_RESETVALUE                     _UINT32_(0xCC)                                       /*  (SSC_SR) Status Register  Reset Value */
+#define SSC_SR_RESETVALUE                     _UINT32_(0x00)                                       /*  (SSC_SR) Status Register  Reset Value */
 
 #define SSC_SR_TXRDY_Pos                      _UINT32_(0)                                          /* (SSC_SR) Transmit Ready Position */
 #define SSC_SR_TXRDY_Msk                      (_UINT32_(0x1) << SSC_SR_TXRDY_Pos)                  /* (SSC_SR) Transmit Ready Mask */
@@ -418,30 +415,30 @@
 #define SSC_SR_CP0_Pos                        _UINT32_(8)                                          /* (SSC_SR) Compare 0 Position */
 #define SSC_SR_CP0_Msk                        (_UINT32_(0x1) << SSC_SR_CP0_Pos)                    /* (SSC_SR) Compare 0 Mask */
 #define SSC_SR_CP0(value)                     (SSC_SR_CP0_Msk & (_UINT32_(value) << SSC_SR_CP0_Pos)) /* Assigment of value for CP0 in the SSC_SR register */
-#define   SSC_SR_CP0_0_Val                    _UINT32_(0x0)                                        /* (SSC_SR) A compare 0 has not occurred since the last read of the Status register.  */
+#define   SSC_SR_CP0_0_Val                    _UINT32_(0x0)                                        /* (SSC_SR) No compare 0 has occurred since the last read of the Status register.  */
 #define   SSC_SR_CP0_1_Val                    _UINT32_(0x1)                                        /* (SSC_SR) A compare 0 has occurred since the last read of the Status register.  */
-#define SSC_SR_CP0_0                          (SSC_SR_CP0_0_Val << SSC_SR_CP0_Pos)                 /* (SSC_SR) A compare 0 has not occurred since the last read of the Status register. Position  */
+#define SSC_SR_CP0_0                          (SSC_SR_CP0_0_Val << SSC_SR_CP0_Pos)                 /* (SSC_SR) No compare 0 has occurred since the last read of the Status register. Position  */
 #define SSC_SR_CP0_1                          (SSC_SR_CP0_1_Val << SSC_SR_CP0_Pos)                 /* (SSC_SR) A compare 0 has occurred since the last read of the Status register. Position  */
 #define SSC_SR_CP1_Pos                        _UINT32_(9)                                          /* (SSC_SR) Compare 1 Position */
 #define SSC_SR_CP1_Msk                        (_UINT32_(0x1) << SSC_SR_CP1_Pos)                    /* (SSC_SR) Compare 1 Mask */
 #define SSC_SR_CP1(value)                     (SSC_SR_CP1_Msk & (_UINT32_(value) << SSC_SR_CP1_Pos)) /* Assigment of value for CP1 in the SSC_SR register */
-#define   SSC_SR_CP1_0_Val                    _UINT32_(0x0)                                        /* (SSC_SR) A compare 1 has not occurred since the last read of the Status register.  */
+#define   SSC_SR_CP1_0_Val                    _UINT32_(0x0)                                        /* (SSC_SR) No compare 1 has occurred since the last read of the Status register.  */
 #define   SSC_SR_CP1_1_Val                    _UINT32_(0x1)                                        /* (SSC_SR) A compare 1 has occurred since the last read of the Status register.  */
-#define SSC_SR_CP1_0                          (SSC_SR_CP1_0_Val << SSC_SR_CP1_Pos)                 /* (SSC_SR) A compare 1 has not occurred since the last read of the Status register. Position  */
+#define SSC_SR_CP1_0                          (SSC_SR_CP1_0_Val << SSC_SR_CP1_Pos)                 /* (SSC_SR) No compare 1 has occurred since the last read of the Status register. Position  */
 #define SSC_SR_CP1_1                          (SSC_SR_CP1_1_Val << SSC_SR_CP1_Pos)                 /* (SSC_SR) A compare 1 has occurred since the last read of the Status register. Position  */
 #define SSC_SR_TXSYN_Pos                      _UINT32_(10)                                         /* (SSC_SR) Transmit Sync Position */
 #define SSC_SR_TXSYN_Msk                      (_UINT32_(0x1) << SSC_SR_TXSYN_Pos)                  /* (SSC_SR) Transmit Sync Mask */
 #define SSC_SR_TXSYN(value)                   (SSC_SR_TXSYN_Msk & (_UINT32_(value) << SSC_SR_TXSYN_Pos)) /* Assigment of value for TXSYN in the SSC_SR register */
-#define   SSC_SR_TXSYN_0_Val                  _UINT32_(0x0)                                        /* (SSC_SR) A Tx Sync has not occurred since the last read of the Status register.  */
+#define   SSC_SR_TXSYN_0_Val                  _UINT32_(0x0)                                        /* (SSC_SR) No Tx Sync has occurred since the last read of the Status register.  */
 #define   SSC_SR_TXSYN_1_Val                  _UINT32_(0x1)                                        /* (SSC_SR) A Tx Sync has occurred since the last read of the Status register.  */
-#define SSC_SR_TXSYN_0                        (SSC_SR_TXSYN_0_Val << SSC_SR_TXSYN_Pos)             /* (SSC_SR) A Tx Sync has not occurred since the last read of the Status register. Position  */
+#define SSC_SR_TXSYN_0                        (SSC_SR_TXSYN_0_Val << SSC_SR_TXSYN_Pos)             /* (SSC_SR) No Tx Sync has occurred since the last read of the Status register. Position  */
 #define SSC_SR_TXSYN_1                        (SSC_SR_TXSYN_1_Val << SSC_SR_TXSYN_Pos)             /* (SSC_SR) A Tx Sync has occurred since the last read of the Status register. Position  */
 #define SSC_SR_RXSYN_Pos                      _UINT32_(11)                                         /* (SSC_SR) Receive Sync Position */
 #define SSC_SR_RXSYN_Msk                      (_UINT32_(0x1) << SSC_SR_RXSYN_Pos)                  /* (SSC_SR) Receive Sync Mask */
 #define SSC_SR_RXSYN(value)                   (SSC_SR_RXSYN_Msk & (_UINT32_(value) << SSC_SR_RXSYN_Pos)) /* Assigment of value for RXSYN in the SSC_SR register */
-#define   SSC_SR_RXSYN_0_Val                  _UINT32_(0x0)                                        /* (SSC_SR) An Rx Sync has not occurred since the last read of the Status register.  */
+#define   SSC_SR_RXSYN_0_Val                  _UINT32_(0x0)                                        /* (SSC_SR) No Rx Sync has occurred since the last read of the Status register.  */
 #define   SSC_SR_RXSYN_1_Val                  _UINT32_(0x1)                                        /* (SSC_SR) An Rx Sync has occurred since the last read of the Status register.  */
-#define SSC_SR_RXSYN_0                        (SSC_SR_RXSYN_0_Val << SSC_SR_RXSYN_Pos)             /* (SSC_SR) An Rx Sync has not occurred since the last read of the Status register. Position  */
+#define SSC_SR_RXSYN_0                        (SSC_SR_RXSYN_0_Val << SSC_SR_RXSYN_Pos)             /* (SSC_SR) No Rx Sync has occurred since the last read of the Status register. Position  */
 #define SSC_SR_RXSYN_1                        (SSC_SR_RXSYN_1_Val << SSC_SR_RXSYN_Pos)             /* (SSC_SR) An Rx Sync has occurred since the last read of the Status register. Position  */
 #define SSC_SR_TXEN_Pos                       _UINT32_(16)                                         /* (SSC_SR) Transmit Enable Position */
 #define SSC_SR_TXEN_Msk                       (_UINT32_(0x1) << SSC_SR_TXEN_Pos)                   /* (SSC_SR) Transmit Enable Mask */
@@ -513,11 +510,11 @@
 #define SSC_IDR_CP1_Pos                       _UINT32_(9)                                          /* (SSC_IDR) Compare 1 Interrupt Disable Position */
 #define SSC_IDR_CP1_Msk                       (_UINT32_(0x1) << SSC_IDR_CP1_Pos)                   /* (SSC_IDR) Compare 1 Interrupt Disable Mask */
 #define SSC_IDR_CP1(value)                    (SSC_IDR_CP1_Msk & (_UINT32_(value) << SSC_IDR_CP1_Pos)) /* Assigment of value for CP1 in the SSC_IDR register */
-#define SSC_IDR_TXSYN_Pos                     _UINT32_(10)                                         /* (SSC_IDR) Tx Sync Interrupt Enable Position */
-#define SSC_IDR_TXSYN_Msk                     (_UINT32_(0x1) << SSC_IDR_TXSYN_Pos)                 /* (SSC_IDR) Tx Sync Interrupt Enable Mask */
+#define SSC_IDR_TXSYN_Pos                     _UINT32_(10)                                         /* (SSC_IDR) Tx Sync Interrupt Disable Position */
+#define SSC_IDR_TXSYN_Msk                     (_UINT32_(0x1) << SSC_IDR_TXSYN_Pos)                 /* (SSC_IDR) Tx Sync Interrupt Disable Mask */
 #define SSC_IDR_TXSYN(value)                  (SSC_IDR_TXSYN_Msk & (_UINT32_(value) << SSC_IDR_TXSYN_Pos)) /* Assigment of value for TXSYN in the SSC_IDR register */
-#define SSC_IDR_RXSYN_Pos                     _UINT32_(11)                                         /* (SSC_IDR) Rx Sync Interrupt Enable Position */
-#define SSC_IDR_RXSYN_Msk                     (_UINT32_(0x1) << SSC_IDR_RXSYN_Pos)                 /* (SSC_IDR) Rx Sync Interrupt Enable Mask */
+#define SSC_IDR_RXSYN_Pos                     _UINT32_(11)                                         /* (SSC_IDR) Rx Sync Interrupt Disable Position */
+#define SSC_IDR_RXSYN_Msk                     (_UINT32_(0x1) << SSC_IDR_RXSYN_Pos)                 /* (SSC_IDR) Rx Sync Interrupt Disable Mask */
 #define SSC_IDR_RXSYN(value)                  (SSC_IDR_RXSYN_Msk & (_UINT32_(value) << SSC_IDR_RXSYN_Pos)) /* Assigment of value for RXSYN in the SSC_IDR register */
 #define SSC_IDR_Msk                           _UINT32_(0x00000F33)                                 /* (SSC_IDR) Register Mask  */
 
@@ -564,10 +561,10 @@
 #define SSC_WPMR_WPEN_Pos                     _UINT32_(0)                                          /* (SSC_WPMR) Write Protection Enable Position */
 #define SSC_WPMR_WPEN_Msk                     (_UINT32_(0x1) << SSC_WPMR_WPEN_Pos)                 /* (SSC_WPMR) Write Protection Enable Mask */
 #define SSC_WPMR_WPEN(value)                  (SSC_WPMR_WPEN_Msk & (_UINT32_(value) << SSC_WPMR_WPEN_Pos)) /* Assigment of value for WPEN in the SSC_WPMR register */
-#define   SSC_WPMR_WPEN_0_Val                 _UINT32_(0x0)                                        /* (SSC_WPMR) Disables the write protection if WPKEY corresponds to 0x535343 ("SSC" in ASCII).  */
-#define   SSC_WPMR_WPEN_1_Val                 _UINT32_(0x1)                                        /* (SSC_WPMR) Enables the write protection if WPKEY corresponds to 0x535343 ("SSC" in ASCII).  */
-#define SSC_WPMR_WPEN_0                       (SSC_WPMR_WPEN_0_Val << SSC_WPMR_WPEN_Pos)           /* (SSC_WPMR) Disables the write protection if WPKEY corresponds to 0x535343 ("SSC" in ASCII). Position  */
-#define SSC_WPMR_WPEN_1                       (SSC_WPMR_WPEN_1_Val << SSC_WPMR_WPEN_Pos)           /* (SSC_WPMR) Enables the write protection if WPKEY corresponds to 0x535343 ("SSC" in ASCII). Position  */
+#define   SSC_WPMR_WPEN_0_Val                 _UINT32_(0x0)                                        /* (SSC_WPMR) Disables the write protection of the configuration registers if WPKEY corresponds to 0x535343 ("SSC" in ASCII).  */
+#define   SSC_WPMR_WPEN_1_Val                 _UINT32_(0x1)                                        /* (SSC_WPMR) Enables the write protection of the configuration registers if WPKEY corresponds to 0x535343 ("SSC" in ASCII).  */
+#define SSC_WPMR_WPEN_0                       (SSC_WPMR_WPEN_0_Val << SSC_WPMR_WPEN_Pos)           /* (SSC_WPMR) Disables the write protection of the configuration registers if WPKEY corresponds to 0x535343 ("SSC" in ASCII). Position  */
+#define SSC_WPMR_WPEN_1                       (SSC_WPMR_WPEN_1_Val << SSC_WPMR_WPEN_Pos)           /* (SSC_WPMR) Enables the write protection of the configuration registers if WPKEY corresponds to 0x535343 ("SSC" in ASCII). Position  */
 #define SSC_WPMR_WPKEY_Pos                    _UINT32_(8)                                          /* (SSC_WPMR) Write Protection Key Position */
 #define SSC_WPMR_WPKEY_Msk                    (_UINT32_(0xFFFFFF) << SSC_WPMR_WPKEY_Pos)           /* (SSC_WPMR) Write Protection Key Mask */
 #define SSC_WPMR_WPKEY(value)                 (SSC_WPMR_WPKEY_Msk & (_UINT32_(value) << SSC_WPMR_WPKEY_Pos)) /* Assigment of value for WPKEY in the SSC_WPMR register */
