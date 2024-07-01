@@ -58,10 +58,6 @@ extern "C" {
 #define APP_USB_SWITCH_DEBOUNCE_COUNT_FS                    150
 #define APP_USB_SWITCH_DEBOUNCE_COUNT_HS                    150
 
-#define UDPHS_IRQn            UDPHSA_IRQn
-#define UDPHS_REGS            UDPHSA_REGS
-#define UDPHS_RAM_ADDR        UDPHS_RAMA_ADDR
-#define DRV_USB_UDPHS_Handler UDPHSA_Handler
 
 //DOM-IGNORE-BEGIN
 #ifdef __cplusplus

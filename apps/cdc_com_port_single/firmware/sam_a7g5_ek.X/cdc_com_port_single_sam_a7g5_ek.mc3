@@ -487,7 +487,10 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;UserData&gt;
   &lt;UserData dnOrder=&quot;0&quot;&gt;
     &lt;GraphSettings canvasHeight=&quot;387&quot; canvasWidth=&quot;512&quot; dnOrder=&quot;0&quot;/&gt;
-    &lt;ComponentGraph dnOrder=&quot;1&quot; id=&quot;__ROOTVIEW&quot;&gt;
+    &lt;PowerProfiles dnOrder=&quot;1&quot;&gt;
+      &lt;Profile dnOrder=&quot;0&quot; id=&quot;profile0&quot; name=&quot;Main&quot;/&gt;
+    &lt;/PowerProfiles&gt;
+    &lt;ComponentGraph dnOrder=&quot;2&quot; id=&quot;__ROOTVIEW&quot;&gt;
       &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
         &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;BSP_SAM_A7G5_Evaluation_Kit&quot; x=&quot;155&quot; y=&quot;47&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;HarmonyCore&quot; x=&quot;8&quot; y=&quot;20&quot;/&gt;
@@ -3459,11 +3462,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\driver\usb\udphs\src\drv_usb_udphs_device.c</file>
-         <hash>50895ffabc12172e78609a6775b03270374e7cd2ebefa727be74b1b57893ef40</hash>
+         <hash>6e9256deabe4011fe49b9cfeb95646dddcb13ccd41d5f25061aa1ec0066daed9</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\driver\usb\udphs\src\drv_usb_udphs_local.h</file>
-         <hash>63c655b77dee399ff612fb1637e008735d2cb7527eb916008974a8136a0c1561</hash>
+         <hash>79a1d82e448a92eb01d048325472eb1beece05612d49bdb63f3148403c27bddd</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\driver\usb\udphs\src\drv_usb_udphs_variant_mapping.h</file>
@@ -3475,7 +3478,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\initialization.c</file>
-         <hash>144b2912617eb8ff5c97ff366fdabd1d196a150f9d4b377ee2c36afcc549388b</hash>
+         <hash>42ab3883c667fe2df7813b7154bfa349c96665de65add34d79563d613d1868e1</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\interrupts.c</file>
@@ -3483,7 +3486,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\interrupts.h</file>
-         <hash>fa2182c5f662ec1eeab080c09d131687e640cb918331e4216e6d108aab547791</hash>
+         <hash>d6353773e79ba48d222b66aa66f4454ec80d6a969df8e79d7e52e8637e35cee3</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\osal\osal.h</file>
@@ -3515,11 +3518,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\peripheral\gic\plib_gic.c</file>
-         <hash>1ae2b24eaf44e949643d1582edda33fc01f10efb93219cfffc029315eda876cd</hash>
+         <hash>698d9839be58d2874337ccc1efdb25905920e0a46c953ef7b0f25d0208f6871a</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\peripheral\gic\plib_gic.h</file>
-         <hash>92e447d1cb7ee981d456921c05de673482ee64824249201bb7543836b59386bb</hash>
+         <hash>e6e611db30d9530c6a4e5ccebb8db8b342a5b9a41dd16cc73c63b1f74b20fdc5</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\peripheral\matrix\plib_matrix.c</file>
@@ -3691,7 +3694,7 @@
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core_A\Include\cmsis_gcc.h</file>
-         <hash>a720d18d2dd2921d8fe308d21c1f2e9c8174549ec1a34447927db3dcc9505aa9</hash>
+         <hash>2a47e8836d3e5dc5a02866021af0271a3cb7ae53ca9cd847ac90d3a5e4a3dc20</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core_A\Include\cmsis_iccarm.h</file>
