@@ -3,7 +3,7 @@
 ![Harmony logo small](https://raw.githubusercontent.com/wiki/Microchip-MPLAB-Harmony/Microchip-MPLAB-Harmony.github.io/images/microchip_mplab_harmony_logo_small.png)
 
 # Microchip MPLAB® Harmony 3 Release Notes
-## Harmony 3 USB Device application examples v3.8.0 (June , 2024)
+## Harmony 3 USB Device application examples v3.8.0
 
 ### Development kit and demo application support
 
@@ -50,6 +50,8 @@ Following table provides number of USB device demo applications available for di
 **Known Issues**
 
 -  After a power cycle, the reset button on the  PIC32CZ CA80 Curiosity Ultra board must be pressed to get the program running.
+
+-  USB Device MSD SD Card demo for SAMA7D65 only works with XC32 optimization level -O0.
 
 
 

@@ -2,5 +2,7 @@
 <Package name="usb_apps_device">
     <Dependencies>
         <Dependency name="usb" version="v3.14.0"/>
+        <Dependency name="bsp" version="v3.20.1"/>
     </Dependencies>
 </Package>
+
