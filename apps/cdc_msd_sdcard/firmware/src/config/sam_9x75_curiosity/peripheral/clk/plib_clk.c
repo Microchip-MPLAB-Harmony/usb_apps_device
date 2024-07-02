@@ -26,6 +26,7 @@
 
 #define PLL_ID_PLLA     0U
 #define PLL_ID_UPLL     1U
+#define PLL_ID_AUDIOPLL 2U
 #define PLL_ID_PLLADIV2 4U
 
 
@@ -92,6 +93,44 @@ static void initUPLLCLK(void)
     }
 }
 
+/*********************************************************************************
+Initialize AUDIOPLL
+*********************************************************************************/
+static void initAUDIOPLLClk(void)
+{
+    /* PMC_PLL_UPDT to target AUDIOPLL, startup time of 150us and update disabled */
+    PMC_REGS->PMC_PLL_UPDT = PMC_PLL_UPDT_STUPTIM(0x6) |
+                             PMC_PLL_UPDT_UPDATE(0x0) |
+                             PMC_PLL_UPDT_ID(PLL_ID_AUDIOPLL);
+
+    /* Set the Analog controls to the values recommended by data sheet */
+    PMC_REGS->PMC_PLL_ACR = PMC_PLL_ACR_LOOP_FILTER(0x1B) |
+                            PMC_PLL_ACR_LOCK_THR(0x4) |
+                            PMC_PLL_ACR_CONTROL(0x10);
+
+    /* Set loop paramaters for the fractional PLL */
+    PMC_REGS->PMC_PLL_CTRL1 = PMC_PLL_CTRL1_MUL(28) |
+                              PMC_PLL_CTRL1_FRACR(699051);
+
+    /* Update the PLL controls */
+    PMC_REGS->PMC_PLL_UPDT |= PMC_PLL_UPDT_UPDATE_Msk;
+
+    /* Enable AUDIOPLL, lock and PMC clock from AUDIOPLL */
+    PMC_REGS->PMC_PLL_CTRL0 = PMC_PLL_CTRL0_ENLOCK_Msk |
+                              PMC_PLL_CTRL0_ENPLL_Msk |
+                              PMC_PLL_CTRL0_DIVPMC(6) |
+                              
+                              PMC_PLL_CTRL0_ENPLLCK_Msk;
+
+    /* Update the PLL controls */
+    PMC_REGS->PMC_PLL_UPDT |= PMC_PLL_UPDT_UPDATE_Msk;
+
+    /* Wait for the lock bit to rise by polling the PMC_PLL_ISR0 */
+    while ((PMC_REGS->PMC_PLL_ISR0 & PMC_PLL_ISR0_AUDIOLOCK_Msk) != PMC_PLL_ISR0_AUDIOLOCK_Msk)
+    {
+        /* Wait */
+    }
+}
 
 
 /*********************************************************************************
@@ -118,7 +157,7 @@ static void initPeriphClk(void)
         { ID_PIOA, 1, 0, 0, 0},
         { ID_PIOB, 1, 0, 0, 0},
         { ID_PIOC, 1, 0, 0, 0},
-        { ID_SDMMC0, 1, 1, 8, 2},
+        { ID_SDMMC0, 1, 1, 6, 0},
         { ID_TC0, 1, 0, 0, 0},
         { ID_UDPHS, 1, 0, 0, 0},
         { ID_PIOD, 1, 0, 0, 0},
@@ -152,6 +191,9 @@ void CLK_Initialize( void )
 
     /* Initialize UPLLA clock generator */
     initUPLLCLK();
+
+    /* Initialize AUDIOPLL clock generator */
+    initAUDIOPLLClk();
 
     /* Initialize Programmable clock */
     initProgrammableClk();
