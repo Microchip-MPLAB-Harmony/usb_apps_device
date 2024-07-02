@@ -3481,7 +3481,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\driver\usb\udphs\src\drv_usb_udphs_local.h</file>
-         <hash>79a1d82e448a92eb01d048325472eb1beece05612d49bdb63f3148403c27bddd</hash>
+         <hash>73fa46494cbe1dd41d7a247c5cf0aa5418debdf1621c6fdcb7cfbe498fd118b2</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\driver\usb\udphs\src\drv_usb_udphs_variant_mapping.h</file>
@@ -3709,7 +3709,7 @@
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core_A\Include\cmsis_gcc.h</file>
-         <hash>2a47e8836d3e5dc5a02866021af0271a3cb7ae53ca9cd847ac90d3a5e4a3dc20</hash>
+         <hash>a720d18d2dd2921d8fe308d21c1f2e9c8174549ec1a34447927db3dcc9505aa9</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core_A\Include\cmsis_iccarm.h</file>
