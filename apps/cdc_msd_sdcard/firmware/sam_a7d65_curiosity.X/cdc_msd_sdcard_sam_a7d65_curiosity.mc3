@@ -7725,7 +7725,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7d65_curiosity\driver\usb\udphs\src\drv_usb_udphs_local.h</file>
-         <hash>4a376e3cb2e11cc5603f7436f9e25e6c79e3db572830a2162064302a6f60ef12</hash>
+         <hash>8fadf20f65f785c2abd3d677163b44b2e361727785f932cc1c6d5eabff0ea2f6</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7d65_curiosity\driver\usb\udphs\src\drv_usb_udphs_variant_mapping.h</file>

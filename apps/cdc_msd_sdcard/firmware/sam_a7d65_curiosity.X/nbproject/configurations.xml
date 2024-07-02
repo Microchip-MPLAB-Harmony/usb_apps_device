@@ -1,13 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <configurationDescriptor version="65">
   <logicalFolder name="root" displayName="root" projectFiles="true">
-    <logicalFolder name="HeaderFiles"
-                   displayName="Header Files"
-                   projectFiles="true">
+    <logicalFolder name="HeaderFiles" displayName="Header Files" projectFiles="true">
       <logicalFolder name="config" displayName="config" projectFiles="true">
-        <logicalFolder name="sam_a7d65_curiosity"
-                       displayName="sam_a7d65_curiosity"
-                       projectFiles="true">
+        <logicalFolder name="sam_a7d65_curiosity" displayName="sam_a7d65_curiosity" projectFiles="true">
           <logicalFolder name="bsp" displayName="bsp" projectFiles="true">
             <itemPath>../src/config/sam_a7d65_curiosity/bsp/bsp.h</itemPath>
           </logicalFolder>
@@ -127,9 +123,7 @@
             </logicalFolder>
           </logicalFolder>
         </logicalFolder>
-        <logicalFolder name="SAMA7D65_DFP"
-                       displayName="SAMA7D65_DFP"
-                       projectFiles="true">
+        <logicalFolder name="SAMA7D65_DFP" displayName="SAMA7D65_DFP" projectFiles="true">
           <logicalFolder name="component" displayName="component" projectFiles="true">
             <itemPath>../src/packs/SAMA7D65_DFP/component/eic.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/component/acc.h</itemPath>
@@ -295,30 +289,20 @@
       </logicalFolder>
       <itemPath>../src/app.h</itemPath>
     </logicalFolder>
-    <logicalFolder name="ExternalFiles"
-                   displayName="Important Files"
-                   projectFiles="true">
+    <logicalFolder name="ExternalFiles" displayName="Important Files" projectFiles="true">
       <itemPath>Makefile</itemPath>
       <itemPath>cdc_msd_sdcard_sam_a7d65_curiosity.mc3</itemPath>
     </logicalFolder>
-    <logicalFolder name="LinkerScript"
-                   displayName="Linker Files"
-                   projectFiles="true">
+    <logicalFolder name="LinkerScript" displayName="Linker Files" projectFiles="true">
       <logicalFolder name="config" displayName="config" projectFiles="true">
-        <logicalFolder name="sam_a7d65_curiosity"
-                       displayName="sam_a7d65_curiosity"
-                       projectFiles="true">
+        <logicalFolder name="sam_a7d65_curiosity" displayName="sam_a7d65_curiosity" projectFiles="true">
           <itemPath>../src/config/sam_a7d65_curiosity/ddr.ld</itemPath>
         </logicalFolder>
       </logicalFolder>
     </logicalFolder>
-    <logicalFolder name="SourceFiles"
-                   displayName="Source Files"
-                   projectFiles="true">
+    <logicalFolder name="SourceFiles" displayName="Source Files" projectFiles="true">
       <logicalFolder name="config" displayName="config" projectFiles="true">
-        <logicalFolder name="sam_a7d65_curiosity"
-                       displayName="sam_a7d65_curiosity"
-                       projectFiles="true">
+        <logicalFolder name="sam_a7d65_curiosity" displayName="sam_a7d65_curiosity" projectFiles="true">
           <logicalFolder name="bsp" displayName="bsp" projectFiles="true">
             <itemPath>../src/config/sam_a7d65_curiosity/bsp/bsp.c</itemPath>
           </logicalFolder>
@@ -399,8 +383,8 @@
       <toolsSet>
         <developmentServer>localhost</developmentServer>
         <targetDevice>SAMA7D65</targetDevice>
-        <targetHeader></targetHeader>
-        <targetPluginBoard></targetPluginBoard>
+        <targetHeader/>
+        <targetPluginBoard/>
         <platformTool>ICD4Tool</platformTool>
         <languageToolchain>XC32</languageToolchain>
         <languageToolchainVersion>4.40</languageToolchainVersion>
@@ -413,8 +397,7 @@
         <ScriptingSetting key="boot.load_adr" value=""/>
         <ScriptingSetting key="boot.use" value="true"/>
         <ScriptingSetting key="boot.entry_adr" value=""/>
-        <ScriptingSetting key="boot.path"
-                          value="${ProjectDir}\..\..\..\..\deps\at91bootstrap_sam_a7d65_curiosity\at91bootstrap.elf"/>
+        <ScriptingSetting key="boot.path" value="${ProjectDir}\..\..\..\..\deps\at91bootstrap_sam_a7d65_curiosity\at91bootstrap.elf"/>
         <ScriptingSetting key="boot.prj" value=""/>
       </ScriptingSettings>
       <compileType>
@@ -427,7 +410,7 @@
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
           <parseOnProdLoad>false</parseOnProdLoad>
-          <alternateLoadableFile></alternateLoadableFile>
+          <alternateLoadableFile/>
         </loading>
         <subordinates>
         </subordinates>
@@ -435,7 +418,7 @@
       <makeCustomizationType>
         <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
         <makeUseCleanTarget>false</makeUseCleanTarget>
-        <makeCustomizationPreStep></makeCustomizationPreStep>
+        <makeCustomizationPreStep/>
         <makeCustomizationPostStepEnabled>true</makeCustomizationPostStepEnabled>
         <makeCustomizationPostStep>${MP_CC_DIR}/xc32-objcopy -O binary ${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.elf ${DISTDIR}/harmony.bin </makeCustomizationPostStep>
         <makeCustomizationPutChecksumInUserID>false</makeCustomizationPutChecksumInUserID>
@@ -450,8 +433,7 @@
         <property key="enable-symbols" value="true"/>
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
-        <property key="extra-include-directories"
-                  value="../src;../src/config/default;../src/config/sam_a7d65_curiosity;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core_A/Include;../src/packs/SAMA7D65_DFP"/>
+        <property key="extra-include-directories" value="../src;../src/config/default;../src/config/sam_a7d65_curiosity;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core_A/Include;../src/packs/SAMA7D65_DFP"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -549,8 +531,7 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
-        <property key="extra-include-directories"
-                  value="../src;../src/config/default;../src/config/sam_a7d65_curiosity;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core_A/Include;../src/packs/SAMA7D65_DFP"/>
+        <property key="extra-include-directories" value="../src;../src/config/default;../src/config/sam_a7d65_curiosity;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core_A/Include;../src/packs/SAMA7D65_DFP"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -584,12 +565,9 @@
       <ICD4Tool>
         <property key="AutoSelectMemRanges" value="auto"/>
         <property key="SecureSegment.SegmentProgramming" value="FullChipProgramming"/>
-        <property key="ToolFirmwareFilePath"
-                  value="Press to browse for a specific firmware version"/>
-        <property key="ToolFirmwareOption.UpdateOptions"
-                  value="ToolFirmwareOption.UseLatest"/>
-        <property key="ToolFirmwareToolPack"
-                  value="Press to select which tool pack to use"/>
+        <property key="ToolFirmwareFilePath" value="Press to browse for a specific firmware version"/>
+        <property key="ToolFirmwareOption.UpdateOptions" value="ToolFirmwareOption.UseLatest"/>
+        <property key="ToolFirmwareToolPack" value="Press to select which tool pack to use"/>
         <property key="communication.activationmode" value="nohv"/>
         <property key="communication.interface" value="swd"/>
         <property key="communication.interface.jtag" value="2wire"/>
@@ -612,8 +590,7 @@
         <property key="memories.exclude.configurationmemory" value="true"/>
         <property key="memories.flashdata" value="true"/>
         <property key="memories.id" value="true"/>
-        <property key="memories.instruction.ram.ranges"
-                  value="${memories.instruction.ram.ranges}"/>
+        <property key="memories.instruction.ram.ranges" value="${memories.instruction.ram.ranges}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="51000-e9000fff"/>
         <property key="poweroptions.powerenable" value="false"/>
@@ -627,8 +604,7 @@
         <property key="programoptions.pgmentry.voltage" value="low"/>
         <property key="programoptions.pgmspeed" value="Med"/>
         <property key="programoptions.preservedataflash" value="false"/>
-        <property key="programoptions.preservedataflash.ranges"
-                  value="${memories.dataflash.default}"/>
+        <property key="programoptions.preservedataflash.ranges" value="${memories.dataflash.default}"/>
         <property key="programoptions.preserveeeprom" value="false"/>
         <property key="programoptions.preserveeeprom.ranges" value=""/>
         <property key="programoptions.preserveprogram.ranges" value=""/>
@@ -643,22 +619,17 @@
         <property key="script.log_level" value="1"/>
         <property key="script.reset_delay" value="0"/>
         <property key="script.show_output" value="false"/>
-        <property key="toolpack.updateoptions"
-                  value="toolpack.updateoptions.uselatestoolpack"/>
-        <property key="toolpack.updateoptions.packversion"
-                  value="Press to select which tool pack to use"/>
+        <property key="toolpack.updateoptions" value="toolpack.updateoptions.uselatestoolpack"/>
+        <property key="toolpack.updateoptions.packversion" value="Press to select which tool pack to use"/>
         <property key="voltagevalue" value="3.25"/>
         <property key="x.recover.delay" value="100000"/>
       </ICD4Tool>
       <Tool>
         <property key="AutoSelectMemRanges" value="auto"/>
         <property key="SecureSegment.SegmentProgramming" value="FullChipProgramming"/>
-        <property key="ToolFirmwareFilePath"
-                  value="Press to browse for a specific firmware version"/>
-        <property key="ToolFirmwareOption.UpdateOptions"
-                  value="ToolFirmwareOption.UseLatest"/>
-        <property key="ToolFirmwareToolPack"
-                  value="Press to select which tool pack to use"/>
+        <property key="ToolFirmwareFilePath" value="Press to browse for a specific firmware version"/>
+        <property key="ToolFirmwareOption.UpdateOptions" value="ToolFirmwareOption.UseLatest"/>
+        <property key="ToolFirmwareToolPack" value="Press to select which tool pack to use"/>
         <property key="communication.activationmode" value="nohv"/>
         <property key="communication.interface" value="swd"/>
         <property key="communication.interface.jtag" value="2wire"/>
@@ -681,13 +652,11 @@
         <property key="memories.exclude.configurationmemory" value="true"/>
         <property key="memories.flashdata" value="true"/>
         <property key="memories.id" value="true"/>
-        <property key="memories.instruction.ram.ranges"
-                  value="${memories.instruction.ram.ranges}"/>
+        <property key="memories.instruction.ram.ranges" value="${memories.instruction.ram.ranges}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="51000-e9000fff"/>
         <property key="poweroptions.powerenable" value="false"/>
-        <property key="programmerToGoFilePath"
-                  value="C:/USB3.13/usb_apps_device/apps/cdc_msd_sdcard/firmware/sam_a7d65_curiosity.X/debug/sam_a7d65_curiosity/sam_a7d65_curiosity_ptg"/>
+        <property key="programmerToGoFilePath" value="C:/USB3.13/usb_apps_device/apps/cdc_msd_sdcard/firmware/sam_a7d65_curiosity.X/debug/sam_a7d65_curiosity/sam_a7d65_curiosity_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.ledbrightness" value="5"/>
@@ -698,8 +667,7 @@
         <property key="programoptions.pgmentry.voltage" value="low"/>
         <property key="programoptions.pgmspeed" value="Med"/>
         <property key="programoptions.preservedataflash" value="false"/>
-        <property key="programoptions.preservedataflash.ranges"
-                  value="${memories.dataflash.default}"/>
+        <property key="programoptions.preservedataflash.ranges" value="${memories.dataflash.default}"/>
         <property key="programoptions.preserveeeprom" value="false"/>
         <property key="programoptions.preserveeeprom.ranges" value=""/>
         <property key="programoptions.preserveprogram.ranges" value=""/>
@@ -714,10 +682,8 @@
         <property key="script.log_level" value="1"/>
         <property key="script.reset_delay" value="0"/>
         <property key="script.show_output" value="false"/>
-        <property key="toolpack.updateoptions"
-                  value="toolpack.updateoptions.uselatestoolpack"/>
-        <property key="toolpack.updateoptions.packversion"
-                  value="Press to select which tool pack to use"/>
+        <property key="toolpack.updateoptions" value="toolpack.updateoptions.uselatestoolpack"/>
+        <property key="toolpack.updateoptions.packversion" value="Press to select which tool pack to use"/>
         <property key="voltagevalue" value="3.25"/>
         <property key="x.recover.delay" value="100000"/>
       </Tool>
