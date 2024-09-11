@@ -138,9 +138,36 @@ typedef struct
     bool (*serialSetup)(USART_SERIAL_SETUP * serialSetup, uint32_t clkFrequency);
     
     USART_ERROR (*errorGet)(void);
+    
+    volatile uint32_t * (*DataGet) ( void );
+    
+    void (*RTSSet)(void);
+    
+    void (*RTSClear)(void);
 
 } APP_USART_INTERFACE;
+/* Application structure for  
+
+  Summary:
+    Group of function pointers to the application for Timer Counter Interface Functions.
+
+  Description:
+    This structure is a group of Group of function pointers to the application 
+    for TC Interface Functions. 
+
+  Remarks:
+    None.
+*/
+typedef struct
+{    
+    uint16_t (*Timer16bitCounterGet)(void); 
     
+    void (*Timer16bitCounterSet)(uint16_t); 
+    
+    void (*TimerStart)(void); 
+    
+} APP_TC_INTERFACE;
+
 // *****************************************************************************
 /* Application states
 
@@ -438,6 +465,7 @@ void APP_Tasks( void );
     None.
 */
 extern APP_USART_INTERFACE appUSARTInterface;
+extern APP_TC_INTERFACE appTCInterface;
 #endif /* _APP_H */
 
 //DOM-IGNORE-BEGIN

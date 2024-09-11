@@ -102,7 +102,7 @@ static void APP_DMAC_0_U1ReceiveCompleteCallback(DMAC_TRANSFER_EVENT event, uint
     /* De-assert the RTS pin. This is to indicate that the Bridge cannot receive
      * data on the UART side */
 
-    U1RTS_Clear();
+    appUSARTInterface.RTSClear();
 
     /* Clear the SOF Counter Values to avoid unnecessary time outs */
     appData.uSOFCounter[PORT1] = 0;
@@ -114,8 +114,8 @@ static void APP_DMAC_0_U1ReceiveCompleteCallback(DMAC_TRANSFER_EVENT event, uint
      * Timer COUNT value has the number of Bytes (Beats) received by the DMA.
      * After reading it, reset the COUNT value to initiate next read. */
 
-    appData.uartObj[PORT1].uActualReadByteCount = TC3_Timer16bitCounterGet();
-    TC3_Timer16bitCounterSet(0);
+    appData.uartObj[PORT1].uActualReadByteCount = appTCInterface.Timer16bitCounterGet();
+    appTCInterface.Timer16bitCounterSet(0);
 
     /* Update the uRxFilledByteCount and uHeadPtr */
     appData.uartObj[PORT1].uRxFilledByteCount += appData.uartObj[PORT1].uActualReadByteCount;
@@ -166,12 +166,12 @@ static void APP_DMAC_0_U1ReceiveCompleteCallback(DMAC_TRANSFER_EVENT event, uint
             {
                 appData.uartObj[PORT1].uActualReadByteCount = APP_DMA_RX_PACKET_SIZE;
             }
-            DMAC_ChannelTransfer(DMAC_CHANNEL_UART1_RX, (const void *)&APP_SERCOM_REGS->USART_INT.SERCOM_DATA, appData.uartObj[PORT1].uHeadPtr, appData.uartObj[PORT1].uActualReadByteCount);
+            DMAC_ChannelTransfer(DMAC_CHANNEL_UART1_RX, (const void *)appUSARTInterface.DataGet(), appData.uartObj[PORT1].uHeadPtr, appData.uartObj[PORT1].uActualReadByteCount);
 
             /* Set the RTS to indicate that Bridge is ready to receive data
              * from the UART side. */
 
-            U1RTS_Set();
+            appUSARTInterface.RTSSet();
         }
         else
         {
@@ -600,9 +600,9 @@ void APP_StateReset(void)
     appData.cdcObj[PORT1].getLineCodingData.bParityType = 0;
     appData.cdcObj[PORT1].getLineCodingData.bCharFormat = 0;
 
-    TC3_Timer16bitCounterSet(0);
+    appTCInterface.Timer16bitCounterSet(0);
 
-    U1RTS_Clear();
+    appUSARTInterface.RTSClear();
 
     resetBuffParameters(PORT1);
 
@@ -633,7 +633,7 @@ void APP_Initialize ( void )
     DMAC_ChannelCallbackRegister(DMAC_CHANNEL_UART1_TX, APP_DMAC_1_U1TransmitCompleteCallback, 0);
 
     /* Start the timer*/
-    TC3_TimerStart();
+    appTCInterface.TimerStart();
     
     APP_SERCOM_REGS = appUSARTInterface.addressGet(); 
     
@@ -717,15 +717,15 @@ void APP_Tasks ( void )
 
             if(appData.baudReceived[PORT1] == true)
             {
-                U1RTS_Clear();
+                appUSARTInterface.RTSClear();
                 resetBuffParameters(PORT1);
 
                 DMAC_ChannelDisable(DMAC_CHANNEL_UART1_RX);
                 if(APP_SerialBaudUpdate(PORT1) == true)
                 {
-                    TC3_Timer16bitCounterSet(0);
-                    DMAC_ChannelTransfer(DMAC_CHANNEL_UART1_RX, (const void *)&APP_SERCOM_REGS->USART_INT.SERCOM_DATA, appData.uartObj[PORT1].uHeadPtr, APP_DMA_RX_PACKET_SIZE);
-                    U1RTS_Set();
+                    appTCInterface.Timer16bitCounterSet(0);
+                    DMAC_ChannelTransfer(DMAC_CHANNEL_UART1_RX, (const void *)appUSARTInterface.DataGet(), appData.uartObj[PORT1].uHeadPtr, APP_DMA_RX_PACKET_SIZE);
+                    appUSARTInterface.RTSSet();
                     appData.baudReceived[PORT1] = false;
 
                     /* If the uart baud is configured then lets start
@@ -870,7 +870,7 @@ void APP_Tasks ( void )
                     appUSARTInterface.dmaChannelDisbale(); 
                     if(true != DMAC_ChannelTransfer(DMAC_CHANNEL_UART1_TX,
                         appData.cdcObj[PORT1].cTailPtr,
-                        (const void *)&APP_SERCOM_REGS->USART_INT.SERCOM_DATA,
+                        (const void *)appUSARTInterface.DataGet(),
                         appData.cdcObj[PORT1].cBuffToUartWriteByteCount))
                     {
                         appData.cdcObj[PORT1].cBuffToUartWriteInProgress = false;
@@ -912,7 +912,7 @@ void APP_Tasks ( void )
             {
                 appData.prevSOFValue[PORT1] = appData.uSOFCounter[PORT1];
 
-                appData.uartObj[PORT1].uActualReadByteCount = TC3_Timer16bitCounterGet();
+                appData.uartObj[PORT1].uActualReadByteCount = appTCInterface.Timer16bitCounterGet();
 
                 if(appData.uartObj[PORT1].uActualReadByteCount != appData.uartObj[PORT1].uLastReadByteCount)
                 {
@@ -944,13 +944,13 @@ void APP_Tasks ( void )
                         
                         appUSARTInterface.dmaChannelDisbale(); 
                         
-                        if(true != DMAC_ChannelTransfer(DMAC_CHANNEL_UART1_RX, (const void *)&APP_SERCOM_REGS->USART_INT.SERCOM_DATA, appData.uartObj[PORT1].uHeadPtr, appData.uartObj[PORT1].uActualReadByteCount))
+                        if(true != DMAC_ChannelTransfer(DMAC_CHANNEL_UART1_RX, (const void *)appUSARTInterface.DataGet(), appData.uartObj[PORT1].uHeadPtr, appData.uartObj[PORT1].uActualReadByteCount))
                         {
                             appData.uartObj[PORT1].uUartRxNotScheduled = true;
                         }
                         appUSARTInterface.dmaChannelEnable(); 
                         
-                        U1RTS_Set();
+                        appUSARTInterface.RTSSet();
                     }
                     else
                     {
@@ -969,13 +969,13 @@ void APP_Tasks ( void )
                 appData.uSOFTimeoutTick[PORT1] = 0;
                 appData.prevSOFValue[PORT1] = 0;
 
-                if(TC3_Timer16bitCounterGet() != 0)
+                if(appTCInterface.Timer16bitCounterGet() != 0)
                 {
-                    U1RTS_Clear();
+                    appUSARTInterface.RTSClear();
                     DMAC_ChannelDisable(DMAC_CHANNEL_UART1_RX);
 
-                    appData.uartObj[PORT1].uActualReadByteCount = TC3_Timer16bitCounterGet();
-                    TC3_Timer16bitCounterSet(0);
+                    appData.uartObj[PORT1].uActualReadByteCount = appTCInterface.Timer16bitCounterGet();
+                    appTCInterface.Timer16bitCounterSet(0);
 
                     appData.uartObj[PORT1].uRxFilledByteCount += appData.uartObj[PORT1].uActualReadByteCount;
                     appData.uartObj[PORT1].uHeadPtr += appData.uartObj[PORT1].uActualReadByteCount;
@@ -1007,13 +1007,13 @@ void APP_Tasks ( void )
                             
                             appUSARTInterface.dmaChannelDisbale(); 
                             
-                            if(true != DMAC_ChannelTransfer(DMAC_CHANNEL_UART1_RX, (const void *)&APP_SERCOM_REGS->USART_INT.SERCOM_DATA, appData.uartObj[PORT1].uHeadPtr, appData.uartObj[PORT1].uActualReadByteCount))
+                            if(true != DMAC_ChannelTransfer(DMAC_CHANNEL_UART1_RX, (const void *)appUSARTInterface.DataGet(), appData.uartObj[PORT1].uHeadPtr, appData.uartObj[PORT1].uActualReadByteCount))
                             {
                                 appData.uartObj[PORT1].uUartRxNotScheduled = true;
                             }
                             appUSARTInterface.dmaChannelEnable(); 
                             
-                            U1RTS_Set();
+                            appUSARTInterface.RTSSet();
                         }
                         else
                         {
