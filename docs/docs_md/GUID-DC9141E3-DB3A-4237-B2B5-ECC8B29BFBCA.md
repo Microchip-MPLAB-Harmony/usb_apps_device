@@ -36,6 +36,7 @@ Following table gives the details of project configurations, target device<br />
 |sam\_a5d29\_curiosity.X|MPLABX|ATSAMA5D29|SAMA5D29 Curiosity Development Board|
 |sam\_9x75\_curiosity.X|MPLABX|SAM9X75D2G|SAM9X75-Curiosity Development Board|
 |sam\_a7d65\_curiosity.X|MPLABX|SAMA7D65|SAMA7D65 Curiosity Development Board|
+|wbz653\_curiosity.X|MPLABX|WBZ653|WBZ653 Curiosity Board|
 
 ## **Configuring the Hardware**
 
@@ -183,6 +184,11 @@ Following table gives the details of project configurations, target device<br />
 -   RGB LED turning to Green indicates USB Device Configuration Set Complete event \(The USB device functionality has been activated by the USB Host\).
 
 ![](GUID-6DEE5CBA-AB4F-43D8-AF25-C502A75A4621-low.jpg)
+
+**WBZ653 Curiosity Board**
+
+-   Use TARGET USB \(J103\) connector on the board to connect the USB Device to the USB Host PC.
+-   RGB\_LED \(D800\) indicates USB Device Configuration Set Complete event \(the USB device functionality has been activated by the USB Host\).
 
 ## **Running the Application**
 

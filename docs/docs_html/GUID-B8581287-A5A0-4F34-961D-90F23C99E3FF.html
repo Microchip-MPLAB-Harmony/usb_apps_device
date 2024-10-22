@@ -33,8 +33,8 @@
             <div class="wh_logo_and_publication_title_container">
                 <div class="wh_logo_and_publication_title">
                     
-                    <a href="index.html" class=" wh_logo d-none d-sm-block "><img src="oxygen-webhelp\template\resources/images/microchip.png" alt="USB Device application examples &#xA;    "/></a>
-                    <div class=" wh_publication_title "><a href="index.html">USB Device application examples 
+                    <a href="index.html" class=" wh_logo d-none d-sm-block "><img src="oxygen-webhelp\template\resources/images/microchip.png" alt="MPLAB® Harmony 3 USB Device application examples &#xA;    "/></a>
+                    <div class=" wh_publication_title "><a href="index.html">MPLAB® Harmony 3 USB Device application examples 
     </a></div>
                     
                 </div>
@@ -147,20 +147,15 @@ License</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-
                             </span>
                         </button>
                         
-                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-A199B158-7D02-4E3F-819E-B4C196601375">
-<h1 class="- topic/title title topictitle1" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-A199B158-7D02-4E3F-819E-B4C196601375" style="">1.14 MSD Multiple LUN Example
-    (msd_multiple_luns)</h1>
-<div class="- topic/body body">
-    <p class="- topic/p p">This application demonstrates data transfer between two storage media - SD card and
-      non-volatile memory (NVM) - and a computer through USB Mass Storage Device (MSD).</p>
-    <section class="- topic/section section" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-972F82F6-803E-43B5-9738-F309C0390D24" data-ofbid="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-972F82F6-803E-43B5-9738-F309C0390D24"><h2 class="- topic/title title sectiontitle"><strong class="+ topic/ph hi-d/b ph b">Description</strong></h2>
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-A199B158-7D02-4E3F-819E-B4C196601375"><h1 class="- topic/title title topictitle1" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-A199B158-7D02-4E3F-819E-B4C196601375" style="">1.14 MSD Multiple LUN Example
+    (msd_multiple_luns)</h1><div class="- topic/body body"><p class="- topic/p p">This application demonstrates data transfer between two storage media - SD card and
+      non-volatile memory (NVM) - and a computer through USB Mass Storage Device (MSD).</p><section class="- topic/section section" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-972F82F6-803E-43B5-9738-F309C0390D24" data-ofbid="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-972F82F6-803E-43B5-9738-F309C0390D24"><h2 class="- topic/title title sectiontitle"><strong class="+ topic/ph hi-d/b ph b">Description</strong></h2>
       
       <p class="- topic/p p">This application demonstrates the creation of a USB device with multiple logical units. The
         storage media, SD Card, acts as one logical unit, and the NVM acts as the second logical
         unit. Data transfer between a computer and the logical units (SD Card / NVM) takes place
         through USB MSD.</p>
-    </section>
-    <section class="- topic/section section" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-040A6C7C-0E7D-4B8C-AE29-5E74F6771F24" data-ofbid="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-040A6C7C-0E7D-4B8C-AE29-5E74F6771F24"><h2 class="- topic/title title sectiontitle"><strong class="+ topic/ph hi-d/b ph b">Downloading and building the application</strong></h2>
+    </section><section class="- topic/section section" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-040A6C7C-0E7D-4B8C-AE29-5E74F6771F24" data-ofbid="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-040A6C7C-0E7D-4B8C-AE29-5E74F6771F24"><h2 class="- topic/title title sectiontitle"><strong class="+ topic/ph hi-d/b ph b">Downloading and building the application</strong></h2>
       
       <p dir="lro" class="- topic/p p">To clone or download this application from Github, go to the <a dir="lro" class="- topic/xref xref" href="https://github.com/Microchip-MPLAB-Harmony/usb_apps_device" target="_blank" rel="external noopener">main page of this repository</a> and then click <strong class="+ topic/ph hi-d/b ph b">Clone</strong>
         button to clone this repository or download as zip file. This content can also be downloaded
@@ -168,82 +163,30 @@ License</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-
       <p dir="lro" class="- topic/p p">Path of the application within the repository is <a class="- topic/xref xref" href="https://github.com/Microchip-MPLAB-Harmony/usb_apps_device/tree/master/apps/msd_multiple_luns" target="_blank" rel="external noopener">usb_apps_device/apps/msd_multiple_luns</a>.</p>
       <p dir="lro" class="- topic/p p">Following table gives the details of project configurations, target device used,
         hardware and its IDE. Open the project using the respective IDE and build it.</p>
-      <div class="table-container"><table dir="lro" class="- topic/table table" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-A3057D85-F234-4612-821A-B648E10DEDE7" data-ofbid="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-A3057D85-F234-4612-821A-B648E10DEDE7" data-cols="4"><caption></caption><colgroup><col/><col/><col/><col/></colgroup><thead dir="lro" class="- topic/thead thead">
-            <tr dir="lro" class="- topic/row">
-              <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-A3057D85-F234-4612-821A-B648E10DEDE7__entry__1">Project Name</th>
-              <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-A3057D85-F234-4612-821A-B648E10DEDE7__entry__2">IDE</th>
-              <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-A3057D85-F234-4612-821A-B648E10DEDE7__entry__3">Target Device</th>
-              <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-A3057D85-F234-4612-821A-B648E10DEDE7__entry__4">Hardware / Configuration</th>
-            </tr>
-          </thead><tbody class="- topic/tbody tbody">
-            <tr dir="lro" class="- topic/row">
-              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-A3057D85-F234-4612-821A-B648E10DEDE7__entry__1">pic32mx470_curiosity.X</td>
-              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-A3057D85-F234-4612-821A-B648E10DEDE7__entry__2">MPLABX</td>
-              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-A3057D85-F234-4612-821A-B648E10DEDE7__entry__3">PIC32MX470F512H</td>
-              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-A3057D85-F234-4612-821A-B648E10DEDE7__entry__4">PIC32MX Curiosity Development Board</td>
-            </tr>
-            <tr dir="lro" class="- topic/row">
-              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-A3057D85-F234-4612-821A-B648E10DEDE7__entry__1">pic32mz_ef_curiosity_2_0.X</td>
-              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-A3057D85-F234-4612-821A-B648E10DEDE7__entry__2">MPLABX</td>
-              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-A3057D85-F234-4612-821A-B648E10DEDE7__entry__3">PIC32MZ2048EFM144</td>
-              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-A3057D85-F234-4612-821A-B648E10DEDE7__entry__4">Curiosity PIC32MZ EF 2.0 Development Board</td>
-            </tr>
-            <tr dir="lro" class="- topic/row">
-              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-A3057D85-F234-4612-821A-B648E10DEDE7__entry__1">pic32cz_ca80_curiosity_ultra.X</td>
-              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-A3057D85-F234-4612-821A-B648E10DEDE7__entry__2">MPLABX</td>
-              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-A3057D85-F234-4612-821A-B648E10DEDE7__entry__3">PIC32CZ8110CA80208</td>
-              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-A3057D85-F234-4612-821A-B648E10DEDE7__entry__4">PIC32CZ Curiosity Development Board</td>
-            </tr>
-          </tbody></table></div>
-    </section>
-    <section class="- topic/section section" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-8D2AF7E5-9752-4E09-A2FA-107A36FC34B1" data-ofbid="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-8D2AF7E5-9752-4E09-A2FA-107A36FC34B1"><h2 class="- topic/title title sectiontitle"><strong class="+ topic/ph hi-d/b ph b">Configuring the Hardware</strong></h2>
+      <div class="table-container"><table dir="lro" class="- topic/table table" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-A3057D85-F234-4612-821A-B648E10DEDE7" data-ofbid="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-A3057D85-F234-4612-821A-B648E10DEDE7" data-cols="4"><caption></caption><colgroup><col/><col/><col/><col/></colgroup><thead dir="lro" class="- topic/thead thead"><tr dir="lro" class="- topic/row"><th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-A3057D85-F234-4612-821A-B648E10DEDE7__entry__1">Project Name</th><th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-A3057D85-F234-4612-821A-B648E10DEDE7__entry__2">IDE</th><th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-A3057D85-F234-4612-821A-B648E10DEDE7__entry__3">Target Device</th><th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-A3057D85-F234-4612-821A-B648E10DEDE7__entry__4">Hardware / Configuration</th></tr></thead><tbody class="- topic/tbody tbody"><tr dir="lro" class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-A3057D85-F234-4612-821A-B648E10DEDE7__entry__1">pic32mx470_curiosity.X</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-A3057D85-F234-4612-821A-B648E10DEDE7__entry__2">MPLABX</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-A3057D85-F234-4612-821A-B648E10DEDE7__entry__3">PIC32MX470F512H</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-A3057D85-F234-4612-821A-B648E10DEDE7__entry__4">PIC32MX Curiosity Development Board</td></tr><tr dir="lro" class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-A3057D85-F234-4612-821A-B648E10DEDE7__entry__1">pic32mz_ef_curiosity_2_0.X</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-A3057D85-F234-4612-821A-B648E10DEDE7__entry__2">MPLABX</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-A3057D85-F234-4612-821A-B648E10DEDE7__entry__3">PIC32MZ2048EFM144</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-A3057D85-F234-4612-821A-B648E10DEDE7__entry__4">Curiosity PIC32MZ EF 2.0 Development Board</td></tr><tr dir="lro" class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-A3057D85-F234-4612-821A-B648E10DEDE7__entry__1">pic32cz_ca80_curiosity_ultra.X</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-A3057D85-F234-4612-821A-B648E10DEDE7__entry__2">MPLABX</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-A3057D85-F234-4612-821A-B648E10DEDE7__entry__3">PIC32CZ8110CA80208</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-A3057D85-F234-4612-821A-B648E10DEDE7__entry__4">PIC32CZ Curiosity Development Board</td></tr></tbody></table></div>
+    </section><section class="- topic/section section" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-8D2AF7E5-9752-4E09-A2FA-107A36FC34B1" data-ofbid="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-8D2AF7E5-9752-4E09-A2FA-107A36FC34B1"><h2 class="- topic/title title sectiontitle"><strong class="+ topic/ph hi-d/b ph b">Configuring the Hardware</strong></h2>
       
-      <div class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b"><a class="- topic/xref xref" href="https://www.microchip.com/Developmenttools/ProductDetails/DM320209" target="_blank" rel="external noopener">Curiosity PIC32MZ EF 2.0 Development Board</a></strong><ul class="- topic/ul ul">
-          <li dir="lro" class="- topic/li li" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-40E1B79F-8184-4414-8752-80D52CE64B1F" data-ofbid="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-40E1B79F-8184-4414-8752-80D52CE64B1F">To run the demo, the following additional hardware is required:<ul class="- topic/ul ul">
-              <li dir="lro" class="- topic/li li" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-676F1959-E88D-49DA-92DF-B7383CA27344" data-ofbid="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-676F1959-E88D-49DA-92DF-B7383CA27344"><a class="- topic/xref xref" href="https://www.mikroe.com/microsd-click" target="_blank" rel="external noopener">micro-sd Click</a> board</li>
-              <li dir="lro" class="- topic/li li" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-CF7B22C7-8530-4515-8297-9C3ACC412EDE" data-ofbid="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-CF7B22C7-8530-4515-8297-9C3ACC412EDE">micro-sd card</li>
-            </ul></li>
-          <li dir="lro" class="- topic/li li" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-FB65533B-1151-42D6-B212-A6D5540621FC" data-ofbid="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-FB65533B-1151-42D6-B212-A6D5540621FC">Insert the micro-sd click board into the Mikro BUS 1 connector on the
-            Curiosity PIC32MZ EF 2.0 Development Board.</li>
-          <li dir="lro" class="- topic/li li" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-140DF699-03FC-4218-B294-546CC9CB6CC8" data-ofbid="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-140DF699-03FC-4218-B294-546CC9CB6CC8">Insert the micro-SD card into the micro-SD Card slot of the micro-sd click
-            board.</li>
-          <li dir="lro" class="- topic/li li" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-9A87065D-B780-4061-AF0B-EF0AC644E630" data-ofbid="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-9A87065D-B780-4061-AF0B-EF0AC644E630">Use the USB micro-B port J201 to connect the USB Device to the USB Host
-            PC.</li>
-          <li dir="lro" class="- topic/li li" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-B39BB306-820E-4E6C-B075-1B49FD1B78C5" data-ofbid="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-B39BB306-820E-4E6C-B075-1B49FD1B78C5">LED1 indicates USB Device Configuration Set Complete event (the USB device
-            functionality has been activated by the USB Host).</li>
-        </ul><strong class="+ topic/ph hi-d/b ph b"><a class="- topic/xref xref" href="https://www.microchip.com/Developmenttools/ProductDetails/dm320103" target="_blank" rel="external noopener">Curiosity PIC32MX470 Development Board</a></strong><ul class="- topic/ul ul">
-          <li dir="lro" class="- topic/li li" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-D341D97A-0360-4282-899B-F8E142AC6DD5" data-ofbid="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-D341D97A-0360-4282-899B-F8E142AC6DD5">To run the demo, the following additional hardware is required:<ul class="- topic/ul ul">
-              <li dir="lro" class="- topic/li li" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-4A3DB401-58B6-46FD-85ED-3003E6CAC3D0" data-ofbid="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-4A3DB401-58B6-46FD-85ED-3003E6CAC3D0"><a class="- topic/xref xref" href="https://www.mikroe.com/microsd-click" target="_blank" rel="external noopener">micro-sd Click</a> board</li>
-              <li dir="lro" class="- topic/li li" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-5654E7E4-A2DF-4EBB-9703-7866F3B0D5A2" data-ofbid="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-5654E7E4-A2DF-4EBB-9703-7866F3B0D5A2">micro-sd card</li>
-            </ul></li>
-          <li dir="lro" class="- topic/li li" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-FDF51FA7-78BA-4747-B4C8-D2A9DFC5E900" data-ofbid="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-FDF51FA7-78BA-4747-B4C8-D2A9DFC5E900">Insert the micro-sd click board into the Mikro BUS 1 connector on the
-            Curiosity PIC32MX470 Development Board.</li>
-          <li dir="lro" class="- topic/li li" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-13579D8E-DCAB-4E1A-9890-18217249A5B8" data-ofbid="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-13579D8E-DCAB-4E1A-9890-18217249A5B8">Insert the micro-SD card into the micro-SD Card slot of the micro-sd click
-            board.</li>
-          <li dir="lro" class="- topic/li li" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-97EFE810-27DB-4B3B-A58F-AE6D4314B891" data-ofbid="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-97EFE810-27DB-4B3B-A58F-AE6D4314B891">Ensure that a jumper is placed at 4-3 on J8, to select supply from debug USB
-            connector.</li>
-          <li dir="lro" class="- topic/li li" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-124D692D-57DE-4A28-9473-B4364754FC85" data-ofbid="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-124D692D-57DE-4A28-9473-B4364754FC85">USB micro-B port J12 to connect the USB device to the USB Host PC.</li>
-          <li dir="lro" class="- topic/li li" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-57F23E16-877B-41F1-B22C-C69307BFE9C6" data-ofbid="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-57F23E16-877B-41F1-B22C-C69307BFE9C6">LED1 indicates USB Device Configuration Set Complete event (the USB device
-            functionality has been activated by the USB Host).</li>
-        </ul><strong class="+ topic/ph hi-d/b ph b"><a class="- topic/xref xref" href="https://www.microchip.com/en-us/development-tool/ea61x20a" target="_blank" rel="external noopener">PIC32CZ CA80 Curiosity Ultra development board</a></strong><ul class="- topic/ul ul">
-          <li dir="lro" class="- topic/li li" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-4678B44E-EAE6-456B-9F13-DA3CDA8A6231" data-ofbid="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-4678B44E-EAE6-456B-9F13-DA3CDA8A6231">
+      <div class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b"><a class="- topic/xref xref" href="https://www.microchip.com/Developmenttools/ProductDetails/DM320209" target="_blank" rel="external noopener">Curiosity PIC32MZ EF 2.0 Development Board</a></strong><ul class="- topic/ul ul"><li dir="lro" class="- topic/li li" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-40E1B79F-8184-4414-8752-80D52CE64B1F" data-ofbid="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-40E1B79F-8184-4414-8752-80D52CE64B1F">To run the demo, the following additional hardware is required:<ul class="- topic/ul ul"><li dir="lro" class="- topic/li li" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-676F1959-E88D-49DA-92DF-B7383CA27344" data-ofbid="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-676F1959-E88D-49DA-92DF-B7383CA27344"><a class="- topic/xref xref" href="https://www.mikroe.com/microsd-click" target="_blank" rel="external noopener">micro-sd Click</a> board</li><li dir="lro" class="- topic/li li" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-CF7B22C7-8530-4515-8297-9C3ACC412EDE" data-ofbid="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-CF7B22C7-8530-4515-8297-9C3ACC412EDE">micro-sd card</li></ul></li><li dir="lro" class="- topic/li li" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-FB65533B-1151-42D6-B212-A6D5540621FC" data-ofbid="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-FB65533B-1151-42D6-B212-A6D5540621FC">Insert the micro-sd click board into the Mikro BUS 1 connector on the
+            Curiosity PIC32MZ EF 2.0 Development Board.</li><li dir="lro" class="- topic/li li" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-140DF699-03FC-4218-B294-546CC9CB6CC8" data-ofbid="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-140DF699-03FC-4218-B294-546CC9CB6CC8">Insert the micro-SD card into the micro-SD Card slot of the micro-sd click
+            board.</li><li dir="lro" class="- topic/li li" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-9A87065D-B780-4061-AF0B-EF0AC644E630" data-ofbid="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-9A87065D-B780-4061-AF0B-EF0AC644E630">Use the USB micro-B port J201 to connect the USB Device to the USB Host
+            PC.</li><li dir="lro" class="- topic/li li" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-B39BB306-820E-4E6C-B075-1B49FD1B78C5" data-ofbid="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-B39BB306-820E-4E6C-B075-1B49FD1B78C5">LED1 indicates USB Device Configuration Set Complete event (the USB device
+            functionality has been activated by the USB Host).</li></ul><strong class="+ topic/ph hi-d/b ph b"><a class="- topic/xref xref" href="https://www.microchip.com/Developmenttools/ProductDetails/dm320103" target="_blank" rel="external noopener">Curiosity PIC32MX470 Development Board</a></strong><ul class="- topic/ul ul"><li dir="lro" class="- topic/li li" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-D341D97A-0360-4282-899B-F8E142AC6DD5" data-ofbid="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-D341D97A-0360-4282-899B-F8E142AC6DD5">To run the demo, the following additional hardware is required:<ul class="- topic/ul ul"><li dir="lro" class="- topic/li li" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-4A3DB401-58B6-46FD-85ED-3003E6CAC3D0" data-ofbid="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-4A3DB401-58B6-46FD-85ED-3003E6CAC3D0"><a class="- topic/xref xref" href="https://www.mikroe.com/microsd-click" target="_blank" rel="external noopener">micro-sd Click</a> board</li><li dir="lro" class="- topic/li li" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-5654E7E4-A2DF-4EBB-9703-7866F3B0D5A2" data-ofbid="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-5654E7E4-A2DF-4EBB-9703-7866F3B0D5A2">micro-sd card</li></ul></li><li dir="lro" class="- topic/li li" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-FDF51FA7-78BA-4747-B4C8-D2A9DFC5E900" data-ofbid="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-FDF51FA7-78BA-4747-B4C8-D2A9DFC5E900">Insert the micro-sd click board into the Mikro BUS 1 connector on the
+            Curiosity PIC32MX470 Development Board.</li><li dir="lro" class="- topic/li li" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-13579D8E-DCAB-4E1A-9890-18217249A5B8" data-ofbid="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-13579D8E-DCAB-4E1A-9890-18217249A5B8">Insert the micro-SD card into the micro-SD Card slot of the micro-sd click
+            board.</li><li dir="lro" class="- topic/li li" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-97EFE810-27DB-4B3B-A58F-AE6D4314B891" data-ofbid="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-97EFE810-27DB-4B3B-A58F-AE6D4314B891">Ensure that a jumper is placed at 4-3 on J8, to select supply from debug USB
+            connector.</li><li dir="lro" class="- topic/li li" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-124D692D-57DE-4A28-9473-B4364754FC85" data-ofbid="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-124D692D-57DE-4A28-9473-B4364754FC85">USB micro-B port J12 to connect the USB device to the USB Host PC.</li><li dir="lro" class="- topic/li li" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-57F23E16-877B-41F1-B22C-C69307BFE9C6" data-ofbid="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-57F23E16-877B-41F1-B22C-C69307BFE9C6">LED1 indicates USB Device Configuration Set Complete event (the USB device
+            functionality has been activated by the USB Host).</li></ul><strong class="+ topic/ph hi-d/b ph b"><a class="- topic/xref xref" href="https://www.microchip.com/en-us/development-tool/ea61x20a" target="_blank" rel="external noopener">PIC32CZ CA80 Curiosity Ultra development board</a></strong><ul class="- topic/ul ul"><li dir="lro" class="- topic/li li" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-4678B44E-EAE6-456B-9F13-DA3CDA8A6231" data-ofbid="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-4678B44E-EAE6-456B-9F13-DA3CDA8A6231">
             <p dir="lro" class="- topic/p p">To run the demo, the following additional hardware is required:</p>
-          </li>
-          <li dir="lro" class="- topic/li li" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-F41D0971-EDBB-400E-8AD9-6D5F00134B6B" data-ofbid="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-F41D0971-EDBB-400E-8AD9-6D5F00134B6B">
+          </li><li dir="lro" class="- topic/li li" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-F41D0971-EDBB-400E-8AD9-6D5F00134B6B" data-ofbid="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-F41D0971-EDBB-400E-8AD9-6D5F00134B6B">
             <p dir="lro" class="- topic/p p">Insert the micro-SD card into the micro-SD Card slot J600 of the PIC32CZ
               CA80 Curiosity Ultra development board.</p>
-          </li>
-          <li dir="lro" class="- topic/li li" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-A9E6D84B-EE12-43D0-BEE9-D0E5F577F541" data-ofbid="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-A9E6D84B-EE12-43D0-BEE9-D0E5F577F541">
+          </li><li dir="lro" class="- topic/li li" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-A9E6D84B-EE12-43D0-BEE9-D0E5F577F541" data-ofbid="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-A9E6D84B-EE12-43D0-BEE9-D0E5F577F541">
             <p dir="lro" class="- topic/p p">Use the USB micro-B port J102 to connect the USB Device to the USB Host
               PC.</p>
-          </li>
-          <li dir="lro" class="- topic/li li" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-9CDE1870-90B6-4A4C-81EE-46E7EE29EE26" data-ofbid="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-9CDE1870-90B6-4A4C-81EE-46E7EE29EE26">
+          </li><li dir="lro" class="- topic/li li" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-9CDE1870-90B6-4A4C-81EE-46E7EE29EE26" data-ofbid="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-9CDE1870-90B6-4A4C-81EE-46E7EE29EE26">
             <p dir="lro" class="- topic/p p">LED1 indicates USB Device Configuration Set Complete event (the USB device
               functionality has been activated by the USB Host).</p>
-          </li>
-        </ul></div>
-    </section>
-    <section class="- topic/section section" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-924FED71-FA8D-4E15-B54C-539BCFC615C6" data-ofbid="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-924FED71-FA8D-4E15-B54C-539BCFC615C6"><h2 class="- topic/title title sectiontitle"><strong class="+ topic/ph hi-d/b ph b">Running the Application</strong></h2>
+          </li></ul></div>
+    </section><section class="- topic/section section" id="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-924FED71-FA8D-4E15-B54C-539BCFC615C6" data-ofbid="GUID-B8581287-A5A0-4F34-961D-90F23C99E3FF__GUID-924FED71-FA8D-4E15-B54C-539BCFC615C6"><h2 class="- topic/title title sectiontitle"><strong class="+ topic/ph hi-d/b ph b">Running the Application</strong></h2>
       
       <p dir="lro" class="- topic/p p">This demonstration uses SD card and NVM as drive storage media and shows them as
         two logical drives on the computer.</p>
@@ -256,9 +199,7 @@ License</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-
       <p dir="lro" class="- topic/p p">Please note that the user should ensure that the Host is not currently writing
         data to the media before detaching the device. On a Windows computer before removing the
         device click on "Safely Remove Hardware" and click on "Eject Media".</p>
-    </section>
-</div>
-</article></main></div>
+    </section></div></article></main></div>
                         
                         
                         

@@ -9,9 +9,7 @@ package:
   dependencies:
     - name: "usb"
       type: "package"
-      version: "v3.14.0"
+      version: "v3.15.0-E1"
     - name: "bsp"
       type: "package"
-      version: "v3.20.1"
-
-
+      version: "v3.21.0-E1"

@@ -33,8 +33,8 @@
             <div class="wh_logo_and_publication_title_container">
                 <div class="wh_logo_and_publication_title">
                     
-                    <a href="index.html" class=" wh_logo d-none d-sm-block "><img src="oxygen-webhelp\template\resources/images/microchip.png" alt="USB Device application examples &#xA;    "/></a>
-                    <div class=" wh_publication_title "><a href="index.html">USB Device application examples 
+                    <a href="index.html" class=" wh_logo d-none d-sm-block "><img src="oxygen-webhelp\template\resources/images/microchip.png" alt="MPLAB® Harmony 3 USB Device application examples &#xA;    "/></a>
+                    <div class=" wh_publication_title "><a href="index.html">MPLAB® Harmony 3 USB Device application examples 
     </a></div>
                     
                 </div>
@@ -147,12 +147,8 @@ License</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-
                             </span>
                         </button>
                         
-                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-CCA41AF1-E064-4648-9E51-88AC041CA12B">
-<h1 class="- topic/title title topictitle1" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-CCA41AF1-E064-4648-9E51-88AC041CA12B" style="">1.8 HID Basic Remote Wakeup Example (hid_basic_remote_wakeup)</h1>
-<div class="- topic/body body">
-        <p class="- topic/p p">This application demonstrates the ability of the MPLAB® Harmony USB Device Stack to
-            support the Remote Wakeup feature using a custom HID device class example.</p>
-        <section class="- topic/section section" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__SECTION_FTK_VR2_TYB" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__SECTION_FTK_VR2_TYB"><h2 class="- topic/title title sectiontitle"><strong class="+ topic/ph hi-d/b ph b">Description</strong></h2>
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-CCA41AF1-E064-4648-9E51-88AC041CA12B"><h1 class="- topic/title title topictitle1" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-CCA41AF1-E064-4648-9E51-88AC041CA12B" style="">1.8 HID Basic Remote Wakeup Example (hid_basic_remote_wakeup)</h1><div class="- topic/body body"><p class="- topic/p p">This application demonstrates the ability of the MPLAB® Harmony USB Device Stack to
+            support the Remote Wakeup feature using a custom HID device class example.</p><section class="- topic/section section" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__SECTION_FTK_VR2_TYB" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__SECTION_FTK_VR2_TYB"><h2 class="- topic/title title sectiontitle"><strong class="+ topic/ph hi-d/b ph b">Description</strong></h2>
             
             <p class="- topic/p p">This application creates a USB HID Device that enumerates as a custom USB HID device
                 on the USB host PC. The device allows the USB Host utility to control the LEDs on
@@ -161,8 +157,7 @@ License</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-
                 utility. The application will put the device to Standby sleep mode when it receives
                 a suspend from PC host. The Push-button is used as wakeup source when the device
                 goes to Standby sleep mode</p>
-        </section>
-        <section class="- topic/section section" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__SECTION_DMW_WR2_TYB" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__SECTION_DMW_WR2_TYB"><h2 class="- topic/title title sectiontitle"><strong class="+ topic/ph hi-d/b ph b">Downloading and building the application</strong></h2>
+        </section><section class="- topic/section section" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__SECTION_DMW_WR2_TYB" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__SECTION_DMW_WR2_TYB"><h2 class="- topic/title title sectiontitle"><strong class="+ topic/ph hi-d/b ph b">Downloading and building the application</strong></h2>
             
             <p dir="lro" class="- topic/p p">To clone or download this application from Github, go to the <a class="- topic/xref xref" href="https://github.com/Microchip-MPLAB-Harmony/usb_apps_device" target="_blank" rel="external noopener">main page of this repository</a> and then click <strong class="+ topic/ph hi-d/b ph b">Clone</strong>
                 button to clone this repository or download as zip file. This content can also be
@@ -171,157 +166,93 @@ License</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-
             <p dir="lro" class="- topic/p p">Following table gives the details of project configurations, target device
                 used, hardware and its IDE. Open the project using the respective IDE and build
                 it.</p>
-            <div class="table-container"><table dir="lro" class="- topic/table table" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__TABLE_KBD_YR2_TYB" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__TABLE_KBD_YR2_TYB" data-cols="4"><caption></caption><colgroup><col/><col/><col/><col/></colgroup><thead dir="lro" class="- topic/thead thead">
-                        <tr dir="ltr" class="- topic/row">
-                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__TABLE_KBD_YR2_TYB__entry__1">Project Name</th>
-                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__TABLE_KBD_YR2_TYB__entry__2">IDE</th>
-                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__TABLE_KBD_YR2_TYB__entry__3">Target Device</th>
-                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__TABLE_KBD_YR2_TYB__entry__4">Hardware / Configuration</th>
-                        </tr>
-                    </thead><tbody class="- topic/tbody tbody">
-                        <tr dir="lro" class="- topic/row">
-                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__TABLE_KBD_YR2_TYB__entry__1">sam_e54_xpro.X</td>
-                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__TABLE_KBD_YR2_TYB__entry__2">MPLABX</td>
-                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__TABLE_KBD_YR2_TYB__entry__3">ATSAME54P20A</td>
-                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__TABLE_KBD_YR2_TYB__entry__4">SAM E54 Xplained Pro Board</td>
-                        </tr>
-                        <tr dir="lro" class="- topic/row">
-                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__TABLE_KBD_YR2_TYB__entry__1">sam_l21_xpro.X</td>
-                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__TABLE_KBD_YR2_TYB__entry__2">MPLABX</td>
-                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__TABLE_KBD_YR2_TYB__entry__3">ATSAML21J18B</td>
-                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__TABLE_KBD_YR2_TYB__entry__4">SAML21 Xplained Pro Board</td>
-                        </tr>
-                        <tr dir="lro" class="- topic/row">
-                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__TABLE_KBD_YR2_TYB__entry__1">pic32cz_ca80_curiosity_ultra.X</td>
-                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__TABLE_KBD_YR2_TYB__entry__2">MPLABX</td>
-                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__TABLE_KBD_YR2_TYB__entry__3">PIC32CZ8110CA80208</td>
-                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__TABLE_KBD_YR2_TYB__entry__4">PIC32CZ CA80 Curiosity Ultra development board</td>
-                        </tr>
-                    </tbody></table></div>
-        </section>
-        <section class="- topic/section section" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__SECTION_ASG_CS2_TYB" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__SECTION_ASG_CS2_TYB"><h2 class="- topic/title title sectiontitle"><strong class="+ topic/ph hi-d/b ph b">Configuring the Hardware</strong></h2>
+            <div class="table-container"><table dir="lro" class="- topic/table table" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__TABLE_KBD_YR2_TYB" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__TABLE_KBD_YR2_TYB" data-cols="4"><caption></caption><colgroup><col/><col/><col/><col/></colgroup><thead dir="lro" class="- topic/thead thead"><tr dir="ltr" class="- topic/row"><th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__TABLE_KBD_YR2_TYB__entry__1">Project Name</th><th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__TABLE_KBD_YR2_TYB__entry__2">IDE</th><th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__TABLE_KBD_YR2_TYB__entry__3">Target Device</th><th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__TABLE_KBD_YR2_TYB__entry__4">Hardware / Configuration</th></tr></thead><tbody class="- topic/tbody tbody"><tr dir="lro" class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__TABLE_KBD_YR2_TYB__entry__1">sam_e54_xpro.X</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__TABLE_KBD_YR2_TYB__entry__2">MPLABX</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__TABLE_KBD_YR2_TYB__entry__3">ATSAME54P20A</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__TABLE_KBD_YR2_TYB__entry__4">SAM E54 Xplained Pro Board</td></tr><tr dir="lro" class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__TABLE_KBD_YR2_TYB__entry__1">sam_l21_xpro.X</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__TABLE_KBD_YR2_TYB__entry__2">MPLABX</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__TABLE_KBD_YR2_TYB__entry__3">ATSAML21J18B</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__TABLE_KBD_YR2_TYB__entry__4">SAML21 Xplained Pro Board</td></tr><tr dir="lro" class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__TABLE_KBD_YR2_TYB__entry__1">pic32cz_ca80_curiosity_ultra.X</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__TABLE_KBD_YR2_TYB__entry__2">MPLABX</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__TABLE_KBD_YR2_TYB__entry__3">PIC32CZ8110CA80208</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__TABLE_KBD_YR2_TYB__entry__4">PIC32CZ CA80 Curiosity Ultra development board</td></tr></tbody></table></div>
+        </section><section class="- topic/section section" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__SECTION_ASG_CS2_TYB" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__SECTION_ASG_CS2_TYB"><h2 class="- topic/title title sectiontitle"><strong class="+ topic/ph hi-d/b ph b">Configuring the Hardware</strong></h2>
             
             <div class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b"><a class="- topic/xref xref" href="https://www.microchip.com/en-us/development-tool/ea61x20a" target="_blank" rel="external noopener">PIC32CZ CA80 Curiosity Ultra development
-                        board</a></strong><ul class="- topic/ul ul" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__UL_YR3_DS2_TYB" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__UL_YR3_DS2_TYB">
-                    <li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-B1C05F60-95CA-430F-AB8B-6A54DAF1D230" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-B1C05F60-95CA-430F-AB8B-6A54DAF1D230">Connect the USB device to the micro-B connector (J102) using a USB
+                        board</a></strong><ul class="- topic/ul ul" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__UL_YR3_DS2_TYB" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__UL_YR3_DS2_TYB"><li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-B1C05F60-95CA-430F-AB8B-6A54DAF1D230" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-B1C05F60-95CA-430F-AB8B-6A54DAF1D230">Connect the USB device to the micro-B connector (J102) using a USB
                         Type-A Female to micro-B male cable (This cable is not included in the
-                        kit).</li>
-                    <li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-2977AE70-CF90-4F33-BB05-D0B7CFF929AC" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-2977AE70-CF90-4F33-BB05-D0B7CFF929AC">LED0 indicates USB Device Configuration Set Complete event (the
-                        USB device functionality has been activated by the USB Host).</li>
-                    <li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-5C087D78-5326-4E20-B097-D1519693A642" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-5C087D78-5326-4E20-B097-D1519693A642">Press the switch SW0 to trigger communication from the USB Device
-                        to the USB Host.</li>
-                    <li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-7B99FF71-6AFD-4574-A6B4-0BE2E4880F55" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-7B99FF71-6AFD-4574-A6B4-0BE2E4880F55">When the device is in Standby sleep, SW0 acts as wakeup source and
+                        kit).</li><li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-2977AE70-CF90-4F33-BB05-D0B7CFF929AC" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-2977AE70-CF90-4F33-BB05-D0B7CFF929AC">LED0 indicates USB Device Configuration Set Complete event (the
+                        USB device functionality has been activated by the USB Host).</li><li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-5C087D78-5326-4E20-B097-D1519693A642" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-5C087D78-5326-4E20-B097-D1519693A642">Press the switch SW0 to trigger communication from the USB Device
+                        to the USB Host.</li><li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-7B99FF71-6AFD-4574-A6B4-0BE2E4880F55" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-7B99FF71-6AFD-4574-A6B4-0BE2E4880F55">When the device is in Standby sleep, SW0 acts as wakeup source and
                         brings the device to active mode. The device sends Remote wakeup to PC host
                         and then goes back to Standby sleep mode to let the PC host drive the
-                        resume.</li>
-                </ul><strong class="+ topic/ph hi-d/b ph b"><a class="- topic/xref xref" href="https://www.microchip.com/developmenttools/productdetails/atsame54-xpro" target="_blank" rel="external noopener">SAME54 Xplained Pro Board</a></strong><ul class="- topic/ul ul" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__UL_ZR3_DS2_TYB" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__UL_ZR3_DS2_TYB">
-                    <li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-77869D3E-05A5-420C-A45E-63DCF378D87A" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-77869D3E-05A5-420C-A45E-63DCF378D87A">Use TARGET USB connector on the board to connect the USB Device to
-                        the USB Host PC.</li>
-                    <li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-D7843967-B90D-4578-8C9C-A91372513954" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-D7843967-B90D-4578-8C9C-A91372513954">LED0 indicates USB Device Configuration Set Complete event (the
-                        USB device functionality has been activated by the USB Host).</li>
-                    <li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-A17897D7-0335-4639-B9CD-5427262EE652" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-A17897D7-0335-4639-B9CD-5427262EE652">Press the switch SW0 to trigger communication from the USB Device
-                        to the USB Host.</li>
-                    <li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-CB8099C2-7129-4DA9-B6ED-61B061A43B6D" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-CB8099C2-7129-4DA9-B6ED-61B061A43B6D">When the device is in Standby sleep, SW0 acts as wakeup source and
+                        resume.</li></ul><strong class="+ topic/ph hi-d/b ph b"><a class="- topic/xref xref" href="https://www.microchip.com/developmenttools/productdetails/atsame54-xpro" target="_blank" rel="external noopener">SAME54 Xplained Pro Board</a></strong><ul class="- topic/ul ul" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__UL_ZR3_DS2_TYB" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__UL_ZR3_DS2_TYB"><li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-77869D3E-05A5-420C-A45E-63DCF378D87A" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-77869D3E-05A5-420C-A45E-63DCF378D87A">Use TARGET USB connector on the board to connect the USB Device to
+                        the USB Host PC.</li><li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-D7843967-B90D-4578-8C9C-A91372513954" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-D7843967-B90D-4578-8C9C-A91372513954">LED0 indicates USB Device Configuration Set Complete event (the
+                        USB device functionality has been activated by the USB Host).</li><li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-A17897D7-0335-4639-B9CD-5427262EE652" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-A17897D7-0335-4639-B9CD-5427262EE652">Press the switch SW0 to trigger communication from the USB Device
+                        to the USB Host.</li><li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-CB8099C2-7129-4DA9-B6ED-61B061A43B6D" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-CB8099C2-7129-4DA9-B6ED-61B061A43B6D">When the device is in Standby sleep, SW0 acts as wakeup source and
                         brings the device to active mode. The device sends Remote wakeup to PC host
                         and then goes back to Standby sleep mode to let the PC host drive the
-                        resume.</li>
-                    <li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-65A3A61E-D084-451B-AF9F-E29BD6580B67" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-65A3A61E-D084-451B-AF9F-E29BD6580B67">To measure current consumed by the device in different Sleep
+                        resume.</li><li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-65A3A61E-D084-451B-AF9F-E29BD6580B67" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-65A3A61E-D084-451B-AF9F-E29BD6580B67">To measure current consumed by the device in different Sleep
                         modes, refer to Section <strong class="+ topic/ph hi-d/b ph b">Current Measurement Header</strong> in <a class="- topic/xref xref" href="https://ww1.microchip.com/downloads/en/DeviceDoc/70005321A.pdf" target="_blank" rel="external noopener">SAME54 Xplained Pro Hardware User
                             Guide</a>. Refer to <strong class="+ topic/ph hi-d/b ph b">Virtual COM Port</strong> section to know more on
-                        using EDBG to send runtime messages.</li>
-                </ul><strong class="+ topic/ph hi-d/b ph b"><a class="- topic/xref xref" href="https://www.microchip.com/developmenttools/ProductDetails/PartNO/ATSAML21-XPRO-B" target="_blank" rel="external noopener">SAML21 Xplained Pro Board</a></strong><ul class="- topic/ul ul" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__UL_AS3_DS2_TYB" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__UL_AS3_DS2_TYB">
-                    <li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-11CCFEBE-4153-4559-A161-E9648985C861" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-11CCFEBE-4153-4559-A161-E9648985C861">Use TARGET USB connector on the board to connect the USB Device to
-                        the USB Host PC.</li>
-                    <li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-CC18E42B-5F12-4B11-AFF8-B86D80EF0D78" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-CC18E42B-5F12-4B11-AFF8-B86D80EF0D78">LED0 indicates USB Device Configuration Set Complete event (the
-                        USB device functionality has been activated by the USB Host).</li>
-                    <li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-387E330A-0393-4370-976D-C0ACC6656875" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-387E330A-0393-4370-976D-C0ACC6656875">Press the switch SW0 to trigger communication from the USB Device
-                        to the USB Host.</li>
-                    <li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-A71EED55-E8EA-451F-91E4-56F4A7712640" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-A71EED55-E8EA-451F-91E4-56F4A7712640">When the device is in Standby sleep, SW0 acts as wakeup source and
+                        using EDBG to send runtime messages.</li></ul><strong class="+ topic/ph hi-d/b ph b"><a class="- topic/xref xref" href="https://www.microchip.com/developmenttools/ProductDetails/PartNO/ATSAML21-XPRO-B" target="_blank" rel="external noopener">SAML21 Xplained Pro Board</a></strong><ul class="- topic/ul ul" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__UL_AS3_DS2_TYB" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__UL_AS3_DS2_TYB"><li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-11CCFEBE-4153-4559-A161-E9648985C861" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-11CCFEBE-4153-4559-A161-E9648985C861">Use TARGET USB connector on the board to connect the USB Device to
+                        the USB Host PC.</li><li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-CC18E42B-5F12-4B11-AFF8-B86D80EF0D78" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-CC18E42B-5F12-4B11-AFF8-B86D80EF0D78">LED0 indicates USB Device Configuration Set Complete event (the
+                        USB device functionality has been activated by the USB Host).</li><li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-387E330A-0393-4370-976D-C0ACC6656875" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-387E330A-0393-4370-976D-C0ACC6656875">Press the switch SW0 to trigger communication from the USB Device
+                        to the USB Host.</li><li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-A71EED55-E8EA-451F-91E4-56F4A7712640" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-A71EED55-E8EA-451F-91E4-56F4A7712640">When the device is in Standby sleep, SW0 acts as wakeup source and
                         brings the device to active mode. The device sends Remote wakeup to PC host
                         and then goes back to Standby sleep mode to let the PC host drive the
-                        resume.</li>
-                </ul></div>
-        </section>
-        <section class="- topic/section section" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__SECTION_UR5_FS2_TYB" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__SECTION_UR5_FS2_TYB"><h2 class="- topic/title title sectiontitle"><strong class="+ topic/ph hi-d/b ph b">Running the Application</strong></h2>
+                        resume.</li></ul></div>
+        </section><section class="- topic/section section" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__SECTION_UR5_FS2_TYB" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__SECTION_UR5_FS2_TYB"><h2 class="- topic/title title sectiontitle"><strong class="+ topic/ph hi-d/b ph b">Running the Application</strong></h2>
             
             <p dir="lro" class="- topic/p p">Runtime messages are sent through UART, which is received by EDBG and sent
                 to PC terminal as USB CDC data. Follow the below steps to see the runtime
                 messages.</p>
-            <ol class="- topic/ol ol" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__OL_ANP_GS2_TYB" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__OL_ANP_GS2_TYB">
-                <li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-8D3DEA59-E939-4445-A7DA-E549B4D5FAF2" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-8D3DEA59-E939-4445-A7DA-E549B4D5FAF2">
+            <ol class="- topic/ol ol" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__OL_ANP_GS2_TYB" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__OL_ANP_GS2_TYB"><li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-8D3DEA59-E939-4445-A7DA-E549B4D5FAF2" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-8D3DEA59-E939-4445-A7DA-E549B4D5FAF2">
                     <p dir="lro" class="- topic/p p">When the debug USB port is connected to the PC, it should be
                         visible as a virtual COM port.</p>
-                </li>
-                <li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-AB4AA973-2E07-4EAD-A4D7-6B754F677E27" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-AB4AA973-2E07-4EAD-A4D7-6B754F677E27">
+                </li><li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-AB4AA973-2E07-4EAD-A4D7-6B754F677E27" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-AB4AA973-2E07-4EAD-A4D7-6B754F677E27">
                     <p dir="lro" class="- topic/p p">Open up a terminal program, such as HyperTerminal and select the
                         appropriate COM port. Set the serial port settings as follows:</p>
-                    <ul class="- topic/ul ul" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__UL_BNP_GS2_TYB" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__UL_BNP_GS2_TYB">
-                        <li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-69851257-B615-4C1F-A558-B87732AEA96F" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-69851257-B615-4C1F-A558-B87732AEA96F">Baud : 115200</li>
-                        <li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-26CED258-0270-4068-9E31-34FDB6220CC7" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-26CED258-0270-4068-9E31-34FDB6220CC7">Data : 8 Bits</li>
-                        <li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-248FB5F7-8560-4DB2-BEB6-34365E6A650B" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-248FB5F7-8560-4DB2-BEB6-34365E6A650B">Parity : None</li>
-                        <li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-07A40832-4CAE-4619-AE33-D046E83FF4C2" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-07A40832-4CAE-4619-AE33-D046E83FF4C2">Stop : 1 Bit</li>
-                        <li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-3F03C17B-E52E-472D-920C-9578772569F1" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-3F03C17B-E52E-472D-920C-9578772569F1">Flow Control : None<p class="- topic/lines lines" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__LINES_NJQ_4S2_TYB" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__LINES_NJQ_4S2_TYB"></p><div class=""><img class="- topic/image image" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__IMAGE_R1K_NS2_TYB" src="GUID-68C6CB19-612A-4DC1-BE85-19E9E1751F09-high.png"/></div></li>
-                    </ul>
-                </li>
-                <li class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-DB42B2F3-598A-423C-BF5D-13C5364B16E2" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-DB42B2F3-598A-423C-BF5D-13C5364B16E2">When the programming is complete and the application starts running, the title
-                    message will be seen.</li>
-                <li class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-3E353F07-E2DE-4091-873D-387B51D73979" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-3E353F07-E2DE-4091-873D-387B51D73979">Connect the Upstream USB port to the PC and when the enumeration is successful,
+                    <ul class="- topic/ul ul" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__UL_BNP_GS2_TYB" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__UL_BNP_GS2_TYB"><li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-69851257-B615-4C1F-A558-B87732AEA96F" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-69851257-B615-4C1F-A558-B87732AEA96F">Baud : 115200</li><li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-26CED258-0270-4068-9E31-34FDB6220CC7" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-26CED258-0270-4068-9E31-34FDB6220CC7">Data : 8 Bits</li><li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-248FB5F7-8560-4DB2-BEB6-34365E6A650B" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-248FB5F7-8560-4DB2-BEB6-34365E6A650B">Parity : None</li><li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-07A40832-4CAE-4619-AE33-D046E83FF4C2" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-07A40832-4CAE-4619-AE33-D046E83FF4C2">Stop : 1 Bit</li><li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-3F03C17B-E52E-472D-920C-9578772569F1" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-3F03C17B-E52E-472D-920C-9578772569F1">Flow Control : None<p class="- topic/lines lines" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__LINES_NJQ_4S2_TYB" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__LINES_NJQ_4S2_TYB"></p><div class=""><img class="- topic/image image" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__IMAGE_R1K_NS2_TYB" src="GUID-68C6CB19-612A-4DC1-BE85-19E9E1751F09-high.png"/></div></li></ul>
+                </li><li class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-DB42B2F3-598A-423C-BF5D-13C5364B16E2" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-DB42B2F3-598A-423C-BF5D-13C5364B16E2">When the programming is complete and the application starts running, the title
+                    message will be seen.</li><li class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-3E353F07-E2DE-4091-873D-387B51D73979" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-3E353F07-E2DE-4091-873D-387B51D73979">Connect the Upstream USB port to the PC and when the enumeration is successful,
                             <em class="+ topic/ph hi-d/i ph i"><strong class="+ topic/ph hi-d/b ph b">Device Configured</strong></em> message is seen. Since this is a HID
                     device, PC host will suspend the device, unless an application is accessing it.
                     The terminal window would now look like
-                        this.<p class="- topic/lines lines" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__LINES_O1Q_VS2_TYB" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__LINES_O1Q_VS2_TYB"></p><div class=""><img class="- topic/image image" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__IMAGE_E55_5S2_TYB" src="GUID-4236E3EF-EE8D-4469-A485-BFD64BC5FDCE-high.png"/></div></li>
-            </ol>
-        </section>
-        <section class="- topic/section section" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__SECTION_TRG_XS2_TYB" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__SECTION_TRG_XS2_TYB"><h2 class="- topic/title title sectiontitle"><strong class="+ topic/ph hi-d/b ph b">HID Basic operation</strong></h2>
+                        this.<p class="- topic/lines lines" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__LINES_O1Q_VS2_TYB" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__LINES_O1Q_VS2_TYB"></p><div class=""><img class="- topic/image image" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__IMAGE_E55_5S2_TYB" src="GUID-4236E3EF-EE8D-4469-A485-BFD64BC5FDCE-high.png"/></div></li></ol>
+        </section><section class="- topic/section section" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__SECTION_TRG_XS2_TYB" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__SECTION_TRG_XS2_TYB"><h2 class="- topic/title title sectiontitle"><strong class="+ topic/ph hi-d/b ph b">HID Basic operation</strong></h2>
             
             <p class="- topic/p p">The HID Basic operation is same as <em class="+ topic/ph hi-d/i ph i">hid_basic</em> demo. Refer to local
                 documentation from <a class="- topic/xref xref" href="GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7.html">usb_apps_device/apps/hid_basic</a>. The documentation is also
                 available in the github path <a class="- topic/xref xref" href="https://github.com/Microchip-MPLAB-Harmony/usb_apps_device/tree/master/apps/hid_basic" target="_blank" rel="external noopener">usb_apps_device/apps/hid_basic</a>.</p>
-        </section>
-        <section class="- topic/section section" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__SECTION_FHQ_YS2_TYB" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__SECTION_FHQ_YS2_TYB"><h2 class="- topic/title title sectiontitle"><strong class="+ topic/ph hi-d/b ph b">Remote Wakeup, Suspend and Resume operation</strong></h2>
+        </section><section class="- topic/section section" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__SECTION_FHQ_YS2_TYB" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__SECTION_FHQ_YS2_TYB"><h2 class="- topic/title title sectiontitle"><strong class="+ topic/ph hi-d/b ph b">Remote Wakeup, Suspend and Resume operation</strong></h2>
             
             <div class="- topic/p p">
-                <ol class="- topic/ol ol" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__OL_YDP_FT2_TYB" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__OL_YDP_FT2_TYB">
-                    <li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-A3606DAE-E585-41FE-9E3D-A2E27C7A888D" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-A3606DAE-E585-41FE-9E3D-A2E27C7A888D">
+                <ol class="- topic/ol ol" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__OL_YDP_FT2_TYB" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__OL_YDP_FT2_TYB"><li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-A3606DAE-E585-41FE-9E3D-A2E27C7A888D" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-A3606DAE-E585-41FE-9E3D-A2E27C7A888D">
                         <p dir="lro" class="- topic/p p">To demonstrate the Remote wakeup capabilities along with the
                             debug messages, the Upstream ports of target USB and debug USB should be
                             connected to two different PC Hosts. This is shown below.</p>
                         <p dir="lro" class="- topic/p p"><div class=""><img class="- topic/image image" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__IMAGE_WQ3_HT2_TYB" src="GUID-A2145BFD-119B-4AFD-904C-A892D271456F-high.png"/></div></p>
-                    </li>
-                    <li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-30F5DBEF-D9D3-48D8-8186-A304A2DF3471" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-30F5DBEF-D9D3-48D8-8186-A304A2DF3471">
+                    </li><li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-30F5DBEF-D9D3-48D8-8186-A304A2DF3471" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-30F5DBEF-D9D3-48D8-8186-A304A2DF3471">
                         <p dir="lro" class="- topic/p p">When the PC utility is connected to the USB device, <em class="+ topic/ph hi-d/i ph i"><strong class="+ topic/ph hi-d/b ph b">USB
                                     Device Resumed</strong></em> message is seen. Closing the application
                             would <em class="+ topic/ph hi-d/i ph i">suspend</em> the USB device and the respective message will be
                             seen.</p>
-                    </li>
-                    <li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-FA1C7103-A839-4EA2-964B-69147E599FC7" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-FA1C7103-A839-4EA2-964B-69147E599FC7">
+                    </li><li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-FA1C7103-A839-4EA2-964B-69147E599FC7" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-FA1C7103-A839-4EA2-964B-69147E599FC7">
                         <p dir="lro" class="- topic/p p">The suspend due to closure of PC utility will not enable the
                             Remote Wakeup of USB device. Hence the message <em class="+ topic/ph hi-d/i ph i"><strong class="+ topic/ph hi-d/b ph b">USB host Suspend
                                     device or Remote wakeup is not enabled</strong></em> would be seen.
                             The device will be put to Standby Sleep mode.</p>
-                    </li>
-                    <li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-45A394E6-1BEC-416E-8D71-35165808E716" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-45A394E6-1BEC-416E-8D71-35165808E716">
+                    </li><li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-45A394E6-1BEC-416E-8D71-35165808E716" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-45A394E6-1BEC-416E-8D71-35165808E716">
                         <p dir="lro" class="- topic/p p">A resume from PC host can wake up the device and continue with
                             HID operation. This is when <em class="+ topic/ph hi-d/i ph i"><strong class="+ topic/ph hi-d/b ph b">USB Device Resumed</strong></em> message is
                             shown.</p>
-                    </li>
-                    <li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-EBCD53A0-B206-4059-A3F7-39D7DF96879A" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-EBCD53A0-B206-4059-A3F7-39D7DF96879A">
+                    </li><li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-EBCD53A0-B206-4059-A3F7-39D7DF96879A" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-EBCD53A0-B206-4059-A3F7-39D7DF96879A">
                         <p dir="lro" class="- topic/p p">Put the PC host connected to Target USB port to sleep to test
                             Remote wakeup. If the device is allowed to wake up PC host, then the
                             Remote Wakeup will be enabled in the USB device by PC host before
                             suspending the bus. This is shown through <em class="+ topic/ph hi-d/i ph i"><strong class="+ topic/ph hi-d/b ph b">USB host in Sleep mode -
                                     Remote wakeup enabled. Press Button to wakeup Host.</strong></em>
                             message.</p>
-                    </li>
-                    <li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-6D291AA0-BE15-4C6B-A85A-AFA2FCFFCC08" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-6D291AA0-BE15-4C6B-A85A-AFA2FCFFCC08">
+                    </li><li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-6D291AA0-BE15-4C6B-A85A-AFA2FCFFCC08" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-6D291AA0-BE15-4C6B-A85A-AFA2FCFFCC08">
                         <p dir="lro" class="- topic/p p">If the message <em class="+ topic/ph hi-d/i ph i"><strong class="+ topic/ph hi-d/b ph b">USB host Suspend device or Remote wakeup
                                     is not enabled</strong></em> is seen when PC host is put to sleep, it
                             means the USB device is not allowed to do Remote Wakeup. Go to the power
                             settings of the USB device in PC host and enable Remote wakeup feature.
                             This can be done in a Windows machine through device manager or command
                             prompt.</p>
-                    </li>
-                </ol>
+                    </li></ol>
                 <pre class="+ topic/pre pr-d/codeblock pre codeblock" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__CODEBLOCK_D23_VT2_TYB" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__CODEBLOCK_D23_VT2_TYB"><code>*** USB Device Remote Wakeup Demonstration ***
 
 Device Configured
@@ -331,8 +262,7 @@ USB host Suspend device or Remote wakeup is not enabled
 MCU on Standby
       Sleep mode
 </code></pre>
-                <ul class="- topic/ul ul" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__UL_E23_VT2_TYB" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__UL_E23_VT2_TYB">
-                    <li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-31E067E0-38D7-4B23-BA6A-4CB31C488A7A" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-31E067E0-38D7-4B23-BA6A-4CB31C488A7A">
+                <ul class="- topic/ul ul" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__UL_E23_VT2_TYB" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__UL_E23_VT2_TYB"><li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-31E067E0-38D7-4B23-BA6A-4CB31C488A7A" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-31E067E0-38D7-4B23-BA6A-4CB31C488A7A">
                         <p class="- topic/p p">On "PC Host 2",</p>
                         <p class="- topic/p p">- launch in a command console with administrator privilege: powercfg
                             -devicequery wake_from_any</p>
@@ -342,20 +272,16 @@ MCU on Standby
                             (002)"</p>
                         <p class="- topic/p p">It can be different. - Then - powercfg -devicequery wake_armed - will
                             return : "HID-compliant vendor-defined device (002)"</p>
-                    </li>
-                    <li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-E8E16283-03E4-423B-80B3-28E70FFF6C11" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-E8E16283-03E4-423B-80B3-28E70FFF6C11">
+                    </li><li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-E8E16283-03E4-423B-80B3-28E70FFF6C11" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-E8E16283-03E4-423B-80B3-28E70FFF6C11">
                         <p dir="lro" class="- topic/p p">Put the "PC Host 2" on sleep</p>
-                    </li>
-                </ul>
+                    </li></ul>
                 <pre class="+ topic/pre pr-d/codeblock pre codeblock" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__CODEBLOCK_F23_VT2_TYB" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__CODEBLOCK_F23_VT2_TYB"><code>USB Device Resumed
 USB Device Suspended
 USB host in Sleep mode - Remote wakeup
       enabled. Press Button to wakeup Host.
 MCU on Standby Sleep mode
 </code></pre>
-                <ul class="- topic/ul ul" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__UL_G23_VT2_TYB" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__UL_G23_VT2_TYB">
-                    <li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-9208B883-1613-4C2D-AEC4-45EC73F76E4F" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-9208B883-1613-4C2D-AEC4-45EC73F76E4F">Press SW0</li>
-                </ul>
+                <ul class="- topic/ul ul" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__UL_G23_VT2_TYB" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__UL_G23_VT2_TYB"><li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-9208B883-1613-4C2D-AEC4-45EC73F76E4F" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-9208B883-1613-4C2D-AEC4-45EC73F76E4F">Press SW0</li></ul>
                 <pre class="+ topic/pre pr-d/codeblock pre codeblock" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__CODEBLOCK_H23_VT2_TYB" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__CODEBLOCK_H23_VT2_TYB"><code>Remote Wakeup Start Sent
 USB Device Resumed
 USB Device Suspended
@@ -369,18 +295,14 @@ USB host Suspend device or Remote wakeup is not
       enabled
 MCU on Standby Sleep mode
 </code></pre>
-                <ul class="- topic/ul ul" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__UL_I23_VT2_TYB" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__UL_I23_VT2_TYB">
-                    <li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-035A5AF1-50CD-4034-A996-00F64066A8A3" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-035A5AF1-50CD-4034-A996-00F64066A8A3">The "PC Host 2" is
+                <ul class="- topic/ul ul" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__UL_I23_VT2_TYB" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__UL_I23_VT2_TYB"><li dir="lro" class="- topic/li li" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-035A5AF1-50CD-4034-A996-00F64066A8A3" data-ofbid="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__GUID-035A5AF1-50CD-4034-A996-00F64066A8A3">The "PC Host 2" is
                             resumed.<p class="- topic/p p">If the Remote Wakeup is enabled and the device is put to
                             sleep, press the switch to initiate a <strong class="+ topic/ph hi-d/b ph b">Remote Wakeup</strong>. The PC host
                             will respond back with a resume and device will continue with its HID
                             operation. The screenshot showing suspend, resume and remote wakeup
-                            operations are shown below.</p><p class="- topic/p p"><div class=""><img class="- topic/image image" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__IMAGE_WBK_B52_TYB" src="GUID-AA0A7696-D58E-4470-8611-321C832AA990-high.png" height="287" width="600"/></div></p></li>
-                </ul>
+                            operations are shown below.</p><p class="- topic/p p"><div class=""><img class="- topic/image image" id="GUID-0B7FFE15-B83E-4494-B418-0FF093E38D11__IMAGE_WBK_B52_TYB" src="GUID-AA0A7696-D58E-4470-8611-321C832AA990-high.png" height="287" width="600"/></div></p></li></ul>
             </div>
-        </section>
-    </div>
-</article></main></div>
+        </section></div></article></main></div>
                         
                         
                         

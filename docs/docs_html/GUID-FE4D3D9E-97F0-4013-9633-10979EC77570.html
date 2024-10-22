@@ -33,8 +33,8 @@
             <div class="wh_logo_and_publication_title_container">
                 <div class="wh_logo_and_publication_title">
                     
-                    <a href="index.html" class=" wh_logo d-none d-sm-block "><img src="oxygen-webhelp\template\resources/images/microchip.png" alt="USB Device application examples &#xA;    "/></a>
-                    <div class=" wh_publication_title "><a href="index.html">USB Device application examples 
+                    <a href="index.html" class=" wh_logo d-none d-sm-block "><img src="oxygen-webhelp\template\resources/images/microchip.png" alt="MPLAB® Harmony 3 USB Device application examples &#xA;    "/></a>
+                    <div class=" wh_publication_title "><a href="index.html">MPLAB® Harmony 3 USB Device application examples 
     </a></div>
                     
                 </div>
@@ -147,18 +147,13 @@ License</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-
                             </span>
                         </button>
                         
-                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__GUID-6BD54176-D801-402E-86B7-74E3EEDF61CC">
-<h1 class="- topic/title title topictitle1" id="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__GUID-6BD54176-D801-402E-86B7-74E3EEDF61CC" style="">1.6 CDC Serial Emulator MSD Example (cdc_serial_emulator_msd)</h1>
-<div class="- topic/body body">
-        <p class="- topic/p p">This demonstration application creates a USB composite device that combines the
-            functionality of the cdc_serial_emulator and msd_basic demonstration applications.</p>
-        <section class="- topic/section section" id="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__SECTION_XFP_FH2_TYB" data-ofbid="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__SECTION_XFP_FH2_TYB"><h2 class="- topic/title title sectiontitle"><strong class="+ topic/ph hi-d/b ph b">Description</strong></h2>
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__GUID-6BD54176-D801-402E-86B7-74E3EEDF61CC"><h1 class="- topic/title title topictitle1" id="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__GUID-6BD54176-D801-402E-86B7-74E3EEDF61CC" style="">1.6 CDC Serial Emulator MSD Example (cdc_serial_emulator_msd)</h1><div class="- topic/body body"><p class="- topic/p p">This demonstration application creates a USB composite device that combines the
+            functionality of the cdc_serial_emulator and msd_basic demonstration applications.</p><section class="- topic/section section" id="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__SECTION_XFP_FH2_TYB" data-ofbid="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__SECTION_XFP_FH2_TYB"><h2 class="- topic/title title sectiontitle"><strong class="+ topic/ph hi-d/b ph b">Description</strong></h2>
             
             <p class="- topic/p p">This application demonstrates a USB composite device with CDC and MSD functions. The
                 CDC function implements a USB-to-Serial Converter. The MSD function driver
                 implements a USB Mass Storage Device with NVM as storage media.</p>
-        </section>
-        <section class="- topic/section section" id="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__SECTION_CSW_GH2_TYB" data-ofbid="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__SECTION_CSW_GH2_TYB"><h2 class="- topic/title title sectiontitle"><strong class="+ topic/ph hi-d/b ph b">Downloading and building the application</strong></h2>
+        </section><section class="- topic/section section" id="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__SECTION_CSW_GH2_TYB" data-ofbid="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__SECTION_CSW_GH2_TYB"><h2 class="- topic/title title sectiontitle"><strong class="+ topic/ph hi-d/b ph b">Downloading and building the application</strong></h2>
             
             <p dir="lro" class="- topic/p p">To clone or download this application from Github, go to the <a class="- topic/xref xref" href="https://github.com/Microchip-MPLAB-Harmony/usb_apps_device" target="_blank" rel="external noopener">main page of this repository</a> and then click <strong class="+ topic/ph hi-d/b ph b">Clone</strong>
                 button to clone this repository or download as zip file. This content can also be
@@ -168,51 +163,21 @@ License</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-
             <p dir="lro" class="- topic/p p">Following table gives the details of project configurations, target device
                 used, hardware and its IDE. Open the project using the respective IDE and build
                 it.</p>
-            <div class="table-container"><table dir="lro" class="- topic/table table" id="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__TABLE_VXH_3H2_TYB" data-ofbid="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__TABLE_VXH_3H2_TYB" data-cols="4"><caption></caption><colgroup><col/><col/><col/><col/></colgroup><thead dir="lro" class="- topic/thead thead">
-                        <tr dir="lro" class="- topic/row">
-                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__TABLE_VXH_3H2_TYB__entry__1">Project Name</th>
-                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__TABLE_VXH_3H2_TYB__entry__2">IDE</th>
-                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__TABLE_VXH_3H2_TYB__entry__3">Target Device</th>
-                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__TABLE_VXH_3H2_TYB__entry__4">Hardware / Configuration</th>
-                        </tr>
-                    </thead><tbody class="- topic/tbody tbody">
-                        <tr dir="lro" class="- topic/row">
-                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__TABLE_VXH_3H2_TYB__entry__1">pic32mz_ef_curiosity_2_0.X</td>
-                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__TABLE_VXH_3H2_TYB__entry__2">MPLABX</td>
-                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__TABLE_VXH_3H2_TYB__entry__3">PIC32MZ2048EFM144</td>
-                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__TABLE_VXH_3H2_TYB__entry__4">Curiosity PIC32MZ EF 2.0 Development Board</td>
-                        </tr>
-                        <tr dir="lro" class="- topic/row">
-                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__TABLE_VXH_3H2_TYB__entry__1">pic32cz_ca80_curiosity_ultra.X</td>
-                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__TABLE_VXH_3H2_TYB__entry__2">MPLABX</td>
-                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__TABLE_VXH_3H2_TYB__entry__3">PIC32CZ8110CA80208</td>
-                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__TABLE_VXH_3H2_TYB__entry__4">PIC32CZ Curiosity Development Board</td>
-                        </tr>
-                    </tbody></table></div>
-        </section>
-        <section class="- topic/section section" id="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__SECTION_Z3C_MH2_TYB" data-ofbid="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__SECTION_Z3C_MH2_TYB"><h2 class="- topic/title title sectiontitle"><strong class="+ topic/ph hi-d/b ph b">Configuring the Hardware</strong></h2>
+            <div class="table-container"><table dir="lro" class="- topic/table table" id="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__TABLE_VXH_3H2_TYB" data-ofbid="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__TABLE_VXH_3H2_TYB" data-cols="4"><caption></caption><colgroup><col/><col/><col/><col/></colgroup><thead dir="lro" class="- topic/thead thead"><tr dir="lro" class="- topic/row"><th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__TABLE_VXH_3H2_TYB__entry__1">Project Name</th><th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__TABLE_VXH_3H2_TYB__entry__2">IDE</th><th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__TABLE_VXH_3H2_TYB__entry__3">Target Device</th><th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__TABLE_VXH_3H2_TYB__entry__4">Hardware / Configuration</th></tr></thead><tbody class="- topic/tbody tbody"><tr dir="lro" class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__TABLE_VXH_3H2_TYB__entry__1">pic32mz_ef_curiosity_2_0.X</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__TABLE_VXH_3H2_TYB__entry__2">MPLABX</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__TABLE_VXH_3H2_TYB__entry__3">PIC32MZ2048EFM144</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__TABLE_VXH_3H2_TYB__entry__4">Curiosity PIC32MZ EF 2.0 Development Board</td></tr><tr dir="lro" class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__TABLE_VXH_3H2_TYB__entry__1">pic32cz_ca80_curiosity_ultra.X</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__TABLE_VXH_3H2_TYB__entry__2">MPLABX</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__TABLE_VXH_3H2_TYB__entry__3">PIC32CZ8110CA80208</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__TABLE_VXH_3H2_TYB__entry__4">PIC32CZ Curiosity Development Board</td></tr></tbody></table></div>
+        </section><section class="- topic/section section" id="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__SECTION_Z3C_MH2_TYB" data-ofbid="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__SECTION_Z3C_MH2_TYB"><h2 class="- topic/title title sectiontitle"><strong class="+ topic/ph hi-d/b ph b">Configuring the Hardware</strong></h2>
             
             <div class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b"><a class="- topic/xref xref" href="https://www.microchip.com/Developmenttools/ProductDetails/DM320209" target="_blank" rel="external noopener">Curiosity PIC32MZ EF 2.0 Development
-                        Board</a></strong><ul class="- topic/ul ul" id="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__UL_IMZ_MH2_TYB" data-ofbid="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__UL_IMZ_MH2_TYB">
-                    <li dir="lro" class="- topic/li li" id="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__GUID-7800E126-905D-409E-8119-597B96E7A350" data-ofbid="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__GUID-7800E126-905D-409E-8119-597B96E7A350">Use the USB micro-B port J201 to connect the USB Device to the USB
-                        Host PC.</li>
-                    <li dir="lro" class="- topic/li li" id="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__GUID-EA3F3706-6C70-40BE-B91F-A115D0ED27EE" data-ofbid="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__GUID-EA3F3706-6C70-40BE-B91F-A115D0ED27EE">LED1 indicates USB Device Configuration Set Complete event (the
-                        USB device functionality has been activated by the USB Host).</li>
-                    <li dir="lro" class="- topic/li li" id="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__GUID-0B4C2009-192F-4D3E-8306-A9893DD14804" data-ofbid="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__GUID-0B4C2009-192F-4D3E-8306-A9893DD14804">The CDC USB (UART to USB) interface on this board is served by the
+                        Board</a></strong><ul class="- topic/ul ul" id="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__UL_IMZ_MH2_TYB" data-ofbid="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__UL_IMZ_MH2_TYB"><li dir="lro" class="- topic/li li" id="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__GUID-7800E126-905D-409E-8119-597B96E7A350" data-ofbid="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__GUID-7800E126-905D-409E-8119-597B96E7A350">Use the USB micro-B port J201 to connect the USB Device to the USB
+                        Host PC.</li><li dir="lro" class="- topic/li li" id="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__GUID-EA3F3706-6C70-40BE-B91F-A115D0ED27EE" data-ofbid="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__GUID-EA3F3706-6C70-40BE-B91F-A115D0ED27EE">LED1 indicates USB Device Configuration Set Complete event (the
+                        USB device functionality has been activated by the USB Host).</li><li dir="lro" class="- topic/li li" id="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__GUID-0B4C2009-192F-4D3E-8306-A9893DD14804" data-ofbid="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__GUID-0B4C2009-192F-4D3E-8306-A9893DD14804">The CDC USB (UART to USB) interface on this board is served by the
                         DEBUG_USB connector J700. Connecting this to the PC will create a COM port
-                        on the PC Host.</li>
-                </ul><strong class="+ topic/ph hi-d/b ph b"><a class="- topic/xref xref" href="https://www.microchip.com/en-us/development-tool/ea61x20a" target="_blank" rel="external noopener">PIC32CZ CA80 Curiosity Ultra development
-                        board</a></strong><ul class="- topic/ul ul" id="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__UL_JMZ_MH2_TYB" data-ofbid="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__UL_JMZ_MH2_TYB">
-                    <li dir="lro" class="- topic/li li" id="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__GUID-0DE9B762-12E4-4E83-B236-C5784CBF88A4" data-ofbid="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__GUID-0DE9B762-12E4-4E83-B236-C5784CBF88A4">Use the USB micro-B port J102 to connect the USB Device to the USB
-                        Host PC.</li>
-                    <li dir="lro" class="- topic/li li" id="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__GUID-B165DEB6-9E99-4DFF-8432-3342E49B28AD" data-ofbid="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__GUID-B165DEB6-9E99-4DFF-8432-3342E49B28AD">LED0 indicates USB Device Configuration Set Complete event (the
-                        USB device functionality has been activated by the USB Host).</li>
-                    <li dir="lro" class="- topic/li li" id="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__GUID-13B21066-FA34-489F-A228-40B0776A0AA8" data-ofbid="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__GUID-13B21066-FA34-489F-A228-40B0776A0AA8">The CDC USB (UART to USB) interface on this board is served by the
+                        on the PC Host.</li></ul><strong class="+ topic/ph hi-d/b ph b"><a class="- topic/xref xref" href="https://www.microchip.com/en-us/development-tool/ea61x20a" target="_blank" rel="external noopener">PIC32CZ CA80 Curiosity Ultra development
+                        board</a></strong><ul class="- topic/ul ul" id="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__UL_JMZ_MH2_TYB" data-ofbid="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__UL_JMZ_MH2_TYB"><li dir="lro" class="- topic/li li" id="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__GUID-0DE9B762-12E4-4E83-B236-C5784CBF88A4" data-ofbid="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__GUID-0DE9B762-12E4-4E83-B236-C5784CBF88A4">Use the USB micro-B port J102 to connect the USB Device to the USB
+                        Host PC.</li><li dir="lro" class="- topic/li li" id="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__GUID-B165DEB6-9E99-4DFF-8432-3342E49B28AD" data-ofbid="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__GUID-B165DEB6-9E99-4DFF-8432-3342E49B28AD">LED0 indicates USB Device Configuration Set Complete event (the
+                        USB device functionality has been activated by the USB Host).</li><li dir="lro" class="- topic/li li" id="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__GUID-13B21066-FA34-489F-A228-40B0776A0AA8" data-ofbid="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__GUID-13B21066-FA34-489F-A228-40B0776A0AA8">The CDC USB (UART to USB) interface on this board is served by the
                         DEBUG_USB connector J200. Connecting this to the PC will create a COM port
-                        on the PC Host.</li>
-                </ul></div>
-        </section>
-        <section class="- topic/section section" id="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__SECTION_IGX_PH2_TYB" data-ofbid="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__SECTION_IGX_PH2_TYB"><h2 class="- topic/title title sectiontitle"><strong class="+ topic/ph hi-d/b ph b">Running the Application</strong></h2>
+                        on the PC Host.</li></ul></div>
+        </section><section class="- topic/section section" id="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__SECTION_IGX_PH2_TYB" data-ofbid="GUID-FE4D3D9E-97F0-4013-9633-10979EC77570__SECTION_IGX_PH2_TYB"><h2 class="- topic/title title sectiontitle"><strong class="+ topic/ph hi-d/b ph b">Running the Application</strong></h2>
             
             <p dir="lro" class="- topic/p p">This demonstration functions as a composite USB Device that combines the
                 features of the devices created by the <a class="- topic/xref xref" href="GUID-D58BD14B-2571-47EA-8A07-2163EDEC3FD5.html">cdc_serial_emulator</a> and the <a class="- topic/xref xref" href="GUID-253EA897-AFA3-4A65-9976-EF08D2D362E8.html">msd_basic</a>
@@ -223,9 +188,7 @@ License</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-
             <p dir="lro" class="- topic/p p">The LEDs on the demonstration board will indicate the USB state of the
                 device, as described in the USB Device State and LED Indication Table in the Device
                 section.</p>
-        </section>
-</div>
-</article></main></div>
+        </section></div></article></main></div>
                         
                         
                         
