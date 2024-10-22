@@ -4864,11 +4864,11 @@
       </entry>
       <entry>
          <file>..\src\config\wbz653_curiosity\configuration.h</file>
-         <hash>47705f45d12205210d98164ae58fb0dd4c6a3914ebf521e77018f7b82a375058</hash>
+         <hash>0dc80507d94a00b143b53d7aced387c120ebc9165a53e91caa1bd518c3fafd7b</hash>
       </entry>
       <entry>
          <file>..\src\config\wbz653_curiosity\definitions.h</file>
-         <hash>da83e8cbed45de7eb1ff2530ced0fced6658c8ef4d255cd8fb047b6a4b98bacb</hash>
+         <hash>468d438c2655811cf9e64102ed25ff4bbbff756591c13cff0471000cbc56667a</hash>
       </entry>
       <entry>
          <file>..\src\config\wbz653_curiosity\device.h</file>
@@ -4908,7 +4908,7 @@
       </entry>
       <entry>
          <file>..\src\config\wbz653_curiosity\driver\usb\usbfs\src\drv_usbfs_device.c</file>
-         <hash>bda41feeb45d7fa5717904c05ef2a8dd251ff50ffd835330bd7d81e818a3cc0d</hash>
+         <hash>0376dff5d850161129eb69b65399c43824d89d61d99c503ced3f7fa62d089518</hash>
       </entry>
       <entry>
          <file>..\src\config\wbz653_curiosity\driver\usb\usbfs\src\drv_usbfs_local.h</file>
@@ -4924,7 +4924,7 @@
       </entry>
       <entry>
          <file>..\src\config\wbz653_curiosity\initialization.c</file>
-         <hash>c9729afd2bfd35f09e80a69a356bb925f677cb601ae65df67900b05b35da0fd9</hash>
+         <hash>532e7fb1cb55b350ae7e054e5ce9a2f1d9b69372716939db5b2429ecf981553d</hash>
       </entry>
       <entry>
          <file>..\src\config\wbz653_curiosity\interrupts.c</file>
@@ -5040,7 +5040,7 @@
       </entry>
       <entry>
          <file>..\src\config\wbz653_curiosity\tasks.c</file>
-         <hash>c68e57e635fa50389a54cbe94cf7a25f16abf17e7e22b6ebfa75868737c73155</hash>
+         <hash>2e39cf49517830e5508fdda962752f8c78495bad0ffaf61b7a9a1b9f00976d69</hash>
       </entry>
       <entry>
          <file>..\src\config\wbz653_curiosity\toolchain_specifics.h</file>

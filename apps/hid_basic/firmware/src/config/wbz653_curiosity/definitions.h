@@ -48,17 +48,17 @@
 #include <stdint.h>
 #include <stddef.h>
 #include <stdbool.h>
-#include "peripheral/evsys/plib_evsys.h"
 #include "usb/usb_device_hid.h"
 #include "usb/usb_hid.h"
+#include "peripheral/evsys/plib_evsys.h"
 #include "peripheral/clk/plib_clk.h"
 #include "peripheral/gpio/plib_gpio.h"
 #include "peripheral/nvic/plib_nvic.h"
 #include "peripheral/cmcc/plib_cmcc.h"
-#include "usb/usb_chapter_9.h"
-#include "usb/usb_device.h"
 #include "driver/usb/usbfs/drv_usbfs.h"
 #include "bsp/bsp.h"
+#include "usb/usb_chapter_9.h"
+#include "usb/usb_device.h"
 #include "system/int/sys_int.h"
 #include "system/cache/sys_cache.h"
 #include "osal/osal.h"
@@ -194,9 +194,9 @@ Remarks:
 
 typedef struct
 {
-    SYS_MODULE_OBJ  usbDevObject0;
-
     SYS_MODULE_OBJ  drvUSBFSObject;
+
+    SYS_MODULE_OBJ  usbDevObject0;
 
 
 } SYSTEM_OBJECTS;
