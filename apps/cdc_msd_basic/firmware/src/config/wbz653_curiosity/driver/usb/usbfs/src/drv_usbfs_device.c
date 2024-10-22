@@ -2054,7 +2054,7 @@ void F_DRV_USBFS_DEVICE_Tasks_ISR(DRV_USBFS_OBJ * hDriver)
             /* Enable the actvity interrupt */
             usb->USB_UOTGIE |= USB_UOTGIR_ACTVIF_Msk;
             
-            /* Clear the resume flag */ // not there in old
+            /* Clear the resume flag */
             usb->USB_UIR = USB_UIR_RESUMEIF_Msk;
             /* Enable the resume interrupt */
             usb->USB_UIE |= USB_UIE_RESUMEIE_Msk;
@@ -2243,7 +2243,6 @@ void F_DRV_USBFS_DEVICE_Tasks_ISR(DRV_USBFS_OBJ * hDriver)
 
                         (lastEndpointObj + (uint32_t)USB_DATA_DIRECTION_DEVICE_TO_HOST)->nextDataToggle = USB_BUFFER_DATA1;
 
-						//usb->UxCON.UxCONbits.TOKBUSY = 0;
                         usb->USB_UCON &= ~(USB_UCON_PKTDIS_TOKBUSY_Msk);
                         /* We should get the next IRP in the queue . */
 

@@ -6090,7 +6090,7 @@
       </entry>
       <entry>
          <file>..\src\config\wbz653_curiosity\driver\usb\usbfs\src\drv_usbfs_device.c</file>
-         <hash>bda41feeb45d7fa5717904c05ef2a8dd251ff50ffd835330bd7d81e818a3cc0d</hash>
+         <hash>0376dff5d850161129eb69b65399c43824d89d61d99c503ced3f7fa62d089518</hash>
       </entry>
       <entry>
          <file>..\src\config\wbz653_curiosity\driver\usb\usbfs\src\drv_usbfs_local.h</file>
