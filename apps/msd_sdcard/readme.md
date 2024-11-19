@@ -5,4 +5,4 @@
 
 This application demonstrates the ability of the MPLAB Harmony USB Device Stack to support USB Mass Storage Device. The application uses SD Card as storage media. 
 
-[Click here to be redirected to the demo application documentation.](../../docs/docs_md/GUID-6CE28C84-CAF9-4BF9-9CC9-BD571C25AE48.md)
+[Click here to be redirected to the demo application documentation.](https://onlinedocs.microchip.com/v2/keyword-lookup?keyword=USB_APPS_DEVICE_MSD_SD_CARD_EXAMPLE&redirect=true)

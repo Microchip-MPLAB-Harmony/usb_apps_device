@@ -6,4 +6,4 @@
 
 This application demonstrates the ability of the MPLAB Harmony USB Device Stack to support CDC Device Class using a real-world application. It implements a USB-USART Bridge application. 
 
-[Click here to be redirected to the demo application documentation.](../../docs/docs_md/GUID-B94E42DD-C87D-47DF-BEC4-81E2DB4A2C4A.md)
+[Click here to be redirected to the demo application documentation.](https://onlinedocs.microchip.com/v2/keyword-lookup?keyword=USB_APPS_DEVICE_USB_UART_BRIDGE_DUAL_CHANNEL_EXAMPLE&redirect=true)

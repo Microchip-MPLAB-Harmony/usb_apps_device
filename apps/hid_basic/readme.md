@@ -6,4 +6,4 @@
 
 This application demonstrates the ability of the MPLAB Harmony USB Device Stack to support custom HID device class. This custom HID device can be controlled by a PC-based utility. 
 
-[Click here to be redirected to the demo application documentation.](../../docs/docs_md/GUID-6CCEC174-DED4-48B5-8023-6BF721AA10D7.md)
+[Click here to be redirected to the demo application documentation.](https://onlinedocs.microchip.com/v2/keyword-lookup?keyword=USB_APPS_DEVICE_HID_BASIC_EXAMPLE&redirect=true)

@@ -6,4 +6,4 @@
 
 This application demonstrates the ability of the MPLAB Harmony USB Device Stack to support USB Communication Device Class. It demonstrates two-way communication between the USB device and the USB Host PC. 
 
-[Click here to be redirected to the demo application documentation.](../../docs/docs_md/GUID-DB15E610-4438-4D75-A60F-9BC2079E65EC.md)
+[Click here to be redirected to the demo application documentation.](https://onlinedocs.microchip.com/v2/keyword-lookup?keyword=USB_APPS_DEVICE_CDC_COM_PORT_SINGLE_EXAMPLE&redirect=true)

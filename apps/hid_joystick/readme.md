@@ -6,4 +6,4 @@
 
 This application demonstrates the ability of the MPLAB Harmony USB Device Stack to support custom HID joystick. 
 
-[Click here to be redirected to the demo application documentation.](../../docs/docs_md/GUID-21956FBE-8E6E-4872-8A1C-3C3F89868BCD.md)
+[Click here to be redirected to the demo application documentation.](https://onlinedocs.microchip.com/v2/keyword-lookup?keyword=USB_APPS_DEVICE_HID_JOYSTICK_EXAMPLE&redirect=true)

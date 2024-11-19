@@ -6,4 +6,4 @@
 
 This application demonstrates the ability of the MPLAB Harmony USB Device Stack to support Composite USB Device. 
 
-[Click here to be redirected to the demo application documentation.](../../docs/docs_md/GUID-461D5868-A2B8-4F4F-B3E3-C866DE626629.md)
+[Click here to be redirected to the demo application documentation.](https://onlinedocs.microchip.com/v2/keyword-lookup?keyword=USB_APPS_DEVICE_CDC_MSD_BASIC_EXAMPLE&redirect=true)

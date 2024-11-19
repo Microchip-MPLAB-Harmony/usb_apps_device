@@ -6,4 +6,4 @@
 
 This application demonstrates the ability of the MPLAB Harmony USB Device Stack to support HID based two-button mouse device. 
 
-[Click here to be redirected to the demo application documentation.](../../docs/docs_md/GUID-AC1353F8-AC36-4056-AFD7-B7AC4BC20ABA.md)
+[Click here to be redirected to the demo application documentation.](https://onlinedocs.microchip.com/v2/keyword-lookup?keyword=USB_APPS_DEVICE_HID_MOUSE_EXAMPLE&redirect=true)

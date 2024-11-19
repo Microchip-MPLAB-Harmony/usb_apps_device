@@ -6,4 +6,4 @@
 
 This application demonstrates the ability of the MPLAB Harmony USB Device Stack to support Generic HID keyboard. 
 
-[Click here to be redirected to the demo application documentation.](../../docs/docs_md/GUID-659FAABC-7E33-4359-B1D8-66E784DF9E43.md)
+[Click here to be redirected to the demo application documentation.](https://onlinedocs.microchip.com/v2/keyword-lookup?keyword=USB_APPS_DEVICE_HID_KEYBOARD_EXAMPLE&redirect=true)
