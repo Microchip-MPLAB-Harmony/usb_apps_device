@@ -128,9 +128,9 @@ void CLOCK_Initialize( void )
     {
         /* Nothing to do */
     }
-    CFG_REGS->CFG_SYSKEY = 0x00000000; // Write junk to lock it if it is already unlocked
-    CFG_REGS->CFG_SYSKEY = 0xAA996655;
-    CFG_REGS->CFG_SYSKEY = 0x556699AA;
+    CFG_REGS->CFG_SYSKEY = 0x00000000U; // Write junk to lock it if it is already unlocked
+    CFG_REGS->CFG_SYSKEY = 0xAA996655U;
+    CFG_REGS->CFG_SYSKEY = 0x556699AAU;
     CRU_REGS->CRU_OSCCON = 0x200U;// switch to XO
 
     //Enable oscillator switch from COSC to NOSC
@@ -146,7 +146,7 @@ void CLOCK_Initialize( void )
      BLE_REGS->BLE_DPLL_RG2 |= 0x02U;
 
     // set PLL_enable
-    BLE_REGS->BLE_DPLL_RG2 &= (uint16_t) (~(0x02U));
+    BLE_REGS->BLE_DPLL_RG2 &= ((uint8_t)~(0x02U));
 
     // Set MISC[24]=0, CLKGEN_PLLRST = 0
     CFG_REGS->CFG_MISCSTAT  &= 0x00FFFFFFU;

@@ -2,7 +2,7 @@
 
 manifest_file_version: 1.0.0
 project: hid_basic_wbz653_curiosity
-creation_date: 2024-10-22T08:54:44.625+05:30[Asia/Calcutta]
+creation_date: 2024-11-20T10:26:22.497+05:30[Asia/Calcutta]
 operating_system: Windows 10
 mcc_mode: IDE
 mcc_mode_version: v6.20
@@ -18,8 +18,8 @@ device_library: {library_class: com.microchip.mcc.harmony.Harmony3Library, name:
     V3, version: 1.5.2}
 packs: {name: PIC32CX-BZ6_DFP, version: 1.0.2}
 modules:
-- {name: csp, type: HARMONY, version: v3.20.0-E1}
-- {name: core, type: HARMONY, version: v3.14.0-E1}
+- {name: csp, type: HARMONY, version: dev}
+- {name: core, type: HARMONY, version: dev}
 - {name: CMSIS_5, type: HARMONY, version: 5.8.0}
-- {name: usb, type: HARMONY, version: v3.15.0-E1}
-- {name: bsp, type: HARMONY, version: v3.21.0-E1}
+- {name: usb, type: HARMONY, version: dev}
+- {name: bsp, type: HARMONY, version: dev}
