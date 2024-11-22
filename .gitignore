@@ -10,6 +10,8 @@
 **/*.X/dist
 **/*.X/build
 **/*.X/.generated_files
+**/*.X/queuelogs
+**/*.X/defmplabxtrace.*
 **/*.IAR/Debug
 **/*.IAR/settings
 **/*.IAR/*.dep
