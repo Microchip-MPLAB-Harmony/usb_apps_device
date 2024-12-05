@@ -36,9 +36,6 @@
             <logicalFolder name="f3" displayName="gic" projectFiles="true">
               <itemPath>../src/config/sam_a7g5_ek/peripheral/gic/plib_gic.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f4" displayName="matrix" projectFiles="true">
-              <itemPath>../src/config/sam_a7g5_ek/peripheral/matrix/plib_matrix.h</itemPath>
-            </logicalFolder>
             <logicalFolder name="f5" displayName="mmu" projectFiles="true">
               <itemPath>../src/config/sam_a7g5_ek/peripheral/mmu/plib_mmu.h</itemPath>
             </logicalFolder>
@@ -313,9 +310,6 @@
             </logicalFolder>
             <logicalFolder name="f3" displayName="gic" projectFiles="true">
               <itemPath>../src/config/sam_a7g5_ek/peripheral/gic/plib_gic.c</itemPath>
-            </logicalFolder>
-            <logicalFolder name="f4" displayName="matrix" projectFiles="true">
-              <itemPath>../src/config/sam_a7g5_ek/peripheral/matrix/plib_matrix.c</itemPath>
             </logicalFolder>
             <logicalFolder name="f5" displayName="mmu" projectFiles="true">
               <itemPath>../src/config/sam_a7g5_ek/peripheral/mmu/plib_mmu.c</itemPath>
