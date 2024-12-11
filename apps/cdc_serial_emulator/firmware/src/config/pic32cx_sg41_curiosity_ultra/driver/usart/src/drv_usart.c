@@ -695,8 +695,8 @@ static void lDRV_USART_RX_PLIB_CallbackHandler( uintptr_t context )
 // Section: USART Driver Common Interface Implementation
 // *****************************************************************************
 // *****************************************************************************
-/* MISRA C-2012 Rule 11.3, 11.8 deviated below. Deviation record ID -
-  H3_MISRAC_2012_R_11_3_DR_1 & H3_MISRAC_2012_R_11_8_DR_1*/
+/* MISRA C-2012 Rule 11.1, 11.3, 11.8 deviated below. Deviation record ID -
+  H3_MISRAC_2012_R_11_1_DR_1 & H3_MISRAC_2012_R_11_3_DR_1 & H3_MISRAC_2012_R_11_8_DR_1*/
 SYS_MODULE_OBJ DRV_USART_Initialize(
     const SYS_MODULE_INDEX drvIndex,
     const SYS_MODULE_INIT* const init

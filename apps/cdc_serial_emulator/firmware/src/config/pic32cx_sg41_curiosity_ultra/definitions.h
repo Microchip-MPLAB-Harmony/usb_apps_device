@@ -49,8 +49,8 @@
 #include <stddef.h>
 #include <stdbool.h>
 #include "peripheral/nvmctrl/plib_nvmctrl.h"
-#include "bsp/bsp.h"
 #include "peripheral/evsys/plib_evsys.h"
+#include "bsp/bsp.h"
 #include "peripheral/port/plib_port.h"
 #include "peripheral/clock/plib_clock.h"
 #include "peripheral/nvic/plib_nvic.h"
@@ -79,13 +79,13 @@ extern "C" {
 // DOM-IGNORE-END
 
 /* Device Information */
-#define DEVICE_NAME			 "PIC32CX1025SG41128"
-#define DEVICE_ARCH			 "CORTEX-M4"
-#define DEVICE_FAMILY		 "PIC32CX"
-#define DEVICE_SERIES		 "PIC32CXSG41"
+#define DEVICE_NAME          "PIC32CX1025SG41128"
+#define DEVICE_ARCH          "CORTEX-M4"
+#define DEVICE_FAMILY        "PIC32CX"
+#define DEVICE_SERIES        "PIC32CXSG41"
 
 /* CPU clock frequency */
-#define CPU_CLOCK_FREQUENCY 120000000
+#define CPU_CLOCK_FREQUENCY 120000000U
 
 // *****************************************************************************
 // *****************************************************************************
