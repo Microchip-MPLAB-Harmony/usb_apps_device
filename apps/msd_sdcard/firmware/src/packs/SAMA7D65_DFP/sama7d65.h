@@ -3,6 +3,8 @@
  *
  * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
  *
+ * SPDX-License-Identifier: Apache-2.0
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -17,7 +19,7 @@
  *
  */
 
-/* File generated from device description file (ATDF) version  */
+/* File generated from device description file (ATDF) version None */
 #ifndef _SAMA7D65_H_
 #define _SAMA7D65_H_
 
@@ -64,7 +66,7 @@
 #endif /* SKIP_INTEGER_LITERALS */
 
 /* ************************************************************************** */
-/* CMSIS DEFINITIONS FOR SAMA7D65                                           */
+/*                       CMSIS DEFINITIONS FOR SAMA7D65                       */
 /* ************************************************************************** */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /* Interrupt Number Definition */
@@ -97,7 +99,7 @@ typedef enum IRQn
   HyperVTimer_IRQn          =  26, /* 26  Hypervisor Timer event (PPI5)       */
   VirtMaint_IRQn            =  25, /* 25  Virtual Maintenance Interrupt (PPI6) */
 
-/******  SAMA7D65 specific Interrupt Numbers ***********************************/
+/* ****************** SAMA7D65 specific Interrupt Numbers ******************* */
   DWDT_SW_IRQn              =  32, /* 32  Dual Watchdog Timer (DWDT)          */
   DWDT_NSW_IRQn             =  33, /* 33  Dual Watchdog Timer (DWDT)          */
   DWDT_NSW_ALARM_IRQn       =  34, /* 34  Dual Watchdog Timer (DWDT)          */
@@ -229,7 +231,7 @@ typedef enum IRQn
   GMAC1_EMAC_IRQn           = 188, /* 188 Gigabit Ethernet MAC (GMAC1)        */
   GMAC1_MMSL_IRQn           = 189, /* 189 Gigabit Ethernet MAC (GMAC1)        */
 
-/******  CORTEX-A7 Special Interrupt Numbers ******************************/
+/* ****************** CORTEX-A7 Special Interrupt Numbers ******************* */
 
   PERIPH_MAX_IRQn           = 189  /* Max peripheral ID */
 } IRQn_Type;
@@ -252,7 +254,7 @@ typedef enum IRQn
 #endif /* USE_CMSIS_INIT */
 
 /* ************************************************************************** */
-/*   SOFTWARE PERIPHERAL API DEFINITION FOR SAMA7D65                          */
+/*              SOFTWARE PERIPHERAL API DEFINITIONS FOR SAMA7D65              */
 /* ************************************************************************** */
 #include "component/acc.h"
 #include "component/adc.h"
@@ -316,7 +318,7 @@ typedef enum IRQn
 #include "component/xdmac.h"
 
 /* ************************************************************************** */
-/*   INSTANCE DEFINITIONS FOR SAMA7D65 */
+/*                     INSTANCE DEFINITIONS FOR SAMA7D65                      */
 /* ************************************************************************** */
 #include "instance/acc.h"
 #include "instance/adc.h"
@@ -364,6 +366,11 @@ typedef enum IRQn
 #include "instance/pdmc0.h"
 #include "instance/pdmc1.h"
 #include "instance/pio.h"
+#include "instance/pioa.h"
+#include "instance/piob.h"
+#include "instance/pioc.h"
+#include "instance/piod.h"
+#include "instance/pioe.h"
 #include "instance/pit64b0.h"
 #include "instance/pit64b1.h"
 #include "instance/pit64b2.h"
@@ -384,6 +391,7 @@ typedef enum IRQn
 #include "instance/sdmmc1.h"
 #include "instance/sdmmc2.h"
 #include "instance/secumod.h"
+#include "instance/securam.h"
 #include "instance/sfr.h"
 #include "instance/sfrbu.h"
 #include "instance/sha.h"
@@ -399,6 +407,7 @@ typedef enum IRQn
 #include "instance/tcpcb.h"
 #include "instance/tdes.h"
 #include "instance/trng.h"
+#include "instance/tzaesb.h"
 #include "instance/tzaesbasc.h"
 #include "instance/tzaesbns.h"
 #include "instance/tzaesbs.h"
@@ -406,6 +415,7 @@ typedef enum IRQn
 #include "instance/tzpm.h"
 #include "instance/udphsa.h"
 #include "instance/udphsb.h"
+#include "instance/uhphs.h"
 #include "instance/uhphs_ehci.h"
 #include "instance/uhphs_ohci.h"
 #include "instance/xdmac0.h"
@@ -413,7 +423,7 @@ typedef enum IRQn
 #include "instance/xdmac2.h"
 
 /* ************************************************************************** */
-/*  PERIPHERAL ID DEFINITIONS FOR SAMA7D65                                    */
+/*                   PERIPHERAL ID DEFINITIONS FOR SAMA7D65                   */
 /* ************************************************************************** */
 #define ID_DWDT_SW       (  0) /* Dual Watchdog Timer, Secure World (DWDT_SW) */
 #define ID_DWDT_NSW      (  1) /* Dual Watchdog Timer, Non-secure World (DWDT_NSW) */
@@ -563,14 +573,14 @@ typedef enum IRQn
 #define ID_PERIPH_MAX    (157) /* Number of peripheral IDs */
 
 /* ************************************************************************** */
-/*   REGISTER STRUCTURE ADDRESS DEFINITIONS FOR SAMA7D65                      */
+/*            REGISTER STRUCTURE ADDRESS DEFINITIONS FOR SAMA7D65             */
 /* ************************************************************************** */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 #define ACC_REGS                         ((acc_registers_t*)0xe1814000)                /* ACC Registers Address        */
 #define ADC_REGS                         ((adc_registers_t*)0xe1000000)                /* ADC Registers Address        */
 #define AES_REGS                         ((aes_registers_t*)0xe1600000)                /* AES Registers Address        */
 #define ASRC_REGS                        ((asrc_registers_t*)0xe2808000)               /* ASRC Registers Address       */
-#define BSC_REGS                         ((bsc_registers_t*)0xe001d604)                /* BSC Registers Address        */
+#define BSC_REGS                         ((bsc_registers_t*)0xe001d600)                /* BSC Registers Address        */
 #define CHIPID_REGS                      ((chipid_registers_t*)0xe0020000)             /* CHIPID Registers Address     */
 #define CPKCC_REGS                       ((cpkcc_registers_t*)0xe000c000)              /* CPKCC Registers Address      */
 #define DDRPUBL_REGS                     ((ddr3phy_registers_t*)0xe3804000)            /* DDRPUBL Registers Address    */
@@ -662,13 +672,13 @@ typedef enum IRQn
 #endif /* (defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 /* ************************************************************************** */
-/*   BASE ADDRESS DEFINITIONS FOR SAMA7D65                                    */
+/*                   BASE ADDRESS DEFINITIONS FOR SAMA7D65                    */
 /* ************************************************************************** */
 #define ACC_BASE_ADDRESS                 _UINT32_(0xe1814000)                          /* ACC Base Address */
 #define ADC_BASE_ADDRESS                 _UINT32_(0xe1000000)                          /* ADC Base Address */
 #define AES_BASE_ADDRESS                 _UINT32_(0xe1600000)                          /* AES Base Address */
 #define ASRC_BASE_ADDRESS                _UINT32_(0xe2808000)                          /* ASRC Base Address */
-#define BSC_BASE_ADDRESS                 _UINT32_(0xe001d604)                          /* BSC Base Address */
+#define BSC_BASE_ADDRESS                 _UINT32_(0xe001d600)                          /* BSC Base Address */
 #define CHIPID_BASE_ADDRESS              _UINT32_(0xe0020000)                          /* CHIPID Base Address */
 #define CPKCC_BASE_ADDRESS               _UINT32_(0xe000c000)                          /* CPKCC Base Address */
 #define DDRPUBL_BASE_ADDRESS             _UINT32_(0xe3804000)                          /* DDRPUBL Base Address */
@@ -759,12 +769,12 @@ typedef enum IRQn
 #define XDMAC2_BASE_ADDRESS              _UINT32_(0xe1200000)                          /* XDMAC2 Base Address */
 
 /* ************************************************************************** */
-/*   PIO DEFINITIONS FOR SAMA7D65                                             */
+/*                        PIO DEFINITIONS FOR SAMA7D65                        */
 /* ************************************************************************** */
 #include "pio/sama7d65.h"
 
 /* ************************************************************************** */
-/*   MEMORY MAPPING DEFINITIONS FOR SAMA7D65                                  */
+/*                  MEMORY MAPPING DEFINITIONS FOR SAMA7D65                   */
 /* ************************************************************************** */
 #define IROM_SIZE                      _UINT32_(0x00014000)    /*   80kB Memory segment type: rom */
 #define ECC_ROM_SIZE                   _UINT32_(0x00018000)    /*   96kB Memory segment type: rom */
@@ -823,17 +833,15 @@ typedef enum IRQn
 #define I3CC_ADDR                      _UINT32_(0xe9000000)    /* I3CC base address (type: ram)*/
 
 /* ************************************************************************** */
-/*   DEVICE SIGNATURES FOR SAMA7D65                                           */
+/*                       DEVICE SIGNATURES FOR SAMA7D65                       */
 /* ************************************************************************** */
 #define CHIP_JTAGID                    _UINT32_(0X05B4203F)
 #define CHIP_CIDR                      _UINT32_(0X80262110)
 #define CHIP_EXID                      _UINT32_(0X00000080)
 
 /* ************************************************************************** */
-/*   ELECTRICAL DEFINITIONS FOR SAMA7D65                                      */
+/*                    ELECTRICAL DEFINITIONS FOR SAMA7D65                     */
 /* ************************************************************************** */
-
-
 
 #ifdef __cplusplus
 }

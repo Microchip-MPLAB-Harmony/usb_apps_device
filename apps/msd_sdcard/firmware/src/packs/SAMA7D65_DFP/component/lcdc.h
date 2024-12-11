@@ -3,6 +3,8 @@
  *
  * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
  *
+ * SPDX-License-Identifier: Apache-2.0
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -17,12 +19,12 @@
  *
  */
 
-/* file generated from device description file (ATDF) version  */
+/*      file generated from device description file (ATDF) version None       */
 #ifndef _SAMA7D6_LCDC_COMPONENT_H_
 #define _SAMA7D6_LCDC_COMPONENT_H_
 
 /* ************************************************************************** */
-/*   SOFTWARE API DEFINITION FOR LCDC                                         */
+/*                      SOFTWARE API DEFINITION FOR LCDC                      */
 /* ************************************************************************** */
 
 /* -------- LCDC_HEOYFBA : (LCDC Offset: 0x00) (R/W 32) High-End Overlay Y Frame Buffer x Addr -------- */
@@ -30,7 +32,7 @@
 
 #define LCDC_HEOYFBA_FBA_Pos                  _UINT32_(0)                                          /* (LCDC_HEOYFBA) Frame Buffer Address Position */
 #define LCDC_HEOYFBA_FBA_Msk                  (_UINT32_(0xFFFFFFFF) << LCDC_HEOYFBA_FBA_Pos)       /* (LCDC_HEOYFBA) Frame Buffer Address Mask */
-#define LCDC_HEOYFBA_FBA(value)               (LCDC_HEOYFBA_FBA_Msk & (_UINT32_(value) << LCDC_HEOYFBA_FBA_Pos)) /* Assigment of value for FBA in the LCDC_HEOYFBA register */
+#define LCDC_HEOYFBA_FBA(value)               (LCDC_HEOYFBA_FBA_Msk & (_UINT32_(value) << LCDC_HEOYFBA_FBA_Pos)) /* Assignment of value for FBA in the LCDC_HEOYFBA register */
 #define LCDC_HEOYFBA_Msk                      _UINT32_(0xFFFFFFFF)                                 /* (LCDC_HEOYFBA) Register Mask  */
 
 
@@ -39,7 +41,7 @@
 
 #define LCDC_HEOCBFBA_CBFBA_Pos               _UINT32_(0)                                          /* (LCDC_HEOCBFBA) Cb or CbCr Plane Frame Buffer Address Position */
 #define LCDC_HEOCBFBA_CBFBA_Msk               (_UINT32_(0xFFFFFFFF) << LCDC_HEOCBFBA_CBFBA_Pos)    /* (LCDC_HEOCBFBA) Cb or CbCr Plane Frame Buffer Address Mask */
-#define LCDC_HEOCBFBA_CBFBA(value)            (LCDC_HEOCBFBA_CBFBA_Msk & (_UINT32_(value) << LCDC_HEOCBFBA_CBFBA_Pos)) /* Assigment of value for CBFBA in the LCDC_HEOCBFBA register */
+#define LCDC_HEOCBFBA_CBFBA(value)            (LCDC_HEOCBFBA_CBFBA_Msk & (_UINT32_(value) << LCDC_HEOCBFBA_CBFBA_Pos)) /* Assignment of value for CBFBA in the LCDC_HEOCBFBA register */
 #define LCDC_HEOCBFBA_Msk                     _UINT32_(0xFFFFFFFF)                                 /* (LCDC_HEOCBFBA) Register Mask  */
 
 
@@ -48,7 +50,7 @@
 
 #define LCDC_HEOCRFBA_CRFBA_Pos               _UINT32_(0)                                          /* (LCDC_HEOCRFBA) Cr Chroma Plane Frame Buffer Address Position */
 #define LCDC_HEOCRFBA_CRFBA_Msk               (_UINT32_(0xFFFFFFFF) << LCDC_HEOCRFBA_CRFBA_Pos)    /* (LCDC_HEOCRFBA) Cr Chroma Plane Frame Buffer Address Mask */
-#define LCDC_HEOCRFBA_CRFBA(value)            (LCDC_HEOCRFBA_CRFBA_Msk & (_UINT32_(value) << LCDC_HEOCRFBA_CRFBA_Pos)) /* Assigment of value for CRFBA in the LCDC_HEOCRFBA register */
+#define LCDC_HEOCRFBA_CRFBA(value)            (LCDC_HEOCRFBA_CRFBA_Msk & (_UINT32_(value) << LCDC_HEOCRFBA_CRFBA_Pos)) /* Assignment of value for CRFBA in the LCDC_HEOCRFBA register */
 #define LCDC_HEOCRFBA_Msk                     _UINT32_(0xFFFFFFFF)                                 /* (LCDC_HEOCRFBA) Register Mask  */
 
 
@@ -57,10 +59,10 @@
 
 #define LCDC_HEOHTAP10P_TAP0_Pos              _UINT32_(0)                                          /* (LCDC_HEOHTAP10P) Horizontal Filter Tap 0 Coefficient Position */
 #define LCDC_HEOHTAP10P_TAP0_Msk              (_UINT32_(0x1FFF) << LCDC_HEOHTAP10P_TAP0_Pos)       /* (LCDC_HEOHTAP10P) Horizontal Filter Tap 0 Coefficient Mask */
-#define LCDC_HEOHTAP10P_TAP0(value)           (LCDC_HEOHTAP10P_TAP0_Msk & (_UINT32_(value) << LCDC_HEOHTAP10P_TAP0_Pos)) /* Assigment of value for TAP0 in the LCDC_HEOHTAP10P register */
+#define LCDC_HEOHTAP10P_TAP0(value)           (LCDC_HEOHTAP10P_TAP0_Msk & (_UINT32_(value) << LCDC_HEOHTAP10P_TAP0_Pos)) /* Assignment of value for TAP0 in the LCDC_HEOHTAP10P register */
 #define LCDC_HEOHTAP10P_TAP1_Pos              _UINT32_(16)                                         /* (LCDC_HEOHTAP10P) Horitzontal Filter Tap 1 Coefficient Position */
 #define LCDC_HEOHTAP10P_TAP1_Msk              (_UINT32_(0x1FFF) << LCDC_HEOHTAP10P_TAP1_Pos)       /* (LCDC_HEOHTAP10P) Horitzontal Filter Tap 1 Coefficient Mask */
-#define LCDC_HEOHTAP10P_TAP1(value)           (LCDC_HEOHTAP10P_TAP1_Msk & (_UINT32_(value) << LCDC_HEOHTAP10P_TAP1_Pos)) /* Assigment of value for TAP1 in the LCDC_HEOHTAP10P register */
+#define LCDC_HEOHTAP10P_TAP1(value)           (LCDC_HEOHTAP10P_TAP1_Msk & (_UINT32_(value) << LCDC_HEOHTAP10P_TAP1_Pos)) /* Assignment of value for TAP1 in the LCDC_HEOHTAP10P register */
 #define LCDC_HEOHTAP10P_Msk                   _UINT32_(0x1FFF1FFF)                                 /* (LCDC_HEOHTAP10P) Register Mask  */
 
 
@@ -69,10 +71,10 @@
 
 #define LCDC_HEOHTAP32P_TAP2_Pos              _UINT32_(0)                                          /* (LCDC_HEOHTAP32P) Horizontal Filter Tap 2 Coefficient Position */
 #define LCDC_HEOHTAP32P_TAP2_Msk              (_UINT32_(0x1FFF) << LCDC_HEOHTAP32P_TAP2_Pos)       /* (LCDC_HEOHTAP32P) Horizontal Filter Tap 2 Coefficient Mask */
-#define LCDC_HEOHTAP32P_TAP2(value)           (LCDC_HEOHTAP32P_TAP2_Msk & (_UINT32_(value) << LCDC_HEOHTAP32P_TAP2_Pos)) /* Assigment of value for TAP2 in the LCDC_HEOHTAP32P register */
+#define LCDC_HEOHTAP32P_TAP2(value)           (LCDC_HEOHTAP32P_TAP2_Msk & (_UINT32_(value) << LCDC_HEOHTAP32P_TAP2_Pos)) /* Assignment of value for TAP2 in the LCDC_HEOHTAP32P register */
 #define LCDC_HEOHTAP32P_TAP3_Pos              _UINT32_(16)                                         /* (LCDC_HEOHTAP32P) Horizontal Filter Tap 3 Coefficient Position */
 #define LCDC_HEOHTAP32P_TAP3_Msk              (_UINT32_(0x1FFF) << LCDC_HEOHTAP32P_TAP3_Pos)       /* (LCDC_HEOHTAP32P) Horizontal Filter Tap 3 Coefficient Mask */
-#define LCDC_HEOHTAP32P_TAP3(value)           (LCDC_HEOHTAP32P_TAP3_Msk & (_UINT32_(value) << LCDC_HEOHTAP32P_TAP3_Pos)) /* Assigment of value for TAP3 in the LCDC_HEOHTAP32P register */
+#define LCDC_HEOHTAP32P_TAP3(value)           (LCDC_HEOHTAP32P_TAP3_Msk & (_UINT32_(value) << LCDC_HEOHTAP32P_TAP3_Pos)) /* Assignment of value for TAP3 in the LCDC_HEOHTAP32P register */
 #define LCDC_HEOHTAP32P_Msk                   _UINT32_(0x1FFF1FFF)                                 /* (LCDC_HEOHTAP32P) Register Mask  */
 
 
@@ -81,10 +83,10 @@
 
 #define LCDC_HEOVTAP10P_TAP0_Pos              _UINT32_(0)                                          /* (LCDC_HEOVTAP10P) Vertical Filter Tap 0 Coefficient Position */
 #define LCDC_HEOVTAP10P_TAP0_Msk              (_UINT32_(0x1FFF) << LCDC_HEOVTAP10P_TAP0_Pos)       /* (LCDC_HEOVTAP10P) Vertical Filter Tap 0 Coefficient Mask */
-#define LCDC_HEOVTAP10P_TAP0(value)           (LCDC_HEOVTAP10P_TAP0_Msk & (_UINT32_(value) << LCDC_HEOVTAP10P_TAP0_Pos)) /* Assigment of value for TAP0 in the LCDC_HEOVTAP10P register */
+#define LCDC_HEOVTAP10P_TAP0(value)           (LCDC_HEOVTAP10P_TAP0_Msk & (_UINT32_(value) << LCDC_HEOVTAP10P_TAP0_Pos)) /* Assignment of value for TAP0 in the LCDC_HEOVTAP10P register */
 #define LCDC_HEOVTAP10P_TAP1_Pos              _UINT32_(16)                                         /* (LCDC_HEOVTAP10P) Vertical Filter Tap 1 Coefficient Position */
 #define LCDC_HEOVTAP10P_TAP1_Msk              (_UINT32_(0x1FFF) << LCDC_HEOVTAP10P_TAP1_Pos)       /* (LCDC_HEOVTAP10P) Vertical Filter Tap 1 Coefficient Mask */
-#define LCDC_HEOVTAP10P_TAP1(value)           (LCDC_HEOVTAP10P_TAP1_Msk & (_UINT32_(value) << LCDC_HEOVTAP10P_TAP1_Pos)) /* Assigment of value for TAP1 in the LCDC_HEOVTAP10P register */
+#define LCDC_HEOVTAP10P_TAP1(value)           (LCDC_HEOVTAP10P_TAP1_Msk & (_UINT32_(value) << LCDC_HEOVTAP10P_TAP1_Pos)) /* Assignment of value for TAP1 in the LCDC_HEOVTAP10P register */
 #define LCDC_HEOVTAP10P_Msk                   _UINT32_(0x1FFF1FFF)                                 /* (LCDC_HEOVTAP10P) Register Mask  */
 
 
@@ -93,10 +95,10 @@
 
 #define LCDC_HEOVTAP32P_TAP2_Pos              _UINT32_(0)                                          /* (LCDC_HEOVTAP32P) Vertical Filter Tap 2 Coefficient Position */
 #define LCDC_HEOVTAP32P_TAP2_Msk              (_UINT32_(0x1FFF) << LCDC_HEOVTAP32P_TAP2_Pos)       /* (LCDC_HEOVTAP32P) Vertical Filter Tap 2 Coefficient Mask */
-#define LCDC_HEOVTAP32P_TAP2(value)           (LCDC_HEOVTAP32P_TAP2_Msk & (_UINT32_(value) << LCDC_HEOVTAP32P_TAP2_Pos)) /* Assigment of value for TAP2 in the LCDC_HEOVTAP32P register */
+#define LCDC_HEOVTAP32P_TAP2(value)           (LCDC_HEOVTAP32P_TAP2_Msk & (_UINT32_(value) << LCDC_HEOVTAP32P_TAP2_Pos)) /* Assignment of value for TAP2 in the LCDC_HEOVTAP32P register */
 #define LCDC_HEOVTAP32P_TAP3_Pos              _UINT32_(16)                                         /* (LCDC_HEOVTAP32P) Vertical Filter Tap 3 Coefficient Position */
 #define LCDC_HEOVTAP32P_TAP3_Msk              (_UINT32_(0x1FFF) << LCDC_HEOVTAP32P_TAP3_Pos)       /* (LCDC_HEOVTAP32P) Vertical Filter Tap 3 Coefficient Mask */
-#define LCDC_HEOVTAP32P_TAP3(value)           (LCDC_HEOVTAP32P_TAP3_Msk & (_UINT32_(value) << LCDC_HEOVTAP32P_TAP3_Pos)) /* Assigment of value for TAP3 in the LCDC_HEOVTAP32P register */
+#define LCDC_HEOVTAP32P_TAP3(value)           (LCDC_HEOVTAP32P_TAP3_Msk & (_UINT32_(value) << LCDC_HEOVTAP32P_TAP3_Pos)) /* Assignment of value for TAP3 in the LCDC_HEOVTAP32P register */
 #define LCDC_HEOVTAP32P_Msk                   _UINT32_(0x1FFF1FFF)                                 /* (LCDC_HEOVTAP32P) Register Mask  */
 
 
@@ -105,28 +107,28 @@
 
 #define LCDC_LCDCFG0_CLKPOL_Pos               _UINT32_(0)                                          /* (LCDC_LCDCFG0) LCDC Clock Polarity Position */
 #define LCDC_LCDCFG0_CLKPOL_Msk               (_UINT32_(0x1) << LCDC_LCDCFG0_CLKPOL_Pos)           /* (LCDC_LCDCFG0) LCDC Clock Polarity Mask */
-#define LCDC_LCDCFG0_CLKPOL(value)            (LCDC_LCDCFG0_CLKPOL_Msk & (_UINT32_(value) << LCDC_LCDCFG0_CLKPOL_Pos)) /* Assigment of value for CLKPOL in the LCDC_LCDCFG0 register */
+#define LCDC_LCDCFG0_CLKPOL(value)            (LCDC_LCDCFG0_CLKPOL_Msk & (_UINT32_(value) << LCDC_LCDCFG0_CLKPOL_Pos)) /* Assignment of value for CLKPOL in the LCDC_LCDCFG0 register */
 #define   LCDC_LCDCFG0_CLKPOL_0_Val           _UINT32_(0x0)                                        /* (LCDC_LCDCFG0) Data/Control signals are launched on the rising edge of the pixel clock.  */
 #define   LCDC_LCDCFG0_CLKPOL_1_Val           _UINT32_(0x1)                                        /* (LCDC_LCDCFG0) Data/Control signals are launched on the falling edge of the pixel clock.  */
-#define LCDC_LCDCFG0_CLKPOL_0                 (LCDC_LCDCFG0_CLKPOL_0_Val << LCDC_LCDCFG0_CLKPOL_Pos) /* (LCDC_LCDCFG0) Data/Control signals are launched on the rising edge of the pixel clock. Position  */
-#define LCDC_LCDCFG0_CLKPOL_1                 (LCDC_LCDCFG0_CLKPOL_1_Val << LCDC_LCDCFG0_CLKPOL_Pos) /* (LCDC_LCDCFG0) Data/Control signals are launched on the falling edge of the pixel clock. Position  */
+#define LCDC_LCDCFG0_CLKPOL_0                 (LCDC_LCDCFG0_CLKPOL_0_Val << LCDC_LCDCFG0_CLKPOL_Pos) /* (LCDC_LCDCFG0) Data/Control signals are launched on the rising edge of the pixel clock. Position */
+#define LCDC_LCDCFG0_CLKPOL_1                 (LCDC_LCDCFG0_CLKPOL_1_Val << LCDC_LCDCFG0_CLKPOL_Pos) /* (LCDC_LCDCFG0) Data/Control signals are launched on the falling edge of the pixel clock. Position */
 #define LCDC_LCDCFG0_CLKBYP_Pos               _UINT32_(1)                                          /* (LCDC_LCDCFG0) LCDC Pixel Clock Divider Bypass Position */
 #define LCDC_LCDCFG0_CLKBYP_Msk               (_UINT32_(0x1) << LCDC_LCDCFG0_CLKBYP_Pos)           /* (LCDC_LCDCFG0) LCDC Pixel Clock Divider Bypass Mask */
-#define LCDC_LCDCFG0_CLKBYP(value)            (LCDC_LCDCFG0_CLKBYP_Msk & (_UINT32_(value) << LCDC_LCDCFG0_CLKBYP_Pos)) /* Assigment of value for CLKBYP in the LCDC_LCDCFG0 register */
+#define LCDC_LCDCFG0_CLKBYP(value)            (LCDC_LCDCFG0_CLKBYP_Msk & (_UINT32_(value) << LCDC_LCDCFG0_CLKBYP_Pos)) /* Assignment of value for CLKBYP in the LCDC_LCDCFG0 register */
 #define   LCDC_LCDCFG0_CLKBYP_0_Val           _UINT32_(0x0)                                        /* (LCDC_LCDCFG0) Pixel clock divider is not bypassed. LCDC_PCK is defined with CLKDIV parameter.  */
 #define   LCDC_LCDCFG0_CLKBYP_1_Val           _UINT32_(0x1)                                        /* (LCDC_LCDCFG0) Pixel clock divider is bypassed. LCDC_PCK = GCLK clock  */
-#define LCDC_LCDCFG0_CLKBYP_0                 (LCDC_LCDCFG0_CLKBYP_0_Val << LCDC_LCDCFG0_CLKBYP_Pos) /* (LCDC_LCDCFG0) Pixel clock divider is not bypassed. LCDC_PCK is defined with CLKDIV parameter. Position  */
-#define LCDC_LCDCFG0_CLKBYP_1                 (LCDC_LCDCFG0_CLKBYP_1_Val << LCDC_LCDCFG0_CLKBYP_Pos) /* (LCDC_LCDCFG0) Pixel clock divider is bypassed. LCDC_PCK = GCLK clock Position  */
+#define LCDC_LCDCFG0_CLKBYP_0                 (LCDC_LCDCFG0_CLKBYP_0_Val << LCDC_LCDCFG0_CLKBYP_Pos) /* (LCDC_LCDCFG0) Pixel clock divider is not bypassed. LCDC_PCK is defined with CLKDIV parameter. Position */
+#define LCDC_LCDCFG0_CLKBYP_1                 (LCDC_LCDCFG0_CLKBYP_1_Val << LCDC_LCDCFG0_CLKBYP_Pos) /* (LCDC_LCDCFG0) Pixel clock divider is bypassed. LCDC_PCK = GCLK clock Position */
 #define LCDC_LCDCFG0_CLKPWMSEL_Pos            _UINT32_(3)                                          /* (LCDC_LCDCFG0) LCDC PWM Clock Source Selection Position */
 #define LCDC_LCDCFG0_CLKPWMSEL_Msk            (_UINT32_(0x1) << LCDC_LCDCFG0_CLKPWMSEL_Pos)        /* (LCDC_LCDCFG0) LCDC PWM Clock Source Selection Mask */
-#define LCDC_LCDCFG0_CLKPWMSEL(value)         (LCDC_LCDCFG0_CLKPWMSEL_Msk & (_UINT32_(value) << LCDC_LCDCFG0_CLKPWMSEL_Pos)) /* Assigment of value for CLKPWMSEL in the LCDC_LCDCFG0 register */
+#define LCDC_LCDCFG0_CLKPWMSEL(value)         (LCDC_LCDCFG0_CLKPWMSEL_Msk & (_UINT32_(value) << LCDC_LCDCFG0_CLKPWMSEL_Pos)) /* Assignment of value for CLKPWMSEL in the LCDC_LCDCFG0 register */
 #define   LCDC_LCDCFG0_CLKPWMSEL_0_Val        _UINT32_(0x0)                                        /* (LCDC_LCDCFG0) The slow clock is selected and feeds the PWM module.  */
 #define   LCDC_LCDCFG0_CLKPWMSEL_1_Val        _UINT32_(0x1)                                        /* (LCDC_LCDCFG0) The system clock is selected and feeds the PWM module.  */
-#define LCDC_LCDCFG0_CLKPWMSEL_0              (LCDC_LCDCFG0_CLKPWMSEL_0_Val << LCDC_LCDCFG0_CLKPWMSEL_Pos) /* (LCDC_LCDCFG0) The slow clock is selected and feeds the PWM module. Position  */
-#define LCDC_LCDCFG0_CLKPWMSEL_1              (LCDC_LCDCFG0_CLKPWMSEL_1_Val << LCDC_LCDCFG0_CLKPWMSEL_Pos) /* (LCDC_LCDCFG0) The system clock is selected and feeds the PWM module. Position  */
+#define LCDC_LCDCFG0_CLKPWMSEL_0              (LCDC_LCDCFG0_CLKPWMSEL_0_Val << LCDC_LCDCFG0_CLKPWMSEL_Pos) /* (LCDC_LCDCFG0) The slow clock is selected and feeds the PWM module. Position */
+#define LCDC_LCDCFG0_CLKPWMSEL_1              (LCDC_LCDCFG0_CLKPWMSEL_1_Val << LCDC_LCDCFG0_CLKPWMSEL_Pos) /* (LCDC_LCDCFG0) The system clock is selected and feeds the PWM module. Position */
 #define LCDC_LCDCFG0_CLKDIV_Pos               _UINT32_(16)                                         /* (LCDC_LCDCFG0) LCDC Clock Divider Position */
 #define LCDC_LCDCFG0_CLKDIV_Msk               (_UINT32_(0xFF) << LCDC_LCDCFG0_CLKDIV_Pos)          /* (LCDC_LCDCFG0) LCDC Clock Divider Mask */
-#define LCDC_LCDCFG0_CLKDIV(value)            (LCDC_LCDCFG0_CLKDIV_Msk & (_UINT32_(value) << LCDC_LCDCFG0_CLKDIV_Pos)) /* Assigment of value for CLKDIV in the LCDC_LCDCFG0 register */
+#define LCDC_LCDCFG0_CLKDIV(value)            (LCDC_LCDCFG0_CLKDIV_Msk & (_UINT32_(value) << LCDC_LCDCFG0_CLKDIV_Pos)) /* Assignment of value for CLKDIV in the LCDC_LCDCFG0 register */
 #define LCDC_LCDCFG0_Msk                      _UINT32_(0x00FF000B)                                 /* (LCDC_LCDCFG0) Register Mask  */
 
 
@@ -135,10 +137,10 @@
 
 #define LCDC_LCDCFG1_HSPW_Pos                 _UINT32_(0)                                          /* (LCDC_LCDCFG1) Horizontal Synchronization Pulse Width Position */
 #define LCDC_LCDCFG1_HSPW_Msk                 (_UINT32_(0x3FF) << LCDC_LCDCFG1_HSPW_Pos)           /* (LCDC_LCDCFG1) Horizontal Synchronization Pulse Width Mask */
-#define LCDC_LCDCFG1_HSPW(value)              (LCDC_LCDCFG1_HSPW_Msk & (_UINT32_(value) << LCDC_LCDCFG1_HSPW_Pos)) /* Assigment of value for HSPW in the LCDC_LCDCFG1 register */
+#define LCDC_LCDCFG1_HSPW(value)              (LCDC_LCDCFG1_HSPW_Msk & (_UINT32_(value) << LCDC_LCDCFG1_HSPW_Pos)) /* Assignment of value for HSPW in the LCDC_LCDCFG1 register */
 #define LCDC_LCDCFG1_VSPW_Pos                 _UINT32_(16)                                         /* (LCDC_LCDCFG1) Vertical Synchronization Pulse Width Position */
 #define LCDC_LCDCFG1_VSPW_Msk                 (_UINT32_(0x3FF) << LCDC_LCDCFG1_VSPW_Pos)           /* (LCDC_LCDCFG1) Vertical Synchronization Pulse Width Mask */
-#define LCDC_LCDCFG1_VSPW(value)              (LCDC_LCDCFG1_VSPW_Msk & (_UINT32_(value) << LCDC_LCDCFG1_VSPW_Pos)) /* Assigment of value for VSPW in the LCDC_LCDCFG1 register */
+#define LCDC_LCDCFG1_VSPW(value)              (LCDC_LCDCFG1_VSPW_Msk & (_UINT32_(value) << LCDC_LCDCFG1_VSPW_Pos)) /* Assignment of value for VSPW in the LCDC_LCDCFG1 register */
 #define LCDC_LCDCFG1_Msk                      _UINT32_(0x03FF03FF)                                 /* (LCDC_LCDCFG1) Register Mask  */
 
 
@@ -147,10 +149,10 @@
 
 #define LCDC_LCDCFG2_VFPW_Pos                 _UINT32_(0)                                          /* (LCDC_LCDCFG2) Vertical Front Porch Width Position */
 #define LCDC_LCDCFG2_VFPW_Msk                 (_UINT32_(0x3FF) << LCDC_LCDCFG2_VFPW_Pos)           /* (LCDC_LCDCFG2) Vertical Front Porch Width Mask */
-#define LCDC_LCDCFG2_VFPW(value)              (LCDC_LCDCFG2_VFPW_Msk & (_UINT32_(value) << LCDC_LCDCFG2_VFPW_Pos)) /* Assigment of value for VFPW in the LCDC_LCDCFG2 register */
+#define LCDC_LCDCFG2_VFPW(value)              (LCDC_LCDCFG2_VFPW_Msk & (_UINT32_(value) << LCDC_LCDCFG2_VFPW_Pos)) /* Assignment of value for VFPW in the LCDC_LCDCFG2 register */
 #define LCDC_LCDCFG2_VBPW_Pos                 _UINT32_(16)                                         /* (LCDC_LCDCFG2) Vertical Back Porch Width Position */
 #define LCDC_LCDCFG2_VBPW_Msk                 (_UINT32_(0x3FF) << LCDC_LCDCFG2_VBPW_Pos)           /* (LCDC_LCDCFG2) Vertical Back Porch Width Mask */
-#define LCDC_LCDCFG2_VBPW(value)              (LCDC_LCDCFG2_VBPW_Msk & (_UINT32_(value) << LCDC_LCDCFG2_VBPW_Pos)) /* Assigment of value for VBPW in the LCDC_LCDCFG2 register */
+#define LCDC_LCDCFG2_VBPW(value)              (LCDC_LCDCFG2_VBPW_Msk & (_UINT32_(value) << LCDC_LCDCFG2_VBPW_Pos)) /* Assignment of value for VBPW in the LCDC_LCDCFG2 register */
 #define LCDC_LCDCFG2_Msk                      _UINT32_(0x03FF03FF)                                 /* (LCDC_LCDCFG2) Register Mask  */
 
 
@@ -159,10 +161,10 @@
 
 #define LCDC_LCDCFG3_HFPW_Pos                 _UINT32_(0)                                          /* (LCDC_LCDCFG3) Horizontal Front Porch Width Position */
 #define LCDC_LCDCFG3_HFPW_Msk                 (_UINT32_(0x3FF) << LCDC_LCDCFG3_HFPW_Pos)           /* (LCDC_LCDCFG3) Horizontal Front Porch Width Mask */
-#define LCDC_LCDCFG3_HFPW(value)              (LCDC_LCDCFG3_HFPW_Msk & (_UINT32_(value) << LCDC_LCDCFG3_HFPW_Pos)) /* Assigment of value for HFPW in the LCDC_LCDCFG3 register */
+#define LCDC_LCDCFG3_HFPW(value)              (LCDC_LCDCFG3_HFPW_Msk & (_UINT32_(value) << LCDC_LCDCFG3_HFPW_Pos)) /* Assignment of value for HFPW in the LCDC_LCDCFG3 register */
 #define LCDC_LCDCFG3_HBPW_Pos                 _UINT32_(16)                                         /* (LCDC_LCDCFG3) Horizontal Back Porch Width Position */
 #define LCDC_LCDCFG3_HBPW_Msk                 (_UINT32_(0x3FF) << LCDC_LCDCFG3_HBPW_Pos)           /* (LCDC_LCDCFG3) Horizontal Back Porch Width Mask */
-#define LCDC_LCDCFG3_HBPW(value)              (LCDC_LCDCFG3_HBPW_Msk & (_UINT32_(value) << LCDC_LCDCFG3_HBPW_Pos)) /* Assigment of value for HBPW in the LCDC_LCDCFG3 register */
+#define LCDC_LCDCFG3_HBPW(value)              (LCDC_LCDCFG3_HBPW_Msk & (_UINT32_(value) << LCDC_LCDCFG3_HBPW_Pos)) /* Assignment of value for HBPW in the LCDC_LCDCFG3 register */
 #define LCDC_LCDCFG3_Msk                      _UINT32_(0x03FF03FF)                                 /* (LCDC_LCDCFG3) Register Mask  */
 
 
@@ -171,10 +173,10 @@
 
 #define LCDC_LCDCFG4_PPL_Pos                  _UINT32_(0)                                          /* (LCDC_LCDCFG4) Number of Pixels Per Line Position */
 #define LCDC_LCDCFG4_PPL_Msk                  (_UINT32_(0x7FF) << LCDC_LCDCFG4_PPL_Pos)            /* (LCDC_LCDCFG4) Number of Pixels Per Line Mask */
-#define LCDC_LCDCFG4_PPL(value)               (LCDC_LCDCFG4_PPL_Msk & (_UINT32_(value) << LCDC_LCDCFG4_PPL_Pos)) /* Assigment of value for PPL in the LCDC_LCDCFG4 register */
+#define LCDC_LCDCFG4_PPL(value)               (LCDC_LCDCFG4_PPL_Msk & (_UINT32_(value) << LCDC_LCDCFG4_PPL_Pos)) /* Assignment of value for PPL in the LCDC_LCDCFG4 register */
 #define LCDC_LCDCFG4_RPF_Pos                  _UINT32_(16)                                         /* (LCDC_LCDCFG4) Number of Active Row Per Frame Position */
 #define LCDC_LCDCFG4_RPF_Msk                  (_UINT32_(0x7FF) << LCDC_LCDCFG4_RPF_Pos)            /* (LCDC_LCDCFG4) Number of Active Row Per Frame Mask */
-#define LCDC_LCDCFG4_RPF(value)               (LCDC_LCDCFG4_RPF_Msk & (_UINT32_(value) << LCDC_LCDCFG4_RPF_Pos)) /* Assigment of value for RPF in the LCDC_LCDCFG4 register */
+#define LCDC_LCDCFG4_RPF(value)               (LCDC_LCDCFG4_RPF_Msk & (_UINT32_(value) << LCDC_LCDCFG4_RPF_Pos)) /* Assignment of value for RPF in the LCDC_LCDCFG4 register */
 #define LCDC_LCDCFG4_Msk                      _UINT32_(0x07FF07FF)                                 /* (LCDC_LCDCFG4) Register Mask  */
 
 
@@ -183,63 +185,63 @@
 
 #define LCDC_LCDCFG5_HSPOL_Pos                _UINT32_(0)                                          /* (LCDC_LCDCFG5) Horizontal Synchronization Pulse Polarity Position */
 #define LCDC_LCDCFG5_HSPOL_Msk                (_UINT32_(0x1) << LCDC_LCDCFG5_HSPOL_Pos)            /* (LCDC_LCDCFG5) Horizontal Synchronization Pulse Polarity Mask */
-#define LCDC_LCDCFG5_HSPOL(value)             (LCDC_LCDCFG5_HSPOL_Msk & (_UINT32_(value) << LCDC_LCDCFG5_HSPOL_Pos)) /* Assigment of value for HSPOL in the LCDC_LCDCFG5 register */
+#define LCDC_LCDCFG5_HSPOL(value)             (LCDC_LCDCFG5_HSPOL_Msk & (_UINT32_(value) << LCDC_LCDCFG5_HSPOL_Pos)) /* Assignment of value for HSPOL in the LCDC_LCDCFG5 register */
 #define   LCDC_LCDCFG5_HSPOL_0_Val            _UINT32_(0x0)                                        /* (LCDC_LCDCFG5) Active high.  */
 #define   LCDC_LCDCFG5_HSPOL_1_Val            _UINT32_(0x1)                                        /* (LCDC_LCDCFG5) Active low.  */
-#define LCDC_LCDCFG5_HSPOL_0                  (LCDC_LCDCFG5_HSPOL_0_Val << LCDC_LCDCFG5_HSPOL_Pos) /* (LCDC_LCDCFG5) Active high. Position  */
-#define LCDC_LCDCFG5_HSPOL_1                  (LCDC_LCDCFG5_HSPOL_1_Val << LCDC_LCDCFG5_HSPOL_Pos) /* (LCDC_LCDCFG5) Active low. Position  */
+#define LCDC_LCDCFG5_HSPOL_0                  (LCDC_LCDCFG5_HSPOL_0_Val << LCDC_LCDCFG5_HSPOL_Pos) /* (LCDC_LCDCFG5) Active high. Position */
+#define LCDC_LCDCFG5_HSPOL_1                  (LCDC_LCDCFG5_HSPOL_1_Val << LCDC_LCDCFG5_HSPOL_Pos) /* (LCDC_LCDCFG5) Active low. Position */
 #define LCDC_LCDCFG5_VSPOL_Pos                _UINT32_(1)                                          /* (LCDC_LCDCFG5) Vertical Synchronization Pulse Polarity Position */
 #define LCDC_LCDCFG5_VSPOL_Msk                (_UINT32_(0x1) << LCDC_LCDCFG5_VSPOL_Pos)            /* (LCDC_LCDCFG5) Vertical Synchronization Pulse Polarity Mask */
-#define LCDC_LCDCFG5_VSPOL(value)             (LCDC_LCDCFG5_VSPOL_Msk & (_UINT32_(value) << LCDC_LCDCFG5_VSPOL_Pos)) /* Assigment of value for VSPOL in the LCDC_LCDCFG5 register */
+#define LCDC_LCDCFG5_VSPOL(value)             (LCDC_LCDCFG5_VSPOL_Msk & (_UINT32_(value) << LCDC_LCDCFG5_VSPOL_Pos)) /* Assignment of value for VSPOL in the LCDC_LCDCFG5 register */
 #define   LCDC_LCDCFG5_VSPOL_0_Val            _UINT32_(0x0)                                        /* (LCDC_LCDCFG5) Active high.  */
 #define   LCDC_LCDCFG5_VSPOL_1_Val            _UINT32_(0x1)                                        /* (LCDC_LCDCFG5) Active low.  */
-#define LCDC_LCDCFG5_VSPOL_0                  (LCDC_LCDCFG5_VSPOL_0_Val << LCDC_LCDCFG5_VSPOL_Pos) /* (LCDC_LCDCFG5) Active high. Position  */
-#define LCDC_LCDCFG5_VSPOL_1                  (LCDC_LCDCFG5_VSPOL_1_Val << LCDC_LCDCFG5_VSPOL_Pos) /* (LCDC_LCDCFG5) Active low. Position  */
+#define LCDC_LCDCFG5_VSPOL_0                  (LCDC_LCDCFG5_VSPOL_0_Val << LCDC_LCDCFG5_VSPOL_Pos) /* (LCDC_LCDCFG5) Active high. Position */
+#define LCDC_LCDCFG5_VSPOL_1                  (LCDC_LCDCFG5_VSPOL_1_Val << LCDC_LCDCFG5_VSPOL_Pos) /* (LCDC_LCDCFG5) Active low. Position */
 #define LCDC_LCDCFG5_VSPDLYS_Pos              _UINT32_(2)                                          /* (LCDC_LCDCFG5) Vertical Synchronization Pulse Start Position */
 #define LCDC_LCDCFG5_VSPDLYS_Msk              (_UINT32_(0x1) << LCDC_LCDCFG5_VSPDLYS_Pos)          /* (LCDC_LCDCFG5) Vertical Synchronization Pulse Start Mask */
-#define LCDC_LCDCFG5_VSPDLYS(value)           (LCDC_LCDCFG5_VSPDLYS_Msk & (_UINT32_(value) << LCDC_LCDCFG5_VSPDLYS_Pos)) /* Assigment of value for VSPDLYS in the LCDC_LCDCFG5 register */
+#define LCDC_LCDCFG5_VSPDLYS(value)           (LCDC_LCDCFG5_VSPDLYS_Msk & (_UINT32_(value) << LCDC_LCDCFG5_VSPDLYS_Pos)) /* Assignment of value for VSPDLYS in the LCDC_LCDCFG5 register */
 #define   LCDC_LCDCFG5_VSPDLYS_0_Val          _UINT32_(0x0)                                        /* (LCDC_LCDCFG5) The first active edge of the vertical synchronization pulse is synchronous with the second edge of the horizontal pulse.  */
 #define   LCDC_LCDCFG5_VSPDLYS_1_Val          _UINT32_(0x1)                                        /* (LCDC_LCDCFG5) The first active edge of the vertical synchronization pulse is synchronous with the first edge of the horizontal pulse.  */
-#define LCDC_LCDCFG5_VSPDLYS_0                (LCDC_LCDCFG5_VSPDLYS_0_Val << LCDC_LCDCFG5_VSPDLYS_Pos) /* (LCDC_LCDCFG5) The first active edge of the vertical synchronization pulse is synchronous with the second edge of the horizontal pulse. Position  */
-#define LCDC_LCDCFG5_VSPDLYS_1                (LCDC_LCDCFG5_VSPDLYS_1_Val << LCDC_LCDCFG5_VSPDLYS_Pos) /* (LCDC_LCDCFG5) The first active edge of the vertical synchronization pulse is synchronous with the first edge of the horizontal pulse. Position  */
+#define LCDC_LCDCFG5_VSPDLYS_0                (LCDC_LCDCFG5_VSPDLYS_0_Val << LCDC_LCDCFG5_VSPDLYS_Pos) /* (LCDC_LCDCFG5) The first active edge of the vertical synchronization pulse is synchronous with the second edge of the horizontal pulse. Position */
+#define LCDC_LCDCFG5_VSPDLYS_1                (LCDC_LCDCFG5_VSPDLYS_1_Val << LCDC_LCDCFG5_VSPDLYS_Pos) /* (LCDC_LCDCFG5) The first active edge of the vertical synchronization pulse is synchronous with the first edge of the horizontal pulse. Position */
 #define LCDC_LCDCFG5_VSPDLYE_Pos              _UINT32_(3)                                          /* (LCDC_LCDCFG5) Vertical Synchronization Pulse End Position */
 #define LCDC_LCDCFG5_VSPDLYE_Msk              (_UINT32_(0x1) << LCDC_LCDCFG5_VSPDLYE_Pos)          /* (LCDC_LCDCFG5) Vertical Synchronization Pulse End Mask */
-#define LCDC_LCDCFG5_VSPDLYE(value)           (LCDC_LCDCFG5_VSPDLYE_Msk & (_UINT32_(value) << LCDC_LCDCFG5_VSPDLYE_Pos)) /* Assigment of value for VSPDLYE in the LCDC_LCDCFG5 register */
+#define LCDC_LCDCFG5_VSPDLYE(value)           (LCDC_LCDCFG5_VSPDLYE_Msk & (_UINT32_(value) << LCDC_LCDCFG5_VSPDLYE_Pos)) /* Assignment of value for VSPDLYE in the LCDC_LCDCFG5 register */
 #define   LCDC_LCDCFG5_VSPDLYE_0_Val          _UINT32_(0x0)                                        /* (LCDC_LCDCFG5) The second active edge of the vertical synchronization pulse is synchronous with the second edge of the horizontal pulse.  */
 #define   LCDC_LCDCFG5_VSPDLYE_1_Val          _UINT32_(0x1)                                        /* (LCDC_LCDCFG5) The second active edge of the vertical synchronization pulse is synchronous with the first edge of the horizontal pulse.  */
-#define LCDC_LCDCFG5_VSPDLYE_0                (LCDC_LCDCFG5_VSPDLYE_0_Val << LCDC_LCDCFG5_VSPDLYE_Pos) /* (LCDC_LCDCFG5) The second active edge of the vertical synchronization pulse is synchronous with the second edge of the horizontal pulse. Position  */
-#define LCDC_LCDCFG5_VSPDLYE_1                (LCDC_LCDCFG5_VSPDLYE_1_Val << LCDC_LCDCFG5_VSPDLYE_Pos) /* (LCDC_LCDCFG5) The second active edge of the vertical synchronization pulse is synchronous with the first edge of the horizontal pulse. Position  */
+#define LCDC_LCDCFG5_VSPDLYE_0                (LCDC_LCDCFG5_VSPDLYE_0_Val << LCDC_LCDCFG5_VSPDLYE_Pos) /* (LCDC_LCDCFG5) The second active edge of the vertical synchronization pulse is synchronous with the second edge of the horizontal pulse. Position */
+#define LCDC_LCDCFG5_VSPDLYE_1                (LCDC_LCDCFG5_VSPDLYE_1_Val << LCDC_LCDCFG5_VSPDLYE_Pos) /* (LCDC_LCDCFG5) The second active edge of the vertical synchronization pulse is synchronous with the first edge of the horizontal pulse. Position */
 #define LCDC_LCDCFG5_DISPPOL_Pos              _UINT32_(4)                                          /* (LCDC_LCDCFG5) Display Signal Polarity Position */
 #define LCDC_LCDCFG5_DISPPOL_Msk              (_UINT32_(0x1) << LCDC_LCDCFG5_DISPPOL_Pos)          /* (LCDC_LCDCFG5) Display Signal Polarity Mask */
-#define LCDC_LCDCFG5_DISPPOL(value)           (LCDC_LCDCFG5_DISPPOL_Msk & (_UINT32_(value) << LCDC_LCDCFG5_DISPPOL_Pos)) /* Assigment of value for DISPPOL in the LCDC_LCDCFG5 register */
+#define LCDC_LCDCFG5_DISPPOL(value)           (LCDC_LCDCFG5_DISPPOL_Msk & (_UINT32_(value) << LCDC_LCDCFG5_DISPPOL_Pos)) /* Assignment of value for DISPPOL in the LCDC_LCDCFG5 register */
 #define   LCDC_LCDCFG5_DISPPOL_0_Val          _UINT32_(0x0)                                        /* (LCDC_LCDCFG5) Active high.  */
 #define   LCDC_LCDCFG5_DISPPOL_1_Val          _UINT32_(0x1)                                        /* (LCDC_LCDCFG5) Active low.  */
-#define LCDC_LCDCFG5_DISPPOL_0                (LCDC_LCDCFG5_DISPPOL_0_Val << LCDC_LCDCFG5_DISPPOL_Pos) /* (LCDC_LCDCFG5) Active high. Position  */
-#define LCDC_LCDCFG5_DISPPOL_1                (LCDC_LCDCFG5_DISPPOL_1_Val << LCDC_LCDCFG5_DISPPOL_Pos) /* (LCDC_LCDCFG5) Active low. Position  */
+#define LCDC_LCDCFG5_DISPPOL_0                (LCDC_LCDCFG5_DISPPOL_0_Val << LCDC_LCDCFG5_DISPPOL_Pos) /* (LCDC_LCDCFG5) Active high. Position */
+#define LCDC_LCDCFG5_DISPPOL_1                (LCDC_LCDCFG5_DISPPOL_1_Val << LCDC_LCDCFG5_DISPPOL_Pos) /* (LCDC_LCDCFG5) Active low. Position */
 #define LCDC_LCDCFG5_SERRGB_Pos               _UINT32_(5)                                          /* (LCDC_LCDCFG5) Serial RGB Mode (See Figure 7-29) Position */
 #define LCDC_LCDCFG5_SERRGB_Msk               (_UINT32_(0x1) << LCDC_LCDCFG5_SERRGB_Pos)           /* (LCDC_LCDCFG5) Serial RGB Mode (See Figure 7-29) Mask */
-#define LCDC_LCDCFG5_SERRGB(value)            (LCDC_LCDCFG5_SERRGB_Msk & (_UINT32_(value) << LCDC_LCDCFG5_SERRGB_Pos)) /* Assigment of value for SERRGB in the LCDC_LCDCFG5 register */
+#define LCDC_LCDCFG5_SERRGB(value)            (LCDC_LCDCFG5_SERRGB_Msk & (_UINT32_(value) << LCDC_LCDCFG5_SERRGB_Pos)) /* Assignment of value for SERRGB in the LCDC_LCDCFG5 register */
 #define   LCDC_LCDCFG5_SERRGB_0_Val           _UINT32_(0x0)                                        /* (LCDC_LCDCFG5) Serial RGB mode is disabled.  */
 #define   LCDC_LCDCFG5_SERRGB_1_Val           _UINT32_(0x1)                                        /* (LCDC_LCDCFG5) Serial RGB mode is enabled.  */
-#define LCDC_LCDCFG5_SERRGB_0                 (LCDC_LCDCFG5_SERRGB_0_Val << LCDC_LCDCFG5_SERRGB_Pos) /* (LCDC_LCDCFG5) Serial RGB mode is disabled. Position  */
-#define LCDC_LCDCFG5_SERRGB_1                 (LCDC_LCDCFG5_SERRGB_1_Val << LCDC_LCDCFG5_SERRGB_Pos) /* (LCDC_LCDCFG5) Serial RGB mode is enabled. Position  */
+#define LCDC_LCDCFG5_SERRGB_0                 (LCDC_LCDCFG5_SERRGB_0_Val << LCDC_LCDCFG5_SERRGB_Pos) /* (LCDC_LCDCFG5) Serial RGB mode is disabled. Position */
+#define LCDC_LCDCFG5_SERRGB_1                 (LCDC_LCDCFG5_SERRGB_1_Val << LCDC_LCDCFG5_SERRGB_Pos) /* (LCDC_LCDCFG5) Serial RGB mode is enabled. Position */
 #define LCDC_LCDCFG5_DITHER_Pos               _UINT32_(6)                                          /* (LCDC_LCDCFG5) LCDC Dithering Position */
 #define LCDC_LCDCFG5_DITHER_Msk               (_UINT32_(0x1) << LCDC_LCDCFG5_DITHER_Pos)           /* (LCDC_LCDCFG5) LCDC Dithering Mask */
-#define LCDC_LCDCFG5_DITHER(value)            (LCDC_LCDCFG5_DITHER_Msk & (_UINT32_(value) << LCDC_LCDCFG5_DITHER_Pos)) /* Assigment of value for DITHER in the LCDC_LCDCFG5 register */
+#define LCDC_LCDCFG5_DITHER(value)            (LCDC_LCDCFG5_DITHER_Msk & (_UINT32_(value) << LCDC_LCDCFG5_DITHER_Pos)) /* Assignment of value for DITHER in the LCDC_LCDCFG5 register */
 #define   LCDC_LCDCFG5_DITHER_0_Val           _UINT32_(0x0)                                        /* (LCDC_LCDCFG5) Dithering logical unit is disabled.  */
 #define   LCDC_LCDCFG5_DITHER_1_Val           _UINT32_(0x1)                                        /* (LCDC_LCDCFG5) Dithering logical unit is activated.  */
-#define LCDC_LCDCFG5_DITHER_0                 (LCDC_LCDCFG5_DITHER_0_Val << LCDC_LCDCFG5_DITHER_Pos) /* (LCDC_LCDCFG5) Dithering logical unit is disabled. Position  */
-#define LCDC_LCDCFG5_DITHER_1                 (LCDC_LCDCFG5_DITHER_1_Val << LCDC_LCDCFG5_DITHER_Pos) /* (LCDC_LCDCFG5) Dithering logical unit is activated. Position  */
+#define LCDC_LCDCFG5_DITHER_0                 (LCDC_LCDCFG5_DITHER_0_Val << LCDC_LCDCFG5_DITHER_Pos) /* (LCDC_LCDCFG5) Dithering logical unit is disabled. Position */
+#define LCDC_LCDCFG5_DITHER_1                 (LCDC_LCDCFG5_DITHER_1_Val << LCDC_LCDCFG5_DITHER_Pos) /* (LCDC_LCDCFG5) Dithering logical unit is activated. Position */
 #define LCDC_LCDCFG5_DISPDLY_Pos              _UINT32_(7)                                          /* (LCDC_LCDCFG5) LCDC Display Power Signal Synchronization Position */
 #define LCDC_LCDCFG5_DISPDLY_Msk              (_UINT32_(0x1) << LCDC_LCDCFG5_DISPDLY_Pos)          /* (LCDC_LCDCFG5) LCDC Display Power Signal Synchronization Mask */
-#define LCDC_LCDCFG5_DISPDLY(value)           (LCDC_LCDCFG5_DISPDLY_Msk & (_UINT32_(value) << LCDC_LCDCFG5_DISPDLY_Pos)) /* Assigment of value for DISPDLY in the LCDC_LCDCFG5 register */
+#define LCDC_LCDCFG5_DISPDLY(value)           (LCDC_LCDCFG5_DISPDLY_Msk & (_UINT32_(value) << LCDC_LCDCFG5_DISPDLY_Pos)) /* Assignment of value for DISPDLY in the LCDC_LCDCFG5 register */
 #define   LCDC_LCDCFG5_DISPDLY_0_Val          _UINT32_(0x0)                                        /* (LCDC_LCDCFG5) The LCDC_DISP signal is asserted synchronously with the second active edge of the horizontal pulse.  */
 #define   LCDC_LCDCFG5_DISPDLY_1_Val          _UINT32_(0x1)                                        /* (LCDC_LCDCFG5) The LCDC_DISP signal is asserted asynchronously with both edges of the horizontal pulse.  */
-#define LCDC_LCDCFG5_DISPDLY_0                (LCDC_LCDCFG5_DISPDLY_0_Val << LCDC_LCDCFG5_DISPDLY_Pos) /* (LCDC_LCDCFG5) The LCDC_DISP signal is asserted synchronously with the second active edge of the horizontal pulse. Position  */
-#define LCDC_LCDCFG5_DISPDLY_1                (LCDC_LCDCFG5_DISPDLY_1_Val << LCDC_LCDCFG5_DISPDLY_Pos) /* (LCDC_LCDCFG5) The LCDC_DISP signal is asserted asynchronously with both edges of the horizontal pulse. Position  */
+#define LCDC_LCDCFG5_DISPDLY_0                (LCDC_LCDCFG5_DISPDLY_0_Val << LCDC_LCDCFG5_DISPDLY_Pos) /* (LCDC_LCDCFG5) The LCDC_DISP signal is asserted synchronously with the second active edge of the horizontal pulse. Position */
+#define LCDC_LCDCFG5_DISPDLY_1                (LCDC_LCDCFG5_DISPDLY_1_Val << LCDC_LCDCFG5_DISPDLY_Pos) /* (LCDC_LCDCFG5) The LCDC_DISP signal is asserted asynchronously with both edges of the horizontal pulse. Position */
 #define LCDC_LCDCFG5_MODE_Pos                 _UINT32_(8)                                          /* (LCDC_LCDCFG5) LCDC Output Mode Position */
 #define LCDC_LCDCFG5_MODE_Msk                 (_UINT32_(0x7) << LCDC_LCDCFG5_MODE_Pos)             /* (LCDC_LCDCFG5) LCDC Output Mode Mask */
-#define LCDC_LCDCFG5_MODE(value)              (LCDC_LCDCFG5_MODE_Msk & (_UINT32_(value) << LCDC_LCDCFG5_MODE_Pos)) /* Assigment of value for MODE in the LCDC_LCDCFG5 register */
+#define LCDC_LCDCFG5_MODE(value)              (LCDC_LCDCFG5_MODE_Msk & (_UINT32_(value) << LCDC_LCDCFG5_MODE_Pos)) /* Assignment of value for MODE in the LCDC_LCDCFG5 register */
 #define   LCDC_LCDCFG5_MODE_OUTPUT_12BPP_Val  _UINT32_(0x0)                                        /* (LCDC_LCDCFG5) LCD Output mode is set to 12 bits per pixel  */
 #define   LCDC_LCDCFG5_MODE_OUTPUT_DPI_16BPPCFG1_Val _UINT32_(0x0)                                        /* (LCDC_LCDCFG5) LCD Output mode is set to 16 bits per pixel Configuration 1  */
 #define   LCDC_LCDCFG5_MODE_OUTPUT_16BPP_Val  _UINT32_(0x1)                                        /* (LCDC_LCDCFG5) LCD Output mode is set to 16 bits per pixel  */
@@ -250,40 +252,40 @@
 #define   LCDC_LCDCFG5_MODE_OUTPUT_DPI_18BPPCFG1_Val _UINT32_(0x3)                                        /* (LCDC_LCDCFG5) LCD Output mode is set to 18 bits per pixel Configuration 1  */
 #define   LCDC_LCDCFG5_MODE_OUTPUT_DPI_18BPPCFG2_Val _UINT32_(0x4)                                        /* (LCDC_LCDCFG5) LCD Output mode is set to 18 bits per pixel Configuration 2  */
 #define   LCDC_LCDCFG5_MODE_OUTPUT_DPI_24BPP_Val _UINT32_(0x5)                                        /* (LCDC_LCDCFG5) LCD Output mode is set to 24 bits per pixel  */
-#define LCDC_LCDCFG5_MODE_OUTPUT_12BPP        (LCDC_LCDCFG5_MODE_OUTPUT_12BPP_Val << LCDC_LCDCFG5_MODE_Pos) /* (LCDC_LCDCFG5) LCD Output mode is set to 12 bits per pixel Position  */
-#define LCDC_LCDCFG5_MODE_OUTPUT_DPI_16BPPCFG1 (LCDC_LCDCFG5_MODE_OUTPUT_DPI_16BPPCFG1_Val << LCDC_LCDCFG5_MODE_Pos) /* (LCDC_LCDCFG5) LCD Output mode is set to 16 bits per pixel Configuration 1 Position  */
-#define LCDC_LCDCFG5_MODE_OUTPUT_16BPP        (LCDC_LCDCFG5_MODE_OUTPUT_16BPP_Val << LCDC_LCDCFG5_MODE_Pos) /* (LCDC_LCDCFG5) LCD Output mode is set to 16 bits per pixel Position  */
-#define LCDC_LCDCFG5_MODE_OUTPUT_DPI_16BPPCFG2 (LCDC_LCDCFG5_MODE_OUTPUT_DPI_16BPPCFG2_Val << LCDC_LCDCFG5_MODE_Pos) /* (LCDC_LCDCFG5) LCD Output mode is set to 16 bits per pixel Configuration 2 Position  */
-#define LCDC_LCDCFG5_MODE_OUTPUT_18BPP        (LCDC_LCDCFG5_MODE_OUTPUT_18BPP_Val << LCDC_LCDCFG5_MODE_Pos) /* (LCDC_LCDCFG5) LCD Output mode is set to 18 bits per pixel Position  */
-#define LCDC_LCDCFG5_MODE_OUTPUT_DPI_16BPPCFG3 (LCDC_LCDCFG5_MODE_OUTPUT_DPI_16BPPCFG3_Val << LCDC_LCDCFG5_MODE_Pos) /* (LCDC_LCDCFG5) LCD Output mode is set to 16 bits per pixel Configuration 3 Position  */
-#define LCDC_LCDCFG5_MODE_OUTPUT_24BPP        (LCDC_LCDCFG5_MODE_OUTPUT_24BPP_Val << LCDC_LCDCFG5_MODE_Pos) /* (LCDC_LCDCFG5) LCD Output mode is set to 24 bits per pixel Position  */
-#define LCDC_LCDCFG5_MODE_OUTPUT_DPI_18BPPCFG1 (LCDC_LCDCFG5_MODE_OUTPUT_DPI_18BPPCFG1_Val << LCDC_LCDCFG5_MODE_Pos) /* (LCDC_LCDCFG5) LCD Output mode is set to 18 bits per pixel Configuration 1 Position  */
-#define LCDC_LCDCFG5_MODE_OUTPUT_DPI_18BPPCFG2 (LCDC_LCDCFG5_MODE_OUTPUT_DPI_18BPPCFG2_Val << LCDC_LCDCFG5_MODE_Pos) /* (LCDC_LCDCFG5) LCD Output mode is set to 18 bits per pixel Configuration 2 Position  */
-#define LCDC_LCDCFG5_MODE_OUTPUT_DPI_24BPP    (LCDC_LCDCFG5_MODE_OUTPUT_DPI_24BPP_Val << LCDC_LCDCFG5_MODE_Pos) /* (LCDC_LCDCFG5) LCD Output mode is set to 24 bits per pixel Position  */
+#define LCDC_LCDCFG5_MODE_OUTPUT_12BPP        (LCDC_LCDCFG5_MODE_OUTPUT_12BPP_Val << LCDC_LCDCFG5_MODE_Pos) /* (LCDC_LCDCFG5) LCD Output mode is set to 12 bits per pixel Position */
+#define LCDC_LCDCFG5_MODE_OUTPUT_DPI_16BPPCFG1 (LCDC_LCDCFG5_MODE_OUTPUT_DPI_16BPPCFG1_Val << LCDC_LCDCFG5_MODE_Pos) /* (LCDC_LCDCFG5) LCD Output mode is set to 16 bits per pixel Configuration 1 Position */
+#define LCDC_LCDCFG5_MODE_OUTPUT_16BPP        (LCDC_LCDCFG5_MODE_OUTPUT_16BPP_Val << LCDC_LCDCFG5_MODE_Pos) /* (LCDC_LCDCFG5) LCD Output mode is set to 16 bits per pixel Position */
+#define LCDC_LCDCFG5_MODE_OUTPUT_DPI_16BPPCFG2 (LCDC_LCDCFG5_MODE_OUTPUT_DPI_16BPPCFG2_Val << LCDC_LCDCFG5_MODE_Pos) /* (LCDC_LCDCFG5) LCD Output mode is set to 16 bits per pixel Configuration 2 Position */
+#define LCDC_LCDCFG5_MODE_OUTPUT_18BPP        (LCDC_LCDCFG5_MODE_OUTPUT_18BPP_Val << LCDC_LCDCFG5_MODE_Pos) /* (LCDC_LCDCFG5) LCD Output mode is set to 18 bits per pixel Position */
+#define LCDC_LCDCFG5_MODE_OUTPUT_DPI_16BPPCFG3 (LCDC_LCDCFG5_MODE_OUTPUT_DPI_16BPPCFG3_Val << LCDC_LCDCFG5_MODE_Pos) /* (LCDC_LCDCFG5) LCD Output mode is set to 16 bits per pixel Configuration 3 Position */
+#define LCDC_LCDCFG5_MODE_OUTPUT_24BPP        (LCDC_LCDCFG5_MODE_OUTPUT_24BPP_Val << LCDC_LCDCFG5_MODE_Pos) /* (LCDC_LCDCFG5) LCD Output mode is set to 24 bits per pixel Position */
+#define LCDC_LCDCFG5_MODE_OUTPUT_DPI_18BPPCFG1 (LCDC_LCDCFG5_MODE_OUTPUT_DPI_18BPPCFG1_Val << LCDC_LCDCFG5_MODE_Pos) /* (LCDC_LCDCFG5) LCD Output mode is set to 18 bits per pixel Configuration 1 Position */
+#define LCDC_LCDCFG5_MODE_OUTPUT_DPI_18BPPCFG2 (LCDC_LCDCFG5_MODE_OUTPUT_DPI_18BPPCFG2_Val << LCDC_LCDCFG5_MODE_Pos) /* (LCDC_LCDCFG5) LCD Output mode is set to 18 bits per pixel Configuration 2 Position */
+#define LCDC_LCDCFG5_MODE_OUTPUT_DPI_24BPP    (LCDC_LCDCFG5_MODE_OUTPUT_DPI_24BPP_Val << LCDC_LCDCFG5_MODE_Pos) /* (LCDC_LCDCFG5) LCD Output mode is set to 24 bits per pixel Position */
 #define LCDC_LCDCFG5_DPI_Pos                  _UINT32_(11)                                         /* (LCDC_LCDCFG5) Display Pixel Interface Compatible Mode Position */
 #define LCDC_LCDCFG5_DPI_Msk                  (_UINT32_(0x1) << LCDC_LCDCFG5_DPI_Pos)              /* (LCDC_LCDCFG5) Display Pixel Interface Compatible Mode Mask */
-#define LCDC_LCDCFG5_DPI(value)               (LCDC_LCDCFG5_DPI_Msk & (_UINT32_(value) << LCDC_LCDCFG5_DPI_Pos)) /* Assigment of value for DPI in the LCDC_LCDCFG5 register */
+#define LCDC_LCDCFG5_DPI(value)               (LCDC_LCDCFG5_DPI_Msk & (_UINT32_(value) << LCDC_LCDCFG5_DPI_Pos)) /* Assignment of value for DPI in the LCDC_LCDCFG5 register */
 #define   LCDC_LCDCFG5_DPI_0_Val              _UINT32_(0x0)                                        /* (LCDC_LCDCFG5) Legacy pixel mapping.  */
 #define   LCDC_LCDCFG5_DPI_1_Val              _UINT32_(0x1)                                        /* (LCDC_LCDCFG5) Activates the DPI compliant pixel stream. See field MODE: LCDC Output Mode  */
-#define LCDC_LCDCFG5_DPI_0                    (LCDC_LCDCFG5_DPI_0_Val << LCDC_LCDCFG5_DPI_Pos)     /* (LCDC_LCDCFG5) Legacy pixel mapping. Position  */
-#define LCDC_LCDCFG5_DPI_1                    (LCDC_LCDCFG5_DPI_1_Val << LCDC_LCDCFG5_DPI_Pos)     /* (LCDC_LCDCFG5) Activates the DPI compliant pixel stream. See field MODE: LCDC Output Mode Position  */
+#define LCDC_LCDCFG5_DPI_0                    (LCDC_LCDCFG5_DPI_0_Val << LCDC_LCDCFG5_DPI_Pos)     /* (LCDC_LCDCFG5) Legacy pixel mapping. Position */
+#define LCDC_LCDCFG5_DPI_1                    (LCDC_LCDCFG5_DPI_1_Val << LCDC_LCDCFG5_DPI_Pos)     /* (LCDC_LCDCFG5) Activates the DPI compliant pixel stream. See field MODE: LCDC Output Mode Position */
 #define LCDC_LCDCFG5_VSPSU_Pos                _UINT32_(12)                                         /* (LCDC_LCDCFG5) LCDC Vertical Synchronization Pulse Setup Configuration Position */
 #define LCDC_LCDCFG5_VSPSU_Msk                (_UINT32_(0x1) << LCDC_LCDCFG5_VSPSU_Pos)            /* (LCDC_LCDCFG5) LCDC Vertical Synchronization Pulse Setup Configuration Mask */
-#define LCDC_LCDCFG5_VSPSU(value)             (LCDC_LCDCFG5_VSPSU_Msk & (_UINT32_(value) << LCDC_LCDCFG5_VSPSU_Pos)) /* Assigment of value for VSPSU in the LCDC_LCDCFG5 register */
+#define LCDC_LCDCFG5_VSPSU(value)             (LCDC_LCDCFG5_VSPSU_Msk & (_UINT32_(value) << LCDC_LCDCFG5_VSPSU_Pos)) /* Assignment of value for VSPSU in the LCDC_LCDCFG5 register */
 #define   LCDC_LCDCFG5_VSPSU_0_Val            _UINT32_(0x0)                                        /* (LCDC_LCDCFG5) The vertical synchronization pulse is asserted synchronously with horizontal pulse edge.  */
 #define   LCDC_LCDCFG5_VSPSU_1_Val            _UINT32_(0x1)                                        /* (LCDC_LCDCFG5) The vertical synchronization pulse is asserted one pixel clock cycle before the horizontal pulse.  */
-#define LCDC_LCDCFG5_VSPSU_0                  (LCDC_LCDCFG5_VSPSU_0_Val << LCDC_LCDCFG5_VSPSU_Pos) /* (LCDC_LCDCFG5) The vertical synchronization pulse is asserted synchronously with horizontal pulse edge. Position  */
-#define LCDC_LCDCFG5_VSPSU_1                  (LCDC_LCDCFG5_VSPSU_1_Val << LCDC_LCDCFG5_VSPSU_Pos) /* (LCDC_LCDCFG5) The vertical synchronization pulse is asserted one pixel clock cycle before the horizontal pulse. Position  */
+#define LCDC_LCDCFG5_VSPSU_0                  (LCDC_LCDCFG5_VSPSU_0_Val << LCDC_LCDCFG5_VSPSU_Pos) /* (LCDC_LCDCFG5) The vertical synchronization pulse is asserted synchronously with horizontal pulse edge. Position */
+#define LCDC_LCDCFG5_VSPSU_1                  (LCDC_LCDCFG5_VSPSU_1_Val << LCDC_LCDCFG5_VSPSU_Pos) /* (LCDC_LCDCFG5) The vertical synchronization pulse is asserted one pixel clock cycle before the horizontal pulse. Position */
 #define LCDC_LCDCFG5_VSPHO_Pos                _UINT32_(13)                                         /* (LCDC_LCDCFG5) LCDC Vertical Synchronization Pulse Hold Configuration Position */
 #define LCDC_LCDCFG5_VSPHO_Msk                (_UINT32_(0x1) << LCDC_LCDCFG5_VSPHO_Pos)            /* (LCDC_LCDCFG5) LCDC Vertical Synchronization Pulse Hold Configuration Mask */
-#define LCDC_LCDCFG5_VSPHO(value)             (LCDC_LCDCFG5_VSPHO_Msk & (_UINT32_(value) << LCDC_LCDCFG5_VSPHO_Pos)) /* Assigment of value for VSPHO in the LCDC_LCDCFG5 register */
+#define LCDC_LCDCFG5_VSPHO(value)             (LCDC_LCDCFG5_VSPHO_Msk & (_UINT32_(value) << LCDC_LCDCFG5_VSPHO_Pos)) /* Assignment of value for VSPHO in the LCDC_LCDCFG5 register */
 #define   LCDC_LCDCFG5_VSPHO_0_Val            _UINT32_(0x0)                                        /* (LCDC_LCDCFG5) The vertical synchronization pulse is asserted synchronously with horizontal pulse edge.  */
 #define   LCDC_LCDCFG5_VSPHO_1_Val            _UINT32_(0x1)                                        /* (LCDC_LCDCFG5) The vertical synchronization pulse is held active one pixel clock cycle after the horizontal pulse.  */
-#define LCDC_LCDCFG5_VSPHO_0                  (LCDC_LCDCFG5_VSPHO_0_Val << LCDC_LCDCFG5_VSPHO_Pos) /* (LCDC_LCDCFG5) The vertical synchronization pulse is asserted synchronously with horizontal pulse edge. Position  */
-#define LCDC_LCDCFG5_VSPHO_1                  (LCDC_LCDCFG5_VSPHO_1_Val << LCDC_LCDCFG5_VSPHO_Pos) /* (LCDC_LCDCFG5) The vertical synchronization pulse is held active one pixel clock cycle after the horizontal pulse. Position  */
+#define LCDC_LCDCFG5_VSPHO_0                  (LCDC_LCDCFG5_VSPHO_0_Val << LCDC_LCDCFG5_VSPHO_Pos) /* (LCDC_LCDCFG5) The vertical synchronization pulse is asserted synchronously with horizontal pulse edge. Position */
+#define LCDC_LCDCFG5_VSPHO_1                  (LCDC_LCDCFG5_VSPHO_1_Val << LCDC_LCDCFG5_VSPHO_Pos) /* (LCDC_LCDCFG5) The vertical synchronization pulse is held active one pixel clock cycle after the horizontal pulse. Position */
 #define LCDC_LCDCFG5_GUARDTIME_Pos            _UINT32_(16)                                         /* (LCDC_LCDCFG5) LCD Display Guard Time Position */
 #define LCDC_LCDCFG5_GUARDTIME_Msk            (_UINT32_(0xFF) << LCDC_LCDCFG5_GUARDTIME_Pos)       /* (LCDC_LCDCFG5) LCD Display Guard Time Mask */
-#define LCDC_LCDCFG5_GUARDTIME(value)         (LCDC_LCDCFG5_GUARDTIME_Msk & (_UINT32_(value) << LCDC_LCDCFG5_GUARDTIME_Pos)) /* Assigment of value for GUARDTIME in the LCDC_LCDCFG5 register */
+#define LCDC_LCDCFG5_GUARDTIME(value)         (LCDC_LCDCFG5_GUARDTIME_Msk & (_UINT32_(value) << LCDC_LCDCFG5_GUARDTIME_Pos)) /* Assignment of value for GUARDTIME in the LCDC_LCDCFG5 register */
 #define LCDC_LCDCFG5_Msk                      _UINT32_(0x00FF3FFF)                                 /* (LCDC_LCDCFG5) Register Mask  */
 
 
@@ -292,7 +294,7 @@
 
 #define LCDC_LCDCFG6_PWMPS_Pos                _UINT32_(0)                                          /* (LCDC_LCDCFG6) PWM Clock Prescaler Position */
 #define LCDC_LCDCFG6_PWMPS_Msk                (_UINT32_(0xF) << LCDC_LCDCFG6_PWMPS_Pos)            /* (LCDC_LCDCFG6) PWM Clock Prescaler Mask */
-#define LCDC_LCDCFG6_PWMPS(value)             (LCDC_LCDCFG6_PWMPS_Msk & (_UINT32_(value) << LCDC_LCDCFG6_PWMPS_Pos)) /* Assigment of value for PWMPS in the LCDC_LCDCFG6 register */
+#define LCDC_LCDCFG6_PWMPS(value)             (LCDC_LCDCFG6_PWMPS_Msk & (_UINT32_(value) << LCDC_LCDCFG6_PWMPS_Pos)) /* Assignment of value for PWMPS in the LCDC_LCDCFG6 register */
 #define   LCDC_LCDCFG6_PWMPS_DIV_1_Val        _UINT32_(0x0)                                        /* (LCDC_LCDCFG6) The counter advances at a rate of fCOUNTER = fPWM_SELECTED_CLOCK  */
 #define   LCDC_LCDCFG6_PWMPS_DIV_2_Val        _UINT32_(0x1)                                        /* (LCDC_LCDCFG6) The counter advances at a rate of fCOUNTER = fPWM_SELECTED_CLOCK/2  */
 #define   LCDC_LCDCFG6_PWMPS_DIV_4_Val        _UINT32_(0x2)                                        /* (LCDC_LCDCFG6) The counter advances at a rate of fCOUNTER = fPWM_SELECTED_CLOCK/4  */
@@ -309,32 +311,32 @@
 #define   LCDC_LCDCFG6_PWMPS_DIV_8192_Val     _UINT32_(0xD)                                        /* (LCDC_LCDCFG6) The counter advances at a of rate fCOUNTER = fPWM_SELECTED_CLOCK/8192  */
 #define   LCDC_LCDCFG6_PWMPS_DIV_16384_Val    _UINT32_(0xE)                                        /* (LCDC_LCDCFG6) The counter advances at a of rate fCOUNTER = fPWM_SELECTED_CLOCK/16384  */
 #define   LCDC_LCDCFG6_PWMPS_DIV_32768_Val    _UINT32_(0xF)                                        /* (LCDC_LCDCFG6) The counter advances at a of rate fCOUNTER = fPWM_SELECTED_CLOCK/32768  */
-#define LCDC_LCDCFG6_PWMPS_DIV_1              (LCDC_LCDCFG6_PWMPS_DIV_1_Val << LCDC_LCDCFG6_PWMPS_Pos) /* (LCDC_LCDCFG6) The counter advances at a rate of fCOUNTER = fPWM_SELECTED_CLOCK Position  */
-#define LCDC_LCDCFG6_PWMPS_DIV_2              (LCDC_LCDCFG6_PWMPS_DIV_2_Val << LCDC_LCDCFG6_PWMPS_Pos) /* (LCDC_LCDCFG6) The counter advances at a rate of fCOUNTER = fPWM_SELECTED_CLOCK/2 Position  */
-#define LCDC_LCDCFG6_PWMPS_DIV_4              (LCDC_LCDCFG6_PWMPS_DIV_4_Val << LCDC_LCDCFG6_PWMPS_Pos) /* (LCDC_LCDCFG6) The counter advances at a rate of fCOUNTER = fPWM_SELECTED_CLOCK/4 Position  */
-#define LCDC_LCDCFG6_PWMPS_DIV_8              (LCDC_LCDCFG6_PWMPS_DIV_8_Val << LCDC_LCDCFG6_PWMPS_Pos) /* (LCDC_LCDCFG6) The counter advances at a rate of fCOUNTER = fPWM_SELECTED_CLOCK/8 Position  */
-#define LCDC_LCDCFG6_PWMPS_DIV_16             (LCDC_LCDCFG6_PWMPS_DIV_16_Val << LCDC_LCDCFG6_PWMPS_Pos) /* (LCDC_LCDCFG6) The counter advances at a rate of fCOUNTER = fPWM_SELECTED_CLOCK/16 Position  */
-#define LCDC_LCDCFG6_PWMPS_DIV_32             (LCDC_LCDCFG6_PWMPS_DIV_32_Val << LCDC_LCDCFG6_PWMPS_Pos) /* (LCDC_LCDCFG6) The counter advances at a of rate fCOUNTER = fPWM_SELECTED_CLOCK/32 Position  */
-#define LCDC_LCDCFG6_PWMPS_DIV_64             (LCDC_LCDCFG6_PWMPS_DIV_64_Val << LCDC_LCDCFG6_PWMPS_Pos) /* (LCDC_LCDCFG6) The counter advances at a of rate fCOUNTER = fPWM_SELECTED_CLOCK/64 Position  */
-#define LCDC_LCDCFG6_PWMPS_DIV_128            (LCDC_LCDCFG6_PWMPS_DIV_128_Val << LCDC_LCDCFG6_PWMPS_Pos) /* (LCDC_LCDCFG6) The counter advances at a of rate fCOUNTER = fPWM_SELECTED_CLOCK/128 Position  */
-#define LCDC_LCDCFG6_PWMPS_DIV_256            (LCDC_LCDCFG6_PWMPS_DIV_256_Val << LCDC_LCDCFG6_PWMPS_Pos) /* (LCDC_LCDCFG6) The counter advances at a of rate fCOUNTER = fPWM_SELECTED_CLOCK/256 Position  */
-#define LCDC_LCDCFG6_PWMPS_DIV_512            (LCDC_LCDCFG6_PWMPS_DIV_512_Val << LCDC_LCDCFG6_PWMPS_Pos) /* (LCDC_LCDCFG6) The counter advances at a of rate fCOUNTER = fPWM_SELECTED_CLOCK/512 Position  */
-#define LCDC_LCDCFG6_PWMPS_DIV_1024           (LCDC_LCDCFG6_PWMPS_DIV_1024_Val << LCDC_LCDCFG6_PWMPS_Pos) /* (LCDC_LCDCFG6) The counter advances at a of rate fCOUNTER = fPWM_SELECTED_CLOCK/1024 Position  */
-#define LCDC_LCDCFG6_PWMPS_DIV_2048           (LCDC_LCDCFG6_PWMPS_DIV_2048_Val << LCDC_LCDCFG6_PWMPS_Pos) /* (LCDC_LCDCFG6) The counter advances at a of rate fCOUNTER = fPWM_SELECTED_CLOCK/2048 Position  */
-#define LCDC_LCDCFG6_PWMPS_DIV_4096           (LCDC_LCDCFG6_PWMPS_DIV_4096_Val << LCDC_LCDCFG6_PWMPS_Pos) /* (LCDC_LCDCFG6) The counter advances at a of rate fCOUNTER = fPWM_SELECTED_CLOCK/4096 Position  */
-#define LCDC_LCDCFG6_PWMPS_DIV_8192           (LCDC_LCDCFG6_PWMPS_DIV_8192_Val << LCDC_LCDCFG6_PWMPS_Pos) /* (LCDC_LCDCFG6) The counter advances at a of rate fCOUNTER = fPWM_SELECTED_CLOCK/8192 Position  */
-#define LCDC_LCDCFG6_PWMPS_DIV_16384          (LCDC_LCDCFG6_PWMPS_DIV_16384_Val << LCDC_LCDCFG6_PWMPS_Pos) /* (LCDC_LCDCFG6) The counter advances at a of rate fCOUNTER = fPWM_SELECTED_CLOCK/16384 Position  */
-#define LCDC_LCDCFG6_PWMPS_DIV_32768          (LCDC_LCDCFG6_PWMPS_DIV_32768_Val << LCDC_LCDCFG6_PWMPS_Pos) /* (LCDC_LCDCFG6) The counter advances at a of rate fCOUNTER = fPWM_SELECTED_CLOCK/32768 Position  */
+#define LCDC_LCDCFG6_PWMPS_DIV_1              (LCDC_LCDCFG6_PWMPS_DIV_1_Val << LCDC_LCDCFG6_PWMPS_Pos) /* (LCDC_LCDCFG6) The counter advances at a rate of fCOUNTER = fPWM_SELECTED_CLOCK Position */
+#define LCDC_LCDCFG6_PWMPS_DIV_2              (LCDC_LCDCFG6_PWMPS_DIV_2_Val << LCDC_LCDCFG6_PWMPS_Pos) /* (LCDC_LCDCFG6) The counter advances at a rate of fCOUNTER = fPWM_SELECTED_CLOCK/2 Position */
+#define LCDC_LCDCFG6_PWMPS_DIV_4              (LCDC_LCDCFG6_PWMPS_DIV_4_Val << LCDC_LCDCFG6_PWMPS_Pos) /* (LCDC_LCDCFG6) The counter advances at a rate of fCOUNTER = fPWM_SELECTED_CLOCK/4 Position */
+#define LCDC_LCDCFG6_PWMPS_DIV_8              (LCDC_LCDCFG6_PWMPS_DIV_8_Val << LCDC_LCDCFG6_PWMPS_Pos) /* (LCDC_LCDCFG6) The counter advances at a rate of fCOUNTER = fPWM_SELECTED_CLOCK/8 Position */
+#define LCDC_LCDCFG6_PWMPS_DIV_16             (LCDC_LCDCFG6_PWMPS_DIV_16_Val << LCDC_LCDCFG6_PWMPS_Pos) /* (LCDC_LCDCFG6) The counter advances at a rate of fCOUNTER = fPWM_SELECTED_CLOCK/16 Position */
+#define LCDC_LCDCFG6_PWMPS_DIV_32             (LCDC_LCDCFG6_PWMPS_DIV_32_Val << LCDC_LCDCFG6_PWMPS_Pos) /* (LCDC_LCDCFG6) The counter advances at a of rate fCOUNTER = fPWM_SELECTED_CLOCK/32 Position */
+#define LCDC_LCDCFG6_PWMPS_DIV_64             (LCDC_LCDCFG6_PWMPS_DIV_64_Val << LCDC_LCDCFG6_PWMPS_Pos) /* (LCDC_LCDCFG6) The counter advances at a of rate fCOUNTER = fPWM_SELECTED_CLOCK/64 Position */
+#define LCDC_LCDCFG6_PWMPS_DIV_128            (LCDC_LCDCFG6_PWMPS_DIV_128_Val << LCDC_LCDCFG6_PWMPS_Pos) /* (LCDC_LCDCFG6) The counter advances at a of rate fCOUNTER = fPWM_SELECTED_CLOCK/128 Position */
+#define LCDC_LCDCFG6_PWMPS_DIV_256            (LCDC_LCDCFG6_PWMPS_DIV_256_Val << LCDC_LCDCFG6_PWMPS_Pos) /* (LCDC_LCDCFG6) The counter advances at a of rate fCOUNTER = fPWM_SELECTED_CLOCK/256 Position */
+#define LCDC_LCDCFG6_PWMPS_DIV_512            (LCDC_LCDCFG6_PWMPS_DIV_512_Val << LCDC_LCDCFG6_PWMPS_Pos) /* (LCDC_LCDCFG6) The counter advances at a of rate fCOUNTER = fPWM_SELECTED_CLOCK/512 Position */
+#define LCDC_LCDCFG6_PWMPS_DIV_1024           (LCDC_LCDCFG6_PWMPS_DIV_1024_Val << LCDC_LCDCFG6_PWMPS_Pos) /* (LCDC_LCDCFG6) The counter advances at a of rate fCOUNTER = fPWM_SELECTED_CLOCK/1024 Position */
+#define LCDC_LCDCFG6_PWMPS_DIV_2048           (LCDC_LCDCFG6_PWMPS_DIV_2048_Val << LCDC_LCDCFG6_PWMPS_Pos) /* (LCDC_LCDCFG6) The counter advances at a of rate fCOUNTER = fPWM_SELECTED_CLOCK/2048 Position */
+#define LCDC_LCDCFG6_PWMPS_DIV_4096           (LCDC_LCDCFG6_PWMPS_DIV_4096_Val << LCDC_LCDCFG6_PWMPS_Pos) /* (LCDC_LCDCFG6) The counter advances at a of rate fCOUNTER = fPWM_SELECTED_CLOCK/4096 Position */
+#define LCDC_LCDCFG6_PWMPS_DIV_8192           (LCDC_LCDCFG6_PWMPS_DIV_8192_Val << LCDC_LCDCFG6_PWMPS_Pos) /* (LCDC_LCDCFG6) The counter advances at a of rate fCOUNTER = fPWM_SELECTED_CLOCK/8192 Position */
+#define LCDC_LCDCFG6_PWMPS_DIV_16384          (LCDC_LCDCFG6_PWMPS_DIV_16384_Val << LCDC_LCDCFG6_PWMPS_Pos) /* (LCDC_LCDCFG6) The counter advances at a of rate fCOUNTER = fPWM_SELECTED_CLOCK/16384 Position */
+#define LCDC_LCDCFG6_PWMPS_DIV_32768          (LCDC_LCDCFG6_PWMPS_DIV_32768_Val << LCDC_LCDCFG6_PWMPS_Pos) /* (LCDC_LCDCFG6) The counter advances at a of rate fCOUNTER = fPWM_SELECTED_CLOCK/32768 Position */
 #define LCDC_LCDCFG6_PWMPOL_Pos               _UINT32_(4)                                          /* (LCDC_LCDCFG6) LCDC PWM Signal Polarity Position */
 #define LCDC_LCDCFG6_PWMPOL_Msk               (_UINT32_(0x1) << LCDC_LCDCFG6_PWMPOL_Pos)           /* (LCDC_LCDCFG6) LCDC PWM Signal Polarity Mask */
-#define LCDC_LCDCFG6_PWMPOL(value)            (LCDC_LCDCFG6_PWMPOL_Msk & (_UINT32_(value) << LCDC_LCDCFG6_PWMPOL_Pos)) /* Assigment of value for PWMPOL in the LCDC_LCDCFG6 register */
+#define LCDC_LCDCFG6_PWMPOL(value)            (LCDC_LCDCFG6_PWMPOL_Msk & (_UINT32_(value) << LCDC_LCDCFG6_PWMPOL_Pos)) /* Assignment of value for PWMPOL in the LCDC_LCDCFG6 register */
 #define   LCDC_LCDCFG6_PWMPOL_0_Val           _UINT32_(0x0)                                        /* (LCDC_LCDCFG6) The output pulses are low level.  */
 #define   LCDC_LCDCFG6_PWMPOL_1_Val           _UINT32_(0x1)                                        /* (LCDC_LCDCFG6) The output pulses are high level (the output is high whenever the value in the counter is less than the value PWMCVAL).  */
-#define LCDC_LCDCFG6_PWMPOL_0                 (LCDC_LCDCFG6_PWMPOL_0_Val << LCDC_LCDCFG6_PWMPOL_Pos) /* (LCDC_LCDCFG6) The output pulses are low level. Position  */
-#define LCDC_LCDCFG6_PWMPOL_1                 (LCDC_LCDCFG6_PWMPOL_1_Val << LCDC_LCDCFG6_PWMPOL_Pos) /* (LCDC_LCDCFG6) The output pulses are high level (the output is high whenever the value in the counter is less than the value PWMCVAL). Position  */
+#define LCDC_LCDCFG6_PWMPOL_0                 (LCDC_LCDCFG6_PWMPOL_0_Val << LCDC_LCDCFG6_PWMPOL_Pos) /* (LCDC_LCDCFG6) The output pulses are low level. Position */
+#define LCDC_LCDCFG6_PWMPOL_1                 (LCDC_LCDCFG6_PWMPOL_1_Val << LCDC_LCDCFG6_PWMPOL_Pos) /* (LCDC_LCDCFG6) The output pulses are high level (the output is high whenever the value in the counter is less than the value PWMCVAL). Position */
 #define LCDC_LCDCFG6_PWMCVAL_Pos              _UINT32_(8)                                          /* (LCDC_LCDCFG6) LCDC PWM Compare Value Position */
 #define LCDC_LCDCFG6_PWMCVAL_Msk              (_UINT32_(0xFF) << LCDC_LCDCFG6_PWMCVAL_Pos)         /* (LCDC_LCDCFG6) LCDC PWM Compare Value Mask */
-#define LCDC_LCDCFG6_PWMCVAL(value)           (LCDC_LCDCFG6_PWMCVAL_Msk & (_UINT32_(value) << LCDC_LCDCFG6_PWMCVAL_Pos)) /* Assigment of value for PWMCVAL in the LCDC_LCDCFG6 register */
+#define LCDC_LCDCFG6_PWMCVAL(value)           (LCDC_LCDCFG6_PWMCVAL_Msk & (_UINT32_(value) << LCDC_LCDCFG6_PWMCVAL_Pos)) /* Assignment of value for PWMCVAL in the LCDC_LCDCFG6 register */
 #define LCDC_LCDCFG6_Msk                      _UINT32_(0x0000FF1F)                                 /* (LCDC_LCDCFG6) Register Mask  */
 
 
@@ -343,127 +345,127 @@
 
 #define LCDC_LCDCFG7_ROW_Pos                  _UINT32_(0)                                          /* (LCDC_LCDCFG7) Row Identifier For Row Interrupt Signal Position */
 #define LCDC_LCDCFG7_ROW_Msk                  (_UINT32_(0x7FF) << LCDC_LCDCFG7_ROW_Pos)            /* (LCDC_LCDCFG7) Row Identifier For Row Interrupt Signal Mask */
-#define LCDC_LCDCFG7_ROW(value)               (LCDC_LCDCFG7_ROW_Msk & (_UINT32_(value) << LCDC_LCDCFG7_ROW_Pos)) /* Assigment of value for ROW in the LCDC_LCDCFG7 register */
+#define LCDC_LCDCFG7_ROW(value)               (LCDC_LCDCFG7_ROW_Msk & (_UINT32_(value) << LCDC_LCDCFG7_ROW_Pos)) /* Assignment of value for ROW in the LCDC_LCDCFG7 register */
 #define LCDC_LCDCFG7_Msk                      _UINT32_(0x000007FF)                                 /* (LCDC_LCDCFG7) Register Mask  */
 
 
 /* -------- LCDC_LCDEN : (LCDC Offset: 0x20) ( /W 32) Enable Register -------- */
 #define LCDC_LCDEN_CLKEN_Pos                  _UINT32_(0)                                          /* (LCDC_LCDEN) LCDC Pixel Clock Enable Position */
 #define LCDC_LCDEN_CLKEN_Msk                  (_UINT32_(0x1) << LCDC_LCDEN_CLKEN_Pos)              /* (LCDC_LCDEN) LCDC Pixel Clock Enable Mask */
-#define LCDC_LCDEN_CLKEN(value)               (LCDC_LCDEN_CLKEN_Msk & (_UINT32_(value) << LCDC_LCDEN_CLKEN_Pos)) /* Assigment of value for CLKEN in the LCDC_LCDEN register */
+#define LCDC_LCDEN_CLKEN(value)               (LCDC_LCDEN_CLKEN_Msk & (_UINT32_(value) << LCDC_LCDEN_CLKEN_Pos)) /* Assignment of value for CLKEN in the LCDC_LCDEN register */
 #define   LCDC_LCDEN_CLKEN_0_Val              _UINT32_(0x0)                                        /* (LCDC_LCDEN) No effect  */
 #define   LCDC_LCDEN_CLKEN_1_Val              _UINT32_(0x1)                                        /* (LCDC_LCDEN) Pixel clock logical unit is activated.  */
-#define LCDC_LCDEN_CLKEN_0                    (LCDC_LCDEN_CLKEN_0_Val << LCDC_LCDEN_CLKEN_Pos)     /* (LCDC_LCDEN) No effect Position  */
-#define LCDC_LCDEN_CLKEN_1                    (LCDC_LCDEN_CLKEN_1_Val << LCDC_LCDEN_CLKEN_Pos)     /* (LCDC_LCDEN) Pixel clock logical unit is activated. Position  */
+#define LCDC_LCDEN_CLKEN_0                    (LCDC_LCDEN_CLKEN_0_Val << LCDC_LCDEN_CLKEN_Pos)     /* (LCDC_LCDEN) No effect Position */
+#define LCDC_LCDEN_CLKEN_1                    (LCDC_LCDEN_CLKEN_1_Val << LCDC_LCDEN_CLKEN_Pos)     /* (LCDC_LCDEN) Pixel clock logical unit is activated. Position */
 #define LCDC_LCDEN_SYNCEN_Pos                 _UINT32_(1)                                          /* (LCDC_LCDEN) LCDC Horizontal and Vertical Synchronization Enable Position */
 #define LCDC_LCDEN_SYNCEN_Msk                 (_UINT32_(0x1) << LCDC_LCDEN_SYNCEN_Pos)             /* (LCDC_LCDEN) LCDC Horizontal and Vertical Synchronization Enable Mask */
-#define LCDC_LCDEN_SYNCEN(value)              (LCDC_LCDEN_SYNCEN_Msk & (_UINT32_(value) << LCDC_LCDEN_SYNCEN_Pos)) /* Assigment of value for SYNCEN in the LCDC_LCDEN register */
+#define LCDC_LCDEN_SYNCEN(value)              (LCDC_LCDEN_SYNCEN_Msk & (_UINT32_(value) << LCDC_LCDEN_SYNCEN_Pos)) /* Assignment of value for SYNCEN in the LCDC_LCDEN register */
 #define   LCDC_LCDEN_SYNCEN_0_Val             _UINT32_(0x0)                                        /* (LCDC_LCDEN) No effect  */
 #define   LCDC_LCDEN_SYNCEN_1_Val             _UINT32_(0x1)                                        /* (LCDC_LCDEN) Both horizontal and vertical synchronization (LCD_VSYNC and LCD_HSYNC) signals are generated.  */
-#define LCDC_LCDEN_SYNCEN_0                   (LCDC_LCDEN_SYNCEN_0_Val << LCDC_LCDEN_SYNCEN_Pos)   /* (LCDC_LCDEN) No effect Position  */
-#define LCDC_LCDEN_SYNCEN_1                   (LCDC_LCDEN_SYNCEN_1_Val << LCDC_LCDEN_SYNCEN_Pos)   /* (LCDC_LCDEN) Both horizontal and vertical synchronization (LCD_VSYNC and LCD_HSYNC) signals are generated. Position  */
+#define LCDC_LCDEN_SYNCEN_0                   (LCDC_LCDEN_SYNCEN_0_Val << LCDC_LCDEN_SYNCEN_Pos)   /* (LCDC_LCDEN) No effect Position */
+#define LCDC_LCDEN_SYNCEN_1                   (LCDC_LCDEN_SYNCEN_1_Val << LCDC_LCDEN_SYNCEN_Pos)   /* (LCDC_LCDEN) Both horizontal and vertical synchronization (LCD_VSYNC and LCD_HSYNC) signals are generated. Position */
 #define LCDC_LCDEN_DISPEN_Pos                 _UINT32_(2)                                          /* (LCDC_LCDEN) LCDC DISP Signal Enable Position */
 #define LCDC_LCDEN_DISPEN_Msk                 (_UINT32_(0x1) << LCDC_LCDEN_DISPEN_Pos)             /* (LCDC_LCDEN) LCDC DISP Signal Enable Mask */
-#define LCDC_LCDEN_DISPEN(value)              (LCDC_LCDEN_DISPEN_Msk & (_UINT32_(value) << LCDC_LCDEN_DISPEN_Pos)) /* Assigment of value for DISPEN in the LCDC_LCDEN register */
+#define LCDC_LCDEN_DISPEN(value)              (LCDC_LCDEN_DISPEN_Msk & (_UINT32_(value) << LCDC_LCDEN_DISPEN_Pos)) /* Assignment of value for DISPEN in the LCDC_LCDEN register */
 #define   LCDC_LCDEN_DISPEN_0_Val             _UINT32_(0x0)                                        /* (LCDC_LCDEN) No effect  */
 #define   LCDC_LCDEN_DISPEN_1_Val             _UINT32_(0x1)                                        /* (LCDC_LCDEN) LCDC_DISP signal is generated.  */
-#define LCDC_LCDEN_DISPEN_0                   (LCDC_LCDEN_DISPEN_0_Val << LCDC_LCDEN_DISPEN_Pos)   /* (LCDC_LCDEN) No effect Position  */
-#define LCDC_LCDEN_DISPEN_1                   (LCDC_LCDEN_DISPEN_1_Val << LCDC_LCDEN_DISPEN_Pos)   /* (LCDC_LCDEN) LCDC_DISP signal is generated. Position  */
+#define LCDC_LCDEN_DISPEN_0                   (LCDC_LCDEN_DISPEN_0_Val << LCDC_LCDEN_DISPEN_Pos)   /* (LCDC_LCDEN) No effect Position */
+#define LCDC_LCDEN_DISPEN_1                   (LCDC_LCDEN_DISPEN_1_Val << LCDC_LCDEN_DISPEN_Pos)   /* (LCDC_LCDEN) LCDC_DISP signal is generated. Position */
 #define LCDC_LCDEN_PWMEN_Pos                  _UINT32_(3)                                          /* (LCDC_LCDEN) LCDC Pulse Width Modulation Enable Position */
 #define LCDC_LCDEN_PWMEN_Msk                  (_UINT32_(0x1) << LCDC_LCDEN_PWMEN_Pos)              /* (LCDC_LCDEN) LCDC Pulse Width Modulation Enable Mask */
-#define LCDC_LCDEN_PWMEN(value)               (LCDC_LCDEN_PWMEN_Msk & (_UINT32_(value) << LCDC_LCDEN_PWMEN_Pos)) /* Assigment of value for PWMEN in the LCDC_LCDEN register */
+#define LCDC_LCDEN_PWMEN(value)               (LCDC_LCDEN_PWMEN_Msk & (_UINT32_(value) << LCDC_LCDEN_PWMEN_Pos)) /* Assignment of value for PWMEN in the LCDC_LCDEN register */
 #define   LCDC_LCDEN_PWMEN_0_Val              _UINT32_(0x0)                                        /* (LCDC_LCDEN) No effect  */
 #define   LCDC_LCDEN_PWMEN_1_Val              _UINT32_(0x1)                                        /* (LCDC_LCDEN) PWM is enabled.  */
-#define LCDC_LCDEN_PWMEN_0                    (LCDC_LCDEN_PWMEN_0_Val << LCDC_LCDEN_PWMEN_Pos)     /* (LCDC_LCDEN) No effect Position  */
-#define LCDC_LCDEN_PWMEN_1                    (LCDC_LCDEN_PWMEN_1_Val << LCDC_LCDEN_PWMEN_Pos)     /* (LCDC_LCDEN) PWM is enabled. Position  */
+#define LCDC_LCDEN_PWMEN_0                    (LCDC_LCDEN_PWMEN_0_Val << LCDC_LCDEN_PWMEN_Pos)     /* (LCDC_LCDEN) No effect Position */
+#define LCDC_LCDEN_PWMEN_1                    (LCDC_LCDEN_PWMEN_1_Val << LCDC_LCDEN_PWMEN_Pos)     /* (LCDC_LCDEN) PWM is enabled. Position */
 #define LCDC_LCDEN_SDEN_Pos                   _UINT32_(5)                                          /* (LCDC_LCDEN) Shutdown Signal Enable Position */
 #define LCDC_LCDEN_SDEN_Msk                   (_UINT32_(0x1) << LCDC_LCDEN_SDEN_Pos)               /* (LCDC_LCDEN) Shutdown Signal Enable Mask */
-#define LCDC_LCDEN_SDEN(value)                (LCDC_LCDEN_SDEN_Msk & (_UINT32_(value) << LCDC_LCDEN_SDEN_Pos)) /* Assigment of value for SDEN in the LCDC_LCDEN register */
+#define LCDC_LCDEN_SDEN(value)                (LCDC_LCDEN_SDEN_Msk & (_UINT32_(value) << LCDC_LCDEN_SDEN_Pos)) /* Assignment of value for SDEN in the LCDC_LCDEN register */
 #define   LCDC_LCDEN_SDEN_0_Val               _UINT32_(0x0)                                        /* (LCDC_LCDEN) No effect.  */
 #define   LCDC_LCDEN_SDEN_1_Val               _UINT32_(0x1)                                        /* (LCDC_LCDEN) Sets the shutdown signal (lcd_sd) to zero (turns on the display).  */
-#define LCDC_LCDEN_SDEN_0                     (LCDC_LCDEN_SDEN_0_Val << LCDC_LCDEN_SDEN_Pos)       /* (LCDC_LCDEN) No effect. Position  */
-#define LCDC_LCDEN_SDEN_1                     (LCDC_LCDEN_SDEN_1_Val << LCDC_LCDEN_SDEN_Pos)       /* (LCDC_LCDEN) Sets the shutdown signal (lcd_sd) to zero (turns on the display). Position  */
+#define LCDC_LCDEN_SDEN_0                     (LCDC_LCDEN_SDEN_0_Val << LCDC_LCDEN_SDEN_Pos)       /* (LCDC_LCDEN) No effect. Position */
+#define LCDC_LCDEN_SDEN_1                     (LCDC_LCDEN_SDEN_1_Val << LCDC_LCDEN_SDEN_Pos)       /* (LCDC_LCDEN) Sets the shutdown signal (lcd_sd) to zero (turns on the display). Position */
 #define LCDC_LCDEN_CMEN_Pos                   _UINT32_(6)                                          /* (LCDC_LCDEN) Color Mode Signal Enable Position */
 #define LCDC_LCDEN_CMEN_Msk                   (_UINT32_(0x1) << LCDC_LCDEN_CMEN_Pos)               /* (LCDC_LCDEN) Color Mode Signal Enable Mask */
-#define LCDC_LCDEN_CMEN(value)                (LCDC_LCDEN_CMEN_Msk & (_UINT32_(value) << LCDC_LCDEN_CMEN_Pos)) /* Assigment of value for CMEN in the LCDC_LCDEN register */
+#define LCDC_LCDEN_CMEN(value)                (LCDC_LCDEN_CMEN_Msk & (_UINT32_(value) << LCDC_LCDEN_CMEN_Pos)) /* Assignment of value for CMEN in the LCDC_LCDEN register */
 #define   LCDC_LCDEN_CMEN_0_Val               _UINT32_(0x0)                                        /* (LCDC_LCDEN) No effect.  */
 #define   LCDC_LCDEN_CMEN_1_Val               _UINT32_(0x1)                                        /* (LCDC_LCDEN) Sets the color mode signal (lcd_cm) to one. If a rising edge is generated, signals the MIPI DSI host to send a "Color Mode On" command to the LCD screen when the MIPI output interface is selected.  */
-#define LCDC_LCDEN_CMEN_0                     (LCDC_LCDEN_CMEN_0_Val << LCDC_LCDEN_CMEN_Pos)       /* (LCDC_LCDEN) No effect. Position  */
-#define LCDC_LCDEN_CMEN_1                     (LCDC_LCDEN_CMEN_1_Val << LCDC_LCDEN_CMEN_Pos)       /* (LCDC_LCDEN) Sets the color mode signal (lcd_cm) to one. If a rising edge is generated, signals the MIPI DSI host to send a "Color Mode On" command to the LCD screen when the MIPI output interface is selected. Position  */
+#define LCDC_LCDEN_CMEN_0                     (LCDC_LCDEN_CMEN_0_Val << LCDC_LCDEN_CMEN_Pos)       /* (LCDC_LCDEN) No effect. Position */
+#define LCDC_LCDEN_CMEN_1                     (LCDC_LCDEN_CMEN_1_Val << LCDC_LCDEN_CMEN_Pos)       /* (LCDC_LCDEN) Sets the color mode signal (lcd_cm) to one. If a rising edge is generated, signals the MIPI DSI host to send a "Color Mode On" command to the LCD screen when the MIPI output interface is selected. Position */
 #define LCDC_LCDEN_Msk                        _UINT32_(0x0000006F)                                 /* (LCDC_LCDEN) Register Mask  */
 
 
 /* -------- LCDC_LCDDIS : (LCDC Offset: 0x24) ( /W 32) Disable Register -------- */
 #define LCDC_LCDDIS_CLKDIS_Pos                _UINT32_(0)                                          /* (LCDC_LCDDIS) LCDC Pixel Clock Disable Position */
 #define LCDC_LCDDIS_CLKDIS_Msk                (_UINT32_(0x1) << LCDC_LCDDIS_CLKDIS_Pos)            /* (LCDC_LCDDIS) LCDC Pixel Clock Disable Mask */
-#define LCDC_LCDDIS_CLKDIS(value)             (LCDC_LCDDIS_CLKDIS_Msk & (_UINT32_(value) << LCDC_LCDDIS_CLKDIS_Pos)) /* Assigment of value for CLKDIS in the LCDC_LCDDIS register */
+#define LCDC_LCDDIS_CLKDIS(value)             (LCDC_LCDDIS_CLKDIS_Msk & (_UINT32_(value) << LCDC_LCDDIS_CLKDIS_Pos)) /* Assignment of value for CLKDIS in the LCDC_LCDDIS register */
 #define   LCDC_LCDDIS_CLKDIS_0_Val            _UINT32_(0x0)                                        /* (LCDC_LCDDIS) No effect.  */
 #define   LCDC_LCDDIS_CLKDIS_1_Val            _UINT32_(0x1)                                        /* (LCDC_LCDDIS) Disables the pixel clock after the end of the frame.  */
-#define LCDC_LCDDIS_CLKDIS_0                  (LCDC_LCDDIS_CLKDIS_0_Val << LCDC_LCDDIS_CLKDIS_Pos) /* (LCDC_LCDDIS) No effect. Position  */
-#define LCDC_LCDDIS_CLKDIS_1                  (LCDC_LCDDIS_CLKDIS_1_Val << LCDC_LCDDIS_CLKDIS_Pos) /* (LCDC_LCDDIS) Disables the pixel clock after the end of the frame. Position  */
+#define LCDC_LCDDIS_CLKDIS_0                  (LCDC_LCDDIS_CLKDIS_0_Val << LCDC_LCDDIS_CLKDIS_Pos) /* (LCDC_LCDDIS) No effect. Position */
+#define LCDC_LCDDIS_CLKDIS_1                  (LCDC_LCDDIS_CLKDIS_1_Val << LCDC_LCDDIS_CLKDIS_Pos) /* (LCDC_LCDDIS) Disables the pixel clock after the end of the frame. Position */
 #define LCDC_LCDDIS_SYNCDIS_Pos               _UINT32_(1)                                          /* (LCDC_LCDDIS) LCDC Horizontal and Vertical Synchronization Disable Position */
 #define LCDC_LCDDIS_SYNCDIS_Msk               (_UINT32_(0x1) << LCDC_LCDDIS_SYNCDIS_Pos)           /* (LCDC_LCDDIS) LCDC Horizontal and Vertical Synchronization Disable Mask */
-#define LCDC_LCDDIS_SYNCDIS(value)            (LCDC_LCDDIS_SYNCDIS_Msk & (_UINT32_(value) << LCDC_LCDDIS_SYNCDIS_Pos)) /* Assigment of value for SYNCDIS in the LCDC_LCDDIS register */
+#define LCDC_LCDDIS_SYNCDIS(value)            (LCDC_LCDDIS_SYNCDIS_Msk & (_UINT32_(value) << LCDC_LCDDIS_SYNCDIS_Pos)) /* Assignment of value for SYNCDIS in the LCDC_LCDDIS register */
 #define   LCDC_LCDDIS_SYNCDIS_0_Val           _UINT32_(0x0)                                        /* (LCDC_LCDDIS) No effect.  */
 #define   LCDC_LCDDIS_SYNCDIS_1_Val           _UINT32_(0x1)                                        /* (LCDC_LCDDIS) Disables the synchronization signals after the end of the frame.  */
-#define LCDC_LCDDIS_SYNCDIS_0                 (LCDC_LCDDIS_SYNCDIS_0_Val << LCDC_LCDDIS_SYNCDIS_Pos) /* (LCDC_LCDDIS) No effect. Position  */
-#define LCDC_LCDDIS_SYNCDIS_1                 (LCDC_LCDDIS_SYNCDIS_1_Val << LCDC_LCDDIS_SYNCDIS_Pos) /* (LCDC_LCDDIS) Disables the synchronization signals after the end of the frame. Position  */
+#define LCDC_LCDDIS_SYNCDIS_0                 (LCDC_LCDDIS_SYNCDIS_0_Val << LCDC_LCDDIS_SYNCDIS_Pos) /* (LCDC_LCDDIS) No effect. Position */
+#define LCDC_LCDDIS_SYNCDIS_1                 (LCDC_LCDDIS_SYNCDIS_1_Val << LCDC_LCDDIS_SYNCDIS_Pos) /* (LCDC_LCDDIS) Disables the synchronization signals after the end of the frame. Position */
 #define LCDC_LCDDIS_DISPDIS_Pos               _UINT32_(2)                                          /* (LCDC_LCDDIS) LCDC DISP Signal Disable Position */
 #define LCDC_LCDDIS_DISPDIS_Msk               (_UINT32_(0x1) << LCDC_LCDDIS_DISPDIS_Pos)           /* (LCDC_LCDDIS) LCDC DISP Signal Disable Mask */
-#define LCDC_LCDDIS_DISPDIS(value)            (LCDC_LCDDIS_DISPDIS_Msk & (_UINT32_(value) << LCDC_LCDDIS_DISPDIS_Pos)) /* Assigment of value for DISPDIS in the LCDC_LCDDIS register */
+#define LCDC_LCDDIS_DISPDIS(value)            (LCDC_LCDDIS_DISPDIS_Msk & (_UINT32_(value) << LCDC_LCDDIS_DISPDIS_Pos)) /* Assignment of value for DISPDIS in the LCDC_LCDDIS register */
 #define   LCDC_LCDDIS_DISPDIS_0_Val           _UINT32_(0x0)                                        /* (LCDC_LCDDIS) No effect.  */
 #define   LCDC_LCDDIS_DISPDIS_1_Val           _UINT32_(0x1)                                        /* (LCDC_LCDDIS) Disables the DISP signal after the end of the frame.  */
-#define LCDC_LCDDIS_DISPDIS_0                 (LCDC_LCDDIS_DISPDIS_0_Val << LCDC_LCDDIS_DISPDIS_Pos) /* (LCDC_LCDDIS) No effect. Position  */
-#define LCDC_LCDDIS_DISPDIS_1                 (LCDC_LCDDIS_DISPDIS_1_Val << LCDC_LCDDIS_DISPDIS_Pos) /* (LCDC_LCDDIS) Disables the DISP signal after the end of the frame. Position  */
+#define LCDC_LCDDIS_DISPDIS_0                 (LCDC_LCDDIS_DISPDIS_0_Val << LCDC_LCDDIS_DISPDIS_Pos) /* (LCDC_LCDDIS) No effect. Position */
+#define LCDC_LCDDIS_DISPDIS_1                 (LCDC_LCDDIS_DISPDIS_1_Val << LCDC_LCDDIS_DISPDIS_Pos) /* (LCDC_LCDDIS) Disables the DISP signal after the end of the frame. Position */
 #define LCDC_LCDDIS_PWMDIS_Pos                _UINT32_(3)                                          /* (LCDC_LCDDIS) LCDC Pulse Width Modulation Disable Position */
 #define LCDC_LCDDIS_PWMDIS_Msk                (_UINT32_(0x1) << LCDC_LCDDIS_PWMDIS_Pos)            /* (LCDC_LCDDIS) LCDC Pulse Width Modulation Disable Mask */
-#define LCDC_LCDDIS_PWMDIS(value)             (LCDC_LCDDIS_PWMDIS_Msk & (_UINT32_(value) << LCDC_LCDDIS_PWMDIS_Pos)) /* Assigment of value for PWMDIS in the LCDC_LCDDIS register */
+#define LCDC_LCDDIS_PWMDIS(value)             (LCDC_LCDDIS_PWMDIS_Msk & (_UINT32_(value) << LCDC_LCDDIS_PWMDIS_Pos)) /* Assignment of value for PWMDIS in the LCDC_LCDDIS register */
 #define   LCDC_LCDDIS_PWMDIS_0_Val            _UINT32_(0x0)                                        /* (LCDC_LCDDIS) No effect.  */
 #define   LCDC_LCDDIS_PWMDIS_1_Val            _UINT32_(0x1)                                        /* (LCDC_LCDDIS) Disables the pulse width modulation signal after the end of the frame.  */
-#define LCDC_LCDDIS_PWMDIS_0                  (LCDC_LCDDIS_PWMDIS_0_Val << LCDC_LCDDIS_PWMDIS_Pos) /* (LCDC_LCDDIS) No effect. Position  */
-#define LCDC_LCDDIS_PWMDIS_1                  (LCDC_LCDDIS_PWMDIS_1_Val << LCDC_LCDDIS_PWMDIS_Pos) /* (LCDC_LCDDIS) Disables the pulse width modulation signal after the end of the frame. Position  */
+#define LCDC_LCDDIS_PWMDIS_0                  (LCDC_LCDDIS_PWMDIS_0_Val << LCDC_LCDDIS_PWMDIS_Pos) /* (LCDC_LCDDIS) No effect. Position */
+#define LCDC_LCDDIS_PWMDIS_1                  (LCDC_LCDDIS_PWMDIS_1_Val << LCDC_LCDDIS_PWMDIS_Pos) /* (LCDC_LCDDIS) Disables the pulse width modulation signal after the end of the frame. Position */
 #define LCDC_LCDDIS_SDDIS_Pos                 _UINT32_(5)                                          /* (LCDC_LCDDIS) Shutdown Signal Disable Position */
 #define LCDC_LCDDIS_SDDIS_Msk                 (_UINT32_(0x1) << LCDC_LCDDIS_SDDIS_Pos)             /* (LCDC_LCDDIS) Shutdown Signal Disable Mask */
-#define LCDC_LCDDIS_SDDIS(value)              (LCDC_LCDDIS_SDDIS_Msk & (_UINT32_(value) << LCDC_LCDDIS_SDDIS_Pos)) /* Assigment of value for SDDIS in the LCDC_LCDDIS register */
+#define LCDC_LCDDIS_SDDIS(value)              (LCDC_LCDDIS_SDDIS_Msk & (_UINT32_(value) << LCDC_LCDDIS_SDDIS_Pos)) /* Assignment of value for SDDIS in the LCDC_LCDDIS register */
 #define   LCDC_LCDDIS_SDDIS_0_Val             _UINT32_(0x0)                                        /* (LCDC_LCDDIS) No effect.  */
 #define   LCDC_LCDDIS_SDDIS_1_Val             _UINT32_(0x1)                                        /* (LCDC_LCDDIS) Sets the shutdown signal (lcd_sd) to one (turns off the display).  */
-#define LCDC_LCDDIS_SDDIS_0                   (LCDC_LCDDIS_SDDIS_0_Val << LCDC_LCDDIS_SDDIS_Pos)   /* (LCDC_LCDDIS) No effect. Position  */
-#define LCDC_LCDDIS_SDDIS_1                   (LCDC_LCDDIS_SDDIS_1_Val << LCDC_LCDDIS_SDDIS_Pos)   /* (LCDC_LCDDIS) Sets the shutdown signal (lcd_sd) to one (turns off the display). Position  */
+#define LCDC_LCDDIS_SDDIS_0                   (LCDC_LCDDIS_SDDIS_0_Val << LCDC_LCDDIS_SDDIS_Pos)   /* (LCDC_LCDDIS) No effect. Position */
+#define LCDC_LCDDIS_SDDIS_1                   (LCDC_LCDDIS_SDDIS_1_Val << LCDC_LCDDIS_SDDIS_Pos)   /* (LCDC_LCDDIS) Sets the shutdown signal (lcd_sd) to one (turns off the display). Position */
 #define LCDC_LCDDIS_CMDIS_Pos                 _UINT32_(6)                                          /* (LCDC_LCDDIS) Color Mode Signal Disable Position */
 #define LCDC_LCDDIS_CMDIS_Msk                 (_UINT32_(0x1) << LCDC_LCDDIS_CMDIS_Pos)             /* (LCDC_LCDDIS) Color Mode Signal Disable Mask */
-#define LCDC_LCDDIS_CMDIS(value)              (LCDC_LCDDIS_CMDIS_Msk & (_UINT32_(value) << LCDC_LCDDIS_CMDIS_Pos)) /* Assigment of value for CMDIS in the LCDC_LCDDIS register */
+#define LCDC_LCDDIS_CMDIS(value)              (LCDC_LCDDIS_CMDIS_Msk & (_UINT32_(value) << LCDC_LCDDIS_CMDIS_Pos)) /* Assignment of value for CMDIS in the LCDC_LCDDIS register */
 #define   LCDC_LCDDIS_CMDIS_0_Val             _UINT32_(0x0)                                        /* (LCDC_LCDDIS) No effect.  */
 #define   LCDC_LCDDIS_CMDIS_1_Val             _UINT32_(0x1)                                        /* (LCDC_LCDDIS) Sets the color mode signa (lcd_cm) to zero. If a falling edge is generated, signals the MIPI DSI host to send a "Color Mode Off" command to the LCD screen when the MIPI output interface is selected).  */
-#define LCDC_LCDDIS_CMDIS_0                   (LCDC_LCDDIS_CMDIS_0_Val << LCDC_LCDDIS_CMDIS_Pos)   /* (LCDC_LCDDIS) No effect. Position  */
-#define LCDC_LCDDIS_CMDIS_1                   (LCDC_LCDDIS_CMDIS_1_Val << LCDC_LCDDIS_CMDIS_Pos)   /* (LCDC_LCDDIS) Sets the color mode signa (lcd_cm) to zero. If a falling edge is generated, signals the MIPI DSI host to send a "Color Mode Off" command to the LCD screen when the MIPI output interface is selected). Position  */
+#define LCDC_LCDDIS_CMDIS_0                   (LCDC_LCDDIS_CMDIS_0_Val << LCDC_LCDDIS_CMDIS_Pos)   /* (LCDC_LCDDIS) No effect. Position */
+#define LCDC_LCDDIS_CMDIS_1                   (LCDC_LCDDIS_CMDIS_1_Val << LCDC_LCDDIS_CMDIS_Pos)   /* (LCDC_LCDDIS) Sets the color mode signa (lcd_cm) to zero. If a falling edge is generated, signals the MIPI DSI host to send a "Color Mode Off" command to the LCD screen when the MIPI output interface is selected). Position */
 #define LCDC_LCDDIS_CLKRST_Pos                _UINT32_(8)                                          /* (LCDC_LCDDIS) LCDC Clock Reset Position */
 #define LCDC_LCDDIS_CLKRST_Msk                (_UINT32_(0x1) << LCDC_LCDDIS_CLKRST_Pos)            /* (LCDC_LCDDIS) LCDC Clock Reset Mask */
-#define LCDC_LCDDIS_CLKRST(value)             (LCDC_LCDDIS_CLKRST_Msk & (_UINT32_(value) << LCDC_LCDDIS_CLKRST_Pos)) /* Assigment of value for CLKRST in the LCDC_LCDDIS register */
+#define LCDC_LCDDIS_CLKRST(value)             (LCDC_LCDDIS_CLKRST_Msk & (_UINT32_(value) << LCDC_LCDDIS_CLKRST_Pos)) /* Assignment of value for CLKRST in the LCDC_LCDDIS register */
 #define   LCDC_LCDDIS_CLKRST_0_Val            _UINT32_(0x0)                                        /* (LCDC_LCDDIS) No effect.  */
 #define   LCDC_LCDDIS_CLKRST_1_Val            _UINT32_(0x1)                                        /* (LCDC_LCDDIS) Resets the pixel clock generator module immediately. The pixel clock duty cycle may be violated.  */
-#define LCDC_LCDDIS_CLKRST_0                  (LCDC_LCDDIS_CLKRST_0_Val << LCDC_LCDDIS_CLKRST_Pos) /* (LCDC_LCDDIS) No effect. Position  */
-#define LCDC_LCDDIS_CLKRST_1                  (LCDC_LCDDIS_CLKRST_1_Val << LCDC_LCDDIS_CLKRST_Pos) /* (LCDC_LCDDIS) Resets the pixel clock generator module immediately. The pixel clock duty cycle may be violated. Position  */
+#define LCDC_LCDDIS_CLKRST_0                  (LCDC_LCDDIS_CLKRST_0_Val << LCDC_LCDDIS_CLKRST_Pos) /* (LCDC_LCDDIS) No effect. Position */
+#define LCDC_LCDDIS_CLKRST_1                  (LCDC_LCDDIS_CLKRST_1_Val << LCDC_LCDDIS_CLKRST_Pos) /* (LCDC_LCDDIS) Resets the pixel clock generator module immediately. The pixel clock duty cycle may be violated. Position */
 #define LCDC_LCDDIS_SYNCRST_Pos               _UINT32_(9)                                          /* (LCDC_LCDDIS) LCDC Horizontal and Vertical Synchronization Reset Position */
 #define LCDC_LCDDIS_SYNCRST_Msk               (_UINT32_(0x1) << LCDC_LCDDIS_SYNCRST_Pos)           /* (LCDC_LCDDIS) LCDC Horizontal and Vertical Synchronization Reset Mask */
-#define LCDC_LCDDIS_SYNCRST(value)            (LCDC_LCDDIS_SYNCRST_Msk & (_UINT32_(value) << LCDC_LCDDIS_SYNCRST_Pos)) /* Assigment of value for SYNCRST in the LCDC_LCDDIS register */
+#define LCDC_LCDDIS_SYNCRST(value)            (LCDC_LCDDIS_SYNCRST_Msk & (_UINT32_(value) << LCDC_LCDDIS_SYNCRST_Pos)) /* Assignment of value for SYNCRST in the LCDC_LCDDIS register */
 #define   LCDC_LCDDIS_SYNCRST_0_Val           _UINT32_(0x0)                                        /* (LCDC_LCDDIS) No effect.  */
 #define   LCDC_LCDDIS_SYNCRST_1_Val           _UINT32_(0x1)                                        /* (LCDC_LCDDIS) Resets the timing engine immediately. The horizontal and vertical pulse widths are both violated.  */
-#define LCDC_LCDDIS_SYNCRST_0                 (LCDC_LCDDIS_SYNCRST_0_Val << LCDC_LCDDIS_SYNCRST_Pos) /* (LCDC_LCDDIS) No effect. Position  */
-#define LCDC_LCDDIS_SYNCRST_1                 (LCDC_LCDDIS_SYNCRST_1_Val << LCDC_LCDDIS_SYNCRST_Pos) /* (LCDC_LCDDIS) Resets the timing engine immediately. The horizontal and vertical pulse widths are both violated. Position  */
+#define LCDC_LCDDIS_SYNCRST_0                 (LCDC_LCDDIS_SYNCRST_0_Val << LCDC_LCDDIS_SYNCRST_Pos) /* (LCDC_LCDDIS) No effect. Position */
+#define LCDC_LCDDIS_SYNCRST_1                 (LCDC_LCDDIS_SYNCRST_1_Val << LCDC_LCDDIS_SYNCRST_Pos) /* (LCDC_LCDDIS) Resets the timing engine immediately. The horizontal and vertical pulse widths are both violated. Position */
 #define LCDC_LCDDIS_DISPRST_Pos               _UINT32_(10)                                         /* (LCDC_LCDDIS) LCDC DISP Signal Reset Position */
 #define LCDC_LCDDIS_DISPRST_Msk               (_UINT32_(0x1) << LCDC_LCDDIS_DISPRST_Pos)           /* (LCDC_LCDDIS) LCDC DISP Signal Reset Mask */
-#define LCDC_LCDDIS_DISPRST(value)            (LCDC_LCDDIS_DISPRST_Msk & (_UINT32_(value) << LCDC_LCDDIS_DISPRST_Pos)) /* Assigment of value for DISPRST in the LCDC_LCDDIS register */
+#define LCDC_LCDDIS_DISPRST(value)            (LCDC_LCDDIS_DISPRST_Msk & (_UINT32_(value) << LCDC_LCDDIS_DISPRST_Pos)) /* Assignment of value for DISPRST in the LCDC_LCDDIS register */
 #define   LCDC_LCDDIS_DISPRST_0_Val           _UINT32_(0x0)                                        /* (LCDC_LCDDIS) No effect.  */
 #define   LCDC_LCDDIS_DISPRST_1_Val           _UINT32_(0x1)                                        /* (LCDC_LCDDIS) Resets the DISP signal immediately.  */
-#define LCDC_LCDDIS_DISPRST_0                 (LCDC_LCDDIS_DISPRST_0_Val << LCDC_LCDDIS_DISPRST_Pos) /* (LCDC_LCDDIS) No effect. Position  */
-#define LCDC_LCDDIS_DISPRST_1                 (LCDC_LCDDIS_DISPRST_1_Val << LCDC_LCDDIS_DISPRST_Pos) /* (LCDC_LCDDIS) Resets the DISP signal immediately. Position  */
+#define LCDC_LCDDIS_DISPRST_0                 (LCDC_LCDDIS_DISPRST_0_Val << LCDC_LCDDIS_DISPRST_Pos) /* (LCDC_LCDDIS) No effect. Position */
+#define LCDC_LCDDIS_DISPRST_1                 (LCDC_LCDDIS_DISPRST_1_Val << LCDC_LCDDIS_DISPRST_Pos) /* (LCDC_LCDDIS) Resets the DISP signal immediately. Position */
 #define LCDC_LCDDIS_PWMRST_Pos                _UINT32_(11)                                         /* (LCDC_LCDDIS) LCDC PWM Reset Position */
 #define LCDC_LCDDIS_PWMRST_Msk                (_UINT32_(0x1) << LCDC_LCDDIS_PWMRST_Pos)            /* (LCDC_LCDDIS) LCDC PWM Reset Mask */
-#define LCDC_LCDDIS_PWMRST(value)             (LCDC_LCDDIS_PWMRST_Msk & (_UINT32_(value) << LCDC_LCDDIS_PWMRST_Pos)) /* Assigment of value for PWMRST in the LCDC_LCDDIS register */
+#define LCDC_LCDDIS_PWMRST(value)             (LCDC_LCDDIS_PWMRST_Msk & (_UINT32_(value) << LCDC_LCDDIS_PWMRST_Pos)) /* Assignment of value for PWMRST in the LCDC_LCDDIS register */
 #define   LCDC_LCDDIS_PWMRST_0_Val            _UINT32_(0x0)                                        /* (LCDC_LCDDIS) No effect.  */
 #define   LCDC_LCDDIS_PWMRST_1_Val            _UINT32_(0x1)                                        /* (LCDC_LCDDIS) Resets the PWM module immediately. The duty cycle may be violated.  */
-#define LCDC_LCDDIS_PWMRST_0                  (LCDC_LCDDIS_PWMRST_0_Val << LCDC_LCDDIS_PWMRST_Pos) /* (LCDC_LCDDIS) No effect. Position  */
-#define LCDC_LCDDIS_PWMRST_1                  (LCDC_LCDDIS_PWMRST_1_Val << LCDC_LCDDIS_PWMRST_Pos) /* (LCDC_LCDDIS) Resets the PWM module immediately. The duty cycle may be violated. Position  */
+#define LCDC_LCDDIS_PWMRST_0                  (LCDC_LCDDIS_PWMRST_0_Val << LCDC_LCDDIS_PWMRST_Pos) /* (LCDC_LCDDIS) No effect. Position */
+#define LCDC_LCDDIS_PWMRST_1                  (LCDC_LCDDIS_PWMRST_1_Val << LCDC_LCDDIS_PWMRST_Pos) /* (LCDC_LCDDIS) Resets the PWM module immediately. The duty cycle may be violated. Position */
 #define LCDC_LCDDIS_Msk                       _UINT32_(0x00000F6F)                                 /* (LCDC_LCDDIS) Register Mask  */
 
 
@@ -472,121 +474,121 @@
 
 #define LCDC_LCDSR_CLKSTS_Pos                 _UINT32_(0)                                          /* (LCDC_LCDSR) Clock Status Position */
 #define LCDC_LCDSR_CLKSTS_Msk                 (_UINT32_(0x1) << LCDC_LCDSR_CLKSTS_Pos)             /* (LCDC_LCDSR) Clock Status Mask */
-#define LCDC_LCDSR_CLKSTS(value)              (LCDC_LCDSR_CLKSTS_Msk & (_UINT32_(value) << LCDC_LCDSR_CLKSTS_Pos)) /* Assigment of value for CLKSTS in the LCDC_LCDSR register */
+#define LCDC_LCDSR_CLKSTS(value)              (LCDC_LCDSR_CLKSTS_Msk & (_UINT32_(value) << LCDC_LCDSR_CLKSTS_Pos)) /* Assignment of value for CLKSTS in the LCDC_LCDSR register */
 #define   LCDC_LCDSR_CLKSTS_0_Val             _UINT32_(0x0)                                        /* (LCDC_LCDSR) Pixel clock is disabled.  */
 #define   LCDC_LCDSR_CLKSTS_1_Val             _UINT32_(0x1)                                        /* (LCDC_LCDSR) Pixel clock is running.  */
-#define LCDC_LCDSR_CLKSTS_0                   (LCDC_LCDSR_CLKSTS_0_Val << LCDC_LCDSR_CLKSTS_Pos)   /* (LCDC_LCDSR) Pixel clock is disabled. Position  */
-#define LCDC_LCDSR_CLKSTS_1                   (LCDC_LCDSR_CLKSTS_1_Val << LCDC_LCDSR_CLKSTS_Pos)   /* (LCDC_LCDSR) Pixel clock is running. Position  */
+#define LCDC_LCDSR_CLKSTS_0                   (LCDC_LCDSR_CLKSTS_0_Val << LCDC_LCDSR_CLKSTS_Pos)   /* (LCDC_LCDSR) Pixel clock is disabled. Position */
+#define LCDC_LCDSR_CLKSTS_1                   (LCDC_LCDSR_CLKSTS_1_Val << LCDC_LCDSR_CLKSTS_Pos)   /* (LCDC_LCDSR) Pixel clock is running. Position */
 #define LCDC_LCDSR_LCDSTS_Pos                 _UINT32_(1)                                          /* (LCDC_LCDSR) LCDC Synchronization Status Position */
 #define LCDC_LCDSR_LCDSTS_Msk                 (_UINT32_(0x1) << LCDC_LCDSR_LCDSTS_Pos)             /* (LCDC_LCDSR) LCDC Synchronization Status Mask */
-#define LCDC_LCDSR_LCDSTS(value)              (LCDC_LCDSR_LCDSTS_Msk & (_UINT32_(value) << LCDC_LCDSR_LCDSTS_Pos)) /* Assigment of value for LCDSTS in the LCDC_LCDSR register */
+#define LCDC_LCDSR_LCDSTS(value)              (LCDC_LCDSR_LCDSTS_Msk & (_UINT32_(value) << LCDC_LCDSR_LCDSTS_Pos)) /* Assignment of value for LCDSTS in the LCDC_LCDSR register */
 #define   LCDC_LCDSR_LCDSTS_0_Val             _UINT32_(0x0)                                        /* (LCDC_LCDSR) Timing engine is disabled.  */
 #define   LCDC_LCDSR_LCDSTS_1_Val             _UINT32_(0x1)                                        /* (LCDC_LCDSR) Timing engine is running.  */
-#define LCDC_LCDSR_LCDSTS_0                   (LCDC_LCDSR_LCDSTS_0_Val << LCDC_LCDSR_LCDSTS_Pos)   /* (LCDC_LCDSR) Timing engine is disabled. Position  */
-#define LCDC_LCDSR_LCDSTS_1                   (LCDC_LCDSR_LCDSTS_1_Val << LCDC_LCDSR_LCDSTS_Pos)   /* (LCDC_LCDSR) Timing engine is running. Position  */
+#define LCDC_LCDSR_LCDSTS_0                   (LCDC_LCDSR_LCDSTS_0_Val << LCDC_LCDSR_LCDSTS_Pos)   /* (LCDC_LCDSR) Timing engine is disabled. Position */
+#define LCDC_LCDSR_LCDSTS_1                   (LCDC_LCDSR_LCDSTS_1_Val << LCDC_LCDSR_LCDSTS_Pos)   /* (LCDC_LCDSR) Timing engine is running. Position */
 #define LCDC_LCDSR_DISPSTS_Pos                _UINT32_(2)                                          /* (LCDC_LCDSR) LCDC DISP Signal Status Position */
 #define LCDC_LCDSR_DISPSTS_Msk                (_UINT32_(0x1) << LCDC_LCDSR_DISPSTS_Pos)            /* (LCDC_LCDSR) LCDC DISP Signal Status Mask */
-#define LCDC_LCDSR_DISPSTS(value)             (LCDC_LCDSR_DISPSTS_Msk & (_UINT32_(value) << LCDC_LCDSR_DISPSTS_Pos)) /* Assigment of value for DISPSTS in the LCDC_LCDSR register */
+#define LCDC_LCDSR_DISPSTS(value)             (LCDC_LCDSR_DISPSTS_Msk & (_UINT32_(value) << LCDC_LCDSR_DISPSTS_Pos)) /* Assignment of value for DISPSTS in the LCDC_LCDSR register */
 #define   LCDC_LCDSR_DISPSTS_0_Val            _UINT32_(0x0)                                        /* (LCDC_LCDSR) DISP is disabled.  */
 #define   LCDC_LCDSR_DISPSTS_1_Val            _UINT32_(0x1)                                        /* (LCDC_LCDSR) DISP signal is activated.  */
-#define LCDC_LCDSR_DISPSTS_0                  (LCDC_LCDSR_DISPSTS_0_Val << LCDC_LCDSR_DISPSTS_Pos) /* (LCDC_LCDSR) DISP is disabled. Position  */
-#define LCDC_LCDSR_DISPSTS_1                  (LCDC_LCDSR_DISPSTS_1_Val << LCDC_LCDSR_DISPSTS_Pos) /* (LCDC_LCDSR) DISP signal is activated. Position  */
+#define LCDC_LCDSR_DISPSTS_0                  (LCDC_LCDSR_DISPSTS_0_Val << LCDC_LCDSR_DISPSTS_Pos) /* (LCDC_LCDSR) DISP is disabled. Position */
+#define LCDC_LCDSR_DISPSTS_1                  (LCDC_LCDSR_DISPSTS_1_Val << LCDC_LCDSR_DISPSTS_Pos) /* (LCDC_LCDSR) DISP signal is activated. Position */
 #define LCDC_LCDSR_PWMSTS_Pos                 _UINT32_(3)                                          /* (LCDC_LCDSR) LCDC PWM Signal Status Position */
 #define LCDC_LCDSR_PWMSTS_Msk                 (_UINT32_(0x1) << LCDC_LCDSR_PWMSTS_Pos)             /* (LCDC_LCDSR) LCDC PWM Signal Status Mask */
-#define LCDC_LCDSR_PWMSTS(value)              (LCDC_LCDSR_PWMSTS_Msk & (_UINT32_(value) << LCDC_LCDSR_PWMSTS_Pos)) /* Assigment of value for PWMSTS in the LCDC_LCDSR register */
+#define LCDC_LCDSR_PWMSTS(value)              (LCDC_LCDSR_PWMSTS_Msk & (_UINT32_(value) << LCDC_LCDSR_PWMSTS_Pos)) /* Assignment of value for PWMSTS in the LCDC_LCDSR register */
 #define   LCDC_LCDSR_PWMSTS_0_Val             _UINT32_(0x0)                                        /* (LCDC_LCDSR) PWM is disabled.  */
 #define   LCDC_LCDSR_PWMSTS_1_Val             _UINT32_(0x1)                                        /* (LCDC_LCDSR) PWM signal is activated.  */
-#define LCDC_LCDSR_PWMSTS_0                   (LCDC_LCDSR_PWMSTS_0_Val << LCDC_LCDSR_PWMSTS_Pos)   /* (LCDC_LCDSR) PWM is disabled. Position  */
-#define LCDC_LCDSR_PWMSTS_1                   (LCDC_LCDSR_PWMSTS_1_Val << LCDC_LCDSR_PWMSTS_Pos)   /* (LCDC_LCDSR) PWM signal is activated. Position  */
+#define LCDC_LCDSR_PWMSTS_0                   (LCDC_LCDSR_PWMSTS_0_Val << LCDC_LCDSR_PWMSTS_Pos)   /* (LCDC_LCDSR) PWM is disabled. Position */
+#define LCDC_LCDSR_PWMSTS_1                   (LCDC_LCDSR_PWMSTS_1_Val << LCDC_LCDSR_PWMSTS_Pos)   /* (LCDC_LCDSR) PWM signal is activated. Position */
 #define LCDC_LCDSR_SIPSTS_Pos                 _UINT32_(4)                                          /* (LCDC_LCDSR) Synchronization In Progress Position */
 #define LCDC_LCDSR_SIPSTS_Msk                 (_UINT32_(0x1) << LCDC_LCDSR_SIPSTS_Pos)             /* (LCDC_LCDSR) Synchronization In Progress Mask */
-#define LCDC_LCDSR_SIPSTS(value)              (LCDC_LCDSR_SIPSTS_Msk & (_UINT32_(value) << LCDC_LCDSR_SIPSTS_Pos)) /* Assigment of value for SIPSTS in the LCDC_LCDSR register */
+#define LCDC_LCDSR_SIPSTS(value)              (LCDC_LCDSR_SIPSTS_Msk & (_UINT32_(value) << LCDC_LCDSR_SIPSTS_Pos)) /* Assignment of value for SIPSTS in the LCDC_LCDSR register */
 #define   LCDC_LCDSR_SIPSTS_0_Val             _UINT32_(0x0)                                        /* (LCDC_LCDSR) Clock domain synchronization is terminated.  */
 #define   LCDC_LCDSR_SIPSTS_1_Val             _UINT32_(0x1)                                        /* (LCDC_LCDSR) Synchronization is in progress. Access to the registers LCDC_LCDCCFG[0..7], LCDC_LCDEN and LCDC_LCDDIS has no effect.  */
-#define LCDC_LCDSR_SIPSTS_0                   (LCDC_LCDSR_SIPSTS_0_Val << LCDC_LCDSR_SIPSTS_Pos)   /* (LCDC_LCDSR) Clock domain synchronization is terminated. Position  */
-#define LCDC_LCDSR_SIPSTS_1                   (LCDC_LCDSR_SIPSTS_1_Val << LCDC_LCDSR_SIPSTS_Pos)   /* (LCDC_LCDSR) Synchronization is in progress. Access to the registers LCDC_LCDCCFG[0..7], LCDC_LCDEN and LCDC_LCDDIS has no effect. Position  */
+#define LCDC_LCDSR_SIPSTS_0                   (LCDC_LCDSR_SIPSTS_0_Val << LCDC_LCDSR_SIPSTS_Pos)   /* (LCDC_LCDSR) Clock domain synchronization is terminated. Position */
+#define LCDC_LCDSR_SIPSTS_1                   (LCDC_LCDSR_SIPSTS_1_Val << LCDC_LCDSR_SIPSTS_Pos)   /* (LCDC_LCDSR) Synchronization is in progress. Access to the registers LCDC_LCDCCFG[0..7], LCDC_LCDEN and LCDC_LCDDIS has no effect. Position */
 #define LCDC_LCDSR_SDSTS_Pos                  _UINT32_(5)                                          /* (LCDC_LCDSR) Shutdown Signal Status Position */
 #define LCDC_LCDSR_SDSTS_Msk                  (_UINT32_(0x1) << LCDC_LCDSR_SDSTS_Pos)              /* (LCDC_LCDSR) Shutdown Signal Status Mask */
-#define LCDC_LCDSR_SDSTS(value)               (LCDC_LCDSR_SDSTS_Msk & (_UINT32_(value) << LCDC_LCDSR_SDSTS_Pos)) /* Assigment of value for SDSTS in the LCDC_LCDSR register */
+#define LCDC_LCDSR_SDSTS(value)               (LCDC_LCDSR_SDSTS_Msk & (_UINT32_(value) << LCDC_LCDSR_SDSTS_Pos)) /* Assignment of value for SDSTS in the LCDC_LCDSR register */
 #define   LCDC_LCDSR_SDSTS_0_Val              _UINT32_(0x0)                                        /* (LCDC_LCDSR) Shutdown signal output is zero.  */
 #define   LCDC_LCDSR_SDSTS_1_Val              _UINT32_(0x1)                                        /* (LCDC_LCDSR) Shutdown signal output is one.  */
-#define LCDC_LCDSR_SDSTS_0                    (LCDC_LCDSR_SDSTS_0_Val << LCDC_LCDSR_SDSTS_Pos)     /* (LCDC_LCDSR) Shutdown signal output is zero. Position  */
-#define LCDC_LCDSR_SDSTS_1                    (LCDC_LCDSR_SDSTS_1_Val << LCDC_LCDSR_SDSTS_Pos)     /* (LCDC_LCDSR) Shutdown signal output is one. Position  */
+#define LCDC_LCDSR_SDSTS_0                    (LCDC_LCDSR_SDSTS_0_Val << LCDC_LCDSR_SDSTS_Pos)     /* (LCDC_LCDSR) Shutdown signal output is zero. Position */
+#define LCDC_LCDSR_SDSTS_1                    (LCDC_LCDSR_SDSTS_1_Val << LCDC_LCDSR_SDSTS_Pos)     /* (LCDC_LCDSR) Shutdown signal output is one. Position */
 #define LCDC_LCDSR_CMSTS_Pos                  _UINT32_(6)                                          /* (LCDC_LCDSR) Color Mode Signal Status Position */
 #define LCDC_LCDSR_CMSTS_Msk                  (_UINT32_(0x1) << LCDC_LCDSR_CMSTS_Pos)              /* (LCDC_LCDSR) Color Mode Signal Status Mask */
-#define LCDC_LCDSR_CMSTS(value)               (LCDC_LCDSR_CMSTS_Msk & (_UINT32_(value) << LCDC_LCDSR_CMSTS_Pos)) /* Assigment of value for CMSTS in the LCDC_LCDSR register */
+#define LCDC_LCDSR_CMSTS(value)               (LCDC_LCDSR_CMSTS_Msk & (_UINT32_(value) << LCDC_LCDSR_CMSTS_Pos)) /* Assignment of value for CMSTS in the LCDC_LCDSR register */
 #define   LCDC_LCDSR_CMSTS_0_Val              _UINT32_(0x0)                                        /* (LCDC_LCDSR) Color mode signal output is zero.  */
 #define   LCDC_LCDSR_CMSTS_1_Val              _UINT32_(0x1)                                        /* (LCDC_LCDSR) Color mode signal output is one.  */
-#define LCDC_LCDSR_CMSTS_0                    (LCDC_LCDSR_CMSTS_0_Val << LCDC_LCDSR_CMSTS_Pos)     /* (LCDC_LCDSR) Color mode signal output is zero. Position  */
-#define LCDC_LCDSR_CMSTS_1                    (LCDC_LCDSR_CMSTS_1_Val << LCDC_LCDSR_CMSTS_Pos)     /* (LCDC_LCDSR) Color mode signal output is one. Position  */
+#define LCDC_LCDSR_CMSTS_0                    (LCDC_LCDSR_CMSTS_0_Val << LCDC_LCDSR_CMSTS_Pos)     /* (LCDC_LCDSR) Color mode signal output is zero. Position */
+#define LCDC_LCDSR_CMSTS_1                    (LCDC_LCDSR_CMSTS_1_Val << LCDC_LCDSR_CMSTS_Pos)     /* (LCDC_LCDSR) Color mode signal output is one. Position */
 #define LCDC_LCDSR_Msk                        _UINT32_(0x0000007F)                                 /* (LCDC_LCDSR) Register Mask  */
 
 
 /* -------- LCDC_LCDIER : (LCDC Offset: 0x2C) ( /W 32) Interrupt Enable Register -------- */
 #define LCDC_LCDIER_SOFIE_Pos                 _UINT32_(0)                                          /* (LCDC_LCDIER) Start of Frame Interrupt Enable Position */
 #define LCDC_LCDIER_SOFIE_Msk                 (_UINT32_(0x1) << LCDC_LCDIER_SOFIE_Pos)             /* (LCDC_LCDIER) Start of Frame Interrupt Enable Mask */
-#define LCDC_LCDIER_SOFIE(value)              (LCDC_LCDIER_SOFIE_Msk & (_UINT32_(value) << LCDC_LCDIER_SOFIE_Pos)) /* Assigment of value for SOFIE in the LCDC_LCDIER register */
+#define LCDC_LCDIER_SOFIE(value)              (LCDC_LCDIER_SOFIE_Msk & (_UINT32_(value) << LCDC_LCDIER_SOFIE_Pos)) /* Assignment of value for SOFIE in the LCDC_LCDIER register */
 #define LCDC_LCDIER_DISIE_Pos                 _UINT32_(1)                                          /* (LCDC_LCDIER) LCD Disable Interrupt Enable Position */
 #define LCDC_LCDIER_DISIE_Msk                 (_UINT32_(0x1) << LCDC_LCDIER_DISIE_Pos)             /* (LCDC_LCDIER) LCD Disable Interrupt Enable Mask */
-#define LCDC_LCDIER_DISIE(value)              (LCDC_LCDIER_DISIE_Msk & (_UINT32_(value) << LCDC_LCDIER_DISIE_Pos)) /* Assigment of value for DISIE in the LCDC_LCDIER register */
+#define LCDC_LCDIER_DISIE(value)              (LCDC_LCDIER_DISIE_Msk & (_UINT32_(value) << LCDC_LCDIER_DISIE_Pos)) /* Assignment of value for DISIE in the LCDC_LCDIER register */
 #define LCDC_LCDIER_DISPIE_Pos                _UINT32_(2)                                          /* (LCDC_LCDIER) Power-up/Power-down Sequence Terminated Interrupt Enable Position */
 #define LCDC_LCDIER_DISPIE_Msk                (_UINT32_(0x1) << LCDC_LCDIER_DISPIE_Pos)            /* (LCDC_LCDIER) Power-up/Power-down Sequence Terminated Interrupt Enable Mask */
-#define LCDC_LCDIER_DISPIE(value)             (LCDC_LCDIER_DISPIE_Msk & (_UINT32_(value) << LCDC_LCDIER_DISPIE_Pos)) /* Assigment of value for DISPIE in the LCDC_LCDIER register */
+#define LCDC_LCDIER_DISPIE(value)             (LCDC_LCDIER_DISPIE_Msk & (_UINT32_(value) << LCDC_LCDIER_DISPIE_Pos)) /* Assignment of value for DISPIE in the LCDC_LCDIER register */
 #define LCDC_LCDIER_ROWIE_Pos                 _UINT32_(3)                                          /* (LCDC_LCDIER) Row Interrupt Enable Position */
 #define LCDC_LCDIER_ROWIE_Msk                 (_UINT32_(0x1) << LCDC_LCDIER_ROWIE_Pos)             /* (LCDC_LCDIER) Row Interrupt Enable Mask */
-#define LCDC_LCDIER_ROWIE(value)              (LCDC_LCDIER_ROWIE_Msk & (_UINT32_(value) << LCDC_LCDIER_ROWIE_Pos)) /* Assigment of value for ROWIE in the LCDC_LCDIER register */
+#define LCDC_LCDIER_ROWIE(value)              (LCDC_LCDIER_ROWIE_Msk & (_UINT32_(value) << LCDC_LCDIER_ROWIE_Pos)) /* Assignment of value for ROWIE in the LCDC_LCDIER register */
 #define LCDC_LCDIER_FIFOERRIE_Pos             _UINT32_(4)                                          /* (LCDC_LCDIER) Output FIFO Error Interrupt Enable Position */
 #define LCDC_LCDIER_FIFOERRIE_Msk             (_UINT32_(0x1) << LCDC_LCDIER_FIFOERRIE_Pos)         /* (LCDC_LCDIER) Output FIFO Error Interrupt Enable Mask */
-#define LCDC_LCDIER_FIFOERRIE(value)          (LCDC_LCDIER_FIFOERRIE_Msk & (_UINT32_(value) << LCDC_LCDIER_FIFOERRIE_Pos)) /* Assigment of value for FIFOERRIE in the LCDC_LCDIER register */
+#define LCDC_LCDIER_FIFOERRIE(value)          (LCDC_LCDIER_FIFOERRIE_Msk & (_UINT32_(value) << LCDC_LCDIER_FIFOERRIE_Pos)) /* Assignment of value for FIFOERRIE in the LCDC_LCDIER register */
 #define LCDC_LCDIER_BASEIE_Pos                _UINT32_(8)                                          /* (LCDC_LCDIER) Base Layer Interrupt Enable Position */
 #define LCDC_LCDIER_BASEIE_Msk                (_UINT32_(0x1) << LCDC_LCDIER_BASEIE_Pos)            /* (LCDC_LCDIER) Base Layer Interrupt Enable Mask */
-#define LCDC_LCDIER_BASEIE(value)             (LCDC_LCDIER_BASEIE_Msk & (_UINT32_(value) << LCDC_LCDIER_BASEIE_Pos)) /* Assigment of value for BASEIE in the LCDC_LCDIER register */
+#define LCDC_LCDIER_BASEIE(value)             (LCDC_LCDIER_BASEIE_Msk & (_UINT32_(value) << LCDC_LCDIER_BASEIE_Pos)) /* Assignment of value for BASEIE in the LCDC_LCDIER register */
 #define LCDC_LCDIER_OVR1IE_Pos                _UINT32_(9)                                          /* (LCDC_LCDIER) Overlay 1 Interrupt Enable Position */
 #define LCDC_LCDIER_OVR1IE_Msk                (_UINT32_(0x1) << LCDC_LCDIER_OVR1IE_Pos)            /* (LCDC_LCDIER) Overlay 1 Interrupt Enable Mask */
-#define LCDC_LCDIER_OVR1IE(value)             (LCDC_LCDIER_OVR1IE_Msk & (_UINT32_(value) << LCDC_LCDIER_OVR1IE_Pos)) /* Assigment of value for OVR1IE in the LCDC_LCDIER register */
+#define LCDC_LCDIER_OVR1IE(value)             (LCDC_LCDIER_OVR1IE_Msk & (_UINT32_(value) << LCDC_LCDIER_OVR1IE_Pos)) /* Assignment of value for OVR1IE in the LCDC_LCDIER register */
 #define LCDC_LCDIER_HEOIE_Pos                 _UINT32_(10)                                         /* (LCDC_LCDIER) High-End Overlay Interrupt Enable Position */
 #define LCDC_LCDIER_HEOIE_Msk                 (_UINT32_(0x1) << LCDC_LCDIER_HEOIE_Pos)             /* (LCDC_LCDIER) High-End Overlay Interrupt Enable Mask */
-#define LCDC_LCDIER_HEOIE(value)              (LCDC_LCDIER_HEOIE_Msk & (_UINT32_(value) << LCDC_LCDIER_HEOIE_Pos)) /* Assigment of value for HEOIE in the LCDC_LCDIER register */
+#define LCDC_LCDIER_HEOIE(value)              (LCDC_LCDIER_HEOIE_Msk & (_UINT32_(value) << LCDC_LCDIER_HEOIE_Pos)) /* Assignment of value for HEOIE in the LCDC_LCDIER register */
 #define LCDC_LCDIER_SFD_Pos                   _UINT32_(30)                                         /* (LCDC_LCDIER) Safety Fault Detection Interrupt Enable Position */
 #define LCDC_LCDIER_SFD_Msk                   (_UINT32_(0x1) << LCDC_LCDIER_SFD_Pos)               /* (LCDC_LCDIER) Safety Fault Detection Interrupt Enable Mask */
-#define LCDC_LCDIER_SFD(value)                (LCDC_LCDIER_SFD_Msk & (_UINT32_(value) << LCDC_LCDIER_SFD_Pos)) /* Assigment of value for SFD in the LCDC_LCDIER register */
+#define LCDC_LCDIER_SFD(value)                (LCDC_LCDIER_SFD_Msk & (_UINT32_(value) << LCDC_LCDIER_SFD_Pos)) /* Assignment of value for SFD in the LCDC_LCDIER register */
 #define LCDC_LCDIER_WPIE_Pos                  _UINT32_(31)                                         /* (LCDC_LCDIER) Write Protection Interrupt Enable Position */
 #define LCDC_LCDIER_WPIE_Msk                  (_UINT32_(0x1) << LCDC_LCDIER_WPIE_Pos)              /* (LCDC_LCDIER) Write Protection Interrupt Enable Mask */
-#define LCDC_LCDIER_WPIE(value)               (LCDC_LCDIER_WPIE_Msk & (_UINT32_(value) << LCDC_LCDIER_WPIE_Pos)) /* Assigment of value for WPIE in the LCDC_LCDIER register */
+#define LCDC_LCDIER_WPIE(value)               (LCDC_LCDIER_WPIE_Msk & (_UINT32_(value) << LCDC_LCDIER_WPIE_Pos)) /* Assignment of value for WPIE in the LCDC_LCDIER register */
 #define LCDC_LCDIER_Msk                       _UINT32_(0xC000071F)                                 /* (LCDC_LCDIER) Register Mask  */
 
 
 /* -------- LCDC_LCDIDR : (LCDC Offset: 0x30) ( /W 32) Interrupt Disable Register -------- */
 #define LCDC_LCDIDR_SOFID_Pos                 _UINT32_(0)                                          /* (LCDC_LCDIDR) Start of Frame Interrupt Disable Position */
 #define LCDC_LCDIDR_SOFID_Msk                 (_UINT32_(0x1) << LCDC_LCDIDR_SOFID_Pos)             /* (LCDC_LCDIDR) Start of Frame Interrupt Disable Mask */
-#define LCDC_LCDIDR_SOFID(value)              (LCDC_LCDIDR_SOFID_Msk & (_UINT32_(value) << LCDC_LCDIDR_SOFID_Pos)) /* Assigment of value for SOFID in the LCDC_LCDIDR register */
+#define LCDC_LCDIDR_SOFID(value)              (LCDC_LCDIDR_SOFID_Msk & (_UINT32_(value) << LCDC_LCDIDR_SOFID_Pos)) /* Assignment of value for SOFID in the LCDC_LCDIDR register */
 #define LCDC_LCDIDR_DISID_Pos                 _UINT32_(1)                                          /* (LCDC_LCDIDR) LCD Disable Interrupt Disable Position */
 #define LCDC_LCDIDR_DISID_Msk                 (_UINT32_(0x1) << LCDC_LCDIDR_DISID_Pos)             /* (LCDC_LCDIDR) LCD Disable Interrupt Disable Mask */
-#define LCDC_LCDIDR_DISID(value)              (LCDC_LCDIDR_DISID_Msk & (_UINT32_(value) << LCDC_LCDIDR_DISID_Pos)) /* Assigment of value for DISID in the LCDC_LCDIDR register */
+#define LCDC_LCDIDR_DISID(value)              (LCDC_LCDIDR_DISID_Msk & (_UINT32_(value) << LCDC_LCDIDR_DISID_Pos)) /* Assignment of value for DISID in the LCDC_LCDIDR register */
 #define LCDC_LCDIDR_DISPID_Pos                _UINT32_(2)                                          /* (LCDC_LCDIDR) Power-up/Power-down Sequence Terminated Interrupt Disable Position */
 #define LCDC_LCDIDR_DISPID_Msk                (_UINT32_(0x1) << LCDC_LCDIDR_DISPID_Pos)            /* (LCDC_LCDIDR) Power-up/Power-down Sequence Terminated Interrupt Disable Mask */
-#define LCDC_LCDIDR_DISPID(value)             (LCDC_LCDIDR_DISPID_Msk & (_UINT32_(value) << LCDC_LCDIDR_DISPID_Pos)) /* Assigment of value for DISPID in the LCDC_LCDIDR register */
+#define LCDC_LCDIDR_DISPID(value)             (LCDC_LCDIDR_DISPID_Msk & (_UINT32_(value) << LCDC_LCDIDR_DISPID_Pos)) /* Assignment of value for DISPID in the LCDC_LCDIDR register */
 #define LCDC_LCDIDR_ROWID_Pos                 _UINT32_(3)                                          /* (LCDC_LCDIDR) Row Interrupt Disable Position */
 #define LCDC_LCDIDR_ROWID_Msk                 (_UINT32_(0x1) << LCDC_LCDIDR_ROWID_Pos)             /* (LCDC_LCDIDR) Row Interrupt Disable Mask */
-#define LCDC_LCDIDR_ROWID(value)              (LCDC_LCDIDR_ROWID_Msk & (_UINT32_(value) << LCDC_LCDIDR_ROWID_Pos)) /* Assigment of value for ROWID in the LCDC_LCDIDR register */
+#define LCDC_LCDIDR_ROWID(value)              (LCDC_LCDIDR_ROWID_Msk & (_UINT32_(value) << LCDC_LCDIDR_ROWID_Pos)) /* Assignment of value for ROWID in the LCDC_LCDIDR register */
 #define LCDC_LCDIDR_FIFOERRID_Pos             _UINT32_(4)                                          /* (LCDC_LCDIDR) Output FIFO Error Interrupt Disable Position */
 #define LCDC_LCDIDR_FIFOERRID_Msk             (_UINT32_(0x1) << LCDC_LCDIDR_FIFOERRID_Pos)         /* (LCDC_LCDIDR) Output FIFO Error Interrupt Disable Mask */
-#define LCDC_LCDIDR_FIFOERRID(value)          (LCDC_LCDIDR_FIFOERRID_Msk & (_UINT32_(value) << LCDC_LCDIDR_FIFOERRID_Pos)) /* Assigment of value for FIFOERRID in the LCDC_LCDIDR register */
+#define LCDC_LCDIDR_FIFOERRID(value)          (LCDC_LCDIDR_FIFOERRID_Msk & (_UINT32_(value) << LCDC_LCDIDR_FIFOERRID_Pos)) /* Assignment of value for FIFOERRID in the LCDC_LCDIDR register */
 #define LCDC_LCDIDR_BASEID_Pos                _UINT32_(8)                                          /* (LCDC_LCDIDR) Base Layer Interrupt Disable Position */
 #define LCDC_LCDIDR_BASEID_Msk                (_UINT32_(0x1) << LCDC_LCDIDR_BASEID_Pos)            /* (LCDC_LCDIDR) Base Layer Interrupt Disable Mask */
-#define LCDC_LCDIDR_BASEID(value)             (LCDC_LCDIDR_BASEID_Msk & (_UINT32_(value) << LCDC_LCDIDR_BASEID_Pos)) /* Assigment of value for BASEID in the LCDC_LCDIDR register */
+#define LCDC_LCDIDR_BASEID(value)             (LCDC_LCDIDR_BASEID_Msk & (_UINT32_(value) << LCDC_LCDIDR_BASEID_Pos)) /* Assignment of value for BASEID in the LCDC_LCDIDR register */
 #define LCDC_LCDIDR_OVR1ID_Pos                _UINT32_(9)                                          /* (LCDC_LCDIDR) Overlay 1 Interrupt Disable Position */
 #define LCDC_LCDIDR_OVR1ID_Msk                (_UINT32_(0x1) << LCDC_LCDIDR_OVR1ID_Pos)            /* (LCDC_LCDIDR) Overlay 1 Interrupt Disable Mask */
-#define LCDC_LCDIDR_OVR1ID(value)             (LCDC_LCDIDR_OVR1ID_Msk & (_UINT32_(value) << LCDC_LCDIDR_OVR1ID_Pos)) /* Assigment of value for OVR1ID in the LCDC_LCDIDR register */
+#define LCDC_LCDIDR_OVR1ID(value)             (LCDC_LCDIDR_OVR1ID_Msk & (_UINT32_(value) << LCDC_LCDIDR_OVR1ID_Pos)) /* Assignment of value for OVR1ID in the LCDC_LCDIDR register */
 #define LCDC_LCDIDR_HEOID_Pos                 _UINT32_(10)                                         /* (LCDC_LCDIDR) High-End Overlay Interrupt Disable Position */
 #define LCDC_LCDIDR_HEOID_Msk                 (_UINT32_(0x1) << LCDC_LCDIDR_HEOID_Pos)             /* (LCDC_LCDIDR) High-End Overlay Interrupt Disable Mask */
-#define LCDC_LCDIDR_HEOID(value)              (LCDC_LCDIDR_HEOID_Msk & (_UINT32_(value) << LCDC_LCDIDR_HEOID_Pos)) /* Assigment of value for HEOID in the LCDC_LCDIDR register */
+#define LCDC_LCDIDR_HEOID(value)              (LCDC_LCDIDR_HEOID_Msk & (_UINT32_(value) << LCDC_LCDIDR_HEOID_Pos)) /* Assignment of value for HEOID in the LCDC_LCDIDR register */
 #define LCDC_LCDIDR_SFD_Pos                   _UINT32_(30)                                         /* (LCDC_LCDIDR) Safety Fault Detection Interrupt Disable Position */
 #define LCDC_LCDIDR_SFD_Msk                   (_UINT32_(0x1) << LCDC_LCDIDR_SFD_Pos)               /* (LCDC_LCDIDR) Safety Fault Detection Interrupt Disable Mask */
-#define LCDC_LCDIDR_SFD(value)                (LCDC_LCDIDR_SFD_Msk & (_UINT32_(value) << LCDC_LCDIDR_SFD_Pos)) /* Assigment of value for SFD in the LCDC_LCDIDR register */
+#define LCDC_LCDIDR_SFD(value)                (LCDC_LCDIDR_SFD_Msk & (_UINT32_(value) << LCDC_LCDIDR_SFD_Pos)) /* Assignment of value for SFD in the LCDC_LCDIDR register */
 #define LCDC_LCDIDR_WPID_Pos                  _UINT32_(31)                                         /* (LCDC_LCDIDR) Write Protection Interrupt Disable Position */
 #define LCDC_LCDIDR_WPID_Msk                  (_UINT32_(0x1) << LCDC_LCDIDR_WPID_Pos)              /* (LCDC_LCDIDR) Write Protection Interrupt Disable Mask */
-#define LCDC_LCDIDR_WPID(value)               (LCDC_LCDIDR_WPID_Msk & (_UINT32_(value) << LCDC_LCDIDR_WPID_Pos)) /* Assigment of value for WPID in the LCDC_LCDIDR register */
+#define LCDC_LCDIDR_WPID(value)               (LCDC_LCDIDR_WPID_Msk & (_UINT32_(value) << LCDC_LCDIDR_WPID_Pos)) /* Assignment of value for WPID in the LCDC_LCDIDR register */
 #define LCDC_LCDIDR_Msk                       _UINT32_(0xC000071F)                                 /* (LCDC_LCDIDR) Register Mask  */
 
 
@@ -595,34 +597,34 @@
 
 #define LCDC_LCDIMR_SOFIM_Pos                 _UINT32_(0)                                          /* (LCDC_LCDIMR) Start of Frame Interrupt Mask Position */
 #define LCDC_LCDIMR_SOFIM_Msk                 (_UINT32_(0x1) << LCDC_LCDIMR_SOFIM_Pos)             /* (LCDC_LCDIMR) Start of Frame Interrupt Mask Mask */
-#define LCDC_LCDIMR_SOFIM(value)              (LCDC_LCDIMR_SOFIM_Msk & (_UINT32_(value) << LCDC_LCDIMR_SOFIM_Pos)) /* Assigment of value for SOFIM in the LCDC_LCDIMR register */
+#define LCDC_LCDIMR_SOFIM(value)              (LCDC_LCDIMR_SOFIM_Msk & (_UINT32_(value) << LCDC_LCDIMR_SOFIM_Pos)) /* Assignment of value for SOFIM in the LCDC_LCDIMR register */
 #define LCDC_LCDIMR_DISIM_Pos                 _UINT32_(1)                                          /* (LCDC_LCDIMR) LCD Disable Interrupt Mask Position */
 #define LCDC_LCDIMR_DISIM_Msk                 (_UINT32_(0x1) << LCDC_LCDIMR_DISIM_Pos)             /* (LCDC_LCDIMR) LCD Disable Interrupt Mask Mask */
-#define LCDC_LCDIMR_DISIM(value)              (LCDC_LCDIMR_DISIM_Msk & (_UINT32_(value) << LCDC_LCDIMR_DISIM_Pos)) /* Assigment of value for DISIM in the LCDC_LCDIMR register */
+#define LCDC_LCDIMR_DISIM(value)              (LCDC_LCDIMR_DISIM_Msk & (_UINT32_(value) << LCDC_LCDIMR_DISIM_Pos)) /* Assignment of value for DISIM in the LCDC_LCDIMR register */
 #define LCDC_LCDIMR_DISPIM_Pos                _UINT32_(2)                                          /* (LCDC_LCDIMR) Power-up/Power-down Sequence Terminated Interrupt Mask Position */
 #define LCDC_LCDIMR_DISPIM_Msk                (_UINT32_(0x1) << LCDC_LCDIMR_DISPIM_Pos)            /* (LCDC_LCDIMR) Power-up/Power-down Sequence Terminated Interrupt Mask Mask */
-#define LCDC_LCDIMR_DISPIM(value)             (LCDC_LCDIMR_DISPIM_Msk & (_UINT32_(value) << LCDC_LCDIMR_DISPIM_Pos)) /* Assigment of value for DISPIM in the LCDC_LCDIMR register */
+#define LCDC_LCDIMR_DISPIM(value)             (LCDC_LCDIMR_DISPIM_Msk & (_UINT32_(value) << LCDC_LCDIMR_DISPIM_Pos)) /* Assignment of value for DISPIM in the LCDC_LCDIMR register */
 #define LCDC_LCDIMR_ROWIM_Pos                 _UINT32_(3)                                          /* (LCDC_LCDIMR) Row Interrupt Mask Position */
 #define LCDC_LCDIMR_ROWIM_Msk                 (_UINT32_(0x1) << LCDC_LCDIMR_ROWIM_Pos)             /* (LCDC_LCDIMR) Row Interrupt Mask Mask */
-#define LCDC_LCDIMR_ROWIM(value)              (LCDC_LCDIMR_ROWIM_Msk & (_UINT32_(value) << LCDC_LCDIMR_ROWIM_Pos)) /* Assigment of value for ROWIM in the LCDC_LCDIMR register */
+#define LCDC_LCDIMR_ROWIM(value)              (LCDC_LCDIMR_ROWIM_Msk & (_UINT32_(value) << LCDC_LCDIMR_ROWIM_Pos)) /* Assignment of value for ROWIM in the LCDC_LCDIMR register */
 #define LCDC_LCDIMR_FIFOERRIM_Pos             _UINT32_(4)                                          /* (LCDC_LCDIMR) Output FIFO Error Interrupt Mask Position */
 #define LCDC_LCDIMR_FIFOERRIM_Msk             (_UINT32_(0x1) << LCDC_LCDIMR_FIFOERRIM_Pos)         /* (LCDC_LCDIMR) Output FIFO Error Interrupt Mask Mask */
-#define LCDC_LCDIMR_FIFOERRIM(value)          (LCDC_LCDIMR_FIFOERRIM_Msk & (_UINT32_(value) << LCDC_LCDIMR_FIFOERRIM_Pos)) /* Assigment of value for FIFOERRIM in the LCDC_LCDIMR register */
+#define LCDC_LCDIMR_FIFOERRIM(value)          (LCDC_LCDIMR_FIFOERRIM_Msk & (_UINT32_(value) << LCDC_LCDIMR_FIFOERRIM_Pos)) /* Assignment of value for FIFOERRIM in the LCDC_LCDIMR register */
 #define LCDC_LCDIMR_BASEIM_Pos                _UINT32_(8)                                          /* (LCDC_LCDIMR) Base Layer Interrupt Mask Position */
 #define LCDC_LCDIMR_BASEIM_Msk                (_UINT32_(0x1) << LCDC_LCDIMR_BASEIM_Pos)            /* (LCDC_LCDIMR) Base Layer Interrupt Mask Mask */
-#define LCDC_LCDIMR_BASEIM(value)             (LCDC_LCDIMR_BASEIM_Msk & (_UINT32_(value) << LCDC_LCDIMR_BASEIM_Pos)) /* Assigment of value for BASEIM in the LCDC_LCDIMR register */
+#define LCDC_LCDIMR_BASEIM(value)             (LCDC_LCDIMR_BASEIM_Msk & (_UINT32_(value) << LCDC_LCDIMR_BASEIM_Pos)) /* Assignment of value for BASEIM in the LCDC_LCDIMR register */
 #define LCDC_LCDIMR_OVR1IM_Pos                _UINT32_(9)                                          /* (LCDC_LCDIMR) Overlay 1 Interrupt Mask Position */
 #define LCDC_LCDIMR_OVR1IM_Msk                (_UINT32_(0x1) << LCDC_LCDIMR_OVR1IM_Pos)            /* (LCDC_LCDIMR) Overlay 1 Interrupt Mask Mask */
-#define LCDC_LCDIMR_OVR1IM(value)             (LCDC_LCDIMR_OVR1IM_Msk & (_UINT32_(value) << LCDC_LCDIMR_OVR1IM_Pos)) /* Assigment of value for OVR1IM in the LCDC_LCDIMR register */
+#define LCDC_LCDIMR_OVR1IM(value)             (LCDC_LCDIMR_OVR1IM_Msk & (_UINT32_(value) << LCDC_LCDIMR_OVR1IM_Pos)) /* Assignment of value for OVR1IM in the LCDC_LCDIMR register */
 #define LCDC_LCDIMR_HEOIM_Pos                 _UINT32_(10)                                         /* (LCDC_LCDIMR) High-End Overlay Interrupt Mask Position */
 #define LCDC_LCDIMR_HEOIM_Msk                 (_UINT32_(0x1) << LCDC_LCDIMR_HEOIM_Pos)             /* (LCDC_LCDIMR) High-End Overlay Interrupt Mask Mask */
-#define LCDC_LCDIMR_HEOIM(value)              (LCDC_LCDIMR_HEOIM_Msk & (_UINT32_(value) << LCDC_LCDIMR_HEOIM_Pos)) /* Assigment of value for HEOIM in the LCDC_LCDIMR register */
+#define LCDC_LCDIMR_HEOIM(value)              (LCDC_LCDIMR_HEOIM_Msk & (_UINT32_(value) << LCDC_LCDIMR_HEOIM_Pos)) /* Assignment of value for HEOIM in the LCDC_LCDIMR register */
 #define LCDC_LCDIMR_SFD_Pos                   _UINT32_(30)                                         /* (LCDC_LCDIMR) Safety Fault Detection Interrupt Mask Position */
 #define LCDC_LCDIMR_SFD_Msk                   (_UINT32_(0x1) << LCDC_LCDIMR_SFD_Pos)               /* (LCDC_LCDIMR) Safety Fault Detection Interrupt Mask Mask */
-#define LCDC_LCDIMR_SFD(value)                (LCDC_LCDIMR_SFD_Msk & (_UINT32_(value) << LCDC_LCDIMR_SFD_Pos)) /* Assigment of value for SFD in the LCDC_LCDIMR register */
+#define LCDC_LCDIMR_SFD(value)                (LCDC_LCDIMR_SFD_Msk & (_UINT32_(value) << LCDC_LCDIMR_SFD_Pos)) /* Assignment of value for SFD in the LCDC_LCDIMR register */
 #define LCDC_LCDIMR_WPIM_Pos                  _UINT32_(31)                                         /* (LCDC_LCDIMR) Write Protection Interrupt Mask Position */
 #define LCDC_LCDIMR_WPIM_Msk                  (_UINT32_(0x1) << LCDC_LCDIMR_WPIM_Pos)              /* (LCDC_LCDIMR) Write Protection Interrupt Mask Mask */
-#define LCDC_LCDIMR_WPIM(value)               (LCDC_LCDIMR_WPIM_Msk & (_UINT32_(value) << LCDC_LCDIMR_WPIM_Pos)) /* Assigment of value for WPIM in the LCDC_LCDIMR register */
+#define LCDC_LCDIMR_WPIM(value)               (LCDC_LCDIMR_WPIM_Msk & (_UINT32_(value) << LCDC_LCDIMR_WPIM_Pos)) /* Assignment of value for WPIM in the LCDC_LCDIMR register */
 #define LCDC_LCDIMR_Msk                       _UINT32_(0xC000071F)                                 /* (LCDC_LCDIMR) Register Mask  */
 
 
@@ -631,74 +633,74 @@
 
 #define LCDC_LCDISR_SOF_Pos                   _UINT32_(0)                                          /* (LCDC_LCDISR) Start of Frame Interrupt Status Position */
 #define LCDC_LCDISR_SOF_Msk                   (_UINT32_(0x1) << LCDC_LCDISR_SOF_Pos)               /* (LCDC_LCDISR) Start of Frame Interrupt Status Mask */
-#define LCDC_LCDISR_SOF(value)                (LCDC_LCDISR_SOF_Msk & (_UINT32_(value) << LCDC_LCDISR_SOF_Pos)) /* Assigment of value for SOF in the LCDC_LCDISR register */
+#define LCDC_LCDISR_SOF(value)                (LCDC_LCDISR_SOF_Msk & (_UINT32_(value) << LCDC_LCDISR_SOF_Pos)) /* Assignment of value for SOF in the LCDC_LCDISR register */
 #define   LCDC_LCDISR_SOF_0_Val               _UINT32_(0x0)                                        /* (LCDC_LCDISR) No detection since last read of LCDC_LCDISR.  */
 #define   LCDC_LCDISR_SOF_1_Val               _UINT32_(0x1)                                        /* (LCDC_LCDISR) Indicates that a start of frame event has been detected. This flag is reset after a read operation.  */
-#define LCDC_LCDISR_SOF_0                     (LCDC_LCDISR_SOF_0_Val << LCDC_LCDISR_SOF_Pos)       /* (LCDC_LCDISR) No detection since last read of LCDC_LCDISR. Position  */
-#define LCDC_LCDISR_SOF_1                     (LCDC_LCDISR_SOF_1_Val << LCDC_LCDISR_SOF_Pos)       /* (LCDC_LCDISR) Indicates that a start of frame event has been detected. This flag is reset after a read operation. Position  */
+#define LCDC_LCDISR_SOF_0                     (LCDC_LCDISR_SOF_0_Val << LCDC_LCDISR_SOF_Pos)       /* (LCDC_LCDISR) No detection since last read of LCDC_LCDISR. Position */
+#define LCDC_LCDISR_SOF_1                     (LCDC_LCDISR_SOF_1_Val << LCDC_LCDISR_SOF_Pos)       /* (LCDC_LCDISR) Indicates that a start of frame event has been detected. This flag is reset after a read operation. Position */
 #define LCDC_LCDISR_DIS_Pos                   _UINT32_(1)                                          /* (LCDC_LCDISR) LCD Disable Interrupt Status Position */
 #define LCDC_LCDISR_DIS_Msk                   (_UINT32_(0x1) << LCDC_LCDISR_DIS_Pos)               /* (LCDC_LCDISR) LCD Disable Interrupt Status Mask */
-#define LCDC_LCDISR_DIS(value)                (LCDC_LCDISR_DIS_Msk & (_UINT32_(value) << LCDC_LCDISR_DIS_Pos)) /* Assigment of value for DIS in the LCDC_LCDISR register */
+#define LCDC_LCDISR_DIS(value)                (LCDC_LCDISR_DIS_Msk & (_UINT32_(value) << LCDC_LCDISR_DIS_Pos)) /* Assignment of value for DIS in the LCDC_LCDISR register */
 #define   LCDC_LCDISR_DIS_0_Val               _UINT32_(0x0)                                        /* (LCDC_LCDISR) Horizontal and vertical timing generator has not yet been disabled.  */
 #define   LCDC_LCDISR_DIS_1_Val               _UINT32_(0x1)                                        /* (LCDC_LCDISR) Indicates that the horizontal and vertical timing generator has been disabled. This flag is reset after a read operation.  */
-#define LCDC_LCDISR_DIS_0                     (LCDC_LCDISR_DIS_0_Val << LCDC_LCDISR_DIS_Pos)       /* (LCDC_LCDISR) Horizontal and vertical timing generator has not yet been disabled. Position  */
-#define LCDC_LCDISR_DIS_1                     (LCDC_LCDISR_DIS_1_Val << LCDC_LCDISR_DIS_Pos)       /* (LCDC_LCDISR) Indicates that the horizontal and vertical timing generator has been disabled. This flag is reset after a read operation. Position  */
+#define LCDC_LCDISR_DIS_0                     (LCDC_LCDISR_DIS_0_Val << LCDC_LCDISR_DIS_Pos)       /* (LCDC_LCDISR) Horizontal and vertical timing generator has not yet been disabled. Position */
+#define LCDC_LCDISR_DIS_1                     (LCDC_LCDISR_DIS_1_Val << LCDC_LCDISR_DIS_Pos)       /* (LCDC_LCDISR) Indicates that the horizontal and vertical timing generator has been disabled. This flag is reset after a read operation. Position */
 #define LCDC_LCDISR_DISP_Pos                  _UINT32_(2)                                          /* (LCDC_LCDISR) Power-up/Power-down Sequence Terminated Interrupt Status Position */
 #define LCDC_LCDISR_DISP_Msk                  (_UINT32_(0x1) << LCDC_LCDISR_DISP_Pos)              /* (LCDC_LCDISR) Power-up/Power-down Sequence Terminated Interrupt Status Mask */
-#define LCDC_LCDISR_DISP(value)               (LCDC_LCDISR_DISP_Msk & (_UINT32_(value) << LCDC_LCDISR_DISP_Pos)) /* Assigment of value for DISP in the LCDC_LCDISR register */
+#define LCDC_LCDISR_DISP(value)               (LCDC_LCDISR_DISP_Msk & (_UINT32_(value) << LCDC_LCDISR_DISP_Pos)) /* Assignment of value for DISP in the LCDC_LCDISR register */
 #define   LCDC_LCDISR_DISP_0_Val              _UINT32_(0x0)                                        /* (LCDC_LCDISR) Power-up sequence or power-down sequence has not yet terminated.  */
 #define   LCDC_LCDISR_DISP_1_Val              _UINT32_(0x1)                                        /* (LCDC_LCDISR) Indicates the power-up sequence or power-down sequence has terminated. This flag is reset after a read operation.  */
-#define LCDC_LCDISR_DISP_0                    (LCDC_LCDISR_DISP_0_Val << LCDC_LCDISR_DISP_Pos)     /* (LCDC_LCDISR) Power-up sequence or power-down sequence has not yet terminated. Position  */
-#define LCDC_LCDISR_DISP_1                    (LCDC_LCDISR_DISP_1_Val << LCDC_LCDISR_DISP_Pos)     /* (LCDC_LCDISR) Indicates the power-up sequence or power-down sequence has terminated. This flag is reset after a read operation. Position  */
+#define LCDC_LCDISR_DISP_0                    (LCDC_LCDISR_DISP_0_Val << LCDC_LCDISR_DISP_Pos)     /* (LCDC_LCDISR) Power-up sequence or power-down sequence has not yet terminated. Position */
+#define LCDC_LCDISR_DISP_1                    (LCDC_LCDISR_DISP_1_Val << LCDC_LCDISR_DISP_Pos)     /* (LCDC_LCDISR) Indicates the power-up sequence or power-down sequence has terminated. This flag is reset after a read operation. Position */
 #define LCDC_LCDISR_ROW_Pos                   _UINT32_(3)                                          /* (LCDC_LCDISR) Row Interrupt Status Position */
 #define LCDC_LCDISR_ROW_Msk                   (_UINT32_(0x1) << LCDC_LCDISR_ROW_Pos)               /* (LCDC_LCDISR) Row Interrupt Status Mask */
-#define LCDC_LCDISR_ROW(value)                (LCDC_LCDISR_ROW_Msk & (_UINT32_(value) << LCDC_LCDISR_ROW_Pos)) /* Assigment of value for ROW in the LCDC_LCDISR register */
+#define LCDC_LCDISR_ROW(value)                (LCDC_LCDISR_ROW_Msk & (_UINT32_(value) << LCDC_LCDISR_ROW_Pos)) /* Assignment of value for ROW in the LCDC_LCDISR register */
 #define   LCDC_LCDISR_ROW_0_Val               _UINT32_(0x0)                                        /* (LCDC_LCDISR) No detection since last read of the LCDC_LCDCISR.  */
 #define   LCDC_LCDISR_ROW_1_Val               _UINT32_(0x1)                                        /* (LCDC_LCDISR) Indicates that a row event has been detected. This flag is reset after a read operation.  */
-#define LCDC_LCDISR_ROW_0                     (LCDC_LCDISR_ROW_0_Val << LCDC_LCDISR_ROW_Pos)       /* (LCDC_LCDISR) No detection since last read of the LCDC_LCDCISR. Position  */
-#define LCDC_LCDISR_ROW_1                     (LCDC_LCDISR_ROW_1_Val << LCDC_LCDISR_ROW_Pos)       /* (LCDC_LCDISR) Indicates that a row event has been detected. This flag is reset after a read operation. Position  */
+#define LCDC_LCDISR_ROW_0                     (LCDC_LCDISR_ROW_0_Val << LCDC_LCDISR_ROW_Pos)       /* (LCDC_LCDISR) No detection since last read of the LCDC_LCDCISR. Position */
+#define LCDC_LCDISR_ROW_1                     (LCDC_LCDISR_ROW_1_Val << LCDC_LCDISR_ROW_Pos)       /* (LCDC_LCDISR) Indicates that a row event has been detected. This flag is reset after a read operation. Position */
 #define LCDC_LCDISR_FIFOERR_Pos               _UINT32_(4)                                          /* (LCDC_LCDISR) Output FIFO Error Position */
 #define LCDC_LCDISR_FIFOERR_Msk               (_UINT32_(0x1) << LCDC_LCDISR_FIFOERR_Pos)           /* (LCDC_LCDISR) Output FIFO Error Mask */
-#define LCDC_LCDISR_FIFOERR(value)            (LCDC_LCDISR_FIFOERR_Msk & (_UINT32_(value) << LCDC_LCDISR_FIFOERR_Pos)) /* Assigment of value for FIFOERR in the LCDC_LCDISR register */
+#define LCDC_LCDISR_FIFOERR(value)            (LCDC_LCDISR_FIFOERR_Msk & (_UINT32_(value) << LCDC_LCDISR_FIFOERR_Pos)) /* Assignment of value for FIFOERR in the LCDC_LCDISR register */
 #define   LCDC_LCDISR_FIFOERR_0_Val           _UINT32_(0x0)                                        /* (LCDC_LCDISR) No underflow has occurred in the output FIFO since last read of LCDC_LCDISR.  */
 #define   LCDC_LCDISR_FIFOERR_1_Val           _UINT32_(0x1)                                        /* (LCDC_LCDISR) Indicates that an underflow has occurred in the output FIFO. This flag is reset after a read operation.  */
-#define LCDC_LCDISR_FIFOERR_0                 (LCDC_LCDISR_FIFOERR_0_Val << LCDC_LCDISR_FIFOERR_Pos) /* (LCDC_LCDISR) No underflow has occurred in the output FIFO since last read of LCDC_LCDISR. Position  */
-#define LCDC_LCDISR_FIFOERR_1                 (LCDC_LCDISR_FIFOERR_1_Val << LCDC_LCDISR_FIFOERR_Pos) /* (LCDC_LCDISR) Indicates that an underflow has occurred in the output FIFO. This flag is reset after a read operation. Position  */
+#define LCDC_LCDISR_FIFOERR_0                 (LCDC_LCDISR_FIFOERR_0_Val << LCDC_LCDISR_FIFOERR_Pos) /* (LCDC_LCDISR) No underflow has occurred in the output FIFO since last read of LCDC_LCDISR. Position */
+#define LCDC_LCDISR_FIFOERR_1                 (LCDC_LCDISR_FIFOERR_1_Val << LCDC_LCDISR_FIFOERR_Pos) /* (LCDC_LCDISR) Indicates that an underflow has occurred in the output FIFO. This flag is reset after a read operation. Position */
 #define LCDC_LCDISR_BASE_Pos                  _UINT32_(8)                                          /* (LCDC_LCDISR) Base Layer Raw Interrupt Status Position */
 #define LCDC_LCDISR_BASE_Msk                  (_UINT32_(0x1) << LCDC_LCDISR_BASE_Pos)              /* (LCDC_LCDISR) Base Layer Raw Interrupt Status Mask */
-#define LCDC_LCDISR_BASE(value)               (LCDC_LCDISR_BASE_Msk & (_UINT32_(value) << LCDC_LCDISR_BASE_Pos)) /* Assigment of value for BASE in the LCDC_LCDISR register */
+#define LCDC_LCDISR_BASE(value)               (LCDC_LCDISR_BASE_Msk & (_UINT32_(value) << LCDC_LCDISR_BASE_Pos)) /* Assignment of value for BASE in the LCDC_LCDISR register */
 #define   LCDC_LCDISR_BASE_0_Val              _UINT32_(0x0)                                        /* (LCDC_LCDISR) No base layer interrupt detected since last read of LCDC_BASEISR.  */
 #define   LCDC_LCDISR_BASE_1_Val              _UINT32_(0x1)                                        /* (LCDC_LCDISR) Indicates that a base layer interrupt is pending. This flag is reset as soon as the LCDC_BASEISR is read.  */
-#define LCDC_LCDISR_BASE_0                    (LCDC_LCDISR_BASE_0_Val << LCDC_LCDISR_BASE_Pos)     /* (LCDC_LCDISR) No base layer interrupt detected since last read of LCDC_BASEISR. Position  */
-#define LCDC_LCDISR_BASE_1                    (LCDC_LCDISR_BASE_1_Val << LCDC_LCDISR_BASE_Pos)     /* (LCDC_LCDISR) Indicates that a base layer interrupt is pending. This flag is reset as soon as the LCDC_BASEISR is read. Position  */
+#define LCDC_LCDISR_BASE_0                    (LCDC_LCDISR_BASE_0_Val << LCDC_LCDISR_BASE_Pos)     /* (LCDC_LCDISR) No base layer interrupt detected since last read of LCDC_BASEISR. Position */
+#define LCDC_LCDISR_BASE_1                    (LCDC_LCDISR_BASE_1_Val << LCDC_LCDISR_BASE_Pos)     /* (LCDC_LCDISR) Indicates that a base layer interrupt is pending. This flag is reset as soon as the LCDC_BASEISR is read. Position */
 #define LCDC_LCDISR_OVR1_Pos                  _UINT32_(9)                                          /* (LCDC_LCDISR) Overlay 1 Raw Interrupt Status Position */
 #define LCDC_LCDISR_OVR1_Msk                  (_UINT32_(0x1) << LCDC_LCDISR_OVR1_Pos)              /* (LCDC_LCDISR) Overlay 1 Raw Interrupt Status Mask */
-#define LCDC_LCDISR_OVR1(value)               (LCDC_LCDISR_OVR1_Msk & (_UINT32_(value) << LCDC_LCDISR_OVR1_Pos)) /* Assigment of value for OVR1 in the LCDC_LCDISR register */
+#define LCDC_LCDISR_OVR1(value)               (LCDC_LCDISR_OVR1_Msk & (_UINT32_(value) << LCDC_LCDISR_OVR1_Pos)) /* Assignment of value for OVR1 in the LCDC_LCDISR register */
 #define   LCDC_LCDISR_OVR1_0_Val              _UINT32_(0x0)                                        /* (LCDC_LCDISR) No Overlay 1 layer interrupt detected since last read of LCDC_OVR1ISR.  */
 #define   LCDC_LCDISR_OVR1_1_Val              _UINT32_(0x1)                                        /* (LCDC_LCDISR) Indicates that an Overlay 1 layer interrupt is pending. This flag is reset as soon as the LCDC_OVR1ISR is read.  */
-#define LCDC_LCDISR_OVR1_0                    (LCDC_LCDISR_OVR1_0_Val << LCDC_LCDISR_OVR1_Pos)     /* (LCDC_LCDISR) No Overlay 1 layer interrupt detected since last read of LCDC_OVR1ISR. Position  */
-#define LCDC_LCDISR_OVR1_1                    (LCDC_LCDISR_OVR1_1_Val << LCDC_LCDISR_OVR1_Pos)     /* (LCDC_LCDISR) Indicates that an Overlay 1 layer interrupt is pending. This flag is reset as soon as the LCDC_OVR1ISR is read. Position  */
+#define LCDC_LCDISR_OVR1_0                    (LCDC_LCDISR_OVR1_0_Val << LCDC_LCDISR_OVR1_Pos)     /* (LCDC_LCDISR) No Overlay 1 layer interrupt detected since last read of LCDC_OVR1ISR. Position */
+#define LCDC_LCDISR_OVR1_1                    (LCDC_LCDISR_OVR1_1_Val << LCDC_LCDISR_OVR1_Pos)     /* (LCDC_LCDISR) Indicates that an Overlay 1 layer interrupt is pending. This flag is reset as soon as the LCDC_OVR1ISR is read. Position */
 #define LCDC_LCDISR_HEO_Pos                   _UINT32_(10)                                         /* (LCDC_LCDISR) High-End Overlay Raw Interrupt Status Position */
 #define LCDC_LCDISR_HEO_Msk                   (_UINT32_(0x1) << LCDC_LCDISR_HEO_Pos)               /* (LCDC_LCDISR) High-End Overlay Raw Interrupt Status Mask */
-#define LCDC_LCDISR_HEO(value)                (LCDC_LCDISR_HEO_Msk & (_UINT32_(value) << LCDC_LCDISR_HEO_Pos)) /* Assigment of value for HEO in the LCDC_LCDISR register */
+#define LCDC_LCDISR_HEO(value)                (LCDC_LCDISR_HEO_Msk & (_UINT32_(value) << LCDC_LCDISR_HEO_Pos)) /* Assignment of value for HEO in the LCDC_LCDISR register */
 #define   LCDC_LCDISR_HEO_0_Val               _UINT32_(0x0)                                        /* (LCDC_LCDISR) No High-End layer interrupt detected since last read of LCDC_HEOISR.  */
 #define   LCDC_LCDISR_HEO_1_Val               _UINT32_(0x1)                                        /* (LCDC_LCDISR) Indicates that a High-End layer interrupt is pending. This flag is reset as soon as the LCDC_HEOISR is read.  */
-#define LCDC_LCDISR_HEO_0                     (LCDC_LCDISR_HEO_0_Val << LCDC_LCDISR_HEO_Pos)       /* (LCDC_LCDISR) No High-End layer interrupt detected since last read of LCDC_HEOISR. Position  */
-#define LCDC_LCDISR_HEO_1                     (LCDC_LCDISR_HEO_1_Val << LCDC_LCDISR_HEO_Pos)       /* (LCDC_LCDISR) Indicates that a High-End layer interrupt is pending. This flag is reset as soon as the LCDC_HEOISR is read. Position  */
+#define LCDC_LCDISR_HEO_0                     (LCDC_LCDISR_HEO_0_Val << LCDC_LCDISR_HEO_Pos)       /* (LCDC_LCDISR) No High-End layer interrupt detected since last read of LCDC_HEOISR. Position */
+#define LCDC_LCDISR_HEO_1                     (LCDC_LCDISR_HEO_1_Val << LCDC_LCDISR_HEO_Pos)       /* (LCDC_LCDISR) Indicates that a High-End layer interrupt is pending. This flag is reset as soon as the LCDC_HEOISR is read. Position */
 #define LCDC_LCDISR_SFD_Pos                   _UINT32_(30)                                         /* (LCDC_LCDISR) Safety Fault Detection Interrupt Status Position */
 #define LCDC_LCDISR_SFD_Msk                   (_UINT32_(0x1) << LCDC_LCDISR_SFD_Pos)               /* (LCDC_LCDISR) Safety Fault Detection Interrupt Status Mask */
-#define LCDC_LCDISR_SFD(value)                (LCDC_LCDISR_SFD_Msk & (_UINT32_(value) << LCDC_LCDISR_SFD_Pos)) /* Assigment of value for SFD in the LCDC_LCDISR register */
+#define LCDC_LCDISR_SFD(value)                (LCDC_LCDISR_SFD_Msk & (_UINT32_(value) << LCDC_LCDISR_SFD_Pos)) /* Assignment of value for SFD in the LCDC_LCDISR register */
 #define   LCDC_LCDISR_SFD_0_Val               _UINT32_(0x0)                                        /* (LCDC_LCDISR) No detection since last read of LCDC_LCDISR.  */
 #define   LCDC_LCDISR_SFD_1_Val               _UINT32_(0x1)                                        /* (LCDC_LCDISR) Indicates that a fault has been detected in the fault detection mechanism. This flag is reset after a read operation.  */
-#define LCDC_LCDISR_SFD_0                     (LCDC_LCDISR_SFD_0_Val << LCDC_LCDISR_SFD_Pos)       /* (LCDC_LCDISR) No detection since last read of LCDC_LCDISR. Position  */
-#define LCDC_LCDISR_SFD_1                     (LCDC_LCDISR_SFD_1_Val << LCDC_LCDISR_SFD_Pos)       /* (LCDC_LCDISR) Indicates that a fault has been detected in the fault detection mechanism. This flag is reset after a read operation. Position  */
+#define LCDC_LCDISR_SFD_0                     (LCDC_LCDISR_SFD_0_Val << LCDC_LCDISR_SFD_Pos)       /* (LCDC_LCDISR) No detection since last read of LCDC_LCDISR. Position */
+#define LCDC_LCDISR_SFD_1                     (LCDC_LCDISR_SFD_1_Val << LCDC_LCDISR_SFD_Pos)       /* (LCDC_LCDISR) Indicates that a fault has been detected in the fault detection mechanism. This flag is reset after a read operation. Position */
 #define LCDC_LCDISR_WP_Pos                    _UINT32_(31)                                         /* (LCDC_LCDISR) Write Protection Interrupt Status Position */
 #define LCDC_LCDISR_WP_Msk                    (_UINT32_(0x1) << LCDC_LCDISR_WP_Pos)                /* (LCDC_LCDISR) Write Protection Interrupt Status Mask */
-#define LCDC_LCDISR_WP(value)                 (LCDC_LCDISR_WP_Msk & (_UINT32_(value) << LCDC_LCDISR_WP_Pos)) /* Assigment of value for WP in the LCDC_LCDISR register */
+#define LCDC_LCDISR_WP(value)                 (LCDC_LCDISR_WP_Msk & (_UINT32_(value) << LCDC_LCDISR_WP_Pos)) /* Assignment of value for WP in the LCDC_LCDISR register */
 #define   LCDC_LCDISR_WP_0_Val                _UINT32_(0x0)                                        /* (LCDC_LCDISR) No Write Protection interrupt detected since last read of LCDC_LCDISR.  */
 #define   LCDC_LCDISR_WP_1_Val                _UINT32_(0x1)                                        /* (LCDC_LCDISR) Indicates that Write Protection error has been detected. This flag is reset after a read operation.  */
-#define LCDC_LCDISR_WP_0                      (LCDC_LCDISR_WP_0_Val << LCDC_LCDISR_WP_Pos)         /* (LCDC_LCDISR) No Write Protection interrupt detected since last read of LCDC_LCDISR. Position  */
-#define LCDC_LCDISR_WP_1                      (LCDC_LCDISR_WP_1_Val << LCDC_LCDISR_WP_Pos)         /* (LCDC_LCDISR) Indicates that Write Protection error has been detected. This flag is reset after a read operation. Position  */
+#define LCDC_LCDISR_WP_0                      (LCDC_LCDISR_WP_0_Val << LCDC_LCDISR_WP_Pos)         /* (LCDC_LCDISR) No Write Protection interrupt detected since last read of LCDC_LCDISR. Position */
+#define LCDC_LCDISR_WP_1                      (LCDC_LCDISR_WP_1_Val << LCDC_LCDISR_WP_Pos)         /* (LCDC_LCDISR) Indicates that Write Protection error has been detected. This flag is reset after a read operation. Position */
 #define LCDC_LCDISR_Msk                       _UINT32_(0xC000071F)                                 /* (LCDC_LCDISR) Register Mask  */
 
 #define LCDC_LCDISR_OVR_Pos                   _UINT32_(9)                                          /* (LCDC_LCDISR Position) Overlay x Raw Interrupt Status */
@@ -708,46 +710,46 @@
 /* -------- LCDC_ATTRE : (LCDC Offset: 0x3C) ( /W 32) Attribute Enable Register -------- */
 #define LCDC_ATTRE_BASE_Pos                   _UINT32_(0)                                          /* (LCDC_ATTRE) Base Layer Update Attribute Position */
 #define LCDC_ATTRE_BASE_Msk                   (_UINT32_(0x1) << LCDC_ATTRE_BASE_Pos)               /* (LCDC_ATTRE) Base Layer Update Attribute Mask */
-#define LCDC_ATTRE_BASE(value)                (LCDC_ATTRE_BASE_Msk & (_UINT32_(value) << LCDC_ATTRE_BASE_Pos)) /* Assigment of value for BASE in the LCDC_ATTRE register */
+#define LCDC_ATTRE_BASE(value)                (LCDC_ATTRE_BASE_Msk & (_UINT32_(value) << LCDC_ATTRE_BASE_Pos)) /* Assignment of value for BASE in the LCDC_ATTRE register */
 #define   LCDC_ATTRE_BASE_0_Val               _UINT32_(0x0)                                        /* (LCDC_ATTRE) No effect.  */
 #define   LCDC_ATTRE_BASE_1_Val               _UINT32_(0x1)                                        /* (LCDC_ATTRE) Updates the base window attributes.  */
-#define LCDC_ATTRE_BASE_0                     (LCDC_ATTRE_BASE_0_Val << LCDC_ATTRE_BASE_Pos)       /* (LCDC_ATTRE) No effect. Position  */
-#define LCDC_ATTRE_BASE_1                     (LCDC_ATTRE_BASE_1_Val << LCDC_ATTRE_BASE_Pos)       /* (LCDC_ATTRE) Updates the base window attributes. Position  */
+#define LCDC_ATTRE_BASE_0                     (LCDC_ATTRE_BASE_0_Val << LCDC_ATTRE_BASE_Pos)       /* (LCDC_ATTRE) No effect. Position */
+#define LCDC_ATTRE_BASE_1                     (LCDC_ATTRE_BASE_1_Val << LCDC_ATTRE_BASE_Pos)       /* (LCDC_ATTRE) Updates the base window attributes. Position */
 #define LCDC_ATTRE_OVR1_Pos                   _UINT32_(1)                                          /* (LCDC_ATTRE) Overlay 1 Update Attribute Position */
 #define LCDC_ATTRE_OVR1_Msk                   (_UINT32_(0x1) << LCDC_ATTRE_OVR1_Pos)               /* (LCDC_ATTRE) Overlay 1 Update Attribute Mask */
-#define LCDC_ATTRE_OVR1(value)                (LCDC_ATTRE_OVR1_Msk & (_UINT32_(value) << LCDC_ATTRE_OVR1_Pos)) /* Assigment of value for OVR1 in the LCDC_ATTRE register */
+#define LCDC_ATTRE_OVR1(value)                (LCDC_ATTRE_OVR1_Msk & (_UINT32_(value) << LCDC_ATTRE_OVR1_Pos)) /* Assignment of value for OVR1 in the LCDC_ATTRE register */
 #define   LCDC_ATTRE_OVR1_0_Val               _UINT32_(0x0)                                        /* (LCDC_ATTRE) No effect.  */
 #define   LCDC_ATTRE_OVR1_1_Val               _UINT32_(0x1)                                        /* (LCDC_ATTRE) Updates the OVR1 window attribute.  */
-#define LCDC_ATTRE_OVR1_0                     (LCDC_ATTRE_OVR1_0_Val << LCDC_ATTRE_OVR1_Pos)       /* (LCDC_ATTRE) No effect. Position  */
-#define LCDC_ATTRE_OVR1_1                     (LCDC_ATTRE_OVR1_1_Val << LCDC_ATTRE_OVR1_Pos)       /* (LCDC_ATTRE) Updates the OVR1 window attribute. Position  */
+#define LCDC_ATTRE_OVR1_0                     (LCDC_ATTRE_OVR1_0_Val << LCDC_ATTRE_OVR1_Pos)       /* (LCDC_ATTRE) No effect. Position */
+#define LCDC_ATTRE_OVR1_1                     (LCDC_ATTRE_OVR1_1_Val << LCDC_ATTRE_OVR1_Pos)       /* (LCDC_ATTRE) Updates the OVR1 window attribute. Position */
 #define LCDC_ATTRE_HEO_Pos                    _UINT32_(3)                                          /* (LCDC_ATTRE) High-End Overlay Update Attribute Position */
 #define LCDC_ATTRE_HEO_Msk                    (_UINT32_(0x1) << LCDC_ATTRE_HEO_Pos)                /* (LCDC_ATTRE) High-End Overlay Update Attribute Mask */
-#define LCDC_ATTRE_HEO(value)                 (LCDC_ATTRE_HEO_Msk & (_UINT32_(value) << LCDC_ATTRE_HEO_Pos)) /* Assigment of value for HEO in the LCDC_ATTRE register */
+#define LCDC_ATTRE_HEO(value)                 (LCDC_ATTRE_HEO_Msk & (_UINT32_(value) << LCDC_ATTRE_HEO_Pos)) /* Assignment of value for HEO in the LCDC_ATTRE register */
 #define   LCDC_ATTRE_HEO_0_Val                _UINT32_(0x0)                                        /* (LCDC_ATTRE) No effect.  */
 #define   LCDC_ATTRE_HEO_1_Val                _UINT32_(0x1)                                        /* (LCDC_ATTRE) Updates the HEO window attribute.  */
-#define LCDC_ATTRE_HEO_0                      (LCDC_ATTRE_HEO_0_Val << LCDC_ATTRE_HEO_Pos)         /* (LCDC_ATTRE) No effect. Position  */
-#define LCDC_ATTRE_HEO_1                      (LCDC_ATTRE_HEO_1_Val << LCDC_ATTRE_HEO_Pos)         /* (LCDC_ATTRE) Updates the HEO window attribute. Position  */
+#define LCDC_ATTRE_HEO_0                      (LCDC_ATTRE_HEO_0_Val << LCDC_ATTRE_HEO_Pos)         /* (LCDC_ATTRE) No effect. Position */
+#define LCDC_ATTRE_HEO_1                      (LCDC_ATTRE_HEO_1_Val << LCDC_ATTRE_HEO_Pos)         /* (LCDC_ATTRE) Updates the HEO window attribute. Position */
 #define LCDC_ATTRE_BASECL_Pos                 _UINT32_(8)                                          /* (LCDC_ATTRE) Base Layer Update Color LUT Position */
 #define LCDC_ATTRE_BASECL_Msk                 (_UINT32_(0x1) << LCDC_ATTRE_BASECL_Pos)             /* (LCDC_ATTRE) Base Layer Update Color LUT Mask */
-#define LCDC_ATTRE_BASECL(value)              (LCDC_ATTRE_BASECL_Msk & (_UINT32_(value) << LCDC_ATTRE_BASECL_Pos)) /* Assigment of value for BASECL in the LCDC_ATTRE register */
+#define LCDC_ATTRE_BASECL(value)              (LCDC_ATTRE_BASECL_Msk & (_UINT32_(value) << LCDC_ATTRE_BASECL_Pos)) /* Assignment of value for BASECL in the LCDC_ATTRE register */
 #define   LCDC_ATTRE_BASECL_0_Val             _UINT32_(0x0)                                        /* (LCDC_ATTRE) No effect.  */
 #define   LCDC_ATTRE_BASECL_1_Val             _UINT32_(0x1)                                        /* (LCDC_ATTRE) DMA update request for the base layer CLUT content.  */
-#define LCDC_ATTRE_BASECL_0                   (LCDC_ATTRE_BASECL_0_Val << LCDC_ATTRE_BASECL_Pos)   /* (LCDC_ATTRE) No effect. Position  */
-#define LCDC_ATTRE_BASECL_1                   (LCDC_ATTRE_BASECL_1_Val << LCDC_ATTRE_BASECL_Pos)   /* (LCDC_ATTRE) DMA update request for the base layer CLUT content. Position  */
+#define LCDC_ATTRE_BASECL_0                   (LCDC_ATTRE_BASECL_0_Val << LCDC_ATTRE_BASECL_Pos)   /* (LCDC_ATTRE) No effect. Position */
+#define LCDC_ATTRE_BASECL_1                   (LCDC_ATTRE_BASECL_1_Val << LCDC_ATTRE_BASECL_Pos)   /* (LCDC_ATTRE) DMA update request for the base layer CLUT content. Position */
 #define LCDC_ATTRE_OVR1CL_Pos                 _UINT32_(9)                                          /* (LCDC_ATTRE) Overlay 1 Update Color LUT Position */
 #define LCDC_ATTRE_OVR1CL_Msk                 (_UINT32_(0x1) << LCDC_ATTRE_OVR1CL_Pos)             /* (LCDC_ATTRE) Overlay 1 Update Color LUT Mask */
-#define LCDC_ATTRE_OVR1CL(value)              (LCDC_ATTRE_OVR1CL_Msk & (_UINT32_(value) << LCDC_ATTRE_OVR1CL_Pos)) /* Assigment of value for OVR1CL in the LCDC_ATTRE register */
+#define LCDC_ATTRE_OVR1CL(value)              (LCDC_ATTRE_OVR1CL_Msk & (_UINT32_(value) << LCDC_ATTRE_OVR1CL_Pos)) /* Assignment of value for OVR1CL in the LCDC_ATTRE register */
 #define   LCDC_ATTRE_OVR1CL_0_Val             _UINT32_(0x0)                                        /* (LCDC_ATTRE) No effect.  */
 #define   LCDC_ATTRE_OVR1CL_1_Val             _UINT32_(0x1)                                        /* (LCDC_ATTRE) DMA update request for the OVR1 layer CLUT content.  */
-#define LCDC_ATTRE_OVR1CL_0                   (LCDC_ATTRE_OVR1CL_0_Val << LCDC_ATTRE_OVR1CL_Pos)   /* (LCDC_ATTRE) No effect. Position  */
-#define LCDC_ATTRE_OVR1CL_1                   (LCDC_ATTRE_OVR1CL_1_Val << LCDC_ATTRE_OVR1CL_Pos)   /* (LCDC_ATTRE) DMA update request for the OVR1 layer CLUT content. Position  */
+#define LCDC_ATTRE_OVR1CL_0                   (LCDC_ATTRE_OVR1CL_0_Val << LCDC_ATTRE_OVR1CL_Pos)   /* (LCDC_ATTRE) No effect. Position */
+#define LCDC_ATTRE_OVR1CL_1                   (LCDC_ATTRE_OVR1CL_1_Val << LCDC_ATTRE_OVR1CL_Pos)   /* (LCDC_ATTRE) DMA update request for the OVR1 layer CLUT content. Position */
 #define LCDC_ATTRE_HEOCL_Pos                  _UINT32_(11)                                         /* (LCDC_ATTRE) High-End Overlay Update Color LUT Position */
 #define LCDC_ATTRE_HEOCL_Msk                  (_UINT32_(0x1) << LCDC_ATTRE_HEOCL_Pos)              /* (LCDC_ATTRE) High-End Overlay Update Color LUT Mask */
-#define LCDC_ATTRE_HEOCL(value)               (LCDC_ATTRE_HEOCL_Msk & (_UINT32_(value) << LCDC_ATTRE_HEOCL_Pos)) /* Assigment of value for HEOCL in the LCDC_ATTRE register */
+#define LCDC_ATTRE_HEOCL(value)               (LCDC_ATTRE_HEOCL_Msk & (_UINT32_(value) << LCDC_ATTRE_HEOCL_Pos)) /* Assignment of value for HEOCL in the LCDC_ATTRE register */
 #define   LCDC_ATTRE_HEOCL_0_Val              _UINT32_(0x0)                                        /* (LCDC_ATTRE) No effect.  */
 #define   LCDC_ATTRE_HEOCL_1_Val              _UINT32_(0x1)                                        /* (LCDC_ATTRE) DMA update request for the HEO layer CLUT content.  */
-#define LCDC_ATTRE_HEOCL_0                    (LCDC_ATTRE_HEOCL_0_Val << LCDC_ATTRE_HEOCL_Pos)     /* (LCDC_ATTRE) No effect. Position  */
-#define LCDC_ATTRE_HEOCL_1                    (LCDC_ATTRE_HEOCL_1_Val << LCDC_ATTRE_HEOCL_Pos)     /* (LCDC_ATTRE) DMA update request for the HEO layer CLUT content. Position  */
+#define LCDC_ATTRE_HEOCL_0                    (LCDC_ATTRE_HEOCL_0_Val << LCDC_ATTRE_HEOCL_Pos)     /* (LCDC_ATTRE) No effect. Position */
+#define LCDC_ATTRE_HEOCL_1                    (LCDC_ATTRE_HEOCL_1_Val << LCDC_ATTRE_HEOCL_Pos)     /* (LCDC_ATTRE) DMA update request for the HEO layer CLUT content. Position */
 #define LCDC_ATTRE_Msk                        _UINT32_(0x00000B0B)                                 /* (LCDC_ATTRE) Register Mask  */
 
 #define LCDC_ATTRE_OVR_Pos                    _UINT32_(1)                                          /* (LCDC_ATTRE Position) Overlay x Update Attribute */
@@ -759,53 +761,53 @@
 
 #define LCDC_ATTRS_BASE_Pos                   _UINT32_(0)                                          /* (LCDC_ATTRS) Base Layer Update Status Position */
 #define LCDC_ATTRS_BASE_Msk                   (_UINT32_(0x1) << LCDC_ATTRS_BASE_Pos)               /* (LCDC_ATTRS) Base Layer Update Status Mask */
-#define LCDC_ATTRS_BASE(value)                (LCDC_ATTRS_BASE_Msk & (_UINT32_(value) << LCDC_ATTRS_BASE_Pos)) /* Assigment of value for BASE in the LCDC_ATTRS register */
+#define LCDC_ATTRS_BASE(value)                (LCDC_ATTRS_BASE_Msk & (_UINT32_(value) << LCDC_ATTRS_BASE_Pos)) /* Assignment of value for BASE in the LCDC_ATTRS register */
 #define   LCDC_ATTRS_BASE_0_Val               _UINT32_(0x0)                                        /* (LCDC_ATTRS) No effect.  */
 #define   LCDC_ATTRS_BASE_1_Val               _UINT32_(0x1)                                        /* (LCDC_ATTRS) Indicates that an update request is pending for the base layer.  */
-#define LCDC_ATTRS_BASE_0                     (LCDC_ATTRS_BASE_0_Val << LCDC_ATTRS_BASE_Pos)       /* (LCDC_ATTRS) No effect. Position  */
-#define LCDC_ATTRS_BASE_1                     (LCDC_ATTRS_BASE_1_Val << LCDC_ATTRS_BASE_Pos)       /* (LCDC_ATTRS) Indicates that an update request is pending for the base layer. Position  */
+#define LCDC_ATTRS_BASE_0                     (LCDC_ATTRS_BASE_0_Val << LCDC_ATTRS_BASE_Pos)       /* (LCDC_ATTRS) No effect. Position */
+#define LCDC_ATTRS_BASE_1                     (LCDC_ATTRS_BASE_1_Val << LCDC_ATTRS_BASE_Pos)       /* (LCDC_ATTRS) Indicates that an update request is pending for the base layer. Position */
 #define LCDC_ATTRS_OVR1_Pos                   _UINT32_(1)                                          /* (LCDC_ATTRS) Overlay 1 Update Status Position */
 #define LCDC_ATTRS_OVR1_Msk                   (_UINT32_(0x1) << LCDC_ATTRS_OVR1_Pos)               /* (LCDC_ATTRS) Overlay 1 Update Status Mask */
-#define LCDC_ATTRS_OVR1(value)                (LCDC_ATTRS_OVR1_Msk & (_UINT32_(value) << LCDC_ATTRS_OVR1_Pos)) /* Assigment of value for OVR1 in the LCDC_ATTRS register */
+#define LCDC_ATTRS_OVR1(value)                (LCDC_ATTRS_OVR1_Msk & (_UINT32_(value) << LCDC_ATTRS_OVR1_Pos)) /* Assignment of value for OVR1 in the LCDC_ATTRS register */
 #define   LCDC_ATTRS_OVR1_0_Val               _UINT32_(0x0)                                        /* (LCDC_ATTRS) No effect.  */
 #define   LCDC_ATTRS_OVR1_1_Val               _UINT32_(0x1)                                        /* (LCDC_ATTRS) Indicates that an update request is pending for the Overlay 1 layer.  */
-#define LCDC_ATTRS_OVR1_0                     (LCDC_ATTRS_OVR1_0_Val << LCDC_ATTRS_OVR1_Pos)       /* (LCDC_ATTRS) No effect. Position  */
-#define LCDC_ATTRS_OVR1_1                     (LCDC_ATTRS_OVR1_1_Val << LCDC_ATTRS_OVR1_Pos)       /* (LCDC_ATTRS) Indicates that an update request is pending for the Overlay 1 layer. Position  */
+#define LCDC_ATTRS_OVR1_0                     (LCDC_ATTRS_OVR1_0_Val << LCDC_ATTRS_OVR1_Pos)       /* (LCDC_ATTRS) No effect. Position */
+#define LCDC_ATTRS_OVR1_1                     (LCDC_ATTRS_OVR1_1_Val << LCDC_ATTRS_OVR1_Pos)       /* (LCDC_ATTRS) Indicates that an update request is pending for the Overlay 1 layer. Position */
 #define LCDC_ATTRS_HEO_Pos                    _UINT32_(3)                                          /* (LCDC_ATTRS) High-End Overlay Update Status Position */
 #define LCDC_ATTRS_HEO_Msk                    (_UINT32_(0x1) << LCDC_ATTRS_HEO_Pos)                /* (LCDC_ATTRS) High-End Overlay Update Status Mask */
-#define LCDC_ATTRS_HEO(value)                 (LCDC_ATTRS_HEO_Msk & (_UINT32_(value) << LCDC_ATTRS_HEO_Pos)) /* Assigment of value for HEO in the LCDC_ATTRS register */
+#define LCDC_ATTRS_HEO(value)                 (LCDC_ATTRS_HEO_Msk & (_UINT32_(value) << LCDC_ATTRS_HEO_Pos)) /* Assignment of value for HEO in the LCDC_ATTRS register */
 #define   LCDC_ATTRS_HEO_0_Val                _UINT32_(0x0)                                        /* (LCDC_ATTRS) No effect.  */
 #define   LCDC_ATTRS_HEO_1_Val                _UINT32_(0x1)                                        /* (LCDC_ATTRS) Indicates that an update request is pending for High-end Overlay.  */
-#define LCDC_ATTRS_HEO_0                      (LCDC_ATTRS_HEO_0_Val << LCDC_ATTRS_HEO_Pos)         /* (LCDC_ATTRS) No effect. Position  */
-#define LCDC_ATTRS_HEO_1                      (LCDC_ATTRS_HEO_1_Val << LCDC_ATTRS_HEO_Pos)         /* (LCDC_ATTRS) Indicates that an update request is pending for High-end Overlay. Position  */
+#define LCDC_ATTRS_HEO_0                      (LCDC_ATTRS_HEO_0_Val << LCDC_ATTRS_HEO_Pos)         /* (LCDC_ATTRS) No effect. Position */
+#define LCDC_ATTRS_HEO_1                      (LCDC_ATTRS_HEO_1_Val << LCDC_ATTRS_HEO_Pos)         /* (LCDC_ATTRS) Indicates that an update request is pending for High-end Overlay. Position */
 #define LCDC_ATTRS_BASECL_Pos                 _UINT32_(8)                                          /* (LCDC_ATTRS) Base Layer Color Table Status Position */
 #define LCDC_ATTRS_BASECL_Msk                 (_UINT32_(0x1) << LCDC_ATTRS_BASECL_Pos)             /* (LCDC_ATTRS) Base Layer Color Table Status Mask */
-#define LCDC_ATTRS_BASECL(value)              (LCDC_ATTRS_BASECL_Msk & (_UINT32_(value) << LCDC_ATTRS_BASECL_Pos)) /* Assigment of value for BASECL in the LCDC_ATTRS register */
+#define LCDC_ATTRS_BASECL(value)              (LCDC_ATTRS_BASECL_Msk & (_UINT32_(value) << LCDC_ATTRS_BASECL_Pos)) /* Assignment of value for BASECL in the LCDC_ATTRS register */
 #define   LCDC_ATTRS_BASECL_0_Val             _UINT32_(0x0)                                        /* (LCDC_ATTRS) No effect.  */
 #define   LCDC_ATTRS_BASECL_1_Val             _UINT32_(0x1)                                        /* (LCDC_ATTRS) Indicates that an update request is pending for the base CLUT.  */
-#define LCDC_ATTRS_BASECL_0                   (LCDC_ATTRS_BASECL_0_Val << LCDC_ATTRS_BASECL_Pos)   /* (LCDC_ATTRS) No effect. Position  */
-#define LCDC_ATTRS_BASECL_1                   (LCDC_ATTRS_BASECL_1_Val << LCDC_ATTRS_BASECL_Pos)   /* (LCDC_ATTRS) Indicates that an update request is pending for the base CLUT. Position  */
+#define LCDC_ATTRS_BASECL_0                   (LCDC_ATTRS_BASECL_0_Val << LCDC_ATTRS_BASECL_Pos)   /* (LCDC_ATTRS) No effect. Position */
+#define LCDC_ATTRS_BASECL_1                   (LCDC_ATTRS_BASECL_1_Val << LCDC_ATTRS_BASECL_Pos)   /* (LCDC_ATTRS) Indicates that an update request is pending for the base CLUT. Position */
 #define LCDC_ATTRS_OVR1CL_Pos                 _UINT32_(9)                                          /* (LCDC_ATTRS) Overlay 1 Color Table Status Position */
 #define LCDC_ATTRS_OVR1CL_Msk                 (_UINT32_(0x1) << LCDC_ATTRS_OVR1CL_Pos)             /* (LCDC_ATTRS) Overlay 1 Color Table Status Mask */
-#define LCDC_ATTRS_OVR1CL(value)              (LCDC_ATTRS_OVR1CL_Msk & (_UINT32_(value) << LCDC_ATTRS_OVR1CL_Pos)) /* Assigment of value for OVR1CL in the LCDC_ATTRS register */
+#define LCDC_ATTRS_OVR1CL(value)              (LCDC_ATTRS_OVR1CL_Msk & (_UINT32_(value) << LCDC_ATTRS_OVR1CL_Pos)) /* Assignment of value for OVR1CL in the LCDC_ATTRS register */
 #define   LCDC_ATTRS_OVR1CL_0_Val             _UINT32_(0x0)                                        /* (LCDC_ATTRS) No effect.  */
 #define   LCDC_ATTRS_OVR1CL_1_Val             _UINT32_(0x1)                                        /* (LCDC_ATTRS) Indicates that an update request is pending for the Overlay 1 CLUT.  */
-#define LCDC_ATTRS_OVR1CL_0                   (LCDC_ATTRS_OVR1CL_0_Val << LCDC_ATTRS_OVR1CL_Pos)   /* (LCDC_ATTRS) No effect. Position  */
-#define LCDC_ATTRS_OVR1CL_1                   (LCDC_ATTRS_OVR1CL_1_Val << LCDC_ATTRS_OVR1CL_Pos)   /* (LCDC_ATTRS) Indicates that an update request is pending for the Overlay 1 CLUT. Position  */
+#define LCDC_ATTRS_OVR1CL_0                   (LCDC_ATTRS_OVR1CL_0_Val << LCDC_ATTRS_OVR1CL_Pos)   /* (LCDC_ATTRS) No effect. Position */
+#define LCDC_ATTRS_OVR1CL_1                   (LCDC_ATTRS_OVR1CL_1_Val << LCDC_ATTRS_OVR1CL_Pos)   /* (LCDC_ATTRS) Indicates that an update request is pending for the Overlay 1 CLUT. Position */
 #define LCDC_ATTRS_HEOCL_Pos                  _UINT32_(11)                                         /* (LCDC_ATTRS) High-End Overlay Color Table Status Position */
 #define LCDC_ATTRS_HEOCL_Msk                  (_UINT32_(0x1) << LCDC_ATTRS_HEOCL_Pos)              /* (LCDC_ATTRS) High-End Overlay Color Table Status Mask */
-#define LCDC_ATTRS_HEOCL(value)               (LCDC_ATTRS_HEOCL_Msk & (_UINT32_(value) << LCDC_ATTRS_HEOCL_Pos)) /* Assigment of value for HEOCL in the LCDC_ATTRS register */
+#define LCDC_ATTRS_HEOCL(value)               (LCDC_ATTRS_HEOCL_Msk & (_UINT32_(value) << LCDC_ATTRS_HEOCL_Pos)) /* Assignment of value for HEOCL in the LCDC_ATTRS register */
 #define   LCDC_ATTRS_HEOCL_0_Val              _UINT32_(0x0)                                        /* (LCDC_ATTRS) No effect.  */
 #define   LCDC_ATTRS_HEOCL_1_Val              _UINT32_(0x1)                                        /* (LCDC_ATTRS) Indicates that an update request is pending for the High-end Overlay CLUT.  */
-#define LCDC_ATTRS_HEOCL_0                    (LCDC_ATTRS_HEOCL_0_Val << LCDC_ATTRS_HEOCL_Pos)     /* (LCDC_ATTRS) No effect. Position  */
-#define LCDC_ATTRS_HEOCL_1                    (LCDC_ATTRS_HEOCL_1_Val << LCDC_ATTRS_HEOCL_Pos)     /* (LCDC_ATTRS) Indicates that an update request is pending for the High-end Overlay CLUT. Position  */
+#define LCDC_ATTRS_HEOCL_0                    (LCDC_ATTRS_HEOCL_0_Val << LCDC_ATTRS_HEOCL_Pos)     /* (LCDC_ATTRS) No effect. Position */
+#define LCDC_ATTRS_HEOCL_1                    (LCDC_ATTRS_HEOCL_1_Val << LCDC_ATTRS_HEOCL_Pos)     /* (LCDC_ATTRS) Indicates that an update request is pending for the High-end Overlay CLUT. Position */
 #define LCDC_ATTRS_SIP_Pos                    _UINT32_(31)                                         /* (LCDC_ATTRS) Synchronization In Progress Position */
 #define LCDC_ATTRS_SIP_Msk                    (_UINT32_(0x1) << LCDC_ATTRS_SIP_Pos)                /* (LCDC_ATTRS) Synchronization In Progress Mask */
-#define LCDC_ATTRS_SIP(value)                 (LCDC_ATTRS_SIP_Msk & (_UINT32_(value) << LCDC_ATTRS_SIP_Pos)) /* Assigment of value for SIP in the LCDC_ATTRS register */
+#define LCDC_ATTRS_SIP(value)                 (LCDC_ATTRS_SIP_Msk & (_UINT32_(value) << LCDC_ATTRS_SIP_Pos)) /* Assignment of value for SIP in the LCDC_ATTRS register */
 #define   LCDC_ATTRS_SIP_0_Val                _UINT32_(0x0)                                        /* (LCDC_ATTRS) Clock domain synchronization is terminated.  */
 #define   LCDC_ATTRS_SIP_1_Val                _UINT32_(0x1)                                        /* (LCDC_ATTRS) Synchronization is in progress. Access to LCDC_ATTRE has no effect.  */
-#define LCDC_ATTRS_SIP_0                      (LCDC_ATTRS_SIP_0_Val << LCDC_ATTRS_SIP_Pos)         /* (LCDC_ATTRS) Clock domain synchronization is terminated. Position  */
-#define LCDC_ATTRS_SIP_1                      (LCDC_ATTRS_SIP_1_Val << LCDC_ATTRS_SIP_Pos)         /* (LCDC_ATTRS) Synchronization is in progress. Access to LCDC_ATTRE has no effect. Position  */
+#define LCDC_ATTRS_SIP_0                      (LCDC_ATTRS_SIP_0_Val << LCDC_ATTRS_SIP_Pos)         /* (LCDC_ATTRS) Clock domain synchronization is terminated. Position */
+#define LCDC_ATTRS_SIP_1                      (LCDC_ATTRS_SIP_1_Val << LCDC_ATTRS_SIP_Pos)         /* (LCDC_ATTRS) Synchronization is in progress. Access to LCDC_ATTRE has no effect. Position */
 #define LCDC_ATTRS_Msk                        _UINT32_(0x80000B0B)                                 /* (LCDC_ATTRS) Register Mask  */
 
 #define LCDC_ATTRS_OVR_Pos                    _UINT32_(1)                                          /* (LCDC_ATTRS Position) Overlay x Update Status */
@@ -815,26 +817,26 @@
 /* -------- LCDC_BASEIER : (LCDC Offset: 0x60) ( /W 32) Base Layer Interrupt Enable Register -------- */
 #define LCDC_BASEIER_END_Pos                  _UINT32_(0)                                          /* (LCDC_BASEIER) End of Frame DMA Transfer Interrupt Enable Position */
 #define LCDC_BASEIER_END_Msk                  (_UINT32_(0x1) << LCDC_BASEIER_END_Pos)              /* (LCDC_BASEIER) End of Frame DMA Transfer Interrupt Enable Mask */
-#define LCDC_BASEIER_END(value)               (LCDC_BASEIER_END_Msk & (_UINT32_(value) << LCDC_BASEIER_END_Pos)) /* Assigment of value for END in the LCDC_BASEIER register */
+#define LCDC_BASEIER_END(value)               (LCDC_BASEIER_END_Msk & (_UINT32_(value) << LCDC_BASEIER_END_Pos)) /* Assignment of value for END in the LCDC_BASEIER register */
 #define LCDC_BASEIER_ERROR_Pos                _UINT32_(1)                                          /* (LCDC_BASEIER) Transfer Error Detected Interrupt Enable Position */
 #define LCDC_BASEIER_ERROR_Msk                (_UINT32_(0x1) << LCDC_BASEIER_ERROR_Pos)            /* (LCDC_BASEIER) Transfer Error Detected Interrupt Enable Mask */
-#define LCDC_BASEIER_ERROR(value)             (LCDC_BASEIER_ERROR_Msk & (_UINT32_(value) << LCDC_BASEIER_ERROR_Pos)) /* Assigment of value for ERROR in the LCDC_BASEIER register */
+#define LCDC_BASEIER_ERROR(value)             (LCDC_BASEIER_ERROR_Msk & (_UINT32_(value) << LCDC_BASEIER_ERROR_Pos)) /* Assignment of value for ERROR in the LCDC_BASEIER register */
 #define LCDC_BASEIER_OVF_Pos                  _UINT32_(2)                                          /* (LCDC_BASEIER) Overflow Interrupt Enable Position */
 #define LCDC_BASEIER_OVF_Msk                  (_UINT32_(0x1) << LCDC_BASEIER_OVF_Pos)              /* (LCDC_BASEIER) Overflow Interrupt Enable Mask */
-#define LCDC_BASEIER_OVF(value)               (LCDC_BASEIER_OVF_Msk & (_UINT32_(value) << LCDC_BASEIER_OVF_Pos)) /* Assigment of value for OVF in the LCDC_BASEIER register */
+#define LCDC_BASEIER_OVF(value)               (LCDC_BASEIER_OVF_Msk & (_UINT32_(value) << LCDC_BASEIER_OVF_Pos)) /* Assignment of value for OVF in the LCDC_BASEIER register */
 #define LCDC_BASEIER_Msk                      _UINT32_(0x00000007)                                 /* (LCDC_BASEIER) Register Mask  */
 
 
 /* -------- LCDC_BASEIDR : (LCDC Offset: 0x64) ( /W 32) Base Layer Interrupt Disable Register -------- */
 #define LCDC_BASEIDR_END_Pos                  _UINT32_(0)                                          /* (LCDC_BASEIDR) End of Frame DMA Transfer Interrupt Disable Position */
 #define LCDC_BASEIDR_END_Msk                  (_UINT32_(0x1) << LCDC_BASEIDR_END_Pos)              /* (LCDC_BASEIDR) End of Frame DMA Transfer Interrupt Disable Mask */
-#define LCDC_BASEIDR_END(value)               (LCDC_BASEIDR_END_Msk & (_UINT32_(value) << LCDC_BASEIDR_END_Pos)) /* Assigment of value for END in the LCDC_BASEIDR register */
+#define LCDC_BASEIDR_END(value)               (LCDC_BASEIDR_END_Msk & (_UINT32_(value) << LCDC_BASEIDR_END_Pos)) /* Assignment of value for END in the LCDC_BASEIDR register */
 #define LCDC_BASEIDR_ERROR_Pos                _UINT32_(1)                                          /* (LCDC_BASEIDR) Transfer Error Interrupt Disable Position */
 #define LCDC_BASEIDR_ERROR_Msk                (_UINT32_(0x1) << LCDC_BASEIDR_ERROR_Pos)            /* (LCDC_BASEIDR) Transfer Error Interrupt Disable Mask */
-#define LCDC_BASEIDR_ERROR(value)             (LCDC_BASEIDR_ERROR_Msk & (_UINT32_(value) << LCDC_BASEIDR_ERROR_Pos)) /* Assigment of value for ERROR in the LCDC_BASEIDR register */
+#define LCDC_BASEIDR_ERROR(value)             (LCDC_BASEIDR_ERROR_Msk & (_UINT32_(value) << LCDC_BASEIDR_ERROR_Pos)) /* Assignment of value for ERROR in the LCDC_BASEIDR register */
 #define LCDC_BASEIDR_OVF_Pos                  _UINT32_(2)                                          /* (LCDC_BASEIDR) Overflow Interrupt Disable Position */
 #define LCDC_BASEIDR_OVF_Msk                  (_UINT32_(0x1) << LCDC_BASEIDR_OVF_Pos)              /* (LCDC_BASEIDR) Overflow Interrupt Disable Mask */
-#define LCDC_BASEIDR_OVF(value)               (LCDC_BASEIDR_OVF_Msk & (_UINT32_(value) << LCDC_BASEIDR_OVF_Pos)) /* Assigment of value for OVF in the LCDC_BASEIDR register */
+#define LCDC_BASEIDR_OVF(value)               (LCDC_BASEIDR_OVF_Msk & (_UINT32_(value) << LCDC_BASEIDR_OVF_Pos)) /* Assignment of value for OVF in the LCDC_BASEIDR register */
 #define LCDC_BASEIDR_Msk                      _UINT32_(0x00000007)                                 /* (LCDC_BASEIDR) Register Mask  */
 
 
@@ -843,13 +845,13 @@
 
 #define LCDC_BASEIMR_END_Pos                  _UINT32_(0)                                          /* (LCDC_BASEIMR) End of Frame DMA Transfer Interrupt Mask Position */
 #define LCDC_BASEIMR_END_Msk                  (_UINT32_(0x1) << LCDC_BASEIMR_END_Pos)              /* (LCDC_BASEIMR) End of Frame DMA Transfer Interrupt Mask Mask */
-#define LCDC_BASEIMR_END(value)               (LCDC_BASEIMR_END_Msk & (_UINT32_(value) << LCDC_BASEIMR_END_Pos)) /* Assigment of value for END in the LCDC_BASEIMR register */
+#define LCDC_BASEIMR_END(value)               (LCDC_BASEIMR_END_Msk & (_UINT32_(value) << LCDC_BASEIMR_END_Pos)) /* Assignment of value for END in the LCDC_BASEIMR register */
 #define LCDC_BASEIMR_ERROR_Pos                _UINT32_(1)                                          /* (LCDC_BASEIMR) Transfer Error Interrupt Mask Position */
 #define LCDC_BASEIMR_ERROR_Msk                (_UINT32_(0x1) << LCDC_BASEIMR_ERROR_Pos)            /* (LCDC_BASEIMR) Transfer Error Interrupt Mask Mask */
-#define LCDC_BASEIMR_ERROR(value)             (LCDC_BASEIMR_ERROR_Msk & (_UINT32_(value) << LCDC_BASEIMR_ERROR_Pos)) /* Assigment of value for ERROR in the LCDC_BASEIMR register */
+#define LCDC_BASEIMR_ERROR(value)             (LCDC_BASEIMR_ERROR_Msk & (_UINT32_(value) << LCDC_BASEIMR_ERROR_Pos)) /* Assignment of value for ERROR in the LCDC_BASEIMR register */
 #define LCDC_BASEIMR_OVF_Pos                  _UINT32_(2)                                          /* (LCDC_BASEIMR) Overflow Interrupt Mask Position */
 #define LCDC_BASEIMR_OVF_Msk                  (_UINT32_(0x1) << LCDC_BASEIMR_OVF_Pos)              /* (LCDC_BASEIMR) Overflow Interrupt Mask Mask */
-#define LCDC_BASEIMR_OVF(value)               (LCDC_BASEIMR_OVF_Msk & (_UINT32_(value) << LCDC_BASEIMR_OVF_Pos)) /* Assigment of value for OVF in the LCDC_BASEIMR register */
+#define LCDC_BASEIMR_OVF(value)               (LCDC_BASEIMR_OVF_Msk & (_UINT32_(value) << LCDC_BASEIMR_OVF_Pos)) /* Assignment of value for OVF in the LCDC_BASEIMR register */
 #define LCDC_BASEIMR_Msk                      _UINT32_(0x00000007)                                 /* (LCDC_BASEIMR) Register Mask  */
 
 
@@ -858,25 +860,25 @@
 
 #define LCDC_BASEISR_END_Pos                  _UINT32_(0)                                          /* (LCDC_BASEISR) End of Frame DMA Transfer Position */
 #define LCDC_BASEISR_END_Msk                  (_UINT32_(0x1) << LCDC_BASEISR_END_Pos)              /* (LCDC_BASEISR) End of Frame DMA Transfer Mask */
-#define LCDC_BASEISR_END(value)               (LCDC_BASEISR_END_Msk & (_UINT32_(value) << LCDC_BASEISR_END_Pos)) /* Assigment of value for END in the LCDC_BASEISR register */
+#define LCDC_BASEISR_END(value)               (LCDC_BASEISR_END_Msk & (_UINT32_(value) << LCDC_BASEISR_END_Pos)) /* Assignment of value for END in the LCDC_BASEISR register */
 #define   LCDC_BASEISR_END_0_Val              _UINT32_(0x0)                                        /* (LCDC_BASEISR) No end of frame DMA transfer has been detected since last read of LCDC_BASEISR.  */
 #define   LCDC_BASEISR_END_1_Val              _UINT32_(0x1)                                        /* (LCDC_BASEISR) End of transfer has been detected. This flag is reset after a read operation.  */
-#define LCDC_BASEISR_END_0                    (LCDC_BASEISR_END_0_Val << LCDC_BASEISR_END_Pos)     /* (LCDC_BASEISR) No end of frame DMA transfer has been detected since last read of LCDC_BASEISR. Position  */
-#define LCDC_BASEISR_END_1                    (LCDC_BASEISR_END_1_Val << LCDC_BASEISR_END_Pos)     /* (LCDC_BASEISR) End of transfer has been detected. This flag is reset after a read operation. Position  */
+#define LCDC_BASEISR_END_0                    (LCDC_BASEISR_END_0_Val << LCDC_BASEISR_END_Pos)     /* (LCDC_BASEISR) No end of frame DMA transfer has been detected since last read of LCDC_BASEISR. Position */
+#define LCDC_BASEISR_END_1                    (LCDC_BASEISR_END_1_Val << LCDC_BASEISR_END_Pos)     /* (LCDC_BASEISR) End of transfer has been detected. This flag is reset after a read operation. Position */
 #define LCDC_BASEISR_ERROR_Pos                _UINT32_(1)                                          /* (LCDC_BASEISR) Transfer Error Detected Position */
 #define LCDC_BASEISR_ERROR_Msk                (_UINT32_(0x1) << LCDC_BASEISR_ERROR_Pos)            /* (LCDC_BASEISR) Transfer Error Detected Mask */
-#define LCDC_BASEISR_ERROR(value)             (LCDC_BASEISR_ERROR_Msk & (_UINT32_(value) << LCDC_BASEISR_ERROR_Pos)) /* Assigment of value for ERROR in the LCDC_BASEISR register */
+#define LCDC_BASEISR_ERROR(value)             (LCDC_BASEISR_ERROR_Msk & (_UINT32_(value) << LCDC_BASEISR_ERROR_Pos)) /* Assignment of value for ERROR in the LCDC_BASEISR register */
 #define   LCDC_BASEISR_ERROR_0_Val            _UINT32_(0x0)                                        /* (LCDC_BASEISR) No system bus error has been detected since the last read of LCDC_BASEISR.  */
 #define   LCDC_BASEISR_ERROR_1_Val            _UINT32_(0x1)                                        /* (LCDC_BASEISR) A system bus error has been detected. This flag is reset after a read operation.  */
-#define LCDC_BASEISR_ERROR_0                  (LCDC_BASEISR_ERROR_0_Val << LCDC_BASEISR_ERROR_Pos) /* (LCDC_BASEISR) No system bus error has been detected since the last read of LCDC_BASEISR. Position  */
-#define LCDC_BASEISR_ERROR_1                  (LCDC_BASEISR_ERROR_1_Val << LCDC_BASEISR_ERROR_Pos) /* (LCDC_BASEISR) A system bus error has been detected. This flag is reset after a read operation. Position  */
+#define LCDC_BASEISR_ERROR_0                  (LCDC_BASEISR_ERROR_0_Val << LCDC_BASEISR_ERROR_Pos) /* (LCDC_BASEISR) No system bus error has been detected since the last read of LCDC_BASEISR. Position */
+#define LCDC_BASEISR_ERROR_1                  (LCDC_BASEISR_ERROR_1_Val << LCDC_BASEISR_ERROR_Pos) /* (LCDC_BASEISR) A system bus error has been detected. This flag is reset after a read operation. Position */
 #define LCDC_BASEISR_OVF_Pos                  _UINT32_(2)                                          /* (LCDC_BASEISR) Overflow Detected Position */
 #define LCDC_BASEISR_OVF_Msk                  (_UINT32_(0x1) << LCDC_BASEISR_OVF_Pos)              /* (LCDC_BASEISR) Overflow Detected Mask */
-#define LCDC_BASEISR_OVF(value)               (LCDC_BASEISR_OVF_Msk & (_UINT32_(value) << LCDC_BASEISR_OVF_Pos)) /* Assigment of value for OVF in the LCDC_BASEISR register */
+#define LCDC_BASEISR_OVF(value)               (LCDC_BASEISR_OVF_Msk & (_UINT32_(value) << LCDC_BASEISR_OVF_Pos)) /* Assignment of value for OVF in the LCDC_BASEISR register */
 #define   LCDC_BASEISR_OVF_0_Val              _UINT32_(0x0)                                        /* (LCDC_BASEISR) No overflow occurred since last read of LCDC_BASEISR.  */
 #define   LCDC_BASEISR_OVF_1_Val              _UINT32_(0x1)                                        /* (LCDC_BASEISR) An overflow occurred, at least one DMA transfer is still running at the End Of Frame. This flag is reset after a read operation.  */
-#define LCDC_BASEISR_OVF_0                    (LCDC_BASEISR_OVF_0_Val << LCDC_BASEISR_OVF_Pos)     /* (LCDC_BASEISR) No overflow occurred since last read of LCDC_BASEISR. Position  */
-#define LCDC_BASEISR_OVF_1                    (LCDC_BASEISR_OVF_1_Val << LCDC_BASEISR_OVF_Pos)     /* (LCDC_BASEISR) An overflow occurred, at least one DMA transfer is still running at the End Of Frame. This flag is reset after a read operation. Position  */
+#define LCDC_BASEISR_OVF_0                    (LCDC_BASEISR_OVF_0_Val << LCDC_BASEISR_OVF_Pos)     /* (LCDC_BASEISR) No overflow occurred since last read of LCDC_BASEISR. Position */
+#define LCDC_BASEISR_OVF_1                    (LCDC_BASEISR_OVF_1_Val << LCDC_BASEISR_OVF_Pos)     /* (LCDC_BASEISR) An overflow occurred, at least one DMA transfer is still running at the End Of Frame. This flag is reset after a read operation. Position */
 #define LCDC_BASEISR_Msk                      _UINT32_(0x00000007)                                 /* (LCDC_BASEISR) Register Mask  */
 
 
@@ -885,11 +887,11 @@
 
 #define LCDC_BASEEN_ENABLE_Pos                _UINT32_(0)                                          /* (LCDC_BASEEN) Base Layer Enable Position */
 #define LCDC_BASEEN_ENABLE_Msk                (_UINT32_(0x1) << LCDC_BASEEN_ENABLE_Pos)            /* (LCDC_BASEEN) Base Layer Enable Mask */
-#define LCDC_BASEEN_ENABLE(value)             (LCDC_BASEEN_ENABLE_Msk & (_UINT32_(value) << LCDC_BASEEN_ENABLE_Pos)) /* Assigment of value for ENABLE in the LCDC_BASEEN register */
+#define LCDC_BASEEN_ENABLE(value)             (LCDC_BASEEN_ENABLE_Msk & (_UINT32_(value) << LCDC_BASEEN_ENABLE_Pos)) /* Assignment of value for ENABLE in the LCDC_BASEEN register */
 #define   LCDC_BASEEN_ENABLE_0_Val            _UINT32_(0x0)                                        /* (LCDC_BASEEN) The layer is disabled.  */
 #define   LCDC_BASEEN_ENABLE_1_Val            _UINT32_(0x1)                                        /* (LCDC_BASEEN) The layer is enabled.  */
-#define LCDC_BASEEN_ENABLE_0                  (LCDC_BASEEN_ENABLE_0_Val << LCDC_BASEEN_ENABLE_Pos) /* (LCDC_BASEEN) The layer is disabled. Position  */
-#define LCDC_BASEEN_ENABLE_1                  (LCDC_BASEEN_ENABLE_1_Val << LCDC_BASEEN_ENABLE_Pos) /* (LCDC_BASEEN) The layer is enabled. Position  */
+#define LCDC_BASEEN_ENABLE_0                  (LCDC_BASEEN_ENABLE_0_Val << LCDC_BASEEN_ENABLE_Pos) /* (LCDC_BASEEN) The layer is disabled. Position */
+#define LCDC_BASEEN_ENABLE_1                  (LCDC_BASEEN_ENABLE_1_Val << LCDC_BASEEN_ENABLE_Pos) /* (LCDC_BASEEN) The layer is enabled. Position */
 #define LCDC_BASEEN_Msk                       _UINT32_(0x00000001)                                 /* (LCDC_BASEEN) Register Mask  */
 
 
@@ -898,7 +900,7 @@
 
 #define LCDC_BASECLA_CLA_Pos                  _UINT32_(3)                                          /* (LCDC_BASECLA) Base Layer CLUT Address Position */
 #define LCDC_BASECLA_CLA_Msk                  (_UINT32_(0x1FFFFFFF) << LCDC_BASECLA_CLA_Pos)       /* (LCDC_BASECLA) Base Layer CLUT Address Mask */
-#define LCDC_BASECLA_CLA(value)               (LCDC_BASECLA_CLA_Msk & (_UINT32_(value) << LCDC_BASECLA_CLA_Pos)) /* Assigment of value for CLA in the LCDC_BASECLA register */
+#define LCDC_BASECLA_CLA(value)               (LCDC_BASECLA_CLA_Msk & (_UINT32_(value) << LCDC_BASECLA_CLA_Pos)) /* Assignment of value for CLA in the LCDC_BASECLA register */
 #define LCDC_BASECLA_Msk                      _UINT32_(0xFFFFFFF8)                                 /* (LCDC_BASECLA) Register Mask  */
 
 
@@ -907,7 +909,7 @@
 
 #define LCDC_BASEFBA_FBA_Pos                  _UINT32_(2)                                          /* (LCDC_BASEFBA) Frame Buffer Address Position */
 #define LCDC_BASEFBA_FBA_Msk                  (_UINT32_(0x3FFFFFFF) << LCDC_BASEFBA_FBA_Pos)       /* (LCDC_BASEFBA) Frame Buffer Address Mask */
-#define LCDC_BASEFBA_FBA(value)               (LCDC_BASEFBA_FBA_Msk & (_UINT32_(value) << LCDC_BASEFBA_FBA_Pos)) /* Assigment of value for FBA in the LCDC_BASEFBA register */
+#define LCDC_BASEFBA_FBA(value)               (LCDC_BASEFBA_FBA_Msk & (_UINT32_(value) << LCDC_BASEFBA_FBA_Pos)) /* Assignment of value for FBA in the LCDC_BASEFBA register */
 #define LCDC_BASEFBA_Msk                      _UINT32_(0xFFFFFFFC)                                 /* (LCDC_BASEFBA) Register Mask  */
 
 
@@ -916,17 +918,17 @@
 
 #define LCDC_BASECFG0_BLEN_Pos                _UINT32_(4)                                          /* (LCDC_BASECFG0) System Bus Burst Length Position */
 #define LCDC_BASECFG0_BLEN_Msk                (_UINT32_(0x7) << LCDC_BASECFG0_BLEN_Pos)            /* (LCDC_BASECFG0) System Bus Burst Length Mask */
-#define LCDC_BASECFG0_BLEN(value)             (LCDC_BASECFG0_BLEN_Msk & (_UINT32_(value) << LCDC_BASECFG0_BLEN_Pos)) /* Assigment of value for BLEN in the LCDC_BASECFG0 register */
+#define LCDC_BASECFG0_BLEN(value)             (LCDC_BASECFG0_BLEN_Msk & (_UINT32_(value) << LCDC_BASECFG0_BLEN_Pos)) /* Assignment of value for BLEN in the LCDC_BASECFG0 register */
 #define   LCDC_BASECFG0_BLEN_INCR1_Val        _UINT32_(0x0)                                        /* (LCDC_BASECFG0) System bus access is started as soon as there is enough space in the FIFO to store one data.  */
 #define   LCDC_BASECFG0_BLEN_INCR4_Val        _UINT32_(0x1)                                        /* (LCDC_BASECFG0) System bus access is started as soon as there is enough space in the FIFO to store a total amount of 4 data. A system bus INCR4 Burst is used by default. INCR1 is used for bursts less than 4.  */
 #define   LCDC_BASECFG0_BLEN_INCR8_Val        _UINT32_(0x2)                                        /* (LCDC_BASECFG0) System bus access is started as soon as there is enough space in the FIFO to store a total amount of 8 data. A system bus INCR8 Burst is used by default. INCR4 bursts are used for bursts of 4 beats.INCR1 is used for bursts less than 4.  */
 #define   LCDC_BASECFG0_BLEN_INCR16_Val       _UINT32_(0x3)                                        /* (LCDC_BASECFG0) System bus access is started as soon as there is enough space in the FIFO to store a total amount of 16 data. A system bus INCR16 Burst is used by default. INCR8 and INCR4 bursts are respectively used for bursts of 8 and 4 beats.INCR1 is used for bursts less than 4.  */
 #define   LCDC_BASECFG0_BLEN_INCR32_Val       _UINT32_(0x4)                                        /* (LCDC_BASECFG0) System bus access is started as soon as there is enough space in the FIFO to store a total amount of 32 data. A system bus INCR32 Burst is used by default. INCR16, INCR8 and INCR4 bursts are respectively used for bursts of 16, 8 and 4 beats. INCR1 is used for bursts less than 4.  */
-#define LCDC_BASECFG0_BLEN_INCR1              (LCDC_BASECFG0_BLEN_INCR1_Val << LCDC_BASECFG0_BLEN_Pos) /* (LCDC_BASECFG0) System bus access is started as soon as there is enough space in the FIFO to store one data. Position  */
-#define LCDC_BASECFG0_BLEN_INCR4              (LCDC_BASECFG0_BLEN_INCR4_Val << LCDC_BASECFG0_BLEN_Pos) /* (LCDC_BASECFG0) System bus access is started as soon as there is enough space in the FIFO to store a total amount of 4 data. A system bus INCR4 Burst is used by default. INCR1 is used for bursts less than 4. Position  */
-#define LCDC_BASECFG0_BLEN_INCR8              (LCDC_BASECFG0_BLEN_INCR8_Val << LCDC_BASECFG0_BLEN_Pos) /* (LCDC_BASECFG0) System bus access is started as soon as there is enough space in the FIFO to store a total amount of 8 data. A system bus INCR8 Burst is used by default. INCR4 bursts are used for bursts of 4 beats.INCR1 is used for bursts less than 4. Position  */
-#define LCDC_BASECFG0_BLEN_INCR16             (LCDC_BASECFG0_BLEN_INCR16_Val << LCDC_BASECFG0_BLEN_Pos) /* (LCDC_BASECFG0) System bus access is started as soon as there is enough space in the FIFO to store a total amount of 16 data. A system bus INCR16 Burst is used by default. INCR8 and INCR4 bursts are respectively used for bursts of 8 and 4 beats.INCR1 is used for bursts less than 4. Position  */
-#define LCDC_BASECFG0_BLEN_INCR32             (LCDC_BASECFG0_BLEN_INCR32_Val << LCDC_BASECFG0_BLEN_Pos) /* (LCDC_BASECFG0) System bus access is started as soon as there is enough space in the FIFO to store a total amount of 32 data. A system bus INCR32 Burst is used by default. INCR16, INCR8 and INCR4 bursts are respectively used for bursts of 16, 8 and 4 beats. INCR1 is used for bursts less than 4. Position  */
+#define LCDC_BASECFG0_BLEN_INCR1              (LCDC_BASECFG0_BLEN_INCR1_Val << LCDC_BASECFG0_BLEN_Pos) /* (LCDC_BASECFG0) System bus access is started as soon as there is enough space in the FIFO to store one data. Position */
+#define LCDC_BASECFG0_BLEN_INCR4              (LCDC_BASECFG0_BLEN_INCR4_Val << LCDC_BASECFG0_BLEN_Pos) /* (LCDC_BASECFG0) System bus access is started as soon as there is enough space in the FIFO to store a total amount of 4 data. A system bus INCR4 Burst is used by default. INCR1 is used for bursts less than 4. Position */
+#define LCDC_BASECFG0_BLEN_INCR8              (LCDC_BASECFG0_BLEN_INCR8_Val << LCDC_BASECFG0_BLEN_Pos) /* (LCDC_BASECFG0) System bus access is started as soon as there is enough space in the FIFO to store a total amount of 8 data. A system bus INCR8 Burst is used by default. INCR4 bursts are used for bursts of 4 beats.INCR1 is used for bursts less than 4. Position */
+#define LCDC_BASECFG0_BLEN_INCR16             (LCDC_BASECFG0_BLEN_INCR16_Val << LCDC_BASECFG0_BLEN_Pos) /* (LCDC_BASECFG0) System bus access is started as soon as there is enough space in the FIFO to store a total amount of 16 data. A system bus INCR16 Burst is used by default. INCR8 and INCR4 bursts are respectively used for bursts of 8 and 4 beats.INCR1 is used for bursts less than 4. Position */
+#define LCDC_BASECFG0_BLEN_INCR32             (LCDC_BASECFG0_BLEN_INCR32_Val << LCDC_BASECFG0_BLEN_Pos) /* (LCDC_BASECFG0) System bus access is started as soon as there is enough space in the FIFO to store a total amount of 32 data. A system bus INCR32 Burst is used by default. INCR16, INCR8 and INCR4 bursts are respectively used for bursts of 16, 8 and 4 beats. INCR1 is used for bursts less than 4. Position */
 #define LCDC_BASECFG0_Msk                     _UINT32_(0x00000070)                                 /* (LCDC_BASECFG0) Register Mask  */
 
 
@@ -935,21 +937,21 @@
 
 #define LCDC_BASECFG1_CLUTEN_Pos              _UINT32_(0)                                          /* (LCDC_BASECFG1) CLUT Mode Enable Position */
 #define LCDC_BASECFG1_CLUTEN_Msk              (_UINT32_(0x1) << LCDC_BASECFG1_CLUTEN_Pos)          /* (LCDC_BASECFG1) CLUT Mode Enable Mask */
-#define LCDC_BASECFG1_CLUTEN(value)           (LCDC_BASECFG1_CLUTEN_Msk & (_UINT32_(value) << LCDC_BASECFG1_CLUTEN_Pos)) /* Assigment of value for CLUTEN in the LCDC_BASECFG1 register */
+#define LCDC_BASECFG1_CLUTEN(value)           (LCDC_BASECFG1_CLUTEN_Msk & (_UINT32_(value) << LCDC_BASECFG1_CLUTEN_Pos)) /* Assignment of value for CLUTEN in the LCDC_BASECFG1 register */
 #define   LCDC_BASECFG1_CLUTEN_0_Val          _UINT32_(0x0)                                        /* (LCDC_BASECFG1) RGB mode is selected.  */
 #define   LCDC_BASECFG1_CLUTEN_1_Val          _UINT32_(0x1)                                        /* (LCDC_BASECFG1) CLUT mode is selected.  */
-#define LCDC_BASECFG1_CLUTEN_0                (LCDC_BASECFG1_CLUTEN_0_Val << LCDC_BASECFG1_CLUTEN_Pos) /* (LCDC_BASECFG1) RGB mode is selected. Position  */
-#define LCDC_BASECFG1_CLUTEN_1                (LCDC_BASECFG1_CLUTEN_1_Val << LCDC_BASECFG1_CLUTEN_Pos) /* (LCDC_BASECFG1) CLUT mode is selected. Position  */
+#define LCDC_BASECFG1_CLUTEN_0                (LCDC_BASECFG1_CLUTEN_0_Val << LCDC_BASECFG1_CLUTEN_Pos) /* (LCDC_BASECFG1) RGB mode is selected. Position */
+#define LCDC_BASECFG1_CLUTEN_1                (LCDC_BASECFG1_CLUTEN_1_Val << LCDC_BASECFG1_CLUTEN_Pos) /* (LCDC_BASECFG1) CLUT mode is selected. Position */
 #define LCDC_BASECFG1_GAM_Pos                 _UINT32_(2)                                          /* (LCDC_BASECFG1) Gamma Correction Position */
 #define LCDC_BASECFG1_GAM_Msk                 (_UINT32_(0x1) << LCDC_BASECFG1_GAM_Pos)             /* (LCDC_BASECFG1) Gamma Correction Mask */
-#define LCDC_BASECFG1_GAM(value)              (LCDC_BASECFG1_GAM_Msk & (_UINT32_(value) << LCDC_BASECFG1_GAM_Pos)) /* Assigment of value for GAM in the LCDC_BASECFG1 register */
+#define LCDC_BASECFG1_GAM(value)              (LCDC_BASECFG1_GAM_Msk & (_UINT32_(value) << LCDC_BASECFG1_GAM_Pos)) /* Assignment of value for GAM in the LCDC_BASECFG1 register */
 #define   LCDC_BASECFG1_GAM_0_Val             _UINT32_(0x0)                                        /* (LCDC_BASECFG1) Gamma correction is disabled  */
 #define   LCDC_BASECFG1_GAM_1_Val             _UINT32_(0x1)                                        /* (LCDC_BASECFG1) Gamma correction is activated  */
-#define LCDC_BASECFG1_GAM_0                   (LCDC_BASECFG1_GAM_0_Val << LCDC_BASECFG1_GAM_Pos)   /* (LCDC_BASECFG1) Gamma correction is disabled Position  */
-#define LCDC_BASECFG1_GAM_1                   (LCDC_BASECFG1_GAM_1_Val << LCDC_BASECFG1_GAM_Pos)   /* (LCDC_BASECFG1) Gamma correction is activated Position  */
+#define LCDC_BASECFG1_GAM_0                   (LCDC_BASECFG1_GAM_0_Val << LCDC_BASECFG1_GAM_Pos)   /* (LCDC_BASECFG1) Gamma correction is disabled Position */
+#define LCDC_BASECFG1_GAM_1                   (LCDC_BASECFG1_GAM_1_Val << LCDC_BASECFG1_GAM_Pos)   /* (LCDC_BASECFG1) Gamma correction is activated Position */
 #define LCDC_BASECFG1_RGBMODE_Pos             _UINT32_(4)                                          /* (LCDC_BASECFG1) RGB Mode Input Selection Position */
 #define LCDC_BASECFG1_RGBMODE_Msk             (_UINT32_(0xF) << LCDC_BASECFG1_RGBMODE_Pos)         /* (LCDC_BASECFG1) RGB Mode Input Selection Mask */
-#define LCDC_BASECFG1_RGBMODE(value)          (LCDC_BASECFG1_RGBMODE_Msk & (_UINT32_(value) << LCDC_BASECFG1_RGBMODE_Pos)) /* Assigment of value for RGBMODE in the LCDC_BASECFG1 register */
+#define LCDC_BASECFG1_RGBMODE(value)          (LCDC_BASECFG1_RGBMODE_Msk & (_UINT32_(value) << LCDC_BASECFG1_RGBMODE_Pos)) /* Assignment of value for RGBMODE in the LCDC_BASECFG1 register */
 #define   LCDC_BASECFG1_RGBMODE_12BPP_RGB_444_Val _UINT32_(0x0)                                        /* (LCDC_BASECFG1) 12 bpp RGB 444  */
 #define   LCDC_BASECFG1_RGBMODE_16BPP_ARGB_4444_Val _UINT32_(0x1)                                        /* (LCDC_BASECFG1) 16 bpp ARGB 4444  */
 #define   LCDC_BASECFG1_RGBMODE_16BPP_RGBA_4444_Val _UINT32_(0x2)                                        /* (LCDC_BASECFG1) 16 bpp RGBA 4444  */
@@ -964,31 +966,31 @@
 #define   LCDC_BASECFG1_RGBMODE_25BPP_ARGB_1888_Val _UINT32_(0xB)                                        /* (LCDC_BASECFG1) 25 bpp ARGB 1888  */
 #define   LCDC_BASECFG1_RGBMODE_32BPP_ARGB_8888_Val _UINT32_(0xC)                                        /* (LCDC_BASECFG1) 32 bpp ARGB 8888  */
 #define   LCDC_BASECFG1_RGBMODE_32BPP_RGBA_8888_Val _UINT32_(0xD)                                        /* (LCDC_BASECFG1) 32 bpp RGBA 8888  */
-#define LCDC_BASECFG1_RGBMODE_12BPP_RGB_444   (LCDC_BASECFG1_RGBMODE_12BPP_RGB_444_Val << LCDC_BASECFG1_RGBMODE_Pos) /* (LCDC_BASECFG1) 12 bpp RGB 444 Position  */
-#define LCDC_BASECFG1_RGBMODE_16BPP_ARGB_4444 (LCDC_BASECFG1_RGBMODE_16BPP_ARGB_4444_Val << LCDC_BASECFG1_RGBMODE_Pos) /* (LCDC_BASECFG1) 16 bpp ARGB 4444 Position  */
-#define LCDC_BASECFG1_RGBMODE_16BPP_RGBA_4444 (LCDC_BASECFG1_RGBMODE_16BPP_RGBA_4444_Val << LCDC_BASECFG1_RGBMODE_Pos) /* (LCDC_BASECFG1) 16 bpp RGBA 4444 Position  */
-#define LCDC_BASECFG1_RGBMODE_16BPP_RGB_565   (LCDC_BASECFG1_RGBMODE_16BPP_RGB_565_Val << LCDC_BASECFG1_RGBMODE_Pos) /* (LCDC_BASECFG1) 16 bpp RGB 565 Position  */
-#define LCDC_BASECFG1_RGBMODE_16BPP_ARGB_1555 (LCDC_BASECFG1_RGBMODE_16BPP_ARGB_1555_Val << LCDC_BASECFG1_RGBMODE_Pos) /* (LCDC_BASECFG1) 16 bpp ARGB 1555 Position  */
-#define LCDC_BASECFG1_RGBMODE_18BPP_RGB_666   (LCDC_BASECFG1_RGBMODE_18BPP_RGB_666_Val << LCDC_BASECFG1_RGBMODE_Pos) /* (LCDC_BASECFG1) 18 bpp RGB 666 Position  */
-#define LCDC_BASECFG1_RGBMODE_18BPP_RGB_666PACKED (LCDC_BASECFG1_RGBMODE_18BPP_RGB_666PACKED_Val << LCDC_BASECFG1_RGBMODE_Pos) /* (LCDC_BASECFG1) 18 bpp RGB 666 PACKED Position  */
-#define LCDC_BASECFG1_RGBMODE_19BPP_ARGB_1666 (LCDC_BASECFG1_RGBMODE_19BPP_ARGB_1666_Val << LCDC_BASECFG1_RGBMODE_Pos) /* (LCDC_BASECFG1) 19 bpp ARGB 1666 Position  */
-#define LCDC_BASECFG1_RGBMODE_19BPP_ARGB_PACKED (LCDC_BASECFG1_RGBMODE_19BPP_ARGB_PACKED_Val << LCDC_BASECFG1_RGBMODE_Pos) /* (LCDC_BASECFG1) 19 bpp ARGB 1666 PACKED Position  */
-#define LCDC_BASECFG1_RGBMODE_24BPP_RGB_888   (LCDC_BASECFG1_RGBMODE_24BPP_RGB_888_Val << LCDC_BASECFG1_RGBMODE_Pos) /* (LCDC_BASECFG1) 24 bpp RGB 888 Position  */
-#define LCDC_BASECFG1_RGBMODE_24BPP_RGB_888_PACKED (LCDC_BASECFG1_RGBMODE_24BPP_RGB_888_PACKED_Val << LCDC_BASECFG1_RGBMODE_Pos) /* (LCDC_BASECFG1) 24 bpp RGB 888 PACKED Position  */
-#define LCDC_BASECFG1_RGBMODE_25BPP_ARGB_1888 (LCDC_BASECFG1_RGBMODE_25BPP_ARGB_1888_Val << LCDC_BASECFG1_RGBMODE_Pos) /* (LCDC_BASECFG1) 25 bpp ARGB 1888 Position  */
-#define LCDC_BASECFG1_RGBMODE_32BPP_ARGB_8888 (LCDC_BASECFG1_RGBMODE_32BPP_ARGB_8888_Val << LCDC_BASECFG1_RGBMODE_Pos) /* (LCDC_BASECFG1) 32 bpp ARGB 8888 Position  */
-#define LCDC_BASECFG1_RGBMODE_32BPP_RGBA_8888 (LCDC_BASECFG1_RGBMODE_32BPP_RGBA_8888_Val << LCDC_BASECFG1_RGBMODE_Pos) /* (LCDC_BASECFG1) 32 bpp RGBA 8888 Position  */
+#define LCDC_BASECFG1_RGBMODE_12BPP_RGB_444   (LCDC_BASECFG1_RGBMODE_12BPP_RGB_444_Val << LCDC_BASECFG1_RGBMODE_Pos) /* (LCDC_BASECFG1) 12 bpp RGB 444 Position */
+#define LCDC_BASECFG1_RGBMODE_16BPP_ARGB_4444 (LCDC_BASECFG1_RGBMODE_16BPP_ARGB_4444_Val << LCDC_BASECFG1_RGBMODE_Pos) /* (LCDC_BASECFG1) 16 bpp ARGB 4444 Position */
+#define LCDC_BASECFG1_RGBMODE_16BPP_RGBA_4444 (LCDC_BASECFG1_RGBMODE_16BPP_RGBA_4444_Val << LCDC_BASECFG1_RGBMODE_Pos) /* (LCDC_BASECFG1) 16 bpp RGBA 4444 Position */
+#define LCDC_BASECFG1_RGBMODE_16BPP_RGB_565   (LCDC_BASECFG1_RGBMODE_16BPP_RGB_565_Val << LCDC_BASECFG1_RGBMODE_Pos) /* (LCDC_BASECFG1) 16 bpp RGB 565 Position */
+#define LCDC_BASECFG1_RGBMODE_16BPP_ARGB_1555 (LCDC_BASECFG1_RGBMODE_16BPP_ARGB_1555_Val << LCDC_BASECFG1_RGBMODE_Pos) /* (LCDC_BASECFG1) 16 bpp ARGB 1555 Position */
+#define LCDC_BASECFG1_RGBMODE_18BPP_RGB_666   (LCDC_BASECFG1_RGBMODE_18BPP_RGB_666_Val << LCDC_BASECFG1_RGBMODE_Pos) /* (LCDC_BASECFG1) 18 bpp RGB 666 Position */
+#define LCDC_BASECFG1_RGBMODE_18BPP_RGB_666PACKED (LCDC_BASECFG1_RGBMODE_18BPP_RGB_666PACKED_Val << LCDC_BASECFG1_RGBMODE_Pos) /* (LCDC_BASECFG1) 18 bpp RGB 666 PACKED Position */
+#define LCDC_BASECFG1_RGBMODE_19BPP_ARGB_1666 (LCDC_BASECFG1_RGBMODE_19BPP_ARGB_1666_Val << LCDC_BASECFG1_RGBMODE_Pos) /* (LCDC_BASECFG1) 19 bpp ARGB 1666 Position */
+#define LCDC_BASECFG1_RGBMODE_19BPP_ARGB_PACKED (LCDC_BASECFG1_RGBMODE_19BPP_ARGB_PACKED_Val << LCDC_BASECFG1_RGBMODE_Pos) /* (LCDC_BASECFG1) 19 bpp ARGB 1666 PACKED Position */
+#define LCDC_BASECFG1_RGBMODE_24BPP_RGB_888   (LCDC_BASECFG1_RGBMODE_24BPP_RGB_888_Val << LCDC_BASECFG1_RGBMODE_Pos) /* (LCDC_BASECFG1) 24 bpp RGB 888 Position */
+#define LCDC_BASECFG1_RGBMODE_24BPP_RGB_888_PACKED (LCDC_BASECFG1_RGBMODE_24BPP_RGB_888_PACKED_Val << LCDC_BASECFG1_RGBMODE_Pos) /* (LCDC_BASECFG1) 24 bpp RGB 888 PACKED Position */
+#define LCDC_BASECFG1_RGBMODE_25BPP_ARGB_1888 (LCDC_BASECFG1_RGBMODE_25BPP_ARGB_1888_Val << LCDC_BASECFG1_RGBMODE_Pos) /* (LCDC_BASECFG1) 25 bpp ARGB 1888 Position */
+#define LCDC_BASECFG1_RGBMODE_32BPP_ARGB_8888 (LCDC_BASECFG1_RGBMODE_32BPP_ARGB_8888_Val << LCDC_BASECFG1_RGBMODE_Pos) /* (LCDC_BASECFG1) 32 bpp ARGB 8888 Position */
+#define LCDC_BASECFG1_RGBMODE_32BPP_RGBA_8888 (LCDC_BASECFG1_RGBMODE_32BPP_RGBA_8888_Val << LCDC_BASECFG1_RGBMODE_Pos) /* (LCDC_BASECFG1) 32 bpp RGBA 8888 Position */
 #define LCDC_BASECFG1_CLUTMODE_Pos            _UINT32_(8)                                          /* (LCDC_BASECFG1) CLUT Mode Input Selection Position */
 #define LCDC_BASECFG1_CLUTMODE_Msk            (_UINT32_(0x3) << LCDC_BASECFG1_CLUTMODE_Pos)        /* (LCDC_BASECFG1) CLUT Mode Input Selection Mask */
-#define LCDC_BASECFG1_CLUTMODE(value)         (LCDC_BASECFG1_CLUTMODE_Msk & (_UINT32_(value) << LCDC_BASECFG1_CLUTMODE_Pos)) /* Assigment of value for CLUTMODE in the LCDC_BASECFG1 register */
+#define LCDC_BASECFG1_CLUTMODE(value)         (LCDC_BASECFG1_CLUTMODE_Msk & (_UINT32_(value) << LCDC_BASECFG1_CLUTMODE_Pos)) /* Assignment of value for CLUTMODE in the LCDC_BASECFG1 register */
 #define   LCDC_BASECFG1_CLUTMODE_CLUT_1BPP_Val _UINT32_(0x0)                                        /* (LCDC_BASECFG1) CLUT mode set to 1 bit per pixel  */
 #define   LCDC_BASECFG1_CLUTMODE_CLUT_2BPP_Val _UINT32_(0x1)                                        /* (LCDC_BASECFG1) CLUT mode set to 2 bits per pixel  */
 #define   LCDC_BASECFG1_CLUTMODE_CLUT_4BPP_Val _UINT32_(0x2)                                        /* (LCDC_BASECFG1) CLUT mode set to 4 bits per pixel  */
 #define   LCDC_BASECFG1_CLUTMODE_CLUT_8BPP_Val _UINT32_(0x3)                                        /* (LCDC_BASECFG1) CLUT mode set to 8 bits per pixel  */
-#define LCDC_BASECFG1_CLUTMODE_CLUT_1BPP      (LCDC_BASECFG1_CLUTMODE_CLUT_1BPP_Val << LCDC_BASECFG1_CLUTMODE_Pos) /* (LCDC_BASECFG1) CLUT mode set to 1 bit per pixel Position  */
-#define LCDC_BASECFG1_CLUTMODE_CLUT_2BPP      (LCDC_BASECFG1_CLUTMODE_CLUT_2BPP_Val << LCDC_BASECFG1_CLUTMODE_Pos) /* (LCDC_BASECFG1) CLUT mode set to 2 bits per pixel Position  */
-#define LCDC_BASECFG1_CLUTMODE_CLUT_4BPP      (LCDC_BASECFG1_CLUTMODE_CLUT_4BPP_Val << LCDC_BASECFG1_CLUTMODE_Pos) /* (LCDC_BASECFG1) CLUT mode set to 4 bits per pixel Position  */
-#define LCDC_BASECFG1_CLUTMODE_CLUT_8BPP      (LCDC_BASECFG1_CLUTMODE_CLUT_8BPP_Val << LCDC_BASECFG1_CLUTMODE_Pos) /* (LCDC_BASECFG1) CLUT mode set to 8 bits per pixel Position  */
+#define LCDC_BASECFG1_CLUTMODE_CLUT_1BPP      (LCDC_BASECFG1_CLUTMODE_CLUT_1BPP_Val << LCDC_BASECFG1_CLUTMODE_Pos) /* (LCDC_BASECFG1) CLUT mode set to 1 bit per pixel Position */
+#define LCDC_BASECFG1_CLUTMODE_CLUT_2BPP      (LCDC_BASECFG1_CLUTMODE_CLUT_2BPP_Val << LCDC_BASECFG1_CLUTMODE_Pos) /* (LCDC_BASECFG1) CLUT mode set to 2 bits per pixel Position */
+#define LCDC_BASECFG1_CLUTMODE_CLUT_4BPP      (LCDC_BASECFG1_CLUTMODE_CLUT_4BPP_Val << LCDC_BASECFG1_CLUTMODE_Pos) /* (LCDC_BASECFG1) CLUT mode set to 4 bits per pixel Position */
+#define LCDC_BASECFG1_CLUTMODE_CLUT_8BPP      (LCDC_BASECFG1_CLUTMODE_CLUT_8BPP_Val << LCDC_BASECFG1_CLUTMODE_Pos) /* (LCDC_BASECFG1) CLUT mode set to 8 bits per pixel Position */
 #define LCDC_BASECFG1_Msk                     _UINT32_(0x000003F5)                                 /* (LCDC_BASECFG1) Register Mask  */
 
 
@@ -997,7 +999,7 @@
 
 #define LCDC_BASECFG2_XSTRIDE_Pos             _UINT32_(0)                                          /* (LCDC_BASECFG2) Horizontal Stride Position */
 #define LCDC_BASECFG2_XSTRIDE_Msk             (_UINT32_(0xFFFFFFFF) << LCDC_BASECFG2_XSTRIDE_Pos)  /* (LCDC_BASECFG2) Horizontal Stride Mask */
-#define LCDC_BASECFG2_XSTRIDE(value)          (LCDC_BASECFG2_XSTRIDE_Msk & (_UINT32_(value) << LCDC_BASECFG2_XSTRIDE_Pos)) /* Assigment of value for XSTRIDE in the LCDC_BASECFG2 register */
+#define LCDC_BASECFG2_XSTRIDE(value)          (LCDC_BASECFG2_XSTRIDE_Msk & (_UINT32_(value) << LCDC_BASECFG2_XSTRIDE_Pos)) /* Assignment of value for XSTRIDE in the LCDC_BASECFG2 register */
 #define LCDC_BASECFG2_Msk                     _UINT32_(0xFFFFFFFF)                                 /* (LCDC_BASECFG2) Register Mask  */
 
 
@@ -1006,13 +1008,13 @@
 
 #define LCDC_BASECFG3_BDEF_Pos                _UINT32_(0)                                          /* (LCDC_BASECFG3) Blue Default Position */
 #define LCDC_BASECFG3_BDEF_Msk                (_UINT32_(0xFF) << LCDC_BASECFG3_BDEF_Pos)           /* (LCDC_BASECFG3) Blue Default Mask */
-#define LCDC_BASECFG3_BDEF(value)             (LCDC_BASECFG3_BDEF_Msk & (_UINT32_(value) << LCDC_BASECFG3_BDEF_Pos)) /* Assigment of value for BDEF in the LCDC_BASECFG3 register */
+#define LCDC_BASECFG3_BDEF(value)             (LCDC_BASECFG3_BDEF_Msk & (_UINT32_(value) << LCDC_BASECFG3_BDEF_Pos)) /* Assignment of value for BDEF in the LCDC_BASECFG3 register */
 #define LCDC_BASECFG3_GDEF_Pos                _UINT32_(8)                                          /* (LCDC_BASECFG3) Green Default Position */
 #define LCDC_BASECFG3_GDEF_Msk                (_UINT32_(0xFF) << LCDC_BASECFG3_GDEF_Pos)           /* (LCDC_BASECFG3) Green Default Mask */
-#define LCDC_BASECFG3_GDEF(value)             (LCDC_BASECFG3_GDEF_Msk & (_UINT32_(value) << LCDC_BASECFG3_GDEF_Pos)) /* Assigment of value for GDEF in the LCDC_BASECFG3 register */
+#define LCDC_BASECFG3_GDEF(value)             (LCDC_BASECFG3_GDEF_Msk & (_UINT32_(value) << LCDC_BASECFG3_GDEF_Pos)) /* Assignment of value for GDEF in the LCDC_BASECFG3 register */
 #define LCDC_BASECFG3_RDEF_Pos                _UINT32_(16)                                         /* (LCDC_BASECFG3) Red Default Position */
 #define LCDC_BASECFG3_RDEF_Msk                (_UINT32_(0xFF) << LCDC_BASECFG3_RDEF_Pos)           /* (LCDC_BASECFG3) Red Default Mask */
-#define LCDC_BASECFG3_RDEF(value)             (LCDC_BASECFG3_RDEF_Msk & (_UINT32_(value) << LCDC_BASECFG3_RDEF_Pos)) /* Assigment of value for RDEF in the LCDC_BASECFG3 register */
+#define LCDC_BASECFG3_RDEF(value)             (LCDC_BASECFG3_RDEF_Msk & (_UINT32_(value) << LCDC_BASECFG3_RDEF_Pos)) /* Assignment of value for RDEF in the LCDC_BASECFG3 register */
 #define LCDC_BASECFG3_Msk                     _UINT32_(0x00FFFFFF)                                 /* (LCDC_BASECFG3) Register Mask  */
 
 
@@ -1021,25 +1023,25 @@
 
 #define LCDC_BASECFG4_DMA_Pos                 _UINT32_(0)                                          /* (LCDC_BASECFG4) Use DMA Data Path Position */
 #define LCDC_BASECFG4_DMA_Msk                 (_UINT32_(0x1) << LCDC_BASECFG4_DMA_Pos)             /* (LCDC_BASECFG4) Use DMA Data Path Mask */
-#define LCDC_BASECFG4_DMA(value)              (LCDC_BASECFG4_DMA_Msk & (_UINT32_(value) << LCDC_BASECFG4_DMA_Pos)) /* Assigment of value for DMA in the LCDC_BASECFG4 register */
+#define LCDC_BASECFG4_DMA(value)              (LCDC_BASECFG4_DMA_Msk & (_UINT32_(value) << LCDC_BASECFG4_DMA_Pos)) /* Assignment of value for DMA in the LCDC_BASECFG4 register */
 #define   LCDC_BASECFG4_DMA_0_Val             _UINT32_(0x0)                                        /* (LCDC_BASECFG4) The default color is used on the base layer.  */
 #define   LCDC_BASECFG4_DMA_1_Val             _UINT32_(0x1)                                        /* (LCDC_BASECFG4) The DMA channel retrieves the pixel stream from the memory.  */
-#define LCDC_BASECFG4_DMA_0                   (LCDC_BASECFG4_DMA_0_Val << LCDC_BASECFG4_DMA_Pos)   /* (LCDC_BASECFG4) The default color is used on the base layer. Position  */
-#define LCDC_BASECFG4_DMA_1                   (LCDC_BASECFG4_DMA_1_Val << LCDC_BASECFG4_DMA_Pos)   /* (LCDC_BASECFG4) The DMA channel retrieves the pixel stream from the memory. Position  */
+#define LCDC_BASECFG4_DMA_0                   (LCDC_BASECFG4_DMA_0_Val << LCDC_BASECFG4_DMA_Pos)   /* (LCDC_BASECFG4) The default color is used on the base layer. Position */
+#define LCDC_BASECFG4_DMA_1                   (LCDC_BASECFG4_DMA_1_Val << LCDC_BASECFG4_DMA_Pos)   /* (LCDC_BASECFG4) The DMA channel retrieves the pixel stream from the memory. Position */
 #define LCDC_BASECFG4_REP_Pos                 _UINT32_(1)                                          /* (LCDC_BASECFG4) Use Replication Logic to Expand RGB Color to 24 Bits Position */
 #define LCDC_BASECFG4_REP_Msk                 (_UINT32_(0x1) << LCDC_BASECFG4_REP_Pos)             /* (LCDC_BASECFG4) Use Replication Logic to Expand RGB Color to 24 Bits Mask */
-#define LCDC_BASECFG4_REP(value)              (LCDC_BASECFG4_REP_Msk & (_UINT32_(value) << LCDC_BASECFG4_REP_Pos)) /* Assigment of value for REP in the LCDC_BASECFG4 register */
+#define LCDC_BASECFG4_REP(value)              (LCDC_BASECFG4_REP_Msk & (_UINT32_(value) << LCDC_BASECFG4_REP_Pos)) /* Assignment of value for REP in the LCDC_BASECFG4 register */
 #define   LCDC_BASECFG4_REP_0_Val             _UINT32_(0x0)                                        /* (LCDC_BASECFG4) When the selected pixel depth is less than 24 bpp, the pixel is shifted and LSBs are set to 0.  */
 #define   LCDC_BASECFG4_REP_1_Val             _UINT32_(0x1)                                        /* (LCDC_BASECFG4) When the selected pixel depth is less than 24 bpp, the pixel is shifted and the LSB replicates the MSB.  */
-#define LCDC_BASECFG4_REP_0                   (LCDC_BASECFG4_REP_0_Val << LCDC_BASECFG4_REP_Pos)   /* (LCDC_BASECFG4) When the selected pixel depth is less than 24 bpp, the pixel is shifted and LSBs are set to 0. Position  */
-#define LCDC_BASECFG4_REP_1                   (LCDC_BASECFG4_REP_1_Val << LCDC_BASECFG4_REP_Pos)   /* (LCDC_BASECFG4) When the selected pixel depth is less than 24 bpp, the pixel is shifted and the LSB replicates the MSB. Position  */
+#define LCDC_BASECFG4_REP_0                   (LCDC_BASECFG4_REP_0_Val << LCDC_BASECFG4_REP_Pos)   /* (LCDC_BASECFG4) When the selected pixel depth is less than 24 bpp, the pixel is shifted and LSBs are set to 0. Position */
+#define LCDC_BASECFG4_REP_1                   (LCDC_BASECFG4_REP_1_Val << LCDC_BASECFG4_REP_Pos)   /* (LCDC_BASECFG4) When the selected pixel depth is less than 24 bpp, the pixel is shifted and the LSB replicates the MSB. Position */
 #define LCDC_BASECFG4_DISCEN_Pos              _UINT32_(4)                                          /* (LCDC_BASECFG4) Discard Area Enable Position */
 #define LCDC_BASECFG4_DISCEN_Msk              (_UINT32_(0x1) << LCDC_BASECFG4_DISCEN_Pos)          /* (LCDC_BASECFG4) Discard Area Enable Mask */
-#define LCDC_BASECFG4_DISCEN(value)           (LCDC_BASECFG4_DISCEN_Msk & (_UINT32_(value) << LCDC_BASECFG4_DISCEN_Pos)) /* Assigment of value for DISCEN in the LCDC_BASECFG4 register */
+#define LCDC_BASECFG4_DISCEN(value)           (LCDC_BASECFG4_DISCEN_Msk & (_UINT32_(value) << LCDC_BASECFG4_DISCEN_Pos)) /* Assignment of value for DISCEN in the LCDC_BASECFG4 register */
 #define   LCDC_BASECFG4_DISCEN_0_Val          _UINT32_(0x0)                                        /* (LCDC_BASECFG4) The whole frame is retrieved from memory.  */
 #define   LCDC_BASECFG4_DISCEN_1_Val          _UINT32_(0x1)                                        /* (LCDC_BASECFG4) The DMA channel discards the area located at screen coordinates {DISCXPOS, DISCYPOS}.  */
-#define LCDC_BASECFG4_DISCEN_0                (LCDC_BASECFG4_DISCEN_0_Val << LCDC_BASECFG4_DISCEN_Pos) /* (LCDC_BASECFG4) The whole frame is retrieved from memory. Position  */
-#define LCDC_BASECFG4_DISCEN_1                (LCDC_BASECFG4_DISCEN_1_Val << LCDC_BASECFG4_DISCEN_Pos) /* (LCDC_BASECFG4) The DMA channel discards the area located at screen coordinates {DISCXPOS, DISCYPOS}. Position  */
+#define LCDC_BASECFG4_DISCEN_0                (LCDC_BASECFG4_DISCEN_0_Val << LCDC_BASECFG4_DISCEN_Pos) /* (LCDC_BASECFG4) The whole frame is retrieved from memory. Position */
+#define LCDC_BASECFG4_DISCEN_1                (LCDC_BASECFG4_DISCEN_1_Val << LCDC_BASECFG4_DISCEN_Pos) /* (LCDC_BASECFG4) The DMA channel discards the area located at screen coordinates {DISCXPOS, DISCYPOS}. Position */
 #define LCDC_BASECFG4_Msk                     _UINT32_(0x00000013)                                 /* (LCDC_BASECFG4) Register Mask  */
 
 
@@ -1048,10 +1050,10 @@
 
 #define LCDC_BASECFG5_DISCXPOS_Pos            _UINT32_(0)                                          /* (LCDC_BASECFG5) Discard Area Horizontal Coordinate Position */
 #define LCDC_BASECFG5_DISCXPOS_Msk            (_UINT32_(0x7FF) << LCDC_BASECFG5_DISCXPOS_Pos)      /* (LCDC_BASECFG5) Discard Area Horizontal Coordinate Mask */
-#define LCDC_BASECFG5_DISCXPOS(value)         (LCDC_BASECFG5_DISCXPOS_Msk & (_UINT32_(value) << LCDC_BASECFG5_DISCXPOS_Pos)) /* Assigment of value for DISCXPOS in the LCDC_BASECFG5 register */
+#define LCDC_BASECFG5_DISCXPOS(value)         (LCDC_BASECFG5_DISCXPOS_Msk & (_UINT32_(value) << LCDC_BASECFG5_DISCXPOS_Pos)) /* Assignment of value for DISCXPOS in the LCDC_BASECFG5 register */
 #define LCDC_BASECFG5_DISCYPOS_Pos            _UINT32_(16)                                         /* (LCDC_BASECFG5) Discard Area Vertical Coordinate Position */
 #define LCDC_BASECFG5_DISCYPOS_Msk            (_UINT32_(0x7FF) << LCDC_BASECFG5_DISCYPOS_Pos)      /* (LCDC_BASECFG5) Discard Area Vertical Coordinate Mask */
-#define LCDC_BASECFG5_DISCYPOS(value)         (LCDC_BASECFG5_DISCYPOS_Msk & (_UINT32_(value) << LCDC_BASECFG5_DISCYPOS_Pos)) /* Assigment of value for DISCYPOS in the LCDC_BASECFG5 register */
+#define LCDC_BASECFG5_DISCYPOS(value)         (LCDC_BASECFG5_DISCYPOS_Msk & (_UINT32_(value) << LCDC_BASECFG5_DISCYPOS_Pos)) /* Assignment of value for DISCYPOS in the LCDC_BASECFG5 register */
 #define LCDC_BASECFG5_Msk                     _UINT32_(0x07FF07FF)                                 /* (LCDC_BASECFG5) Register Mask  */
 
 
@@ -1060,10 +1062,10 @@
 
 #define LCDC_BASECFG6_DISCXSIZE_Pos           _UINT32_(0)                                          /* (LCDC_BASECFG6) Discard Area Horizontal Size Position */
 #define LCDC_BASECFG6_DISCXSIZE_Msk           (_UINT32_(0x7FF) << LCDC_BASECFG6_DISCXSIZE_Pos)     /* (LCDC_BASECFG6) Discard Area Horizontal Size Mask */
-#define LCDC_BASECFG6_DISCXSIZE(value)        (LCDC_BASECFG6_DISCXSIZE_Msk & (_UINT32_(value) << LCDC_BASECFG6_DISCXSIZE_Pos)) /* Assigment of value for DISCXSIZE in the LCDC_BASECFG6 register */
+#define LCDC_BASECFG6_DISCXSIZE(value)        (LCDC_BASECFG6_DISCXSIZE_Msk & (_UINT32_(value) << LCDC_BASECFG6_DISCXSIZE_Pos)) /* Assignment of value for DISCXSIZE in the LCDC_BASECFG6 register */
 #define LCDC_BASECFG6_DISCYSIZE_Pos           _UINT32_(16)                                         /* (LCDC_BASECFG6) Discard Area Vertical Size Position */
 #define LCDC_BASECFG6_DISCYSIZE_Msk           (_UINT32_(0x7FF) << LCDC_BASECFG6_DISCYSIZE_Pos)     /* (LCDC_BASECFG6) Discard Area Vertical Size Mask */
-#define LCDC_BASECFG6_DISCYSIZE(value)        (LCDC_BASECFG6_DISCYSIZE_Msk & (_UINT32_(value) << LCDC_BASECFG6_DISCYSIZE_Pos)) /* Assigment of value for DISCYSIZE in the LCDC_BASECFG6 register */
+#define LCDC_BASECFG6_DISCYSIZE(value)        (LCDC_BASECFG6_DISCYSIZE_Msk & (_UINT32_(value) << LCDC_BASECFG6_DISCYSIZE_Pos)) /* Assignment of value for DISCYSIZE in the LCDC_BASECFG6 register */
 #define LCDC_BASECFG6_Msk                     _UINT32_(0x07FF07FF)                                 /* (LCDC_BASECFG6) Register Mask  */
 
 
@@ -1072,26 +1074,26 @@
 
 #define LCDC_FICR_FITRIG_Pos                  _UINT32_(0)                                          /* (LCDC_FICR) Fault Injection Trigger Position */
 #define LCDC_FICR_FITRIG_Msk                  (_UINT32_(0x1) << LCDC_FICR_FITRIG_Pos)              /* (LCDC_FICR) Fault Injection Trigger Mask */
-#define LCDC_FICR_FITRIG(value)               (LCDC_FICR_FITRIG_Msk & (_UINT32_(value) << LCDC_FICR_FITRIG_Pos)) /* Assigment of value for FITRIG in the LCDC_FICR register */
+#define LCDC_FICR_FITRIG(value)               (LCDC_FICR_FITRIG_Msk & (_UINT32_(value) << LCDC_FICR_FITRIG_Pos)) /* Assignment of value for FITRIG in the LCDC_FICR register */
 #define   LCDC_FICR_FITRIG_0_Val              _UINT32_(0x0)                                        /* (LCDC_FICR) No Fault is injected  */
 #define   LCDC_FICR_FITRIG_1_Val              _UINT32_(0x1)                                        /* (LCDC_FICR) Fault is injected once  */
-#define LCDC_FICR_FITRIG_0                    (LCDC_FICR_FITRIG_0_Val << LCDC_FICR_FITRIG_Pos)     /* (LCDC_FICR) No Fault is injected Position  */
-#define LCDC_FICR_FITRIG_1                    (LCDC_FICR_FITRIG_1_Val << LCDC_FICR_FITRIG_Pos)     /* (LCDC_FICR) Fault is injected once Position  */
+#define LCDC_FICR_FITRIG_0                    (LCDC_FICR_FITRIG_0_Val << LCDC_FICR_FITRIG_Pos)     /* (LCDC_FICR) No Fault is injected Position */
+#define LCDC_FICR_FITRIG_1                    (LCDC_FICR_FITRIG_1_Val << LCDC_FICR_FITRIG_Pos)     /* (LCDC_FICR) Fault is injected once Position */
 #define LCDC_FICR_FIBID_Pos                   _UINT32_(4)                                          /* (LCDC_FICR) Fault Injection Block Index Position */
 #define LCDC_FICR_FIBID_Msk                   (_UINT32_(0xFF) << LCDC_FICR_FIBID_Pos)              /* (LCDC_FICR) Fault Injection Block Index Mask */
-#define LCDC_FICR_FIBID(value)                (LCDC_FICR_FIBID_Msk & (_UINT32_(value) << LCDC_FICR_FIBID_Pos)) /* Assigment of value for FIBID in the LCDC_FICR register */
+#define LCDC_FICR_FIBID(value)                (LCDC_FICR_FIBID_Msk & (_UINT32_(value) << LCDC_FICR_FIBID_Pos)) /* Assignment of value for FIBID in the LCDC_FICR register */
 #define LCDC_FICR_FIDIS_Pos                   _UINT32_(15)                                         /* (LCDC_FICR) Fault Injection Control Register Disable Position */
 #define LCDC_FICR_FIDIS_Msk                   (_UINT32_(0x1) << LCDC_FICR_FIDIS_Pos)               /* (LCDC_FICR) Fault Injection Control Register Disable Mask */
-#define LCDC_FICR_FIDIS(value)                (LCDC_FICR_FIDIS_Msk & (_UINT32_(value) << LCDC_FICR_FIDIS_Pos)) /* Assigment of value for FIDIS in the LCDC_FICR register */
+#define LCDC_FICR_FIDIS(value)                (LCDC_FICR_FIDIS_Msk & (_UINT32_(value) << LCDC_FICR_FIDIS_Pos)) /* Assignment of value for FIDIS in the LCDC_FICR register */
 #define   LCDC_FICR_FIDIS_NO_EFFECT_Val       _UINT32_(0x0)                                        /* (LCDC_FICR) No effect.  */
 #define   LCDC_FICR_FIDIS_ACTIVE_Val          _UINT32_(0x1)                                        /* (LCDC_FICR) Locks the write access to LCDC_FICR until the next system reset.  */
-#define LCDC_FICR_FIDIS_NO_EFFECT             (LCDC_FICR_FIDIS_NO_EFFECT_Val << LCDC_FICR_FIDIS_Pos) /* (LCDC_FICR) No effect. Position  */
-#define LCDC_FICR_FIDIS_ACTIVE                (LCDC_FICR_FIDIS_ACTIVE_Val << LCDC_FICR_FIDIS_Pos)  /* (LCDC_FICR) Locks the write access to LCDC_FICR until the next system reset. Position  */
+#define LCDC_FICR_FIDIS_NO_EFFECT             (LCDC_FICR_FIDIS_NO_EFFECT_Val << LCDC_FICR_FIDIS_Pos) /* (LCDC_FICR) No effect. Position */
+#define LCDC_FICR_FIDIS_ACTIVE                (LCDC_FICR_FIDIS_ACTIVE_Val << LCDC_FICR_FIDIS_Pos)  /* (LCDC_FICR) Locks the write access to LCDC_FICR until the next system reset. Position */
 #define LCDC_FICR_FIKEY_Pos                   _UINT32_(16)                                         /* (LCDC_FICR) Write Protection Key Password Position */
 #define LCDC_FICR_FIKEY_Msk                   (_UINT32_(0xFFFF) << LCDC_FICR_FIKEY_Pos)            /* (LCDC_FICR) Write Protection Key Password Mask */
-#define LCDC_FICR_FIKEY(value)                (LCDC_FICR_FIKEY_Msk & (_UINT32_(value) << LCDC_FICR_FIKEY_Pos)) /* Assigment of value for FIKEY in the LCDC_FICR register */
+#define LCDC_FICR_FIKEY(value)                (LCDC_FICR_FIKEY_Msk & (_UINT32_(value) << LCDC_FICR_FIKEY_Pos)) /* Assignment of value for FIKEY in the LCDC_FICR register */
 #define   LCDC_FICR_FIKEY_PASSWD_Val          _UINT32_(0x4C43)                                     /* (LCDC_FICR) Writing any other value in this field aborts the write operation of the FITRIG, FIBID bits.  Always reads as 0.  */
-#define LCDC_FICR_FIKEY_PASSWD                (LCDC_FICR_FIKEY_PASSWD_Val << LCDC_FICR_FIKEY_Pos)  /* (LCDC_FICR) Writing any other value in this field aborts the write operation of the FITRIG, FIBID bits.  Always reads as 0. Position  */
+#define LCDC_FICR_FIKEY_PASSWD                (LCDC_FICR_FIKEY_PASSWD_Val << LCDC_FICR_FIKEY_Pos)  /* (LCDC_FICR) Writing any other value in this field aborts the write operation of the FITRIG, FIBID bits.  Always reads as 0. Position */
 #define LCDC_FICR_Msk                         _UINT32_(0xFFFF8FF1)                                 /* (LCDC_FICR) Register Mask  */
 
 
@@ -1100,22 +1102,22 @@
 
 #define LCDC_FICFG_FI1EN_Pos                  _UINT32_(0)                                          /* (LCDC_FICFG) Fault Injection 1 Enable Position */
 #define LCDC_FICFG_FI1EN_Msk                  (_UINT32_(0x1) << LCDC_FICFG_FI1EN_Pos)              /* (LCDC_FICFG) Fault Injection 1 Enable Mask */
-#define LCDC_FICFG_FI1EN(value)               (LCDC_FICFG_FI1EN_Msk & (_UINT32_(value) << LCDC_FICFG_FI1EN_Pos)) /* Assigment of value for FI1EN in the LCDC_FICFG register */
+#define LCDC_FICFG_FI1EN(value)               (LCDC_FICFG_FI1EN_Msk & (_UINT32_(value) << LCDC_FICFG_FI1EN_Pos)) /* Assignment of value for FI1EN in the LCDC_FICFG register */
 #define   LCDC_FICFG_FI1EN_0_Val              _UINT32_(0x0)                                        /* (LCDC_FICFG) First fault injection is disabled  */
 #define   LCDC_FICFG_FI1EN_1_Val              _UINT32_(0x1)                                        /* (LCDC_FICFG) First fault injection is enabled  */
-#define LCDC_FICFG_FI1EN_0                    (LCDC_FICFG_FI1EN_0_Val << LCDC_FICFG_FI1EN_Pos)     /* (LCDC_FICFG) First fault injection is disabled Position  */
-#define LCDC_FICFG_FI1EN_1                    (LCDC_FICFG_FI1EN_1_Val << LCDC_FICFG_FI1EN_Pos)     /* (LCDC_FICFG) First fault injection is enabled Position  */
+#define LCDC_FICFG_FI1EN_0                    (LCDC_FICFG_FI1EN_0_Val << LCDC_FICFG_FI1EN_Pos)     /* (LCDC_FICFG) First fault injection is disabled Position */
+#define LCDC_FICFG_FI1EN_1                    (LCDC_FICFG_FI1EN_1_Val << LCDC_FICFG_FI1EN_Pos)     /* (LCDC_FICFG) First fault injection is enabled Position */
 #define LCDC_FICFG_CLCMP_Pos                  _UINT32_(16)                                         /* (LCDC_FICFG) CLUT Ram Component Index Position */
 #define LCDC_FICFG_CLCMP_Msk                  (_UINT32_(0x3) << LCDC_FICFG_CLCMP_Pos)              /* (LCDC_FICFG) CLUT Ram Component Index Mask */
-#define LCDC_FICFG_CLCMP(value)               (LCDC_FICFG_CLCMP_Msk & (_UINT32_(value) << LCDC_FICFG_CLCMP_Pos)) /* Assigment of value for CLCMP in the LCDC_FICFG register */
+#define LCDC_FICFG_CLCMP(value)               (LCDC_FICFG_CLCMP_Msk & (_UINT32_(value) << LCDC_FICFG_CLCMP_Pos)) /* Assignment of value for CLCMP in the LCDC_FICFG register */
 #define   LCDC_FICFG_CLCMP_0_Val              _UINT32_(0x0)                                        /* (LCDC_FICFG) Blue Component  */
 #define   LCDC_FICFG_CLCMP_1_Val              _UINT32_(0x1)                                        /* (LCDC_FICFG) Green Component  */
 #define   LCDC_FICFG_CLCMP_2_Val              _UINT32_(0x2)                                        /* (LCDC_FICFG) Red Component  */
 #define   LCDC_FICFG_CLCMP_3_Val              _UINT32_(0x3)                                        /* (LCDC_FICFG) Alpha Component  */
-#define LCDC_FICFG_CLCMP_0                    (LCDC_FICFG_CLCMP_0_Val << LCDC_FICFG_CLCMP_Pos)     /* (LCDC_FICFG) Blue Component Position  */
-#define LCDC_FICFG_CLCMP_1                    (LCDC_FICFG_CLCMP_1_Val << LCDC_FICFG_CLCMP_Pos)     /* (LCDC_FICFG) Green Component Position  */
-#define LCDC_FICFG_CLCMP_2                    (LCDC_FICFG_CLCMP_2_Val << LCDC_FICFG_CLCMP_Pos)     /* (LCDC_FICFG) Red Component Position  */
-#define LCDC_FICFG_CLCMP_3                    (LCDC_FICFG_CLCMP_3_Val << LCDC_FICFG_CLCMP_Pos)     /* (LCDC_FICFG) Alpha Component Position  */
+#define LCDC_FICFG_CLCMP_0                    (LCDC_FICFG_CLCMP_0_Val << LCDC_FICFG_CLCMP_Pos)     /* (LCDC_FICFG) Blue Component Position */
+#define LCDC_FICFG_CLCMP_1                    (LCDC_FICFG_CLCMP_1_Val << LCDC_FICFG_CLCMP_Pos)     /* (LCDC_FICFG) Green Component Position */
+#define LCDC_FICFG_CLCMP_2                    (LCDC_FICFG_CLCMP_2_Val << LCDC_FICFG_CLCMP_Pos)     /* (LCDC_FICFG) Red Component Position */
+#define LCDC_FICFG_CLCMP_3                    (LCDC_FICFG_CLCMP_3_Val << LCDC_FICFG_CLCMP_Pos)     /* (LCDC_FICFG) Alpha Component Position */
 #define LCDC_FICFG_Msk                        _UINT32_(0x00030001)                                 /* (LCDC_FICFG) Register Mask  */
 
 
@@ -1124,14 +1126,14 @@
 
 #define LCDC_FDSR_BLID_Pos                    _UINT32_(0)                                          /* (LCDC_FDSR) Block Index Position */
 #define LCDC_FDSR_BLID_Msk                    (_UINT32_(0xFF) << LCDC_FDSR_BLID_Pos)               /* (LCDC_FDSR) Block Index Mask */
-#define LCDC_FDSR_BLID(value)                 (LCDC_FDSR_BLID_Msk & (_UINT32_(value) << LCDC_FDSR_BLID_Pos)) /* Assigment of value for BLID in the LCDC_FDSR register */
+#define LCDC_FDSR_BLID(value)                 (LCDC_FDSR_BLID_Msk & (_UINT32_(value) << LCDC_FDSR_BLID_Pos)) /* Assignment of value for BLID in the LCDC_FDSR register */
 #define LCDC_FDSR_NCF_Pos                     _UINT32_(9)                                          /* (LCDC_FDSR) Non-Corrected Fault Status Position */
 #define LCDC_FDSR_NCF_Msk                     (_UINT32_(0x1) << LCDC_FDSR_NCF_Pos)                 /* (LCDC_FDSR) Non-Corrected Fault Status Mask */
-#define LCDC_FDSR_NCF(value)                  (LCDC_FDSR_NCF_Msk & (_UINT32_(value) << LCDC_FDSR_NCF_Pos)) /* Assigment of value for NCF in the LCDC_FDSR register */
+#define LCDC_FDSR_NCF(value)                  (LCDC_FDSR_NCF_Msk & (_UINT32_(value) << LCDC_FDSR_NCF_Pos)) /* Assignment of value for NCF in the LCDC_FDSR register */
 #define   LCDC_FDSR_NCF_0_Val                 _UINT32_(0x0)                                        /* (LCDC_FDSR) No non-correctable fault has been detected since the last read of LCDC_FDSR.  */
 #define   LCDC_FDSR_NCF_1_Val                 _UINT32_(0x1)                                        /* (LCDC_FDSR) A non-correctable fault has been detected. This flag is reset after a read operation.  */
-#define LCDC_FDSR_NCF_0                       (LCDC_FDSR_NCF_0_Val << LCDC_FDSR_NCF_Pos)           /* (LCDC_FDSR) No non-correctable fault has been detected since the last read of LCDC_FDSR. Position  */
-#define LCDC_FDSR_NCF_1                       (LCDC_FDSR_NCF_1_Val << LCDC_FDSR_NCF_Pos)           /* (LCDC_FDSR) A non-correctable fault has been detected. This flag is reset after a read operation. Position  */
+#define LCDC_FDSR_NCF_0                       (LCDC_FDSR_NCF_0_Val << LCDC_FDSR_NCF_Pos)           /* (LCDC_FDSR) No non-correctable fault has been detected since the last read of LCDC_FDSR. Position */
+#define LCDC_FDSR_NCF_1                       (LCDC_FDSR_NCF_1_Val << LCDC_FDSR_NCF_Pos)           /* (LCDC_FDSR) A non-correctable fault has been detected. This flag is reset after a read operation. Position */
 #define LCDC_FDSR_Msk                         _UINT32_(0x000002FF)                                 /* (LCDC_FDSR) Register Mask  */
 
 
@@ -1140,114 +1142,114 @@
 
 #define LCDC_WPMR_WPCFGE_Pos                  _UINT32_(0)                                          /* (LCDC_WPMR) Write Protection Configuration Registers Enable Position */
 #define LCDC_WPMR_WPCFGE_Msk                  (_UINT32_(0x1) << LCDC_WPMR_WPCFGE_Pos)              /* (LCDC_WPMR) Write Protection Configuration Registers Enable Mask */
-#define LCDC_WPMR_WPCFGE(value)               (LCDC_WPMR_WPCFGE_Msk & (_UINT32_(value) << LCDC_WPMR_WPCFGE_Pos)) /* Assigment of value for WPCFGE in the LCDC_WPMR register */
+#define LCDC_WPMR_WPCFGE(value)               (LCDC_WPMR_WPCFGE_Msk & (_UINT32_(value) << LCDC_WPMR_WPCFGE_Pos)) /* Assignment of value for WPCFGE in the LCDC_WPMR register */
 #define   LCDC_WPMR_WPCFGE_0_Val              _UINT32_(0x0)                                        /* (LCDC_WPMR) Disables the write protection of LCDC Configuration registers if WPKEY corresponds to 0x58 ("X" in ASCII).  */
 #define   LCDC_WPMR_WPCFGE_1_Val              _UINT32_(0x1)                                        /* (LCDC_WPMR) Enables the write protection of LCDC Configuration registers if WPKEY corresponds to 0x58 ("X" in ASCII).  */
-#define LCDC_WPMR_WPCFGE_0                    (LCDC_WPMR_WPCFGE_0_Val << LCDC_WPMR_WPCFGE_Pos)     /* (LCDC_WPMR) Disables the write protection of LCDC Configuration registers if WPKEY corresponds to 0x58 ("X" in ASCII). Position  */
-#define LCDC_WPMR_WPCFGE_1                    (LCDC_WPMR_WPCFGE_1_Val << LCDC_WPMR_WPCFGE_Pos)     /* (LCDC_WPMR) Enables the write protection of LCDC Configuration registers if WPKEY corresponds to 0x58 ("X" in ASCII). Position  */
+#define LCDC_WPMR_WPCFGE_0                    (LCDC_WPMR_WPCFGE_0_Val << LCDC_WPMR_WPCFGE_Pos)     /* (LCDC_WPMR) Disables the write protection of LCDC Configuration registers if WPKEY corresponds to 0x58 ("X" in ASCII). Position */
+#define LCDC_WPMR_WPCFGE_1                    (LCDC_WPMR_WPCFGE_1_Val << LCDC_WPMR_WPCFGE_Pos)     /* (LCDC_WPMR) Enables the write protection of LCDC Configuration registers if WPKEY corresponds to 0x58 ("X" in ASCII). Position */
 #define LCDC_WPMR_WPITE_Pos                   _UINT32_(1)                                          /* (LCDC_WPMR) Write Protection Interrupt Registers Enable Position */
 #define LCDC_WPMR_WPITE_Msk                   (_UINT32_(0x1) << LCDC_WPMR_WPITE_Pos)               /* (LCDC_WPMR) Write Protection Interrupt Registers Enable Mask */
-#define LCDC_WPMR_WPITE(value)                (LCDC_WPMR_WPITE_Msk & (_UINT32_(value) << LCDC_WPMR_WPITE_Pos)) /* Assigment of value for WPITE in the LCDC_WPMR register */
+#define LCDC_WPMR_WPITE(value)                (LCDC_WPMR_WPITE_Msk & (_UINT32_(value) << LCDC_WPMR_WPITE_Pos)) /* Assignment of value for WPITE in the LCDC_WPMR register */
 #define   LCDC_WPMR_WPITE_0_Val               _UINT32_(0x0)                                        /* (LCDC_WPMR) Disables the write protection of LCDC Interrupt Enable/Disable registers if WPKEY corresponds to 0x58 ("X" in ASCII).  */
 #define   LCDC_WPMR_WPITE_1_Val               _UINT32_(0x1)                                        /* (LCDC_WPMR) Enables the write protection of LCDC Interrupt Enable/Disable registers if WPKEY corresponds to 0x58 ("X" in ASCII).  */
-#define LCDC_WPMR_WPITE_0                     (LCDC_WPMR_WPITE_0_Val << LCDC_WPMR_WPITE_Pos)       /* (LCDC_WPMR) Disables the write protection of LCDC Interrupt Enable/Disable registers if WPKEY corresponds to 0x58 ("X" in ASCII). Position  */
-#define LCDC_WPMR_WPITE_1                     (LCDC_WPMR_WPITE_1_Val << LCDC_WPMR_WPITE_Pos)       /* (LCDC_WPMR) Enables the write protection of LCDC Interrupt Enable/Disable registers if WPKEY corresponds to 0x58 ("X" in ASCII). Position  */
+#define LCDC_WPMR_WPITE_0                     (LCDC_WPMR_WPITE_0_Val << LCDC_WPMR_WPITE_Pos)       /* (LCDC_WPMR) Disables the write protection of LCDC Interrupt Enable/Disable registers if WPKEY corresponds to 0x58 ("X" in ASCII). Position */
+#define LCDC_WPMR_WPITE_1                     (LCDC_WPMR_WPITE_1_Val << LCDC_WPMR_WPITE_Pos)       /* (LCDC_WPMR) Enables the write protection of LCDC Interrupt Enable/Disable registers if WPKEY corresponds to 0x58 ("X" in ASCII). Position */
 #define LCDC_WPMR_WPCRE_Pos                   _UINT32_(2)                                          /* (LCDC_WPMR) Write Protection Control Registers Enable Position */
 #define LCDC_WPMR_WPCRE_Msk                   (_UINT32_(0x1) << LCDC_WPMR_WPCRE_Pos)               /* (LCDC_WPMR) Write Protection Control Registers Enable Mask */
-#define LCDC_WPMR_WPCRE(value)                (LCDC_WPMR_WPCRE_Msk & (_UINT32_(value) << LCDC_WPMR_WPCRE_Pos)) /* Assigment of value for WPCRE in the LCDC_WPMR register */
+#define LCDC_WPMR_WPCRE(value)                (LCDC_WPMR_WPCRE_Msk & (_UINT32_(value) << LCDC_WPMR_WPCRE_Pos)) /* Assignment of value for WPCRE in the LCDC_WPMR register */
 #define   LCDC_WPMR_WPCRE_0_Val               _UINT32_(0x0)                                        /* (LCDC_WPMR) Disables the write protection of LCDC Control registers if WPKEY corresponds to 0x58 ("X" in ASCII).  */
 #define   LCDC_WPMR_WPCRE_1_Val               _UINT32_(0x1)                                        /* (LCDC_WPMR) Enables the write protection of LCDC Control registers if WPKEY corresponds to 0x58 ("X" in ASCII).  */
-#define LCDC_WPMR_WPCRE_0                     (LCDC_WPMR_WPCRE_0_Val << LCDC_WPMR_WPCRE_Pos)       /* (LCDC_WPMR) Disables the write protection of LCDC Control registers if WPKEY corresponds to 0x58 ("X" in ASCII). Position  */
-#define LCDC_WPMR_WPCRE_1                     (LCDC_WPMR_WPCRE_1_Val << LCDC_WPMR_WPCRE_Pos)       /* (LCDC_WPMR) Enables the write protection of LCDC Control registers if WPKEY corresponds to 0x58 ("X" in ASCII). Position  */
+#define LCDC_WPMR_WPCRE_0                     (LCDC_WPMR_WPCRE_0_Val << LCDC_WPMR_WPCRE_Pos)       /* (LCDC_WPMR) Disables the write protection of LCDC Control registers if WPKEY corresponds to 0x58 ("X" in ASCII). Position */
+#define LCDC_WPMR_WPCRE_1                     (LCDC_WPMR_WPCRE_1_Val << LCDC_WPMR_WPCRE_Pos)       /* (LCDC_WPMR) Enables the write protection of LCDC Control registers if WPKEY corresponds to 0x58 ("X" in ASCII). Position */
 #define LCDC_WPMR_BWPCFGE_Pos                 _UINT32_(3)                                          /* (LCDC_WPMR) Base Layer Write Protection Configuration Registers Enable Position */
 #define LCDC_WPMR_BWPCFGE_Msk                 (_UINT32_(0x1) << LCDC_WPMR_BWPCFGE_Pos)             /* (LCDC_WPMR) Base Layer Write Protection Configuration Registers Enable Mask */
-#define LCDC_WPMR_BWPCFGE(value)              (LCDC_WPMR_BWPCFGE_Msk & (_UINT32_(value) << LCDC_WPMR_BWPCFGE_Pos)) /* Assigment of value for BWPCFGE in the LCDC_WPMR register */
+#define LCDC_WPMR_BWPCFGE(value)              (LCDC_WPMR_BWPCFGE_Msk & (_UINT32_(value) << LCDC_WPMR_BWPCFGE_Pos)) /* Assignment of value for BWPCFGE in the LCDC_WPMR register */
 #define   LCDC_WPMR_BWPCFGE_0_Val             _UINT32_(0x0)                                        /* (LCDC_WPMR) Disables the write protection of base layer Configuration registers if WPKEY corresponds to 0x58 ("X" in ASCII).  */
 #define   LCDC_WPMR_BWPCFGE_1_Val             _UINT32_(0x1)                                        /* (LCDC_WPMR) Enables the write protection of base layer Configuration registers if WPKEY corresponds to 0x58 ("X" in ASCII).  */
-#define LCDC_WPMR_BWPCFGE_0                   (LCDC_WPMR_BWPCFGE_0_Val << LCDC_WPMR_BWPCFGE_Pos)   /* (LCDC_WPMR) Disables the write protection of base layer Configuration registers if WPKEY corresponds to 0x58 ("X" in ASCII). Position  */
-#define LCDC_WPMR_BWPCFGE_1                   (LCDC_WPMR_BWPCFGE_1_Val << LCDC_WPMR_BWPCFGE_Pos)   /* (LCDC_WPMR) Enables the write protection of base layer Configuration registers if WPKEY corresponds to 0x58 ("X" in ASCII). Position  */
+#define LCDC_WPMR_BWPCFGE_0                   (LCDC_WPMR_BWPCFGE_0_Val << LCDC_WPMR_BWPCFGE_Pos)   /* (LCDC_WPMR) Disables the write protection of base layer Configuration registers if WPKEY corresponds to 0x58 ("X" in ASCII). Position */
+#define LCDC_WPMR_BWPCFGE_1                   (LCDC_WPMR_BWPCFGE_1_Val << LCDC_WPMR_BWPCFGE_Pos)   /* (LCDC_WPMR) Enables the write protection of base layer Configuration registers if WPKEY corresponds to 0x58 ("X" in ASCII). Position */
 #define LCDC_WPMR_BWPITE_Pos                  _UINT32_(4)                                          /* (LCDC_WPMR) Base Layer Write Protection Interrupt Registers Enable Position */
 #define LCDC_WPMR_BWPITE_Msk                  (_UINT32_(0x1) << LCDC_WPMR_BWPITE_Pos)              /* (LCDC_WPMR) Base Layer Write Protection Interrupt Registers Enable Mask */
-#define LCDC_WPMR_BWPITE(value)               (LCDC_WPMR_BWPITE_Msk & (_UINT32_(value) << LCDC_WPMR_BWPITE_Pos)) /* Assigment of value for BWPITE in the LCDC_WPMR register */
+#define LCDC_WPMR_BWPITE(value)               (LCDC_WPMR_BWPITE_Msk & (_UINT32_(value) << LCDC_WPMR_BWPITE_Pos)) /* Assignment of value for BWPITE in the LCDC_WPMR register */
 #define   LCDC_WPMR_BWPITE_0_Val              _UINT32_(0x0)                                        /* (LCDC_WPMR) Disables the write protection of base layer Interrupt Enable/Disable registers if WPKEY corresponds to 0x58 ("X" in ASCII).  */
 #define   LCDC_WPMR_BWPITE_1_Val              _UINT32_(0x1)                                        /* (LCDC_WPMR) Enables the write protection of base layer Interrupt Enable/Disable registers if WPKEY corresponds to 0x58 ("X" in ASCII).  */
-#define LCDC_WPMR_BWPITE_0                    (LCDC_WPMR_BWPITE_0_Val << LCDC_WPMR_BWPITE_Pos)     /* (LCDC_WPMR) Disables the write protection of base layer Interrupt Enable/Disable registers if WPKEY corresponds to 0x58 ("X" in ASCII). Position  */
-#define LCDC_WPMR_BWPITE_1                    (LCDC_WPMR_BWPITE_1_Val << LCDC_WPMR_BWPITE_Pos)     /* (LCDC_WPMR) Enables the write protection of base layer Interrupt Enable/Disable registers if WPKEY corresponds to 0x58 ("X" in ASCII). Position  */
+#define LCDC_WPMR_BWPITE_0                    (LCDC_WPMR_BWPITE_0_Val << LCDC_WPMR_BWPITE_Pos)     /* (LCDC_WPMR) Disables the write protection of base layer Interrupt Enable/Disable registers if WPKEY corresponds to 0x58 ("X" in ASCII). Position */
+#define LCDC_WPMR_BWPITE_1                    (LCDC_WPMR_BWPITE_1_Val << LCDC_WPMR_BWPITE_Pos)     /* (LCDC_WPMR) Enables the write protection of base layer Interrupt Enable/Disable registers if WPKEY corresponds to 0x58 ("X" in ASCII). Position */
 #define LCDC_WPMR_BWPCRE_Pos                  _UINT32_(5)                                          /* (LCDC_WPMR) Base Layer Write Protection Control Registers Enable Position */
 #define LCDC_WPMR_BWPCRE_Msk                  (_UINT32_(0x1) << LCDC_WPMR_BWPCRE_Pos)              /* (LCDC_WPMR) Base Layer Write Protection Control Registers Enable Mask */
-#define LCDC_WPMR_BWPCRE(value)               (LCDC_WPMR_BWPCRE_Msk & (_UINT32_(value) << LCDC_WPMR_BWPCRE_Pos)) /* Assigment of value for BWPCRE in the LCDC_WPMR register */
+#define LCDC_WPMR_BWPCRE(value)               (LCDC_WPMR_BWPCRE_Msk & (_UINT32_(value) << LCDC_WPMR_BWPCRE_Pos)) /* Assignment of value for BWPCRE in the LCDC_WPMR register */
 #define   LCDC_WPMR_BWPCRE_0_Val              _UINT32_(0x0)                                        /* (LCDC_WPMR) Disables the write protection of base layer Control registers if WPKEY corresponds to 0x58 ("X" in ASCII).  */
 #define   LCDC_WPMR_BWPCRE_1_Val              _UINT32_(0x1)                                        /* (LCDC_WPMR) Enables the write protection of base layer Control registers if WPKEY corresponds to 0x58 ("X" in ASCII).  */
-#define LCDC_WPMR_BWPCRE_0                    (LCDC_WPMR_BWPCRE_0_Val << LCDC_WPMR_BWPCRE_Pos)     /* (LCDC_WPMR) Disables the write protection of base layer Control registers if WPKEY corresponds to 0x58 ("X" in ASCII). Position  */
-#define LCDC_WPMR_BWPCRE_1                    (LCDC_WPMR_BWPCRE_1_Val << LCDC_WPMR_BWPCRE_Pos)     /* (LCDC_WPMR) Enables the write protection of base layer Control registers if WPKEY corresponds to 0x58 ("X" in ASCII). Position  */
+#define LCDC_WPMR_BWPCRE_0                    (LCDC_WPMR_BWPCRE_0_Val << LCDC_WPMR_BWPCRE_Pos)     /* (LCDC_WPMR) Disables the write protection of base layer Control registers if WPKEY corresponds to 0x58 ("X" in ASCII). Position */
+#define LCDC_WPMR_BWPCRE_1                    (LCDC_WPMR_BWPCRE_1_Val << LCDC_WPMR_BWPCRE_Pos)     /* (LCDC_WPMR) Enables the write protection of base layer Control registers if WPKEY corresponds to 0x58 ("X" in ASCII). Position */
 #define LCDC_WPMR_O1WPCFGE_Pos                _UINT32_(6)                                          /* (LCDC_WPMR) Overlay 1 Write Protection Configuration Registers Enable Position */
 #define LCDC_WPMR_O1WPCFGE_Msk                (_UINT32_(0x1) << LCDC_WPMR_O1WPCFGE_Pos)            /* (LCDC_WPMR) Overlay 1 Write Protection Configuration Registers Enable Mask */
-#define LCDC_WPMR_O1WPCFGE(value)             (LCDC_WPMR_O1WPCFGE_Msk & (_UINT32_(value) << LCDC_WPMR_O1WPCFGE_Pos)) /* Assigment of value for O1WPCFGE in the LCDC_WPMR register */
+#define LCDC_WPMR_O1WPCFGE(value)             (LCDC_WPMR_O1WPCFGE_Msk & (_UINT32_(value) << LCDC_WPMR_O1WPCFGE_Pos)) /* Assignment of value for O1WPCFGE in the LCDC_WPMR register */
 #define   LCDC_WPMR_O1WPCFGE_0_Val            _UINT32_(0x0)                                        /* (LCDC_WPMR) Disables the write protection of Overlay 1 Configuration registers if WPKEY corresponds to 0x58 ("X" in ASCII).  */
 #define   LCDC_WPMR_O1WPCFGE_1_Val            _UINT32_(0x1)                                        /* (LCDC_WPMR) Enables the write protection of Overlay 1 Configuration registers if WPKEY corresponds to 0x58 ("X" in ASCII).  */
-#define LCDC_WPMR_O1WPCFGE_0                  (LCDC_WPMR_O1WPCFGE_0_Val << LCDC_WPMR_O1WPCFGE_Pos) /* (LCDC_WPMR) Disables the write protection of Overlay 1 Configuration registers if WPKEY corresponds to 0x58 ("X" in ASCII). Position  */
-#define LCDC_WPMR_O1WPCFGE_1                  (LCDC_WPMR_O1WPCFGE_1_Val << LCDC_WPMR_O1WPCFGE_Pos) /* (LCDC_WPMR) Enables the write protection of Overlay 1 Configuration registers if WPKEY corresponds to 0x58 ("X" in ASCII). Position  */
+#define LCDC_WPMR_O1WPCFGE_0                  (LCDC_WPMR_O1WPCFGE_0_Val << LCDC_WPMR_O1WPCFGE_Pos) /* (LCDC_WPMR) Disables the write protection of Overlay 1 Configuration registers if WPKEY corresponds to 0x58 ("X" in ASCII). Position */
+#define LCDC_WPMR_O1WPCFGE_1                  (LCDC_WPMR_O1WPCFGE_1_Val << LCDC_WPMR_O1WPCFGE_Pos) /* (LCDC_WPMR) Enables the write protection of Overlay 1 Configuration registers if WPKEY corresponds to 0x58 ("X" in ASCII). Position */
 #define LCDC_WPMR_O1WPITE_Pos                 _UINT32_(7)                                          /* (LCDC_WPMR) Overlay 1 Write Protection Interrupt Registers Enable Position */
 #define LCDC_WPMR_O1WPITE_Msk                 (_UINT32_(0x1) << LCDC_WPMR_O1WPITE_Pos)             /* (LCDC_WPMR) Overlay 1 Write Protection Interrupt Registers Enable Mask */
-#define LCDC_WPMR_O1WPITE(value)              (LCDC_WPMR_O1WPITE_Msk & (_UINT32_(value) << LCDC_WPMR_O1WPITE_Pos)) /* Assigment of value for O1WPITE in the LCDC_WPMR register */
+#define LCDC_WPMR_O1WPITE(value)              (LCDC_WPMR_O1WPITE_Msk & (_UINT32_(value) << LCDC_WPMR_O1WPITE_Pos)) /* Assignment of value for O1WPITE in the LCDC_WPMR register */
 #define   LCDC_WPMR_O1WPITE_0_Val             _UINT32_(0x0)                                        /* (LCDC_WPMR) Disables the write protection of Overlay 1 Interrupt Enable/Disable registers if WPKEY corresponds to 0x58 ("X" in ASCII).  */
 #define   LCDC_WPMR_O1WPITE_1_Val             _UINT32_(0x1)                                        /* (LCDC_WPMR) Enables the write protection of Overlay 1 Interrupt Enable/Disable registers if WPKEY corresponds to 0x58 ("X" in ASCII).  */
-#define LCDC_WPMR_O1WPITE_0                   (LCDC_WPMR_O1WPITE_0_Val << LCDC_WPMR_O1WPITE_Pos)   /* (LCDC_WPMR) Disables the write protection of Overlay 1 Interrupt Enable/Disable registers if WPKEY corresponds to 0x58 ("X" in ASCII). Position  */
-#define LCDC_WPMR_O1WPITE_1                   (LCDC_WPMR_O1WPITE_1_Val << LCDC_WPMR_O1WPITE_Pos)   /* (LCDC_WPMR) Enables the write protection of Overlay 1 Interrupt Enable/Disable registers if WPKEY corresponds to 0x58 ("X" in ASCII). Position  */
+#define LCDC_WPMR_O1WPITE_0                   (LCDC_WPMR_O1WPITE_0_Val << LCDC_WPMR_O1WPITE_Pos)   /* (LCDC_WPMR) Disables the write protection of Overlay 1 Interrupt Enable/Disable registers if WPKEY corresponds to 0x58 ("X" in ASCII). Position */
+#define LCDC_WPMR_O1WPITE_1                   (LCDC_WPMR_O1WPITE_1_Val << LCDC_WPMR_O1WPITE_Pos)   /* (LCDC_WPMR) Enables the write protection of Overlay 1 Interrupt Enable/Disable registers if WPKEY corresponds to 0x58 ("X" in ASCII). Position */
 #define LCDC_WPMR_O1WPCRE_Pos                 _UINT32_(8)                                          /* (LCDC_WPMR) Overlay 1 Write Protection Control Registers Enable Position */
 #define LCDC_WPMR_O1WPCRE_Msk                 (_UINT32_(0x1) << LCDC_WPMR_O1WPCRE_Pos)             /* (LCDC_WPMR) Overlay 1 Write Protection Control Registers Enable Mask */
-#define LCDC_WPMR_O1WPCRE(value)              (LCDC_WPMR_O1WPCRE_Msk & (_UINT32_(value) << LCDC_WPMR_O1WPCRE_Pos)) /* Assigment of value for O1WPCRE in the LCDC_WPMR register */
+#define LCDC_WPMR_O1WPCRE(value)              (LCDC_WPMR_O1WPCRE_Msk & (_UINT32_(value) << LCDC_WPMR_O1WPCRE_Pos)) /* Assignment of value for O1WPCRE in the LCDC_WPMR register */
 #define   LCDC_WPMR_O1WPCRE_0_Val             _UINT32_(0x0)                                        /* (LCDC_WPMR) Disables the write protection of Overlay 1 Control registers if WPKEY corresponds to 0x58 ("X" in ASCII).  */
 #define   LCDC_WPMR_O1WPCRE_1_Val             _UINT32_(0x1)                                        /* (LCDC_WPMR) Enables the write protection of Overlay 1 Control registers if WPKEY corresponds to 0x58 ("X" in ASCII).  */
-#define LCDC_WPMR_O1WPCRE_0                   (LCDC_WPMR_O1WPCRE_0_Val << LCDC_WPMR_O1WPCRE_Pos)   /* (LCDC_WPMR) Disables the write protection of Overlay 1 Control registers if WPKEY corresponds to 0x58 ("X" in ASCII). Position  */
-#define LCDC_WPMR_O1WPCRE_1                   (LCDC_WPMR_O1WPCRE_1_Val << LCDC_WPMR_O1WPCRE_Pos)   /* (LCDC_WPMR) Enables the write protection of Overlay 1 Control registers if WPKEY corresponds to 0x58 ("X" in ASCII). Position  */
+#define LCDC_WPMR_O1WPCRE_0                   (LCDC_WPMR_O1WPCRE_0_Val << LCDC_WPMR_O1WPCRE_Pos)   /* (LCDC_WPMR) Disables the write protection of Overlay 1 Control registers if WPKEY corresponds to 0x58 ("X" in ASCII). Position */
+#define LCDC_WPMR_O1WPCRE_1                   (LCDC_WPMR_O1WPCRE_1_Val << LCDC_WPMR_O1WPCRE_Pos)   /* (LCDC_WPMR) Enables the write protection of Overlay 1 Control registers if WPKEY corresponds to 0x58 ("X" in ASCII). Position */
 #define LCDC_WPMR_HEWPCFGE_Pos                _UINT32_(12)                                         /* (LCDC_WPMR) High-End Overlay Write Protection Configuration Registers Enable Position */
 #define LCDC_WPMR_HEWPCFGE_Msk                (_UINT32_(0x1) << LCDC_WPMR_HEWPCFGE_Pos)            /* (LCDC_WPMR) High-End Overlay Write Protection Configuration Registers Enable Mask */
-#define LCDC_WPMR_HEWPCFGE(value)             (LCDC_WPMR_HEWPCFGE_Msk & (_UINT32_(value) << LCDC_WPMR_HEWPCFGE_Pos)) /* Assigment of value for HEWPCFGE in the LCDC_WPMR register */
+#define LCDC_WPMR_HEWPCFGE(value)             (LCDC_WPMR_HEWPCFGE_Msk & (_UINT32_(value) << LCDC_WPMR_HEWPCFGE_Pos)) /* Assignment of value for HEWPCFGE in the LCDC_WPMR register */
 #define   LCDC_WPMR_HEWPCFGE_0_Val            _UINT32_(0x0)                                        /* (LCDC_WPMR) Disables the write protection of High-End Overlay Configuration registers if WPKEY corresponds to 0x58 ("X" in ASCII).  */
 #define   LCDC_WPMR_HEWPCFGE_1_Val            _UINT32_(0x1)                                        /* (LCDC_WPMR) Enables the write protection of High-End Overlay Configuration registers if WPKEY corresponds to 0x58 ("X" in ASCII).  */
-#define LCDC_WPMR_HEWPCFGE_0                  (LCDC_WPMR_HEWPCFGE_0_Val << LCDC_WPMR_HEWPCFGE_Pos) /* (LCDC_WPMR) Disables the write protection of High-End Overlay Configuration registers if WPKEY corresponds to 0x58 ("X" in ASCII). Position  */
-#define LCDC_WPMR_HEWPCFGE_1                  (LCDC_WPMR_HEWPCFGE_1_Val << LCDC_WPMR_HEWPCFGE_Pos) /* (LCDC_WPMR) Enables the write protection of High-End Overlay Configuration registers if WPKEY corresponds to 0x58 ("X" in ASCII). Position  */
+#define LCDC_WPMR_HEWPCFGE_0                  (LCDC_WPMR_HEWPCFGE_0_Val << LCDC_WPMR_HEWPCFGE_Pos) /* (LCDC_WPMR) Disables the write protection of High-End Overlay Configuration registers if WPKEY corresponds to 0x58 ("X" in ASCII). Position */
+#define LCDC_WPMR_HEWPCFGE_1                  (LCDC_WPMR_HEWPCFGE_1_Val << LCDC_WPMR_HEWPCFGE_Pos) /* (LCDC_WPMR) Enables the write protection of High-End Overlay Configuration registers if WPKEY corresponds to 0x58 ("X" in ASCII). Position */
 #define LCDC_WPMR_HEWPITE_Pos                 _UINT32_(13)                                         /* (LCDC_WPMR) High-End Overlay Write Protection Interrupt Registers Enable Position */
 #define LCDC_WPMR_HEWPITE_Msk                 (_UINT32_(0x1) << LCDC_WPMR_HEWPITE_Pos)             /* (LCDC_WPMR) High-End Overlay Write Protection Interrupt Registers Enable Mask */
-#define LCDC_WPMR_HEWPITE(value)              (LCDC_WPMR_HEWPITE_Msk & (_UINT32_(value) << LCDC_WPMR_HEWPITE_Pos)) /* Assigment of value for HEWPITE in the LCDC_WPMR register */
+#define LCDC_WPMR_HEWPITE(value)              (LCDC_WPMR_HEWPITE_Msk & (_UINT32_(value) << LCDC_WPMR_HEWPITE_Pos)) /* Assignment of value for HEWPITE in the LCDC_WPMR register */
 #define   LCDC_WPMR_HEWPITE_0_Val             _UINT32_(0x0)                                        /* (LCDC_WPMR) Disables the write protection of High-End Overlay Interrupt Enable/Disable registers if WPKEY corresponds to 0x58 ("X" in ASCII).  */
 #define   LCDC_WPMR_HEWPITE_1_Val             _UINT32_(0x1)                                        /* (LCDC_WPMR) Enables the write protection of High-End Overlay Interrupt Enable/Disable registers if WPKEY corresponds to 0x58 ("X" in ASCII).  */
-#define LCDC_WPMR_HEWPITE_0                   (LCDC_WPMR_HEWPITE_0_Val << LCDC_WPMR_HEWPITE_Pos)   /* (LCDC_WPMR) Disables the write protection of High-End Overlay Interrupt Enable/Disable registers if WPKEY corresponds to 0x58 ("X" in ASCII). Position  */
-#define LCDC_WPMR_HEWPITE_1                   (LCDC_WPMR_HEWPITE_1_Val << LCDC_WPMR_HEWPITE_Pos)   /* (LCDC_WPMR) Enables the write protection of High-End Overlay Interrupt Enable/Disable registers if WPKEY corresponds to 0x58 ("X" in ASCII). Position  */
+#define LCDC_WPMR_HEWPITE_0                   (LCDC_WPMR_HEWPITE_0_Val << LCDC_WPMR_HEWPITE_Pos)   /* (LCDC_WPMR) Disables the write protection of High-End Overlay Interrupt Enable/Disable registers if WPKEY corresponds to 0x58 ("X" in ASCII). Position */
+#define LCDC_WPMR_HEWPITE_1                   (LCDC_WPMR_HEWPITE_1_Val << LCDC_WPMR_HEWPITE_Pos)   /* (LCDC_WPMR) Enables the write protection of High-End Overlay Interrupt Enable/Disable registers if WPKEY corresponds to 0x58 ("X" in ASCII). Position */
 #define LCDC_WPMR_HEWPCRE_Pos                 _UINT32_(14)                                         /* (LCDC_WPMR) High-End Overlay Write Protection Control Registers Enable Position */
 #define LCDC_WPMR_HEWPCRE_Msk                 (_UINT32_(0x1) << LCDC_WPMR_HEWPCRE_Pos)             /* (LCDC_WPMR) High-End Overlay Write Protection Control Registers Enable Mask */
-#define LCDC_WPMR_HEWPCRE(value)              (LCDC_WPMR_HEWPCRE_Msk & (_UINT32_(value) << LCDC_WPMR_HEWPCRE_Pos)) /* Assigment of value for HEWPCRE in the LCDC_WPMR register */
+#define LCDC_WPMR_HEWPCRE(value)              (LCDC_WPMR_HEWPCRE_Msk & (_UINT32_(value) << LCDC_WPMR_HEWPCRE_Pos)) /* Assignment of value for HEWPCRE in the LCDC_WPMR register */
 #define   LCDC_WPMR_HEWPCRE_0_Val             _UINT32_(0x0)                                        /* (LCDC_WPMR) Disables the write protection of High-End Overlay Control registers if WPKEY corresponds to 0x58 ("X" in ASCII).  */
 #define   LCDC_WPMR_HEWPCRE_1_Val             _UINT32_(0x1)                                        /* (LCDC_WPMR) Enables the write protection of High-End Overlay Control registers if WPKEY corresponds to 0x58 ("X" in ASCII).  */
-#define LCDC_WPMR_HEWPCRE_0                   (LCDC_WPMR_HEWPCRE_0_Val << LCDC_WPMR_HEWPCRE_Pos)   /* (LCDC_WPMR) Disables the write protection of High-End Overlay Control registers if WPKEY corresponds to 0x58 ("X" in ASCII). Position  */
-#define LCDC_WPMR_HEWPCRE_1                   (LCDC_WPMR_HEWPCRE_1_Val << LCDC_WPMR_HEWPCRE_Pos)   /* (LCDC_WPMR) Enables the write protection of High-End Overlay Control registers if WPKEY corresponds to 0x58 ("X" in ASCII). Position  */
+#define LCDC_WPMR_HEWPCRE_0                   (LCDC_WPMR_HEWPCRE_0_Val << LCDC_WPMR_HEWPCRE_Pos)   /* (LCDC_WPMR) Disables the write protection of High-End Overlay Control registers if WPKEY corresponds to 0x58 ("X" in ASCII). Position */
+#define LCDC_WPMR_HEWPCRE_1                   (LCDC_WPMR_HEWPCRE_1_Val << LCDC_WPMR_HEWPCRE_Pos)   /* (LCDC_WPMR) Enables the write protection of High-End Overlay Control registers if WPKEY corresponds to 0x58 ("X" in ASCII). Position */
 #define LCDC_WPMR_LCKCFGEN_Pos                _UINT32_(21)                                         /* (LCDC_WPMR) Write Protection Lock Enable for Configuration Register Position */
 #define LCDC_WPMR_LCKCFGEN_Msk                (_UINT32_(0x1) << LCDC_WPMR_LCKCFGEN_Pos)            /* (LCDC_WPMR) Write Protection Lock Enable for Configuration Register Mask */
-#define LCDC_WPMR_LCKCFGEN(value)             (LCDC_WPMR_LCKCFGEN_Msk & (_UINT32_(value) << LCDC_WPMR_LCKCFGEN_Pos)) /* Assigment of value for LCKCFGEN in the LCDC_WPMR register */
+#define LCDC_WPMR_LCKCFGEN(value)             (LCDC_WPMR_LCKCFGEN_Msk & (_UINT32_(value) << LCDC_WPMR_LCKCFGEN_Pos)) /* Assignment of value for LCKCFGEN in the LCDC_WPMR register */
 #define   LCDC_WPMR_LCKCFGEN_0_Val            _UINT32_(0x0)                                        /* (LCDC_WPMR) No effect.  */
 #define   LCDC_WPMR_LCKCFGEN_1_Val            _UINT32_(0x1)                                        /* (LCDC_WPMR) Locks the write access to the WPCFEN bit until the next system reset. WPCFEN must be set in the same access to per-form the action.  */
-#define LCDC_WPMR_LCKCFGEN_0                  (LCDC_WPMR_LCKCFGEN_0_Val << LCDC_WPMR_LCKCFGEN_Pos) /* (LCDC_WPMR) No effect. Position  */
-#define LCDC_WPMR_LCKCFGEN_1                  (LCDC_WPMR_LCKCFGEN_1_Val << LCDC_WPMR_LCKCFGEN_Pos) /* (LCDC_WPMR) Locks the write access to the WPCFEN bit until the next system reset. WPCFEN must be set in the same access to per-form the action. Position  */
+#define LCDC_WPMR_LCKCFGEN_0                  (LCDC_WPMR_LCKCFGEN_0_Val << LCDC_WPMR_LCKCFGEN_Pos) /* (LCDC_WPMR) No effect. Position */
+#define LCDC_WPMR_LCKCFGEN_1                  (LCDC_WPMR_LCKCFGEN_1_Val << LCDC_WPMR_LCKCFGEN_Pos) /* (LCDC_WPMR) Locks the write access to the WPCFEN bit until the next system reset. WPCFEN must be set in the same access to per-form the action. Position */
 #define LCDC_WPMR_LCKITEN_Pos                 _UINT32_(22)                                         /* (LCDC_WPMR) Write Protection Lock Enable for Interrupt Register Position */
 #define LCDC_WPMR_LCKITEN_Msk                 (_UINT32_(0x1) << LCDC_WPMR_LCKITEN_Pos)             /* (LCDC_WPMR) Write Protection Lock Enable for Interrupt Register Mask */
-#define LCDC_WPMR_LCKITEN(value)              (LCDC_WPMR_LCKITEN_Msk & (_UINT32_(value) << LCDC_WPMR_LCKITEN_Pos)) /* Assigment of value for LCKITEN in the LCDC_WPMR register */
+#define LCDC_WPMR_LCKITEN(value)              (LCDC_WPMR_LCKITEN_Msk & (_UINT32_(value) << LCDC_WPMR_LCKITEN_Pos)) /* Assignment of value for LCKITEN in the LCDC_WPMR register */
 #define   LCDC_WPMR_LCKITEN_0_Val             _UINT32_(0x0)                                        /* (LCDC_WPMR) No effect.  */
 #define   LCDC_WPMR_LCKITEN_1_Val             _UINT32_(0x1)                                        /* (LCDC_WPMR) Locks the write access to the WPITE bit until the next system reset. WPITE must be set in the same access to per-form the action.  */
-#define LCDC_WPMR_LCKITEN_0                   (LCDC_WPMR_LCKITEN_0_Val << LCDC_WPMR_LCKITEN_Pos)   /* (LCDC_WPMR) No effect. Position  */
-#define LCDC_WPMR_LCKITEN_1                   (LCDC_WPMR_LCKITEN_1_Val << LCDC_WPMR_LCKITEN_Pos)   /* (LCDC_WPMR) Locks the write access to the WPITE bit until the next system reset. WPITE must be set in the same access to per-form the action. Position  */
+#define LCDC_WPMR_LCKITEN_0                   (LCDC_WPMR_LCKITEN_0_Val << LCDC_WPMR_LCKITEN_Pos)   /* (LCDC_WPMR) No effect. Position */
+#define LCDC_WPMR_LCKITEN_1                   (LCDC_WPMR_LCKITEN_1_Val << LCDC_WPMR_LCKITEN_Pos)   /* (LCDC_WPMR) Locks the write access to the WPITE bit until the next system reset. WPITE must be set in the same access to per-form the action. Position */
 #define LCDC_WPMR_LCKCREN_Pos                 _UINT32_(23)                                         /* (LCDC_WPMR) Write Protection Lock Enable for Control Register Position */
 #define LCDC_WPMR_LCKCREN_Msk                 (_UINT32_(0x1) << LCDC_WPMR_LCKCREN_Pos)             /* (LCDC_WPMR) Write Protection Lock Enable for Control Register Mask */
-#define LCDC_WPMR_LCKCREN(value)              (LCDC_WPMR_LCKCREN_Msk & (_UINT32_(value) << LCDC_WPMR_LCKCREN_Pos)) /* Assigment of value for LCKCREN in the LCDC_WPMR register */
+#define LCDC_WPMR_LCKCREN(value)              (LCDC_WPMR_LCKCREN_Msk & (_UINT32_(value) << LCDC_WPMR_LCKCREN_Pos)) /* Assignment of value for LCKCREN in the LCDC_WPMR register */
 #define   LCDC_WPMR_LCKCREN_0_Val             _UINT32_(0x0)                                        /* (LCDC_WPMR) No effect.  */
 #define   LCDC_WPMR_LCKCREN_1_Val             _UINT32_(0x1)                                        /* (LCDC_WPMR) Locks the write access to the WPCRE bit until the next system reset. WPCRE must be set in the same access to per-form the action.  */
-#define LCDC_WPMR_LCKCREN_0                   (LCDC_WPMR_LCKCREN_0_Val << LCDC_WPMR_LCKCREN_Pos)   /* (LCDC_WPMR) No effect. Position  */
-#define LCDC_WPMR_LCKCREN_1                   (LCDC_WPMR_LCKCREN_1_Val << LCDC_WPMR_LCKCREN_Pos)   /* (LCDC_WPMR) Locks the write access to the WPCRE bit until the next system reset. WPCRE must be set in the same access to per-form the action. Position  */
+#define LCDC_WPMR_LCKCREN_0                   (LCDC_WPMR_LCKCREN_0_Val << LCDC_WPMR_LCKCREN_Pos)   /* (LCDC_WPMR) No effect. Position */
+#define LCDC_WPMR_LCKCREN_1                   (LCDC_WPMR_LCKCREN_1_Val << LCDC_WPMR_LCKCREN_Pos)   /* (LCDC_WPMR) Locks the write access to the WPCRE bit until the next system reset. WPCRE must be set in the same access to per-form the action. Position */
 #define LCDC_WPMR_WPKEY_Pos                   _UINT32_(24)                                         /* (LCDC_WPMR) Write Protection Key Password Position */
 #define LCDC_WPMR_WPKEY_Msk                   (_UINT32_(0xFF) << LCDC_WPMR_WPKEY_Pos)              /* (LCDC_WPMR) Write Protection Key Password Mask */
-#define LCDC_WPMR_WPKEY(value)                (LCDC_WPMR_WPKEY_Msk & (_UINT32_(value) << LCDC_WPMR_WPKEY_Pos)) /* Assigment of value for WPKEY in the LCDC_WPMR register */
+#define LCDC_WPMR_WPKEY(value)                (LCDC_WPMR_WPKEY_Msk & (_UINT32_(value) << LCDC_WPMR_WPKEY_Pos)) /* Assignment of value for WPKEY in the LCDC_WPMR register */
 #define   LCDC_WPMR_WPKEY_PASSWD_Val          _UINT32_(0x58)                                       /* (LCDC_WPMR) Writing any other value in this field aborts the write operation of the WPCFGE, WPITE, WPCRE bits.  Always reads as 0.  */
-#define LCDC_WPMR_WPKEY_PASSWD                (LCDC_WPMR_WPKEY_PASSWD_Val << LCDC_WPMR_WPKEY_Pos)  /* (LCDC_WPMR) Writing any other value in this field aborts the write operation of the WPCFGE, WPITE, WPCRE bits.  Always reads as 0. Position  */
+#define LCDC_WPMR_WPKEY_PASSWD                (LCDC_WPMR_WPKEY_PASSWD_Val << LCDC_WPMR_WPKEY_Pos)  /* (LCDC_WPMR) Writing any other value in this field aborts the write operation of the WPCFGE, WPITE, WPCRE bits.  Always reads as 0. Position */
 #define LCDC_WPMR_Msk                         _UINT32_(0xFFE071FF)                                 /* (LCDC_WPMR) Register Mask  */
 
 
@@ -1256,43 +1258,43 @@
 
 #define LCDC_WPSR_WPVS_Pos                    _UINT32_(0)                                          /* (LCDC_WPSR) Write Protection Violation Status Position */
 #define LCDC_WPSR_WPVS_Msk                    (_UINT32_(0x1) << LCDC_WPSR_WPVS_Pos)                /* (LCDC_WPSR) Write Protection Violation Status Mask */
-#define LCDC_WPSR_WPVS(value)                 (LCDC_WPSR_WPVS_Msk & (_UINT32_(value) << LCDC_WPSR_WPVS_Pos)) /* Assigment of value for WPVS in the LCDC_WPSR register */
+#define LCDC_WPSR_WPVS(value)                 (LCDC_WPSR_WPVS_Msk & (_UINT32_(value) << LCDC_WPSR_WPVS_Pos)) /* Assignment of value for WPVS in the LCDC_WPSR register */
 #define LCDC_WPSR_LCKV_Pos                    _UINT32_(3)                                          /* (LCDC_WPSR) Lock Violation Status Position */
 #define LCDC_WPSR_LCKV_Msk                    (_UINT32_(0x1) << LCDC_WPSR_LCKV_Pos)                /* (LCDC_WPSR) Lock Violation Status Mask */
-#define LCDC_WPSR_LCKV(value)                 (LCDC_WPSR_LCKV_Msk & (_UINT32_(value) << LCDC_WPSR_LCKV_Pos)) /* Assigment of value for LCKV in the LCDC_WPSR register */
+#define LCDC_WPSR_LCKV(value)                 (LCDC_WPSR_LCKV_Msk & (_UINT32_(value) << LCDC_WPSR_LCKV_Pos)) /* Assignment of value for LCKV in the LCDC_WPSR register */
 #define   LCDC_WPSR_LCKV_0_Val                _UINT32_(0x0)                                        /* (LCDC_WPSR) No lock violation has occurred since the last read of LCDC_WPSR.  */
 #define   LCDC_WPSR_LCKV_1_Val                _UINT32_(0x1)                                        /* (LCDC_WPSR) A lock violation related to LCDC_WPMR.LCKCFGEN, LCDC_WPMR.LCKITEN or LCDC_WPMR.LCKCREN has occurred since the last read of LCDC_WPSR.  */
-#define LCDC_WPSR_LCKV_0                      (LCDC_WPSR_LCKV_0_Val << LCDC_WPSR_LCKV_Pos)         /* (LCDC_WPSR) No lock violation has occurred since the last read of LCDC_WPSR. Position  */
-#define LCDC_WPSR_LCKV_1                      (LCDC_WPSR_LCKV_1_Val << LCDC_WPSR_LCKV_Pos)         /* (LCDC_WPSR) A lock violation related to LCDC_WPMR.LCKCFGEN, LCDC_WPMR.LCKITEN or LCDC_WPMR.LCKCREN has occurred since the last read of LCDC_WPSR. Position  */
+#define LCDC_WPSR_LCKV_0                      (LCDC_WPSR_LCKV_0_Val << LCDC_WPSR_LCKV_Pos)         /* (LCDC_WPSR) No lock violation has occurred since the last read of LCDC_WPSR. Position */
+#define LCDC_WPSR_LCKV_1                      (LCDC_WPSR_LCKV_1_Val << LCDC_WPSR_LCKV_Pos)         /* (LCDC_WPSR) A lock violation related to LCDC_WPMR.LCKCFGEN, LCDC_WPMR.LCKITEN or LCDC_WPMR.LCKCREN has occurred since the last read of LCDC_WPSR. Position */
 #define LCDC_WPSR_WPVSRC_Pos                  _UINT32_(8)                                          /* (LCDC_WPSR) Write Protection Violation Source Position */
 #define LCDC_WPSR_WPVSRC_Msk                  (_UINT32_(0xFFFF) << LCDC_WPSR_WPVSRC_Pos)           /* (LCDC_WPSR) Write Protection Violation Source Mask */
-#define LCDC_WPSR_WPVSRC(value)               (LCDC_WPSR_WPVSRC_Msk & (_UINT32_(value) << LCDC_WPSR_WPVSRC_Pos)) /* Assigment of value for WPVSRC in the LCDC_WPSR register */
+#define LCDC_WPSR_WPVSRC(value)               (LCDC_WPSR_WPVSRC_Msk & (_UINT32_(value) << LCDC_WPSR_WPVSRC_Pos)) /* Assignment of value for WPVSRC in the LCDC_WPSR register */
 #define LCDC_WPSR_Msk                         _UINT32_(0x00FFFF09)                                 /* (LCDC_WPSR) Register Mask  */
 
 
 /* -------- LCDC_OVR1IER : (LCDC Offset: 0x160) ( /W 32) Overlay 1 Interrupt Enable Register -------- */
 #define LCDC_OVR1IER_END_Pos                  _UINT32_(0)                                          /* (LCDC_OVR1IER) End of Frame DMA Transfer Interrupt Enable Position */
 #define LCDC_OVR1IER_END_Msk                  (_UINT32_(0x1) << LCDC_OVR1IER_END_Pos)              /* (LCDC_OVR1IER) End of Frame DMA Transfer Interrupt Enable Mask */
-#define LCDC_OVR1IER_END(value)               (LCDC_OVR1IER_END_Msk & (_UINT32_(value) << LCDC_OVR1IER_END_Pos)) /* Assigment of value for END in the LCDC_OVR1IER register */
+#define LCDC_OVR1IER_END(value)               (LCDC_OVR1IER_END_Msk & (_UINT32_(value) << LCDC_OVR1IER_END_Pos)) /* Assignment of value for END in the LCDC_OVR1IER register */
 #define LCDC_OVR1IER_ERROR_Pos                _UINT32_(1)                                          /* (LCDC_OVR1IER) Transfer Error Detected Interrupt Enable Position */
 #define LCDC_OVR1IER_ERROR_Msk                (_UINT32_(0x1) << LCDC_OVR1IER_ERROR_Pos)            /* (LCDC_OVR1IER) Transfer Error Detected Interrupt Enable Mask */
-#define LCDC_OVR1IER_ERROR(value)             (LCDC_OVR1IER_ERROR_Msk & (_UINT32_(value) << LCDC_OVR1IER_ERROR_Pos)) /* Assigment of value for ERROR in the LCDC_OVR1IER register */
+#define LCDC_OVR1IER_ERROR(value)             (LCDC_OVR1IER_ERROR_Msk & (_UINT32_(value) << LCDC_OVR1IER_ERROR_Pos)) /* Assignment of value for ERROR in the LCDC_OVR1IER register */
 #define LCDC_OVR1IER_OVF_Pos                  _UINT32_(2)                                          /* (LCDC_OVR1IER) Overflow Interrupt Enable Position */
 #define LCDC_OVR1IER_OVF_Msk                  (_UINT32_(0x1) << LCDC_OVR1IER_OVF_Pos)              /* (LCDC_OVR1IER) Overflow Interrupt Enable Mask */
-#define LCDC_OVR1IER_OVF(value)               (LCDC_OVR1IER_OVF_Msk & (_UINT32_(value) << LCDC_OVR1IER_OVF_Pos)) /* Assigment of value for OVF in the LCDC_OVR1IER register */
+#define LCDC_OVR1IER_OVF(value)               (LCDC_OVR1IER_OVF_Msk & (_UINT32_(value) << LCDC_OVR1IER_OVF_Pos)) /* Assignment of value for OVF in the LCDC_OVR1IER register */
 #define LCDC_OVR1IER_Msk                      _UINT32_(0x00000007)                                 /* (LCDC_OVR1IER) Register Mask  */
 
 
 /* -------- LCDC_OVR1IDR : (LCDC Offset: 0x164) ( /W 32) Overlay 1 Interrupt Disable Register -------- */
 #define LCDC_OVR1IDR_END_Pos                  _UINT32_(0)                                          /* (LCDC_OVR1IDR) End of Frame DMA Transfer Interrupt Disable Position */
 #define LCDC_OVR1IDR_END_Msk                  (_UINT32_(0x1) << LCDC_OVR1IDR_END_Pos)              /* (LCDC_OVR1IDR) End of Frame DMA Transfer Interrupt Disable Mask */
-#define LCDC_OVR1IDR_END(value)               (LCDC_OVR1IDR_END_Msk & (_UINT32_(value) << LCDC_OVR1IDR_END_Pos)) /* Assigment of value for END in the LCDC_OVR1IDR register */
+#define LCDC_OVR1IDR_END(value)               (LCDC_OVR1IDR_END_Msk & (_UINT32_(value) << LCDC_OVR1IDR_END_Pos)) /* Assignment of value for END in the LCDC_OVR1IDR register */
 #define LCDC_OVR1IDR_ERROR_Pos                _UINT32_(1)                                          /* (LCDC_OVR1IDR) Error Interrupt Disable Position */
 #define LCDC_OVR1IDR_ERROR_Msk                (_UINT32_(0x1) << LCDC_OVR1IDR_ERROR_Pos)            /* (LCDC_OVR1IDR) Error Interrupt Disable Mask */
-#define LCDC_OVR1IDR_ERROR(value)             (LCDC_OVR1IDR_ERROR_Msk & (_UINT32_(value) << LCDC_OVR1IDR_ERROR_Pos)) /* Assigment of value for ERROR in the LCDC_OVR1IDR register */
+#define LCDC_OVR1IDR_ERROR(value)             (LCDC_OVR1IDR_ERROR_Msk & (_UINT32_(value) << LCDC_OVR1IDR_ERROR_Pos)) /* Assignment of value for ERROR in the LCDC_OVR1IDR register */
 #define LCDC_OVR1IDR_OVF_Pos                  _UINT32_(2)                                          /* (LCDC_OVR1IDR) Overflow Interrupt Disable Position */
 #define LCDC_OVR1IDR_OVF_Msk                  (_UINT32_(0x1) << LCDC_OVR1IDR_OVF_Pos)              /* (LCDC_OVR1IDR) Overflow Interrupt Disable Mask */
-#define LCDC_OVR1IDR_OVF(value)               (LCDC_OVR1IDR_OVF_Msk & (_UINT32_(value) << LCDC_OVR1IDR_OVF_Pos)) /* Assigment of value for OVF in the LCDC_OVR1IDR register */
+#define LCDC_OVR1IDR_OVF(value)               (LCDC_OVR1IDR_OVF_Msk & (_UINT32_(value) << LCDC_OVR1IDR_OVF_Pos)) /* Assignment of value for OVF in the LCDC_OVR1IDR register */
 #define LCDC_OVR1IDR_Msk                      _UINT32_(0x00000007)                                 /* (LCDC_OVR1IDR) Register Mask  */
 
 
@@ -1301,13 +1303,13 @@
 
 #define LCDC_OVR1IMR_END_Pos                  _UINT32_(0)                                          /* (LCDC_OVR1IMR) End of Frame DMA Transfer Interrupt Mask Position */
 #define LCDC_OVR1IMR_END_Msk                  (_UINT32_(0x1) << LCDC_OVR1IMR_END_Pos)              /* (LCDC_OVR1IMR) End of Frame DMA Transfer Interrupt Mask Mask */
-#define LCDC_OVR1IMR_END(value)               (LCDC_OVR1IMR_END_Msk & (_UINT32_(value) << LCDC_OVR1IMR_END_Pos)) /* Assigment of value for END in the LCDC_OVR1IMR register */
+#define LCDC_OVR1IMR_END(value)               (LCDC_OVR1IMR_END_Msk & (_UINT32_(value) << LCDC_OVR1IMR_END_Pos)) /* Assignment of value for END in the LCDC_OVR1IMR register */
 #define LCDC_OVR1IMR_ERROR_Pos                _UINT32_(1)                                          /* (LCDC_OVR1IMR) Bus Error Detected Interrupt Mask Position */
 #define LCDC_OVR1IMR_ERROR_Msk                (_UINT32_(0x1) << LCDC_OVR1IMR_ERROR_Pos)            /* (LCDC_OVR1IMR) Bus Error Detected Interrupt Mask Mask */
-#define LCDC_OVR1IMR_ERROR(value)             (LCDC_OVR1IMR_ERROR_Msk & (_UINT32_(value) << LCDC_OVR1IMR_ERROR_Pos)) /* Assigment of value for ERROR in the LCDC_OVR1IMR register */
+#define LCDC_OVR1IMR_ERROR(value)             (LCDC_OVR1IMR_ERROR_Msk & (_UINT32_(value) << LCDC_OVR1IMR_ERROR_Pos)) /* Assignment of value for ERROR in the LCDC_OVR1IMR register */
 #define LCDC_OVR1IMR_OVF_Pos                  _UINT32_(2)                                          /* (LCDC_OVR1IMR) Overflow Interrupt Mask Position */
 #define LCDC_OVR1IMR_OVF_Msk                  (_UINT32_(0x1) << LCDC_OVR1IMR_OVF_Pos)              /* (LCDC_OVR1IMR) Overflow Interrupt Mask Mask */
-#define LCDC_OVR1IMR_OVF(value)               (LCDC_OVR1IMR_OVF_Msk & (_UINT32_(value) << LCDC_OVR1IMR_OVF_Pos)) /* Assigment of value for OVF in the LCDC_OVR1IMR register */
+#define LCDC_OVR1IMR_OVF(value)               (LCDC_OVR1IMR_OVF_Msk & (_UINT32_(value) << LCDC_OVR1IMR_OVF_Pos)) /* Assignment of value for OVF in the LCDC_OVR1IMR register */
 #define LCDC_OVR1IMR_Msk                      _UINT32_(0x00000007)                                 /* (LCDC_OVR1IMR) Register Mask  */
 
 
@@ -1316,25 +1318,25 @@
 
 #define LCDC_OVR1ISR_END_Pos                  _UINT32_(0)                                          /* (LCDC_OVR1ISR) End of Frame DMA Transfer Position */
 #define LCDC_OVR1ISR_END_Msk                  (_UINT32_(0x1) << LCDC_OVR1ISR_END_Pos)              /* (LCDC_OVR1ISR) End of Frame DMA Transfer Mask */
-#define LCDC_OVR1ISR_END(value)               (LCDC_OVR1ISR_END_Msk & (_UINT32_(value) << LCDC_OVR1ISR_END_Pos)) /* Assigment of value for END in the LCDC_OVR1ISR register */
+#define LCDC_OVR1ISR_END(value)               (LCDC_OVR1ISR_END_Msk & (_UINT32_(value) << LCDC_OVR1ISR_END_Pos)) /* Assignment of value for END in the LCDC_OVR1ISR register */
 #define   LCDC_OVR1ISR_END_0_Val              _UINT32_(0x0)                                        /* (LCDC_OVR1ISR) No end of transfer has been detected since last read of LCDC_OVR1ISR.  */
 #define   LCDC_OVR1ISR_END_1_Val              _UINT32_(0x1)                                        /* (LCDC_OVR1ISR) End of transfer has been detected. This flag is reset after a read operation.  */
-#define LCDC_OVR1ISR_END_0                    (LCDC_OVR1ISR_END_0_Val << LCDC_OVR1ISR_END_Pos)     /* (LCDC_OVR1ISR) No end of transfer has been detected since last read of LCDC_OVR1ISR. Position  */
-#define LCDC_OVR1ISR_END_1                    (LCDC_OVR1ISR_END_1_Val << LCDC_OVR1ISR_END_Pos)     /* (LCDC_OVR1ISR) End of transfer has been detected. This flag is reset after a read operation. Position  */
+#define LCDC_OVR1ISR_END_0                    (LCDC_OVR1ISR_END_0_Val << LCDC_OVR1ISR_END_Pos)     /* (LCDC_OVR1ISR) No end of transfer has been detected since last read of LCDC_OVR1ISR. Position */
+#define LCDC_OVR1ISR_END_1                    (LCDC_OVR1ISR_END_1_Val << LCDC_OVR1ISR_END_Pos)     /* (LCDC_OVR1ISR) End of transfer has been detected. This flag is reset after a read operation. Position */
 #define LCDC_OVR1ISR_ERROR_Pos                _UINT32_(1)                                          /* (LCDC_OVR1ISR) Bus Error Detected Position */
 #define LCDC_OVR1ISR_ERROR_Msk                (_UINT32_(0x1) << LCDC_OVR1ISR_ERROR_Pos)            /* (LCDC_OVR1ISR) Bus Error Detected Mask */
-#define LCDC_OVR1ISR_ERROR(value)             (LCDC_OVR1ISR_ERROR_Msk & (_UINT32_(value) << LCDC_OVR1ISR_ERROR_Pos)) /* Assigment of value for ERROR in the LCDC_OVR1ISR register */
+#define LCDC_OVR1ISR_ERROR(value)             (LCDC_OVR1ISR_ERROR_Msk & (_UINT32_(value) << LCDC_OVR1ISR_ERROR_Pos)) /* Assignment of value for ERROR in the LCDC_OVR1ISR register */
 #define   LCDC_OVR1ISR_ERROR_0_Val            _UINT32_(0x0)                                        /* (LCDC_OVR1ISR) No system bus error has been detected since the last read of LCDC_OVR1ISR.  */
 #define   LCDC_OVR1ISR_ERROR_1_Val            _UINT32_(0x1)                                        /* (LCDC_OVR1ISR) A system bus error has been detected. This flag is reset after a read operation  */
-#define LCDC_OVR1ISR_ERROR_0                  (LCDC_OVR1ISR_ERROR_0_Val << LCDC_OVR1ISR_ERROR_Pos) /* (LCDC_OVR1ISR) No system bus error has been detected since the last read of LCDC_OVR1ISR. Position  */
-#define LCDC_OVR1ISR_ERROR_1                  (LCDC_OVR1ISR_ERROR_1_Val << LCDC_OVR1ISR_ERROR_Pos) /* (LCDC_OVR1ISR) A system bus error has been detected. This flag is reset after a read operation Position  */
+#define LCDC_OVR1ISR_ERROR_0                  (LCDC_OVR1ISR_ERROR_0_Val << LCDC_OVR1ISR_ERROR_Pos) /* (LCDC_OVR1ISR) No system bus error has been detected since the last read of LCDC_OVR1ISR. Position */
+#define LCDC_OVR1ISR_ERROR_1                  (LCDC_OVR1ISR_ERROR_1_Val << LCDC_OVR1ISR_ERROR_Pos) /* (LCDC_OVR1ISR) A system bus error has been detected. This flag is reset after a read operation Position */
 #define LCDC_OVR1ISR_OVF_Pos                  _UINT32_(2)                                          /* (LCDC_OVR1ISR) Overflow Detected Position */
 #define LCDC_OVR1ISR_OVF_Msk                  (_UINT32_(0x1) << LCDC_OVR1ISR_OVF_Pos)              /* (LCDC_OVR1ISR) Overflow Detected Mask */
-#define LCDC_OVR1ISR_OVF(value)               (LCDC_OVR1ISR_OVF_Msk & (_UINT32_(value) << LCDC_OVR1ISR_OVF_Pos)) /* Assigment of value for OVF in the LCDC_OVR1ISR register */
+#define LCDC_OVR1ISR_OVF(value)               (LCDC_OVR1ISR_OVF_Msk & (_UINT32_(value) << LCDC_OVR1ISR_OVF_Pos)) /* Assignment of value for OVF in the LCDC_OVR1ISR register */
 #define   LCDC_OVR1ISR_OVF_0_Val              _UINT32_(0x0)                                        /* (LCDC_OVR1ISR) No overflow occurred since last read of LCDC_OVR1ISR.  */
 #define   LCDC_OVR1ISR_OVF_1_Val              _UINT32_(0x1)                                        /* (LCDC_OVR1ISR) An overflow occurred, at least one DMA transfer is still running at the End Of Frame. This flag is reset after a read operation  */
-#define LCDC_OVR1ISR_OVF_0                    (LCDC_OVR1ISR_OVF_0_Val << LCDC_OVR1ISR_OVF_Pos)     /* (LCDC_OVR1ISR) No overflow occurred since last read of LCDC_OVR1ISR. Position  */
-#define LCDC_OVR1ISR_OVF_1                    (LCDC_OVR1ISR_OVF_1_Val << LCDC_OVR1ISR_OVF_Pos)     /* (LCDC_OVR1ISR) An overflow occurred, at least one DMA transfer is still running at the End Of Frame. This flag is reset after a read operation Position  */
+#define LCDC_OVR1ISR_OVF_0                    (LCDC_OVR1ISR_OVF_0_Val << LCDC_OVR1ISR_OVF_Pos)     /* (LCDC_OVR1ISR) No overflow occurred since last read of LCDC_OVR1ISR. Position */
+#define LCDC_OVR1ISR_OVF_1                    (LCDC_OVR1ISR_OVF_1_Val << LCDC_OVR1ISR_OVF_Pos)     /* (LCDC_OVR1ISR) An overflow occurred, at least one DMA transfer is still running at the End Of Frame. This flag is reset after a read operation Position */
 #define LCDC_OVR1ISR_Msk                      _UINT32_(0x00000007)                                 /* (LCDC_OVR1ISR) Register Mask  */
 
 
@@ -1343,11 +1345,11 @@
 
 #define LCDC_OVR1EN_ENABLE_Pos                _UINT32_(0)                                          /* (LCDC_OVR1EN) Layer Enable Position */
 #define LCDC_OVR1EN_ENABLE_Msk                (_UINT32_(0x1) << LCDC_OVR1EN_ENABLE_Pos)            /* (LCDC_OVR1EN) Layer Enable Mask */
-#define LCDC_OVR1EN_ENABLE(value)             (LCDC_OVR1EN_ENABLE_Msk & (_UINT32_(value) << LCDC_OVR1EN_ENABLE_Pos)) /* Assigment of value for ENABLE in the LCDC_OVR1EN register */
+#define LCDC_OVR1EN_ENABLE(value)             (LCDC_OVR1EN_ENABLE_Msk & (_UINT32_(value) << LCDC_OVR1EN_ENABLE_Pos)) /* Assignment of value for ENABLE in the LCDC_OVR1EN register */
 #define   LCDC_OVR1EN_ENABLE_0_Val            _UINT32_(0x0)                                        /* (LCDC_OVR1EN) The layer is disabled.  */
 #define   LCDC_OVR1EN_ENABLE_1_Val            _UINT32_(0x1)                                        /* (LCDC_OVR1EN) The layer is enabled.  */
-#define LCDC_OVR1EN_ENABLE_0                  (LCDC_OVR1EN_ENABLE_0_Val << LCDC_OVR1EN_ENABLE_Pos) /* (LCDC_OVR1EN) The layer is disabled. Position  */
-#define LCDC_OVR1EN_ENABLE_1                  (LCDC_OVR1EN_ENABLE_1_Val << LCDC_OVR1EN_ENABLE_Pos) /* (LCDC_OVR1EN) The layer is enabled. Position  */
+#define LCDC_OVR1EN_ENABLE_0                  (LCDC_OVR1EN_ENABLE_0_Val << LCDC_OVR1EN_ENABLE_Pos) /* (LCDC_OVR1EN) The layer is disabled. Position */
+#define LCDC_OVR1EN_ENABLE_1                  (LCDC_OVR1EN_ENABLE_1_Val << LCDC_OVR1EN_ENABLE_Pos) /* (LCDC_OVR1EN) The layer is enabled. Position */
 #define LCDC_OVR1EN_Msk                       _UINT32_(0x00000001)                                 /* (LCDC_OVR1EN) Register Mask  */
 
 
@@ -1356,7 +1358,7 @@
 
 #define LCDC_OVR1CLA_CLA_Pos                  _UINT32_(3)                                          /* (LCDC_OVR1CLA) Overlay 1 CLUT Address Position */
 #define LCDC_OVR1CLA_CLA_Msk                  (_UINT32_(0x1FFFFFFF) << LCDC_OVR1CLA_CLA_Pos)       /* (LCDC_OVR1CLA) Overlay 1 CLUT Address Mask */
-#define LCDC_OVR1CLA_CLA(value)               (LCDC_OVR1CLA_CLA_Msk & (_UINT32_(value) << LCDC_OVR1CLA_CLA_Pos)) /* Assigment of value for CLA in the LCDC_OVR1CLA register */
+#define LCDC_OVR1CLA_CLA(value)               (LCDC_OVR1CLA_CLA_Msk & (_UINT32_(value) << LCDC_OVR1CLA_CLA_Pos)) /* Assignment of value for CLA in the LCDC_OVR1CLA register */
 #define LCDC_OVR1CLA_Msk                      _UINT32_(0xFFFFFFF8)                                 /* (LCDC_OVR1CLA) Register Mask  */
 
 
@@ -1365,7 +1367,7 @@
 
 #define LCDC_OVR1FBA_FBA_Pos                  _UINT32_(0)                                          /* (LCDC_OVR1FBA) Frame Buffer Address Position */
 #define LCDC_OVR1FBA_FBA_Msk                  (_UINT32_(0xFFFFFFFF) << LCDC_OVR1FBA_FBA_Pos)       /* (LCDC_OVR1FBA) Frame Buffer Address Mask */
-#define LCDC_OVR1FBA_FBA(value)               (LCDC_OVR1FBA_FBA_Msk & (_UINT32_(value) << LCDC_OVR1FBA_FBA_Pos)) /* Assigment of value for FBA in the LCDC_OVR1FBA register */
+#define LCDC_OVR1FBA_FBA(value)               (LCDC_OVR1FBA_FBA_Msk & (_UINT32_(value) << LCDC_OVR1FBA_FBA_Pos)) /* Assignment of value for FBA in the LCDC_OVR1FBA register */
 #define LCDC_OVR1FBA_Msk                      _UINT32_(0xFFFFFFFF)                                 /* (LCDC_OVR1FBA) Register Mask  */
 
 
@@ -1374,17 +1376,17 @@
 
 #define LCDC_OVR1CFG0_BLEN_Pos                _UINT32_(4)                                          /* (LCDC_OVR1CFG0) System Bus Burst Length Position */
 #define LCDC_OVR1CFG0_BLEN_Msk                (_UINT32_(0x7) << LCDC_OVR1CFG0_BLEN_Pos)            /* (LCDC_OVR1CFG0) System Bus Burst Length Mask */
-#define LCDC_OVR1CFG0_BLEN(value)             (LCDC_OVR1CFG0_BLEN_Msk & (_UINT32_(value) << LCDC_OVR1CFG0_BLEN_Pos)) /* Assigment of value for BLEN in the LCDC_OVR1CFG0 register */
+#define LCDC_OVR1CFG0_BLEN(value)             (LCDC_OVR1CFG0_BLEN_Msk & (_UINT32_(value) << LCDC_OVR1CFG0_BLEN_Pos)) /* Assignment of value for BLEN in the LCDC_OVR1CFG0 register */
 #define   LCDC_OVR1CFG0_BLEN_INCR1_Val        _UINT32_(0x0)                                        /* (LCDC_OVR1CFG0) System bus access is started as soon as there is enough space in the FIFO to store one data.  */
 #define   LCDC_OVR1CFG0_BLEN_INCR4_Val        _UINT32_(0x1)                                        /* (LCDC_OVR1CFG0) System bus access is started as soon as there is enough space in the FIFO to store a total amount of 4 data. A system bus INCR4 Burst is used by default. INCR1 is used for bursts less than 4.  */
 #define   LCDC_OVR1CFG0_BLEN_INCR8_Val        _UINT32_(0x2)                                        /* (LCDC_OVR1CFG0) System bus access is started as soon as there is enough space in the FIFO to store a total amount of 8 data. A system bus INCR8 Burst is used by default. INCR4 bursts are used for burst of 4 beats. INCR1 is used for bursts less than 4.  */
 #define   LCDC_OVR1CFG0_BLEN_INCR16_Val       _UINT32_(0x3)                                        /* (LCDC_OVR1CFG0) System bus access is started as soon as there is enough space in the FIFO to store a total amount of 16 data. A system bus INCR16 Burst is used by default. INCR8 and INCR4 bursts are respectively used for burst of 8 and 4 beats. INCR1 is used for bursts less than 4.  */
 #define   LCDC_OVR1CFG0_BLEN_INCR32_Val       _UINT32_(0x4)                                        /* (LCDC_OVR1CFG0) System bus access is started as soon as there is enough space in the FIFO to store a total amount of 32 data. A system bus INCR32 Burst is used by default. INCR16, INCR8 and INCR4 bursts are respectively used for burst of 16, 8 and 4 beats. INCR1 is used for bursts less than 4.  */
-#define LCDC_OVR1CFG0_BLEN_INCR1              (LCDC_OVR1CFG0_BLEN_INCR1_Val << LCDC_OVR1CFG0_BLEN_Pos) /* (LCDC_OVR1CFG0) System bus access is started as soon as there is enough space in the FIFO to store one data. Position  */
-#define LCDC_OVR1CFG0_BLEN_INCR4              (LCDC_OVR1CFG0_BLEN_INCR4_Val << LCDC_OVR1CFG0_BLEN_Pos) /* (LCDC_OVR1CFG0) System bus access is started as soon as there is enough space in the FIFO to store a total amount of 4 data. A system bus INCR4 Burst is used by default. INCR1 is used for bursts less than 4. Position  */
-#define LCDC_OVR1CFG0_BLEN_INCR8              (LCDC_OVR1CFG0_BLEN_INCR8_Val << LCDC_OVR1CFG0_BLEN_Pos) /* (LCDC_OVR1CFG0) System bus access is started as soon as there is enough space in the FIFO to store a total amount of 8 data. A system bus INCR8 Burst is used by default. INCR4 bursts are used for burst of 4 beats. INCR1 is used for bursts less than 4. Position  */
-#define LCDC_OVR1CFG0_BLEN_INCR16             (LCDC_OVR1CFG0_BLEN_INCR16_Val << LCDC_OVR1CFG0_BLEN_Pos) /* (LCDC_OVR1CFG0) System bus access is started as soon as there is enough space in the FIFO to store a total amount of 16 data. A system bus INCR16 Burst is used by default. INCR8 and INCR4 bursts are respectively used for burst of 8 and 4 beats. INCR1 is used for bursts less than 4. Position  */
-#define LCDC_OVR1CFG0_BLEN_INCR32             (LCDC_OVR1CFG0_BLEN_INCR32_Val << LCDC_OVR1CFG0_BLEN_Pos) /* (LCDC_OVR1CFG0) System bus access is started as soon as there is enough space in the FIFO to store a total amount of 32 data. A system bus INCR32 Burst is used by default. INCR16, INCR8 and INCR4 bursts are respectively used for burst of 16, 8 and 4 beats. INCR1 is used for bursts less than 4. Position  */
+#define LCDC_OVR1CFG0_BLEN_INCR1              (LCDC_OVR1CFG0_BLEN_INCR1_Val << LCDC_OVR1CFG0_BLEN_Pos) /* (LCDC_OVR1CFG0) System bus access is started as soon as there is enough space in the FIFO to store one data. Position */
+#define LCDC_OVR1CFG0_BLEN_INCR4              (LCDC_OVR1CFG0_BLEN_INCR4_Val << LCDC_OVR1CFG0_BLEN_Pos) /* (LCDC_OVR1CFG0) System bus access is started as soon as there is enough space in the FIFO to store a total amount of 4 data. A system bus INCR4 Burst is used by default. INCR1 is used for bursts less than 4. Position */
+#define LCDC_OVR1CFG0_BLEN_INCR8              (LCDC_OVR1CFG0_BLEN_INCR8_Val << LCDC_OVR1CFG0_BLEN_Pos) /* (LCDC_OVR1CFG0) System bus access is started as soon as there is enough space in the FIFO to store a total amount of 8 data. A system bus INCR8 Burst is used by default. INCR4 bursts are used for burst of 4 beats. INCR1 is used for bursts less than 4. Position */
+#define LCDC_OVR1CFG0_BLEN_INCR16             (LCDC_OVR1CFG0_BLEN_INCR16_Val << LCDC_OVR1CFG0_BLEN_Pos) /* (LCDC_OVR1CFG0) System bus access is started as soon as there is enough space in the FIFO to store a total amount of 16 data. A system bus INCR16 Burst is used by default. INCR8 and INCR4 bursts are respectively used for burst of 8 and 4 beats. INCR1 is used for bursts less than 4. Position */
+#define LCDC_OVR1CFG0_BLEN_INCR32             (LCDC_OVR1CFG0_BLEN_INCR32_Val << LCDC_OVR1CFG0_BLEN_Pos) /* (LCDC_OVR1CFG0) System bus access is started as soon as there is enough space in the FIFO to store a total amount of 32 data. A system bus INCR32 Burst is used by default. INCR16, INCR8 and INCR4 bursts are respectively used for burst of 16, 8 and 4 beats. INCR1 is used for bursts less than 4. Position */
 #define LCDC_OVR1CFG0_Msk                     _UINT32_(0x00000070)                                 /* (LCDC_OVR1CFG0) Register Mask  */
 
 
@@ -1393,21 +1395,21 @@
 
 #define LCDC_OVR1CFG1_CLUTEN_Pos              _UINT32_(0)                                          /* (LCDC_OVR1CFG1) CLUT Mode Enable Position */
 #define LCDC_OVR1CFG1_CLUTEN_Msk              (_UINT32_(0x1) << LCDC_OVR1CFG1_CLUTEN_Pos)          /* (LCDC_OVR1CFG1) CLUT Mode Enable Mask */
-#define LCDC_OVR1CFG1_CLUTEN(value)           (LCDC_OVR1CFG1_CLUTEN_Msk & (_UINT32_(value) << LCDC_OVR1CFG1_CLUTEN_Pos)) /* Assigment of value for CLUTEN in the LCDC_OVR1CFG1 register */
+#define LCDC_OVR1CFG1_CLUTEN(value)           (LCDC_OVR1CFG1_CLUTEN_Msk & (_UINT32_(value) << LCDC_OVR1CFG1_CLUTEN_Pos)) /* Assignment of value for CLUTEN in the LCDC_OVR1CFG1 register */
 #define   LCDC_OVR1CFG1_CLUTEN_0_Val          _UINT32_(0x0)                                        /* (LCDC_OVR1CFG1) RGB mode is selected.  */
 #define   LCDC_OVR1CFG1_CLUTEN_1_Val          _UINT32_(0x1)                                        /* (LCDC_OVR1CFG1) CLUT mode is selected.  */
-#define LCDC_OVR1CFG1_CLUTEN_0                (LCDC_OVR1CFG1_CLUTEN_0_Val << LCDC_OVR1CFG1_CLUTEN_Pos) /* (LCDC_OVR1CFG1) RGB mode is selected. Position  */
-#define LCDC_OVR1CFG1_CLUTEN_1                (LCDC_OVR1CFG1_CLUTEN_1_Val << LCDC_OVR1CFG1_CLUTEN_Pos) /* (LCDC_OVR1CFG1) CLUT mode is selected. Position  */
+#define LCDC_OVR1CFG1_CLUTEN_0                (LCDC_OVR1CFG1_CLUTEN_0_Val << LCDC_OVR1CFG1_CLUTEN_Pos) /* (LCDC_OVR1CFG1) RGB mode is selected. Position */
+#define LCDC_OVR1CFG1_CLUTEN_1                (LCDC_OVR1CFG1_CLUTEN_1_Val << LCDC_OVR1CFG1_CLUTEN_Pos) /* (LCDC_OVR1CFG1) CLUT mode is selected. Position */
 #define LCDC_OVR1CFG1_GAM_Pos                 _UINT32_(2)                                          /* (LCDC_OVR1CFG1) Gamma Correction Position */
 #define LCDC_OVR1CFG1_GAM_Msk                 (_UINT32_(0x1) << LCDC_OVR1CFG1_GAM_Pos)             /* (LCDC_OVR1CFG1) Gamma Correction Mask */
-#define LCDC_OVR1CFG1_GAM(value)              (LCDC_OVR1CFG1_GAM_Msk & (_UINT32_(value) << LCDC_OVR1CFG1_GAM_Pos)) /* Assigment of value for GAM in the LCDC_OVR1CFG1 register */
+#define LCDC_OVR1CFG1_GAM(value)              (LCDC_OVR1CFG1_GAM_Msk & (_UINT32_(value) << LCDC_OVR1CFG1_GAM_Pos)) /* Assignment of value for GAM in the LCDC_OVR1CFG1 register */
 #define   LCDC_OVR1CFG1_GAM_0_Val             _UINT32_(0x0)                                        /* (LCDC_OVR1CFG1) Gamma correction is disabled  */
 #define   LCDC_OVR1CFG1_GAM_1_Val             _UINT32_(0x1)                                        /* (LCDC_OVR1CFG1) Gamma correction is enabled  */
-#define LCDC_OVR1CFG1_GAM_0                   (LCDC_OVR1CFG1_GAM_0_Val << LCDC_OVR1CFG1_GAM_Pos)   /* (LCDC_OVR1CFG1) Gamma correction is disabled Position  */
-#define LCDC_OVR1CFG1_GAM_1                   (LCDC_OVR1CFG1_GAM_1_Val << LCDC_OVR1CFG1_GAM_Pos)   /* (LCDC_OVR1CFG1) Gamma correction is enabled Position  */
+#define LCDC_OVR1CFG1_GAM_0                   (LCDC_OVR1CFG1_GAM_0_Val << LCDC_OVR1CFG1_GAM_Pos)   /* (LCDC_OVR1CFG1) Gamma correction is disabled Position */
+#define LCDC_OVR1CFG1_GAM_1                   (LCDC_OVR1CFG1_GAM_1_Val << LCDC_OVR1CFG1_GAM_Pos)   /* (LCDC_OVR1CFG1) Gamma correction is enabled Position */
 #define LCDC_OVR1CFG1_RGBMODE_Pos             _UINT32_(4)                                          /* (LCDC_OVR1CFG1) RGB Mode Input Selection Position */
 #define LCDC_OVR1CFG1_RGBMODE_Msk             (_UINT32_(0xF) << LCDC_OVR1CFG1_RGBMODE_Pos)         /* (LCDC_OVR1CFG1) RGB Mode Input Selection Mask */
-#define LCDC_OVR1CFG1_RGBMODE(value)          (LCDC_OVR1CFG1_RGBMODE_Msk & (_UINT32_(value) << LCDC_OVR1CFG1_RGBMODE_Pos)) /* Assigment of value for RGBMODE in the LCDC_OVR1CFG1 register */
+#define LCDC_OVR1CFG1_RGBMODE(value)          (LCDC_OVR1CFG1_RGBMODE_Msk & (_UINT32_(value) << LCDC_OVR1CFG1_RGBMODE_Pos)) /* Assignment of value for RGBMODE in the LCDC_OVR1CFG1 register */
 #define   LCDC_OVR1CFG1_RGBMODE_12BPP_RGB_444_Val _UINT32_(0x0)                                        /* (LCDC_OVR1CFG1) 12 bpp RGB 444  */
 #define   LCDC_OVR1CFG1_RGBMODE_16BPP_ARGB_4444_Val _UINT32_(0x1)                                        /* (LCDC_OVR1CFG1) 16 bpp ARGB 4444  */
 #define   LCDC_OVR1CFG1_RGBMODE_16BPP_RGBA_4444_Val _UINT32_(0x2)                                        /* (LCDC_OVR1CFG1) 16 bpp RGBA 4444  */
@@ -1422,31 +1424,31 @@
 #define   LCDC_OVR1CFG1_RGBMODE_25BPP_ARGB_1888_Val _UINT32_(0xB)                                        /* (LCDC_OVR1CFG1) 25 bpp ARGB 1888  */
 #define   LCDC_OVR1CFG1_RGBMODE_32BPP_ARGB_8888_Val _UINT32_(0xC)                                        /* (LCDC_OVR1CFG1) 32 bpp ARGB 8888  */
 #define   LCDC_OVR1CFG1_RGBMODE_32BPP_RGBA_8888_Val _UINT32_(0xD)                                        /* (LCDC_OVR1CFG1) 32 bpp RGBA 8888  */
-#define LCDC_OVR1CFG1_RGBMODE_12BPP_RGB_444   (LCDC_OVR1CFG1_RGBMODE_12BPP_RGB_444_Val << LCDC_OVR1CFG1_RGBMODE_Pos) /* (LCDC_OVR1CFG1) 12 bpp RGB 444 Position  */
-#define LCDC_OVR1CFG1_RGBMODE_16BPP_ARGB_4444 (LCDC_OVR1CFG1_RGBMODE_16BPP_ARGB_4444_Val << LCDC_OVR1CFG1_RGBMODE_Pos) /* (LCDC_OVR1CFG1) 16 bpp ARGB 4444 Position  */
-#define LCDC_OVR1CFG1_RGBMODE_16BPP_RGBA_4444 (LCDC_OVR1CFG1_RGBMODE_16BPP_RGBA_4444_Val << LCDC_OVR1CFG1_RGBMODE_Pos) /* (LCDC_OVR1CFG1) 16 bpp RGBA 4444 Position  */
-#define LCDC_OVR1CFG1_RGBMODE_16BPP_RGB_565   (LCDC_OVR1CFG1_RGBMODE_16BPP_RGB_565_Val << LCDC_OVR1CFG1_RGBMODE_Pos) /* (LCDC_OVR1CFG1) 16 bpp RGB 565 Position  */
-#define LCDC_OVR1CFG1_RGBMODE_16BPP_ARGB_1555 (LCDC_OVR1CFG1_RGBMODE_16BPP_ARGB_1555_Val << LCDC_OVR1CFG1_RGBMODE_Pos) /* (LCDC_OVR1CFG1) 16 bpp ARGB 1555 Position  */
-#define LCDC_OVR1CFG1_RGBMODE_18BPP_RGB_666   (LCDC_OVR1CFG1_RGBMODE_18BPP_RGB_666_Val << LCDC_OVR1CFG1_RGBMODE_Pos) /* (LCDC_OVR1CFG1) 18 bpp RGB 666 Position  */
-#define LCDC_OVR1CFG1_RGBMODE_18BPP_RGB_666PACKED (LCDC_OVR1CFG1_RGBMODE_18BPP_RGB_666PACKED_Val << LCDC_OVR1CFG1_RGBMODE_Pos) /* (LCDC_OVR1CFG1) 18 bpp RGB 666 PACKED Position  */
-#define LCDC_OVR1CFG1_RGBMODE_19BPP_ARGB_1666 (LCDC_OVR1CFG1_RGBMODE_19BPP_ARGB_1666_Val << LCDC_OVR1CFG1_RGBMODE_Pos) /* (LCDC_OVR1CFG1) 19 bpp ARGB 1666 Position  */
-#define LCDC_OVR1CFG1_RGBMODE_19BPP_ARGB_PACKED (LCDC_OVR1CFG1_RGBMODE_19BPP_ARGB_PACKED_Val << LCDC_OVR1CFG1_RGBMODE_Pos) /* (LCDC_OVR1CFG1) 19 bpp ARGB 1666 PACKED Position  */
-#define LCDC_OVR1CFG1_RGBMODE_24BPP_RGB_888   (LCDC_OVR1CFG1_RGBMODE_24BPP_RGB_888_Val << LCDC_OVR1CFG1_RGBMODE_Pos) /* (LCDC_OVR1CFG1) 24 bpp RGB 888 Position  */
-#define LCDC_OVR1CFG1_RGBMODE_24BPP_RGB_888_PACKED (LCDC_OVR1CFG1_RGBMODE_24BPP_RGB_888_PACKED_Val << LCDC_OVR1CFG1_RGBMODE_Pos) /* (LCDC_OVR1CFG1) 24 bpp RGB 888 PACKED Position  */
-#define LCDC_OVR1CFG1_RGBMODE_25BPP_ARGB_1888 (LCDC_OVR1CFG1_RGBMODE_25BPP_ARGB_1888_Val << LCDC_OVR1CFG1_RGBMODE_Pos) /* (LCDC_OVR1CFG1) 25 bpp ARGB 1888 Position  */
-#define LCDC_OVR1CFG1_RGBMODE_32BPP_ARGB_8888 (LCDC_OVR1CFG1_RGBMODE_32BPP_ARGB_8888_Val << LCDC_OVR1CFG1_RGBMODE_Pos) /* (LCDC_OVR1CFG1) 32 bpp ARGB 8888 Position  */
-#define LCDC_OVR1CFG1_RGBMODE_32BPP_RGBA_8888 (LCDC_OVR1CFG1_RGBMODE_32BPP_RGBA_8888_Val << LCDC_OVR1CFG1_RGBMODE_Pos) /* (LCDC_OVR1CFG1) 32 bpp RGBA 8888 Position  */
+#define LCDC_OVR1CFG1_RGBMODE_12BPP_RGB_444   (LCDC_OVR1CFG1_RGBMODE_12BPP_RGB_444_Val << LCDC_OVR1CFG1_RGBMODE_Pos) /* (LCDC_OVR1CFG1) 12 bpp RGB 444 Position */
+#define LCDC_OVR1CFG1_RGBMODE_16BPP_ARGB_4444 (LCDC_OVR1CFG1_RGBMODE_16BPP_ARGB_4444_Val << LCDC_OVR1CFG1_RGBMODE_Pos) /* (LCDC_OVR1CFG1) 16 bpp ARGB 4444 Position */
+#define LCDC_OVR1CFG1_RGBMODE_16BPP_RGBA_4444 (LCDC_OVR1CFG1_RGBMODE_16BPP_RGBA_4444_Val << LCDC_OVR1CFG1_RGBMODE_Pos) /* (LCDC_OVR1CFG1) 16 bpp RGBA 4444 Position */
+#define LCDC_OVR1CFG1_RGBMODE_16BPP_RGB_565   (LCDC_OVR1CFG1_RGBMODE_16BPP_RGB_565_Val << LCDC_OVR1CFG1_RGBMODE_Pos) /* (LCDC_OVR1CFG1) 16 bpp RGB 565 Position */
+#define LCDC_OVR1CFG1_RGBMODE_16BPP_ARGB_1555 (LCDC_OVR1CFG1_RGBMODE_16BPP_ARGB_1555_Val << LCDC_OVR1CFG1_RGBMODE_Pos) /* (LCDC_OVR1CFG1) 16 bpp ARGB 1555 Position */
+#define LCDC_OVR1CFG1_RGBMODE_18BPP_RGB_666   (LCDC_OVR1CFG1_RGBMODE_18BPP_RGB_666_Val << LCDC_OVR1CFG1_RGBMODE_Pos) /* (LCDC_OVR1CFG1) 18 bpp RGB 666 Position */
+#define LCDC_OVR1CFG1_RGBMODE_18BPP_RGB_666PACKED (LCDC_OVR1CFG1_RGBMODE_18BPP_RGB_666PACKED_Val << LCDC_OVR1CFG1_RGBMODE_Pos) /* (LCDC_OVR1CFG1) 18 bpp RGB 666 PACKED Position */
+#define LCDC_OVR1CFG1_RGBMODE_19BPP_ARGB_1666 (LCDC_OVR1CFG1_RGBMODE_19BPP_ARGB_1666_Val << LCDC_OVR1CFG1_RGBMODE_Pos) /* (LCDC_OVR1CFG1) 19 bpp ARGB 1666 Position */
+#define LCDC_OVR1CFG1_RGBMODE_19BPP_ARGB_PACKED (LCDC_OVR1CFG1_RGBMODE_19BPP_ARGB_PACKED_Val << LCDC_OVR1CFG1_RGBMODE_Pos) /* (LCDC_OVR1CFG1) 19 bpp ARGB 1666 PACKED Position */
+#define LCDC_OVR1CFG1_RGBMODE_24BPP_RGB_888   (LCDC_OVR1CFG1_RGBMODE_24BPP_RGB_888_Val << LCDC_OVR1CFG1_RGBMODE_Pos) /* (LCDC_OVR1CFG1) 24 bpp RGB 888 Position */
+#define LCDC_OVR1CFG1_RGBMODE_24BPP_RGB_888_PACKED (LCDC_OVR1CFG1_RGBMODE_24BPP_RGB_888_PACKED_Val << LCDC_OVR1CFG1_RGBMODE_Pos) /* (LCDC_OVR1CFG1) 24 bpp RGB 888 PACKED Position */
+#define LCDC_OVR1CFG1_RGBMODE_25BPP_ARGB_1888 (LCDC_OVR1CFG1_RGBMODE_25BPP_ARGB_1888_Val << LCDC_OVR1CFG1_RGBMODE_Pos) /* (LCDC_OVR1CFG1) 25 bpp ARGB 1888 Position */
+#define LCDC_OVR1CFG1_RGBMODE_32BPP_ARGB_8888 (LCDC_OVR1CFG1_RGBMODE_32BPP_ARGB_8888_Val << LCDC_OVR1CFG1_RGBMODE_Pos) /* (LCDC_OVR1CFG1) 32 bpp ARGB 8888 Position */
+#define LCDC_OVR1CFG1_RGBMODE_32BPP_RGBA_8888 (LCDC_OVR1CFG1_RGBMODE_32BPP_RGBA_8888_Val << LCDC_OVR1CFG1_RGBMODE_Pos) /* (LCDC_OVR1CFG1) 32 bpp RGBA 8888 Position */
 #define LCDC_OVR1CFG1_CLUTMODE_Pos            _UINT32_(8)                                          /* (LCDC_OVR1CFG1) CLUT Mode Input Selection Position */
 #define LCDC_OVR1CFG1_CLUTMODE_Msk            (_UINT32_(0x3) << LCDC_OVR1CFG1_CLUTMODE_Pos)        /* (LCDC_OVR1CFG1) CLUT Mode Input Selection Mask */
-#define LCDC_OVR1CFG1_CLUTMODE(value)         (LCDC_OVR1CFG1_CLUTMODE_Msk & (_UINT32_(value) << LCDC_OVR1CFG1_CLUTMODE_Pos)) /* Assigment of value for CLUTMODE in the LCDC_OVR1CFG1 register */
+#define LCDC_OVR1CFG1_CLUTMODE(value)         (LCDC_OVR1CFG1_CLUTMODE_Msk & (_UINT32_(value) << LCDC_OVR1CFG1_CLUTMODE_Pos)) /* Assignment of value for CLUTMODE in the LCDC_OVR1CFG1 register */
 #define   LCDC_OVR1CFG1_CLUTMODE_CLUT_1BPP_Val _UINT32_(0x0)                                        /* (LCDC_OVR1CFG1) CLUT mode set to 1 bit per pixel  */
 #define   LCDC_OVR1CFG1_CLUTMODE_CLUT_2BPP_Val _UINT32_(0x1)                                        /* (LCDC_OVR1CFG1) CLUT mode set to 2 bits per pixel  */
 #define   LCDC_OVR1CFG1_CLUTMODE_CLUT_4BPP_Val _UINT32_(0x2)                                        /* (LCDC_OVR1CFG1) CLUT mode set to 4 bits per pixel  */
 #define   LCDC_OVR1CFG1_CLUTMODE_CLUT_8BPP_Val _UINT32_(0x3)                                        /* (LCDC_OVR1CFG1) CLUT mode set to 8 bits per pixel  */
-#define LCDC_OVR1CFG1_CLUTMODE_CLUT_1BPP      (LCDC_OVR1CFG1_CLUTMODE_CLUT_1BPP_Val << LCDC_OVR1CFG1_CLUTMODE_Pos) /* (LCDC_OVR1CFG1) CLUT mode set to 1 bit per pixel Position  */
-#define LCDC_OVR1CFG1_CLUTMODE_CLUT_2BPP      (LCDC_OVR1CFG1_CLUTMODE_CLUT_2BPP_Val << LCDC_OVR1CFG1_CLUTMODE_Pos) /* (LCDC_OVR1CFG1) CLUT mode set to 2 bits per pixel Position  */
-#define LCDC_OVR1CFG1_CLUTMODE_CLUT_4BPP      (LCDC_OVR1CFG1_CLUTMODE_CLUT_4BPP_Val << LCDC_OVR1CFG1_CLUTMODE_Pos) /* (LCDC_OVR1CFG1) CLUT mode set to 4 bits per pixel Position  */
-#define LCDC_OVR1CFG1_CLUTMODE_CLUT_8BPP      (LCDC_OVR1CFG1_CLUTMODE_CLUT_8BPP_Val << LCDC_OVR1CFG1_CLUTMODE_Pos) /* (LCDC_OVR1CFG1) CLUT mode set to 8 bits per pixel Position  */
+#define LCDC_OVR1CFG1_CLUTMODE_CLUT_1BPP      (LCDC_OVR1CFG1_CLUTMODE_CLUT_1BPP_Val << LCDC_OVR1CFG1_CLUTMODE_Pos) /* (LCDC_OVR1CFG1) CLUT mode set to 1 bit per pixel Position */
+#define LCDC_OVR1CFG1_CLUTMODE_CLUT_2BPP      (LCDC_OVR1CFG1_CLUTMODE_CLUT_2BPP_Val << LCDC_OVR1CFG1_CLUTMODE_Pos) /* (LCDC_OVR1CFG1) CLUT mode set to 2 bits per pixel Position */
+#define LCDC_OVR1CFG1_CLUTMODE_CLUT_4BPP      (LCDC_OVR1CFG1_CLUTMODE_CLUT_4BPP_Val << LCDC_OVR1CFG1_CLUTMODE_Pos) /* (LCDC_OVR1CFG1) CLUT mode set to 4 bits per pixel Position */
+#define LCDC_OVR1CFG1_CLUTMODE_CLUT_8BPP      (LCDC_OVR1CFG1_CLUTMODE_CLUT_8BPP_Val << LCDC_OVR1CFG1_CLUTMODE_Pos) /* (LCDC_OVR1CFG1) CLUT mode set to 8 bits per pixel Position */
 #define LCDC_OVR1CFG1_Msk                     _UINT32_(0x000003F5)                                 /* (LCDC_OVR1CFG1) Register Mask  */
 
 
@@ -1455,10 +1457,10 @@
 
 #define LCDC_OVR1CFG2_XPOS_Pos                _UINT32_(0)                                          /* (LCDC_OVR1CFG2) Horizontal Window Position Position */
 #define LCDC_OVR1CFG2_XPOS_Msk                (_UINT32_(0x7FF) << LCDC_OVR1CFG2_XPOS_Pos)          /* (LCDC_OVR1CFG2) Horizontal Window Position Mask */
-#define LCDC_OVR1CFG2_XPOS(value)             (LCDC_OVR1CFG2_XPOS_Msk & (_UINT32_(value) << LCDC_OVR1CFG2_XPOS_Pos)) /* Assigment of value for XPOS in the LCDC_OVR1CFG2 register */
+#define LCDC_OVR1CFG2_XPOS(value)             (LCDC_OVR1CFG2_XPOS_Msk & (_UINT32_(value) << LCDC_OVR1CFG2_XPOS_Pos)) /* Assignment of value for XPOS in the LCDC_OVR1CFG2 register */
 #define LCDC_OVR1CFG2_YPOS_Pos                _UINT32_(16)                                         /* (LCDC_OVR1CFG2) Vertical Window Position Position */
 #define LCDC_OVR1CFG2_YPOS_Msk                (_UINT32_(0x7FF) << LCDC_OVR1CFG2_YPOS_Pos)          /* (LCDC_OVR1CFG2) Vertical Window Position Mask */
-#define LCDC_OVR1CFG2_YPOS(value)             (LCDC_OVR1CFG2_YPOS_Msk & (_UINT32_(value) << LCDC_OVR1CFG2_YPOS_Pos)) /* Assigment of value for YPOS in the LCDC_OVR1CFG2 register */
+#define LCDC_OVR1CFG2_YPOS(value)             (LCDC_OVR1CFG2_YPOS_Msk & (_UINT32_(value) << LCDC_OVR1CFG2_YPOS_Pos)) /* Assignment of value for YPOS in the LCDC_OVR1CFG2 register */
 #define LCDC_OVR1CFG2_Msk                     _UINT32_(0x07FF07FF)                                 /* (LCDC_OVR1CFG2) Register Mask  */
 
 
@@ -1467,10 +1469,10 @@
 
 #define LCDC_OVR1CFG3_XSIZE_Pos               _UINT32_(0)                                          /* (LCDC_OVR1CFG3) Horizontal Window Size Position */
 #define LCDC_OVR1CFG3_XSIZE_Msk               (_UINT32_(0x7FF) << LCDC_OVR1CFG3_XSIZE_Pos)         /* (LCDC_OVR1CFG3) Horizontal Window Size Mask */
-#define LCDC_OVR1CFG3_XSIZE(value)            (LCDC_OVR1CFG3_XSIZE_Msk & (_UINT32_(value) << LCDC_OVR1CFG3_XSIZE_Pos)) /* Assigment of value for XSIZE in the LCDC_OVR1CFG3 register */
+#define LCDC_OVR1CFG3_XSIZE(value)            (LCDC_OVR1CFG3_XSIZE_Msk & (_UINT32_(value) << LCDC_OVR1CFG3_XSIZE_Pos)) /* Assignment of value for XSIZE in the LCDC_OVR1CFG3 register */
 #define LCDC_OVR1CFG3_YSIZE_Pos               _UINT32_(16)                                         /* (LCDC_OVR1CFG3) Vertical Window Size Position */
 #define LCDC_OVR1CFG3_YSIZE_Msk               (_UINT32_(0x7FF) << LCDC_OVR1CFG3_YSIZE_Pos)         /* (LCDC_OVR1CFG3) Vertical Window Size Mask */
-#define LCDC_OVR1CFG3_YSIZE(value)            (LCDC_OVR1CFG3_YSIZE_Msk & (_UINT32_(value) << LCDC_OVR1CFG3_YSIZE_Pos)) /* Assigment of value for YSIZE in the LCDC_OVR1CFG3 register */
+#define LCDC_OVR1CFG3_YSIZE(value)            (LCDC_OVR1CFG3_YSIZE_Msk & (_UINT32_(value) << LCDC_OVR1CFG3_YSIZE_Pos)) /* Assignment of value for YSIZE in the LCDC_OVR1CFG3 register */
 #define LCDC_OVR1CFG3_Msk                     _UINT32_(0x07FF07FF)                                 /* (LCDC_OVR1CFG3) Register Mask  */
 
 
@@ -1479,7 +1481,7 @@
 
 #define LCDC_OVR1CFG4_XSTRIDE_Pos             _UINT32_(0)                                          /* (LCDC_OVR1CFG4) Horizontal Stride Position */
 #define LCDC_OVR1CFG4_XSTRIDE_Msk             (_UINT32_(0xFFFFFFFF) << LCDC_OVR1CFG4_XSTRIDE_Pos)  /* (LCDC_OVR1CFG4) Horizontal Stride Mask */
-#define LCDC_OVR1CFG4_XSTRIDE(value)          (LCDC_OVR1CFG4_XSTRIDE_Msk & (_UINT32_(value) << LCDC_OVR1CFG4_XSTRIDE_Pos)) /* Assigment of value for XSTRIDE in the LCDC_OVR1CFG4 register */
+#define LCDC_OVR1CFG4_XSTRIDE(value)          (LCDC_OVR1CFG4_XSTRIDE_Msk & (_UINT32_(value) << LCDC_OVR1CFG4_XSTRIDE_Pos)) /* Assignment of value for XSTRIDE in the LCDC_OVR1CFG4 register */
 #define LCDC_OVR1CFG4_Msk                     _UINT32_(0xFFFFFFFF)                                 /* (LCDC_OVR1CFG4) Register Mask  */
 
 
@@ -1488,7 +1490,7 @@
 
 #define LCDC_OVR1CFG5_PSTRIDE_Pos             _UINT32_(0)                                          /* (LCDC_OVR1CFG5) Pixel Stride Position */
 #define LCDC_OVR1CFG5_PSTRIDE_Msk             (_UINT32_(0xFFFFFFFF) << LCDC_OVR1CFG5_PSTRIDE_Pos)  /* (LCDC_OVR1CFG5) Pixel Stride Mask */
-#define LCDC_OVR1CFG5_PSTRIDE(value)          (LCDC_OVR1CFG5_PSTRIDE_Msk & (_UINT32_(value) << LCDC_OVR1CFG5_PSTRIDE_Pos)) /* Assigment of value for PSTRIDE in the LCDC_OVR1CFG5 register */
+#define LCDC_OVR1CFG5_PSTRIDE(value)          (LCDC_OVR1CFG5_PSTRIDE_Msk & (_UINT32_(value) << LCDC_OVR1CFG5_PSTRIDE_Pos)) /* Assignment of value for PSTRIDE in the LCDC_OVR1CFG5 register */
 #define LCDC_OVR1CFG5_Msk                     _UINT32_(0xFFFFFFFF)                                 /* (LCDC_OVR1CFG5) Register Mask  */
 
 
@@ -1497,16 +1499,16 @@
 
 #define LCDC_OVR1CFG6_BDEF_Pos                _UINT32_(0)                                          /* (LCDC_OVR1CFG6) Blue Default Position */
 #define LCDC_OVR1CFG6_BDEF_Msk                (_UINT32_(0xFF) << LCDC_OVR1CFG6_BDEF_Pos)           /* (LCDC_OVR1CFG6) Blue Default Mask */
-#define LCDC_OVR1CFG6_BDEF(value)             (LCDC_OVR1CFG6_BDEF_Msk & (_UINT32_(value) << LCDC_OVR1CFG6_BDEF_Pos)) /* Assigment of value for BDEF in the LCDC_OVR1CFG6 register */
+#define LCDC_OVR1CFG6_BDEF(value)             (LCDC_OVR1CFG6_BDEF_Msk & (_UINT32_(value) << LCDC_OVR1CFG6_BDEF_Pos)) /* Assignment of value for BDEF in the LCDC_OVR1CFG6 register */
 #define LCDC_OVR1CFG6_GDEF_Pos                _UINT32_(8)                                          /* (LCDC_OVR1CFG6) Green Default Position */
 #define LCDC_OVR1CFG6_GDEF_Msk                (_UINT32_(0xFF) << LCDC_OVR1CFG6_GDEF_Pos)           /* (LCDC_OVR1CFG6) Green Default Mask */
-#define LCDC_OVR1CFG6_GDEF(value)             (LCDC_OVR1CFG6_GDEF_Msk & (_UINT32_(value) << LCDC_OVR1CFG6_GDEF_Pos)) /* Assigment of value for GDEF in the LCDC_OVR1CFG6 register */
+#define LCDC_OVR1CFG6_GDEF(value)             (LCDC_OVR1CFG6_GDEF_Msk & (_UINT32_(value) << LCDC_OVR1CFG6_GDEF_Pos)) /* Assignment of value for GDEF in the LCDC_OVR1CFG6 register */
 #define LCDC_OVR1CFG6_RDEF_Pos                _UINT32_(16)                                         /* (LCDC_OVR1CFG6) Red Default Position */
 #define LCDC_OVR1CFG6_RDEF_Msk                (_UINT32_(0xFF) << LCDC_OVR1CFG6_RDEF_Pos)           /* (LCDC_OVR1CFG6) Red Default Mask */
-#define LCDC_OVR1CFG6_RDEF(value)             (LCDC_OVR1CFG6_RDEF_Msk & (_UINT32_(value) << LCDC_OVR1CFG6_RDEF_Pos)) /* Assigment of value for RDEF in the LCDC_OVR1CFG6 register */
+#define LCDC_OVR1CFG6_RDEF(value)             (LCDC_OVR1CFG6_RDEF_Msk & (_UINT32_(value) << LCDC_OVR1CFG6_RDEF_Pos)) /* Assignment of value for RDEF in the LCDC_OVR1CFG6 register */
 #define LCDC_OVR1CFG6_ADEF_Pos                _UINT32_(24)                                         /* (LCDC_OVR1CFG6) Alpha Default Position */
 #define LCDC_OVR1CFG6_ADEF_Msk                (_UINT32_(0xFF) << LCDC_OVR1CFG6_ADEF_Pos)           /* (LCDC_OVR1CFG6) Alpha Default Mask */
-#define LCDC_OVR1CFG6_ADEF(value)             (LCDC_OVR1CFG6_ADEF_Msk & (_UINT32_(value) << LCDC_OVR1CFG6_ADEF_Pos)) /* Assigment of value for ADEF in the LCDC_OVR1CFG6 register */
+#define LCDC_OVR1CFG6_ADEF(value)             (LCDC_OVR1CFG6_ADEF_Msk & (_UINT32_(value) << LCDC_OVR1CFG6_ADEF_Pos)) /* Assignment of value for ADEF in the LCDC_OVR1CFG6 register */
 #define LCDC_OVR1CFG6_Msk                     _UINT32_(0xFFFFFFFF)                                 /* (LCDC_OVR1CFG6) Register Mask  */
 
 
@@ -1515,13 +1517,13 @@
 
 #define LCDC_OVR1CFG7_BKEY_Pos                _UINT32_(0)                                          /* (LCDC_OVR1CFG7) Blue Color Component Chroma Key Position */
 #define LCDC_OVR1CFG7_BKEY_Msk                (_UINT32_(0xFF) << LCDC_OVR1CFG7_BKEY_Pos)           /* (LCDC_OVR1CFG7) Blue Color Component Chroma Key Mask */
-#define LCDC_OVR1CFG7_BKEY(value)             (LCDC_OVR1CFG7_BKEY_Msk & (_UINT32_(value) << LCDC_OVR1CFG7_BKEY_Pos)) /* Assigment of value for BKEY in the LCDC_OVR1CFG7 register */
+#define LCDC_OVR1CFG7_BKEY(value)             (LCDC_OVR1CFG7_BKEY_Msk & (_UINT32_(value) << LCDC_OVR1CFG7_BKEY_Pos)) /* Assignment of value for BKEY in the LCDC_OVR1CFG7 register */
 #define LCDC_OVR1CFG7_GKEY_Pos                _UINT32_(8)                                          /* (LCDC_OVR1CFG7) Green Color Component Chroma Key Position */
 #define LCDC_OVR1CFG7_GKEY_Msk                (_UINT32_(0xFF) << LCDC_OVR1CFG7_GKEY_Pos)           /* (LCDC_OVR1CFG7) Green Color Component Chroma Key Mask */
-#define LCDC_OVR1CFG7_GKEY(value)             (LCDC_OVR1CFG7_GKEY_Msk & (_UINT32_(value) << LCDC_OVR1CFG7_GKEY_Pos)) /* Assigment of value for GKEY in the LCDC_OVR1CFG7 register */
+#define LCDC_OVR1CFG7_GKEY(value)             (LCDC_OVR1CFG7_GKEY_Msk & (_UINT32_(value) << LCDC_OVR1CFG7_GKEY_Pos)) /* Assignment of value for GKEY in the LCDC_OVR1CFG7 register */
 #define LCDC_OVR1CFG7_RKEY_Pos                _UINT32_(16)                                         /* (LCDC_OVR1CFG7) Red Color Component Chroma Key Position */
 #define LCDC_OVR1CFG7_RKEY_Msk                (_UINT32_(0xFF) << LCDC_OVR1CFG7_RKEY_Pos)           /* (LCDC_OVR1CFG7) Red Color Component Chroma Key Mask */
-#define LCDC_OVR1CFG7_RKEY(value)             (LCDC_OVR1CFG7_RKEY_Msk & (_UINT32_(value) << LCDC_OVR1CFG7_RKEY_Pos)) /* Assigment of value for RKEY in the LCDC_OVR1CFG7 register */
+#define LCDC_OVR1CFG7_RKEY(value)             (LCDC_OVR1CFG7_RKEY_Msk & (_UINT32_(value) << LCDC_OVR1CFG7_RKEY_Pos)) /* Assignment of value for RKEY in the LCDC_OVR1CFG7 register */
 #define LCDC_OVR1CFG7_Msk                     _UINT32_(0x00FFFFFF)                                 /* (LCDC_OVR1CFG7) Register Mask  */
 
 
@@ -1530,13 +1532,13 @@
 
 #define LCDC_OVR1CFG8_BMASK_Pos               _UINT32_(0)                                          /* (LCDC_OVR1CFG8) Blue Color Component Chroma Key Mask Position */
 #define LCDC_OVR1CFG8_BMASK_Msk               (_UINT32_(0xFF) << LCDC_OVR1CFG8_BMASK_Pos)          /* (LCDC_OVR1CFG8) Blue Color Component Chroma Key Mask Mask */
-#define LCDC_OVR1CFG8_BMASK(value)            (LCDC_OVR1CFG8_BMASK_Msk & (_UINT32_(value) << LCDC_OVR1CFG8_BMASK_Pos)) /* Assigment of value for BMASK in the LCDC_OVR1CFG8 register */
+#define LCDC_OVR1CFG8_BMASK(value)            (LCDC_OVR1CFG8_BMASK_Msk & (_UINT32_(value) << LCDC_OVR1CFG8_BMASK_Pos)) /* Assignment of value for BMASK in the LCDC_OVR1CFG8 register */
 #define LCDC_OVR1CFG8_GMASK_Pos               _UINT32_(8)                                          /* (LCDC_OVR1CFG8) Green Color Component Chroma Key Mask Position */
 #define LCDC_OVR1CFG8_GMASK_Msk               (_UINT32_(0xFF) << LCDC_OVR1CFG8_GMASK_Pos)          /* (LCDC_OVR1CFG8) Green Color Component Chroma Key Mask Mask */
-#define LCDC_OVR1CFG8_GMASK(value)            (LCDC_OVR1CFG8_GMASK_Msk & (_UINT32_(value) << LCDC_OVR1CFG8_GMASK_Pos)) /* Assigment of value for GMASK in the LCDC_OVR1CFG8 register */
+#define LCDC_OVR1CFG8_GMASK(value)            (LCDC_OVR1CFG8_GMASK_Msk & (_UINT32_(value) << LCDC_OVR1CFG8_GMASK_Pos)) /* Assignment of value for GMASK in the LCDC_OVR1CFG8 register */
 #define LCDC_OVR1CFG8_RMASK_Pos               _UINT32_(16)                                         /* (LCDC_OVR1CFG8) Red Color Component Chroma Key Mask Position */
 #define LCDC_OVR1CFG8_RMASK_Msk               (_UINT32_(0xFF) << LCDC_OVR1CFG8_RMASK_Pos)          /* (LCDC_OVR1CFG8) Red Color Component Chroma Key Mask Mask */
-#define LCDC_OVR1CFG8_RMASK(value)            (LCDC_OVR1CFG8_RMASK_Msk & (_UINT32_(value) << LCDC_OVR1CFG8_RMASK_Pos)) /* Assigment of value for RMASK in the LCDC_OVR1CFG8 register */
+#define LCDC_OVR1CFG8_RMASK(value)            (LCDC_OVR1CFG8_RMASK_Msk & (_UINT32_(value) << LCDC_OVR1CFG8_RMASK_Pos)) /* Assignment of value for RMASK in the LCDC_OVR1CFG8 register */
 #define LCDC_OVR1CFG8_Msk                     _UINT32_(0x00FFFFFF)                                 /* (LCDC_OVR1CFG8) Register Mask  */
 
 
@@ -1545,57 +1547,57 @@
 
 #define LCDC_OVR1CFG9_DMA_Pos                 _UINT32_(0)                                          /* (LCDC_OVR1CFG9) DMA Enable Position */
 #define LCDC_OVR1CFG9_DMA_Msk                 (_UINT32_(0x1) << LCDC_OVR1CFG9_DMA_Pos)             /* (LCDC_OVR1CFG9) DMA Enable Mask */
-#define LCDC_OVR1CFG9_DMA(value)              (LCDC_OVR1CFG9_DMA_Msk & (_UINT32_(value) << LCDC_OVR1CFG9_DMA_Pos)) /* Assigment of value for DMA in the LCDC_OVR1CFG9 register */
+#define LCDC_OVR1CFG9_DMA(value)              (LCDC_OVR1CFG9_DMA_Msk & (_UINT32_(value) << LCDC_OVR1CFG9_DMA_Pos)) /* Assignment of value for DMA in the LCDC_OVR1CFG9 register */
 #define   LCDC_OVR1CFG9_DMA_0_Val             _UINT32_(0x0)                                        /* (LCDC_OVR1CFG9) The pixel for the current layer is retrieved from the default color register.  */
 #define   LCDC_OVR1CFG9_DMA_1_Val             _UINT32_(0x1)                                        /* (LCDC_OVR1CFG9) The pixel stream is retrieved from the memory.  */
-#define LCDC_OVR1CFG9_DMA_0                   (LCDC_OVR1CFG9_DMA_0_Val << LCDC_OVR1CFG9_DMA_Pos)   /* (LCDC_OVR1CFG9) The pixel for the current layer is retrieved from the default color register. Position  */
-#define LCDC_OVR1CFG9_DMA_1                   (LCDC_OVR1CFG9_DMA_1_Val << LCDC_OVR1CFG9_DMA_Pos)   /* (LCDC_OVR1CFG9) The pixel stream is retrieved from the memory. Position  */
+#define LCDC_OVR1CFG9_DMA_0                   (LCDC_OVR1CFG9_DMA_0_Val << LCDC_OVR1CFG9_DMA_Pos)   /* (LCDC_OVR1CFG9) The pixel for the current layer is retrieved from the default color register. Position */
+#define LCDC_OVR1CFG9_DMA_1                   (LCDC_OVR1CFG9_DMA_1_Val << LCDC_OVR1CFG9_DMA_Pos)   /* (LCDC_OVR1CFG9) The pixel stream is retrieved from the memory. Position */
 #define LCDC_OVR1CFG9_REP_Pos                 _UINT32_(1)                                          /* (LCDC_OVR1CFG9) Replication Logic Position */
 #define LCDC_OVR1CFG9_REP_Msk                 (_UINT32_(0x1) << LCDC_OVR1CFG9_REP_Pos)             /* (LCDC_OVR1CFG9) Replication Logic Mask */
-#define LCDC_OVR1CFG9_REP(value)              (LCDC_OVR1CFG9_REP_Msk & (_UINT32_(value) << LCDC_OVR1CFG9_REP_Pos)) /* Assigment of value for REP in the LCDC_OVR1CFG9 register */
+#define LCDC_OVR1CFG9_REP(value)              (LCDC_OVR1CFG9_REP_Msk & (_UINT32_(value) << LCDC_OVR1CFG9_REP_Pos)) /* Assignment of value for REP in the LCDC_OVR1CFG9 register */
 #define   LCDC_OVR1CFG9_REP_0_Val             _UINT32_(0x0)                                        /* (LCDC_OVR1CFG9) When the selected pixel depth is less than 24 bpp, the pixel is shifted and LSBs are set to 0.  */
 #define   LCDC_OVR1CFG9_REP_1_Val             _UINT32_(0x1)                                        /* (LCDC_OVR1CFG9) When the selected pixel depth is less than 24 bpp, the pixel is shifted and the LSB replicates the MSB.  */
-#define LCDC_OVR1CFG9_REP_0                   (LCDC_OVR1CFG9_REP_0_Val << LCDC_OVR1CFG9_REP_Pos)   /* (LCDC_OVR1CFG9) When the selected pixel depth is less than 24 bpp, the pixel is shifted and LSBs are set to 0. Position  */
-#define LCDC_OVR1CFG9_REP_1                   (LCDC_OVR1CFG9_REP_1_Val << LCDC_OVR1CFG9_REP_Pos)   /* (LCDC_OVR1CFG9) When the selected pixel depth is less than 24 bpp, the pixel is shifted and the LSB replicates the MSB. Position  */
+#define LCDC_OVR1CFG9_REP_0                   (LCDC_OVR1CFG9_REP_0_Val << LCDC_OVR1CFG9_REP_Pos)   /* (LCDC_OVR1CFG9) When the selected pixel depth is less than 24 bpp, the pixel is shifted and LSBs are set to 0. Position */
+#define LCDC_OVR1CFG9_REP_1                   (LCDC_OVR1CFG9_REP_1_Val << LCDC_OVR1CFG9_REP_Pos)   /* (LCDC_OVR1CFG9) When the selected pixel depth is less than 24 bpp, the pixel is shifted and the LSB replicates the MSB. Position */
 #define LCDC_OVR1CFG9_CRKEY_Pos               _UINT32_(2)                                          /* (LCDC_OVR1CFG9) Chroma Keying Enable Position */
 #define LCDC_OVR1CFG9_CRKEY_Msk               (_UINT32_(0x1) << LCDC_OVR1CFG9_CRKEY_Pos)           /* (LCDC_OVR1CFG9) Chroma Keying Enable Mask */
-#define LCDC_OVR1CFG9_CRKEY(value)            (LCDC_OVR1CFG9_CRKEY_Msk & (_UINT32_(value) << LCDC_OVR1CFG9_CRKEY_Pos)) /* Assigment of value for CRKEY in the LCDC_OVR1CFG9 register */
+#define LCDC_OVR1CFG9_CRKEY(value)            (LCDC_OVR1CFG9_CRKEY_Msk & (_UINT32_(value) << LCDC_OVR1CFG9_CRKEY_Pos)) /* Assignment of value for CRKEY in the LCDC_OVR1CFG9 register */
 #define LCDC_OVR1CFG9_DSTKEY_Pos              _UINT32_(3)                                          /* (LCDC_OVR1CFG9) Destination Color Keying Position */
 #define LCDC_OVR1CFG9_DSTKEY_Msk              (_UINT32_(0x1) << LCDC_OVR1CFG9_DSTKEY_Pos)          /* (LCDC_OVR1CFG9) Destination Color Keying Mask */
-#define LCDC_OVR1CFG9_DSTKEY(value)           (LCDC_OVR1CFG9_DSTKEY_Msk & (_UINT32_(value) << LCDC_OVR1CFG9_DSTKEY_Pos)) /* Assigment of value for DSTKEY in the LCDC_OVR1CFG9 register */
+#define LCDC_OVR1CFG9_DSTKEY(value)           (LCDC_OVR1CFG9_DSTKEY_Msk & (_UINT32_(value) << LCDC_OVR1CFG9_DSTKEY_Pos)) /* Assignment of value for DSTKEY in the LCDC_OVR1CFG9 register */
 #define   LCDC_OVR1CFG9_DSTKEY_0_Val          _UINT32_(0x0)                                        /* (LCDC_OVR1CFG9) When CRKEY is enabled, color key is applied on OVR1 pixels, before the blending operation.  */
 #define   LCDC_OVR1CFG9_DSTKEY_1_Val          _UINT32_(0x1)                                        /* (LCDC_OVR1CFG9) When CRKEY is enabled, color key is applied on OVR1 pixels, after the blending operation.  */
-#define LCDC_OVR1CFG9_DSTKEY_0                (LCDC_OVR1CFG9_DSTKEY_0_Val << LCDC_OVR1CFG9_DSTKEY_Pos) /* (LCDC_OVR1CFG9) When CRKEY is enabled, color key is applied on OVR1 pixels, before the blending operation. Position  */
-#define LCDC_OVR1CFG9_DSTKEY_1                (LCDC_OVR1CFG9_DSTKEY_1_Val << LCDC_OVR1CFG9_DSTKEY_Pos) /* (LCDC_OVR1CFG9) When CRKEY is enabled, color key is applied on OVR1 pixels, after the blending operation. Position  */
+#define LCDC_OVR1CFG9_DSTKEY_0                (LCDC_OVR1CFG9_DSTKEY_0_Val << LCDC_OVR1CFG9_DSTKEY_Pos) /* (LCDC_OVR1CFG9) When CRKEY is enabled, color key is applied on OVR1 pixels, before the blending operation. Position */
+#define LCDC_OVR1CFG9_DSTKEY_1                (LCDC_OVR1CFG9_DSTKEY_1_Val << LCDC_OVR1CFG9_DSTKEY_Pos) /* (LCDC_OVR1CFG9) When CRKEY is enabled, color key is applied on OVR1 pixels, after the blending operation. Position */
 #define LCDC_OVR1CFG9_SFACTC_Pos              _UINT32_(6)                                          /* (LCDC_OVR1CFG9) Source Factor for the Blending Equation of the Color Component Position */
 #define LCDC_OVR1CFG9_SFACTC_Msk              (_UINT32_(0x7) << LCDC_OVR1CFG9_SFACTC_Pos)          /* (LCDC_OVR1CFG9) Source Factor for the Blending Equation of the Color Component Mask */
-#define LCDC_OVR1CFG9_SFACTC(value)           (LCDC_OVR1CFG9_SFACTC_Msk & (_UINT32_(value) << LCDC_OVR1CFG9_SFACTC_Pos)) /* Assigment of value for SFACTC in the LCDC_OVR1CFG9 register */
+#define LCDC_OVR1CFG9_SFACTC(value)           (LCDC_OVR1CFG9_SFACTC_Msk & (_UINT32_(value) << LCDC_OVR1CFG9_SFACTC_Pos)) /* Assignment of value for SFACTC in the LCDC_OVR1CFG9 register */
 #define   LCDC_OVR1CFG9_SFACTC_ONE_Val        _UINT32_(0x0)                                        /* (LCDC_OVR1CFG9) Sets the factor to 1.0.  */
 #define   LCDC_OVR1CFG9_SFACTC_ZERO_Val       _UINT32_(0x1)                                        /* (LCDC_OVR1CFG9) Sets the factor to 0.0.  */
 #define   LCDC_OVR1CFG9_SFACTC_A0_Val         _UINT32_(0x2)                                        /* (LCDC_OVR1CFG9) Sets the factor to A0/255.  */
 #define   LCDC_OVR1CFG9_SFACTC_A0_MULT_AD_Val _UINT32_(0x3)                                        /* (LCDC_OVR1CFG9) Sets the factor to A0 multiplied by Destination Alpha.  */
 #define   LCDC_OVR1CFG9_SFACTC_A0_MUL_AS_Val  _UINT32_(0x4)                                        /* (LCDC_OVR1CFG9) Sets the factor to A0 multiplied by Source Alpha.  */
 #define   LCDC_OVR1CFG9_SFACTC_M_A0_MUL_AD_Val _UINT32_(0x5)                                        /* (LCDC_OVR1CFG9) Computes A0 multiplied by Destination Alpha, then sets the factor to minus the result.  */
-#define LCDC_OVR1CFG9_SFACTC_ONE              (LCDC_OVR1CFG9_SFACTC_ONE_Val << LCDC_OVR1CFG9_SFACTC_Pos) /* (LCDC_OVR1CFG9) Sets the factor to 1.0. Position  */
-#define LCDC_OVR1CFG9_SFACTC_ZERO             (LCDC_OVR1CFG9_SFACTC_ZERO_Val << LCDC_OVR1CFG9_SFACTC_Pos) /* (LCDC_OVR1CFG9) Sets the factor to 0.0. Position  */
-#define LCDC_OVR1CFG9_SFACTC_A0               (LCDC_OVR1CFG9_SFACTC_A0_Val << LCDC_OVR1CFG9_SFACTC_Pos) /* (LCDC_OVR1CFG9) Sets the factor to A0/255. Position  */
-#define LCDC_OVR1CFG9_SFACTC_A0_MULT_AD       (LCDC_OVR1CFG9_SFACTC_A0_MULT_AD_Val << LCDC_OVR1CFG9_SFACTC_Pos) /* (LCDC_OVR1CFG9) Sets the factor to A0 multiplied by Destination Alpha. Position  */
-#define LCDC_OVR1CFG9_SFACTC_A0_MUL_AS        (LCDC_OVR1CFG9_SFACTC_A0_MUL_AS_Val << LCDC_OVR1CFG9_SFACTC_Pos) /* (LCDC_OVR1CFG9) Sets the factor to A0 multiplied by Source Alpha. Position  */
-#define LCDC_OVR1CFG9_SFACTC_M_A0_MUL_AD      (LCDC_OVR1CFG9_SFACTC_M_A0_MUL_AD_Val << LCDC_OVR1CFG9_SFACTC_Pos) /* (LCDC_OVR1CFG9) Computes A0 multiplied by Destination Alpha, then sets the factor to minus the result. Position  */
+#define LCDC_OVR1CFG9_SFACTC_ONE              (LCDC_OVR1CFG9_SFACTC_ONE_Val << LCDC_OVR1CFG9_SFACTC_Pos) /* (LCDC_OVR1CFG9) Sets the factor to 1.0. Position */
+#define LCDC_OVR1CFG9_SFACTC_ZERO             (LCDC_OVR1CFG9_SFACTC_ZERO_Val << LCDC_OVR1CFG9_SFACTC_Pos) /* (LCDC_OVR1CFG9) Sets the factor to 0.0. Position */
+#define LCDC_OVR1CFG9_SFACTC_A0               (LCDC_OVR1CFG9_SFACTC_A0_Val << LCDC_OVR1CFG9_SFACTC_Pos) /* (LCDC_OVR1CFG9) Sets the factor to A0/255. Position */
+#define LCDC_OVR1CFG9_SFACTC_A0_MULT_AD       (LCDC_OVR1CFG9_SFACTC_A0_MULT_AD_Val << LCDC_OVR1CFG9_SFACTC_Pos) /* (LCDC_OVR1CFG9) Sets the factor to A0 multiplied by Destination Alpha. Position */
+#define LCDC_OVR1CFG9_SFACTC_A0_MUL_AS        (LCDC_OVR1CFG9_SFACTC_A0_MUL_AS_Val << LCDC_OVR1CFG9_SFACTC_Pos) /* (LCDC_OVR1CFG9) Sets the factor to A0 multiplied by Source Alpha. Position */
+#define LCDC_OVR1CFG9_SFACTC_M_A0_MUL_AD      (LCDC_OVR1CFG9_SFACTC_M_A0_MUL_AD_Val << LCDC_OVR1CFG9_SFACTC_Pos) /* (LCDC_OVR1CFG9) Computes A0 multiplied by Destination Alpha, then sets the factor to minus the result. Position */
 #define LCDC_OVR1CFG9_SFACTA_Pos              _UINT32_(9)                                          /* (LCDC_OVR1CFG9) Source Factor for the Blending Equation of the Alpha Component Position */
 #define LCDC_OVR1CFG9_SFACTA_Msk              (_UINT32_(0x3) << LCDC_OVR1CFG9_SFACTA_Pos)          /* (LCDC_OVR1CFG9) Source Factor for the Blending Equation of the Alpha Component Mask */
-#define LCDC_OVR1CFG9_SFACTA(value)           (LCDC_OVR1CFG9_SFACTA_Msk & (_UINT32_(value) << LCDC_OVR1CFG9_SFACTA_Pos)) /* Assigment of value for SFACTA in the LCDC_OVR1CFG9 register */
+#define LCDC_OVR1CFG9_SFACTA(value)           (LCDC_OVR1CFG9_SFACTA_Msk & (_UINT32_(value) << LCDC_OVR1CFG9_SFACTA_Pos)) /* Assignment of value for SFACTA in the LCDC_OVR1CFG9 register */
 #define   LCDC_OVR1CFG9_SFACTA_ZERO_Val       _UINT32_(0x0)                                        /* (LCDC_OVR1CFG9) Sets the factor to 0.0.  */
 #define   LCDC_OVR1CFG9_SFACTA_ONE_Val        _UINT32_(0x1)                                        /* (LCDC_OVR1CFG9) Sets the factor to 1.0.  */
 #define   LCDC_OVR1CFG9_SFACTA_A0_Val         _UINT32_(0x2)                                        /* (LCDC_OVR1CFG9) Sets the factor to A0/255.  */
 #define   LCDC_OVR1CFG9_SFACTA_A1_Val         _UINT32_(0x3)                                        /* (LCDC_OVR1CFG9) Sets the factor to A1/255.  */
-#define LCDC_OVR1CFG9_SFACTA_ZERO             (LCDC_OVR1CFG9_SFACTA_ZERO_Val << LCDC_OVR1CFG9_SFACTA_Pos) /* (LCDC_OVR1CFG9) Sets the factor to 0.0. Position  */
-#define LCDC_OVR1CFG9_SFACTA_ONE              (LCDC_OVR1CFG9_SFACTA_ONE_Val << LCDC_OVR1CFG9_SFACTA_Pos) /* (LCDC_OVR1CFG9) Sets the factor to 1.0. Position  */
-#define LCDC_OVR1CFG9_SFACTA_A0               (LCDC_OVR1CFG9_SFACTA_A0_Val << LCDC_OVR1CFG9_SFACTA_Pos) /* (LCDC_OVR1CFG9) Sets the factor to A0/255. Position  */
-#define LCDC_OVR1CFG9_SFACTA_A1               (LCDC_OVR1CFG9_SFACTA_A1_Val << LCDC_OVR1CFG9_SFACTA_Pos) /* (LCDC_OVR1CFG9) Sets the factor to A1/255. Position  */
+#define LCDC_OVR1CFG9_SFACTA_ZERO             (LCDC_OVR1CFG9_SFACTA_ZERO_Val << LCDC_OVR1CFG9_SFACTA_Pos) /* (LCDC_OVR1CFG9) Sets the factor to 0.0. Position */
+#define LCDC_OVR1CFG9_SFACTA_ONE              (LCDC_OVR1CFG9_SFACTA_ONE_Val << LCDC_OVR1CFG9_SFACTA_Pos) /* (LCDC_OVR1CFG9) Sets the factor to 1.0. Position */
+#define LCDC_OVR1CFG9_SFACTA_A0               (LCDC_OVR1CFG9_SFACTA_A0_Val << LCDC_OVR1CFG9_SFACTA_Pos) /* (LCDC_OVR1CFG9) Sets the factor to A0/255. Position */
+#define LCDC_OVR1CFG9_SFACTA_A1               (LCDC_OVR1CFG9_SFACTA_A1_Val << LCDC_OVR1CFG9_SFACTA_Pos) /* (LCDC_OVR1CFG9) Sets the factor to A1/255. Position */
 #define LCDC_OVR1CFG9_DFACTC_Pos              _UINT32_(11)                                         /* (LCDC_OVR1CFG9) Destination Factor for the Blending Equation of the Color Component Position */
 #define LCDC_OVR1CFG9_DFACTC_Msk              (_UINT32_(0x7) << LCDC_OVR1CFG9_DFACTC_Pos)          /* (LCDC_OVR1CFG9) Destination Factor for the Blending Equation of the Color Component Mask */
-#define LCDC_OVR1CFG9_DFACTC(value)           (LCDC_OVR1CFG9_DFACTC_Msk & (_UINT32_(value) << LCDC_OVR1CFG9_DFACTC_Pos)) /* Assigment of value for DFACTC in the LCDC_OVR1CFG9 register */
+#define LCDC_OVR1CFG9_DFACTC(value)           (LCDC_OVR1CFG9_DFACTC_Msk & (_UINT32_(value) << LCDC_OVR1CFG9_DFACTC_Pos)) /* Assignment of value for DFACTC in the LCDC_OVR1CFG9 register */
 #define   LCDC_OVR1CFG9_DFACTC_ZERO_Val       _UINT32_(0x0)                                        /* (LCDC_OVR1CFG9) Sets the factor to 0.0.  */
 #define   LCDC_OVR1CFG9_DFACTC_ONE_Val        _UINT32_(0x1)                                        /* (LCDC_OVR1CFG9) Sets the factor to 1.0.  */
 #define   LCDC_OVR1CFG9_DFACTC_A0_Val         _UINT32_(0x2)                                        /* (LCDC_OVR1CFG9) Sets the factor to A0/255.  */
@@ -1604,93 +1606,93 @@
 #define   LCDC_OVR1CFG9_DFACTC_M_A0_MULT_AD_Val _UINT32_(0x5)                                        /* (LCDC_OVR1CFG9) Sets the factor to A0 multiplied by Destination Alpha, then sets the factor to one minus the result.  */
 #define   LCDC_OVR1CFG9_DFACTC_M_A0_MUL_AS_Val _UINT32_(0x6)                                        /* (LCDC_OVR1CFG9) Computes A0 multiplied by source alpha0, then sets the factor to one minus the result.  */
 #define   LCDC_OVR1CFG9_DFACTC_M_A0_Val       _UINT32_(0x7)                                        /* (LCDC_OVR1CFG9) Computes one minus A0, then sets the factor to one minus the result.  */
-#define LCDC_OVR1CFG9_DFACTC_ZERO             (LCDC_OVR1CFG9_DFACTC_ZERO_Val << LCDC_OVR1CFG9_DFACTC_Pos) /* (LCDC_OVR1CFG9) Sets the factor to 0.0. Position  */
-#define LCDC_OVR1CFG9_DFACTC_ONE              (LCDC_OVR1CFG9_DFACTC_ONE_Val << LCDC_OVR1CFG9_DFACTC_Pos) /* (LCDC_OVR1CFG9) Sets the factor to 1.0. Position  */
-#define LCDC_OVR1CFG9_DFACTC_A0               (LCDC_OVR1CFG9_DFACTC_A0_Val << LCDC_OVR1CFG9_DFACTC_Pos) /* (LCDC_OVR1CFG9) Sets the factor to A0/255. Position  */
-#define LCDC_OVR1CFG9_DFACTC_A1               (LCDC_OVR1CFG9_DFACTC_A1_Val << LCDC_OVR1CFG9_DFACTC_Pos) /* (LCDC_OVR1CFG9) Sets the factor to A1/255. Position  */
-#define LCDC_OVR1CFG9_DFACTC_A0_MULT_AD       (LCDC_OVR1CFG9_DFACTC_A0_MULT_AD_Val << LCDC_OVR1CFG9_DFACTC_Pos) /* (LCDC_OVR1CFG9) Sets the factor to A0 multiplied by Destination Alpha. Position  */
-#define LCDC_OVR1CFG9_DFACTC_M_A0_MULT_AD     (LCDC_OVR1CFG9_DFACTC_M_A0_MULT_AD_Val << LCDC_OVR1CFG9_DFACTC_Pos) /* (LCDC_OVR1CFG9) Sets the factor to A0 multiplied by Destination Alpha, then sets the factor to one minus the result. Position  */
-#define LCDC_OVR1CFG9_DFACTC_M_A0_MUL_AS      (LCDC_OVR1CFG9_DFACTC_M_A0_MUL_AS_Val << LCDC_OVR1CFG9_DFACTC_Pos) /* (LCDC_OVR1CFG9) Computes A0 multiplied by source alpha0, then sets the factor to one minus the result. Position  */
-#define LCDC_OVR1CFG9_DFACTC_M_A0             (LCDC_OVR1CFG9_DFACTC_M_A0_Val << LCDC_OVR1CFG9_DFACTC_Pos) /* (LCDC_OVR1CFG9) Computes one minus A0, then sets the factor to one minus the result. Position  */
+#define LCDC_OVR1CFG9_DFACTC_ZERO             (LCDC_OVR1CFG9_DFACTC_ZERO_Val << LCDC_OVR1CFG9_DFACTC_Pos) /* (LCDC_OVR1CFG9) Sets the factor to 0.0. Position */
+#define LCDC_OVR1CFG9_DFACTC_ONE              (LCDC_OVR1CFG9_DFACTC_ONE_Val << LCDC_OVR1CFG9_DFACTC_Pos) /* (LCDC_OVR1CFG9) Sets the factor to 1.0. Position */
+#define LCDC_OVR1CFG9_DFACTC_A0               (LCDC_OVR1CFG9_DFACTC_A0_Val << LCDC_OVR1CFG9_DFACTC_Pos) /* (LCDC_OVR1CFG9) Sets the factor to A0/255. Position */
+#define LCDC_OVR1CFG9_DFACTC_A1               (LCDC_OVR1CFG9_DFACTC_A1_Val << LCDC_OVR1CFG9_DFACTC_Pos) /* (LCDC_OVR1CFG9) Sets the factor to A1/255. Position */
+#define LCDC_OVR1CFG9_DFACTC_A0_MULT_AD       (LCDC_OVR1CFG9_DFACTC_A0_MULT_AD_Val << LCDC_OVR1CFG9_DFACTC_Pos) /* (LCDC_OVR1CFG9) Sets the factor to A0 multiplied by Destination Alpha. Position */
+#define LCDC_OVR1CFG9_DFACTC_M_A0_MULT_AD     (LCDC_OVR1CFG9_DFACTC_M_A0_MULT_AD_Val << LCDC_OVR1CFG9_DFACTC_Pos) /* (LCDC_OVR1CFG9) Sets the factor to A0 multiplied by Destination Alpha, then sets the factor to one minus the result. Position */
+#define LCDC_OVR1CFG9_DFACTC_M_A0_MUL_AS      (LCDC_OVR1CFG9_DFACTC_M_A0_MUL_AS_Val << LCDC_OVR1CFG9_DFACTC_Pos) /* (LCDC_OVR1CFG9) Computes A0 multiplied by source alpha0, then sets the factor to one minus the result. Position */
+#define LCDC_OVR1CFG9_DFACTC_M_A0             (LCDC_OVR1CFG9_DFACTC_M_A0_Val << LCDC_OVR1CFG9_DFACTC_Pos) /* (LCDC_OVR1CFG9) Computes one minus A0, then sets the factor to one minus the result. Position */
 #define LCDC_OVR1CFG9_DFACTA_Pos              _UINT32_(14)                                         /* (LCDC_OVR1CFG9) Destination Factor for the Blending Equation of the Alpha Component Position */
 #define LCDC_OVR1CFG9_DFACTA_Msk              (_UINT32_(0x3) << LCDC_OVR1CFG9_DFACTA_Pos)          /* (LCDC_OVR1CFG9) Destination Factor for the Blending Equation of the Alpha Component Mask */
-#define LCDC_OVR1CFG9_DFACTA(value)           (LCDC_OVR1CFG9_DFACTA_Msk & (_UINT32_(value) << LCDC_OVR1CFG9_DFACTA_Pos)) /* Assigment of value for DFACTA in the LCDC_OVR1CFG9 register */
+#define LCDC_OVR1CFG9_DFACTA(value)           (LCDC_OVR1CFG9_DFACTA_Msk & (_UINT32_(value) << LCDC_OVR1CFG9_DFACTA_Pos)) /* Assignment of value for DFACTA in the LCDC_OVR1CFG9 register */
 #define   LCDC_OVR1CFG9_DFACTA_ZERO_Val       _UINT32_(0x0)                                        /* (LCDC_OVR1CFG9) Sets the factor to 0.0.  */
 #define   LCDC_OVR1CFG9_DFACTA_ONE_Val        _UINT32_(0x1)                                        /* (LCDC_OVR1CFG9) Sets the factor to 1.0.  */
 #define   LCDC_OVR1CFG9_DFACTA_M_A0_MUL_AS_Val _UINT32_(0x2)                                        /* (LCDC_OVR1CFG9) Computes A0 multiplied by source alpha, then sets the factor to one minus the result.  */
 #define   LCDC_OVR1CFG9_DFACTA_A1_Val         _UINT32_(0x3)                                        /* (LCDC_OVR1CFG9) Sets the factor to A1/255.  */
-#define LCDC_OVR1CFG9_DFACTA_ZERO             (LCDC_OVR1CFG9_DFACTA_ZERO_Val << LCDC_OVR1CFG9_DFACTA_Pos) /* (LCDC_OVR1CFG9) Sets the factor to 0.0. Position  */
-#define LCDC_OVR1CFG9_DFACTA_ONE              (LCDC_OVR1CFG9_DFACTA_ONE_Val << LCDC_OVR1CFG9_DFACTA_Pos) /* (LCDC_OVR1CFG9) Sets the factor to 1.0. Position  */
-#define LCDC_OVR1CFG9_DFACTA_M_A0_MUL_AS      (LCDC_OVR1CFG9_DFACTA_M_A0_MUL_AS_Val << LCDC_OVR1CFG9_DFACTA_Pos) /* (LCDC_OVR1CFG9) Computes A0 multiplied by source alpha, then sets the factor to one minus the result. Position  */
-#define LCDC_OVR1CFG9_DFACTA_A1               (LCDC_OVR1CFG9_DFACTA_A1_Val << LCDC_OVR1CFG9_DFACTA_Pos) /* (LCDC_OVR1CFG9) Sets the factor to A1/255. Position  */
+#define LCDC_OVR1CFG9_DFACTA_ZERO             (LCDC_OVR1CFG9_DFACTA_ZERO_Val << LCDC_OVR1CFG9_DFACTA_Pos) /* (LCDC_OVR1CFG9) Sets the factor to 0.0. Position */
+#define LCDC_OVR1CFG9_DFACTA_ONE              (LCDC_OVR1CFG9_DFACTA_ONE_Val << LCDC_OVR1CFG9_DFACTA_Pos) /* (LCDC_OVR1CFG9) Sets the factor to 1.0. Position */
+#define LCDC_OVR1CFG9_DFACTA_M_A0_MUL_AS      (LCDC_OVR1CFG9_DFACTA_M_A0_MUL_AS_Val << LCDC_OVR1CFG9_DFACTA_Pos) /* (LCDC_OVR1CFG9) Computes A0 multiplied by source alpha, then sets the factor to one minus the result. Position */
+#define LCDC_OVR1CFG9_DFACTA_A1               (LCDC_OVR1CFG9_DFACTA_A1_Val << LCDC_OVR1CFG9_DFACTA_Pos) /* (LCDC_OVR1CFG9) Sets the factor to A1/255. Position */
 #define LCDC_OVR1CFG9_A0_Pos                  _UINT32_(16)                                         /* (LCDC_OVR1CFG9) Alpha 0 Value Position */
 #define LCDC_OVR1CFG9_A0_Msk                  (_UINT32_(0xFF) << LCDC_OVR1CFG9_A0_Pos)             /* (LCDC_OVR1CFG9) Alpha 0 Value Mask */
-#define LCDC_OVR1CFG9_A0(value)               (LCDC_OVR1CFG9_A0_Msk & (_UINT32_(value) << LCDC_OVR1CFG9_A0_Pos)) /* Assigment of value for A0 in the LCDC_OVR1CFG9 register */
+#define LCDC_OVR1CFG9_A0(value)               (LCDC_OVR1CFG9_A0_Msk & (_UINT32_(value) << LCDC_OVR1CFG9_A0_Pos)) /* Assignment of value for A0 in the LCDC_OVR1CFG9 register */
 #define LCDC_OVR1CFG9_A1_Pos                  _UINT32_(24)                                         /* (LCDC_OVR1CFG9) Alpha 1 Value Position */
 #define LCDC_OVR1CFG9_A1_Msk                  (_UINT32_(0xFF) << LCDC_OVR1CFG9_A1_Pos)             /* (LCDC_OVR1CFG9) Alpha 1 Value Mask */
-#define LCDC_OVR1CFG9_A1(value)               (LCDC_OVR1CFG9_A1_Msk & (_UINT32_(value) << LCDC_OVR1CFG9_A1_Pos)) /* Assigment of value for A1 in the LCDC_OVR1CFG9 register */
+#define LCDC_OVR1CFG9_A1(value)               (LCDC_OVR1CFG9_A1_Msk & (_UINT32_(value) << LCDC_OVR1CFG9_A1_Pos)) /* Assignment of value for A1 in the LCDC_OVR1CFG9 register */
 #define LCDC_OVR1CFG9_Msk                     _UINT32_(0xFFFFFFCF)                                 /* (LCDC_OVR1CFG9) Register Mask  */
 
 
 /* -------- LCDC_HEOIER : (LCDC Offset: 0x360) ( /W 32) High-End Overlay Interrupt Enable Register -------- */
 #define LCDC_HEOIER_END_Pos                   _UINT32_(0)                                          /* (LCDC_HEOIER) End of Frame DMA Transfer Interrupt Enable Position */
 #define LCDC_HEOIER_END_Msk                   (_UINT32_(0x1) << LCDC_HEOIER_END_Pos)               /* (LCDC_HEOIER) End of Frame DMA Transfer Interrupt Enable Mask */
-#define LCDC_HEOIER_END(value)                (LCDC_HEOIER_END_Msk & (_UINT32_(value) << LCDC_HEOIER_END_Pos)) /* Assigment of value for END in the LCDC_HEOIER register */
+#define LCDC_HEOIER_END(value)                (LCDC_HEOIER_END_Msk & (_UINT32_(value) << LCDC_HEOIER_END_Pos)) /* Assignment of value for END in the LCDC_HEOIER register */
 #define LCDC_HEOIER_ERROR_Pos                 _UINT32_(1)                                          /* (LCDC_HEOIER) Bus Transfer Error Detected Interrupt Enable Position */
 #define LCDC_HEOIER_ERROR_Msk                 (_UINT32_(0x1) << LCDC_HEOIER_ERROR_Pos)             /* (LCDC_HEOIER) Bus Transfer Error Detected Interrupt Enable Mask */
-#define LCDC_HEOIER_ERROR(value)              (LCDC_HEOIER_ERROR_Msk & (_UINT32_(value) << LCDC_HEOIER_ERROR_Pos)) /* Assigment of value for ERROR in the LCDC_HEOIER register */
+#define LCDC_HEOIER_ERROR(value)              (LCDC_HEOIER_ERROR_Msk & (_UINT32_(value) << LCDC_HEOIER_ERROR_Pos)) /* Assignment of value for ERROR in the LCDC_HEOIER register */
 #define LCDC_HEOIER_OVF_Pos                   _UINT32_(2)                                          /* (LCDC_HEOIER) Overflow Interrupt Enable Position */
 #define LCDC_HEOIER_OVF_Msk                   (_UINT32_(0x1) << LCDC_HEOIER_OVF_Pos)               /* (LCDC_HEOIER) Overflow Interrupt Enable Mask */
-#define LCDC_HEOIER_OVF(value)                (LCDC_HEOIER_OVF_Msk & (_UINT32_(value) << LCDC_HEOIER_OVF_Pos)) /* Assigment of value for OVF in the LCDC_HEOIER register */
+#define LCDC_HEOIER_OVF(value)                (LCDC_HEOIER_OVF_Msk & (_UINT32_(value) << LCDC_HEOIER_OVF_Pos)) /* Assignment of value for OVF in the LCDC_HEOIER register */
 #define LCDC_HEOIER_CBEND_Pos                 _UINT32_(8)                                          /* (LCDC_HEOIER)  Position */
 #define LCDC_HEOIER_CBEND_Msk                 (_UINT32_(0x1) << LCDC_HEOIER_CBEND_Pos)             /* (LCDC_HEOIER)  Mask */
-#define LCDC_HEOIER_CBEND(value)              (LCDC_HEOIER_CBEND_Msk & (_UINT32_(value) << LCDC_HEOIER_CBEND_Pos)) /* Assigment of value for CBEND in the LCDC_HEOIER register */
+#define LCDC_HEOIER_CBEND(value)              (LCDC_HEOIER_CBEND_Msk & (_UINT32_(value) << LCDC_HEOIER_CBEND_Pos)) /* Assignment of value for CBEND in the LCDC_HEOIER register */
 #define LCDC_HEOIER_CBERROR_Pos               _UINT32_(9)                                          /* (LCDC_HEOIER)  Position */
 #define LCDC_HEOIER_CBERROR_Msk               (_UINT32_(0x1) << LCDC_HEOIER_CBERROR_Pos)           /* (LCDC_HEOIER)  Mask */
-#define LCDC_HEOIER_CBERROR(value)            (LCDC_HEOIER_CBERROR_Msk & (_UINT32_(value) << LCDC_HEOIER_CBERROR_Pos)) /* Assigment of value for CBERROR in the LCDC_HEOIER register */
+#define LCDC_HEOIER_CBERROR(value)            (LCDC_HEOIER_CBERROR_Msk & (_UINT32_(value) << LCDC_HEOIER_CBERROR_Pos)) /* Assignment of value for CBERROR in the LCDC_HEOIER register */
 #define LCDC_HEOIER_CBOVF_Pos                 _UINT32_(10)                                         /* (LCDC_HEOIER)  Position */
 #define LCDC_HEOIER_CBOVF_Msk                 (_UINT32_(0x1) << LCDC_HEOIER_CBOVF_Pos)             /* (LCDC_HEOIER)  Mask */
-#define LCDC_HEOIER_CBOVF(value)              (LCDC_HEOIER_CBOVF_Msk & (_UINT32_(value) << LCDC_HEOIER_CBOVF_Pos)) /* Assigment of value for CBOVF in the LCDC_HEOIER register */
+#define LCDC_HEOIER_CBOVF(value)              (LCDC_HEOIER_CBOVF_Msk & (_UINT32_(value) << LCDC_HEOIER_CBOVF_Pos)) /* Assignment of value for CBOVF in the LCDC_HEOIER register */
 #define LCDC_HEOIER_CREND_Pos                 _UINT32_(16)                                         /* (LCDC_HEOIER)  Position */
 #define LCDC_HEOIER_CREND_Msk                 (_UINT32_(0x1) << LCDC_HEOIER_CREND_Pos)             /* (LCDC_HEOIER)  Mask */
-#define LCDC_HEOIER_CREND(value)              (LCDC_HEOIER_CREND_Msk & (_UINT32_(value) << LCDC_HEOIER_CREND_Pos)) /* Assigment of value for CREND in the LCDC_HEOIER register */
+#define LCDC_HEOIER_CREND(value)              (LCDC_HEOIER_CREND_Msk & (_UINT32_(value) << LCDC_HEOIER_CREND_Pos)) /* Assignment of value for CREND in the LCDC_HEOIER register */
 #define LCDC_HEOIER_CRERROR_Pos               _UINT32_(17)                                         /* (LCDC_HEOIER)  Position */
 #define LCDC_HEOIER_CRERROR_Msk               (_UINT32_(0x1) << LCDC_HEOIER_CRERROR_Pos)           /* (LCDC_HEOIER)  Mask */
-#define LCDC_HEOIER_CRERROR(value)            (LCDC_HEOIER_CRERROR_Msk & (_UINT32_(value) << LCDC_HEOIER_CRERROR_Pos)) /* Assigment of value for CRERROR in the LCDC_HEOIER register */
+#define LCDC_HEOIER_CRERROR(value)            (LCDC_HEOIER_CRERROR_Msk & (_UINT32_(value) << LCDC_HEOIER_CRERROR_Pos)) /* Assignment of value for CRERROR in the LCDC_HEOIER register */
 #define LCDC_HEOIER_CROVF_Pos                 _UINT32_(18)                                         /* (LCDC_HEOIER)  Position */
 #define LCDC_HEOIER_CROVF_Msk                 (_UINT32_(0x1) << LCDC_HEOIER_CROVF_Pos)             /* (LCDC_HEOIER)  Mask */
-#define LCDC_HEOIER_CROVF(value)              (LCDC_HEOIER_CROVF_Msk & (_UINT32_(value) << LCDC_HEOIER_CROVF_Pos)) /* Assigment of value for CROVF in the LCDC_HEOIER register */
+#define LCDC_HEOIER_CROVF(value)              (LCDC_HEOIER_CROVF_Msk & (_UINT32_(value) << LCDC_HEOIER_CROVF_Pos)) /* Assignment of value for CROVF in the LCDC_HEOIER register */
 #define LCDC_HEOIER_Msk                       _UINT32_(0x00070707)                                 /* (LCDC_HEOIER) Register Mask  */
 
 
 /* -------- LCDC_HEOIDR : (LCDC Offset: 0x364) ( /W 32) High-End Overlay Interrupt Disable Register -------- */
 #define LCDC_HEOIDR_END_Pos                   _UINT32_(0)                                          /* (LCDC_HEOIDR) End of Frame DMA Transfer Interrupt Disable Position */
 #define LCDC_HEOIDR_END_Msk                   (_UINT32_(0x1) << LCDC_HEOIDR_END_Pos)               /* (LCDC_HEOIDR) End of Frame DMA Transfer Interrupt Disable Mask */
-#define LCDC_HEOIDR_END(value)                (LCDC_HEOIDR_END_Msk & (_UINT32_(value) << LCDC_HEOIDR_END_Pos)) /* Assigment of value for END in the LCDC_HEOIDR register */
+#define LCDC_HEOIDR_END(value)                (LCDC_HEOIDR_END_Msk & (_UINT32_(value) << LCDC_HEOIDR_END_Pos)) /* Assignment of value for END in the LCDC_HEOIDR register */
 #define LCDC_HEOIDR_ERROR_Pos                 _UINT32_(1)                                          /* (LCDC_HEOIDR) Bus Transfer Error Detected Interrupt Disable Position */
 #define LCDC_HEOIDR_ERROR_Msk                 (_UINT32_(0x1) << LCDC_HEOIDR_ERROR_Pos)             /* (LCDC_HEOIDR) Bus Transfer Error Detected Interrupt Disable Mask */
-#define LCDC_HEOIDR_ERROR(value)              (LCDC_HEOIDR_ERROR_Msk & (_UINT32_(value) << LCDC_HEOIDR_ERROR_Pos)) /* Assigment of value for ERROR in the LCDC_HEOIDR register */
+#define LCDC_HEOIDR_ERROR(value)              (LCDC_HEOIDR_ERROR_Msk & (_UINT32_(value) << LCDC_HEOIDR_ERROR_Pos)) /* Assignment of value for ERROR in the LCDC_HEOIDR register */
 #define LCDC_HEOIDR_OVF_Pos                   _UINT32_(2)                                          /* (LCDC_HEOIDR) Overflow Interrupt Disable Position */
 #define LCDC_HEOIDR_OVF_Msk                   (_UINT32_(0x1) << LCDC_HEOIDR_OVF_Pos)               /* (LCDC_HEOIDR) Overflow Interrupt Disable Mask */
-#define LCDC_HEOIDR_OVF(value)                (LCDC_HEOIDR_OVF_Msk & (_UINT32_(value) << LCDC_HEOIDR_OVF_Pos)) /* Assigment of value for OVF in the LCDC_HEOIDR register */
+#define LCDC_HEOIDR_OVF(value)                (LCDC_HEOIDR_OVF_Msk & (_UINT32_(value) << LCDC_HEOIDR_OVF_Pos)) /* Assignment of value for OVF in the LCDC_HEOIDR register */
 #define LCDC_HEOIDR_CBEND_Pos                 _UINT32_(8)                                          /* (LCDC_HEOIDR) End of Frame DMA Transfer for Cb or CbCr Chroma Plane Interrupt Disable Position */
 #define LCDC_HEOIDR_CBEND_Msk                 (_UINT32_(0x1) << LCDC_HEOIDR_CBEND_Pos)             /* (LCDC_HEOIDR) End of Frame DMA Transfer for Cb or CbCr Chroma Plane Interrupt Disable Mask */
-#define LCDC_HEOIDR_CBEND(value)              (LCDC_HEOIDR_CBEND_Msk & (_UINT32_(value) << LCDC_HEOIDR_CBEND_Pos)) /* Assigment of value for CBEND in the LCDC_HEOIDR register */
+#define LCDC_HEOIDR_CBEND(value)              (LCDC_HEOIDR_CBEND_Msk & (_UINT32_(value) << LCDC_HEOIDR_CBEND_Pos)) /* Assignment of value for CBEND in the LCDC_HEOIDR register */
 #define LCDC_HEOIDR_CBERROR_Pos               _UINT32_(9)                                          /* (LCDC_HEOIDR) Bus Transfer Error Detected for Cb or CbCr Chroma Plane Interrupt Disable Position */
 #define LCDC_HEOIDR_CBERROR_Msk               (_UINT32_(0x1) << LCDC_HEOIDR_CBERROR_Pos)           /* (LCDC_HEOIDR) Bus Transfer Error Detected for Cb or CbCr Chroma Plane Interrupt Disable Mask */
-#define LCDC_HEOIDR_CBERROR(value)            (LCDC_HEOIDR_CBERROR_Msk & (_UINT32_(value) << LCDC_HEOIDR_CBERROR_Pos)) /* Assigment of value for CBERROR in the LCDC_HEOIDR register */
+#define LCDC_HEOIDR_CBERROR(value)            (LCDC_HEOIDR_CBERROR_Msk & (_UINT32_(value) << LCDC_HEOIDR_CBERROR_Pos)) /* Assignment of value for CBERROR in the LCDC_HEOIDR register */
 #define LCDC_HEOIDR_CBOVF_Pos                 _UINT32_(10)                                         /* (LCDC_HEOIDR) Overflow for Cb or CbCr Chroma Plane Interrupt Disable Position */
 #define LCDC_HEOIDR_CBOVF_Msk                 (_UINT32_(0x1) << LCDC_HEOIDR_CBOVF_Pos)             /* (LCDC_HEOIDR) Overflow for Cb or CbCr Chroma Plane Interrupt Disable Mask */
-#define LCDC_HEOIDR_CBOVF(value)              (LCDC_HEOIDR_CBOVF_Msk & (_UINT32_(value) << LCDC_HEOIDR_CBOVF_Pos)) /* Assigment of value for CBOVF in the LCDC_HEOIDR register */
+#define LCDC_HEOIDR_CBOVF(value)              (LCDC_HEOIDR_CBOVF_Msk & (_UINT32_(value) << LCDC_HEOIDR_CBOVF_Pos)) /* Assignment of value for CBOVF in the LCDC_HEOIDR register */
 #define LCDC_HEOIDR_CREND_Pos                 _UINT32_(16)                                         /* (LCDC_HEOIDR) End of Frame DMA Transfer for Cr Chroma Plane Interrupt Disable Position */
 #define LCDC_HEOIDR_CREND_Msk                 (_UINT32_(0x1) << LCDC_HEOIDR_CREND_Pos)             /* (LCDC_HEOIDR) End of Frame DMA Transfer for Cr Chroma Plane Interrupt Disable Mask */
-#define LCDC_HEOIDR_CREND(value)              (LCDC_HEOIDR_CREND_Msk & (_UINT32_(value) << LCDC_HEOIDR_CREND_Pos)) /* Assigment of value for CREND in the LCDC_HEOIDR register */
+#define LCDC_HEOIDR_CREND(value)              (LCDC_HEOIDR_CREND_Msk & (_UINT32_(value) << LCDC_HEOIDR_CREND_Pos)) /* Assignment of value for CREND in the LCDC_HEOIDR register */
 #define LCDC_HEOIDR_CRERROR_Pos               _UINT32_(17)                                         /* (LCDC_HEOIDR) Bus Transfer Error Detected for Cr Chroma Plane Interrupt Disable Position */
 #define LCDC_HEOIDR_CRERROR_Msk               (_UINT32_(0x1) << LCDC_HEOIDR_CRERROR_Pos)           /* (LCDC_HEOIDR) Bus Transfer Error Detected for Cr Chroma Plane Interrupt Disable Mask */
-#define LCDC_HEOIDR_CRERROR(value)            (LCDC_HEOIDR_CRERROR_Msk & (_UINT32_(value) << LCDC_HEOIDR_CRERROR_Pos)) /* Assigment of value for CRERROR in the LCDC_HEOIDR register */
+#define LCDC_HEOIDR_CRERROR(value)            (LCDC_HEOIDR_CRERROR_Msk & (_UINT32_(value) << LCDC_HEOIDR_CRERROR_Pos)) /* Assignment of value for CRERROR in the LCDC_HEOIDR register */
 #define LCDC_HEOIDR_CROVF_Pos                 _UINT32_(18)                                         /* (LCDC_HEOIDR) Overflow for Cr Chroma Plane Interrupt Disable Position */
 #define LCDC_HEOIDR_CROVF_Msk                 (_UINT32_(0x1) << LCDC_HEOIDR_CROVF_Pos)             /* (LCDC_HEOIDR) Overflow for Cr Chroma Plane Interrupt Disable Mask */
-#define LCDC_HEOIDR_CROVF(value)              (LCDC_HEOIDR_CROVF_Msk & (_UINT32_(value) << LCDC_HEOIDR_CROVF_Pos)) /* Assigment of value for CROVF in the LCDC_HEOIDR register */
+#define LCDC_HEOIDR_CROVF(value)              (LCDC_HEOIDR_CROVF_Msk & (_UINT32_(value) << LCDC_HEOIDR_CROVF_Pos)) /* Assignment of value for CROVF in the LCDC_HEOIDR register */
 #define LCDC_HEOIDR_Msk                       _UINT32_(0x00070707)                                 /* (LCDC_HEOIDR) Register Mask  */
 
 
@@ -1699,31 +1701,31 @@
 
 #define LCDC_HEOIMR_END_Pos                   _UINT32_(0)                                          /* (LCDC_HEOIMR) End of Frame DMA Transfer Interrupt Mask Position */
 #define LCDC_HEOIMR_END_Msk                   (_UINT32_(0x1) << LCDC_HEOIMR_END_Pos)               /* (LCDC_HEOIMR) End of Frame DMA Transfer Interrupt Mask Mask */
-#define LCDC_HEOIMR_END(value)                (LCDC_HEOIMR_END_Msk & (_UINT32_(value) << LCDC_HEOIMR_END_Pos)) /* Assigment of value for END in the LCDC_HEOIMR register */
+#define LCDC_HEOIMR_END(value)                (LCDC_HEOIMR_END_Msk & (_UINT32_(value) << LCDC_HEOIMR_END_Pos)) /* Assignment of value for END in the LCDC_HEOIMR register */
 #define LCDC_HEOIMR_ERROR_Pos                 _UINT32_(1)                                          /* (LCDC_HEOIMR) Bus Transfer Error Detected Interrupt Mask Position */
 #define LCDC_HEOIMR_ERROR_Msk                 (_UINT32_(0x1) << LCDC_HEOIMR_ERROR_Pos)             /* (LCDC_HEOIMR) Bus Transfer Error Detected Interrupt Mask Mask */
-#define LCDC_HEOIMR_ERROR(value)              (LCDC_HEOIMR_ERROR_Msk & (_UINT32_(value) << LCDC_HEOIMR_ERROR_Pos)) /* Assigment of value for ERROR in the LCDC_HEOIMR register */
+#define LCDC_HEOIMR_ERROR(value)              (LCDC_HEOIMR_ERROR_Msk & (_UINT32_(value) << LCDC_HEOIMR_ERROR_Pos)) /* Assignment of value for ERROR in the LCDC_HEOIMR register */
 #define LCDC_HEOIMR_OVF_Pos                   _UINT32_(2)                                          /* (LCDC_HEOIMR) Overflow Interrupt Mask Position */
 #define LCDC_HEOIMR_OVF_Msk                   (_UINT32_(0x1) << LCDC_HEOIMR_OVF_Pos)               /* (LCDC_HEOIMR) Overflow Interrupt Mask Mask */
-#define LCDC_HEOIMR_OVF(value)                (LCDC_HEOIMR_OVF_Msk & (_UINT32_(value) << LCDC_HEOIMR_OVF_Pos)) /* Assigment of value for OVF in the LCDC_HEOIMR register */
+#define LCDC_HEOIMR_OVF(value)                (LCDC_HEOIMR_OVF_Msk & (_UINT32_(value) << LCDC_HEOIMR_OVF_Pos)) /* Assignment of value for OVF in the LCDC_HEOIMR register */
 #define LCDC_HEOIMR_CBEND_Pos                 _UINT32_(8)                                          /* (LCDC_HEOIMR) End of Frame DMA Transfer for Cb or CbCr Chroma Plane Interrupt Mask Position */
 #define LCDC_HEOIMR_CBEND_Msk                 (_UINT32_(0x1) << LCDC_HEOIMR_CBEND_Pos)             /* (LCDC_HEOIMR) End of Frame DMA Transfer for Cb or CbCr Chroma Plane Interrupt Mask Mask */
-#define LCDC_HEOIMR_CBEND(value)              (LCDC_HEOIMR_CBEND_Msk & (_UINT32_(value) << LCDC_HEOIMR_CBEND_Pos)) /* Assigment of value for CBEND in the LCDC_HEOIMR register */
+#define LCDC_HEOIMR_CBEND(value)              (LCDC_HEOIMR_CBEND_Msk & (_UINT32_(value) << LCDC_HEOIMR_CBEND_Pos)) /* Assignment of value for CBEND in the LCDC_HEOIMR register */
 #define LCDC_HEOIMR_CBERROR_Pos               _UINT32_(9)                                          /* (LCDC_HEOIMR) Bus Transfer Error Detected for Cb or CbCr Chroma Plane Interrupt Mask Position */
 #define LCDC_HEOIMR_CBERROR_Msk               (_UINT32_(0x1) << LCDC_HEOIMR_CBERROR_Pos)           /* (LCDC_HEOIMR) Bus Transfer Error Detected for Cb or CbCr Chroma Plane Interrupt Mask Mask */
-#define LCDC_HEOIMR_CBERROR(value)            (LCDC_HEOIMR_CBERROR_Msk & (_UINT32_(value) << LCDC_HEOIMR_CBERROR_Pos)) /* Assigment of value for CBERROR in the LCDC_HEOIMR register */
+#define LCDC_HEOIMR_CBERROR(value)            (LCDC_HEOIMR_CBERROR_Msk & (_UINT32_(value) << LCDC_HEOIMR_CBERROR_Pos)) /* Assignment of value for CBERROR in the LCDC_HEOIMR register */
 #define LCDC_HEOIMR_CBOVF_Pos                 _UINT32_(10)                                         /* (LCDC_HEOIMR) Overflow for Cb or CbCr Chroma Plane Interrupt Mask Position */
 #define LCDC_HEOIMR_CBOVF_Msk                 (_UINT32_(0x1) << LCDC_HEOIMR_CBOVF_Pos)             /* (LCDC_HEOIMR) Overflow for Cb or CbCr Chroma Plane Interrupt Mask Mask */
-#define LCDC_HEOIMR_CBOVF(value)              (LCDC_HEOIMR_CBOVF_Msk & (_UINT32_(value) << LCDC_HEOIMR_CBOVF_Pos)) /* Assigment of value for CBOVF in the LCDC_HEOIMR register */
+#define LCDC_HEOIMR_CBOVF(value)              (LCDC_HEOIMR_CBOVF_Msk & (_UINT32_(value) << LCDC_HEOIMR_CBOVF_Pos)) /* Assignment of value for CBOVF in the LCDC_HEOIMR register */
 #define LCDC_HEOIMR_CREND_Pos                 _UINT32_(16)                                         /* (LCDC_HEOIMR) End of Frame DMA Transfer for Cr Chroma Plane Interrupt Mask Position */
 #define LCDC_HEOIMR_CREND_Msk                 (_UINT32_(0x1) << LCDC_HEOIMR_CREND_Pos)             /* (LCDC_HEOIMR) End of Frame DMA Transfer for Cr Chroma Plane Interrupt Mask Mask */
-#define LCDC_HEOIMR_CREND(value)              (LCDC_HEOIMR_CREND_Msk & (_UINT32_(value) << LCDC_HEOIMR_CREND_Pos)) /* Assigment of value for CREND in the LCDC_HEOIMR register */
+#define LCDC_HEOIMR_CREND(value)              (LCDC_HEOIMR_CREND_Msk & (_UINT32_(value) << LCDC_HEOIMR_CREND_Pos)) /* Assignment of value for CREND in the LCDC_HEOIMR register */
 #define LCDC_HEOIMR_CRERROR_Pos               _UINT32_(17)                                         /* (LCDC_HEOIMR) Bus Transfer Error Detected for Cr Chroma Plane Interrupt Mask Position */
 #define LCDC_HEOIMR_CRERROR_Msk               (_UINT32_(0x1) << LCDC_HEOIMR_CRERROR_Pos)           /* (LCDC_HEOIMR) Bus Transfer Error Detected for Cr Chroma Plane Interrupt Mask Mask */
-#define LCDC_HEOIMR_CRERROR(value)            (LCDC_HEOIMR_CRERROR_Msk & (_UINT32_(value) << LCDC_HEOIMR_CRERROR_Pos)) /* Assigment of value for CRERROR in the LCDC_HEOIMR register */
+#define LCDC_HEOIMR_CRERROR(value)            (LCDC_HEOIMR_CRERROR_Msk & (_UINT32_(value) << LCDC_HEOIMR_CRERROR_Pos)) /* Assignment of value for CRERROR in the LCDC_HEOIMR register */
 #define LCDC_HEOIMR_CROVF_Pos                 _UINT32_(18)                                         /* (LCDC_HEOIMR) Overflow for Cr Chroma Plane Interrupt Mask Position */
 #define LCDC_HEOIMR_CROVF_Msk                 (_UINT32_(0x1) << LCDC_HEOIMR_CROVF_Pos)             /* (LCDC_HEOIMR) Overflow for Cr Chroma Plane Interrupt Mask Mask */
-#define LCDC_HEOIMR_CROVF(value)              (LCDC_HEOIMR_CROVF_Msk & (_UINT32_(value) << LCDC_HEOIMR_CROVF_Pos)) /* Assigment of value for CROVF in the LCDC_HEOIMR register */
+#define LCDC_HEOIMR_CROVF(value)              (LCDC_HEOIMR_CROVF_Msk & (_UINT32_(value) << LCDC_HEOIMR_CROVF_Pos)) /* Assignment of value for CROVF in the LCDC_HEOIMR register */
 #define LCDC_HEOIMR_Msk                       _UINT32_(0x00070707)                                 /* (LCDC_HEOIMR) Register Mask  */
 
 
@@ -1732,67 +1734,67 @@
 
 #define LCDC_HEOISR_END_Pos                   _UINT32_(0)                                          /* (LCDC_HEOISR) End of Frame DMA Transfer Position */
 #define LCDC_HEOISR_END_Msk                   (_UINT32_(0x1) << LCDC_HEOISR_END_Pos)               /* (LCDC_HEOISR) End of Frame DMA Transfer Mask */
-#define LCDC_HEOISR_END(value)                (LCDC_HEOISR_END_Msk & (_UINT32_(value) << LCDC_HEOISR_END_Pos)) /* Assigment of value for END in the LCDC_HEOISR register */
+#define LCDC_HEOISR_END(value)                (LCDC_HEOISR_END_Msk & (_UINT32_(value) << LCDC_HEOISR_END_Pos)) /* Assignment of value for END in the LCDC_HEOISR register */
 #define   LCDC_HEOISR_END_0_Val               _UINT32_(0x0)                                        /* (LCDC_HEOISR) No end of transfer has been detected since last read of LCDC_HEOISR.  */
 #define   LCDC_HEOISR_END_1_Val               _UINT32_(0x1)                                        /* (LCDC_HEOISR) End of transfer has been detected. This flag is reset after a read operation.  */
-#define LCDC_HEOISR_END_0                     (LCDC_HEOISR_END_0_Val << LCDC_HEOISR_END_Pos)       /* (LCDC_HEOISR) No end of transfer has been detected since last read of LCDC_HEOISR. Position  */
-#define LCDC_HEOISR_END_1                     (LCDC_HEOISR_END_1_Val << LCDC_HEOISR_END_Pos)       /* (LCDC_HEOISR) End of transfer has been detected. This flag is reset after a read operation. Position  */
+#define LCDC_HEOISR_END_0                     (LCDC_HEOISR_END_0_Val << LCDC_HEOISR_END_Pos)       /* (LCDC_HEOISR) No end of transfer has been detected since last read of LCDC_HEOISR. Position */
+#define LCDC_HEOISR_END_1                     (LCDC_HEOISR_END_1_Val << LCDC_HEOISR_END_Pos)       /* (LCDC_HEOISR) End of transfer has been detected. This flag is reset after a read operation. Position */
 #define LCDC_HEOISR_ERROR_Pos                 _UINT32_(1)                                          /* (LCDC_HEOISR) Bus Error Detected Position */
 #define LCDC_HEOISR_ERROR_Msk                 (_UINT32_(0x1) << LCDC_HEOISR_ERROR_Pos)             /* (LCDC_HEOISR) Bus Error Detected Mask */
-#define LCDC_HEOISR_ERROR(value)              (LCDC_HEOISR_ERROR_Msk & (_UINT32_(value) << LCDC_HEOISR_ERROR_Pos)) /* Assigment of value for ERROR in the LCDC_HEOISR register */
+#define LCDC_HEOISR_ERROR(value)              (LCDC_HEOISR_ERROR_Msk & (_UINT32_(value) << LCDC_HEOISR_ERROR_Pos)) /* Assignment of value for ERROR in the LCDC_HEOISR register */
 #define   LCDC_HEOISR_ERROR_0_Val             _UINT32_(0x0)                                        /* (LCDC_HEOISR) No system bus error has been detected since the last read of LCDC_HEOISR.  */
 #define   LCDC_HEOISR_ERROR_1_Val             _UINT32_(0x1)                                        /* (LCDC_HEOISR) A system bus error has been detected. This flag is reset after a read operation.  */
-#define LCDC_HEOISR_ERROR_0                   (LCDC_HEOISR_ERROR_0_Val << LCDC_HEOISR_ERROR_Pos)   /* (LCDC_HEOISR) No system bus error has been detected since the last read of LCDC_HEOISR. Position  */
-#define LCDC_HEOISR_ERROR_1                   (LCDC_HEOISR_ERROR_1_Val << LCDC_HEOISR_ERROR_Pos)   /* (LCDC_HEOISR) A system bus error has been detected. This flag is reset after a read operation. Position  */
+#define LCDC_HEOISR_ERROR_0                   (LCDC_HEOISR_ERROR_0_Val << LCDC_HEOISR_ERROR_Pos)   /* (LCDC_HEOISR) No system bus error has been detected since the last read of LCDC_HEOISR. Position */
+#define LCDC_HEOISR_ERROR_1                   (LCDC_HEOISR_ERROR_1_Val << LCDC_HEOISR_ERROR_Pos)   /* (LCDC_HEOISR) A system bus error has been detected. This flag is reset after a read operation. Position */
 #define LCDC_HEOISR_OVF_Pos                   _UINT32_(2)                                          /* (LCDC_HEOISR) Overflow Detected Position */
 #define LCDC_HEOISR_OVF_Msk                   (_UINT32_(0x1) << LCDC_HEOISR_OVF_Pos)               /* (LCDC_HEOISR) Overflow Detected Mask */
-#define LCDC_HEOISR_OVF(value)                (LCDC_HEOISR_OVF_Msk & (_UINT32_(value) << LCDC_HEOISR_OVF_Pos)) /* Assigment of value for OVF in the LCDC_HEOISR register */
+#define LCDC_HEOISR_OVF(value)                (LCDC_HEOISR_OVF_Msk & (_UINT32_(value) << LCDC_HEOISR_OVF_Pos)) /* Assignment of value for OVF in the LCDC_HEOISR register */
 #define   LCDC_HEOISR_OVF_0_Val               _UINT32_(0x0)                                        /* (LCDC_HEOISR) No overflow occurred since last read of LCDC_HEOISR.  */
 #define   LCDC_HEOISR_OVF_1_Val               _UINT32_(0x1)                                        /* (LCDC_HEOISR) An overflow occurred, at least one DMA transfer is still running at the End Of Frame. This flag is reset after a read operation  */
-#define LCDC_HEOISR_OVF_0                     (LCDC_HEOISR_OVF_0_Val << LCDC_HEOISR_OVF_Pos)       /* (LCDC_HEOISR) No overflow occurred since last read of LCDC_HEOISR. Position  */
-#define LCDC_HEOISR_OVF_1                     (LCDC_HEOISR_OVF_1_Val << LCDC_HEOISR_OVF_Pos)       /* (LCDC_HEOISR) An overflow occurred, at least one DMA transfer is still running at the End Of Frame. This flag is reset after a read operation Position  */
+#define LCDC_HEOISR_OVF_0                     (LCDC_HEOISR_OVF_0_Val << LCDC_HEOISR_OVF_Pos)       /* (LCDC_HEOISR) No overflow occurred since last read of LCDC_HEOISR. Position */
+#define LCDC_HEOISR_OVF_1                     (LCDC_HEOISR_OVF_1_Val << LCDC_HEOISR_OVF_Pos)       /* (LCDC_HEOISR) An overflow occurred, at least one DMA transfer is still running at the End Of Frame. This flag is reset after a read operation Position */
 #define LCDC_HEOISR_CBEND_Pos                 _UINT32_(8)                                          /* (LCDC_HEOISR) End of Frame DMA Transfer for Cb or CbCr plane Position */
 #define LCDC_HEOISR_CBEND_Msk                 (_UINT32_(0x1) << LCDC_HEOISR_CBEND_Pos)             /* (LCDC_HEOISR) End of Frame DMA Transfer for Cb or CbCr plane Mask */
-#define LCDC_HEOISR_CBEND(value)              (LCDC_HEOISR_CBEND_Msk & (_UINT32_(value) << LCDC_HEOISR_CBEND_Pos)) /* Assigment of value for CBEND in the LCDC_HEOISR register */
+#define LCDC_HEOISR_CBEND(value)              (LCDC_HEOISR_CBEND_Msk & (_UINT32_(value) << LCDC_HEOISR_CBEND_Pos)) /* Assignment of value for CBEND in the LCDC_HEOISR register */
 #define   LCDC_HEOISR_CBEND_0_Val             _UINT32_(0x0)                                        /* (LCDC_HEOISR) No end of transfer has been detected since last read of LCDC_HEOISR.  */
 #define   LCDC_HEOISR_CBEND_1_Val             _UINT32_(0x1)                                        /* (LCDC_HEOISR) End of transfer has been detected. This flag is reset after a read operation.  */
-#define LCDC_HEOISR_CBEND_0                   (LCDC_HEOISR_CBEND_0_Val << LCDC_HEOISR_CBEND_Pos)   /* (LCDC_HEOISR) No end of transfer has been detected since last read of LCDC_HEOISR. Position  */
-#define LCDC_HEOISR_CBEND_1                   (LCDC_HEOISR_CBEND_1_Val << LCDC_HEOISR_CBEND_Pos)   /* (LCDC_HEOISR) End of transfer has been detected. This flag is reset after a read operation. Position  */
+#define LCDC_HEOISR_CBEND_0                   (LCDC_HEOISR_CBEND_0_Val << LCDC_HEOISR_CBEND_Pos)   /* (LCDC_HEOISR) No end of transfer has been detected since last read of LCDC_HEOISR. Position */
+#define LCDC_HEOISR_CBEND_1                   (LCDC_HEOISR_CBEND_1_Val << LCDC_HEOISR_CBEND_Pos)   /* (LCDC_HEOISR) End of transfer has been detected. This flag is reset after a read operation. Position */
 #define LCDC_HEOISR_CBERROR_Pos               _UINT32_(9)                                          /* (LCDC_HEOISR) Bus Transfer Error Detected for Cb or CbCr plane Position */
 #define LCDC_HEOISR_CBERROR_Msk               (_UINT32_(0x1) << LCDC_HEOISR_CBERROR_Pos)           /* (LCDC_HEOISR) Bus Transfer Error Detected for Cb or CbCr plane Mask */
-#define LCDC_HEOISR_CBERROR(value)            (LCDC_HEOISR_CBERROR_Msk & (_UINT32_(value) << LCDC_HEOISR_CBERROR_Pos)) /* Assigment of value for CBERROR in the LCDC_HEOISR register */
+#define LCDC_HEOISR_CBERROR(value)            (LCDC_HEOISR_CBERROR_Msk & (_UINT32_(value) << LCDC_HEOISR_CBERROR_Pos)) /* Assignment of value for CBERROR in the LCDC_HEOISR register */
 #define   LCDC_HEOISR_CBERROR_0_Val           _UINT32_(0x0)                                        /* (LCDC_HEOISR) No system bus error has been detected since the last read of LCDC_HEOISR.  */
 #define   LCDC_HEOISR_CBERROR_1_Val           _UINT32_(0x1)                                        /* (LCDC_HEOISR) A system bus error has been detected. This flag is reset after a read operation.  */
-#define LCDC_HEOISR_CBERROR_0                 (LCDC_HEOISR_CBERROR_0_Val << LCDC_HEOISR_CBERROR_Pos) /* (LCDC_HEOISR) No system bus error has been detected since the last read of LCDC_HEOISR. Position  */
-#define LCDC_HEOISR_CBERROR_1                 (LCDC_HEOISR_CBERROR_1_Val << LCDC_HEOISR_CBERROR_Pos) /* (LCDC_HEOISR) A system bus error has been detected. This flag is reset after a read operation. Position  */
+#define LCDC_HEOISR_CBERROR_0                 (LCDC_HEOISR_CBERROR_0_Val << LCDC_HEOISR_CBERROR_Pos) /* (LCDC_HEOISR) No system bus error has been detected since the last read of LCDC_HEOISR. Position */
+#define LCDC_HEOISR_CBERROR_1                 (LCDC_HEOISR_CBERROR_1_Val << LCDC_HEOISR_CBERROR_Pos) /* (LCDC_HEOISR) A system bus error has been detected. This flag is reset after a read operation. Position */
 #define LCDC_HEOISR_CBOVF_Pos                 _UINT32_(10)                                         /* (LCDC_HEOISR) Overflow Detected for Cb or CbCr plane Position */
 #define LCDC_HEOISR_CBOVF_Msk                 (_UINT32_(0x1) << LCDC_HEOISR_CBOVF_Pos)             /* (LCDC_HEOISR) Overflow Detected for Cb or CbCr plane Mask */
-#define LCDC_HEOISR_CBOVF(value)              (LCDC_HEOISR_CBOVF_Msk & (_UINT32_(value) << LCDC_HEOISR_CBOVF_Pos)) /* Assigment of value for CBOVF in the LCDC_HEOISR register */
+#define LCDC_HEOISR_CBOVF(value)              (LCDC_HEOISR_CBOVF_Msk & (_UINT32_(value) << LCDC_HEOISR_CBOVF_Pos)) /* Assignment of value for CBOVF in the LCDC_HEOISR register */
 #define   LCDC_HEOISR_CBOVF_0_Val             _UINT32_(0x0)                                        /* (LCDC_HEOISR) No overflow occurred since last read of LCDC_HEOISR.  */
 #define   LCDC_HEOISR_CBOVF_1_Val             _UINT32_(0x1)                                        /* (LCDC_HEOISR) An overflow occurred, at least one DMA transfer is still running at the End Of Frame. This flag is reset after a read operation.  */
-#define LCDC_HEOISR_CBOVF_0                   (LCDC_HEOISR_CBOVF_0_Val << LCDC_HEOISR_CBOVF_Pos)   /* (LCDC_HEOISR) No overflow occurred since last read of LCDC_HEOISR. Position  */
-#define LCDC_HEOISR_CBOVF_1                   (LCDC_HEOISR_CBOVF_1_Val << LCDC_HEOISR_CBOVF_Pos)   /* (LCDC_HEOISR) An overflow occurred, at least one DMA transfer is still running at the End Of Frame. This flag is reset after a read operation. Position  */
+#define LCDC_HEOISR_CBOVF_0                   (LCDC_HEOISR_CBOVF_0_Val << LCDC_HEOISR_CBOVF_Pos)   /* (LCDC_HEOISR) No overflow occurred since last read of LCDC_HEOISR. Position */
+#define LCDC_HEOISR_CBOVF_1                   (LCDC_HEOISR_CBOVF_1_Val << LCDC_HEOISR_CBOVF_Pos)   /* (LCDC_HEOISR) An overflow occurred, at least one DMA transfer is still running at the End Of Frame. This flag is reset after a read operation. Position */
 #define LCDC_HEOISR_CREND_Pos                 _UINT32_(16)                                         /* (LCDC_HEOISR) End of Frame DMA Transfer for Cr plane Position */
 #define LCDC_HEOISR_CREND_Msk                 (_UINT32_(0x1) << LCDC_HEOISR_CREND_Pos)             /* (LCDC_HEOISR) End of Frame DMA Transfer for Cr plane Mask */
-#define LCDC_HEOISR_CREND(value)              (LCDC_HEOISR_CREND_Msk & (_UINT32_(value) << LCDC_HEOISR_CREND_Pos)) /* Assigment of value for CREND in the LCDC_HEOISR register */
+#define LCDC_HEOISR_CREND(value)              (LCDC_HEOISR_CREND_Msk & (_UINT32_(value) << LCDC_HEOISR_CREND_Pos)) /* Assignment of value for CREND in the LCDC_HEOISR register */
 #define   LCDC_HEOISR_CREND_0_Val             _UINT32_(0x0)                                        /* (LCDC_HEOISR) No end of transfer has been detected since last read of LCDC_HEOISR.  */
 #define   LCDC_HEOISR_CREND_1_Val             _UINT32_(0x1)                                        /* (LCDC_HEOISR) End of transfer has been detected. This flag is reset after a read operation.  */
-#define LCDC_HEOISR_CREND_0                   (LCDC_HEOISR_CREND_0_Val << LCDC_HEOISR_CREND_Pos)   /* (LCDC_HEOISR) No end of transfer has been detected since last read of LCDC_HEOISR. Position  */
-#define LCDC_HEOISR_CREND_1                   (LCDC_HEOISR_CREND_1_Val << LCDC_HEOISR_CREND_Pos)   /* (LCDC_HEOISR) End of transfer has been detected. This flag is reset after a read operation. Position  */
+#define LCDC_HEOISR_CREND_0                   (LCDC_HEOISR_CREND_0_Val << LCDC_HEOISR_CREND_Pos)   /* (LCDC_HEOISR) No end of transfer has been detected since last read of LCDC_HEOISR. Position */
+#define LCDC_HEOISR_CREND_1                   (LCDC_HEOISR_CREND_1_Val << LCDC_HEOISR_CREND_Pos)   /* (LCDC_HEOISR) End of transfer has been detected. This flag is reset after a read operation. Position */
 #define LCDC_HEOISR_CRERROR_Pos               _UINT32_(17)                                         /* (LCDC_HEOISR) Bus Transfer Error detected for Cr plane Position */
 #define LCDC_HEOISR_CRERROR_Msk               (_UINT32_(0x1) << LCDC_HEOISR_CRERROR_Pos)           /* (LCDC_HEOISR) Bus Transfer Error detected for Cr plane Mask */
-#define LCDC_HEOISR_CRERROR(value)            (LCDC_HEOISR_CRERROR_Msk & (_UINT32_(value) << LCDC_HEOISR_CRERROR_Pos)) /* Assigment of value for CRERROR in the LCDC_HEOISR register */
+#define LCDC_HEOISR_CRERROR(value)            (LCDC_HEOISR_CRERROR_Msk & (_UINT32_(value) << LCDC_HEOISR_CRERROR_Pos)) /* Assignment of value for CRERROR in the LCDC_HEOISR register */
 #define   LCDC_HEOISR_CRERROR_0_Val           _UINT32_(0x0)                                        /* (LCDC_HEOISR) No system bus error has been detected since the last read of LCDC_HEOISR.  */
 #define   LCDC_HEOISR_CRERROR_1_Val           _UINT32_(0x1)                                        /* (LCDC_HEOISR) A system bus error has been detected. This flag is reset after a read operation.  */
-#define LCDC_HEOISR_CRERROR_0                 (LCDC_HEOISR_CRERROR_0_Val << LCDC_HEOISR_CRERROR_Pos) /* (LCDC_HEOISR) No system bus error has been detected since the last read of LCDC_HEOISR. Position  */
-#define LCDC_HEOISR_CRERROR_1                 (LCDC_HEOISR_CRERROR_1_Val << LCDC_HEOISR_CRERROR_Pos) /* (LCDC_HEOISR) A system bus error has been detected. This flag is reset after a read operation. Position  */
+#define LCDC_HEOISR_CRERROR_0                 (LCDC_HEOISR_CRERROR_0_Val << LCDC_HEOISR_CRERROR_Pos) /* (LCDC_HEOISR) No system bus error has been detected since the last read of LCDC_HEOISR. Position */
+#define LCDC_HEOISR_CRERROR_1                 (LCDC_HEOISR_CRERROR_1_Val << LCDC_HEOISR_CRERROR_Pos) /* (LCDC_HEOISR) A system bus error has been detected. This flag is reset after a read operation. Position */
 #define LCDC_HEOISR_CROVF_Pos                 _UINT32_(18)                                         /* (LCDC_HEOISR) Overflow Detected for Cr plane Position */
 #define LCDC_HEOISR_CROVF_Msk                 (_UINT32_(0x1) << LCDC_HEOISR_CROVF_Pos)             /* (LCDC_HEOISR) Overflow Detected for Cr plane Mask */
-#define LCDC_HEOISR_CROVF(value)              (LCDC_HEOISR_CROVF_Msk & (_UINT32_(value) << LCDC_HEOISR_CROVF_Pos)) /* Assigment of value for CROVF in the LCDC_HEOISR register */
+#define LCDC_HEOISR_CROVF(value)              (LCDC_HEOISR_CROVF_Msk & (_UINT32_(value) << LCDC_HEOISR_CROVF_Pos)) /* Assignment of value for CROVF in the LCDC_HEOISR register */
 #define   LCDC_HEOISR_CROVF_0_Val             _UINT32_(0x0)                                        /* (LCDC_HEOISR) No overflow occurred since last read of LCDC_HEOISR.  */
 #define   LCDC_HEOISR_CROVF_1_Val             _UINT32_(0x1)                                        /* (LCDC_HEOISR) An overflow occurred, at least one DMA transfer is still running at the End Of Frame. This flag is reset after a read operation.  */
-#define LCDC_HEOISR_CROVF_0                   (LCDC_HEOISR_CROVF_0_Val << LCDC_HEOISR_CROVF_Pos)   /* (LCDC_HEOISR) No overflow occurred since last read of LCDC_HEOISR. Position  */
-#define LCDC_HEOISR_CROVF_1                   (LCDC_HEOISR_CROVF_1_Val << LCDC_HEOISR_CROVF_Pos)   /* (LCDC_HEOISR) An overflow occurred, at least one DMA transfer is still running at the End Of Frame. This flag is reset after a read operation. Position  */
+#define LCDC_HEOISR_CROVF_0                   (LCDC_HEOISR_CROVF_0_Val << LCDC_HEOISR_CROVF_Pos)   /* (LCDC_HEOISR) No overflow occurred since last read of LCDC_HEOISR. Position */
+#define LCDC_HEOISR_CROVF_1                   (LCDC_HEOISR_CROVF_1_Val << LCDC_HEOISR_CROVF_Pos)   /* (LCDC_HEOISR) An overflow occurred, at least one DMA transfer is still running at the End Of Frame. This flag is reset after a read operation. Position */
 #define LCDC_HEOISR_Msk                       _UINT32_(0x00070707)                                 /* (LCDC_HEOISR) Register Mask  */
 
 
@@ -1801,11 +1803,11 @@
 
 #define LCDC_HEOEN_ENABLE_Pos                 _UINT32_(0)                                          /* (LCDC_HEOEN) Overlay Enable Position */
 #define LCDC_HEOEN_ENABLE_Msk                 (_UINT32_(0x1) << LCDC_HEOEN_ENABLE_Pos)             /* (LCDC_HEOEN) Overlay Enable Mask */
-#define LCDC_HEOEN_ENABLE(value)              (LCDC_HEOEN_ENABLE_Msk & (_UINT32_(value) << LCDC_HEOEN_ENABLE_Pos)) /* Assigment of value for ENABLE in the LCDC_HEOEN register */
+#define LCDC_HEOEN_ENABLE(value)              (LCDC_HEOEN_ENABLE_Msk & (_UINT32_(value) << LCDC_HEOEN_ENABLE_Pos)) /* Assignment of value for ENABLE in the LCDC_HEOEN register */
 #define   LCDC_HEOEN_ENABLE_0_Val             _UINT32_(0x0)                                        /* (LCDC_HEOEN) The layer is disabled.  */
 #define   LCDC_HEOEN_ENABLE_1_Val             _UINT32_(0x1)                                        /* (LCDC_HEOEN) The layer is enabled.  */
-#define LCDC_HEOEN_ENABLE_0                   (LCDC_HEOEN_ENABLE_0_Val << LCDC_HEOEN_ENABLE_Pos)   /* (LCDC_HEOEN) The layer is disabled. Position  */
-#define LCDC_HEOEN_ENABLE_1                   (LCDC_HEOEN_ENABLE_1_Val << LCDC_HEOEN_ENABLE_Pos)   /* (LCDC_HEOEN) The layer is enabled. Position  */
+#define LCDC_HEOEN_ENABLE_0                   (LCDC_HEOEN_ENABLE_0_Val << LCDC_HEOEN_ENABLE_Pos)   /* (LCDC_HEOEN) The layer is disabled. Position */
+#define LCDC_HEOEN_ENABLE_1                   (LCDC_HEOEN_ENABLE_1_Val << LCDC_HEOEN_ENABLE_Pos)   /* (LCDC_HEOEN) The layer is enabled. Position */
 #define LCDC_HEOEN_Msk                        _UINT32_(0x00000001)                                 /* (LCDC_HEOEN) Register Mask  */
 
 
@@ -1814,7 +1816,7 @@
 
 #define LCDC_HEOCLA_CLA_Pos                   _UINT32_(3)                                          /* (LCDC_HEOCLA) High-End Overlay CLUT Address Position */
 #define LCDC_HEOCLA_CLA_Msk                   (_UINT32_(0x1FFFFFFF) << LCDC_HEOCLA_CLA_Pos)        /* (LCDC_HEOCLA) High-End Overlay CLUT Address Mask */
-#define LCDC_HEOCLA_CLA(value)                (LCDC_HEOCLA_CLA_Msk & (_UINT32_(value) << LCDC_HEOCLA_CLA_Pos)) /* Assigment of value for CLA in the LCDC_HEOCLA register */
+#define LCDC_HEOCLA_CLA(value)                (LCDC_HEOCLA_CLA_Msk & (_UINT32_(value) << LCDC_HEOCLA_CLA_Pos)) /* Assignment of value for CLA in the LCDC_HEOCLA register */
 #define LCDC_HEOCLA_Msk                       _UINT32_(0xFFFFFFF8)                                 /* (LCDC_HEOCLA) Register Mask  */
 
 
@@ -1823,30 +1825,30 @@
 
 #define LCDC_HEOCFG0_BLEN_Pos                 _UINT32_(4)                                          /* (LCDC_HEOCFG0) System Bus Burst Length Position */
 #define LCDC_HEOCFG0_BLEN_Msk                 (_UINT32_(0x7) << LCDC_HEOCFG0_BLEN_Pos)             /* (LCDC_HEOCFG0) System Bus Burst Length Mask */
-#define LCDC_HEOCFG0_BLEN(value)              (LCDC_HEOCFG0_BLEN_Msk & (_UINT32_(value) << LCDC_HEOCFG0_BLEN_Pos)) /* Assigment of value for BLEN in the LCDC_HEOCFG0 register */
+#define LCDC_HEOCFG0_BLEN(value)              (LCDC_HEOCFG0_BLEN_Msk & (_UINT32_(value) << LCDC_HEOCFG0_BLEN_Pos)) /* Assignment of value for BLEN in the LCDC_HEOCFG0 register */
 #define   LCDC_HEOCFG0_BLEN_INCR1_Val         _UINT32_(0x0)                                        /* (LCDC_HEOCFG0) System bus access is started as soon as there is enough space in the FIFO to store one data.  */
 #define   LCDC_HEOCFG0_BLEN_INCR4_Val         _UINT32_(0x1)                                        /* (LCDC_HEOCFG0) System bus access is started as soon as there is enough space in the FIFO to store a total amount of 4 data. A system bus INCR4 Burst is used by default. INCR1 is used for bursts less than 4.  */
 #define   LCDC_HEOCFG0_BLEN_INCR8_Val         _UINT32_(0x2)                                        /* (LCDC_HEOCFG0) System bus access is started as soon as there is enough space in the FIFO to store a total amount of 8 data. A system bus INCR8 Burst is used by default. INCR4 bursts are used for bursts of 4 beats. INCR1 is used for bursts less than 4.  */
 #define   LCDC_HEOCFG0_BLEN_INCR16_Val        _UINT32_(0x3)                                        /* (LCDC_HEOCFG0) System bus access is started as soon as there is enough space in the FIFO to store a total amount of 16 data. A system bus INCR16 Burst is used by default. INCR8 and INCR4 bursts are respectively used for bursts of 8 and 4 beats. INCR1 is used for bursts less than 4.  */
 #define   LCDC_HEOCFG0_BLEN_INCR32_Val        _UINT32_(0x4)                                        /* (LCDC_HEOCFG0) System bus access is started as soon as there is enough space in the FIFO to store a total amount of 32 data. A system bus INCR32 Burst is used by default. INCR16, INCR8 and INCR4 bursts are respectively used for bursts of 16, 8 and 4 beats. INCR1 is used for bursts less than 4.  */
-#define LCDC_HEOCFG0_BLEN_INCR1               (LCDC_HEOCFG0_BLEN_INCR1_Val << LCDC_HEOCFG0_BLEN_Pos) /* (LCDC_HEOCFG0) System bus access is started as soon as there is enough space in the FIFO to store one data. Position  */
-#define LCDC_HEOCFG0_BLEN_INCR4               (LCDC_HEOCFG0_BLEN_INCR4_Val << LCDC_HEOCFG0_BLEN_Pos) /* (LCDC_HEOCFG0) System bus access is started as soon as there is enough space in the FIFO to store a total amount of 4 data. A system bus INCR4 Burst is used by default. INCR1 is used for bursts less than 4. Position  */
-#define LCDC_HEOCFG0_BLEN_INCR8               (LCDC_HEOCFG0_BLEN_INCR8_Val << LCDC_HEOCFG0_BLEN_Pos) /* (LCDC_HEOCFG0) System bus access is started as soon as there is enough space in the FIFO to store a total amount of 8 data. A system bus INCR8 Burst is used by default. INCR4 bursts are used for bursts of 4 beats. INCR1 is used for bursts less than 4. Position  */
-#define LCDC_HEOCFG0_BLEN_INCR16              (LCDC_HEOCFG0_BLEN_INCR16_Val << LCDC_HEOCFG0_BLEN_Pos) /* (LCDC_HEOCFG0) System bus access is started as soon as there is enough space in the FIFO to store a total amount of 16 data. A system bus INCR16 Burst is used by default. INCR8 and INCR4 bursts are respectively used for bursts of 8 and 4 beats. INCR1 is used for bursts less than 4. Position  */
-#define LCDC_HEOCFG0_BLEN_INCR32              (LCDC_HEOCFG0_BLEN_INCR32_Val << LCDC_HEOCFG0_BLEN_Pos) /* (LCDC_HEOCFG0) System bus access is started as soon as there is enough space in the FIFO to store a total amount of 32 data. A system bus INCR32 Burst is used by default. INCR16, INCR8 and INCR4 bursts are respectively used for bursts of 16, 8 and 4 beats. INCR1 is used for bursts less than 4. Position  */
+#define LCDC_HEOCFG0_BLEN_INCR1               (LCDC_HEOCFG0_BLEN_INCR1_Val << LCDC_HEOCFG0_BLEN_Pos) /* (LCDC_HEOCFG0) System bus access is started as soon as there is enough space in the FIFO to store one data. Position */
+#define LCDC_HEOCFG0_BLEN_INCR4               (LCDC_HEOCFG0_BLEN_INCR4_Val << LCDC_HEOCFG0_BLEN_Pos) /* (LCDC_HEOCFG0) System bus access is started as soon as there is enough space in the FIFO to store a total amount of 4 data. A system bus INCR4 Burst is used by default. INCR1 is used for bursts less than 4. Position */
+#define LCDC_HEOCFG0_BLEN_INCR8               (LCDC_HEOCFG0_BLEN_INCR8_Val << LCDC_HEOCFG0_BLEN_Pos) /* (LCDC_HEOCFG0) System bus access is started as soon as there is enough space in the FIFO to store a total amount of 8 data. A system bus INCR8 Burst is used by default. INCR4 bursts are used for bursts of 4 beats. INCR1 is used for bursts less than 4. Position */
+#define LCDC_HEOCFG0_BLEN_INCR16              (LCDC_HEOCFG0_BLEN_INCR16_Val << LCDC_HEOCFG0_BLEN_Pos) /* (LCDC_HEOCFG0) System bus access is started as soon as there is enough space in the FIFO to store a total amount of 16 data. A system bus INCR16 Burst is used by default. INCR8 and INCR4 bursts are respectively used for bursts of 8 and 4 beats. INCR1 is used for bursts less than 4. Position */
+#define LCDC_HEOCFG0_BLEN_INCR32              (LCDC_HEOCFG0_BLEN_INCR32_Val << LCDC_HEOCFG0_BLEN_Pos) /* (LCDC_HEOCFG0) System bus access is started as soon as there is enough space in the FIFO to store a total amount of 32 data. A system bus INCR32 Burst is used by default. INCR16, INCR8 and INCR4 bursts are respectively used for bursts of 16, 8 and 4 beats. INCR1 is used for bursts less than 4. Position */
 #define LCDC_HEOCFG0_BLENCC_Pos               _UINT32_(8)                                          /* (LCDC_HEOCFG0) System Bus Burst Length for Cb-Cr Channel Position */
 #define LCDC_HEOCFG0_BLENCC_Msk               (_UINT32_(0x7) << LCDC_HEOCFG0_BLENCC_Pos)           /* (LCDC_HEOCFG0) System Bus Burst Length for Cb-Cr Channel Mask */
-#define LCDC_HEOCFG0_BLENCC(value)            (LCDC_HEOCFG0_BLENCC_Msk & (_UINT32_(value) << LCDC_HEOCFG0_BLENCC_Pos)) /* Assigment of value for BLENCC in the LCDC_HEOCFG0 register */
+#define LCDC_HEOCFG0_BLENCC(value)            (LCDC_HEOCFG0_BLENCC_Msk & (_UINT32_(value) << LCDC_HEOCFG0_BLENCC_Pos)) /* Assignment of value for BLENCC in the LCDC_HEOCFG0 register */
 #define   LCDC_HEOCFG0_BLENCC_INCR1_Val       _UINT32_(0x0)                                        /* (LCDC_HEOCFG0) System bus access is started as soon as there is enough space in the FIFO to store one data.  */
 #define   LCDC_HEOCFG0_BLENCC_INCR4_Val       _UINT32_(0x1)                                        /* (LCDC_HEOCFG0) System bus access is started as soon as there is enough space in the FIFO to store a total amount of 4 data. A system bus INCR4 Burst is used by default. INCR1 is used for bursts less than 4.  */
 #define   LCDC_HEOCFG0_BLENCC_INCR8_Val       _UINT32_(0x2)                                        /* (LCDC_HEOCFG0) System bus access is started as soon as there is enough space in the FIFO to store a total amount of 8 data. A system bus INCR8 Burst is used by default. INCR4 bursts are used for bursts of 4 beats. INCR1 is used for bursts less than 4.  */
 #define   LCDC_HEOCFG0_BLENCC_INCR16_Val      _UINT32_(0x3)                                        /* (LCDC_HEOCFG0) System bus access is started as soon as there is enough space in the FIFO to store a total amount of 16 data. A system bus INCR16 Burst is used by default. INCR8 and INCR4 bursts are respectively used for bursts of 8 and 4 beats. INCR1 is used for bursts less than 4.  */
 #define   LCDC_HEOCFG0_BLENCC_INCR32_Val      _UINT32_(0x4)                                        /* (LCDC_HEOCFG0) System bus access is started as soon as there is enough space in the FIFO to store a total amount of 32 data. A system bus INCR32 Burst is used by default. INCR16, INCR8 and INCR4 bursts are respectively used for bursts of 16, 8 and 4 beats. INCR1 is used for bursts less than 4.  */
-#define LCDC_HEOCFG0_BLENCC_INCR1             (LCDC_HEOCFG0_BLENCC_INCR1_Val << LCDC_HEOCFG0_BLENCC_Pos) /* (LCDC_HEOCFG0) System bus access is started as soon as there is enough space in the FIFO to store one data. Position  */
-#define LCDC_HEOCFG0_BLENCC_INCR4             (LCDC_HEOCFG0_BLENCC_INCR4_Val << LCDC_HEOCFG0_BLENCC_Pos) /* (LCDC_HEOCFG0) System bus access is started as soon as there is enough space in the FIFO to store a total amount of 4 data. A system bus INCR4 Burst is used by default. INCR1 is used for bursts less than 4. Position  */
-#define LCDC_HEOCFG0_BLENCC_INCR8             (LCDC_HEOCFG0_BLENCC_INCR8_Val << LCDC_HEOCFG0_BLENCC_Pos) /* (LCDC_HEOCFG0) System bus access is started as soon as there is enough space in the FIFO to store a total amount of 8 data. A system bus INCR8 Burst is used by default. INCR4 bursts are used for bursts of 4 beats. INCR1 is used for bursts less than 4. Position  */
-#define LCDC_HEOCFG0_BLENCC_INCR16            (LCDC_HEOCFG0_BLENCC_INCR16_Val << LCDC_HEOCFG0_BLENCC_Pos) /* (LCDC_HEOCFG0) System bus access is started as soon as there is enough space in the FIFO to store a total amount of 16 data. A system bus INCR16 Burst is used by default. INCR8 and INCR4 bursts are respectively used for bursts of 8 and 4 beats. INCR1 is used for bursts less than 4. Position  */
-#define LCDC_HEOCFG0_BLENCC_INCR32            (LCDC_HEOCFG0_BLENCC_INCR32_Val << LCDC_HEOCFG0_BLENCC_Pos) /* (LCDC_HEOCFG0) System bus access is started as soon as there is enough space in the FIFO to store a total amount of 32 data. A system bus INCR32 Burst is used by default. INCR16, INCR8 and INCR4 bursts are respectively used for bursts of 16, 8 and 4 beats. INCR1 is used for bursts less than 4. Position  */
+#define LCDC_HEOCFG0_BLENCC_INCR1             (LCDC_HEOCFG0_BLENCC_INCR1_Val << LCDC_HEOCFG0_BLENCC_Pos) /* (LCDC_HEOCFG0) System bus access is started as soon as there is enough space in the FIFO to store one data. Position */
+#define LCDC_HEOCFG0_BLENCC_INCR4             (LCDC_HEOCFG0_BLENCC_INCR4_Val << LCDC_HEOCFG0_BLENCC_Pos) /* (LCDC_HEOCFG0) System bus access is started as soon as there is enough space in the FIFO to store a total amount of 4 data. A system bus INCR4 Burst is used by default. INCR1 is used for bursts less than 4. Position */
+#define LCDC_HEOCFG0_BLENCC_INCR8             (LCDC_HEOCFG0_BLENCC_INCR8_Val << LCDC_HEOCFG0_BLENCC_Pos) /* (LCDC_HEOCFG0) System bus access is started as soon as there is enough space in the FIFO to store a total amount of 8 data. A system bus INCR8 Burst is used by default. INCR4 bursts are used for bursts of 4 beats. INCR1 is used for bursts less than 4. Position */
+#define LCDC_HEOCFG0_BLENCC_INCR16            (LCDC_HEOCFG0_BLENCC_INCR16_Val << LCDC_HEOCFG0_BLENCC_Pos) /* (LCDC_HEOCFG0) System bus access is started as soon as there is enough space in the FIFO to store a total amount of 16 data. A system bus INCR16 Burst is used by default. INCR8 and INCR4 bursts are respectively used for bursts of 8 and 4 beats. INCR1 is used for bursts less than 4. Position */
+#define LCDC_HEOCFG0_BLENCC_INCR32            (LCDC_HEOCFG0_BLENCC_INCR32_Val << LCDC_HEOCFG0_BLENCC_Pos) /* (LCDC_HEOCFG0) System bus access is started as soon as there is enough space in the FIFO to store a total amount of 32 data. A system bus INCR32 Burst is used by default. INCR16, INCR8 and INCR4 bursts are respectively used for bursts of 16, 8 and 4 beats. INCR1 is used for bursts less than 4. Position */
 #define LCDC_HEOCFG0_Msk                      _UINT32_(0x00000770)                                 /* (LCDC_HEOCFG0) Register Mask  */
 
 
@@ -1855,28 +1857,28 @@
 
 #define LCDC_HEOCFG1_CLUTEN_Pos               _UINT32_(0)                                          /* (LCDC_HEOCFG1) CLUT Mode Enable Position */
 #define LCDC_HEOCFG1_CLUTEN_Msk               (_UINT32_(0x1) << LCDC_HEOCFG1_CLUTEN_Pos)           /* (LCDC_HEOCFG1) CLUT Mode Enable Mask */
-#define LCDC_HEOCFG1_CLUTEN(value)            (LCDC_HEOCFG1_CLUTEN_Msk & (_UINT32_(value) << LCDC_HEOCFG1_CLUTEN_Pos)) /* Assigment of value for CLUTEN in the LCDC_HEOCFG1 register */
+#define LCDC_HEOCFG1_CLUTEN(value)            (LCDC_HEOCFG1_CLUTEN_Msk & (_UINT32_(value) << LCDC_HEOCFG1_CLUTEN_Pos)) /* Assignment of value for CLUTEN in the LCDC_HEOCFG1 register */
 #define   LCDC_HEOCFG1_CLUTEN_0_Val           _UINT32_(0x0)                                        /* (LCDC_HEOCFG1) RGB mode is selected.  */
 #define   LCDC_HEOCFG1_CLUTEN_1_Val           _UINT32_(0x1)                                        /* (LCDC_HEOCFG1) CLUT mode is selected.  */
-#define LCDC_HEOCFG1_CLUTEN_0                 (LCDC_HEOCFG1_CLUTEN_0_Val << LCDC_HEOCFG1_CLUTEN_Pos) /* (LCDC_HEOCFG1) RGB mode is selected. Position  */
-#define LCDC_HEOCFG1_CLUTEN_1                 (LCDC_HEOCFG1_CLUTEN_1_Val << LCDC_HEOCFG1_CLUTEN_Pos) /* (LCDC_HEOCFG1) CLUT mode is selected. Position  */
+#define LCDC_HEOCFG1_CLUTEN_0                 (LCDC_HEOCFG1_CLUTEN_0_Val << LCDC_HEOCFG1_CLUTEN_Pos) /* (LCDC_HEOCFG1) RGB mode is selected. Position */
+#define LCDC_HEOCFG1_CLUTEN_1                 (LCDC_HEOCFG1_CLUTEN_1_Val << LCDC_HEOCFG1_CLUTEN_Pos) /* (LCDC_HEOCFG1) CLUT mode is selected. Position */
 #define LCDC_HEOCFG1_YCCEN_Pos                _UINT32_(1)                                          /* (LCDC_HEOCFG1) YCbCr Color Space Enable Position */
 #define LCDC_HEOCFG1_YCCEN_Msk                (_UINT32_(0x1) << LCDC_HEOCFG1_YCCEN_Pos)            /* (LCDC_HEOCFG1) YCbCr Color Space Enable Mask */
-#define LCDC_HEOCFG1_YCCEN(value)             (LCDC_HEOCFG1_YCCEN_Msk & (_UINT32_(value) << LCDC_HEOCFG1_YCCEN_Pos)) /* Assigment of value for YCCEN in the LCDC_HEOCFG1 register */
+#define LCDC_HEOCFG1_YCCEN(value)             (LCDC_HEOCFG1_YCCEN_Msk & (_UINT32_(value) << LCDC_HEOCFG1_YCCEN_Pos)) /* Assignment of value for YCCEN in the LCDC_HEOCFG1 register */
 #define   LCDC_HEOCFG1_YCCEN_0_Val            _UINT32_(0x0)                                        /* (LCDC_HEOCFG1) Color space is RGB.  */
 #define   LCDC_HEOCFG1_YCCEN_1_Val            _UINT32_(0x1)                                        /* (LCDC_HEOCFG1) Color space is YCbCr.  */
-#define LCDC_HEOCFG1_YCCEN_0                  (LCDC_HEOCFG1_YCCEN_0_Val << LCDC_HEOCFG1_YCCEN_Pos) /* (LCDC_HEOCFG1) Color space is RGB. Position  */
-#define LCDC_HEOCFG1_YCCEN_1                  (LCDC_HEOCFG1_YCCEN_1_Val << LCDC_HEOCFG1_YCCEN_Pos) /* (LCDC_HEOCFG1) Color space is YCbCr. Position  */
+#define LCDC_HEOCFG1_YCCEN_0                  (LCDC_HEOCFG1_YCCEN_0_Val << LCDC_HEOCFG1_YCCEN_Pos) /* (LCDC_HEOCFG1) Color space is RGB. Position */
+#define LCDC_HEOCFG1_YCCEN_1                  (LCDC_HEOCFG1_YCCEN_1_Val << LCDC_HEOCFG1_YCCEN_Pos) /* (LCDC_HEOCFG1) Color space is YCbCr. Position */
 #define LCDC_HEOCFG1_GAM_Pos                  _UINT32_(2)                                          /* (LCDC_HEOCFG1) Gamma Correction Position */
 #define LCDC_HEOCFG1_GAM_Msk                  (_UINT32_(0x1) << LCDC_HEOCFG1_GAM_Pos)              /* (LCDC_HEOCFG1) Gamma Correction Mask */
-#define LCDC_HEOCFG1_GAM(value)               (LCDC_HEOCFG1_GAM_Msk & (_UINT32_(value) << LCDC_HEOCFG1_GAM_Pos)) /* Assigment of value for GAM in the LCDC_HEOCFG1 register */
+#define LCDC_HEOCFG1_GAM(value)               (LCDC_HEOCFG1_GAM_Msk & (_UINT32_(value) << LCDC_HEOCFG1_GAM_Pos)) /* Assignment of value for GAM in the LCDC_HEOCFG1 register */
 #define   LCDC_HEOCFG1_GAM_0_Val              _UINT32_(0x0)                                        /* (LCDC_HEOCFG1) Gamma correction is disabled.  */
 #define   LCDC_HEOCFG1_GAM_1_Val              _UINT32_(0x1)                                        /* (LCDC_HEOCFG1) Gamma correction is enabled.  */
-#define LCDC_HEOCFG1_GAM_0                    (LCDC_HEOCFG1_GAM_0_Val << LCDC_HEOCFG1_GAM_Pos)     /* (LCDC_HEOCFG1) Gamma correction is disabled. Position  */
-#define LCDC_HEOCFG1_GAM_1                    (LCDC_HEOCFG1_GAM_1_Val << LCDC_HEOCFG1_GAM_Pos)     /* (LCDC_HEOCFG1) Gamma correction is enabled. Position  */
+#define LCDC_HEOCFG1_GAM_0                    (LCDC_HEOCFG1_GAM_0_Val << LCDC_HEOCFG1_GAM_Pos)     /* (LCDC_HEOCFG1) Gamma correction is disabled. Position */
+#define LCDC_HEOCFG1_GAM_1                    (LCDC_HEOCFG1_GAM_1_Val << LCDC_HEOCFG1_GAM_Pos)     /* (LCDC_HEOCFG1) Gamma correction is enabled. Position */
 #define LCDC_HEOCFG1_RGBMODE_Pos              _UINT32_(4)                                          /* (LCDC_HEOCFG1) RGB Mode Input Selection Position */
 #define LCDC_HEOCFG1_RGBMODE_Msk              (_UINT32_(0xF) << LCDC_HEOCFG1_RGBMODE_Pos)          /* (LCDC_HEOCFG1) RGB Mode Input Selection Mask */
-#define LCDC_HEOCFG1_RGBMODE(value)           (LCDC_HEOCFG1_RGBMODE_Msk & (_UINT32_(value) << LCDC_HEOCFG1_RGBMODE_Pos)) /* Assigment of value for RGBMODE in the LCDC_HEOCFG1 register */
+#define LCDC_HEOCFG1_RGBMODE(value)           (LCDC_HEOCFG1_RGBMODE_Msk & (_UINT32_(value) << LCDC_HEOCFG1_RGBMODE_Pos)) /* Assignment of value for RGBMODE in the LCDC_HEOCFG1 register */
 #define   LCDC_HEOCFG1_RGBMODE_12BPP_RGB_444_Val _UINT32_(0x0)                                        /* (LCDC_HEOCFG1) 12 bpp RGB 444  */
 #define   LCDC_HEOCFG1_RGBMODE_16BPP_ARGB_4444_Val _UINT32_(0x1)                                        /* (LCDC_HEOCFG1) 16 bpp ARGB 4444  */
 #define   LCDC_HEOCFG1_RGBMODE_16BPP_RGBA_4444_Val _UINT32_(0x2)                                        /* (LCDC_HEOCFG1) 16 bpp RGBA 4444  */
@@ -1891,40 +1893,40 @@
 #define   LCDC_HEOCFG1_RGBMODE_25BPP_ARGB_1888_Val _UINT32_(0xB)                                        /* (LCDC_HEOCFG1) 25 bpp ARGB 1888  */
 #define   LCDC_HEOCFG1_RGBMODE_32BPP_ARGB_8888_Val _UINT32_(0xC)                                        /* (LCDC_HEOCFG1) 32 bpp ARGB 8888  */
 #define   LCDC_HEOCFG1_RGBMODE_32BPP_RGBA_8888_Val _UINT32_(0xD)                                        /* (LCDC_HEOCFG1) 32 bpp RGBA 8888  */
-#define LCDC_HEOCFG1_RGBMODE_12BPP_RGB_444    (LCDC_HEOCFG1_RGBMODE_12BPP_RGB_444_Val << LCDC_HEOCFG1_RGBMODE_Pos) /* (LCDC_HEOCFG1) 12 bpp RGB 444 Position  */
-#define LCDC_HEOCFG1_RGBMODE_16BPP_ARGB_4444  (LCDC_HEOCFG1_RGBMODE_16BPP_ARGB_4444_Val << LCDC_HEOCFG1_RGBMODE_Pos) /* (LCDC_HEOCFG1) 16 bpp ARGB 4444 Position  */
-#define LCDC_HEOCFG1_RGBMODE_16BPP_RGBA_4444  (LCDC_HEOCFG1_RGBMODE_16BPP_RGBA_4444_Val << LCDC_HEOCFG1_RGBMODE_Pos) /* (LCDC_HEOCFG1) 16 bpp RGBA 4444 Position  */
-#define LCDC_HEOCFG1_RGBMODE_16BPP_RGB_565    (LCDC_HEOCFG1_RGBMODE_16BPP_RGB_565_Val << LCDC_HEOCFG1_RGBMODE_Pos) /* (LCDC_HEOCFG1) 16 bpp RGB 565 Position  */
-#define LCDC_HEOCFG1_RGBMODE_16BPP_ARGB_1555  (LCDC_HEOCFG1_RGBMODE_16BPP_ARGB_1555_Val << LCDC_HEOCFG1_RGBMODE_Pos) /* (LCDC_HEOCFG1) 16 bpp ARGB 1555 Position  */
-#define LCDC_HEOCFG1_RGBMODE_18BPP_RGB_666    (LCDC_HEOCFG1_RGBMODE_18BPP_RGB_666_Val << LCDC_HEOCFG1_RGBMODE_Pos) /* (LCDC_HEOCFG1) 18 bpp RGB 666 Position  */
-#define LCDC_HEOCFG1_RGBMODE_18BPP_RGB_666PACKED (LCDC_HEOCFG1_RGBMODE_18BPP_RGB_666PACKED_Val << LCDC_HEOCFG1_RGBMODE_Pos) /* (LCDC_HEOCFG1) 18 bpp RGB 666 PACKED Position  */
-#define LCDC_HEOCFG1_RGBMODE_19BPP_ARGB_1666  (LCDC_HEOCFG1_RGBMODE_19BPP_ARGB_1666_Val << LCDC_HEOCFG1_RGBMODE_Pos) /* (LCDC_HEOCFG1) 19 bpp ARGB 1666 Position  */
-#define LCDC_HEOCFG1_RGBMODE_19BPP_ARGB_PACKED (LCDC_HEOCFG1_RGBMODE_19BPP_ARGB_PACKED_Val << LCDC_HEOCFG1_RGBMODE_Pos) /* (LCDC_HEOCFG1) 19 bpp ARGB 1666 PACKED Position  */
-#define LCDC_HEOCFG1_RGBMODE_24BPP_RGB_888    (LCDC_HEOCFG1_RGBMODE_24BPP_RGB_888_Val << LCDC_HEOCFG1_RGBMODE_Pos) /* (LCDC_HEOCFG1) 24 bpp RGB 888 Position  */
-#define LCDC_HEOCFG1_RGBMODE_24BPP_RGB_888_PACKED (LCDC_HEOCFG1_RGBMODE_24BPP_RGB_888_PACKED_Val << LCDC_HEOCFG1_RGBMODE_Pos) /* (LCDC_HEOCFG1) 24 bpp RGB 888 PACKED Position  */
-#define LCDC_HEOCFG1_RGBMODE_25BPP_ARGB_1888  (LCDC_HEOCFG1_RGBMODE_25BPP_ARGB_1888_Val << LCDC_HEOCFG1_RGBMODE_Pos) /* (LCDC_HEOCFG1) 25 bpp ARGB 1888 Position  */
-#define LCDC_HEOCFG1_RGBMODE_32BPP_ARGB_8888  (LCDC_HEOCFG1_RGBMODE_32BPP_ARGB_8888_Val << LCDC_HEOCFG1_RGBMODE_Pos) /* (LCDC_HEOCFG1) 32 bpp ARGB 8888 Position  */
-#define LCDC_HEOCFG1_RGBMODE_32BPP_RGBA_8888  (LCDC_HEOCFG1_RGBMODE_32BPP_RGBA_8888_Val << LCDC_HEOCFG1_RGBMODE_Pos) /* (LCDC_HEOCFG1) 32 bpp RGBA 8888 Position  */
+#define LCDC_HEOCFG1_RGBMODE_12BPP_RGB_444    (LCDC_HEOCFG1_RGBMODE_12BPP_RGB_444_Val << LCDC_HEOCFG1_RGBMODE_Pos) /* (LCDC_HEOCFG1) 12 bpp RGB 444 Position */
+#define LCDC_HEOCFG1_RGBMODE_16BPP_ARGB_4444  (LCDC_HEOCFG1_RGBMODE_16BPP_ARGB_4444_Val << LCDC_HEOCFG1_RGBMODE_Pos) /* (LCDC_HEOCFG1) 16 bpp ARGB 4444 Position */
+#define LCDC_HEOCFG1_RGBMODE_16BPP_RGBA_4444  (LCDC_HEOCFG1_RGBMODE_16BPP_RGBA_4444_Val << LCDC_HEOCFG1_RGBMODE_Pos) /* (LCDC_HEOCFG1) 16 bpp RGBA 4444 Position */
+#define LCDC_HEOCFG1_RGBMODE_16BPP_RGB_565    (LCDC_HEOCFG1_RGBMODE_16BPP_RGB_565_Val << LCDC_HEOCFG1_RGBMODE_Pos) /* (LCDC_HEOCFG1) 16 bpp RGB 565 Position */
+#define LCDC_HEOCFG1_RGBMODE_16BPP_ARGB_1555  (LCDC_HEOCFG1_RGBMODE_16BPP_ARGB_1555_Val << LCDC_HEOCFG1_RGBMODE_Pos) /* (LCDC_HEOCFG1) 16 bpp ARGB 1555 Position */
+#define LCDC_HEOCFG1_RGBMODE_18BPP_RGB_666    (LCDC_HEOCFG1_RGBMODE_18BPP_RGB_666_Val << LCDC_HEOCFG1_RGBMODE_Pos) /* (LCDC_HEOCFG1) 18 bpp RGB 666 Position */
+#define LCDC_HEOCFG1_RGBMODE_18BPP_RGB_666PACKED (LCDC_HEOCFG1_RGBMODE_18BPP_RGB_666PACKED_Val << LCDC_HEOCFG1_RGBMODE_Pos) /* (LCDC_HEOCFG1) 18 bpp RGB 666 PACKED Position */
+#define LCDC_HEOCFG1_RGBMODE_19BPP_ARGB_1666  (LCDC_HEOCFG1_RGBMODE_19BPP_ARGB_1666_Val << LCDC_HEOCFG1_RGBMODE_Pos) /* (LCDC_HEOCFG1) 19 bpp ARGB 1666 Position */
+#define LCDC_HEOCFG1_RGBMODE_19BPP_ARGB_PACKED (LCDC_HEOCFG1_RGBMODE_19BPP_ARGB_PACKED_Val << LCDC_HEOCFG1_RGBMODE_Pos) /* (LCDC_HEOCFG1) 19 bpp ARGB 1666 PACKED Position */
+#define LCDC_HEOCFG1_RGBMODE_24BPP_RGB_888    (LCDC_HEOCFG1_RGBMODE_24BPP_RGB_888_Val << LCDC_HEOCFG1_RGBMODE_Pos) /* (LCDC_HEOCFG1) 24 bpp RGB 888 Position */
+#define LCDC_HEOCFG1_RGBMODE_24BPP_RGB_888_PACKED (LCDC_HEOCFG1_RGBMODE_24BPP_RGB_888_PACKED_Val << LCDC_HEOCFG1_RGBMODE_Pos) /* (LCDC_HEOCFG1) 24 bpp RGB 888 PACKED Position */
+#define LCDC_HEOCFG1_RGBMODE_25BPP_ARGB_1888  (LCDC_HEOCFG1_RGBMODE_25BPP_ARGB_1888_Val << LCDC_HEOCFG1_RGBMODE_Pos) /* (LCDC_HEOCFG1) 25 bpp ARGB 1888 Position */
+#define LCDC_HEOCFG1_RGBMODE_32BPP_ARGB_8888  (LCDC_HEOCFG1_RGBMODE_32BPP_ARGB_8888_Val << LCDC_HEOCFG1_RGBMODE_Pos) /* (LCDC_HEOCFG1) 32 bpp ARGB 8888 Position */
+#define LCDC_HEOCFG1_RGBMODE_32BPP_RGBA_8888  (LCDC_HEOCFG1_RGBMODE_32BPP_RGBA_8888_Val << LCDC_HEOCFG1_RGBMODE_Pos) /* (LCDC_HEOCFG1) 32 bpp RGBA 8888 Position */
 #define LCDC_HEOCFG1_CLUTMODE_Pos             _UINT32_(8)                                          /* (LCDC_HEOCFG1) CLUT Mode Input Selection Position */
 #define LCDC_HEOCFG1_CLUTMODE_Msk             (_UINT32_(0x3) << LCDC_HEOCFG1_CLUTMODE_Pos)         /* (LCDC_HEOCFG1) CLUT Mode Input Selection Mask */
-#define LCDC_HEOCFG1_CLUTMODE(value)          (LCDC_HEOCFG1_CLUTMODE_Msk & (_UINT32_(value) << LCDC_HEOCFG1_CLUTMODE_Pos)) /* Assigment of value for CLUTMODE in the LCDC_HEOCFG1 register */
+#define LCDC_HEOCFG1_CLUTMODE(value)          (LCDC_HEOCFG1_CLUTMODE_Msk & (_UINT32_(value) << LCDC_HEOCFG1_CLUTMODE_Pos)) /* Assignment of value for CLUTMODE in the LCDC_HEOCFG1 register */
 #define   LCDC_HEOCFG1_CLUTMODE_CLUT_1BPP_Val _UINT32_(0x0)                                        /* (LCDC_HEOCFG1) CLUT mode set to 1 bit per pixel  */
 #define   LCDC_HEOCFG1_CLUTMODE_CLUT_2BPP_Val _UINT32_(0x1)                                        /* (LCDC_HEOCFG1) CLUT mode set to 2 bits per pixel  */
 #define   LCDC_HEOCFG1_CLUTMODE_CLUT_4BPP_Val _UINT32_(0x2)                                        /* (LCDC_HEOCFG1) CLUT mode set to 4 bits per pixel  */
 #define   LCDC_HEOCFG1_CLUTMODE_CLUT_8BPP_Val _UINT32_(0x3)                                        /* (LCDC_HEOCFG1) CLUT mode set to 8 bits per pixel  */
-#define LCDC_HEOCFG1_CLUTMODE_CLUT_1BPP       (LCDC_HEOCFG1_CLUTMODE_CLUT_1BPP_Val << LCDC_HEOCFG1_CLUTMODE_Pos) /* (LCDC_HEOCFG1) CLUT mode set to 1 bit per pixel Position  */
-#define LCDC_HEOCFG1_CLUTMODE_CLUT_2BPP       (LCDC_HEOCFG1_CLUTMODE_CLUT_2BPP_Val << LCDC_HEOCFG1_CLUTMODE_Pos) /* (LCDC_HEOCFG1) CLUT mode set to 2 bits per pixel Position  */
-#define LCDC_HEOCFG1_CLUTMODE_CLUT_4BPP       (LCDC_HEOCFG1_CLUTMODE_CLUT_4BPP_Val << LCDC_HEOCFG1_CLUTMODE_Pos) /* (LCDC_HEOCFG1) CLUT mode set to 4 bits per pixel Position  */
-#define LCDC_HEOCFG1_CLUTMODE_CLUT_8BPP       (LCDC_HEOCFG1_CLUTMODE_CLUT_8BPP_Val << LCDC_HEOCFG1_CLUTMODE_Pos) /* (LCDC_HEOCFG1) CLUT mode set to 8 bits per pixel Position  */
+#define LCDC_HEOCFG1_CLUTMODE_CLUT_1BPP       (LCDC_HEOCFG1_CLUTMODE_CLUT_1BPP_Val << LCDC_HEOCFG1_CLUTMODE_Pos) /* (LCDC_HEOCFG1) CLUT mode set to 1 bit per pixel Position */
+#define LCDC_HEOCFG1_CLUTMODE_CLUT_2BPP       (LCDC_HEOCFG1_CLUTMODE_CLUT_2BPP_Val << LCDC_HEOCFG1_CLUTMODE_Pos) /* (LCDC_HEOCFG1) CLUT mode set to 2 bits per pixel Position */
+#define LCDC_HEOCFG1_CLUTMODE_CLUT_4BPP       (LCDC_HEOCFG1_CLUTMODE_CLUT_4BPP_Val << LCDC_HEOCFG1_CLUTMODE_Pos) /* (LCDC_HEOCFG1) CLUT mode set to 4 bits per pixel Position */
+#define LCDC_HEOCFG1_CLUTMODE_CLUT_8BPP       (LCDC_HEOCFG1_CLUTMODE_CLUT_8BPP_Val << LCDC_HEOCFG1_CLUTMODE_Pos) /* (LCDC_HEOCFG1) CLUT mode set to 8 bits per pixel Position */
 #define LCDC_HEOCFG1_YCCMODE_Pos              _UINT32_(12)                                         /* (LCDC_HEOCFG1)  Position */
 #define LCDC_HEOCFG1_YCCMODE_Msk              (_UINT32_(0xF) << LCDC_HEOCFG1_YCCMODE_Pos)          /* (LCDC_HEOCFG1)  Mask */
-#define LCDC_HEOCFG1_YCCMODE(value)           (LCDC_HEOCFG1_YCCMODE_Msk & (_UINT32_(value) << LCDC_HEOCFG1_YCCMODE_Pos)) /* Assigment of value for YCCMODE in the LCDC_HEOCFG1 register */
+#define LCDC_HEOCFG1_YCCMODE(value)           (LCDC_HEOCFG1_YCCMODE_Msk & (_UINT32_(value) << LCDC_HEOCFG1_YCCMODE_Pos)) /* Assignment of value for YCCMODE in the LCDC_HEOCFG1 register */
 #define LCDC_HEOCFG1_YCC422ROT_Pos            _UINT32_(16)                                         /* (LCDC_HEOCFG1)  Position */
 #define LCDC_HEOCFG1_YCC422ROT_Msk            (_UINT32_(0x1) << LCDC_HEOCFG1_YCC422ROT_Pos)        /* (LCDC_HEOCFG1)  Mask */
-#define LCDC_HEOCFG1_YCC422ROT(value)         (LCDC_HEOCFG1_YCC422ROT_Msk & (_UINT32_(value) << LCDC_HEOCFG1_YCC422ROT_Pos)) /* Assigment of value for YCC422ROT in the LCDC_HEOCFG1 register */
+#define LCDC_HEOCFG1_YCC422ROT(value)         (LCDC_HEOCFG1_YCC422ROT_Msk & (_UINT32_(value) << LCDC_HEOCFG1_YCC422ROT_Pos)) /* Assignment of value for YCC422ROT in the LCDC_HEOCFG1 register */
 #define LCDC_HEOCFG1_ILD_Pos                  _UINT32_(24)                                         /* (LCDC_HEOCFG1)  Position */
 #define LCDC_HEOCFG1_ILD_Msk                  (_UINT32_(0x1) << LCDC_HEOCFG1_ILD_Pos)              /* (LCDC_HEOCFG1)  Mask */
-#define LCDC_HEOCFG1_ILD(value)               (LCDC_HEOCFG1_ILD_Msk & (_UINT32_(value) << LCDC_HEOCFG1_ILD_Pos)) /* Assigment of value for ILD in the LCDC_HEOCFG1 register */
+#define LCDC_HEOCFG1_ILD(value)               (LCDC_HEOCFG1_ILD_Msk & (_UINT32_(value) << LCDC_HEOCFG1_ILD_Pos)) /* Assignment of value for ILD in the LCDC_HEOCFG1 register */
 #define LCDC_HEOCFG1_Msk                      _UINT32_(0x0101F3F7)                                 /* (LCDC_HEOCFG1) Register Mask  */
 
 
@@ -1933,10 +1935,10 @@
 
 #define LCDC_HEOCFG2_XPOS_Pos                 _UINT32_(0)                                          /* (LCDC_HEOCFG2) Horizontal Window Position Position */
 #define LCDC_HEOCFG2_XPOS_Msk                 (_UINT32_(0x7FF) << LCDC_HEOCFG2_XPOS_Pos)           /* (LCDC_HEOCFG2) Horizontal Window Position Mask */
-#define LCDC_HEOCFG2_XPOS(value)              (LCDC_HEOCFG2_XPOS_Msk & (_UINT32_(value) << LCDC_HEOCFG2_XPOS_Pos)) /* Assigment of value for XPOS in the LCDC_HEOCFG2 register */
+#define LCDC_HEOCFG2_XPOS(value)              (LCDC_HEOCFG2_XPOS_Msk & (_UINT32_(value) << LCDC_HEOCFG2_XPOS_Pos)) /* Assignment of value for XPOS in the LCDC_HEOCFG2 register */
 #define LCDC_HEOCFG2_YPOS_Pos                 _UINT32_(16)                                         /* (LCDC_HEOCFG2) Vertical Window Position Position */
 #define LCDC_HEOCFG2_YPOS_Msk                 (_UINT32_(0x7FF) << LCDC_HEOCFG2_YPOS_Pos)           /* (LCDC_HEOCFG2) Vertical Window Position Mask */
-#define LCDC_HEOCFG2_YPOS(value)              (LCDC_HEOCFG2_YPOS_Msk & (_UINT32_(value) << LCDC_HEOCFG2_YPOS_Pos)) /* Assigment of value for YPOS in the LCDC_HEOCFG2 register */
+#define LCDC_HEOCFG2_YPOS(value)              (LCDC_HEOCFG2_YPOS_Msk & (_UINT32_(value) << LCDC_HEOCFG2_YPOS_Pos)) /* Assignment of value for YPOS in the LCDC_HEOCFG2 register */
 #define LCDC_HEOCFG2_Msk                      _UINT32_(0x07FF07FF)                                 /* (LCDC_HEOCFG2) Register Mask  */
 
 
@@ -1945,10 +1947,10 @@
 
 #define LCDC_HEOCFG3_XSIZE_Pos                _UINT32_(0)                                          /* (LCDC_HEOCFG3) Horizontal Window Size Position */
 #define LCDC_HEOCFG3_XSIZE_Msk                (_UINT32_(0x7FF) << LCDC_HEOCFG3_XSIZE_Pos)          /* (LCDC_HEOCFG3) Horizontal Window Size Mask */
-#define LCDC_HEOCFG3_XSIZE(value)             (LCDC_HEOCFG3_XSIZE_Msk & (_UINT32_(value) << LCDC_HEOCFG3_XSIZE_Pos)) /* Assigment of value for XSIZE in the LCDC_HEOCFG3 register */
+#define LCDC_HEOCFG3_XSIZE(value)             (LCDC_HEOCFG3_XSIZE_Msk & (_UINT32_(value) << LCDC_HEOCFG3_XSIZE_Pos)) /* Assignment of value for XSIZE in the LCDC_HEOCFG3 register */
 #define LCDC_HEOCFG3_YSIZE_Pos                _UINT32_(16)                                         /* (LCDC_HEOCFG3) Vertical Window Size Position */
 #define LCDC_HEOCFG3_YSIZE_Msk                (_UINT32_(0x7FF) << LCDC_HEOCFG3_YSIZE_Pos)          /* (LCDC_HEOCFG3) Vertical Window Size Mask */
-#define LCDC_HEOCFG3_YSIZE(value)             (LCDC_HEOCFG3_YSIZE_Msk & (_UINT32_(value) << LCDC_HEOCFG3_YSIZE_Pos)) /* Assigment of value for YSIZE in the LCDC_HEOCFG3 register */
+#define LCDC_HEOCFG3_YSIZE(value)             (LCDC_HEOCFG3_YSIZE_Msk & (_UINT32_(value) << LCDC_HEOCFG3_YSIZE_Pos)) /* Assignment of value for YSIZE in the LCDC_HEOCFG3 register */
 #define LCDC_HEOCFG3_Msk                      _UINT32_(0x07FF07FF)                                 /* (LCDC_HEOCFG3) Register Mask  */
 
 
@@ -1957,10 +1959,10 @@
 
 #define LCDC_HEOCFG4_XMEMSIZE_Pos             _UINT32_(0)                                          /* (LCDC_HEOCFG4) Horizontal image Size in Memory Position */
 #define LCDC_HEOCFG4_XMEMSIZE_Msk             (_UINT32_(0x7FF) << LCDC_HEOCFG4_XMEMSIZE_Pos)       /* (LCDC_HEOCFG4) Horizontal image Size in Memory Mask */
-#define LCDC_HEOCFG4_XMEMSIZE(value)          (LCDC_HEOCFG4_XMEMSIZE_Msk & (_UINT32_(value) << LCDC_HEOCFG4_XMEMSIZE_Pos)) /* Assigment of value for XMEMSIZE in the LCDC_HEOCFG4 register */
+#define LCDC_HEOCFG4_XMEMSIZE(value)          (LCDC_HEOCFG4_XMEMSIZE_Msk & (_UINT32_(value) << LCDC_HEOCFG4_XMEMSIZE_Pos)) /* Assignment of value for XMEMSIZE in the LCDC_HEOCFG4 register */
 #define LCDC_HEOCFG4_YMEMSIZE_Pos             _UINT32_(16)                                         /* (LCDC_HEOCFG4) Vertical image Size in Memory Position */
 #define LCDC_HEOCFG4_YMEMSIZE_Msk             (_UINT32_(0x7FF) << LCDC_HEOCFG4_YMEMSIZE_Pos)       /* (LCDC_HEOCFG4) Vertical image Size in Memory Mask */
-#define LCDC_HEOCFG4_YMEMSIZE(value)          (LCDC_HEOCFG4_YMEMSIZE_Msk & (_UINT32_(value) << LCDC_HEOCFG4_YMEMSIZE_Pos)) /* Assigment of value for YMEMSIZE in the LCDC_HEOCFG4 register */
+#define LCDC_HEOCFG4_YMEMSIZE(value)          (LCDC_HEOCFG4_YMEMSIZE_Msk & (_UINT32_(value) << LCDC_HEOCFG4_YMEMSIZE_Pos)) /* Assignment of value for YMEMSIZE in the LCDC_HEOCFG4 register */
 #define LCDC_HEOCFG4_Msk                      _UINT32_(0x07FF07FF)                                 /* (LCDC_HEOCFG4) Register Mask  */
 
 
@@ -1969,7 +1971,7 @@
 
 #define LCDC_HEOCFG5_XSTRIDE_Pos              _UINT32_(0)                                          /* (LCDC_HEOCFG5) Horizontal Stride Position */
 #define LCDC_HEOCFG5_XSTRIDE_Msk              (_UINT32_(0xFFFFFFFF) << LCDC_HEOCFG5_XSTRIDE_Pos)   /* (LCDC_HEOCFG5) Horizontal Stride Mask */
-#define LCDC_HEOCFG5_XSTRIDE(value)           (LCDC_HEOCFG5_XSTRIDE_Msk & (_UINT32_(value) << LCDC_HEOCFG5_XSTRIDE_Pos)) /* Assigment of value for XSTRIDE in the LCDC_HEOCFG5 register */
+#define LCDC_HEOCFG5_XSTRIDE(value)           (LCDC_HEOCFG5_XSTRIDE_Msk & (_UINT32_(value) << LCDC_HEOCFG5_XSTRIDE_Pos)) /* Assignment of value for XSTRIDE in the LCDC_HEOCFG5 register */
 #define LCDC_HEOCFG5_Msk                      _UINT32_(0xFFFFFFFF)                                 /* (LCDC_HEOCFG5) Register Mask  */
 
 
@@ -1978,7 +1980,7 @@
 
 #define LCDC_HEOCFG6_PSTRIDE_Pos              _UINT32_(0)                                          /* (LCDC_HEOCFG6) Pixel Stride Position */
 #define LCDC_HEOCFG6_PSTRIDE_Msk              (_UINT32_(0xFFFFFFFF) << LCDC_HEOCFG6_PSTRIDE_Pos)   /* (LCDC_HEOCFG6) Pixel Stride Mask */
-#define LCDC_HEOCFG6_PSTRIDE(value)           (LCDC_HEOCFG6_PSTRIDE_Msk & (_UINT32_(value) << LCDC_HEOCFG6_PSTRIDE_Pos)) /* Assigment of value for PSTRIDE in the LCDC_HEOCFG6 register */
+#define LCDC_HEOCFG6_PSTRIDE(value)           (LCDC_HEOCFG6_PSTRIDE_Msk & (_UINT32_(value) << LCDC_HEOCFG6_PSTRIDE_Pos)) /* Assignment of value for PSTRIDE in the LCDC_HEOCFG6 register */
 #define LCDC_HEOCFG6_Msk                      _UINT32_(0xFFFFFFFF)                                 /* (LCDC_HEOCFG6) Register Mask  */
 
 
@@ -1987,7 +1989,7 @@
 
 #define LCDC_HEOCFG7_CCXSTRIDE_Pos            _UINT32_(0)                                          /* (LCDC_HEOCFG7) CbCr Horizontal Stride Position */
 #define LCDC_HEOCFG7_CCXSTRIDE_Msk            (_UINT32_(0xFFFFFFFF) << LCDC_HEOCFG7_CCXSTRIDE_Pos) /* (LCDC_HEOCFG7) CbCr Horizontal Stride Mask */
-#define LCDC_HEOCFG7_CCXSTRIDE(value)         (LCDC_HEOCFG7_CCXSTRIDE_Msk & (_UINT32_(value) << LCDC_HEOCFG7_CCXSTRIDE_Pos)) /* Assigment of value for CCXSTRIDE in the LCDC_HEOCFG7 register */
+#define LCDC_HEOCFG7_CCXSTRIDE(value)         (LCDC_HEOCFG7_CCXSTRIDE_Msk & (_UINT32_(value) << LCDC_HEOCFG7_CCXSTRIDE_Pos)) /* Assignment of value for CCXSTRIDE in the LCDC_HEOCFG7 register */
 #define LCDC_HEOCFG7_Msk                      _UINT32_(0xFFFFFFFF)                                 /* (LCDC_HEOCFG7) Register Mask  */
 
 
@@ -1996,7 +1998,7 @@
 
 #define LCDC_HEOCFG8_CCPSTRIDE_Pos            _UINT32_(0)                                          /* (LCDC_HEOCFG8) CbCr Pixel Stride Position */
 #define LCDC_HEOCFG8_CCPSTRIDE_Msk            (_UINT32_(0xFFFFFFFF) << LCDC_HEOCFG8_CCPSTRIDE_Pos) /* (LCDC_HEOCFG8) CbCr Pixel Stride Mask */
-#define LCDC_HEOCFG8_CCPSTRIDE(value)         (LCDC_HEOCFG8_CCPSTRIDE_Msk & (_UINT32_(value) << LCDC_HEOCFG8_CCPSTRIDE_Pos)) /* Assigment of value for CCPSTRIDE in the LCDC_HEOCFG8 register */
+#define LCDC_HEOCFG8_CCPSTRIDE(value)         (LCDC_HEOCFG8_CCPSTRIDE_Msk & (_UINT32_(value) << LCDC_HEOCFG8_CCPSTRIDE_Pos)) /* Assignment of value for CCPSTRIDE in the LCDC_HEOCFG8 register */
 #define LCDC_HEOCFG8_Msk                      _UINT32_(0xFFFFFFFF)                                 /* (LCDC_HEOCFG8) Register Mask  */
 
 
@@ -2005,16 +2007,16 @@
 
 #define LCDC_HEOCFG9_BDEF_Pos                 _UINT32_(0)                                          /* (LCDC_HEOCFG9) Blue Default Position */
 #define LCDC_HEOCFG9_BDEF_Msk                 (_UINT32_(0xFF) << LCDC_HEOCFG9_BDEF_Pos)            /* (LCDC_HEOCFG9) Blue Default Mask */
-#define LCDC_HEOCFG9_BDEF(value)              (LCDC_HEOCFG9_BDEF_Msk & (_UINT32_(value) << LCDC_HEOCFG9_BDEF_Pos)) /* Assigment of value for BDEF in the LCDC_HEOCFG9 register */
+#define LCDC_HEOCFG9_BDEF(value)              (LCDC_HEOCFG9_BDEF_Msk & (_UINT32_(value) << LCDC_HEOCFG9_BDEF_Pos)) /* Assignment of value for BDEF in the LCDC_HEOCFG9 register */
 #define LCDC_HEOCFG9_GDEF_Pos                 _UINT32_(8)                                          /* (LCDC_HEOCFG9) Green Default Position */
 #define LCDC_HEOCFG9_GDEF_Msk                 (_UINT32_(0xFF) << LCDC_HEOCFG9_GDEF_Pos)            /* (LCDC_HEOCFG9) Green Default Mask */
-#define LCDC_HEOCFG9_GDEF(value)              (LCDC_HEOCFG9_GDEF_Msk & (_UINT32_(value) << LCDC_HEOCFG9_GDEF_Pos)) /* Assigment of value for GDEF in the LCDC_HEOCFG9 register */
+#define LCDC_HEOCFG9_GDEF(value)              (LCDC_HEOCFG9_GDEF_Msk & (_UINT32_(value) << LCDC_HEOCFG9_GDEF_Pos)) /* Assignment of value for GDEF in the LCDC_HEOCFG9 register */
 #define LCDC_HEOCFG9_RDEF_Pos                 _UINT32_(16)                                         /* (LCDC_HEOCFG9) Red Default Position */
 #define LCDC_HEOCFG9_RDEF_Msk                 (_UINT32_(0xFF) << LCDC_HEOCFG9_RDEF_Pos)            /* (LCDC_HEOCFG9) Red Default Mask */
-#define LCDC_HEOCFG9_RDEF(value)              (LCDC_HEOCFG9_RDEF_Msk & (_UINT32_(value) << LCDC_HEOCFG9_RDEF_Pos)) /* Assigment of value for RDEF in the LCDC_HEOCFG9 register */
+#define LCDC_HEOCFG9_RDEF(value)              (LCDC_HEOCFG9_RDEF_Msk & (_UINT32_(value) << LCDC_HEOCFG9_RDEF_Pos)) /* Assignment of value for RDEF in the LCDC_HEOCFG9 register */
 #define LCDC_HEOCFG9_ADEF_Pos                 _UINT32_(24)                                         /* (LCDC_HEOCFG9) Alpha Default Position */
 #define LCDC_HEOCFG9_ADEF_Msk                 (_UINT32_(0xFF) << LCDC_HEOCFG9_ADEF_Pos)            /* (LCDC_HEOCFG9) Alpha Default Mask */
-#define LCDC_HEOCFG9_ADEF(value)              (LCDC_HEOCFG9_ADEF_Msk & (_UINT32_(value) << LCDC_HEOCFG9_ADEF_Pos)) /* Assigment of value for ADEF in the LCDC_HEOCFG9 register */
+#define LCDC_HEOCFG9_ADEF(value)              (LCDC_HEOCFG9_ADEF_Msk & (_UINT32_(value) << LCDC_HEOCFG9_ADEF_Pos)) /* Assignment of value for ADEF in the LCDC_HEOCFG9 register */
 #define LCDC_HEOCFG9_Msk                      _UINT32_(0xFFFFFFFF)                                 /* (LCDC_HEOCFG9) Register Mask  */
 
 
@@ -2023,13 +2025,13 @@
 
 #define LCDC_HEOCFG10_BKEY_Pos                _UINT32_(0)                                          /* (LCDC_HEOCFG10) Blue Color Component Chroma Key Position */
 #define LCDC_HEOCFG10_BKEY_Msk                (_UINT32_(0xFF) << LCDC_HEOCFG10_BKEY_Pos)           /* (LCDC_HEOCFG10) Blue Color Component Chroma Key Mask */
-#define LCDC_HEOCFG10_BKEY(value)             (LCDC_HEOCFG10_BKEY_Msk & (_UINT32_(value) << LCDC_HEOCFG10_BKEY_Pos)) /* Assigment of value for BKEY in the LCDC_HEOCFG10 register */
+#define LCDC_HEOCFG10_BKEY(value)             (LCDC_HEOCFG10_BKEY_Msk & (_UINT32_(value) << LCDC_HEOCFG10_BKEY_Pos)) /* Assignment of value for BKEY in the LCDC_HEOCFG10 register */
 #define LCDC_HEOCFG10_GKEY_Pos                _UINT32_(8)                                          /* (LCDC_HEOCFG10) Green Color Component Chroma Key Position */
 #define LCDC_HEOCFG10_GKEY_Msk                (_UINT32_(0xFF) << LCDC_HEOCFG10_GKEY_Pos)           /* (LCDC_HEOCFG10) Green Color Component Chroma Key Mask */
-#define LCDC_HEOCFG10_GKEY(value)             (LCDC_HEOCFG10_GKEY_Msk & (_UINT32_(value) << LCDC_HEOCFG10_GKEY_Pos)) /* Assigment of value for GKEY in the LCDC_HEOCFG10 register */
+#define LCDC_HEOCFG10_GKEY(value)             (LCDC_HEOCFG10_GKEY_Msk & (_UINT32_(value) << LCDC_HEOCFG10_GKEY_Pos)) /* Assignment of value for GKEY in the LCDC_HEOCFG10 register */
 #define LCDC_HEOCFG10_RKEY_Pos                _UINT32_(16)                                         /* (LCDC_HEOCFG10) Red Color Component Chroma Key Position */
 #define LCDC_HEOCFG10_RKEY_Msk                (_UINT32_(0xFF) << LCDC_HEOCFG10_RKEY_Pos)           /* (LCDC_HEOCFG10) Red Color Component Chroma Key Mask */
-#define LCDC_HEOCFG10_RKEY(value)             (LCDC_HEOCFG10_RKEY_Msk & (_UINT32_(value) << LCDC_HEOCFG10_RKEY_Pos)) /* Assigment of value for RKEY in the LCDC_HEOCFG10 register */
+#define LCDC_HEOCFG10_RKEY(value)             (LCDC_HEOCFG10_RKEY_Msk & (_UINT32_(value) << LCDC_HEOCFG10_RKEY_Pos)) /* Assignment of value for RKEY in the LCDC_HEOCFG10 register */
 #define LCDC_HEOCFG10_Msk                     _UINT32_(0x00FFFFFF)                                 /* (LCDC_HEOCFG10) Register Mask  */
 
 
@@ -2038,13 +2040,13 @@
 
 #define LCDC_HEOCFG11_BMASK_Pos               _UINT32_(0)                                          /* (LCDC_HEOCFG11) Blue Color Component Chroma Key Mask Position */
 #define LCDC_HEOCFG11_BMASK_Msk               (_UINT32_(0xFF) << LCDC_HEOCFG11_BMASK_Pos)          /* (LCDC_HEOCFG11) Blue Color Component Chroma Key Mask Mask */
-#define LCDC_HEOCFG11_BMASK(value)            (LCDC_HEOCFG11_BMASK_Msk & (_UINT32_(value) << LCDC_HEOCFG11_BMASK_Pos)) /* Assigment of value for BMASK in the LCDC_HEOCFG11 register */
+#define LCDC_HEOCFG11_BMASK(value)            (LCDC_HEOCFG11_BMASK_Msk & (_UINT32_(value) << LCDC_HEOCFG11_BMASK_Pos)) /* Assignment of value for BMASK in the LCDC_HEOCFG11 register */
 #define LCDC_HEOCFG11_GMASK_Pos               _UINT32_(8)                                          /* (LCDC_HEOCFG11) Green Color Component Chroma Key Mask Position */
 #define LCDC_HEOCFG11_GMASK_Msk               (_UINT32_(0xFF) << LCDC_HEOCFG11_GMASK_Pos)          /* (LCDC_HEOCFG11) Green Color Component Chroma Key Mask Mask */
-#define LCDC_HEOCFG11_GMASK(value)            (LCDC_HEOCFG11_GMASK_Msk & (_UINT32_(value) << LCDC_HEOCFG11_GMASK_Pos)) /* Assigment of value for GMASK in the LCDC_HEOCFG11 register */
+#define LCDC_HEOCFG11_GMASK(value)            (LCDC_HEOCFG11_GMASK_Msk & (_UINT32_(value) << LCDC_HEOCFG11_GMASK_Pos)) /* Assignment of value for GMASK in the LCDC_HEOCFG11 register */
 #define LCDC_HEOCFG11_RMASK_Pos               _UINT32_(16)                                         /* (LCDC_HEOCFG11) Red Color Component Chroma Key Mask Position */
 #define LCDC_HEOCFG11_RMASK_Msk               (_UINT32_(0xFF) << LCDC_HEOCFG11_RMASK_Pos)          /* (LCDC_HEOCFG11) Red Color Component Chroma Key Mask Mask */
-#define LCDC_HEOCFG11_RMASK(value)            (LCDC_HEOCFG11_RMASK_Msk & (_UINT32_(value) << LCDC_HEOCFG11_RMASK_Pos)) /* Assigment of value for RMASK in the LCDC_HEOCFG11 register */
+#define LCDC_HEOCFG11_RMASK(value)            (LCDC_HEOCFG11_RMASK_Msk & (_UINT32_(value) << LCDC_HEOCFG11_RMASK_Pos)) /* Assignment of value for RMASK in the LCDC_HEOCFG11 register */
 #define LCDC_HEOCFG11_Msk                     _UINT32_(0x00FFFFFF)                                 /* (LCDC_HEOCFG11) Register Mask  */
 
 
@@ -2053,64 +2055,64 @@
 
 #define LCDC_HEOCFG12_DMA_Pos                 _UINT32_(0)                                          /* (LCDC_HEOCFG12) DMA Enable Position */
 #define LCDC_HEOCFG12_DMA_Msk                 (_UINT32_(0x1) << LCDC_HEOCFG12_DMA_Pos)             /* (LCDC_HEOCFG12) DMA Enable Mask */
-#define LCDC_HEOCFG12_DMA(value)              (LCDC_HEOCFG12_DMA_Msk & (_UINT32_(value) << LCDC_HEOCFG12_DMA_Pos)) /* Assigment of value for DMA in the LCDC_HEOCFG12 register */
+#define LCDC_HEOCFG12_DMA(value)              (LCDC_HEOCFG12_DMA_Msk & (_UINT32_(value) << LCDC_HEOCFG12_DMA_Pos)) /* Assignment of value for DMA in the LCDC_HEOCFG12 register */
 #define   LCDC_HEOCFG12_DMA_0_Val             _UINT32_(0x0)                                        /* (LCDC_HEOCFG12) The pixel for the current layer is retrieved from the default color register.  */
 #define   LCDC_HEOCFG12_DMA_1_Val             _UINT32_(0x1)                                        /* (LCDC_HEOCFG12) The pixel stream is retrieved from the memory.  */
-#define LCDC_HEOCFG12_DMA_0                   (LCDC_HEOCFG12_DMA_0_Val << LCDC_HEOCFG12_DMA_Pos)   /* (LCDC_HEOCFG12) The pixel for the current layer is retrieved from the default color register. Position  */
-#define LCDC_HEOCFG12_DMA_1                   (LCDC_HEOCFG12_DMA_1_Val << LCDC_HEOCFG12_DMA_Pos)   /* (LCDC_HEOCFG12) The pixel stream is retrieved from the memory. Position  */
+#define LCDC_HEOCFG12_DMA_0                   (LCDC_HEOCFG12_DMA_0_Val << LCDC_HEOCFG12_DMA_Pos)   /* (LCDC_HEOCFG12) The pixel for the current layer is retrieved from the default color register. Position */
+#define LCDC_HEOCFG12_DMA_1                   (LCDC_HEOCFG12_DMA_1_Val << LCDC_HEOCFG12_DMA_Pos)   /* (LCDC_HEOCFG12) The pixel stream is retrieved from the memory. Position */
 #define LCDC_HEOCFG12_REP_Pos                 _UINT32_(1)                                          /* (LCDC_HEOCFG12) Replication Logic Position */
 #define LCDC_HEOCFG12_REP_Msk                 (_UINT32_(0x1) << LCDC_HEOCFG12_REP_Pos)             /* (LCDC_HEOCFG12) Replication Logic Mask */
-#define LCDC_HEOCFG12_REP(value)              (LCDC_HEOCFG12_REP_Msk & (_UINT32_(value) << LCDC_HEOCFG12_REP_Pos)) /* Assigment of value for REP in the LCDC_HEOCFG12 register */
+#define LCDC_HEOCFG12_REP(value)              (LCDC_HEOCFG12_REP_Msk & (_UINT32_(value) << LCDC_HEOCFG12_REP_Pos)) /* Assignment of value for REP in the LCDC_HEOCFG12 register */
 #define   LCDC_HEOCFG12_REP_0_Val             _UINT32_(0x0)                                        /* (LCDC_HEOCFG12) When the selected pixel depth is less than 24 bpp, the pixel is shifted and LSBs are set to 0.  */
 #define   LCDC_HEOCFG12_REP_1_Val             _UINT32_(0x1)                                        /* (LCDC_HEOCFG12) When the selected pixel depth is less than 24 bpp, the pixel is shifted and the LSB replicates the MSB.  */
-#define LCDC_HEOCFG12_REP_0                   (LCDC_HEOCFG12_REP_0_Val << LCDC_HEOCFG12_REP_Pos)   /* (LCDC_HEOCFG12) When the selected pixel depth is less than 24 bpp, the pixel is shifted and LSBs are set to 0. Position  */
-#define LCDC_HEOCFG12_REP_1                   (LCDC_HEOCFG12_REP_1_Val << LCDC_HEOCFG12_REP_Pos)   /* (LCDC_HEOCFG12) When the selected pixel depth is less than 24 bpp, the pixel is shifted and the LSB replicates the MSB. Position  */
+#define LCDC_HEOCFG12_REP_0                   (LCDC_HEOCFG12_REP_0_Val << LCDC_HEOCFG12_REP_Pos)   /* (LCDC_HEOCFG12) When the selected pixel depth is less than 24 bpp, the pixel is shifted and LSBs are set to 0. Position */
+#define LCDC_HEOCFG12_REP_1                   (LCDC_HEOCFG12_REP_1_Val << LCDC_HEOCFG12_REP_Pos)   /* (LCDC_HEOCFG12) When the selected pixel depth is less than 24 bpp, the pixel is shifted and the LSB replicates the MSB. Position */
 #define LCDC_HEOCFG12_CRKEY_Pos               _UINT32_(2)                                          /* (LCDC_HEOCFG12) Chroma Keying Position */
 #define LCDC_HEOCFG12_CRKEY_Msk               (_UINT32_(0x1) << LCDC_HEOCFG12_CRKEY_Pos)           /* (LCDC_HEOCFG12) Chroma Keying Mask */
-#define LCDC_HEOCFG12_CRKEY(value)            (LCDC_HEOCFG12_CRKEY_Msk & (_UINT32_(value) << LCDC_HEOCFG12_CRKEY_Pos)) /* Assigment of value for CRKEY in the LCDC_HEOCFG12 register */
+#define LCDC_HEOCFG12_CRKEY(value)            (LCDC_HEOCFG12_CRKEY_Msk & (_UINT32_(value) << LCDC_HEOCFG12_CRKEY_Pos)) /* Assignment of value for CRKEY in the LCDC_HEOCFG12 register */
 #define LCDC_HEOCFG12_DSTKEY_Pos              _UINT32_(3)                                          /* (LCDC_HEOCFG12) Destination Color Keying Position */
 #define LCDC_HEOCFG12_DSTKEY_Msk              (_UINT32_(0x1) << LCDC_HEOCFG12_DSTKEY_Pos)          /* (LCDC_HEOCFG12) Destination Color Keying Mask */
-#define LCDC_HEOCFG12_DSTKEY(value)           (LCDC_HEOCFG12_DSTKEY_Msk & (_UINT32_(value) << LCDC_HEOCFG12_DSTKEY_Pos)) /* Assigment of value for DSTKEY in the LCDC_HEOCFG12 register */
+#define LCDC_HEOCFG12_DSTKEY(value)           (LCDC_HEOCFG12_DSTKEY_Msk & (_UINT32_(value) << LCDC_HEOCFG12_DSTKEY_Pos)) /* Assignment of value for DSTKEY in the LCDC_HEOCFG12 register */
 #define   LCDC_HEOCFG12_DSTKEY_0_Val          _UINT32_(0x0)                                        /* (LCDC_HEOCFG12) When CRKEY is enabled, color key is applied on HEO pixels, before blending operation.  */
 #define   LCDC_HEOCFG12_DSTKEY_1_Val          _UINT32_(0x1)                                        /* (LCDC_HEOCFG12) When CRKEY is enabled, color key is applied on HEO pixels, after blending operation.  */
-#define LCDC_HEOCFG12_DSTKEY_0                (LCDC_HEOCFG12_DSTKEY_0_Val << LCDC_HEOCFG12_DSTKEY_Pos) /* (LCDC_HEOCFG12) When CRKEY is enabled, color key is applied on HEO pixels, before blending operation. Position  */
-#define LCDC_HEOCFG12_DSTKEY_1                (LCDC_HEOCFG12_DSTKEY_1_Val << LCDC_HEOCFG12_DSTKEY_Pos) /* (LCDC_HEOCFG12) When CRKEY is enabled, color key is applied on HEO pixels, after blending operation. Position  */
+#define LCDC_HEOCFG12_DSTKEY_0                (LCDC_HEOCFG12_DSTKEY_0_Val << LCDC_HEOCFG12_DSTKEY_Pos) /* (LCDC_HEOCFG12) When CRKEY is enabled, color key is applied on HEO pixels, before blending operation. Position */
+#define LCDC_HEOCFG12_DSTKEY_1                (LCDC_HEOCFG12_DSTKEY_1_Val << LCDC_HEOCFG12_DSTKEY_Pos) /* (LCDC_HEOCFG12) When CRKEY is enabled, color key is applied on HEO pixels, after blending operation. Position */
 #define LCDC_HEOCFG12_VIDPRI_Pos              _UINT32_(5)                                          /* (LCDC_HEOCFG12) Video Priority Mode Position */
 #define LCDC_HEOCFG12_VIDPRI_Msk              (_UINT32_(0x1) << LCDC_HEOCFG12_VIDPRI_Pos)          /* (LCDC_HEOCFG12) Video Priority Mode Mask */
-#define LCDC_HEOCFG12_VIDPRI(value)           (LCDC_HEOCFG12_VIDPRI_Msk & (_UINT32_(value) << LCDC_HEOCFG12_VIDPRI_Pos)) /* Assigment of value for VIDPRI in the LCDC_HEOCFG12 register */
+#define LCDC_HEOCFG12_VIDPRI(value)           (LCDC_HEOCFG12_VIDPRI_Msk & (_UINT32_(value) << LCDC_HEOCFG12_VIDPRI_Pos)) /* Assignment of value for VIDPRI in the LCDC_HEOCFG12 register */
 #define   LCDC_HEOCFG12_VIDPRI_0_Val          _UINT32_(0x0)                                        /* (LCDC_HEOCFG12) HEO is located below OVR1.  */
 #define   LCDC_HEOCFG12_VIDPRI_1_Val          _UINT32_(0x1)                                        /* (LCDC_HEOCFG12) HEO is located above OVR1.  */
-#define LCDC_HEOCFG12_VIDPRI_0                (LCDC_HEOCFG12_VIDPRI_0_Val << LCDC_HEOCFG12_VIDPRI_Pos) /* (LCDC_HEOCFG12) HEO is located below OVR1. Position  */
-#define LCDC_HEOCFG12_VIDPRI_1                (LCDC_HEOCFG12_VIDPRI_1_Val << LCDC_HEOCFG12_VIDPRI_Pos) /* (LCDC_HEOCFG12) HEO is located above OVR1. Position  */
+#define LCDC_HEOCFG12_VIDPRI_0                (LCDC_HEOCFG12_VIDPRI_0_Val << LCDC_HEOCFG12_VIDPRI_Pos) /* (LCDC_HEOCFG12) HEO is located below OVR1. Position */
+#define LCDC_HEOCFG12_VIDPRI_1                (LCDC_HEOCFG12_VIDPRI_1_Val << LCDC_HEOCFG12_VIDPRI_Pos) /* (LCDC_HEOCFG12) HEO is located above OVR1. Position */
 #define LCDC_HEOCFG12_SFACTC_Pos              _UINT32_(6)                                          /* (LCDC_HEOCFG12) Source Factor for the Blending Equation of the Color Component Position */
 #define LCDC_HEOCFG12_SFACTC_Msk              (_UINT32_(0x7) << LCDC_HEOCFG12_SFACTC_Pos)          /* (LCDC_HEOCFG12) Source Factor for the Blending Equation of the Color Component Mask */
-#define LCDC_HEOCFG12_SFACTC(value)           (LCDC_HEOCFG12_SFACTC_Msk & (_UINT32_(value) << LCDC_HEOCFG12_SFACTC_Pos)) /* Assigment of value for SFACTC in the LCDC_HEOCFG12 register */
+#define LCDC_HEOCFG12_SFACTC(value)           (LCDC_HEOCFG12_SFACTC_Msk & (_UINT32_(value) << LCDC_HEOCFG12_SFACTC_Pos)) /* Assignment of value for SFACTC in the LCDC_HEOCFG12 register */
 #define   LCDC_HEOCFG12_SFACTC_ONE_Val        _UINT32_(0x0)                                        /* (LCDC_HEOCFG12) Sets the factor to 1.0.  */
 #define   LCDC_HEOCFG12_SFACTC_ZERO_Val       _UINT32_(0x1)                                        /* (LCDC_HEOCFG12) Sets the factor to 0.0.  */
 #define   LCDC_HEOCFG12_SFACTC_A0_Val         _UINT32_(0x2)                                        /* (LCDC_HEOCFG12) Sets the factor to A0/255.  */
 #define   LCDC_HEOCFG12_SFACTC_A0_MULT_AD_Val _UINT32_(0x3)                                        /* (LCDC_HEOCFG12) Sets the factor to A0 multiplied by Destination Alpha.  */
 #define   LCDC_HEOCFG12_SFACTC_A0_MUL_AS_Val  _UINT32_(0x4)                                        /* (LCDC_HEOCFG12) Sets the factor to A0 multiplied by Source Alpha.  */
 #define   LCDC_HEOCFG12_SFACTC_M_A0_MUL_AD_Val _UINT32_(0x5)                                        /* (LCDC_HEOCFG12) Computes A0 multiplied by Destination Alpha, then sets the factor to minus the result.  */
-#define LCDC_HEOCFG12_SFACTC_ONE              (LCDC_HEOCFG12_SFACTC_ONE_Val << LCDC_HEOCFG12_SFACTC_Pos) /* (LCDC_HEOCFG12) Sets the factor to 1.0. Position  */
-#define LCDC_HEOCFG12_SFACTC_ZERO             (LCDC_HEOCFG12_SFACTC_ZERO_Val << LCDC_HEOCFG12_SFACTC_Pos) /* (LCDC_HEOCFG12) Sets the factor to 0.0. Position  */
-#define LCDC_HEOCFG12_SFACTC_A0               (LCDC_HEOCFG12_SFACTC_A0_Val << LCDC_HEOCFG12_SFACTC_Pos) /* (LCDC_HEOCFG12) Sets the factor to A0/255. Position  */
-#define LCDC_HEOCFG12_SFACTC_A0_MULT_AD       (LCDC_HEOCFG12_SFACTC_A0_MULT_AD_Val << LCDC_HEOCFG12_SFACTC_Pos) /* (LCDC_HEOCFG12) Sets the factor to A0 multiplied by Destination Alpha. Position  */
-#define LCDC_HEOCFG12_SFACTC_A0_MUL_AS        (LCDC_HEOCFG12_SFACTC_A0_MUL_AS_Val << LCDC_HEOCFG12_SFACTC_Pos) /* (LCDC_HEOCFG12) Sets the factor to A0 multiplied by Source Alpha. Position  */
-#define LCDC_HEOCFG12_SFACTC_M_A0_MUL_AD      (LCDC_HEOCFG12_SFACTC_M_A0_MUL_AD_Val << LCDC_HEOCFG12_SFACTC_Pos) /* (LCDC_HEOCFG12) Computes A0 multiplied by Destination Alpha, then sets the factor to minus the result. Position  */
+#define LCDC_HEOCFG12_SFACTC_ONE              (LCDC_HEOCFG12_SFACTC_ONE_Val << LCDC_HEOCFG12_SFACTC_Pos) /* (LCDC_HEOCFG12) Sets the factor to 1.0. Position */
+#define LCDC_HEOCFG12_SFACTC_ZERO             (LCDC_HEOCFG12_SFACTC_ZERO_Val << LCDC_HEOCFG12_SFACTC_Pos) /* (LCDC_HEOCFG12) Sets the factor to 0.0. Position */
+#define LCDC_HEOCFG12_SFACTC_A0               (LCDC_HEOCFG12_SFACTC_A0_Val << LCDC_HEOCFG12_SFACTC_Pos) /* (LCDC_HEOCFG12) Sets the factor to A0/255. Position */
+#define LCDC_HEOCFG12_SFACTC_A0_MULT_AD       (LCDC_HEOCFG12_SFACTC_A0_MULT_AD_Val << LCDC_HEOCFG12_SFACTC_Pos) /* (LCDC_HEOCFG12) Sets the factor to A0 multiplied by Destination Alpha. Position */
+#define LCDC_HEOCFG12_SFACTC_A0_MUL_AS        (LCDC_HEOCFG12_SFACTC_A0_MUL_AS_Val << LCDC_HEOCFG12_SFACTC_Pos) /* (LCDC_HEOCFG12) Sets the factor to A0 multiplied by Source Alpha. Position */
+#define LCDC_HEOCFG12_SFACTC_M_A0_MUL_AD      (LCDC_HEOCFG12_SFACTC_M_A0_MUL_AD_Val << LCDC_HEOCFG12_SFACTC_Pos) /* (LCDC_HEOCFG12) Computes A0 multiplied by Destination Alpha, then sets the factor to minus the result. Position */
 #define LCDC_HEOCFG12_SFACTA_Pos              _UINT32_(9)                                          /* (LCDC_HEOCFG12) Source Factor for the Blending Equation of the Alpha Component Position */
 #define LCDC_HEOCFG12_SFACTA_Msk              (_UINT32_(0x3) << LCDC_HEOCFG12_SFACTA_Pos)          /* (LCDC_HEOCFG12) Source Factor for the Blending Equation of the Alpha Component Mask */
-#define LCDC_HEOCFG12_SFACTA(value)           (LCDC_HEOCFG12_SFACTA_Msk & (_UINT32_(value) << LCDC_HEOCFG12_SFACTA_Pos)) /* Assigment of value for SFACTA in the LCDC_HEOCFG12 register */
+#define LCDC_HEOCFG12_SFACTA(value)           (LCDC_HEOCFG12_SFACTA_Msk & (_UINT32_(value) << LCDC_HEOCFG12_SFACTA_Pos)) /* Assignment of value for SFACTA in the LCDC_HEOCFG12 register */
 #define   LCDC_HEOCFG12_SFACTA_ZERO_Val       _UINT32_(0x0)                                        /* (LCDC_HEOCFG12) Sets the factor to 0.0.  */
 #define   LCDC_HEOCFG12_SFACTA_ONE_Val        _UINT32_(0x1)                                        /* (LCDC_HEOCFG12) Sets the factor to 1.0.  */
 #define   LCDC_HEOCFG12_SFACTA_A0_Val         _UINT32_(0x2)                                        /* (LCDC_HEOCFG12) Sets the factor to A0/255.  */
 #define   LCDC_HEOCFG12_SFACTA_A1_Val         _UINT32_(0x3)                                        /* (LCDC_HEOCFG12) Sets the factor to A1/255.  */
-#define LCDC_HEOCFG12_SFACTA_ZERO             (LCDC_HEOCFG12_SFACTA_ZERO_Val << LCDC_HEOCFG12_SFACTA_Pos) /* (LCDC_HEOCFG12) Sets the factor to 0.0. Position  */
-#define LCDC_HEOCFG12_SFACTA_ONE              (LCDC_HEOCFG12_SFACTA_ONE_Val << LCDC_HEOCFG12_SFACTA_Pos) /* (LCDC_HEOCFG12) Sets the factor to 1.0. Position  */
-#define LCDC_HEOCFG12_SFACTA_A0               (LCDC_HEOCFG12_SFACTA_A0_Val << LCDC_HEOCFG12_SFACTA_Pos) /* (LCDC_HEOCFG12) Sets the factor to A0/255. Position  */
-#define LCDC_HEOCFG12_SFACTA_A1               (LCDC_HEOCFG12_SFACTA_A1_Val << LCDC_HEOCFG12_SFACTA_Pos) /* (LCDC_HEOCFG12) Sets the factor to A1/255. Position  */
+#define LCDC_HEOCFG12_SFACTA_ZERO             (LCDC_HEOCFG12_SFACTA_ZERO_Val << LCDC_HEOCFG12_SFACTA_Pos) /* (LCDC_HEOCFG12) Sets the factor to 0.0. Position */
+#define LCDC_HEOCFG12_SFACTA_ONE              (LCDC_HEOCFG12_SFACTA_ONE_Val << LCDC_HEOCFG12_SFACTA_Pos) /* (LCDC_HEOCFG12) Sets the factor to 1.0. Position */
+#define LCDC_HEOCFG12_SFACTA_A0               (LCDC_HEOCFG12_SFACTA_A0_Val << LCDC_HEOCFG12_SFACTA_Pos) /* (LCDC_HEOCFG12) Sets the factor to A0/255. Position */
+#define LCDC_HEOCFG12_SFACTA_A1               (LCDC_HEOCFG12_SFACTA_A1_Val << LCDC_HEOCFG12_SFACTA_Pos) /* (LCDC_HEOCFG12) Sets the factor to A1/255. Position */
 #define LCDC_HEOCFG12_DFACTC_Pos              _UINT32_(11)                                         /* (LCDC_HEOCFG12) Destination Factor for the Blending Equation of the Color Component Position */
 #define LCDC_HEOCFG12_DFACTC_Msk              (_UINT32_(0x7) << LCDC_HEOCFG12_DFACTC_Pos)          /* (LCDC_HEOCFG12) Destination Factor for the Blending Equation of the Color Component Mask */
-#define LCDC_HEOCFG12_DFACTC(value)           (LCDC_HEOCFG12_DFACTC_Msk & (_UINT32_(value) << LCDC_HEOCFG12_DFACTC_Pos)) /* Assigment of value for DFACTC in the LCDC_HEOCFG12 register */
+#define LCDC_HEOCFG12_DFACTC(value)           (LCDC_HEOCFG12_DFACTC_Msk & (_UINT32_(value) << LCDC_HEOCFG12_DFACTC_Pos)) /* Assignment of value for DFACTC in the LCDC_HEOCFG12 register */
 #define   LCDC_HEOCFG12_DFACTC_ZERO_Val       _UINT32_(0x0)                                        /* (LCDC_HEOCFG12) Sets the factor to 0.0.  */
 #define   LCDC_HEOCFG12_DFACTC_ONE_Val        _UINT32_(0x1)                                        /* (LCDC_HEOCFG12) Sets the factor to 1.0.  */
 #define   LCDC_HEOCFG12_DFACTC_A0_Val         _UINT32_(0x2)                                        /* (LCDC_HEOCFG12) Sets the factor to A0/255.  */
@@ -2119,31 +2121,31 @@
 #define   LCDC_HEOCFG12_DFACTC_M_A0_MULT_AD_Val _UINT32_(0x5)                                        /* (LCDC_HEOCFG12) Sets the factor to A0 multiplied by Destination Alpha, then sets the factor one minus the result.  */
 #define   LCDC_HEOCFG12_DFACTC_M_A0_MUL_AS_Val _UINT32_(0x6)                                        /* (LCDC_HEOCFG12) Computes A0 multiplied by source alpha0, then set the factor to one minus the result.  */
 #define   LCDC_HEOCFG12_DFACTC_M_A0_Val       _UINT32_(0x7)                                        /* (LCDC_HEOCFG12) Computes one minus A0, then set the factor to one minus the result.  */
-#define LCDC_HEOCFG12_DFACTC_ZERO             (LCDC_HEOCFG12_DFACTC_ZERO_Val << LCDC_HEOCFG12_DFACTC_Pos) /* (LCDC_HEOCFG12) Sets the factor to 0.0. Position  */
-#define LCDC_HEOCFG12_DFACTC_ONE              (LCDC_HEOCFG12_DFACTC_ONE_Val << LCDC_HEOCFG12_DFACTC_Pos) /* (LCDC_HEOCFG12) Sets the factor to 1.0. Position  */
-#define LCDC_HEOCFG12_DFACTC_A0               (LCDC_HEOCFG12_DFACTC_A0_Val << LCDC_HEOCFG12_DFACTC_Pos) /* (LCDC_HEOCFG12) Sets the factor to A0/255. Position  */
-#define LCDC_HEOCFG12_DFACTC_A1               (LCDC_HEOCFG12_DFACTC_A1_Val << LCDC_HEOCFG12_DFACTC_Pos) /* (LCDC_HEOCFG12) Sets the factor to A1/255. Position  */
-#define LCDC_HEOCFG12_DFACTC_A0_MULT_AD       (LCDC_HEOCFG12_DFACTC_A0_MULT_AD_Val << LCDC_HEOCFG12_DFACTC_Pos) /* (LCDC_HEOCFG12) Sets the factor to A0 multiplied by Destination Alpha. Position  */
-#define LCDC_HEOCFG12_DFACTC_M_A0_MULT_AD     (LCDC_HEOCFG12_DFACTC_M_A0_MULT_AD_Val << LCDC_HEOCFG12_DFACTC_Pos) /* (LCDC_HEOCFG12) Sets the factor to A0 multiplied by Destination Alpha, then sets the factor one minus the result. Position  */
-#define LCDC_HEOCFG12_DFACTC_M_A0_MUL_AS      (LCDC_HEOCFG12_DFACTC_M_A0_MUL_AS_Val << LCDC_HEOCFG12_DFACTC_Pos) /* (LCDC_HEOCFG12) Computes A0 multiplied by source alpha0, then set the factor to one minus the result. Position  */
-#define LCDC_HEOCFG12_DFACTC_M_A0             (LCDC_HEOCFG12_DFACTC_M_A0_Val << LCDC_HEOCFG12_DFACTC_Pos) /* (LCDC_HEOCFG12) Computes one minus A0, then set the factor to one minus the result. Position  */
+#define LCDC_HEOCFG12_DFACTC_ZERO             (LCDC_HEOCFG12_DFACTC_ZERO_Val << LCDC_HEOCFG12_DFACTC_Pos) /* (LCDC_HEOCFG12) Sets the factor to 0.0. Position */
+#define LCDC_HEOCFG12_DFACTC_ONE              (LCDC_HEOCFG12_DFACTC_ONE_Val << LCDC_HEOCFG12_DFACTC_Pos) /* (LCDC_HEOCFG12) Sets the factor to 1.0. Position */
+#define LCDC_HEOCFG12_DFACTC_A0               (LCDC_HEOCFG12_DFACTC_A0_Val << LCDC_HEOCFG12_DFACTC_Pos) /* (LCDC_HEOCFG12) Sets the factor to A0/255. Position */
+#define LCDC_HEOCFG12_DFACTC_A1               (LCDC_HEOCFG12_DFACTC_A1_Val << LCDC_HEOCFG12_DFACTC_Pos) /* (LCDC_HEOCFG12) Sets the factor to A1/255. Position */
+#define LCDC_HEOCFG12_DFACTC_A0_MULT_AD       (LCDC_HEOCFG12_DFACTC_A0_MULT_AD_Val << LCDC_HEOCFG12_DFACTC_Pos) /* (LCDC_HEOCFG12) Sets the factor to A0 multiplied by Destination Alpha. Position */
+#define LCDC_HEOCFG12_DFACTC_M_A0_MULT_AD     (LCDC_HEOCFG12_DFACTC_M_A0_MULT_AD_Val << LCDC_HEOCFG12_DFACTC_Pos) /* (LCDC_HEOCFG12) Sets the factor to A0 multiplied by Destination Alpha, then sets the factor one minus the result. Position */
+#define LCDC_HEOCFG12_DFACTC_M_A0_MUL_AS      (LCDC_HEOCFG12_DFACTC_M_A0_MUL_AS_Val << LCDC_HEOCFG12_DFACTC_Pos) /* (LCDC_HEOCFG12) Computes A0 multiplied by source alpha0, then set the factor to one minus the result. Position */
+#define LCDC_HEOCFG12_DFACTC_M_A0             (LCDC_HEOCFG12_DFACTC_M_A0_Val << LCDC_HEOCFG12_DFACTC_Pos) /* (LCDC_HEOCFG12) Computes one minus A0, then set the factor to one minus the result. Position */
 #define LCDC_HEOCFG12_DFACTA_Pos              _UINT32_(14)                                         /* (LCDC_HEOCFG12) Destination Factor for the Blending Equation of the Alpha Component Position */
 #define LCDC_HEOCFG12_DFACTA_Msk              (_UINT32_(0x3) << LCDC_HEOCFG12_DFACTA_Pos)          /* (LCDC_HEOCFG12) Destination Factor for the Blending Equation of the Alpha Component Mask */
-#define LCDC_HEOCFG12_DFACTA(value)           (LCDC_HEOCFG12_DFACTA_Msk & (_UINT32_(value) << LCDC_HEOCFG12_DFACTA_Pos)) /* Assigment of value for DFACTA in the LCDC_HEOCFG12 register */
+#define LCDC_HEOCFG12_DFACTA(value)           (LCDC_HEOCFG12_DFACTA_Msk & (_UINT32_(value) << LCDC_HEOCFG12_DFACTA_Pos)) /* Assignment of value for DFACTA in the LCDC_HEOCFG12 register */
 #define   LCDC_HEOCFG12_DFACTA_ZERO_Val       _UINT32_(0x0)                                        /* (LCDC_HEOCFG12) Sets the factor to 0.0.  */
 #define   LCDC_HEOCFG12_DFACTA_ONE_Val        _UINT32_(0x1)                                        /* (LCDC_HEOCFG12) Sets the factor to 1.0.  */
 #define   LCDC_HEOCFG12_DFACTA_M_A0_MUL_AS_Val _UINT32_(0x2)                                        /* (LCDC_HEOCFG12) Computes A0 multiplied by source alpha, then set the factor to one minus the result.  */
 #define   LCDC_HEOCFG12_DFACTA_A1_Val         _UINT32_(0x3)                                        /* (LCDC_HEOCFG12) Sets the factor to A1/255.  */
-#define LCDC_HEOCFG12_DFACTA_ZERO             (LCDC_HEOCFG12_DFACTA_ZERO_Val << LCDC_HEOCFG12_DFACTA_Pos) /* (LCDC_HEOCFG12) Sets the factor to 0.0. Position  */
-#define LCDC_HEOCFG12_DFACTA_ONE              (LCDC_HEOCFG12_DFACTA_ONE_Val << LCDC_HEOCFG12_DFACTA_Pos) /* (LCDC_HEOCFG12) Sets the factor to 1.0. Position  */
-#define LCDC_HEOCFG12_DFACTA_M_A0_MUL_AS      (LCDC_HEOCFG12_DFACTA_M_A0_MUL_AS_Val << LCDC_HEOCFG12_DFACTA_Pos) /* (LCDC_HEOCFG12) Computes A0 multiplied by source alpha, then set the factor to one minus the result. Position  */
-#define LCDC_HEOCFG12_DFACTA_A1               (LCDC_HEOCFG12_DFACTA_A1_Val << LCDC_HEOCFG12_DFACTA_Pos) /* (LCDC_HEOCFG12) Sets the factor to A1/255. Position  */
+#define LCDC_HEOCFG12_DFACTA_ZERO             (LCDC_HEOCFG12_DFACTA_ZERO_Val << LCDC_HEOCFG12_DFACTA_Pos) /* (LCDC_HEOCFG12) Sets the factor to 0.0. Position */
+#define LCDC_HEOCFG12_DFACTA_ONE              (LCDC_HEOCFG12_DFACTA_ONE_Val << LCDC_HEOCFG12_DFACTA_Pos) /* (LCDC_HEOCFG12) Sets the factor to 1.0. Position */
+#define LCDC_HEOCFG12_DFACTA_M_A0_MUL_AS      (LCDC_HEOCFG12_DFACTA_M_A0_MUL_AS_Val << LCDC_HEOCFG12_DFACTA_Pos) /* (LCDC_HEOCFG12) Computes A0 multiplied by source alpha, then set the factor to one minus the result. Position */
+#define LCDC_HEOCFG12_DFACTA_A1               (LCDC_HEOCFG12_DFACTA_A1_Val << LCDC_HEOCFG12_DFACTA_Pos) /* (LCDC_HEOCFG12) Sets the factor to A1/255. Position */
 #define LCDC_HEOCFG12_A0_Pos                  _UINT32_(16)                                         /* (LCDC_HEOCFG12) Alpha 0 Value Position */
 #define LCDC_HEOCFG12_A0_Msk                  (_UINT32_(0xFF) << LCDC_HEOCFG12_A0_Pos)             /* (LCDC_HEOCFG12) Alpha 0 Value Mask */
-#define LCDC_HEOCFG12_A0(value)               (LCDC_HEOCFG12_A0_Msk & (_UINT32_(value) << LCDC_HEOCFG12_A0_Pos)) /* Assigment of value for A0 in the LCDC_HEOCFG12 register */
+#define LCDC_HEOCFG12_A0(value)               (LCDC_HEOCFG12_A0_Msk & (_UINT32_(value) << LCDC_HEOCFG12_A0_Pos)) /* Assignment of value for A0 in the LCDC_HEOCFG12 register */
 #define LCDC_HEOCFG12_A1_Pos                  _UINT32_(24)                                         /* (LCDC_HEOCFG12) Alpha 1 Value Position */
 #define LCDC_HEOCFG12_A1_Msk                  (_UINT32_(0xFF) << LCDC_HEOCFG12_A1_Pos)             /* (LCDC_HEOCFG12) Alpha 1 Value Mask */
-#define LCDC_HEOCFG12_A1(value)               (LCDC_HEOCFG12_A1_Msk & (_UINT32_(value) << LCDC_HEOCFG12_A1_Pos)) /* Assigment of value for A1 in the LCDC_HEOCFG12 register */
+#define LCDC_HEOCFG12_A1(value)               (LCDC_HEOCFG12_A1_Msk & (_UINT32_(value) << LCDC_HEOCFG12_A1_Pos)) /* Assignment of value for A1 in the LCDC_HEOCFG12 register */
 #define LCDC_HEOCFG12_Msk                     _UINT32_(0xFFFFFFEF)                                 /* (LCDC_HEOCFG12) Register Mask  */
 
 
@@ -2152,18 +2154,18 @@
 
 #define LCDC_HEOCFG13_ENABLE_Pos              _UINT32_(0)                                          /* (LCDC_HEOCFG13) Contrast, Brightness Hue and Saturation Enable Position */
 #define LCDC_HEOCFG13_ENABLE_Msk              (_UINT32_(0x1) << LCDC_HEOCFG13_ENABLE_Pos)          /* (LCDC_HEOCFG13) Contrast, Brightness Hue and Saturation Enable Mask */
-#define LCDC_HEOCFG13_ENABLE(value)           (LCDC_HEOCFG13_ENABLE_Msk & (_UINT32_(value) << LCDC_HEOCFG13_ENABLE_Pos)) /* Assigment of value for ENABLE in the LCDC_HEOCFG13 register */
+#define LCDC_HEOCFG13_ENABLE(value)           (LCDC_HEOCFG13_ENABLE_Msk & (_UINT32_(value) << LCDC_HEOCFG13_ENABLE_Pos)) /* Assignment of value for ENABLE in the LCDC_HEOCFG13 register */
 #define   LCDC_HEOCFG13_ENABLE_0_Val          _UINT32_(0x0)                                        /* (LCDC_HEOCFG13) CBHS is disabled.  */
 #define   LCDC_HEOCFG13_ENABLE_1_Val          _UINT32_(0x1)                                        /* (LCDC_HEOCFG13) CBHS is enabled.  */
-#define LCDC_HEOCFG13_ENABLE_0                (LCDC_HEOCFG13_ENABLE_0_Val << LCDC_HEOCFG13_ENABLE_Pos) /* (LCDC_HEOCFG13) CBHS is disabled. Position  */
-#define LCDC_HEOCFG13_ENABLE_1                (LCDC_HEOCFG13_ENABLE_1_Val << LCDC_HEOCFG13_ENABLE_Pos) /* (LCDC_HEOCFG13) CBHS is enabled. Position  */
+#define LCDC_HEOCFG13_ENABLE_0                (LCDC_HEOCFG13_ENABLE_0_Val << LCDC_HEOCFG13_ENABLE_Pos) /* (LCDC_HEOCFG13) CBHS is disabled. Position */
+#define LCDC_HEOCFG13_ENABLE_1                (LCDC_HEOCFG13_ENABLE_1_Val << LCDC_HEOCFG13_ENABLE_Pos) /* (LCDC_HEOCFG13) CBHS is enabled. Position */
 #define LCDC_HEOCFG13_BL_Pos                  _UINT32_(4)                                          /* (LCDC_HEOCFG13) Black Level Position */
 #define LCDC_HEOCFG13_BL_Msk                  (_UINT32_(0x1) << LCDC_HEOCFG13_BL_Pos)              /* (LCDC_HEOCFG13) Black Level Mask */
-#define LCDC_HEOCFG13_BL(value)               (LCDC_HEOCFG13_BL_Msk & (_UINT32_(value) << LCDC_HEOCFG13_BL_Pos)) /* Assigment of value for BL in the LCDC_HEOCFG13 register */
+#define LCDC_HEOCFG13_BL(value)               (LCDC_HEOCFG13_BL_Msk & (_UINT32_(value) << LCDC_HEOCFG13_BL_Pos)) /* Assignment of value for BL in the LCDC_HEOCFG13 register */
 #define   LCDC_HEOCFG13_BL_0_Val              _UINT32_(0x0)                                        /* (LCDC_HEOCFG13) Black level offset is disabled.  */
 #define   LCDC_HEOCFG13_BL_1_Val              _UINT32_(0x1)                                        /* (LCDC_HEOCFG13) Black level offset is enabled.  */
-#define LCDC_HEOCFG13_BL_0                    (LCDC_HEOCFG13_BL_0_Val << LCDC_HEOCFG13_BL_Pos)     /* (LCDC_HEOCFG13) Black level offset is disabled. Position  */
-#define LCDC_HEOCFG13_BL_1                    (LCDC_HEOCFG13_BL_1_Val << LCDC_HEOCFG13_BL_Pos)     /* (LCDC_HEOCFG13) Black level offset is enabled. Position  */
+#define LCDC_HEOCFG13_BL_0                    (LCDC_HEOCFG13_BL_0_Val << LCDC_HEOCFG13_BL_Pos)     /* (LCDC_HEOCFG13) Black level offset is disabled. Position */
+#define LCDC_HEOCFG13_BL_1                    (LCDC_HEOCFG13_BL_1_Val << LCDC_HEOCFG13_BL_Pos)     /* (LCDC_HEOCFG13) Black level offset is enabled. Position */
 #define LCDC_HEOCFG13_Msk                     _UINT32_(0x00000011)                                 /* (LCDC_HEOCFG13) Register Mask  */
 
 
@@ -2172,10 +2174,10 @@
 
 #define LCDC_HEOCFG14_BRIGHT_Pos              _UINT32_(0)                                          /* (LCDC_HEOCFG14) Brightness Value Position */
 #define LCDC_HEOCFG14_BRIGHT_Msk              (_UINT32_(0x7FF) << LCDC_HEOCFG14_BRIGHT_Pos)        /* (LCDC_HEOCFG14) Brightness Value Mask */
-#define LCDC_HEOCFG14_BRIGHT(value)           (LCDC_HEOCFG14_BRIGHT_Msk & (_UINT32_(value) << LCDC_HEOCFG14_BRIGHT_Pos)) /* Assigment of value for BRIGHT in the LCDC_HEOCFG14 register */
+#define LCDC_HEOCFG14_BRIGHT(value)           (LCDC_HEOCFG14_BRIGHT_Msk & (_UINT32_(value) << LCDC_HEOCFG14_BRIGHT_Pos)) /* Assignment of value for BRIGHT in the LCDC_HEOCFG14 register */
 #define LCDC_HEOCFG14_CONT_Pos                _UINT32_(16)                                         /* (LCDC_HEOCFG14) Contrast Value Position */
 #define LCDC_HEOCFG14_CONT_Msk                (_UINT32_(0xFFF) << LCDC_HEOCFG14_CONT_Pos)          /* (LCDC_HEOCFG14) Contrast Value Mask */
-#define LCDC_HEOCFG14_CONT(value)             (LCDC_HEOCFG14_CONT_Msk & (_UINT32_(value) << LCDC_HEOCFG14_CONT_Pos)) /* Assigment of value for CONT in the LCDC_HEOCFG14 register */
+#define LCDC_HEOCFG14_CONT(value)             (LCDC_HEOCFG14_CONT_Msk & (_UINT32_(value) << LCDC_HEOCFG14_CONT_Pos)) /* Assignment of value for CONT in the LCDC_HEOCFG14 register */
 #define LCDC_HEOCFG14_Msk                     _UINT32_(0x0FFF07FF)                                 /* (LCDC_HEOCFG14) Register Mask  */
 
 
@@ -2184,10 +2186,10 @@
 
 #define LCDC_HEOCFG15_HUE_Pos                 _UINT32_(0)                                          /* (LCDC_HEOCFG15) Hue Value in Degrees Position */
 #define LCDC_HEOCFG15_HUE_Msk                 (_UINT32_(0x1FF) << LCDC_HEOCFG15_HUE_Pos)           /* (LCDC_HEOCFG15) Hue Value in Degrees Mask */
-#define LCDC_HEOCFG15_HUE(value)              (LCDC_HEOCFG15_HUE_Msk & (_UINT32_(value) << LCDC_HEOCFG15_HUE_Pos)) /* Assigment of value for HUE in the LCDC_HEOCFG15 register */
+#define LCDC_HEOCFG15_HUE(value)              (LCDC_HEOCFG15_HUE_Msk & (_UINT32_(value) << LCDC_HEOCFG15_HUE_Pos)) /* Assignment of value for HUE in the LCDC_HEOCFG15 register */
 #define LCDC_HEOCFG15_SAT_Pos                 _UINT32_(16)                                         /* (LCDC_HEOCFG15) Saturation Value Position */
 #define LCDC_HEOCFG15_SAT_Msk                 (_UINT32_(0xFFF) << LCDC_HEOCFG15_SAT_Pos)           /* (LCDC_HEOCFG15) Saturation Value Mask */
-#define LCDC_HEOCFG15_SAT(value)              (LCDC_HEOCFG15_SAT_Msk & (_UINT32_(value) << LCDC_HEOCFG15_SAT_Pos)) /* Assigment of value for SAT in the LCDC_HEOCFG15 register */
+#define LCDC_HEOCFG15_SAT(value)              (LCDC_HEOCFG15_SAT_Msk & (_UINT32_(value) << LCDC_HEOCFG15_SAT_Pos)) /* Assignment of value for SAT in the LCDC_HEOCFG15 register */
 #define LCDC_HEOCFG15_Msk                     _UINT32_(0x0FFF01FF)                                 /* (LCDC_HEOCFG15) Register Mask  */
 
 
@@ -2196,10 +2198,10 @@
 
 #define LCDC_HEOCFG16_RYGAIN_Pos              _UINT32_(0)                                          /* (LCDC_HEOCFG16) Color Space Conversion Y Coefficient for Red Component 1:2:10 Format Position */
 #define LCDC_HEOCFG16_RYGAIN_Msk              (_UINT32_(0x1FFF) << LCDC_HEOCFG16_RYGAIN_Pos)       /* (LCDC_HEOCFG16) Color Space Conversion Y Coefficient for Red Component 1:2:10 Format Mask */
-#define LCDC_HEOCFG16_RYGAIN(value)           (LCDC_HEOCFG16_RYGAIN_Msk & (_UINT32_(value) << LCDC_HEOCFG16_RYGAIN_Pos)) /* Assigment of value for RYGAIN in the LCDC_HEOCFG16 register */
+#define LCDC_HEOCFG16_RYGAIN(value)           (LCDC_HEOCFG16_RYGAIN_Msk & (_UINT32_(value) << LCDC_HEOCFG16_RYGAIN_Pos)) /* Assignment of value for RYGAIN in the LCDC_HEOCFG16 register */
 #define LCDC_HEOCFG16_RCBGAIN_Pos             _UINT32_(16)                                         /* (LCDC_HEOCFG16) Color Space Conversion CB Coefficient for Red Component 1:2:10 Format Position */
 #define LCDC_HEOCFG16_RCBGAIN_Msk             (_UINT32_(0x1FFF) << LCDC_HEOCFG16_RCBGAIN_Pos)      /* (LCDC_HEOCFG16) Color Space Conversion CB Coefficient for Red Component 1:2:10 Format Mask */
-#define LCDC_HEOCFG16_RCBGAIN(value)          (LCDC_HEOCFG16_RCBGAIN_Msk & (_UINT32_(value) << LCDC_HEOCFG16_RCBGAIN_Pos)) /* Assigment of value for RCBGAIN in the LCDC_HEOCFG16 register */
+#define LCDC_HEOCFG16_RCBGAIN(value)          (LCDC_HEOCFG16_RCBGAIN_Msk & (_UINT32_(value) << LCDC_HEOCFG16_RCBGAIN_Pos)) /* Assignment of value for RCBGAIN in the LCDC_HEOCFG16 register */
 #define LCDC_HEOCFG16_Msk                     _UINT32_(0x1FFF1FFF)                                 /* (LCDC_HEOCFG16) Register Mask  */
 
 
@@ -2208,7 +2210,7 @@
 
 #define LCDC_HEOCFG17_RCRGAIN_Pos             _UINT32_(0)                                          /* (LCDC_HEOCFG17) Color Space Conversion CR Coefficient for Red Component 1:2:10 Format Position */
 #define LCDC_HEOCFG17_RCRGAIN_Msk             (_UINT32_(0x1FFF) << LCDC_HEOCFG17_RCRGAIN_Pos)      /* (LCDC_HEOCFG17) Color Space Conversion CR Coefficient for Red Component 1:2:10 Format Mask */
-#define LCDC_HEOCFG17_RCRGAIN(value)          (LCDC_HEOCFG17_RCRGAIN_Msk & (_UINT32_(value) << LCDC_HEOCFG17_RCRGAIN_Pos)) /* Assigment of value for RCRGAIN in the LCDC_HEOCFG17 register */
+#define LCDC_HEOCFG17_RCRGAIN(value)          (LCDC_HEOCFG17_RCRGAIN_Msk & (_UINT32_(value) << LCDC_HEOCFG17_RCRGAIN_Pos)) /* Assignment of value for RCRGAIN in the LCDC_HEOCFG17 register */
 #define LCDC_HEOCFG17_Msk                     _UINT32_(0x00001FFF)                                 /* (LCDC_HEOCFG17) Register Mask  */
 
 
@@ -2217,10 +2219,10 @@
 
 #define LCDC_HEOCFG18_GYGAIN_Pos              _UINT32_(0)                                          /* (LCDC_HEOCFG18) Color Space Conversion Y Coefficient for Green Component 1:2:10 Format Position */
 #define LCDC_HEOCFG18_GYGAIN_Msk              (_UINT32_(0x1FFF) << LCDC_HEOCFG18_GYGAIN_Pos)       /* (LCDC_HEOCFG18) Color Space Conversion Y Coefficient for Green Component 1:2:10 Format Mask */
-#define LCDC_HEOCFG18_GYGAIN(value)           (LCDC_HEOCFG18_GYGAIN_Msk & (_UINT32_(value) << LCDC_HEOCFG18_GYGAIN_Pos)) /* Assigment of value for GYGAIN in the LCDC_HEOCFG18 register */
+#define LCDC_HEOCFG18_GYGAIN(value)           (LCDC_HEOCFG18_GYGAIN_Msk & (_UINT32_(value) << LCDC_HEOCFG18_GYGAIN_Pos)) /* Assignment of value for GYGAIN in the LCDC_HEOCFG18 register */
 #define LCDC_HEOCFG18_GCBGAIN_Pos             _UINT32_(16)                                         /* (LCDC_HEOCFG18) Color Space Conversion CB Coefficient for Green Component 1:2:10 Format Position */
 #define LCDC_HEOCFG18_GCBGAIN_Msk             (_UINT32_(0x1FFF) << LCDC_HEOCFG18_GCBGAIN_Pos)      /* (LCDC_HEOCFG18) Color Space Conversion CB Coefficient for Green Component 1:2:10 Format Mask */
-#define LCDC_HEOCFG18_GCBGAIN(value)          (LCDC_HEOCFG18_GCBGAIN_Msk & (_UINT32_(value) << LCDC_HEOCFG18_GCBGAIN_Pos)) /* Assigment of value for GCBGAIN in the LCDC_HEOCFG18 register */
+#define LCDC_HEOCFG18_GCBGAIN(value)          (LCDC_HEOCFG18_GCBGAIN_Msk & (_UINT32_(value) << LCDC_HEOCFG18_GCBGAIN_Pos)) /* Assignment of value for GCBGAIN in the LCDC_HEOCFG18 register */
 #define LCDC_HEOCFG18_Msk                     _UINT32_(0x1FFF1FFF)                                 /* (LCDC_HEOCFG18) Register Mask  */
 
 
@@ -2229,7 +2231,7 @@
 
 #define LCDC_HEOCFG19_GCRGAIN_Pos             _UINT32_(0)                                          /* (LCDC_HEOCFG19) Color Space Conversion CR Coefficient for Green Component 1:2:10 Format Position */
 #define LCDC_HEOCFG19_GCRGAIN_Msk             (_UINT32_(0x1FFF) << LCDC_HEOCFG19_GCRGAIN_Pos)      /* (LCDC_HEOCFG19) Color Space Conversion CR Coefficient for Green Component 1:2:10 Format Mask */
-#define LCDC_HEOCFG19_GCRGAIN(value)          (LCDC_HEOCFG19_GCRGAIN_Msk & (_UINT32_(value) << LCDC_HEOCFG19_GCRGAIN_Pos)) /* Assigment of value for GCRGAIN in the LCDC_HEOCFG19 register */
+#define LCDC_HEOCFG19_GCRGAIN(value)          (LCDC_HEOCFG19_GCRGAIN_Msk & (_UINT32_(value) << LCDC_HEOCFG19_GCRGAIN_Pos)) /* Assignment of value for GCRGAIN in the LCDC_HEOCFG19 register */
 #define LCDC_HEOCFG19_Msk                     _UINT32_(0x00001FFF)                                 /* (LCDC_HEOCFG19) Register Mask  */
 
 
@@ -2238,10 +2240,10 @@
 
 #define LCDC_HEOCFG20_BYGAIN_Pos              _UINT32_(0)                                          /* (LCDC_HEOCFG20) Color Space Conversion Y Coefficient for Blue Component 1:2:10 Format Position */
 #define LCDC_HEOCFG20_BYGAIN_Msk              (_UINT32_(0x1FFF) << LCDC_HEOCFG20_BYGAIN_Pos)       /* (LCDC_HEOCFG20) Color Space Conversion Y Coefficient for Blue Component 1:2:10 Format Mask */
-#define LCDC_HEOCFG20_BYGAIN(value)           (LCDC_HEOCFG20_BYGAIN_Msk & (_UINT32_(value) << LCDC_HEOCFG20_BYGAIN_Pos)) /* Assigment of value for BYGAIN in the LCDC_HEOCFG20 register */
+#define LCDC_HEOCFG20_BYGAIN(value)           (LCDC_HEOCFG20_BYGAIN_Msk & (_UINT32_(value) << LCDC_HEOCFG20_BYGAIN_Pos)) /* Assignment of value for BYGAIN in the LCDC_HEOCFG20 register */
 #define LCDC_HEOCFG20_BCBGAIN_Pos             _UINT32_(16)                                         /* (LCDC_HEOCFG20) Color Space Conversion CB Coefficient for Blue Component 1:2:10 Format Position */
 #define LCDC_HEOCFG20_BCBGAIN_Msk             (_UINT32_(0x1FFF) << LCDC_HEOCFG20_BCBGAIN_Pos)      /* (LCDC_HEOCFG20) Color Space Conversion CB Coefficient for Blue Component 1:2:10 Format Mask */
-#define LCDC_HEOCFG20_BCBGAIN(value)          (LCDC_HEOCFG20_BCBGAIN_Msk & (_UINT32_(value) << LCDC_HEOCFG20_BCBGAIN_Pos)) /* Assigment of value for BCBGAIN in the LCDC_HEOCFG20 register */
+#define LCDC_HEOCFG20_BCBGAIN(value)          (LCDC_HEOCFG20_BCBGAIN_Msk & (_UINT32_(value) << LCDC_HEOCFG20_BCBGAIN_Pos)) /* Assignment of value for BCBGAIN in the LCDC_HEOCFG20 register */
 #define LCDC_HEOCFG20_Msk                     _UINT32_(0x1FFF1FFF)                                 /* (LCDC_HEOCFG20) Register Mask  */
 
 
@@ -2250,7 +2252,7 @@
 
 #define LCDC_HEOCFG21_BCRGAIN_Pos             _UINT32_(0)                                          /* (LCDC_HEOCFG21) Color Space Conversion Y Coefficient for Blue Component 1:2:10 Format Position */
 #define LCDC_HEOCFG21_BCRGAIN_Msk             (_UINT32_(0x1FFF) << LCDC_HEOCFG21_BCRGAIN_Pos)      /* (LCDC_HEOCFG21) Color Space Conversion Y Coefficient for Blue Component 1:2:10 Format Mask */
-#define LCDC_HEOCFG21_BCRGAIN(value)          (LCDC_HEOCFG21_BCRGAIN_Msk & (_UINT32_(value) << LCDC_HEOCFG21_BCRGAIN_Pos)) /* Assigment of value for BCRGAIN in the LCDC_HEOCFG21 register */
+#define LCDC_HEOCFG21_BCRGAIN(value)          (LCDC_HEOCFG21_BCRGAIN_Msk & (_UINT32_(value) << LCDC_HEOCFG21_BCRGAIN_Pos)) /* Assignment of value for BCRGAIN in the LCDC_HEOCFG21 register */
 #define LCDC_HEOCFG21_Msk                     _UINT32_(0x00001FFF)                                 /* (LCDC_HEOCFG21) Register Mask  */
 
 
@@ -2259,13 +2261,13 @@
 
 #define LCDC_HEOCFG22_YOFF_Pos                _UINT32_(0)                                          /* (LCDC_HEOCFG22) Luma Offset Position */
 #define LCDC_HEOCFG22_YOFF_Msk                (_UINT32_(0x1) << LCDC_HEOCFG22_YOFF_Pos)            /* (LCDC_HEOCFG22) Luma Offset Mask */
-#define LCDC_HEOCFG22_YOFF(value)             (LCDC_HEOCFG22_YOFF_Msk & (_UINT32_(value) << LCDC_HEOCFG22_YOFF_Pos)) /* Assigment of value for YOFF in the LCDC_HEOCFG22 register */
+#define LCDC_HEOCFG22_YOFF(value)             (LCDC_HEOCFG22_YOFF_Msk & (_UINT32_(value) << LCDC_HEOCFG22_YOFF_Pos)) /* Assignment of value for YOFF in the LCDC_HEOCFG22 register */
 #define LCDC_HEOCFG22_CBOFF_Pos               _UINT32_(1)                                          /* (LCDC_HEOCFG22) Blue Chroma Offset Position */
 #define LCDC_HEOCFG22_CBOFF_Msk               (_UINT32_(0x1) << LCDC_HEOCFG22_CBOFF_Pos)           /* (LCDC_HEOCFG22) Blue Chroma Offset Mask */
-#define LCDC_HEOCFG22_CBOFF(value)            (LCDC_HEOCFG22_CBOFF_Msk & (_UINT32_(value) << LCDC_HEOCFG22_CBOFF_Pos)) /* Assigment of value for CBOFF in the LCDC_HEOCFG22 register */
+#define LCDC_HEOCFG22_CBOFF(value)            (LCDC_HEOCFG22_CBOFF_Msk & (_UINT32_(value) << LCDC_HEOCFG22_CBOFF_Pos)) /* Assignment of value for CBOFF in the LCDC_HEOCFG22 register */
 #define LCDC_HEOCFG22_CROFF_Pos               _UINT32_(2)                                          /* (LCDC_HEOCFG22) Red Chroma Offset Position */
 #define LCDC_HEOCFG22_CROFF_Msk               (_UINT32_(0x1) << LCDC_HEOCFG22_CROFF_Pos)           /* (LCDC_HEOCFG22) Red Chroma Offset Mask */
-#define LCDC_HEOCFG22_CROFF(value)            (LCDC_HEOCFG22_CROFF_Msk & (_UINT32_(value) << LCDC_HEOCFG22_CROFF_Pos)) /* Assigment of value for CROFF in the LCDC_HEOCFG22 register */
+#define LCDC_HEOCFG22_CROFF(value)            (LCDC_HEOCFG22_CROFF_Msk & (_UINT32_(value) << LCDC_HEOCFG22_CROFF_Pos)) /* Assignment of value for CROFF in the LCDC_HEOCFG22 register */
 #define LCDC_HEOCFG22_Msk                     _UINT32_(0x00000007)                                 /* (LCDC_HEOCFG22) Register Mask  */
 
 
@@ -2274,16 +2276,16 @@
 
 #define LCDC_HEOCFG23_VXSYEN_Pos              _UINT32_(0)                                          /* (LCDC_HEOCFG23) Vertical Scaler Luma Component Enable Position */
 #define LCDC_HEOCFG23_VXSYEN_Msk              (_UINT32_(0x1) << LCDC_HEOCFG23_VXSYEN_Pos)          /* (LCDC_HEOCFG23) Vertical Scaler Luma Component Enable Mask */
-#define LCDC_HEOCFG23_VXSYEN(value)           (LCDC_HEOCFG23_VXSYEN_Msk & (_UINT32_(value) << LCDC_HEOCFG23_VXSYEN_Pos)) /* Assigment of value for VXSYEN in the LCDC_HEOCFG23 register */
+#define LCDC_HEOCFG23_VXSYEN(value)           (LCDC_HEOCFG23_VXSYEN_Msk & (_UINT32_(value) << LCDC_HEOCFG23_VXSYEN_Pos)) /* Assignment of value for VXSYEN in the LCDC_HEOCFG23 register */
 #define LCDC_HEOCFG23_VXSCEN_Pos              _UINT32_(1)                                          /* (LCDC_HEOCFG23) Vertical Scaler Chroma Component Enable Position */
 #define LCDC_HEOCFG23_VXSCEN_Msk              (_UINT32_(0x1) << LCDC_HEOCFG23_VXSCEN_Pos)          /* (LCDC_HEOCFG23) Vertical Scaler Chroma Component Enable Mask */
-#define LCDC_HEOCFG23_VXSCEN(value)           (LCDC_HEOCFG23_VXSCEN_Msk & (_UINT32_(value) << LCDC_HEOCFG23_VXSCEN_Pos)) /* Assigment of value for VXSCEN in the LCDC_HEOCFG23 register */
+#define LCDC_HEOCFG23_VXSCEN(value)           (LCDC_HEOCFG23_VXSCEN_Msk & (_UINT32_(value) << LCDC_HEOCFG23_VXSCEN_Pos)) /* Assignment of value for VXSCEN in the LCDC_HEOCFG23 register */
 #define LCDC_HEOCFG23_HXSYEN_Pos              _UINT32_(4)                                          /* (LCDC_HEOCFG23) Horizontal Scaler Luma Component Enable Position */
 #define LCDC_HEOCFG23_HXSYEN_Msk              (_UINT32_(0x1) << LCDC_HEOCFG23_HXSYEN_Pos)          /* (LCDC_HEOCFG23) Horizontal Scaler Luma Component Enable Mask */
-#define LCDC_HEOCFG23_HXSYEN(value)           (LCDC_HEOCFG23_HXSYEN_Msk & (_UINT32_(value) << LCDC_HEOCFG23_HXSYEN_Pos)) /* Assigment of value for HXSYEN in the LCDC_HEOCFG23 register */
+#define LCDC_HEOCFG23_HXSYEN(value)           (LCDC_HEOCFG23_HXSYEN_Msk & (_UINT32_(value) << LCDC_HEOCFG23_HXSYEN_Pos)) /* Assignment of value for HXSYEN in the LCDC_HEOCFG23 register */
 #define LCDC_HEOCFG23_HXSCEN_Pos              _UINT32_(5)                                          /* (LCDC_HEOCFG23) Horizontal Scaler Chroma Component Enable Position */
 #define LCDC_HEOCFG23_HXSCEN_Msk              (_UINT32_(0x1) << LCDC_HEOCFG23_HXSCEN_Pos)          /* (LCDC_HEOCFG23) Horizontal Scaler Chroma Component Enable Mask */
-#define LCDC_HEOCFG23_HXSCEN(value)           (LCDC_HEOCFG23_HXSCEN_Msk & (_UINT32_(value) << LCDC_HEOCFG23_HXSCEN_Pos)) /* Assigment of value for HXSCEN in the LCDC_HEOCFG23 register */
+#define LCDC_HEOCFG23_HXSCEN(value)           (LCDC_HEOCFG23_HXSCEN_Msk & (_UINT32_(value) << LCDC_HEOCFG23_HXSCEN_Pos)) /* Assignment of value for HXSCEN in the LCDC_HEOCFG23 register */
 #define LCDC_HEOCFG23_Msk                     _UINT32_(0x00000033)                                 /* (LCDC_HEOCFG23) Register Mask  */
 
 
@@ -2292,7 +2294,7 @@
 
 #define LCDC_HEOCFG24_VXSYFACT_Pos            _UINT32_(0)                                          /* (LCDC_HEOCFG24) Vertical Luma Scaling Factor Position */
 #define LCDC_HEOCFG24_VXSYFACT_Msk            (_UINT32_(0xFFFFFF) << LCDC_HEOCFG24_VXSYFACT_Pos)   /* (LCDC_HEOCFG24) Vertical Luma Scaling Factor Mask */
-#define LCDC_HEOCFG24_VXSYFACT(value)         (LCDC_HEOCFG24_VXSYFACT_Msk & (_UINT32_(value) << LCDC_HEOCFG24_VXSYFACT_Pos)) /* Assigment of value for VXSYFACT in the LCDC_HEOCFG24 register */
+#define LCDC_HEOCFG24_VXSYFACT(value)         (LCDC_HEOCFG24_VXSYFACT_Msk & (_UINT32_(value) << LCDC_HEOCFG24_VXSYFACT_Pos)) /* Assignment of value for VXSYFACT in the LCDC_HEOCFG24 register */
 #define LCDC_HEOCFG24_Msk                     _UINT32_(0x00FFFFFF)                                 /* (LCDC_HEOCFG24) Register Mask  */
 
 
@@ -2301,7 +2303,7 @@
 
 #define LCDC_HEOCFG25_VXSCFACT_Pos            _UINT32_(0)                                          /* (LCDC_HEOCFG25) Vertical Chroma Scaling Factor Position */
 #define LCDC_HEOCFG25_VXSCFACT_Msk            (_UINT32_(0xFFFFFF) << LCDC_HEOCFG25_VXSCFACT_Pos)   /* (LCDC_HEOCFG25) Vertical Chroma Scaling Factor Mask */
-#define LCDC_HEOCFG25_VXSCFACT(value)         (LCDC_HEOCFG25_VXSCFACT_Msk & (_UINT32_(value) << LCDC_HEOCFG25_VXSCFACT_Pos)) /* Assigment of value for VXSCFACT in the LCDC_HEOCFG25 register */
+#define LCDC_HEOCFG25_VXSCFACT(value)         (LCDC_HEOCFG25_VXSCFACT_Msk & (_UINT32_(value) << LCDC_HEOCFG25_VXSCFACT_Pos)) /* Assignment of value for VXSCFACT in the LCDC_HEOCFG25 register */
 #define LCDC_HEOCFG25_Msk                     _UINT32_(0x00FFFFFF)                                 /* (LCDC_HEOCFG25) Register Mask  */
 
 
@@ -2310,7 +2312,7 @@
 
 #define LCDC_HEOCFG26_HXSYFACT_Pos            _UINT32_(0)                                          /* (LCDC_HEOCFG26) Horizontal Luma Scaling factor Position */
 #define LCDC_HEOCFG26_HXSYFACT_Msk            (_UINT32_(0xFFFFFF) << LCDC_HEOCFG26_HXSYFACT_Pos)   /* (LCDC_HEOCFG26) Horizontal Luma Scaling factor Mask */
-#define LCDC_HEOCFG26_HXSYFACT(value)         (LCDC_HEOCFG26_HXSYFACT_Msk & (_UINT32_(value) << LCDC_HEOCFG26_HXSYFACT_Pos)) /* Assigment of value for HXSYFACT in the LCDC_HEOCFG26 register */
+#define LCDC_HEOCFG26_HXSYFACT(value)         (LCDC_HEOCFG26_HXSYFACT_Msk & (_UINT32_(value) << LCDC_HEOCFG26_HXSYFACT_Pos)) /* Assignment of value for HXSYFACT in the LCDC_HEOCFG26 register */
 #define LCDC_HEOCFG26_Msk                     _UINT32_(0x00FFFFFF)                                 /* (LCDC_HEOCFG26) Register Mask  */
 
 
@@ -2319,7 +2321,7 @@
 
 #define LCDC_HEOCFG27_HXSCFACT_Pos            _UINT32_(0)                                          /* (LCDC_HEOCFG27) Horizontal Chroma Scaling Factor Position */
 #define LCDC_HEOCFG27_HXSCFACT_Msk            (_UINT32_(0xFFFFFF) << LCDC_HEOCFG27_HXSCFACT_Pos)   /* (LCDC_HEOCFG27) Horizontal Chroma Scaling Factor Mask */
-#define LCDC_HEOCFG27_HXSCFACT(value)         (LCDC_HEOCFG27_HXSCFACT_Msk & (_UINT32_(value) << LCDC_HEOCFG27_HXSCFACT_Pos)) /* Assigment of value for HXSCFACT in the LCDC_HEOCFG27 register */
+#define LCDC_HEOCFG27_HXSCFACT(value)         (LCDC_HEOCFG27_HXSCFACT_Msk & (_UINT32_(value) << LCDC_HEOCFG27_HXSCFACT_Pos)) /* Assignment of value for HXSCFACT in the LCDC_HEOCFG27 register */
 #define LCDC_HEOCFG27_Msk                     _UINT32_(0x00FFFFFF)                                 /* (LCDC_HEOCFG27) Register Mask  */
 
 
@@ -2328,16 +2330,16 @@
 
 #define LCDC_HEOCFG28_VXSYOFF_Pos             _UINT32_(0)                                          /* (LCDC_HEOCFG28) Vertical Scaler Luma Default Phase for Field 0 or Progressive Scan Position */
 #define LCDC_HEOCFG28_VXSYOFF_Msk             (_UINT32_(0xF) << LCDC_HEOCFG28_VXSYOFF_Pos)         /* (LCDC_HEOCFG28) Vertical Scaler Luma Default Phase for Field 0 or Progressive Scan Mask */
-#define LCDC_HEOCFG28_VXSYOFF(value)          (LCDC_HEOCFG28_VXSYOFF_Msk & (_UINT32_(value) << LCDC_HEOCFG28_VXSYOFF_Pos)) /* Assigment of value for VXSYOFF in the LCDC_HEOCFG28 register */
+#define LCDC_HEOCFG28_VXSYOFF(value)          (LCDC_HEOCFG28_VXSYOFF_Msk & (_UINT32_(value) << LCDC_HEOCFG28_VXSYOFF_Pos)) /* Assignment of value for VXSYOFF in the LCDC_HEOCFG28 register */
 #define LCDC_HEOCFG28_VXSYOFF1_Pos            _UINT32_(8)                                          /* (LCDC_HEOCFG28) Vertical Scaler Luma Default Phase for Field 1 Position */
 #define LCDC_HEOCFG28_VXSYOFF1_Msk            (_UINT32_(0xF) << LCDC_HEOCFG28_VXSYOFF1_Pos)        /* (LCDC_HEOCFG28) Vertical Scaler Luma Default Phase for Field 1 Mask */
-#define LCDC_HEOCFG28_VXSYOFF1(value)         (LCDC_HEOCFG28_VXSYOFF1_Msk & (_UINT32_(value) << LCDC_HEOCFG28_VXSYOFF1_Pos)) /* Assigment of value for VXSYOFF1 in the LCDC_HEOCFG28 register */
+#define LCDC_HEOCFG28_VXSYOFF1(value)         (LCDC_HEOCFG28_VXSYOFF1_Msk & (_UINT32_(value) << LCDC_HEOCFG28_VXSYOFF1_Pos)) /* Assignment of value for VXSYOFF1 in the LCDC_HEOCFG28 register */
 #define LCDC_HEOCFG28_VXSCOFF_Pos             _UINT32_(16)                                         /* (LCDC_HEOCFG28) Vertical Scaler Chroma Default Phase for Field 0 or Progressive Scan Position */
 #define LCDC_HEOCFG28_VXSCOFF_Msk             (_UINT32_(0xF) << LCDC_HEOCFG28_VXSCOFF_Pos)         /* (LCDC_HEOCFG28) Vertical Scaler Chroma Default Phase for Field 0 or Progressive Scan Mask */
-#define LCDC_HEOCFG28_VXSCOFF(value)          (LCDC_HEOCFG28_VXSCOFF_Msk & (_UINT32_(value) << LCDC_HEOCFG28_VXSCOFF_Pos)) /* Assigment of value for VXSCOFF in the LCDC_HEOCFG28 register */
+#define LCDC_HEOCFG28_VXSCOFF(value)          (LCDC_HEOCFG28_VXSCOFF_Msk & (_UINT32_(value) << LCDC_HEOCFG28_VXSCOFF_Pos)) /* Assignment of value for VXSCOFF in the LCDC_HEOCFG28 register */
 #define LCDC_HEOCFG28_VXSCOFF1_Pos            _UINT32_(24)                                         /* (LCDC_HEOCFG28) Vertical Scaler Chroma Default Phase for Field 1 Position */
 #define LCDC_HEOCFG28_VXSCOFF1_Msk            (_UINT32_(0xF) << LCDC_HEOCFG28_VXSCOFF1_Pos)        /* (LCDC_HEOCFG28) Vertical Scaler Chroma Default Phase for Field 1 Mask */
-#define LCDC_HEOCFG28_VXSCOFF1(value)         (LCDC_HEOCFG28_VXSCOFF1_Msk & (_UINT32_(value) << LCDC_HEOCFG28_VXSCOFF1_Pos)) /* Assigment of value for VXSCOFF1 in the LCDC_HEOCFG28 register */
+#define LCDC_HEOCFG28_VXSCOFF1(value)         (LCDC_HEOCFG28_VXSCOFF1_Msk & (_UINT32_(value) << LCDC_HEOCFG28_VXSCOFF1_Pos)) /* Assignment of value for VXSCOFF1 in the LCDC_HEOCFG28 register */
 #define LCDC_HEOCFG28_Msk                     _UINT32_(0x0F0F0F0F)                                 /* (LCDC_HEOCFG28) Register Mask  */
 
 
@@ -2346,10 +2348,10 @@
 
 #define LCDC_HEOCFG29_HXSYOFF_Pos             _UINT32_(0)                                          /* (LCDC_HEOCFG29) Horizontal Scaler Luma Offset Position */
 #define LCDC_HEOCFG29_HXSYOFF_Msk             (_UINT32_(0xF) << LCDC_HEOCFG29_HXSYOFF_Pos)         /* (LCDC_HEOCFG29) Horizontal Scaler Luma Offset Mask */
-#define LCDC_HEOCFG29_HXSYOFF(value)          (LCDC_HEOCFG29_HXSYOFF_Msk & (_UINT32_(value) << LCDC_HEOCFG29_HXSYOFF_Pos)) /* Assigment of value for HXSYOFF in the LCDC_HEOCFG29 register */
+#define LCDC_HEOCFG29_HXSYOFF(value)          (LCDC_HEOCFG29_HXSYOFF_Msk & (_UINT32_(value) << LCDC_HEOCFG29_HXSYOFF_Pos)) /* Assignment of value for HXSYOFF in the LCDC_HEOCFG29 register */
 #define LCDC_HEOCFG29_HXSCOFF_Pos             _UINT32_(16)                                         /* (LCDC_HEOCFG29) Hozontal Scaler Chroma Offset Position */
 #define LCDC_HEOCFG29_HXSCOFF_Msk             (_UINT32_(0xF) << LCDC_HEOCFG29_HXSCOFF_Pos)         /* (LCDC_HEOCFG29) Hozontal Scaler Chroma Offset Mask */
-#define LCDC_HEOCFG29_HXSCOFF(value)          (LCDC_HEOCFG29_HXSCOFF_Msk & (_UINT32_(value) << LCDC_HEOCFG29_HXSCOFF_Pos)) /* Assigment of value for HXSCOFF in the LCDC_HEOCFG29 register */
+#define LCDC_HEOCFG29_HXSCOFF(value)          (LCDC_HEOCFG29_HXSCOFF_Msk & (_UINT32_(value) << LCDC_HEOCFG29_HXSCOFF_Pos)) /* Assignment of value for HXSCOFF in the LCDC_HEOCFG29 register */
 #define LCDC_HEOCFG29_Msk                     _UINT32_(0x000F000F)                                 /* (LCDC_HEOCFG29) Register Mask  */
 
 
@@ -2358,58 +2360,58 @@
 
 #define LCDC_HEOCFG30_VXSYCFG_Pos             _UINT32_(0)                                          /* (LCDC_HEOCFG30) Vertical Scaler Luma/AR Configuration for Field 0 or Progressive Scan Position */
 #define LCDC_HEOCFG30_VXSYCFG_Msk             (_UINT32_(0x3) << LCDC_HEOCFG30_VXSYCFG_Pos)         /* (LCDC_HEOCFG30) Vertical Scaler Luma/AR Configuration for Field 0 or Progressive Scan Mask */
-#define LCDC_HEOCFG30_VXSYCFG(value)          (LCDC_HEOCFG30_VXSYCFG_Msk & (_UINT32_(value) << LCDC_HEOCFG30_VXSYCFG_Pos)) /* Assigment of value for VXSYCFG in the LCDC_HEOCFG30 register */
+#define LCDC_HEOCFG30_VXSYCFG(value)          (LCDC_HEOCFG30_VXSYCFG_Msk & (_UINT32_(value) << LCDC_HEOCFG30_VXSYCFG_Pos)) /* Assignment of value for VXSYCFG in the LCDC_HEOCFG30 register */
 #define LCDC_HEOCFG30_VXSYTAP2_Pos            _UINT32_(4)                                          /* (LCDC_HEOCFG30) Vertical Scaler Predefined Bilinear 2 Taps Selected for Luma/AR Component Position */
 #define LCDC_HEOCFG30_VXSYTAP2_Msk            (_UINT32_(0x1) << LCDC_HEOCFG30_VXSYTAP2_Pos)        /* (LCDC_HEOCFG30) Vertical Scaler Predefined Bilinear 2 Taps Selected for Luma/AR Component Mask */
-#define LCDC_HEOCFG30_VXSYTAP2(value)         (LCDC_HEOCFG30_VXSYTAP2_Msk & (_UINT32_(value) << LCDC_HEOCFG30_VXSYTAP2_Pos)) /* Assigment of value for VXSYTAP2 in the LCDC_HEOCFG30 register */
+#define LCDC_HEOCFG30_VXSYTAP2(value)         (LCDC_HEOCFG30_VXSYTAP2_Msk & (_UINT32_(value) << LCDC_HEOCFG30_VXSYTAP2_Pos)) /* Assignment of value for VXSYTAP2 in the LCDC_HEOCFG30 register */
 #define   LCDC_HEOCFG30_VXSYTAP2_0_Val        _UINT32_(0x0)                                        /* (LCDC_HEOCFG30) Bilinear 2 taps value not selected.  */
 #define   LCDC_HEOCFG30_VXSYTAP2_1_Val        _UINT32_(0x1)                                        /* (LCDC_HEOCFG30) Bilinear 2 taps value selected.  */
-#define LCDC_HEOCFG30_VXSYTAP2_0              (LCDC_HEOCFG30_VXSYTAP2_0_Val << LCDC_HEOCFG30_VXSYTAP2_Pos) /* (LCDC_HEOCFG30) Bilinear 2 taps value not selected. Position  */
-#define LCDC_HEOCFG30_VXSYTAP2_1              (LCDC_HEOCFG30_VXSYTAP2_1_Val << LCDC_HEOCFG30_VXSYTAP2_Pos) /* (LCDC_HEOCFG30) Bilinear 2 taps value selected. Position  */
+#define LCDC_HEOCFG30_VXSYTAP2_0              (LCDC_HEOCFG30_VXSYTAP2_0_Val << LCDC_HEOCFG30_VXSYTAP2_Pos) /* (LCDC_HEOCFG30) Bilinear 2 taps value not selected. Position */
+#define LCDC_HEOCFG30_VXSYTAP2_1              (LCDC_HEOCFG30_VXSYTAP2_1_Val << LCDC_HEOCFG30_VXSYTAP2_Pos) /* (LCDC_HEOCFG30) Bilinear 2 taps value selected. Position */
 #define LCDC_HEOCFG30_VXSY1201N_Pos           _UINT32_(5)                                          /* (LCDC_HEOCFG30) Vertical Scaler Bilinear 2 Taps Position among 4 Filter Taps for Luma/AR Component Position */
 #define LCDC_HEOCFG30_VXSY1201N_Msk           (_UINT32_(0x1) << LCDC_HEOCFG30_VXSY1201N_Pos)       /* (LCDC_HEOCFG30) Vertical Scaler Bilinear 2 Taps Position among 4 Filter Taps for Luma/AR Component Mask */
-#define LCDC_HEOCFG30_VXSY1201N(value)        (LCDC_HEOCFG30_VXSY1201N_Msk & (_UINT32_(value) << LCDC_HEOCFG30_VXSY1201N_Pos)) /* Assigment of value for VXSY1201N in the LCDC_HEOCFG30 register */
+#define LCDC_HEOCFG30_VXSY1201N(value)        (LCDC_HEOCFG30_VXSY1201N_Msk & (_UINT32_(value) << LCDC_HEOCFG30_VXSY1201N_Pos)) /* Assignment of value for VXSY1201N in the LCDC_HEOCFG30 register */
 #define   LCDC_HEOCFG30_VXSY1201N_0_Val       _UINT32_(0x0)                                        /* (LCDC_HEOCFG30) When selected, bilinear tap values are located on 0 and 1 positions (left-aligned).  */
 #define   LCDC_HEOCFG30_VXSY1201N_1_Val       _UINT32_(0x1)                                        /* (LCDC_HEOCFG30) When selected, bilinear tap values are located on 0 and 1 positions (center-aligned).  */
-#define LCDC_HEOCFG30_VXSY1201N_0             (LCDC_HEOCFG30_VXSY1201N_0_Val << LCDC_HEOCFG30_VXSY1201N_Pos) /* (LCDC_HEOCFG30) When selected, bilinear tap values are located on 0 and 1 positions (left-aligned). Position  */
-#define LCDC_HEOCFG30_VXSY1201N_1             (LCDC_HEOCFG30_VXSY1201N_1_Val << LCDC_HEOCFG30_VXSY1201N_Pos) /* (LCDC_HEOCFG30) When selected, bilinear tap values are located on 0 and 1 positions (center-aligned). Position  */
+#define LCDC_HEOCFG30_VXSY1201N_0             (LCDC_HEOCFG30_VXSY1201N_0_Val << LCDC_HEOCFG30_VXSY1201N_Pos) /* (LCDC_HEOCFG30) When selected, bilinear tap values are located on 0 and 1 positions (left-aligned). Position */
+#define LCDC_HEOCFG30_VXSY1201N_1             (LCDC_HEOCFG30_VXSY1201N_1_Val << LCDC_HEOCFG30_VXSY1201N_Pos) /* (LCDC_HEOCFG30) When selected, bilinear tap values are located on 0 and 1 positions (center-aligned). Position */
 #define LCDC_HEOCFG30_VXSYBICU_Pos            _UINT32_(6)                                          /* (LCDC_HEOCFG30) Vertical Scaler Predefined Bicubic Taps Selected for Luma/AR Component Position */
 #define LCDC_HEOCFG30_VXSYBICU_Msk            (_UINT32_(0x1) << LCDC_HEOCFG30_VXSYBICU_Pos)        /* (LCDC_HEOCFG30) Vertical Scaler Predefined Bicubic Taps Selected for Luma/AR Component Mask */
-#define LCDC_HEOCFG30_VXSYBICU(value)         (LCDC_HEOCFG30_VXSYBICU_Msk & (_UINT32_(value) << LCDC_HEOCFG30_VXSYBICU_Pos)) /* Assigment of value for VXSYBICU in the LCDC_HEOCFG30 register */
+#define LCDC_HEOCFG30_VXSYBICU(value)         (LCDC_HEOCFG30_VXSYBICU_Msk & (_UINT32_(value) << LCDC_HEOCFG30_VXSYBICU_Pos)) /* Assignment of value for VXSYBICU in the LCDC_HEOCFG30 register */
 #define   LCDC_HEOCFG30_VXSYBICU_0_Val        _UINT32_(0x0)                                        /* (LCDC_HEOCFG30) Bicubic taps values are not selected.  */
 #define   LCDC_HEOCFG30_VXSYBICU_1_Val        _UINT32_(0x1)                                        /* (LCDC_HEOCFG30) Bicubic taps values are selected.  */
-#define LCDC_HEOCFG30_VXSYBICU_0              (LCDC_HEOCFG30_VXSYBICU_0_Val << LCDC_HEOCFG30_VXSYBICU_Pos) /* (LCDC_HEOCFG30) Bicubic taps values are not selected. Position  */
-#define LCDC_HEOCFG30_VXSYBICU_1              (LCDC_HEOCFG30_VXSYBICU_1_Val << LCDC_HEOCFG30_VXSYBICU_Pos) /* (LCDC_HEOCFG30) Bicubic taps values are selected. Position  */
+#define LCDC_HEOCFG30_VXSYBICU_0              (LCDC_HEOCFG30_VXSYBICU_0_Val << LCDC_HEOCFG30_VXSYBICU_Pos) /* (LCDC_HEOCFG30) Bicubic taps values are not selected. Position */
+#define LCDC_HEOCFG30_VXSYBICU_1              (LCDC_HEOCFG30_VXSYBICU_1_Val << LCDC_HEOCFG30_VXSYBICU_Pos) /* (LCDC_HEOCFG30) Bicubic taps values are selected. Position */
 #define LCDC_HEOCFG30_VXSYCFG1_Pos            _UINT32_(8)                                          /* (LCDC_HEOCFG30) Vertical Scaler Chroma/GB Configuration for Field 1 (only used for interlaced frame content) Position */
 #define LCDC_HEOCFG30_VXSYCFG1_Msk            (_UINT32_(0x3) << LCDC_HEOCFG30_VXSYCFG1_Pos)        /* (LCDC_HEOCFG30) Vertical Scaler Chroma/GB Configuration for Field 1 (only used for interlaced frame content) Mask */
-#define LCDC_HEOCFG30_VXSYCFG1(value)         (LCDC_HEOCFG30_VXSYCFG1_Msk & (_UINT32_(value) << LCDC_HEOCFG30_VXSYCFG1_Pos)) /* Assigment of value for VXSYCFG1 in the LCDC_HEOCFG30 register */
+#define LCDC_HEOCFG30_VXSYCFG1(value)         (LCDC_HEOCFG30_VXSYCFG1_Msk & (_UINT32_(value) << LCDC_HEOCFG30_VXSYCFG1_Pos)) /* Assignment of value for VXSYCFG1 in the LCDC_HEOCFG30 register */
 #define LCDC_HEOCFG30_VXSCCFG_Pos             _UINT32_(16)                                         /* (LCDC_HEOCFG30) Vertical Scaler Chroma/GB Configuration for Field 0 or Progressive Scan Position */
 #define LCDC_HEOCFG30_VXSCCFG_Msk             (_UINT32_(0x3) << LCDC_HEOCFG30_VXSCCFG_Pos)         /* (LCDC_HEOCFG30) Vertical Scaler Chroma/GB Configuration for Field 0 or Progressive Scan Mask */
-#define LCDC_HEOCFG30_VXSCCFG(value)          (LCDC_HEOCFG30_VXSCCFG_Msk & (_UINT32_(value) << LCDC_HEOCFG30_VXSCCFG_Pos)) /* Assigment of value for VXSCCFG in the LCDC_HEOCFG30 register */
+#define LCDC_HEOCFG30_VXSCCFG(value)          (LCDC_HEOCFG30_VXSCCFG_Msk & (_UINT32_(value) << LCDC_HEOCFG30_VXSCCFG_Pos)) /* Assignment of value for VXSCCFG in the LCDC_HEOCFG30 register */
 #define LCDC_HEOCFG30_VXSCTAP2_Pos            _UINT32_(20)                                         /* (LCDC_HEOCFG30) Vertical Scaler Predefined Bilinear 2 Taps Selected for Chroma/GB Component Position */
 #define LCDC_HEOCFG30_VXSCTAP2_Msk            (_UINT32_(0x1) << LCDC_HEOCFG30_VXSCTAP2_Pos)        /* (LCDC_HEOCFG30) Vertical Scaler Predefined Bilinear 2 Taps Selected for Chroma/GB Component Mask */
-#define LCDC_HEOCFG30_VXSCTAP2(value)         (LCDC_HEOCFG30_VXSCTAP2_Msk & (_UINT32_(value) << LCDC_HEOCFG30_VXSCTAP2_Pos)) /* Assigment of value for VXSCTAP2 in the LCDC_HEOCFG30 register */
+#define LCDC_HEOCFG30_VXSCTAP2(value)         (LCDC_HEOCFG30_VXSCTAP2_Msk & (_UINT32_(value) << LCDC_HEOCFG30_VXSCTAP2_Pos)) /* Assignment of value for VXSCTAP2 in the LCDC_HEOCFG30 register */
 #define   LCDC_HEOCFG30_VXSCTAP2_0_Val        _UINT32_(0x0)                                        /* (LCDC_HEOCFG30) Bilinear 2 taps value not selected.  */
 #define   LCDC_HEOCFG30_VXSCTAP2_1_Val        _UINT32_(0x1)                                        /* (LCDC_HEOCFG30) Bilinear 2 taps value selected.  */
-#define LCDC_HEOCFG30_VXSCTAP2_0              (LCDC_HEOCFG30_VXSCTAP2_0_Val << LCDC_HEOCFG30_VXSCTAP2_Pos) /* (LCDC_HEOCFG30) Bilinear 2 taps value not selected. Position  */
-#define LCDC_HEOCFG30_VXSCTAP2_1              (LCDC_HEOCFG30_VXSCTAP2_1_Val << LCDC_HEOCFG30_VXSCTAP2_Pos) /* (LCDC_HEOCFG30) Bilinear 2 taps value selected. Position  */
+#define LCDC_HEOCFG30_VXSCTAP2_0              (LCDC_HEOCFG30_VXSCTAP2_0_Val << LCDC_HEOCFG30_VXSCTAP2_Pos) /* (LCDC_HEOCFG30) Bilinear 2 taps value not selected. Position */
+#define LCDC_HEOCFG30_VXSCTAP2_1              (LCDC_HEOCFG30_VXSCTAP2_1_Val << LCDC_HEOCFG30_VXSCTAP2_Pos) /* (LCDC_HEOCFG30) Bilinear 2 taps value selected. Position */
 #define LCDC_HEOCFG30_VXSC1201N_Pos           _UINT32_(21)                                         /* (LCDC_HEOCFG30) Vertical Scaler Bilinear 2 Taps Position among 4 Taps Filter for Chroma/GB Component Position */
 #define LCDC_HEOCFG30_VXSC1201N_Msk           (_UINT32_(0x1) << LCDC_HEOCFG30_VXSC1201N_Pos)       /* (LCDC_HEOCFG30) Vertical Scaler Bilinear 2 Taps Position among 4 Taps Filter for Chroma/GB Component Mask */
-#define LCDC_HEOCFG30_VXSC1201N(value)        (LCDC_HEOCFG30_VXSC1201N_Msk & (_UINT32_(value) << LCDC_HEOCFG30_VXSC1201N_Pos)) /* Assigment of value for VXSC1201N in the LCDC_HEOCFG30 register */
+#define LCDC_HEOCFG30_VXSC1201N(value)        (LCDC_HEOCFG30_VXSC1201N_Msk & (_UINT32_(value) << LCDC_HEOCFG30_VXSC1201N_Pos)) /* Assignment of value for VXSC1201N in the LCDC_HEOCFG30 register */
 #define   LCDC_HEOCFG30_VXSC1201N_0_Val       _UINT32_(0x0)                                        /* (LCDC_HEOCFG30) When selected, bilinear taps values are located on 0 and 1 positions (left aligned).  */
 #define   LCDC_HEOCFG30_VXSC1201N_1_Val       _UINT32_(0x1)                                        /* (LCDC_HEOCFG30) When selected, bilinear taps values are located on 0 and 1 positions (center aligned).  */
-#define LCDC_HEOCFG30_VXSC1201N_0             (LCDC_HEOCFG30_VXSC1201N_0_Val << LCDC_HEOCFG30_VXSC1201N_Pos) /* (LCDC_HEOCFG30) When selected, bilinear taps values are located on 0 and 1 positions (left aligned). Position  */
-#define LCDC_HEOCFG30_VXSC1201N_1             (LCDC_HEOCFG30_VXSC1201N_1_Val << LCDC_HEOCFG30_VXSC1201N_Pos) /* (LCDC_HEOCFG30) When selected, bilinear taps values are located on 0 and 1 positions (center aligned). Position  */
+#define LCDC_HEOCFG30_VXSC1201N_0             (LCDC_HEOCFG30_VXSC1201N_0_Val << LCDC_HEOCFG30_VXSC1201N_Pos) /* (LCDC_HEOCFG30) When selected, bilinear taps values are located on 0 and 1 positions (left aligned). Position */
+#define LCDC_HEOCFG30_VXSC1201N_1             (LCDC_HEOCFG30_VXSC1201N_1_Val << LCDC_HEOCFG30_VXSC1201N_Pos) /* (LCDC_HEOCFG30) When selected, bilinear taps values are located on 0 and 1 positions (center aligned). Position */
 #define LCDC_HEOCFG30_VXSCBICU_Pos            _UINT32_(22)                                         /* (LCDC_HEOCFG30) Vertical Scaler Predefined Bicubic Taps Selected for Chroma/GB Component Position */
 #define LCDC_HEOCFG30_VXSCBICU_Msk            (_UINT32_(0x1) << LCDC_HEOCFG30_VXSCBICU_Pos)        /* (LCDC_HEOCFG30) Vertical Scaler Predefined Bicubic Taps Selected for Chroma/GB Component Mask */
-#define LCDC_HEOCFG30_VXSCBICU(value)         (LCDC_HEOCFG30_VXSCBICU_Msk & (_UINT32_(value) << LCDC_HEOCFG30_VXSCBICU_Pos)) /* Assigment of value for VXSCBICU in the LCDC_HEOCFG30 register */
+#define LCDC_HEOCFG30_VXSCBICU(value)         (LCDC_HEOCFG30_VXSCBICU_Msk & (_UINT32_(value) << LCDC_HEOCFG30_VXSCBICU_Pos)) /* Assignment of value for VXSCBICU in the LCDC_HEOCFG30 register */
 #define   LCDC_HEOCFG30_VXSCBICU_0_Val        _UINT32_(0x0)                                        /* (LCDC_HEOCFG30) Bicubic taps values are not selected.  */
 #define   LCDC_HEOCFG30_VXSCBICU_1_Val        _UINT32_(0x1)                                        /* (LCDC_HEOCFG30) Bicubic taps values are selected.  */
-#define LCDC_HEOCFG30_VXSCBICU_0              (LCDC_HEOCFG30_VXSCBICU_0_Val << LCDC_HEOCFG30_VXSCBICU_Pos) /* (LCDC_HEOCFG30) Bicubic taps values are not selected. Position  */
-#define LCDC_HEOCFG30_VXSCBICU_1              (LCDC_HEOCFG30_VXSCBICU_1_Val << LCDC_HEOCFG30_VXSCBICU_Pos) /* (LCDC_HEOCFG30) Bicubic taps values are selected. Position  */
+#define LCDC_HEOCFG30_VXSCBICU_0              (LCDC_HEOCFG30_VXSCBICU_0_Val << LCDC_HEOCFG30_VXSCBICU_Pos) /* (LCDC_HEOCFG30) Bicubic taps values are not selected. Position */
+#define LCDC_HEOCFG30_VXSCBICU_1              (LCDC_HEOCFG30_VXSCBICU_1_Val << LCDC_HEOCFG30_VXSCBICU_Pos) /* (LCDC_HEOCFG30) Bicubic taps values are selected. Position */
 #define LCDC_HEOCFG30_VXSCCFG1_Pos            _UINT32_(24)                                         /* (LCDC_HEOCFG30) Vertical Scaler Chroma Configuration for Field 1(only used for YCrCb Interlaced Frame Content) Position */
 #define LCDC_HEOCFG30_VXSCCFG1_Msk            (_UINT32_(0x3) << LCDC_HEOCFG30_VXSCCFG1_Pos)        /* (LCDC_HEOCFG30) Vertical Scaler Chroma Configuration for Field 1(only used for YCrCb Interlaced Frame Content) Mask */
-#define LCDC_HEOCFG30_VXSCCFG1(value)         (LCDC_HEOCFG30_VXSCCFG1_Msk & (_UINT32_(value) << LCDC_HEOCFG30_VXSCCFG1_Pos)) /* Assigment of value for VXSCCFG1 in the LCDC_HEOCFG30 register */
+#define LCDC_HEOCFG30_VXSCCFG1(value)         (LCDC_HEOCFG30_VXSCCFG1_Msk & (_UINT32_(value) << LCDC_HEOCFG30_VXSCCFG1_Pos)) /* Assignment of value for VXSCCFG1 in the LCDC_HEOCFG30 register */
 #define LCDC_HEOCFG30_Msk                     _UINT32_(0x03730373)                                 /* (LCDC_HEOCFG30) Register Mask  */
 
 #define LCDC_HEOCFG30_VXSYTAP_Pos             _UINT32_(4)                                          /* (LCDC_HEOCFG30 Position) Vertical Scaler Predefined Bilinear 2 Taps Selected for Luma/AR Component */
@@ -2424,38 +2426,38 @@
 
 #define LCDC_HEOCFG31_HXSYCFG_Pos             _UINT32_(0)                                          /* (LCDC_HEOCFG31) Horizontal Scaler Luma Configuration Position */
 #define LCDC_HEOCFG31_HXSYCFG_Msk             (_UINT32_(0x3) << LCDC_HEOCFG31_HXSYCFG_Pos)         /* (LCDC_HEOCFG31) Horizontal Scaler Luma Configuration Mask */
-#define LCDC_HEOCFG31_HXSYCFG(value)          (LCDC_HEOCFG31_HXSYCFG_Msk & (_UINT32_(value) << LCDC_HEOCFG31_HXSYCFG_Pos)) /* Assigment of value for HXSYCFG in the LCDC_HEOCFG31 register */
+#define LCDC_HEOCFG31_HXSYCFG(value)          (LCDC_HEOCFG31_HXSYCFG_Msk & (_UINT32_(value) << LCDC_HEOCFG31_HXSYCFG_Pos)) /* Assignment of value for HXSYCFG in the LCDC_HEOCFG31 register */
 #define LCDC_HEOCFG31_HXSYTAP2_Pos            _UINT32_(4)                                          /* (LCDC_HEOCFG31) Horizontal Scaler Predefined Bilinear 2 Taps Selected for Luma/AR Component Position */
 #define LCDC_HEOCFG31_HXSYTAP2_Msk            (_UINT32_(0x1) << LCDC_HEOCFG31_HXSYTAP2_Pos)        /* (LCDC_HEOCFG31) Horizontal Scaler Predefined Bilinear 2 Taps Selected for Luma/AR Component Mask */
-#define LCDC_HEOCFG31_HXSYTAP2(value)         (LCDC_HEOCFG31_HXSYTAP2_Msk & (_UINT32_(value) << LCDC_HEOCFG31_HXSYTAP2_Pos)) /* Assigment of value for HXSYTAP2 in the LCDC_HEOCFG31 register */
+#define LCDC_HEOCFG31_HXSYTAP2(value)         (LCDC_HEOCFG31_HXSYTAP2_Msk & (_UINT32_(value) << LCDC_HEOCFG31_HXSYTAP2_Pos)) /* Assignment of value for HXSYTAP2 in the LCDC_HEOCFG31 register */
 #define   LCDC_HEOCFG31_HXSYTAP2_0_Val        _UINT32_(0x0)                                        /* (LCDC_HEOCFG31) Bilinear 2 taps value not selected.  */
 #define   LCDC_HEOCFG31_HXSYTAP2_1_Val        _UINT32_(0x1)                                        /* (LCDC_HEOCFG31) Bilinear 2 taps value selected.  */
-#define LCDC_HEOCFG31_HXSYTAP2_0              (LCDC_HEOCFG31_HXSYTAP2_0_Val << LCDC_HEOCFG31_HXSYTAP2_Pos) /* (LCDC_HEOCFG31) Bilinear 2 taps value not selected. Position  */
-#define LCDC_HEOCFG31_HXSYTAP2_1              (LCDC_HEOCFG31_HXSYTAP2_1_Val << LCDC_HEOCFG31_HXSYTAP2_Pos) /* (LCDC_HEOCFG31) Bilinear 2 taps value selected. Position  */
+#define LCDC_HEOCFG31_HXSYTAP2_0              (LCDC_HEOCFG31_HXSYTAP2_0_Val << LCDC_HEOCFG31_HXSYTAP2_Pos) /* (LCDC_HEOCFG31) Bilinear 2 taps value not selected. Position */
+#define LCDC_HEOCFG31_HXSYTAP2_1              (LCDC_HEOCFG31_HXSYTAP2_1_Val << LCDC_HEOCFG31_HXSYTAP2_Pos) /* (LCDC_HEOCFG31) Bilinear 2 taps value selected. Position */
 #define LCDC_HEOCFG31_HXSYBICU_Pos            _UINT32_(5)                                          /* (LCDC_HEOCFG31) Horizontal Scaler Predefined Bicubic Taps Selected for Luma/AR Component Position */
 #define LCDC_HEOCFG31_HXSYBICU_Msk            (_UINT32_(0x1) << LCDC_HEOCFG31_HXSYBICU_Pos)        /* (LCDC_HEOCFG31) Horizontal Scaler Predefined Bicubic Taps Selected for Luma/AR Component Mask */
-#define LCDC_HEOCFG31_HXSYBICU(value)         (LCDC_HEOCFG31_HXSYBICU_Msk & (_UINT32_(value) << LCDC_HEOCFG31_HXSYBICU_Pos)) /* Assigment of value for HXSYBICU in the LCDC_HEOCFG31 register */
+#define LCDC_HEOCFG31_HXSYBICU(value)         (LCDC_HEOCFG31_HXSYBICU_Msk & (_UINT32_(value) << LCDC_HEOCFG31_HXSYBICU_Pos)) /* Assignment of value for HXSYBICU in the LCDC_HEOCFG31 register */
 #define   LCDC_HEOCFG31_HXSYBICU_0_Val        _UINT32_(0x0)                                        /* (LCDC_HEOCFG31) Bicubic taps values are not selected.  */
 #define   LCDC_HEOCFG31_HXSYBICU_1_Val        _UINT32_(0x1)                                        /* (LCDC_HEOCFG31) Bicubic taps values are selected.  */
-#define LCDC_HEOCFG31_HXSYBICU_0              (LCDC_HEOCFG31_HXSYBICU_0_Val << LCDC_HEOCFG31_HXSYBICU_Pos) /* (LCDC_HEOCFG31) Bicubic taps values are not selected. Position  */
-#define LCDC_HEOCFG31_HXSYBICU_1              (LCDC_HEOCFG31_HXSYBICU_1_Val << LCDC_HEOCFG31_HXSYBICU_Pos) /* (LCDC_HEOCFG31) Bicubic taps values are selected. Position  */
+#define LCDC_HEOCFG31_HXSYBICU_0              (LCDC_HEOCFG31_HXSYBICU_0_Val << LCDC_HEOCFG31_HXSYBICU_Pos) /* (LCDC_HEOCFG31) Bicubic taps values are not selected. Position */
+#define LCDC_HEOCFG31_HXSYBICU_1              (LCDC_HEOCFG31_HXSYBICU_1_Val << LCDC_HEOCFG31_HXSYBICU_Pos) /* (LCDC_HEOCFG31) Bicubic taps values are selected. Position */
 #define LCDC_HEOCFG31_HXSCCFG_Pos             _UINT32_(16)                                         /* (LCDC_HEOCFG31) Horizontal Scaler Chroma/GB Configuration Position */
 #define LCDC_HEOCFG31_HXSCCFG_Msk             (_UINT32_(0x3) << LCDC_HEOCFG31_HXSCCFG_Pos)         /* (LCDC_HEOCFG31) Horizontal Scaler Chroma/GB Configuration Mask */
-#define LCDC_HEOCFG31_HXSCCFG(value)          (LCDC_HEOCFG31_HXSCCFG_Msk & (_UINT32_(value) << LCDC_HEOCFG31_HXSCCFG_Pos)) /* Assigment of value for HXSCCFG in the LCDC_HEOCFG31 register */
+#define LCDC_HEOCFG31_HXSCCFG(value)          (LCDC_HEOCFG31_HXSCCFG_Msk & (_UINT32_(value) << LCDC_HEOCFG31_HXSCCFG_Pos)) /* Assignment of value for HXSCCFG in the LCDC_HEOCFG31 register */
 #define LCDC_HEOCFG31_HXSCTAP2_Pos            _UINT32_(20)                                         /* (LCDC_HEOCFG31) Horizontal Scaler Predefined Bilinear 2 Taps Selected for Chroma Component Position */
 #define LCDC_HEOCFG31_HXSCTAP2_Msk            (_UINT32_(0x1) << LCDC_HEOCFG31_HXSCTAP2_Pos)        /* (LCDC_HEOCFG31) Horizontal Scaler Predefined Bilinear 2 Taps Selected for Chroma Component Mask */
-#define LCDC_HEOCFG31_HXSCTAP2(value)         (LCDC_HEOCFG31_HXSCTAP2_Msk & (_UINT32_(value) << LCDC_HEOCFG31_HXSCTAP2_Pos)) /* Assigment of value for HXSCTAP2 in the LCDC_HEOCFG31 register */
+#define LCDC_HEOCFG31_HXSCTAP2(value)         (LCDC_HEOCFG31_HXSCTAP2_Msk & (_UINT32_(value) << LCDC_HEOCFG31_HXSCTAP2_Pos)) /* Assignment of value for HXSCTAP2 in the LCDC_HEOCFG31 register */
 #define   LCDC_HEOCFG31_HXSCTAP2_0_Val        _UINT32_(0x0)                                        /* (LCDC_HEOCFG31) Bilinear 2 taps value not selected.  */
 #define   LCDC_HEOCFG31_HXSCTAP2_1_Val        _UINT32_(0x1)                                        /* (LCDC_HEOCFG31) Bilinear 2 taps value selected.  */
-#define LCDC_HEOCFG31_HXSCTAP2_0              (LCDC_HEOCFG31_HXSCTAP2_0_Val << LCDC_HEOCFG31_HXSCTAP2_Pos) /* (LCDC_HEOCFG31) Bilinear 2 taps value not selected. Position  */
-#define LCDC_HEOCFG31_HXSCTAP2_1              (LCDC_HEOCFG31_HXSCTAP2_1_Val << LCDC_HEOCFG31_HXSCTAP2_Pos) /* (LCDC_HEOCFG31) Bilinear 2 taps value selected. Position  */
+#define LCDC_HEOCFG31_HXSCTAP2_0              (LCDC_HEOCFG31_HXSCTAP2_0_Val << LCDC_HEOCFG31_HXSCTAP2_Pos) /* (LCDC_HEOCFG31) Bilinear 2 taps value not selected. Position */
+#define LCDC_HEOCFG31_HXSCTAP2_1              (LCDC_HEOCFG31_HXSCTAP2_1_Val << LCDC_HEOCFG31_HXSCTAP2_Pos) /* (LCDC_HEOCFG31) Bilinear 2 taps value selected. Position */
 #define LCDC_HEOCFG31_HXSCBICU_Pos            _UINT32_(21)                                         /* (LCDC_HEOCFG31) Horizontal Scaler Bicubic Coefficients Selected for Chroma Component Position */
 #define LCDC_HEOCFG31_HXSCBICU_Msk            (_UINT32_(0x1) << LCDC_HEOCFG31_HXSCBICU_Pos)        /* (LCDC_HEOCFG31) Horizontal Scaler Bicubic Coefficients Selected for Chroma Component Mask */
-#define LCDC_HEOCFG31_HXSCBICU(value)         (LCDC_HEOCFG31_HXSCBICU_Msk & (_UINT32_(value) << LCDC_HEOCFG31_HXSCBICU_Pos)) /* Assigment of value for HXSCBICU in the LCDC_HEOCFG31 register */
+#define LCDC_HEOCFG31_HXSCBICU(value)         (LCDC_HEOCFG31_HXSCBICU_Msk & (_UINT32_(value) << LCDC_HEOCFG31_HXSCBICU_Pos)) /* Assignment of value for HXSCBICU in the LCDC_HEOCFG31 register */
 #define   LCDC_HEOCFG31_HXSCBICU_0_Val        _UINT32_(0x0)                                        /* (LCDC_HEOCFG31) Bicubic taps values are not selected.  */
 #define   LCDC_HEOCFG31_HXSCBICU_1_Val        _UINT32_(0x1)                                        /* (LCDC_HEOCFG31) Bicubic taps values are selected.  */
-#define LCDC_HEOCFG31_HXSCBICU_0              (LCDC_HEOCFG31_HXSCBICU_0_Val << LCDC_HEOCFG31_HXSCBICU_Pos) /* (LCDC_HEOCFG31) Bicubic taps values are not selected. Position  */
-#define LCDC_HEOCFG31_HXSCBICU_1              (LCDC_HEOCFG31_HXSCBICU_1_Val << LCDC_HEOCFG31_HXSCBICU_Pos) /* (LCDC_HEOCFG31) Bicubic taps values are selected. Position  */
+#define LCDC_HEOCFG31_HXSCBICU_0              (LCDC_HEOCFG31_HXSCBICU_0_Val << LCDC_HEOCFG31_HXSCBICU_Pos) /* (LCDC_HEOCFG31) Bicubic taps values are not selected. Position */
+#define LCDC_HEOCFG31_HXSCBICU_1              (LCDC_HEOCFG31_HXSCBICU_1_Val << LCDC_HEOCFG31_HXSCBICU_Pos) /* (LCDC_HEOCFG31) Bicubic taps values are selected. Position */
 #define LCDC_HEOCFG31_Msk                     _UINT32_(0x00330033)                                 /* (LCDC_HEOCFG31) Register Mask  */
 
 #define LCDC_HEOCFG31_HXSYTAP_Pos             _UINT32_(4)                                          /* (LCDC_HEOCFG31 Position) Horizontal Scaler Predefined Bilinear 2 Taps Selected for Luma/AR Component */
@@ -2468,52 +2470,52 @@
 /* -------- LCDC_BASECLUT : (LCDC Offset: 0x700) (R/W 32) Base Layer CLUT Register x -------- */
 #define LCDC_BASECLUT_BCLUT_Pos               _UINT32_(0)                                          /* (LCDC_BASECLUT) Blue Color Entry Position */
 #define LCDC_BASECLUT_BCLUT_Msk               (_UINT32_(0xFF) << LCDC_BASECLUT_BCLUT_Pos)          /* (LCDC_BASECLUT) Blue Color Entry Mask */
-#define LCDC_BASECLUT_BCLUT(value)            (LCDC_BASECLUT_BCLUT_Msk & (_UINT32_(value) << LCDC_BASECLUT_BCLUT_Pos)) /* Assigment of value for BCLUT in the LCDC_BASECLUT register */
+#define LCDC_BASECLUT_BCLUT(value)            (LCDC_BASECLUT_BCLUT_Msk & (_UINT32_(value) << LCDC_BASECLUT_BCLUT_Pos)) /* Assignment of value for BCLUT in the LCDC_BASECLUT register */
 #define LCDC_BASECLUT_GCLUT_Pos               _UINT32_(8)                                          /* (LCDC_BASECLUT) Green Color Entry Position */
 #define LCDC_BASECLUT_GCLUT_Msk               (_UINT32_(0xFF) << LCDC_BASECLUT_GCLUT_Pos)          /* (LCDC_BASECLUT) Green Color Entry Mask */
-#define LCDC_BASECLUT_GCLUT(value)            (LCDC_BASECLUT_GCLUT_Msk & (_UINT32_(value) << LCDC_BASECLUT_GCLUT_Pos)) /* Assigment of value for GCLUT in the LCDC_BASECLUT register */
+#define LCDC_BASECLUT_GCLUT(value)            (LCDC_BASECLUT_GCLUT_Msk & (_UINT32_(value) << LCDC_BASECLUT_GCLUT_Pos)) /* Assignment of value for GCLUT in the LCDC_BASECLUT register */
 #define LCDC_BASECLUT_RCLUT_Pos               _UINT32_(16)                                         /* (LCDC_BASECLUT) Red Color Entry Position */
 #define LCDC_BASECLUT_RCLUT_Msk               (_UINT32_(0xFF) << LCDC_BASECLUT_RCLUT_Pos)          /* (LCDC_BASECLUT) Red Color Entry Mask */
-#define LCDC_BASECLUT_RCLUT(value)            (LCDC_BASECLUT_RCLUT_Msk & (_UINT32_(value) << LCDC_BASECLUT_RCLUT_Pos)) /* Assigment of value for RCLUT in the LCDC_BASECLUT register */
+#define LCDC_BASECLUT_RCLUT(value)            (LCDC_BASECLUT_RCLUT_Msk & (_UINT32_(value) << LCDC_BASECLUT_RCLUT_Pos)) /* Assignment of value for RCLUT in the LCDC_BASECLUT register */
 #define LCDC_BASECLUT_ACLUT_Pos               _UINT32_(24)                                         /* (LCDC_BASECLUT) Alpha Component Entry Position */
 #define LCDC_BASECLUT_ACLUT_Msk               (_UINT32_(0xFF) << LCDC_BASECLUT_ACLUT_Pos)          /* (LCDC_BASECLUT) Alpha Component Entry Mask */
-#define LCDC_BASECLUT_ACLUT(value)            (LCDC_BASECLUT_ACLUT_Msk & (_UINT32_(value) << LCDC_BASECLUT_ACLUT_Pos)) /* Assigment of value for ACLUT in the LCDC_BASECLUT register */
+#define LCDC_BASECLUT_ACLUT(value)            (LCDC_BASECLUT_ACLUT_Msk & (_UINT32_(value) << LCDC_BASECLUT_ACLUT_Pos)) /* Assignment of value for ACLUT in the LCDC_BASECLUT register */
 #define LCDC_BASECLUT_Msk                     _UINT32_(0xFFFFFFFF)                                 /* (LCDC_BASECLUT) Register Mask  */
 
 
 /* -------- LCDC_OVR1CLUT : (LCDC Offset: 0xB00) (R/W 32) Overlay 1 CLUT Register x -------- */
 #define LCDC_OVR1CLUT_BCLUT_Pos               _UINT32_(0)                                          /* (LCDC_OVR1CLUT) Blue Color Entry Position */
 #define LCDC_OVR1CLUT_BCLUT_Msk               (_UINT32_(0xFF) << LCDC_OVR1CLUT_BCLUT_Pos)          /* (LCDC_OVR1CLUT) Blue Color Entry Mask */
-#define LCDC_OVR1CLUT_BCLUT(value)            (LCDC_OVR1CLUT_BCLUT_Msk & (_UINT32_(value) << LCDC_OVR1CLUT_BCLUT_Pos)) /* Assigment of value for BCLUT in the LCDC_OVR1CLUT register */
+#define LCDC_OVR1CLUT_BCLUT(value)            (LCDC_OVR1CLUT_BCLUT_Msk & (_UINT32_(value) << LCDC_OVR1CLUT_BCLUT_Pos)) /* Assignment of value for BCLUT in the LCDC_OVR1CLUT register */
 #define LCDC_OVR1CLUT_GCLUT_Pos               _UINT32_(8)                                          /* (LCDC_OVR1CLUT) Green Color Entry Position */
 #define LCDC_OVR1CLUT_GCLUT_Msk               (_UINT32_(0xFF) << LCDC_OVR1CLUT_GCLUT_Pos)          /* (LCDC_OVR1CLUT) Green Color Entry Mask */
-#define LCDC_OVR1CLUT_GCLUT(value)            (LCDC_OVR1CLUT_GCLUT_Msk & (_UINT32_(value) << LCDC_OVR1CLUT_GCLUT_Pos)) /* Assigment of value for GCLUT in the LCDC_OVR1CLUT register */
+#define LCDC_OVR1CLUT_GCLUT(value)            (LCDC_OVR1CLUT_GCLUT_Msk & (_UINT32_(value) << LCDC_OVR1CLUT_GCLUT_Pos)) /* Assignment of value for GCLUT in the LCDC_OVR1CLUT register */
 #define LCDC_OVR1CLUT_RCLUT_Pos               _UINT32_(16)                                         /* (LCDC_OVR1CLUT) Red Color Entry Position */
 #define LCDC_OVR1CLUT_RCLUT_Msk               (_UINT32_(0xFF) << LCDC_OVR1CLUT_RCLUT_Pos)          /* (LCDC_OVR1CLUT) Red Color Entry Mask */
-#define LCDC_OVR1CLUT_RCLUT(value)            (LCDC_OVR1CLUT_RCLUT_Msk & (_UINT32_(value) << LCDC_OVR1CLUT_RCLUT_Pos)) /* Assigment of value for RCLUT in the LCDC_OVR1CLUT register */
+#define LCDC_OVR1CLUT_RCLUT(value)            (LCDC_OVR1CLUT_RCLUT_Msk & (_UINT32_(value) << LCDC_OVR1CLUT_RCLUT_Pos)) /* Assignment of value for RCLUT in the LCDC_OVR1CLUT register */
 #define LCDC_OVR1CLUT_ACLUT_Pos               _UINT32_(24)                                         /* (LCDC_OVR1CLUT) Alpha Color Entry Position */
 #define LCDC_OVR1CLUT_ACLUT_Msk               (_UINT32_(0xFF) << LCDC_OVR1CLUT_ACLUT_Pos)          /* (LCDC_OVR1CLUT) Alpha Color Entry Mask */
-#define LCDC_OVR1CLUT_ACLUT(value)            (LCDC_OVR1CLUT_ACLUT_Msk & (_UINT32_(value) << LCDC_OVR1CLUT_ACLUT_Pos)) /* Assigment of value for ACLUT in the LCDC_OVR1CLUT register */
+#define LCDC_OVR1CLUT_ACLUT(value)            (LCDC_OVR1CLUT_ACLUT_Msk & (_UINT32_(value) << LCDC_OVR1CLUT_ACLUT_Pos)) /* Assignment of value for ACLUT in the LCDC_OVR1CLUT register */
 #define LCDC_OVR1CLUT_Msk                     _UINT32_(0xFFFFFFFF)                                 /* (LCDC_OVR1CLUT) Register Mask  */
 
 
 /* -------- LCDC_HEOCLUT : (LCDC Offset: 0x1300) (R/W 32) High-End Overlay CLUT Register x -------- */
 #define LCDC_HEOCLUT_BCLUT_Pos                _UINT32_(0)                                          /* (LCDC_HEOCLUT) Blue Color Entry Position */
 #define LCDC_HEOCLUT_BCLUT_Msk                (_UINT32_(0xFF) << LCDC_HEOCLUT_BCLUT_Pos)           /* (LCDC_HEOCLUT) Blue Color Entry Mask */
-#define LCDC_HEOCLUT_BCLUT(value)             (LCDC_HEOCLUT_BCLUT_Msk & (_UINT32_(value) << LCDC_HEOCLUT_BCLUT_Pos)) /* Assigment of value for BCLUT in the LCDC_HEOCLUT register */
+#define LCDC_HEOCLUT_BCLUT(value)             (LCDC_HEOCLUT_BCLUT_Msk & (_UINT32_(value) << LCDC_HEOCLUT_BCLUT_Pos)) /* Assignment of value for BCLUT in the LCDC_HEOCLUT register */
 #define LCDC_HEOCLUT_GCLUT_Pos                _UINT32_(8)                                          /* (LCDC_HEOCLUT) Green Color Entry Position */
 #define LCDC_HEOCLUT_GCLUT_Msk                (_UINT32_(0xFF) << LCDC_HEOCLUT_GCLUT_Pos)           /* (LCDC_HEOCLUT) Green Color Entry Mask */
-#define LCDC_HEOCLUT_GCLUT(value)             (LCDC_HEOCLUT_GCLUT_Msk & (_UINT32_(value) << LCDC_HEOCLUT_GCLUT_Pos)) /* Assigment of value for GCLUT in the LCDC_HEOCLUT register */
+#define LCDC_HEOCLUT_GCLUT(value)             (LCDC_HEOCLUT_GCLUT_Msk & (_UINT32_(value) << LCDC_HEOCLUT_GCLUT_Pos)) /* Assignment of value for GCLUT in the LCDC_HEOCLUT register */
 #define LCDC_HEOCLUT_RCLUT_Pos                _UINT32_(16)                                         /* (LCDC_HEOCLUT) Red Color Entry Position */
 #define LCDC_HEOCLUT_RCLUT_Msk                (_UINT32_(0xFF) << LCDC_HEOCLUT_RCLUT_Pos)           /* (LCDC_HEOCLUT) Red Color Entry Mask */
-#define LCDC_HEOCLUT_RCLUT(value)             (LCDC_HEOCLUT_RCLUT_Msk & (_UINT32_(value) << LCDC_HEOCLUT_RCLUT_Pos)) /* Assigment of value for RCLUT in the LCDC_HEOCLUT register */
+#define LCDC_HEOCLUT_RCLUT(value)             (LCDC_HEOCLUT_RCLUT_Msk & (_UINT32_(value) << LCDC_HEOCLUT_RCLUT_Pos)) /* Assignment of value for RCLUT in the LCDC_HEOCLUT register */
 #define LCDC_HEOCLUT_ACLUT_Pos                _UINT32_(24)                                         /* (LCDC_HEOCLUT) Alpha Color Entry Position */
 #define LCDC_HEOCLUT_ACLUT_Msk                (_UINT32_(0xFF) << LCDC_HEOCLUT_ACLUT_Pos)           /* (LCDC_HEOCLUT) Alpha Color Entry Mask */
-#define LCDC_HEOCLUT_ACLUT(value)             (LCDC_HEOCLUT_ACLUT_Msk & (_UINT32_(value) << LCDC_HEOCLUT_ACLUT_Pos)) /* Assigment of value for ACLUT in the LCDC_HEOCLUT register */
+#define LCDC_HEOCLUT_ACLUT(value)             (LCDC_HEOCLUT_ACLUT_Msk & (_UINT32_(value) << LCDC_HEOCLUT_ACLUT_Pos)) /* Assignment of value for ACLUT in the LCDC_HEOCLUT register */
 #define LCDC_HEOCLUT_Msk                      _UINT32_(0xFFFFFFFF)                                 /* (LCDC_HEOCLUT) Register Mask  */
 
 
-/** \brief LCDC register offsets definitions */
+/* LCDC register offsets definitions */
 #define LCDC_HEOYFBA_REG_OFST          _UINT32_(0x00)      /* (LCDC_HEOYFBA) High-End Overlay Y Frame Buffer x Addr Offset */
 #define LCDC_HEOCBFBA_REG_OFST         _UINT32_(0x04)      /* (LCDC_HEOCBFBA) High-End Overlay Cb Frame Buffer x Addr Offset */
 #define LCDC_HEOCRFBA_REG_OFST         _UINT32_(0x08)      /* (LCDC_HEOCRFBA) High-End Overlay Cr Frame Buffer x Addr Offset */
@@ -3385,26 +3387,26 @@
 #define LCDC_HEOCLUT255_REG_OFST       _UINT32_(0x16FC)    /* (LCDC_HEOCLUT255) High-End Overlay CLUT Register x Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
-/** \brief LCDC_HEO register API structure */
+/* LCDC_HEO register API structure */
 typedef struct
 {
-  __IO  uint32_t                       LCDC_HEOYFBA;       /**< Offset: 0x00 (R/W  32) High-End Overlay Y Frame Buffer x Addr */
-  __IO  uint32_t                       LCDC_HEOCBFBA;      /**< Offset: 0x04 (R/W  32) High-End Overlay Cb Frame Buffer x Addr */
-  __IO  uint32_t                       LCDC_HEOCRFBA;      /**< Offset: 0x08 (R/W  32) High-End Overlay Cr Frame Buffer x Addr */
+  __IO  uint32_t                       LCDC_HEOYFBA;       /* Offset: 0x00 (R/W  32) High-End Overlay Y Frame Buffer x Addr */
+  __IO  uint32_t                       LCDC_HEOCBFBA;      /* Offset: 0x04 (R/W  32) High-End Overlay Cb Frame Buffer x Addr */
+  __IO  uint32_t                       LCDC_HEOCRFBA;      /* Offset: 0x08 (R/W  32) High-End Overlay Cr Frame Buffer x Addr */
 } lcdc_heo_registers_t;
 
-/** \brief LCDC_HEOHTAP register API structure */
+/* LCDC_HEOHTAP register API structure */
 typedef struct
 {
-  __IO  uint32_t                       LCDC_HEOHTAP10P;    /**< Offset: 0x00 (R/W  32) High-End Overlay HXS T10 Phi Register  */
-  __IO  uint32_t                       LCDC_HEOHTAP32P;    /**< Offset: 0x04 (R/W  32) High-End Overlay HXS T32 Phi Register  */
+  __IO  uint32_t                       LCDC_HEOHTAP10P;    /* Offset: 0x00 (R/W  32) High-End Overlay HXS T10 Phi Register  */
+  __IO  uint32_t                       LCDC_HEOHTAP32P;    /* Offset: 0x04 (R/W  32) High-End Overlay HXS T32 Phi Register  */
 } lcdc_heohtap_registers_t;
 
-/** \brief LCDC_HEOVTAP register API structure */
+/* LCDC_HEOVTAP register API structure */
 typedef struct
 {
-  __IO  uint32_t                       LCDC_HEOVTAP10P;    /**< Offset: 0x00 (R/W  32) High-End Overlay VXS T10 Phi Register  */
-  __IO  uint32_t                       LCDC_HEOVTAP32P;    /**< Offset: 0x04 (R/W  32) High-End Overlay VXS T32 Phi Register  */
+  __IO  uint32_t                       LCDC_HEOVTAP10P;    /* Offset: 0x00 (R/W  32) High-End Overlay VXS T10 Phi Register  */
+  __IO  uint32_t                       LCDC_HEOVTAP32P;    /* Offset: 0x04 (R/W  32) High-End Overlay VXS T32 Phi Register  */
 } lcdc_heovtap_registers_t;
 
 #define LCDC_HEO_NUMBER 2
@@ -3413,113 +3415,113 @@ typedef struct
 
 #define LCDC_HEOHTAP_NUMBER 16
 
-/** \brief LCDC register API structure */
+/* LCDC register API structure */
 typedef struct
 {  /* LCD Controller */
-  __IO  uint32_t                       LCDC_LCDCFG0;       /**< Offset: 0x00 (R/W  32) Configuration Register 0 */
-  __IO  uint32_t                       LCDC_LCDCFG1;       /**< Offset: 0x04 (R/W  32) Configuration Register 1 */
-  __IO  uint32_t                       LCDC_LCDCFG2;       /**< Offset: 0x08 (R/W  32) Configuration Register 2 */
-  __IO  uint32_t                       LCDC_LCDCFG3;       /**< Offset: 0x0C (R/W  32) Configuration Register 3 */
-  __IO  uint32_t                       LCDC_LCDCFG4;       /**< Offset: 0x10 (R/W  32) Configuration Register 4 */
-  __IO  uint32_t                       LCDC_LCDCFG5;       /**< Offset: 0x14 (R/W  32) Configuration Register 5 */
-  __IO  uint32_t                       LCDC_LCDCFG6;       /**< Offset: 0x18 (R/W  32) Configuration Register 6 */
-  __IO  uint32_t                       LCDC_LCDCFG7;       /**< Offset: 0x1C (R/W  32) Configuration Register 7 */
-  __O   uint32_t                       LCDC_LCDEN;         /**< Offset: 0x20 ( /W  32) Enable Register */
-  __O   uint32_t                       LCDC_LCDDIS;        /**< Offset: 0x24 ( /W  32) Disable Register */
-  __I   uint32_t                       LCDC_LCDSR;         /**< Offset: 0x28 (R/   32) Status Register */
-  __O   uint32_t                       LCDC_LCDIER;        /**< Offset: 0x2C ( /W  32) Interrupt Enable Register */
-  __O   uint32_t                       LCDC_LCDIDR;        /**< Offset: 0x30 ( /W  32) Interrupt Disable Register */
-  __I   uint32_t                       LCDC_LCDIMR;        /**< Offset: 0x34 (R/   32) Interrupt Mask Register */
-  __I   uint32_t                       LCDC_LCDISR;        /**< Offset: 0x38 (R/   32) Interrupt Status Register */
-  __O   uint32_t                       LCDC_ATTRE;         /**< Offset: 0x3C ( /W  32) Attribute Enable Register */
-  __I   uint32_t                       LCDC_ATTRS;         /**< Offset: 0x40 (R/   32) Attribute Status Register */
+  __IO  uint32_t                       LCDC_LCDCFG0;       /* Offset: 0x00 (R/W  32) Configuration Register 0 */
+  __IO  uint32_t                       LCDC_LCDCFG1;       /* Offset: 0x04 (R/W  32) Configuration Register 1 */
+  __IO  uint32_t                       LCDC_LCDCFG2;       /* Offset: 0x08 (R/W  32) Configuration Register 2 */
+  __IO  uint32_t                       LCDC_LCDCFG3;       /* Offset: 0x0C (R/W  32) Configuration Register 3 */
+  __IO  uint32_t                       LCDC_LCDCFG4;       /* Offset: 0x10 (R/W  32) Configuration Register 4 */
+  __IO  uint32_t                       LCDC_LCDCFG5;       /* Offset: 0x14 (R/W  32) Configuration Register 5 */
+  __IO  uint32_t                       LCDC_LCDCFG6;       /* Offset: 0x18 (R/W  32) Configuration Register 6 */
+  __IO  uint32_t                       LCDC_LCDCFG7;       /* Offset: 0x1C (R/W  32) Configuration Register 7 */
+  __O   uint32_t                       LCDC_LCDEN;         /* Offset: 0x20 ( /W  32) Enable Register */
+  __O   uint32_t                       LCDC_LCDDIS;        /* Offset: 0x24 ( /W  32) Disable Register */
+  __I   uint32_t                       LCDC_LCDSR;         /* Offset: 0x28 (R/   32) Status Register */
+  __O   uint32_t                       LCDC_LCDIER;        /* Offset: 0x2C ( /W  32) Interrupt Enable Register */
+  __O   uint32_t                       LCDC_LCDIDR;        /* Offset: 0x30 ( /W  32) Interrupt Disable Register */
+  __I   uint32_t                       LCDC_LCDIMR;        /* Offset: 0x34 (R/   32) Interrupt Mask Register */
+  __I   uint32_t                       LCDC_LCDISR;        /* Offset: 0x38 (R/   32) Interrupt Status Register */
+  __O   uint32_t                       LCDC_ATTRE;         /* Offset: 0x3C ( /W  32) Attribute Enable Register */
+  __I   uint32_t                       LCDC_ATTRS;         /* Offset: 0x40 (R/   32) Attribute Status Register */
   __I   uint8_t                        Reserved1[0x1C];
-  __O   uint32_t                       LCDC_BASEIER;       /**< Offset: 0x60 ( /W  32) Base Layer Interrupt Enable Register */
-  __O   uint32_t                       LCDC_BASEIDR;       /**< Offset: 0x64 ( /W  32) Base Layer Interrupt Disable Register */
-  __I   uint32_t                       LCDC_BASEIMR;       /**< Offset: 0x68 (R/   32) Base Layer Interrupt Mask Register */
-  __I   uint32_t                       LCDC_BASEISR;       /**< Offset: 0x6C (R/   32) Base Layer Interrupt Status Register */
-  __IO  uint32_t                       LCDC_BASEEN;        /**< Offset: 0x70 (R/W  32) Base Layer Enable Register */
-  __IO  uint32_t                       LCDC_BASECLA;       /**< Offset: 0x74 (R/W  32) Base Layer Color Table Address Register */
-  __IO  uint32_t                       LCDC_BASEFBA;       /**< Offset: 0x78 (R/W  32) Base Layer Frame Buffer Address Register */
-  __IO  uint32_t                       LCDC_BASECFG0;      /**< Offset: 0x7C (R/W  32) Base Layer Configuration Register 0 */
-  __IO  uint32_t                       LCDC_BASECFG1;      /**< Offset: 0x80 (R/W  32) Base Layer Configuration Register 1 */
-  __IO  uint32_t                       LCDC_BASECFG2;      /**< Offset: 0x84 (R/W  32) Base Layer Configuration Register 2 */
-  __IO  uint32_t                       LCDC_BASECFG3;      /**< Offset: 0x88 (R/W  32) Base Layer Configuration Register 3 */
-  __IO  uint32_t                       LCDC_BASECFG4;      /**< Offset: 0x8C (R/W  32) Base Layer Configuration Register 4 */
-  __IO  uint32_t                       LCDC_BASECFG5;      /**< Offset: 0x90 (R/W  32) Base Layer Configuration Register 5 */
-  __IO  uint32_t                       LCDC_BASECFG6;      /**< Offset: 0x94 (R/W  32) Base Layer Configuration Register 6 */
+  __O   uint32_t                       LCDC_BASEIER;       /* Offset: 0x60 ( /W  32) Base Layer Interrupt Enable Register */
+  __O   uint32_t                       LCDC_BASEIDR;       /* Offset: 0x64 ( /W  32) Base Layer Interrupt Disable Register */
+  __I   uint32_t                       LCDC_BASEIMR;       /* Offset: 0x68 (R/   32) Base Layer Interrupt Mask Register */
+  __I   uint32_t                       LCDC_BASEISR;       /* Offset: 0x6C (R/   32) Base Layer Interrupt Status Register */
+  __IO  uint32_t                       LCDC_BASEEN;        /* Offset: 0x70 (R/W  32) Base Layer Enable Register */
+  __IO  uint32_t                       LCDC_BASECLA;       /* Offset: 0x74 (R/W  32) Base Layer Color Table Address Register */
+  __IO  uint32_t                       LCDC_BASEFBA;       /* Offset: 0x78 (R/W  32) Base Layer Frame Buffer Address Register */
+  __IO  uint32_t                       LCDC_BASECFG0;      /* Offset: 0x7C (R/W  32) Base Layer Configuration Register 0 */
+  __IO  uint32_t                       LCDC_BASECFG1;      /* Offset: 0x80 (R/W  32) Base Layer Configuration Register 1 */
+  __IO  uint32_t                       LCDC_BASECFG2;      /* Offset: 0x84 (R/W  32) Base Layer Configuration Register 2 */
+  __IO  uint32_t                       LCDC_BASECFG3;      /* Offset: 0x88 (R/W  32) Base Layer Configuration Register 3 */
+  __IO  uint32_t                       LCDC_BASECFG4;      /* Offset: 0x8C (R/W  32) Base Layer Configuration Register 4 */
+  __IO  uint32_t                       LCDC_BASECFG5;      /* Offset: 0x90 (R/W  32) Base Layer Configuration Register 5 */
+  __IO  uint32_t                       LCDC_BASECFG6;      /* Offset: 0x94 (R/W  32) Base Layer Configuration Register 6 */
   __I   uint8_t                        Reserved2[0x3C];
-  __IO  uint32_t                       LCDC_FICR;          /**< Offset: 0xD4 (R/W  32) Fault Injection Control Register */
-  __IO  uint32_t                       LCDC_FICFG;         /**< Offset: 0xD8 (R/W  32) Fault Injection Configuration Register */
-  __I   uint32_t                       LCDC_FDSR;          /**< Offset: 0xDC (R/   32) Fault Detection Status Register */
+  __IO  uint32_t                       LCDC_FICR;          /* Offset: 0xD4 (R/W  32) Fault Injection Control Register */
+  __IO  uint32_t                       LCDC_FICFG;         /* Offset: 0xD8 (R/W  32) Fault Injection Configuration Register */
+  __I   uint32_t                       LCDC_FDSR;          /* Offset: 0xDC (R/   32) Fault Detection Status Register */
   __I   uint8_t                        Reserved3[0x04];
-  __IO  uint32_t                       LCDC_WPMR;          /**< Offset: 0xE4 (R/W  32) Write Protection Mode Register */
-  __I   uint32_t                       LCDC_WPSR;          /**< Offset: 0xE8 (R/   32) Write Protection Status Register */
+  __IO  uint32_t                       LCDC_WPMR;          /* Offset: 0xE4 (R/W  32) Write Protection Mode Register */
+  __I   uint32_t                       LCDC_WPSR;          /* Offset: 0xE8 (R/   32) Write Protection Status Register */
   __I   uint8_t                        Reserved4[0x74];
-  __O   uint32_t                       LCDC_OVR1IER;       /**< Offset: 0x160 ( /W  32) Overlay 1 Interrupt Enable Register */
-  __O   uint32_t                       LCDC_OVR1IDR;       /**< Offset: 0x164 ( /W  32) Overlay 1 Interrupt Disable Register */
-  __I   uint32_t                       LCDC_OVR1IMR;       /**< Offset: 0x168 (R/   32) Overlay 1 Interrupt Mask Register */
-  __I   uint32_t                       LCDC_OVR1ISR;       /**< Offset: 0x16C (R/   32) Overlay 1 Interrupt Status Register */
-  __IO  uint32_t                       LCDC_OVR1EN;        /**< Offset: 0x170 (R/W  32) Overlay 1 Enable Register */
-  __IO  uint32_t                       LCDC_OVR1CLA;       /**< Offset: 0x174 (R/W  32) Overlay 1 Color Table Address Register */
-  __IO  uint32_t                       LCDC_OVR1FBA;       /**< Offset: 0x178 (R/W  32) Overlay 1 Frame Buffer Address Register */
-  __IO  uint32_t                       LCDC_OVR1CFG0;      /**< Offset: 0x17C (R/W  32) Overlay 1 Configuration Register 0 */
-  __IO  uint32_t                       LCDC_OVR1CFG1;      /**< Offset: 0x180 (R/W  32) Overlay 1 Configuration Register 1 */
-  __IO  uint32_t                       LCDC_OVR1CFG2;      /**< Offset: 0x184 (R/W  32) Overlay 1 Configuration Register 2 */
-  __IO  uint32_t                       LCDC_OVR1CFG3;      /**< Offset: 0x188 (R/W  32) Overlay 1 Configuration Register 3 */
-  __IO  uint32_t                       LCDC_OVR1CFG4;      /**< Offset: 0x18C (R/W  32) Overlay 1 Configuration Register 4 */
-  __IO  uint32_t                       LCDC_OVR1CFG5;      /**< Offset: 0x190 (R/W  32) Overlay 1 Configuration Register 5 */
-  __IO  uint32_t                       LCDC_OVR1CFG6;      /**< Offset: 0x194 (R/W  32) Overlay 1 Configuration Register 6 */
-  __IO  uint32_t                       LCDC_OVR1CFG7;      /**< Offset: 0x198 (R/W  32) Overlay 1 Configuration Register 7 */
-  __IO  uint32_t                       LCDC_OVR1CFG8;      /**< Offset: 0x19C (R/W  32) Overlay 1 Configuration Register 8 */
-  __IO  uint32_t                       LCDC_OVR1CFG9;      /**< Offset: 0x1A0 (R/W  32) Overlay 1 Configuration Register 9 */
+  __O   uint32_t                       LCDC_OVR1IER;       /* Offset: 0x160 ( /W  32) Overlay 1 Interrupt Enable Register */
+  __O   uint32_t                       LCDC_OVR1IDR;       /* Offset: 0x164 ( /W  32) Overlay 1 Interrupt Disable Register */
+  __I   uint32_t                       LCDC_OVR1IMR;       /* Offset: 0x168 (R/   32) Overlay 1 Interrupt Mask Register */
+  __I   uint32_t                       LCDC_OVR1ISR;       /* Offset: 0x16C (R/   32) Overlay 1 Interrupt Status Register */
+  __IO  uint32_t                       LCDC_OVR1EN;        /* Offset: 0x170 (R/W  32) Overlay 1 Enable Register */
+  __IO  uint32_t                       LCDC_OVR1CLA;       /* Offset: 0x174 (R/W  32) Overlay 1 Color Table Address Register */
+  __IO  uint32_t                       LCDC_OVR1FBA;       /* Offset: 0x178 (R/W  32) Overlay 1 Frame Buffer Address Register */
+  __IO  uint32_t                       LCDC_OVR1CFG0;      /* Offset: 0x17C (R/W  32) Overlay 1 Configuration Register 0 */
+  __IO  uint32_t                       LCDC_OVR1CFG1;      /* Offset: 0x180 (R/W  32) Overlay 1 Configuration Register 1 */
+  __IO  uint32_t                       LCDC_OVR1CFG2;      /* Offset: 0x184 (R/W  32) Overlay 1 Configuration Register 2 */
+  __IO  uint32_t                       LCDC_OVR1CFG3;      /* Offset: 0x188 (R/W  32) Overlay 1 Configuration Register 3 */
+  __IO  uint32_t                       LCDC_OVR1CFG4;      /* Offset: 0x18C (R/W  32) Overlay 1 Configuration Register 4 */
+  __IO  uint32_t                       LCDC_OVR1CFG5;      /* Offset: 0x190 (R/W  32) Overlay 1 Configuration Register 5 */
+  __IO  uint32_t                       LCDC_OVR1CFG6;      /* Offset: 0x194 (R/W  32) Overlay 1 Configuration Register 6 */
+  __IO  uint32_t                       LCDC_OVR1CFG7;      /* Offset: 0x198 (R/W  32) Overlay 1 Configuration Register 7 */
+  __IO  uint32_t                       LCDC_OVR1CFG8;      /* Offset: 0x19C (R/W  32) Overlay 1 Configuration Register 8 */
+  __IO  uint32_t                       LCDC_OVR1CFG9;      /* Offset: 0x1A0 (R/W  32) Overlay 1 Configuration Register 9 */
   __I   uint8_t                        Reserved5[0x1BC];
-  __O   uint32_t                       LCDC_HEOIER;        /**< Offset: 0x360 ( /W  32) High-End Overlay Interrupt Enable Register */
-  __O   uint32_t                       LCDC_HEOIDR;        /**< Offset: 0x364 ( /W  32) High-End Overlay Interrupt Disable Register */
-  __I   uint32_t                       LCDC_HEOIMR;        /**< Offset: 0x368 (R/   32) High-End Overlay Interrupt Mask Register */
-  __I   uint32_t                       LCDC_HEOISR;        /**< Offset: 0x36C (R/   32) High-End Overlay Interrupt Status Register */
-  __IO  uint32_t                       LCDC_HEOEN;         /**< Offset: 0x370 (R/W  32) High-End Overlay Enable Register */
-  __IO  uint32_t                       LCDC_HEOCLA;        /**< Offset: 0x374 (R/W  32) High-End Overlay Table Address Register */
-        lcdc_heo_registers_t           LCDC_HEO[LCDC_HEO_NUMBER]; /**< Offset: 0x378  */
-  __IO  uint32_t                       LCDC_HEOCFG0;       /**< Offset: 0x390 (R/W  32) High-End Overlay Configuration Register 0 */
-  __IO  uint32_t                       LCDC_HEOCFG1;       /**< Offset: 0x394 (R/W  32) High-End Overlay Configuration Register 1 */
-  __IO  uint32_t                       LCDC_HEOCFG2;       /**< Offset: 0x398 (R/W  32) High-End Overlay Configuration Register 2 */
-  __IO  uint32_t                       LCDC_HEOCFG3;       /**< Offset: 0x39C (R/W  32) High-End Overlay Configuration Register 3 */
-  __IO  uint32_t                       LCDC_HEOCFG4;       /**< Offset: 0x3A0 (R/W  32) High-End Overlay Configuration Register 4 */
-  __IO  uint32_t                       LCDC_HEOCFG5;       /**< Offset: 0x3A4 (R/W  32) High-End Overlay Configuration Register 5 */
-  __IO  uint32_t                       LCDC_HEOCFG6;       /**< Offset: 0x3A8 (R/W  32) High-End Overlay Configuration Register 6 */
-  __IO  uint32_t                       LCDC_HEOCFG7;       /**< Offset: 0x3AC (R/W  32) High-End Overlay Configuration Register 7 */
-  __IO  uint32_t                       LCDC_HEOCFG8;       /**< Offset: 0x3B0 (R/W  32) High-End Overlay Configuration Register 8 */
-  __IO  uint32_t                       LCDC_HEOCFG9;       /**< Offset: 0x3B4 (R/W  32) High-End Overlay Configuration Register 9 */
-  __IO  uint32_t                       LCDC_HEOCFG10;      /**< Offset: 0x3B8 (R/W  32) High-End Overlay Configuration Register 10 */
-  __IO  uint32_t                       LCDC_HEOCFG11;      /**< Offset: 0x3BC (R/W  32) High-End Overlay Configuration Register 11 */
-  __IO  uint32_t                       LCDC_HEOCFG12;      /**< Offset: 0x3C0 (R/W  32) High-End Overlay Configuration Register 12 */
-  __IO  uint32_t                       LCDC_HEOCFG13;      /**< Offset: 0x3C4 (R/W  32) High-End Overlay Configuration Register 13 */
-  __IO  uint32_t                       LCDC_HEOCFG14;      /**< Offset: 0x3C8 (R/W  32) High-End Overlay Configuration Register 14 */
-  __IO  uint32_t                       LCDC_HEOCFG15;      /**< Offset: 0x3CC (R/W  32) High-End Overlay Configuration Register 15 */
-  __IO  uint32_t                       LCDC_HEOCFG16;      /**< Offset: 0x3D0 (R/W  32) High-End Overlay Configuration Register 16 */
-  __IO  uint32_t                       LCDC_HEOCFG17;      /**< Offset: 0x3D4 (R/W  32) High-End Overlay Configuration Register 17 */
-  __IO  uint32_t                       LCDC_HEOCFG18;      /**< Offset: 0x3D8 (R/W  32) High-End Overlay Configuration Register 18 */
-  __IO  uint32_t                       LCDC_HEOCFG19;      /**< Offset: 0x3DC (R/W  32) High-End Overlay Configuration Register 19 */
-  __IO  uint32_t                       LCDC_HEOCFG20;      /**< Offset: 0x3E0 (R/W  32) High-End Overlay Configuration Register 20 */
-  __IO  uint32_t                       LCDC_HEOCFG21;      /**< Offset: 0x3E4 (R/W  32) High-End Overlay Configuration Register 21 */
-  __IO  uint32_t                       LCDC_HEOCFG22;      /**< Offset: 0x3E8 (R/W  32) High-End Overlay Configuration Register 22 */
-  __IO  uint32_t                       LCDC_HEOCFG23;      /**< Offset: 0x3EC (R/W  32) High-End Overlay Configuration Register 23 */
-  __IO  uint32_t                       LCDC_HEOCFG24;      /**< Offset: 0x3F0 (R/W  32) High-End Overlay Configuration Register 24 */
-  __IO  uint32_t                       LCDC_HEOCFG25;      /**< Offset: 0x3F4 (R/W  32) High-End Overlay Configuration Register 25 */
-  __IO  uint32_t                       LCDC_HEOCFG26;      /**< Offset: 0x3F8 (R/W  32) High-End Overlay Configuration Register 26 */
-  __IO  uint32_t                       LCDC_HEOCFG27;      /**< Offset: 0x3FC (R/W  32) High-End Overlay Configuration Register 27 */
-  __IO  uint32_t                       LCDC_HEOCFG28;      /**< Offset: 0x400 (R/W  32) High-End Overlay Configuration Register 28 */
-  __IO  uint32_t                       LCDC_HEOCFG29;      /**< Offset: 0x404 (R/W  32) High-End Overlay Configuration Register 29 */
-  __IO  uint32_t                       LCDC_HEOCFG30;      /**< Offset: 0x408 (R/W  32) High-End Overlay Configuration Register 30 */
-  __IO  uint32_t                       LCDC_HEOCFG31;      /**< Offset: 0x40C (R/W  32) High-End Overlay Configuration Register 31 */
-        lcdc_heovtap_registers_t       LCDC_HEOVTAP[LCDC_HEOVTAP_NUMBER]; /**< Offset: 0x410  */
-        lcdc_heohtap_registers_t       LCDC_HEOHTAP[LCDC_HEOHTAP_NUMBER]; /**< Offset: 0x490  */
+  __O   uint32_t                       LCDC_HEOIER;        /* Offset: 0x360 ( /W  32) High-End Overlay Interrupt Enable Register */
+  __O   uint32_t                       LCDC_HEOIDR;        /* Offset: 0x364 ( /W  32) High-End Overlay Interrupt Disable Register */
+  __I   uint32_t                       LCDC_HEOIMR;        /* Offset: 0x368 (R/   32) High-End Overlay Interrupt Mask Register */
+  __I   uint32_t                       LCDC_HEOISR;        /* Offset: 0x36C (R/   32) High-End Overlay Interrupt Status Register */
+  __IO  uint32_t                       LCDC_HEOEN;         /* Offset: 0x370 (R/W  32) High-End Overlay Enable Register */
+  __IO  uint32_t                       LCDC_HEOCLA;        /* Offset: 0x374 (R/W  32) High-End Overlay Table Address Register */
+        lcdc_heo_registers_t           LCDC_HEO[LCDC_HEO_NUMBER]; /* Offset: 0x378  */
+  __IO  uint32_t                       LCDC_HEOCFG0;       /* Offset: 0x390 (R/W  32) High-End Overlay Configuration Register 0 */
+  __IO  uint32_t                       LCDC_HEOCFG1;       /* Offset: 0x394 (R/W  32) High-End Overlay Configuration Register 1 */
+  __IO  uint32_t                       LCDC_HEOCFG2;       /* Offset: 0x398 (R/W  32) High-End Overlay Configuration Register 2 */
+  __IO  uint32_t                       LCDC_HEOCFG3;       /* Offset: 0x39C (R/W  32) High-End Overlay Configuration Register 3 */
+  __IO  uint32_t                       LCDC_HEOCFG4;       /* Offset: 0x3A0 (R/W  32) High-End Overlay Configuration Register 4 */
+  __IO  uint32_t                       LCDC_HEOCFG5;       /* Offset: 0x3A4 (R/W  32) High-End Overlay Configuration Register 5 */
+  __IO  uint32_t                       LCDC_HEOCFG6;       /* Offset: 0x3A8 (R/W  32) High-End Overlay Configuration Register 6 */
+  __IO  uint32_t                       LCDC_HEOCFG7;       /* Offset: 0x3AC (R/W  32) High-End Overlay Configuration Register 7 */
+  __IO  uint32_t                       LCDC_HEOCFG8;       /* Offset: 0x3B0 (R/W  32) High-End Overlay Configuration Register 8 */
+  __IO  uint32_t                       LCDC_HEOCFG9;       /* Offset: 0x3B4 (R/W  32) High-End Overlay Configuration Register 9 */
+  __IO  uint32_t                       LCDC_HEOCFG10;      /* Offset: 0x3B8 (R/W  32) High-End Overlay Configuration Register 10 */
+  __IO  uint32_t                       LCDC_HEOCFG11;      /* Offset: 0x3BC (R/W  32) High-End Overlay Configuration Register 11 */
+  __IO  uint32_t                       LCDC_HEOCFG12;      /* Offset: 0x3C0 (R/W  32) High-End Overlay Configuration Register 12 */
+  __IO  uint32_t                       LCDC_HEOCFG13;      /* Offset: 0x3C4 (R/W  32) High-End Overlay Configuration Register 13 */
+  __IO  uint32_t                       LCDC_HEOCFG14;      /* Offset: 0x3C8 (R/W  32) High-End Overlay Configuration Register 14 */
+  __IO  uint32_t                       LCDC_HEOCFG15;      /* Offset: 0x3CC (R/W  32) High-End Overlay Configuration Register 15 */
+  __IO  uint32_t                       LCDC_HEOCFG16;      /* Offset: 0x3D0 (R/W  32) High-End Overlay Configuration Register 16 */
+  __IO  uint32_t                       LCDC_HEOCFG17;      /* Offset: 0x3D4 (R/W  32) High-End Overlay Configuration Register 17 */
+  __IO  uint32_t                       LCDC_HEOCFG18;      /* Offset: 0x3D8 (R/W  32) High-End Overlay Configuration Register 18 */
+  __IO  uint32_t                       LCDC_HEOCFG19;      /* Offset: 0x3DC (R/W  32) High-End Overlay Configuration Register 19 */
+  __IO  uint32_t                       LCDC_HEOCFG20;      /* Offset: 0x3E0 (R/W  32) High-End Overlay Configuration Register 20 */
+  __IO  uint32_t                       LCDC_HEOCFG21;      /* Offset: 0x3E4 (R/W  32) High-End Overlay Configuration Register 21 */
+  __IO  uint32_t                       LCDC_HEOCFG22;      /* Offset: 0x3E8 (R/W  32) High-End Overlay Configuration Register 22 */
+  __IO  uint32_t                       LCDC_HEOCFG23;      /* Offset: 0x3EC (R/W  32) High-End Overlay Configuration Register 23 */
+  __IO  uint32_t                       LCDC_HEOCFG24;      /* Offset: 0x3F0 (R/W  32) High-End Overlay Configuration Register 24 */
+  __IO  uint32_t                       LCDC_HEOCFG25;      /* Offset: 0x3F4 (R/W  32) High-End Overlay Configuration Register 25 */
+  __IO  uint32_t                       LCDC_HEOCFG26;      /* Offset: 0x3F8 (R/W  32) High-End Overlay Configuration Register 26 */
+  __IO  uint32_t                       LCDC_HEOCFG27;      /* Offset: 0x3FC (R/W  32) High-End Overlay Configuration Register 27 */
+  __IO  uint32_t                       LCDC_HEOCFG28;      /* Offset: 0x400 (R/W  32) High-End Overlay Configuration Register 28 */
+  __IO  uint32_t                       LCDC_HEOCFG29;      /* Offset: 0x404 (R/W  32) High-End Overlay Configuration Register 29 */
+  __IO  uint32_t                       LCDC_HEOCFG30;      /* Offset: 0x408 (R/W  32) High-End Overlay Configuration Register 30 */
+  __IO  uint32_t                       LCDC_HEOCFG31;      /* Offset: 0x40C (R/W  32) High-End Overlay Configuration Register 31 */
+        lcdc_heovtap_registers_t       LCDC_HEOVTAP[LCDC_HEOVTAP_NUMBER]; /* Offset: 0x410  */
+        lcdc_heohtap_registers_t       LCDC_HEOHTAP[LCDC_HEOHTAP_NUMBER]; /* Offset: 0x490  */
   __I   uint8_t                        Reserved6[0x1F0];
-  __IO  uint32_t                       LCDC_BASECLUT[256]; /**< Offset: 0x700 (R/W  32) Base Layer CLUT Register x */
-  __IO  uint32_t                       LCDC_OVR1CLUT[256]; /**< Offset: 0xB00 (R/W  32) Overlay 1 CLUT Register x */
+  __IO  uint32_t                       LCDC_BASECLUT[256]; /* Offset: 0x700 (R/W  32) Base Layer CLUT Register x */
+  __IO  uint32_t                       LCDC_OVR1CLUT[256]; /* Offset: 0xB00 (R/W  32) Overlay 1 CLUT Register x */
   __I   uint8_t                        Reserved7[0x400];
-  __IO  uint32_t                       LCDC_HEOCLUT[256];  /**< Offset: 0x1300 (R/W  32) High-End Overlay CLUT Register x */
+  __IO  uint32_t                       LCDC_HEOCLUT[256];  /* Offset: 0x1300 (R/W  32) High-End Overlay CLUT Register x */
 } lcdc_registers_t;
 
 
