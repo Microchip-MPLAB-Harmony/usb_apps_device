@@ -76,13 +76,13 @@ extern "C" {
 // DOM-IGNORE-END
 
 /* Device Information */
-#define DEVICE_NAME			 "ATSAML22N18A"
-#define DEVICE_ARCH			 "CORTEX-M0PLUS"
-#define DEVICE_FAMILY		 "SAML"
-#define DEVICE_SERIES		 "SAML22"
+#define DEVICE_NAME          "ATSAML22N18A"
+#define DEVICE_ARCH          "CORTEX-M0PLUS"
+#define DEVICE_FAMILY        "SAML"
+#define DEVICE_SERIES        "SAML22"
 
 /* CPU clock frequency */
-#define CPU_CLOCK_FREQUENCY 32000000
+#define CPU_CLOCK_FREQUENCY 32000000U
 
 // *****************************************************************************
 // *****************************************************************************
