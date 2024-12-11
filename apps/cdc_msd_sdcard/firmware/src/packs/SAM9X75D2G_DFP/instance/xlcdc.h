@@ -1,5 +1,5 @@
 /*
- * Instance header file for ATSAM9X75D5M
+ * Instance header file for ATSAM9X75D5MN0
  *
  * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
  *
@@ -17,7 +17,7 @@
  *
  */
 
-/* file generated from device description file (ATDF) version 2024-04-05T08:36:56Z */
+/* file generated from device description file (ATDF) version 2024-06-25T17:22:56Z */
 #ifndef _SAM9X7_XLCDC_INSTANCE_
 #define _SAM9X7_XLCDC_INSTANCE_
 
