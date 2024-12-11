@@ -17,12 +17,12 @@
  *
  */
 
-/* file generated from device description file (ATDF) version 2024-04-05T08:36:56Z */
+/*  file generated from device description file (ATDF) version 2024-06-25T17:22:56Z  */
 #ifndef _SAM9X7_PMERRLOC_COMPONENT_H_
 #define _SAM9X7_PMERRLOC_COMPONENT_H_
 
 /* ************************************************************************** */
-/*   SOFTWARE API DEFINITION FOR PMERRLOC                                     */
+/*                    SOFTWARE API DEFINITION FOR PMERRLOC                    */
 /* ************************************************************************** */
 
 /* -------- PMERRLOC_ELCFG : (PMERRLOC Offset: 0x00) (R/W 32) Configuration Register -------- */
@@ -30,14 +30,14 @@
 
 #define PMERRLOC_ELCFG_SECTORSZ_Pos           _UINT32_(0)                                          /* (PMERRLOC_ELCFG) Sector Size Position */
 #define PMERRLOC_ELCFG_SECTORSZ_Msk           (_UINT32_(0x1) << PMERRLOC_ELCFG_SECTORSZ_Pos)       /* (PMERRLOC_ELCFG) Sector Size Mask */
-#define PMERRLOC_ELCFG_SECTORSZ(value)        (PMERRLOC_ELCFG_SECTORSZ_Msk & (_UINT32_(value) << PMERRLOC_ELCFG_SECTORSZ_Pos)) /* Assigment of value for SECTORSZ in the PMERRLOC_ELCFG register */
+#define PMERRLOC_ELCFG_SECTORSZ(value)        (PMERRLOC_ELCFG_SECTORSZ_Msk & (_UINT32_(value) << PMERRLOC_ELCFG_SECTORSZ_Pos)) /* Assignment of value for SECTORSZ in the PMERRLOC_ELCFG register */
 #define   PMERRLOC_ELCFG_SECTORSZ_0_Val       _UINT32_(0x0)                                        /* (PMERRLOC_ELCFG) The ECC computation is based on a 512-byte sector.  */
 #define   PMERRLOC_ELCFG_SECTORSZ_1_Val       _UINT32_(0x1)                                        /* (PMERRLOC_ELCFG) The ECC computation is based on a 1024-byte sector.  */
-#define PMERRLOC_ELCFG_SECTORSZ_0             (PMERRLOC_ELCFG_SECTORSZ_0_Val << PMERRLOC_ELCFG_SECTORSZ_Pos) /* (PMERRLOC_ELCFG) The ECC computation is based on a 512-byte sector. Position  */
-#define PMERRLOC_ELCFG_SECTORSZ_1             (PMERRLOC_ELCFG_SECTORSZ_1_Val << PMERRLOC_ELCFG_SECTORSZ_Pos) /* (PMERRLOC_ELCFG) The ECC computation is based on a 1024-byte sector. Position  */
+#define PMERRLOC_ELCFG_SECTORSZ_0             (PMERRLOC_ELCFG_SECTORSZ_0_Val << PMERRLOC_ELCFG_SECTORSZ_Pos) /* (PMERRLOC_ELCFG) The ECC computation is based on a 512-byte sector. Position */
+#define PMERRLOC_ELCFG_SECTORSZ_1             (PMERRLOC_ELCFG_SECTORSZ_1_Val << PMERRLOC_ELCFG_SECTORSZ_Pos) /* (PMERRLOC_ELCFG) The ECC computation is based on a 1024-byte sector. Position */
 #define PMERRLOC_ELCFG_ERRNUM_Pos             _UINT32_(16)                                         /* (PMERRLOC_ELCFG) Number of Errors Position */
 #define PMERRLOC_ELCFG_ERRNUM_Msk             (_UINT32_(0x1F) << PMERRLOC_ELCFG_ERRNUM_Pos)        /* (PMERRLOC_ELCFG) Number of Errors Mask */
-#define PMERRLOC_ELCFG_ERRNUM(value)          (PMERRLOC_ELCFG_ERRNUM_Msk & (_UINT32_(value) << PMERRLOC_ELCFG_ERRNUM_Pos)) /* Assigment of value for ERRNUM in the PMERRLOC_ELCFG register */
+#define PMERRLOC_ELCFG_ERRNUM(value)          (PMERRLOC_ELCFG_ERRNUM_Msk & (_UINT32_(value) << PMERRLOC_ELCFG_ERRNUM_Pos)) /* Assignment of value for ERRNUM in the PMERRLOC_ELCFG register */
 #define PMERRLOC_ELCFG_Msk                    _UINT32_(0x001F0001)                                 /* (PMERRLOC_ELCFG) Register Mask  */
 
 
@@ -46,7 +46,7 @@
 
 #define PMERRLOC_ELPRIM_PRIMITIV_Pos          _UINT32_(0)                                          /* (PMERRLOC_ELPRIM) Primitive Polynomial Position */
 #define PMERRLOC_ELPRIM_PRIMITIV_Msk          (_UINT32_(0xFFFF) << PMERRLOC_ELPRIM_PRIMITIV_Pos)   /* (PMERRLOC_ELPRIM) Primitive Polynomial Mask */
-#define PMERRLOC_ELPRIM_PRIMITIV(value)       (PMERRLOC_ELPRIM_PRIMITIV_Msk & (_UINT32_(value) << PMERRLOC_ELPRIM_PRIMITIV_Pos)) /* Assigment of value for PRIMITIV in the PMERRLOC_ELPRIM register */
+#define PMERRLOC_ELPRIM_PRIMITIV(value)       (PMERRLOC_ELPRIM_PRIMITIV_Msk & (_UINT32_(value) << PMERRLOC_ELPRIM_PRIMITIV_Pos)) /* Assignment of value for PRIMITIV in the PMERRLOC_ELPRIM register */
 #define PMERRLOC_ELPRIM_Msk                   _UINT32_(0x0000FFFF)                                 /* (PMERRLOC_ELPRIM) Register Mask  */
 
 
@@ -55,7 +55,7 @@
 
 #define PMERRLOC_ELEN_ENINIT_Pos              _UINT32_(0)                                          /* (PMERRLOC_ELEN) Initial Number of Bits in the Codeword Position */
 #define PMERRLOC_ELEN_ENINIT_Msk              (_UINT32_(0x3FFF) << PMERRLOC_ELEN_ENINIT_Pos)       /* (PMERRLOC_ELEN) Initial Number of Bits in the Codeword Mask */
-#define PMERRLOC_ELEN_ENINIT(value)           (PMERRLOC_ELEN_ENINIT_Msk & (_UINT32_(value) << PMERRLOC_ELEN_ENINIT_Pos)) /* Assigment of value for ENINIT in the PMERRLOC_ELEN register */
+#define PMERRLOC_ELEN_ENINIT(value)           (PMERRLOC_ELEN_ENINIT_Msk & (_UINT32_(value) << PMERRLOC_ELEN_ENINIT_Pos)) /* Assignment of value for ENINIT in the PMERRLOC_ELEN register */
 #define PMERRLOC_ELEN_Msk                     _UINT32_(0x00003FFF)                                 /* (PMERRLOC_ELEN) Register Mask  */
 
 
@@ -64,7 +64,7 @@
 
 #define PMERRLOC_ELDIS_DIS_Pos                _UINT32_(0)                                          /* (PMERRLOC_ELDIS) Disable Error Location Engine Position */
 #define PMERRLOC_ELDIS_DIS_Msk                (_UINT32_(0x1) << PMERRLOC_ELDIS_DIS_Pos)            /* (PMERRLOC_ELDIS) Disable Error Location Engine Mask */
-#define PMERRLOC_ELDIS_DIS(value)             (PMERRLOC_ELDIS_DIS_Msk & (_UINT32_(value) << PMERRLOC_ELDIS_DIS_Pos)) /* Assigment of value for DIS in the PMERRLOC_ELDIS register */
+#define PMERRLOC_ELDIS_DIS(value)             (PMERRLOC_ELDIS_DIS_Msk & (_UINT32_(value) << PMERRLOC_ELDIS_DIS_Pos)) /* Assignment of value for DIS in the PMERRLOC_ELDIS register */
 #define PMERRLOC_ELDIS_Msk                    _UINT32_(0x00000001)                                 /* (PMERRLOC_ELDIS) Register Mask  */
 
 
@@ -73,7 +73,7 @@
 
 #define PMERRLOC_ELSR_BUSY_Pos                _UINT32_(0)                                          /* (PMERRLOC_ELSR) Error Location Engine Busy Position */
 #define PMERRLOC_ELSR_BUSY_Msk                (_UINT32_(0x1) << PMERRLOC_ELSR_BUSY_Pos)            /* (PMERRLOC_ELSR) Error Location Engine Busy Mask */
-#define PMERRLOC_ELSR_BUSY(value)             (PMERRLOC_ELSR_BUSY_Msk & (_UINT32_(value) << PMERRLOC_ELSR_BUSY_Pos)) /* Assigment of value for BUSY in the PMERRLOC_ELSR register */
+#define PMERRLOC_ELSR_BUSY(value)             (PMERRLOC_ELSR_BUSY_Msk & (_UINT32_(value) << PMERRLOC_ELSR_BUSY_Pos)) /* Assignment of value for BUSY in the PMERRLOC_ELSR register */
 #define PMERRLOC_ELSR_Msk                     _UINT32_(0x00000001)                                 /* (PMERRLOC_ELSR) Register Mask  */
 
 
@@ -82,7 +82,7 @@
 
 #define PMERRLOC_ELIER_DONE_Pos               _UINT32_(0)                                          /* (PMERRLOC_ELIER) Computation Terminated Interrupt Enable Position */
 #define PMERRLOC_ELIER_DONE_Msk               (_UINT32_(0x1) << PMERRLOC_ELIER_DONE_Pos)           /* (PMERRLOC_ELIER) Computation Terminated Interrupt Enable Mask */
-#define PMERRLOC_ELIER_DONE(value)            (PMERRLOC_ELIER_DONE_Msk & (_UINT32_(value) << PMERRLOC_ELIER_DONE_Pos)) /* Assigment of value for DONE in the PMERRLOC_ELIER register */
+#define PMERRLOC_ELIER_DONE(value)            (PMERRLOC_ELIER_DONE_Msk & (_UINT32_(value) << PMERRLOC_ELIER_DONE_Pos)) /* Assignment of value for DONE in the PMERRLOC_ELIER register */
 #define PMERRLOC_ELIER_Msk                    _UINT32_(0x00000001)                                 /* (PMERRLOC_ELIER) Register Mask  */
 
 
@@ -91,7 +91,7 @@
 
 #define PMERRLOC_ELIDR_DONE_Pos               _UINT32_(0)                                          /* (PMERRLOC_ELIDR) Computation Terminated Interrupt Disable Position */
 #define PMERRLOC_ELIDR_DONE_Msk               (_UINT32_(0x1) << PMERRLOC_ELIDR_DONE_Pos)           /* (PMERRLOC_ELIDR) Computation Terminated Interrupt Disable Mask */
-#define PMERRLOC_ELIDR_DONE(value)            (PMERRLOC_ELIDR_DONE_Msk & (_UINT32_(value) << PMERRLOC_ELIDR_DONE_Pos)) /* Assigment of value for DONE in the PMERRLOC_ELIDR register */
+#define PMERRLOC_ELIDR_DONE(value)            (PMERRLOC_ELIDR_DONE_Msk & (_UINT32_(value) << PMERRLOC_ELIDR_DONE_Pos)) /* Assignment of value for DONE in the PMERRLOC_ELIDR register */
 #define PMERRLOC_ELIDR_Msk                    _UINT32_(0x00000001)                                 /* (PMERRLOC_ELIDR) Register Mask  */
 
 
@@ -100,7 +100,7 @@
 
 #define PMERRLOC_ELIMR_DONE_Pos               _UINT32_(0)                                          /* (PMERRLOC_ELIMR) Computation Terminated Interrupt Mask Position */
 #define PMERRLOC_ELIMR_DONE_Msk               (_UINT32_(0x1) << PMERRLOC_ELIMR_DONE_Pos)           /* (PMERRLOC_ELIMR) Computation Terminated Interrupt Mask Mask */
-#define PMERRLOC_ELIMR_DONE(value)            (PMERRLOC_ELIMR_DONE_Msk & (_UINT32_(value) << PMERRLOC_ELIMR_DONE_Pos)) /* Assigment of value for DONE in the PMERRLOC_ELIMR register */
+#define PMERRLOC_ELIMR_DONE(value)            (PMERRLOC_ELIMR_DONE_Msk & (_UINT32_(value) << PMERRLOC_ELIMR_DONE_Pos)) /* Assignment of value for DONE in the PMERRLOC_ELIMR register */
 #define PMERRLOC_ELIMR_Msk                    _UINT32_(0x00000001)                                 /* (PMERRLOC_ELIMR) Register Mask  */
 
 
@@ -109,10 +109,10 @@
 
 #define PMERRLOC_ELISR_DONE_Pos               _UINT32_(0)                                          /* (PMERRLOC_ELISR) Computation Terminated Interrupt Status Position */
 #define PMERRLOC_ELISR_DONE_Msk               (_UINT32_(0x1) << PMERRLOC_ELISR_DONE_Pos)           /* (PMERRLOC_ELISR) Computation Terminated Interrupt Status Mask */
-#define PMERRLOC_ELISR_DONE(value)            (PMERRLOC_ELISR_DONE_Msk & (_UINT32_(value) << PMERRLOC_ELISR_DONE_Pos)) /* Assigment of value for DONE in the PMERRLOC_ELISR register */
+#define PMERRLOC_ELISR_DONE(value)            (PMERRLOC_ELISR_DONE_Msk & (_UINT32_(value) << PMERRLOC_ELISR_DONE_Pos)) /* Assignment of value for DONE in the PMERRLOC_ELISR register */
 #define PMERRLOC_ELISR_ERR_CNT_Pos            _UINT32_(8)                                          /* (PMERRLOC_ELISR) Error Counter Value Position */
 #define PMERRLOC_ELISR_ERR_CNT_Msk            (_UINT32_(0x1F) << PMERRLOC_ELISR_ERR_CNT_Pos)       /* (PMERRLOC_ELISR) Error Counter Value Mask */
-#define PMERRLOC_ELISR_ERR_CNT(value)         (PMERRLOC_ELISR_ERR_CNT_Msk & (_UINT32_(value) << PMERRLOC_ELISR_ERR_CNT_Pos)) /* Assigment of value for ERR_CNT in the PMERRLOC_ELISR register */
+#define PMERRLOC_ELISR_ERR_CNT(value)         (PMERRLOC_ELISR_ERR_CNT_Msk & (_UINT32_(value) << PMERRLOC_ELISR_ERR_CNT_Pos)) /* Assignment of value for ERR_CNT in the PMERRLOC_ELISR register */
 #define PMERRLOC_ELISR_Msk                    _UINT32_(0x00001F01)                                 /* (PMERRLOC_ELISR) Register Mask  */
 
 
@@ -121,7 +121,7 @@
 
 #define PMERRLOC_SIGMA0_SIGMA0_Pos            _UINT32_(0)                                          /* (PMERRLOC_SIGMA0) Coefficient of Degree 0 in the SIGMA Polynomial Position */
 #define PMERRLOC_SIGMA0_SIGMA0_Msk            (_UINT32_(0x3FFF) << PMERRLOC_SIGMA0_SIGMA0_Pos)     /* (PMERRLOC_SIGMA0) Coefficient of Degree 0 in the SIGMA Polynomial Mask */
-#define PMERRLOC_SIGMA0_SIGMA0(value)         (PMERRLOC_SIGMA0_SIGMA0_Msk & (_UINT32_(value) << PMERRLOC_SIGMA0_SIGMA0_Pos)) /* Assigment of value for SIGMA0 in the PMERRLOC_SIGMA0 register */
+#define PMERRLOC_SIGMA0_SIGMA0(value)         (PMERRLOC_SIGMA0_SIGMA0_Msk & (_UINT32_(value) << PMERRLOC_SIGMA0_SIGMA0_Pos)) /* Assignment of value for SIGMA0 in the PMERRLOC_SIGMA0 register */
 #define PMERRLOC_SIGMA0_Msk                   _UINT32_(0x00003FFF)                                 /* (PMERRLOC_SIGMA0) Register Mask  */
 
 
@@ -130,7 +130,7 @@
 
 #define PMERRLOC_SIGMA1_SIGMA1_Pos            _UINT32_(0)                                          /* (PMERRLOC_SIGMA1) Coefficient of Degree x in the SIGMA Polynomial. Position */
 #define PMERRLOC_SIGMA1_SIGMA1_Msk            (_UINT32_(0x3FFF) << PMERRLOC_SIGMA1_SIGMA1_Pos)     /* (PMERRLOC_SIGMA1) Coefficient of Degree x in the SIGMA Polynomial. Mask */
-#define PMERRLOC_SIGMA1_SIGMA1(value)         (PMERRLOC_SIGMA1_SIGMA1_Msk & (_UINT32_(value) << PMERRLOC_SIGMA1_SIGMA1_Pos)) /* Assigment of value for SIGMA1 in the PMERRLOC_SIGMA1 register */
+#define PMERRLOC_SIGMA1_SIGMA1(value)         (PMERRLOC_SIGMA1_SIGMA1_Msk & (_UINT32_(value) << PMERRLOC_SIGMA1_SIGMA1_Pos)) /* Assignment of value for SIGMA1 in the PMERRLOC_SIGMA1 register */
 #define PMERRLOC_SIGMA1_Msk                   _UINT32_(0x00003FFF)                                 /* (PMERRLOC_SIGMA1) Register Mask  */
 
 
@@ -139,7 +139,7 @@
 
 #define PMERRLOC_SIGMA2_SIGMA2_Pos            _UINT32_(0)                                          /* (PMERRLOC_SIGMA2) Coefficient of Degree x in the SIGMA Polynomial. Position */
 #define PMERRLOC_SIGMA2_SIGMA2_Msk            (_UINT32_(0x3FFF) << PMERRLOC_SIGMA2_SIGMA2_Pos)     /* (PMERRLOC_SIGMA2) Coefficient of Degree x in the SIGMA Polynomial. Mask */
-#define PMERRLOC_SIGMA2_SIGMA2(value)         (PMERRLOC_SIGMA2_SIGMA2_Msk & (_UINT32_(value) << PMERRLOC_SIGMA2_SIGMA2_Pos)) /* Assigment of value for SIGMA2 in the PMERRLOC_SIGMA2 register */
+#define PMERRLOC_SIGMA2_SIGMA2(value)         (PMERRLOC_SIGMA2_SIGMA2_Msk & (_UINT32_(value) << PMERRLOC_SIGMA2_SIGMA2_Pos)) /* Assignment of value for SIGMA2 in the PMERRLOC_SIGMA2 register */
 #define PMERRLOC_SIGMA2_Msk                   _UINT32_(0x00003FFF)                                 /* (PMERRLOC_SIGMA2) Register Mask  */
 
 
@@ -148,7 +148,7 @@
 
 #define PMERRLOC_SIGMA3_SIGMA3_Pos            _UINT32_(0)                                          /* (PMERRLOC_SIGMA3) Coefficient of Degree x in the SIGMA Polynomial. Position */
 #define PMERRLOC_SIGMA3_SIGMA3_Msk            (_UINT32_(0x3FFF) << PMERRLOC_SIGMA3_SIGMA3_Pos)     /* (PMERRLOC_SIGMA3) Coefficient of Degree x in the SIGMA Polynomial. Mask */
-#define PMERRLOC_SIGMA3_SIGMA3(value)         (PMERRLOC_SIGMA3_SIGMA3_Msk & (_UINT32_(value) << PMERRLOC_SIGMA3_SIGMA3_Pos)) /* Assigment of value for SIGMA3 in the PMERRLOC_SIGMA3 register */
+#define PMERRLOC_SIGMA3_SIGMA3(value)         (PMERRLOC_SIGMA3_SIGMA3_Msk & (_UINT32_(value) << PMERRLOC_SIGMA3_SIGMA3_Pos)) /* Assignment of value for SIGMA3 in the PMERRLOC_SIGMA3 register */
 #define PMERRLOC_SIGMA3_Msk                   _UINT32_(0x00003FFF)                                 /* (PMERRLOC_SIGMA3) Register Mask  */
 
 
@@ -157,7 +157,7 @@
 
 #define PMERRLOC_SIGMA4_SIGMA4_Pos            _UINT32_(0)                                          /* (PMERRLOC_SIGMA4) Coefficient of Degree x in the SIGMA Polynomial. Position */
 #define PMERRLOC_SIGMA4_SIGMA4_Msk            (_UINT32_(0x3FFF) << PMERRLOC_SIGMA4_SIGMA4_Pos)     /* (PMERRLOC_SIGMA4) Coefficient of Degree x in the SIGMA Polynomial. Mask */
-#define PMERRLOC_SIGMA4_SIGMA4(value)         (PMERRLOC_SIGMA4_SIGMA4_Msk & (_UINT32_(value) << PMERRLOC_SIGMA4_SIGMA4_Pos)) /* Assigment of value for SIGMA4 in the PMERRLOC_SIGMA4 register */
+#define PMERRLOC_SIGMA4_SIGMA4(value)         (PMERRLOC_SIGMA4_SIGMA4_Msk & (_UINT32_(value) << PMERRLOC_SIGMA4_SIGMA4_Pos)) /* Assignment of value for SIGMA4 in the PMERRLOC_SIGMA4 register */
 #define PMERRLOC_SIGMA4_Msk                   _UINT32_(0x00003FFF)                                 /* (PMERRLOC_SIGMA4) Register Mask  */
 
 
@@ -166,7 +166,7 @@
 
 #define PMERRLOC_SIGMA5_SIGMA5_Pos            _UINT32_(0)                                          /* (PMERRLOC_SIGMA5) Coefficient of Degree x in the SIGMA Polynomial. Position */
 #define PMERRLOC_SIGMA5_SIGMA5_Msk            (_UINT32_(0x3FFF) << PMERRLOC_SIGMA5_SIGMA5_Pos)     /* (PMERRLOC_SIGMA5) Coefficient of Degree x in the SIGMA Polynomial. Mask */
-#define PMERRLOC_SIGMA5_SIGMA5(value)         (PMERRLOC_SIGMA5_SIGMA5_Msk & (_UINT32_(value) << PMERRLOC_SIGMA5_SIGMA5_Pos)) /* Assigment of value for SIGMA5 in the PMERRLOC_SIGMA5 register */
+#define PMERRLOC_SIGMA5_SIGMA5(value)         (PMERRLOC_SIGMA5_SIGMA5_Msk & (_UINT32_(value) << PMERRLOC_SIGMA5_SIGMA5_Pos)) /* Assignment of value for SIGMA5 in the PMERRLOC_SIGMA5 register */
 #define PMERRLOC_SIGMA5_Msk                   _UINT32_(0x00003FFF)                                 /* (PMERRLOC_SIGMA5) Register Mask  */
 
 
@@ -175,7 +175,7 @@
 
 #define PMERRLOC_SIGMA6_SIGMA6_Pos            _UINT32_(0)                                          /* (PMERRLOC_SIGMA6) Coefficient of Degree x in the SIGMA Polynomial. Position */
 #define PMERRLOC_SIGMA6_SIGMA6_Msk            (_UINT32_(0x3FFF) << PMERRLOC_SIGMA6_SIGMA6_Pos)     /* (PMERRLOC_SIGMA6) Coefficient of Degree x in the SIGMA Polynomial. Mask */
-#define PMERRLOC_SIGMA6_SIGMA6(value)         (PMERRLOC_SIGMA6_SIGMA6_Msk & (_UINT32_(value) << PMERRLOC_SIGMA6_SIGMA6_Pos)) /* Assigment of value for SIGMA6 in the PMERRLOC_SIGMA6 register */
+#define PMERRLOC_SIGMA6_SIGMA6(value)         (PMERRLOC_SIGMA6_SIGMA6_Msk & (_UINT32_(value) << PMERRLOC_SIGMA6_SIGMA6_Pos)) /* Assignment of value for SIGMA6 in the PMERRLOC_SIGMA6 register */
 #define PMERRLOC_SIGMA6_Msk                   _UINT32_(0x00003FFF)                                 /* (PMERRLOC_SIGMA6) Register Mask  */
 
 
@@ -184,7 +184,7 @@
 
 #define PMERRLOC_SIGMA7_SIGMA7_Pos            _UINT32_(0)                                          /* (PMERRLOC_SIGMA7) Coefficient of Degree x in the SIGMA Polynomial. Position */
 #define PMERRLOC_SIGMA7_SIGMA7_Msk            (_UINT32_(0x3FFF) << PMERRLOC_SIGMA7_SIGMA7_Pos)     /* (PMERRLOC_SIGMA7) Coefficient of Degree x in the SIGMA Polynomial. Mask */
-#define PMERRLOC_SIGMA7_SIGMA7(value)         (PMERRLOC_SIGMA7_SIGMA7_Msk & (_UINT32_(value) << PMERRLOC_SIGMA7_SIGMA7_Pos)) /* Assigment of value for SIGMA7 in the PMERRLOC_SIGMA7 register */
+#define PMERRLOC_SIGMA7_SIGMA7(value)         (PMERRLOC_SIGMA7_SIGMA7_Msk & (_UINT32_(value) << PMERRLOC_SIGMA7_SIGMA7_Pos)) /* Assignment of value for SIGMA7 in the PMERRLOC_SIGMA7 register */
 #define PMERRLOC_SIGMA7_Msk                   _UINT32_(0x00003FFF)                                 /* (PMERRLOC_SIGMA7) Register Mask  */
 
 
@@ -193,7 +193,7 @@
 
 #define PMERRLOC_SIGMA8_SIGMA8_Pos            _UINT32_(0)                                          /* (PMERRLOC_SIGMA8) Coefficient of Degree x in the SIGMA Polynomial. Position */
 #define PMERRLOC_SIGMA8_SIGMA8_Msk            (_UINT32_(0x3FFF) << PMERRLOC_SIGMA8_SIGMA8_Pos)     /* (PMERRLOC_SIGMA8) Coefficient of Degree x in the SIGMA Polynomial. Mask */
-#define PMERRLOC_SIGMA8_SIGMA8(value)         (PMERRLOC_SIGMA8_SIGMA8_Msk & (_UINT32_(value) << PMERRLOC_SIGMA8_SIGMA8_Pos)) /* Assigment of value for SIGMA8 in the PMERRLOC_SIGMA8 register */
+#define PMERRLOC_SIGMA8_SIGMA8(value)         (PMERRLOC_SIGMA8_SIGMA8_Msk & (_UINT32_(value) << PMERRLOC_SIGMA8_SIGMA8_Pos)) /* Assignment of value for SIGMA8 in the PMERRLOC_SIGMA8 register */
 #define PMERRLOC_SIGMA8_Msk                   _UINT32_(0x00003FFF)                                 /* (PMERRLOC_SIGMA8) Register Mask  */
 
 
@@ -202,7 +202,7 @@
 
 #define PMERRLOC_SIGMA9_SIGMA9_Pos            _UINT32_(0)                                          /* (PMERRLOC_SIGMA9) Coefficient of Degree x in the SIGMA Polynomial. Position */
 #define PMERRLOC_SIGMA9_SIGMA9_Msk            (_UINT32_(0x3FFF) << PMERRLOC_SIGMA9_SIGMA9_Pos)     /* (PMERRLOC_SIGMA9) Coefficient of Degree x in the SIGMA Polynomial. Mask */
-#define PMERRLOC_SIGMA9_SIGMA9(value)         (PMERRLOC_SIGMA9_SIGMA9_Msk & (_UINT32_(value) << PMERRLOC_SIGMA9_SIGMA9_Pos)) /* Assigment of value for SIGMA9 in the PMERRLOC_SIGMA9 register */
+#define PMERRLOC_SIGMA9_SIGMA9(value)         (PMERRLOC_SIGMA9_SIGMA9_Msk & (_UINT32_(value) << PMERRLOC_SIGMA9_SIGMA9_Pos)) /* Assignment of value for SIGMA9 in the PMERRLOC_SIGMA9 register */
 #define PMERRLOC_SIGMA9_Msk                   _UINT32_(0x00003FFF)                                 /* (PMERRLOC_SIGMA9) Register Mask  */
 
 
@@ -211,7 +211,7 @@
 
 #define PMERRLOC_SIGMA10_SIGMA10_Pos          _UINT32_(0)                                          /* (PMERRLOC_SIGMA10) Coefficient of Degree x in the SIGMA Polynomial. Position */
 #define PMERRLOC_SIGMA10_SIGMA10_Msk          (_UINT32_(0x3FFF) << PMERRLOC_SIGMA10_SIGMA10_Pos)   /* (PMERRLOC_SIGMA10) Coefficient of Degree x in the SIGMA Polynomial. Mask */
-#define PMERRLOC_SIGMA10_SIGMA10(value)       (PMERRLOC_SIGMA10_SIGMA10_Msk & (_UINT32_(value) << PMERRLOC_SIGMA10_SIGMA10_Pos)) /* Assigment of value for SIGMA10 in the PMERRLOC_SIGMA10 register */
+#define PMERRLOC_SIGMA10_SIGMA10(value)       (PMERRLOC_SIGMA10_SIGMA10_Msk & (_UINT32_(value) << PMERRLOC_SIGMA10_SIGMA10_Pos)) /* Assignment of value for SIGMA10 in the PMERRLOC_SIGMA10 register */
 #define PMERRLOC_SIGMA10_Msk                  _UINT32_(0x00003FFF)                                 /* (PMERRLOC_SIGMA10) Register Mask  */
 
 
@@ -220,7 +220,7 @@
 
 #define PMERRLOC_SIGMA11_SIGMA11_Pos          _UINT32_(0)                                          /* (PMERRLOC_SIGMA11) Coefficient of Degree x in the SIGMA Polynomial. Position */
 #define PMERRLOC_SIGMA11_SIGMA11_Msk          (_UINT32_(0x3FFF) << PMERRLOC_SIGMA11_SIGMA11_Pos)   /* (PMERRLOC_SIGMA11) Coefficient of Degree x in the SIGMA Polynomial. Mask */
-#define PMERRLOC_SIGMA11_SIGMA11(value)       (PMERRLOC_SIGMA11_SIGMA11_Msk & (_UINT32_(value) << PMERRLOC_SIGMA11_SIGMA11_Pos)) /* Assigment of value for SIGMA11 in the PMERRLOC_SIGMA11 register */
+#define PMERRLOC_SIGMA11_SIGMA11(value)       (PMERRLOC_SIGMA11_SIGMA11_Msk & (_UINT32_(value) << PMERRLOC_SIGMA11_SIGMA11_Pos)) /* Assignment of value for SIGMA11 in the PMERRLOC_SIGMA11 register */
 #define PMERRLOC_SIGMA11_Msk                  _UINT32_(0x00003FFF)                                 /* (PMERRLOC_SIGMA11) Register Mask  */
 
 
@@ -229,7 +229,7 @@
 
 #define PMERRLOC_SIGMA12_SIGMA12_Pos          _UINT32_(0)                                          /* (PMERRLOC_SIGMA12) Coefficient of Degree x in the SIGMA Polynomial. Position */
 #define PMERRLOC_SIGMA12_SIGMA12_Msk          (_UINT32_(0x3FFF) << PMERRLOC_SIGMA12_SIGMA12_Pos)   /* (PMERRLOC_SIGMA12) Coefficient of Degree x in the SIGMA Polynomial. Mask */
-#define PMERRLOC_SIGMA12_SIGMA12(value)       (PMERRLOC_SIGMA12_SIGMA12_Msk & (_UINT32_(value) << PMERRLOC_SIGMA12_SIGMA12_Pos)) /* Assigment of value for SIGMA12 in the PMERRLOC_SIGMA12 register */
+#define PMERRLOC_SIGMA12_SIGMA12(value)       (PMERRLOC_SIGMA12_SIGMA12_Msk & (_UINT32_(value) << PMERRLOC_SIGMA12_SIGMA12_Pos)) /* Assignment of value for SIGMA12 in the PMERRLOC_SIGMA12 register */
 #define PMERRLOC_SIGMA12_Msk                  _UINT32_(0x00003FFF)                                 /* (PMERRLOC_SIGMA12) Register Mask  */
 
 
@@ -238,7 +238,7 @@
 
 #define PMERRLOC_SIGMA13_SIGMA13_Pos          _UINT32_(0)                                          /* (PMERRLOC_SIGMA13) Coefficient of Degree x in the SIGMA Polynomial. Position */
 #define PMERRLOC_SIGMA13_SIGMA13_Msk          (_UINT32_(0x3FFF) << PMERRLOC_SIGMA13_SIGMA13_Pos)   /* (PMERRLOC_SIGMA13) Coefficient of Degree x in the SIGMA Polynomial. Mask */
-#define PMERRLOC_SIGMA13_SIGMA13(value)       (PMERRLOC_SIGMA13_SIGMA13_Msk & (_UINT32_(value) << PMERRLOC_SIGMA13_SIGMA13_Pos)) /* Assigment of value for SIGMA13 in the PMERRLOC_SIGMA13 register */
+#define PMERRLOC_SIGMA13_SIGMA13(value)       (PMERRLOC_SIGMA13_SIGMA13_Msk & (_UINT32_(value) << PMERRLOC_SIGMA13_SIGMA13_Pos)) /* Assignment of value for SIGMA13 in the PMERRLOC_SIGMA13 register */
 #define PMERRLOC_SIGMA13_Msk                  _UINT32_(0x00003FFF)                                 /* (PMERRLOC_SIGMA13) Register Mask  */
 
 
@@ -247,7 +247,7 @@
 
 #define PMERRLOC_SIGMA14_SIGMA14_Pos          _UINT32_(0)                                          /* (PMERRLOC_SIGMA14) Coefficient of Degree x in the SIGMA Polynomial. Position */
 #define PMERRLOC_SIGMA14_SIGMA14_Msk          (_UINT32_(0x3FFF) << PMERRLOC_SIGMA14_SIGMA14_Pos)   /* (PMERRLOC_SIGMA14) Coefficient of Degree x in the SIGMA Polynomial. Mask */
-#define PMERRLOC_SIGMA14_SIGMA14(value)       (PMERRLOC_SIGMA14_SIGMA14_Msk & (_UINT32_(value) << PMERRLOC_SIGMA14_SIGMA14_Pos)) /* Assigment of value for SIGMA14 in the PMERRLOC_SIGMA14 register */
+#define PMERRLOC_SIGMA14_SIGMA14(value)       (PMERRLOC_SIGMA14_SIGMA14_Msk & (_UINT32_(value) << PMERRLOC_SIGMA14_SIGMA14_Pos)) /* Assignment of value for SIGMA14 in the PMERRLOC_SIGMA14 register */
 #define PMERRLOC_SIGMA14_Msk                  _UINT32_(0x00003FFF)                                 /* (PMERRLOC_SIGMA14) Register Mask  */
 
 
@@ -256,7 +256,7 @@
 
 #define PMERRLOC_SIGMA15_SIGMA15_Pos          _UINT32_(0)                                          /* (PMERRLOC_SIGMA15) Coefficient of Degree x in the SIGMA Polynomial. Position */
 #define PMERRLOC_SIGMA15_SIGMA15_Msk          (_UINT32_(0x3FFF) << PMERRLOC_SIGMA15_SIGMA15_Pos)   /* (PMERRLOC_SIGMA15) Coefficient of Degree x in the SIGMA Polynomial. Mask */
-#define PMERRLOC_SIGMA15_SIGMA15(value)       (PMERRLOC_SIGMA15_SIGMA15_Msk & (_UINT32_(value) << PMERRLOC_SIGMA15_SIGMA15_Pos)) /* Assigment of value for SIGMA15 in the PMERRLOC_SIGMA15 register */
+#define PMERRLOC_SIGMA15_SIGMA15(value)       (PMERRLOC_SIGMA15_SIGMA15_Msk & (_UINT32_(value) << PMERRLOC_SIGMA15_SIGMA15_Pos)) /* Assignment of value for SIGMA15 in the PMERRLOC_SIGMA15 register */
 #define PMERRLOC_SIGMA15_Msk                  _UINT32_(0x00003FFF)                                 /* (PMERRLOC_SIGMA15) Register Mask  */
 
 
@@ -265,7 +265,7 @@
 
 #define PMERRLOC_SIGMA16_SIGMA16_Pos          _UINT32_(0)                                          /* (PMERRLOC_SIGMA16) Coefficient of Degree x in the SIGMA Polynomial. Position */
 #define PMERRLOC_SIGMA16_SIGMA16_Msk          (_UINT32_(0x3FFF) << PMERRLOC_SIGMA16_SIGMA16_Pos)   /* (PMERRLOC_SIGMA16) Coefficient of Degree x in the SIGMA Polynomial. Mask */
-#define PMERRLOC_SIGMA16_SIGMA16(value)       (PMERRLOC_SIGMA16_SIGMA16_Msk & (_UINT32_(value) << PMERRLOC_SIGMA16_SIGMA16_Pos)) /* Assigment of value for SIGMA16 in the PMERRLOC_SIGMA16 register */
+#define PMERRLOC_SIGMA16_SIGMA16(value)       (PMERRLOC_SIGMA16_SIGMA16_Msk & (_UINT32_(value) << PMERRLOC_SIGMA16_SIGMA16_Pos)) /* Assignment of value for SIGMA16 in the PMERRLOC_SIGMA16 register */
 #define PMERRLOC_SIGMA16_Msk                  _UINT32_(0x00003FFF)                                 /* (PMERRLOC_SIGMA16) Register Mask  */
 
 
@@ -274,7 +274,7 @@
 
 #define PMERRLOC_SIGMA17_SIGMA17_Pos          _UINT32_(0)                                          /* (PMERRLOC_SIGMA17) Coefficient of Degree x in the SIGMA Polynomial. Position */
 #define PMERRLOC_SIGMA17_SIGMA17_Msk          (_UINT32_(0x3FFF) << PMERRLOC_SIGMA17_SIGMA17_Pos)   /* (PMERRLOC_SIGMA17) Coefficient of Degree x in the SIGMA Polynomial. Mask */
-#define PMERRLOC_SIGMA17_SIGMA17(value)       (PMERRLOC_SIGMA17_SIGMA17_Msk & (_UINT32_(value) << PMERRLOC_SIGMA17_SIGMA17_Pos)) /* Assigment of value for SIGMA17 in the PMERRLOC_SIGMA17 register */
+#define PMERRLOC_SIGMA17_SIGMA17(value)       (PMERRLOC_SIGMA17_SIGMA17_Msk & (_UINT32_(value) << PMERRLOC_SIGMA17_SIGMA17_Pos)) /* Assignment of value for SIGMA17 in the PMERRLOC_SIGMA17 register */
 #define PMERRLOC_SIGMA17_Msk                  _UINT32_(0x00003FFF)                                 /* (PMERRLOC_SIGMA17) Register Mask  */
 
 
@@ -283,7 +283,7 @@
 
 #define PMERRLOC_SIGMA18_SIGMA18_Pos          _UINT32_(0)                                          /* (PMERRLOC_SIGMA18) Coefficient of Degree x in the SIGMA Polynomial. Position */
 #define PMERRLOC_SIGMA18_SIGMA18_Msk          (_UINT32_(0x3FFF) << PMERRLOC_SIGMA18_SIGMA18_Pos)   /* (PMERRLOC_SIGMA18) Coefficient of Degree x in the SIGMA Polynomial. Mask */
-#define PMERRLOC_SIGMA18_SIGMA18(value)       (PMERRLOC_SIGMA18_SIGMA18_Msk & (_UINT32_(value) << PMERRLOC_SIGMA18_SIGMA18_Pos)) /* Assigment of value for SIGMA18 in the PMERRLOC_SIGMA18 register */
+#define PMERRLOC_SIGMA18_SIGMA18(value)       (PMERRLOC_SIGMA18_SIGMA18_Msk & (_UINT32_(value) << PMERRLOC_SIGMA18_SIGMA18_Pos)) /* Assignment of value for SIGMA18 in the PMERRLOC_SIGMA18 register */
 #define PMERRLOC_SIGMA18_Msk                  _UINT32_(0x00003FFF)                                 /* (PMERRLOC_SIGMA18) Register Mask  */
 
 
@@ -292,7 +292,7 @@
 
 #define PMERRLOC_SIGMA19_SIGMA19_Pos          _UINT32_(0)                                          /* (PMERRLOC_SIGMA19) Coefficient of Degree x in the SIGMA Polynomial. Position */
 #define PMERRLOC_SIGMA19_SIGMA19_Msk          (_UINT32_(0x3FFF) << PMERRLOC_SIGMA19_SIGMA19_Pos)   /* (PMERRLOC_SIGMA19) Coefficient of Degree x in the SIGMA Polynomial. Mask */
-#define PMERRLOC_SIGMA19_SIGMA19(value)       (PMERRLOC_SIGMA19_SIGMA19_Msk & (_UINT32_(value) << PMERRLOC_SIGMA19_SIGMA19_Pos)) /* Assigment of value for SIGMA19 in the PMERRLOC_SIGMA19 register */
+#define PMERRLOC_SIGMA19_SIGMA19(value)       (PMERRLOC_SIGMA19_SIGMA19_Msk & (_UINT32_(value) << PMERRLOC_SIGMA19_SIGMA19_Pos)) /* Assignment of value for SIGMA19 in the PMERRLOC_SIGMA19 register */
 #define PMERRLOC_SIGMA19_Msk                  _UINT32_(0x00003FFF)                                 /* (PMERRLOC_SIGMA19) Register Mask  */
 
 
@@ -301,7 +301,7 @@
 
 #define PMERRLOC_SIGMA20_SIGMA20_Pos          _UINT32_(0)                                          /* (PMERRLOC_SIGMA20) Coefficient of Degree x in the SIGMA Polynomial. Position */
 #define PMERRLOC_SIGMA20_SIGMA20_Msk          (_UINT32_(0x3FFF) << PMERRLOC_SIGMA20_SIGMA20_Pos)   /* (PMERRLOC_SIGMA20) Coefficient of Degree x in the SIGMA Polynomial. Mask */
-#define PMERRLOC_SIGMA20_SIGMA20(value)       (PMERRLOC_SIGMA20_SIGMA20_Msk & (_UINT32_(value) << PMERRLOC_SIGMA20_SIGMA20_Pos)) /* Assigment of value for SIGMA20 in the PMERRLOC_SIGMA20 register */
+#define PMERRLOC_SIGMA20_SIGMA20(value)       (PMERRLOC_SIGMA20_SIGMA20_Msk & (_UINT32_(value) << PMERRLOC_SIGMA20_SIGMA20_Pos)) /* Assignment of value for SIGMA20 in the PMERRLOC_SIGMA20 register */
 #define PMERRLOC_SIGMA20_Msk                  _UINT32_(0x00003FFF)                                 /* (PMERRLOC_SIGMA20) Register Mask  */
 
 
@@ -310,7 +310,7 @@
 
 #define PMERRLOC_SIGMA21_SIGMA21_Pos          _UINT32_(0)                                          /* (PMERRLOC_SIGMA21) Coefficient of Degree x in the SIGMA Polynomial. Position */
 #define PMERRLOC_SIGMA21_SIGMA21_Msk          (_UINT32_(0x3FFF) << PMERRLOC_SIGMA21_SIGMA21_Pos)   /* (PMERRLOC_SIGMA21) Coefficient of Degree x in the SIGMA Polynomial. Mask */
-#define PMERRLOC_SIGMA21_SIGMA21(value)       (PMERRLOC_SIGMA21_SIGMA21_Msk & (_UINT32_(value) << PMERRLOC_SIGMA21_SIGMA21_Pos)) /* Assigment of value for SIGMA21 in the PMERRLOC_SIGMA21 register */
+#define PMERRLOC_SIGMA21_SIGMA21(value)       (PMERRLOC_SIGMA21_SIGMA21_Msk & (_UINT32_(value) << PMERRLOC_SIGMA21_SIGMA21_Pos)) /* Assignment of value for SIGMA21 in the PMERRLOC_SIGMA21 register */
 #define PMERRLOC_SIGMA21_Msk                  _UINT32_(0x00003FFF)                                 /* (PMERRLOC_SIGMA21) Register Mask  */
 
 
@@ -319,7 +319,7 @@
 
 #define PMERRLOC_SIGMA22_SIGMA22_Pos          _UINT32_(0)                                          /* (PMERRLOC_SIGMA22) Coefficient of Degree x in the SIGMA Polynomial. Position */
 #define PMERRLOC_SIGMA22_SIGMA22_Msk          (_UINT32_(0x3FFF) << PMERRLOC_SIGMA22_SIGMA22_Pos)   /* (PMERRLOC_SIGMA22) Coefficient of Degree x in the SIGMA Polynomial. Mask */
-#define PMERRLOC_SIGMA22_SIGMA22(value)       (PMERRLOC_SIGMA22_SIGMA22_Msk & (_UINT32_(value) << PMERRLOC_SIGMA22_SIGMA22_Pos)) /* Assigment of value for SIGMA22 in the PMERRLOC_SIGMA22 register */
+#define PMERRLOC_SIGMA22_SIGMA22(value)       (PMERRLOC_SIGMA22_SIGMA22_Msk & (_UINT32_(value) << PMERRLOC_SIGMA22_SIGMA22_Pos)) /* Assignment of value for SIGMA22 in the PMERRLOC_SIGMA22 register */
 #define PMERRLOC_SIGMA22_Msk                  _UINT32_(0x00003FFF)                                 /* (PMERRLOC_SIGMA22) Register Mask  */
 
 
@@ -328,7 +328,7 @@
 
 #define PMERRLOC_SIGMA23_SIGMA23_Pos          _UINT32_(0)                                          /* (PMERRLOC_SIGMA23) Coefficient of Degree x in the SIGMA Polynomial. Position */
 #define PMERRLOC_SIGMA23_SIGMA23_Msk          (_UINT32_(0x3FFF) << PMERRLOC_SIGMA23_SIGMA23_Pos)   /* (PMERRLOC_SIGMA23) Coefficient of Degree x in the SIGMA Polynomial. Mask */
-#define PMERRLOC_SIGMA23_SIGMA23(value)       (PMERRLOC_SIGMA23_SIGMA23_Msk & (_UINT32_(value) << PMERRLOC_SIGMA23_SIGMA23_Pos)) /* Assigment of value for SIGMA23 in the PMERRLOC_SIGMA23 register */
+#define PMERRLOC_SIGMA23_SIGMA23(value)       (PMERRLOC_SIGMA23_SIGMA23_Msk & (_UINT32_(value) << PMERRLOC_SIGMA23_SIGMA23_Pos)) /* Assignment of value for SIGMA23 in the PMERRLOC_SIGMA23 register */
 #define PMERRLOC_SIGMA23_Msk                  _UINT32_(0x00003FFF)                                 /* (PMERRLOC_SIGMA23) Register Mask  */
 
 
@@ -337,7 +337,7 @@
 
 #define PMERRLOC_SIGMA24_SIGMA24_Pos          _UINT32_(0)                                          /* (PMERRLOC_SIGMA24) Coefficient of Degree x in the SIGMA Polynomial. Position */
 #define PMERRLOC_SIGMA24_SIGMA24_Msk          (_UINT32_(0x3FFF) << PMERRLOC_SIGMA24_SIGMA24_Pos)   /* (PMERRLOC_SIGMA24) Coefficient of Degree x in the SIGMA Polynomial. Mask */
-#define PMERRLOC_SIGMA24_SIGMA24(value)       (PMERRLOC_SIGMA24_SIGMA24_Msk & (_UINT32_(value) << PMERRLOC_SIGMA24_SIGMA24_Pos)) /* Assigment of value for SIGMA24 in the PMERRLOC_SIGMA24 register */
+#define PMERRLOC_SIGMA24_SIGMA24(value)       (PMERRLOC_SIGMA24_SIGMA24_Msk & (_UINT32_(value) << PMERRLOC_SIGMA24_SIGMA24_Pos)) /* Assignment of value for SIGMA24 in the PMERRLOC_SIGMA24 register */
 #define PMERRLOC_SIGMA24_Msk                  _UINT32_(0x00003FFF)                                 /* (PMERRLOC_SIGMA24) Register Mask  */
 
 
@@ -346,11 +346,11 @@
 
 #define PMERRLOC_EL_ERRLOCN_Pos               _UINT32_(0)                                          /* (PMERRLOC_EL) Error Position within the Set {sector area, spare area}. Position */
 #define PMERRLOC_EL_ERRLOCN_Msk               (_UINT32_(0x3FFF) << PMERRLOC_EL_ERRLOCN_Pos)        /* (PMERRLOC_EL) Error Position within the Set {sector area, spare area}. Mask */
-#define PMERRLOC_EL_ERRLOCN(value)            (PMERRLOC_EL_ERRLOCN_Msk & (_UINT32_(value) << PMERRLOC_EL_ERRLOCN_Pos)) /* Assigment of value for ERRLOCN in the PMERRLOC_EL register */
+#define PMERRLOC_EL_ERRLOCN(value)            (PMERRLOC_EL_ERRLOCN_Msk & (_UINT32_(value) << PMERRLOC_EL_ERRLOCN_Pos)) /* Assignment of value for ERRLOCN in the PMERRLOC_EL register */
 #define PMERRLOC_EL_Msk                       _UINT32_(0x00003FFF)                                 /* (PMERRLOC_EL) Register Mask  */
 
 
-/** \brief PMERRLOC register offsets definitions */
+/* PMERRLOC register offsets definitions */
 #define PMERRLOC_ELCFG_REG_OFST        _UINT32_(0x00)      /* (PMERRLOC_ELCFG) Configuration Register Offset */
 #define PMERRLOC_ELPRIM_REG_OFST       _UINT32_(0x04)      /* (PMERRLOC_ELPRIM) Primitive Register Offset */
 #define PMERRLOC_ELEN_REG_OFST         _UINT32_(0x08)      /* (PMERRLOC_ELEN) Enable Register Offset */
@@ -412,45 +412,45 @@
 #define PMERRLOC_EL23_REG_OFST         _UINT32_(0xE8)      /* (PMERRLOC_EL23) Error Location x Register Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
-/** \brief PMERRLOC register API structure */
+/* PMERRLOC register API structure */
 typedef struct
 {  /* Programmable Multibit ECC Error Location */
-  __IO  uint32_t                       PMERRLOC_ELCFG;     /**< Offset: 0x00 (R/W  32) Configuration Register */
-  __I   uint32_t                       PMERRLOC_ELPRIM;    /**< Offset: 0x04 (R/   32) Primitive Register */
-  __IO  uint32_t                       PMERRLOC_ELEN;      /**< Offset: 0x08 (R/W  32) Enable Register */
-  __IO  uint32_t                       PMERRLOC_ELDIS;     /**< Offset: 0x0C (R/W  32) Disable Register */
-  __IO  uint32_t                       PMERRLOC_ELSR;      /**< Offset: 0x10 (R/W  32) Status Register */
-  __O   uint32_t                       PMERRLOC_ELIER;     /**< Offset: 0x14 ( /W  32) Interrupt Enable Register */
-  __O   uint32_t                       PMERRLOC_ELIDR;     /**< Offset: 0x18 ( /W  32) Interrupt Disable Register */
-  __I   uint32_t                       PMERRLOC_ELIMR;     /**< Offset: 0x1C (R/   32) Interrupt Mask Register */
-  __I   uint32_t                       PMERRLOC_ELISR;     /**< Offset: 0x20 (R/   32) Interrupt Status Register */
+  __IO  uint32_t                       PMERRLOC_ELCFG;     /* Offset: 0x00 (R/W  32) Configuration Register */
+  __I   uint32_t                       PMERRLOC_ELPRIM;    /* Offset: 0x04 (R/   32) Primitive Register */
+  __IO  uint32_t                       PMERRLOC_ELEN;      /* Offset: 0x08 (R/W  32) Enable Register */
+  __IO  uint32_t                       PMERRLOC_ELDIS;     /* Offset: 0x0C (R/W  32) Disable Register */
+  __IO  uint32_t                       PMERRLOC_ELSR;      /* Offset: 0x10 (R/W  32) Status Register */
+  __O   uint32_t                       PMERRLOC_ELIER;     /* Offset: 0x14 ( /W  32) Interrupt Enable Register */
+  __O   uint32_t                       PMERRLOC_ELIDR;     /* Offset: 0x18 ( /W  32) Interrupt Disable Register */
+  __I   uint32_t                       PMERRLOC_ELIMR;     /* Offset: 0x1C (R/   32) Interrupt Mask Register */
+  __I   uint32_t                       PMERRLOC_ELISR;     /* Offset: 0x20 (R/   32) Interrupt Status Register */
   __I   uint8_t                        Reserved1[0x04];
-  __I   uint32_t                       PMERRLOC_SIGMA0;    /**< Offset: 0x28 (R/   32) SIGMA0 Register */
-  __IO  uint32_t                       PMERRLOC_SIGMA1;    /**< Offset: 0x2C (R/W  32) SIGMA1 Register */
-  __IO  uint32_t                       PMERRLOC_SIGMA2;    /**< Offset: 0x30 (R/W  32) SIGMA2 Register */
-  __IO  uint32_t                       PMERRLOC_SIGMA3;    /**< Offset: 0x34 (R/W  32) SIGMA3 Register */
-  __IO  uint32_t                       PMERRLOC_SIGMA4;    /**< Offset: 0x38 (R/W  32) SIGMA4 Register */
-  __IO  uint32_t                       PMERRLOC_SIGMA5;    /**< Offset: 0x3C (R/W  32) SIGMA5 Register */
-  __IO  uint32_t                       PMERRLOC_SIGMA6;    /**< Offset: 0x40 (R/W  32) SIGMA6 Register */
-  __IO  uint32_t                       PMERRLOC_SIGMA7;    /**< Offset: 0x44 (R/W  32) SIGMA7 Register */
-  __IO  uint32_t                       PMERRLOC_SIGMA8;    /**< Offset: 0x48 (R/W  32) SIGMA8 Register */
-  __IO  uint32_t                       PMERRLOC_SIGMA9;    /**< Offset: 0x4C (R/W  32) SIGMA9 Register */
-  __IO  uint32_t                       PMERRLOC_SIGMA10;   /**< Offset: 0x50 (R/W  32) SIGMA10 Register */
-  __IO  uint32_t                       PMERRLOC_SIGMA11;   /**< Offset: 0x54 (R/W  32) SIGMA11 Register */
-  __IO  uint32_t                       PMERRLOC_SIGMA12;   /**< Offset: 0x58 (R/W  32) SIGMA12 Register */
-  __IO  uint32_t                       PMERRLOC_SIGMA13;   /**< Offset: 0x5C (R/W  32) SIGMA13 Register */
-  __IO  uint32_t                       PMERRLOC_SIGMA14;   /**< Offset: 0x60 (R/W  32) SIGMA14 Register */
-  __IO  uint32_t                       PMERRLOC_SIGMA15;   /**< Offset: 0x64 (R/W  32) SIGMA15 Register */
-  __IO  uint32_t                       PMERRLOC_SIGMA16;   /**< Offset: 0x68 (R/W  32) SIGMA16 Register */
-  __IO  uint32_t                       PMERRLOC_SIGMA17;   /**< Offset: 0x6C (R/W  32) SIGMA17 Register */
-  __IO  uint32_t                       PMERRLOC_SIGMA18;   /**< Offset: 0x70 (R/W  32) SIGMA18 Register */
-  __IO  uint32_t                       PMERRLOC_SIGMA19;   /**< Offset: 0x74 (R/W  32) SIGMA19 Register */
-  __IO  uint32_t                       PMERRLOC_SIGMA20;   /**< Offset: 0x78 (R/W  32) SIGMA20 Register */
-  __IO  uint32_t                       PMERRLOC_SIGMA21;   /**< Offset: 0x7C (R/W  32) SIGMA21 Register */
-  __IO  uint32_t                       PMERRLOC_SIGMA22;   /**< Offset: 0x80 (R/W  32) SIGMA22 Register */
-  __IO  uint32_t                       PMERRLOC_SIGMA23;   /**< Offset: 0x84 (R/W  32) SIGMA23 Register */
-  __IO  uint32_t                       PMERRLOC_SIGMA24;   /**< Offset: 0x88 (R/W  32) SIGMA24 Register */
-  __I   uint32_t                       PMERRLOC_EL[24];    /**< Offset: 0x8C (R/   32) Error Location x Register */
+  __I   uint32_t                       PMERRLOC_SIGMA0;    /* Offset: 0x28 (R/   32) SIGMA0 Register */
+  __IO  uint32_t                       PMERRLOC_SIGMA1;    /* Offset: 0x2C (R/W  32) SIGMA1 Register */
+  __IO  uint32_t                       PMERRLOC_SIGMA2;    /* Offset: 0x30 (R/W  32) SIGMA2 Register */
+  __IO  uint32_t                       PMERRLOC_SIGMA3;    /* Offset: 0x34 (R/W  32) SIGMA3 Register */
+  __IO  uint32_t                       PMERRLOC_SIGMA4;    /* Offset: 0x38 (R/W  32) SIGMA4 Register */
+  __IO  uint32_t                       PMERRLOC_SIGMA5;    /* Offset: 0x3C (R/W  32) SIGMA5 Register */
+  __IO  uint32_t                       PMERRLOC_SIGMA6;    /* Offset: 0x40 (R/W  32) SIGMA6 Register */
+  __IO  uint32_t                       PMERRLOC_SIGMA7;    /* Offset: 0x44 (R/W  32) SIGMA7 Register */
+  __IO  uint32_t                       PMERRLOC_SIGMA8;    /* Offset: 0x48 (R/W  32) SIGMA8 Register */
+  __IO  uint32_t                       PMERRLOC_SIGMA9;    /* Offset: 0x4C (R/W  32) SIGMA9 Register */
+  __IO  uint32_t                       PMERRLOC_SIGMA10;   /* Offset: 0x50 (R/W  32) SIGMA10 Register */
+  __IO  uint32_t                       PMERRLOC_SIGMA11;   /* Offset: 0x54 (R/W  32) SIGMA11 Register */
+  __IO  uint32_t                       PMERRLOC_SIGMA12;   /* Offset: 0x58 (R/W  32) SIGMA12 Register */
+  __IO  uint32_t                       PMERRLOC_SIGMA13;   /* Offset: 0x5C (R/W  32) SIGMA13 Register */
+  __IO  uint32_t                       PMERRLOC_SIGMA14;   /* Offset: 0x60 (R/W  32) SIGMA14 Register */
+  __IO  uint32_t                       PMERRLOC_SIGMA15;   /* Offset: 0x64 (R/W  32) SIGMA15 Register */
+  __IO  uint32_t                       PMERRLOC_SIGMA16;   /* Offset: 0x68 (R/W  32) SIGMA16 Register */
+  __IO  uint32_t                       PMERRLOC_SIGMA17;   /* Offset: 0x6C (R/W  32) SIGMA17 Register */
+  __IO  uint32_t                       PMERRLOC_SIGMA18;   /* Offset: 0x70 (R/W  32) SIGMA18 Register */
+  __IO  uint32_t                       PMERRLOC_SIGMA19;   /* Offset: 0x74 (R/W  32) SIGMA19 Register */
+  __IO  uint32_t                       PMERRLOC_SIGMA20;   /* Offset: 0x78 (R/W  32) SIGMA20 Register */
+  __IO  uint32_t                       PMERRLOC_SIGMA21;   /* Offset: 0x7C (R/W  32) SIGMA21 Register */
+  __IO  uint32_t                       PMERRLOC_SIGMA22;   /* Offset: 0x80 (R/W  32) SIGMA22 Register */
+  __IO  uint32_t                       PMERRLOC_SIGMA23;   /* Offset: 0x84 (R/W  32) SIGMA23 Register */
+  __IO  uint32_t                       PMERRLOC_SIGMA24;   /* Offset: 0x88 (R/W  32) SIGMA24 Register */
+  __I   uint32_t                       PMERRLOC_EL[24];    /* Offset: 0x8C (R/   32) Error Location x Register */
 } pmerrloc_registers_t;
 
 
