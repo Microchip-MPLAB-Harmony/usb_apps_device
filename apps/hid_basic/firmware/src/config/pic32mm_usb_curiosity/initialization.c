@@ -102,9 +102,10 @@
 // *****************************************************************************
 // *****************************************************************************
 /* Following MISRA-C rules are deviated in the below code block */
-/* MISRA C-2012 Rule 11.1 */
-/* MISRA C-2012 Rule 11.3 */
-/* MISRA C-2012 Rule 11.8 */
+/* MISRA C-2012 Rule 7.2 - Deviation record ID - H3_MISRAC_2012_R_7_2_DR_1 */
+/* MISRA C-2012 Rule 11.1 - Deviation record ID - H3_MISRAC_2012_R_11_1_DR_1 */
+/* MISRA C-2012 Rule 11.3 - Deviation record ID - H3_MISRAC_2012_R_11_3_DR_1 */
+/* MISRA C-2012 Rule 11.8 - Deviation record ID - H3_MISRAC_2012_R_11_8_DR_1 */
 
 
 
@@ -133,11 +134,8 @@ static const DRV_USBFS_INIT drvUSBFSInit =
      /* Assign the endpoint table */
     .endpointTable= endPointTable1,
 
-
-
     /* Interrupt Source for USB module */
     .interruptSource = INT_SOURCE_USB,
-
     
     /* USB Controller to operate as USB Device */
     .operationMode = DRV_USBFS_OPMODE_DEVICE,
@@ -147,7 +145,7 @@ static const DRV_USBFS_INIT drvUSBFSInit =
     /* Stop in idle */
     .stopInIdle = false,
     
-        /* Suspend in sleep */
+    /* Suspend in sleep */
     .suspendInSleep = false,
  
     /* Identifies peripheral (PLIB-level) ID */
@@ -205,7 +203,6 @@ void SYS_Initialize ( void* data )
 	GPIO_Initialize();
 
 	BSP_Initialize();
-
 
     /* MISRAC 2012 deviation block start */
     /* Following MISRA-C rules deviated in this block  */

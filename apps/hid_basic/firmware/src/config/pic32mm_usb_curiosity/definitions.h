@@ -73,13 +73,13 @@ extern "C" {
 // DOM-IGNORE-END
 
 /* Device Information */
-#define DEVICE_NAME			 "PIC32MM0256GPM064"
-#define DEVICE_ARCH			 "MIPS"
-#define DEVICE_FAMILY		 "PIC32MM1387"
-#define DEVICE_SERIES		 "PIC32MM"
+#define DEVICE_NAME          "PIC32MM0256GPM064"
+#define DEVICE_ARCH          "MIPS"
+#define DEVICE_FAMILY        "PIC32MM1387"
+#define DEVICE_SERIES        "PIC32MM"
 
 /* CPU clock frequency */
-#define CPU_CLOCK_FREQUENCY 24000000
+#define CPU_CLOCK_FREQUENCY 24000000U
 
 // *****************************************************************************
 // *****************************************************************************
