@@ -88,19 +88,7 @@ void CLK_Initialize( void )
     SYSKEY = 0x00000000U;
     SYSKEY = 0xAA996655U;
     SYSKEY = 0x556699AAU;
-
- 
-      
-    /* Configure UPLL */
-    /* UPOSCEN = UPLL */
-    /* PLLODIV = DIV_8 */
-    /* PLLMULT = MUL_32 */
-    /* PLLIDIV = DIV_1 */
-    /* PLLRANGE = RANGE_8_16_MHZ */
-    UPLLCON = 0x31f0002;
-
-  
-
+    
     /* Peripheral Module Disable Configuration */
 
     CFGCONbits.PMDLOCK = 0;
@@ -114,6 +102,18 @@ void CLK_Initialize( void )
     PMD7 = 0xffffffefU;
 
     CFGCONbits.PMDLOCK = 1;
+
+ 
+      
+    /* Configure UPLL */
+    /* UPOSCEN = UPLL */
+    /* PLLODIV = DIV_8 */
+    /* PLLMULT = MUL_32 */
+    /* PLLIDIV = DIV_1 */
+    /* PLLRANGE = RANGE_8_16_MHZ */
+    UPLLCON = 0x31f0002;
+
+  
 
     /* Lock system since done with clock configuration */
     SYSKEY = 0x33333333U;
