@@ -1,8 +1,8 @@
 /*--------------------------------------------------------------------------
  * MPLAB XC Compiler -  PIC32MK1024GPE100 linker script
- * Build date : Sep 01 2021
+ * Build date : Jan 30 2024
  * 
- * Copyright (c) 2021, Microchip Technology Inc. and its subsidiaries ("Microchip")
+ * Copyright (c) 2024, Microchip Technology Inc. and its subsidiaries ("Microchip")
  * All rights reserved.
  * 
  * This software is developed by Microchip Technology Inc. and its
@@ -328,6 +328,10 @@ SECTIONS
     KEEP(*(.bev_handler))
   } > kseg1_boot_mem
 
+  .simple_tlb_refill_excpt _SIMPLE_TLB_REFILL_EXCPT_ADDR :
+  {
+    KEEP(*(.simple_tlb_refill_vector))
+  } > kseg0_program_mem
   .app_excpt _GEN_EXCPT_ADDR :
   {
     KEEP(*(.gen_handler))
