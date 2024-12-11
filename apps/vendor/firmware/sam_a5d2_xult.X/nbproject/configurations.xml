@@ -203,6 +203,13 @@
             <itemPath>../src/packs/ATSAMA5D27_DFP/instance/xdmac0.h</itemPath>
             <itemPath>../src/packs/ATSAMA5D27_DFP/instance/xdmac1.h</itemPath>
             <itemPath>../src/packs/ATSAMA5D27_DFP/instance/hsmc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/s_pio_ctrl.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/pio_ctrl.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/s_pio.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/pioc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/piod.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/piob.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/pioa.h</itemPath>
           </logicalFolder>
           <logicalFolder name="f3" displayName="pio" projectFiles="true">
             <itemPath>../src/packs/ATSAMA5D27_DFP/pio/sama5d27.h</itemPath>
@@ -326,12 +333,12 @@
         <targetPluginBoard/>
         <platformTool>jlink</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.40</languageToolchainVersion>
+        <languageToolchainVersion>4.45</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
         <pack name="CMSIS" vendor="ARM" version="5.8.0"/>
-        <pack name="SAMA5D2_DFP" vendor="Microchip" version="1.10.213"/>
+        <pack name="SAMA5D2_DFP" vendor="Microchip" version="1.11.228"/>
       </packs>
       <ScriptingSettings>
         <ScriptingSetting key="boot.load_adr" value=""/>
