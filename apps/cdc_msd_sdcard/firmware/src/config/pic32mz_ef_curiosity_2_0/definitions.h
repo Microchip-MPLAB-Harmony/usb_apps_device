@@ -59,9 +59,9 @@
 #include "bsp/bsp.h"
 #include "driver/sdspi/drv_sdspi.h"
 #include "system/time/sys_time.h"
-#include "driver/usb/usbhs/drv_usbhs.h"
 #include "usb/usb_device_cdc.h"
 #include "usb/usb_cdc.h"
+#include "driver/usb/usbhs/drv_usbhs.h"
 #include "peripheral/tmr1/plib_tmr1.h"
 #include "peripheral/spi/spi_master/plib_spi1_master.h"
 #include "system/int/sys_int.h"
@@ -82,13 +82,13 @@ extern "C" {
 // DOM-IGNORE-END
 
 /* Device Information */
-#define DEVICE_NAME			 "PIC32MZ2048EFM144"
-#define DEVICE_ARCH			 "MIPS"
-#define DEVICE_FAMILY		 "PIC32MZEF"
-#define DEVICE_SERIES		 "PIC32MZ"
+#define DEVICE_NAME          "PIC32MZ2048EFM144"
+#define DEVICE_ARCH          "MIPS"
+#define DEVICE_FAMILY        "PIC32MZEF"
+#define DEVICE_SERIES        "PIC32MZ"
 
 /* CPU clock frequency */
-#define CPU_CLOCK_FREQUENCY 198000000
+#define CPU_CLOCK_FREQUENCY 198000000U
 
 // *****************************************************************************
 // *****************************************************************************
