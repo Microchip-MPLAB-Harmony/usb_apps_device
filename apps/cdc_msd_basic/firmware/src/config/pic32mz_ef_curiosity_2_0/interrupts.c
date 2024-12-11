@@ -78,22 +78,22 @@ void FLASH_CONTROL_Handler (void);
 // Section: System Interrupt Vector definitions
 // *****************************************************************************
 // *****************************************************************************
-void __ISR(_TIMER_1_VECTOR, ipl1SRS) TIMER_1_Handler (void)
+void __attribute__((used)) __ISR(_TIMER_1_VECTOR, ipl1SRS) TIMER_1_Handler (void)
 {
     TIMER_1_InterruptHandler();
 }
 
-void __ISR(_USB_VECTOR, ipl1SRS) USB_Handler (void)
+void __attribute__((used)) __ISR(_USB_VECTOR, ipl1SRS) USB_Handler (void)
 {
     DRV_USBHS_InterruptHandler();
 }
 
-void __ISR(_USB_DMA_VECTOR, ipl1SRS) USB_DMA_Handler (void)
+void __attribute__((used)) __ISR(_USB_DMA_VECTOR, ipl1SRS) USB_DMA_Handler (void)
 {
     DRV_USBHS_DMAInterruptHandler();
 }
 
-void __ISR(_FLASH_CONTROL_VECTOR, ipl1SRS) FLASH_CONTROL_Handler (void)
+void __attribute__((used)) __ISR(_FLASH_CONTROL_VECTOR, ipl1SRS) FLASH_CONTROL_Handler (void)
 {
     NVM_InterruptHandler();
 }
