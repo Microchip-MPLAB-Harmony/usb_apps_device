@@ -50,8 +50,8 @@
 #include <stdbool.h>
 #include "usb/usb_device_cdc.h"
 #include "usb/usb_cdc.h"
-#include "driver/usb/udphs/drv_usb_udphs.h"
 #include "bsp/bsp.h"
+#include "driver/usb/udphs/drv_usb_udphs.h"
 #include "peripheral/pit/plib_pit.h"
 #include "peripheral/mmu/plib_mmu.h"
 #include "peripheral/clk/plib_clk.h"
@@ -78,13 +78,13 @@ extern "C" {
 // DOM-IGNORE-END
 
 /* Device Information */
-#define DEVICE_NAME			 "SAM9X60"
-#define DEVICE_ARCH			 "ARM926EJ-S"
-#define DEVICE_FAMILY		 "SAM9"
-#define DEVICE_SERIES		 "SAM9X"
+#define DEVICE_NAME          "SAM9X60"
+#define DEVICE_ARCH          "ARM926EJ-S"
+#define DEVICE_FAMILY        "SAM9"
+#define DEVICE_SERIES        "SAM9X6"
 
 /* CPU clock frequency */
-#define CPU_CLOCK_FREQUENCY 600000000
+#define CPU_CLOCK_FREQUENCY 600000000U
 
 // *****************************************************************************
 // *****************************************************************************

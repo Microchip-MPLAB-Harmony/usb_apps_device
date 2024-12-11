@@ -191,7 +191,7 @@ void OSAL_CRIT_Leave(OSAL_CRIT_TYPE severity, OSAL_CRITSECT_DATA_TYPE status)
 // Semaphore group
 // *****************************************************************************
 /* Function: OSAL_RESULT OSAL_SEM_Create(OSAL_SEM_HANDLE_TYPE* semID, OSAL_SEM_TYPE type,
-                                uint8_t maxCount, uint8_t initialCount)
+                                OSAL_SEM_COUNT_TYPE maxCount, OSAL_SEM_COUNT_TYPE initialCount)
   Summary:
     Create an OSAL Semaphore
 
@@ -232,7 +232,7 @@ void OSAL_CRIT_Leave(OSAL_CRIT_TYPE severity, OSAL_CRITSECT_DATA_TYPE status)
 /* MISRA C-2012 Rule 16.1, 16.3 deviated below. Deviation record ID -
    H3_MISRAC_2012_R_16_1_DR_1 & H3_MISRAC_2012_R_16_3_DR_1*/
 
-OSAL_RESULT OSAL_SEM_Create(OSAL_SEM_HANDLE_TYPE* semID, OSAL_SEM_TYPE type, uint8_t maxCount, uint8_t initialCount)
+OSAL_RESULT OSAL_SEM_Create(OSAL_SEM_HANDLE_TYPE* semID, OSAL_SEM_TYPE type, OSAL_SEM_COUNT_TYPE maxCount, OSAL_SEM_COUNT_TYPE initialCount)
 {
   switch (type)
   {
@@ -318,7 +318,7 @@ OSAL_RESULT OSAL_SEM_Delete(OSAL_SEM_HANDLE_TYPE* semID)
 }
 
 // *****************************************************************************
-/* Function: OSAL_RESULT OSAL_SEM_Pend(OSAL_SEM_HANDLE_TYPE* semID, uint16_t waitMS)
+/* Function: OSAL_RESULT OSAL_SEM_Pend(OSAL_SEM_HANDLE_TYPE* semID, OSAL_TICK_TYPE waitMS)
 
   Summary:
      Pend on a semaphore. Returns true if semaphore obtained within time limit.
@@ -360,27 +360,32 @@ OSAL_RESULT OSAL_SEM_Delete(OSAL_SEM_HANDLE_TYPE* semID)
 
   Remarks:
  */
-OSAL_RESULT OSAL_SEM_Pend(OSAL_SEM_HANDLE_TYPE* semID, uint16_t waitMS)
+OSAL_RESULT OSAL_SEM_Pend(OSAL_SEM_HANDLE_TYPE* semID, OSAL_TICK_TYPE waitMS)
 {
-  TickType_t timeout = 0;
+    TickType_t timeout = 0;
+  
+    if ((semID == NULL) || (*(SemaphoreHandle_t*)semID == NULL))
+    {
+        return (OSAL_RESULT)OSAL_RESULT_FAIL;
+    }
 
-  if(waitMS == OSAL_WAIT_FOREVER)
-  {
-    timeout = portMAX_DELAY;
-  }
-  else
-  {
-    timeout = ((TickType_t)waitMS / portTICK_PERIOD_MS);
-  }
+    if(waitMS == OSAL_WAIT_FOREVER)
+    {
+        timeout = portMAX_DELAY;
+    }
+    else
+    {
+        timeout = ((TickType_t)waitMS / portTICK_PERIOD_MS);
+    }
 
-  if (xSemaphoreTake(*(SemaphoreHandle_t*)semID, timeout) == (int32_t)pdTRUE)
-  {
-    return (OSAL_RESULT)OSAL_RESULT_SUCCESS;
-  }
-  else
-  {
-    return (OSAL_RESULT)OSAL_RESULT_FAIL;
-  }
+    if (xSemaphoreTake(*(SemaphoreHandle_t*)semID, timeout) == (int32_t)pdTRUE)
+    {
+        return (OSAL_RESULT)OSAL_RESULT_SUCCESS;
+    }
+    else
+    {
+        return (OSAL_RESULT)OSAL_RESULT_FAIL;
+    }
 }
 
 // *****************************************************************************
@@ -413,12 +418,16 @@ OSAL_RESULT OSAL_SEM_Pend(OSAL_SEM_HANDLE_TYPE* semID, uint16_t waitMS)
  */
 OSAL_RESULT OSAL_SEM_Post(OSAL_SEM_HANDLE_TYPE* semID)
 {
-  if (xSemaphoreGive(*(SemaphoreHandle_t*)semID) == (int32_t)pdTRUE)
-  {
-    return (OSAL_RESULT)OSAL_RESULT_SUCCESS;
-  }
+    if ((semID == NULL) || (*(SemaphoreHandle_t*)semID == NULL))
+    {
+        return (OSAL_RESULT)OSAL_RESULT_FAIL;
+    }
+    if (xSemaphoreGive(*(SemaphoreHandle_t*)semID) == (int32_t)pdTRUE)
+    {
+        return (OSAL_RESULT)OSAL_RESULT_SUCCESS;
+    }
 
-  return (OSAL_RESULT)OSAL_RESULT_FAIL;
+    return (OSAL_RESULT)OSAL_RESULT_FAIL;
 }
 
 // *****************************************************************************
@@ -468,20 +477,24 @@ OSAL_RESULT OSAL_SEM_Post(OSAL_SEM_HANDLE_TYPE* semID)
  */
 OSAL_RESULT OSAL_SEM_PostISR(OSAL_SEM_HANDLE_TYPE* semID)
 {
-  BaseType_t taskWoken = (int32_t)pdFALSE;
+    BaseType_t taskWoken = (int32_t)pdFALSE;
 
-  if ((xSemaphoreGiveFromISR(*(SemaphoreHandle_t*)semID, &taskWoken)) != 0)
-  {
-    portEND_SWITCHING_ISR(taskWoken);
-    return (OSAL_RESULT)OSAL_RESULT_SUCCESS;
-  }
+    if ((semID == NULL) || (*(SemaphoreHandle_t*)semID == NULL))
+    {
+        return (OSAL_RESULT)OSAL_RESULT_FAIL;
+    }
+    if ((xSemaphoreGiveFromISR(*(SemaphoreHandle_t*)semID, &taskWoken)) != 0)
+    {
+        portEND_SWITCHING_ISR(taskWoken);
+        return (OSAL_RESULT)OSAL_RESULT_SUCCESS;
+    }
 
-  return (OSAL_RESULT)OSAL_RESULT_FAIL;
+    return (OSAL_RESULT)OSAL_RESULT_FAIL;
 }
 
 /* MISRAC 2012 deviation block end */
 // *****************************************************************************
-/* Function: uint8_t OSAL_SEM_GetCount(OSAL_SEM_HANDLE_TYPE* semID)
+/* Function: OSAL_SEM_COUNT_TYPE OSAL_SEM_GetCount(OSAL_SEM_HANDLE_TYPE* semID)
 
   Summary:
     Return the current value of a counting semaphore.
@@ -502,7 +515,7 @@ OSAL_RESULT OSAL_SEM_PostISR(OSAL_SEM_HANDLE_TYPE* semID)
 
   Example:
     <code>
-     uint8_t semCount;
+     OSAL_SEM_COUNT_TYPE semCount;
 
      semCount = OSAL_SEM_GetCount(semUART);
 
@@ -529,17 +542,18 @@ OSAL_RESULT OSAL_SEM_PostISR(OSAL_SEM_HANDLE_TYPE* semID)
      a critical section. The exact requirements will depend upon the particular
      RTOS being used.
  */
-uint8_t OSAL_SEM_GetCount(OSAL_SEM_HANDLE_TYPE* semID)
+OSAL_SEM_COUNT_TYPE OSAL_SEM_GetCount(OSAL_SEM_HANDLE_TYPE* semID)
 {
-  UBaseType_t SemCount;
-  SemCount = uxQueueMessagesWaiting(*(SemaphoreHandle_t*)semID);
+    UBaseType_t SemCount;
+    
+    SemCount = uxQueueMessagesWaiting(*(SemaphoreHandle_t*)semID);
 
-  if(SemCount > 255U)
-  {
-    SemCount = 255;
-  }
+    if(SemCount > 255U)
+    {
+        SemCount = 255;
+    }
 
-  return (uint8_t)SemCount;
+    return (OSAL_SEM_COUNT_TYPE)SemCount;
 }
 
 // *****************************************************************************
@@ -581,15 +595,24 @@ uint8_t OSAL_SEM_GetCount(OSAL_SEM_HANDLE_TYPE* semID)
  */
 OSAL_RESULT OSAL_MUTEX_Create(OSAL_MUTEX_HANDLE_TYPE* mutexID)
 {
-  /* mutex may already have been created so test before creating it */
-  if (*(SemaphoreHandle_t*)mutexID != NULL)
-  {
-    return (OSAL_RESULT)OSAL_RESULT_FAIL;
-  }
+    if (mutexID == NULL)
+    {
+        return (OSAL_RESULT)OSAL_RESULT_FAIL;
+    }
+    /* mutex may already have been created so test before creating it */
+    if (*(SemaphoreHandle_t*)mutexID != NULL)
+    {
+        return (OSAL_RESULT)OSAL_RESULT_FAIL;
+    }
 
-  *(SemaphoreHandle_t*)mutexID = xSemaphoreCreateMutex();
+    *(SemaphoreHandle_t*)mutexID = xSemaphoreCreateMutex();
+    
+    if (*(SemaphoreHandle_t*)mutexID == NULL)
+    {
+        return (OSAL_RESULT)OSAL_RESULT_FAIL;
+    }
 
-  return (OSAL_RESULT)OSAL_RESULT_SUCCESS;
+    return (OSAL_RESULT)OSAL_RESULT_SUCCESS;
 }
 
 // *****************************************************************************
@@ -622,19 +645,19 @@ OSAL_RESULT OSAL_MUTEX_Create(OSAL_MUTEX_HANDLE_TYPE* mutexID)
  */
 OSAL_RESULT OSAL_MUTEX_Delete(OSAL_MUTEX_HANDLE_TYPE* mutexID)
 {
-  if(*(SemaphoreHandle_t*)mutexID == NULL)
-  {
-    return (OSAL_RESULT)OSAL_RESULT_FAIL;
-  }
+    if ((mutexID == NULL) || (*(SemaphoreHandle_t*)mutexID == NULL))
+    {
+        return (OSAL_RESULT)OSAL_RESULT_FAIL;
+    }
+    
+    vSemaphoreDelete(*(SemaphoreHandle_t*)mutexID);
+    *(SemaphoreHandle_t*)mutexID = NULL;
 
-  vSemaphoreDelete(*(SemaphoreHandle_t*)mutexID);
-  *(SemaphoreHandle_t*)mutexID = NULL;
-
-  return (OSAL_RESULT)OSAL_RESULT_SUCCESS;
+    return (OSAL_RESULT)OSAL_RESULT_SUCCESS;
 }
 
 // *****************************************************************************
-/* Function: OSAL_RESULT OSAL_MUTEX_Lock(OSAL_MUTEX_HANDLE_TYPE* mutexID, uint16_t waitMS)
+/* Function: OSAL_RESULT OSAL_MUTEX_Lock(OSAL_MUTEX_HANDLE_TYPE* mutexID, OSAL_TICK_TYPE waitMS)
 
   Summary:
     Lock a mutex.
@@ -678,27 +701,32 @@ OSAL_RESULT OSAL_MUTEX_Delete(OSAL_MUTEX_HANDLE_TYPE* mutexID)
   Remarks:
 
  */
-OSAL_RESULT OSAL_MUTEX_Lock(OSAL_MUTEX_HANDLE_TYPE* mutexID, uint16_t waitMS)
+OSAL_RESULT OSAL_MUTEX_Lock(OSAL_MUTEX_HANDLE_TYPE* mutexID, OSAL_TICK_TYPE waitMS)
 {
-  TickType_t timeout = 0;
+    TickType_t timeout = 0;
+  
+    if ((mutexID == NULL) || (*(SemaphoreHandle_t*)mutexID == NULL))
+    {
+        return (OSAL_RESULT)OSAL_RESULT_FAIL;
+    }
 
-  if(waitMS == OSAL_WAIT_FOREVER)
-  {
-    timeout = portMAX_DELAY;
-  }
-  else
-  {
-    timeout = ((TickType_t)waitMS / portTICK_PERIOD_MS);
-  }
+    if(waitMS == OSAL_WAIT_FOREVER)
+    {
+        timeout = portMAX_DELAY;
+    }
+    else
+    {
+        timeout = ((TickType_t)waitMS / portTICK_PERIOD_MS);
+    }
 
-  if (xSemaphoreTake(*(SemaphoreHandle_t*)mutexID, timeout) == (int32_t)pdTRUE)
-  {
-    return (OSAL_RESULT)OSAL_RESULT_SUCCESS;
-  }
-  else
-  {
-    return (OSAL_RESULT)OSAL_RESULT_FAIL;
-  }
+    if (xSemaphoreTake(*(SemaphoreHandle_t*)mutexID, timeout) == (int32_t)pdTRUE)
+    {
+        return (OSAL_RESULT)OSAL_RESULT_SUCCESS;
+    }
+    else
+    {
+        return (OSAL_RESULT)OSAL_RESULT_FAIL;
+    }
 }
 
 // *****************************************************************************
@@ -742,12 +770,16 @@ OSAL_RESULT OSAL_MUTEX_Lock(OSAL_MUTEX_HANDLE_TYPE* mutexID, uint16_t waitMS)
  */
 OSAL_RESULT OSAL_MUTEX_Unlock(OSAL_MUTEX_HANDLE_TYPE* mutexID)
 {
-  if (xSemaphoreGive(*(SemaphoreHandle_t*)mutexID) == (int32_t)pdTRUE)
-  {
-    return (OSAL_RESULT)OSAL_RESULT_SUCCESS;
-  }
+    if ((mutexID == NULL) || (*(SemaphoreHandle_t*)mutexID == NULL))
+    {
+        return (OSAL_RESULT)OSAL_RESULT_FAIL;
+    }
+    if (xSemaphoreGive(*(SemaphoreHandle_t*)mutexID) == (int32_t)pdTRUE)
+    {
+        return (OSAL_RESULT)OSAL_RESULT_SUCCESS;
+    }
 
-  return (OSAL_RESULT)OSAL_RESULT_FAIL;
+    return (OSAL_RESULT)OSAL_RESULT_FAIL;
 }
 
 // *****************************************************************************
