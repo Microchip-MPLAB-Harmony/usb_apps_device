@@ -35,7 +35,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.2"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.3"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -5924,7 +5924,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\driver\usb\udphs\drv_usb_udphs.h</file>
-         <hash>b17edfcf64adcddf51df0391be56abdd30cc84236d9ac51a10ae96242ca5239f</hash>
+         <hash>5531eb875bee36619e0ecca260fbf004d12de51a864cb34143cb2426cd30aaa3</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\driver\usb\udphs\src\drv_usb_udphs.c</file>
@@ -5932,7 +5932,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\driver\usb\udphs\src\drv_usb_udphs_device.c</file>
-         <hash>6e9256deabe4011fe49b9cfeb95646dddcb13ccd41d5f25061aa1ec0066daed9</hash>
+         <hash>994e97c805951f6bc28388b89e70cd0ca06764d78bdb7280686f6f9630cb65b5</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\driver\usb\udphs\src\drv_usb_udphs_local.h</file>
@@ -5968,7 +5968,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\osal\osal_impl_basic.h</file>
-         <hash>7f06b68ec1d6cf3bbd1129bdac599d108557e2c26ca5a58a28a3d59fdf772944</hash>
+         <hash>65e68edbc0320d0407399f65e6d06ff7e6d3d7697231cf1fe0a1fdf1d65f0463</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\peripheral\aic\plib_aic.c</file>
@@ -6064,7 +6064,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\usb\src\usb_device.c</file>
-         <hash>af8a74c998876da1c72e4c0ed30b11a3dc98b7577857d659652cd0a0cc3e7078</hash>
+         <hash>25d4e1719a2948619c4f4b38406f896be37bbb74f4b8f631770ca32e1fe45b77</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\usb\src\usb_device_function_driver.h</file>
@@ -6112,7 +6112,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\usb\usb_host.h</file>
-         <hash>56c248da571d1a46c5d6b5b34e28a978b30b40ee1fb04fa4f2efdcb8a5a1039b</hash>
+         <hash>9e71096993b82346d36f826b35ff46d1cecadbfda0fee4ae47125da2764391e4</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\usb\usb_host_client_driver.h</file>
