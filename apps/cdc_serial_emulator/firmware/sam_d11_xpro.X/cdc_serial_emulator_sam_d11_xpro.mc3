@@ -59,7 +59,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.2"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.3"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -2924,7 +2924,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_d11_xpro\definitions.h</file>
-         <hash>e0d73b8a5bb14f8d3badd18a3a897949ddeacd7ca2e5c9817caf9a79f7cb03f5</hash>
+         <hash>98152b2f9f05dfcea6cb364219da640ab88b07008351372afdcc37f14db414b1</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_d11_xpro\device.h</file>
@@ -2956,7 +2956,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_d11_xpro\driver\usart\src\drv_usart.c</file>
-         <hash>f3d874dc864b0e4987fe89c7a6a0e8851b2a9087e16538d968e7405f6b1f334e</hash>
+         <hash>1c3b8526b7089ea9d91e89c36a309e5cbce5eccfa5e9fc63d104fe6631625be0</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_d11_xpro\driver\usart\src\drv_usart_local.h</file>
@@ -2992,11 +2992,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_d11_xpro\exceptions.c</file>
-         <hash>3d788ce1bd25caaaf6b533ec5b06e4b1e753044c1a217dd5cdf8629628ae85a9</hash>
+         <hash>b0b65c30aa1f7a01ef7be6c1628c331a5ca3eae7dc3bd76ebe647703b76f432d</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_d11_xpro\initialization.c</file>
-         <hash>6c9a01ea13bbe36fcbe61511c236f8dbcc0b3e94eff62ae223985d16077a6c9b</hash>
+         <hash>7686674944c3a7139507654859d36689f3ba75e91fcef1c0ffe856d18d43f8c0</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_d11_xpro\interrupts.c</file>
@@ -3012,7 +3012,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_d11_xpro\osal\osal.h</file>
-         <hash>8404fbe44807fa0484ffb38843a72cb9af8e31c9c30bd1b2594e609b8ea317d9</hash>
+         <hash>1cfe3b61d9693b2369922041eef33fe16b3c1ccd9c85d4ded808b805f90a869c</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_d11_xpro\osal\osal_definitions.h</file>
@@ -3020,7 +3020,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_d11_xpro\osal\osal_impl_basic.h</file>
-         <hash>67ce72d34fd1e4dee0b6937fa026ab2c7bd285f82a24da09742c68333adaf0fc</hash>
+         <hash>65e68edbc0320d0407399f65e6d06ff7e6d3d7697231cf1fe0a1fdf1d65f0463</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_d11_xpro\peripheral\clock\plib_clock.c</file>
@@ -3040,11 +3040,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_d11_xpro\peripheral\nvic\plib_nvic.c</file>
-         <hash>c1875416dba0c3c474ce191661d44ddc63cd0b222f378d2fb5da2f44752bb044</hash>
+         <hash>f93574b3fa271bbe8552ea8c02d797cacc5eef2557505ce60598ba7429655784</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_d11_xpro\peripheral\nvic\plib_nvic.h</file>
-         <hash>81e813a093101d546799e00723cbf7245e2d18471fa51c8d130c5809cecca03e</hash>
+         <hash>9936ac782115af41003255283fa2f603f4ff2212d16275b7c80ea8d067a9e208</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_d11_xpro\peripheral\nvmctrl\plib_nvmctrl.c</file>
@@ -3052,11 +3052,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_d11_xpro\peripheral\nvmctrl\plib_nvmctrl.h</file>
-         <hash>a10c9385ab1460929c8d9efdbd3ee8e491051546a6e08c5dbf7767300235ebcd</hash>
+         <hash>7340508b3885f1ce3795cb4dfb505a9518f5e197b5869fc35ccffff20387aef7</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_d11_xpro\peripheral\port\plib_port.c</file>
-         <hash>c3ac7239d27e9e809300d580112e1f0bfc23a6cfd509f9e94bcc67ea76246873</hash>
+         <hash>f31dfa7b22784ea70baa60bb249bd953633618923d4dea80e49685029eb98744</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_d11_xpro\peripheral\port\plib_port.h</file>
@@ -3064,15 +3064,15 @@
       </entry>
       <entry>
          <file>..\src\config\sam_d11_xpro\peripheral\sercom\usart\plib_sercom2_usart.c</file>
-         <hash>dade5a66f404e53c4de43a0904d3ff1e66287d16dc0ca927a95d42282d5710af</hash>
+         <hash>bd3e97fc8e3ca77f1a0736b8536983124776540cf139109fd997d4ead1d524a1</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_d11_xpro\peripheral\sercom\usart\plib_sercom2_usart.h</file>
-         <hash>f3c2a11d23fbcb408e5bdd0573f2c7c919c35b82f14cdead26243d1a1eb8b9e3</hash>
+         <hash>09c17c725b402654121033ff2450cf410b4c9745efc6583f9725677fd909607b</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_d11_xpro\peripheral\sercom\usart\plib_sercom_usart_common.h</file>
-         <hash>63c6e89936ba47e8989478a8be0fa40b406361f2f0dcc1b6cfcd801b50a4bf92</hash>
+         <hash>9f02e811b95f0470ca23f3546f3ddf4ccccb385b4d8b8c091899d0d20b0c56e1</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_d11_xpro\pin_configurations.csv</file>
@@ -3140,7 +3140,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_d11_xpro\usb\src\usb_device.c</file>
-         <hash>af8a74c998876da1c72e4c0ed30b11a3dc98b7577857d659652cd0a0cc3e7078</hash>
+         <hash>25d4e1719a2948619c4f4b38406f896be37bbb74f4b8f631770ca32e1fe45b77</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_d11_xpro\usb\src\usb_device_cdc.c</file>
@@ -3192,7 +3192,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_d11_xpro\usb\usb_host.h</file>
-         <hash>56c248da571d1a46c5d6b5b34e28a978b30b40ee1fb04fa4f2efdcb8a5a1039b</hash>
+         <hash>9e71096993b82346d36f826b35ff46d1cecadbfda0fee4ae47125da2764391e4</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_d11_xpro\usb\usb_host_client_driver.h</file>
@@ -3460,7 +3460,7 @@
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_version.h</file>
-         <hash>2de01ae2556a38eb82c389de23c701805ec63308cfbcf3f84cb12141589b0858</hash>
+         <hash>8cda7ac3ff6f0eb5e83c4fe613dd195151b24da54167f5c3c007e599a03f1edc</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\core_cm0plus.h</file>
