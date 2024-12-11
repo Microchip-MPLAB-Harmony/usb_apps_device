@@ -52,9 +52,9 @@
 #include "peripheral/clk/plib_clk.h"
 #include "peripheral/gpio/plib_gpio.h"
 #include "peripheral/evic/plib_evic.h"
-#include "bsp/bsp.h"
 #include "usb/usb_chapter_9.h"
 #include "usb/usb_device.h"
+#include "bsp/bsp.h"
 #include "FreeRTOS.h"
 #include "task.h"
 #include "system/int/sys_int.h"
@@ -73,13 +73,13 @@ extern "C" {
 // DOM-IGNORE-END
 
 /* Device Information */
-#define DEVICE_NAME			 "PIC32MZ2048EFH144"
-#define DEVICE_ARCH			 "MIPS"
-#define DEVICE_FAMILY		 "PIC32MZEF"
-#define DEVICE_SERIES		 "PIC32MZ"
+#define DEVICE_NAME          "PIC32MZ2048EFH144"
+#define DEVICE_ARCH          "MIPS"
+#define DEVICE_FAMILY        "PIC32MZEF"
+#define DEVICE_SERIES        "PIC32MZ"
 
 /* CPU clock frequency */
-#define CPU_CLOCK_FREQUENCY 200000000
+#define CPU_CLOCK_FREQUENCY 200000000U
 
 // *****************************************************************************
 // *****************************************************************************

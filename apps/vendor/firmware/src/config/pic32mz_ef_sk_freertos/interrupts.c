@@ -79,12 +79,12 @@ void USB_DMA_Handler (void);
 // *****************************************************************************
 
 
-void USB_Handler (void)
+void __attribute__((used)) USB_Handler (void)
 {
     DRV_USBHS_InterruptHandler();
 }
 
-void USB_DMA_Handler (void)
+void __attribute__((used)) USB_DMA_Handler (void)
 {
     DRV_USBHS_DMAInterruptHandler();
 }
