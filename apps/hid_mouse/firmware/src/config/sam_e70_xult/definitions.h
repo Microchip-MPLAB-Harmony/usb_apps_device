@@ -48,8 +48,8 @@
 #include <stdint.h>
 #include <stddef.h>
 #include <stdbool.h>
-#include "driver/usb/usbhsv1/drv_usbhsv1.h"
 #include "bsp/bsp.h"
+#include "driver/usb/usbhsv1/drv_usbhsv1.h"
 #include "usb/usb_device_hid.h"
 #include "usb/usb_hid.h"
 #include "peripheral/clk/plib_clk.h"
@@ -75,13 +75,13 @@ extern "C" {
 // DOM-IGNORE-END
 
 /* Device Information */
-#define DEVICE_NAME			 "ATSAME70Q21B"
-#define DEVICE_ARCH			 "CORTEX-M7"
-#define DEVICE_FAMILY		 "SAME"
-#define DEVICE_SERIES		 "SAME70"
+#define DEVICE_NAME          "ATSAME70Q21B"
+#define DEVICE_ARCH          "CORTEX-M7"
+#define DEVICE_FAMILY        "SAME"
+#define DEVICE_SERIES        "SAME70"
 
 /* CPU clock frequency */
-#define CPU_CLOCK_FREQUENCY 300000000
+#define CPU_CLOCK_FREQUENCY 300000000U
 
 // *****************************************************************************
 // *****************************************************************************
