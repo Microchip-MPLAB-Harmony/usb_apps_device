@@ -216,6 +216,8 @@
             <itemPath>../src/packs/SAM9X75D2G_DFP/instance/mpddrc.h</itemPath>
             <itemPath>../src/packs/SAM9X75D2G_DFP/instance/uhphs_ohci.h</itemPath>
             <itemPath>../src/packs/SAM9X75D2G_DFP/instance/uhphs.h</itemPath>
+            <itemPath>../src/packs/SAM9X75D2G_DFP/instance/lvdsphy.h</itemPath>
+            <itemPath>../src/packs/SAM9X75D2G_DFP/instance/mipiphy.h</itemPath>
           </logicalFolder>
           <logicalFolder name="pio" displayName="pio" projectFiles="true">
             <itemPath>../src/packs/SAM9X75D2G_DFP/pio/sam9x75d2g.h</itemPath>
@@ -312,11 +314,11 @@
         <targetPluginBoard/>
         <platformTool>noID</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.40</languageToolchainVersion>
+        <languageToolchainVersion>4.45</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="SAM9X7_DFP" vendor="Microchip" version="1.3.149"/>
+        <pack name="SAM9X7_DFP" vendor="Microchip" version="1.6.161"/>
       </packs>
       <ScriptingSettings>
         <ScriptingSetting key="boot.load_adr" value=""/>
