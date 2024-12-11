@@ -59,7 +59,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.2"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.3"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -6117,7 +6117,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro\definitions.h</file>
-         <hash>d6f7d3d9ba1a636691e68dadabefbd7737ef3b7265e1c90444032a6d9f37af35</hash>
+         <hash>cc876a107bca865084c31391ad39e49327dbdf70fbfb5914286fe966f949daae</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro\device.h</file>
@@ -6149,7 +6149,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro\driver\usart\src\drv_usart.c</file>
-         <hash>f3d874dc864b0e4987fe89c7a6a0e8851b2a9087e16538d968e7405f6b1f334e</hash>
+         <hash>1c3b8526b7089ea9d91e89c36a309e5cbce5eccfa5e9fc63d104fe6631625be0</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro\driver\usart\src\drv_usart_local.h</file>
@@ -6181,15 +6181,15 @@
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro\driver\usb\usbfsv1\src\drv_usbfsv1_variant_mapping.h</file>
-         <hash>d24927f80f8649352f6e962565aea4fb803c4a229c3bd513cdb82b7a896a6b06</hash>
+         <hash>416cdf38c0239efb313ee0dfe3cc44294ca42d9db374565e69f986bba2d6023d</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro\exceptions.c</file>
-         <hash>3d788ce1bd25caaaf6b533ec5b06e4b1e753044c1a217dd5cdf8629628ae85a9</hash>
+         <hash>b0b65c30aa1f7a01ef7be6c1628c331a5ca3eae7dc3bd76ebe647703b76f432d</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro\initialization.c</file>
-         <hash>83190b8ad6d7b08063dbe1dfafd15df91b7815c0c9e98107e8d51b3f443b0b33</hash>
+         <hash>522f3382cbb0a1e58e149890d95a8e4b47f4cae515afc3125aef3e5e08948f7d</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro\interrupts.c</file>
@@ -6205,7 +6205,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro\osal\osal.h</file>
-         <hash>8404fbe44807fa0484ffb38843a72cb9af8e31c9c30bd1b2594e609b8ea317d9</hash>
+         <hash>1cfe3b61d9693b2369922041eef33fe16b3c1ccd9c85d4ded808b805f90a869c</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro\osal\osal_definitions.h</file>
@@ -6213,7 +6213,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro\osal\osal_impl_basic.h</file>
-         <hash>67ce72d34fd1e4dee0b6937fa026ab2c7bd285f82a24da09742c68333adaf0fc</hash>
+         <hash>65e68edbc0320d0407399f65e6d06ff7e6d3d7697231cf1fe0a1fdf1d65f0463</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro\peripheral\clock\plib_clock.c</file>
@@ -6233,11 +6233,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro\peripheral\nvic\plib_nvic.c</file>
-         <hash>e6027d0d8930cceadb9315c838235f5254b565057e755556f5411f80a19156e6</hash>
+         <hash>084d195186b03ed0ae82f2151b4d121b01492fa4e543fffff9e26f23acfacea6</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro\peripheral\nvic\plib_nvic.h</file>
-         <hash>81e813a093101d546799e00723cbf7245e2d18471fa51c8d130c5809cecca03e</hash>
+         <hash>9936ac782115af41003255283fa2f603f4ff2212d16275b7c80ea8d067a9e208</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro\peripheral\nvmctrl\plib_nvmctrl.c</file>
@@ -6245,11 +6245,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro\peripheral\nvmctrl\plib_nvmctrl.h</file>
-         <hash>a10c9385ab1460929c8d9efdbd3ee8e491051546a6e08c5dbf7767300235ebcd</hash>
+         <hash>5ed5f5c5b0892544d57303872afa61c7a560577850ce23de1af5f8113193f2dd</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro\peripheral\port\plib_port.c</file>
-         <hash>8ba49174ea76b11140c478fdb19fd7018557cf4b48b873aaef529810b7389df1</hash>
+         <hash>99fc55be0d97b075eb04ab4f8063ff37e2f7ef5f0aedd9f5d328499a938cea11</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro\peripheral\port\plib_port.h</file>
@@ -6257,15 +6257,15 @@
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro\peripheral\sercom\usart\plib_sercom3_usart.c</file>
-         <hash>7035ba2cba065bc16918ff6fb9d0555015e9c927af0f4a0ad68f8ebf9cef25d2</hash>
+         <hash>d0e083b3bf848dd99471c0f41b8ce2180d51f45cc02b05cbbd8c141008b6844c</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro\peripheral\sercom\usart\plib_sercom3_usart.h</file>
-         <hash>bdb7a2a6a892bbf75e432ff0874a6903193ef29952e3a75570a5c06e10c9b3bd</hash>
+         <hash>22b0b20a392b7b9a0bcc89663853e622c2fcadb751f6b8ded1a4f834614accc8</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro\peripheral\sercom\usart\plib_sercom_usart_common.h</file>
-         <hash>63c6e89936ba47e8989478a8be0fa40b406361f2f0dcc1b6cfcd801b50a4bf92</hash>
+         <hash>9f02e811b95f0470ca23f3546f3ddf4ccccb385b4d8b8c091899d0d20b0c56e1</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro\pin_configurations.csv</file>
@@ -6333,7 +6333,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro\usb\src\usb_device.c</file>
-         <hash>af8a74c998876da1c72e4c0ed30b11a3dc98b7577857d659652cd0a0cc3e7078</hash>
+         <hash>25d4e1719a2948619c4f4b38406f896be37bbb74f4b8f631770ca32e1fe45b77</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro\usb\src\usb_device_cdc.c</file>
@@ -6385,7 +6385,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro\usb\usb_host.h</file>
-         <hash>56c248da571d1a46c5d6b5b34e28a978b30b40ee1fb04fa4f2efdcb8a5a1039b</hash>
+         <hash>9e71096993b82346d36f826b35ff46d1cecadbfda0fee4ae47125da2764391e4</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro\usb\usb_host_client_driver.h</file>
@@ -6693,7 +6693,7 @@
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_version.h</file>
-         <hash>2de01ae2556a38eb82c389de23c701805ec63308cfbcf3f84cb12141589b0858</hash>
+         <hash>8cda7ac3ff6f0eb5e83c4fe613dd195151b24da54167f5c3c007e599a03f1edc</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\core_cm0plus.h</file>
