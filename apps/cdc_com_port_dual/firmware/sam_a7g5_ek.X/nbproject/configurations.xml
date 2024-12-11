@@ -251,6 +251,14 @@
             <itemPath>../src/packs/SAMA7G54_DFP/instance/xdmac0.h</itemPath>
             <itemPath>../src/packs/SAMA7G54_DFP/instance/xdmac1.h</itemPath>
             <itemPath>../src/packs/SAMA7G54_DFP/instance/xdmac2.h</itemPath>
+            <itemPath>../src/packs/SAMA7G54_DFP/instance/tzaesb.h</itemPath>
+            <itemPath>../src/packs/SAMA7G54_DFP/instance/piod.h</itemPath>
+            <itemPath>../src/packs/SAMA7G54_DFP/instance/pioc.h</itemPath>
+            <itemPath>../src/packs/SAMA7G54_DFP/instance/uhphs.h</itemPath>
+            <itemPath>../src/packs/SAMA7G54_DFP/instance/pioe.h</itemPath>
+            <itemPath>../src/packs/SAMA7G54_DFP/instance/securam.h</itemPath>
+            <itemPath>../src/packs/SAMA7G54_DFP/instance/pioa.h</itemPath>
+            <itemPath>../src/packs/SAMA7G54_DFP/instance/piob.h</itemPath>
           </logicalFolder>
           <logicalFolder name="f3" displayName="pio" projectFiles="true">
             <itemPath>../src/packs/SAMA7G54_DFP/pio/sama7g54.h</itemPath>
@@ -362,11 +370,11 @@
         <targetPluginBoard/>
         <platformTool>noID</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.40</languageToolchainVersion>
+        <languageToolchainVersion>4.45</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="SAMA7G5_DFP" vendor="Microchip" version="1.2.178"/>
+        <pack name="SAMA7G5_DFP" vendor="Microchip" version="1.5.222"/>
       </packs>
       <ScriptingSettings>
         <ScriptingSetting key="boot.load_adr" value=""/>
