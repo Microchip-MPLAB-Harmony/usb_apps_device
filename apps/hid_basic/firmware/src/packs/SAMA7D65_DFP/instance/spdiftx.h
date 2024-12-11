@@ -3,6 +3,8 @@
  *
  * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
  *
+ * SPDX-License-Identifier: Apache-2.0
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -17,7 +19,7 @@
  *
  */
 
-/* file generated from device description file (ATDF) version  */
+/* file generated from device description file (ATDF) version None */
 #ifndef _SAMA7D6_SPDIFTX_INSTANCE_
 #define _SAMA7D6_SPDIFTX_INSTANCE_
 
