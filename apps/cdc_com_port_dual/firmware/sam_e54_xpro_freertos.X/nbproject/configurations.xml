@@ -111,6 +111,7 @@
             <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/mpu_prototypes.h</itemPath>
             <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/stream_buffer.h</itemPath>
             <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/message_buffer.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/mpu_syscall_numbers.h</itemPath>
           </logicalFolder>
           <logicalFolder name="f2" displayName="portable" projectFiles="true">
             <logicalFolder name="f1" displayName="GCC" projectFiles="true">
@@ -391,12 +392,12 @@
         <targetPluginBoard/>
         <platformTool>noID</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.40</languageToolchainVersion>
+        <languageToolchainVersion>4.45</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
         <pack name="CMSIS" vendor="ARM" version="5.8.0"/>
-        <pack name="SAME54_DFP" vendor="Microchip" version="3.8.234"/>
+        <pack name="SAME54_DFP" vendor="Microchip" version="3.9.244"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
