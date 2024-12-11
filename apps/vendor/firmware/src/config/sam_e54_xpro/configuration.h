@@ -93,6 +93,19 @@ extern "C" {
 // Section: Middleware & Other Library Configuration
 // *****************************************************************************
 // *****************************************************************************
+/* Number of Endpoints used */
+#define DRV_USBFSV1_ENDPOINTS_NUMBER                        2U
+
+/* The USB Device Layer will not initialize the USB Driver */
+#define USB_DEVICE_DRIVER_INITIALIZE_EXPLICIT
+
+/* Maximum device layer instances */
+#define USB_DEVICE_INSTANCES_NUMBER                         1U
+
+/* EP0 size in bytes */
+#define USB_DEVICE_EP0_BUFFER_SIZE                          64U
+
+
 /*** USB Driver Configuration ***/
 
 /* Maximum USB driver instances */
@@ -110,19 +123,6 @@ extern "C" {
 
 /* Alignment for buffers that are submitted to USB Driver*/ 
 #define USB_ALIGN  __ALIGNED(CACHE_LINE_SIZE)
-
-/* Number of Endpoints used */
-#define DRV_USBFSV1_ENDPOINTS_NUMBER                        2U
-
-/* The USB Device Layer will not initialize the USB Driver */
-#define USB_DEVICE_DRIVER_INITIALIZE_EXPLICIT
-
-/* Maximum device layer instances */
-#define USB_DEVICE_INSTANCES_NUMBER                         1U
-
-/* EP0 size in bytes */
-#define USB_DEVICE_EP0_BUFFER_SIZE                          64U
-
 
 /* Endpoint Transfer Queue Size for both read and
    write. Applicable to all instances of the
