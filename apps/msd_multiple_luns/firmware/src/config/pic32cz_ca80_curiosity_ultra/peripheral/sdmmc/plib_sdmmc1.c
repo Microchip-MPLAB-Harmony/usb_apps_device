@@ -69,7 +69,7 @@ static void SDMMC1_VariablesInit ( void )
     sdmmc1Obj.callback = NULL;
 }
 
-static void SDMMC1_TransferModeSet ( uint32_t opcode )
+static void SDMMC1_TransferModeSet ( uint32_t opcode, SDMMC_DataTransferFlags transferFlags )
 {
     uint16_t transferMode = 0U;
 
@@ -96,7 +96,17 @@ static void SDMMC1_TransferModeSet ( uint32_t opcode )
             /* Write multiple blocks of data to the device. */
             transferMode = (SDMMC_TMR_DMAEN_ENABLE | SDMMC_TMR_MSBSEL_Msk | SDMMC_TMR_BCEN_Msk);
             break;
-
+        case SDMMC_CMD_IO_RW_EXT:
+            if (transferFlags.transferType == SDMMC_DATA_TRANSFER_TYPE_SDIO_BLOCK)
+            {
+                transferMode = SDMMC_TMR_MSBSEL_Msk | SDMMC_TMR_BCEN_Msk;
+            }
+            if (transferFlags.transferDir == SDMMC_DATA_TRANSFER_DIR_READ)
+            {
+                transferMode |= SDMMC_TMR_DTDSEL_Msk;
+            }
+            transferMode |= SDMMC_TMR_DMAEN_ENABLE; 
+            break;
         default: /* Do Nothing */
             break;
     }
@@ -448,6 +458,15 @@ void SDMMC1_CommandSend (
     sdmmc1Obj.isCmdInProgress = false;
     sdmmc1Obj.isDataInProgress = false;
     sdmmc1Obj.errorStatus = 0U;
+    
+    /* For R1B response, only TRFC interrupt is enabled. However, peripheral will set both CMDC and TRFC bits in the NISTR status register.
+     * Now, when interrupt occurs, TRFC bit is set first and after sometime the CMDC bit is set. As a result, in the interrupt handler, only
+     * the TRFC bit is cleared, leaving the CMDC bit set, which does not get cleared because the corresponding interrupt is not enabled for
+     * R1B responses. Enabling both TRFC and CMDC interrupts for R1B may lead to interrupt handler being called twice since these two bits 
+     * are set (and hence cleared) at slightly different times. Hence, clearing it before submitting a new command seems to be the best option.
+     */
+     
+     SDMMC1_REGS->SDMMC_NISTR = (SDMMC_NISTR_CMDC_Msk | SDMMC_NISTR_TRFC_Msk);
 
     /* Keep the card insertion and removal interrupts enabled */
     normalIntSigEnable = (SDMMC_NISIER_CINS_Msk | SDMMC_NISIER_CREM_Msk);
@@ -491,7 +510,7 @@ void SDMMC1_CommandSend (
     if (transferFlags.isDataPresent == true)
     {
         sdmmc1Obj.isDataInProgress = true;
-        SDMMC1_TransferModeSet(opCode);
+        SDMMC1_TransferModeSet(opCode, transferFlags);
         /* Enable data transfer complete and DMA interrupt */
         normalIntSigEnable |= (SDMMC_NISIER_TRFC_Msk | SDMMC_NISIER_DMAINT_Msk);
     }
