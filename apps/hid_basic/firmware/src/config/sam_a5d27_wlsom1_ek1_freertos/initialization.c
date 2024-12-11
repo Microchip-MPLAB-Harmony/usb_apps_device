@@ -62,9 +62,10 @@
 // *****************************************************************************
 // *****************************************************************************
 /* Following MISRA-C rules are deviated in the below code block */
-/* MISRA C-2012 Rule 11.1 */
-/* MISRA C-2012 Rule 11.3 */
-/* MISRA C-2012 Rule 11.8 */
+/* MISRA C-2012 Rule 7.2 - Deviation record ID - H3_MISRAC_2012_R_7_2_DR_1 */
+/* MISRA C-2012 Rule 11.1 - Deviation record ID - H3_MISRAC_2012_R_11_1_DR_1 */
+/* MISRA C-2012 Rule 11.3 - Deviation record ID - H3_MISRAC_2012_R_11_3_DR_1 */
+/* MISRA C-2012 Rule 11.8 - Deviation record ID - H3_MISRAC_2012_R_11_8_DR_1 */
 
 
 
@@ -98,8 +99,10 @@ static DRV_USB_VBUS_LEVEL DRV_USB_UDPHS_VBUS_Comparator(void)
 
 static const DRV_USB_UDPHS_INIT drvUSBInit =
 {
-    /* Interrupt Source for USB module */
+
+
     .interruptSource = (INT_SOURCE)UDPHS_IRQn,
+
 
     /* System module initialization */
     .moduleInit = {0},
@@ -109,6 +112,7 @@ static const DRV_USB_UDPHS_INIT drvUSBInit =
 
     /* Identifies peripheral (PLIB-level) ID */
     .usbID = UDPHS_REGS,
+
     
     /* Function to check for VBus */
     .vbusComparator = DRV_USB_UDPHS_VBUS_Comparator
@@ -164,7 +168,6 @@ void SYS_Initialize ( void* data )
     AIC_INT_Initialize();
     
 	WDT_REGS->WDT_MR = WDT_MR_WDDIS_Msk; 		// Disable WDT 
-
 
 
     /* MISRAC 2012 deviation block start */

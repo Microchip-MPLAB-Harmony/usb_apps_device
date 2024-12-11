@@ -109,6 +109,7 @@
             <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/mpu_prototypes.h</itemPath>
             <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/stream_buffer.h</itemPath>
             <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/message_buffer.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/mpu_syscall_numbers.h</itemPath>
           </logicalFolder>
           <logicalFolder name="f2" displayName="portable" projectFiles="true">
             <logicalFolder name="f1" displayName="XC32" projectFiles="true">
@@ -241,6 +242,13 @@
             <itemPath>../src/packs/ATSAMA5D27CLD2G_DFP/instance/wdt.h</itemPath>
             <itemPath>../src/packs/ATSAMA5D27CLD2G_DFP/instance/xdmac0.h</itemPath>
             <itemPath>../src/packs/ATSAMA5D27CLD2G_DFP/instance/xdmac1.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CLD2G_DFP/instance/piod.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CLD2G_DFP/instance/piob.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CLD2G_DFP/instance/s_pio_ctrl.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CLD2G_DFP/instance/pioa.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CLD2G_DFP/instance/pioc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CLD2G_DFP/instance/pio_ctrl.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CLD2G_DFP/instance/s_pio.h</itemPath>
           </logicalFolder>
           <logicalFolder name="f3" displayName="pio" projectFiles="true">
             <itemPath>../src/packs/ATSAMA5D27CLD2G_DFP/pio/sama5d27cld2g.h</itemPath>
@@ -398,11 +406,11 @@
         <targetPluginBoard/>
         <platformTool>noID</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.40</languageToolchainVersion>
+        <languageToolchainVersion>4.45</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="SAMA5D2_DFP" vendor="Microchip" version="1.10.213"/>
+        <pack name="SAMA5D2_DFP" vendor="Microchip" version="1.11.228"/>
         <pack name="CMSIS" vendor="ARM" version="5.8.0"/>
       </packs>
       <ScriptingSettings>
