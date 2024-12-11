@@ -63,7 +63,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.2"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.3"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -6398,11 +6398,11 @@
       </entry>
       <entry>
          <file>..\src\config\wbz653_curiosity\usb\src\usb_device_msd.c</file>
-         <hash>fee13b32723a549eb7f2e62ac37d22b46be5f8b2673a43df72b09918ad3c219b</hash>
+         <hash>ec0e762e41f1d3bf031736d64b8b09deefbb61c802d340e2c8a0a96b75cf2a79</hash>
       </entry>
       <entry>
          <file>..\src\config\wbz653_curiosity\usb\src\usb_device_msd_local.h</file>
-         <hash>ac0f59175b4420224dca9e42cef0f5ffe7f38544c87a0707b9abf70ccf27f66e</hash>
+         <hash>17dd9a7f3769f653da17b393b517076099304191604c06dce74ecc55caf7d289</hash>
       </entry>
       <entry>
          <file>..\src\config\wbz653_curiosity\usb\src\usb_external_dependencies.h</file>
@@ -6434,7 +6434,7 @@
       </entry>
       <entry>
          <file>..\src\config\wbz653_curiosity\usb\usb_host.h</file>
-         <hash>56c248da571d1a46c5d6b5b34e28a978b30b40ee1fb04fa4f2efdcb8a5a1039b</hash>
+         <hash>9e71096993b82346d36f826b35ff46d1cecadbfda0fee4ae47125da2764391e4</hash>
       </entry>
       <entry>
          <file>..\src\config\wbz653_curiosity\usb\usb_host_client_driver.h</file>
@@ -6494,7 +6494,7 @@
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_version.h</file>
-         <hash>2de01ae2556a38eb82c389de23c701805ec63308cfbcf3f84cb12141589b0858</hash>
+         <hash>8cda7ac3ff6f0eb5e83c4fe613dd195151b24da54167f5c3c007e599a03f1edc</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\core_cm4.h</file>
