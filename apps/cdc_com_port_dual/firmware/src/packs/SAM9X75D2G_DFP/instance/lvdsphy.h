@@ -18,12 +18,11 @@
  */
 
 /* file generated from device description file (ATDF) version 2024-06-25T17:22:56Z */
-#ifndef _SAM9X7_CSI_INSTANCE_
-#define _SAM9X7_CSI_INSTANCE_
+#ifndef _SAM9X7_LVDSPHY_INSTANCE_
+#define _SAM9X7_LVDSPHY_INSTANCE_
 
 
-/* ========== Instance Parameter definitions for CSI peripheral ========== */
-#define CSI_CLOCK_ID                             (53)       
-#define CSI_INSTANCE_ID                          (53)       /* Camera Serial Interface 2 4-Lanes */
+/* ========== Instance Parameter definitions for LVDSPHY peripheral ========== */
+#define LVDSPHY_INSTANCE_ID                      (57)       /* LVDS PHY */
 
-#endif /* _SAM9X7_CSI_INSTANCE_ */
+#endif /* _SAM9X7_LVDSPHY_INSTANCE_ */
