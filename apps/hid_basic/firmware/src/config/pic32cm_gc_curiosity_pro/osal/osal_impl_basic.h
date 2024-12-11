@@ -316,14 +316,8 @@ static OSAL_RESULT __attribute__((always_inline)) OSAL_MUTEX_Delete(OSAL_MUTEX_H
  */
 static OSAL_RESULT __attribute__((always_inline)) OSAL_MUTEX_Lock(OSAL_MUTEX_HANDLE_TYPE* mutexID, OSAL_TICK_TYPE waitMS)
 {
-    if (mutexID == NULL)
-    {
-        return OSAL_RESULT_FAIL;
-    }
-    if (waitMS == OSAL_WAIT_FOREVER)
-    {
-        while (*mutexID == 0U){}
-    }
+    (void) waitMS;
+
     if (*mutexID == 1U)
     {
         *mutexID = 0;
