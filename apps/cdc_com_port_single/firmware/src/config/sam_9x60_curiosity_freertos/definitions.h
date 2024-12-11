@@ -58,9 +58,9 @@
 #include "peripheral/aic/plib_aic.h"
 #include "usb/usb_chapter_9.h"
 #include "usb/usb_device.h"
-#include "bsp/bsp.h"
 #include "FreeRTOS.h"
 #include "task.h"
+#include "bsp/bsp.h"
 #include "system/int/sys_int.h"
 #include "system/cache/sys_cache.h"
 #include "osal/osal.h"
@@ -78,13 +78,13 @@ extern "C" {
 // DOM-IGNORE-END
 
 /* Device Information */
-#define DEVICE_NAME			 "SAM9X60D1G"
-#define DEVICE_ARCH			 "ARM926EJ-S"
-#define DEVICE_FAMILY		 "SAM9"
-#define DEVICE_SERIES		 "SAM9X"
+#define DEVICE_NAME          "SAM9X60D1G"
+#define DEVICE_ARCH          "ARM926EJ-S"
+#define DEVICE_FAMILY        "SAM9"
+#define DEVICE_SERIES        "SAM9X6"
 
 /* CPU clock frequency */
-#define CPU_CLOCK_FREQUENCY 600000000
+#define CPU_CLOCK_FREQUENCY 600000000U
 
 // *****************************************************************************
 // *****************************************************************************
