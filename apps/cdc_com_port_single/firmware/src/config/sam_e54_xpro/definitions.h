@@ -57,9 +57,9 @@
 #include "peripheral/clock/plib_clock.h"
 #include "peripheral/nvic/plib_nvic.h"
 #include "peripheral/cmcc/plib_cmcc.h"
+#include "driver/usb/usbfsv1/drv_usbfsv1.h"
 #include "usb/usb_chapter_9.h"
 #include "usb/usb_device.h"
-#include "driver/usb/usbfsv1/drv_usbfsv1.h"
 #include "system/int/sys_int.h"
 #include "system/cache/sys_cache.h"
 #include "osal/osal.h"
@@ -77,13 +77,13 @@ extern "C" {
 // DOM-IGNORE-END
 
 /* Device Information */
-#define DEVICE_NAME			 "ATSAME54P20A"
-#define DEVICE_ARCH			 "CORTEX-M4"
-#define DEVICE_FAMILY		 "SAME"
-#define DEVICE_SERIES		 "SAME54"
+#define DEVICE_NAME          "ATSAME54P20A"
+#define DEVICE_ARCH          "CORTEX-M4"
+#define DEVICE_FAMILY        "SAME"
+#define DEVICE_SERIES        "SAME54"
 
 /* CPU clock frequency */
-#define CPU_CLOCK_FREQUENCY 120000000
+#define CPU_CLOCK_FREQUENCY 120000000U
 
 // *****************************************************************************
 // *****************************************************************************
@@ -195,9 +195,9 @@ Remarks:
 
 typedef struct
 {
-    SYS_MODULE_OBJ  usbDevObject0;
-
     SYS_MODULE_OBJ  drvUSBFSV1Object;
+
+    SYS_MODULE_OBJ  usbDevObject0;
 
 
 } SYSTEM_OBJECTS;
