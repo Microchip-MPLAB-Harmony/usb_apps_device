@@ -69,6 +69,7 @@
 #define GPIO_RD4_OutputEnable()      (TRISDCLR = (1<<4))
 #define GPIO_RD4_InputEnable()       (TRISDSET = (1<<4))
 #define GPIO_RD4_Get()               ((PORTD >> 4) & 0x1)
+#define GPIO_RD4_GetLatch()          ((LATD >> 4) & 0x1)
 #define GPIO_RD4_PIN                  GPIO_PIN_RD4
 
 
