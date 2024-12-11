@@ -55,7 +55,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.2"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.3"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -5851,7 +5851,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_curiosity_ultra\PIC32CX1025SG41128.ld</file>
-         <hash>b27609f5d56d8ef063b4e4812db9f72edb9b3a5663cfd2ad211b18b02c19229f</hash>
+         <hash>21759c69f8e816ff4de8dcc90be985675087811066cc30df8c5d598294fdb3cf</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_curiosity_ultra\bsp\bsp.c</file>
@@ -5867,7 +5867,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_curiosity_ultra\definitions.h</file>
-         <hash>1d410b0465ca435702cd0ed9f0ad0bb6f0c7d24345cd619f62f8f3847743cf1a</hash>
+         <hash>2430a0c7c27aca699674801a2fb794e560848545202dfb6c952baaa841e69cee</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_curiosity_ultra\device.h</file>
@@ -5947,11 +5947,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_curiosity_ultra\exceptions.c</file>
-         <hash>89852728a9a1cc4c9746839cc3caf5308b8698c0c30bf6bfbad0db9e552a387e</hash>
+         <hash>a565e8d25d218b3e1069267ae9cc317161d062683a27c64e3cb454757bb82fd9</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_curiosity_ultra\initialization.c</file>
-         <hash>9068ee9a515c4435717f7c8caae9b33a90e403c6eee2fe90a9dcff95eb70a679</hash>
+         <hash>b384ba277475137182369b76114ef5633be0242921504509bf33eabd80c291a1</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_curiosity_ultra\interrupts.c</file>
@@ -5967,7 +5967,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_curiosity_ultra\osal\osal.h</file>
-         <hash>8404fbe44807fa0484ffb38843a72cb9af8e31c9c30bd1b2594e609b8ea317d9</hash>
+         <hash>1cfe3b61d9693b2369922041eef33fe16b3c1ccd9c85d4ded808b805f90a869c</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_curiosity_ultra\osal\osal_definitions.h</file>
@@ -5975,7 +5975,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_curiosity_ultra\osal\osal_impl_basic.h</file>
-         <hash>67ce72d34fd1e4dee0b6937fa026ab2c7bd285f82a24da09742c68333adaf0fc</hash>
+         <hash>65e68edbc0320d0407399f65e6d06ff7e6d3d7697231cf1fe0a1fdf1d65f0463</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_curiosity_ultra\peripheral\clock\plib_clock.c</file>
@@ -6003,11 +6003,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_curiosity_ultra\peripheral\nvic\plib_nvic.c</file>
-         <hash>e371313ccdfde1c8dd088495abf72b77582a1e8bfe58a2e65d0b239adaf734e4</hash>
+         <hash>caa1c1e1ca1609aa5eba6181b6cc4083a975704decf718584c0e9b17568d7886</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_curiosity_ultra\peripheral\nvic\plib_nvic.h</file>
-         <hash>81e813a093101d546799e00723cbf7245e2d18471fa51c8d130c5809cecca03e</hash>
+         <hash>9936ac782115af41003255283fa2f603f4ff2212d16275b7c80ea8d067a9e208</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_curiosity_ultra\peripheral\nvmctrl\plib_nvmctrl.c</file>
@@ -6019,7 +6019,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_curiosity_ultra\peripheral\port\plib_port.c</file>
-         <hash>04e1f9a6268aa104d55f960a656459960e1dfdac58a0ab9746c90c08e35a41e7</hash>
+         <hash>4f9dc7d2617beeca8d46b215a8f6c8ecc0056420d084b8b20b9d0b8bf93ef0d1</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_curiosity_ultra\peripheral\port\plib_port.h</file>
@@ -6095,7 +6095,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_curiosity_ultra\usb\src\usb_device.c</file>
-         <hash>af8a74c998876da1c72e4c0ed30b11a3dc98b7577857d659652cd0a0cc3e7078</hash>
+         <hash>25d4e1719a2948619c4f4b38406f896be37bbb74f4b8f631770ca32e1fe45b77</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_curiosity_ultra\usb\src\usb_device_function_driver.h</file>
@@ -6111,11 +6111,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_curiosity_ultra\usb\src\usb_device_msd.c</file>
-         <hash>fee13b32723a549eb7f2e62ac37d22b46be5f8b2673a43df72b09918ad3c219b</hash>
+         <hash>ec0e762e41f1d3bf031736d64b8b09deefbb61c802d340e2c8a0a96b75cf2a79</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_curiosity_ultra\usb\src\usb_device_msd_local.h</file>
-         <hash>ac0f59175b4420224dca9e42cef0f5ffe7f38544c87a0707b9abf70ccf27f66e</hash>
+         <hash>17dd9a7f3769f653da17b393b517076099304191604c06dce74ecc55caf7d289</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_curiosity_ultra\usb\src\usb_external_dependencies.h</file>
@@ -6139,7 +6139,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_curiosity_ultra\usb\usb_host.h</file>
-         <hash>56c248da571d1a46c5d6b5b34e28a978b30b40ee1fb04fa4f2efdcb8a5a1039b</hash>
+         <hash>9e71096993b82346d36f826b35ff46d1cecadbfda0fee4ae47125da2764391e4</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_curiosity_ultra\usb\usb_host_client_driver.h</file>
@@ -6199,7 +6199,7 @@
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_version.h</file>
-         <hash>2de01ae2556a38eb82c389de23c701805ec63308cfbcf3f84cb12141589b0858</hash>
+         <hash>8cda7ac3ff6f0eb5e83c4fe613dd195151b24da54167f5c3c007e599a03f1edc</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\core_cm4.h</file>
@@ -6211,411 +6211,411 @@
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\component\ac.h</file>
-         <hash>25c0bf49305d1b239b44df7e79fcaadacdd9ae68dd3a19ae1af69efecf2b2e4f</hash>
+         <hash>b086756d08f9fa31068f08d27fc4e5a67261ba6f6c323c8de87ca4948937d13e</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\component\adc.h</file>
-         <hash>ad143cae2313affdd3ba6da8c7f4c59baa24385975499f547d81ce75178f3673</hash>
+         <hash>fbb2970b91cf8bd3a9fdad1015308011057e32644d61203b536bfc0621c1dc7d</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\component\aes.h</file>
-         <hash>89d54043988e8fb249191fbb8496181fe2bdc18d350d717a9bc3e566d703a617</hash>
+         <hash>beff3d2d8a75cea69c9e7f49bf6e782918e263fb9961acb05ce75a391b169295</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\component\can.h</file>
-         <hash>7a7de79681b634ea1c68bb9b78f86c5cd0ab54bc22fca8cd46e30d93016d7c76</hash>
+         <hash>95ae7cb9b394262f3f1abef92363352b2c67d15b7a75867c3c120d4d7f52752c</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\component\ccl.h</file>
-         <hash>112aff0e63fbaf91a6c415ee436bc2e30c6e4242d84d4551ed2e8b2553dcba6d</hash>
+         <hash>17d41029277c5b51a33f08b4da0319f8677fb0ea050654e9ff680106feabf108</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\component\cmcc.h</file>
-         <hash>72724eb104882386f6464ffd09df67a09886aa8f59553b5dc6fe24a30b9ae098</hash>
+         <hash>b30d760fed96c4f8f551258cb46d52b1cf6728ecb7c132c14bb72b148c8042a1</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\component\dac.h</file>
-         <hash>38b8f78feef12fbd089a145b6d48bf3906d10a46c43450ad44d57ec3df1691ee</hash>
+         <hash>5e6fca8f8735812bad5b4d9da9b861b45735ec83716217f0c575a918c465756a</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\component\dmac.h</file>
-         <hash>af2035f3571bbb594ca0f157ee53454595a9fe4771983c81037badcb4f9cde5c</hash>
+         <hash>2c609e8a7aa2aaf1fa9c9129bf6a8af38e7f7be0b8304ce985213776a94344c7</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\component\dsu.h</file>
-         <hash>7dc81c3d0b6a68d8151bfd1523552d43d2f47a3f71bd7fdebfa8424e4b699ab6</hash>
+         <hash>344dcc778da7068472df7d42ab5df57be263945e2c6b8bece6529b5a6845aeef</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\component\eic.h</file>
-         <hash>8b5c7a345440cd199319fd28e9f19510ab1c8726931a453c1112d652cfd38121</hash>
+         <hash>41e37fc3fb23fe798951ea1a884d4f89353d6238522015aa1fededd657af26c2</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\component\evsys.h</file>
-         <hash>ad1b060a8494537f7d4230621ebc46be87bce05d0dcabb74dd4f2bbdee4b7dc0</hash>
+         <hash>7378fb86fc461406c57ef278d46bc19fb6806a565c746d405d56ba5dd2019ea7</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\component\freqm.h</file>
-         <hash>012d6f230340a72eb64c5b1c33923cf6d22083464907e49eabc84107f9dbdd8f</hash>
+         <hash>8e147e85eb2eebd6b48bbd1fde21cc5a42ea5e276c93859f6da0676f2d3e54d1</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\component\fuses.h</file>
-         <hash>bfd563d874b806e472d151de0e276d66f7be1fcf9fb3f1c139ac13b8c5598dd0</hash>
+         <hash>957bdfe4c6e9ffee83d55bb8c69fe6f1c2311da93addeac559ae272d6b3d03c2</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\component\gclk.h</file>
-         <hash>ab91482f952a474020f8b71ace1f7e921a682c78b4292ad66b8c991f67a9b364</hash>
+         <hash>1d99b0c14cd981180c618fc431067f7d915c58753e1d735c51bb161ed946f0c7</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\component\gmac.h</file>
-         <hash>5e4827a2347350affb94e085d890150ffb7f20788cd72ede9efa24b3c5c14e36</hash>
+         <hash>6847a2fbc25871afa2186c09d822dbeb57638b83e76c302b70fa291e7a24a53f</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\component\hmatrixb.h</file>
-         <hash>5ab812d9ade7a5c30fca04a80d24974f38b767bb2d9e732d8dd186e839fd3ff6</hash>
+         <hash>c655da3550aaac8f49784e338e5c4626ce91c96e653be101c58feb7d2b0fe46a</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\component\i2s.h</file>
-         <hash>b222b80ddeb822d9afac87a0912bd7f5eed6c0667db07bf7061a4d08e5aff4fc</hash>
+         <hash>b766d756d89987c72bd8c592a93375cd24760d9805e53a6fb6d230c012a835a3</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\component\icm.h</file>
-         <hash>d0b7c8a9d6dc9ad8a9feec5a3e39ae4d661ba672cfbafe966f2baf79d8cc9dc7</hash>
+         <hash>e979981b500896a393f2f3709761be6ea401f3738bcdec93222e00de359f925e</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\component\mclk.h</file>
-         <hash>685e8ece939a56a54e960e41bc156ba936e7c72593e045f3e99fe3c3ce8a7dea</hash>
+         <hash>e4ac85152217ec49a76486115d7c28dae1d54b290fea0ad801f59a1ebf20e944</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\component\nvmctrl.h</file>
-         <hash>4e211489b89998a07b6cf8772a41ce4ff8515d6c283b6df2f32b273ad23c5eec</hash>
+         <hash>4f4c82c2fd3fd3824241c1b2e4a4fe08d2bf9b8464f3fdac5033131ef7168448</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\component\osc32kctrl.h</file>
-         <hash>4b324ebfd426b21c3718850b1de500fe2d5db8d6af8228550f56259e42a5c79c</hash>
+         <hash>b10f3ab38cc653325c5820ee18315da273818cc61cb30151a692956ca54ad5cd</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\component\oscctrl.h</file>
-         <hash>6477f47087f4a01466b8ffb0dfa1f59f48f847f4a5e8e0f8e86453dcfc4e164c</hash>
+         <hash>5ffad8cab0453bc2c3df5c29764e6e19c089a78cd1643bc8078ea5409156fdd3</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\component\pac.h</file>
-         <hash>3cf896ca72dfa65ae366d57f176fbb97fdc93a399aa0c6406cf3576101ad96a2</hash>
+         <hash>4c0636c1df1ca0f838183512e4f579e7ff3efe71c24a7ffa7c5934e49cf03268</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\component\pcc.h</file>
-         <hash>9fe04f3f7ab3d1fd51d570e7314787115093b0b3169e1cfe8f4cf9649a1d3989</hash>
+         <hash>418ed23385eedd4588deb22440f3e003f7a44d43ac5230913f8870cd7f08cfc7</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\component\pdec.h</file>
-         <hash>d09a4374017c3711b1201ac0c0fe1c523dcc54b44848cf186c4db38b6a7e1715</hash>
+         <hash>c1826a329a0b590ddeba7a33dd93882a1d763f8859716ea79f8993e113e32ab3</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\component\pm.h</file>
-         <hash>8f8f6e732882d49691cb0b637ea204cb20071b8e6bc038c37eb37ec58971341f</hash>
+         <hash>1c37dfa4ee93fce8ceb579d86797dd17ec72f62d4290214b91328f041f8966ae</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\component\port.h</file>
-         <hash>fa37de184d352a3107186ecedd06ce678bde278f352a5fa83f36c6467c78693c</hash>
+         <hash>bb931d610328488045ee11589cff89885ed5f917107c71bdcd2b0e686204ddc6</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\component\pukcc.h</file>
-         <hash>a9f65699e7cad7f129c197bf3874a4408ea7b0af89e108f9bdee5ae2e5d57db4</hash>
+         <hash>f445f69d956000513d479eb0aedb20b596ee12c5dbd39d740a5cabf8b78d64da</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\component\qspi.h</file>
-         <hash>f49b97efd4b09cd0da9f2ab4e4ff172fcde4bbe5cafb13db7364274fa9ed8193</hash>
+         <hash>27db91da6c4f14fe0698b2c6b25042435a823412e18de5208d3cb6720d8b6992</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\component\ramecc.h</file>
-         <hash>2adfeb3b257edf12a4a7e45223a8eb1bc582babe4ef714e4c0c07699e19b5747</hash>
+         <hash>2a03719a75683d4a54ffa11a535dc3472fa36cab9f8759c43fa54101ad37e54c</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\component\rstc.h</file>
-         <hash>25f8e8d04038b54831c049f36572ff86cc4a1f6b3c763d5b1d13019d8f5d96fa</hash>
+         <hash>e453ef7fe26794b28ff8e7409cc17229f146265d7f0f6fa17fe54603d16614cc</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\component\rtc.h</file>
-         <hash>b65bf4942925b6f4ab33d1a73ff6a3e620028a5519261ea322b83e8560166b59</hash>
+         <hash>741da94d1c0d1b850d9eded7148d86976f43a9facdca73c246407ca20340e595</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\component\sdhc.h</file>
-         <hash>fe443a2f9d82a30566ef1882931021c6131ff9137850ffb772f1b6f1cfdf0bdf</hash>
+         <hash>4fe680d3ca62052d87d4b457f1a9a4e9a25264fb7e2964205f415d2292f43e1f</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\component\sercom.h</file>
-         <hash>4fa692a89a29fa8307c994a1705eee72380eaca516fe5268114c306f5ad0bf3b</hash>
+         <hash>41d2f8b3b47addf29a769e8ab5010da664a3066e3cd5e9ca3a790841d36905a1</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\component\supc.h</file>
-         <hash>7faa0394c5a102568cdc2d5cc0cd7549171b46e30ed4ba96fee119b355079784</hash>
+         <hash>50118835b61a1c0d56cccac1cb9a724b1fb4a49e86f479ac428dc9c631ae3d07</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\component\tc.h</file>
-         <hash>a2354b5d6970c5e23b3c1ea8dd332ea1a07820480fb54780806cdbf814bb7922</hash>
+         <hash>ae493e24bdd4c1e068babd366871c0becf65906456dc9243ae85026e78b09849</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\component\tcc.h</file>
-         <hash>39f785bf85812b37307bfff6abf6eb160af82c21654798712c2c98eb104b22a8</hash>
+         <hash>2752ca892d6ae657934f8ef4a67cb5ff0c4b43f1d8d148778c37099461664e10</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\component\trng.h</file>
-         <hash>10d65eda42defd35211a2fd2d9a48509ca23e808955a0790fb382a4e6dd6e4c0</hash>
+         <hash>2d13377e45a0dba32440841a1d746de4bf4718a09283e8ff1b95cb754f61ad68</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\component\usb.h</file>
-         <hash>1c25ae162f06ff21d6d2d6ee601cebe5bb3ced0eb5498cf8ef3480c22a784d7c</hash>
+         <hash>0715cf19bf7b4c7caeb9b8ee1d9e7dfabfab5a485f934a2a5f5ae2212ab29b9f</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\component\wdt.h</file>
-         <hash>e410e2e9c272099ee8986c74da0edee9b66aad2347f9355ead937c65f59dc8fd</hash>
+         <hash>d1cc842141099c43674e17474edc0bc59a5cac0f9b5d8febb3cebca31b30314b</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\ac.h</file>
-         <hash>fee16e4445c77bfb69b0fa0d7381fda631e17205b499302fa81829856f6293c4</hash>
+         <hash>5300f8541ce3ac7a6639b5c407bab0cad0ab96392ae3f4975e8eb7cd6e098198</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\adc0.h</file>
-         <hash>0fe5fe6823333fafabecf3d7ea261af9f14a905c1bd687ee20154889660ffc91</hash>
+         <hash>959b61f29c6deed2c45e83923666b2e01e73fe6c0b1890b60a44f3593135909f</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\adc1.h</file>
-         <hash>d6b518c5270ed28eb65db4e9863a56685176996876349b2881113efcfacd8f57</hash>
+         <hash>3445bdb20de5a024a1393fe49ed10d27dbef2e3fc4e8585d613256d41cadad20</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\aes.h</file>
-         <hash>e8a10c76d07cc9d4f3ec402f14879ecbdf53ded21ce5cdf0bd282cae6ba17e46</hash>
+         <hash>da3164005171911c97b04f0c0d6135c1f154e6383948b0424489481934ed5538</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\can0.h</file>
-         <hash>741e7dd8b911c072bf500641e73b86af34d753bb2d619b86e60b85cf399f9dc6</hash>
+         <hash>d80b981597331aea8e7f6f9bd3fcfb2fe637c4b29eabdc39af6e1750b98048bd</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\can1.h</file>
-         <hash>b6bd765bbc04a23cd0ae9e441efc9dddeab68ca49d6a07afbe2da974757a2480</hash>
+         <hash>56f243c7749e662c59dd6b91185790ee8f41291bd74ba687fb3dd0054d4feeb0</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\ccl.h</file>
-         <hash>61277647827f637a81981019433f55a10ae899063ca6445905387d7906bdf952</hash>
+         <hash>c8f0f7c97f8a2f1c1566bfb12c2c02342a111d222e09aa430f7f71cee6941153</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\cmcc.h</file>
-         <hash>af1736893e8afc9f03561a91da3811112cb5ac45f5fc7f0a77554da63b4acef6</hash>
+         <hash>2bc21fc43e108e93115342ec4359e8fcb2924549a2385040f488083a37650de9</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\dac.h</file>
-         <hash>acf1b15131f423d84a76c44db5d528df42fcdb77c9fe0e803121fad91cbc6018</hash>
+         <hash>327d1ec918e8ede61a2b2cf25a43d42e78bb4af82cd314608a4c4a9b6c32e126</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\dmac.h</file>
-         <hash>f6dd47ed45522779b259b8f6ada5c3303557f2cbd4ba74f315c7f571e99c83b1</hash>
+         <hash>d051cd56bdce9aa3a386a02598df7d95f9f825542213999632a2fe0cbafe993d</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\dsu.h</file>
-         <hash>cf7efccb245499ea1b7efd7de6aa9559ddaceaa0c4ee8a2e8b47435fe1e1d7f8</hash>
+         <hash>620bcec7c6782ddec73479c89b5ab842efa10c734c4673baba1a1f82e12da7ee</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\eic.h</file>
-         <hash>e04080703264e28bd58ed3c6dea63bbfe2e38efcd0c4b55632551e607a068a50</hash>
+         <hash>e200c50a45d7c6329a8aa7d5d960fb42f8b267ba27c51ecc03944bef8a71f896</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\evsys.h</file>
-         <hash>1eaab61b3adefe7cefcf89beae064f3956eef79a94598114b52f8ed0809bbc3f</hash>
+         <hash>3f08ab7ebfb6190d543293b57e39111ed0965660ef06509ffa1c7a3e58903d1c</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\freqm.h</file>
-         <hash>83c01b7ef4997ad18113f0120cca38d31f9fd1554db6809a06f043bd7b1403c3</hash>
+         <hash>760e510248232c634b314fbf5615dc6b4c4b4bd549a514433ba4cbc93d0bf87e</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\fuses.h</file>
-         <hash>9af38b50ce4414ba34e39525f69e4f8c8fa5ae759e25d503257bff2a631ae6d9</hash>
+         <hash>e0115ff6339f9411ccdfe10ae80a6484c39f9dbb4e4dd7017e9a15a07b5dae17</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\gclk.h</file>
-         <hash>21dec9c7932236f930c6e8fe57e24e571b2e0d9f382666c2173d852d9ed8c96c</hash>
+         <hash>4844a6eb6c7ff291623848e0a52ee6f91ae834ecdb9f086f1dcb11d5310917c4</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\gmac.h</file>
-         <hash>c773721078fa92b91e1bb5d34a2917ef51a0e39d5f4e75ad65bfb14b180e1fa9</hash>
+         <hash>521be3c121cb93204f3a256a7af339134e6d75df9edae1f143c1a308aae96f7c</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\hmatrix.h</file>
-         <hash>33307d9daa9ba3d1063775a856f592eb07888b01487b277f86e037c574bf4801</hash>
+         <hash>25178d4e1ae94ca6b4bc1b868dbcda4e764456c2aed3822f484999220adf80c7</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\i2s.h</file>
-         <hash>497e462fa6313dc0698d9828bff40a1370ff1db3a8723b2910510daca4039465</hash>
+         <hash>87150a201c094dbad91829ae9bbf3d7646eb73d239af853c2fddca17194ed29f</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\icm.h</file>
-         <hash>2c9f8d68ca3b2483107a3bb3fa4eb5c6f75c92b5e9db1dd54230245a225c30e5</hash>
+         <hash>dc4182ea7ca9739b5cdb97dd83e3b183bf54974ac158f94b943c9f03710ef508</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\mclk.h</file>
-         <hash>451a2c1e786a3df20cf85651f6d5a34086069ae795d8c656c2b4773404540a99</hash>
+         <hash>c26e5c3c06954db39365c3f5a1a2394f6d945b8cd6ed15d4dca2b5a6de186a57</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\nvmctrl.h</file>
-         <hash>52097ce5c2c9926194adea6baa44347d4974bf66a80a04d1d9b95e082e8e5102</hash>
+         <hash>9e000c135109c6dedb6b312498a756d36a6fcfa6a730b2cf005d578a7541090f</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\osc32kctrl.h</file>
-         <hash>c8f077d5d0d5c3a95605d33cf71186aad6c83b673b3624bf11f811c367baec9b</hash>
+         <hash>a51d261bb99584f0c09150d3f158d1759ba40893163997e94d97afbe6162815e</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\oscctrl.h</file>
-         <hash>db75106beea9206b39d1643a8cbe2ec40d4e68cd1e7dab6fe9be61a187785d0a</hash>
+         <hash>b5a028649a21935cd866fa26acb453ef0e080032e39f105d1587f0ac3acb80a3</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\pac.h</file>
-         <hash>bbc18e12faa0db034f1bb2f342d3df01e0d8b820bd49d2f11d3e4563b145ee4c</hash>
+         <hash>a305a4c4efd66856e6dfc057f85ff5d33c98e071c2a618f0953da3418564845b</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\pcc.h</file>
-         <hash>b648aeb6980fe0c77b36542e59e1434c5e0c1fac9e9a3ed746118c06572cafae</hash>
+         <hash>7ffa6c88c536de1063c36f75548b66b99ee8a699c561647a36d54407527f13ea</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\pdec.h</file>
-         <hash>0eef1ef77215e241e4f95eb3f72bdbebf0f07cf2e6625e70c107570624f68a3a</hash>
+         <hash>46ad96cde6c9d03c79fdd0e495a16ef6a79e391161d5adcf4b602f6508c4db26</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\pm.h</file>
-         <hash>863f3cb1a2c7e75f016d58c21998c6d31a18a572f8eae5847f56ae97bb76aa1e</hash>
+         <hash>36129a1e6b1942460955f81e89fcfca7ddb161bf76f8203a0d00f981d0ca411e</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\port.h</file>
-         <hash>b0e253ac8a36a2bb317d42a51edce8695886f6c2785c5e4dc4e61f2be7b0c9f5</hash>
+         <hash>9219832bc5a980750f7e5978b3d73a411b96688dc8dc85a6e2122575be1a6c5d</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\qspi.h</file>
-         <hash>622d8b3baa9afa3f8b3f08030836862286a41a5a475e82b8a20ae1569d8dce1c</hash>
+         <hash>d71277e4daed87851d49e6d559ff2969ba7c96b53ed21c933668330d95b9284c</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\ramecc.h</file>
-         <hash>8a432d9ce4345935e1d5740b5fab654528e3d6b52641b70d30695914e81530db</hash>
+         <hash>cf7c6446c1f45e6e1675200696e9fa00aff9ba389a69ca3c27f7685ad89080d5</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\rstc.h</file>
-         <hash>479e8e725e38d5bb9df0092e4e61827f53a1f6338bfa5285af9595b254894be0</hash>
+         <hash>72e08d8898e7a525c7acf441ed2ae445663fae9f4e59dd6eee3a2f32fc255e34</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\rtc.h</file>
-         <hash>d791fb6b201774462b510fea58952804f1daca1f84826be9093f283996dde813</hash>
+         <hash>7fa144f125d698f3eae4348750ff0a94c706261fe3bc59deaf19a3fa396ee7ff</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\sdhc0.h</file>
-         <hash>a5510fc6e35bda0a956e17602d5e9c83fb6d199811e33c6cccab02886e064bf5</hash>
+         <hash>889b6bccc502ffec27ac097f5f66b65671ccede9779b7fda0efcf01f42c450eb</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\sdhc1.h</file>
-         <hash>73c76fb2c20cb5c01e8b8762403e947cb228d6d29154ff62c202e5cc2405f576</hash>
+         <hash>67f710221dd524d2d5e4066130ebaf327960337d2d4067fb598e4c2b14d2d827</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\sercom0.h</file>
-         <hash>419319a2000a2c0ef0f6ee98ac1a2c0cdc3fdda88d5a2def3ac39a35529d30f6</hash>
+         <hash>b03639987019e358d33cd824f600f4dfbe742db6f1140628be84f9a7cfcc5c1c</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\sercom1.h</file>
-         <hash>7a37adedd0329a6d923361ccb30df4f18ccddc9f967586ab0b00c951f1f0f95a</hash>
+         <hash>c5d07c034c0e5fe6e502dcab8a8a36d19b7a18720a7b5528c6a0d63dd7cdec87</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\sercom2.h</file>
-         <hash>1dee17aeaf4cede8d445f333e7ba9b4013494ac02968957c1844e308196a0828</hash>
+         <hash>c68f87fd93e8b41dc467d34931e7d953ef5b371a16ee59f38c8ce5cf7ab41cdc</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\sercom3.h</file>
-         <hash>d53f4609af6bad2e8d2a310923bcbf3c4695579ed5563361d2ad1241d77936c9</hash>
+         <hash>ed21c1602f5ea3a9ad71b4aeaf4dbc256be09e2d6da7455e07a553b458ae68e8</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\sercom4.h</file>
-         <hash>4df985af640dcabe2ed1b059af356cd040b562ac0ee2a0b1606790969af425bf</hash>
+         <hash>50007c5b58f47045a7b910170c1a29d5e1706a36b6a7ae05fb4fd7a01083f570</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\sercom5.h</file>
-         <hash>5352dc186ca748e800394d35a2ffb7ab137a2cc28f00357691de8c62ef9dee89</hash>
+         <hash>4f27e4c920fbadb489fc7adc8efcd84551ecdc7fc85f6ba7bedffcebccebca80</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\sercom6.h</file>
-         <hash>44a1f60fed3cab9d6e6f6054f1e0a309cc14fbd37687b5865e8c14dfc6159238</hash>
+         <hash>376bb3a65ae07286e029fe50ccfd0ec95d47198d3f9fd4d13e268936943c218e</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\sercom7.h</file>
-         <hash>04394355873828dff8da4c5fb97cde50328ed46ca0703991d0420a9802d448d9</hash>
+         <hash>f37ad04d81c3f0bfd5df7d852fbed30ee88ea740b8616845d35860606cb88b7c</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\supc.h</file>
-         <hash>0fe7775fc86995ea5962b6bd358296c741ea4b6b8e24027ede62cccbb9a984be</hash>
+         <hash>5288a7482c6d7c622d5c912e27915705583137f3e9c57d4575ac738b8375fa13</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\tc0.h</file>
-         <hash>bb267c3a3e27766adbcf5868c43787ed4d1bba7cf8fc28dd7947c13639222459</hash>
+         <hash>4986548db87a51e09ed4253fe2a15deddd44a02e32425009c020cc888d3d34ca</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\tc1.h</file>
-         <hash>9d8fbb83052da39af53613418c2891ee00734443e33eef0b7b4c0206d1bb3a53</hash>
+         <hash>9115ddbda7ee394118c5876a7d60b572b13e821f6b2e7693fd3b1eeff1752e6b</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\tc2.h</file>
-         <hash>f17a516f6edce79f6fb81468e91eebada19646916b43051d8e8ae7ae86d6c490</hash>
+         <hash>47e64413699b20d58a0693e641b880757264eadc8d445788726a74463f5a0697</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\tc3.h</file>
-         <hash>702cbb3d461571dce922f3be392729b68e65d6adb39c7ade86be538d8a1a2b4d</hash>
+         <hash>bffc99fe8a4c521b234dc6ba8999b0234350b6a9b5737905bb2b005e9ae789e8</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\tc4.h</file>
-         <hash>774413f030f058620c1eef92b9361524398c334e056d40af9541f36da9a3c0c9</hash>
+         <hash>4dfdc5269c2ac30a6f04d2744d5bc268528882a82e390bb294a2d6eaa6b3b7f0</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\tc5.h</file>
-         <hash>4570ac62479e87a1305b02bc8db426723656640ea75ac449df9258a726337a96</hash>
+         <hash>2485e56b4b31b556806de4eedb7d553249cd9f06ead67690a0c209f4e0ae5197</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\tc6.h</file>
-         <hash>332c4f25e88afa5fb9e71fb0eaeaeb3c492ca35b0099918b4ad6d44aeffae541</hash>
+         <hash>99e0921d5016aedfcc64ae930ee62be6ce5b4055fdcdd723b796a354f57d59ac</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\tc7.h</file>
-         <hash>0f9ef36b64e83b781c13b7b5214a71ee5903a22d6160a37bbbd1056645f1405d</hash>
+         <hash>16c5ee1aa25801bb0feda4ef87080683ad4e759ce5b969d1f90401b8a9ecc6dc</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\tcc0.h</file>
-         <hash>3dad3f8578185a0010c96090aa603d42201aa0a4bfd07049a25bac2d21d87999</hash>
+         <hash>66ea87db251eee6516d9f41b01b4066558a8c74f4777a721e8432a71621b7d96</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\tcc1.h</file>
-         <hash>58a0f1f1c18a7e13449259d5010277637955cddb1248cedc6bdcb6b0d49517ea</hash>
+         <hash>fa4fb848af5bd7f79172c6f52ef8dce0d17f0167ad587c7a949e5c910a7d898c</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\tcc2.h</file>
-         <hash>914b4049af3608f5d7841b18b12ec073bd56540c526616b11aa56314ca20a35f</hash>
+         <hash>87c4d2fd2d0c32d0f35c1453d0143df3ce286393d9e709cca3fb7cee8431405d</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\tcc3.h</file>
-         <hash>423cd144765ba4d3888febe4402be2007f2092b6d6424a9d446a86b75ccb3d1c</hash>
+         <hash>788f7a0dcfcd596149c4ec28ec32a297d07754bdb03566e4dbfc2f6cf4b108d3</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\tcc4.h</file>
-         <hash>dc0dbd9e50fe52373bdd4d24aa311a7fd62fbd9ce34b70cee90051586a03067b</hash>
+         <hash>1a060d4d0debf6f3f11aaa530cd7681a1273aae70b8a88fc31fc1722d6c43355</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\trng.h</file>
-         <hash>913772f84216525d27d61bf444591bad0c9a076ec5d1678736c5f753f0698926</hash>
+         <hash>6833a2543c786a3cf52ab187f837fcaa5a39fc6ceb474dd8219ec36b134a94c5</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\usb.h</file>
-         <hash>7cf8e46eb6db6711aad958aa664444a2e894d36fa544293452297018a86f0dd2</hash>
+         <hash>09ae18070e0cd1d55daa3289660ccc7b8a4688cdff57069705d21ebca95564a8</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\instance\wdt.h</file>
-         <hash>9ab6beed462366bfc9a790002b4065fc2f3cd46acfeb29004cd63d7f39eda573</hash>
+         <hash>8d95565dbcf11152b7627cafb1e7562287486a1dec5338f0dabc20538058cdcb</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\pic32cx1025sg41128.h</file>
-         <hash>307411003272c103ebe36856596e220d029e15b2d7906e218ea0d6e2549b3f7d</hash>
+         <hash>a50311236a8adaab149801b6ec9e1242b2760107ee9e2b7ca2b711501e216e7b</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CX1025SG41128_DFP\pio\pic32cx1025sg41128.h</file>
-         <hash>abb268bdb186a9785ce5af31ead7794b627309b132b6079359bac711099f70e4</hash>
+         <hash>58c86f9244c3e5f3c4fbaab84baee99d74725b7ff682d59b513af6ae0d5f9b7b</hash>
       </entry>
    </generatedFileHashHistoryMap>
 </config>
