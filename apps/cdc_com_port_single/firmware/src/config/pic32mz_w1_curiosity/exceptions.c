@@ -104,7 +104,7 @@ static uint32_t  exception_code;
 /* Counter must be reset to 0 by the application everytime after waking from Extereme Deep Sleep and after completion of flash erase operation.
    Counter value of 1 indicates false Flash ECC error.
 */
-volatile uint32_t ibe_error_cntr = 0;
+volatile static uint32_t ibe_error_cntr = 0;
 
 // </editor-fold>
 

@@ -69,6 +69,7 @@
 #define GPIO_RC15_OutputEnable()      (TRISCCLR = (1U<<15))
 #define GPIO_RC15_InputEnable()       (TRISCSET = (1U<<15))
 #define GPIO_RC15_Get()               ((PORTC >> 15) & 0x1U)
+#define GPIO_RC15_GetLatch()          ((LATC >> 15) & 0x1U)
 #define GPIO_RC15_PIN                  GPIO_PIN_RC15
 
 
@@ -224,7 +225,7 @@ void GPIO_PortOutputEnable(GPIO_PORT port, uint32_t mask);
 
 static inline void GPIO_PinWrite(GPIO_PIN pin, bool value)
 {
-	 uint32_t xvalue = (uint32_t)value;
+     uint32_t xvalue = (uint32_t)value;
     GPIO_PortWrite((pin>>4U), (uint32_t)(0x1U) << (pin & 0xFU), (xvalue) << (pin & 0xFU));
 }
 
