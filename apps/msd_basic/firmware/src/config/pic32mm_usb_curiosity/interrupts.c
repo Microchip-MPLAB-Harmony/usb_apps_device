@@ -76,12 +76,12 @@ void NVM_Handler (void);
 // Section: System Interrupt Vector definitions
 // *****************************************************************************
 // *****************************************************************************
-void __ISR(_USB_VECTOR, ipl1SOFT) USB_Handler (void)
+void __attribute__((used)) __ISR(_USB_VECTOR, ipl1SOFT) USB_Handler (void)
 {
     DRV_USBFS_USB_Handler();
 }
 
-void __ISR(_NVM_VECTOR, ipl1SOFT) NVM_Handler (void)
+void __attribute__((used)) __ISR(_NVM_VECTOR, ipl1SOFT) NVM_Handler (void)
 {
     NVM_InterruptHandler();
 }
