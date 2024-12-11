@@ -77,12 +77,12 @@ void USB_DMA_Handler (void);
 // Section: System Interrupt Vector definitions
 // *****************************************************************************
 // *****************************************************************************
-void __ISR(_USB_VECTOR, ipl1SRS) USB_Handler (void)
+void __attribute__((used)) __ISR(_USB_VECTOR, ipl1SRS) USB_Handler (void)
 {
     DRV_USBHS_InterruptHandler();
 }
 
-void __ISR(_USB_DMA_VECTOR, ipl1SRS) USB_DMA_Handler (void)
+void __attribute__((used)) __ISR(_USB_DMA_VECTOR, ipl1SRS) USB_DMA_Handler (void)
 {
     DRV_USBHS_DMAInterruptHandler();
 }
