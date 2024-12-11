@@ -680,6 +680,7 @@ void DRV_USBFSV1_USB_Handler(void)
     M_DRV_USBFSV1_ISR_OTHER(sysObj.drvUSBFSV1Object);
 
 }/* end of USB_Handler() */
+
 // *****************************************************************************
 /* Function:
     void DRV_USBFSV1_ClientEventCallBackSet
