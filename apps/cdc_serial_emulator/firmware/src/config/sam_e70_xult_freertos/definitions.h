@@ -54,9 +54,9 @@
 #include "usb/usb_chapter_9.h"
 #include "usb/usb_device.h"
 #include "peripheral/efc/plib_efc.h"
+#include "bsp/bsp.h"
 #include "usb/usb_device_cdc.h"
 #include "usb/usb_cdc.h"
-#include "bsp/bsp.h"
 #include "driver/usb/usbhsv1/drv_usbhsv1.h"
 #include "driver/usart/drv_usart.h"
 #include "peripheral/usart/plib_usart1.h"
@@ -80,13 +80,13 @@ extern "C" {
 // DOM-IGNORE-END
 
 /* Device Information */
-#define DEVICE_NAME			 "ATSAME70Q21B"
-#define DEVICE_ARCH			 "CORTEX-M7"
-#define DEVICE_FAMILY		 "SAME"
-#define DEVICE_SERIES		 "SAME70"
+#define DEVICE_NAME          "ATSAME70Q21B"
+#define DEVICE_ARCH          "CORTEX-M7"
+#define DEVICE_FAMILY        "SAME"
+#define DEVICE_SERIES        "SAME70"
 
 /* CPU clock frequency */
-#define CPU_CLOCK_FREQUENCY 300000000
+#define CPU_CLOCK_FREQUENCY 300000000U
 
 // *****************************************************************************
 // *****************************************************************************
