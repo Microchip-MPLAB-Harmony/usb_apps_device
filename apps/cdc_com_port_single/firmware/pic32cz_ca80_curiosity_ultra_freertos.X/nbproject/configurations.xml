@@ -133,6 +133,7 @@
             <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/portable.h</itemPath>
             <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/list.h</itemPath>
             <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/FreeRTOS.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/mpu_syscall_numbers.h</itemPath>
           </logicalFolder>
           <logicalFolder name="portable" displayName="portable" projectFiles="true">
             <logicalFolder name="GCC" displayName="GCC" projectFiles="true">
@@ -388,12 +389,12 @@
         <targetPluginBoard/>
         <platformTool>pkob4hybrid</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.40</languageToolchainVersion>
+        <languageToolchainVersion>4.45</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
         <pack name="CMSIS" vendor="ARM" version="5.8.0"/>
-        <pack name="PIC32CZ-CA80_DFP" vendor="Microchip" version="1.2.150"/>
+        <pack name="PIC32CZ-CA80_DFP" vendor="Microchip" version="1.4.158"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
