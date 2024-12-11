@@ -59,7 +59,7 @@
  * Macro Mapping
  **********************************************/
 
-/* PIC32CM5164LE00100 Devices have USB PADCAL values in OTP4_ADDR */ 
+/* PIC32CM5164LE00100 Devices have USB PADCAL values in OTP4_ADDR */
 #define DRV_USBFSV1_READ_PADCAL_VALUE (*((uint32_t *) OTP4_ADDR + 1) >> 13)
 
 /* PIC32CM5164LE00100 Devices has one interrupt vector for USB module */
