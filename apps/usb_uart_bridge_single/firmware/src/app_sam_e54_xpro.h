@@ -74,6 +74,9 @@ void APP_SAME54_XPRO_DmaInterruptEnable(void);
 uint32_t APP_SAME54_XPRO_USARTFrequencyGet(void);
 bool APP_SAME54_XPRO_USARTSetup(USART_SERIAL_SETUP * serialSetup, uint32_t clkFrequency);
 USART_ERROR APP_SAME54_XPRO_USARTErrorGet(void);
+uint16_t APP_SAME54_XPRO_Timer16bitCounterGet(void); 
+void APP_SAME54_XPRO_Timer16bitCounterSet(uint16_t countVal);
+void APP_SAME54_XPRO_TimerStart(void);
 
 
 

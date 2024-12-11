@@ -61,6 +61,12 @@ APP_USART_INTERFACE appUSARTInterface =
     .errorGet = APP_SAMD21_XPRO_USARTErrorGet
 };
 
+APP_TC_INTERFACE appTCInterface =
+{
+    .Timer16bitCounterGet = APP_SAMD21_XPRO_Timer16bitCounterGet,
+    .Timer16bitCounterSet = APP_SAMD21_XPRO_Timer16bitCounterSet,
+    .TimerStart = APP_SAMD21_XPRO_TimerStart
+};
 // *****************************************************************************
 // *****************************************************************************
 // Section: APP USART Interface Routines
@@ -113,6 +119,27 @@ bool APP_SAMD21_XPRO_USARTSetup(USART_SERIAL_SETUP * serialSetup, uint32_t clkFr
 USART_ERROR APP_SAMD21_XPRO_USARTErrorGet(void)
 {
     return SERCOM1_USART_ErrorGet();
+}
+/*******************************************************************************
+ * This function returns counter value. 
+ ******************************************************************************/
+uint16_t APP_SAMD21_XPRO_Timer16bitCounterGet(void)
+{
+	return TC3_Timer16bitCounterGet();
+}
+/*******************************************************************************
+ * This function sets the counter value. 
+ ******************************************************************************/
+void APP_SAMD21_XPRO_Timer16bitCounterSet(uint16_t countVal)
+{
+	TC3_Timer16bitCounterSet(countVal);
+}
+/*******************************************************************************
+ * This function starts the Timer. 
+ ******************************************************************************/
+void APP_SAMD21_XPRO_TimerStart(void)
+{
+	TC3_TimerStart();
 }
 /*******************************************************************************
  End of File
