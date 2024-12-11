@@ -65,6 +65,10 @@
 
 
 
+/*** LED Macros for LED_AL_PC28 ***/
+#define LED_AL_PC28_Toggle()     (PORT_REGS->GROUP[2].PORT_OUTTGL = 1UL << 28)
+#define LED_AL_PC28_On()         (PORT_REGS->GROUP[2].PORT_OUTCLR = 1UL << 28)
+#define LED_AL_PC28_Off()        (PORT_REGS->GROUP[2].PORT_OUTSET = 1UL << 28)
 /*** LED Macros for LED ***/
 #define LED_Toggle()     (PORT_REGS->GROUP[1].PORT_OUTTGL = 1UL << 21)
 #define LED_On()         (PORT_REGS->GROUP[1].PORT_OUTCLR = 1UL << 21)
@@ -73,19 +77,15 @@
 #define LED1_Toggle()     (PORT_REGS->GROUP[1].PORT_OUTTGL = 1UL << 22)
 #define LED1_On()         (PORT_REGS->GROUP[1].PORT_OUTCLR = 1UL << 22)
 #define LED1_Off()        (PORT_REGS->GROUP[1].PORT_OUTSET = 1UL << 22)
-/*** LED Macros for LED_AL_PC28 ***/
-#define LED_AL_PC28_Toggle()     (PORT_REGS->GROUP[2].PORT_OUTTGL = 1UL << 28)
-#define LED_AL_PC28_On()         (PORT_REGS->GROUP[2].PORT_OUTCLR = 1UL << 28)
-#define LED_AL_PC28_Off()        (PORT_REGS->GROUP[2].PORT_OUTSET = 1UL << 28)
 
-/*** SWITCH Macros for SWITCH0 ***/
-#define SWITCH0_Get()     ((PORT_REGS->GROUP[1].PORT_IN >> 24) & 0x01)
-#define SWITCH0_STATE_PRESSED   0
-#define SWITCH0_STATE_RELEASED  1
 /*** SWITCH Macros for SWITCH1 ***/
 #define SWITCH1_Get()     ((PORT_REGS->GROUP[2].PORT_IN >> 23) & 0x01)
 #define SWITCH1_STATE_PRESSED   0
 #define SWITCH1_STATE_RELEASED  1
+/*** SWITCH Macros for SWITCH0 ***/
+#define SWITCH0_Get()     ((PORT_REGS->GROUP[1].PORT_IN >> 24) & 0x01)
+#define SWITCH0_STATE_PRESSED   0
+#define SWITCH0_STATE_RELEASED  1
 
 
 

@@ -75,9 +75,9 @@ void BSP_Initialize(void )
 
 
     /* Switch off LEDs */
+    LED_AL_PC28_Off();
     LED_Off();
     LED1_Off();
-    LED_AL_PC28_Off();
 
 
 }
