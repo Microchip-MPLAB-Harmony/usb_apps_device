@@ -1,8 +1,8 @@
 /*--------------------------------------------------------------------------
  * MPLAB XC Compiler -  PIC32MM0256GPM064 linker script
- * Build date : Aug 27 2021
+ * Build date : Jan 31 2024
  * 
- * Copyright (c) 2021, Microchip Technology Inc. and its subsidiaries ("Microchip")
+ * Copyright (c) 2024, Microchip Technology Inc. and its subsidiaries ("Microchip")
  * All rights reserved.
  * 
  * This software is developed by Microchip Technology Inc. and its
@@ -203,6 +203,10 @@ SECTIONS
     . += (DEFINED (_DEBUGGER) ? _DBG_CODE_SIZE : 0x0);
   } > debug_exec_mem
 
+  .simple_tlb_refill_excpt _SIMPLE_TLB_REFILL_EXCPT_ADDR :
+  {
+    KEEP(*(.simple_tlb_refill_vector))
+  } > exception_mem
   .app_excpt _GEN_EXCPT_ADDR :
   {
     KEEP(*(.gen_handler))
