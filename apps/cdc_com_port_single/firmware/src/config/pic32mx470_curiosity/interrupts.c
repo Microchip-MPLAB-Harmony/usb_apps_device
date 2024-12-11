@@ -75,7 +75,7 @@ void USB_FS_Handler (void);
 // Section: System Interrupt Vector definitions
 // *****************************************************************************
 // *****************************************************************************
-void __ISR(_USB_1_VECTOR, ipl4SOFT) USB_FS_Handler (void)
+void __attribute__((used)) __ISR(_USB_1_VECTOR, ipl4SOFT) USB_FS_Handler (void)
 {
     DRV_USBFS_USB_Handler();
 }
