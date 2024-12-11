@@ -105,6 +105,7 @@
             <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/mpu_prototypes.h</itemPath>
             <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/stream_buffer.h</itemPath>
             <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/message_buffer.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/mpu_syscall_numbers.h</itemPath>
           </logicalFolder>
           <logicalFolder name="f2" displayName="portable" projectFiles="true">
             <logicalFolder name="f1" displayName="GCC" projectFiles="true">
@@ -340,6 +341,9 @@
                   <itemPath>../src/third_party/rtos/FreeRTOS/Source/portable/GCC/SAM/CM7/port.c</itemPath>
                 </logicalFolder>
               </logicalFolder>
+              <logicalFolder name="Common" displayName="Common" projectFiles="true">
+                <itemPath>../src/third_party/rtos/FreeRTOS/Source/portable/GCC/Common/mpu_wrappers_v2.c</itemPath>
+              </logicalFolder>
             </logicalFolder>
             <logicalFolder name="f2" displayName="MemMang" projectFiles="true">
               <itemPath>../src/third_party/rtos/FreeRTOS/Source/portable/MemMang/heap_1.c</itemPath>
@@ -372,12 +376,12 @@
         <targetPluginBoard/>
         <platformTool>noID</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.40</languageToolchainVersion>
+        <languageToolchainVersion>4.45</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
         <pack name="CMSIS" vendor="ARM" version="5.8.0"/>
-        <pack name="SAME70_DFP" vendor="Microchip" version="4.10.248"/>
+        <pack name="SAME70_DFP" vendor="Microchip" version="4.11.257"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
