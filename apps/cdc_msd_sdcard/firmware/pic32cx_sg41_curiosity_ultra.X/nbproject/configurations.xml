@@ -348,12 +348,12 @@
         <targetPluginBoard/>
         <platformTool>noID</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.40</languageToolchainVersion>
+        <languageToolchainVersion>4.45</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
         <pack name="CMSIS" vendor="ARM" version="5.8.0"/>
-        <pack name="PIC32CX-SG41_DFP" vendor="Microchip" version="1.1.122"/>
+        <pack name="PIC32CX-SG41_DFP" vendor="Microchip" version="1.5.140"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>

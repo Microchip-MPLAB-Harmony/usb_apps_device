@@ -53,8 +53,8 @@
 #define SDHC1_DMA_NUM_DESCR_LINES        (1U)
 #define SDHC1_BASE_CLOCK_FREQUENCY       (12000000U)
 #define SDHC1_MAX_BLOCK_SIZE             (0x200U)
-#define SDHC1_DMA_DESC_TABLE_SIZE	     (8U * 1)
-#define SDHC1_DMA_DESC_TABLE_SIZE_CACHE_ALIGN	 (SDHC1_DMA_DESC_TABLE_SIZE + ((SDHC1_DMA_DESC_TABLE_SIZE % CACHE_LINE_SIZE)? (CACHE_LINE_SIZE - (SDHC1_DMA_DESC_TABLE_SIZE % CACHE_LINE_SIZE)) : 0U))
+#define SDHC1_DMA_DESC_TABLE_SIZE        (8U * 1)
+#define SDHC1_DMA_DESC_TABLE_SIZE_CACHE_ALIGN    (SDHC1_DMA_DESC_TABLE_SIZE + ((SDHC1_DMA_DESC_TABLE_SIZE % CACHE_LINE_SIZE)? (CACHE_LINE_SIZE - (SDHC1_DMA_DESC_TABLE_SIZE % CACHE_LINE_SIZE)) : 0U))
 
 static CACHE_ALIGN SDHC_ADMA_DESCR sdhc1DmaDescrTable[(SDHC1_DMA_DESC_TABLE_SIZE_CACHE_ALIGN/8U)];
 
@@ -68,7 +68,7 @@ static void SDHC1_VariablesInit ( void )
     sdhc1Obj.callback = NULL;
 }
 
-static void SDHC1_TransferModeSet ( uint32_t opcode )
+static void SDHC1_TransferModeSet ( uint32_t opcode, SDHC_DataTransferFlags transferFlags )
 {
     uint16_t transferMode = 0U;
 
@@ -96,8 +96,21 @@ static void SDHC1_TransferModeSet ( uint32_t opcode )
             transferMode = (SDHC_TMR_DMAEN_ENABLE | SDHC_TMR_MSBSEL_Msk | SDHC_TMR_BCEN_Msk);
             break;
 
+        case SDHC_CMD_IO_RW_EXT:
+            if (transferFlags.transferType == SDHC_DATA_TRANSFER_SDIO_BLOCK)
+            {
+                transferMode = SDHC_TMR_MSBSEL_Msk | SDHC_TMR_BCEN_Msk;
+            }
+            if (transferFlags.transferDir == SDHC_DATA_TRANSFER_DIR_READ)
+            {
+                transferMode |= SDHC_TMR_DTDSEL_Msk;
+            }
+            transferMode |= SDHC_TMR_DMAEN_ENABLE;
+
+            break;
+
         default:
-		   /* Do Nothing here */
+           /* Do Nothing here */
             break;
     }
 
@@ -174,9 +187,9 @@ void SDHC1_ErrorReset ( SDHC_RESET_TYPE resetType )
 
     /* Wait until host resets the error status */
     while ((SDHC1_REGS->SDHC_SRR & (uint8_t)resetType) != 0U)
-	{
+    {
 
-	}
+    }
 }
 
 uint16_t SDHC1_GetError(void)
@@ -258,9 +271,9 @@ void SDHC1_ClockEnable ( void )
     SDHC1_REGS->SDHC_CCR |= SDHC_CCR_INTCLKEN_Msk;
 
     while ((SDHC1_REGS->SDHC_CCR & SDHC_CCR_INTCLKS_Msk) == 0U)
-	{
+    {
         /* Wait for the internal clock to stabilize */
-	}
+    }
 
     /* Enable the SD Clock */
     SDHC1_REGS->SDHC_CCR |= SDHC_CCR_SDCLKEN_Msk;
@@ -316,9 +329,9 @@ bool SDHC1_ClockSet ( uint32_t speed)
     if ((SDHC1_REGS->SDHC_CCR & SDHC_CCR_SDCLKEN_Msk) != 0U)
     {
         while ((SDHC1_REGS->SDHC_PSR & (SDHC_PSR_CMDINHC_Msk | SDHC_PSR_CMDINHD_Msk)) != 0U)
-		{
+        {
             /* Wait for clock status to clear */
-		}
+        }
         SDHC1_REGS->SDHC_CCR &= (uint16_t)(~SDHC_CCR_SDCLKEN_Msk);
     }
 
@@ -410,7 +423,7 @@ void SDHC1_ResponseRead (
             response[3] = SDHC1_REGS->SDHC_RR[3];
             break;
 
-		case SDHC_READ_RESP_REG_0:
+        case SDHC_READ_RESP_REG_0:
         default:
             *response = SDHC1_REGS->SDHC_RR[0];
             break;
@@ -473,7 +486,7 @@ void SDHC1_CommandSend (
     if (transferFlags.isDataPresent == true)
     {
         sdhc1Obj.isDataInProgress = true;
-        SDHC1_TransferModeSet(opCode);
+        SDHC1_TransferModeSet(opCode, transferFlags);
         /* Enable data transfer complete and DMA interrupt */
         normalIntSigEnable |= (SDHC_NISIER_TRFC_Msk | SDHC_NISIER_DMAINT_Msk);
     }
@@ -501,9 +514,9 @@ void SDHC1_ModuleInit( void )
     /* Reset module*/
     SDHC1_REGS->SDHC_SRR |= SDHC_SRR_SWRSTALL_Msk;
     while((SDHC1_REGS->SDHC_SRR & SDHC_SRR_SWRSTALL_Msk) == SDHC_SRR_SWRSTALL_Msk)
-	{
+    {
         /* Wait for reset to complete */
-	}
+    }
 
     /* Clear the normal and error interrupt status flags */
     SDHC1_REGS->SDHC_EISTR = SDHC_EISTR_Msk;
