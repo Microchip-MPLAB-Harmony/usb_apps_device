@@ -51,6 +51,7 @@ static void OSCCTRL_Initialize(void)
     {
         /* Waiting for the XOSC Ready state */
     }
+    
 }
 
 static void OSC32KCTRL_Initialize(void)
@@ -62,8 +63,8 @@ static void OSC32KCTRL_Initialize(void)
 static void PLL0_Initialize(void)
 {
     /* Enable Additional Voltage Regulator */
-    SUPC_REGS->SUPC_VREGCTRL |= SUPC_VREGCTRL_AVREGEN_Msk;
-    while ((SUPC_REGS->SUPC_STATUS & SUPC_STATUS_ADDVREGRDY_Msk) != SUPC_STATUS_ADDVREGRDY_Msk)
+    SUPC_REGS->SUPC_VREGCTRL |= SUPC_VREGCTRL_AVREGEN(4U);
+    while ((SUPC_REGS->SUPC_STATUS & ((uint32_t)4U << SUPC_STATUS_ADDVREGRDY_Pos)) != ((uint32_t)4U << SUPC_STATUS_ADDVREGRDY_Pos))
     {
         /* Do Nothing */
     }
@@ -83,12 +84,7 @@ static void PLL0_Initialize(void)
 
     OSCCTRL_REGS->OSCCTRL_PLL0POSTDIVA = OSCCTRL_PLL0POSTDIVA_OUTEN0_Msk | OSCCTRL_PLL0POSTDIVA_POSTDIV0(3U);
 
-    OSCCTRL_REGS->OSCCTRL_PLL0CTRL |= OSCCTRL_PLL0CTRL_BWSEL(0x1U) | OSCCTRL_PLL0CTRL_REFSEL(1U) | OSCCTRL_PLL0CTRL_ENABLE_Msk;
-
-    while((OSCCTRL_REGS->OSCCTRL_STATUS & OSCCTRL_STATUS_PLL0LOCK_Msk) != OSCCTRL_STATUS_PLL0LOCK_Msk)
-    {
-        /* Waiting for the Ready state */
-    }
+    OSCCTRL_REGS->OSCCTRL_PLL0CTRL |= OSCCTRL_PLL0CTRL_BWSEL(0x1U) | OSCCTRL_PLL0CTRL_REFSEL(1U) | OSCCTRL_PLL0CTRL_ONDEMAND_Msk | OSCCTRL_PLL0CTRL_ENABLE_Msk;
 }
 
 
