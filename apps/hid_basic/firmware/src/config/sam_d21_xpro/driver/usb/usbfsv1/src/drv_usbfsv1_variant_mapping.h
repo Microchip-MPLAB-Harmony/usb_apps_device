@@ -64,6 +64,7 @@
 
 /* ATSAMD21J18A Devices has one interrupt vector for USB module */
 #define DRV_USBFSV1_MULTIPLE_ISR_AVAILABLE false
+
   
 #if (DRV_USBFSV1_MULTIPLE_ISR_AVAILABLE == true)
     #define M_DRV_USBFSV1_SYS_INT_SourceEnable(a, b, c, d);          \
