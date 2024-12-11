@@ -55,9 +55,9 @@
 #include "peripheral/clock/plib_clock.h"
 #include "peripheral/nvic/plib_nvic.h"
 #include "peripheral/systick/plib_systick.h"
+#include "peripheral/pm/plib_pm.h"
 #include "usb/usb_chapter_9.h"
 #include "usb/usb_device.h"
-#include "peripheral/pm/plib_pm.h"
 #include "peripheral/eic/plib_eic.h"
 #include "system/time/sys_time.h"
 #include "usb/usb_device_hid.h"
@@ -82,13 +82,13 @@ extern "C" {
 // DOM-IGNORE-END
 
 /* Device Information */
-#define DEVICE_NAME			 "ATSAML21J18B"
-#define DEVICE_ARCH			 "CORTEX-M0PLUS"
-#define DEVICE_FAMILY		 "SAML"
-#define DEVICE_SERIES		 "SAML21"
+#define DEVICE_NAME          "ATSAML21J18B"
+#define DEVICE_ARCH          "CORTEX-M0PLUS"
+#define DEVICE_FAMILY        "SAML"
+#define DEVICE_SERIES        "SAML21"
 
 /* CPU clock frequency */
-#define CPU_CLOCK_FREQUENCY 48000000
+#define CPU_CLOCK_FREQUENCY 48000000U
 
 // *****************************************************************************
 // *****************************************************************************
