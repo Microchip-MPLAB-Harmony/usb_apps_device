@@ -76,12 +76,12 @@ void USB_1_Handler (void);
 // Section: System Interrupt Vector definitions
 // *****************************************************************************
 // *****************************************************************************
-void __ISR(_FCE_VECTOR, ipl1SOFT) FCE_Handler (void)
+void __attribute__((used)) __ISR(_FCE_VECTOR, ipl1SOFT) FCE_Handler (void)
 {
     NVM_InterruptHandler();
 }
 
-void __ISR(_USB_1_VECTOR, ipl1SOFT) USB_1_Handler (void)
+void __attribute__((used)) __ISR(_USB_1_VECTOR, ipl1SOFT) USB_1_Handler (void)
 {
     DRV_USBFS_USB_Handler();
 }
