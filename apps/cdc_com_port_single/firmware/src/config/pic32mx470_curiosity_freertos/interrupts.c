@@ -77,7 +77,7 @@ void USB_1_Handler (void);
 // *****************************************************************************
 
 
-void USB_1_Handler (void)
+void __attribute__((used)) USB_1_Handler (void)
 {
     DRV_USBFS_USB_Handler();
 }
