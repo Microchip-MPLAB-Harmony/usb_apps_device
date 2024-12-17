@@ -352,7 +352,7 @@
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="CMSIS" vendor="ARM" version="5.8.0"/>
+        <pack name="CMSIS" vendor="ARM" version="5.9.0"/>
         <pack name="PIC32CX-SG41_DFP" vendor="Microchip" version="1.5.140"/>
       </packs>
       <ScriptingSettings>

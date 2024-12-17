@@ -382,7 +382,7 @@
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="CMSIS" vendor="ARM" version="5.8.0"/>
+        <pack name="CMSIS" vendor="ARM" version="5.9.0"/>
         <pack name="SAMV71_DFP" vendor="Microchip" version="4.10.230"/>
       </packs>
       <ScriptingSettings>

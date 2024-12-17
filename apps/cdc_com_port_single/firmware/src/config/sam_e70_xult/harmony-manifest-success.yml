@@ -17,7 +17,7 @@ modules:
     - {name: "csp", version: "v3.20.0"}
     - {name: "core", version: "v3.14.0"}
     - {name: "CMSIS_5", version: "5.9.0"}
-    - {name: "usb", version: "v3.15.0-E1-14-gc859ee8"}
+    - {name: "usb", version: "v3.15.0"}
     - {name: "bsp", version: "v3.21.1"}
 
 packs:

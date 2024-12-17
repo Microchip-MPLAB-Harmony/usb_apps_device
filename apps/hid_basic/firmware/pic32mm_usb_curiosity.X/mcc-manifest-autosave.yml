@@ -20,5 +20,5 @@ packs: null
 modules:
 - {name: csp, type: HARMONY, version: v3.20.0}
 - {name: core, type: HARMONY, version: v3.14.0}
-- {name: usb, type: HARMONY, version: v3.15.0-E1-14-gc859ee8}
+- {name: usb, type: HARMONY, version: v3.15.0}
 - {name: bsp, type: HARMONY, version: v3.21.1}

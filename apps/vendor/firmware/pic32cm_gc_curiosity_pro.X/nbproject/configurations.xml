@@ -284,7 +284,7 @@
       </toolsSet>
       <packs>
         <pack name="PIC32CM-GC00_DFP" vendor="Microchip" version="1.0.23"/>
-        <pack name="CMSIS" vendor="ARM" version="5.8.0"/>
+        <pack name="CMSIS" vendor="ARM" version="5.9.0"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>

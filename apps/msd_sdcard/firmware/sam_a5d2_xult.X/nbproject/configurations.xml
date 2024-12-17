@@ -376,7 +376,7 @@
       </toolsSet>
       <packs>
         <pack name="SAMA5D2_DFP" vendor="Microchip" version="1.11.228"/>
-        <pack name="CMSIS" vendor="ARM" version="5.8.0"/>
+        <pack name="CMSIS" vendor="ARM" version="5.9.0"/>
       </packs>
       <ScriptingSettings>
         <ScriptingSetting key="boot.load_adr" value=""/>

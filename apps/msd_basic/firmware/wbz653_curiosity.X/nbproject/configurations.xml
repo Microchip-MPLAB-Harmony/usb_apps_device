@@ -336,7 +336,7 @@
       </toolsSet>
       <packs>
         <pack name="PIC32CX-BZ6_DFP" vendor="Microchip" version="1.0.2"/>
-        <pack name="CMSIS" vendor="ARM" version="5.8.0"/>
+        <pack name="CMSIS" vendor="ARM" version="5.9.0"/>
       </packs>
       <ScriptingSettings>
         <ScriptingSetting key="configuration.header.zota_manufacture_code" value="0xFFFF"/>
