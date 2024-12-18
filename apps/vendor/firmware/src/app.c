@@ -61,7 +61,7 @@
 // Section: Global Data Definitions
 // *****************************************************************************
 // *****************************************************************************
-#if defined (__PIC32MZ__) || defined (__PIC32MX__) || defined(__PIC32CX1025SG41128__) || defined (_SAMD21J18A_H_) || defined (_SAME54P20A_H_) ||  defined (__PIC32MM__) ||  defined (_PIC32CM5164LE00100_H_) || defined (__PIC32CZ__) || defined (__PIC32CK2051GC01144__) || defined (_PIC32CM5112GC00100_H_)
+#if defined (__PIC32MZ__) || defined (__PIC32MX__) || defined(__PIC32CX1025SG41128__) || defined (_SAMD21J18A_H_) || defined (_SAME54P20A_H_) ||  defined (__PIC32MM__) ||  defined (_PIC32CM5164LE00100_H_) || defined (DRV_USBHS_DEVICE_SUPPORT) || defined (DRV_USBFS_DEVICE_SUPPORT)|| defined (__PIC32CK2051GC01144__) || defined (_PIC32CM5112GC00100_H_)
 #define APP_EP_BULK_OUT 1
 #define APP_EP_BULK_IN 1
 #else
