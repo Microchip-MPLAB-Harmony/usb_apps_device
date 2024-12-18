@@ -21,7 +21,7 @@ Pin Number,Pin ID,Custom Name,Function,Mode, Direction,Latch,Pull Up,Pull Down,O
 24,PA20,LED0,LED_AL,Digital,Out,High,,,No,FAST
 25,PA19,,Available,,,,,,No,FAST
 26,PB00,,Available,,,,,,No,FAST
-27,PB07,SWITCH,SWITCH_AL,Digital,In,n/a,No,No,No,FAST
+27,PB07,SWITCH,EIC_EXTINT8,Digital,In,n/a,Yes,No,No,FAST
 30,PB01,,Available,,,,,,No,FAST
 31,PB02,,Available,,,,,,No,FAST
 35,PB11,SW1,SWITCH_AL,Digital,In,n/a,No,No,No,FAST

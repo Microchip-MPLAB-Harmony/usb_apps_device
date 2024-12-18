@@ -53,10 +53,11 @@
 #include "peripheral/clock/plib_clock.h"
 #include "peripheral/nvic/plib_nvic.h"
 #include "peripheral/systick/plib_systick.h"
+#include "peripheral/pm/plib_pm.h"
 #include "usb/usb_chapter_9.h"
 #include "usb/usb_device.h"
-#include "peripheral/pm/plib_pm.h"
 #include "peripheral/sercom/usart/plib_sercom4_usart.h"
+#include "peripheral/eic/plib_eic.h"
 #include "bsp/bsp.h"
 #include "system/time/sys_time.h"
 #include "usb/usb_device_hid.h"
@@ -200,9 +201,9 @@ typedef struct
 {
     SYS_MODULE_OBJ  usbDevObject0;
 
+    SYS_MODULE_OBJ  sysTime;
     SYS_MODULE_OBJ  sysDebug;
 
-    SYS_MODULE_OBJ  sysTime;
     SYS_MODULE_OBJ  drvUSBFSV1Object;
 
     SYS_MODULE_OBJ  sysConsole0;

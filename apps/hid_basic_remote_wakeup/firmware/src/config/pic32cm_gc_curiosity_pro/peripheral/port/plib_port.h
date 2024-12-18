@@ -65,6 +65,10 @@
 // *****************************************************************************
 // *****************************************************************************
 
+/*** Macros for SWITCH pin ***/
+#define SWITCH_Get()               (((PORT_REGS->GROUP[1].PORT_IN >> 7U)) & 0x01U)
+#define SWITCH_PIN                  PORT_PIN_PB07
+
 /*** Macros for USB_VBUS_SENSE pin ***/
 #define USB_VBUS_SENSE_Set()               (PORT_REGS->GROUP[3].PORT_OUTSET = ((uint32_t)1U << 10U))
 #define USB_VBUS_SENSE_Clear()             (PORT_REGS->GROUP[3].PORT_OUTCLR = ((uint32_t)1U << 10U))
