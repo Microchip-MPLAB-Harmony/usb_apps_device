@@ -67,7 +67,7 @@ void vPortSVCHandler (void);
 void DebugMonitor_Handler (void);
 void xPortPendSVHandler (void);
 void xPortSysTickHandler (void);
-void USART1_InterruptHandler (void);
+void UART1_InterruptHandler (void);
 void DRV_USBHSV1_USBHS_Handler (void);
 
 

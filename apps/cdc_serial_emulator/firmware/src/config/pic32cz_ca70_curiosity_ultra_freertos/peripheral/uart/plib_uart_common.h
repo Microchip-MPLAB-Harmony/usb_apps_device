@@ -1,14 +1,14 @@
 /*******************************************************************************
-  USART PLIB
+  UART PLIB
 
   Company:
     Microchip Technology Inc.
 
   File Name:
-    plib_usart.h
+    plib_uart.h
 
   Summary:
-    USART PLIB Global Header File
+    UART PLIB Global Header File
 
   Description:
     None
@@ -38,13 +38,13 @@
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *******************************************************************************/
 
-#ifndef PLIB_USART_COMMON_H
-#define PLIB_USART_COMMON_H
+#ifndef PLIB_UART_COMMON_H
+#define PLIB_UART_COMMON_H
 
 #include <stddef.h>
 #include <stdbool.h>
 #include <stdint.h>
-#include "device.h"
+#include "device.h" //For UART_*_Msk
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
@@ -60,61 +60,39 @@
 // *****************************************************************************
 // *****************************************************************************
 
-#define   USART_ERROR_NONE  0U
-#define   USART_ERROR_OVERRUN  US_CSR_USART_OVRE_Msk
-#define   USART_ERROR_PARITY   US_CSR_USART_PARE_Msk
-#define   USART_ERROR_FRAMING  US_CSR_USART_FRAME_Msk
-typedef uint32_t USART_ERROR;
+
+#define     UART_ERROR_NONE         (0U)
+#define     UART_ERROR_OVERRUN      (UART_SR_OVRE_Msk)
+#define     UART_ERROR_PARITY       (UART_SR_PARE_Msk)
+#define     UART_ERROR_FRAMING      (UART_SR_FRAME_Msk)
+
+typedef uint32_t UART_ERROR;
 
 
-typedef enum
-{
-    USART_DATA_5_BIT = US_MR_USART_CHRL_5_BIT,
-    USART_DATA_6_BIT = US_MR_USART_CHRL_6_BIT,
-    USART_DATA_7_BIT = US_MR_USART_CHRL_7_BIT,
-    USART_DATA_8_BIT = US_MR_USART_CHRL_8_BIT,
-    USART_DATA_9_BIT = US_MR_USART_MODE9_Msk,
+#define    UART_PARITY_NONE      (UART_MR_PAR_NO)
 
-    /* Force the compiler to reserve 32-bit memory for each enum */
-    USART_DATA_INVALID = 0xFFFFFFFF
+#define    UART_PARITY_ODD       (UART_MR_PAR_ODD)
 
-} USART_DATA;
+#define    UART_PARITY_EVEN      (UART_MR_PAR_EVEN)
 
-typedef enum
-{
-    USART_PARITY_NONE = US_MR_USART_PAR_NO,
-    USART_PARITY_ODD = US_MR_USART_PAR_ODD,
-    USART_PARITY_EVEN = US_MR_USART_PAR_EVEN,
-    USART_PARITY_MARK = US_MR_USART_PAR_MARK,
-    USART_PARITY_SPACE = US_MR_USART_PAR_SPACE,
-    USART_PARITY_MULTIDROP = US_MR_USART_PAR_MULTIDROP,
+#define    UART_PARITY_MARK      (UART_MR_PAR_MARK)
 
-    /* Force the compiler to reserve 32-bit memory for each enum */
-    USART_PARITY_INVALID = 0xFFFFFFFF
+#define    UART_PARITY_SPACE     (UART_MR_PAR_SPACE)
 
-} USART_PARITY;
+/* Force the compiler to reserve 32-bit space for each enum */
+#define    UART_PARITY_INVALID   (0xFFFFFFFFU)
 
-typedef enum
-{
-    USART_STOP_1_BIT = US_MR_USART_NBSTOP_1_BIT,
-    USART_STOP_1_5_BIT = US_MR_USART_NBSTOP_1_5_BIT,
-    USART_STOP_2_BIT = US_MR_USART_NBSTOP_2_BIT,
-
-    /* Force the compiler to reserve 32-bit memory for each enum */
-    USART_STOP_INVALID = 0xFFFFFFFF
-
-} USART_STOP;
+typedef uint32_t UART_PARITY;
 
 typedef struct
 {
     uint32_t baudRate;
-    USART_PARITY parity;
-    USART_DATA dataWidth;
-    USART_STOP stopBits;
 
-} USART_SERIAL_SETUP;
+    UART_PARITY parity;
 
-typedef void (* USART_CALLBACK)( uintptr_t context );
+} UART_SERIAL_SETUP;
+
+typedef void (* UART_CALLBACK)( uintptr_t context );
 
 
 // *****************************************************************************
@@ -125,40 +103,38 @@ typedef void (* USART_CALLBACK)( uintptr_t context );
 
 typedef struct
 {
-    void *                  txBuffer;
+    uint8_t *               txBuffer;
     size_t                  txSize;
     size_t                  txProcessedSize;
-    USART_CALLBACK          txCallback;
+    UART_CALLBACK           txCallback;
     uintptr_t               txContext;
     bool                    txBusyStatus;
 
-    void *                  rxBuffer;
+    uint8_t *               rxBuffer;
     size_t                  rxSize;
     size_t                  rxProcessedSize;
-    USART_CALLBACK          rxCallback;
+    UART_CALLBACK           rxCallback;
     uintptr_t               rxContext;
     bool                    rxBusyStatus;
 
-    USART_ERROR             errorStatus;
-
-} USART_OBJECT ;
+} UART_OBJECT ;
 
 typedef enum
 {
     /* Threshold number of bytes are available in the receive ring buffer */
-    USART_EVENT_READ_THRESHOLD_REACHED = 0,
+    UART_EVENT_READ_THRESHOLD_REACHED = 0,
 
     /* Receive ring buffer is full. Application must read the data out to avoid missing data on the next RX interrupt. */
-    USART_EVENT_READ_BUFFER_FULL,
+    UART_EVENT_READ_BUFFER_FULL,
 
-    /* USART error. Application must call the USARTx_ErrorGet API to get the type of error and clear the error. */
-    USART_EVENT_READ_ERROR,
+    /* USART error. Application must call the UARTx_ErrorGet API to get the type of error and clear the error. */
+    UART_EVENT_READ_ERROR,
 
     /* Threshold number of free space is available in the transmit ring buffer */
-    USART_EVENT_WRITE_THRESHOLD_REACHED,
-}USART_EVENT;
+    UART_EVENT_WRITE_THRESHOLD_REACHED,
+}UART_EVENT;
 
-typedef void (* USART_RING_BUFFER_CALLBACK)(USART_EVENT event, uintptr_t context );
+typedef void (* UART_RING_BUFFER_CALLBACK)(UART_EVENT event, uintptr_t context );
 
 
 // *****************************************************************************
@@ -169,41 +145,35 @@ typedef void (* USART_RING_BUFFER_CALLBACK)(USART_EVENT event, uintptr_t context
 
 typedef struct
 {
-    USART_RING_BUFFER_CALLBACK                          wrCallback;
+    UART_RING_BUFFER_CALLBACK                           wrCallback;
 
-    uintptr_t                                           wrContext;
+    uintptr_t                               			wrContext;
 
-    uint32_t                                            wrInIndex;
+    uint32_t                       			            wrInIndex;
 
-    uint32_t                                            wrOutIndex;
+    uint32_t                       			            wrOutIndex;
 
-    uint32_t                                            wrBufferSize;
+    bool                                    			isWrNotificationEnabled;
 
-    bool                                                isWrNotificationEnabled;
+    uint32_t                                			wrThreshold;
 
-    uint32_t                                            wrThreshold;
+    bool                                    			isWrNotifyPersistently;
 
-    bool                                                isWrNotifyPersistently;
+    UART_RING_BUFFER_CALLBACK                  			rdCallback;
 
-    USART_RING_BUFFER_CALLBACK                          rdCallback;
+    uintptr_t                               			rdContext;
 
-    uintptr_t                                           rdContext;
+    uint32_t                       			            rdInIndex;
 
-    uint32_t                                            rdInIndex;
+    uint32_t                       			            rdOutIndex;
 
-    uint32_t                                            rdOutIndex;
+    bool                                    			isRdNotificationEnabled;
 
-    uint32_t                                            rdBufferSize;
+    uint32_t                                			rdThreshold;
 
-    bool                                                isRdNotificationEnabled;
+    bool                                    			isRdNotifyPersistently;
 
-    uint32_t                                            rdThreshold;
-
-    bool                                                isRdNotifyPersistently;
-
-    USART_ERROR                                         errorStatus;
-
-} USART_RING_BUFFER_OBJECT;
+} UART_RING_BUFFER_OBJECT;
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
@@ -212,4 +182,4 @@ typedef struct
 
 #endif
 // DOM-IGNORE-END
-#endif // PLIB_USART_COMMON_H
+#endif // PLIB_UART_COMMON_H

@@ -59,7 +59,7 @@
 69,PD18,,Available,In,,,,,,,
 70,PA27,,Available,In,,,,,,,
 71,PD28,,Available,In,,,,,,,
-73,PA5,,Available,In,,,,,,,
+73,PA5,,UART1_URXD1,n/a,n/a,No,Disabled,No,No,Disabled,Low
 74,PD17,,Available,In,,,,,,,
 75,PA9,SW1,SWITCH_AL,n/a,n/a,No,Disabled,Yes,No,Disabled,Low
 76,PC28,,Available,In,,,,,,,
@@ -92,7 +92,7 @@
 111,PC18,,Available,In,,,,,,,
 112,PA28,,Available,In,,,,,,,
 113,PD8,,Available,In,,,,,,,
-114,PA6,,Available,In,,,,,,,
+114,PA6,,UART1_UTXD1,n/a,n/a,No,Disabled,No,No,Disabled,Low
 116,PA30,,Available,In,,,,,,,
 117,PC19,,Available,In,,,,,,,
 118,PA31,,Available,In,,,,,,,

@@ -78,22 +78,22 @@ static DRV_USART_CLIENT_OBJ drvUSART0ClientObjPool[DRV_USART_CLIENTS_NUMBER_IDX0
 static DRV_USART_BUFFER_OBJ drvUSART0BufferObjPool[DRV_USART_QUEUE_SIZE_IDX0];
 
 static const DRV_USART_PLIB_INTERFACE drvUsart0PlibAPI = {
-    .readCallbackRegister = (DRV_USART_PLIB_READ_CALLBACK_REG)USART1_ReadCallbackRegister,
-    .read_t = (DRV_USART_PLIB_READ)USART1_Read,
-    .readIsBusy = (DRV_USART_PLIB_READ_IS_BUSY)USART1_ReadIsBusy,
-    .readCountGet = (DRV_USART_PLIB_READ_COUNT_GET)USART1_ReadCountGet,
-    .readAbort = (DRV_USART_PLIB_READ_ABORT)USART1_ReadAbort,
-    .writeCallbackRegister = (DRV_USART_PLIB_WRITE_CALLBACK_REG)USART1_WriteCallbackRegister,
-    .write_t = (DRV_USART_PLIB_WRITE)USART1_Write,
-    .writeIsBusy = (DRV_USART_PLIB_WRITE_IS_BUSY)USART1_WriteIsBusy,
-    .writeCountGet = (DRV_USART_PLIB_WRITE_COUNT_GET)USART1_WriteCountGet,
-    .errorGet = (DRV_USART_PLIB_ERROR_GET)USART1_ErrorGet,
-    .serialSetup = (DRV_USART_PLIB_SERIAL_SETUP)USART1_SerialSetup
+    .readCallbackRegister = (DRV_USART_PLIB_READ_CALLBACK_REG)UART1_ReadCallbackRegister,
+    .read_t = (DRV_USART_PLIB_READ)UART1_Read,
+    .readIsBusy = (DRV_USART_PLIB_READ_IS_BUSY)UART1_ReadIsBusy,
+    .readCountGet = (DRV_USART_PLIB_READ_COUNT_GET)UART1_ReadCountGet,
+    .readAbort = (DRV_USART_PLIB_READ_ABORT)UART1_ReadAbort,
+    .writeCallbackRegister = (DRV_USART_PLIB_WRITE_CALLBACK_REG)UART1_WriteCallbackRegister,
+    .write_t = (DRV_USART_PLIB_WRITE)UART1_Write,
+    .writeIsBusy = (DRV_USART_PLIB_WRITE_IS_BUSY)UART1_WriteIsBusy,
+    .writeCountGet = (DRV_USART_PLIB_WRITE_COUNT_GET)UART1_WriteCountGet,
+    .errorGet = (DRV_USART_PLIB_ERROR_GET)UART1_ErrorGet,
+    .serialSetup = (DRV_USART_PLIB_SERIAL_SETUP)UART1_SerialSetup
 };
 
-static const uint32_t drvUsart0remapDataWidth[] = { 0x0, 0x40, 0x80, 0xC0, 0x20000 };
-static const uint32_t drvUsart0remapParity[] = { 0x800, 0x0, 0x200, 0x600, 0x400, 0xC00 };
-static const uint32_t drvUsart0remapStopBits[] = { 0x0, 0x1000, 0x2000 };
+static const uint32_t drvUsart0remapDataWidth[] = { 0xFFFFFFFFU, 0xFFFFFFFFU, 0xFFFFFFFFU, 0x0, 0xFFFFFFFFU };
+static const uint32_t drvUsart0remapParity[] = { 0x800, 0x0, 0x200, 0x600, 0x400, 0xFFFFFFFFU };
+static const uint32_t drvUsart0remapStopBits[] = { 0x0, 0xFFFFFFFFU, 0xFFFFFFFFU };
 static const uint32_t drvUsart0remapError[] = { 0x20, 0x80, 0x40 };
 
 static const DRV_USART_INTERRUPT_SOURCES drvUSART0InterruptSources =
@@ -102,7 +102,7 @@ static const DRV_USART_INTERRUPT_SOURCES drvUSART0InterruptSources =
     .isSingleIntSrc                        = true,
 
     /* Peripheral interrupt line */
-    .intSources.usartInterrupt             = (int32_t)USART1_IRQn,
+    .intSources.usartInterrupt             = (int32_t)UART1_IRQn,
 };
 
 static const DRV_USART_INIT drvUsart0InitData =
@@ -257,7 +257,7 @@ void SYS_Initialize ( void* data )
 	WDT_REGS->WDT_MR = WDT_MR_WDDIS_Msk; 		// Disable WDT 
 
 	BSP_Initialize();
-    USART1_Initialize();
+	UART1_Initialize();
 
 
     /* MISRAC 2012 deviation block start */

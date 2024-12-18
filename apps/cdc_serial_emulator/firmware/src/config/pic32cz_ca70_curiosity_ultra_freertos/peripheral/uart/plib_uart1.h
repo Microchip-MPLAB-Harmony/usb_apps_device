@@ -1,14 +1,14 @@
 /*******************************************************************************
-  USART1 PLIB
+  UART1 PLIB
 
   Company:
     Microchip Technology Inc.
 
   File Name:
-    plib_usart1.h
+    plib_uart1.h
 
   Summary:
-    USART1 PLIB Header File
+    UART1 PLIB Header File
 
   Description:
     None
@@ -38,10 +38,10 @@
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *******************************************************************************/
 
-#ifndef PLIB_USART1_H
-#define PLIB_USART1_H
+#ifndef PLIB_UART1_H
+#define PLIB_UART1_H
 
-#include "plib_usart_common.h"
+#include "plib_uart_common.h"
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
@@ -57,36 +57,36 @@
 // *****************************************************************************
 // *****************************************************************************
 
-#define USART1_FrequencyGet()    (uint32_t)(150000000UL)
+#define UART1_FrequencyGet()    (uint32_t)(150000000UL)
 
-/****************************** USART1 API *********************************/
+/****************************** UART1 API *********************************/
 
-void USART1_Initialize( void );
+void UART1_Initialize( void );
 
-USART_ERROR USART1_ErrorGet( void );
+UART_ERROR UART1_ErrorGet( void );
 
-bool USART1_SerialSetup( USART_SERIAL_SETUP *setup, uint32_t srcClkFreq );
+bool UART1_SerialSetup( UART_SERIAL_SETUP *setup, uint32_t srcClkFreq );
 
-bool USART1_Write( void *buffer, const size_t size );
+bool UART1_Write( void *buffer, const size_t size );
 
-bool USART1_Read( void *buffer, const size_t size );
+bool UART1_Read( void *buffer, const size_t size );
 
-bool USART1_WriteIsBusy( void );
+bool UART1_WriteIsBusy( void );
 
-bool USART1_ReadIsBusy( void );
+bool UART1_ReadIsBusy( void );
 
-size_t USART1_WriteCountGet( void );
+size_t UART1_WriteCountGet( void );
 
-size_t USART1_ReadCountGet( void );
+size_t UART1_ReadCountGet( void );
 
-bool USART1_ReadAbort(void);
+bool UART1_ReadAbort(void);
 
-void USART1_WriteCallbackRegister( USART_CALLBACK callback, uintptr_t context );
+void UART1_WriteCallbackRegister( UART_CALLBACK callback, uintptr_t context );
 
-void USART1_ReadCallbackRegister( USART_CALLBACK callback, uintptr_t context );
+void UART1_ReadCallbackRegister( UART_CALLBACK callback, uintptr_t context );
 
 
-bool USART1_TransmitComplete( void );
+bool UART1_TransmitComplete( void );
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
@@ -96,4 +96,4 @@ bool USART1_TransmitComplete( void );
 #endif
 
 // DOM-IGNORE-END
-#endif // PLIB_USART1_H
+#endif // PLIB_UART1_H

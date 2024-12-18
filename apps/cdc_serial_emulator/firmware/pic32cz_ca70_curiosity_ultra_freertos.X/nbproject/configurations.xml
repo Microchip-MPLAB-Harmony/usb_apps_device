@@ -1,9 +1,13 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <configurationDescriptor version="65">
   <logicalFolder name="root" displayName="root" projectFiles="true">
-    <logicalFolder name="HeaderFiles" displayName="Header Files" projectFiles="true">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
       <logicalFolder name="config" displayName="config" projectFiles="true">
-        <logicalFolder name="pic32cz_ca70_curiosity_ultra_freertos" displayName="pic32cz_ca70_curiosity_ultra_freertos" projectFiles="true">
+        <logicalFolder name="pic32cz_ca70_curiosity_ultra_freertos"
+                       displayName="pic32cz_ca70_curiosity_ultra_freertos"
+                       projectFiles="true">
           <logicalFolder name="bsp" displayName="bsp" projectFiles="true">
             <itemPath>../src/config/pic32cz_ca70_curiosity_ultra_freertos/bsp/bsp.h</itemPath>
           </logicalFolder>
@@ -45,9 +49,9 @@
             <logicalFolder name="pio" displayName="pio" projectFiles="true">
               <itemPath>../src/config/pic32cz_ca70_curiosity_ultra_freertos/peripheral/pio/plib_pio.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="usart" displayName="usart" projectFiles="true">
-              <itemPath>../src/config/pic32cz_ca70_curiosity_ultra_freertos/peripheral/usart/plib_usart1.h</itemPath>
-              <itemPath>../src/config/pic32cz_ca70_curiosity_ultra_freertos/peripheral/usart/plib_usart_common.h</itemPath>
+            <logicalFolder name="uart" displayName="uart" projectFiles="true">
+              <itemPath>../src/config/pic32cz_ca70_curiosity_ultra_freertos/peripheral/uart/plib_uart1.h</itemPath>
+              <itemPath>../src/config/pic32cz_ca70_curiosity_ultra_freertos/peripheral/uart/plib_uart_common.h</itemPath>
             </logicalFolder>
           </logicalFolder>
           <logicalFolder name="system" displayName="system" projectFiles="true">
@@ -146,7 +150,9 @@
             </logicalFolder>
           </logicalFolder>
         </logicalFolder>
-        <logicalFolder name="PIC32CZ2051CA70144_DFP" displayName="PIC32CZ2051CA70144_DFP" projectFiles="true">
+        <logicalFolder name="PIC32CZ2051CA70144_DFP"
+                       displayName="PIC32CZ2051CA70144_DFP"
+                       projectFiles="true">
           <logicalFolder name="component" displayName="component" projectFiles="true">
             <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/component/tc.h</itemPath>
             <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/component/gpbr.h</itemPath>
@@ -253,20 +259,30 @@
       </logicalFolder>
       <itemPath>../src/app.h</itemPath>
     </logicalFolder>
-    <logicalFolder name="ExternalFiles" displayName="Important Files" projectFiles="true">
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="true">
       <itemPath>Makefile</itemPath>
       <itemPath>cdc_serial_emulator_pic32cz_ca70_curiosity_ultra_freertos.mc3</itemPath>
     </logicalFolder>
-    <logicalFolder name="LinkerScript" displayName="Linker Files" projectFiles="true">
+    <logicalFolder name="LinkerScript"
+                   displayName="Linker Files"
+                   projectFiles="true">
       <logicalFolder name="config" displayName="config" projectFiles="true">
-        <logicalFolder name="pic32cz_ca70_curiosity_ultra_freertos" displayName="pic32cz_ca70_curiosity_ultra_freertos" projectFiles="true">
+        <logicalFolder name="pic32cz_ca70_curiosity_ultra_freertos"
+                       displayName="pic32cz_ca70_curiosity_ultra_freertos"
+                       projectFiles="true">
           <itemPath>../src/config/pic32cz_ca70_curiosity_ultra_freertos/PIC32CZ2051CA70144.ld</itemPath>
         </logicalFolder>
       </logicalFolder>
     </logicalFolder>
-    <logicalFolder name="SourceFiles" displayName="Source Files" projectFiles="true">
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
       <logicalFolder name="config" displayName="config" projectFiles="true">
-        <logicalFolder name="pic32cz_ca70_curiosity_ultra_freertos" displayName="pic32cz_ca70_curiosity_ultra_freertos" projectFiles="true">
+        <logicalFolder name="pic32cz_ca70_curiosity_ultra_freertos"
+                       displayName="pic32cz_ca70_curiosity_ultra_freertos"
+                       projectFiles="true">
           <logicalFolder name="bsp" displayName="bsp" projectFiles="true">
             <itemPath>../src/config/pic32cz_ca70_curiosity_ultra_freertos/bsp/bsp.c</itemPath>
           </logicalFolder>
@@ -299,8 +315,8 @@
             <logicalFolder name="pio" displayName="pio" projectFiles="true">
               <itemPath>../src/config/pic32cz_ca70_curiosity_ultra_freertos/peripheral/pio/plib_pio.c</itemPath>
             </logicalFolder>
-            <logicalFolder name="usart" displayName="usart" projectFiles="true">
-              <itemPath>../src/config/pic32cz_ca70_curiosity_ultra_freertos/peripheral/usart/plib_usart1.c</itemPath>
+            <logicalFolder name="uart" displayName="uart" projectFiles="true">
+              <itemPath>../src/config/pic32cz_ca70_curiosity_ultra_freertos/peripheral/uart/plib_uart1.c</itemPath>
             </logicalFolder>
           </logicalFolder>
           <logicalFolder name="stdio" displayName="stdio" projectFiles="true">
@@ -365,9 +381,9 @@
       <toolsSet>
         <developmentServer>localhost</developmentServer>
         <targetDevice>PIC32CZ2051CA70144</targetDevice>
-        <targetHeader/>
-        <targetPluginBoard/>
-        <platformTool>noID</platformTool>
+        <targetHeader></targetHeader>
+        <targetPluginBoard></targetPluginBoard>
+        <platformTool>pkob4hybrid</platformTool>
         <languageToolchain>XC32</languageToolchain>
         <languageToolchainVersion>4.45</languageToolchainVersion>
         <platform>3</platform>
@@ -388,7 +404,7 @@
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
           <parseOnProdLoad>false</parseOnProdLoad>
-          <alternateLoadableFile/>
+          <alternateLoadableFile></alternateLoadableFile>
         </loading>
         <subordinates>
         </subordinates>
@@ -396,9 +412,9 @@
       <makeCustomizationType>
         <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
         <makeUseCleanTarget>false</makeUseCleanTarget>
-        <makeCustomizationPreStep/>
+        <makeCustomizationPreStep></makeCustomizationPreStep>
         <makeCustomizationPostStepEnabled>false</makeCustomizationPostStepEnabled>
-        <makeCustomizationPostStep/>
+        <makeCustomizationPostStep></makeCustomizationPostStep>
         <makeCustomizationPutChecksumInUserID>false</makeCustomizationPutChecksumInUserID>
         <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
@@ -406,12 +422,14 @@
       <C32>
         <property key="additional-warnings" value="true"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="enable-app-io" value="false"/>
         <property key="enable-omit-frame-pointer" value="false"/>
         <property key="enable-symbols" value="true"/>
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
-        <property key="extra-include-directories" value="../src;../src/config/default;../src/config/pic32cz_ca70_curiosity_ultra_freertos;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/PIC32CZ2051CA70144_DFP;../src/third_party/rtos/FreeRTOS/Source/include;../src/third_party/rtos/FreeRTOS/Source/portable/GCC/SAM/CM7"/>
+        <property key="extra-include-directories"
+                  value="../src;../src/config/default;../src/config/pic32cz_ca70_curiosity_ultra_freertos;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/PIC32CZ2051CA70144_DFP;../src/third_party/rtos/FreeRTOS/Source/include;../src/third_party/rtos/FreeRTOS/Source/portable/GCC/SAM/CM7"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -461,6 +479,7 @@
         <property key="additional-options-use-response-files" value="false"/>
         <property key="additional-options-write-sla" value="false"/>
         <property key="allocate-dinit" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="code-dinit" value="false"/>
         <property key="ebase-addr" value=""/>
         <property key="enable-check-sections" value="false"/>
@@ -500,6 +519,7 @@
       <C32CPP>
         <property key="additional-warnings" value="false"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="check-new" value="false"/>
         <property key="eh-specs" value="true"/>
         <property key="enable-app-io" value="false"/>
@@ -508,7 +528,8 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
-        <property key="extra-include-directories" value="../src;../src/config/default;../src/config/pic32cz_ca70_curiosity_ultra_freertos;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/PIC32CZ2051CA70144_DFP;../src/third_party/rtos/FreeRTOS/Source/include;../src/third_party/rtos/FreeRTOS/Source/portable/GCC/SAM/CM7"/>
+        <property key="extra-include-directories"
+                  value="../src;../src/config/default;../src/config/pic32cz_ca70_curiosity_ultra_freertos;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/PIC32CZ2051CA70144_DFP;../src/third_party/rtos/FreeRTOS/Source/include;../src/third_party/rtos/FreeRTOS/Source/portable/GCC/SAM/CM7"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -527,6 +548,7 @@
         <property key="use-indirect-calls" value="false"/>
       </C32CPP>
       <C32Global>
+        <property key="appendMe" value=""/>
         <property key="common-include-directories" value=""/>
         <property key="gp-relative-option" value=""/>
         <property key="legacy-libc" value="false"/>

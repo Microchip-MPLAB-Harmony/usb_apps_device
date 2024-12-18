@@ -64,7 +64,7 @@ void MemoryManagement_Handler (void);
 void BusFault_Handler (void);
 void UsageFault_Handler (void);
 void DebugMonitor_Handler (void);
-void USART1_InterruptHandler (void);
+void UART1_InterruptHandler (void);
 void DRV_USBHSV1_USBHS_Handler (void);
 
 
