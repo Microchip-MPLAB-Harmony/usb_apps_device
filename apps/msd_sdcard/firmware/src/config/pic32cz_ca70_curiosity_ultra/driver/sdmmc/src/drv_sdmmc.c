@@ -714,10 +714,6 @@ static uint8_t lDRV_SDMMC_SDIO_CISP_Get(
                 status = DRV_SDMMC_COMMAND_STATUS_SUCCESS;
             }
         }
-        else
-        {
-            status = DRV_SDMMC_COMMAND_STATUS_ERROR;
-        }
     }
 
     if (status != DRV_SDMMC_COMMAND_STATUS_IN_PROGRESS)
@@ -835,10 +831,6 @@ static uint8_t lDRV_SDMMC_SDIO_CIS_Tuple_Rd(
                 break;
             }
         }
-        else
-        {
-            status = DRV_SDMMC_COMMAND_STATUS_ERROR;
-        }
     }
 
     if (status != DRV_SDMMC_COMMAND_STATUS_IN_PROGRESS)
@@ -866,8 +858,7 @@ static uint8_t lDRV_SDMMC_SDIO_ReadBlkSize(
 
     if (isCispRead == false)
     {
-        status = lDRV_SDMMC_SDIO_CISP_Get(dObj, fn, (uint8_t*)&cisp);
-        if (status == DRV_SDMMC_COMMAND_STATUS_SUCCESS)
+        if (lDRV_SDMMC_SDIO_CISP_Get(dObj, fn, (uint8_t*)&cisp) == DRV_SDMMC_COMMAND_STATUS_SUCCESS)
         {
             isCispRead = true;
         }
@@ -1551,10 +1542,6 @@ static uint8_t lDRV_SDMMC_SendOPCond_CMD1(DRV_SDMMC_OBJ* dObj)
                             status = DRV_SDMMC_COMMAND_STATUS_ERROR;
                         }
                     }
-                }
-                else
-                {
-                    status = DRV_SDMMC_COMMAND_STATUS_ERROR;
                 }
             }
 
@@ -3767,7 +3754,7 @@ void DRV_SDMMC_Tasks( SYS_MODULE_OBJ object )
     DRV_SDMMC_CLIENT_OBJ* clientObj = NULL;
     DRV_SDMMC_BUFFER_OBJ* currentBufObj = NULL;
     DRV_SDMMC_EVENT evtStatus = DRV_SDMMC_EVENT_COMMAND_COMPLETE;
-    uint32_t response = 0;    
+    uint32_t response = 0;
     static bool cardAttached = true;
 
     dObj = &gDrvSDMMCObj[object];
