@@ -77,7 +77,9 @@ USART_ERROR APP_SAME54_XPRO_USARTErrorGet(void);
 uint16_t APP_SAME54_XPRO_Timer16bitCounterGet(void); 
 void APP_SAME54_XPRO_Timer16bitCounterSet(uint16_t countVal);
 void APP_SAME54_XPRO_TimerStart(void);
-
+volatile uint32_t * APP_SAME54_XPRO_USARTDataGet ( void );
+void APP_SAME54_XPRO_RTSSet(void);
+void APP_SAME54_XPRO_RTSClear(void);
 
 
 #endif /* _APP_H */

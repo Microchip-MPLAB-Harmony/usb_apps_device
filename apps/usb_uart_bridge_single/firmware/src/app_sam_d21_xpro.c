@@ -58,7 +58,10 @@ APP_USART_INTERFACE appUSARTInterface =
     .dmaChannelEnable = APP_SAMD21_XPRO_DmaInterruptEnable,
     .frequencyGet = APP_SAMD21_XPRO_USARTFrequencyGet,
     .serialSetup = APP_SAMD21_XPRO_USARTSetup,
-    .errorGet = APP_SAMD21_XPRO_USARTErrorGet
+    .errorGet = APP_SAMD21_XPRO_USARTErrorGet,
+    .DataGet = APP_SAMD21_XPRO_USARTDataGet,
+    .RTSSet = APP_SAMD21_XPRO_RTSSet,
+    .RTSClear = APP_SAMD21_XPRO_RTSClear
 };
 
 APP_TC_INTERFACE appTCInterface =
@@ -78,6 +81,15 @@ APP_TC_INTERFACE appTCInterface =
 sercom_registers_t * APP_SAMD21_XPRO_USARTAddressGet ( void )
 {
      return SERCOM1_REGS;   
+}
+/*******************************************************************************
+ * This function return SERCOM registers. 
+ ******************************************************************************/
+volatile uint32_t * APP_SAMD21_XPRO_USARTDataGet ( void )
+{
+    volatile uint32_t* data; 
+    data = (uint32_t*)&SERCOM1_REGS->USART_INT.SERCOM_DATA;
+    return data;   
 }
 
 
@@ -140,6 +152,20 @@ void APP_SAMD21_XPRO_Timer16bitCounterSet(uint16_t countVal)
 void APP_SAMD21_XPRO_TimerStart(void)
 {
 	TC3_TimerStart();
+}
+/*******************************************************************************
+ * This function Sets the RTS. 
+ ******************************************************************************/
+void APP_SAMD21_XPRO_RTSSet(void)
+{
+    U1RTS_Set();
+}
+/*******************************************************************************
+ * This function Clears the RTS. 
+ ******************************************************************************/
+void APP_SAMD21_XPRO_RTSClear(void)
+{
+    U1RTS_Clear();
 }
 /*******************************************************************************
  End of File

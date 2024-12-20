@@ -58,7 +58,10 @@ APP_USART_INTERFACE appUSARTInterface =
     .dmaChannelEnable = APP_SAME54_XPRO_DmaInterruptEnable,
     .frequencyGet = APP_SAME54_XPRO_USARTFrequencyGet,
     .serialSetup = APP_SAME54_XPRO_USARTSetup,
-    .errorGet = APP_SAME54_XPRO_USARTErrorGet
+    .errorGet = APP_SAME54_XPRO_USARTErrorGet,
+    .DataGet = APP_SAME54_XPRO_USARTDataGet,
+    .RTSSet = APP_SAME54_XPRO_RTSSet,
+    .RTSClear = APP_SAME54_XPRO_RTSClear
 };
 
 APP_TC_INTERFACE appTCInterface =
@@ -79,7 +82,14 @@ sercom_registers_t * APP_SAME54_XPRO_USARTAddressGet ( void )
 {
      return SERCOM0_REGS;   
 }
-
+/*******************************************************************************
+ * This function return SERCOM registers. 
+ ******************************************************************************/
+volatile uint32_t * APP_SAME54_XPRO_USARTDataGet ( void )
+{
+    volatile uint32_t* data = (uint32_t*)&SERCOM0_REGS->USART_INT.SERCOM_DATA;
+    return data;   
+}
 
 /*******************************************************************************
  * This function disables the DMA Interrupts. 
@@ -142,6 +152,20 @@ void APP_SAME54_XPRO_Timer16bitCounterSet(uint16_t countVal)
 void APP_SAME54_XPRO_TimerStart(void)
 {
 	TC3_TimerStart();
+}
+/*******************************************************************************
+ * This function Sets the RTS. 
+ ******************************************************************************/
+void APP_SAME54_XPRO_RTSSet(void)
+{
+    U1RTS_Set();
+}
+/*******************************************************************************
+ * This function Clears the RTS. 
+ ******************************************************************************/
+void APP_SAME54_XPRO_RTSClear(void)
+{
+    U1RTS_Clear();
 }
 /*******************************************************************************
  End of File

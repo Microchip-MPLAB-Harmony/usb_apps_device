@@ -77,9 +77,9 @@ USART_ERROR APP_SAMD21_XPRO_USARTErrorGet(void);
 uint16_t APP_SAMD21_XPRO_Timer16bitCounterGet(void); 
 void APP_SAMD21_XPRO_Timer16bitCounterSet(uint16_t countVal);
 void APP_SAMD21_XPRO_TimerStart(void);
-
-
-
+void APP_SAMD21_XPRO_RTSSet(void);
+void APP_SAMD21_XPRO_RTSClear(void);
+volatile uint32_t * APP_SAMD21_XPRO_USARTDataGet ( void );
 #endif /* _APP_H */
 
 //DOM-IGNORE-BEGIN
