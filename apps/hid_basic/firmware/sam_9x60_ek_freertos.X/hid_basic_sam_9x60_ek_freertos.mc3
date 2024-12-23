@@ -3472,7 +3472,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\definitions.h</file>
-         <hash>2e94bd50c3b96c05a01ba8add082220ad0eb6930d62a65e8d8757aca5bba67b9</hash>
+         <hash>2e8252503d865d71375c2ff2838cd038689e82a659c162880e8edfaf1ebc3295</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\device.h</file>
@@ -3504,7 +3504,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\driver\usb\udphs\src\drv_usb_udphs_device.c</file>
-         <hash>994e97c805951f6bc28388b89e70cd0ca06764d78bdb7280686f6f9630cb65b5</hash>
+         <hash>82e7765f01e7c1a4f8bb5ed858d39fdac749b0965f7f5bb28cbf9674843112c6</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\driver\usb\udphs\src\drv_usb_udphs_local.h</file>
