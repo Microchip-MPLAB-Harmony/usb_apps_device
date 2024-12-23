@@ -3260,7 +3260,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\definitions.h</file>
-         <hash>2efbc984534436a06575249875d4bb9283f0f4c9bdcff460a7c344f9336fde29</hash>
+         <hash>58a574fcad9940b3da1fb67a7eaf3de4e74bc0636ab300144c52383e3900cc95</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\device.h</file>
@@ -3292,7 +3292,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\driver\usb\udphs\src\drv_usb_udphs_device.c</file>
-         <hash>994e97c805951f6bc28388b89e70cd0ca06764d78bdb7280686f6f9630cb65b5</hash>
+         <hash>82e7765f01e7c1a4f8bb5ed858d39fdac749b0965f7f5bb28cbf9674843112c6</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\driver\usb\udphs\src\drv_usb_udphs_local.h</file>
