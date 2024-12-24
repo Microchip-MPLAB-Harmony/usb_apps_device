@@ -34,9 +34,7 @@ To view the documentation offline, follow these steps:
  
 ____
 
-[![License](https://img.shields.io/badge/license-Harmony%20license-orange.svg)](https://github.com/Microchip-MPLAB-Harmony/usb_apps_device/blob/master/mplab_harmony_license.md)
-[![Latest release](https://img.shields.io/github/release/Microchip-MPLAB-Harmony/usb_apps_device.svg)](https://github.com/Microchip-MPLAB-Harmony/usb_apps_device/releases/latest)
-[![Latest release date](https://img.shields.io/github/release-date/Microchip-MPLAB-Harmony/usb_apps_device.svg)](https://github.com/Microchip-MPLAB-Harmony/usb_apps_device/releases/latest)
+[![License](https://img.shields.io/badge/license-Harmony%20license-orange.svg)](https://github.com/Microchip-MPLAB-Harmony/usb_apps_device/blob/master/Microchip_SLA001.md)
 [![Commit activity](https://img.shields.io/github/commit-activity/y/Microchip-MPLAB-Harmony/usb_apps_device.svg)](https://github.com/Microchip-MPLAB-Harmony/usb_apps_device/graphs/commit-activity)
 [![Contributors](https://img.shields.io/github/contributors-anon/Microchip-MPLAB-Harmony/usb_apps_device.svg)](https://github.com/Microchip-MPLAB-Harmony/usb_apps_device/graphs/contributors)
 
