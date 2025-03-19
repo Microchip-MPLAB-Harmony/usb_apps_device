@@ -1,7 +1,9 @@
 /*
  * Component description for SDMMC
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -452,6 +454,13 @@
 #define SDMMC_NISTR_EMMC_CMDC_Pos             _UINT16_(0)                                          /* (SDMMC_NISTR) Command Complete Position */
 #define SDMMC_NISTR_EMMC_CMDC_Msk             (_UINT16_(0x1) << SDMMC_NISTR_EMMC_CMDC_Pos)         /* (SDMMC_NISTR) Command Complete Mask */
 #define SDMMC_NISTR_EMMC_CMDC(value)          (SDMMC_NISTR_EMMC_CMDC_Msk & (_UINT16_(value) << SDMMC_NISTR_EMMC_CMDC_Pos))
+#define SDMMC_NISTR_EMMC_TRFC_Pos             _UINT16_(1)                                          /* (SDMMC_NISTR) Transfer Complete Position */
+#define SDMMC_NISTR_EMMC_TRFC_Msk             (_UINT16_(0x1) << SDMMC_NISTR_EMMC_TRFC_Pos)         /* (SDMMC_NISTR) Transfer Complete Mask */
+#define SDMMC_NISTR_EMMC_TRFC(value)          (SDMMC_NISTR_EMMC_TRFC_Msk & (_UINT16_(value) << SDMMC_NISTR_EMMC_TRFC_Pos))
+#define   SDMMC_NISTR_EMMC_TRFC_0_Val         _UINT16_(0x0)                                        /* (SDMMC_NISTR) Command execution is not complete.  */
+#define   SDMMC_NISTR_EMMC_TRFC_1_Val         _UINT16_(0x1)                                        /* (SDMMC_NISTR) Command execution is complete.  */
+#define SDMMC_NISTR_EMMC_TRFC_0               (SDMMC_NISTR_EMMC_TRFC_0_Val << SDMMC_NISTR_EMMC_TRFC_Pos) /* (SDMMC_NISTR) Command execution is not complete. Position */
+#define SDMMC_NISTR_EMMC_TRFC_1               (SDMMC_NISTR_EMMC_TRFC_1_Val << SDMMC_NISTR_EMMC_TRFC_Pos) /* (SDMMC_NISTR) Command execution is complete. Position */
 #define SDMMC_NISTR_EMMC_BLKGE_Pos            _UINT16_(2)                                          /* (SDMMC_NISTR) Block Gap Event Position */
 #define SDMMC_NISTR_EMMC_BLKGE_Msk            (_UINT16_(0x1) << SDMMC_NISTR_EMMC_BLKGE_Pos)        /* (SDMMC_NISTR) Block Gap Event Mask */
 #define SDMMC_NISTR_EMMC_BLKGE(value)         (SDMMC_NISTR_EMMC_BLKGE_Msk & (_UINT16_(value) << SDMMC_NISTR_EMMC_BLKGE_Pos))
@@ -490,7 +499,7 @@
 #define   SDMMC_NISTR_EMMC_ERRINT_1_Val       _UINT16_(0x1)                                        /* (SDMMC_NISTR) Error.  */
 #define SDMMC_NISTR_EMMC_ERRINT_0             (SDMMC_NISTR_EMMC_ERRINT_0_Val << SDMMC_NISTR_EMMC_ERRINT_Pos) /* (SDMMC_NISTR) No error. Position */
 #define SDMMC_NISTR_EMMC_ERRINT_1             (SDMMC_NISTR_EMMC_ERRINT_1_Val << SDMMC_NISTR_EMMC_ERRINT_Pos) /* (SDMMC_NISTR) Error. Position */
-#define SDMMC_NISTR_EMMC_Msk                  _UINT16_(0xC03D)                                     /* (SDMMC_NISTR_EMMC) Register Mask  */
+#define SDMMC_NISTR_EMMC_Msk                  _UINT16_(0xC03F)                                     /* (SDMMC_NISTR_EMMC) Register Mask  */
 
 /* SD_SDIO mode */
 #define SDMMC_NISTR_SD_SDIO_CMDC_Pos          _UINT16_(0)                                          /* (SDMMC_NISTR) Command Complete Position */
