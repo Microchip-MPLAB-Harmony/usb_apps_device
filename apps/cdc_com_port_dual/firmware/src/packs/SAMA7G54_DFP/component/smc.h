@@ -1,7 +1,9 @@
 /*
  * Component description for SMC
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,7 +19,7 @@
  *
  */
 
-/*  file generated from device description file (ATDF) version 2024-02-20T14:30:20Z  */
+/*      file generated from device description file (ATDF) version None       */
 #ifndef _SAMA7G5_SMC_COMPONENT_H_
 #define _SAMA7G5_SMC_COMPONENT_H_
 
@@ -150,18 +152,7 @@
 #define   HSMC_MODE_TDF_MODE_1_Val            _UINT32_(0x1)                                        /* (HSMC_MODE) TDF optimization enabled  */
 #define HSMC_MODE_TDF_MODE_0                  (HSMC_MODE_TDF_MODE_0_Val << HSMC_MODE_TDF_MODE_Pos) /* (HSMC_MODE) TDF optimization disabled Position */
 #define HSMC_MODE_TDF_MODE_1                  (HSMC_MODE_TDF_MODE_1_Val << HSMC_MODE_TDF_MODE_Pos) /* (HSMC_MODE) TDF optimization enabled Position */
-#define HSMC_MODE_PS_Pos                      _UINT32_(28)                                         /* (HSMC_MODE) Page Size Position */
-#define HSMC_MODE_PS_Msk                      (_UINT32_(0x3) << HSMC_MODE_PS_Pos)                  /* (HSMC_MODE) Page Size Mask */
-#define HSMC_MODE_PS(value)                   (HSMC_MODE_PS_Msk & (_UINT32_(value) << HSMC_MODE_PS_Pos)) /* Assignment of value for PS in the HSMC_MODE register */
-#define   HSMC_MODE_PS_BYTE_4_Val             _UINT32_(0x0)                                        /* (HSMC_MODE) 4-byte page  */
-#define   HSMC_MODE_PS_BYTE_8_Val             _UINT32_(0x1)                                        /* (HSMC_MODE) 8-byte page  */
-#define   HSMC_MODE_PS_BYTE_16_Val            _UINT32_(0x2)                                        /* (HSMC_MODE) 16-byte page  */
-#define   HSMC_MODE_PS_BYTE_32_Val            _UINT32_(0x3)                                        /* (HSMC_MODE) 32-byte page  */
-#define HSMC_MODE_PS_BYTE_4                   (HSMC_MODE_PS_BYTE_4_Val << HSMC_MODE_PS_Pos)        /* (HSMC_MODE) 4-byte page Position */
-#define HSMC_MODE_PS_BYTE_8                   (HSMC_MODE_PS_BYTE_8_Val << HSMC_MODE_PS_Pos)        /* (HSMC_MODE) 8-byte page Position */
-#define HSMC_MODE_PS_BYTE_16                  (HSMC_MODE_PS_BYTE_16_Val << HSMC_MODE_PS_Pos)       /* (HSMC_MODE) 16-byte page Position */
-#define HSMC_MODE_PS_BYTE_32                  (HSMC_MODE_PS_BYTE_32_Val << HSMC_MODE_PS_Pos)       /* (HSMC_MODE) 32-byte page Position */
-#define HSMC_MODE_Msk                         _UINT32_(0x301F1133)                                 /* (HSMC_MODE) Register Mask  */
+#define HSMC_MODE_Msk                         _UINT32_(0x001F1133)                                 /* (HSMC_MODE) Register Mask  */
 
 
 /* -------- HSMC_PMECC : (SMC Offset: 0x00) ( R/ 32) PMECC Redundancy x Register  -------- */

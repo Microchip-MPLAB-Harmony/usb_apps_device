@@ -1,7 +1,9 @@
 /*
  * Instance header file for ATSAMA7G54D4G
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,12 +19,12 @@
  *
  */
 
-/* file generated from device description file (ATDF) version 2024-02-20T14:30:20Z */
+/* file generated from device description file (ATDF) version None */
 #ifndef _SAMA7G5_GPBR_INSTANCE_
 #define _SAMA7G5_GPBR_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for GPBR peripheral ========== */
-#define GPBR_NUMBER_DIV2                         (2)        /* GPBR_NUMBER divided by 2 -1 Gallardo=1 SAM9X60=3 Mistral=11 */
+#define GPBR_NUMBER_DIV2                         (1)        /* Number of GPBR registers divide by 2 */
 
 #endif /* _SAMA7G5_GPBR_INSTANCE_ */

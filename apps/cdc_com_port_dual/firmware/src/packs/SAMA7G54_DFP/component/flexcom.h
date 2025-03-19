@@ -1,7 +1,9 @@
 /*
  * Component description for FLEXCOM
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,7 +19,7 @@
  *
  */
 
-/*  file generated from device description file (ATDF) version 2024-02-20T14:30:20Z  */
+/*      file generated from device description file (ATDF) version None       */
 #ifndef _SAMA7G5_FLEXCOM_COMPONENT_H_
 #define _SAMA7G5_FLEXCOM_COMPONENT_H_
 
@@ -245,8 +247,8 @@
 #define   FLEX_US_MR_USART_MODE_NORMAL_Val    _UINT32_(0x0)                                        /* (FLEX_US_MR) Normal mode  */
 #define   FLEX_US_MR_USART_MODE_RS485_Val     _UINT32_(0x1)                                        /* (FLEX_US_MR) RS485  */
 #define   FLEX_US_MR_USART_MODE_HW_HANDSHAKING_Val _UINT32_(0x2)                                        /* (FLEX_US_MR) Hardware handshaking  */
-#define   FLEX_US_MR_USART_MODE_IS07816_T_0_Val _UINT32_(0x4)                                        /* (FLEX_US_MR) IS07816 Protocol: T = 0  */
-#define   FLEX_US_MR_USART_MODE_IS07816_T_1_Val _UINT32_(0x6)                                        /* (FLEX_US_MR) IS07816 Protocol: T = 1  */
+#define   FLEX_US_MR_USART_MODE_ISO7816_T_0_Val _UINT32_(0x4)                                        /* (FLEX_US_MR) IS07816 Protocol: T = 0  */
+#define   FLEX_US_MR_USART_MODE_ISO7816_T_1_Val _UINT32_(0x6)                                        /* (FLEX_US_MR) IS07816 Protocol: T = 1  */
 #define   FLEX_US_MR_USART_MODE_IRDA_Val      _UINT32_(0x8)                                        /* (FLEX_US_MR) IrDA  */
 #define   FLEX_US_MR_USART_MODE_LIN_MASTER_Val _UINT32_(0xA)                                        /* (FLEX_US_MR) LIN Host mode  */
 #define   FLEX_US_MR_USART_MODE_LIN_SLAVE_Val _UINT32_(0xB)                                        /* (FLEX_US_MR) LIN Client mode  */
@@ -255,8 +257,8 @@
 #define FLEX_US_MR_USART_MODE_NORMAL          (FLEX_US_MR_USART_MODE_NORMAL_Val << FLEX_US_MR_USART_MODE_Pos) /* (FLEX_US_MR) Normal mode Position */
 #define FLEX_US_MR_USART_MODE_RS485           (FLEX_US_MR_USART_MODE_RS485_Val << FLEX_US_MR_USART_MODE_Pos) /* (FLEX_US_MR) RS485 Position */
 #define FLEX_US_MR_USART_MODE_HW_HANDSHAKING  (FLEX_US_MR_USART_MODE_HW_HANDSHAKING_Val << FLEX_US_MR_USART_MODE_Pos) /* (FLEX_US_MR) Hardware handshaking Position */
-#define FLEX_US_MR_USART_MODE_IS07816_T_0     (FLEX_US_MR_USART_MODE_IS07816_T_0_Val << FLEX_US_MR_USART_MODE_Pos) /* (FLEX_US_MR) IS07816 Protocol: T = 0 Position */
-#define FLEX_US_MR_USART_MODE_IS07816_T_1     (FLEX_US_MR_USART_MODE_IS07816_T_1_Val << FLEX_US_MR_USART_MODE_Pos) /* (FLEX_US_MR) IS07816 Protocol: T = 1 Position */
+#define FLEX_US_MR_USART_MODE_ISO7816_T_0     (FLEX_US_MR_USART_MODE_ISO7816_T_0_Val << FLEX_US_MR_USART_MODE_Pos) /* (FLEX_US_MR) IS07816 Protocol: T = 0 Position */
+#define FLEX_US_MR_USART_MODE_ISO7816_T_1     (FLEX_US_MR_USART_MODE_ISO7816_T_1_Val << FLEX_US_MR_USART_MODE_Pos) /* (FLEX_US_MR) IS07816 Protocol: T = 1 Position */
 #define FLEX_US_MR_USART_MODE_IRDA            (FLEX_US_MR_USART_MODE_IRDA_Val << FLEX_US_MR_USART_MODE_Pos) /* (FLEX_US_MR) IrDA Position */
 #define FLEX_US_MR_USART_MODE_LIN_MASTER      (FLEX_US_MR_USART_MODE_LIN_MASTER_Val << FLEX_US_MR_USART_MODE_Pos) /* (FLEX_US_MR) LIN Host mode Position */
 #define FLEX_US_MR_USART_MODE_LIN_SLAVE       (FLEX_US_MR_USART_MODE_LIN_SLAVE_Val << FLEX_US_MR_USART_MODE_Pos) /* (FLEX_US_MR) LIN Client mode Position */
@@ -1363,20 +1365,20 @@
 #define   FLEX_US_FESR_RXFTHF_1_Val           _UINT32_(0x1)                                        /* (FLEX_US_FESR) Number of unread data in Receive FIFO has reached RXFTHRES threshold since the last RSTSTA command was issued.  */
 #define FLEX_US_FESR_RXFTHF_0                 (FLEX_US_FESR_RXFTHF_0_Val << FLEX_US_FESR_RXFTHF_Pos) /* (FLEX_US_FESR) Number of unread data in Receive FIFO is below RXFTHRES threshold. Position */
 #define FLEX_US_FESR_RXFTHF_1                 (FLEX_US_FESR_RXFTHF_1_Val << FLEX_US_FESR_RXFTHF_Pos) /* (FLEX_US_FESR) Number of unread data in Receive FIFO has reached RXFTHRES threshold since the last RSTSTA command was issued. Position */
-#define FLEX_US_FESR_TXFPTEF_Pos              _UINT32_(6)                                          /* (FLEX_US_FESR) Transmit FIFO Pointer Error Flag Position */
-#define FLEX_US_FESR_TXFPTEF_Msk              (_UINT32_(0x1) << FLEX_US_FESR_TXFPTEF_Pos)          /* (FLEX_US_FESR) Transmit FIFO Pointer Error Flag Mask */
+#define FLEX_US_FESR_TXFPTEF_Pos              _UINT32_(6)                                          /* (FLEX_US_FESR) Transmit FIFO Overflow Error Flag Position */
+#define FLEX_US_FESR_TXFPTEF_Msk              (_UINT32_(0x1) << FLEX_US_FESR_TXFPTEF_Pos)          /* (FLEX_US_FESR) Transmit FIFO Overflow Error Flag Mask */
 #define FLEX_US_FESR_TXFPTEF(value)           (FLEX_US_FESR_TXFPTEF_Msk & (_UINT32_(value) << FLEX_US_FESR_TXFPTEF_Pos)) /* Assignment of value for TXFPTEF in the FLEX_US_FESR register */
-#define   FLEX_US_FESR_TXFPTEF_0_Val          _UINT32_(0x0)                                        /* (FLEX_US_FESR) No Transmit FIFO pointer occurred  */
-#define   FLEX_US_FESR_TXFPTEF_1_Val          _UINT32_(0x1)                                        /* (FLEX_US_FESR) Transmit FIFO pointer error occurred. Transceiver must be reset  */
-#define FLEX_US_FESR_TXFPTEF_0                (FLEX_US_FESR_TXFPTEF_0_Val << FLEX_US_FESR_TXFPTEF_Pos) /* (FLEX_US_FESR) No Transmit FIFO pointer occurred Position */
-#define FLEX_US_FESR_TXFPTEF_1                (FLEX_US_FESR_TXFPTEF_1_Val << FLEX_US_FESR_TXFPTEF_Pos) /* (FLEX_US_FESR) Transmit FIFO pointer error occurred. Transceiver must be reset Position */
-#define FLEX_US_FESR_RXFPTEF_Pos              _UINT32_(7)                                          /* (FLEX_US_FESR) Receive FIFO Pointer Error Flag Position */
-#define FLEX_US_FESR_RXFPTEF_Msk              (_UINT32_(0x1) << FLEX_US_FESR_RXFPTEF_Pos)          /* (FLEX_US_FESR) Receive FIFO Pointer Error Flag Mask */
+#define   FLEX_US_FESR_TXFPTEF_0_Val          _UINT32_(0x0)                                        /* (FLEX_US_FESR) No Transmit FIFO overflow occurred.  */
+#define   FLEX_US_FESR_TXFPTEF_1_Val          _UINT32_(0x1)                                        /* (FLEX_US_FESR) Transmit FIFO overflow error occurred due to an incorrect software access (written data exceeding available space). Transceiver must be reset by writing FLEX_SPI_CR.SWRST=1.  */
+#define FLEX_US_FESR_TXFPTEF_0                (FLEX_US_FESR_TXFPTEF_0_Val << FLEX_US_FESR_TXFPTEF_Pos) /* (FLEX_US_FESR) No Transmit FIFO overflow occurred. Position */
+#define FLEX_US_FESR_TXFPTEF_1                (FLEX_US_FESR_TXFPTEF_1_Val << FLEX_US_FESR_TXFPTEF_Pos) /* (FLEX_US_FESR) Transmit FIFO overflow error occurred due to an incorrect software access (written data exceeding available space). Transceiver must be reset by writing FLEX_SPI_CR.SWRST=1. Position */
+#define FLEX_US_FESR_RXFPTEF_Pos              _UINT32_(7)                                          /* (FLEX_US_FESR) Receive FIFO Underflow Error Flag Position */
+#define FLEX_US_FESR_RXFPTEF_Msk              (_UINT32_(0x1) << FLEX_US_FESR_RXFPTEF_Pos)          /* (FLEX_US_FESR) Receive FIFO Underflow Error Flag Mask */
 #define FLEX_US_FESR_RXFPTEF(value)           (FLEX_US_FESR_RXFPTEF_Msk & (_UINT32_(value) << FLEX_US_FESR_RXFPTEF_Pos)) /* Assignment of value for RXFPTEF in the FLEX_US_FESR register */
-#define   FLEX_US_FESR_RXFPTEF_0_Val          _UINT32_(0x0)                                        /* (FLEX_US_FESR) No Receive FIFO pointer occurred  */
-#define   FLEX_US_FESR_RXFPTEF_1_Val          _UINT32_(0x1)                                        /* (FLEX_US_FESR) Receive FIFO pointer error occurred. Receiver must be reset  */
-#define FLEX_US_FESR_RXFPTEF_0                (FLEX_US_FESR_RXFPTEF_0_Val << FLEX_US_FESR_RXFPTEF_Pos) /* (FLEX_US_FESR) No Receive FIFO pointer occurred Position */
-#define FLEX_US_FESR_RXFPTEF_1                (FLEX_US_FESR_RXFPTEF_1_Val << FLEX_US_FESR_RXFPTEF_Pos) /* (FLEX_US_FESR) Receive FIFO pointer error occurred. Receiver must be reset Position */
+#define   FLEX_US_FESR_RXFPTEF_0_Val          _UINT32_(0x0)                                        /* (FLEX_US_FESR) No Receive FIFO underflow occurred.  */
+#define   FLEX_US_FESR_RXFPTEF_1_Val          _UINT32_(0x1)                                        /* (FLEX_US_FESR) Receive FIFO underflow error occurred due to an incorrect software access (read data exceeding available data in FIFO). Receiver must be reset by writing FLEX_SPI_CR.SWRST=1.  */
+#define FLEX_US_FESR_RXFPTEF_0                (FLEX_US_FESR_RXFPTEF_0_Val << FLEX_US_FESR_RXFPTEF_Pos) /* (FLEX_US_FESR) No Receive FIFO underflow occurred. Position */
+#define FLEX_US_FESR_RXFPTEF_1                (FLEX_US_FESR_RXFPTEF_1_Val << FLEX_US_FESR_RXFPTEF_Pos) /* (FLEX_US_FESR) Receive FIFO underflow error occurred due to an incorrect software access (read data exceeding available data in FIFO). Receiver must be reset by writing FLEX_SPI_CR.SWRST=1. Position */
 #define FLEX_US_FESR_TXFLOCK_Pos              _UINT32_(8)                                          /* (FLEX_US_FESR) Transmit FIFO Lock Position */
 #define FLEX_US_FESR_TXFLOCK_Msk              (_UINT32_(0x1) << FLEX_US_FESR_TXFLOCK_Pos)          /* (FLEX_US_FESR) Transmit FIFO Lock Mask */
 #define FLEX_US_FESR_TXFLOCK(value)           (FLEX_US_FESR_TXFLOCK_Msk & (_UINT32_(value) << FLEX_US_FESR_TXFLOCK_Pos)) /* Assignment of value for TXFLOCK in the FLEX_US_FESR register */
@@ -1761,20 +1763,20 @@
 #define   FLEX_SPI_SR_RXFTHF_1_Val            _UINT32_(0x1)                                        /* (FLEX_SPI_SR) Number of unread data in Receive FIFO has reached RXFTHRES threshold (changing states from "below threshold" to "equal to or above threshold").  */
 #define FLEX_SPI_SR_RXFTHF_0                  (FLEX_SPI_SR_RXFTHF_0_Val << FLEX_SPI_SR_RXFTHF_Pos) /* (FLEX_SPI_SR) Number of unread data in Receive FIFO is below RXFTHRES threshold or RXFTH flag has been cleared. Position */
 #define FLEX_SPI_SR_RXFTHF_1                  (FLEX_SPI_SR_RXFTHF_1_Val << FLEX_SPI_SR_RXFTHF_Pos) /* (FLEX_SPI_SR) Number of unread data in Receive FIFO has reached RXFTHRES threshold (changing states from "below threshold" to "equal to or above threshold"). Position */
-#define FLEX_SPI_SR_TXFPTEF_Pos               _UINT32_(30)                                         /* (FLEX_SPI_SR) Transmit FIFO Pointer Error Flag Position */
-#define FLEX_SPI_SR_TXFPTEF_Msk               (_UINT32_(0x1) << FLEX_SPI_SR_TXFPTEF_Pos)           /* (FLEX_SPI_SR) Transmit FIFO Pointer Error Flag Mask */
+#define FLEX_SPI_SR_TXFPTEF_Pos               _UINT32_(30)                                         /* (FLEX_SPI_SR) Transmit FIFO Overflow Error Flag Position */
+#define FLEX_SPI_SR_TXFPTEF_Msk               (_UINT32_(0x1) << FLEX_SPI_SR_TXFPTEF_Pos)           /* (FLEX_SPI_SR) Transmit FIFO Overflow Error Flag Mask */
 #define FLEX_SPI_SR_TXFPTEF(value)            (FLEX_SPI_SR_TXFPTEF_Msk & (_UINT32_(value) << FLEX_SPI_SR_TXFPTEF_Pos)) /* Assignment of value for TXFPTEF in the FLEX_SPI_SR register */
-#define   FLEX_SPI_SR_TXFPTEF_0_Val           _UINT32_(0x0)                                        /* (FLEX_SPI_SR) No Transmit FIFO pointer occurred  */
-#define   FLEX_SPI_SR_TXFPTEF_1_Val           _UINT32_(0x1)                                        /* (FLEX_SPI_SR) Transmit FIFO pointer error occurred. Transceiver must be reset  */
-#define FLEX_SPI_SR_TXFPTEF_0                 (FLEX_SPI_SR_TXFPTEF_0_Val << FLEX_SPI_SR_TXFPTEF_Pos) /* (FLEX_SPI_SR) No Transmit FIFO pointer occurred Position */
-#define FLEX_SPI_SR_TXFPTEF_1                 (FLEX_SPI_SR_TXFPTEF_1_Val << FLEX_SPI_SR_TXFPTEF_Pos) /* (FLEX_SPI_SR) Transmit FIFO pointer error occurred. Transceiver must be reset Position */
-#define FLEX_SPI_SR_RXFPTEF_Pos               _UINT32_(31)                                         /* (FLEX_SPI_SR) Receive FIFO Pointer Error Flag Position */
-#define FLEX_SPI_SR_RXFPTEF_Msk               (_UINT32_(0x1) << FLEX_SPI_SR_RXFPTEF_Pos)           /* (FLEX_SPI_SR) Receive FIFO Pointer Error Flag Mask */
+#define   FLEX_SPI_SR_TXFPTEF_0_Val           _UINT32_(0x0)                                        /* (FLEX_SPI_SR) No Transmit FIFO overflow occurred.  */
+#define   FLEX_SPI_SR_TXFPTEF_1_Val           _UINT32_(0x1)                                        /* (FLEX_SPI_SR) Transmit FIFO overflow error occurred due to an incorrect software access (written data exceeding available space). Transceiver must be reset by writing FLEX_SPI_CR.SWRST=1.  */
+#define FLEX_SPI_SR_TXFPTEF_0                 (FLEX_SPI_SR_TXFPTEF_0_Val << FLEX_SPI_SR_TXFPTEF_Pos) /* (FLEX_SPI_SR) No Transmit FIFO overflow occurred. Position */
+#define FLEX_SPI_SR_TXFPTEF_1                 (FLEX_SPI_SR_TXFPTEF_1_Val << FLEX_SPI_SR_TXFPTEF_Pos) /* (FLEX_SPI_SR) Transmit FIFO overflow error occurred due to an incorrect software access (written data exceeding available space). Transceiver must be reset by writing FLEX_SPI_CR.SWRST=1. Position */
+#define FLEX_SPI_SR_RXFPTEF_Pos               _UINT32_(31)                                         /* (FLEX_SPI_SR) Receive FIFO Underflow Error Flag Position */
+#define FLEX_SPI_SR_RXFPTEF_Msk               (_UINT32_(0x1) << FLEX_SPI_SR_RXFPTEF_Pos)           /* (FLEX_SPI_SR) Receive FIFO Underflow Error Flag Mask */
 #define FLEX_SPI_SR_RXFPTEF(value)            (FLEX_SPI_SR_RXFPTEF_Msk & (_UINT32_(value) << FLEX_SPI_SR_RXFPTEF_Pos)) /* Assignment of value for RXFPTEF in the FLEX_SPI_SR register */
-#define   FLEX_SPI_SR_RXFPTEF_0_Val           _UINT32_(0x0)                                        /* (FLEX_SPI_SR) No Receive FIFO pointer occurred  */
-#define   FLEX_SPI_SR_RXFPTEF_1_Val           _UINT32_(0x1)                                        /* (FLEX_SPI_SR) Receive FIFO pointer error occurred. Receiver must be reset  */
-#define FLEX_SPI_SR_RXFPTEF_0                 (FLEX_SPI_SR_RXFPTEF_0_Val << FLEX_SPI_SR_RXFPTEF_Pos) /* (FLEX_SPI_SR) No Receive FIFO pointer occurred Position */
-#define FLEX_SPI_SR_RXFPTEF_1                 (FLEX_SPI_SR_RXFPTEF_1_Val << FLEX_SPI_SR_RXFPTEF_Pos) /* (FLEX_SPI_SR) Receive FIFO pointer error occurred. Receiver must be reset Position */
+#define   FLEX_SPI_SR_RXFPTEF_0_Val           _UINT32_(0x0)                                        /* (FLEX_SPI_SR) No Receive FIFO underflow occurred.  */
+#define   FLEX_SPI_SR_RXFPTEF_1_Val           _UINT32_(0x1)                                        /* (FLEX_SPI_SR) Receive FIFO underflow error occurred due to an incorrect software access (read data exceeding available data in FIFO). Receiver must be reset by writing FLEX_SPI_CR.SWRST=1.  */
+#define FLEX_SPI_SR_RXFPTEF_0                 (FLEX_SPI_SR_RXFPTEF_0_Val << FLEX_SPI_SR_RXFPTEF_Pos) /* (FLEX_SPI_SR) No Receive FIFO underflow occurred. Position */
+#define FLEX_SPI_SR_RXFPTEF_1                 (FLEX_SPI_SR_RXFPTEF_1_Val << FLEX_SPI_SR_RXFPTEF_Pos) /* (FLEX_SPI_SR) Receive FIFO underflow error occurred due to an incorrect software access (read data exceeding available data in FIFO). Receiver must be reset by writing FLEX_SPI_CR.SWRST=1. Position */
 #define FLEX_SPI_SR_Msk                       _UINT32_(0xFF011F0F)                                 /* (FLEX_SPI_SR) Register Mask  */
 
 
@@ -3172,20 +3174,20 @@
 #define   FLEX_TWI_FSR_RXFTHF_1_Val           _UINT32_(0x1)                                        /* (FLEX_TWI_FSR) Number of unread data in Receive FIFO has reached RXFTHRES threshold since the last read of FLEX_TWI_FSR.  */
 #define FLEX_TWI_FSR_RXFTHF_0                 (FLEX_TWI_FSR_RXFTHF_0_Val << FLEX_TWI_FSR_RXFTHF_Pos) /* (FLEX_TWI_FSR) Number of unread data in Receive FIFO is below RXFTHRES threshold. Position */
 #define FLEX_TWI_FSR_RXFTHF_1                 (FLEX_TWI_FSR_RXFTHF_1_Val << FLEX_TWI_FSR_RXFTHF_Pos) /* (FLEX_TWI_FSR) Number of unread data in Receive FIFO has reached RXFTHRES threshold since the last read of FLEX_TWI_FSR. Position */
-#define FLEX_TWI_FSR_TXFPTEF_Pos              _UINT32_(6)                                          /* (FLEX_TWI_FSR) Transmit FIFO Pointer Error Flag Position */
-#define FLEX_TWI_FSR_TXFPTEF_Msk              (_UINT32_(0x1) << FLEX_TWI_FSR_TXFPTEF_Pos)          /* (FLEX_TWI_FSR) Transmit FIFO Pointer Error Flag Mask */
+#define FLEX_TWI_FSR_TXFPTEF_Pos              _UINT32_(6)                                          /* (FLEX_TWI_FSR) Transmit FIFO Overflow Error Flag Position */
+#define FLEX_TWI_FSR_TXFPTEF_Msk              (_UINT32_(0x1) << FLEX_TWI_FSR_TXFPTEF_Pos)          /* (FLEX_TWI_FSR) Transmit FIFO Overflow Error Flag Mask */
 #define FLEX_TWI_FSR_TXFPTEF(value)           (FLEX_TWI_FSR_TXFPTEF_Msk & (_UINT32_(value) << FLEX_TWI_FSR_TXFPTEF_Pos)) /* Assignment of value for TXFPTEF in the FLEX_TWI_FSR register */
-#define   FLEX_TWI_FSR_TXFPTEF_0_Val          _UINT32_(0x0)                                        /* (FLEX_TWI_FSR) No Transmit FIFO pointer occurred  */
-#define   FLEX_TWI_FSR_TXFPTEF_1_Val          _UINT32_(0x1)                                        /* (FLEX_TWI_FSR) Transmit FIFO pointer error occurred. Transceiver must be reset  */
-#define FLEX_TWI_FSR_TXFPTEF_0                (FLEX_TWI_FSR_TXFPTEF_0_Val << FLEX_TWI_FSR_TXFPTEF_Pos) /* (FLEX_TWI_FSR) No Transmit FIFO pointer occurred Position */
-#define FLEX_TWI_FSR_TXFPTEF_1                (FLEX_TWI_FSR_TXFPTEF_1_Val << FLEX_TWI_FSR_TXFPTEF_Pos) /* (FLEX_TWI_FSR) Transmit FIFO pointer error occurred. Transceiver must be reset Position */
-#define FLEX_TWI_FSR_RXFPTEF_Pos              _UINT32_(7)                                          /* (FLEX_TWI_FSR) Receive FIFO Pointer Error Flag Position */
-#define FLEX_TWI_FSR_RXFPTEF_Msk              (_UINT32_(0x1) << FLEX_TWI_FSR_RXFPTEF_Pos)          /* (FLEX_TWI_FSR) Receive FIFO Pointer Error Flag Mask */
+#define   FLEX_TWI_FSR_TXFPTEF_0_Val          _UINT32_(0x0)                                        /* (FLEX_TWI_FSR) No Transmit FIFO overflow occurred.  */
+#define   FLEX_TWI_FSR_TXFPTEF_1_Val          _UINT32_(0x1)                                        /* (FLEX_TWI_FSR) Transmit FIFO overflow error occurred due to an incorrect software access (written data exceeding available space). Transceiver must be reset by writing FLEX_SPI_CR.SWRST=1.  */
+#define FLEX_TWI_FSR_TXFPTEF_0                (FLEX_TWI_FSR_TXFPTEF_0_Val << FLEX_TWI_FSR_TXFPTEF_Pos) /* (FLEX_TWI_FSR) No Transmit FIFO overflow occurred. Position */
+#define FLEX_TWI_FSR_TXFPTEF_1                (FLEX_TWI_FSR_TXFPTEF_1_Val << FLEX_TWI_FSR_TXFPTEF_Pos) /* (FLEX_TWI_FSR) Transmit FIFO overflow error occurred due to an incorrect software access (written data exceeding available space). Transceiver must be reset by writing FLEX_SPI_CR.SWRST=1. Position */
+#define FLEX_TWI_FSR_RXFPTEF_Pos              _UINT32_(7)                                          /* (FLEX_TWI_FSR) Receive FIFO Underflow Error Flag Position */
+#define FLEX_TWI_FSR_RXFPTEF_Msk              (_UINT32_(0x1) << FLEX_TWI_FSR_RXFPTEF_Pos)          /* (FLEX_TWI_FSR) Receive FIFO Underflow Error Flag Mask */
 #define FLEX_TWI_FSR_RXFPTEF(value)           (FLEX_TWI_FSR_RXFPTEF_Msk & (_UINT32_(value) << FLEX_TWI_FSR_RXFPTEF_Pos)) /* Assignment of value for RXFPTEF in the FLEX_TWI_FSR register */
-#define   FLEX_TWI_FSR_RXFPTEF_0_Val          _UINT32_(0x0)                                        /* (FLEX_TWI_FSR) No Receive FIFO pointer occurred  */
-#define   FLEX_TWI_FSR_RXFPTEF_1_Val          _UINT32_(0x1)                                        /* (FLEX_TWI_FSR) Receive FIFO pointer error occurred. Receiver must be reset  */
-#define FLEX_TWI_FSR_RXFPTEF_0                (FLEX_TWI_FSR_RXFPTEF_0_Val << FLEX_TWI_FSR_RXFPTEF_Pos) /* (FLEX_TWI_FSR) No Receive FIFO pointer occurred Position */
-#define FLEX_TWI_FSR_RXFPTEF_1                (FLEX_TWI_FSR_RXFPTEF_1_Val << FLEX_TWI_FSR_RXFPTEF_Pos) /* (FLEX_TWI_FSR) Receive FIFO pointer error occurred. Receiver must be reset Position */
+#define   FLEX_TWI_FSR_RXFPTEF_0_Val          _UINT32_(0x0)                                        /* (FLEX_TWI_FSR) No Receive FIFO underflow occurred.  */
+#define   FLEX_TWI_FSR_RXFPTEF_1_Val          _UINT32_(0x1)                                        /* (FLEX_TWI_FSR) Receive FIFO underflow error occurred due to an incorrect software access (read data exceeding available data in FIFO). Receiver must be reset by writing FLEX_SPI_CR.SWRST=1.  */
+#define FLEX_TWI_FSR_RXFPTEF_0                (FLEX_TWI_FSR_RXFPTEF_0_Val << FLEX_TWI_FSR_RXFPTEF_Pos) /* (FLEX_TWI_FSR) No Receive FIFO underflow occurred. Position */
+#define FLEX_TWI_FSR_RXFPTEF_1                (FLEX_TWI_FSR_RXFPTEF_1_Val << FLEX_TWI_FSR_RXFPTEF_Pos) /* (FLEX_TWI_FSR) Receive FIFO underflow error occurred due to an incorrect software access (read data exceeding available data in FIFO). Receiver must be reset by writing FLEX_SPI_CR.SWRST=1. Position */
 #define FLEX_TWI_FSR_Msk                      _UINT32_(0x000000FF)                                 /* (FLEX_TWI_FSR) Register Mask  */
 
 

@@ -1,7 +1,9 @@
 /*
  * Instance header file for ATSAMA7G54D4G
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,14 +19,14 @@
  *
  */
 
-/* file generated from device description file (ATDF) version 2024-02-20T14:30:20Z */
+/* file generated from device description file (ATDF) version None */
 #ifndef _SAMA7G5_OTPC_INSTANCE_
 #define _SAMA7G5_OTPC_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for OTPC peripheral ========== */
-#define OTPC_EMULATION_ADDRESS                   (0xE0000000) 
-#define OTPC_EMULATION_SIZE                      (0x00001000) 
+#define OTPC_EMULATION_ADDRESS                   (0xE0000000) /* Base address of emulation area */
+#define OTPC_EMULATION_SIZE                      (0x00001000) /* Size of emulation area */
 #define OTPC_INSTANCE_ID                         (67)       /* One Time Programmable memory Controller */
 
 #endif /* _SAMA7G5_OTPC_INSTANCE_ */

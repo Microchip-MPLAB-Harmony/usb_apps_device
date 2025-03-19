@@ -1,7 +1,9 @@
 /*
  * Component description for ADC
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,7 +19,7 @@
  *
  */
 
-/*  file generated from device description file (ATDF) version 2024-02-20T14:30:20Z  */
+/*      file generated from device description file (ATDF) version None       */
 #ifndef _SAMA7G5_ADC_COMPONENT_H_
 #define _SAMA7G5_ADC_COMPONENT_H_
 
@@ -40,13 +42,6 @@
 #define   ADC_CR_START_1_Val                  _UINT32_(0x1)                                        /* (ADC_CR) Begins analog-to-digital conversion.  */
 #define ADC_CR_START_0                        (ADC_CR_START_0_Val << ADC_CR_START_Pos)             /* (ADC_CR) No effect. Position */
 #define ADC_CR_START_1                        (ADC_CR_START_1_Val << ADC_CR_START_Pos)             /* (ADC_CR) Begins analog-to-digital conversion. Position */
-#define ADC_CR_SWFIFO_Pos                     _UINT32_(3)                                          /* (ADC_CR) Software FIFO Reset Position */
-#define ADC_CR_SWFIFO_Msk                     (_UINT32_(0x1) << ADC_CR_SWFIFO_Pos)                 /* (ADC_CR) Software FIFO Reset Mask */
-#define ADC_CR_SWFIFO(value)                  (ADC_CR_SWFIFO_Msk & (_UINT32_(value) << ADC_CR_SWFIFO_Pos)) /* Assignment of value for SWFIFO in the ADC_CR register */
-#define   ADC_CR_SWFIFO_0_Val                 _UINT32_(0x0)                                        /* (ADC_CR) No effect.  */
-#define   ADC_CR_SWFIFO_1_Val                 _UINT32_(0x1)                                        /* (ADC_CR) Resets the internal FIFO, simulating a hardware reset.  */
-#define ADC_CR_SWFIFO_0                       (ADC_CR_SWFIFO_0_Val << ADC_CR_SWFIFO_Pos)           /* (ADC_CR) No effect. Position */
-#define ADC_CR_SWFIFO_1                       (ADC_CR_SWFIFO_1_Val << ADC_CR_SWFIFO_Pos)           /* (ADC_CR) Resets the internal FIFO, simulating a hardware reset. Position */
 #define ADC_CR_CMPRST_Pos                     _UINT32_(4)                                          /* (ADC_CR) Comparison Restart Position */
 #define ADC_CR_CMPRST_Msk                     (_UINT32_(0x1) << ADC_CR_CMPRST_Pos)                 /* (ADC_CR) Comparison Restart Mask */
 #define ADC_CR_CMPRST(value)                  (ADC_CR_CMPRST_Msk & (_UINT32_(value) << ADC_CR_CMPRST_Pos)) /* Assignment of value for CMPRST in the ADC_CR register */
@@ -54,7 +49,14 @@
 #define   ADC_CR_CMPRST_1_Val                 _UINT32_(0x1)                                        /* (ADC_CR) Stops the conversion result storage until the next comparison match.  */
 #define ADC_CR_CMPRST_0                       (ADC_CR_CMPRST_0_Val << ADC_CR_CMPRST_Pos)           /* (ADC_CR) No effect. Position */
 #define ADC_CR_CMPRST_1                       (ADC_CR_CMPRST_1_Val << ADC_CR_CMPRST_Pos)           /* (ADC_CR) Stops the conversion result storage until the next comparison match. Position */
-#define ADC_CR_Msk                            _UINT32_(0x0000001B)                                 /* (ADC_CR) Register Mask  */
+#define ADC_CR_SWFIFO_Pos                     _UINT32_(5)                                          /* (ADC_CR) Software FIFO Reset Position */
+#define ADC_CR_SWFIFO_Msk                     (_UINT32_(0x1) << ADC_CR_SWFIFO_Pos)                 /* (ADC_CR) Software FIFO Reset Mask */
+#define ADC_CR_SWFIFO(value)                  (ADC_CR_SWFIFO_Msk & (_UINT32_(value) << ADC_CR_SWFIFO_Pos)) /* Assignment of value for SWFIFO in the ADC_CR register */
+#define   ADC_CR_SWFIFO_0_Val                 _UINT32_(0x0)                                        /* (ADC_CR) No effect.  */
+#define   ADC_CR_SWFIFO_1_Val                 _UINT32_(0x1)                                        /* (ADC_CR) Resets the internal FIFO, simulating a hardware reset.  */
+#define ADC_CR_SWFIFO_0                       (ADC_CR_SWFIFO_0_Val << ADC_CR_SWFIFO_Pos)           /* (ADC_CR) No effect. Position */
+#define ADC_CR_SWFIFO_1                       (ADC_CR_SWFIFO_1_Val << ADC_CR_SWFIFO_Pos)           /* (ADC_CR) Resets the internal FIFO, simulating a hardware reset. Position */
+#define ADC_CR_Msk                            _UINT32_(0x00000033)                                 /* (ADC_CR) Register Mask  */
 
 
 /* -------- ADC_MR : (ADC Offset: 0x04) (R/W 32) Mode Register -------- */
@@ -636,9 +638,9 @@
 #define ADC_LCDR_NO_OSR_LDATA_Pos             _UINT32_(0)                                          /* (ADC_LCDR) Last Data Converted when No Oversampling Position */
 #define ADC_LCDR_NO_OSR_LDATA_Msk             (_UINT32_(0xFFF) << ADC_LCDR_NO_OSR_LDATA_Pos)       /* (ADC_LCDR) Last Data Converted when No Oversampling Mask */
 #define ADC_LCDR_NO_OSR_LDATA(value)          (ADC_LCDR_NO_OSR_LDATA_Msk & (_UINT32_(value) << ADC_LCDR_NO_OSR_LDATA_Pos))
-#define ADC_LCDR_NO_OSR_CHNBOSR_Pos           _UINT32_(12)                                         /* (ADC_LCDR) Channel Number when No Oversampling Position */
-#define ADC_LCDR_NO_OSR_CHNBOSR_Msk           (_UINT32_(0xF) << ADC_LCDR_NO_OSR_CHNBOSR_Pos)       /* (ADC_LCDR) Channel Number when No Oversampling Mask */
-#define ADC_LCDR_NO_OSR_CHNBOSR(value)        (ADC_LCDR_NO_OSR_CHNBOSR_Msk & (_UINT32_(value) << ADC_LCDR_NO_OSR_CHNBOSR_Pos))
+#define ADC_LCDR_NO_OSR_CHNB_Pos              _UINT32_(12)                                         /* (ADC_LCDR) Channel Number when No Oversampling Position */
+#define ADC_LCDR_NO_OSR_CHNB_Msk              (_UINT32_(0xF) << ADC_LCDR_NO_OSR_CHNB_Pos)          /* (ADC_LCDR) Channel Number when No Oversampling Mask */
+#define ADC_LCDR_NO_OSR_CHNB(value)           (ADC_LCDR_NO_OSR_CHNB_Msk & (_UINT32_(value) << ADC_LCDR_NO_OSR_CHNB_Pos))
 #define ADC_LCDR_NO_OSR_Msk                   _UINT32_(0x0000FFFF)                                 /* (ADC_LCDR_NO_OSR) Register Mask  */
 
 

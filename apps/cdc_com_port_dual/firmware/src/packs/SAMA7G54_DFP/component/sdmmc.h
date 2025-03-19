@@ -1,7 +1,9 @@
 /*
  * Component description for SDMMC
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,7 +19,7 @@
  *
  */
 
-/*  file generated from device description file (ATDF) version 2024-02-20T14:30:20Z  */
+/*      file generated from device description file (ATDF) version None       */
 #ifndef _SAMA7G5_SDMMC_COMPONENT_H_
 #define _SAMA7G5_SDMMC_COMPONENT_H_
 
@@ -25,8 +27,8 @@
 /*                     SOFTWARE API DEFINITION FOR SDMMC                      */
 /* ************************************************************************** */
 
-/* -------- SDMMC_SSAR : (SDMMC Offset: 0x00) (R/W 32) SDMA System Address / Argument 2 Register -------- */
-#define SDMMC_SSAR_RESETVALUE                 _UINT32_(0x00)                                       /*  (SDMMC_SSAR) SDMA System Address / Argument 2 Register  Reset Value */
+/* -------- SDMMC_SSAR : (SDMMC Offset: 0x00) (R/W 32) SDMA System Address/Argument 2 Register -------- */
+#define SDMMC_SSAR_RESETVALUE                 _UINT32_(0x00)                                       /*  (SDMMC_SSAR) SDMA System Address/Argument 2 Register  Reset Value */
 
 #define SDMMC_SSAR_ADDR_Pos                   _UINT32_(0)                                          /* (SDMMC_SSAR) SDMA System Address Position */
 #define SDMMC_SSAR_ADDR_Msk                   (_UINT32_(0xFFFFFFFF) << SDMMC_SSAR_ADDR_Pos)        /* (SDMMC_SSAR) SDMA System Address Mask */
@@ -194,7 +196,7 @@
 
 
 /* -------- SDMMC_PSR : (SDMMC Offset: 0x24) ( R/ 32) Present State Register -------- */
-#define SDMMC_PSR_RESETVALUE                  _UINT32_(0xF80000)                                   /*  (SDMMC_PSR) Present State Register  Reset Value */
+#define SDMMC_PSR_RESETVALUE                  _UINT32_(0x1F80000)                                  /*  (SDMMC_PSR) Present State Register  Reset Value */
 
 #define SDMMC_PSR_CMDINHC_Pos                 _UINT32_(0)                                          /* (SDMMC_PSR) Command Inhibit (CMD) Position */
 #define SDMMC_PSR_CMDINHC_Msk                 (_UINT32_(0x1) << SDMMC_PSR_CMDINHC_Pos)             /* (SDMMC_PSR) Command Inhibit (CMD) Mask */
@@ -1557,8 +1559,8 @@
 #define SDMMC_CA0R_BASECLKF_Pos               _UINT32_(8)                                          /* (SDMMC_CA0R) Base Clock Frequency Position */
 #define SDMMC_CA0R_BASECLKF_Msk               (_UINT32_(0xFF) << SDMMC_CA0R_BASECLKF_Pos)          /* (SDMMC_CA0R) Base Clock Frequency Mask */
 #define SDMMC_CA0R_BASECLKF(value)            (SDMMC_CA0R_BASECLKF_Msk & (_UINT32_(value) << SDMMC_CA0R_BASECLKF_Pos)) /* Assignment of value for BASECLKF in the SDMMC_CA0R register */
-#define SDMMC_CA0R_MAXBLKL_Pos                _UINT32_(16)                                         /* (SDMMC_CA0R) Max Block Length Position */
-#define SDMMC_CA0R_MAXBLKL_Msk                (_UINT32_(0x3) << SDMMC_CA0R_MAXBLKL_Pos)            /* (SDMMC_CA0R) Max Block Length Mask */
+#define SDMMC_CA0R_MAXBLKL_Pos                _UINT32_(16)                                         /* (SDMMC_CA0R) Max Block Length (read-only) Position */
+#define SDMMC_CA0R_MAXBLKL_Msk                (_UINT32_(0x3) << SDMMC_CA0R_MAXBLKL_Pos)            /* (SDMMC_CA0R) Max Block Length (read-only) Mask */
 #define SDMMC_CA0R_MAXBLKL(value)             (SDMMC_CA0R_MAXBLKL_Msk & (_UINT32_(value) << SDMMC_CA0R_MAXBLKL_Pos)) /* Assignment of value for MAXBLKL in the SDMMC_CA0R register */
 #define   SDMMC_CA0R_MAXBLKL_512_Val          _UINT32_(0x0)                                        /* (SDMMC_CA0R) 512 bytes  */
 #define   SDMMC_CA0R_MAXBLKL_1024_Val         _UINT32_(0x1)                                        /* (SDMMC_CA0R) 1024 bytes  */
@@ -1566,36 +1568,36 @@
 #define SDMMC_CA0R_MAXBLKL_512                (SDMMC_CA0R_MAXBLKL_512_Val << SDMMC_CA0R_MAXBLKL_Pos) /* (SDMMC_CA0R) 512 bytes Position */
 #define SDMMC_CA0R_MAXBLKL_1024               (SDMMC_CA0R_MAXBLKL_1024_Val << SDMMC_CA0R_MAXBLKL_Pos) /* (SDMMC_CA0R) 1024 bytes Position */
 #define SDMMC_CA0R_MAXBLKL_2048               (SDMMC_CA0R_MAXBLKL_2048_Val << SDMMC_CA0R_MAXBLKL_Pos) /* (SDMMC_CA0R) 2048 bytes Position */
-#define SDMMC_CA0R_ED8SUP_Pos                 _UINT32_(18)                                         /* (SDMMC_CA0R) 8-Bit Support for Embedded Device Position */
-#define SDMMC_CA0R_ED8SUP_Msk                 (_UINT32_(0x1) << SDMMC_CA0R_ED8SUP_Pos)             /* (SDMMC_CA0R) 8-Bit Support for Embedded Device Mask */
+#define SDMMC_CA0R_ED8SUP_Pos                 _UINT32_(18)                                         /* (SDMMC_CA0R) 8-Bit Support for Embedded Device (read-only) Position */
+#define SDMMC_CA0R_ED8SUP_Msk                 (_UINT32_(0x1) << SDMMC_CA0R_ED8SUP_Pos)             /* (SDMMC_CA0R) 8-Bit Support for Embedded Device (read-only) Mask */
 #define SDMMC_CA0R_ED8SUP(value)              (SDMMC_CA0R_ED8SUP_Msk & (_UINT32_(value) << SDMMC_CA0R_ED8SUP_Pos)) /* Assignment of value for ED8SUP in the SDMMC_CA0R register */
 #define   SDMMC_CA0R_ED8SUP_0_Val             _UINT32_(0x0)                                        /* (SDMMC_CA0R) 8-bit bus width not supported.  */
 #define   SDMMC_CA0R_ED8SUP_1_Val             _UINT32_(0x1)                                        /* (SDMMC_CA0R) 8-bit bus width supported.  */
 #define SDMMC_CA0R_ED8SUP_0                   (SDMMC_CA0R_ED8SUP_0_Val << SDMMC_CA0R_ED8SUP_Pos)   /* (SDMMC_CA0R) 8-bit bus width not supported. Position */
 #define SDMMC_CA0R_ED8SUP_1                   (SDMMC_CA0R_ED8SUP_1_Val << SDMMC_CA0R_ED8SUP_Pos)   /* (SDMMC_CA0R) 8-bit bus width supported. Position */
-#define SDMMC_CA0R_ADMA2SUP_Pos               _UINT32_(19)                                         /* (SDMMC_CA0R) ADMA2 Support Position */
-#define SDMMC_CA0R_ADMA2SUP_Msk               (_UINT32_(0x1) << SDMMC_CA0R_ADMA2SUP_Pos)           /* (SDMMC_CA0R) ADMA2 Support Mask */
+#define SDMMC_CA0R_ADMA2SUP_Pos               _UINT32_(19)                                         /* (SDMMC_CA0R) ADMA2 Support (read-only) Position */
+#define SDMMC_CA0R_ADMA2SUP_Msk               (_UINT32_(0x1) << SDMMC_CA0R_ADMA2SUP_Pos)           /* (SDMMC_CA0R) ADMA2 Support (read-only) Mask */
 #define SDMMC_CA0R_ADMA2SUP(value)            (SDMMC_CA0R_ADMA2SUP_Msk & (_UINT32_(value) << SDMMC_CA0R_ADMA2SUP_Pos)) /* Assignment of value for ADMA2SUP in the SDMMC_CA0R register */
 #define   SDMMC_CA0R_ADMA2SUP_0_Val           _UINT32_(0x0)                                        /* (SDMMC_CA0R) ADMA2 not supported.  */
 #define   SDMMC_CA0R_ADMA2SUP_1_Val           _UINT32_(0x1)                                        /* (SDMMC_CA0R) ADMA2 supported.  */
 #define SDMMC_CA0R_ADMA2SUP_0                 (SDMMC_CA0R_ADMA2SUP_0_Val << SDMMC_CA0R_ADMA2SUP_Pos) /* (SDMMC_CA0R) ADMA2 not supported. Position */
 #define SDMMC_CA0R_ADMA2SUP_1                 (SDMMC_CA0R_ADMA2SUP_1_Val << SDMMC_CA0R_ADMA2SUP_Pos) /* (SDMMC_CA0R) ADMA2 supported. Position */
-#define SDMMC_CA0R_HSSUP_Pos                  _UINT32_(21)                                         /* (SDMMC_CA0R) High Speed Support Position */
-#define SDMMC_CA0R_HSSUP_Msk                  (_UINT32_(0x1) << SDMMC_CA0R_HSSUP_Pos)              /* (SDMMC_CA0R) High Speed Support Mask */
+#define SDMMC_CA0R_HSSUP_Pos                  _UINT32_(21)                                         /* (SDMMC_CA0R) High Speed Support (read-only) Position */
+#define SDMMC_CA0R_HSSUP_Msk                  (_UINT32_(0x1) << SDMMC_CA0R_HSSUP_Pos)              /* (SDMMC_CA0R) High Speed Support (read-only) Mask */
 #define SDMMC_CA0R_HSSUP(value)               (SDMMC_CA0R_HSSUP_Msk & (_UINT32_(value) << SDMMC_CA0R_HSSUP_Pos)) /* Assignment of value for HSSUP in the SDMMC_CA0R register */
 #define   SDMMC_CA0R_HSSUP_0_Val              _UINT32_(0x0)                                        /* (SDMMC_CA0R) High Speed not supported.  */
 #define   SDMMC_CA0R_HSSUP_1_Val              _UINT32_(0x1)                                        /* (SDMMC_CA0R) High Speed supported.  */
 #define SDMMC_CA0R_HSSUP_0                    (SDMMC_CA0R_HSSUP_0_Val << SDMMC_CA0R_HSSUP_Pos)     /* (SDMMC_CA0R) High Speed not supported. Position */
 #define SDMMC_CA0R_HSSUP_1                    (SDMMC_CA0R_HSSUP_1_Val << SDMMC_CA0R_HSSUP_Pos)     /* (SDMMC_CA0R) High Speed supported. Position */
-#define SDMMC_CA0R_SDMASUP_Pos                _UINT32_(22)                                         /* (SDMMC_CA0R) SDMA Support Position */
-#define SDMMC_CA0R_SDMASUP_Msk                (_UINT32_(0x1) << SDMMC_CA0R_SDMASUP_Pos)            /* (SDMMC_CA0R) SDMA Support Mask */
+#define SDMMC_CA0R_SDMASUP_Pos                _UINT32_(22)                                         /* (SDMMC_CA0R) SDMA Support (read-only) Position */
+#define SDMMC_CA0R_SDMASUP_Msk                (_UINT32_(0x1) << SDMMC_CA0R_SDMASUP_Pos)            /* (SDMMC_CA0R) SDMA Support (read-only) Mask */
 #define SDMMC_CA0R_SDMASUP(value)             (SDMMC_CA0R_SDMASUP_Msk & (_UINT32_(value) << SDMMC_CA0R_SDMASUP_Pos)) /* Assignment of value for SDMASUP in the SDMMC_CA0R register */
 #define   SDMMC_CA0R_SDMASUP_0_Val            _UINT32_(0x0)                                        /* (SDMMC_CA0R) SDMA not supported.  */
 #define   SDMMC_CA0R_SDMASUP_1_Val            _UINT32_(0x1)                                        /* (SDMMC_CA0R) SDMA supported.  */
 #define SDMMC_CA0R_SDMASUP_0                  (SDMMC_CA0R_SDMASUP_0_Val << SDMMC_CA0R_SDMASUP_Pos) /* (SDMMC_CA0R) SDMA not supported. Position */
 #define SDMMC_CA0R_SDMASUP_1                  (SDMMC_CA0R_SDMASUP_1_Val << SDMMC_CA0R_SDMASUP_Pos) /* (SDMMC_CA0R) SDMA supported. Position */
-#define SDMMC_CA0R_SRSUP_Pos                  _UINT32_(23)                                         /* (SDMMC_CA0R) Suspend/Resume Support Position */
-#define SDMMC_CA0R_SRSUP_Msk                  (_UINT32_(0x1) << SDMMC_CA0R_SRSUP_Pos)              /* (SDMMC_CA0R) Suspend/Resume Support Mask */
+#define SDMMC_CA0R_SRSUP_Pos                  _UINT32_(23)                                         /* (SDMMC_CA0R) Suspend/Resume Support (read-only) Position */
+#define SDMMC_CA0R_SRSUP_Msk                  (_UINT32_(0x1) << SDMMC_CA0R_SRSUP_Pos)              /* (SDMMC_CA0R) Suspend/Resume Support (read-only) Mask */
 #define SDMMC_CA0R_SRSUP(value)               (SDMMC_CA0R_SRSUP_Msk & (_UINT32_(value) << SDMMC_CA0R_SRSUP_Pos)) /* Assignment of value for SRSUP in the SDMMC_CA0R register */
 #define   SDMMC_CA0R_SRSUP_0_Val              _UINT32_(0x0)                                        /* (SDMMC_CA0R) Suspend/Resume not supported.  */
 #define   SDMMC_CA0R_SRSUP_1_Val              _UINT32_(0x1)                                        /* (SDMMC_CA0R) Suspend/Resume supported.  */
@@ -2127,7 +2129,7 @@
 
 
 /* -------- SDMMC_CALCR : (SDMMC Offset: 0x240) (R/W 32) Calibration Control Register -------- */
-#define SDMMC_CALCR_RESETVALUE                _UINT32_(0x500E)                                     /*  (SDMMC_CALCR) Calibration Control Register  Reset Value */
+#define SDMMC_CALCR_RESETVALUE                _UINT32_(0x00)                                       /*  (SDMMC_CALCR) Calibration Control Register  Reset Value */
 
 #define SDMMC_CALCR_EN_Pos                    _UINT32_(0)                                          /* (SDMMC_CALCR) PADs Calibration Enable Position */
 #define SDMMC_CALCR_EN_Msk                    (_UINT32_(0x1) << SDMMC_CALCR_EN_Pos)                /* (SDMMC_CALCR) PADs Calibration Enable Mask */
@@ -2194,7 +2196,7 @@
 
 
 /* SDMMC register offsets definitions */
-#define SDMMC_SSAR_REG_OFST            _UINT32_(0x00)      /* (SDMMC_SSAR) SDMA System Address / Argument 2 Register Offset */
+#define SDMMC_SSAR_REG_OFST            _UINT32_(0x00)      /* (SDMMC_SSAR) SDMA System Address/Argument 2 Register Offset */
 #define SDMMC_BSR_REG_OFST             _UINT32_(0x04)      /* (SDMMC_BSR) Block Size Register Offset */
 #define SDMMC_BCR_REG_OFST             _UINT32_(0x06)      /* (SDMMC_BCR) Block Count Register Offset */
 #define SDMMC_ARG1R_REG_OFST           _UINT32_(0x08)      /* (SDMMC_ARG1R) Argument 1 Register Offset */
@@ -2264,7 +2266,7 @@
 /* SDMMC register API structure */
 typedef struct
 {  /* Secure Digital MultiMedia Card Controller */
-  __IO  uint32_t                       SDMMC_SSAR;         /* Offset: 0x00 (R/W  32) SDMA System Address / Argument 2 Register */
+  __IO  uint32_t                       SDMMC_SSAR;         /* Offset: 0x00 (R/W  32) SDMA System Address/Argument 2 Register */
   __IO  uint16_t                       SDMMC_BSR;          /* Offset: 0x04 (R/W  16) Block Size Register */
   __IO  uint16_t                       SDMMC_BCR;          /* Offset: 0x06 (R/W  16) Block Count Register */
   __IO  uint32_t                       SDMMC_ARG1R;        /* Offset: 0x08 (R/W  32) Argument 1 Register */
