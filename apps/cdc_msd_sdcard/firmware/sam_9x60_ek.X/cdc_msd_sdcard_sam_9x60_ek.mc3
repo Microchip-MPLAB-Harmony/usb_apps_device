@@ -63,7 +63,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.3"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.4"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -4675,7 +4675,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\configuration.h</file>
-         <hash>68cc7a85d880683a0a52387fd096ee46b24fdfd2c2ba0a1333a19b614e448896</hash>
+         <hash>a3a001352c216defe1a2b44cc48cba18ce880fda915da1b63fad166f93147945</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\cstartup.S</file>
@@ -4687,11 +4687,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\definitions.h</file>
-         <hash>b0a6f44577dbc325010d38d6a63defa3061b85ec2bc2a0fcfd5e43ea3d302136</hash>
+         <hash>59329f53f710bf562eda57bd87df3400a8ed598b2180d49ba579342a39183fd7</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\device.h</file>
-         <hash>272c30439d908c419ccaac5f8a4dff8f7caa7881537bac508320752dfcfbf0d0</hash>
+         <hash>9191d645a12f96842eed9c51335f9c9f10371d437d9a33c36b0ff4d12e931d46</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\device_cache.h</file>
@@ -4739,7 +4739,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\driver\usb\udphs\src\drv_usb_udphs_local.h</file>
-         <hash>73fa46494cbe1dd41d7a247c5cf0aa5418debdf1621c6fdcb7cfbe498fd118b2</hash>
+         <hash>13a520cc87e13618daddf16a29dcdcec6d87d927c3c874dbcf00259295399ee1</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\driver\usb\udphs\src\drv_usb_udphs_variant_mapping.h</file>
@@ -4751,15 +4751,15 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\initialization.c</file>
-         <hash>3965b2c27324650fee24fe0a9fd3fc6a84b7e50b36342c8d18e9f7628769b229</hash>
+         <hash>c8827f21e1df9fde726b93127777cdfacddfae259c27d8cf201034e39efec148</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\interrupts.c</file>
-         <hash>361f5e1d843df60d762741cff2e30549cff849154b7e8d5aa89a3b3a8b07aa80</hash>
+         <hash>3f257c1c617c901d65c7a959e95e16fa3baaacb7c3667d18059a321a4dbab6bf</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\interrupts.h</file>
-         <hash>87dd37a663af5e2a79550365ee0fb5881b2dadd59b3dd35810fafc3da15a479e</hash>
+         <hash>526b7dbd063580d9f9719b9bc5524e13161264d05a64675ae4977289d46ae799</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\osal\osal.h</file>
@@ -4811,7 +4811,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\peripheral\sdmmc\plib_sdmmc0.c</file>
-         <hash>1c8d8b06183afedc8c7d2cdfc41fbefa2c52d1ecf34b9e0fa9a73b2b231d18ef</hash>
+         <hash>d6e291b7ba7ef97ac7313d51cb58c5bc473f10017eaf93f1b643ebc86fff6e49</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\peripheral\sdmmc\plib_sdmmc0.h</file>
@@ -4823,7 +4823,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\peripheral\tc\plib_tc0.c</file>
-         <hash>c9bf7dc22d3246852f35ef21424a686d58bc801ade85fd2cc3c9d54092f68b15</hash>
+         <hash>5fbee1d3d312e57915dc68bd264587f2d44eb4b640112126aa816a238071722b</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\peripheral\tc\plib_tc0.h</file>
