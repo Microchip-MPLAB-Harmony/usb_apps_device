@@ -88,7 +88,7 @@ static inline uint32_t SDMMC1_MIN_U32 (uint32_t a, uint32_t b)
 
 static CACHE_ALIGN SDMMC_ADMA_DESCR sdmmc1DmaDescrTable[(SDMMC1_DMA_DESC_TABLE_SIZE_CACHE_ALIGN/8)];
 
-volatile static SDMMC_OBJECT sdmmc1Obj;
+static volatile SDMMC_OBJECT sdmmc1Obj;
 
 static void SDMMC1_InitVariables ( void )
 {
