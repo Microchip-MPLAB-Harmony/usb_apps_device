@@ -1,7 +1,9 @@
 /*
  * Component description for NICGPV
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,7 +19,7 @@
  *
  */
 
-/*  file generated from device description file (ATDF) version 2024-02-20T14:30:20Z  */
+/*      file generated from device description file (ATDF) version None       */
 #ifndef _SAMA7G5_NICGPV_COMPONENT_H_
 #define _SAMA7G5_NICGPV_COMPONENT_H_
 
@@ -25,7 +27,7 @@
 /*                     SOFTWARE API DEFINITION FOR NICGPV                     */
 /* ************************************************************************** */
 
-/* -------- NICGPV_AMIB_FN_MOD_BM_ISS : (NICGPV Offset: 0x08) (R/W 32) AMIB Bus Matrix Issuing Functionality Modification Register  -------- */
+/* -------- NICGPV_AMIB_FN_MOD_BM_ISS : (NICGPV Offset: 0x00) (R/W 32) AMIB Bus Matrix Issuing Functionality Modification Register  -------- */
 #define NICGPV_AMIB_FN_MOD_BM_ISS_RESETVALUE  _UINT32_(0x00)                                       /*  (NICGPV_AMIB_FN_MOD_BM_ISS) AMIB Bus Matrix Issuing Functionality Modification Register   Reset Value */
 
 #define NICGPV_AMIB_FN_MOD_BM_ISS_READ_ISS_OVERRIDE_Pos _UINT32_(0)                                          /* (NICGPV_AMIB_FN_MOD_BM_ISS) Read Issuing Override Position */
@@ -45,7 +47,7 @@
 #define NICGPV_AMIB_FN_MOD_BM_ISS_Msk         _UINT32_(0x00000003)                                 /* (NICGPV_AMIB_FN_MOD_BM_ISS) Register Mask  */
 
 
-/* -------- NICGPV_ASIB_READ_QOS : (NICGPV Offset: 0x100) (R/W 32) ASIB Read Channel QoS Register  -------- */
+/* -------- NICGPV_ASIB_READ_QOS : (NICGPV Offset: 0x00) (R/W 32) ASIB Read Channel QoS Register  -------- */
 #define NICGPV_ASIB_READ_QOS_RESETVALUE       _UINT32_(0x00)                                       /*  (NICGPV_ASIB_READ_QOS) ASIB Read Channel QoS Register   Reset Value */
 
 #define NICGPV_ASIB_READ_QOS_RD_QOS_Pos       _UINT32_(0)                                          /* (NICGPV_ASIB_READ_QOS) Read QoS Position */
@@ -54,7 +56,7 @@
 #define NICGPV_ASIB_READ_QOS_Msk              _UINT32_(0x0000000F)                                 /* (NICGPV_ASIB_READ_QOS) Register Mask  */
 
 
-/* -------- NICGPV_ASIB_WRITE_QOS : (NICGPV Offset: 0x104) (R/W 32) ASIB Write Channel QoS Register  -------- */
+/* -------- NICGPV_ASIB_WRITE_QOS : (NICGPV Offset: 0x04) (R/W 32) ASIB Write Channel QoS Register  -------- */
 #define NICGPV_ASIB_WRITE_QOS_RESETVALUE      _UINT32_(0x00)                                       /*  (NICGPV_ASIB_WRITE_QOS) ASIB Write Channel QoS Register   Reset Value */
 
 #define NICGPV_ASIB_WRITE_QOS_WR_QOS_Pos      _UINT32_(0)                                          /* (NICGPV_ASIB_WRITE_QOS) Write QoS Position */
@@ -63,7 +65,7 @@
 #define NICGPV_ASIB_WRITE_QOS_Msk             _UINT32_(0x0000000F)                                 /* (NICGPV_ASIB_WRITE_QOS) Register Mask  */
 
 
-/* -------- NICGPV_ASIB_QOS_CNTL : (NICGPV Offset: 0x10C) (R/W 32) ASIB QoS Control Register  -------- */
+/* -------- NICGPV_ASIB_QOS_CNTL : (NICGPV Offset: 0x0C) (R/W 32) ASIB QoS Control Register  -------- */
 #define NICGPV_ASIB_QOS_CNTL_RESETVALUE       _UINT32_(0x00)                                       /*  (NICGPV_ASIB_QOS_CNTL) ASIB QoS Control Register   Reset Value */
 
 #define NICGPV_ASIB_QOS_CNTL_EN_AW_RATE_Pos   _UINT32_(0)                                          /* (NICGPV_ASIB_QOS_CNTL) AW Rate Enable Position */
@@ -139,7 +141,7 @@
 #define NICGPV_ASIB_QOS_CNTL_Msk              _UINT32_(0x001100FF)                                 /* (NICGPV_ASIB_QOS_CNTL) Register Mask  */
 
 
-/* -------- NICGPV_ASIB_MAX_OT : (NICGPV Offset: 0x110) (R/W 32) ASIB Maximum Number of Outstanding Transactions Register  -------- */
+/* -------- NICGPV_ASIB_MAX_OT : (NICGPV Offset: 0x10) (R/W 32) ASIB Maximum Number of Outstanding Transactions Register  -------- */
 #define NICGPV_ASIB_MAX_OT_RESETVALUE         _UINT32_(0x00)                                       /*  (NICGPV_ASIB_MAX_OT) ASIB Maximum Number of Outstanding Transactions Register   Reset Value */
 
 #define NICGPV_ASIB_MAX_OT_AW_MAX_OTF_Pos     _UINT32_(0)                                          /* (NICGPV_ASIB_MAX_OT) AW Maximum Outstanding Transaction Fraction Position */
@@ -157,7 +159,7 @@
 #define NICGPV_ASIB_MAX_OT_Msk                _UINT32_(0x3FFF3FFF)                                 /* (NICGPV_ASIB_MAX_OT) Register Mask  */
 
 
-/* -------- NICGPV_ASIB_MAX_COMB_OT : (NICGPV Offset: 0x114) (R/W 32) ASIB Maximum Combined Outstanding Transactions Register  -------- */
+/* -------- NICGPV_ASIB_MAX_COMB_OT : (NICGPV Offset: 0x14) (R/W 32) ASIB Maximum Combined Outstanding Transactions Register  -------- */
 #define NICGPV_ASIB_MAX_COMB_OT_RESETVALUE    _UINT32_(0x00)                                       /*  (NICGPV_ASIB_MAX_COMB_OT) ASIB Maximum Combined Outstanding Transactions Register   Reset Value */
 
 #define NICGPV_ASIB_MAX_COMB_OT_AWAR_MAX_OTF_Pos _UINT32_(0)                                          /* (NICGPV_ASIB_MAX_COMB_OT) AW and AR Combined Maximum Outstanding Transactions Fraction Position */
@@ -169,7 +171,7 @@
 #define NICGPV_ASIB_MAX_COMB_OT_Msk           _UINT32_(0x00007FFF)                                 /* (NICGPV_ASIB_MAX_COMB_OT) Register Mask  */
 
 
-/* -------- NICGPV_ASIB_AW_P : (NICGPV Offset: 0x118) (R/W 32) ASIB Write Address Channel Peak Rate Register  -------- */
+/* -------- NICGPV_ASIB_AW_P : (NICGPV Offset: 0x18) (R/W 32) ASIB Write Address Channel Peak Rate Register  -------- */
 #define NICGPV_ASIB_AW_P_RESETVALUE           _UINT32_(0x00)                                       /*  (NICGPV_ASIB_AW_P) ASIB Write Address Channel Peak Rate Register   Reset Value */
 
 #define NICGPV_ASIB_AW_P_AW_P_Pos             _UINT32_(24)                                         /* (NICGPV_ASIB_AW_P) AW Channel Peak Rate Position */
@@ -178,7 +180,7 @@
 #define NICGPV_ASIB_AW_P_Msk                  _UINT32_(0xFF000000)                                 /* (NICGPV_ASIB_AW_P) Register Mask  */
 
 
-/* -------- NICGPV_ASIB_AW_B : (NICGPV Offset: 0x11C) (R/W 32) ASIB Write Address Channel Burstiness Allowance Register  -------- */
+/* -------- NICGPV_ASIB_AW_B : (NICGPV Offset: 0x1C) (R/W 32) ASIB Write Address Channel Burstiness Allowance Register  -------- */
 #define NICGPV_ASIB_AW_B_RESETVALUE           _UINT32_(0x00)                                       /*  (NICGPV_ASIB_AW_B) ASIB Write Address Channel Burstiness Allowance Register   Reset Value */
 
 #define NICGPV_ASIB_AW_B_AW_B_Pos             _UINT32_(0)                                          /* (NICGPV_ASIB_AW_B) AW Channel Burstiness Position */
@@ -187,7 +189,7 @@
 #define NICGPV_ASIB_AW_B_Msk                  _UINT32_(0x0000FFFF)                                 /* (NICGPV_ASIB_AW_B) Register Mask  */
 
 
-/* -------- NICGPV_ASIB_AW_R : (NICGPV Offset: 0x120) (R/W 32) ASIB Write Address Channel Average Rate Register  -------- */
+/* -------- NICGPV_ASIB_AW_R : (NICGPV Offset: 0x20) (R/W 32) ASIB Write Address Channel Average Rate Register  -------- */
 #define NICGPV_ASIB_AW_R_RESETVALUE           _UINT32_(0x00)                                       /*  (NICGPV_ASIB_AW_R) ASIB Write Address Channel Average Rate Register   Reset Value */
 
 #define NICGPV_ASIB_AW_R_AW_R_Pos             _UINT32_(20)                                         /* (NICGPV_ASIB_AW_R) AW Channel Average Rate Position */
@@ -196,7 +198,7 @@
 #define NICGPV_ASIB_AW_R_Msk                  _UINT32_(0xFFF00000)                                 /* (NICGPV_ASIB_AW_R) Register Mask  */
 
 
-/* -------- NICGPV_ASIB_AR_P : (NICGPV Offset: 0x124) (R/W 32) ASIB Read Address Channel Peak Rate Register  -------- */
+/* -------- NICGPV_ASIB_AR_P : (NICGPV Offset: 0x24) (R/W 32) ASIB Read Address Channel Peak Rate Register  -------- */
 #define NICGPV_ASIB_AR_P_RESETVALUE           _UINT32_(0x00)                                       /*  (NICGPV_ASIB_AR_P) ASIB Read Address Channel Peak Rate Register   Reset Value */
 
 #define NICGPV_ASIB_AR_P_AR_P_Pos             _UINT32_(24)                                         /* (NICGPV_ASIB_AR_P) AR Channel Peak Rate Position */
@@ -205,7 +207,7 @@
 #define NICGPV_ASIB_AR_P_Msk                  _UINT32_(0xFF000000)                                 /* (NICGPV_ASIB_AR_P) Register Mask  */
 
 
-/* -------- NICGPV_ASIB_AR_B : (NICGPV Offset: 0x128) (R/W 32) ASIB Read Address Channel Burstiness Allowance Register  -------- */
+/* -------- NICGPV_ASIB_AR_B : (NICGPV Offset: 0x28) (R/W 32) ASIB Read Address Channel Burstiness Allowance Register  -------- */
 #define NICGPV_ASIB_AR_B_RESETVALUE           _UINT32_(0x00)                                       /*  (NICGPV_ASIB_AR_B) ASIB Read Address Channel Burstiness Allowance Register   Reset Value */
 
 #define NICGPV_ASIB_AR_B_AR_B_Pos             _UINT32_(0)                                          /* (NICGPV_ASIB_AR_B) AR Channel Burstiness Position */
@@ -214,7 +216,7 @@
 #define NICGPV_ASIB_AR_B_Msk                  _UINT32_(0x0000FFFF)                                 /* (NICGPV_ASIB_AR_B) Register Mask  */
 
 
-/* -------- NICGPV_ASIB_AR_R : (NICGPV Offset: 0x12C) (R/W 32) ASIB Read Address Channel Average Rate Register  -------- */
+/* -------- NICGPV_ASIB_AR_R : (NICGPV Offset: 0x2C) (R/W 32) ASIB Read Address Channel Average Rate Register  -------- */
 #define NICGPV_ASIB_AR_R_RESETVALUE           _UINT32_(0x00)                                       /*  (NICGPV_ASIB_AR_R) ASIB Read Address Channel Average Rate Register   Reset Value */
 
 #define NICGPV_ASIB_AR_R_AR_R_Pos             _UINT32_(20)                                         /* (NICGPV_ASIB_AR_R) AR Channel Average Rate Position */
@@ -223,7 +225,7 @@
 #define NICGPV_ASIB_AR_R_Msk                  _UINT32_(0xFFF00000)                                 /* (NICGPV_ASIB_AR_R) Register Mask  */
 
 
-/* -------- NICGPV_ASIB_TARGET_FC : (NICGPV Offset: 0x130) (R/W 32) ASIB Feedback Controlled Target Register  -------- */
+/* -------- NICGPV_ASIB_TARGET_FC : (NICGPV Offset: 0x30) (R/W 32) ASIB Feedback Controlled Target Register  -------- */
 #define NICGPV_ASIB_TARGET_FC_RESETVALUE      _UINT32_(0x00)                                       /*  (NICGPV_ASIB_TARGET_FC) ASIB Feedback Controlled Target Register   Reset Value */
 
 #define NICGPV_ASIB_TARGET_FC_AW_TGT_LATENCY_Pos _UINT32_(0)                                          /* (NICGPV_ASIB_TARGET_FC) AW Channel Target Latency Position */
@@ -235,7 +237,7 @@
 #define NICGPV_ASIB_TARGET_FC_Msk             _UINT32_(0x0FFF0FFF)                                 /* (NICGPV_ASIB_TARGET_FC) Register Mask  */
 
 
-/* -------- NICGPV_ASIB_KI_FC : (NICGPV Offset: 0x134) (R/W 32) ASIB Feedback Controlled Scale Register  -------- */
+/* -------- NICGPV_ASIB_KI_FC : (NICGPV Offset: 0x34) (R/W 32) ASIB Feedback Controlled Scale Register  -------- */
 #define NICGPV_ASIB_KI_FC_RESETVALUE          _UINT32_(0x00)                                       /*  (NICGPV_ASIB_KI_FC) ASIB Feedback Controlled Scale Register   Reset Value */
 
 #define NICGPV_ASIB_KI_FC_AW_KI_Pos           _UINT32_(0)                                          /* (NICGPV_ASIB_KI_FC) AR QOS Scale Factor Position */
@@ -279,7 +281,7 @@
 #define NICGPV_ASIB_KI_FC_Msk                 _UINT32_(0x00000707)                                 /* (NICGPV_ASIB_KI_FC) Register Mask  */
 
 
-/* -------- NICGPV_ASIB_QOS_RANGE : (NICGPV Offset: 0x138) (R/W 32) ASIB QoS Range Register  -------- */
+/* -------- NICGPV_ASIB_QOS_RANGE : (NICGPV Offset: 0x38) (R/W 32) ASIB QoS Range Register  -------- */
 #define NICGPV_ASIB_QOS_RANGE_RESETVALUE      _UINT32_(0x00)                                       /*  (NICGPV_ASIB_QOS_RANGE) ASIB QoS Range Register   Reset Value */
 
 #define NICGPV_ASIB_QOS_RANGE_AW_MIN_QOS_Pos  _UINT32_(0)                                          /* (NICGPV_ASIB_QOS_RANGE) AW Minimum QOS Position */
@@ -297,7 +299,7 @@
 #define NICGPV_ASIB_QOS_RANGE_Msk             _UINT32_(0x0F0F0F0F)                                 /* (NICGPV_ASIB_QOS_RANGE) Register Mask  */
 
 
-/* -------- NICGPV_IB_FN_MOD_BM_ISS : (NICGPV Offset: 0x08) (R/W 32) IB Bus Matrix Issuing Functionality Modification Register  -------- */
+/* -------- NICGPV_IB_FN_MOD_BM_ISS : (NICGPV Offset: 0x00) (R/W 32) IB Bus Matrix Issuing Functionality Modification Register  -------- */
 #define NICGPV_IB_FN_MOD_BM_ISS_RESETVALUE    _UINT32_(0x00)                                       /*  (NICGPV_IB_FN_MOD_BM_ISS) IB Bus Matrix Issuing Functionality Modification Register   Reset Value */
 
 #define NICGPV_IB_FN_MOD_BM_ISS_FN_MODE_Pos   _UINT32_(0)                                          /* (NICGPV_IB_FN_MOD_BM_ISS) Issuing Functionality Position */
@@ -310,7 +312,7 @@
 #define NICGPV_IB_FN_MOD_BM_ISS_Msk           _UINT32_(0x00000003)                                 /* (NICGPV_IB_FN_MOD_BM_ISS) Register Mask  */
 
 
-/* -------- NICGPV_IB_SYNC_MODE : (NICGPV Offset: 0x20) (R/W 32) IB Clock Boundary Synchronization Scheme Register  -------- */
+/* -------- NICGPV_IB_SYNC_MODE : (NICGPV Offset: 0x18) (R/W 32) IB Clock Boundary Synchronization Scheme Register  -------- */
 #define NICGPV_IB_SYNC_MODE_RESETVALUE        _UINT32_(0x04)                                       /*  (NICGPV_IB_SYNC_MODE) IB Clock Boundary Synchronization Scheme Register   Reset Value */
 
 #define NICGPV_IB_SYNC_MODE_SYNC_MODE_Pos     _UINT32_(0)                                          /* (NICGPV_IB_SYNC_MODE) Read Issuing Position */
@@ -329,7 +331,7 @@
 #define NICGPV_IB_SYNC_MODE_Msk               _UINT32_(0x00000007)                                 /* (NICGPV_IB_SYNC_MODE) Register Mask  */
 
 
-/* -------- NICGPV_IB_FN_MOD2_BP_MRG : (NICGPV Offset: 0x24) (R/W 32) IB Bypass Merge register  -------- */
+/* -------- NICGPV_IB_FN_MOD2_BP_MRG : (NICGPV Offset: 0x1C) (R/W 32) IB Bypass Merge register  -------- */
 #define NICGPV_IB_FN_MOD2_BP_MRG_RESETVALUE   _UINT32_(0x00)                                       /*  (NICGPV_IB_FN_MOD2_BP_MRG) IB Bypass Merge register   Reset Value */
 
 #define NICGPV_IB_FN_MOD2_BP_MRG_BP_MRG_Pos   _UINT32_(0)                                          /* (NICGPV_IB_FN_MOD2_BP_MRG) Bypass Merge Position */
@@ -338,7 +340,7 @@
 #define NICGPV_IB_FN_MOD2_BP_MRG_Msk          _UINT32_(0x00000001)                                 /* (NICGPV_IB_FN_MOD2_BP_MRG) Register Mask  */
 
 
-/* -------- NICGPV_IB_FN_MOD_LB : (NICGPV Offset: 0x2C) (R/W 32) IB Long Burst Functionality Modification Register  -------- */
+/* -------- NICGPV_IB_FN_MOD_LB : (NICGPV Offset: 0x24) (R/W 32) IB Long Burst Functionality Modification Register  -------- */
 #define NICGPV_IB_FN_MOD_LB_RESETVALUE        _UINT32_(0x00)                                       /*  (NICGPV_IB_FN_MOD_LB) IB Long Burst Functionality Modification Register   Reset Value */
 
 #define NICGPV_IB_FN_MOD_LB_LB_MODE_Pos       _UINT32_(0)                                          /* (NICGPV_IB_FN_MOD_LB) Long Burst Mode Position */
@@ -351,7 +353,7 @@
 #define NICGPV_IB_FN_MOD_LB_Msk               _UINT32_(0x00000001)                                 /* (NICGPV_IB_FN_MOD_LB) Register Mask  */
 
 
-/* -------- NICGPV_IB_WR_TIDEMARK : (NICGPV Offset: 0x40) (R/W 32) IB Tidemark Register  -------- */
+/* -------- NICGPV_IB_WR_TIDEMARK : (NICGPV Offset: 0x38) (R/W 32) IB Tidemark Register  -------- */
 #define NICGPV_IB_WR_TIDEMARK_RESETVALUE      _UINT32_(0x02)                                       /*  (NICGPV_IB_WR_TIDEMARK) IB Tidemark Register   Reset Value */
 
 #define NICGPV_IB_WR_TIDEMARK_WR_TIDEMARK_Pos _UINT32_(0)                                          /* (NICGPV_IB_WR_TIDEMARK) WR Tidemark Value Position */
@@ -360,7 +362,7 @@
 #define NICGPV_IB_WR_TIDEMARK_Msk             _UINT32_(0x0000000F)                                 /* (NICGPV_IB_WR_TIDEMARK) Register Mask  */
 
 
-/* -------- NICGPV_IB_FN_MOD : (NICGPV Offset: 0x108) (R/W 32) IB Issuing Functionality Modification Register  -------- */
+/* -------- NICGPV_IB_FN_MOD : (NICGPV Offset: 0x100) (R/W 32) IB Issuing Functionality Modification Register  -------- */
 #define NICGPV_IB_FN_MOD_RESETVALUE           _UINT32_(0x00)                                       /*  (NICGPV_IB_FN_MOD) IB Issuing Functionality Modification Register   Reset Value */
 
 #define NICGPV_IB_FN_MOD_FN_MODE_Pos          _UINT32_(0)                                          /* (NICGPV_IB_FN_MOD) Issuing Functionality Mode Position */
@@ -374,77 +376,74 @@
 
 
 /* NICGPV register offsets definitions */
-#define NICGPV_AMIB_FN_MOD_BM_ISS_REG_OFST _UINT32_(0x08)      /* (NICGPV_AMIB_FN_MOD_BM_ISS) AMIB Bus Matrix Issuing Functionality Modification Register  Offset */
-#define NICGPV_ASIB_READ_QOS_REG_OFST  _UINT32_(0x100)     /* (NICGPV_ASIB_READ_QOS) ASIB Read Channel QoS Register  Offset */
-#define NICGPV_ASIB_WRITE_QOS_REG_OFST _UINT32_(0x104)     /* (NICGPV_ASIB_WRITE_QOS) ASIB Write Channel QoS Register  Offset */
-#define NICGPV_ASIB_QOS_CNTL_REG_OFST  _UINT32_(0x10C)     /* (NICGPV_ASIB_QOS_CNTL) ASIB QoS Control Register  Offset */
-#define NICGPV_ASIB_MAX_OT_REG_OFST    _UINT32_(0x110)     /* (NICGPV_ASIB_MAX_OT) ASIB Maximum Number of Outstanding Transactions Register  Offset */
-#define NICGPV_ASIB_MAX_COMB_OT_REG_OFST _UINT32_(0x114)     /* (NICGPV_ASIB_MAX_COMB_OT) ASIB Maximum Combined Outstanding Transactions Register  Offset */
-#define NICGPV_ASIB_AW_P_REG_OFST      _UINT32_(0x118)     /* (NICGPV_ASIB_AW_P) ASIB Write Address Channel Peak Rate Register  Offset */
-#define NICGPV_ASIB_AW_B_REG_OFST      _UINT32_(0x11C)     /* (NICGPV_ASIB_AW_B) ASIB Write Address Channel Burstiness Allowance Register  Offset */
-#define NICGPV_ASIB_AW_R_REG_OFST      _UINT32_(0x120)     /* (NICGPV_ASIB_AW_R) ASIB Write Address Channel Average Rate Register  Offset */
-#define NICGPV_ASIB_AR_P_REG_OFST      _UINT32_(0x124)     /* (NICGPV_ASIB_AR_P) ASIB Read Address Channel Peak Rate Register  Offset */
-#define NICGPV_ASIB_AR_B_REG_OFST      _UINT32_(0x128)     /* (NICGPV_ASIB_AR_B) ASIB Read Address Channel Burstiness Allowance Register  Offset */
-#define NICGPV_ASIB_AR_R_REG_OFST      _UINT32_(0x12C)     /* (NICGPV_ASIB_AR_R) ASIB Read Address Channel Average Rate Register  Offset */
-#define NICGPV_ASIB_TARGET_FC_REG_OFST _UINT32_(0x130)     /* (NICGPV_ASIB_TARGET_FC) ASIB Feedback Controlled Target Register  Offset */
-#define NICGPV_ASIB_KI_FC_REG_OFST     _UINT32_(0x134)     /* (NICGPV_ASIB_KI_FC) ASIB Feedback Controlled Scale Register  Offset */
-#define NICGPV_ASIB_QOS_RANGE_REG_OFST _UINT32_(0x138)     /* (NICGPV_ASIB_QOS_RANGE) ASIB QoS Range Register  Offset */
-#define NICGPV_IB_FN_MOD_BM_ISS_REG_OFST _UINT32_(0x08)      /* (NICGPV_IB_FN_MOD_BM_ISS) IB Bus Matrix Issuing Functionality Modification Register  Offset */
-#define NICGPV_IB_SYNC_MODE_REG_OFST   _UINT32_(0x20)      /* (NICGPV_IB_SYNC_MODE) IB Clock Boundary Synchronization Scheme Register  Offset */
-#define NICGPV_IB_FN_MOD2_BP_MRG_REG_OFST _UINT32_(0x24)      /* (NICGPV_IB_FN_MOD2_BP_MRG) IB Bypass Merge register  Offset */
-#define NICGPV_IB_FN_MOD_LB_REG_OFST   _UINT32_(0x2C)      /* (NICGPV_IB_FN_MOD_LB) IB Long Burst Functionality Modification Register  Offset */
-#define NICGPV_IB_WR_TIDEMARK_REG_OFST _UINT32_(0x40)      /* (NICGPV_IB_WR_TIDEMARK) IB Tidemark Register  Offset */
-#define NICGPV_IB_FN_MOD_REG_OFST      _UINT32_(0x108)     /* (NICGPV_IB_FN_MOD) IB Issuing Functionality Modification Register  Offset */
+#define NICGPV_AMIB_FN_MOD_BM_ISS_REG_OFST _UINT32_(0x00)      /* (NICGPV_AMIB_FN_MOD_BM_ISS) AMIB Bus Matrix Issuing Functionality Modification Register  Offset */
+#define NICGPV_ASIB_READ_QOS_REG_OFST  _UINT32_(0x00)      /* (NICGPV_ASIB_READ_QOS) ASIB Read Channel QoS Register  Offset */
+#define NICGPV_ASIB_WRITE_QOS_REG_OFST _UINT32_(0x04)      /* (NICGPV_ASIB_WRITE_QOS) ASIB Write Channel QoS Register  Offset */
+#define NICGPV_ASIB_QOS_CNTL_REG_OFST  _UINT32_(0x0C)      /* (NICGPV_ASIB_QOS_CNTL) ASIB QoS Control Register  Offset */
+#define NICGPV_ASIB_MAX_OT_REG_OFST    _UINT32_(0x10)      /* (NICGPV_ASIB_MAX_OT) ASIB Maximum Number of Outstanding Transactions Register  Offset */
+#define NICGPV_ASIB_MAX_COMB_OT_REG_OFST _UINT32_(0x14)      /* (NICGPV_ASIB_MAX_COMB_OT) ASIB Maximum Combined Outstanding Transactions Register  Offset */
+#define NICGPV_ASIB_AW_P_REG_OFST      _UINT32_(0x18)      /* (NICGPV_ASIB_AW_P) ASIB Write Address Channel Peak Rate Register  Offset */
+#define NICGPV_ASIB_AW_B_REG_OFST      _UINT32_(0x1C)      /* (NICGPV_ASIB_AW_B) ASIB Write Address Channel Burstiness Allowance Register  Offset */
+#define NICGPV_ASIB_AW_R_REG_OFST      _UINT32_(0x20)      /* (NICGPV_ASIB_AW_R) ASIB Write Address Channel Average Rate Register  Offset */
+#define NICGPV_ASIB_AR_P_REG_OFST      _UINT32_(0x24)      /* (NICGPV_ASIB_AR_P) ASIB Read Address Channel Peak Rate Register  Offset */
+#define NICGPV_ASIB_AR_B_REG_OFST      _UINT32_(0x28)      /* (NICGPV_ASIB_AR_B) ASIB Read Address Channel Burstiness Allowance Register  Offset */
+#define NICGPV_ASIB_AR_R_REG_OFST      _UINT32_(0x2C)      /* (NICGPV_ASIB_AR_R) ASIB Read Address Channel Average Rate Register  Offset */
+#define NICGPV_ASIB_TARGET_FC_REG_OFST _UINT32_(0x30)      /* (NICGPV_ASIB_TARGET_FC) ASIB Feedback Controlled Target Register  Offset */
+#define NICGPV_ASIB_KI_FC_REG_OFST     _UINT32_(0x34)      /* (NICGPV_ASIB_KI_FC) ASIB Feedback Controlled Scale Register  Offset */
+#define NICGPV_ASIB_QOS_RANGE_REG_OFST _UINT32_(0x38)      /* (NICGPV_ASIB_QOS_RANGE) ASIB QoS Range Register  Offset */
+#define NICGPV_IB_FN_MOD_BM_ISS_REG_OFST _UINT32_(0x00)      /* (NICGPV_IB_FN_MOD_BM_ISS) IB Bus Matrix Issuing Functionality Modification Register  Offset */
+#define NICGPV_IB_SYNC_MODE_REG_OFST   _UINT32_(0x18)      /* (NICGPV_IB_SYNC_MODE) IB Clock Boundary Synchronization Scheme Register  Offset */
+#define NICGPV_IB_FN_MOD2_BP_MRG_REG_OFST _UINT32_(0x1C)      /* (NICGPV_IB_FN_MOD2_BP_MRG) IB Bypass Merge register  Offset */
+#define NICGPV_IB_FN_MOD_LB_REG_OFST   _UINT32_(0x24)      /* (NICGPV_IB_FN_MOD_LB) IB Long Burst Functionality Modification Register  Offset */
+#define NICGPV_IB_WR_TIDEMARK_REG_OFST _UINT32_(0x38)      /* (NICGPV_IB_WR_TIDEMARK) IB Tidemark Register  Offset */
+#define NICGPV_IB_FN_MOD_REG_OFST      _UINT32_(0x100)     /* (NICGPV_IB_FN_MOD) IB Issuing Functionality Modification Register  Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
-/* NICGPV_AMIB register API structure */
+/* NICGPV_AMIB_FN_MOD_BM_ISS register API structure */
 typedef struct
 {
-  __I   uint8_t                        Reserved1[0x08];
-  __IO  uint32_t                       NICGPV_AMIB_FN_MOD_BM_ISS; /* Offset: 0x08 (R/W  32) AMIB Bus Matrix Issuing Functionality Modification Register  */
-  __I   uint8_t                        Reserved2[0xFF4];
-} nicgpv_amib_registers_t;
+  __IO  uint32_t                       NICGPV_AMIB_FN_MOD_BM_ISS; /* Offset: 0x00 (R/W  32) AMIB Bus Matrix Issuing Functionality Modification Register  */
+  __I   uint8_t                        Reserved1[0xFFC];
+} nicgpv_amib_fn_mod_bm_iss_registers_t;
 
 /* NICGPV_ASIB register API structure */
 typedef struct
 {
-  __I   uint8_t                        Reserved1[0x100];
-  __IO  uint32_t                       NICGPV_ASIB_READ_QOS; /* Offset: 0x100 (R/W  32) ASIB Read Channel QoS Register  */
-  __IO  uint32_t                       NICGPV_ASIB_WRITE_QOS; /* Offset: 0x104 (R/W  32) ASIB Write Channel QoS Register  */
-  __I   uint8_t                        Reserved2[0x04];
-  __IO  uint32_t                       NICGPV_ASIB_QOS_CNTL; /* Offset: 0x10C (R/W  32) ASIB QoS Control Register  */
-  __IO  uint32_t                       NICGPV_ASIB_MAX_OT; /* Offset: 0x110 (R/W  32) ASIB Maximum Number of Outstanding Transactions Register  */
-  __IO  uint32_t                       NICGPV_ASIB_MAX_COMB_OT; /* Offset: 0x114 (R/W  32) ASIB Maximum Combined Outstanding Transactions Register  */
-  __IO  uint32_t                       NICGPV_ASIB_AW_P;   /* Offset: 0x118 (R/W  32) ASIB Write Address Channel Peak Rate Register  */
-  __IO  uint32_t                       NICGPV_ASIB_AW_B;   /* Offset: 0x11C (R/W  32) ASIB Write Address Channel Burstiness Allowance Register  */
-  __IO  uint32_t                       NICGPV_ASIB_AW_R;   /* Offset: 0x120 (R/W  32) ASIB Write Address Channel Average Rate Register  */
-  __IO  uint32_t                       NICGPV_ASIB_AR_P;   /* Offset: 0x124 (R/W  32) ASIB Read Address Channel Peak Rate Register  */
-  __IO  uint32_t                       NICGPV_ASIB_AR_B;   /* Offset: 0x128 (R/W  32) ASIB Read Address Channel Burstiness Allowance Register  */
-  __IO  uint32_t                       NICGPV_ASIB_AR_R;   /* Offset: 0x12C (R/W  32) ASIB Read Address Channel Average Rate Register  */
-  __IO  uint32_t                       NICGPV_ASIB_TARGET_FC; /* Offset: 0x130 (R/W  32) ASIB Feedback Controlled Target Register  */
-  __IO  uint32_t                       NICGPV_ASIB_KI_FC;  /* Offset: 0x134 (R/W  32) ASIB Feedback Controlled Scale Register  */
-  __IO  uint32_t                       NICGPV_ASIB_QOS_RANGE; /* Offset: 0x138 (R/W  32) ASIB QoS Range Register  */
-  __I   uint8_t                        Reserved3[0xEC4];
+  __IO  uint32_t                       NICGPV_ASIB_READ_QOS; /* Offset: 0x00 (R/W  32) ASIB Read Channel QoS Register  */
+  __IO  uint32_t                       NICGPV_ASIB_WRITE_QOS; /* Offset: 0x04 (R/W  32) ASIB Write Channel QoS Register  */
+  __I   uint8_t                        Reserved1[0x04];
+  __IO  uint32_t                       NICGPV_ASIB_QOS_CNTL; /* Offset: 0x0C (R/W  32) ASIB QoS Control Register  */
+  __IO  uint32_t                       NICGPV_ASIB_MAX_OT; /* Offset: 0x10 (R/W  32) ASIB Maximum Number of Outstanding Transactions Register  */
+  __IO  uint32_t                       NICGPV_ASIB_MAX_COMB_OT; /* Offset: 0x14 (R/W  32) ASIB Maximum Combined Outstanding Transactions Register  */
+  __IO  uint32_t                       NICGPV_ASIB_AW_P;   /* Offset: 0x18 (R/W  32) ASIB Write Address Channel Peak Rate Register  */
+  __IO  uint32_t                       NICGPV_ASIB_AW_B;   /* Offset: 0x1C (R/W  32) ASIB Write Address Channel Burstiness Allowance Register  */
+  __IO  uint32_t                       NICGPV_ASIB_AW_R;   /* Offset: 0x20 (R/W  32) ASIB Write Address Channel Average Rate Register  */
+  __IO  uint32_t                       NICGPV_ASIB_AR_P;   /* Offset: 0x24 (R/W  32) ASIB Read Address Channel Peak Rate Register  */
+  __IO  uint32_t                       NICGPV_ASIB_AR_B;   /* Offset: 0x28 (R/W  32) ASIB Read Address Channel Burstiness Allowance Register  */
+  __IO  uint32_t                       NICGPV_ASIB_AR_R;   /* Offset: 0x2C (R/W  32) ASIB Read Address Channel Average Rate Register  */
+  __IO  uint32_t                       NICGPV_ASIB_TARGET_FC; /* Offset: 0x30 (R/W  32) ASIB Feedback Controlled Target Register  */
+  __IO  uint32_t                       NICGPV_ASIB_KI_FC;  /* Offset: 0x34 (R/W  32) ASIB Feedback Controlled Scale Register  */
+  __IO  uint32_t                       NICGPV_ASIB_QOS_RANGE; /* Offset: 0x38 (R/W  32) ASIB QoS Range Register  */
+  __I   uint8_t                        Reserved2[0xFC4];
 } nicgpv_asib_registers_t;
 
 /* NICGPV_IB register API structure */
 typedef struct
 {
-  __I   uint8_t                        Reserved1[0x08];
-  __IO  uint32_t                       NICGPV_IB_FN_MOD_BM_ISS; /* Offset: 0x08 (R/W  32) IB Bus Matrix Issuing Functionality Modification Register  */
-  __I   uint8_t                        Reserved2[0x14];
-  __IO  uint32_t                       NICGPV_IB_SYNC_MODE; /* Offset: 0x20 (R/W  32) IB Clock Boundary Synchronization Scheme Register  */
-  __IO  uint32_t                       NICGPV_IB_FN_MOD2_BP_MRG; /* Offset: 0x24 (R/W  32) IB Bypass Merge register  */
-  __I   uint8_t                        Reserved3[0x04];
-  __IO  uint32_t                       NICGPV_IB_FN_MOD_LB; /* Offset: 0x2C (R/W  32) IB Long Burst Functionality Modification Register  */
-  __I   uint8_t                        Reserved4[0x10];
-  __IO  uint32_t                       NICGPV_IB_WR_TIDEMARK; /* Offset: 0x40 (R/W  32) IB Tidemark Register  */
-  __I   uint8_t                        Reserved5[0xC4];
-  __IO  uint32_t                       NICGPV_IB_FN_MOD;   /* Offset: 0x108 (R/W  32) IB Issuing Functionality Modification Register  */
-  __I   uint8_t                        Reserved6[0xEF4];
+  __IO  uint32_t                       NICGPV_IB_FN_MOD_BM_ISS; /* Offset: 0x00 (R/W  32) IB Bus Matrix Issuing Functionality Modification Register  */
+  __I   uint8_t                        Reserved1[0x14];
+  __IO  uint32_t                       NICGPV_IB_SYNC_MODE; /* Offset: 0x18 (R/W  32) IB Clock Boundary Synchronization Scheme Register  */
+  __IO  uint32_t                       NICGPV_IB_FN_MOD2_BP_MRG; /* Offset: 0x1C (R/W  32) IB Bypass Merge register  */
+  __I   uint8_t                        Reserved2[0x04];
+  __IO  uint32_t                       NICGPV_IB_FN_MOD_LB; /* Offset: 0x24 (R/W  32) IB Long Burst Functionality Modification Register  */
+  __I   uint8_t                        Reserved3[0x10];
+  __IO  uint32_t                       NICGPV_IB_WR_TIDEMARK; /* Offset: 0x38 (R/W  32) IB Tidemark Register  */
+  __I   uint8_t                        Reserved4[0xC4];
+  __IO  uint32_t                       NICGPV_IB_FN_MOD;   /* Offset: 0x100 (R/W  32) IB Issuing Functionality Modification Register  */
+  __I   uint8_t                        Reserved5[0xEFC];
 } nicgpv_ib_registers_t;
 
-#define NICGPV_AMIB_NUMBER 15
+#define NICGPV_AMIB_FN_MOD_BM_ISS_NUMBER 15
 
 #define NICGPV_ASIB_NUMBER 11
 
@@ -453,12 +452,12 @@ typedef struct
 /* NICGPV register API structure */
 typedef struct
 {  /* NIC-400 Global Programmers View */
-  __I   uint8_t                        Reserved1[0x2000];
-        nicgpv_amib_registers_t        NICGPV_AMIB[NICGPV_AMIB_NUMBER]; /* Offset: 0x2000  */
-  __I   uint8_t                        Reserved2[0x31000];
-        nicgpv_asib_registers_t        NICGPV_ASIB[NICGPV_ASIB_NUMBER]; /* Offset: 0x42000  */
-  __I   uint8_t                        Reserved3[0x75000];
-        nicgpv_ib_registers_t          NICGPV_IB[NICGPV_IB_NUMBER]; /* Offset: 0xC2000  */
+  __I   uint8_t                        Reserved1[0x2008];
+        nicgpv_amib_fn_mod_bm_iss_registers_t NICGPV_AMIB_FN_MOD_BM_ISS[NICGPV_AMIB_FN_MOD_BM_ISS_NUMBER]; /* Offset: 0x2008  */
+  __I   uint8_t                        Reserved2[0x310F8];
+        nicgpv_asib_registers_t        NICGPV_ASIB[NICGPV_ASIB_NUMBER]; /* Offset: 0x42100  */
+  __I   uint8_t                        Reserved3[0x74F08];
+        nicgpv_ib_registers_t          NICGPV_IB[NICGPV_IB_NUMBER]; /* Offset: 0xC2008  */
 } nicgpv_registers_t;
 
 

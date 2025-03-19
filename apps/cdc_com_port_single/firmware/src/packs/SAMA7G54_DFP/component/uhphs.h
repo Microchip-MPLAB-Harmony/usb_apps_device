@@ -1,7 +1,9 @@
 /*
  * Component description for UHPHS
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,7 +19,7 @@
  *
  */
 
-/*  file generated from device description file (ATDF) version 2024-02-20T14:30:20Z  */
+/*      file generated from device description file (ATDF) version None       */
 #ifndef _SAMA7G5_UHPHS_COMPONENT_H_
 #define _SAMA7G5_UHPHS_COMPONENT_H_
 
@@ -113,9 +115,11 @@
 #define   UHPHS_USBCMD_FLS_0_Val              _UINT32_(0x0)                                        /* (UHPHS_USBCMD) 1024 elements (4096 bytes).  */
 #define   UHPHS_USBCMD_FLS_1_Val              _UINT32_(0x1)                                        /* (UHPHS_USBCMD) 512 elements (2048 bytes).  */
 #define   UHPHS_USBCMD_FLS_2_Val              _UINT32_(0x2)                                        /* (UHPHS_USBCMD) 256 elements (1024 bytes), for resource-constrained environments.  */
+#define   UHPHS_USBCMD_FLS_3_Val              _UINT32_(0x3)                                        /* (UHPHS_USBCMD) Reserved.  */
 #define UHPHS_USBCMD_FLS_0                    (UHPHS_USBCMD_FLS_0_Val << UHPHS_USBCMD_FLS_Pos)     /* (UHPHS_USBCMD) 1024 elements (4096 bytes). Position */
 #define UHPHS_USBCMD_FLS_1                    (UHPHS_USBCMD_FLS_1_Val << UHPHS_USBCMD_FLS_Pos)     /* (UHPHS_USBCMD) 512 elements (2048 bytes). Position */
 #define UHPHS_USBCMD_FLS_2                    (UHPHS_USBCMD_FLS_2_Val << UHPHS_USBCMD_FLS_Pos)     /* (UHPHS_USBCMD) 256 elements (1024 bytes), for resource-constrained environments. Position */
+#define UHPHS_USBCMD_FLS_3                    (UHPHS_USBCMD_FLS_3_Val << UHPHS_USBCMD_FLS_Pos)     /* (UHPHS_USBCMD) Reserved. Position */
 #define UHPHS_USBCMD_PSE_Pos                  _UINT32_(4)                                          /* (UHPHS_USBCMD) Periodic Schedule Enable (read/write) Position */
 #define UHPHS_USBCMD_PSE_Msk                  (_UINT32_(0x1) << UHPHS_USBCMD_PSE_Pos)              /* (UHPHS_USBCMD) Periodic Schedule Enable (read/write) Mask */
 #define UHPHS_USBCMD_PSE(value)               (UHPHS_USBCMD_PSE_Msk & (_UINT32_(value) << UHPHS_USBCMD_PSE_Pos)) /* Assignment of value for PSE in the UHPHS_USBCMD register */

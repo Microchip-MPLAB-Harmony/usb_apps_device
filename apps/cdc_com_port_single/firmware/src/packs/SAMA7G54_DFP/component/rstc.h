@@ -1,7 +1,9 @@
 /*
  * Component description for RSTC
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,7 +19,7 @@
  *
  */
 
-/*  file generated from device description file (ATDF) version 2024-02-20T14:30:20Z  */
+/*      file generated from device description file (ATDF) version None       */
 #ifndef _SAMA7G5_RSTC_COMPONENT_H_
 #define _SAMA7G5_RSTC_COMPONENT_H_
 
@@ -67,14 +69,12 @@
 #define   RSTC_SR_RSTTYP_SOFT_RST_Val         _UINT32_(0x3)                                        /* (RSTC_SR) Processor reset required by the software  */
 #define   RSTC_SR_RSTTYP_USER_RST_Val         _UINT32_(0x4)                                        /* (RSTC_SR) NRST pin detected low  */
 #define   RSTC_SR_RSTTYP_SLCK_XTAL_RST_Val    _UINT32_(0x7)                                        /* (RSTC_SR) 32.768 kHz crystal failure detection fault occurred  */
-#define   RSTC_SR_RSTTYP_ULP2_RST_Val         _UINT32_(0x8)                                        /* (RSTC_SR) ULP Mode 2 reset  */
 #define RSTC_SR_RSTTYP_GENERAL_RST            (RSTC_SR_RSTTYP_GENERAL_RST_Val << RSTC_SR_RSTTYP_Pos) /* (RSTC_SR) First powerup reset Position */
 #define RSTC_SR_RSTTYP_BACKUP_RST             (RSTC_SR_RSTTYP_BACKUP_RST_Val << RSTC_SR_RSTTYP_Pos) /* (RSTC_SR) Return from Backup mode Position */
 #define RSTC_SR_RSTTYP_WDT_RST                (RSTC_SR_RSTTYP_WDT_RST_Val << RSTC_SR_RSTTYP_Pos)   /* (RSTC_SR) Watchdog fault occurred Position */
 #define RSTC_SR_RSTTYP_SOFT_RST               (RSTC_SR_RSTTYP_SOFT_RST_Val << RSTC_SR_RSTTYP_Pos)  /* (RSTC_SR) Processor reset required by the software Position */
 #define RSTC_SR_RSTTYP_USER_RST               (RSTC_SR_RSTTYP_USER_RST_Val << RSTC_SR_RSTTYP_Pos)  /* (RSTC_SR) NRST pin detected low Position */
 #define RSTC_SR_RSTTYP_SLCK_XTAL_RST          (RSTC_SR_RSTTYP_SLCK_XTAL_RST_Val << RSTC_SR_RSTTYP_Pos) /* (RSTC_SR) 32.768 kHz crystal failure detection fault occurred Position */
-#define RSTC_SR_RSTTYP_ULP2_RST               (RSTC_SR_RSTTYP_ULP2_RST_Val << RSTC_SR_RSTTYP_Pos)  /* (RSTC_SR) ULP Mode 2 reset Position */
 #define RSTC_SR_NRSTL_Pos                     _UINT32_(16)                                         /* (RSTC_SR) NRST Pin Level Position */
 #define RSTC_SR_NRSTL_Msk                     (_UINT32_(0x1) << RSTC_SR_NRSTL_Pos)                 /* (RSTC_SR) NRST Pin Level Mask */
 #define RSTC_SR_NRSTL(value)                  (RSTC_SR_NRSTL_Msk & (_UINT32_(value) << RSTC_SR_NRSTL_Pos)) /* Assignment of value for NRSTL in the RSTC_SR register */

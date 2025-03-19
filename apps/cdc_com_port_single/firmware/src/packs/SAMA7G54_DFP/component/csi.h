@@ -1,7 +1,9 @@
 /*
  * Component description for CSI
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,7 +19,7 @@
  *
  */
 
-/*  file generated from device description file (ATDF) version 2024-02-20T14:30:20Z  */
+/*      file generated from device description file (ATDF) version None       */
 #ifndef _SAMA7G5_CSI_COMPONENT_H_
 #define _SAMA7G5_CSI_COMPONENT_H_
 
@@ -75,8 +77,8 @@
 #define   CSI_INT_ST_MAIN_STATUS_INT_FRAME_FATAL_1_Val _UINT32_(0x1)                                        /* (CSI_INT_ST_MAIN) Indicates if an event occurred in the CSI_INT_ST_FRAME_FATAL register since the last CSI_INT_ST_MAIN read.  */
 #define CSI_INT_ST_MAIN_STATUS_INT_FRAME_FATAL_0 (CSI_INT_ST_MAIN_STATUS_INT_FRAME_FATAL_0_Val << CSI_INT_ST_MAIN_STATUS_INT_FRAME_FATAL_Pos) /* (CSI_INT_ST_MAIN) No event occurred in the CSI_INT_ST_FRAME_FATAL register since the last CSI_INT_ST_MAIN read. Position */
 #define CSI_INT_ST_MAIN_STATUS_INT_FRAME_FATAL_1 (CSI_INT_ST_MAIN_STATUS_INT_FRAME_FATAL_1_Val << CSI_INT_ST_MAIN_STATUS_INT_FRAME_FATAL_Pos) /* (CSI_INT_ST_MAIN) Indicates if an event occurred in the CSI_INT_ST_FRAME_FATAL register since the last CSI_INT_ST_MAIN read. Position */
-#define CSI_INT_ST_MAIN_STATUS_INT_DPHY_Pos   _UINT32_(16)                                         /* (CSI_INT_ST_MAIN) CSI_INT_ST_PHY Register Event (Cleared on Read) Position */
-#define CSI_INT_ST_MAIN_STATUS_INT_DPHY_Msk   (_UINT32_(0x1) << CSI_INT_ST_MAIN_STATUS_INT_DPHY_Pos) /* (CSI_INT_ST_MAIN) CSI_INT_ST_PHY Register Event (Cleared on Read) Mask */
+#define CSI_INT_ST_MAIN_STATUS_INT_DPHY_Pos   _UINT32_(16)                                         /* (CSI_INT_ST_MAIN) CSI_INT_ST_DPHY Register Event (Cleared on Read) Position */
+#define CSI_INT_ST_MAIN_STATUS_INT_DPHY_Msk   (_UINT32_(0x1) << CSI_INT_ST_MAIN_STATUS_INT_DPHY_Pos) /* (CSI_INT_ST_MAIN) CSI_INT_ST_DPHY Register Event (Cleared on Read) Mask */
 #define CSI_INT_ST_MAIN_STATUS_INT_DPHY(value) (CSI_INT_ST_MAIN_STATUS_INT_DPHY_Msk & (_UINT32_(value) << CSI_INT_ST_MAIN_STATUS_INT_DPHY_Pos)) /* Assignment of value for STATUS_INT_DPHY in the CSI_INT_ST_MAIN register */
 #define   CSI_INT_ST_MAIN_STATUS_INT_DPHY_0_Val _UINT32_(0x0)                                        /* (CSI_INT_ST_MAIN) No event occurred in the CSI_INT_ST_DPHY register since the last CSI_INT_ST_MAIN read.  */
 #define   CSI_INT_ST_MAIN_STATUS_INT_DPHY_1_Val _UINT32_(0x1)                                        /* (CSI_INT_ST_MAIN) Indicates if an event occurred in the CSI_INT_ST_DPHY register since the last CSI_INT_ST_MAIN read.  */
@@ -90,6 +92,62 @@
 #define CSI_INT_ST_MAIN_STATUS_INT_PKT_0      (CSI_INT_ST_MAIN_STATUS_INT_PKT_0_Val << CSI_INT_ST_MAIN_STATUS_INT_PKT_Pos) /* (CSI_INT_ST_MAIN) No event occurred in the CSI_INT_ST_PKT register since the last CSI_INT_ST_MAIN read. Position */
 #define CSI_INT_ST_MAIN_STATUS_INT_PKT_1      (CSI_INT_ST_MAIN_STATUS_INT_PKT_1_Val << CSI_INT_ST_MAIN_STATUS_INT_PKT_Pos) /* (CSI_INT_ST_MAIN) Indicates if an event occurred in the CSI_INT_ST_PKT register since the last CSI_INT_ST_MAIN read. Position */
 #define CSI_INT_ST_MAIN_Msk                   _UINT32_(0x00030007)                                 /* (CSI_INT_ST_MAIN) Register Mask  */
+
+
+/* -------- CSI_DATA_IDS_1 : (CSI Offset: 0x10) (R/W 32) Static read and write register   Programs the data Ids for matching line error reporting.   Enables up to eight different data Ids that can be identified simultaneously. -------- */
+#define CSI_DATA_IDS_1_DI0_DT_Pos             _UINT32_(0)                                          /* (CSI_DATA_IDS_1) Data type for programmed data Id 0. Position */
+#define CSI_DATA_IDS_1_DI0_DT_Msk             (_UINT32_(0x3F) << CSI_DATA_IDS_1_DI0_DT_Pos)        /* (CSI_DATA_IDS_1) Data type for programmed data Id 0. Mask */
+#define CSI_DATA_IDS_1_DI0_DT(value)          (CSI_DATA_IDS_1_DI0_DT_Msk & (_UINT32_(value) << CSI_DATA_IDS_1_DI0_DT_Pos)) /* Assignment of value for DI0_DT in the CSI_DATA_IDS_1 register */
+#define CSI_DATA_IDS_1_DI0_VC_Pos             _UINT32_(6)                                          /* (CSI_DATA_IDS_1) Virtual channel for programmed data Id 0. Position */
+#define CSI_DATA_IDS_1_DI0_VC_Msk             (_UINT32_(0x3) << CSI_DATA_IDS_1_DI0_VC_Pos)         /* (CSI_DATA_IDS_1) Virtual channel for programmed data Id 0. Mask */
+#define CSI_DATA_IDS_1_DI0_VC(value)          (CSI_DATA_IDS_1_DI0_VC_Msk & (_UINT32_(value) << CSI_DATA_IDS_1_DI0_VC_Pos)) /* Assignment of value for DI0_VC in the CSI_DATA_IDS_1 register */
+#define CSI_DATA_IDS_1_DI1_DT_Pos             _UINT32_(8)                                          /* (CSI_DATA_IDS_1) Data type for programmed data Id 1. Position */
+#define CSI_DATA_IDS_1_DI1_DT_Msk             (_UINT32_(0x3F) << CSI_DATA_IDS_1_DI1_DT_Pos)        /* (CSI_DATA_IDS_1) Data type for programmed data Id 1. Mask */
+#define CSI_DATA_IDS_1_DI1_DT(value)          (CSI_DATA_IDS_1_DI1_DT_Msk & (_UINT32_(value) << CSI_DATA_IDS_1_DI1_DT_Pos)) /* Assignment of value for DI1_DT in the CSI_DATA_IDS_1 register */
+#define CSI_DATA_IDS_1_DI1_VC_Pos             _UINT32_(14)                                         /* (CSI_DATA_IDS_1) Virtual channel for programmed data Id 1. Position */
+#define CSI_DATA_IDS_1_DI1_VC_Msk             (_UINT32_(0x3) << CSI_DATA_IDS_1_DI1_VC_Pos)         /* (CSI_DATA_IDS_1) Virtual channel for programmed data Id 1. Mask */
+#define CSI_DATA_IDS_1_DI1_VC(value)          (CSI_DATA_IDS_1_DI1_VC_Msk & (_UINT32_(value) << CSI_DATA_IDS_1_DI1_VC_Pos)) /* Assignment of value for DI1_VC in the CSI_DATA_IDS_1 register */
+#define CSI_DATA_IDS_1_DI2_DT_Pos             _UINT32_(16)                                         /* (CSI_DATA_IDS_1) Data type for programmed Data ID 2. Position */
+#define CSI_DATA_IDS_1_DI2_DT_Msk             (_UINT32_(0x3F) << CSI_DATA_IDS_1_DI2_DT_Pos)        /* (CSI_DATA_IDS_1) Data type for programmed Data ID 2. Mask */
+#define CSI_DATA_IDS_1_DI2_DT(value)          (CSI_DATA_IDS_1_DI2_DT_Msk & (_UINT32_(value) << CSI_DATA_IDS_1_DI2_DT_Pos)) /* Assignment of value for DI2_DT in the CSI_DATA_IDS_1 register */
+#define CSI_DATA_IDS_1_DI2_VC_Pos             _UINT32_(22)                                         /* (CSI_DATA_IDS_1) Virtual channel for programmed data Id 2. Position */
+#define CSI_DATA_IDS_1_DI2_VC_Msk             (_UINT32_(0x3) << CSI_DATA_IDS_1_DI2_VC_Pos)         /* (CSI_DATA_IDS_1) Virtual channel for programmed data Id 2. Mask */
+#define CSI_DATA_IDS_1_DI2_VC(value)          (CSI_DATA_IDS_1_DI2_VC_Msk & (_UINT32_(value) << CSI_DATA_IDS_1_DI2_VC_Pos)) /* Assignment of value for DI2_VC in the CSI_DATA_IDS_1 register */
+#define CSI_DATA_IDS_1_DI3_DT_Pos             _UINT32_(24)                                         /* (CSI_DATA_IDS_1) Data type for programmed data Id 3. Position */
+#define CSI_DATA_IDS_1_DI3_DT_Msk             (_UINT32_(0x3F) << CSI_DATA_IDS_1_DI3_DT_Pos)        /* (CSI_DATA_IDS_1) Data type for programmed data Id 3. Mask */
+#define CSI_DATA_IDS_1_DI3_DT(value)          (CSI_DATA_IDS_1_DI3_DT_Msk & (_UINT32_(value) << CSI_DATA_IDS_1_DI3_DT_Pos)) /* Assignment of value for DI3_DT in the CSI_DATA_IDS_1 register */
+#define CSI_DATA_IDS_1_DI3_VC_Pos             _UINT32_(30)                                         /* (CSI_DATA_IDS_1) Virtual channel for programmed data Id 3. Position */
+#define CSI_DATA_IDS_1_DI3_VC_Msk             (_UINT32_(0x3) << CSI_DATA_IDS_1_DI3_VC_Pos)         /* (CSI_DATA_IDS_1) Virtual channel for programmed data Id 3. Mask */
+#define CSI_DATA_IDS_1_DI3_VC(value)          (CSI_DATA_IDS_1_DI3_VC_Msk & (_UINT32_(value) << CSI_DATA_IDS_1_DI3_VC_Pos)) /* Assignment of value for DI3_VC in the CSI_DATA_IDS_1 register */
+#define CSI_DATA_IDS_1_Msk                    _UINT32_(0xFFFFFFFF)                                 /* (CSI_DATA_IDS_1) Register Mask  */
+
+
+/* -------- CSI_DATA_IDS_2 : (CSI Offset: 0x14) (R/W 32) Static read and write register   Programs the data Ids for matching line error reporting.   Configures Data ID definition for four additional pairs of data types and virtual channel identifiers. -------- */
+#define CSI_DATA_IDS_2_DI4_DT_Pos             _UINT32_(0)                                          /* (CSI_DATA_IDS_2) Data type for programmed data Id 4. Position */
+#define CSI_DATA_IDS_2_DI4_DT_Msk             (_UINT32_(0x3F) << CSI_DATA_IDS_2_DI4_DT_Pos)        /* (CSI_DATA_IDS_2) Data type for programmed data Id 4. Mask */
+#define CSI_DATA_IDS_2_DI4_DT(value)          (CSI_DATA_IDS_2_DI4_DT_Msk & (_UINT32_(value) << CSI_DATA_IDS_2_DI4_DT_Pos)) /* Assignment of value for DI4_DT in the CSI_DATA_IDS_2 register */
+#define CSI_DATA_IDS_2_DI4_VC_Pos             _UINT32_(6)                                          /* (CSI_DATA_IDS_2) Virtual channel for programmed data Id 4. Position */
+#define CSI_DATA_IDS_2_DI4_VC_Msk             (_UINT32_(0x3) << CSI_DATA_IDS_2_DI4_VC_Pos)         /* (CSI_DATA_IDS_2) Virtual channel for programmed data Id 4. Mask */
+#define CSI_DATA_IDS_2_DI4_VC(value)          (CSI_DATA_IDS_2_DI4_VC_Msk & (_UINT32_(value) << CSI_DATA_IDS_2_DI4_VC_Pos)) /* Assignment of value for DI4_VC in the CSI_DATA_IDS_2 register */
+#define CSI_DATA_IDS_2_DI5_DT_Pos             _UINT32_(8)                                          /* (CSI_DATA_IDS_2) Data type for programmed data Id 5. Position */
+#define CSI_DATA_IDS_2_DI5_DT_Msk             (_UINT32_(0x3F) << CSI_DATA_IDS_2_DI5_DT_Pos)        /* (CSI_DATA_IDS_2) Data type for programmed data Id 5. Mask */
+#define CSI_DATA_IDS_2_DI5_DT(value)          (CSI_DATA_IDS_2_DI5_DT_Msk & (_UINT32_(value) << CSI_DATA_IDS_2_DI5_DT_Pos)) /* Assignment of value for DI5_DT in the CSI_DATA_IDS_2 register */
+#define CSI_DATA_IDS_2_DI5_VC_Pos             _UINT32_(14)                                         /* (CSI_DATA_IDS_2) Virtual channel for programmed data Id 5. Position */
+#define CSI_DATA_IDS_2_DI5_VC_Msk             (_UINT32_(0x3) << CSI_DATA_IDS_2_DI5_VC_Pos)         /* (CSI_DATA_IDS_2) Virtual channel for programmed data Id 5. Mask */
+#define CSI_DATA_IDS_2_DI5_VC(value)          (CSI_DATA_IDS_2_DI5_VC_Msk & (_UINT32_(value) << CSI_DATA_IDS_2_DI5_VC_Pos)) /* Assignment of value for DI5_VC in the CSI_DATA_IDS_2 register */
+#define CSI_DATA_IDS_2_DI6_DT_Pos             _UINT32_(16)                                         /* (CSI_DATA_IDS_2) Data type for programmed data Id 6. Position */
+#define CSI_DATA_IDS_2_DI6_DT_Msk             (_UINT32_(0x3F) << CSI_DATA_IDS_2_DI6_DT_Pos)        /* (CSI_DATA_IDS_2) Data type for programmed data Id 6. Mask */
+#define CSI_DATA_IDS_2_DI6_DT(value)          (CSI_DATA_IDS_2_DI6_DT_Msk & (_UINT32_(value) << CSI_DATA_IDS_2_DI6_DT_Pos)) /* Assignment of value for DI6_DT in the CSI_DATA_IDS_2 register */
+#define CSI_DATA_IDS_2_DI6_VC_Pos             _UINT32_(22)                                         /* (CSI_DATA_IDS_2) Virtual channel for programmed data Id 6. Position */
+#define CSI_DATA_IDS_2_DI6_VC_Msk             (_UINT32_(0x3) << CSI_DATA_IDS_2_DI6_VC_Pos)         /* (CSI_DATA_IDS_2) Virtual channel for programmed data Id 6. Mask */
+#define CSI_DATA_IDS_2_DI6_VC(value)          (CSI_DATA_IDS_2_DI6_VC_Msk & (_UINT32_(value) << CSI_DATA_IDS_2_DI6_VC_Pos)) /* Assignment of value for DI6_VC in the CSI_DATA_IDS_2 register */
+#define CSI_DATA_IDS_2_DI7_DT_Pos             _UINT32_(24)                                         /* (CSI_DATA_IDS_2) Data type for programmed data Id 7. Position */
+#define CSI_DATA_IDS_2_DI7_DT_Msk             (_UINT32_(0x3F) << CSI_DATA_IDS_2_DI7_DT_Pos)        /* (CSI_DATA_IDS_2) Data type for programmed data Id 7. Mask */
+#define CSI_DATA_IDS_2_DI7_DT(value)          (CSI_DATA_IDS_2_DI7_DT_Msk & (_UINT32_(value) << CSI_DATA_IDS_2_DI7_DT_Pos)) /* Assignment of value for DI7_DT in the CSI_DATA_IDS_2 register */
+#define CSI_DATA_IDS_2_DI7_VC_Pos             _UINT32_(30)                                         /* (CSI_DATA_IDS_2) Virtual channel for programmed data Id 7. Position */
+#define CSI_DATA_IDS_2_DI7_VC_Msk             (_UINT32_(0x3) << CSI_DATA_IDS_2_DI7_VC_Pos)         /* (CSI_DATA_IDS_2) Virtual channel for programmed data Id 7. Mask */
+#define CSI_DATA_IDS_2_DI7_VC(value)          (CSI_DATA_IDS_2_DI7_VC_Msk & (_UINT32_(value) << CSI_DATA_IDS_2_DI7_VC_Pos)) /* Assignment of value for DI7_VC in the CSI_DATA_IDS_2 register */
+#define CSI_DATA_IDS_2_Msk                    _UINT32_(0xFFFFFFFF)                                 /* (CSI_DATA_IDS_2) Register Mask  */
 
 
 /* -------- CSI_PHY_SHUTDOWNZ : (CSI Offset: 0x40) (R/W 32) CSI D-PHY Shutdown Register -------- */
@@ -135,13 +193,13 @@
 #define   CSI_PHY_RX_PHY_RXULPSESC_1_1_Val    _UINT32_(0x1)                                        /* (CSI_PHY_RX) Data lane 1 module has entered ULP Mode.  */
 #define CSI_PHY_RX_PHY_RXULPSESC_1_0          (CSI_PHY_RX_PHY_RXULPSESC_1_0_Val << CSI_PHY_RX_PHY_RXULPSESC_1_Pos) /* (CSI_PHY_RX) Data lane 1 module is not in ULP Mode. Position */
 #define CSI_PHY_RX_PHY_RXULPSESC_1_1          (CSI_PHY_RX_PHY_RXULPSESC_1_1_Val << CSI_PHY_RX_PHY_RXULPSESC_1_Pos) /* (CSI_PHY_RX) Data lane 1 module has entered ULP Mode. Position */
-#define CSI_PHY_RX_PHY_RXULPSCLKNOT_Pos       _UINT32_(16)                                         /* (CSI_PHY_RX) Clock Lane Power Status Position */
-#define CSI_PHY_RX_PHY_RXULPSCLKNOT_Msk       (_UINT32_(0x1) << CSI_PHY_RX_PHY_RXULPSCLKNOT_Pos)   /* (CSI_PHY_RX) Clock Lane Power Status Mask */
-#define CSI_PHY_RX_PHY_RXULPSCLKNOT(value)    (CSI_PHY_RX_PHY_RXULPSCLKNOT_Msk & (_UINT32_(value) << CSI_PHY_RX_PHY_RXULPSCLKNOT_Pos)) /* Assignment of value for PHY_RXULPSCLKNOT in the CSI_PHY_RX register */
-#define   CSI_PHY_RX_PHY_RXULPSCLKNOT_0_Val   _UINT32_(0x0)                                        /* (CSI_PHY_RX) Indicates that D-PHY Clock Lane module has entered the Ultra-Low-Power Mode.  */
-#define   CSI_PHY_RX_PHY_RXULPSCLKNOT_1_Val   _UINT32_(0x1)                                        /* (CSI_PHY_RX) Clock Lane is not ULP Mode.  */
-#define CSI_PHY_RX_PHY_RXULPSCLKNOT_0         (CSI_PHY_RX_PHY_RXULPSCLKNOT_0_Val << CSI_PHY_RX_PHY_RXULPSCLKNOT_Pos) /* (CSI_PHY_RX) Indicates that D-PHY Clock Lane module has entered the Ultra-Low-Power Mode. Position */
-#define CSI_PHY_RX_PHY_RXULPSCLKNOT_1         (CSI_PHY_RX_PHY_RXULPSCLKNOT_1_Val << CSI_PHY_RX_PHY_RXULPSCLKNOT_Pos) /* (CSI_PHY_RX) Clock Lane is not ULP Mode. Position */
+#define CSI_PHY_RX_PHY_RXULPSSCLKNOT_Pos      _UINT32_(16)                                         /* (CSI_PHY_RX) Clock Lane Power Status Position */
+#define CSI_PHY_RX_PHY_RXULPSSCLKNOT_Msk      (_UINT32_(0x1) << CSI_PHY_RX_PHY_RXULPSSCLKNOT_Pos)  /* (CSI_PHY_RX) Clock Lane Power Status Mask */
+#define CSI_PHY_RX_PHY_RXULPSSCLKNOT(value)   (CSI_PHY_RX_PHY_RXULPSSCLKNOT_Msk & (_UINT32_(value) << CSI_PHY_RX_PHY_RXULPSSCLKNOT_Pos)) /* Assignment of value for PHY_RXULPSSCLKNOT in the CSI_PHY_RX register */
+#define   CSI_PHY_RX_PHY_RXULPSSCLKNOT_0_Val  _UINT32_(0x0)                                        /* (CSI_PHY_RX) Indicates that D-PHY Clock Lane module has entered the Ultra-Low-Power Mode.  */
+#define   CSI_PHY_RX_PHY_RXULPSSCLKNOT_1_Val  _UINT32_(0x1)                                        /* (CSI_PHY_RX) Clock Lane is not ULP Mode.  */
+#define CSI_PHY_RX_PHY_RXULPSSCLKNOT_0        (CSI_PHY_RX_PHY_RXULPSSCLKNOT_0_Val << CSI_PHY_RX_PHY_RXULPSSCLKNOT_Pos) /* (CSI_PHY_RX) Indicates that D-PHY Clock Lane module has entered the Ultra-Low-Power Mode. Position */
+#define CSI_PHY_RX_PHY_RXULPSSCLKNOT_1        (CSI_PHY_RX_PHY_RXULPSSCLKNOT_1_Val << CSI_PHY_RX_PHY_RXULPSSCLKNOT_Pos) /* (CSI_PHY_RX) Clock Lane is not ULP Mode. Position */
 #define CSI_PHY_RX_PHY_RXCLKACTIVEHS_Pos      _UINT32_(17)                                         /* (CSI_PHY_RX) D-PHY Receives a DDR clock Position */
 #define CSI_PHY_RX_PHY_RXCLKACTIVEHS_Msk      (_UINT32_(0x1) << CSI_PHY_RX_PHY_RXCLKACTIVEHS_Pos)  /* (CSI_PHY_RX) D-PHY Receives a DDR clock Mask */
 #define CSI_PHY_RX_PHY_RXCLKACTIVEHS(value)   (CSI_PHY_RX_PHY_RXCLKACTIVEHS_Msk & (_UINT32_(value) << CSI_PHY_RX_PHY_RXCLKACTIVEHS_Pos)) /* Assignment of value for PHY_RXCLKACTIVEHS in the CSI_PHY_RX register */
@@ -158,20 +216,20 @@
 /* -------- CSI_PHY_STOPSTATE : (CSI Offset: 0x4C) ( R/ 32) CSI D-PHY Stop State Register -------- */
 #define CSI_PHY_STOPSTATE_RESETVALUE          _UINT32_(0x00)                                       /*  (CSI_PHY_STOPSTATE) CSI D-PHY Stop State Register  Reset Value */
 
-#define CSI_PHY_STOPSTATE_PHY_STOPSTATEDATA_0_Pos _UINT32_(0)                                          /* (CSI_PHY_STOPSTATE) Data Lane 0 Stop State Status Position */
-#define CSI_PHY_STOPSTATE_PHY_STOPSTATEDATA_0_Msk (_UINT32_(0x1) << CSI_PHY_STOPSTATE_PHY_STOPSTATEDATA_0_Pos) /* (CSI_PHY_STOPSTATE) Data Lane 0 Stop State Status Mask */
-#define CSI_PHY_STOPSTATE_PHY_STOPSTATEDATA_0(value) (CSI_PHY_STOPSTATE_PHY_STOPSTATEDATA_0_Msk & (_UINT32_(value) << CSI_PHY_STOPSTATE_PHY_STOPSTATEDATA_0_Pos)) /* Assignment of value for PHY_STOPSTATEDATA_0 in the CSI_PHY_STOPSTATE register */
-#define   CSI_PHY_STOPSTATE_PHY_STOPSTATEDATA_0_0_Val _UINT32_(0x0)                                        /* (CSI_PHY_STOPSTATE) Data lane 0 module is not in Stop state.  */
-#define   CSI_PHY_STOPSTATE_PHY_STOPSTATEDATA_0_1_Val _UINT32_(0x1)                                        /* (CSI_PHY_STOPSTATE) Lane 0 module has entered Stop state.  */
-#define CSI_PHY_STOPSTATE_PHY_STOPSTATEDATA_0_0 (CSI_PHY_STOPSTATE_PHY_STOPSTATEDATA_0_0_Val << CSI_PHY_STOPSTATE_PHY_STOPSTATEDATA_0_Pos) /* (CSI_PHY_STOPSTATE) Data lane 0 module is not in Stop state. Position */
-#define CSI_PHY_STOPSTATE_PHY_STOPSTATEDATA_0_1 (CSI_PHY_STOPSTATE_PHY_STOPSTATEDATA_0_1_Val << CSI_PHY_STOPSTATE_PHY_STOPSTATEDATA_0_Pos) /* (CSI_PHY_STOPSTATE) Lane 0 module has entered Stop state. Position */
-#define CSI_PHY_STOPSTATE_PHY_STOPSTATEDATA_1_Pos _UINT32_(1)                                          /* (CSI_PHY_STOPSTATE) Data Lane 1 Stop State Status Position */
-#define CSI_PHY_STOPSTATE_PHY_STOPSTATEDATA_1_Msk (_UINT32_(0x1) << CSI_PHY_STOPSTATE_PHY_STOPSTATEDATA_1_Pos) /* (CSI_PHY_STOPSTATE) Data Lane 1 Stop State Status Mask */
-#define CSI_PHY_STOPSTATE_PHY_STOPSTATEDATA_1(value) (CSI_PHY_STOPSTATE_PHY_STOPSTATEDATA_1_Msk & (_UINT32_(value) << CSI_PHY_STOPSTATE_PHY_STOPSTATEDATA_1_Pos)) /* Assignment of value for PHY_STOPSTATEDATA_1 in the CSI_PHY_STOPSTATE register */
-#define   CSI_PHY_STOPSTATE_PHY_STOPSTATEDATA_1_0_Val _UINT32_(0x0)                                        /* (CSI_PHY_STOPSTATE) Lane 1 module is not in Stop state.  */
-#define   CSI_PHY_STOPSTATE_PHY_STOPSTATEDATA_1_1_Val _UINT32_(0x1)                                        /* (CSI_PHY_STOPSTATE) Lane 1 module has entered Stop state.  */
-#define CSI_PHY_STOPSTATE_PHY_STOPSTATEDATA_1_0 (CSI_PHY_STOPSTATE_PHY_STOPSTATEDATA_1_0_Val << CSI_PHY_STOPSTATE_PHY_STOPSTATEDATA_1_Pos) /* (CSI_PHY_STOPSTATE) Lane 1 module is not in Stop state. Position */
-#define CSI_PHY_STOPSTATE_PHY_STOPSTATEDATA_1_1 (CSI_PHY_STOPSTATE_PHY_STOPSTATEDATA_1_1_Val << CSI_PHY_STOPSTATE_PHY_STOPSTATEDATA_1_Pos) /* (CSI_PHY_STOPSTATE) Lane 1 module has entered Stop state. Position */
+#define CSI_PHY_STOPSTATE_PHY_STOPSTADATA_0_Pos _UINT32_(0)                                          /* (CSI_PHY_STOPSTATE) Data Lane 0 Stop State Status Position */
+#define CSI_PHY_STOPSTATE_PHY_STOPSTADATA_0_Msk (_UINT32_(0x1) << CSI_PHY_STOPSTATE_PHY_STOPSTADATA_0_Pos) /* (CSI_PHY_STOPSTATE) Data Lane 0 Stop State Status Mask */
+#define CSI_PHY_STOPSTATE_PHY_STOPSTADATA_0(value) (CSI_PHY_STOPSTATE_PHY_STOPSTADATA_0_Msk & (_UINT32_(value) << CSI_PHY_STOPSTATE_PHY_STOPSTADATA_0_Pos)) /* Assignment of value for PHY_STOPSTADATA_0 in the CSI_PHY_STOPSTATE register */
+#define   CSI_PHY_STOPSTATE_PHY_STOPSTADATA_0_0_Val _UINT32_(0x0)                                        /* (CSI_PHY_STOPSTATE) Data lane 0 module is not in Stop state.  */
+#define   CSI_PHY_STOPSTATE_PHY_STOPSTADATA_0_1_Val _UINT32_(0x1)                                        /* (CSI_PHY_STOPSTATE) Lane 0 module has entered Stop state.  */
+#define CSI_PHY_STOPSTATE_PHY_STOPSTADATA_0_0 (CSI_PHY_STOPSTATE_PHY_STOPSTADATA_0_0_Val << CSI_PHY_STOPSTATE_PHY_STOPSTADATA_0_Pos) /* (CSI_PHY_STOPSTATE) Data lane 0 module is not in Stop state. Position */
+#define CSI_PHY_STOPSTATE_PHY_STOPSTADATA_0_1 (CSI_PHY_STOPSTATE_PHY_STOPSTADATA_0_1_Val << CSI_PHY_STOPSTATE_PHY_STOPSTADATA_0_Pos) /* (CSI_PHY_STOPSTATE) Lane 0 module has entered Stop state. Position */
+#define CSI_PHY_STOPSTATE_PHY_STOPSTADATA_1_Pos _UINT32_(1)                                          /* (CSI_PHY_STOPSTATE) Data Lane 1 Stop State Status Position */
+#define CSI_PHY_STOPSTATE_PHY_STOPSTADATA_1_Msk (_UINT32_(0x1) << CSI_PHY_STOPSTATE_PHY_STOPSTADATA_1_Pos) /* (CSI_PHY_STOPSTATE) Data Lane 1 Stop State Status Mask */
+#define CSI_PHY_STOPSTATE_PHY_STOPSTADATA_1(value) (CSI_PHY_STOPSTATE_PHY_STOPSTADATA_1_Msk & (_UINT32_(value) << CSI_PHY_STOPSTATE_PHY_STOPSTADATA_1_Pos)) /* Assignment of value for PHY_STOPSTADATA_1 in the CSI_PHY_STOPSTATE register */
+#define   CSI_PHY_STOPSTATE_PHY_STOPSTADATA_1_0_Val _UINT32_(0x0)                                        /* (CSI_PHY_STOPSTATE) Lane 1 module is not in Stop state.  */
+#define   CSI_PHY_STOPSTATE_PHY_STOPSTADATA_1_1_Val _UINT32_(0x1)                                        /* (CSI_PHY_STOPSTATE) Lane 1 module has entered Stop state.  */
+#define CSI_PHY_STOPSTATE_PHY_STOPSTADATA_1_0 (CSI_PHY_STOPSTATE_PHY_STOPSTADATA_1_0_Val << CSI_PHY_STOPSTATE_PHY_STOPSTADATA_1_Pos) /* (CSI_PHY_STOPSTATE) Lane 1 module is not in Stop state. Position */
+#define CSI_PHY_STOPSTATE_PHY_STOPSTADATA_1_1 (CSI_PHY_STOPSTATE_PHY_STOPSTADATA_1_1_Val << CSI_PHY_STOPSTATE_PHY_STOPSTADATA_1_Pos) /* (CSI_PHY_STOPSTATE) Lane 1 module has entered Stop state. Position */
 #define CSI_PHY_STOPSTATE_PHY_STOPSTATECLK_Pos _UINT32_(16)                                         /* (CSI_PHY_STOPSTATE) Clock Lane Stop State Status Position */
 #define CSI_PHY_STOPSTATE_PHY_STOPSTATECLK_Msk (_UINT32_(0x1) << CSI_PHY_STOPSTATE_PHY_STOPSTATECLK_Pos) /* (CSI_PHY_STOPSTATE) Clock Lane Stop State Status Mask */
 #define CSI_PHY_STOPSTATE_PHY_STOPSTATECLK(value) (CSI_PHY_STOPSTATE_PHY_STOPSTATECLK_Msk & (_UINT32_(value) << CSI_PHY_STOPSTATE_PHY_STOPSTATECLK_Pos)) /* Assignment of value for PHY_STOPSTATECLK in the CSI_PHY_STOPSTATE register */
@@ -181,9 +239,9 @@
 #define CSI_PHY_STOPSTATE_PHY_STOPSTATECLK_1  (CSI_PHY_STOPSTATE_PHY_STOPSTATECLK_1_Val << CSI_PHY_STOPSTATE_PHY_STOPSTATECLK_Pos) /* (CSI_PHY_STOPSTATE) Clock lane module is in Stop state. Position */
 #define CSI_PHY_STOPSTATE_Msk                 _UINT32_(0x00010003)                                 /* (CSI_PHY_STOPSTATE) Register Mask  */
 
-#define CSI_PHY_STOPSTATE_PHY_STOPSTATEDATA__Pos _UINT32_(0)                                          /* (CSI_PHY_STOPSTATE Position) Data Lane x Stop State Status */
-#define CSI_PHY_STOPSTATE_PHY_STOPSTATEDATA__Msk (_UINT32_(0x3) << CSI_PHY_STOPSTATE_PHY_STOPSTATEDATA__Pos) /* (CSI_PHY_STOPSTATE Mask) PHY_STOPSTATEDATA_ */
-#define CSI_PHY_STOPSTATE_PHY_STOPSTATEDATA_(value) (CSI_PHY_STOPSTATE_PHY_STOPSTATEDATA__Msk & (_UINT32_(value) << CSI_PHY_STOPSTATE_PHY_STOPSTATEDATA__Pos)) 
+#define CSI_PHY_STOPSTATE_PHY_STOPSTADATA__Pos _UINT32_(0)                                          /* (CSI_PHY_STOPSTATE Position) Data Lane x Stop State Status */
+#define CSI_PHY_STOPSTATE_PHY_STOPSTADATA__Msk (_UINT32_(0x3) << CSI_PHY_STOPSTATE_PHY_STOPSTADATA__Pos) /* (CSI_PHY_STOPSTATE Mask) PHY_STOPSTADATA_ */
+#define CSI_PHY_STOPSTATE_PHY_STOPSTADATA_(value) (CSI_PHY_STOPSTATE_PHY_STOPSTADATA__Msk & (_UINT32_(value) << CSI_PHY_STOPSTATE_PHY_STOPSTADATA__Pos)) 
 
 /* -------- CSI_PHY_TEST_CTRL0 : (CSI Offset: 0x50) (R/W 32) CSI D-PHY Analog Configuration Control Register -------- */
 #define CSI_PHY_TEST_CTRL0_RESETVALUE         _UINT32_(0x01)                                       /*  (CSI_PHY_TEST_CTRL0) CSI D-PHY Analog Configuration Control Register  Reset Value */
@@ -712,6 +770,8 @@
 #define CSI_N_LANES_REG_OFST           _UINT32_(0x04)      /* (CSI_N_LANES) CSI Lane Configuration Register Offset */
 #define CSI_CSI2_RESETN_REG_OFST       _UINT32_(0x08)      /* (CSI_CSI2_RESETN) CSI Reset Control Register Offset */
 #define CSI_INT_ST_MAIN_REG_OFST       _UINT32_(0x0C)      /* (CSI_INT_ST_MAIN) CSI Main Interrupt Status Register Offset */
+#define CSI_DATA_IDS_1_REG_OFST        _UINT32_(0x10)      /* (CSI_DATA_IDS_1) Static read and write register   Programs the data Ids for matching line error reporting.   Enables up to eight different data Ids that can be identified simultaneously. Offset */
+#define CSI_DATA_IDS_2_REG_OFST        _UINT32_(0x14)      /* (CSI_DATA_IDS_2) Static read and write register   Programs the data Ids for matching line error reporting.   Configures Data ID definition for four additional pairs of data types and virtual channel identifiers. Offset */
 #define CSI_PHY_SHUTDOWNZ_REG_OFST     _UINT32_(0x40)      /* (CSI_PHY_SHUTDOWNZ) CSI D-PHY Shutdown Register Offset */
 #define CSI_DPHY_RSTZ_REG_OFST         _UINT32_(0x44)      /* (CSI_DPHY_RSTZ) CSI D-PHY Reset Register Offset */
 #define CSI_PHY_RX_REG_OFST            _UINT32_(0x48)      /* (CSI_PHY_RX) CSI D-PHY Receive Status Register Offset */
@@ -746,7 +806,9 @@ typedef struct
   __IO  uint32_t                       CSI_N_LANES;        /* Offset: 0x04 (R/W  32) CSI Lane Configuration Register */
   __IO  uint32_t                       CSI_CSI2_RESETN;    /* Offset: 0x08 (R/W  32) CSI Reset Control Register */
   __I   uint32_t                       CSI_INT_ST_MAIN;    /* Offset: 0x0C (R/   32) CSI Main Interrupt Status Register */
-  __I   uint8_t                        Reserved2[0x30];
+  __IO  uint32_t                       CSI_DATA_IDS_1;     /* Offset: 0x10 (R/W  32) Static read and write register   Programs the data Ids for matching line error reporting.   Enables up to eight different data Ids that can be identified simultaneously. */
+  __IO  uint32_t                       CSI_DATA_IDS_2;     /* Offset: 0x14 (R/W  32) Static read and write register   Programs the data Ids for matching line error reporting.   Configures Data ID definition for four additional pairs of data types and virtual channel identifiers. */
+  __I   uint8_t                        Reserved2[0x28];
   __IO  uint32_t                       CSI_PHY_SHUTDOWNZ;  /* Offset: 0x40 (R/W  32) CSI D-PHY Shutdown Register */
   __IO  uint32_t                       CSI_DPHY_RSTZ;      /* Offset: 0x44 (R/W  32) CSI D-PHY Reset Register */
   __I   uint32_t                       CSI_PHY_RX;         /* Offset: 0x48 (R/   32) CSI D-PHY Receive Status Register */
