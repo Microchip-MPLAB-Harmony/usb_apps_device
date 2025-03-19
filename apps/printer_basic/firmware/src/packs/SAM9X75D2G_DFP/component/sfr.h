@@ -1,7 +1,9 @@
 /*
  * Component description for SFR
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -529,8 +531,53 @@
 /* -------- SFR_REMAP_MP_DDR : (SFR Offset: 0x260) (R/W 32) Remap Multiport DDR Register -------- */
 #define SFR_REMAP_MP_DDR_RESETVALUE           _UINT32_(0x00)                                       /*  (SFR_REMAP_MP_DDR) Remap Multiport DDR Register  Reset Value */
 
-#define SFR_REMAP_MP_DDR_Msk                  _UINT32_(0x00000000)                                 /* (SFR_REMAP_MP_DDR) Register Mask  */
+#define SFR_REMAP_MP_DDR_Host_0_Pos           _UINT32_(0)                                          /* (SFR_REMAP_MP_DDR) Enable DDR Multiport Only for Host_0 Position */
+#define SFR_REMAP_MP_DDR_Host_0_Msk           (_UINT32_(0x1) << SFR_REMAP_MP_DDR_Host_0_Pos)       /* (SFR_REMAP_MP_DDR) Enable DDR Multiport Only for Host_0 Mask */
+#define SFR_REMAP_MP_DDR_Host_0(value)        (SFR_REMAP_MP_DDR_Host_0_Msk & (_UINT32_(value) << SFR_REMAP_MP_DDR_Host_0_Pos)) /* Assignment of value for Host_0 in the SFR_REMAP_MP_DDR register */
+#define SFR_REMAP_MP_DDR_Host_1_Pos           _UINT32_(1)                                          /* (SFR_REMAP_MP_DDR) Enable DDR Multiport Only for Host_1 Position */
+#define SFR_REMAP_MP_DDR_Host_1_Msk           (_UINT32_(0x1) << SFR_REMAP_MP_DDR_Host_1_Pos)       /* (SFR_REMAP_MP_DDR) Enable DDR Multiport Only for Host_1 Mask */
+#define SFR_REMAP_MP_DDR_Host_1(value)        (SFR_REMAP_MP_DDR_Host_1_Msk & (_UINT32_(value) << SFR_REMAP_MP_DDR_Host_1_Pos)) /* Assignment of value for Host_1 in the SFR_REMAP_MP_DDR register */
+#define SFR_REMAP_MP_DDR_Host_2_Pos           _UINT32_(2)                                          /* (SFR_REMAP_MP_DDR) Enable DDR Multiport Only for Host_2 Position */
+#define SFR_REMAP_MP_DDR_Host_2_Msk           (_UINT32_(0x1) << SFR_REMAP_MP_DDR_Host_2_Pos)       /* (SFR_REMAP_MP_DDR) Enable DDR Multiport Only for Host_2 Mask */
+#define SFR_REMAP_MP_DDR_Host_2(value)        (SFR_REMAP_MP_DDR_Host_2_Msk & (_UINT32_(value) << SFR_REMAP_MP_DDR_Host_2_Pos)) /* Assignment of value for Host_2 in the SFR_REMAP_MP_DDR register */
+#define SFR_REMAP_MP_DDR_Host_3_Pos           _UINT32_(3)                                          /* (SFR_REMAP_MP_DDR) Enable DDR Multiport Only for Host_3 Position */
+#define SFR_REMAP_MP_DDR_Host_3_Msk           (_UINT32_(0x1) << SFR_REMAP_MP_DDR_Host_3_Pos)       /* (SFR_REMAP_MP_DDR) Enable DDR Multiport Only for Host_3 Mask */
+#define SFR_REMAP_MP_DDR_Host_3(value)        (SFR_REMAP_MP_DDR_Host_3_Msk & (_UINT32_(value) << SFR_REMAP_MP_DDR_Host_3_Pos)) /* Assignment of value for Host_3 in the SFR_REMAP_MP_DDR register */
+#define SFR_REMAP_MP_DDR_Host_4_Pos           _UINT32_(4)                                          /* (SFR_REMAP_MP_DDR) Enable DDR Multiport Only for Host_4 Position */
+#define SFR_REMAP_MP_DDR_Host_4_Msk           (_UINT32_(0x1) << SFR_REMAP_MP_DDR_Host_4_Pos)       /* (SFR_REMAP_MP_DDR) Enable DDR Multiport Only for Host_4 Mask */
+#define SFR_REMAP_MP_DDR_Host_4(value)        (SFR_REMAP_MP_DDR_Host_4_Msk & (_UINT32_(value) << SFR_REMAP_MP_DDR_Host_4_Pos)) /* Assignment of value for Host_4 in the SFR_REMAP_MP_DDR register */
+#define SFR_REMAP_MP_DDR_Host_5_Pos           _UINT32_(5)                                          /* (SFR_REMAP_MP_DDR) Enable DDR Multiport Only for Host_5 Position */
+#define SFR_REMAP_MP_DDR_Host_5_Msk           (_UINT32_(0x1) << SFR_REMAP_MP_DDR_Host_5_Pos)       /* (SFR_REMAP_MP_DDR) Enable DDR Multiport Only for Host_5 Mask */
+#define SFR_REMAP_MP_DDR_Host_5(value)        (SFR_REMAP_MP_DDR_Host_5_Msk & (_UINT32_(value) << SFR_REMAP_MP_DDR_Host_5_Pos)) /* Assignment of value for Host_5 in the SFR_REMAP_MP_DDR register */
+#define SFR_REMAP_MP_DDR_Host_6_Pos           _UINT32_(6)                                          /* (SFR_REMAP_MP_DDR) Enable DDR Multiport Only for Host_6 Position */
+#define SFR_REMAP_MP_DDR_Host_6_Msk           (_UINT32_(0x1) << SFR_REMAP_MP_DDR_Host_6_Pos)       /* (SFR_REMAP_MP_DDR) Enable DDR Multiport Only for Host_6 Mask */
+#define SFR_REMAP_MP_DDR_Host_6(value)        (SFR_REMAP_MP_DDR_Host_6_Msk & (_UINT32_(value) << SFR_REMAP_MP_DDR_Host_6_Pos)) /* Assignment of value for Host_6 in the SFR_REMAP_MP_DDR register */
+#define SFR_REMAP_MP_DDR_Host_7_Pos           _UINT32_(7)                                          /* (SFR_REMAP_MP_DDR) Enable DDR Multiport Only for Host_7 Position */
+#define SFR_REMAP_MP_DDR_Host_7_Msk           (_UINT32_(0x1) << SFR_REMAP_MP_DDR_Host_7_Pos)       /* (SFR_REMAP_MP_DDR) Enable DDR Multiport Only for Host_7 Mask */
+#define SFR_REMAP_MP_DDR_Host_7(value)        (SFR_REMAP_MP_DDR_Host_7_Msk & (_UINT32_(value) << SFR_REMAP_MP_DDR_Host_7_Pos)) /* Assignment of value for Host_7 in the SFR_REMAP_MP_DDR register */
+#define SFR_REMAP_MP_DDR_Host_8_Pos           _UINT32_(8)                                          /* (SFR_REMAP_MP_DDR) Enable DDR Multiport Only for Host_8 Position */
+#define SFR_REMAP_MP_DDR_Host_8_Msk           (_UINT32_(0x1) << SFR_REMAP_MP_DDR_Host_8_Pos)       /* (SFR_REMAP_MP_DDR) Enable DDR Multiport Only for Host_8 Mask */
+#define SFR_REMAP_MP_DDR_Host_8(value)        (SFR_REMAP_MP_DDR_Host_8_Msk & (_UINT32_(value) << SFR_REMAP_MP_DDR_Host_8_Pos)) /* Assignment of value for Host_8 in the SFR_REMAP_MP_DDR register */
+#define SFR_REMAP_MP_DDR_Host_9_Pos           _UINT32_(9)                                          /* (SFR_REMAP_MP_DDR) Enable DDR Multiport Only for Host_9 Position */
+#define SFR_REMAP_MP_DDR_Host_9_Msk           (_UINT32_(0x1) << SFR_REMAP_MP_DDR_Host_9_Pos)       /* (SFR_REMAP_MP_DDR) Enable DDR Multiport Only for Host_9 Mask */
+#define SFR_REMAP_MP_DDR_Host_9(value)        (SFR_REMAP_MP_DDR_Host_9_Msk & (_UINT32_(value) << SFR_REMAP_MP_DDR_Host_9_Pos)) /* Assignment of value for Host_9 in the SFR_REMAP_MP_DDR register */
+#define SFR_REMAP_MP_DDR_Host_10_Pos          _UINT32_(10)                                         /* (SFR_REMAP_MP_DDR) Enable DDR Multiport Only for Host_10 Position */
+#define SFR_REMAP_MP_DDR_Host_10_Msk          (_UINT32_(0x1) << SFR_REMAP_MP_DDR_Host_10_Pos)      /* (SFR_REMAP_MP_DDR) Enable DDR Multiport Only for Host_10 Mask */
+#define SFR_REMAP_MP_DDR_Host_10(value)       (SFR_REMAP_MP_DDR_Host_10_Msk & (_UINT32_(value) << SFR_REMAP_MP_DDR_Host_10_Pos)) /* Assignment of value for Host_10 in the SFR_REMAP_MP_DDR register */
+#define SFR_REMAP_MP_DDR_Host_11_Pos          _UINT32_(11)                                         /* (SFR_REMAP_MP_DDR) Enable DDR Multiport Only for Host_11 Position */
+#define SFR_REMAP_MP_DDR_Host_11_Msk          (_UINT32_(0x1) << SFR_REMAP_MP_DDR_Host_11_Pos)      /* (SFR_REMAP_MP_DDR) Enable DDR Multiport Only for Host_11 Mask */
+#define SFR_REMAP_MP_DDR_Host_11(value)       (SFR_REMAP_MP_DDR_Host_11_Msk & (_UINT32_(value) << SFR_REMAP_MP_DDR_Host_11_Pos)) /* Assignment of value for Host_11 in the SFR_REMAP_MP_DDR register */
+#define SFR_REMAP_MP_DDR_Host_12_Pos          _UINT32_(12)                                         /* (SFR_REMAP_MP_DDR) Enable DDR Multiport Only for Host_12 Position */
+#define SFR_REMAP_MP_DDR_Host_12_Msk          (_UINT32_(0x1) << SFR_REMAP_MP_DDR_Host_12_Pos)      /* (SFR_REMAP_MP_DDR) Enable DDR Multiport Only for Host_12 Mask */
+#define SFR_REMAP_MP_DDR_Host_12(value)       (SFR_REMAP_MP_DDR_Host_12_Msk & (_UINT32_(value) << SFR_REMAP_MP_DDR_Host_12_Pos)) /* Assignment of value for Host_12 in the SFR_REMAP_MP_DDR register */
+#define SFR_REMAP_MP_DDR_Host_13_Pos          _UINT32_(13)                                         /* (SFR_REMAP_MP_DDR) Enable DDR Multiport Only for Host_13 Position */
+#define SFR_REMAP_MP_DDR_Host_13_Msk          (_UINT32_(0x1) << SFR_REMAP_MP_DDR_Host_13_Pos)      /* (SFR_REMAP_MP_DDR) Enable DDR Multiport Only for Host_13 Mask */
+#define SFR_REMAP_MP_DDR_Host_13(value)       (SFR_REMAP_MP_DDR_Host_13_Msk & (_UINT32_(value) << SFR_REMAP_MP_DDR_Host_13_Pos)) /* Assignment of value for Host_13 in the SFR_REMAP_MP_DDR register */
+#define SFR_REMAP_MP_DDR_Msk                  _UINT32_(0x00003FFF)                                 /* (SFR_REMAP_MP_DDR) Register Mask  */
 
+#define SFR_REMAP_MP_DDR_Host__Pos            _UINT32_(0)                                          /* (SFR_REMAP_MP_DDR Position) Enable DDR Multiport Only for Host_x3 */
+#define SFR_REMAP_MP_DDR_Host__Msk            (_UINT32_(0x3FFF) << SFR_REMAP_MP_DDR_Host__Pos)     /* (SFR_REMAP_MP_DDR Mask) Host_ */
+#define SFR_REMAP_MP_DDR_Host_(value)         (SFR_REMAP_MP_DDR_Host__Msk & (_UINT32_(value) << SFR_REMAP_MP_DDR_Host__Pos)) 
 
 /* SFR register offsets definitions */
 #define SFR_CCFG_EBICSA_REG_OFST       _UINT32_(0x04)      /* (SFR_CCFG_EBICSA) EBI Chip Select Register Offset */
