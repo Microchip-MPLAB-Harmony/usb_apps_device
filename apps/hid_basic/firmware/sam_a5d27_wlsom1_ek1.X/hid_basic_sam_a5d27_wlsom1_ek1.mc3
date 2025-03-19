@@ -39,7 +39,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.3"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.4"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -4153,11 +4153,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_wlsom1_ek1\definitions.h</file>
-         <hash>f81fd57e4e36903e7476d2344ba79739cfaccbff0e6960f0836383ba6006a0af</hash>
+         <hash>e0646ea7ddd5214205f5139a963b3462327c855bb198823658768930f01e2722</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_wlsom1_ek1\device.h</file>
-         <hash>64c58838a2549b34741f2895af19bcbfcb56a66b80ad69f6b9557484d7dd534d</hash>
+         <hash>88195247ded1c7f8dafb2a5990e102f18060e31e796c2f77191e1cacb997d4be</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_wlsom1_ek1\device_cache.h</file>
@@ -4189,7 +4189,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_wlsom1_ek1\driver\usb\udphs\src\drv_usb_udphs_local.h</file>
-         <hash>8fadf20f65f785c2abd3d677163b44b2e361727785f932cc1c6d5eabff0ea2f6</hash>
+         <hash>d27f8d052b3b89ab81953d6ab2191d207dc6bfd3533b42a9b4080f721c5f3a91</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_wlsom1_ek1\driver\usb\udphs\src\drv_usb_udphs_variant_mapping.h</file>
@@ -4201,15 +4201,15 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_wlsom1_ek1\initialization.c</file>
-         <hash>b9658e7dd77cdbc265738065c69f3a82b914bbb0412161475d831ccd7294abe6</hash>
+         <hash>94ddf1e0e0eaf0dd06300d35cf962000e8ee61fba33246810b8bf203c3f8deb2</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_wlsom1_ek1\interrupts.c</file>
-         <hash>6c897205519661daeb3f03fbade1997db33fdc6e32a2a569b7a7c6da150bff23</hash>
+         <hash>3722fa2b8adb5ddfd5a8db1f1102eeb82422c9bc8350d45f992e8f9a3f7a6dbd</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_wlsom1_ek1\interrupts.h</file>
-         <hash>9f56286fb5dfe6a16af81238e8ae6fe767f9be4915fedc25a5fcee8f21175e9c</hash>
+         <hash>aea87e50d70b6452047dd37e91dd16f427933d0c0811dc66e4d1b1e27d47f255</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_wlsom1_ek1\osal\osal.h</file>
