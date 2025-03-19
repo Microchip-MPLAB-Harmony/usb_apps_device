@@ -1,7 +1,9 @@
 /*
  * Component description for CSI2DC
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -150,10 +152,7 @@
 #define CSI2DC_GIER_DED_Pos                   _UINT32_(7)                                          /* (CSI2DC_GIER) Packet Header Double Bit Error Detected Enable Position */
 #define CSI2DC_GIER_DED_Msk                   (_UINT32_(0x1) << CSI2DC_GIER_DED_Pos)               /* (CSI2DC_GIER) Packet Header Double Bit Error Detected Enable Mask */
 #define CSI2DC_GIER_DED(value)                (CSI2DC_GIER_DED_Msk & (_UINT32_(value) << CSI2DC_GIER_DED_Pos)) /* Assignment of value for DED in the CSI2DC_GIER register */
-#define CSI2DC_GIER_FD_Pos                    _UINT32_(9)                                          /* (CSI2DC_GIER)  Position */
-#define CSI2DC_GIER_FD_Msk                    (_UINT32_(0x1) << CSI2DC_GIER_FD_Pos)                /* (CSI2DC_GIER)  Mask */
-#define CSI2DC_GIER_FD(value)                 (CSI2DC_GIER_FD_Msk & (_UINT32_(value) << CSI2DC_GIER_FD_Pos)) /* Assignment of value for FD in the CSI2DC_GIER register */
-#define CSI2DC_GIER_Msk                       _UINT32_(0x000002FF)                                 /* (CSI2DC_GIER) Register Mask  */
+#define CSI2DC_GIER_Msk                       _UINT32_(0x000000FF)                                 /* (CSI2DC_GIER) Register Mask  */
 
 
 /* -------- CSI2DC_GIDR : (CSI2DC Offset: 0x10) ( /W 32) Global Interrupt Disable Register -------- */
@@ -181,10 +180,7 @@
 #define CSI2DC_GIDR_DED_Pos                   _UINT32_(7)                                          /* (CSI2DC_GIDR) Double Bit Error Detected Interrupt Disable Position */
 #define CSI2DC_GIDR_DED_Msk                   (_UINT32_(0x1) << CSI2DC_GIDR_DED_Pos)               /* (CSI2DC_GIDR) Double Bit Error Detected Interrupt Disable Mask */
 #define CSI2DC_GIDR_DED(value)                (CSI2DC_GIDR_DED_Msk & (_UINT32_(value) << CSI2DC_GIDR_DED_Pos)) /* Assignment of value for DED in the CSI2DC_GIDR register */
-#define CSI2DC_GIDR_FD_Pos                    _UINT32_(9)                                          /* (CSI2DC_GIDR)  Position */
-#define CSI2DC_GIDR_FD_Msk                    (_UINT32_(0x1) << CSI2DC_GIDR_FD_Pos)                /* (CSI2DC_GIDR)  Mask */
-#define CSI2DC_GIDR_FD(value)                 (CSI2DC_GIDR_FD_Msk & (_UINT32_(value) << CSI2DC_GIDR_FD_Pos)) /* Assignment of value for FD in the CSI2DC_GIDR register */
-#define CSI2DC_GIDR_Msk                       _UINT32_(0x000002FF)                                 /* (CSI2DC_GIDR) Register Mask  */
+#define CSI2DC_GIDR_Msk                       _UINT32_(0x000000FF)                                 /* (CSI2DC_GIDR) Register Mask  */
 
 
 /* -------- CSI2DC_GIMR : (CSI2DC Offset: 0x14) ( R/ 32) Global Interrupt Mask Register -------- */
@@ -214,10 +210,7 @@
 #define CSI2DC_GIMR_DED_Pos                   _UINT32_(7)                                          /* (CSI2DC_GIMR) Double Error Detected Interrupt Disable Interrupt Mask Position */
 #define CSI2DC_GIMR_DED_Msk                   (_UINT32_(0x1) << CSI2DC_GIMR_DED_Pos)               /* (CSI2DC_GIMR) Double Error Detected Interrupt Disable Interrupt Mask Mask */
 #define CSI2DC_GIMR_DED(value)                (CSI2DC_GIMR_DED_Msk & (_UINT32_(value) << CSI2DC_GIMR_DED_Pos)) /* Assignment of value for DED in the CSI2DC_GIMR register */
-#define CSI2DC_GIMR_FD_Pos                    _UINT32_(9)                                          /* (CSI2DC_GIMR)  Position */
-#define CSI2DC_GIMR_FD_Msk                    (_UINT32_(0x1) << CSI2DC_GIMR_FD_Pos)                /* (CSI2DC_GIMR)  Mask */
-#define CSI2DC_GIMR_FD(value)                 (CSI2DC_GIMR_FD_Msk & (_UINT32_(value) << CSI2DC_GIMR_FD_Pos)) /* Assignment of value for FD in the CSI2DC_GIMR register */
-#define CSI2DC_GIMR_Msk                       _UINT32_(0x000002FF)                                 /* (CSI2DC_GIMR) Register Mask  */
+#define CSI2DC_GIMR_Msk                       _UINT32_(0x000000FF)                                 /* (CSI2DC_GIMR) Register Mask  */
 
 
 /* -------- CSI2DC_GISR : (CSI2DC Offset: 0x18) ( R/ 32) Global Interrupt Status Register -------- */
@@ -279,10 +272,7 @@
 #define   CSI2DC_GISR_DED_1_Val               _UINT32_(0x1)                                        /* (CSI2DC_GISR) A double bit error has been detected in the packet header. This bit is reset after the register read operation.  */
 #define CSI2DC_GISR_DED_0                     (CSI2DC_GISR_DED_0_Val << CSI2DC_GISR_DED_Pos)       /* (CSI2DC_GISR) No double bit error detected is pending. Position */
 #define CSI2DC_GISR_DED_1                     (CSI2DC_GISR_DED_1_Val << CSI2DC_GISR_DED_Pos)       /* (CSI2DC_GISR) A double bit error has been detected in the packet header. This bit is reset after the register read operation. Position */
-#define CSI2DC_GISR_FD_Pos                    _UINT32_(9)                                          /* (CSI2DC_GISR)  Position */
-#define CSI2DC_GISR_FD_Msk                    (_UINT32_(0x1) << CSI2DC_GISR_FD_Pos)                /* (CSI2DC_GISR)  Mask */
-#define CSI2DC_GISR_FD(value)                 (CSI2DC_GISR_FD_Msk & (_UINT32_(value) << CSI2DC_GISR_FD_Pos)) /* Assignment of value for FD in the CSI2DC_GISR register */
-#define CSI2DC_GISR_Msk                       _UINT32_(0x000002FF)                                 /* (CSI2DC_GISR) Register Mask  */
+#define CSI2DC_GISR_Msk                       _UINT32_(0x000000FF)                                 /* (CSI2DC_GISR) Register Mask  */
 
 
 /* -------- CSI2DC_SSPIER : (CSI2DC Offset: 0x1C) ( /W 32) SSP Interrupt Enable Register -------- */
