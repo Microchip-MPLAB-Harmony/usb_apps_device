@@ -48,9 +48,9 @@
 // *****************************************************************************
 // *****************************************************************************
 
-volatile static DBGU_OBJECT dbguObj;
+static volatile DBGU_OBJECT dbguObj;
 
-void static __attribute__((used)) DBGU_ISR_RX_Handler(void)
+static void __attribute__((used)) DBGU_ISR_RX_Handler(void)
 {
     if (dbguObj.rxBusyStatus == true)
     {
@@ -90,7 +90,7 @@ void static __attribute__((used)) DBGU_ISR_RX_Handler(void)
     return;
 }
 
-void static __attribute__((used)) DBGU_ISR_TX_Handler(void)
+static void __attribute__((used)) DBGU_ISR_TX_Handler(void)
 {
     if (dbguObj.txBusyStatus == true)
     {
@@ -167,7 +167,7 @@ void __attribute__((used)) DBGU_InterruptHandler(void)
 }
 
 
-void static DBGU_ErrorClear(void)
+static void DBGU_ErrorClear(void)
 {
     uint8_t dummyData = 0u;
 
