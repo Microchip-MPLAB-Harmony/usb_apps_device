@@ -1,7 +1,7 @@
 /*
  * Component description for GMAC
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -195,8 +195,8 @@
 #define GMAC_FRER_CTRL_B_SEQ_REC_WINDOW_Pos   _UINT32_(0)                                          /* (GMAC_FRER_CTRL_B) Vector Recovery Window Position */
 #define GMAC_FRER_CTRL_B_SEQ_REC_WINDOW_Msk   (_UINT32_(0x3F) << GMAC_FRER_CTRL_B_SEQ_REC_WINDOW_Pos) /* (GMAC_FRER_CTRL_B) Vector Recovery Window Mask */
 #define GMAC_FRER_CTRL_B_SEQ_REC_WINDOW(value) (GMAC_FRER_CTRL_B_SEQ_REC_WINDOW_Msk & (_UINT32_(value) << GMAC_FRER_CTRL_B_SEQ_REC_WINDOW_Pos)) /* Assignment of value for SEQ_REC_WINDOW in the GMAC_FRER_CTRL_B register */
-#define GMAC_FRER_CTRL_B_SEQ_NUM_LENGTH_Pos   _UINT32_(8)                                          /* (GMAC_FRER_CTRL_B) Number of Significants Bits of the 802.1CB Sequence Number Position */
-#define GMAC_FRER_CTRL_B_SEQ_NUM_LENGTH_Msk   (_UINT32_(0x1F) << GMAC_FRER_CTRL_B_SEQ_NUM_LENGTH_Pos) /* (GMAC_FRER_CTRL_B) Number of Significants Bits of the 802.1CB Sequence Number Mask */
+#define GMAC_FRER_CTRL_B_SEQ_NUM_LENGTH_Pos   _UINT32_(8)                                          /* (GMAC_FRER_CTRL_B) Number of Significants bits of the 802.1CB Sequence Number Position */
+#define GMAC_FRER_CTRL_B_SEQ_NUM_LENGTH_Msk   (_UINT32_(0x1F) << GMAC_FRER_CTRL_B_SEQ_NUM_LENGTH_Pos) /* (GMAC_FRER_CTRL_B) Number of Significants bits of the 802.1CB Sequence Number Mask */
 #define GMAC_FRER_CTRL_B_SEQ_NUM_LENGTH(value) (GMAC_FRER_CTRL_B_SEQ_NUM_LENGTH_Msk & (_UINT32_(value) << GMAC_FRER_CTRL_B_SEQ_NUM_LENGTH_Pos)) /* Assignment of value for SEQ_NUM_LENGTH in the GMAC_FRER_CTRL_B register */
 #define GMAC_FRER_CTRL_B_Msk                  _UINT32_(0x00001F3F)                                 /* (GMAC_FRER_CTRL_B) Register Mask  */
 
@@ -2345,8 +2345,8 @@
 #define GMAC_TXPQUANT1_Msk                    _UINT32_(0xFFFFFFFF)                                 /* (GMAC_TXPQUANT1) Register Mask  */
 
 
-/* -------- GMAC_TXPQUANT2 : (GMAC Offset: 0x264) (R/W 32) Transmit Pause Quantum 2 Register{*}0{*} -------- */
-#define GMAC_TXPQUANT2_RESETVALUE             _UINT32_(0xFFFFFFFF)                                 /*  (GMAC_TXPQUANT2) Transmit Pause Quantum 2 Register{*}0{*}  Reset Value */
+/* -------- GMAC_TXPQUANT2 : (GMAC Offset: 0x264) (R/W 32) Transmit Pause Quantum 2 Register -------- */
+#define GMAC_TXPQUANT2_RESETVALUE             _UINT32_(0xFFFFFFFF)                                 /*  (GMAC_TXPQUANT2) Transmit Pause Quantum 2 Register  Reset Value */
 
 #define GMAC_TXPQUANT2_QUANT_P4_Pos           _UINT32_(0)                                          /* (GMAC_TXPQUANT2) Priority 4 Transmit Pause Quantum Position */
 #define GMAC_TXPQUANT2_QUANT_P4_Msk           (_UINT32_(0xFFFF) << GMAC_TXPQUANT2_QUANT_P4_Pos)    /* (GMAC_TXPQUANT2) Priority 4 Transmit Pause Quantum Mask */
@@ -5803,8 +5803,8 @@
 #define GMAC_EMAC_FRER_CTRL1_B_SEQ_REC_WINDOW_Pos _UINT32_(0)                                          /* (GMAC_EMAC_FRER_CTRL1_B) Vector Recovery Window Position */
 #define GMAC_EMAC_FRER_CTRL1_B_SEQ_REC_WINDOW_Msk (_UINT32_(0x3F) << GMAC_EMAC_FRER_CTRL1_B_SEQ_REC_WINDOW_Pos) /* (GMAC_EMAC_FRER_CTRL1_B) Vector Recovery Window Mask */
 #define GMAC_EMAC_FRER_CTRL1_B_SEQ_REC_WINDOW(value) (GMAC_EMAC_FRER_CTRL1_B_SEQ_REC_WINDOW_Msk & (_UINT32_(value) << GMAC_EMAC_FRER_CTRL1_B_SEQ_REC_WINDOW_Pos)) /* Assignment of value for SEQ_REC_WINDOW in the GMAC_EMAC_FRER_CTRL1_B register */
-#define GMAC_EMAC_FRER_CTRL1_B_SEQ_NUM_LENGTH_Pos _UINT32_(8)                                          /* (GMAC_EMAC_FRER_CTRL1_B) Number of Significants Bits of the 802.1CB Sequence Number Position */
-#define GMAC_EMAC_FRER_CTRL1_B_SEQ_NUM_LENGTH_Msk (_UINT32_(0x1F) << GMAC_EMAC_FRER_CTRL1_B_SEQ_NUM_LENGTH_Pos) /* (GMAC_EMAC_FRER_CTRL1_B) Number of Significants Bits of the 802.1CB Sequence Number Mask */
+#define GMAC_EMAC_FRER_CTRL1_B_SEQ_NUM_LENGTH_Pos _UINT32_(8)                                          /* (GMAC_EMAC_FRER_CTRL1_B) Number of Significants bits of the 802.1CB Sequence Number Position */
+#define GMAC_EMAC_FRER_CTRL1_B_SEQ_NUM_LENGTH_Msk (_UINT32_(0x1F) << GMAC_EMAC_FRER_CTRL1_B_SEQ_NUM_LENGTH_Pos) /* (GMAC_EMAC_FRER_CTRL1_B) Number of Significants bits of the 802.1CB Sequence Number Mask */
 #define GMAC_EMAC_FRER_CTRL1_B_SEQ_NUM_LENGTH(value) (GMAC_EMAC_FRER_CTRL1_B_SEQ_NUM_LENGTH_Msk & (_UINT32_(value) << GMAC_EMAC_FRER_CTRL1_B_SEQ_NUM_LENGTH_Pos)) /* Assignment of value for SEQ_NUM_LENGTH in the GMAC_EMAC_FRER_CTRL1_B register */
 #define GMAC_EMAC_FRER_CTRL1_B_Msk            _UINT32_(0x00001F3F)                                 /* (GMAC_EMAC_FRER_CTRL1_B) Register Mask  */
 
@@ -5882,8 +5882,8 @@
 #define GMAC_EMAC_FRER_CTRL2_B_SEQ_REC_WINDOW_Pos _UINT32_(0)                                          /* (GMAC_EMAC_FRER_CTRL2_B) Vector Recovery Window Position */
 #define GMAC_EMAC_FRER_CTRL2_B_SEQ_REC_WINDOW_Msk (_UINT32_(0x3F) << GMAC_EMAC_FRER_CTRL2_B_SEQ_REC_WINDOW_Pos) /* (GMAC_EMAC_FRER_CTRL2_B) Vector Recovery Window Mask */
 #define GMAC_EMAC_FRER_CTRL2_B_SEQ_REC_WINDOW(value) (GMAC_EMAC_FRER_CTRL2_B_SEQ_REC_WINDOW_Msk & (_UINT32_(value) << GMAC_EMAC_FRER_CTRL2_B_SEQ_REC_WINDOW_Pos)) /* Assignment of value for SEQ_REC_WINDOW in the GMAC_EMAC_FRER_CTRL2_B register */
-#define GMAC_EMAC_FRER_CTRL2_B_SEQ_NUM_LENGTH_Pos _UINT32_(8)                                          /* (GMAC_EMAC_FRER_CTRL2_B) Number of Significants Bits of the 802.1CB Sequence Number Position */
-#define GMAC_EMAC_FRER_CTRL2_B_SEQ_NUM_LENGTH_Msk (_UINT32_(0x1F) << GMAC_EMAC_FRER_CTRL2_B_SEQ_NUM_LENGTH_Pos) /* (GMAC_EMAC_FRER_CTRL2_B) Number of Significants Bits of the 802.1CB Sequence Number Mask */
+#define GMAC_EMAC_FRER_CTRL2_B_SEQ_NUM_LENGTH_Pos _UINT32_(8)                                          /* (GMAC_EMAC_FRER_CTRL2_B) Number of Significants bits of the 802.1CB Sequence Number Position */
+#define GMAC_EMAC_FRER_CTRL2_B_SEQ_NUM_LENGTH_Msk (_UINT32_(0x1F) << GMAC_EMAC_FRER_CTRL2_B_SEQ_NUM_LENGTH_Pos) /* (GMAC_EMAC_FRER_CTRL2_B) Number of Significants bits of the 802.1CB Sequence Number Mask */
 #define GMAC_EMAC_FRER_CTRL2_B_SEQ_NUM_LENGTH(value) (GMAC_EMAC_FRER_CTRL2_B_SEQ_NUM_LENGTH_Msk & (_UINT32_(value) << GMAC_EMAC_FRER_CTRL2_B_SEQ_NUM_LENGTH_Pos)) /* Assignment of value for SEQ_NUM_LENGTH in the GMAC_EMAC_FRER_CTRL2_B register */
 #define GMAC_EMAC_FRER_CTRL2_B_Msk            _UINT32_(0x00001F3F)                                 /* (GMAC_EMAC_FRER_CTRL2_B) Register Mask  */
 
@@ -6114,7 +6114,7 @@
 #define GMAC_PEFRSL_REG_OFST           _UINT32_(0x1F8)     /* (GMAC_PEFRSL) PTP Peer Event Frame Received Seconds Low Register Offset */
 #define GMAC_PEFRN_REG_OFST            _UINT32_(0x1FC)     /* (GMAC_PEFRN) PTP Peer Event Frame Received Nanoseconds Register Offset */
 #define GMAC_TXPQUANT1_REG_OFST        _UINT32_(0x260)     /* (GMAC_TXPQUANT1) Transmit Pause Quantum 1 Register Offset */
-#define GMAC_TXPQUANT2_REG_OFST        _UINT32_(0x264)     /* (GMAC_TXPQUANT2) Transmit Pause Quantum 2 Register{*}0{*} Offset */
+#define GMAC_TXPQUANT2_REG_OFST        _UINT32_(0x264)     /* (GMAC_TXPQUANT2) Transmit Pause Quantum 2 Register Offset */
 #define GMAC_TXPQUANT3_REG_OFST        _UINT32_(0x268)     /* (GMAC_TXPQUANT3) Transmit Pause Quantum 3 Register Offset */
 #define GMAC_RXLPI_REG_OFST            _UINT32_(0x270)     /* (GMAC_RXLPI) Received LPI Transitions Offset */
 #define GMAC_RXLPITIME_REG_OFST        _UINT32_(0x274)     /* (GMAC_RXLPITIME) Received LPI Time Offset */
@@ -6573,7 +6573,7 @@ typedef struct
   __I   uint32_t                       GMAC_PEFRN;         /* Offset: 0x1FC (R/   32) PTP Peer Event Frame Received Nanoseconds Register */
   __I   uint8_t                        Reserved8[0x60];
   __IO  uint32_t                       GMAC_TXPQUANT1;     /* Offset: 0x260 (R/W  32) Transmit Pause Quantum 1 Register */
-  __IO  uint32_t                       GMAC_TXPQUANT2;     /* Offset: 0x264 (R/W  32) Transmit Pause Quantum 2 Register{*}0{*} */
+  __IO  uint32_t                       GMAC_TXPQUANT2;     /* Offset: 0x264 (R/W  32) Transmit Pause Quantum 2 Register */
   __IO  uint32_t                       GMAC_TXPQUANT3;     /* Offset: 0x268 (R/W  32) Transmit Pause Quantum 3 Register */
   __I   uint8_t                        Reserved9[0x04];
   __I   uint32_t                       GMAC_RXLPI;         /* Offset: 0x270 (R/   32) Received LPI Transitions */

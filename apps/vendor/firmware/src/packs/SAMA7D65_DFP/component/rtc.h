@@ -1,7 +1,7 @@
 /*
  * Component description for RTC
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -80,9 +80,9 @@
 #define RTC_MR_UTC_Pos                        _UINT32_(2)                                          /* (RTC_MR) UTC Time Format Position */
 #define RTC_MR_UTC_Msk                        (_UINT32_(0x1) << RTC_MR_UTC_Pos)                    /* (RTC_MR) UTC Time Format Mask */
 #define RTC_MR_UTC(value)                     (RTC_MR_UTC_Msk & (_UINT32_(value) << RTC_MR_UTC_Pos)) /* Assignment of value for UTC in the RTC_MR register */
-#define   RTC_MR_UTC_DISABLED_Val             _UINT32_(0x0)                                        /* (RTC_MR) Gregorian or Persian calendar.  */
+#define   RTC_MR_UTC_DISABLED_Val             _UINT32_(0x0)                                        /* (RTC_MR) Gregorian calendar.  */
 #define   RTC_MR_UTC_ENABLED_Val              _UINT32_(0x1)                                        /* (RTC_MR) UTC format.  */
-#define RTC_MR_UTC_DISABLED                   (RTC_MR_UTC_DISABLED_Val << RTC_MR_UTC_Pos)          /* (RTC_MR) Gregorian or Persian calendar. Position */
+#define RTC_MR_UTC_DISABLED                   (RTC_MR_UTC_DISABLED_Val << RTC_MR_UTC_Pos)          /* (RTC_MR) Gregorian calendar. Position */
 #define RTC_MR_UTC_ENABLED                    (RTC_MR_UTC_ENABLED_Val << RTC_MR_UTC_Pos)           /* (RTC_MR) UTC format. Position */
 #define RTC_MR_NEGPPM_Pos                     _UINT32_(4)                                          /* (RTC_MR) NEGative PPM Correction Position */
 #define RTC_MR_NEGPPM_Msk                     (_UINT32_(0x1) << RTC_MR_NEGPPM_Pos)                 /* (RTC_MR) NEGative PPM Correction Mask */
