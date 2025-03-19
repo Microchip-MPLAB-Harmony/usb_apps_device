@@ -35,7 +35,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.3"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.4"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -3227,11 +3227,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\definitions.h</file>
-         <hash>5177880cc0a001c615b4778708db561e359e63876b652984f1ef7fd6c0ee3dd8</hash>
+         <hash>1e87254286797b148c7c4a7479638949834635a9ad519200dd4fd25b832fd543</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\device.h</file>
-         <hash>272c30439d908c419ccaac5f8a4dff8f7caa7881537bac508320752dfcfbf0d0</hash>
+         <hash>9191d645a12f96842eed9c51335f9c9f10371d437d9a33c36b0ff4d12e931d46</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\device_cache.h</file>
@@ -3263,7 +3263,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\driver\usb\udphs\src\drv_usb_udphs_local.h</file>
-         <hash>73fa46494cbe1dd41d7a247c5cf0aa5418debdf1621c6fdcb7cfbe498fd118b2</hash>
+         <hash>13a520cc87e13618daddf16a29dcdcec6d87d927c3c874dbcf00259295399ee1</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\driver\usb\udphs\src\drv_usb_udphs_variant_mapping.h</file>
@@ -3275,15 +3275,15 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\initialization.c</file>
-         <hash>82f73a9ca6e50b8b4ffe8abbfd9f21442f1e68fbd9c8720288d2de5799eb43f6</hash>
+         <hash>1566d9f916947146312ffe22bc207e1f790b36129f94f1c67463848337bc30a9</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\interrupts.c</file>
-         <hash>361f5e1d843df60d762741cff2e30549cff849154b7e8d5aa89a3b3a8b07aa80</hash>
+         <hash>3f257c1c617c901d65c7a959e95e16fa3baaacb7c3667d18059a321a4dbab6bf</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\interrupts.h</file>
-         <hash>9f56286fb5dfe6a16af81238e8ae6fe767f9be4915fedc25a5fcee8f21175e9c</hash>
+         <hash>aea87e50d70b6452047dd37e91dd16f427933d0c0811dc66e4d1b1e27d47f255</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\osal\osal.h</file>
