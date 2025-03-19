@@ -1,7 +1,7 @@
 /*
  * Component description for DWDT
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -53,13 +53,6 @@
 /* -------- DWDT_NS_WDT_MR : (DWDT Offset: 0x04) (R/W 32) Never Secure Mode Register -------- */
 #define DWDT_NS_WDT_MR_RESETVALUE             _UINT32_(0x30)                                       /*  (DWDT_NS_WDT_MR) Never Secure Mode Register  Reset Value */
 
-#define DWDT_NS_WDT_MR_RPTHALM_Pos            _UINT32_(5)                                          /* (DWDT_NS_WDT_MR) Repeat Threshold Alarm Position */
-#define DWDT_NS_WDT_MR_RPTHALM_Msk            (_UINT32_(0x1) << DWDT_NS_WDT_MR_RPTHALM_Pos)        /* (DWDT_NS_WDT_MR) Repeat Threshold Alarm Mask */
-#define DWDT_NS_WDT_MR_RPTHALM(value)         (DWDT_NS_WDT_MR_RPTHALM_Msk & (_UINT32_(value) << DWDT_NS_WDT_MR_RPTHALM_Pos)) /* Assignment of value for RPTHALM in the DWDT_NS_WDT_MR register */
-#define   DWDT_NS_WDT_MR_RPTHALM_0_Val        _UINT32_(0x0)                                        /* (DWDT_NS_WDT_MR) No alarm is sent to the security module if the watchdog is restarted before the RPTH threshold.  */
-#define   DWDT_NS_WDT_MR_RPTHALM_1_Val        _UINT32_(0x1)                                        /* (DWDT_NS_WDT_MR) An alarm is sent to the security module if the watchdog is restarted before the RPTH threshold.  */
-#define DWDT_NS_WDT_MR_RPTHALM_0              (DWDT_NS_WDT_MR_RPTHALM_0_Val << DWDT_NS_WDT_MR_RPTHALM_Pos) /* (DWDT_NS_WDT_MR) No alarm is sent to the security module if the watchdog is restarted before the RPTH threshold. Position */
-#define DWDT_NS_WDT_MR_RPTHALM_1              (DWDT_NS_WDT_MR_RPTHALM_1_Val << DWDT_NS_WDT_MR_RPTHALM_Pos) /* (DWDT_NS_WDT_MR) An alarm is sent to the security module if the watchdog is restarted before the RPTH threshold. Position */
 #define DWDT_NS_WDT_MR_WDDIS_Pos              _UINT32_(12)                                         /* (DWDT_NS_WDT_MR) Watchdog Disable Position */
 #define DWDT_NS_WDT_MR_WDDIS_Msk              (_UINT32_(0x1) << DWDT_NS_WDT_MR_WDDIS_Pos)          /* (DWDT_NS_WDT_MR) Watchdog Disable Mask */
 #define DWDT_NS_WDT_MR_WDDIS(value)           (DWDT_NS_WDT_MR_WDDIS_Msk & (_UINT32_(value) << DWDT_NS_WDT_MR_WDDIS_Pos)) /* Assignment of value for WDDIS in the DWDT_NS_WDT_MR register */
@@ -81,7 +74,7 @@
 #define   DWDT_NS_WDT_MR_WDDBGHLT_1_Val       _UINT32_(0x1)                                        /* (DWDT_NS_WDT_MR) The watchdog stops when the processor is in Debug state.  */
 #define DWDT_NS_WDT_MR_WDDBGHLT_0             (DWDT_NS_WDT_MR_WDDBGHLT_0_Val << DWDT_NS_WDT_MR_WDDBGHLT_Pos) /* (DWDT_NS_WDT_MR) The watchdog runs when the processor is in Debug state. Position */
 #define DWDT_NS_WDT_MR_WDDBGHLT_1             (DWDT_NS_WDT_MR_WDDBGHLT_1_Val << DWDT_NS_WDT_MR_WDDBGHLT_Pos) /* (DWDT_NS_WDT_MR) The watchdog stops when the processor is in Debug state. Position */
-#define DWDT_NS_WDT_MR_Msk                    _UINT32_(0x30001020)                                 /* (DWDT_NS_WDT_MR) Register Mask  */
+#define DWDT_NS_WDT_MR_Msk                    _UINT32_(0x30001000)                                 /* (DWDT_NS_WDT_MR) Register Mask  */
 
 
 /* -------- DWDT_NS_WDT_VR : (DWDT Offset: 0x08) ( R/ 32) Never Secure Value Register -------- */
@@ -283,7 +276,7 @@
 
 
 /* -------- DWDT_PS_WDT_VR : (DWDT Offset: 0x1008) ( R/ 32) Programmable Secure Value Register -------- */
-#define DWDT_PS_WDT_VR_RESETVALUE             _UINT32_(0x00)                                       /*  (DWDT_PS_WDT_VR) Programmable Secure Value Register  Reset Value */
+#define DWDT_PS_WDT_VR_RESETVALUE             _UINT32_(0xFFF)                                      /*  (DWDT_PS_WDT_VR) Programmable Secure Value Register  Reset Value */
 
 #define DWDT_PS_WDT_VR_COUNTER_Pos            _UINT32_(0)                                          /* (DWDT_PS_WDT_VR) Watchdog Down Counter Value Position */
 #define DWDT_PS_WDT_VR_COUNTER_Msk            (_UINT32_(0xFFF) << DWDT_PS_WDT_VR_COUNTER_Pos)      /* (DWDT_PS_WDT_VR) Watchdog Down Counter Value Mask */

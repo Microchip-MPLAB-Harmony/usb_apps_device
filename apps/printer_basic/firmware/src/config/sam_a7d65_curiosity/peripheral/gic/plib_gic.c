@@ -61,8 +61,8 @@ void GIC_IRQHandler(uint32_t  iarRegVal);
 void GIC_FIQHandler(uint32_t  iarRegVal);
 
 
-volatile static PPI_SPI_HANDLER gicPIVectorTable[174U];
-volatile static SGI_HANDLER gicSGIHandler;
+static volatile PPI_SPI_HANDLER gicPIVectorTable[174U];
+static volatile SGI_HANDLER gicSGIHandler;
 
 static const struct {
     IRQn_Type irqID;

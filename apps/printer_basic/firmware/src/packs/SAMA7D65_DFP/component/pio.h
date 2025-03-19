@@ -1,7 +1,7 @@
 /*
  * Component description for PIO
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -2800,8 +2800,8 @@
 #define   PIO_S_PIO_CFGR_SCHMITT_DISABLED_Val _UINT32_(0x1)                                        /* (PIO_S_PIO_CFGR) Schmitt trigger is disabled for the selected I/O lines.  */
 #define PIO_S_PIO_CFGR_SCHMITT_ENABLED        (PIO_S_PIO_CFGR_SCHMITT_ENABLED_Val << PIO_S_PIO_CFGR_SCHMITT_Pos) /* (PIO_S_PIO_CFGR) Schmitt trigger is enabled for the selected I/O lines. Position */
 #define PIO_S_PIO_CFGR_SCHMITT_DISABLED       (PIO_S_PIO_CFGR_SCHMITT_DISABLED_Val << PIO_S_PIO_CFGR_SCHMITT_Pos) /* (PIO_S_PIO_CFGR) Schmitt trigger is disabled for the selected I/O lines. Position */
-#define PIO_S_PIO_CFGR_DRVSTR_Pos             _UINT32_(16)                                         /* (PIO_S_PIO_CFGR)  Position */
-#define PIO_S_PIO_CFGR_DRVSTR_Msk             (_UINT32_(0x3) << PIO_S_PIO_CFGR_DRVSTR_Pos)         /* (PIO_S_PIO_CFGR)  Mask */
+#define PIO_S_PIO_CFGR_DRVSTR_Pos             _UINT32_(16)                                         /* (PIO_S_PIO_CFGR) Drive Strength Position */
+#define PIO_S_PIO_CFGR_DRVSTR_Msk             (_UINT32_(0x3) << PIO_S_PIO_CFGR_DRVSTR_Pos)         /* (PIO_S_PIO_CFGR) Drive Strength Mask */
 #define PIO_S_PIO_CFGR_DRVSTR(value)          (PIO_S_PIO_CFGR_DRVSTR_Msk & (_UINT32_(value) << PIO_S_PIO_CFGR_DRVSTR_Pos)) /* Assignment of value for DRVSTR in the PIO_S_PIO_CFGR register */
 #define PIO_S_PIO_CFGR_EVTSEL_Pos             _UINT32_(24)                                         /* (PIO_S_PIO_CFGR) Event Selection Position */
 #define PIO_S_PIO_CFGR_EVTSEL_Msk             (_UINT32_(0x7) << PIO_S_PIO_CFGR_EVTSEL_Pos)         /* (PIO_S_PIO_CFGR) Event Selection Mask */
@@ -5390,7 +5390,7 @@
 #define PIO_S_PIO_SIOSR_P(value)              (PIO_S_PIO_SIOSR_P_Msk & (_UINT32_(value) << PIO_S_PIO_SIOSR_P_Pos)) 
 
 /* -------- PIO_S_PIO_IOSSR : (PIO Offset: 0x38) ( R/ 32) Secure PIO I/O Security Status Register  -------- */
-#define PIO_S_PIO_IOSSR_RESETVALUE            _UINT32_(0xFFFFFFFF)                                 /*  (PIO_S_PIO_IOSSR) Secure PIO I/O Security Status Register   Reset Value */
+#define PIO_S_PIO_IOSSR_RESETVALUE            _UINT32_(0x3FFF)                                     /*  (PIO_S_PIO_IOSSR) Secure PIO I/O Security Status Register   Reset Value */
 
 #define PIO_S_PIO_IOSSR_P0_Pos                _UINT32_(0)                                          /* (PIO_S_PIO_IOSSR) I/O Security Status Position */
 #define PIO_S_PIO_IOSSR_P0_Msk                (_UINT32_(0x1) << PIO_S_PIO_IOSSR_P0_Pos)            /* (PIO_S_PIO_IOSSR) I/O Security Status Mask */
