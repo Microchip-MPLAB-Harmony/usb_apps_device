@@ -43,7 +43,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.3"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.4"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -4989,11 +4989,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d29_curiosity\definitions.h</file>
-         <hash>9892838a4564b746796f4bfd1812076ccc977493e1c1b067571e0c87e768777e</hash>
+         <hash>481f9bb1e6f6b0131e9c268c2f0e2b89a24988dd60ec3d95391af27e054d4b43</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d29_curiosity\device.h</file>
-         <hash>be1fb5478ad239e349379f9e69d62fa4a4fb117f6c1ce55072c440e252b7c16c</hash>
+         <hash>4d7a5908f693c0ebdd1b71878e37d52050e06c2881fda52e1991ac23de07335d</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d29_curiosity\device_cache.h</file>
@@ -5025,7 +5025,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d29_curiosity\driver\usb\udphs\src\drv_usb_udphs_local.h</file>
-         <hash>8fadf20f65f785c2abd3d677163b44b2e361727785f932cc1c6d5eabff0ea2f6</hash>
+         <hash>d27f8d052b3b89ab81953d6ab2191d207dc6bfd3533b42a9b4080f721c5f3a91</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d29_curiosity\driver\usb\udphs\src\drv_usb_udphs_variant_mapping.h</file>
@@ -5037,15 +5037,15 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d29_curiosity\initialization.c</file>
-         <hash>b9658e7dd77cdbc265738065c69f3a82b914bbb0412161475d831ccd7294abe6</hash>
+         <hash>94ddf1e0e0eaf0dd06300d35cf962000e8ee61fba33246810b8bf203c3f8deb2</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d29_curiosity\interrupts.c</file>
-         <hash>6c897205519661daeb3f03fbade1997db33fdc6e32a2a569b7a7c6da150bff23</hash>
+         <hash>3722fa2b8adb5ddfd5a8db1f1102eeb82422c9bc8350d45f992e8f9a3f7a6dbd</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d29_curiosity\interrupts.h</file>
-         <hash>9f56286fb5dfe6a16af81238e8ae6fe767f9be4915fedc25a5fcee8f21175e9c</hash>
+         <hash>aea87e50d70b6452047dd37e91dd16f427933d0c0811dc66e4d1b1e27d47f255</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d29_curiosity\osal\osal.h</file>
