@@ -1,7 +1,9 @@
 /*
  * Component description for PMC
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,7 +19,7 @@
  *
  */
 
-/*  file generated from device description file (ATDF) version 2024-02-20T14:30:20Z  */
+/*      file generated from device description file (ATDF) version None       */
 #ifndef _SAMA7G5_PMC_COMPONENT_H_
 #define _SAMA7G5_PMC_COMPONENT_H_
 
@@ -347,13 +349,6 @@
 #define   CKGR_MOR_MOSCRCEN_1_Val             _UINT32_(0x1)                                        /* (CKGR_MOR) The main RC oscillator is enabled.  */
 #define CKGR_MOR_MOSCRCEN_0                   (CKGR_MOR_MOSCRCEN_0_Val << CKGR_MOR_MOSCRCEN_Pos)   /* (CKGR_MOR) The main RC oscillator is disabled. Position */
 #define CKGR_MOR_MOSCRCEN_1                   (CKGR_MOR_MOSCRCEN_1_Val << CKGR_MOR_MOSCRCEN_Pos)   /* (CKGR_MOR) The main RC oscillator is enabled. Position */
-#define CKGR_MOR_ULP2_Pos                     _UINT32_(7)                                          /* (CKGR_MOR) ULP2 Mode Command (write-only) Position */
-#define CKGR_MOR_ULP2_Msk                     (_UINT32_(0x1) << CKGR_MOR_ULP2_Pos)                 /* (CKGR_MOR) ULP2 Mode Command (write-only) Mask */
-#define CKGR_MOR_ULP2(value)                  (CKGR_MOR_ULP2_Msk & (_UINT32_(value) << CKGR_MOR_ULP2_Pos)) /* Assignment of value for ULP2 in the CKGR_MOR register */
-#define   CKGR_MOR_ULP2_0_Val                 _UINT32_(0x0)                                        /* (CKGR_MOR) No effect.  */
-#define   CKGR_MOR_ULP2_1_Val                 _UINT32_(0x1)                                        /* (CKGR_MOR) Enables the device to enter ULP2 mode. ULP2 mode is entered when the processor WFE instruction is executed.  */
-#define CKGR_MOR_ULP2_0                       (CKGR_MOR_ULP2_0_Val << CKGR_MOR_ULP2_Pos)           /* (CKGR_MOR) No effect. Position */
-#define CKGR_MOR_ULP2_1                       (CKGR_MOR_ULP2_1_Val << CKGR_MOR_ULP2_Pos)           /* (CKGR_MOR) Enables the device to enter ULP2 mode. ULP2 mode is entered when the processor WFE instruction is executed. Position */
 #define CKGR_MOR_MOSCXTST_Pos                 _UINT32_(8)                                          /* (CKGR_MOR) Main Crystal Oscillator Start-up Time Position */
 #define CKGR_MOR_MOSCXTST_Msk                 (_UINT32_(0xFF) << CKGR_MOR_MOSCXTST_Pos)            /* (CKGR_MOR) Main Crystal Oscillator Start-up Time Mask */
 #define CKGR_MOR_MOSCXTST(value)              (CKGR_MOR_MOSCXTST_Msk & (_UINT32_(value) << CKGR_MOR_MOSCXTST_Pos)) /* Assignment of value for MOSCXTST in the CKGR_MOR register */
@@ -397,8 +392,11 @@
 #define   CKGR_MOR_AUTOCPUSW_1_Val            _UINT32_(0x1)                                        /* (CKGR_MOR) If a main crystal oscillator failure is detected, the processor clock source selection automatically switches to the main clock.  */
 #define CKGR_MOR_AUTOCPUSW_0                  (CKGR_MOR_AUTOCPUSW_0_Val << CKGR_MOR_AUTOCPUSW_Pos) /* (CKGR_MOR) A main crystal oscillator failure detection has no effect on the processor clock source selection. Position */
 #define CKGR_MOR_AUTOCPUSW_1                  (CKGR_MOR_AUTOCPUSW_1_Val << CKGR_MOR_AUTOCPUSW_Pos) /* (CKGR_MOR) If a main crystal oscillator failure is detected, the processor clock source selection automatically switches to the main clock. Position */
-#define CKGR_MOR_Msk                          _UINT32_(0x67FFFF8D)                                 /* (CKGR_MOR) Register Mask  */
+#define CKGR_MOR_Msk                          _UINT32_(0x67FFFF0D)                                 /* (CKGR_MOR) Register Mask  */
 
+#define CKGR_MOR_ULP_Pos                      _UINT32_(2)                                          /* (CKGR_MOR Position) ULPx Mode Command (write-only) */
+#define CKGR_MOR_ULP_Msk                      (_UINT32_(0x1) << CKGR_MOR_ULP_Pos)                  /* (CKGR_MOR Mask) ULP */
+#define CKGR_MOR_ULP(value)                   (CKGR_MOR_ULP_Msk & (_UINT32_(value) << CKGR_MOR_ULP_Pos)) 
 
 /* -------- CKGR_MCFR : (PMC Offset: 0x24) (R/W 32) Main Clock Frequency Register -------- */
 #define CKGR_MCFR_RESETVALUE                  _UINT32_(0x00)                                       /*  (CKGR_MCFR) Main Clock Frequency Register  Reset Value */
@@ -649,8 +647,8 @@
 #define PMC_IER_PLL_INT_Pos                   _UINT32_(25)                                         /* (PMC_IER) PLL Interrupt Enable Position */
 #define PMC_IER_PLL_INT_Msk                   (_UINT32_(0x1) << PMC_IER_PLL_INT_Pos)               /* (PMC_IER) PLL Interrupt Enable Mask */
 #define PMC_IER_PLL_INT(value)                (PMC_IER_PLL_INT_Msk & (_UINT32_(value) << PMC_IER_PLL_INT_Pos)) /* Assignment of value for PLL_INT in the PMC_IER register */
-#define PMC_IER_MCKXRDY_Pos                   _UINT32_(26)                                         /* (PMC_IER) Main System Bus Clock x [x=1..4] Ready Interrupt Enable Position */
-#define PMC_IER_MCKXRDY_Msk                   (_UINT32_(0x1) << PMC_IER_MCKXRDY_Pos)               /* (PMC_IER) Main System Bus Clock x [x=1..4] Ready Interrupt Enable Mask */
+#define PMC_IER_MCKXRDY_Pos                   _UINT32_(26)                                         /* (PMC_IER) Main System Bus Clock x Ready Interrupt Enable Position */
+#define PMC_IER_MCKXRDY_Msk                   (_UINT32_(0x1) << PMC_IER_MCKXRDY_Pos)               /* (PMC_IER) Main System Bus Clock x Ready Interrupt Enable Mask */
 #define PMC_IER_MCKXRDY(value)                (PMC_IER_MCKXRDY_Msk & (_UINT32_(value) << PMC_IER_MCKXRDY_Pos)) /* Assignment of value for MCKXRDY in the PMC_IER register */
 #define PMC_IER_Msk                           _UINT32_(0x06A7FF09)                                 /* (PMC_IER) Register Mask  */
 
@@ -707,8 +705,8 @@
 #define PMC_IDR_PLL_INT_Pos                   _UINT32_(25)                                         /* (PMC_IDR) PLL Interrupt Disable Position */
 #define PMC_IDR_PLL_INT_Msk                   (_UINT32_(0x1) << PMC_IDR_PLL_INT_Pos)               /* (PMC_IDR) PLL Interrupt Disable Mask */
 #define PMC_IDR_PLL_INT(value)                (PMC_IDR_PLL_INT_Msk & (_UINT32_(value) << PMC_IDR_PLL_INT_Pos)) /* Assignment of value for PLL_INT in the PMC_IDR register */
-#define PMC_IDR_MCKXRDY_Pos                   _UINT32_(26)                                         /* (PMC_IDR) Main System Bus Clock x [x=1..4] Ready Interrupt Disable Position */
-#define PMC_IDR_MCKXRDY_Msk                   (_UINT32_(0x1) << PMC_IDR_MCKXRDY_Pos)               /* (PMC_IDR) Main System Bus Clock x [x=1..4] Ready Interrupt Disable Mask */
+#define PMC_IDR_MCKXRDY_Pos                   _UINT32_(26)                                         /* (PMC_IDR) Main System Bus Clock x Ready Interrupt Disable Position */
+#define PMC_IDR_MCKXRDY_Msk                   (_UINT32_(0x1) << PMC_IDR_MCKXRDY_Pos)               /* (PMC_IDR) Main System Bus Clock x Ready Interrupt Disable Mask */
 #define PMC_IDR_MCKXRDY(value)                (PMC_IDR_MCKXRDY_Msk & (_UINT32_(value) << PMC_IDR_MCKXRDY_Pos)) /* Assignment of value for MCKXRDY in the PMC_IDR register */
 #define PMC_IDR_Msk                           _UINT32_(0x06A7FF09)                                 /* (PMC_IDR) Register Mask  */
 
@@ -859,8 +857,8 @@
 #define   PMC_SR_PLL_INT_1_Val                _UINT32_(0x1)                                        /* (PMC_SR) A PLL interrupt has occurred. PLL interrupt is defined by the configuration of the PMC_IMR register.  */
 #define PMC_SR_PLL_INT_0                      (PMC_SR_PLL_INT_0_Val << PMC_SR_PLL_INT_Pos)         /* (PMC_SR) No PLL interrupt has occurred. Position */
 #define PMC_SR_PLL_INT_1                      (PMC_SR_PLL_INT_1_Val << PMC_SR_PLL_INT_Pos)         /* (PMC_SR) A PLL interrupt has occurred. PLL interrupt is defined by the configuration of the PMC_IMR register. Position */
-#define PMC_SR_MCKXRDY_Pos                    _UINT32_(26)                                         /* (PMC_SR) Main System Bus Clock x [x=1..4] Ready Status Position */
-#define PMC_SR_MCKXRDY_Msk                    (_UINT32_(0x1) << PMC_SR_MCKXRDY_Pos)                /* (PMC_SR) Main System Bus Clock x [x=1..4] Ready Status Mask */
+#define PMC_SR_MCKXRDY_Pos                    _UINT32_(26)                                         /* (PMC_SR) Main System Bus Clock x Ready Status Position */
+#define PMC_SR_MCKXRDY_Msk                    (_UINT32_(0x1) << PMC_SR_MCKXRDY_Pos)                /* (PMC_SR) Main System Bus Clock x Ready Status Mask */
 #define PMC_SR_MCKXRDY(value)                 (PMC_SR_MCKXRDY_Msk & (_UINT32_(value) << PMC_SR_MCKXRDY_Pos)) /* Assignment of value for MCKXRDY in the PMC_SR register */
 #define   PMC_SR_MCKXRDY_0_Val                _UINT32_(0x0)                                        /* (PMC_SR) At least one main system bus clock is not established.  */
 #define   PMC_SR_MCKXRDY_1_Val                _UINT32_(0x1)                                        /* (PMC_SR) All main system bus clocks are established.  */
@@ -923,8 +921,8 @@
 #define PMC_IMR_PLL_INT_Pos                   _UINT32_(25)                                         /* (PMC_IMR) PLL Interrupt Mask Position */
 #define PMC_IMR_PLL_INT_Msk                   (_UINT32_(0x1) << PMC_IMR_PLL_INT_Pos)               /* (PMC_IMR) PLL Interrupt Mask Mask */
 #define PMC_IMR_PLL_INT(value)                (PMC_IMR_PLL_INT_Msk & (_UINT32_(value) << PMC_IMR_PLL_INT_Pos)) /* Assignment of value for PLL_INT in the PMC_IMR register */
-#define PMC_IMR_MCKXRDY_Pos                   _UINT32_(26)                                         /* (PMC_IMR) Main System Bus Clock x [x=1..4] Ready Interrupt Mask Position */
-#define PMC_IMR_MCKXRDY_Msk                   (_UINT32_(0x1) << PMC_IMR_MCKXRDY_Pos)               /* (PMC_IMR) Main System Bus Clock x [x=1..4] Ready Interrupt Mask Mask */
+#define PMC_IMR_MCKXRDY_Pos                   _UINT32_(26)                                         /* (PMC_IMR) Main System Bus Clock x Ready Interrupt Mask Position */
+#define PMC_IMR_MCKXRDY_Msk                   (_UINT32_(0x1) << PMC_IMR_MCKXRDY_Pos)               /* (PMC_IMR) Main System Bus Clock x Ready Interrupt Mask Mask */
 #define PMC_IMR_MCKXRDY(value)                (PMC_IMR_MCKXRDY_Msk & (_UINT32_(value) << PMC_IMR_MCKXRDY_Pos)) /* Assignment of value for MCKXRDY in the PMC_IMR register */
 #define PMC_IMR_Msk                           _UINT32_(0x06A7FF09)                                 /* (PMC_IMR) Register Mask  */
 
@@ -1107,10 +1105,10 @@
 #define PMC_SLPWK_AIPR_AIP_Pos                _UINT32_(0)                                          /* (PMC_SLPWK_AIPR) Activity In Progress Position */
 #define PMC_SLPWK_AIPR_AIP_Msk                (_UINT32_(0x1) << PMC_SLPWK_AIPR_AIP_Pos)            /* (PMC_SLPWK_AIPR) Activity In Progress Mask */
 #define PMC_SLPWK_AIPR_AIP(value)             (PMC_SLPWK_AIPR_AIP_Msk & (_UINT32_(value) << PMC_SLPWK_AIPR_AIP_Pos)) /* Assignment of value for AIP in the PMC_SLPWK_AIPR register */
-#define   PMC_SLPWK_AIPR_AIP_0_Val            _UINT32_(0x0)                                        /* (PMC_SLPWK_AIPR) There is no activity on peripherals. The asynchronous partial wake-up function can be activated on one or more peripherals. The device can enter ULP1 or ULP2 mode.  */
-#define   PMC_SLPWK_AIPR_AIP_1_Val            _UINT32_(0x1)                                        /* (PMC_SLPWK_AIPR) One or more peripherals are currently active. The device must not enter ULP1 or ULP2 mode if the asynchronous partial wake-up is enabled for one of the following PIDs: FLEXCOMx and ADCC.  */
-#define PMC_SLPWK_AIPR_AIP_0                  (PMC_SLPWK_AIPR_AIP_0_Val << PMC_SLPWK_AIPR_AIP_Pos) /* (PMC_SLPWK_AIPR) There is no activity on peripherals. The asynchronous partial wake-up function can be activated on one or more peripherals. The device can enter ULP1 or ULP2 mode. Position */
-#define PMC_SLPWK_AIPR_AIP_1                  (PMC_SLPWK_AIPR_AIP_1_Val << PMC_SLPWK_AIPR_AIP_Pos) /* (PMC_SLPWK_AIPR) One or more peripherals are currently active. The device must not enter ULP1 or ULP2 mode if the asynchronous partial wake-up is enabled for one of the following PIDs: FLEXCOMx and ADCC. Position */
+#define   PMC_SLPWK_AIPR_AIP_0_Val            _UINT32_(0x0)                                        /* (PMC_SLPWK_AIPR) There is no activity on peripherals. The asynchronous partial wake-up function can be activated on one or more peripherals. The device can enter ULP1 mode.  */
+#define   PMC_SLPWK_AIPR_AIP_1_Val            _UINT32_(0x1)                                        /* (PMC_SLPWK_AIPR) One or more peripherals are currently active. The device must not enter ULP1 mode if the asynchronous partial wake-up is enabled for one of the following PIDs: FLEXCOMx, and ADCC.  */
+#define PMC_SLPWK_AIPR_AIP_0                  (PMC_SLPWK_AIPR_AIP_0_Val << PMC_SLPWK_AIPR_AIP_Pos) /* (PMC_SLPWK_AIPR) There is no activity on peripherals. The asynchronous partial wake-up function can be activated on one or more peripherals. The device can enter ULP1 mode. Position */
+#define PMC_SLPWK_AIPR_AIP_1                  (PMC_SLPWK_AIPR_AIP_1_Val << PMC_SLPWK_AIPR_AIP_Pos) /* (PMC_SLPWK_AIPR) One or more peripherals are currently active. The device must not enter ULP1 mode if the asynchronous partial wake-up is enabled for one of the following PIDs: FLEXCOMx, and ADCC. Position */
 #define PMC_SLPWK_AIPR_Msk                    _UINT32_(0x00000001)                                 /* (PMC_SLPWK_AIPR) Register Mask  */
 
 
