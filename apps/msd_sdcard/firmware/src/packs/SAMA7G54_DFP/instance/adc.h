@@ -1,7 +1,9 @@
 /*
  * Instance header file for ATSAMA7G54D4G
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,7 +19,7 @@
  *
  */
 
-/* file generated from device description file (ATDF) version 2024-02-20T14:30:20Z */
+/* file generated from device description file (ATDF) version None */
 #ifndef _SAMA7G5_ADC_INSTANCE_
 #define _SAMA7G5_ADC_INSTANCE_
 
@@ -25,5 +27,6 @@
 /* ========== Instance Parameter definitions for ADC peripheral ========== */
 #define ADC_DMAC_ID_RX                           (0)        
 #define ADC_INSTANCE_ID                          (26)       /* Analog-to-Digital Converter */
+#define ADC_PMC_PROG_CLK_NB                      (8)        /* Number of PCKs in the product */
 
 #endif /* _SAMA7G5_ADC_INSTANCE_ */

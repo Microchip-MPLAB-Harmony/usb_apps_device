@@ -1,7 +1,9 @@
 /*
  * Component description for CSI2DC
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,7 +19,7 @@
  *
  */
 
-/*  file generated from device description file (ATDF) version 2024-02-20T14:30:20Z  */
+/*      file generated from device description file (ATDF) version None       */
 #ifndef _SAMA7G5_CSI2DC_COMPONENT_H_
 #define _SAMA7G5_CSI2DC_COMPONENT_H_
 
@@ -1233,9 +1235,9 @@
 #define CSI2DC_VPISR_RATEOVF_Pos              _UINT32_(1)                                          /* (CSI2DC_VPISR) Rate Buffer Overflow Interrupt Status Position */
 #define CSI2DC_VPISR_RATEOVF_Msk              (_UINT32_(0x1) << CSI2DC_VPISR_RATEOVF_Pos)          /* (CSI2DC_VPISR) Rate Buffer Overflow Interrupt Status Mask */
 #define CSI2DC_VPISR_RATEOVF(value)           (CSI2DC_VPISR_RATEOVF_Msk & (_UINT32_(value) << CSI2DC_VPISR_RATEOVF_Pos)) /* Assignment of value for RATEOVF in the CSI2DC_VPISR register */
-#define   CSI2DC_VPISR_RATEOVF_0_Val          _UINT32_(0x0)                                        /* (CSI2DC_VPISR) No Rate Buffer Overflow since the last read of the register  */
+#define   CSI2DC_VPISR_RATEOVF_0_Val          _UINT32_(0x0)                                        /* (CSI2DC_VPISR) No Rate Buffer Overflow since the last read of the register.  */
 #define   CSI2DC_VPISR_RATEOVF_1_Val          _UINT32_(0x1)                                        /* (CSI2DC_VPISR) A Rate Buffer Overflow has been detected.  */
-#define CSI2DC_VPISR_RATEOVF_0                (CSI2DC_VPISR_RATEOVF_0_Val << CSI2DC_VPISR_RATEOVF_Pos) /* (CSI2DC_VPISR) No Rate Buffer Overflow since the last read of the register Position */
+#define CSI2DC_VPISR_RATEOVF_0                (CSI2DC_VPISR_RATEOVF_0_Val << CSI2DC_VPISR_RATEOVF_Pos) /* (CSI2DC_VPISR) No Rate Buffer Overflow since the last read of the register. Position */
 #define CSI2DC_VPISR_RATEOVF_1                (CSI2DC_VPISR_RATEOVF_1_Val << CSI2DC_VPISR_RATEOVF_Pos) /* (CSI2DC_VPISR) A Rate Buffer Overflow has been detected. Position */
 #define CSI2DC_VPISR_CTLOVF_Pos               _UINT32_(2)                                          /* (CSI2DC_VPISR) Control Buffer Overflow Interrupt Status Position */
 #define CSI2DC_VPISR_CTLOVF_Msk               (_UINT32_(0x1) << CSI2DC_VPISR_CTLOVF_Pos)           /* (CSI2DC_VPISR) Control Buffer Overflow Interrupt Status Mask */

@@ -1,7 +1,9 @@
 /*
  * Instance header file for ATSAMA7G54D4G
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,13 +19,13 @@
  *
  */
 
-/* file generated from device description file (ATDF) version 2024-02-20T14:30:20Z */
+/* file generated from device description file (ATDF) version None */
 #ifndef _SAMA7G5_PMC_INSTANCE_
 #define _SAMA7G5_PMC_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for PMC peripheral ========== */
 #define PMC_INSTANCE_ID                          (10)       /* Power Management Controller */
-#define PMC_PROG_CLK_NB                          (8)        /* Number of PCKs in the product - 1 SAM9X60, SAM9X70: 1 SAMA7G5: 7 */
+#define PMC_PROG_CLK_NB                          (8)        /* Number of PCKs in the product */
 
 #endif /* _SAMA7G5_PMC_INSTANCE_ */
