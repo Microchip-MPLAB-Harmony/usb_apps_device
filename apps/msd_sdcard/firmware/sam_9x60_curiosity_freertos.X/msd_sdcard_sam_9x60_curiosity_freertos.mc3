@@ -63,7 +63,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.3"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.4"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -8563,7 +8563,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\configuration.h</file>
-         <hash>38a77956f008b11786ba90556342610fb2534333c03a989c4636c2671fcc8785</hash>
+         <hash>2a4535a71f27c254f81877f604e9cf86c817269ed67f90b5854805c50ebc4ed0</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\cstartup.S</file>
@@ -8575,11 +8575,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\definitions.h</file>
-         <hash>9f5ba01175a32d697d860a210c1524227bcaead6b49298859f48950f4e502d6a</hash>
+         <hash>6260849893ecb34424f11033f4fc9364c1e00f44001afec4adce5d96ed8e757f</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\device.h</file>
-         <hash>ed9ee88de49173c319fa346ebf6831280dd0b10b2d2a9cf24b7533fb17e444b9</hash>
+         <hash>8ba8582c02c997ef9e9bf372a52a223522bd7ed460e29655399fdb3836fff841</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\device_cache.h</file>
@@ -8627,7 +8627,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\driver\usb\udphs\src\drv_usb_udphs_local.h</file>
-         <hash>73fa46494cbe1dd41d7a247c5cf0aa5418debdf1621c6fdcb7cfbe498fd118b2</hash>
+         <hash>13a520cc87e13618daddf16a29dcdcec6d87d927c3c874dbcf00259295399ee1</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\driver\usb\udphs\src\drv_usb_udphs_variant_mapping.h</file>
@@ -8643,15 +8643,15 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\initialization.c</file>
-         <hash>4cb1dff2fd6e0a7a7d2c055eb700a67fb1af1d5ee06d7a3eea9bef7728b4bcb5</hash>
+         <hash>b85a7832e68a10ce84eb384d2be24ce54c1bed955a919d1a8c930fa7ec9d1a72</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\interrupts.c</file>
-         <hash>fe4cdb3717277d50350b8321d0e14fcbf7728381a8f5d5a669091d78a7690402</hash>
+         <hash>10b3cf3d38c0646d51b17db3a93bb914b9f6079ebc804d76318a4fcde225c275</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\interrupts.h</file>
-         <hash>14f4a9633babf032f629e22a43ea62cf3f31fe5098061f355a861276fa109b62</hash>
+         <hash>f94a7165b77ef83cb71dc82de30390ca41194c7735155a66b4150798d06cd248</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\osal\osal.h</file>
@@ -8707,7 +8707,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\peripheral\pit\plib_pit.c</file>
-         <hash>b124f7b2ebb6bff7319456256d247db11c15d1c74f6a0f9e40cb781b4cb8b4b3</hash>
+         <hash>04cc8904ec666595d57d83514cd6045afa13f41d0226783ca0001c50b42c778b</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\peripheral\pit\plib_pit.h</file>
@@ -8715,7 +8715,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\peripheral\sdmmc\plib_sdmmc0.c</file>
-         <hash>1c8d8b06183afedc8c7d2cdfc41fbefa2c52d1ecf34b9e0fa9a73b2b231d18ef</hash>
+         <hash>d6e291b7ba7ef97ac7313d51cb58c5bc473f10017eaf93f1b643ebc86fff6e49</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\peripheral\sdmmc\plib_sdmmc0.h</file>
@@ -8727,7 +8727,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\peripheral\tc\plib_tc0.c</file>
-         <hash>c9bf7dc22d3246852f35ef21424a686d58bc801ade85fd2cc3c9d54092f68b15</hash>
+         <hash>5fbee1d3d312e57915dc68bd264587f2d44eb4b640112126aa816a238071722b</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\peripheral\tc\plib_tc0.h</file>
