@@ -59,7 +59,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.3"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.4"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -5757,11 +5757,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\definitions.h</file>
-         <hash>e7a79e104dec91be26df704ead767f4323a76af9318a93d403d023306247fd2c</hash>
+         <hash>f3c8890562707a59eb4fb3e1a514ab8a8dbfcbc0df588eb6f627148474955669</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\device.h</file>
-         <hash>11a8f8b0117a756dce1391269f23ce00912796fbb892fbf77ea4060535dc6d8c</hash>
+         <hash>18f89c91820c9e22fdb95f10bb00c2d2c03431b389d09e33632dedc9487777ea</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\device_cache.h</file>
@@ -5809,7 +5809,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\driver\usb\udphs\src\drv_usb_udphs_local.h</file>
-         <hash>8fadf20f65f785c2abd3d677163b44b2e361727785f932cc1c6d5eabff0ea2f6</hash>
+         <hash>d27f8d052b3b89ab81953d6ab2191d207dc6bfd3533b42a9b4080f721c5f3a91</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\driver\usb\udphs\src\drv_usb_udphs_variant_mapping.h</file>
@@ -5821,15 +5821,15 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\initialization.c</file>
-         <hash>a35e39f10a6b39cc574f7a22f54bab1afd7feb98a2a51091486485160e72c318</hash>
+         <hash>2d0f2113944a14bd71b1e715da17e8c00a3d64148989617f60e3bfff3909b2e8</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\interrupts.c</file>
-         <hash>6c897205519661daeb3f03fbade1997db33fdc6e32a2a569b7a7c6da150bff23</hash>
+         <hash>3722fa2b8adb5ddfd5a8db1f1102eeb82422c9bc8350d45f992e8f9a3f7a6dbd</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\interrupts.h</file>
-         <hash>87dd37a663af5e2a79550365ee0fb5881b2dadd59b3dd35810fafc3da15a479e</hash>
+         <hash>526b7dbd063580d9f9719b9bc5524e13161264d05a64675ae4977289d46ae799</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\osal\osal.h</file>
@@ -5885,7 +5885,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\peripheral\sdmmc\plib_sdmmc0.c</file>
-         <hash>e81dc35fb00ff9b8f2c75a5a5bbeb157adc441e112b53352ff784f57a3be2e55</hash>
+         <hash>cc13317b34ceb82d287e1ef8b0d1e565468ea91ba33331fdf401389a5fe73ace</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\peripheral\sdmmc\plib_sdmmc0.h</file>
@@ -5897,7 +5897,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\peripheral\tc\plib_tc0.c</file>
-         <hash>96ea56e9cea7ba7edfd3c0c496a63eadcd4b133767d04edd8b2885804a40041b</hash>
+         <hash>1654b83637fe77185fe7d317688b3e346984fd881008fe3636755a1f3f4e97d1</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\peripheral\tc\plib_tc0.h</file>
