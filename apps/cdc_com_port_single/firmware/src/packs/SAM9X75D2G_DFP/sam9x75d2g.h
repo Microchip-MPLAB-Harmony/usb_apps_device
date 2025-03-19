@@ -1,7 +1,9 @@
 /*
  * Header file for ATSAM9X75D2G
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -523,7 +525,6 @@ typedef enum IRQn
 #define EBI_CS0_SIZE                   _UINT32_(0x10000000)    /* 262144kB Memory segment type: ram */
 #define EBI_CS1_SIZE                   _UINT32_(0x10000000)    /* 262144kB Memory segment type: ram */
 #define EBI_MPDDR_SIZE                 _UINT32_(0x10000000)    /* 262144kB Memory segment type: ram */
-#define SDRAM_CS_SIZE                  _UINT32_(0x10000000)    /* 262144kB Memory segment type: ram */
 #define EBI_CS2_SIZE                   _UINT32_(0x10000000)    /* 262144kB Memory segment type: ram */
 #define EBI_NF_SIZE                    _UINT32_(0x10000000)    /* 262144kB Memory segment type: ram */
 #define QSPIMEM_SIZE                   _UINT32_(0x20000000)    /* 524288kB Memory segment type: ram */
@@ -542,7 +543,6 @@ typedef enum IRQn
 #define EBI_CS0_ADDR                   _UINT32_(0x10000000)    /* EBI_CS0 base address (type: ram)*/
 #define EBI_CS1_ADDR                   _UINT32_(0x20000000)    /* EBI_CS1 base address (type: ram)*/
 #define EBI_MPDDR_ADDR                 _UINT32_(0x20000000)    /* EBI_MPDDR base address (type: ram)*/
-#define SDRAM_CS_ADDR                  _UINT32_(0x20000000)    /* SDRAM_CS base address (type: ram)*/
 #define EBI_CS2_ADDR                   _UINT32_(0x30000000)    /* EBI_CS2 base address (type: ram)*/
 #define EBI_NF_ADDR                    _UINT32_(0x30000000)    /* EBI_NF base address (type: ram)*/
 #define QSPIMEM_ADDR                   _UINT32_(0x60000000)    /* QSPIMEM base address (type: ram)*/
