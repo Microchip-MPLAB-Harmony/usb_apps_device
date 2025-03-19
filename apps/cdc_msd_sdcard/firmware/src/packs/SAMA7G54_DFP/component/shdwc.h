@@ -1,7 +1,9 @@
 /*
  * Component description for SHDWC
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,7 +19,7 @@
  *
  */
 
-/*  file generated from device description file (ATDF) version 2024-02-20T14:30:20Z  */
+/*      file generated from device description file (ATDF) version None       */
 #ifndef _SAMA7G5_SHDWC_COMPONENT_H_
 #define _SAMA7G5_SHDWC_COMPONENT_H_
 
@@ -72,13 +74,6 @@
 #define   SHDW_MR_RTCWKEN_1_Val               _UINT32_(0x1)                                        /* (SHDW_MR) The RTC Alarm signal forces the de-assertion of the SHDN pin.  */
 #define SHDW_MR_RTCWKEN_0                     (SHDW_MR_RTCWKEN_0_Val << SHDW_MR_RTCWKEN_Pos)       /* (SHDW_MR) The RTC Alarm signal has no effect on the SHDWC. Position */
 #define SHDW_MR_RTCWKEN_1                     (SHDW_MR_RTCWKEN_1_Val << SHDW_MR_RTCWKEN_Pos)       /* (SHDW_MR) The RTC Alarm signal forces the de-assertion of the SHDN pin. Position */
-#define SHDW_MR_AUTOLPM_Pos                   _UINT32_(20)                                         /* (SHDW_MR) Automatic LPM Pad Management Position */
-#define SHDW_MR_AUTOLPM_Msk                   (_UINT32_(0x1) << SHDW_MR_AUTOLPM_Pos)               /* (SHDW_MR) Automatic LPM Pad Management Mask */
-#define SHDW_MR_AUTOLPM(value)                (SHDW_MR_AUTOLPM_Msk & (_UINT32_(value) << SHDW_MR_AUTOLPM_Pos)) /* Assignment of value for AUTOLPM in the SHDW_MR register */
-#define   SHDW_MR_AUTOLPM_0_Val               _UINT32_(0x0)                                        /* (SHDW_MR) The LPM pad is never automatically modified by the RSTC.  */
-#define   SHDW_MR_AUTOLPM_1_Val               _UINT32_(0x1)                                        /* (SHDW_MR) The LPM pad is automatically modified by the RSTC when the system goes into or out of the ULP2 mode.  */
-#define SHDW_MR_AUTOLPM_0                     (SHDW_MR_AUTOLPM_0_Val << SHDW_MR_AUTOLPM_Pos)       /* (SHDW_MR) The LPM pad is never automatically modified by the RSTC. Position */
-#define SHDW_MR_AUTOLPM_1                     (SHDW_MR_AUTOLPM_1_Val << SHDW_MR_AUTOLPM_Pos)       /* (SHDW_MR) The LPM pad is automatically modified by the RSTC when the system goes into or out of the ULP2 mode. Position */
 #define SHDW_MR_WKUPDBC_Pos                   _UINT32_(24)                                         /* (SHDW_MR) Wake-up Inputs Debouncer Period Position */
 #define SHDW_MR_WKUPDBC_Msk                   (_UINT32_(0x7) << SHDW_MR_WKUPDBC_Pos)               /* (SHDW_MR) Wake-up Inputs Debouncer Period Mask */
 #define SHDW_MR_WKUPDBC(value)                (SHDW_MR_WKUPDBC_Msk & (_UINT32_(value) << SHDW_MR_WKUPDBC_Pos)) /* Assignment of value for WKUPDBC in the SHDW_MR register */
@@ -94,19 +89,19 @@
 #define SHDW_MR_WKUPDBC_512_SLCK              (SHDW_MR_WKUPDBC_512_SLCK_Val << SHDW_MR_WKUPDBC_Pos) /* (SHDW_MR) PIOBUx shall be in its active state for at least 512 MD_SLCK periods Position */
 #define SHDW_MR_WKUPDBC_4096_SLCK             (SHDW_MR_WKUPDBC_4096_SLCK_Val << SHDW_MR_WKUPDBC_Pos) /* (SHDW_MR) PIOBUx shall be in its active state for at least 4,096 MD_SLCK periods Position */
 #define SHDW_MR_WKUPDBC_32768_SLCK            (SHDW_MR_WKUPDBC_32768_SLCK_Val << SHDW_MR_WKUPDBC_Pos) /* (SHDW_MR) PIOBUx shall be in its active state for at least 32,768 MD_SLCK periods Position */
-#define SHDW_MR_Msk                           _UINT32_(0x07130000)                                 /* (SHDW_MR) Register Mask  */
+#define SHDW_MR_Msk                           _UINT32_(0x07030000)                                 /* (SHDW_MR) Register Mask  */
 
 
 /* -------- SHDW_SR : (SHDWC Offset: 0x08) ( R/ 32) Status Register -------- */
 #define SHDW_SR_RESETVALUE                    _UINT32_(0x00)                                       /*  (SHDW_SR) Status Register  Reset Value */
 
-#define SHDW_SR_WKUPS_Pos                     _UINT32_(0)                                          /* (SHDW_SR) PIOBU, WKUP Wake-up Status Position */
-#define SHDW_SR_WKUPS_Msk                     (_UINT32_(0x1) << SHDW_SR_WKUPS_Pos)                 /* (SHDW_SR) PIOBU, WKUP Wake-up Status Mask */
+#define SHDW_SR_WKUPS_Pos                     _UINT32_(0)                                          /* (SHDW_SR) Wake-up Status Position */
+#define SHDW_SR_WKUPS_Msk                     (_UINT32_(0x1) << SHDW_SR_WKUPS_Pos)                 /* (SHDW_SR) Wake-up Status Mask */
 #define SHDW_SR_WKUPS(value)                  (SHDW_SR_WKUPS_Msk & (_UINT32_(value) << SHDW_SR_WKUPS_Pos)) /* Assignment of value for WKUPS in the SHDW_SR register */
-#define   SHDW_SR_WKUPS_NO_Val                _UINT32_(0x0)                                        /* (SHDW_SR) No wake-up due to the assertion of the PIOBU, WKUP pins has occurred since the last read of SHDW_SR.  */
-#define   SHDW_SR_WKUPS_PRESENT_Val           _UINT32_(0x1)                                        /* (SHDW_SR) At least one wake-up due to the assertion of the PIOBU, WKUP pins has occurred since the last read of SHDW_SR.  */
-#define SHDW_SR_WKUPS_NO                      (SHDW_SR_WKUPS_NO_Val << SHDW_SR_WKUPS_Pos)          /* (SHDW_SR) No wake-up due to the assertion of the PIOBU, WKUP pins has occurred since the last read of SHDW_SR. Position */
-#define SHDW_SR_WKUPS_PRESENT                 (SHDW_SR_WKUPS_PRESENT_Val << SHDW_SR_WKUPS_Pos)     /* (SHDW_SR) At least one wake-up due to the assertion of the PIOBU, WKUP pins has occurred since the last read of SHDW_SR. Position */
+#define   SHDW_SR_WKUPS_NO_Val                _UINT32_(0x0)                                        /* (SHDW_SR) No wake-up due to the assertion of the wake-up pins has occurred since the last read of SHDW_SR.  */
+#define   SHDW_SR_WKUPS_PRESENT_Val           _UINT32_(0x1)                                        /* (SHDW_SR) At least one wake-up due to the assertion of the wake-up pins has occurred since the last read of SHDW_SR.  */
+#define SHDW_SR_WKUPS_NO                      (SHDW_SR_WKUPS_NO_Val << SHDW_SR_WKUPS_Pos)          /* (SHDW_SR) No wake-up due to the assertion of the wake-up pins has occurred since the last read of SHDW_SR. Position */
+#define SHDW_SR_WKUPS_PRESENT                 (SHDW_SR_WKUPS_PRESENT_Val << SHDW_SR_WKUPS_Pos)     /* (SHDW_SR) At least one wake-up due to the assertion of the wake-up pins has occurred since the last read of SHDW_SR. Position */
 #define SHDW_SR_RTTWK_Pos                     _UINT32_(4)                                          /* (SHDW_SR) Real-time Timer Wake-up Position */
 #define SHDW_SR_RTTWK_Msk                     (_UINT32_(0x1) << SHDW_SR_RTTWK_Pos)                 /* (SHDW_SR) Real-time Timer Wake-up Mask */
 #define SHDW_SR_RTTWK(value)                  (SHDW_SR_RTTWK_Msk & (_UINT32_(value) << SHDW_SR_RTTWK_Pos)) /* Assignment of value for RTTWK in the SHDW_SR register */

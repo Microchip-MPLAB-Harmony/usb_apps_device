@@ -1,7 +1,9 @@
 /*
  * Component description for DWDT
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,7 +19,7 @@
  *
  */
 
-/*  file generated from device description file (ATDF) version 2024-02-20T14:30:20Z  */
+/*      file generated from device description file (ATDF) version None       */
 #ifndef _SAMA7G5_DWDT_COMPONENT_H_
 #define _SAMA7G5_DWDT_COMPONENT_H_
 
@@ -274,7 +276,7 @@
 
 
 /* -------- DWDT_PS_WDT_VR : (DWDT Offset: 0x1188) ( R/ 32) Programmable Secure Value Register -------- */
-#define DWDT_PS_WDT_VR_RESETVALUE             _UINT32_(0x00)                                       /*  (DWDT_PS_WDT_VR) Programmable Secure Value Register  Reset Value */
+#define DWDT_PS_WDT_VR_RESETVALUE             _UINT32_(0xFFF)                                      /*  (DWDT_PS_WDT_VR) Programmable Secure Value Register  Reset Value */
 
 #define DWDT_PS_WDT_VR_COUNTER_Pos            _UINT32_(0)                                          /* (DWDT_PS_WDT_VR) Watchdog Down Counter Value Position */
 #define DWDT_PS_WDT_VR_COUNTER_Msk            (_UINT32_(0xFFF) << DWDT_PS_WDT_VR_COUNTER_Pos)      /* (DWDT_PS_WDT_VR) Watchdog Down Counter Value Mask */
