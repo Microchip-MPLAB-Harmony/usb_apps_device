@@ -1,7 +1,7 @@
 /*
  * Component description for SHDWC
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -95,13 +95,13 @@
 /* -------- SHDW_SR : (SHDWC Offset: 0x08) ( R/ 32) Status Register -------- */
 #define SHDW_SR_RESETVALUE                    _UINT32_(0x00)                                       /*  (SHDW_SR) Status Register  Reset Value */
 
-#define SHDW_SR_WKUPS_Pos                     _UINT32_(0)                                          /* (SHDW_SR) WKUP Wake-up Status Position */
-#define SHDW_SR_WKUPS_Msk                     (_UINT32_(0x1) << SHDW_SR_WKUPS_Pos)                 /* (SHDW_SR) WKUP Wake-up Status Mask */
+#define SHDW_SR_WKUPS_Pos                     _UINT32_(0)                                          /* (SHDW_SR) Wake-up Status Position */
+#define SHDW_SR_WKUPS_Msk                     (_UINT32_(0x1) << SHDW_SR_WKUPS_Pos)                 /* (SHDW_SR) Wake-up Status Mask */
 #define SHDW_SR_WKUPS(value)                  (SHDW_SR_WKUPS_Msk & (_UINT32_(value) << SHDW_SR_WKUPS_Pos)) /* Assignment of value for WKUPS in the SHDW_SR register */
-#define   SHDW_SR_WKUPS_NO_Val                _UINT32_(0x0)                                        /* (SHDW_SR) No wake-up due to the assertion of one or more WKUP pins has occurred since the last read of SHDW_SR.  */
-#define   SHDW_SR_WKUPS_PRESENT_Val           _UINT32_(0x1)                                        /* (SHDW_SR) At least one wake-up due to the assertion of one or more WKUP pins has occurred since the last read of SHDW_SR.  */
-#define SHDW_SR_WKUPS_NO                      (SHDW_SR_WKUPS_NO_Val << SHDW_SR_WKUPS_Pos)          /* (SHDW_SR) No wake-up due to the assertion of one or more WKUP pins has occurred since the last read of SHDW_SR. Position */
-#define SHDW_SR_WKUPS_PRESENT                 (SHDW_SR_WKUPS_PRESENT_Val << SHDW_SR_WKUPS_Pos)     /* (SHDW_SR) At least one wake-up due to the assertion of one or more WKUP pins has occurred since the last read of SHDW_SR. Position */
+#define   SHDW_SR_WKUPS_NO_Val                _UINT32_(0x0)                                        /* (SHDW_SR) No wake-up due to the assertion of one or more wake-up pins has occurred since the last read of SHDW_SR.  */
+#define   SHDW_SR_WKUPS_PRESENT_Val           _UINT32_(0x1)                                        /* (SHDW_SR) At least one wake-up due to the assertion of one or more wake-up pins has occurred since the last read of SHDW_SR.  */
+#define SHDW_SR_WKUPS_NO                      (SHDW_SR_WKUPS_NO_Val << SHDW_SR_WKUPS_Pos)          /* (SHDW_SR) No wake-up due to the assertion of one or more wake-up pins has occurred since the last read of SHDW_SR. Position */
+#define SHDW_SR_WKUPS_PRESENT                 (SHDW_SR_WKUPS_PRESENT_Val << SHDW_SR_WKUPS_Pos)     /* (SHDW_SR) At least one wake-up due to the assertion of one or more wake-up pins has occurred since the last read of SHDW_SR. Position */
 #define SHDW_SR_RTTWK_Pos                     _UINT32_(4)                                          /* (SHDW_SR) Real-time Timer Wake-up Position */
 #define SHDW_SR_RTTWK_Msk                     (_UINT32_(0x1) << SHDW_SR_RTTWK_Pos)                 /* (SHDW_SR) Real-time Timer Wake-up Mask */
 #define SHDW_SR_RTTWK(value)                  (SHDW_SR_RTTWK_Msk & (_UINT32_(value) << SHDW_SR_RTTWK_Pos)) /* Assignment of value for RTTWK in the SHDW_SR register */

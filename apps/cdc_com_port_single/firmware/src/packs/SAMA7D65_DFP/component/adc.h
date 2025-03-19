@@ -1,7 +1,7 @@
 /*
  * Component description for ADC
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -42,13 +42,6 @@
 #define   ADC_CR_START_1_Val                  _UINT32_(0x1)                                        /* (ADC_CR) Begins analog-to-digital conversion.  */
 #define ADC_CR_START_0                        (ADC_CR_START_0_Val << ADC_CR_START_Pos)             /* (ADC_CR) No effect. Position */
 #define ADC_CR_START_1                        (ADC_CR_START_1_Val << ADC_CR_START_Pos)             /* (ADC_CR) Begins analog-to-digital conversion. Position */
-#define ADC_CR_SWFIFO_Pos                     _UINT32_(3)                                          /* (ADC_CR) Software FIFO Reset Position */
-#define ADC_CR_SWFIFO_Msk                     (_UINT32_(0x1) << ADC_CR_SWFIFO_Pos)                 /* (ADC_CR) Software FIFO Reset Mask */
-#define ADC_CR_SWFIFO(value)                  (ADC_CR_SWFIFO_Msk & (_UINT32_(value) << ADC_CR_SWFIFO_Pos)) /* Assignment of value for SWFIFO in the ADC_CR register */
-#define   ADC_CR_SWFIFO_0_Val                 _UINT32_(0x0)                                        /* (ADC_CR) No effect.  */
-#define   ADC_CR_SWFIFO_1_Val                 _UINT32_(0x1)                                        /* (ADC_CR) Resets the internal FIFO, simulating a hardware reset.  */
-#define ADC_CR_SWFIFO_0                       (ADC_CR_SWFIFO_0_Val << ADC_CR_SWFIFO_Pos)           /* (ADC_CR) No effect. Position */
-#define ADC_CR_SWFIFO_1                       (ADC_CR_SWFIFO_1_Val << ADC_CR_SWFIFO_Pos)           /* (ADC_CR) Resets the internal FIFO, simulating a hardware reset. Position */
 #define ADC_CR_CMPRST_Pos                     _UINT32_(4)                                          /* (ADC_CR) Comparison Restart Position */
 #define ADC_CR_CMPRST_Msk                     (_UINT32_(0x1) << ADC_CR_CMPRST_Pos)                 /* (ADC_CR) Comparison Restart Mask */
 #define ADC_CR_CMPRST(value)                  (ADC_CR_CMPRST_Msk & (_UINT32_(value) << ADC_CR_CMPRST_Pos)) /* Assignment of value for CMPRST in the ADC_CR register */
@@ -56,7 +49,14 @@
 #define   ADC_CR_CMPRST_1_Val                 _UINT32_(0x1)                                        /* (ADC_CR) Stops the conversion result storage until the next comparison match.  */
 #define ADC_CR_CMPRST_0                       (ADC_CR_CMPRST_0_Val << ADC_CR_CMPRST_Pos)           /* (ADC_CR) No effect. Position */
 #define ADC_CR_CMPRST_1                       (ADC_CR_CMPRST_1_Val << ADC_CR_CMPRST_Pos)           /* (ADC_CR) Stops the conversion result storage until the next comparison match. Position */
-#define ADC_CR_Msk                            _UINT32_(0x0000001B)                                 /* (ADC_CR) Register Mask  */
+#define ADC_CR_SWFIFO_Pos                     _UINT32_(5)                                          /* (ADC_CR) Software FIFO Reset Position */
+#define ADC_CR_SWFIFO_Msk                     (_UINT32_(0x1) << ADC_CR_SWFIFO_Pos)                 /* (ADC_CR) Software FIFO Reset Mask */
+#define ADC_CR_SWFIFO(value)                  (ADC_CR_SWFIFO_Msk & (_UINT32_(value) << ADC_CR_SWFIFO_Pos)) /* Assignment of value for SWFIFO in the ADC_CR register */
+#define   ADC_CR_SWFIFO_0_Val                 _UINT32_(0x0)                                        /* (ADC_CR) No effect.  */
+#define   ADC_CR_SWFIFO_1_Val                 _UINT32_(0x1)                                        /* (ADC_CR) Resets the internal FIFO, simulating a hardware reset.  */
+#define ADC_CR_SWFIFO_0                       (ADC_CR_SWFIFO_0_Val << ADC_CR_SWFIFO_Pos)           /* (ADC_CR) No effect. Position */
+#define ADC_CR_SWFIFO_1                       (ADC_CR_SWFIFO_1_Val << ADC_CR_SWFIFO_Pos)           /* (ADC_CR) Resets the internal FIFO, simulating a hardware reset. Position */
+#define ADC_CR_Msk                            _UINT32_(0x00000033)                                 /* (ADC_CR) Register Mask  */
 
 
 /* -------- ADC_MR : (ADC Offset: 0x04) (R/W 32) Mode Register -------- */
@@ -66,18 +66,18 @@
 #define ADC_MR_TRGSEL_Msk                     (_UINT32_(0x7) << ADC_MR_TRGSEL_Pos)                 /* (ADC_MR) Trigger Selection Mask */
 #define ADC_MR_TRGSEL(value)                  (ADC_MR_TRGSEL_Msk & (_UINT32_(value) << ADC_MR_TRGSEL_Pos)) /* Assignment of value for TRGSEL in the ADC_MR register */
 #define   ADC_MR_TRGSEL_ADC_TRIG0_Val         _UINT32_(0x0)                                        /* (ADC_MR) ADTRG  */
-#define   ADC_MR_TRGSEL_ADC_TRIG1_Val         _UINT32_(0x1)                                        /* (ADC_MR) TIOA0 TC0  */
-#define   ADC_MR_TRGSEL_ADC_TRIG2_Val         _UINT32_(0x2)                                        /* (ADC_MR) TIOA1 TC0  */
-#define   ADC_MR_TRGSEL_ADC_TRIG3_Val         _UINT32_(0x3)                                        /* (ADC_MR) TIOA2 TC0  */
-#define   ADC_MR_TRGSEL_ADC_TRIG4_Val         _UINT32_(0x4)                                        /* (ADC_MR) TIOA3  */
+#define   ADC_MR_TRGSEL_ADC_TRIG1_Val         _UINT32_(0x1)                                        /* (ADC_MR) TIOA0 (TC0 TIOA0)  */
+#define   ADC_MR_TRGSEL_ADC_TRIG2_Val         _UINT32_(0x2)                                        /* (ADC_MR) TIOA1 (TC0 TIOA1)  */
+#define   ADC_MR_TRGSEL_ADC_TRIG3_Val         _UINT32_(0x3)                                        /* (ADC_MR) TIOA2 (TC0 TIOA2)  */
+#define   ADC_MR_TRGSEL_ADC_TRIG4_Val         _UINT32_(0x4)                                        /* (ADC_MR) TIOA3 (TC1 TIOA0)  */
 #define   ADC_MR_TRGSEL_ADC_TRIG5_Val         _UINT32_(0x5)                                        /* (ADC_MR) ACC  */
 #define   ADC_MR_TRGSEL_ADC_TRIG6_Val         _UINT32_(0x6)                                        /* (ADC_MR) PWM event line 0  */
 #define   ADC_MR_TRGSEL_ADC_TRIG7_Val         _UINT32_(0x7)                                        /* (ADC_MR) RTCOUT0  */
 #define ADC_MR_TRGSEL_ADC_TRIG0               (ADC_MR_TRGSEL_ADC_TRIG0_Val << ADC_MR_TRGSEL_Pos)   /* (ADC_MR) ADTRG Position */
-#define ADC_MR_TRGSEL_ADC_TRIG1               (ADC_MR_TRGSEL_ADC_TRIG1_Val << ADC_MR_TRGSEL_Pos)   /* (ADC_MR) TIOA0 TC0 Position */
-#define ADC_MR_TRGSEL_ADC_TRIG2               (ADC_MR_TRGSEL_ADC_TRIG2_Val << ADC_MR_TRGSEL_Pos)   /* (ADC_MR) TIOA1 TC0 Position */
-#define ADC_MR_TRGSEL_ADC_TRIG3               (ADC_MR_TRGSEL_ADC_TRIG3_Val << ADC_MR_TRGSEL_Pos)   /* (ADC_MR) TIOA2 TC0 Position */
-#define ADC_MR_TRGSEL_ADC_TRIG4               (ADC_MR_TRGSEL_ADC_TRIG4_Val << ADC_MR_TRGSEL_Pos)   /* (ADC_MR) TIOA3 Position */
+#define ADC_MR_TRGSEL_ADC_TRIG1               (ADC_MR_TRGSEL_ADC_TRIG1_Val << ADC_MR_TRGSEL_Pos)   /* (ADC_MR) TIOA0 (TC0 TIOA0) Position */
+#define ADC_MR_TRGSEL_ADC_TRIG2               (ADC_MR_TRGSEL_ADC_TRIG2_Val << ADC_MR_TRGSEL_Pos)   /* (ADC_MR) TIOA1 (TC0 TIOA1) Position */
+#define ADC_MR_TRGSEL_ADC_TRIG3               (ADC_MR_TRGSEL_ADC_TRIG3_Val << ADC_MR_TRGSEL_Pos)   /* (ADC_MR) TIOA2 (TC0 TIOA2) Position */
+#define ADC_MR_TRGSEL_ADC_TRIG4               (ADC_MR_TRGSEL_ADC_TRIG4_Val << ADC_MR_TRGSEL_Pos)   /* (ADC_MR) TIOA3 (TC1 TIOA0) Position */
 #define ADC_MR_TRGSEL_ADC_TRIG5               (ADC_MR_TRGSEL_ADC_TRIG5_Val << ADC_MR_TRGSEL_Pos)   /* (ADC_MR) ACC Position */
 #define ADC_MR_TRGSEL_ADC_TRIG6               (ADC_MR_TRGSEL_ADC_TRIG6_Val << ADC_MR_TRGSEL_Pos)   /* (ADC_MR) PWM event line 0 Position */
 #define ADC_MR_TRGSEL_ADC_TRIG7               (ADC_MR_TRGSEL_ADC_TRIG7_Val << ADC_MR_TRGSEL_Pos)   /* (ADC_MR) RTCOUT0 Position */
@@ -638,9 +638,9 @@
 #define ADC_LCDR_NO_OSR_LDATA_Pos             _UINT32_(0)                                          /* (ADC_LCDR) Last Data Converted when No Oversampling Position */
 #define ADC_LCDR_NO_OSR_LDATA_Msk             (_UINT32_(0xFFF) << ADC_LCDR_NO_OSR_LDATA_Pos)       /* (ADC_LCDR) Last Data Converted when No Oversampling Mask */
 #define ADC_LCDR_NO_OSR_LDATA(value)          (ADC_LCDR_NO_OSR_LDATA_Msk & (_UINT32_(value) << ADC_LCDR_NO_OSR_LDATA_Pos))
-#define ADC_LCDR_NO_OSR_CHNBOSR_Pos           _UINT32_(12)                                         /* (ADC_LCDR) Channel Number when No Oversampling Position */
-#define ADC_LCDR_NO_OSR_CHNBOSR_Msk           (_UINT32_(0xF) << ADC_LCDR_NO_OSR_CHNBOSR_Pos)       /* (ADC_LCDR) Channel Number when No Oversampling Mask */
-#define ADC_LCDR_NO_OSR_CHNBOSR(value)        (ADC_LCDR_NO_OSR_CHNBOSR_Msk & (_UINT32_(value) << ADC_LCDR_NO_OSR_CHNBOSR_Pos))
+#define ADC_LCDR_NO_OSR_CHNB_Pos              _UINT32_(12)                                         /* (ADC_LCDR) Channel Number when No Oversampling Position */
+#define ADC_LCDR_NO_OSR_CHNB_Msk              (_UINT32_(0xF) << ADC_LCDR_NO_OSR_CHNB_Pos)          /* (ADC_LCDR) Channel Number when No Oversampling Mask */
+#define ADC_LCDR_NO_OSR_CHNB(value)           (ADC_LCDR_NO_OSR_CHNB_Msk & (_UINT32_(value) << ADC_LCDR_NO_OSR_CHNB_Pos))
 #define ADC_LCDR_NO_OSR_Msk                   _UINT32_(0x0000FFFF)                                 /* (ADC_LCDR_NO_OSR) Register Mask  */
 
 

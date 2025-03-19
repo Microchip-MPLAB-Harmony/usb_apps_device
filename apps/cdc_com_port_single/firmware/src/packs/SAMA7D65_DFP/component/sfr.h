@@ -1,7 +1,7 @@
 /*
  * Component description for SFR
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -171,18 +171,6 @@
 #define SFR_DEBUG_Msk                         _UINT32_(0x00000001)                                 /* (SFR_DEBUG) Register Mask  */
 
 
-/* -------- SFR_HSS_AXIQOS : (SFR Offset: 0x2028) (R/W 32) HSS AXI QOS Register -------- */
-#define SFR_HSS_AXIQOS_RESETVALUE             _UINT32_(0x00)                                       /*  (SFR_HSS_AXIQOS) HSS AXI QOS Register  Reset Value */
-
-#define SFR_HSS_AXIQOS_READ_Pos               _UINT32_(0)                                          /* (SFR_HSS_AXIQOS) QOS Value for Read Transfer from HSS to the DDR Controller Position */
-#define SFR_HSS_AXIQOS_READ_Msk               (_UINT32_(0xF) << SFR_HSS_AXIQOS_READ_Pos)           /* (SFR_HSS_AXIQOS) QOS Value for Read Transfer from HSS to the DDR Controller Mask */
-#define SFR_HSS_AXIQOS_READ(value)            (SFR_HSS_AXIQOS_READ_Msk & (_UINT32_(value) << SFR_HSS_AXIQOS_READ_Pos)) /* Assignment of value for READ in the SFR_HSS_AXIQOS register */
-#define SFR_HSS_AXIQOS_WRITE_Pos              _UINT32_(8)                                          /* (SFR_HSS_AXIQOS) QOS Value for Write Transfer from HSS to the DDR Controller Position */
-#define SFR_HSS_AXIQOS_WRITE_Msk              (_UINT32_(0xF) << SFR_HSS_AXIQOS_WRITE_Pos)          /* (SFR_HSS_AXIQOS) QOS Value for Write Transfer from HSS to the DDR Controller Mask */
-#define SFR_HSS_AXIQOS_WRITE(value)           (SFR_HSS_AXIQOS_WRITE_Msk & (_UINT32_(value) << SFR_HSS_AXIQOS_WRITE_Pos)) /* Assignment of value for WRITE in the SFR_HSS_AXIQOS register */
-#define SFR_HSS_AXIQOS_Msk                    _UINT32_(0x00000F0F)                                 /* (SFR_HSS_AXIQOS) Register Mask  */
-
-
 /* -------- SFR_MSK_ERR_DBG_MODE : (SFR Offset: 0x202C) (R/W 32) Mask Error Debug Mode Register -------- */
 #define SFR_MSK_ERR_DBG_MODE_RESETVALUE       _UINT32_(0x00)                                       /*  (SFR_MSK_ERR_DBG_MODE) Mask Error Debug Mode Register  Reset Value */
 
@@ -308,39 +296,6 @@
 #define   SFR_NIC_CG_CFG_NIC1_MCK3_ENABLE_0_Val _UINT32_(0x0)                                        /* (SFR_NIC_CG_CFG) NIC1_MCK3_ENABLE clock gating disabled.  */
 #define SFR_NIC_CG_CFG_NIC1_MCK3_ENABLE_0     (SFR_NIC_CG_CFG_NIC1_MCK3_ENABLE_0_Val << SFR_NIC_CG_CFG_NIC1_MCK3_ENABLE_Pos) /* (SFR_NIC_CG_CFG) NIC1_MCK3_ENABLE clock gating disabled. Position */
 #define SFR_NIC_CG_CFG_Msk                    _UINT32_(0x000101FF)                                 /* (SFR_NIC_CG_CFG) Register Mask  */
-
-
-/* -------- SFR_UTMIHSTRIM : (SFR Offset: 0x2044) (R/W 32) UTMI High-Speed Trimming Register -------- */
-#define SFR_UTMIHSTRIM_RESETVALUE             _UINT32_(0x44433)                                    /*  (SFR_UTMIHSTRIM) UTMI High-Speed Trimming Register  Reset Value */
-
-#define SFR_UTMIHSTRIM_SLOPE0_Pos             _UINT32_(8)                                          /* (SFR_UTMIHSTRIM) UTMI HS PORTx Transceiver Slope Trimming Position */
-#define SFR_UTMIHSTRIM_SLOPE0_Msk             (_UINT32_(0x7) << SFR_UTMIHSTRIM_SLOPE0_Pos)         /* (SFR_UTMIHSTRIM) UTMI HS PORTx Transceiver Slope Trimming Mask */
-#define SFR_UTMIHSTRIM_SLOPE0(value)          (SFR_UTMIHSTRIM_SLOPE0_Msk & (_UINT32_(value) << SFR_UTMIHSTRIM_SLOPE0_Pos)) /* Assignment of value for SLOPE0 in the SFR_UTMIHSTRIM register */
-#define SFR_UTMIHSTRIM_SLOPE1_Pos             _UINT32_(12)                                         /* (SFR_UTMIHSTRIM) UTMI HS PORTx Transceiver Slope Trimming Position */
-#define SFR_UTMIHSTRIM_SLOPE1_Msk             (_UINT32_(0x7) << SFR_UTMIHSTRIM_SLOPE1_Pos)         /* (SFR_UTMIHSTRIM) UTMI HS PORTx Transceiver Slope Trimming Mask */
-#define SFR_UTMIHSTRIM_SLOPE1(value)          (SFR_UTMIHSTRIM_SLOPE1_Msk & (_UINT32_(value) << SFR_UTMIHSTRIM_SLOPE1_Pos)) /* Assignment of value for SLOPE1 in the SFR_UTMIHSTRIM register */
-#define SFR_UTMIHSTRIM_SLOPE2_Pos             _UINT32_(16)                                         /* (SFR_UTMIHSTRIM) UTMI HS PORTx Transceiver Slope Trimming Position */
-#define SFR_UTMIHSTRIM_SLOPE2_Msk             (_UINT32_(0x7) << SFR_UTMIHSTRIM_SLOPE2_Pos)         /* (SFR_UTMIHSTRIM) UTMI HS PORTx Transceiver Slope Trimming Mask */
-#define SFR_UTMIHSTRIM_SLOPE2(value)          (SFR_UTMIHSTRIM_SLOPE2_Msk & (_UINT32_(value) << SFR_UTMIHSTRIM_SLOPE2_Pos)) /* Assignment of value for SLOPE2 in the SFR_UTMIHSTRIM register */
-#define SFR_UTMIHSTRIM_Msk                    _UINT32_(0x00077700)                                 /* (SFR_UTMIHSTRIM) Register Mask  */
-
-
-/* -------- SFR_UTMIFSTRIM : (SFR Offset: 0x2048) (R/W 32) UTMI Full-Speed Trimming Register -------- */
-#define SFR_UTMIFSTRIM_RESETVALUE             _UINT32_(0x430211)                                   /*  (SFR_UTMIFSTRIM) UTMI Full-Speed Trimming Register  Reset Value */
-
-#define SFR_UTMIFSTRIM_ZN_Pos                 _UINT32_(16)                                         /* (SFR_UTMIFSTRIM) FS Transceiver NMOS Impedance Trimming Position */
-#define SFR_UTMIFSTRIM_ZN_Msk                 (_UINT32_(0x7) << SFR_UTMIFSTRIM_ZN_Pos)             /* (SFR_UTMIFSTRIM) FS Transceiver NMOS Impedance Trimming Mask */
-#define SFR_UTMIFSTRIM_ZN(value)              (SFR_UTMIFSTRIM_ZN_Msk & (_UINT32_(value) << SFR_UTMIFSTRIM_ZN_Pos)) /* Assignment of value for ZN in the SFR_UTMIFSTRIM register */
-#define SFR_UTMIFSTRIM_ZP_Pos                 _UINT32_(20)                                         /* (SFR_UTMIFSTRIM) FS Transceiver PMOS Impedance Trimming Position */
-#define SFR_UTMIFSTRIM_ZP_Msk                 (_UINT32_(0x7) << SFR_UTMIFSTRIM_ZP_Pos)             /* (SFR_UTMIFSTRIM) FS Transceiver PMOS Impedance Trimming Mask */
-#define SFR_UTMIFSTRIM_ZP(value)              (SFR_UTMIFSTRIM_ZP_Msk & (_UINT32_(value) << SFR_UTMIFSTRIM_ZP_Pos)) /* Assignment of value for ZP in the SFR_UTMIFSTRIM register */
-#define SFR_UTMIFSTRIM_ZN_CAL_Pos             _UINT32_(24)                                         /* (SFR_UTMIFSTRIM) FS Transceiver NMOS Impedance Calibration Position */
-#define SFR_UTMIFSTRIM_ZN_CAL_Msk             (_UINT32_(0x7) << SFR_UTMIFSTRIM_ZN_CAL_Pos)         /* (SFR_UTMIFSTRIM) FS Transceiver NMOS Impedance Calibration Mask */
-#define SFR_UTMIFSTRIM_ZN_CAL(value)          (SFR_UTMIFSTRIM_ZN_CAL_Msk & (_UINT32_(value) << SFR_UTMIFSTRIM_ZN_CAL_Pos)) /* Assignment of value for ZN_CAL in the SFR_UTMIFSTRIM register */
-#define SFR_UTMIFSTRIM_ZP_CAL_Pos             _UINT32_(28)                                         /* (SFR_UTMIFSTRIM) FS Transceiver PMOS Impedance Calibration Position */
-#define SFR_UTMIFSTRIM_ZP_CAL_Msk             (_UINT32_(0x7) << SFR_UTMIFSTRIM_ZP_CAL_Pos)         /* (SFR_UTMIFSTRIM) FS Transceiver PMOS Impedance Calibration Mask */
-#define SFR_UTMIFSTRIM_ZP_CAL(value)          (SFR_UTMIFSTRIM_ZP_CAL_Msk & (_UINT32_(value) << SFR_UTMIFSTRIM_ZP_CAL_Pos)) /* Assignment of value for ZP_CAL in the SFR_UTMIFSTRIM register */
-#define SFR_UTMIFSTRIM_Msk                    _UINT32_(0x77770000)                                 /* (SFR_UTMIFSTRIM) Register Mask  */
 
 
 /* -------- SFR_UTMISWAP : (SFR Offset: 0x204C) (R/W 32) UTMI DP/DM Pin Swapping Register -------- */
@@ -661,12 +616,9 @@
 #define SFR_WPMR_REG_OFST              _UINT32_(0xE4)      /* (SFR_WPMR) Write Protection Mode Register Offset */
 #define SFR_WPSR_REG_OFST              _UINT32_(0xE8)      /* (SFR_WPSR) Write Protection Status Register Offset */
 #define SFR_DEBUG_REG_OFST             _UINT32_(0x200C)    /* (SFR_DEBUG) Debug Register Offset */
-#define SFR_HSS_AXIQOS_REG_OFST        _UINT32_(0x2028)    /* (SFR_HSS_AXIQOS) HSS AXI QOS Register Offset */
 #define SFR_MSK_ERR_DBG_MODE_REG_OFST  _UINT32_(0x202C)    /* (SFR_MSK_ERR_DBG_MODE) Mask Error Debug Mode Register Offset */
 #define SFR_CAN_SRAM_SEL_REG_OFST      _UINT32_(0x2030)    /* (SFR_CAN_SRAM_SEL) CAN SRAM Selection Register Offset */
 #define SFR_NIC_CG_CFG_REG_OFST        _UINT32_(0x203C)    /* (SFR_NIC_CG_CFG) NIC Clock Gating Configuration Register Offset */
-#define SFR_UTMIHSTRIM_REG_OFST        _UINT32_(0x2044)    /* (SFR_UTMIHSTRIM) UTMI High-Speed Trimming Register Offset */
-#define SFR_UTMIFSTRIM_REG_OFST        _UINT32_(0x2048)    /* (SFR_UTMIFSTRIM) UTMI Full-Speed Trimming Register Offset */
 #define SFR_UTMISWAP_REG_OFST          _UINT32_(0x204C)    /* (SFR_UTMISWAP) UTMI DP/DM Pin Swapping Register Offset */
 #define SFR_CLEAR_ONLY_SD_CFG_REG_OFST _UINT32_(0x2058)    /* (SFR_CLEAR_ONLY_SD_CFG) Memory Clear-Only Shutdown Configuration Register Offset */
 #define SFR_DISABLE_SD_CFG_REG_OFST    _UINT32_(0x205C)    /* (SFR_DISABLE_SD_CFG) Memory Disable Shutdown Configuration Register Offset */
@@ -692,15 +644,12 @@ typedef struct
   __I   uint32_t                       SFR_WPSR;           /* Offset: 0xE8 (R/   32) Write Protection Status Register */
   __I   uint8_t                        Reserved2[0x1F20];
   __IO  uint32_t                       SFR_DEBUG;          /* Offset: 0x200C (R/W  32) Debug Register */
-  __I   uint8_t                        Reserved3[0x18];
-  __IO  uint32_t                       SFR_HSS_AXIQOS;     /* Offset: 0x2028 (R/W  32) HSS AXI QOS Register */
+  __I   uint8_t                        Reserved3[0x1C];
   __IO  uint32_t                       SFR_MSK_ERR_DBG_MODE; /* Offset: 0x202C (R/W  32) Mask Error Debug Mode Register */
   __IO  uint32_t                       SFR_CAN_SRAM_SEL;   /* Offset: 0x2030 (R/W  32) CAN SRAM Selection Register */
   __I   uint8_t                        Reserved4[0x08];
   __IO  uint32_t                       SFR_NIC_CG_CFG;     /* Offset: 0x203C (R/W  32) NIC Clock Gating Configuration Register */
-  __I   uint8_t                        Reserved5[0x04];
-  __IO  uint32_t                       SFR_UTMIHSTRIM;     /* Offset: 0x2044 (R/W  32) UTMI High-Speed Trimming Register */
-  __IO  uint32_t                       SFR_UTMIFSTRIM;     /* Offset: 0x2048 (R/W  32) UTMI Full-Speed Trimming Register */
+  __I   uint8_t                        Reserved5[0x0C];
   __IO  uint32_t                       SFR_UTMISWAP;       /* Offset: 0x204C (R/W  32) UTMI DP/DM Pin Swapping Register */
   __I   uint8_t                        Reserved6[0x08];
   __IO  uint32_t                       SFR_CLEAR_ONLY_SD_CFG; /* Offset: 0x2058 (R/W  32) Memory Clear-Only Shutdown Configuration Register */

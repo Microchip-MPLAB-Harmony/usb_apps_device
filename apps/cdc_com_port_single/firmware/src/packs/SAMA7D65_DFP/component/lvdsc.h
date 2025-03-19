@@ -1,7 +1,7 @@
 /*
  * Component description for LVDSC
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -144,19 +144,12 @@
 #define   LVDSC_WPMR_WPEN_1_Val               _UINT32_(0x1)                                        /* (LVDSC_WPMR) Enables write protection if WPKEY corresponds to 0x4C5644 ("LVD" in ASCII).  */
 #define LVDSC_WPMR_WPEN_0                     (LVDSC_WPMR_WPEN_0_Val << LVDSC_WPMR_WPEN_Pos)       /* (LVDSC_WPMR) Disables write protection if WPKEY corresponds to 0x4C5644 ("LVD" in ASCII). Position */
 #define LVDSC_WPMR_WPEN_1                     (LVDSC_WPMR_WPEN_1_Val << LVDSC_WPMR_WPEN_Pos)       /* (LVDSC_WPMR) Enables write protection if WPKEY corresponds to 0x4C5644 ("LVD" in ASCII). Position */
-#define LVDSC_WPMR_LCKWPEN_Pos                _UINT32_(4)                                          /* (LVDSC_WPMR) Lock Write Protection Enable Until Next System Reset Position */
-#define LVDSC_WPMR_LCKWPEN_Msk                (_UINT32_(0x1) << LVDSC_WPMR_LCKWPEN_Pos)            /* (LVDSC_WPMR) Lock Write Protection Enable Until Next System Reset Mask */
-#define LVDSC_WPMR_LCKWPEN(value)             (LVDSC_WPMR_LCKWPEN_Msk & (_UINT32_(value) << LVDSC_WPMR_LCKWPEN_Pos)) /* Assignment of value for LCKWPEN in the LVDSC_WPMR register */
-#define   LVDSC_WPMR_LCKWPEN_0_Val            _UINT32_(0x0)                                        /* (LVDSC_WPMR) No effect.  */
-#define   LVDSC_WPMR_LCKWPEN_1_Val            _UINT32_(0x1)                                        /* (LVDSC_WPMR) Locks the WPEN bit to 1 until the next system reset if on the same access WPEN=1 and WPKEY corresponds to 0x4C5644 ("LVD" in ASCII).  */
-#define LVDSC_WPMR_LCKWPEN_0                  (LVDSC_WPMR_LCKWPEN_0_Val << LVDSC_WPMR_LCKWPEN_Pos) /* (LVDSC_WPMR) No effect. Position */
-#define LVDSC_WPMR_LCKWPEN_1                  (LVDSC_WPMR_LCKWPEN_1_Val << LVDSC_WPMR_LCKWPEN_Pos) /* (LVDSC_WPMR) Locks the WPEN bit to 1 until the next system reset if on the same access WPEN=1 and WPKEY corresponds to 0x4C5644 ("LVD" in ASCII). Position */
 #define LVDSC_WPMR_WPKEY_Pos                  _UINT32_(8)                                          /* (LVDSC_WPMR) Write Protection Key Position */
 #define LVDSC_WPMR_WPKEY_Msk                  (_UINT32_(0xFFFFFF) << LVDSC_WPMR_WPKEY_Pos)         /* (LVDSC_WPMR) Write Protection Key Mask */
 #define LVDSC_WPMR_WPKEY(value)               (LVDSC_WPMR_WPKEY_Msk & (_UINT32_(value) << LVDSC_WPMR_WPKEY_Pos)) /* Assignment of value for WPKEY in the LVDSC_WPMR register */
 #define   LVDSC_WPMR_WPKEY_PASSWD_Val         _UINT32_(0x4C5644)                                   /* (LVDSC_WPMR) Writing any other value in this field aborts the write operation of the WPEN bit.  Always reads as 0.  */
 #define LVDSC_WPMR_WPKEY_PASSWD               (LVDSC_WPMR_WPKEY_PASSWD_Val << LVDSC_WPMR_WPKEY_Pos) /* (LVDSC_WPMR) Writing any other value in this field aborts the write operation of the WPEN bit.  Always reads as 0. Position */
-#define LVDSC_WPMR_Msk                        _UINT32_(0xFFFFFF11)                                 /* (LVDSC_WPMR) Register Mask  */
+#define LVDSC_WPMR_Msk                        _UINT32_(0xFFFFFF01)                                 /* (LVDSC_WPMR) Register Mask  */
 
 
 /* -------- LVDSC_WPSR : (LVDSC Offset: 0xE8) ( R/ 32) Write Protection Status Register -------- */
