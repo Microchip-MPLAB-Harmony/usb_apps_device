@@ -59,7 +59,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.3"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.4"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -5665,11 +5665,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult\definitions.h</file>
-         <hash>a23f9b72faf1cf90f23f1ef44c9da55830bf94203eb6917baa724a34444a69bb</hash>
+         <hash>b68bb8334c2eee8292a703f7c4b7d0abcbee9f4880cff32a3ae0ccefc8321813</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult\device.h</file>
-         <hash>4126ce3ca266117c19cdb10813d19276849347fd0544fa49a8d73045ab519af4</hash>
+         <hash>272109e553ae9f86f114b9ef83df5030e9d20da41c23a496515d17b62466744c</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult\device_cache.h</file>
@@ -5717,7 +5717,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult\driver\usb\udphs\src\drv_usb_udphs_local.h</file>
-         <hash>8fadf20f65f785c2abd3d677163b44b2e361727785f932cc1c6d5eabff0ea2f6</hash>
+         <hash>d27f8d052b3b89ab81953d6ab2191d207dc6bfd3533b42a9b4080f721c5f3a91</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult\driver\usb\udphs\src\drv_usb_udphs_variant_mapping.h</file>
@@ -5729,15 +5729,15 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult\initialization.c</file>
-         <hash>483e48d9197343ebbfb6c8373325205d159992bcd4be441f918de632b87d1b17</hash>
+         <hash>2d3e1d6d7e681c9ec822fecbae950261e7b90f8a4db92c2ba5d9b15190f9f9fd</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult\interrupts.c</file>
-         <hash>6c897205519661daeb3f03fbade1997db33fdc6e32a2a569b7a7c6da150bff23</hash>
+         <hash>3722fa2b8adb5ddfd5a8db1f1102eeb82422c9bc8350d45f992e8f9a3f7a6dbd</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult\interrupts.h</file>
-         <hash>5e7fe6e5338bd85c8239d02690dc0a7c21e4f65bd3239312e1b68130c52cc5e2</hash>
+         <hash>dd9dae7b82cecc96a5de2b8a40046be3384f9eccfd5bf4ffff2c3786e24b4510</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult\osal\osal.h</file>
@@ -5793,7 +5793,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult\peripheral\sdmmc\plib_sdmmc1.c</file>
-         <hash>ea232b28f6b37432ad4444ea6bf115c8cec7ce29df5377a89918fd3559d9285a</hash>
+         <hash>c282964a0ade4cc877dee00dcc48e5a9163f0fefd53f2f2520443417d73c7570</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult\peripheral\sdmmc\plib_sdmmc1.h</file>
@@ -5805,7 +5805,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult\peripheral\tc\plib_tc0.c</file>
-         <hash>af3e0f211a187f4f4b8268f29d8cd8256eb3d2b420349d59a7188707a4c0e4d0</hash>
+         <hash>973813cc7e0baae12bc7d9b65476c661053d201fe33cc9576ff496568c3389ae</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult\peripheral\tc\plib_tc0.h</file>
