@@ -1,7 +1,9 @@
 /*
  * Component description for MATRIX
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -174,27 +176,7 @@
 #define   MATRIX_PRBS_LQOSEN13_1_Val          _UINT32_(0x1)                                        /* (MATRIX_PRBS) Enables the propagation of Latency Quality of Service from the Host x to the Client if supported by the Host x.  */
 #define MATRIX_PRBS_LQOSEN13_0                (MATRIX_PRBS_LQOSEN13_0_Val << MATRIX_PRBS_LQOSEN13_Pos) /* (MATRIX_PRBS) Disables propagation of Latency Quality of Service from the Host x to the Client and apply MxPR priority for all access from Host x to the Client. Position */
 #define MATRIX_PRBS_LQOSEN13_1                (MATRIX_PRBS_LQOSEN13_1_Val << MATRIX_PRBS_LQOSEN13_Pos) /* (MATRIX_PRBS) Enables the propagation of Latency Quality of Service from the Host x to the Client if supported by the Host x. Position */
-#define MATRIX_PRBS_M14PR_Pos                 _UINT32_(24)                                         /* (MATRIX_PRBS) Host 14 Priority Position */
-#define MATRIX_PRBS_M14PR_Msk                 (_UINT32_(0x3) << MATRIX_PRBS_M14PR_Pos)             /* (MATRIX_PRBS) Host 14 Priority Mask */
-#define MATRIX_PRBS_M14PR(value)              (MATRIX_PRBS_M14PR_Msk & (_UINT32_(value) << MATRIX_PRBS_M14PR_Pos)) /* Assignment of value for M14PR in the MATRIX_PRBS register */
-#define MATRIX_PRBS_LQOSEN14_Pos              _UINT32_(26)                                         /* (MATRIX_PRBS) Latency Quality of Service Enable for Host 14 Position */
-#define MATRIX_PRBS_LQOSEN14_Msk              (_UINT32_(0x1) << MATRIX_PRBS_LQOSEN14_Pos)          /* (MATRIX_PRBS) Latency Quality of Service Enable for Host 14 Mask */
-#define MATRIX_PRBS_LQOSEN14(value)           (MATRIX_PRBS_LQOSEN14_Msk & (_UINT32_(value) << MATRIX_PRBS_LQOSEN14_Pos)) /* Assignment of value for LQOSEN14 in the MATRIX_PRBS register */
-#define   MATRIX_PRBS_LQOSEN14_0_Val          _UINT32_(0x0)                                        /* (MATRIX_PRBS) Disables propagation of Latency Quality of Service from the Host x to the Client and apply MxPR priority for all access from Host x to the Client.  */
-#define   MATRIX_PRBS_LQOSEN14_1_Val          _UINT32_(0x1)                                        /* (MATRIX_PRBS) Enables the propagation of Latency Quality of Service from the Host x to the Client if supported by the Host x.  */
-#define MATRIX_PRBS_LQOSEN14_0                (MATRIX_PRBS_LQOSEN14_0_Val << MATRIX_PRBS_LQOSEN14_Pos) /* (MATRIX_PRBS) Disables propagation of Latency Quality of Service from the Host x to the Client and apply MxPR priority for all access from Host x to the Client. Position */
-#define MATRIX_PRBS_LQOSEN14_1                (MATRIX_PRBS_LQOSEN14_1_Val << MATRIX_PRBS_LQOSEN14_Pos) /* (MATRIX_PRBS) Enables the propagation of Latency Quality of Service from the Host x to the Client if supported by the Host x. Position */
-#define MATRIX_PRBS_M15PR_Pos                 _UINT32_(28)                                         /* (MATRIX_PRBS) Host 15 Priority Position */
-#define MATRIX_PRBS_M15PR_Msk                 (_UINT32_(0x3) << MATRIX_PRBS_M15PR_Pos)             /* (MATRIX_PRBS) Host 15 Priority Mask */
-#define MATRIX_PRBS_M15PR(value)              (MATRIX_PRBS_M15PR_Msk & (_UINT32_(value) << MATRIX_PRBS_M15PR_Pos)) /* Assignment of value for M15PR in the MATRIX_PRBS register */
-#define MATRIX_PRBS_LQOSEN15_Pos              _UINT32_(30)                                         /* (MATRIX_PRBS) Latency Quality of Service Enable for Host 15 Position */
-#define MATRIX_PRBS_LQOSEN15_Msk              (_UINT32_(0x1) << MATRIX_PRBS_LQOSEN15_Pos)          /* (MATRIX_PRBS) Latency Quality of Service Enable for Host 15 Mask */
-#define MATRIX_PRBS_LQOSEN15(value)           (MATRIX_PRBS_LQOSEN15_Msk & (_UINT32_(value) << MATRIX_PRBS_LQOSEN15_Pos)) /* Assignment of value for LQOSEN15 in the MATRIX_PRBS register */
-#define   MATRIX_PRBS_LQOSEN15_0_Val          _UINT32_(0x0)                                        /* (MATRIX_PRBS) Disables propagation of Latency Quality of Service from the Host x to the Client and apply MxPR priority for all access from Host x to the Client.  */
-#define   MATRIX_PRBS_LQOSEN15_1_Val          _UINT32_(0x1)                                        /* (MATRIX_PRBS) Enables the propagation of Latency Quality of Service from the Host x to the Client if supported by the Host x.  */
-#define MATRIX_PRBS_LQOSEN15_0                (MATRIX_PRBS_LQOSEN15_0_Val << MATRIX_PRBS_LQOSEN15_Pos) /* (MATRIX_PRBS) Disables propagation of Latency Quality of Service from the Host x to the Client and apply MxPR priority for all access from Host x to the Client. Position */
-#define MATRIX_PRBS_LQOSEN15_1                (MATRIX_PRBS_LQOSEN15_1_Val << MATRIX_PRBS_LQOSEN15_Pos) /* (MATRIX_PRBS) Enables the propagation of Latency Quality of Service from the Host x to the Client if supported by the Host x. Position */
-#define MATRIX_PRBS_Msk                       _UINT32_(0x77777777)                                 /* (MATRIX_PRBS) Register Mask  */
+#define MATRIX_PRBS_Msk                       _UINT32_(0x00777777)                                 /* (MATRIX_PRBS) Register Mask  */
 
 
 /* -------- MATRIX_MCFG : (MATRIX Offset: 0x00) (R/W 32) Host Configuration Register x -------- */
@@ -344,24 +326,10 @@
 #define   MATRIX_MRCR_RCB13_1_Val             _UINT32_(0x1)                                        /* (MATRIX_MRCR) Enables remapped address decoding for the selected Host.  */
 #define MATRIX_MRCR_RCB13_0                   (MATRIX_MRCR_RCB13_0_Val << MATRIX_MRCR_RCB13_Pos)   /* (MATRIX_MRCR) Disables remapped address decoding for the selected Host. Position */
 #define MATRIX_MRCR_RCB13_1                   (MATRIX_MRCR_RCB13_1_Val << MATRIX_MRCR_RCB13_Pos)   /* (MATRIX_MRCR) Enables remapped address decoding for the selected Host. Position */
-#define MATRIX_MRCR_RCB14_Pos                 _UINT32_(14)                                         /* (MATRIX_MRCR) Remap Command Bit for Host 14 Position */
-#define MATRIX_MRCR_RCB14_Msk                 (_UINT32_(0x1) << MATRIX_MRCR_RCB14_Pos)             /* (MATRIX_MRCR) Remap Command Bit for Host 14 Mask */
-#define MATRIX_MRCR_RCB14(value)              (MATRIX_MRCR_RCB14_Msk & (_UINT32_(value) << MATRIX_MRCR_RCB14_Pos)) /* Assignment of value for RCB14 in the MATRIX_MRCR register */
-#define   MATRIX_MRCR_RCB14_0_Val             _UINT32_(0x0)                                        /* (MATRIX_MRCR) Disables remapped address decoding for the selected Host.  */
-#define   MATRIX_MRCR_RCB14_1_Val             _UINT32_(0x1)                                        /* (MATRIX_MRCR) Enables remapped address decoding for the selected Host.  */
-#define MATRIX_MRCR_RCB14_0                   (MATRIX_MRCR_RCB14_0_Val << MATRIX_MRCR_RCB14_Pos)   /* (MATRIX_MRCR) Disables remapped address decoding for the selected Host. Position */
-#define MATRIX_MRCR_RCB14_1                   (MATRIX_MRCR_RCB14_1_Val << MATRIX_MRCR_RCB14_Pos)   /* (MATRIX_MRCR) Enables remapped address decoding for the selected Host. Position */
-#define MATRIX_MRCR_RCB15_Pos                 _UINT32_(15)                                         /* (MATRIX_MRCR) Remap Command Bit for Host 15 Position */
-#define MATRIX_MRCR_RCB15_Msk                 (_UINT32_(0x1) << MATRIX_MRCR_RCB15_Pos)             /* (MATRIX_MRCR) Remap Command Bit for Host 15 Mask */
-#define MATRIX_MRCR_RCB15(value)              (MATRIX_MRCR_RCB15_Msk & (_UINT32_(value) << MATRIX_MRCR_RCB15_Pos)) /* Assignment of value for RCB15 in the MATRIX_MRCR register */
-#define   MATRIX_MRCR_RCB15_0_Val             _UINT32_(0x0)                                        /* (MATRIX_MRCR) Disables remapped address decoding for the selected Host.  */
-#define   MATRIX_MRCR_RCB15_1_Val             _UINT32_(0x1)                                        /* (MATRIX_MRCR) Enables remapped address decoding for the selected Host.  */
-#define MATRIX_MRCR_RCB15_0                   (MATRIX_MRCR_RCB15_0_Val << MATRIX_MRCR_RCB15_Pos)   /* (MATRIX_MRCR) Disables remapped address decoding for the selected Host. Position */
-#define MATRIX_MRCR_RCB15_1                   (MATRIX_MRCR_RCB15_1_Val << MATRIX_MRCR_RCB15_Pos)   /* (MATRIX_MRCR) Enables remapped address decoding for the selected Host. Position */
-#define MATRIX_MRCR_Msk                       _UINT32_(0x0000FFFF)                                 /* (MATRIX_MRCR) Register Mask  */
+#define MATRIX_MRCR_Msk                       _UINT32_(0x00003FFF)                                 /* (MATRIX_MRCR) Register Mask  */
 
-#define MATRIX_MRCR_RCB_Pos                   _UINT32_(0)                                          /* (MATRIX_MRCR Position) Remap Command Bit for Host x5 */
-#define MATRIX_MRCR_RCB_Msk                   (_UINT32_(0xFFFF) << MATRIX_MRCR_RCB_Pos)            /* (MATRIX_MRCR Mask) RCB */
+#define MATRIX_MRCR_RCB_Pos                   _UINT32_(0)                                          /* (MATRIX_MRCR Position) Remap Command Bit for Host x3 */
+#define MATRIX_MRCR_RCB_Msk                   (_UINT32_(0x3FFF) << MATRIX_MRCR_RCB_Pos)            /* (MATRIX_MRCR Mask) RCB */
 #define MATRIX_MRCR_RCB(value)                (MATRIX_MRCR_RCB_Msk & (_UINT32_(value) << MATRIX_MRCR_RCB_Pos)) 
 
 /* -------- MATRIX_MEIER : (MATRIX Offset: 0x150) ( /W 32) Host Error Interrupt Enable Register -------- */
@@ -463,24 +431,10 @@
 #define   MATRIX_MEIER_MERR13_1_Val           _UINT32_(0x1)                                        /* (MATRIX_MEIER) Enables Host x Access Error interrupt source.  */
 #define MATRIX_MEIER_MERR13_0                 (MATRIX_MEIER_MERR13_0_Val << MATRIX_MEIER_MERR13_Pos) /* (MATRIX_MEIER) No effect. Position */
 #define MATRIX_MEIER_MERR13_1                 (MATRIX_MEIER_MERR13_1_Val << MATRIX_MEIER_MERR13_Pos) /* (MATRIX_MEIER) Enables Host x Access Error interrupt source. Position */
-#define MATRIX_MEIER_MERR14_Pos               _UINT32_(14)                                         /* (MATRIX_MEIER) Host 14 Access Error Position */
-#define MATRIX_MEIER_MERR14_Msk               (_UINT32_(0x1) << MATRIX_MEIER_MERR14_Pos)           /* (MATRIX_MEIER) Host 14 Access Error Mask */
-#define MATRIX_MEIER_MERR14(value)            (MATRIX_MEIER_MERR14_Msk & (_UINT32_(value) << MATRIX_MEIER_MERR14_Pos)) /* Assignment of value for MERR14 in the MATRIX_MEIER register */
-#define   MATRIX_MEIER_MERR14_0_Val           _UINT32_(0x0)                                        /* (MATRIX_MEIER) No effect.  */
-#define   MATRIX_MEIER_MERR14_1_Val           _UINT32_(0x1)                                        /* (MATRIX_MEIER) Enables Host x Access Error interrupt source.  */
-#define MATRIX_MEIER_MERR14_0                 (MATRIX_MEIER_MERR14_0_Val << MATRIX_MEIER_MERR14_Pos) /* (MATRIX_MEIER) No effect. Position */
-#define MATRIX_MEIER_MERR14_1                 (MATRIX_MEIER_MERR14_1_Val << MATRIX_MEIER_MERR14_Pos) /* (MATRIX_MEIER) Enables Host x Access Error interrupt source. Position */
-#define MATRIX_MEIER_MERR15_Pos               _UINT32_(15)                                         /* (MATRIX_MEIER) Host 15 Access Error Position */
-#define MATRIX_MEIER_MERR15_Msk               (_UINT32_(0x1) << MATRIX_MEIER_MERR15_Pos)           /* (MATRIX_MEIER) Host 15 Access Error Mask */
-#define MATRIX_MEIER_MERR15(value)            (MATRIX_MEIER_MERR15_Msk & (_UINT32_(value) << MATRIX_MEIER_MERR15_Pos)) /* Assignment of value for MERR15 in the MATRIX_MEIER register */
-#define   MATRIX_MEIER_MERR15_0_Val           _UINT32_(0x0)                                        /* (MATRIX_MEIER) No effect.  */
-#define   MATRIX_MEIER_MERR15_1_Val           _UINT32_(0x1)                                        /* (MATRIX_MEIER) Enables Host x Access Error interrupt source.  */
-#define MATRIX_MEIER_MERR15_0                 (MATRIX_MEIER_MERR15_0_Val << MATRIX_MEIER_MERR15_Pos) /* (MATRIX_MEIER) No effect. Position */
-#define MATRIX_MEIER_MERR15_1                 (MATRIX_MEIER_MERR15_1_Val << MATRIX_MEIER_MERR15_Pos) /* (MATRIX_MEIER) Enables Host x Access Error interrupt source. Position */
-#define MATRIX_MEIER_Msk                      _UINT32_(0x0000FFFF)                                 /* (MATRIX_MEIER) Register Mask  */
+#define MATRIX_MEIER_Msk                      _UINT32_(0x00003FFF)                                 /* (MATRIX_MEIER) Register Mask  */
 
-#define MATRIX_MEIER_MERR_Pos                 _UINT32_(0)                                          /* (MATRIX_MEIER Position) Host x5 Access Error */
-#define MATRIX_MEIER_MERR_Msk                 (_UINT32_(0xFFFF) << MATRIX_MEIER_MERR_Pos)          /* (MATRIX_MEIER Mask) MERR */
+#define MATRIX_MEIER_MERR_Pos                 _UINT32_(0)                                          /* (MATRIX_MEIER Position) Host x3 Access Error */
+#define MATRIX_MEIER_MERR_Msk                 (_UINT32_(0x3FFF) << MATRIX_MEIER_MERR_Pos)          /* (MATRIX_MEIER Mask) MERR */
 #define MATRIX_MEIER_MERR(value)              (MATRIX_MEIER_MERR_Msk & (_UINT32_(value) << MATRIX_MEIER_MERR_Pos)) 
 
 /* -------- MATRIX_MEIDR : (MATRIX Offset: 0x154) ( /W 32) Host Error Interrupt Disable Register -------- */
@@ -582,24 +536,10 @@
 #define   MATRIX_MEIDR_MERR13_1_Val           _UINT32_(0x1)                                        /* (MATRIX_MEIDR) Disables Host x Access Error interrupt source.  */
 #define MATRIX_MEIDR_MERR13_0                 (MATRIX_MEIDR_MERR13_0_Val << MATRIX_MEIDR_MERR13_Pos) /* (MATRIX_MEIDR) No effect. Position */
 #define MATRIX_MEIDR_MERR13_1                 (MATRIX_MEIDR_MERR13_1_Val << MATRIX_MEIDR_MERR13_Pos) /* (MATRIX_MEIDR) Disables Host x Access Error interrupt source. Position */
-#define MATRIX_MEIDR_MERR14_Pos               _UINT32_(14)                                         /* (MATRIX_MEIDR) Host 14 Access Error Position */
-#define MATRIX_MEIDR_MERR14_Msk               (_UINT32_(0x1) << MATRIX_MEIDR_MERR14_Pos)           /* (MATRIX_MEIDR) Host 14 Access Error Mask */
-#define MATRIX_MEIDR_MERR14(value)            (MATRIX_MEIDR_MERR14_Msk & (_UINT32_(value) << MATRIX_MEIDR_MERR14_Pos)) /* Assignment of value for MERR14 in the MATRIX_MEIDR register */
-#define   MATRIX_MEIDR_MERR14_0_Val           _UINT32_(0x0)                                        /* (MATRIX_MEIDR) No effect.  */
-#define   MATRIX_MEIDR_MERR14_1_Val           _UINT32_(0x1)                                        /* (MATRIX_MEIDR) Disables Host x Access Error interrupt source.  */
-#define MATRIX_MEIDR_MERR14_0                 (MATRIX_MEIDR_MERR14_0_Val << MATRIX_MEIDR_MERR14_Pos) /* (MATRIX_MEIDR) No effect. Position */
-#define MATRIX_MEIDR_MERR14_1                 (MATRIX_MEIDR_MERR14_1_Val << MATRIX_MEIDR_MERR14_Pos) /* (MATRIX_MEIDR) Disables Host x Access Error interrupt source. Position */
-#define MATRIX_MEIDR_MERR15_Pos               _UINT32_(15)                                         /* (MATRIX_MEIDR) Host 15 Access Error Position */
-#define MATRIX_MEIDR_MERR15_Msk               (_UINT32_(0x1) << MATRIX_MEIDR_MERR15_Pos)           /* (MATRIX_MEIDR) Host 15 Access Error Mask */
-#define MATRIX_MEIDR_MERR15(value)            (MATRIX_MEIDR_MERR15_Msk & (_UINT32_(value) << MATRIX_MEIDR_MERR15_Pos)) /* Assignment of value for MERR15 in the MATRIX_MEIDR register */
-#define   MATRIX_MEIDR_MERR15_0_Val           _UINT32_(0x0)                                        /* (MATRIX_MEIDR) No effect.  */
-#define   MATRIX_MEIDR_MERR15_1_Val           _UINT32_(0x1)                                        /* (MATRIX_MEIDR) Disables Host x Access Error interrupt source.  */
-#define MATRIX_MEIDR_MERR15_0                 (MATRIX_MEIDR_MERR15_0_Val << MATRIX_MEIDR_MERR15_Pos) /* (MATRIX_MEIDR) No effect. Position */
-#define MATRIX_MEIDR_MERR15_1                 (MATRIX_MEIDR_MERR15_1_Val << MATRIX_MEIDR_MERR15_Pos) /* (MATRIX_MEIDR) Disables Host x Access Error interrupt source. Position */
-#define MATRIX_MEIDR_Msk                      _UINT32_(0x0000FFFF)                                 /* (MATRIX_MEIDR) Register Mask  */
+#define MATRIX_MEIDR_Msk                      _UINT32_(0x00003FFF)                                 /* (MATRIX_MEIDR) Register Mask  */
 
-#define MATRIX_MEIDR_MERR_Pos                 _UINT32_(0)                                          /* (MATRIX_MEIDR Position) Host x5 Access Error */
-#define MATRIX_MEIDR_MERR_Msk                 (_UINT32_(0xFFFF) << MATRIX_MEIDR_MERR_Pos)          /* (MATRIX_MEIDR Mask) MERR */
+#define MATRIX_MEIDR_MERR_Pos                 _UINT32_(0)                                          /* (MATRIX_MEIDR Position) Host x3 Access Error */
+#define MATRIX_MEIDR_MERR_Msk                 (_UINT32_(0x3FFF) << MATRIX_MEIDR_MERR_Pos)          /* (MATRIX_MEIDR Mask) MERR */
 #define MATRIX_MEIDR_MERR(value)              (MATRIX_MEIDR_MERR_Msk & (_UINT32_(value) << MATRIX_MEIDR_MERR_Pos)) 
 
 /* -------- MATRIX_MEIMR : (MATRIX Offset: 0x158) ( R/ 32) Host Error Interrupt Mask Register -------- */
@@ -703,24 +643,10 @@
 #define   MATRIX_MEIMR_MERR13_1_Val           _UINT32_(0x1)                                        /* (MATRIX_MEIMR) Host x Access Error triggers the MATRIX interrupt line.  */
 #define MATRIX_MEIMR_MERR13_0                 (MATRIX_MEIMR_MERR13_0_Val << MATRIX_MEIMR_MERR13_Pos) /* (MATRIX_MEIMR) Host x Access Error does not trigger any interrupt. Position */
 #define MATRIX_MEIMR_MERR13_1                 (MATRIX_MEIMR_MERR13_1_Val << MATRIX_MEIMR_MERR13_Pos) /* (MATRIX_MEIMR) Host x Access Error triggers the MATRIX interrupt line. Position */
-#define MATRIX_MEIMR_MERR14_Pos               _UINT32_(14)                                         /* (MATRIX_MEIMR) Host 14 Access Error Position */
-#define MATRIX_MEIMR_MERR14_Msk               (_UINT32_(0x1) << MATRIX_MEIMR_MERR14_Pos)           /* (MATRIX_MEIMR) Host 14 Access Error Mask */
-#define MATRIX_MEIMR_MERR14(value)            (MATRIX_MEIMR_MERR14_Msk & (_UINT32_(value) << MATRIX_MEIMR_MERR14_Pos)) /* Assignment of value for MERR14 in the MATRIX_MEIMR register */
-#define   MATRIX_MEIMR_MERR14_0_Val           _UINT32_(0x0)                                        /* (MATRIX_MEIMR) Host x Access Error does not trigger any interrupt.  */
-#define   MATRIX_MEIMR_MERR14_1_Val           _UINT32_(0x1)                                        /* (MATRIX_MEIMR) Host x Access Error triggers the MATRIX interrupt line.  */
-#define MATRIX_MEIMR_MERR14_0                 (MATRIX_MEIMR_MERR14_0_Val << MATRIX_MEIMR_MERR14_Pos) /* (MATRIX_MEIMR) Host x Access Error does not trigger any interrupt. Position */
-#define MATRIX_MEIMR_MERR14_1                 (MATRIX_MEIMR_MERR14_1_Val << MATRIX_MEIMR_MERR14_Pos) /* (MATRIX_MEIMR) Host x Access Error triggers the MATRIX interrupt line. Position */
-#define MATRIX_MEIMR_MERR15_Pos               _UINT32_(15)                                         /* (MATRIX_MEIMR) Host 15 Access Error Position */
-#define MATRIX_MEIMR_MERR15_Msk               (_UINT32_(0x1) << MATRIX_MEIMR_MERR15_Pos)           /* (MATRIX_MEIMR) Host 15 Access Error Mask */
-#define MATRIX_MEIMR_MERR15(value)            (MATRIX_MEIMR_MERR15_Msk & (_UINT32_(value) << MATRIX_MEIMR_MERR15_Pos)) /* Assignment of value for MERR15 in the MATRIX_MEIMR register */
-#define   MATRIX_MEIMR_MERR15_0_Val           _UINT32_(0x0)                                        /* (MATRIX_MEIMR) Host x Access Error does not trigger any interrupt.  */
-#define   MATRIX_MEIMR_MERR15_1_Val           _UINT32_(0x1)                                        /* (MATRIX_MEIMR) Host x Access Error triggers the MATRIX interrupt line.  */
-#define MATRIX_MEIMR_MERR15_0                 (MATRIX_MEIMR_MERR15_0_Val << MATRIX_MEIMR_MERR15_Pos) /* (MATRIX_MEIMR) Host x Access Error does not trigger any interrupt. Position */
-#define MATRIX_MEIMR_MERR15_1                 (MATRIX_MEIMR_MERR15_1_Val << MATRIX_MEIMR_MERR15_Pos) /* (MATRIX_MEIMR) Host x Access Error triggers the MATRIX interrupt line. Position */
-#define MATRIX_MEIMR_Msk                      _UINT32_(0x0000FFFF)                                 /* (MATRIX_MEIMR) Register Mask  */
+#define MATRIX_MEIMR_Msk                      _UINT32_(0x00003FFF)                                 /* (MATRIX_MEIMR) Register Mask  */
 
-#define MATRIX_MEIMR_MERR_Pos                 _UINT32_(0)                                          /* (MATRIX_MEIMR Position) Host x5 Access Error */
-#define MATRIX_MEIMR_MERR_Msk                 (_UINT32_(0xFFFF) << MATRIX_MEIMR_MERR_Pos)          /* (MATRIX_MEIMR Mask) MERR */
+#define MATRIX_MEIMR_MERR_Pos                 _UINT32_(0)                                          /* (MATRIX_MEIMR Position) Host x3 Access Error */
+#define MATRIX_MEIMR_MERR_Msk                 (_UINT32_(0x3FFF) << MATRIX_MEIMR_MERR_Pos)          /* (MATRIX_MEIMR Mask) MERR */
 #define MATRIX_MEIMR_MERR(value)              (MATRIX_MEIMR_MERR_Msk & (_UINT32_(value) << MATRIX_MEIMR_MERR_Pos)) 
 
 /* -------- MATRIX_MESR : (MATRIX Offset: 0x15C) ( R/ 32) Host Error Status Register -------- */
@@ -824,24 +750,10 @@
 #define   MATRIX_MESR_MERR13_1_Val            _UINT32_(0x1)                                        /* (MATRIX_MESR) At least one Host Access Error has occurred since the last read of the MATRIX_MESR.  */
 #define MATRIX_MESR_MERR13_0                  (MATRIX_MESR_MERR13_0_Val << MATRIX_MESR_MERR13_Pos) /* (MATRIX_MESR) No Host Access Error has occurred since the last read of the MATRIX_MESR. Position */
 #define MATRIX_MESR_MERR13_1                  (MATRIX_MESR_MERR13_1_Val << MATRIX_MESR_MERR13_Pos) /* (MATRIX_MESR) At least one Host Access Error has occurred since the last read of the MATRIX_MESR. Position */
-#define MATRIX_MESR_MERR14_Pos                _UINT32_(14)                                         /* (MATRIX_MESR) Host 14 Access Error Position */
-#define MATRIX_MESR_MERR14_Msk                (_UINT32_(0x1) << MATRIX_MESR_MERR14_Pos)            /* (MATRIX_MESR) Host 14 Access Error Mask */
-#define MATRIX_MESR_MERR14(value)             (MATRIX_MESR_MERR14_Msk & (_UINT32_(value) << MATRIX_MESR_MERR14_Pos)) /* Assignment of value for MERR14 in the MATRIX_MESR register */
-#define   MATRIX_MESR_MERR14_0_Val            _UINT32_(0x0)                                        /* (MATRIX_MESR) No Host Access Error has occurred since the last read of the MATRIX_MESR.  */
-#define   MATRIX_MESR_MERR14_1_Val            _UINT32_(0x1)                                        /* (MATRIX_MESR) At least one Host Access Error has occurred since the last read of the MATRIX_MESR.  */
-#define MATRIX_MESR_MERR14_0                  (MATRIX_MESR_MERR14_0_Val << MATRIX_MESR_MERR14_Pos) /* (MATRIX_MESR) No Host Access Error has occurred since the last read of the MATRIX_MESR. Position */
-#define MATRIX_MESR_MERR14_1                  (MATRIX_MESR_MERR14_1_Val << MATRIX_MESR_MERR14_Pos) /* (MATRIX_MESR) At least one Host Access Error has occurred since the last read of the MATRIX_MESR. Position */
-#define MATRIX_MESR_MERR15_Pos                _UINT32_(15)                                         /* (MATRIX_MESR) Host 15 Access Error Position */
-#define MATRIX_MESR_MERR15_Msk                (_UINT32_(0x1) << MATRIX_MESR_MERR15_Pos)            /* (MATRIX_MESR) Host 15 Access Error Mask */
-#define MATRIX_MESR_MERR15(value)             (MATRIX_MESR_MERR15_Msk & (_UINT32_(value) << MATRIX_MESR_MERR15_Pos)) /* Assignment of value for MERR15 in the MATRIX_MESR register */
-#define   MATRIX_MESR_MERR15_0_Val            _UINT32_(0x0)                                        /* (MATRIX_MESR) No Host Access Error has occurred since the last read of the MATRIX_MESR.  */
-#define   MATRIX_MESR_MERR15_1_Val            _UINT32_(0x1)                                        /* (MATRIX_MESR) At least one Host Access Error has occurred since the last read of the MATRIX_MESR.  */
-#define MATRIX_MESR_MERR15_0                  (MATRIX_MESR_MERR15_0_Val << MATRIX_MESR_MERR15_Pos) /* (MATRIX_MESR) No Host Access Error has occurred since the last read of the MATRIX_MESR. Position */
-#define MATRIX_MESR_MERR15_1                  (MATRIX_MESR_MERR15_1_Val << MATRIX_MESR_MERR15_Pos) /* (MATRIX_MESR) At least one Host Access Error has occurred since the last read of the MATRIX_MESR. Position */
-#define MATRIX_MESR_Msk                       _UINT32_(0x0000FFFF)                                 /* (MATRIX_MESR) Register Mask  */
+#define MATRIX_MESR_Msk                       _UINT32_(0x00003FFF)                                 /* (MATRIX_MESR) Register Mask  */
 
-#define MATRIX_MESR_MERR_Pos                  _UINT32_(0)                                          /* (MATRIX_MESR Position) Host x5 Access Error */
-#define MATRIX_MESR_MERR_Msk                  (_UINT32_(0xFFFF) << MATRIX_MESR_MERR_Pos)           /* (MATRIX_MESR Mask) MERR */
+#define MATRIX_MESR_MERR_Pos                  _UINT32_(0)                                          /* (MATRIX_MESR Position) Host x3 Access Error */
+#define MATRIX_MESR_MERR_Msk                  (_UINT32_(0x3FFF) << MATRIX_MESR_MERR_Pos)           /* (MATRIX_MESR Mask) MERR */
 #define MATRIX_MESR_MERR(value)               (MATRIX_MESR_MERR_Msk & (_UINT32_(value) << MATRIX_MESR_MERR_Pos)) 
 
 /* -------- MATRIX_MEAR : (MATRIX Offset: 0x160) ( R/ 32) Host x Error Address Register -------- */
@@ -912,8 +824,6 @@
 #define MATRIX_MCFG11_REG_OFST         _UINT32_(0x2C)      /* (MATRIX_MCFG11) Host Configuration Register x Offset */
 #define MATRIX_MCFG12_REG_OFST         _UINT32_(0x30)      /* (MATRIX_MCFG12) Host Configuration Register x Offset */
 #define MATRIX_MCFG13_REG_OFST         _UINT32_(0x34)      /* (MATRIX_MCFG13) Host Configuration Register x Offset */
-#define MATRIX_MCFG14_REG_OFST         _UINT32_(0x38)      /* (MATRIX_MCFG14) Host Configuration Register x Offset */
-#define MATRIX_MCFG15_REG_OFST         _UINT32_(0x3C)      /* (MATRIX_MCFG15) Host Configuration Register x Offset */
 #define MATRIX_SCFG_REG_OFST           _UINT32_(0x40)      /* (MATRIX_SCFG) Client Configuration Register x Offset */
 #define MATRIX_SCFG0_REG_OFST          _UINT32_(0x40)      /* (MATRIX_SCFG0) Client Configuration Register x Offset */
 #define MATRIX_SCFG1_REG_OFST          _UINT32_(0x44)      /* (MATRIX_SCFG1) Client Configuration Register x Offset */
@@ -927,10 +837,6 @@
 #define MATRIX_SCFG9_REG_OFST          _UINT32_(0x64)      /* (MATRIX_SCFG9) Client Configuration Register x Offset */
 #define MATRIX_SCFG10_REG_OFST         _UINT32_(0x68)      /* (MATRIX_SCFG10) Client Configuration Register x Offset */
 #define MATRIX_SCFG11_REG_OFST         _UINT32_(0x6C)      /* (MATRIX_SCFG11) Client Configuration Register x Offset */
-#define MATRIX_SCFG12_REG_OFST         _UINT32_(0x70)      /* (MATRIX_SCFG12) Client Configuration Register x Offset */
-#define MATRIX_SCFG13_REG_OFST         _UINT32_(0x74)      /* (MATRIX_SCFG13) Client Configuration Register x Offset */
-#define MATRIX_SCFG14_REG_OFST         _UINT32_(0x78)      /* (MATRIX_SCFG14) Client Configuration Register x Offset */
-#define MATRIX_SCFG15_REG_OFST         _UINT32_(0x7C)      /* (MATRIX_SCFG15) Client Configuration Register x Offset */
 #define MATRIX_MRCR_REG_OFST           _UINT32_(0x100)     /* (MATRIX_MRCR) Host Remap Control Register Offset */
 #define MATRIX_MEIER_REG_OFST          _UINT32_(0x150)     /* (MATRIX_MEIER) Host Error Interrupt Enable Register Offset */
 #define MATRIX_MEIDR_REG_OFST          _UINT32_(0x154)     /* (MATRIX_MEIDR) Host Error Interrupt Disable Register Offset */
@@ -951,8 +857,6 @@
 #define MATRIX_MEAR11_REG_OFST         _UINT32_(0x18C)     /* (MATRIX_MEAR11) Host x Error Address Register Offset */
 #define MATRIX_MEAR12_REG_OFST         _UINT32_(0x190)     /* (MATRIX_MEAR12) Host x Error Address Register Offset */
 #define MATRIX_MEAR13_REG_OFST         _UINT32_(0x194)     /* (MATRIX_MEAR13) Host x Error Address Register Offset */
-#define MATRIX_MEAR14_REG_OFST         _UINT32_(0x198)     /* (MATRIX_MEAR14) Host x Error Address Register Offset */
-#define MATRIX_MEAR15_REG_OFST         _UINT32_(0x19C)     /* (MATRIX_MEAR15) Host x Error Address Register Offset */
 #define MATRIX_WPMR_REG_OFST           _UINT32_(0x1E4)     /* (MATRIX_WPMR) Write Protect Mode Register Offset */
 #define MATRIX_WPSR_REG_OFST           _UINT32_(0x1E8)     /* (MATRIX_WPSR) Write Protect Status Register Offset */
 
@@ -964,22 +868,25 @@ typedef struct
   __IO  uint32_t                       MATRIX_PRBS;        /* Offset: 0x04 (R/W  32) Priority Register B for Client x */
 } matrix_pr_registers_t;
 
-#define MATRIX_PR_NUMBER 16
+#define MATRIX_PR_NUMBER 12
 
 /* MATRIX register API structure */
 typedef struct
 {  /* AHB Bus Matrix (MATRIX2) */
-  __IO  uint32_t                       MATRIX_MCFG[16];    /* Offset: 0x00 (R/W  32) Host Configuration Register x */
-  __IO  uint32_t                       MATRIX_SCFG[16];    /* Offset: 0x40 (R/W  32) Client Configuration Register x */
+  __IO  uint32_t                       MATRIX_MCFG[14];    /* Offset: 0x00 (R/W  32) Host Configuration Register x */
+  __I   uint8_t                        Reserved1[0x08];
+  __IO  uint32_t                       MATRIX_SCFG[12];    /* Offset: 0x40 (R/W  32) Client Configuration Register x */
+  __I   uint8_t                        Reserved2[0x10];
         matrix_pr_registers_t          MATRIX_PR[MATRIX_PR_NUMBER]; /* Offset: 0x80  */
+  __I   uint8_t                        Reserved3[0x20];
   __IO  uint32_t                       MATRIX_MRCR;        /* Offset: 0x100 (R/W  32) Host Remap Control Register */
-  __I   uint8_t                        Reserved1[0x4C];
+  __I   uint8_t                        Reserved4[0x4C];
   __O   uint32_t                       MATRIX_MEIER;       /* Offset: 0x150 ( /W  32) Host Error Interrupt Enable Register */
   __O   uint32_t                       MATRIX_MEIDR;       /* Offset: 0x154 ( /W  32) Host Error Interrupt Disable Register */
   __I   uint32_t                       MATRIX_MEIMR;       /* Offset: 0x158 (R/   32) Host Error Interrupt Mask Register */
   __I   uint32_t                       MATRIX_MESR;        /* Offset: 0x15C (R/   32) Host Error Status Register */
-  __I   uint32_t                       MATRIX_MEAR[16];    /* Offset: 0x160 (R/   32) Host x Error Address Register */
-  __I   uint8_t                        Reserved2[0x44];
+  __I   uint32_t                       MATRIX_MEAR[14];    /* Offset: 0x160 (R/   32) Host x Error Address Register */
+  __I   uint8_t                        Reserved5[0x4C];
   __IO  uint32_t                       MATRIX_WPMR;        /* Offset: 0x1E4 (R/W  32) Write Protect Mode Register */
   __I   uint32_t                       MATRIX_WPSR;        /* Offset: 0x1E8 (R/   32) Write Protect Status Register */
 } matrix_registers_t;

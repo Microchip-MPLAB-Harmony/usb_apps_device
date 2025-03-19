@@ -1,7 +1,9 @@
 /*
  * Component description for FLEXCOM
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -1933,6 +1935,13 @@
 #define   FLEX_SPI_MR_LLB_1_Val               _UINT32_(0x1)                                        /* (FLEX_SPI_MR) Local loopback path enabled.  */
 #define FLEX_SPI_MR_LLB_0                     (FLEX_SPI_MR_LLB_0_Val << FLEX_SPI_MR_LLB_Pos)       /* (FLEX_SPI_MR) Local loopback path disabled. Position */
 #define FLEX_SPI_MR_LLB_1                     (FLEX_SPI_MR_LLB_1_Val << FLEX_SPI_MR_LLB_Pos)       /* (FLEX_SPI_MR) Local loopback path enabled. Position */
+#define FLEX_SPI_MR_LSBHALF_Pos               _UINT32_(8)                                          /* (FLEX_SPI_MR) Last Bit Half Period Compatibility Position */
+#define FLEX_SPI_MR_LSBHALF_Msk               (_UINT32_(0x1) << FLEX_SPI_MR_LSBHALF_Pos)           /* (FLEX_SPI_MR) Last Bit Half Period Compatibility Mask */
+#define FLEX_SPI_MR_LSBHALF(value)            (FLEX_SPI_MR_LSBHALF_Msk & (_UINT32_(value) << FLEX_SPI_MR_LSBHALF_Pos)) /* Assignment of value for LSBHALF in the FLEX_SPI_MR register */
+#define   FLEX_SPI_MR_LSBHALF_0_Val           _UINT32_(0x0)                                        /* (FLEX_SPI_MR) Normal SPI mode of operation: all bits have a 1-bit time duration (standard SPI mode)  */
+#define   FLEX_SPI_MR_LSBHALF_1_Val           _UINT32_(0x1)                                        /* (FLEX_SPI_MR) Compatibility mode when connected to an SPI client having only a half bit period duration time for the last bit of the frame (non-standard SPI mode)  */
+#define FLEX_SPI_MR_LSBHALF_0                 (FLEX_SPI_MR_LSBHALF_0_Val << FLEX_SPI_MR_LSBHALF_Pos) /* (FLEX_SPI_MR) Normal SPI mode of operation: all bits have a 1-bit time duration (standard SPI mode) Position */
+#define FLEX_SPI_MR_LSBHALF_1                 (FLEX_SPI_MR_LSBHALF_1_Val << FLEX_SPI_MR_LSBHALF_Pos) /* (FLEX_SPI_MR) Compatibility mode when connected to an SPI client having only a half bit period duration time for the last bit of the frame (non-standard SPI mode) Position */
 #define FLEX_SPI_MR_CMPMODE_Pos               _UINT32_(12)                                         /* (FLEX_SPI_MR) Comparison Mode Position */
 #define FLEX_SPI_MR_CMPMODE_Msk               (_UINT32_(0x1) << FLEX_SPI_MR_CMPMODE_Pos)           /* (FLEX_SPI_MR) Comparison Mode Mask */
 #define FLEX_SPI_MR_CMPMODE(value)            (FLEX_SPI_MR_CMPMODE_Msk & (_UINT32_(value) << FLEX_SPI_MR_CMPMODE_Pos)) /* Assignment of value for CMPMODE in the FLEX_SPI_MR register */
@@ -1967,7 +1976,7 @@
 #define FLEX_SPI_MR_DLYBCS_Pos                _UINT32_(24)                                         /* (FLEX_SPI_MR) Delay Between Chip Selects Position */
 #define FLEX_SPI_MR_DLYBCS_Msk                (_UINT32_(0xFF) << FLEX_SPI_MR_DLYBCS_Pos)           /* (FLEX_SPI_MR) Delay Between Chip Selects Mask */
 #define FLEX_SPI_MR_DLYBCS(value)             (FLEX_SPI_MR_DLYBCS_Msk & (_UINT32_(value) << FLEX_SPI_MR_DLYBCS_Pos)) /* Assignment of value for DLYBCS in the FLEX_SPI_MR register */
-#define FLEX_SPI_MR_Msk                       _UINT32_(0xFF0FF0FF)                                 /* (FLEX_SPI_MR) Register Mask  */
+#define FLEX_SPI_MR_Msk                       _UINT32_(0xFF0FF1FF)                                 /* (FLEX_SPI_MR) Register Mask  */
 
 
 /* -------- FLEX_SPI_RDR : (FLEXCOM Offset: 0x408) ( R/ 32) SPI Receive Data Register -------- */

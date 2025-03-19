@@ -1,7 +1,9 @@
 /*
  * Component description for DBGU
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -337,7 +339,7 @@
 
 
 /* -------- DBGU_CIDR : (DBGU Offset: 0x40) ( R/ 32) Chip ID Register -------- */
-#define DBGU_CIDR_RESETVALUE                  _UINT32_(0x819B35A1)                                 /*  (DBGU_CIDR) Chip ID Register  Reset Value */
+#define DBGU_CIDR_RESETVALUE                  _UINT32_(0x89750030)                                 /*  (DBGU_CIDR) Chip ID Register  Reset Value */
 
 #define DBGU_CIDR_CHID_Pos                    _UINT32_(0)                                          /* (DBGU_CIDR) Chip ID Value Position */
 #define DBGU_CIDR_CHID_Msk                    (_UINT32_(0x7FFFFFFF) << DBGU_CIDR_CHID_Pos)         /* (DBGU_CIDR) Chip ID Value Mask */
