@@ -1,7 +1,7 @@
 /*
  * Component description for OTPC
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -551,9 +551,9 @@
 #define OTPC_ISR_SECE_Msk                     (_UINT32_(0x1) << OTPC_ISR_SECE_Pos)                 /* (OTPC_ISR) Security and/or Safety Event (cleared on read) Mask */
 #define OTPC_ISR_SECE(value)                  (OTPC_ISR_SECE_Msk & (_UINT32_(value) << OTPC_ISR_SECE_Pos)) /* Assignment of value for SECE in the OTPC_ISR register */
 #define   OTPC_ISR_SECE_0_Val                 _UINT32_(0x0)                                        /* (OTPC_ISR) No security or safety event occurred since the last read of OTPC_ISR.  */
-#define   OTPC_ISR_SECE_1_Val                 _UINT32_(0x1)                                        /* (OTPC_ISR) One or more safety or security event occurred since the last read of OTPC_ISR. For details on the event, refer to OTPC_WPSR.  */
+#define   OTPC_ISR_SECE_1_Val                 _UINT32_(0x1)                                        /* (OTPC_ISR) One or more safety or security event occurred since the last read of OTPC_ISR. For details on the event, see OTPC_WPSR.  */
 #define OTPC_ISR_SECE_0                       (OTPC_ISR_SECE_0_Val << OTPC_ISR_SECE_Pos)           /* (OTPC_ISR) No security or safety event occurred since the last read of OTPC_ISR. Position */
-#define OTPC_ISR_SECE_1                       (OTPC_ISR_SECE_1_Val << OTPC_ISR_SECE_Pos)           /* (OTPC_ISR) One or more safety or security event occurred since the last read of OTPC_ISR. For details on the event, refer to OTPC_WPSR. Position */
+#define OTPC_ISR_SECE_1                       (OTPC_ISR_SECE_1_Val << OTPC_ISR_SECE_Pos)           /* (OTPC_ISR) One or more safety or security event occurred since the last read of OTPC_ISR. For details on the event, see OTPC_WPSR. Position */
 #define OTPC_ISR_Msk                          _UINT32_(0x10017FFF)                                 /* (OTPC_ISR) Register Mask  */
 
 

@@ -1,7 +1,7 @@
 /*
- * Instance header file for ATSAMA7D65D2G
+ * Instance header file for ATSAMA7D65D2GN8
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -36,16 +36,15 @@
 #define TC0_INSTANCE_ID_CHANNEL0                 (83)       /* 32-bit Timer Counter 0 Channel 0. Max Generic Clock Frequency = FPCLOCK  3. */
 #define TC0_INSTANCE_ID_CHANNEL1                 (84)       /* 32-bit Timer Counter 0 Channel 1 */
 #define TC0_INSTANCE_ID_CHANNEL2                 (85)       /* 32-bit Timer Counter 0 Channel 2 */
-#define TC0_NUM_INTERRUPT_LINES                  (3)        
-#define TC0_TCCLKS_                              (0)        /* MCK1 */
-#define TC0_TCCLKS_TIMER_CLOCK1                  (1)        /* GCLK */
-#define TC0_TCCLKS_TIMER_CLOCK2                  (2)        /* MCK1/8 */
-#define TC0_TCCLKS_TIMER_CLOCK3                  (3)        /* MCK1/32 */
-#define TC0_TCCLKS_TIMER_CLOCK4                  (4)        /* MCK1/128 */
-#define TC0_TCCLKS_TIMER_CLOCK5                  (5)        /* TD_SLCK */
-#define TC0_TCCLKS_XC0                           (6)        /* XC0 */
-#define TC0_TCCLKS_XC1                           (7)        /* XC1 */
-#define TC0_TCCLKS_XC2                           (8)        /* XC2 */
-#define TC0_TIMER_WIDTH                          (32)       
+#define TC0_NUM_INTERRUPT_LINES                  (3)        /* Number of interrupt lines */
+#define TC0_TCCLKS_TIMER_CLOCK1                  (0)        /* GCLK */
+#define TC0_TCCLKS_TIMER_CLOCK2                  (1)        /* MCK0/8 */
+#define TC0_TCCLKS_TIMER_CLOCK3                  (2)        /* MCK0/32 */
+#define TC0_TCCLKS_TIMER_CLOCK4                  (3)        /* MCK0/128 */
+#define TC0_TCCLKS_TIMER_CLOCK5                  (4)        /* TD_SLCK */
+#define TC0_TCCLKS_XC0                           (5)        /* XC0 */
+#define TC0_TCCLKS_XC1                           (6)        /* XC1 */
+#define TC0_TCCLKS_XC2                           (7)        /* XC2 */
+#define TC0_TIMER_WIDTH                          (32)       /* Timer width */
 
 #endif /* _SAMA7D6_TC0_INSTANCE_ */

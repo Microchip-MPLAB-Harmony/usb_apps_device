@@ -1,7 +1,7 @@
 /*
  * Peripheral I/O description for SAMA7D65
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -365,6 +365,22 @@
 #define PIN_PB21D_ADC_ADTRG                        _UINT32_(53) /* ADC signal: ADC_ADTRG on PB21 mux D */
 #define MUX_PB21D_ADC_ADTRG                        _UINT32_(3)  /* ADC signal line function value: ADC_ADTRG */
 #define PIO_PB21D_ADC_ADTRG                        (_UINT32_(1) << 21) /* ADC signal: ADC_ADTRG */
+/* =================== PIO definition for ARM peripheral ==================== */
+#define PIN_PC25A_ARM_NTRST                        _UINT32_(89) /* ARM signal: ARM_NTRST on PC25 mux A */
+#define MUX_PC25A_ARM_NTRST                        _UINT32_(0)  /* ARM signal line function value: ARM_NTRST */
+#define PIO_PC25A_ARM_NTRST                        (_UINT32_(1) << 25) /* ARM signal: ARM_NTRST */
+#define PIN_PC26A_ARM_TCK_SWCLK                    _UINT32_(90) /* ARM signal: ARM_TCK_SWCLK on PC26 mux A */
+#define MUX_PC26A_ARM_TCK_SWCLK                    _UINT32_(0)  /* ARM signal line function value: ARM_TCK_SWCLK */
+#define PIO_PC26A_ARM_TCK_SWCLK                    (_UINT32_(1) << 26) /* ARM signal: ARM_TCK_SWCLK */
+#define PIN_PC28A_ARM_TDI                          _UINT32_(92) /* ARM signal: ARM_TDI on PC28 mux A */
+#define MUX_PC28A_ARM_TDI                          _UINT32_(0)  /* ARM signal line function value: ARM_TDI */
+#define PIO_PC28A_ARM_TDI                          (_UINT32_(1) << 28) /* ARM signal: ARM_TDI */
+#define PIN_PC29A_ARM_TDO                          _UINT32_(93) /* ARM signal: ARM_TDO on PC29 mux A */
+#define MUX_PC29A_ARM_TDO                          _UINT32_(0)  /* ARM signal line function value: ARM_TDO */
+#define PIO_PC29A_ARM_TDO                          (_UINT32_(1) << 29) /* ARM signal: ARM_TDO */
+#define PIN_PC27A_ARM_TMS_SWDIO                    _UINT32_(91) /* ARM signal: ARM_TMS_SWDIO on PC27 mux A */
+#define MUX_PC27A_ARM_TMS_SWDIO                    _UINT32_(0)  /* ARM signal line function value: ARM_TMS_SWDIO */
+#define PIO_PC27A_ARM_TMS_SWDIO                    (_UINT32_(1) << 27) /* ARM signal: ARM_TMS_SWDIO */
 /* =================== PIO definition for EBI peripheral ==================== */
 #define PIN_PC21E_EBI_A0                           _UINT32_(85) /* EBI signal: EBI_A0 on PC21 mux E */
 #define MUX_PC21E_EBI_A0                           _UINT32_(4)  /* EBI signal line function value: EBI_A0 */

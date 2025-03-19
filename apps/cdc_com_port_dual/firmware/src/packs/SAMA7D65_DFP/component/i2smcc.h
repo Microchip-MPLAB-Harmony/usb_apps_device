@@ -1,7 +1,7 @@
 /*
  * Component description for I2SMCC
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -1087,9 +1087,9 @@
 #define I2SMCC_FIR_FPARE_Msk                  (_UINT32_(0x1) << I2SMCC_FIR_FPARE_Pos)              /* (I2SMCC_FIR) Single Fault for I2SMCC Configuration Register Mask */
 #define I2SMCC_FIR_FPARE(value)               (I2SMCC_FIR_FPARE_Msk & (_UINT32_(value) << I2SMCC_FIR_FPARE_Pos)) /* Assignment of value for FPARE in the I2SMCC_FIR register */
 #define   I2SMCC_FIR_FPARE_NO_EFFECT_Val      _UINT32_(0x0)                                        /* (I2SMCC_FIR) No effect.  */
-#define   I2SMCC_FIR_FPARE_INJECT_Val         _UINT32_(0x1)                                        /* (I2SMCC_FIR) Injects a single fault on configuration register if the I2SMCC receiver and transmitter are both disabled (for security reasons), the flag I2SMCC_WPSR.PARE rises and the flag I2SMCC_ISRB.WERR =1. To clear the fault, all the fields of the corresponding configuration registers must be reconfigured. For I2SMCC_IMR, the clear is performed by writing a 1 into all the fields of I2SMCC_IDR. Thus the functional value must be reloaded by writing in I2SMCC_IER.  */
+#define   I2SMCC_FIR_FPARE_INJECT_Val         _UINT32_(0x1)                                        /* (I2SMCC_FIR) Injects a single fault on configuration register if the I2SMCC receiver and transmitter are both disabled (for security reasons), the flag I2SMCC_WPSR.PARE rises and the flag I2SMCC_ISRB.WERR =1. To clear the fault, all the fields of the corresponding Configuration registers must be reconfigured. For I2SMCC_IMR, the clear is performed by writing a '1' into all the fields of I2SMCC_IDR. Thus the functional value must be reloaded by writing in I2SMCC_IER.  */
 #define I2SMCC_FIR_FPARE_NO_EFFECT            (I2SMCC_FIR_FPARE_NO_EFFECT_Val << I2SMCC_FIR_FPARE_Pos) /* (I2SMCC_FIR) No effect. Position */
-#define I2SMCC_FIR_FPARE_INJECT               (I2SMCC_FIR_FPARE_INJECT_Val << I2SMCC_FIR_FPARE_Pos) /* (I2SMCC_FIR) Injects a single fault on configuration register if the I2SMCC receiver and transmitter are both disabled (for security reasons), the flag I2SMCC_WPSR.PARE rises and the flag I2SMCC_ISRB.WERR =1. To clear the fault, all the fields of the corresponding configuration registers must be reconfigured. For I2SMCC_IMR, the clear is performed by writing a 1 into all the fields of I2SMCC_IDR. Thus the functional value must be reloaded by writing in I2SMCC_IER. Position */
+#define I2SMCC_FIR_FPARE_INJECT               (I2SMCC_FIR_FPARE_INJECT_Val << I2SMCC_FIR_FPARE_Pos) /* (I2SMCC_FIR) Injects a single fault on configuration register if the I2SMCC receiver and transmitter are both disabled (for security reasons), the flag I2SMCC_WPSR.PARE rises and the flag I2SMCC_ISRB.WERR =1. To clear the fault, all the fields of the corresponding Configuration registers must be reconfigured. For I2SMCC_IMR, the clear is performed by writing a '1' into all the fields of I2SMCC_IDR. Thus the functional value must be reloaded by writing in I2SMCC_IER. Position */
 #define I2SMCC_FIR_FIRDIS_Pos                 _UINT32_(7)                                          /* (I2SMCC_FIR) Fault Injection Register Disable Position */
 #define I2SMCC_FIR_FIRDIS_Msk                 (_UINT32_(0x1) << I2SMCC_FIR_FIRDIS_Pos)             /* (I2SMCC_FIR) Fault Injection Register Disable Mask */
 #define I2SMCC_FIR_FIRDIS(value)              (I2SMCC_FIR_FIRDIS_Msk & (_UINT32_(value) << I2SMCC_FIR_FIRDIS_Pos)) /* Assignment of value for FIRDIS in the I2SMCC_FIR register */

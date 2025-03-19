@@ -1,7 +1,7 @@
 /*
  * Component description for ICM
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -65,9 +65,19 @@
 #define ICM_RCFG_PROCDLY_Pos                  _UINT32_(10)                                         /* (ICM_RCFG) Processing Delay Position */
 #define ICM_RCFG_PROCDLY_Msk                  (_UINT32_(0x1) << ICM_RCFG_PROCDLY_Pos)              /* (ICM_RCFG) Processing Delay Mask */
 #define ICM_RCFG_PROCDLY(value)               (ICM_RCFG_PROCDLY_Msk & (_UINT32_(value) << ICM_RCFG_PROCDLY_Pos)) /* Assignment of value for PROCDLY in the ICM_RCFG register */
+#define   ICM_RCFG_PROCDLY_SHORTEST_Val       _UINT32_(0x0)                                        /* (ICM_RCFG) SHA processing runtime is the shortest one  */
+#define   ICM_RCFG_PROCDLY_LONGEST_Val        _UINT32_(0x1)                                        /* (ICM_RCFG) SHA processing runtime is the longest one (reduces the SHA bandwidth requirement, reduces the system bus overload)  */
+#define ICM_RCFG_PROCDLY_SHORTEST             (ICM_RCFG_PROCDLY_SHORTEST_Val << ICM_RCFG_PROCDLY_Pos) /* (ICM_RCFG) SHA processing runtime is the shortest one Position */
+#define ICM_RCFG_PROCDLY_LONGEST              (ICM_RCFG_PROCDLY_LONGEST_Val << ICM_RCFG_PROCDLY_Pos) /* (ICM_RCFG) SHA processing runtime is the longest one (reduces the SHA bandwidth requirement, reduces the system bus overload) Position */
 #define ICM_RCFG_ALGO_Pos                     _UINT32_(12)                                         /* (ICM_RCFG) SHA Algorithm Position */
 #define ICM_RCFG_ALGO_Msk                     (_UINT32_(0x7) << ICM_RCFG_ALGO_Pos)                 /* (ICM_RCFG) SHA Algorithm Mask */
 #define ICM_RCFG_ALGO(value)                  (ICM_RCFG_ALGO_Msk & (_UINT32_(value) << ICM_RCFG_ALGO_Pos)) /* Assignment of value for ALGO in the ICM_RCFG register */
+#define   ICM_RCFG_ALGO_SHA1_Val              _UINT32_(0x0)                                        /* (ICM_RCFG) SHA1 algorithm processed  */
+#define   ICM_RCFG_ALGO_SHA256_Val            _UINT32_(0x1)                                        /* (ICM_RCFG) SHA256 algorithm processed  */
+#define   ICM_RCFG_ALGO_SHA224_Val            _UINT32_(0x4)                                        /* (ICM_RCFG) SHA224 algorithm processed  */
+#define ICM_RCFG_ALGO_SHA1                    (ICM_RCFG_ALGO_SHA1_Val << ICM_RCFG_ALGO_Pos)        /* (ICM_RCFG) SHA1 algorithm processed Position */
+#define ICM_RCFG_ALGO_SHA256                  (ICM_RCFG_ALGO_SHA256_Val << ICM_RCFG_ALGO_Pos)      /* (ICM_RCFG) SHA256 algorithm processed Position */
+#define ICM_RCFG_ALGO_SHA224                  (ICM_RCFG_ALGO_SHA224_Val << ICM_RCFG_ALGO_Pos)      /* (ICM_RCFG) SHA224 algorithm processed Position */
 #define ICM_RCFG_Msk                          _UINT32_(0x000077F7)                                 /* (ICM_RCFG) Register Mask  */
 
 

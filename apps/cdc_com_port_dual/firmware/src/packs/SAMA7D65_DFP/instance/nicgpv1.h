@@ -1,7 +1,7 @@
 /*
- * Instance header file for ATSAMA7D65D2G
+ * Instance header file for ATSAMA7D65D2GN8
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -25,7 +25,10 @@
 
 
 /* ========== Instance Parameter definitions for NICGPV1 peripheral ========== */
+#define NICGPV1_AMIB_COUNT                       (1)        /* Number of AXI master interface blocks */
+#define NICGPV1_ASIB_COUNT                       (3)        /* Number of AXI slave interface blocks */
 #define NICGPV1_CLOCK_ID                         (52)       
+#define NICGPV1_IB_COUNT                         (0)        /* Number of interface blocks */
 #define NICGPV1_INSTANCE_ID                      (52)       /* NIC400 Global ProgrammersViewinstance1' */
 
 #endif /* _SAMA7D6_NICGPV1_INSTANCE_ */
