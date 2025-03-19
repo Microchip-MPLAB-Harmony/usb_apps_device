@@ -69,7 +69,7 @@ typedef struct
 // Section: File Scope or Global Constants
 // *****************************************************************************
 // *****************************************************************************
-volatile static PIT_OBJECT pit;
+static volatile PIT_OBJECT pit;
 
 
 void PIT_TimerInitialize(void)
