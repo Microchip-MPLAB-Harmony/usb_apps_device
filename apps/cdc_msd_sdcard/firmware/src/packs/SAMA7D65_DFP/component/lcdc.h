@@ -1,7 +1,7 @@
 /*
  * Component description for LCDC
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -123,9 +123,9 @@
 #define LCDC_LCDCFG0_CLKPWMSEL_Msk            (_UINT32_(0x1) << LCDC_LCDCFG0_CLKPWMSEL_Pos)        /* (LCDC_LCDCFG0) LCDC PWM Clock Source Selection Mask */
 #define LCDC_LCDCFG0_CLKPWMSEL(value)         (LCDC_LCDCFG0_CLKPWMSEL_Msk & (_UINT32_(value) << LCDC_LCDCFG0_CLKPWMSEL_Pos)) /* Assignment of value for CLKPWMSEL in the LCDC_LCDCFG0 register */
 #define   LCDC_LCDCFG0_CLKPWMSEL_0_Val        _UINT32_(0x0)                                        /* (LCDC_LCDCFG0) The slow clock is selected and feeds the PWM module.  */
-#define   LCDC_LCDCFG0_CLKPWMSEL_1_Val        _UINT32_(0x1)                                        /* (LCDC_LCDCFG0) The system clock is selected and feeds the PWM module.  */
+#define   LCDC_LCDCFG0_CLKPWMSEL_1_Val        _UINT32_(0x1)                                        /* (LCDC_LCDCFG0) The peripheral clock (MCK) is selected and feeds the PWM module.  */
 #define LCDC_LCDCFG0_CLKPWMSEL_0              (LCDC_LCDCFG0_CLKPWMSEL_0_Val << LCDC_LCDCFG0_CLKPWMSEL_Pos) /* (LCDC_LCDCFG0) The slow clock is selected and feeds the PWM module. Position */
-#define LCDC_LCDCFG0_CLKPWMSEL_1              (LCDC_LCDCFG0_CLKPWMSEL_1_Val << LCDC_LCDCFG0_CLKPWMSEL_Pos) /* (LCDC_LCDCFG0) The system clock is selected and feeds the PWM module. Position */
+#define LCDC_LCDCFG0_CLKPWMSEL_1              (LCDC_LCDCFG0_CLKPWMSEL_1_Val << LCDC_LCDCFG0_CLKPWMSEL_Pos) /* (LCDC_LCDCFG0) The peripheral clock (MCK) is selected and feeds the PWM module. Position */
 #define LCDC_LCDCFG0_CLKDIV_Pos               _UINT32_(16)                                         /* (LCDC_LCDCFG0) LCDC Clock Divider Position */
 #define LCDC_LCDCFG0_CLKDIV_Msk               (_UINT32_(0xFF) << LCDC_LCDCFG0_CLKDIV_Pos)          /* (LCDC_LCDCFG0) LCDC Clock Divider Mask */
 #define LCDC_LCDCFG0_CLKDIV(value)            (LCDC_LCDCFG0_CLKDIV_Msk & (_UINT32_(value) << LCDC_LCDCFG0_CLKDIV_Pos)) /* Assignment of value for CLKDIV in the LCDC_LCDCFG0 register */
