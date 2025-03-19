@@ -1,7 +1,9 @@
 /*
  * Header file for ATSAMA7G54
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,7 +19,7 @@
  *
  */
 
-/* File generated from device description file (ATDF) version 2024-04-05T12:31:09Z */
+/* File generated from device description file (ATDF) version None */
 #ifndef _SAMA7G54_H_
 #define _SAMA7G54_H_
 
@@ -89,13 +91,13 @@ typedef enum IRQn
   SGI15_IRQn                =  15, /* 15  Software Generated Interrupt 15     */
 
 /******  CORTEX-A7 Processor Exceptions Numbers ******************************/
+  VirtMaint_IRQn            =  25, /* 25  Virtual Maintenance Interrupt (PPI6) */
+  HyperVTimer_IRQn          =  26, /* 26  Hypervisor Timer event (PPI5)       */
+  VirtTimer_IRQn            =  27, /* 27  Virtual Timer event (PPI4)          */
   LegacynFIQ_IRQn           =  28, /* 28  Legacy nFIQ signal (PPI0)           */
   SecPhysTimer_IRQn         =  29, /* 29  Secure Physical Timer event (PPI1)  */
   NonSecPhysTimer_IRQn      =  30, /* 30  Non-secure Physical Timer event (PPI2) */
   LegacynIRQ_IRQn           =  31, /* 31  Legacy nIRQ signal (PPI3)           */
-  VirtTimer_IRQn            =  27, /* 27  Virtual Timer event (PPI4)          */
-  HyperVTimer_IRQn          =  26, /* 26  Hypervisor Timer event (PPI5)       */
-  VirtMaint_IRQn            =  25, /* 25  Virtual Maintenance Interrupt (PPI6) */
 
 /* ****************** SAMA7G54 specific Interrupt Numbers ******************* */
   DWDT_SW_IRQn              =  32, /* 32  Dual Watchdog Timer (DWDT)          */
@@ -122,7 +124,7 @@ typedef enum IRQn
   ACC_IRQn                  =  57, /* 57  Analog Comparator Controller (ACC)  */
   ADC_IRQn                  =  58, /* 58  Analog-to-Digital Converter (ADC)   */
   AES_IRQn                  =  59, /* 59  Advanced Encryption Standard (AES)  */
-  ARM_IRQn                  =  61, /* 61  ARM (ARM)                           */
+  ARM_IRQn                  =  61, /* 61  Cortex-A7 CPU (ARM)                 */
   ASRC_IRQn                 =  62, /* 62  Asynchronous Sample Rate Converter (ASRC) */
   CPKCC_IRQn                =  64, /* 64  Classic Public Key Cryptography Controller (CPKCC) */
   CSI_IRQn                  =  65, /* 65  CSI Host Controller (CSI)           */
@@ -193,8 +195,8 @@ typedef enum IRQn
   UDPHSA_IRQn               = 136, /* 136 IP_Name (UDPHSA)                    */
   UDPHSB_IRQn               = 137, /* 137 IP_Name (UDPHSB)                    */
   UHPHS_IRQn                = 138, /* 138 USB Host High Speed Port (UHPHS)    */
-  ARM_NPMUIRQ_IRQn          = 142, /* 142 ARM_NPMUIRQ (ARM)                   */
-  ARM_NAXIERRIRQ_IRQn       = 143, /* 143 ARM_NAXIERRIRQ (ARM)                */
+  ARM_NPMUIRQ_IRQn          = 142, /* 142 Cortex-A7 CPU (ARM)                 */
+  ARM_NAXIERRIRQ_IRQn       = 143, /* 143 Cortex-A7 CPU (ARM)                 */
   XDMAC0_SINT_IRQn          = 144, /* 144 Extensible DMA Controller (XDMAC0)  */
   XDMAC1_SINT_IRQn          = 145, /* 145 Extensible DMA Controller (XDMAC1)  */
   XDMAC2_SINT_IRQn          = 146, /* 146 Extensible DMA Controller (XDMAC2)  */
@@ -835,7 +837,7 @@ typedef enum IRQn
 /*                       DEVICE SIGNATURES FOR SAMA7G54                       */
 /* ************************************************************************** */
 #define CHIP_JTAGID                    _UINT32_(0X05B4203F)
-#define CHIP_CIDR                      _UINT32_(0X80162110)
+#define CHIP_CIDR                      _UINT32_(0X80162111)
 #define CHIP_EXID                      _UINT32_(0X00000000)
 
 /* ************************************************************************** */

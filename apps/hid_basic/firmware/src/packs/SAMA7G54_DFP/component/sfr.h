@@ -1,7 +1,9 @@
 /*
  * Component description for SFR
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,7 +19,7 @@
  *
  */
 
-/*  file generated from device description file (ATDF) version 2024-02-20T14:30:20Z  */
+/*      file generated from device description file (ATDF) version None       */
 #ifndef _SAMA7G5_SFR_COMPONENT_H_
 #define _SAMA7G5_SFR_COMPONENT_H_
 
@@ -142,18 +144,6 @@
 #define SFR_EHCIOHCI_Msk                      _UINT32_(0x00000001)                                 /* (SFR_EHCIOHCI) Register Mask  */
 
 
-/* -------- SFR_HSS_AXIQOS : (SFR Offset: 0x2028) (R/W 32) HSS AXI QOS Register -------- */
-#define SFR_HSS_AXIQOS_RESETVALUE             _UINT32_(0x00)                                       /*  (SFR_HSS_AXIQOS) HSS AXI QOS Register  Reset Value */
-
-#define SFR_HSS_AXIQOS_READ_Pos               _UINT32_(0)                                          /* (SFR_HSS_AXIQOS) QOS value for read transfer from HSS to the DDR controller Position */
-#define SFR_HSS_AXIQOS_READ_Msk               (_UINT32_(0xF) << SFR_HSS_AXIQOS_READ_Pos)           /* (SFR_HSS_AXIQOS) QOS value for read transfer from HSS to the DDR controller Mask */
-#define SFR_HSS_AXIQOS_READ(value)            (SFR_HSS_AXIQOS_READ_Msk & (_UINT32_(value) << SFR_HSS_AXIQOS_READ_Pos)) /* Assignment of value for READ in the SFR_HSS_AXIQOS register */
-#define SFR_HSS_AXIQOS_WRITE_Pos              _UINT32_(8)                                          /* (SFR_HSS_AXIQOS) QOS value for write transfer from HSS to the DDR controller Position */
-#define SFR_HSS_AXIQOS_WRITE_Msk              (_UINT32_(0xF) << SFR_HSS_AXIQOS_WRITE_Pos)          /* (SFR_HSS_AXIQOS) QOS value for write transfer from HSS to the DDR controller Mask */
-#define SFR_HSS_AXIQOS_WRITE(value)           (SFR_HSS_AXIQOS_WRITE_Msk & (_UINT32_(value) << SFR_HSS_AXIQOS_WRITE_Pos)) /* Assignment of value for WRITE in the SFR_HSS_AXIQOS register */
-#define SFR_HSS_AXIQOS_Msk                    _UINT32_(0x00000F0F)                                 /* (SFR_HSS_AXIQOS) Register Mask  */
-
-
 /* -------- SFR_UDDRC : (SFR Offset: 0x202C) (R/W 32) UDDRC Register -------- */
 #define SFR_UDDRC_RESETVALUE                  _UINT32_(0x00)                                       /*  (SFR_UDDRC) UDDRC Register  Reset Value */
 
@@ -245,7 +235,6 @@
 #define SFR_WPMR_REG_OFST              _UINT32_(0xE4)      /* (SFR_WPMR) Write Protection Mode Register Offset */
 #define SFR_WPSR_REG_OFST              _UINT32_(0xE8)      /* (SFR_WPSR) Write Protection Status Register Offset */
 #define SFR_EHCIOHCI_REG_OFST          _UINT32_(0x2020)    /* (SFR_EHCIOHCI) EHCI OHCI Register Offset */
-#define SFR_HSS_AXIQOS_REG_OFST        _UINT32_(0x2028)    /* (SFR_HSS_AXIQOS) HSS AXI QOS Register Offset */
 #define SFR_UDDRC_REG_OFST             _UINT32_(0x202C)    /* (SFR_UDDRC) UDDRC Register Offset */
 #define SFR_CAN_SRAM_SEL_REG_OFST      _UINT32_(0x2030)    /* (SFR_CAN_SRAM_SEL) SFR CAN SRAM Selection Register Offset */
 #define SFR_UTMI0R_REG_OFST            _UINT32_(0x2040)    /* (SFR_UTMI0R) UTMI0 Configuration Register (port = 0) Offset */
@@ -264,8 +253,7 @@ typedef struct
   __I   uint32_t                       SFR_WPSR;           /* Offset: 0xE8 (R/   32) Write Protection Status Register */
   __I   uint8_t                        Reserved2[0x1F34];
   __IO  uint32_t                       SFR_EHCIOHCI;       /* Offset: 0x2020 (R/W  32) EHCI OHCI Register */
-  __I   uint8_t                        Reserved3[0x04];
-  __IO  uint32_t                       SFR_HSS_AXIQOS;     /* Offset: 0x2028 (R/W  32) HSS AXI QOS Register */
+  __I   uint8_t                        Reserved3[0x08];
   __IO  uint32_t                       SFR_UDDRC;          /* Offset: 0x202C (R/W  32) UDDRC Register */
   __IO  uint32_t                       SFR_CAN_SRAM_SEL;   /* Offset: 0x2030 (R/W  32) SFR CAN SRAM Selection Register */
   __I   uint8_t                        Reserved4[0x0C];

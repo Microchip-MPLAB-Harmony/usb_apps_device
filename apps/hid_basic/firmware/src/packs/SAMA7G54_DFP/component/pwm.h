@@ -1,7 +1,9 @@
 /*
  * Component description for PWM
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,7 +19,7 @@
  *
  */
 
-/*  file generated from device description file (ATDF) version 2024-02-20T14:30:20Z  */
+/*      file generated from device description file (ATDF) version None       */
 #ifndef _SAMA7G5_PWM_COMPONENT_H_
 #define _SAMA7G5_PWM_COMPONENT_H_
 
@@ -1655,14 +1657,16 @@
 #define PWM_SSPUP_Msk                         _UINT32_(0x00FFFFFF)                                 /* (PWM_SSPUP) Register Mask  */
 
 
-/* -------- PWM_DEBUG : (PWM Offset: 0xAC) (R/W 32) PWM Debug Register -------- */
+/* -------- PWM_DEBUG : (PWM Offset: 0xAC) (R/W 32) Debug Register -------- */
+#define PWM_DEBUG_RESETVALUE                  _UINT32_(0x00)                                       /*  (PWM_DEBUG) Debug Register  Reset Value */
+
 #define PWM_DEBUG_OUTMODE_Pos                 _UINT32_(0)                                          /* (PWM_DEBUG) PWM Output Mode when System is in Debug Mode Position */
 #define PWM_DEBUG_OUTMODE_Msk                 (_UINT32_(0x1) << PWM_DEBUG_OUTMODE_Pos)             /* (PWM_DEBUG) PWM Output Mode when System is in Debug Mode Mask */
 #define PWM_DEBUG_OUTMODE(value)              (PWM_DEBUG_OUTMODE_Msk & (_UINT32_(value) << PWM_DEBUG_OUTMODE_Pos)) /* Assignment of value for OUTMODE in the PWM_DEBUG register */
-#define   PWM_DEBUG_OUTMODE_NO_EFFECT_Val     _UINT32_(0x0)                                        /* (PWM_DEBUG) Keeps the PWM outputs running when the processor reports a debug operating  */
-#define   PWM_DEBUG_OUTMODE_STUCK_AT_Val      _UINT32_(0x1)                                        /* (PWM_DEBUG) Forces the PWM outputs with the values configured in PWM_FPVx as soon as the processor reports a debug operating mode.  */
-#define PWM_DEBUG_OUTMODE_NO_EFFECT           (PWM_DEBUG_OUTMODE_NO_EFFECT_Val << PWM_DEBUG_OUTMODE_Pos) /* (PWM_DEBUG) Keeps the PWM outputs running when the processor reports a debug operating Position */
-#define PWM_DEBUG_OUTMODE_STUCK_AT            (PWM_DEBUG_OUTMODE_STUCK_AT_Val << PWM_DEBUG_OUTMODE_Pos) /* (PWM_DEBUG) Forces the PWM outputs with the values configured in PWM_FPVx as soon as the processor reports a debug operating mode. Position */
+#define   PWM_DEBUG_OUTMODE_NO_EFFECT_Val     _UINT32_(0x0)                                        /* (PWM_DEBUG) Keeps the PWM outputs running when the processor reports a debug operating mode.  */
+#define   PWM_DEBUG_OUTMODE_STUCK_AT_Val      _UINT32_(0x1)                                        /* (PWM_DEBUG) Forces the PWM outputs with the values configured in PWM_FPVx (see Section 8.27 "PWM Fault Protection Value Register 1" and Section 8.37 "PWM Fault Protection Value Register 2") as soon as the processor reports a debug operating mode.  */
+#define PWM_DEBUG_OUTMODE_NO_EFFECT           (PWM_DEBUG_OUTMODE_NO_EFFECT_Val << PWM_DEBUG_OUTMODE_Pos) /* (PWM_DEBUG) Keeps the PWM outputs running when the processor reports a debug operating mode. Position */
+#define PWM_DEBUG_OUTMODE_STUCK_AT            (PWM_DEBUG_OUTMODE_STUCK_AT_Val << PWM_DEBUG_OUTMODE_Pos) /* (PWM_DEBUG) Forces the PWM outputs with the values configured in PWM_FPVx (see Section 8.27 "PWM Fault Protection Value Register 1" and Section 8.37 "PWM Fault Protection Value Register 2") as soon as the processor reports a debug operating mode. Position */
 #define PWM_DEBUG_Msk                         _UINT32_(0x00000001)                                 /* (PWM_DEBUG) Register Mask  */
 
 
@@ -2012,9 +2016,9 @@
 #define PWM_ETRG1_TRGSRC_Msk                  (_UINT32_(0x1) << PWM_ETRG1_TRGSRC_Pos)              /* (PWM_ETRG1) Trigger Source Mask */
 #define PWM_ETRG1_TRGSRC(value)               (PWM_ETRG1_TRGSRC_Msk & (_UINT32_(value) << PWM_ETRG1_TRGSRC_Pos)) /* Assignment of value for TRGSRC in the PWM_ETRG1 register */
 #define   PWM_ETRG1_TRGSRC_0_Val              _UINT32_(0x0)                                        /* (PWM_ETRG1) The TRGINx signal is driven by the PWMEXTRGx input.  */
-#define   PWM_ETRG1_TRGSRC_1_Val              _UINT32_(0x1)                                        /* (PWM_ETRG1) The TRGINx signal is driven by the Analog Comparator Controller.  */
+#define   PWM_ETRG1_TRGSRC_1_Val              _UINT32_(0x1)                                        /* (PWM_ETRG1) The TRGINx signal is driven .  */
 #define PWM_ETRG1_TRGSRC_0                    (PWM_ETRG1_TRGSRC_0_Val << PWM_ETRG1_TRGSRC_Pos)     /* (PWM_ETRG1) The TRGINx signal is driven by the PWMEXTRGx input. Position */
-#define PWM_ETRG1_TRGSRC_1                    (PWM_ETRG1_TRGSRC_1_Val << PWM_ETRG1_TRGSRC_Pos)     /* (PWM_ETRG1) The TRGINx signal is driven by the Analog Comparator Controller. Position */
+#define PWM_ETRG1_TRGSRC_1                    (PWM_ETRG1_TRGSRC_1_Val << PWM_ETRG1_TRGSRC_Pos)     /* (PWM_ETRG1) The TRGINx signal is driven . Position */
 #define PWM_ETRG1_RFEN_Pos                    _UINT32_(31)                                         /* (PWM_ETRG1) Recoverable Fault Enable Position */
 #define PWM_ETRG1_RFEN_Msk                    (_UINT32_(0x1) << PWM_ETRG1_RFEN_Pos)                /* (PWM_ETRG1) Recoverable Fault Enable Mask */
 #define PWM_ETRG1_RFEN(value)                 (PWM_ETRG1_RFEN_Msk & (_UINT32_(value) << PWM_ETRG1_RFEN_Pos)) /* Assignment of value for RFEN in the PWM_ETRG1 register */
@@ -2111,9 +2115,9 @@
 #define PWM_ETRG2_TRGSRC_Msk                  (_UINT32_(0x1) << PWM_ETRG2_TRGSRC_Pos)              /* (PWM_ETRG2) Trigger Source Mask */
 #define PWM_ETRG2_TRGSRC(value)               (PWM_ETRG2_TRGSRC_Msk & (_UINT32_(value) << PWM_ETRG2_TRGSRC_Pos)) /* Assignment of value for TRGSRC in the PWM_ETRG2 register */
 #define   PWM_ETRG2_TRGSRC_0_Val              _UINT32_(0x0)                                        /* (PWM_ETRG2) The TRGINx signal is driven by the PWMEXTRGx input.  */
-#define   PWM_ETRG2_TRGSRC_1_Val              _UINT32_(0x1)                                        /* (PWM_ETRG2) The TRGINx signal is driven by the Analog Comparator Controller.  */
+#define   PWM_ETRG2_TRGSRC_1_Val              _UINT32_(0x1)                                        /* (PWM_ETRG2) The TRGINx signal is driven .  */
 #define PWM_ETRG2_TRGSRC_0                    (PWM_ETRG2_TRGSRC_0_Val << PWM_ETRG2_TRGSRC_Pos)     /* (PWM_ETRG2) The TRGINx signal is driven by the PWMEXTRGx input. Position */
-#define PWM_ETRG2_TRGSRC_1                    (PWM_ETRG2_TRGSRC_1_Val << PWM_ETRG2_TRGSRC_Pos)     /* (PWM_ETRG2) The TRGINx signal is driven by the Analog Comparator Controller. Position */
+#define PWM_ETRG2_TRGSRC_1                    (PWM_ETRG2_TRGSRC_1_Val << PWM_ETRG2_TRGSRC_Pos)     /* (PWM_ETRG2) The TRGINx signal is driven . Position */
 #define PWM_ETRG2_RFEN_Pos                    _UINT32_(31)                                         /* (PWM_ETRG2) Recoverable Fault Enable Position */
 #define PWM_ETRG2_RFEN_Msk                    (_UINT32_(0x1) << PWM_ETRG2_RFEN_Pos)                /* (PWM_ETRG2) Recoverable Fault Enable Mask */
 #define PWM_ETRG2_RFEN(value)                 (PWM_ETRG2_RFEN_Msk & (_UINT32_(value) << PWM_ETRG2_RFEN_Pos)) /* Assignment of value for RFEN in the PWM_ETRG2 register */
@@ -2223,7 +2227,7 @@
 #define PWM_ELMR1_REG_OFST             _UINT32_(0x80)      /* (PWM_ELMR1) PWM Event Line x Mode Register Offset */
 #define PWM_SSPR_REG_OFST              _UINT32_(0xA0)      /* (PWM_SSPR) PWM Spread Spectrum Register Offset */
 #define PWM_SSPUP_REG_OFST             _UINT32_(0xA4)      /* (PWM_SSPUP) PWM Spread Spectrum Update Register Offset */
-#define PWM_DEBUG_REG_OFST             _UINT32_(0xAC)      /* (PWM_DEBUG) PWM Debug Register Offset */
+#define PWM_DEBUG_REG_OFST             _UINT32_(0xAC)      /* (PWM_DEBUG) Debug Register Offset */
 #define PWM_SMMR_REG_OFST              _UINT32_(0xB0)      /* (PWM_SMMR) PWM Stepper Motor Mode Register Offset */
 #define PWM_FPV2_REG_OFST              _UINT32_(0xC0)      /* (PWM_FPV2) PWM Fault Protection Value 2 Register Offset */
 #define PWM_WPCR_REG_OFST              _UINT32_(0xE4)      /* (PWM_WPCR) PWM Write Protection Control Register Offset */
@@ -2301,7 +2305,7 @@ typedef struct
   __IO  uint32_t                       PWM_SSPR;           /* Offset: 0xA0 (R/W  32) PWM Spread Spectrum Register */
   __O   uint32_t                       PWM_SSPUP;          /* Offset: 0xA4 ( /W  32) PWM Spread Spectrum Update Register */
   __I   uint8_t                        Reserved3[0x04];
-  __IO  uint32_t                       PWM_DEBUG;          /* Offset: 0xAC (R/W  32) PWM Debug Register */
+  __IO  uint32_t                       PWM_DEBUG;          /* Offset: 0xAC (R/W  32) Debug Register */
   __IO  uint32_t                       PWM_SMMR;           /* Offset: 0xB0 (R/W  32) PWM Stepper Motor Mode Register */
   __I   uint8_t                        Reserved4[0x0C];
   __IO  uint32_t                       PWM_FPV2;           /* Offset: 0xC0 (R/W  32) PWM Fault Protection Value 2 Register */
