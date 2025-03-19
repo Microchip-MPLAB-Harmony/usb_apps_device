@@ -43,7 +43,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.3"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.4"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -3507,11 +3507,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\definitions.h</file>
-         <hash>bcdd11d5f2c176157427d102fecf56755a164982acf13279952b872420b579cf</hash>
+         <hash>f322758340aafc53cefc7d8f61b9006b5721500d1f107c91fae8c368dbf7860c</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\device.h</file>
-         <hash>272c30439d908c419ccaac5f8a4dff8f7caa7881537bac508320752dfcfbf0d0</hash>
+         <hash>9191d645a12f96842eed9c51335f9c9f10371d437d9a33c36b0ff4d12e931d46</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\device_cache.h</file>
@@ -3543,7 +3543,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\driver\usb\udphs\src\drv_usb_udphs_local.h</file>
-         <hash>73fa46494cbe1dd41d7a247c5cf0aa5418debdf1621c6fdcb7cfbe498fd118b2</hash>
+         <hash>13a520cc87e13618daddf16a29dcdcec6d87d927c3c874dbcf00259295399ee1</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\driver\usb\udphs\src\drv_usb_udphs_variant_mapping.h</file>
@@ -3559,15 +3559,15 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\initialization.c</file>
-         <hash>97fc5e75951d605ab1cb7b4f5da90d9ff0a091c3754f8395caa9702352a6b4ce</hash>
+         <hash>d7b70ca78381d877505f6e56d34375e19ee410d2cea293cd367ff27c3876bc7b</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\interrupts.c</file>
-         <hash>fe4cdb3717277d50350b8321d0e14fcbf7728381a8f5d5a669091d78a7690402</hash>
+         <hash>10b3cf3d38c0646d51b17db3a93bb914b9f6079ebc804d76318a4fcde225c275</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\interrupts.h</file>
-         <hash>7e49adb50a608608e68e2751f3de35e0f50e29e389028af988691972df81d0c1</hash>
+         <hash>d272aad9c27bb23f4642f875e52e24ff1b950df3ca6b8ad38f28f226292da9c7</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\osal\osal.h</file>
@@ -3623,7 +3623,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\peripheral\pit\plib_pit.c</file>
-         <hash>b124f7b2ebb6bff7319456256d247db11c15d1c74f6a0f9e40cb781b4cb8b4b3</hash>
+         <hash>04cc8904ec666595d57d83514cd6045afa13f41d0226783ca0001c50b42c778b</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\peripheral\pit\plib_pit.h</file>
