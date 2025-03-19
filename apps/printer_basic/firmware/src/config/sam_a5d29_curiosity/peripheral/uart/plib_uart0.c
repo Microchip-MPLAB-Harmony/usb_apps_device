@@ -48,7 +48,7 @@
 // *****************************************************************************
 // *****************************************************************************
 
-volatile static UART_OBJECT uart0Obj;
+static volatile UART_OBJECT uart0Obj;
 
 static void __attribute__((used)) UART0_ISR_RX_Handler( void )
 {
