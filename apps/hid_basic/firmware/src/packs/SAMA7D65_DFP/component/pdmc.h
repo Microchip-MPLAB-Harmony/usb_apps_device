@@ -1,7 +1,7 @@
 /*
  * Component description for PDMC
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -72,10 +72,10 @@
 #define PDMC_MR_DST_Pos                       _UINT32_(12)                                         /* (PDMC_MR) Audio Data Destination Position */
 #define PDMC_MR_DST_Msk                       (_UINT32_(0x1) << PDMC_MR_DST_Pos)                   /* (PDMC_MR) Audio Data Destination Mask */
 #define PDMC_MR_DST(value)                    (PDMC_MR_DST_Msk & (_UINT32_(value) << PDMC_MR_DST_Pos)) /* Assignment of value for DST in the PDMC_MR register */
-#define   PDMC_MR_DST_0_Val                   _UINT32_(0x0)                                        /* (PDMC_MR) Audio data are read through PDMC_RHR by the DMA or software.  */
-#define   PDMC_MR_DST_1_Val                   _UINT32_(0x1)                                        /* (PDMC_MR) Audio data are transferred directly to the ASRC without DMA intervention or software.  */
-#define PDMC_MR_DST_0                         (PDMC_MR_DST_0_Val << PDMC_MR_DST_Pos)               /* (PDMC_MR) Audio data are read through PDMC_RHR by the DMA or software. Position */
-#define PDMC_MR_DST_1                         (PDMC_MR_DST_1_Val << PDMC_MR_DST_Pos)               /* (PDMC_MR) Audio data are transferred directly to the ASRC without DMA intervention or software. Position */
+#define   PDMC_MR_DST_DMA_SOFT_Val            _UINT32_(0x0)                                        /* (PDMC_MR) Audio data are read through PDMC_RHR by the DMA or software.  */
+#define   PDMC_MR_DST_DIRECT_TO_ASRC_Val      _UINT32_(0x1)                                        /* (PDMC_MR) Audio data are transferred directly to the ASRC without DMA intervention or software.  */
+#define PDMC_MR_DST_DMA_SOFT                  (PDMC_MR_DST_DMA_SOFT_Val << PDMC_MR_DST_Pos)        /* (PDMC_MR) Audio data are read through PDMC_RHR by the DMA or software. Position */
+#define PDMC_MR_DST_DIRECT_TO_ASRC            (PDMC_MR_DST_DIRECT_TO_ASRC_Val << PDMC_MR_DST_Pos)  /* (PDMC_MR) Audio data are transferred directly to the ASRC without DMA intervention or software. Position */
 #define PDMC_MR_RHRMSB_Pos                    _UINT32_(14)                                         /* (PDMC_MR) RHR MSB Mode Position */
 #define PDMC_MR_RHRMSB_Msk                    (_UINT32_(0x1) << PDMC_MR_RHRMSB_Pos)                /* (PDMC_MR) RHR MSB Mode Mask */
 #define PDMC_MR_RHRMSB(value)                 (PDMC_MR_RHRMSB_Msk & (_UINT32_(value) << PDMC_MR_RHRMSB_Pos)) /* Assignment of value for RHRMSB in the PDMC_MR register */
@@ -102,16 +102,16 @@
 #define PDMC_MR_SINCORDER_Pos                 _UINT32_(20)                                         /* (PDMC_MR) SINC Filter Order Position */
 #define PDMC_MR_SINCORDER_Msk                 (_UINT32_(0xF) << PDMC_MR_SINCORDER_Pos)             /* (PDMC_MR) SINC Filter Order Mask */
 #define PDMC_MR_SINCORDER(value)              (PDMC_MR_SINCORDER_Msk & (_UINT32_(value) << PDMC_MR_SINCORDER_Pos)) /* Assignment of value for SINCORDER in the PDMC_MR register */
-#define   PDMC_MR_SINCORDER_ORDER1_Val        _UINT32_(0x1)                                        /* (PDMC_MR) SINC filter order is 1  */
-#define   PDMC_MR_SINCORDER_ORDER2_Val        _UINT32_(0x2)                                        /* (PDMC_MR) SINC filter order is 2  */
+#define   PDMC_MR_SINCORDER_ORDER1_Val        _UINT32_(0x1)                                        /* (PDMC_MR) SINC filter order is 1.  */
+#define   PDMC_MR_SINCORDER_ORDER2_Val        _UINT32_(0x2)                                        /* (PDMC_MR) SINC filter order is 2.  */
 #define   PDMC_MR_SINCORDER_ORDER3_Val        _UINT32_(0x3)                                        /* (PDMC_MR) SINC filter order is 3. Recommended if SINC_OSR=0  */
-#define   PDMC_MR_SINCORDER_ORDER4_Val        _UINT32_(0x4)                                        /* (PDMC_MR) SINC filter order is 4  */
-#define   PDMC_MR_SINCORDER_ORDER5_Val        _UINT32_(0x5)                                        /* (PDMC_MR) SINC filter order is 5  */
-#define PDMC_MR_SINCORDER_ORDER1              (PDMC_MR_SINCORDER_ORDER1_Val << PDMC_MR_SINCORDER_Pos) /* (PDMC_MR) SINC filter order is 1 Position */
-#define PDMC_MR_SINCORDER_ORDER2              (PDMC_MR_SINCORDER_ORDER2_Val << PDMC_MR_SINCORDER_Pos) /* (PDMC_MR) SINC filter order is 2 Position */
+#define   PDMC_MR_SINCORDER_ORDER4_Val        _UINT32_(0x4)                                        /* (PDMC_MR) SINC filter order is 4.  */
+#define   PDMC_MR_SINCORDER_ORDER5_Val        _UINT32_(0x5)                                        /* (PDMC_MR) SINC filter order is 5.  */
+#define PDMC_MR_SINCORDER_ORDER1              (PDMC_MR_SINCORDER_ORDER1_Val << PDMC_MR_SINCORDER_Pos) /* (PDMC_MR) SINC filter order is 1. Position */
+#define PDMC_MR_SINCORDER_ORDER2              (PDMC_MR_SINCORDER_ORDER2_Val << PDMC_MR_SINCORDER_Pos) /* (PDMC_MR) SINC filter order is 2. Position */
 #define PDMC_MR_SINCORDER_ORDER3              (PDMC_MR_SINCORDER_ORDER3_Val << PDMC_MR_SINCORDER_Pos) /* (PDMC_MR) SINC filter order is 3. Recommended if SINC_OSR=0 Position */
-#define PDMC_MR_SINCORDER_ORDER4              (PDMC_MR_SINCORDER_ORDER4_Val << PDMC_MR_SINCORDER_Pos) /* (PDMC_MR) SINC filter order is 4 Position */
-#define PDMC_MR_SINCORDER_ORDER5              (PDMC_MR_SINCORDER_ORDER5_Val << PDMC_MR_SINCORDER_Pos) /* (PDMC_MR) SINC filter order is 5 Position */
+#define PDMC_MR_SINCORDER_ORDER4              (PDMC_MR_SINCORDER_ORDER4_Val << PDMC_MR_SINCORDER_Pos) /* (PDMC_MR) SINC filter order is 4. Position */
+#define PDMC_MR_SINCORDER_ORDER5              (PDMC_MR_SINCORDER_ORDER5_Val << PDMC_MR_SINCORDER_Pos) /* (PDMC_MR) SINC filter order is 5. Position */
 #define PDMC_MR_SINC_OSR_Pos                  _UINT32_(24)                                         /* (PDMC_MR) SINC Filter Oversampling Ratio Position */
 #define PDMC_MR_SINC_OSR_Msk                  (_UINT32_(0xF) << PDMC_MR_SINC_OSR_Pos)              /* (PDMC_MR) SINC Filter Oversampling Ratio Mask */
 #define PDMC_MR_SINC_OSR(value)               (PDMC_MR_SINC_OSR_Msk & (_UINT32_(value) << PDMC_MR_SINC_OSR_Pos)) /* Assignment of value for SINC_OSR in the PDMC_MR register */
@@ -172,51 +172,51 @@
 #define PDMC_CFGR_DATAL_Pos                   _UINT32_(8)                                          /* (PDMC_CFGR) Data Length Position */
 #define PDMC_CFGR_DATAL_Msk                   (_UINT32_(0x7) << PDMC_CFGR_DATAL_Pos)               /* (PDMC_CFGR) Data Length Mask */
 #define PDMC_CFGR_DATAL(value)                (PDMC_CFGR_DATAL_Msk & (_UINT32_(value) << PDMC_CFGR_DATAL_Pos)) /* Assignment of value for DATAL in the PDMC_CFGR register */
-#define   PDMC_CFGR_DATAL_24_BITS_Val         _UINT32_(0x0)                                        /* (PDMC_CFGR) Data are defined on 24 bits  */
-#define   PDMC_CFGR_DATAL_32_BITS_Val         _UINT32_(0x1)                                        /* (PDMC_CFGR) Data are defined on 32 bits  */
-#define   PDMC_CFGR_DATAL_20_BITS_Val         _UINT32_(0x2)                                        /* (PDMC_CFGR) Data are defined on 20 bits  */
-#define   PDMC_CFGR_DATAL_16_BITS_Val         _UINT32_(0x3)                                        /* (PDMC_CFGR) Data are defined on 16 bits  */
-#define   PDMC_CFGR_DATAL_8_BITS_Val          _UINT32_(0x4)                                        /* (PDMC_CFGR) Data are defined on 8 bits  */
-#define PDMC_CFGR_DATAL_24_BITS               (PDMC_CFGR_DATAL_24_BITS_Val << PDMC_CFGR_DATAL_Pos) /* (PDMC_CFGR) Data are defined on 24 bits Position */
-#define PDMC_CFGR_DATAL_32_BITS               (PDMC_CFGR_DATAL_32_BITS_Val << PDMC_CFGR_DATAL_Pos) /* (PDMC_CFGR) Data are defined on 32 bits Position */
-#define PDMC_CFGR_DATAL_20_BITS               (PDMC_CFGR_DATAL_20_BITS_Val << PDMC_CFGR_DATAL_Pos) /* (PDMC_CFGR) Data are defined on 20 bits Position */
-#define PDMC_CFGR_DATAL_16_BITS               (PDMC_CFGR_DATAL_16_BITS_Val << PDMC_CFGR_DATAL_Pos) /* (PDMC_CFGR) Data are defined on 16 bits Position */
-#define PDMC_CFGR_DATAL_8_BITS                (PDMC_CFGR_DATAL_8_BITS_Val << PDMC_CFGR_DATAL_Pos)  /* (PDMC_CFGR) Data are defined on 8 bits Position */
+#define   PDMC_CFGR_DATAL_24_BITS_Val         _UINT32_(0x0)                                        /* (PDMC_CFGR) Data are defined on 24 bits.  */
+#define   PDMC_CFGR_DATAL_32_BITS_Val         _UINT32_(0x1)                                        /* (PDMC_CFGR) Data are defined on 32 bits.  */
+#define   PDMC_CFGR_DATAL_20_BITS_Val         _UINT32_(0x2)                                        /* (PDMC_CFGR) Data are defined on 20 bits.  */
+#define   PDMC_CFGR_DATAL_16_BITS_Val         _UINT32_(0x3)                                        /* (PDMC_CFGR) Data are defined on 16 bits.  */
+#define   PDMC_CFGR_DATAL_8_BITS_Val          _UINT32_(0x4)                                        /* (PDMC_CFGR) Data are defined on 8 bits.  */
+#define PDMC_CFGR_DATAL_24_BITS               (PDMC_CFGR_DATAL_24_BITS_Val << PDMC_CFGR_DATAL_Pos) /* (PDMC_CFGR) Data are defined on 24 bits. Position */
+#define PDMC_CFGR_DATAL_32_BITS               (PDMC_CFGR_DATAL_32_BITS_Val << PDMC_CFGR_DATAL_Pos) /* (PDMC_CFGR) Data are defined on 32 bits. Position */
+#define PDMC_CFGR_DATAL_20_BITS               (PDMC_CFGR_DATAL_20_BITS_Val << PDMC_CFGR_DATAL_Pos) /* (PDMC_CFGR) Data are defined on 20 bits. Position */
+#define PDMC_CFGR_DATAL_16_BITS               (PDMC_CFGR_DATAL_16_BITS_Val << PDMC_CFGR_DATAL_Pos) /* (PDMC_CFGR) Data are defined on 16 bits. Position */
+#define PDMC_CFGR_DATAL_8_BITS                (PDMC_CFGR_DATAL_8_BITS_Val << PDMC_CFGR_DATAL_Pos)  /* (PDMC_CFGR) Data are defined on 8 bits. Position */
 #define PDMC_CFGR_PACK_Pos                    _UINT32_(12)                                         /* (PDMC_CFGR) Packed Data Position */
 #define PDMC_CFGR_PACK_Msk                    (_UINT32_(0x1) << PDMC_CFGR_PACK_Pos)                /* (PDMC_CFGR) Packed Data Mask */
 #define PDMC_CFGR_PACK(value)                 (PDMC_CFGR_PACK_Msk & (_UINT32_(value) << PDMC_CFGR_PACK_Pos)) /* Assignment of value for PACK in the PDMC_CFGR register */
 #define   PDMC_CFGR_PACK_0_Val                _UINT32_(0x0)                                        /* (PDMC_CFGR) Data are not packed.  */
-#define   PDMC_CFGR_PACK_1_Val                _UINT32_(0x1)                                        /* (PDMC_CFGR) Data are packed (if the DATAL configuration allows the packing).  */
+#define   PDMC_CFGR_PACK_1_Val                _UINT32_(0x1)                                        /* (PDMC_CFGR) Data are packed (if the DATAL configuration allows packing).  */
 #define PDMC_CFGR_PACK_0                      (PDMC_CFGR_PACK_0_Val << PDMC_CFGR_PACK_Pos)         /* (PDMC_CFGR) Data are not packed. Position */
-#define PDMC_CFGR_PACK_1                      (PDMC_CFGR_PACK_1_Val << PDMC_CFGR_PACK_Pos)         /* (PDMC_CFGR) Data are packed (if the DATAL configuration allows the packing). Position */
+#define PDMC_CFGR_PACK_1                      (PDMC_CFGR_PACK_1_Val << PDMC_CFGR_PACK_Pos)         /* (PDMC_CFGR) Data are packed (if the DATAL configuration allows packing). Position */
 #define PDMC_CFGR_PDMSEL0_Pos                 _UINT32_(16)                                         /* (PDMC_CFGR) PDM Microphone Source Selection Position */
 #define PDMC_CFGR_PDMSEL0_Msk                 (_UINT32_(0x1) << PDMC_CFGR_PDMSEL0_Pos)             /* (PDMC_CFGR) PDM Microphone Source Selection Mask */
 #define PDMC_CFGR_PDMSEL0(value)              (PDMC_CFGR_PDMSEL0_Msk & (_UINT32_(value) << PDMC_CFGR_PDMSEL0_Pos)) /* Assignment of value for PDMSEL0 in the PDMC_CFGR register */
-#define   PDMC_CFGR_PDMSEL0_0_Val             _UINT32_(0x0)                                        /* (PDMC_CFGR) PDMSELx corresponds to PMDC_DS0.  */
-#define   PDMC_CFGR_PDMSEL0_1_Val             _UINT32_(0x1)                                        /* (PDMC_CFGR) PDMSELx corresponds to PMDC_DS1.  */
-#define PDMC_CFGR_PDMSEL0_0                   (PDMC_CFGR_PDMSEL0_0_Val << PDMC_CFGR_PDMSEL0_Pos)   /* (PDMC_CFGR) PDMSELx corresponds to PMDC_DS0. Position */
-#define PDMC_CFGR_PDMSEL0_1                   (PDMC_CFGR_PDMSEL0_1_Val << PDMC_CFGR_PDMSEL0_Pos)   /* (PDMC_CFGR) PDMSELx corresponds to PMDC_DS1. Position */
+#define   PDMC_CFGR_PDMSEL0_DS0_Val           _UINT32_(0x0)                                        /* (PDMC_CFGR) PDMSELx corresponds to PMDC_DS0.  */
+#define   PDMC_CFGR_PDMSEL0_DS1_Val           _UINT32_(0x1)                                        /* (PDMC_CFGR) PDMSELx corresponds to PMDC_DS1.  */
+#define PDMC_CFGR_PDMSEL0_DS0                 (PDMC_CFGR_PDMSEL0_DS0_Val << PDMC_CFGR_PDMSEL0_Pos) /* (PDMC_CFGR) PDMSELx corresponds to PMDC_DS0. Position */
+#define PDMC_CFGR_PDMSEL0_DS1                 (PDMC_CFGR_PDMSEL0_DS1_Val << PDMC_CFGR_PDMSEL0_Pos) /* (PDMC_CFGR) PDMSELx corresponds to PMDC_DS1. Position */
 #define PDMC_CFGR_PDMSEL1_Pos                 _UINT32_(18)                                         /* (PDMC_CFGR) PDM Microphone Source Selection Position */
 #define PDMC_CFGR_PDMSEL1_Msk                 (_UINT32_(0x1) << PDMC_CFGR_PDMSEL1_Pos)             /* (PDMC_CFGR) PDM Microphone Source Selection Mask */
 #define PDMC_CFGR_PDMSEL1(value)              (PDMC_CFGR_PDMSEL1_Msk & (_UINT32_(value) << PDMC_CFGR_PDMSEL1_Pos)) /* Assignment of value for PDMSEL1 in the PDMC_CFGR register */
-#define   PDMC_CFGR_PDMSEL1_0_Val             _UINT32_(0x0)                                        /* (PDMC_CFGR) PDMSELx corresponds to PMDC_DS0.  */
-#define   PDMC_CFGR_PDMSEL1_1_Val             _UINT32_(0x1)                                        /* (PDMC_CFGR) PDMSELx corresponds to PMDC_DS1.  */
-#define PDMC_CFGR_PDMSEL1_0                   (PDMC_CFGR_PDMSEL1_0_Val << PDMC_CFGR_PDMSEL1_Pos)   /* (PDMC_CFGR) PDMSELx corresponds to PMDC_DS0. Position */
-#define PDMC_CFGR_PDMSEL1_1                   (PDMC_CFGR_PDMSEL1_1_Val << PDMC_CFGR_PDMSEL1_Pos)   /* (PDMC_CFGR) PDMSELx corresponds to PMDC_DS1. Position */
+#define   PDMC_CFGR_PDMSEL1_DS0_Val           _UINT32_(0x0)                                        /* (PDMC_CFGR) PDMSELx corresponds to PMDC_DS0.  */
+#define   PDMC_CFGR_PDMSEL1_DS1_Val           _UINT32_(0x1)                                        /* (PDMC_CFGR) PDMSELx corresponds to PMDC_DS1.  */
+#define PDMC_CFGR_PDMSEL1_DS0                 (PDMC_CFGR_PDMSEL1_DS0_Val << PDMC_CFGR_PDMSEL1_Pos) /* (PDMC_CFGR) PDMSELx corresponds to PMDC_DS0. Position */
+#define PDMC_CFGR_PDMSEL1_DS1                 (PDMC_CFGR_PDMSEL1_DS1_Val << PDMC_CFGR_PDMSEL1_Pos) /* (PDMC_CFGR) PDMSELx corresponds to PMDC_DS1. Position */
 #define PDMC_CFGR_PDMSEL2_Pos                 _UINT32_(20)                                         /* (PDMC_CFGR) PDM Microphone Source Selection Position */
 #define PDMC_CFGR_PDMSEL2_Msk                 (_UINT32_(0x1) << PDMC_CFGR_PDMSEL2_Pos)             /* (PDMC_CFGR) PDM Microphone Source Selection Mask */
 #define PDMC_CFGR_PDMSEL2(value)              (PDMC_CFGR_PDMSEL2_Msk & (_UINT32_(value) << PDMC_CFGR_PDMSEL2_Pos)) /* Assignment of value for PDMSEL2 in the PDMC_CFGR register */
-#define   PDMC_CFGR_PDMSEL2_0_Val             _UINT32_(0x0)                                        /* (PDMC_CFGR) PDMSELx corresponds to PMDC_DS0.  */
-#define   PDMC_CFGR_PDMSEL2_1_Val             _UINT32_(0x1)                                        /* (PDMC_CFGR) PDMSELx corresponds to PMDC_DS1.  */
-#define PDMC_CFGR_PDMSEL2_0                   (PDMC_CFGR_PDMSEL2_0_Val << PDMC_CFGR_PDMSEL2_Pos)   /* (PDMC_CFGR) PDMSELx corresponds to PMDC_DS0. Position */
-#define PDMC_CFGR_PDMSEL2_1                   (PDMC_CFGR_PDMSEL2_1_Val << PDMC_CFGR_PDMSEL2_Pos)   /* (PDMC_CFGR) PDMSELx corresponds to PMDC_DS1. Position */
+#define   PDMC_CFGR_PDMSEL2_DS0_Val           _UINT32_(0x0)                                        /* (PDMC_CFGR) PDMSELx corresponds to PMDC_DS0.  */
+#define   PDMC_CFGR_PDMSEL2_DS1_Val           _UINT32_(0x1)                                        /* (PDMC_CFGR) PDMSELx corresponds to PMDC_DS1.  */
+#define PDMC_CFGR_PDMSEL2_DS0                 (PDMC_CFGR_PDMSEL2_DS0_Val << PDMC_CFGR_PDMSEL2_Pos) /* (PDMC_CFGR) PDMSELx corresponds to PMDC_DS0. Position */
+#define PDMC_CFGR_PDMSEL2_DS1                 (PDMC_CFGR_PDMSEL2_DS1_Val << PDMC_CFGR_PDMSEL2_Pos) /* (PDMC_CFGR) PDMSELx corresponds to PMDC_DS1. Position */
 #define PDMC_CFGR_PDMSEL3_Pos                 _UINT32_(22)                                         /* (PDMC_CFGR) PDM Microphone Source Selection Position */
 #define PDMC_CFGR_PDMSEL3_Msk                 (_UINT32_(0x1) << PDMC_CFGR_PDMSEL3_Pos)             /* (PDMC_CFGR) PDM Microphone Source Selection Mask */
 #define PDMC_CFGR_PDMSEL3(value)              (PDMC_CFGR_PDMSEL3_Msk & (_UINT32_(value) << PDMC_CFGR_PDMSEL3_Pos)) /* Assignment of value for PDMSEL3 in the PDMC_CFGR register */
-#define   PDMC_CFGR_PDMSEL3_0_Val             _UINT32_(0x0)                                        /* (PDMC_CFGR) PDMSELx corresponds to PMDC_DS0.  */
-#define   PDMC_CFGR_PDMSEL3_1_Val             _UINT32_(0x1)                                        /* (PDMC_CFGR) PDMSELx corresponds to PMDC_DS1.  */
-#define PDMC_CFGR_PDMSEL3_0                   (PDMC_CFGR_PDMSEL3_0_Val << PDMC_CFGR_PDMSEL3_Pos)   /* (PDMC_CFGR) PDMSELx corresponds to PMDC_DS0. Position */
-#define PDMC_CFGR_PDMSEL3_1                   (PDMC_CFGR_PDMSEL3_1_Val << PDMC_CFGR_PDMSEL3_Pos)   /* (PDMC_CFGR) PDMSELx corresponds to PMDC_DS1. Position */
+#define   PDMC_CFGR_PDMSEL3_DS0_Val           _UINT32_(0x0)                                        /* (PDMC_CFGR) PDMSELx corresponds to PMDC_DS0.  */
+#define   PDMC_CFGR_PDMSEL3_DS1_Val           _UINT32_(0x1)                                        /* (PDMC_CFGR) PDMSELx corresponds to PMDC_DS1.  */
+#define PDMC_CFGR_PDMSEL3_DS0                 (PDMC_CFGR_PDMSEL3_DS0_Val << PDMC_CFGR_PDMSEL3_Pos) /* (PDMC_CFGR) PDMSELx corresponds to PMDC_DS0. Position */
+#define PDMC_CFGR_PDMSEL3_DS1                 (PDMC_CFGR_PDMSEL3_DS1_Val << PDMC_CFGR_PDMSEL3_Pos) /* (PDMC_CFGR) PDMSELx corresponds to PMDC_DS1. Position */
 #define PDMC_CFGR_Msk                         _UINT32_(0x00551755)                                 /* (PDMC_CFGR) Register Mask  */
 
 #define PDMC_CFGR_BSSEL_Pos                   _UINT32_(0)                                          /* (PDMC_CFGR Position) Bitstream Source Selection */
@@ -363,29 +363,29 @@
 /* -------- PDMC_ISR : (PDMC Offset: 0x20) ( R/ 32) Interrupt Status Register -------- */
 #define PDMC_ISR_RESETVALUE                   _UINT32_(0x02)                                       /*  (PDMC_ISR) Interrupt Status Register  Reset Value */
 
-#define PDMC_ISR_RXRDY_Pos                    _UINT32_(0)                                          /* (PDMC_ISR) Receive Ready Interrupt Status Position */
-#define PDMC_ISR_RXRDY_Msk                    (_UINT32_(0x1) << PDMC_ISR_RXRDY_Pos)                /* (PDMC_ISR) Receive Ready Interrupt Status Mask */
+#define PDMC_ISR_RXRDY_Pos                    _UINT32_(0)                                          /* (PDMC_ISR) Receive Ready Interrupt Status (cleared by reading PDMC_RHR) Position */
+#define PDMC_ISR_RXRDY_Msk                    (_UINT32_(0x1) << PDMC_ISR_RXRDY_Pos)                /* (PDMC_ISR) Receive Ready Interrupt Status (cleared by reading PDMC_RHR) Mask */
 #define PDMC_ISR_RXRDY(value)                 (PDMC_ISR_RXRDY_Msk & (_UINT32_(value) << PDMC_ISR_RXRDY_Pos)) /* Assignment of value for RXRDY in the PDMC_ISR register */
 #define   PDMC_ISR_RXRDY_0_Val                _UINT32_(0x0)                                        /* (PDMC_ISR) There is no data in the RX FIFO.  */
 #define   PDMC_ISR_RXRDY_1_Val                _UINT32_(0x1)                                        /* (PDMC_ISR) At least one data is in the RX FIFO and can be read through PDMC_RHR.  */
 #define PDMC_ISR_RXRDY_0                      (PDMC_ISR_RXRDY_0_Val << PDMC_ISR_RXRDY_Pos)         /* (PDMC_ISR) There is no data in the RX FIFO. Position */
 #define PDMC_ISR_RXRDY_1                      (PDMC_ISR_RXRDY_1_Val << PDMC_ISR_RXRDY_Pos)         /* (PDMC_ISR) At least one data is in the RX FIFO and can be read through PDMC_RHR. Position */
-#define PDMC_ISR_RXEMPTY_Pos                  _UINT32_(1)                                          /* (PDMC_ISR) Receive FIFO Empty Interrupt Status Position */
-#define PDMC_ISR_RXEMPTY_Msk                  (_UINT32_(0x1) << PDMC_ISR_RXEMPTY_Pos)              /* (PDMC_ISR) Receive FIFO Empty Interrupt Status Mask */
+#define PDMC_ISR_RXEMPTY_Pos                  _UINT32_(1)                                          /* (PDMC_ISR) Receive FIFO Empty Interrupt Status (automatically cleared when an audio sample is generated) Position */
+#define PDMC_ISR_RXEMPTY_Msk                  (_UINT32_(0x1) << PDMC_ISR_RXEMPTY_Pos)              /* (PDMC_ISR) Receive FIFO Empty Interrupt Status (automatically cleared when an audio sample is generated) Mask */
 #define PDMC_ISR_RXEMPTY(value)               (PDMC_ISR_RXEMPTY_Msk & (_UINT32_(value) << PDMC_ISR_RXEMPTY_Pos)) /* Assignment of value for RXEMPTY in the PDMC_ISR register */
 #define   PDMC_ISR_RXEMPTY_0_Val              _UINT32_(0x0)                                        /* (PDMC_ISR) At least one data is in the RX FIFO.  */
 #define   PDMC_ISR_RXEMPTY_1_Val              _UINT32_(0x1)                                        /* (PDMC_ISR) The RX FIFO is empty.  */
 #define PDMC_ISR_RXEMPTY_0                    (PDMC_ISR_RXEMPTY_0_Val << PDMC_ISR_RXEMPTY_Pos)     /* (PDMC_ISR) At least one data is in the RX FIFO. Position */
 #define PDMC_ISR_RXEMPTY_1                    (PDMC_ISR_RXEMPTY_1_Val << PDMC_ISR_RXEMPTY_Pos)     /* (PDMC_ISR) The RX FIFO is empty. Position */
-#define PDMC_ISR_RXFULL_Pos                   _UINT32_(2)                                          /* (PDMC_ISR) Receive FIFO Full Interrupt Status Position */
-#define PDMC_ISR_RXFULL_Msk                   (_UINT32_(0x1) << PDMC_ISR_RXFULL_Pos)               /* (PDMC_ISR) Receive FIFO Full Interrupt Status Mask */
+#define PDMC_ISR_RXFULL_Pos                   _UINT32_(2)                                          /* (PDMC_ISR) Receive FIFO Full Interrupt Status (cleared by reading PDMC_RHR) Position */
+#define PDMC_ISR_RXFULL_Msk                   (_UINT32_(0x1) << PDMC_ISR_RXFULL_Pos)               /* (PDMC_ISR) Receive FIFO Full Interrupt Status (cleared by reading PDMC_RHR) Mask */
 #define PDMC_ISR_RXFULL(value)                (PDMC_ISR_RXFULL_Msk & (_UINT32_(value) << PDMC_ISR_RXFULL_Pos)) /* Assignment of value for RXFULL in the PDMC_ISR register */
 #define   PDMC_ISR_RXFULL_0_Val               _UINT32_(0x0)                                        /* (PDMC_ISR) The RX FIFO is not full and can still receive data.  */
 #define   PDMC_ISR_RXFULL_1_Val               _UINT32_(0x1)                                        /* (PDMC_ISR) The RX FIFO is full and cannot receive more data.  */
 #define PDMC_ISR_RXFULL_0                     (PDMC_ISR_RXFULL_0_Val << PDMC_ISR_RXFULL_Pos)       /* (PDMC_ISR) The RX FIFO is not full and can still receive data. Position */
 #define PDMC_ISR_RXFULL_1                     (PDMC_ISR_RXFULL_1_Val << PDMC_ISR_RXFULL_Pos)       /* (PDMC_ISR) The RX FIFO is full and cannot receive more data. Position */
-#define PDMC_ISR_RXCHUNK_Pos                  _UINT32_(3)                                          /* (PDMC_ISR) Receive FIFO Chunk Interrupt Status Position */
-#define PDMC_ISR_RXCHUNK_Msk                  (_UINT32_(0x1) << PDMC_ISR_RXCHUNK_Pos)              /* (PDMC_ISR) Receive FIFO Chunk Interrupt Status Mask */
+#define PDMC_ISR_RXCHUNK_Pos                  _UINT32_(3)                                          /* (PDMC_ISR) Receive FIFO Chunk Interrupt Status (cleared by reading PDMC_RHR) Position */
+#define PDMC_ISR_RXCHUNK_Msk                  (_UINT32_(0x1) << PDMC_ISR_RXCHUNK_Pos)              /* (PDMC_ISR) Receive FIFO Chunk Interrupt Status (cleared by reading PDMC_RHR) Mask */
 #define PDMC_ISR_RXCHUNK(value)               (PDMC_ISR_RXCHUNK_Msk & (_UINT32_(value) << PDMC_ISR_RXCHUNK_Pos)) /* Assignment of value for RXCHUNK in the PDMC_ISR register */
 #define   PDMC_ISR_RXCHUNK_0_Val              _UINT32_(0x0)                                        /* (PDMC_ISR) There is less than PDMC_MR.CHUNK data in the RX FIFO.  */
 #define   PDMC_ISR_RXCHUNK_1_Val              _UINT32_(0x1)                                        /* (PDMC_ISR) At least PDMC_MR.CHUNK data can be read in the RX FIFO.  */
@@ -405,29 +405,29 @@
 #define   PDMC_ISR_RXOVR_1_Val                _UINT32_(0x1)                                        /* (PDMC_ISR) At least one overflow event occurred since the last read of PDMC_ISR.  */
 #define PDMC_ISR_RXOVR_0                      (PDMC_ISR_RXOVR_0_Val << PDMC_ISR_RXOVR_Pos)         /* (PDMC_ISR) No overflow event occurred since the last read of PDMC_ISR. Position */
 #define PDMC_ISR_RXOVR_1                      (PDMC_ISR_RXOVR_1_Val << PDMC_ISR_RXOVR_Pos)         /* (PDMC_ISR) At least one overflow event occurred since the last read of PDMC_ISR. Position */
-#define PDMC_ISR_SAT0_Pos                     _UINT32_(8)                                          /* (PDMC_ISR) Saturation Detection on Channel 0 Interrupt Status Position */
-#define PDMC_ISR_SAT0_Msk                     (_UINT32_(0x1) << PDMC_ISR_SAT0_Pos)                 /* (PDMC_ISR) Saturation Detection on Channel 0 Interrupt Status Mask */
+#define PDMC_ISR_SAT0_Pos                     _UINT32_(8)                                          /* (PDMC_ISR) Saturation Detection on Channel 0 Interrupt Status (cleared on read) Position */
+#define PDMC_ISR_SAT0_Msk                     (_UINT32_(0x1) << PDMC_ISR_SAT0_Pos)                 /* (PDMC_ISR) Saturation Detection on Channel 0 Interrupt Status (cleared on read) Mask */
 #define PDMC_ISR_SAT0(value)                  (PDMC_ISR_SAT0_Msk & (_UINT32_(value) << PDMC_ISR_SAT0_Pos)) /* Assignment of value for SAT0 in the PDMC_ISR register */
 #define   PDMC_ISR_SAT0_0_Val                 _UINT32_(0x0)                                        /* (PDMC_ISR) No saturation event has occurred on channel x since the last read of PDMC_ISR.  */
 #define   PDMC_ISR_SAT0_1_Val                 _UINT32_(0x1)                                        /* (PDMC_ISR) One or more saturation event has occurred on channel x since the last read of PDMC_ISR.  */
 #define PDMC_ISR_SAT0_0                       (PDMC_ISR_SAT0_0_Val << PDMC_ISR_SAT0_Pos)           /* (PDMC_ISR) No saturation event has occurred on channel x since the last read of PDMC_ISR. Position */
 #define PDMC_ISR_SAT0_1                       (PDMC_ISR_SAT0_1_Val << PDMC_ISR_SAT0_Pos)           /* (PDMC_ISR) One or more saturation event has occurred on channel x since the last read of PDMC_ISR. Position */
-#define PDMC_ISR_SAT1_Pos                     _UINT32_(9)                                          /* (PDMC_ISR) Saturation Detection on Channel 1 Interrupt Status Position */
-#define PDMC_ISR_SAT1_Msk                     (_UINT32_(0x1) << PDMC_ISR_SAT1_Pos)                 /* (PDMC_ISR) Saturation Detection on Channel 1 Interrupt Status Mask */
+#define PDMC_ISR_SAT1_Pos                     _UINT32_(9)                                          /* (PDMC_ISR) Saturation Detection on Channel 1 Interrupt Status (cleared on read) Position */
+#define PDMC_ISR_SAT1_Msk                     (_UINT32_(0x1) << PDMC_ISR_SAT1_Pos)                 /* (PDMC_ISR) Saturation Detection on Channel 1 Interrupt Status (cleared on read) Mask */
 #define PDMC_ISR_SAT1(value)                  (PDMC_ISR_SAT1_Msk & (_UINT32_(value) << PDMC_ISR_SAT1_Pos)) /* Assignment of value for SAT1 in the PDMC_ISR register */
 #define   PDMC_ISR_SAT1_0_Val                 _UINT32_(0x0)                                        /* (PDMC_ISR) No saturation event has occurred on channel x since the last read of PDMC_ISR.  */
 #define   PDMC_ISR_SAT1_1_Val                 _UINT32_(0x1)                                        /* (PDMC_ISR) One or more saturation event has occurred on channel x since the last read of PDMC_ISR.  */
 #define PDMC_ISR_SAT1_0                       (PDMC_ISR_SAT1_0_Val << PDMC_ISR_SAT1_Pos)           /* (PDMC_ISR) No saturation event has occurred on channel x since the last read of PDMC_ISR. Position */
 #define PDMC_ISR_SAT1_1                       (PDMC_ISR_SAT1_1_Val << PDMC_ISR_SAT1_Pos)           /* (PDMC_ISR) One or more saturation event has occurred on channel x since the last read of PDMC_ISR. Position */
-#define PDMC_ISR_SAT2_Pos                     _UINT32_(10)                                         /* (PDMC_ISR) Saturation Detection on Channel 2 Interrupt Status Position */
-#define PDMC_ISR_SAT2_Msk                     (_UINT32_(0x1) << PDMC_ISR_SAT2_Pos)                 /* (PDMC_ISR) Saturation Detection on Channel 2 Interrupt Status Mask */
+#define PDMC_ISR_SAT2_Pos                     _UINT32_(10)                                         /* (PDMC_ISR) Saturation Detection on Channel 2 Interrupt Status (cleared on read) Position */
+#define PDMC_ISR_SAT2_Msk                     (_UINT32_(0x1) << PDMC_ISR_SAT2_Pos)                 /* (PDMC_ISR) Saturation Detection on Channel 2 Interrupt Status (cleared on read) Mask */
 #define PDMC_ISR_SAT2(value)                  (PDMC_ISR_SAT2_Msk & (_UINT32_(value) << PDMC_ISR_SAT2_Pos)) /* Assignment of value for SAT2 in the PDMC_ISR register */
 #define   PDMC_ISR_SAT2_0_Val                 _UINT32_(0x0)                                        /* (PDMC_ISR) No saturation event has occurred on channel x since the last read of PDMC_ISR.  */
 #define   PDMC_ISR_SAT2_1_Val                 _UINT32_(0x1)                                        /* (PDMC_ISR) One or more saturation event has occurred on channel x since the last read of PDMC_ISR.  */
 #define PDMC_ISR_SAT2_0                       (PDMC_ISR_SAT2_0_Val << PDMC_ISR_SAT2_Pos)           /* (PDMC_ISR) No saturation event has occurred on channel x since the last read of PDMC_ISR. Position */
 #define PDMC_ISR_SAT2_1                       (PDMC_ISR_SAT2_1_Val << PDMC_ISR_SAT2_Pos)           /* (PDMC_ISR) One or more saturation event has occurred on channel x since the last read of PDMC_ISR. Position */
-#define PDMC_ISR_SAT3_Pos                     _UINT32_(11)                                         /* (PDMC_ISR) Saturation Detection on Channel 3 Interrupt Status Position */
-#define PDMC_ISR_SAT3_Msk                     (_UINT32_(0x1) << PDMC_ISR_SAT3_Pos)                 /* (PDMC_ISR) Saturation Detection on Channel 3 Interrupt Status Mask */
+#define PDMC_ISR_SAT3_Pos                     _UINT32_(11)                                         /* (PDMC_ISR) Saturation Detection on Channel 3 Interrupt Status (cleared on read) Position */
+#define PDMC_ISR_SAT3_Msk                     (_UINT32_(0x1) << PDMC_ISR_SAT3_Pos)                 /* (PDMC_ISR) Saturation Detection on Channel 3 Interrupt Status (cleared on read) Mask */
 #define PDMC_ISR_SAT3(value)                  (PDMC_ISR_SAT3_Msk & (_UINT32_(value) << PDMC_ISR_SAT3_Pos)) /* Assignment of value for SAT3 in the PDMC_ISR register */
 #define   PDMC_ISR_SAT3_0_Val                 _UINT32_(0x0)                                        /* (PDMC_ISR) No saturation event has occurred on channel x since the last read of PDMC_ISR.  */
 #define   PDMC_ISR_SAT3_1_Val                 _UINT32_(0x1)                                        /* (PDMC_ISR) One or more saturation event has occurred on channel x since the last read of PDMC_ISR.  */
@@ -436,13 +436,13 @@
 #define PDMC_ISR_WPERR_Pos                    _UINT32_(28)                                         /* (PDMC_ISR) Write Protect Event Interrupt Status (cleared on read) Position */
 #define PDMC_ISR_WPERR_Msk                    (_UINT32_(0x1) << PDMC_ISR_WPERR_Pos)                /* (PDMC_ISR) Write Protect Event Interrupt Status (cleared on read) Mask */
 #define PDMC_ISR_WPERR(value)                 (PDMC_ISR_WPERR_Msk & (_UINT32_(value) << PDMC_ISR_WPERR_Pos)) /* Assignment of value for WPERR in the PDMC_ISR register */
-#define   PDMC_ISR_WPERR_0_Val                _UINT32_(0x0)                                        /* (PDMC_ISR) No write protect event has occurred since the last read of PDMC_ISR.  */
-#define   PDMC_ISR_WPERR_1_Val                _UINT32_(0x1)                                        /* (PDMC_ISR) One or more write protect event occurred since the last read of PDMC_ISR. For details on the event, see PDMC Write Protection Status Register.  */
-#define PDMC_ISR_WPERR_0                      (PDMC_ISR_WPERR_0_Val << PDMC_ISR_WPERR_Pos)         /* (PDMC_ISR) No write protect event has occurred since the last read of PDMC_ISR. Position */
-#define PDMC_ISR_WPERR_1                      (PDMC_ISR_WPERR_1_Val << PDMC_ISR_WPERR_Pos)         /* (PDMC_ISR) One or more write protect event occurred since the last read of PDMC_ISR. For details on the event, see PDMC Write Protection Status Register. Position */
+#define   PDMC_ISR_WPERR_0_Val                _UINT32_(0x0)                                        /* (PDMC_ISR) No security event has occurred since the last read of PDMC_ISR.  */
+#define   PDMC_ISR_WPERR_1_Val                _UINT32_(0x1)                                        /* (PDMC_ISR) One or more security events occurred since the last read of PDMC_ISR. For details on the event(s), see PDMC Write Protection Status Register.  */
+#define PDMC_ISR_WPERR_0                      (PDMC_ISR_WPERR_0_Val << PDMC_ISR_WPERR_Pos)         /* (PDMC_ISR) No security event has occurred since the last read of PDMC_ISR. Position */
+#define PDMC_ISR_WPERR_1                      (PDMC_ISR_WPERR_1_Val << PDMC_ISR_WPERR_Pos)         /* (PDMC_ISR) One or more security events occurred since the last read of PDMC_ISR. For details on the event(s), see PDMC Write Protection Status Register. Position */
 #define PDMC_ISR_Msk                          _UINT32_(0x10000F3F)                                 /* (PDMC_ISR) Register Mask  */
 
-#define PDMC_ISR_SAT_Pos                      _UINT32_(8)                                          /* (PDMC_ISR Position) Saturation Detection on Channel x Interrupt Status */
+#define PDMC_ISR_SAT_Pos                      _UINT32_(8)                                          /* (PDMC_ISR Position) Saturation Detection on Channel x Interrupt Status (cleared on read) */
 #define PDMC_ISR_SAT_Msk                      (_UINT32_(0xF) << PDMC_ISR_SAT_Pos)                  /* (PDMC_ISR Mask) SAT */
 #define PDMC_ISR_SAT(value)                   (PDMC_ISR_SAT_Msk & (_UINT32_(value) << PDMC_ISR_SAT_Pos)) 
 
@@ -456,15 +456,15 @@
 #define   PDMC_WPMR_WPEN_1_Val                _UINT32_(0x1)                                        /* (PDMC_WPMR) Enables write protection if WPKEY corresponds to 0x50444D ("PDM" in ASCII).  */
 #define PDMC_WPMR_WPEN_0                      (PDMC_WPMR_WPEN_0_Val << PDMC_WPMR_WPEN_Pos)         /* (PDMC_WPMR) Disables write protection if WPKEY corresponds to 0x50444D ("PDM" in ASCII). Position */
 #define PDMC_WPMR_WPEN_1                      (PDMC_WPMR_WPEN_1_Val << PDMC_WPMR_WPEN_Pos)         /* (PDMC_WPMR) Enables write protection if WPKEY corresponds to 0x50444D ("PDM" in ASCII). Position */
-#define PDMC_WPMR_WPITEN_Pos                  _UINT32_(1)                                          /* (PDMC_WPMR) Write Protection Enable for Interrupt Registers Position */
-#define PDMC_WPMR_WPITEN_Msk                  (_UINT32_(0x1) << PDMC_WPMR_WPITEN_Pos)              /* (PDMC_WPMR) Write Protection Enable for Interrupt Registers Mask */
+#define PDMC_WPMR_WPITEN_Pos                  _UINT32_(1)                                          /* (PDMC_WPMR) Write Protection Enable for Interrupt Position */
+#define PDMC_WPMR_WPITEN_Msk                  (_UINT32_(0x1) << PDMC_WPMR_WPITEN_Pos)              /* (PDMC_WPMR) Write Protection Enable for Interrupt Mask */
 #define PDMC_WPMR_WPITEN(value)               (PDMC_WPMR_WPITEN_Msk & (_UINT32_(value) << PDMC_WPMR_WPITEN_Pos)) /* Assignment of value for WPITEN in the PDMC_WPMR register */
 #define   PDMC_WPMR_WPITEN_0_Val              _UINT32_(0x0)                                        /* (PDMC_WPMR) Disables the write protection on interrupt registers if WPKEY corresponds to 0x50444D ("PDM" in ASCII).  */
 #define   PDMC_WPMR_WPITEN_1_Val              _UINT32_(0x1)                                        /* (PDMC_WPMR) Enables the write protection on interrupt registers if WPKEY corresponds to 0x50444D ("PDM" in ASCII).  */
 #define PDMC_WPMR_WPITEN_0                    (PDMC_WPMR_WPITEN_0_Val << PDMC_WPMR_WPITEN_Pos)     /* (PDMC_WPMR) Disables the write protection on interrupt registers if WPKEY corresponds to 0x50444D ("PDM" in ASCII). Position */
 #define PDMC_WPMR_WPITEN_1                    (PDMC_WPMR_WPITEN_1_Val << PDMC_WPMR_WPITEN_Pos)     /* (PDMC_WPMR) Enables the write protection on interrupt registers if WPKEY corresponds to 0x50444D ("PDM" in ASCII). Position */
-#define PDMC_WPMR_WPCREN_Pos                  _UINT32_(2)                                          /* (PDMC_WPMR) Write Protection Enable for Control Registers Position */
-#define PDMC_WPMR_WPCREN_Msk                  (_UINT32_(0x1) << PDMC_WPMR_WPCREN_Pos)              /* (PDMC_WPMR) Write Protection Enable for Control Registers Mask */
+#define PDMC_WPMR_WPCREN_Pos                  _UINT32_(2)                                          /* (PDMC_WPMR) Write Protection Enable for Control Register Position */
+#define PDMC_WPMR_WPCREN_Msk                  (_UINT32_(0x1) << PDMC_WPMR_WPCREN_Pos)              /* (PDMC_WPMR) Write Protection Enable for Control Register Mask */
 #define PDMC_WPMR_WPCREN(value)               (PDMC_WPMR_WPCREN_Msk & (_UINT32_(value) << PDMC_WPMR_WPCREN_Pos)) /* Assignment of value for WPCREN in the PDMC_WPMR register */
 #define   PDMC_WPMR_WPCREN_0_Val              _UINT32_(0x0)                                        /* (PDMC_WPMR) Disables the write protection on control registers if WPKEY corresponds to 0x50444D ("PDM" in ASCII).  */
 #define   PDMC_WPMR_WPCREN_1_Val              _UINT32_(0x1)                                        /* (PDMC_WPMR) Enables the write protection on control registers if WPKEY corresponds to 0x50444D ("PDM" in ASCII).  */
@@ -488,15 +488,15 @@
 /* -------- PDMC_WPSR : (PDMC Offset: 0x30) ( R/ 32) Write Protection Status Register -------- */
 #define PDMC_WPSR_RESETVALUE                  _UINT32_(0x00)                                       /*  (PDMC_WPSR) Write Protection Status Register  Reset Value */
 
-#define PDMC_WPSR_WPVS_Pos                    _UINT32_(0)                                          /* (PDMC_WPSR) Write Protection Violation Status Position */
-#define PDMC_WPSR_WPVS_Msk                    (_UINT32_(0x1) << PDMC_WPSR_WPVS_Pos)                /* (PDMC_WPSR) Write Protection Violation Status Mask */
+#define PDMC_WPSR_WPVS_Pos                    _UINT32_(0)                                          /* (PDMC_WPSR) Write Protection Violation Status (cleared on read) Position */
+#define PDMC_WPSR_WPVS_Msk                    (_UINT32_(0x1) << PDMC_WPSR_WPVS_Pos)                /* (PDMC_WPSR) Write Protection Violation Status (cleared on read) Mask */
 #define PDMC_WPSR_WPVS(value)                 (PDMC_WPSR_WPVS_Msk & (_UINT32_(value) << PDMC_WPSR_WPVS_Pos)) /* Assignment of value for WPVS in the PDMC_WPSR register */
 #define   PDMC_WPSR_WPVS_0_Val                _UINT32_(0x0)                                        /* (PDMC_WPSR) No write protection violation has occurred since the last read of PDMC_WPSR.  */
-#define   PDMC_WPSR_WPVS_1_Val                _UINT32_(0x1)                                        /* (PDMC_WPSR) A write protection violation has occurred since the last read of PDMC_WPSR. If this violation is an unauthorized attempt to write a protected register, the associated violation is reported into field WPSRC.  */
+#define   PDMC_WPSR_WPVS_1_Val                _UINT32_(0x1)                                        /* (PDMC_WPSR) A write protection violation has occurred since the last read of PDMC_WPSR. If this violation is an unauthorized attempt to write a protected register, the associated violation is reported into the field WPSRC.  */
 #define PDMC_WPSR_WPVS_0                      (PDMC_WPSR_WPVS_0_Val << PDMC_WPSR_WPVS_Pos)         /* (PDMC_WPSR) No write protection violation has occurred since the last read of PDMC_WPSR. Position */
-#define PDMC_WPSR_WPVS_1                      (PDMC_WPSR_WPVS_1_Val << PDMC_WPSR_WPVS_Pos)         /* (PDMC_WPSR) A write protection violation has occurred since the last read of PDMC_WPSR. If this violation is an unauthorized attempt to write a protected register, the associated violation is reported into field WPSRC. Position */
-#define PDMC_WPSR_SEQE_Pos                    _UINT32_(2)                                          /* (PDMC_WPSR) Internal Sequencer Error Position */
-#define PDMC_WPSR_SEQE_Msk                    (_UINT32_(0x1) << PDMC_WPSR_SEQE_Pos)                /* (PDMC_WPSR) Internal Sequencer Error Mask */
+#define PDMC_WPSR_WPVS_1                      (PDMC_WPSR_WPVS_1_Val << PDMC_WPSR_WPVS_Pos)         /* (PDMC_WPSR) A write protection violation has occurred since the last read of PDMC_WPSR. If this violation is an unauthorized attempt to write a protected register, the associated violation is reported into the field WPSRC. Position */
+#define PDMC_WPSR_SEQE_Pos                    _UINT32_(2)                                          /* (PDMC_WPSR) Internal Sequencer Error (cleared on read) Position */
+#define PDMC_WPSR_SEQE_Msk                    (_UINT32_(0x1) << PDMC_WPSR_SEQE_Pos)                /* (PDMC_WPSR) Internal Sequencer Error (cleared on read) Mask */
 #define PDMC_WPSR_SEQE(value)                 (PDMC_WPSR_SEQE_Msk & (_UINT32_(value) << PDMC_WPSR_SEQE_Pos)) /* Assignment of value for SEQE in the PDMC_WPSR register */
 #define   PDMC_WPSR_SEQE_0_Val                _UINT32_(0x0)                                        /* (PDMC_WPSR) No peripheral internal sequencer error has occurred since the last read of PDMC_WPSR.  */
 #define   PDMC_WPSR_SEQE_1_Val                _UINT32_(0x1)                                        /* (PDMC_WPSR) A peripheral internal sequencer error has occurred since the last read of PDMC_WPSR.  */
@@ -506,84 +506,78 @@
 #define PDMC_WPSR_SWE_Msk                     (_UINT32_(0x1) << PDMC_WPSR_SWE_Pos)                 /* (PDMC_WPSR) Software Control Error (cleared on read) Mask */
 #define PDMC_WPSR_SWE(value)                  (PDMC_WPSR_SWE_Msk & (_UINT32_(value) << PDMC_WPSR_SWE_Pos)) /* Assignment of value for SWE in the PDMC_WPSR register */
 #define   PDMC_WPSR_SWE_0_Val                 _UINT32_(0x0)                                        /* (PDMC_WPSR) No software error has occurred since the last read of PDMC_WPSR.  */
-#define   PDMC_WPSR_SWE_1_Val                 _UINT32_(0x1)                                        /* (PDMC_WPSR) A software error has occurred since the last read of PDMC_WPSR. SWETYP details the type of software error; the associated incorrect software access is reported in WPSRC (if WPVS=0).  */
+#define   PDMC_WPSR_SWE_1_Val                 _UINT32_(0x1)                                        /* (PDMC_WPSR) A software error has occurred since the last read of PDMC_WPSR. SWETYP provides details on the type of software error. The associated incorrect software access is reported in WPSRC (if WPVS=0).  */
 #define PDMC_WPSR_SWE_0                       (PDMC_WPSR_SWE_0_Val << PDMC_WPSR_SWE_Pos)           /* (PDMC_WPSR) No software error has occurred since the last read of PDMC_WPSR. Position */
-#define PDMC_WPSR_SWE_1                       (PDMC_WPSR_SWE_1_Val << PDMC_WPSR_SWE_Pos)           /* (PDMC_WPSR) A software error has occurred since the last read of PDMC_WPSR. SWETYP details the type of software error; the associated incorrect software access is reported in WPSRC (if WPVS=0). Position */
-#define PDMC_WPSR_NCE_Pos                     _UINT32_(4)                                          /* (PDMC_WPSR) Non Corrected Error (cleared by reconfiguring the faulty registers or by clearing the error via PDMC_FIR) Position */
-#define PDMC_WPSR_NCE_Msk                     (_UINT32_(0x3) << PDMC_WPSR_NCE_Pos)                 /* (PDMC_WPSR) Non Corrected Error (cleared by reconfiguring the faulty registers or by clearing the error via PDMC_FIR) Mask */
+#define PDMC_WPSR_SWE_1                       (PDMC_WPSR_SWE_1_Val << PDMC_WPSR_SWE_Pos)           /* (PDMC_WPSR) A software error has occurred since the last read of PDMC_WPSR. SWETYP provides details on the type of software error. The associated incorrect software access is reported in WPSRC (if WPVS=0). Position */
+#define PDMC_WPSR_NCE_Pos                     _UINT32_(4)                                          /* (PDMC_WPSR) Non-Corrected Error (cleared by reconfiguring the faulty registers) Position */
+#define PDMC_WPSR_NCE_Msk                     (_UINT32_(0x3) << PDMC_WPSR_NCE_Pos)                 /* (PDMC_WPSR) Non-Corrected Error (cleared by reconfiguring the faulty registers) Mask */
 #define PDMC_WPSR_NCE(value)                  (PDMC_WPSR_NCE_Msk & (_UINT32_(value) << PDMC_WPSR_NCE_Pos)) /* Assignment of value for NCE in the PDMC_WPSR register */
 #define   PDMC_WPSR_NCE_0_Val                 _UINT32_(0x0)                                        /* (PDMC_WPSR) No error is detected in the configuration registers.  */
-#define   PDMC_WPSR_NCE_1_Val                 _UINT32_(0x1)                                        /* (PDMC_WPSR) An error is detected in PDMC_MR, PDMC_CFGR or PDMC_IMR.  */
 #define PDMC_WPSR_NCE_0                       (PDMC_WPSR_NCE_0_Val << PDMC_WPSR_NCE_Pos)           /* (PDMC_WPSR) No error is detected in the configuration registers. Position */
-#define PDMC_WPSR_NCE_1                       (PDMC_WPSR_NCE_1_Val << PDMC_WPSR_NCE_Pos)           /* (PDMC_WPSR) An error is detected in PDMC_MR, PDMC_CFGR or PDMC_IMR. Position */
 #define PDMC_WPSR_WPSRC_Pos                   _UINT32_(8)                                          /* (PDMC_WPSR) Write Protection Source Position */
 #define PDMC_WPSR_WPSRC_Msk                   (_UINT32_(0xFFFF) << PDMC_WPSR_WPSRC_Pos)            /* (PDMC_WPSR) Write Protection Source Mask */
 #define PDMC_WPSR_WPSRC(value)                (PDMC_WPSR_WPSRC_Msk & (_UINT32_(value) << PDMC_WPSR_WPSRC_Pos)) /* Assignment of value for WPSRC in the PDMC_WPSR register */
 #define PDMC_WPSR_SWETYP_Pos                  _UINT32_(24)                                         /* (PDMC_WPSR) Software Error Type (cleared on read) Position */
 #define PDMC_WPSR_SWETYP_Msk                  (_UINT32_(0x7) << PDMC_WPSR_SWETYP_Pos)              /* (PDMC_WPSR) Software Error Type (cleared on read) Mask */
 #define PDMC_WPSR_SWETYP(value)               (PDMC_WPSR_SWETYP_Msk & (_UINT32_(value) << PDMC_WPSR_SWETYP_Pos)) /* Assignment of value for SWETYP in the PDMC_WPSR register */
-#define   PDMC_WPSR_SWETYP_READ_WO_Val        _UINT32_(0x0)                                        /* (PDMC_WPSR) A write-only register has been read (warning).  */
-#define   PDMC_WPSR_SWETYP_WRITE_RO_Val       _UINT32_(0x1)                                        /* (PDMC_WPSR) A write access has been performed on a read-only register (warning).  */
-#define   PDMC_WPSR_SWETYP_UNDEF_RW_Val       _UINT32_(0x2)                                        /* (PDMC_WPSR) Access to an undefined address (warning).  */
-#define PDMC_WPSR_SWETYP_READ_WO              (PDMC_WPSR_SWETYP_READ_WO_Val << PDMC_WPSR_SWETYP_Pos) /* (PDMC_WPSR) A write-only register has been read (warning). Position */
-#define PDMC_WPSR_SWETYP_WRITE_RO             (PDMC_WPSR_SWETYP_WRITE_RO_Val << PDMC_WPSR_SWETYP_Pos) /* (PDMC_WPSR) A write access has been performed on a read-only register (warning). Position */
-#define PDMC_WPSR_SWETYP_UNDEF_RW             (PDMC_WPSR_SWETYP_UNDEF_RW_Val << PDMC_WPSR_SWETYP_Pos) /* (PDMC_WPSR) Access to an undefined address (warning). Position */
+#define   PDMC_WPSR_SWETYP_READ_WO_Val        _UINT32_(0x0)                                        /* (PDMC_WPSR) A write-only register has been read.  */
+#define   PDMC_WPSR_SWETYP_WRITE_RO_Val       _UINT32_(0x1)                                        /* (PDMC_WPSR) A write access has been performed on a read-only register.  */
+#define   PDMC_WPSR_SWETYP_UNDEF_RW_Val       _UINT32_(0x2)                                        /* (PDMC_WPSR) Access to an undefined address.  */
+#define PDMC_WPSR_SWETYP_READ_WO              (PDMC_WPSR_SWETYP_READ_WO_Val << PDMC_WPSR_SWETYP_Pos) /* (PDMC_WPSR) A write-only register has been read. Position */
+#define PDMC_WPSR_SWETYP_WRITE_RO             (PDMC_WPSR_SWETYP_WRITE_RO_Val << PDMC_WPSR_SWETYP_Pos) /* (PDMC_WPSR) A write access has been performed on a read-only register. Position */
+#define PDMC_WPSR_SWETYP_UNDEF_RW             (PDMC_WPSR_SWETYP_UNDEF_RW_Val << PDMC_WPSR_SWETYP_Pos) /* (PDMC_WPSR) Access to an undefined address. Position */
 #define PDMC_WPSR_Msk                         _UINT32_(0x07FFFF3D)                                 /* (PDMC_WPSR) Register Mask  */
 
 
 /* -------- PDMC_FIR : (PDMC Offset: 0x38) (R/W 32) Fault Injection Register -------- */
 #define PDMC_FIR_RESETVALUE                   _UINT32_(0x00)                                       /*  (PDMC_FIR) Fault Injection Register  Reset Value */
 
-#define PDMC_FIR_F0_Pos                       _UINT32_(0)                                          /* (PDMC_FIR) Single Fault for Mode Registers (PDMC_MR) Position */
-#define PDMC_FIR_F0_Msk                       (_UINT32_(0x1) << PDMC_FIR_F0_Pos)                   /* (PDMC_FIR) Single Fault for Mode Registers (PDMC_MR) Mask */
+#define PDMC_FIR_F0_Pos                       _UINT32_(0)                                          /* (PDMC_FIR) Single Fault for Mode Register (PDMC_MR) Position */
+#define PDMC_FIR_F0_Msk                       (_UINT32_(0x1) << PDMC_FIR_F0_Pos)                   /* (PDMC_FIR) Single Fault for Mode Register (PDMC_MR) Mask */
 #define PDMC_FIR_F0(value)                    (PDMC_FIR_F0_Msk & (_UINT32_(value) << PDMC_FIR_F0_Pos)) /* Assignment of value for F0 in the PDMC_FIR register */
 #define   PDMC_FIR_F0_0_Val                   _UINT32_(0x0)                                        /* (PDMC_FIR) No effect.  */
-#define   PDMC_FIR_F0_1_Val                   _UINT32_(0x1)                                        /* (PDMC_FIR) Creates a single fault in the error detection circuitry of PDMC_MR (the configuration is not modified) which triggers the PDMC_WPSR.NCE to '1'.  */
+#define   PDMC_FIR_F0_1_Val                   _UINT32_(0x1)                                        /* (PDMC_FIR) Creates a single fault in the error detection circuitry of PDMC_MR (the configuration is not modified) which triggers PDMC_WPSR.NCE to '3'.  */
 #define PDMC_FIR_F0_0                         (PDMC_FIR_F0_0_Val << PDMC_FIR_F0_Pos)               /* (PDMC_FIR) No effect. Position */
-#define PDMC_FIR_F0_1                         (PDMC_FIR_F0_1_Val << PDMC_FIR_F0_Pos)               /* (PDMC_FIR) Creates a single fault in the error detection circuitry of PDMC_MR (the configuration is not modified) which triggers the PDMC_WPSR.NCE to '1'. Position */
+#define PDMC_FIR_F0_1                         (PDMC_FIR_F0_1_Val << PDMC_FIR_F0_Pos)               /* (PDMC_FIR) Creates a single fault in the error detection circuitry of PDMC_MR (the configuration is not modified) which triggers PDMC_WPSR.NCE to '3'. Position */
 #define PDMC_FIR_F1_Pos                       _UINT32_(1)                                          /* (PDMC_FIR) Single Fault for Configuration Register (PDMC_CFGR) Position */
 #define PDMC_FIR_F1_Msk                       (_UINT32_(0x1) << PDMC_FIR_F1_Pos)                   /* (PDMC_FIR) Single Fault for Configuration Register (PDMC_CFGR) Mask */
 #define PDMC_FIR_F1(value)                    (PDMC_FIR_F1_Msk & (_UINT32_(value) << PDMC_FIR_F1_Pos)) /* Assignment of value for F1 in the PDMC_FIR register */
 #define   PDMC_FIR_F1_0_Val                   _UINT32_(0x0)                                        /* (PDMC_FIR) No effect.  */
-#define   PDMC_FIR_F1_1_Val                   _UINT32_(0x1)                                        /* (PDMC_FIR) Creates a single fault in the error detection circuitry of PDMC_CFGR (the configuration is not modified) which triggers the PDMC_WPSR.NCE to '1'.  */
+#define   PDMC_FIR_F1_1_Val                   _UINT32_(0x1)                                        /* (PDMC_FIR) Creates a single fault in the error detection circuitry of PDMC_CFGR (the configuration is not modified) which triggers PDMC_WPSR.NCE to '3'.  */
 #define PDMC_FIR_F1_0                         (PDMC_FIR_F1_0_Val << PDMC_FIR_F1_Pos)               /* (PDMC_FIR) No effect. Position */
-#define PDMC_FIR_F1_1                         (PDMC_FIR_F1_1_Val << PDMC_FIR_F1_Pos)               /* (PDMC_FIR) Creates a single fault in the error detection circuitry of PDMC_CFGR (the configuration is not modified) which triggers the PDMC_WPSR.NCE to '1'. Position */
+#define PDMC_FIR_F1_1                         (PDMC_FIR_F1_1_Val << PDMC_FIR_F1_Pos)               /* (PDMC_FIR) Creates a single fault in the error detection circuitry of PDMC_CFGR (the configuration is not modified) which triggers PDMC_WPSR.NCE to '3'. Position */
 #define PDMC_FIR_F2_Pos                       _UINT32_(2)                                          /* (PDMC_FIR) Single Fault for Interrupt Mask Register (PDMC_IMR) Position */
 #define PDMC_FIR_F2_Msk                       (_UINT32_(0x1) << PDMC_FIR_F2_Pos)                   /* (PDMC_FIR) Single Fault for Interrupt Mask Register (PDMC_IMR) Mask */
 #define PDMC_FIR_F2(value)                    (PDMC_FIR_F2_Msk & (_UINT32_(value) << PDMC_FIR_F2_Pos)) /* Assignment of value for F2 in the PDMC_FIR register */
 #define   PDMC_FIR_F2_0_Val                   _UINT32_(0x0)                                        /* (PDMC_FIR) No effect.  */
-#define   PDMC_FIR_F2_1_Val                   _UINT32_(0x1)                                        /* (PDMC_FIR) Creates a single fault in the error detection circuitry of PDMC_IMR (the configuration is not modified) which triggers the PDMC_WPSR.NCE to '1'.  */
+#define   PDMC_FIR_F2_1_Val                   _UINT32_(0x1)                                        /* (PDMC_FIR) Creates a single fault in the error detection circuitry of PDMC_IMR (the configuration is not modified) which triggers PDMC_WPSR.NCE to '3'.  */
 #define PDMC_FIR_F2_0                         (PDMC_FIR_F2_0_Val << PDMC_FIR_F2_Pos)               /* (PDMC_FIR) No effect. Position */
-#define PDMC_FIR_F2_1                         (PDMC_FIR_F2_1_Val << PDMC_FIR_F2_Pos)               /* (PDMC_FIR) Creates a single fault in the error detection circuitry of PDMC_IMR (the configuration is not modified) which triggers the PDMC_WPSR.NCE to '1'. Position */
+#define PDMC_FIR_F2_1                         (PDMC_FIR_F2_1_Val << PDMC_FIR_F2_Pos)               /* (PDMC_FIR) Creates a single fault in the error detection circuitry of PDMC_IMR (the configuration is not modified) which triggers PDMC_WPSR.NCE to '3'. Position */
 #define PDMC_FIR_F3_Pos                       _UINT32_(3)                                          /* (PDMC_FIR) Single Fault for Write Protection Mode Register (PDMC_WPMR) Position */
 #define PDMC_FIR_F3_Msk                       (_UINT32_(0x1) << PDMC_FIR_F3_Pos)                   /* (PDMC_FIR) Single Fault for Write Protection Mode Register (PDMC_WPMR) Mask */
 #define PDMC_FIR_F3(value)                    (PDMC_FIR_F3_Msk & (_UINT32_(value) << PDMC_FIR_F3_Pos)) /* Assignment of value for F3 in the PDMC_FIR register */
 #define   PDMC_FIR_F3_0_Val                   _UINT32_(0x0)                                        /* (PDMC_FIR) No effect.  */
-#define   PDMC_FIR_F3_1_Val                   _UINT32_(0x1)                                        /* (PDMC_FIR) Creates a single fault in the error detection circuitry of PDMC_WPMR (the configuration is not modified) which triggers the PDMC_WPSR.NCE to '1'.  */
+#define   PDMC_FIR_F3_1_Val                   _UINT32_(0x1)                                        /* (PDMC_FIR) Creates a single fault in the error detection circuitry of PDMC_WPMR (the configuration is not modified) which triggers PDMC_WPSR.NCE to '3'.  */
 #define PDMC_FIR_F3_0                         (PDMC_FIR_F3_0_Val << PDMC_FIR_F3_Pos)               /* (PDMC_FIR) No effect. Position */
-#define PDMC_FIR_F3_1                         (PDMC_FIR_F3_1_Val << PDMC_FIR_F3_Pos)               /* (PDMC_FIR) Creates a single fault in the error detection circuitry of PDMC_WPMR (the configuration is not modified) which triggers the PDMC_WPSR.NCE to '1'. Position */
+#define PDMC_FIR_F3_1                         (PDMC_FIR_F3_1_Val << PDMC_FIR_F3_Pos)               /* (PDMC_FIR) Creates a single fault in the error detection circuitry of PDMC_WPMR (the configuration is not modified) which triggers PDMC_WPSR.NCE to '3'. Position */
 #define PDMC_FIR_SFEN_Pos                     _UINT32_(5)                                          /* (PDMC_FIR) Single Fault Enable Position */
 #define PDMC_FIR_SFEN_Msk                     (_UINT32_(0x1) << PDMC_FIR_SFEN_Pos)                 /* (PDMC_FIR) Single Fault Enable Mask */
 #define PDMC_FIR_SFEN(value)                  (PDMC_FIR_SFEN_Msk & (_UINT32_(value) << PDMC_FIR_SFEN_Pos)) /* Assignment of value for SFEN in the PDMC_FIR register */
-#define   PDMC_FIR_SFEN_0_Val                 _UINT32_(0x0)                                        /* (PDMC_FIR) No effect.  */
-#define   PDMC_FIR_SFEN_1_Val                 _UINT32_(0x1)                                        /* (PDMC_FIR) Always write to '1' for fault injection  */
-#define PDMC_FIR_SFEN_0                       (PDMC_FIR_SFEN_0_Val << PDMC_FIR_SFEN_Pos)           /* (PDMC_FIR) No effect. Position */
-#define PDMC_FIR_SFEN_1                       (PDMC_FIR_SFEN_1_Val << PDMC_FIR_SFEN_Pos)           /* (PDMC_FIR) Always write to '1' for fault injection Position */
 #define PDMC_FIR_FIRDIS_Pos                   _UINT32_(7)                                          /* (PDMC_FIR) Fault Injection Register Disable Position */
 #define PDMC_FIR_FIRDIS_Msk                   (_UINT32_(0x1) << PDMC_FIR_FIRDIS_Pos)               /* (PDMC_FIR) Fault Injection Register Disable Mask */
 #define PDMC_FIR_FIRDIS(value)                (PDMC_FIR_FIRDIS_Msk & (_UINT32_(value) << PDMC_FIR_FIRDIS_Pos)) /* Assignment of value for FIRDIS in the PDMC_FIR register */
 #define   PDMC_FIR_FIRDIS_NO_EFFECT_Val       _UINT32_(0x0)                                        /* (PDMC_FIR) No effect.  */
-#define   PDMC_FIR_FIRDIS_ACTIVE_Val          _UINT32_(0x1)                                        /* (PDMC_FIR) Disables the fault injection until the next hardware reset. The command is valid only if PDMC_WPSR.NCE=0 and the other bits are cleared (F0=F1=F2=F3=0).  */
+#define   PDMC_FIR_FIRDIS_ACTIVE_Val          _UINT32_(0x1)                                        /* (PDMC_FIR) Disables the fault injection until the next hardware reset. The command is valid only if PDMC_WPSR.NCE=0 and the other bits are cleared (F0=F1=F2=F3=SFEN=0).  */
 #define PDMC_FIR_FIRDIS_NO_EFFECT             (PDMC_FIR_FIRDIS_NO_EFFECT_Val << PDMC_FIR_FIRDIS_Pos) /* (PDMC_FIR) No effect. Position */
-#define PDMC_FIR_FIRDIS_ACTIVE                (PDMC_FIR_FIRDIS_ACTIVE_Val << PDMC_FIR_FIRDIS_Pos)  /* (PDMC_FIR) Disables the fault injection until the next hardware reset. The command is valid only if PDMC_WPSR.NCE=0 and the other bits are cleared (F0=F1=F2=F3=0). Position */
-#define PDMC_FIR_FIKEY_Pos                    _UINT32_(8)                                          /* (PDMC_FIR) Fault Injection Key Position */
-#define PDMC_FIR_FIKEY_Msk                    (_UINT32_(0xFFFFFF) << PDMC_FIR_FIKEY_Pos)           /* (PDMC_FIR) Fault Injection Key Mask */
+#define PDMC_FIR_FIRDIS_ACTIVE                (PDMC_FIR_FIRDIS_ACTIVE_Val << PDMC_FIR_FIRDIS_Pos)  /* (PDMC_FIR) Disables the fault injection until the next hardware reset. The command is valid only if PDMC_WPSR.NCE=0 and the other bits are cleared (F0=F1=F2=F3=SFEN=0). Position */
+#define PDMC_FIR_FIKEY_Pos                    _UINT32_(8)                                          /* (PDMC_FIR) Fault Injection Key (read only) Position */
+#define PDMC_FIR_FIKEY_Msk                    (_UINT32_(0xFFFFFF) << PDMC_FIR_FIKEY_Pos)           /* (PDMC_FIR) Fault Injection Key (read only) Mask */
 #define PDMC_FIR_FIKEY(value)                 (PDMC_FIR_FIKEY_Msk & (_UINT32_(value) << PDMC_FIR_FIKEY_Pos)) /* Assignment of value for FIKEY in the PDMC_FIR register */
-#define   PDMC_FIR_FIKEY_PASSWD_Val           _UINT32_(0x504649)                                   /* (PDMC_FIR) Writing any other value in this field aborts the write operation of the WPEN bit. Always reads as 0.  */
-#define PDMC_FIR_FIKEY_PASSWD                 (PDMC_FIR_FIKEY_PASSWD_Val << PDMC_FIR_FIKEY_Pos)    /* (PDMC_FIR) Writing any other value in this field aborts the write operation of the WPEN bit. Always reads as 0. Position */
+#define   PDMC_FIR_FIKEY_PASSWD_Val           _UINT32_(0x504649)                                   /* (PDMC_FIR) Writing any other value in this field aborts the write operation. Always reads as 0.  */
+#define PDMC_FIR_FIKEY_PASSWD                 (PDMC_FIR_FIKEY_PASSWD_Val << PDMC_FIR_FIKEY_Pos)    /* (PDMC_FIR) Writing any other value in this field aborts the write operation. Always reads as 0. Position */
 #define PDMC_FIR_Msk                          _UINT32_(0xFFFFFFAF)                                 /* (PDMC_FIR) Register Mask  */
 
-#define PDMC_FIR_F_Pos                        _UINT32_(0)                                          /* (PDMC_FIR Position) Single Fault for Mode Registers (PDMC_MR) */
+#define PDMC_FIR_F_Pos                        _UINT32_(0)                                          /* (PDMC_FIR Position) Single Fault for Mode Register (PDMC_MR) */
 #define PDMC_FIR_F_Msk                        (_UINT32_(0xF) << PDMC_FIR_F_Pos)                    /* (PDMC_FIR Mask) F */
 #define PDMC_FIR_F(value)                     (PDMC_FIR_F_Msk & (_UINT32_(value) << PDMC_FIR_F_Pos)) 
 
@@ -594,30 +588,30 @@
 #define PDMC_FSR_MRNCF_Msk                    (_UINT32_(0x1) << PDMC_FSR_MRNCF_Pos)                /* (PDMC_FSR) Mode Registers Non-Corrected Fault Status Mask */
 #define PDMC_FSR_MRNCF(value)                 (PDMC_FSR_MRNCF_Msk & (_UINT32_(value) << PDMC_FSR_MRNCF_Pos)) /* Assignment of value for MRNCF in the PDMC_FSR register */
 #define   PDMC_FSR_MRNCF_0_Val                _UINT32_(0x0)                                        /* (PDMC_FSR) No fault in PDMC_MR.  */
-#define   PDMC_FSR_MRNCF_1_Val                _UINT32_(0x1)                                        /* (PDMC_FSR) There is a non-correctable fault in PDMC_MR. To correct the fault, a write access must be performed in PDMC_MR with the correct value.  */
+#define   PDMC_FSR_MRNCF_1_Val                _UINT32_(0x1)                                        /* (PDMC_FSR) An error is detected in PDMC_MR. To correct the fault, a write access must be performed in PDMC_MR with the correct value.  */
 #define PDMC_FSR_MRNCF_0                      (PDMC_FSR_MRNCF_0_Val << PDMC_FSR_MRNCF_Pos)         /* (PDMC_FSR) No fault in PDMC_MR. Position */
-#define PDMC_FSR_MRNCF_1                      (PDMC_FSR_MRNCF_1_Val << PDMC_FSR_MRNCF_Pos)         /* (PDMC_FSR) There is a non-correctable fault in PDMC_MR. To correct the fault, a write access must be performed in PDMC_MR with the correct value. Position */
+#define PDMC_FSR_MRNCF_1                      (PDMC_FSR_MRNCF_1_Val << PDMC_FSR_MRNCF_Pos)         /* (PDMC_FSR) An error is detected in PDMC_MR. To correct the fault, a write access must be performed in PDMC_MR with the correct value. Position */
 #define PDMC_FSR_CFGNCF_Pos                   _UINT32_(9)                                          /* (PDMC_FSR) Configuration Register Non-Corrected Fault Status Position */
 #define PDMC_FSR_CFGNCF_Msk                   (_UINT32_(0x1) << PDMC_FSR_CFGNCF_Pos)               /* (PDMC_FSR) Configuration Register Non-Corrected Fault Status Mask */
 #define PDMC_FSR_CFGNCF(value)                (PDMC_FSR_CFGNCF_Msk & (_UINT32_(value) << PDMC_FSR_CFGNCF_Pos)) /* Assignment of value for CFGNCF in the PDMC_FSR register */
 #define   PDMC_FSR_CFGNCF_0_Val               _UINT32_(0x0)                                        /* (PDMC_FSR) No fault in PDMC_CFGR.  */
-#define   PDMC_FSR_CFGNCF_1_Val               _UINT32_(0x1)                                        /* (PDMC_FSR) There is a non-correctable fault in PDMC_CFGR. To correct the fault, a write access must be performed in PDMC_CFGR with the correct value.  */
+#define   PDMC_FSR_CFGNCF_1_Val               _UINT32_(0x1)                                        /* (PDMC_FSR) An error is detected in PDMC_CFGR. To correct the fault, a write access must be performed in PDMC_CFGR with the correct value.  */
 #define PDMC_FSR_CFGNCF_0                     (PDMC_FSR_CFGNCF_0_Val << PDMC_FSR_CFGNCF_Pos)       /* (PDMC_FSR) No fault in PDMC_CFGR. Position */
-#define PDMC_FSR_CFGNCF_1                     (PDMC_FSR_CFGNCF_1_Val << PDMC_FSR_CFGNCF_Pos)       /* (PDMC_FSR) There is a non-correctable fault in PDMC_CFGR. To correct the fault, a write access must be performed in PDMC_CFGR with the correct value. Position */
+#define PDMC_FSR_CFGNCF_1                     (PDMC_FSR_CFGNCF_1_Val << PDMC_FSR_CFGNCF_Pos)       /* (PDMC_FSR) An error is detected in PDMC_CFGR. To correct the fault, a write access must be performed in PDMC_CFGR with the correct value. Position */
 #define PDMC_FSR_IMRNCF_Pos                   _UINT32_(10)                                         /* (PDMC_FSR) User Data Registers Non-Corrected Fault Status Position */
 #define PDMC_FSR_IMRNCF_Msk                   (_UINT32_(0x1) << PDMC_FSR_IMRNCF_Pos)               /* (PDMC_FSR) User Data Registers Non-Corrected Fault Status Mask */
 #define PDMC_FSR_IMRNCF(value)                (PDMC_FSR_IMRNCF_Msk & (_UINT32_(value) << PDMC_FSR_IMRNCF_Pos)) /* Assignment of value for IMRNCF in the PDMC_FSR register */
 #define   PDMC_FSR_IMRNCF_0_Val               _UINT32_(0x0)                                        /* (PDMC_FSR) No fault in PDMC_IMR.  */
-#define   PDMC_FSR_IMRNCF_1_Val               _UINT32_(0x1)                                        /* (PDMC_FSR) There is a non-correctable fault in PDMC_IMR. To correct the fault, a write access must be performed in PDMC_IDR to clear all the sources of interrupts and a write access must be performed in the PDMC_IER to reload the correct value for the enabled sources of interrupt.  */
+#define   PDMC_FSR_IMRNCF_1_Val               _UINT32_(0x1)                                        /* (PDMC_FSR) An error is detected in PDMC_IMR. To correct the fault, a write access must be performed in PDMC_IDR to clear all the sources of interrupts and a write access must be performed in the PDMC_IER to reload the correct value for the enabled sources of interrupt.  */
 #define PDMC_FSR_IMRNCF_0                     (PDMC_FSR_IMRNCF_0_Val << PDMC_FSR_IMRNCF_Pos)       /* (PDMC_FSR) No fault in PDMC_IMR. Position */
-#define PDMC_FSR_IMRNCF_1                     (PDMC_FSR_IMRNCF_1_Val << PDMC_FSR_IMRNCF_Pos)       /* (PDMC_FSR) There is a non-correctable fault in PDMC_IMR. To correct the fault, a write access must be performed in PDMC_IDR to clear all the sources of interrupts and a write access must be performed in the PDMC_IER to reload the correct value for the enabled sources of interrupt. Position */
+#define PDMC_FSR_IMRNCF_1                     (PDMC_FSR_IMRNCF_1_Val << PDMC_FSR_IMRNCF_Pos)       /* (PDMC_FSR) An error is detected in PDMC_IMR. To correct the fault, a write access must be performed in PDMC_IDR to clear all the sources of interrupts and a write access must be performed in the PDMC_IER to reload the correct value for the enabled sources of interrupt. Position */
 #define PDMC_FSR_WPMRNCF_Pos                  _UINT32_(11)                                         /* (PDMC_FSR) Write Protection Mode Register Non-Corrected Fault Status Position */
 #define PDMC_FSR_WPMRNCF_Msk                  (_UINT32_(0x1) << PDMC_FSR_WPMRNCF_Pos)              /* (PDMC_FSR) Write Protection Mode Register Non-Corrected Fault Status Mask */
 #define PDMC_FSR_WPMRNCF(value)               (PDMC_FSR_WPMRNCF_Msk & (_UINT32_(value) << PDMC_FSR_WPMRNCF_Pos)) /* Assignment of value for WPMRNCF in the PDMC_FSR register */
 #define   PDMC_FSR_WPMRNCF_0_Val              _UINT32_(0x0)                                        /* (PDMC_FSR) No fault in PDMC_WPMR.  */
-#define   PDMC_FSR_WPMRNCF_1_Val              _UINT32_(0x1)                                        /* (PDMC_FSR) There is a non-correctable fault in PDMC_WPMR. To correct the fault, write accesses must be performed in PDMC_WPMR with the correct value.  */
+#define   PDMC_FSR_WPMRNCF_1_Val              _UINT32_(0x1)                                        /* (PDMC_FSR) An error is detected in PDMC_WPMR. To correct the fault, write accesses must be performed in PDMC_WPMR with the correct value.  */
 #define PDMC_FSR_WPMRNCF_0                    (PDMC_FSR_WPMRNCF_0_Val << PDMC_FSR_WPMRNCF_Pos)     /* (PDMC_FSR) No fault in PDMC_WPMR. Position */
-#define PDMC_FSR_WPMRNCF_1                    (PDMC_FSR_WPMRNCF_1_Val << PDMC_FSR_WPMRNCF_Pos)     /* (PDMC_FSR) There is a non-correctable fault in PDMC_WPMR. To correct the fault, write accesses must be performed in PDMC_WPMR with the correct value. Position */
+#define PDMC_FSR_WPMRNCF_1                    (PDMC_FSR_WPMRNCF_1_Val << PDMC_FSR_WPMRNCF_Pos)     /* (PDMC_FSR) An error is detected in PDMC_WPMR. To correct the fault, write accesses must be performed in PDMC_WPMR with the correct value. Position */
 #define PDMC_FSR_Msk                          _UINT32_(0x00000F00)                                 /* (PDMC_FSR) Register Mask  */
 
 

@@ -146,7 +146,6 @@
             <itemPath>../src/packs/SAMA7D65_DFP/component/dsi.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/component/tzaesbasc.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/component/sckc.h</itemPath>
-            <itemPath>../src/packs/SAMA7D65_DFP/component/pmonc.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/component/aes.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/component/rtc.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/component/icm.h</itemPath>
@@ -244,7 +243,6 @@
             <itemPath>../src/packs/SAMA7D65_DFP/instance/lcdc.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/mcan4.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/tzaesbasc.h</itemPath>
-            <itemPath>../src/packs/SAMA7D65_DFP/instance/pmonc.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/sfrbu.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/tdes.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/xdmac0.h</itemPath>
@@ -358,11 +356,11 @@
         <targetPluginBoard/>
         <platformTool>noID</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.45</languageToolchainVersion>
+        <languageToolchainVersion>4.60</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="SAMA7D65_DFP" vendor="Microchip" version="1.2.47"/>
+        <pack name="SAMA7D65_DFP" vendor="Microchip" version="1.4.54"/>
       </packs>
       <ScriptingSettings>
         <ScriptingSetting key="boot.load_adr" value=""/>

@@ -1,7 +1,7 @@
 /*
  * Component description for SMC
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -683,8 +683,8 @@
 #define   HSMC_PMECCTRL_ENABLE_1_Val          _UINT32_(0x1)                                        /* (HSMC_PMECCTRL) Enable the PMECC controller.  */
 #define HSMC_PMECCTRL_ENABLE_0                (HSMC_PMECCTRL_ENABLE_0_Val << HSMC_PMECCTRL_ENABLE_Pos) /* (HSMC_PMECCTRL) No effect Position */
 #define HSMC_PMECCTRL_ENABLE_1                (HSMC_PMECCTRL_ENABLE_1_Val << HSMC_PMECCTRL_ENABLE_Pos) /* (HSMC_PMECCTRL) Enable the PMECC controller. Position */
-#define HSMC_PMECCTRL_DISABLE_Pos             _UINT32_(5)                                          /* (HSMC_PMECCTRL) PMECC Enable Position */
-#define HSMC_PMECCTRL_DISABLE_Msk             (_UINT32_(0x1) << HSMC_PMECCTRL_DISABLE_Pos)         /* (HSMC_PMECCTRL) PMECC Enable Mask */
+#define HSMC_PMECCTRL_DISABLE_Pos             _UINT32_(5)                                          /* (HSMC_PMECCTRL) PMECC Disable Position */
+#define HSMC_PMECCTRL_DISABLE_Msk             (_UINT32_(0x1) << HSMC_PMECCTRL_DISABLE_Pos)         /* (HSMC_PMECCTRL) PMECC Disable Mask */
 #define HSMC_PMECCTRL_DISABLE(value)          (HSMC_PMECCTRL_DISABLE_Msk & (_UINT32_(value) << HSMC_PMECCTRL_DISABLE_Pos)) /* Assignment of value for DISABLE in the HSMC_PMECCTRL register */
 #define   HSMC_PMECCTRL_DISABLE_0_Val         _UINT32_(0x0)                                        /* (HSMC_PMECCTRL) No effect  */
 #define   HSMC_PMECCTRL_DISABLE_1_Val         _UINT32_(0x1)                                        /* (HSMC_PMECCTRL) Disable the PMECC controller.  */

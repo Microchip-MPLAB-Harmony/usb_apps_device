@@ -1,7 +1,7 @@
 /*
- * Instance header file for ATSAMA7D65D2G
+ * Instance header file for ATSAMA7D65D2GN8
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -29,6 +29,7 @@
 #define PIOA_ABCDSR2_DEFAULT_VAL                 (0x00000000) /* Register value at reset */
 #define PIOA_ABCDSR3_DEFAULT_VAL                 (0x00000000) /* Register value at reset */
 #define PIOA_ABCDSR4_DEFAULT_VAL                 (0x00000000) /* Register value at reset */
+#define PIOA_CLOCK_ID                            (10)       
 #define PIOA_FILTRS_DEFAULT_VAL                  (0x00000000) /* Register value at reset */
 #define PIOA_INSTANCE_ID                         (10)       /* For PIO 0 to 31 */
 #define PIOA_INSTANCE_ID_SINT                    (119)      /* For PIO 0 to 31, Secure Interrupt */

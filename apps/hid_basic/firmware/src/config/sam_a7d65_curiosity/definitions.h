@@ -14,7 +14,7 @@
 
 //DOM-IGNORE-BEGIN
 /*******************************************************************************
-* Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
+* Copyright (C) 2025 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -52,9 +52,9 @@
 #include "usb/usb_device_hid.h"
 #include "usb/usb_hid.h"
 #include "peripheral/dwdt/plib_dwdt.h"
+#include "peripheral/mmu/plib_mmu.h"
 #include "peripheral/clk/plib_clk.h"
 #include "peripheral/gic/plib_gic.h"
-#include "peripheral/mmu/plib_mmu.h"
 #include "peripheral/pio/plib_pio.h"
 #include "usb/usb_chapter_9.h"
 #include "usb/usb_device.h"
