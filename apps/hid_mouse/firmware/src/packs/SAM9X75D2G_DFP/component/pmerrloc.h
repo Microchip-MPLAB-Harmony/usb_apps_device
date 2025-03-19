@@ -1,7 +1,9 @@
 /*
  * Component description for PMERRLOC
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -119,225 +121,225 @@
 /* -------- PMERRLOC_SIGMA0 : (PMERRLOC Offset: 0x28) ( R/ 32) SIGMA0 Register -------- */
 #define PMERRLOC_SIGMA0_RESETVALUE            _UINT32_(0x01)                                       /*  (PMERRLOC_SIGMA0) SIGMA0 Register  Reset Value */
 
-#define PMERRLOC_SIGMA0_SIGMA0_Pos            _UINT32_(0)                                          /* (PMERRLOC_SIGMA0) Coefficient of Degree 0 in the SIGMA Polynomial Position */
-#define PMERRLOC_SIGMA0_SIGMA0_Msk            (_UINT32_(0x3FFF) << PMERRLOC_SIGMA0_SIGMA0_Pos)     /* (PMERRLOC_SIGMA0) Coefficient of Degree 0 in the SIGMA Polynomial Mask */
-#define PMERRLOC_SIGMA0_SIGMA0(value)         (PMERRLOC_SIGMA0_SIGMA0_Msk & (_UINT32_(value) << PMERRLOC_SIGMA0_SIGMA0_Pos)) /* Assignment of value for SIGMA0 in the PMERRLOC_SIGMA0 register */
+#define PMERRLOC_SIGMA0_SIGMA_Pos             _UINT32_(0)                                          /* (PMERRLOC_SIGMA0) Coefficient of Degree 0 in the SIGMA Polynomial Position */
+#define PMERRLOC_SIGMA0_SIGMA_Msk             (_UINT32_(0x3FFF) << PMERRLOC_SIGMA0_SIGMA_Pos)      /* (PMERRLOC_SIGMA0) Coefficient of Degree 0 in the SIGMA Polynomial Mask */
+#define PMERRLOC_SIGMA0_SIGMA(value)          (PMERRLOC_SIGMA0_SIGMA_Msk & (_UINT32_(value) << PMERRLOC_SIGMA0_SIGMA_Pos)) /* Assignment of value for SIGMA in the PMERRLOC_SIGMA0 register */
 #define PMERRLOC_SIGMA0_Msk                   _UINT32_(0x00003FFF)                                 /* (PMERRLOC_SIGMA0) Register Mask  */
 
 
 /* -------- PMERRLOC_SIGMA1 : (PMERRLOC Offset: 0x2C) (R/W 32) SIGMA1 Register -------- */
 #define PMERRLOC_SIGMA1_RESETVALUE            _UINT32_(0x00)                                       /*  (PMERRLOC_SIGMA1) SIGMA1 Register  Reset Value */
 
-#define PMERRLOC_SIGMA1_SIGMA1_Pos            _UINT32_(0)                                          /* (PMERRLOC_SIGMA1) Coefficient of Degree x in the SIGMA Polynomial. Position */
-#define PMERRLOC_SIGMA1_SIGMA1_Msk            (_UINT32_(0x3FFF) << PMERRLOC_SIGMA1_SIGMA1_Pos)     /* (PMERRLOC_SIGMA1) Coefficient of Degree x in the SIGMA Polynomial. Mask */
-#define PMERRLOC_SIGMA1_SIGMA1(value)         (PMERRLOC_SIGMA1_SIGMA1_Msk & (_UINT32_(value) << PMERRLOC_SIGMA1_SIGMA1_Pos)) /* Assignment of value for SIGMA1 in the PMERRLOC_SIGMA1 register */
+#define PMERRLOC_SIGMA1_SIGMA_Pos             _UINT32_(0)                                          /* (PMERRLOC_SIGMA1) Coefficient of Degree x in the SIGMA Polynomial. Position */
+#define PMERRLOC_SIGMA1_SIGMA_Msk             (_UINT32_(0x3FFF) << PMERRLOC_SIGMA1_SIGMA_Pos)      /* (PMERRLOC_SIGMA1) Coefficient of Degree x in the SIGMA Polynomial. Mask */
+#define PMERRLOC_SIGMA1_SIGMA(value)          (PMERRLOC_SIGMA1_SIGMA_Msk & (_UINT32_(value) << PMERRLOC_SIGMA1_SIGMA_Pos)) /* Assignment of value for SIGMA in the PMERRLOC_SIGMA1 register */
 #define PMERRLOC_SIGMA1_Msk                   _UINT32_(0x00003FFF)                                 /* (PMERRLOC_SIGMA1) Register Mask  */
 
 
 /* -------- PMERRLOC_SIGMA2 : (PMERRLOC Offset: 0x30) (R/W 32) SIGMA2 Register -------- */
 #define PMERRLOC_SIGMA2_RESETVALUE            _UINT32_(0x00)                                       /*  (PMERRLOC_SIGMA2) SIGMA2 Register  Reset Value */
 
-#define PMERRLOC_SIGMA2_SIGMA2_Pos            _UINT32_(0)                                          /* (PMERRLOC_SIGMA2) Coefficient of Degree x in the SIGMA Polynomial. Position */
-#define PMERRLOC_SIGMA2_SIGMA2_Msk            (_UINT32_(0x3FFF) << PMERRLOC_SIGMA2_SIGMA2_Pos)     /* (PMERRLOC_SIGMA2) Coefficient of Degree x in the SIGMA Polynomial. Mask */
-#define PMERRLOC_SIGMA2_SIGMA2(value)         (PMERRLOC_SIGMA2_SIGMA2_Msk & (_UINT32_(value) << PMERRLOC_SIGMA2_SIGMA2_Pos)) /* Assignment of value for SIGMA2 in the PMERRLOC_SIGMA2 register */
+#define PMERRLOC_SIGMA2_SIGMA_Pos             _UINT32_(0)                                          /* (PMERRLOC_SIGMA2) Coefficient of Degree x in the SIGMA Polynomial. Position */
+#define PMERRLOC_SIGMA2_SIGMA_Msk             (_UINT32_(0x3FFF) << PMERRLOC_SIGMA2_SIGMA_Pos)      /* (PMERRLOC_SIGMA2) Coefficient of Degree x in the SIGMA Polynomial. Mask */
+#define PMERRLOC_SIGMA2_SIGMA(value)          (PMERRLOC_SIGMA2_SIGMA_Msk & (_UINT32_(value) << PMERRLOC_SIGMA2_SIGMA_Pos)) /* Assignment of value for SIGMA in the PMERRLOC_SIGMA2 register */
 #define PMERRLOC_SIGMA2_Msk                   _UINT32_(0x00003FFF)                                 /* (PMERRLOC_SIGMA2) Register Mask  */
 
 
 /* -------- PMERRLOC_SIGMA3 : (PMERRLOC Offset: 0x34) (R/W 32) SIGMA3 Register -------- */
 #define PMERRLOC_SIGMA3_RESETVALUE            _UINT32_(0x00)                                       /*  (PMERRLOC_SIGMA3) SIGMA3 Register  Reset Value */
 
-#define PMERRLOC_SIGMA3_SIGMA3_Pos            _UINT32_(0)                                          /* (PMERRLOC_SIGMA3) Coefficient of Degree x in the SIGMA Polynomial. Position */
-#define PMERRLOC_SIGMA3_SIGMA3_Msk            (_UINT32_(0x3FFF) << PMERRLOC_SIGMA3_SIGMA3_Pos)     /* (PMERRLOC_SIGMA3) Coefficient of Degree x in the SIGMA Polynomial. Mask */
-#define PMERRLOC_SIGMA3_SIGMA3(value)         (PMERRLOC_SIGMA3_SIGMA3_Msk & (_UINT32_(value) << PMERRLOC_SIGMA3_SIGMA3_Pos)) /* Assignment of value for SIGMA3 in the PMERRLOC_SIGMA3 register */
+#define PMERRLOC_SIGMA3_SIGMA_Pos             _UINT32_(0)                                          /* (PMERRLOC_SIGMA3) Coefficient of Degree x in the SIGMA Polynomial. Position */
+#define PMERRLOC_SIGMA3_SIGMA_Msk             (_UINT32_(0x3FFF) << PMERRLOC_SIGMA3_SIGMA_Pos)      /* (PMERRLOC_SIGMA3) Coefficient of Degree x in the SIGMA Polynomial. Mask */
+#define PMERRLOC_SIGMA3_SIGMA(value)          (PMERRLOC_SIGMA3_SIGMA_Msk & (_UINT32_(value) << PMERRLOC_SIGMA3_SIGMA_Pos)) /* Assignment of value for SIGMA in the PMERRLOC_SIGMA3 register */
 #define PMERRLOC_SIGMA3_Msk                   _UINT32_(0x00003FFF)                                 /* (PMERRLOC_SIGMA3) Register Mask  */
 
 
 /* -------- PMERRLOC_SIGMA4 : (PMERRLOC Offset: 0x38) (R/W 32) SIGMA4 Register -------- */
 #define PMERRLOC_SIGMA4_RESETVALUE            _UINT32_(0x00)                                       /*  (PMERRLOC_SIGMA4) SIGMA4 Register  Reset Value */
 
-#define PMERRLOC_SIGMA4_SIGMA4_Pos            _UINT32_(0)                                          /* (PMERRLOC_SIGMA4) Coefficient of Degree x in the SIGMA Polynomial. Position */
-#define PMERRLOC_SIGMA4_SIGMA4_Msk            (_UINT32_(0x3FFF) << PMERRLOC_SIGMA4_SIGMA4_Pos)     /* (PMERRLOC_SIGMA4) Coefficient of Degree x in the SIGMA Polynomial. Mask */
-#define PMERRLOC_SIGMA4_SIGMA4(value)         (PMERRLOC_SIGMA4_SIGMA4_Msk & (_UINT32_(value) << PMERRLOC_SIGMA4_SIGMA4_Pos)) /* Assignment of value for SIGMA4 in the PMERRLOC_SIGMA4 register */
+#define PMERRLOC_SIGMA4_SIGMA_Pos             _UINT32_(0)                                          /* (PMERRLOC_SIGMA4) Coefficient of Degree x in the SIGMA Polynomial. Position */
+#define PMERRLOC_SIGMA4_SIGMA_Msk             (_UINT32_(0x3FFF) << PMERRLOC_SIGMA4_SIGMA_Pos)      /* (PMERRLOC_SIGMA4) Coefficient of Degree x in the SIGMA Polynomial. Mask */
+#define PMERRLOC_SIGMA4_SIGMA(value)          (PMERRLOC_SIGMA4_SIGMA_Msk & (_UINT32_(value) << PMERRLOC_SIGMA4_SIGMA_Pos)) /* Assignment of value for SIGMA in the PMERRLOC_SIGMA4 register */
 #define PMERRLOC_SIGMA4_Msk                   _UINT32_(0x00003FFF)                                 /* (PMERRLOC_SIGMA4) Register Mask  */
 
 
 /* -------- PMERRLOC_SIGMA5 : (PMERRLOC Offset: 0x3C) (R/W 32) SIGMA5 Register -------- */
 #define PMERRLOC_SIGMA5_RESETVALUE            _UINT32_(0x00)                                       /*  (PMERRLOC_SIGMA5) SIGMA5 Register  Reset Value */
 
-#define PMERRLOC_SIGMA5_SIGMA5_Pos            _UINT32_(0)                                          /* (PMERRLOC_SIGMA5) Coefficient of Degree x in the SIGMA Polynomial. Position */
-#define PMERRLOC_SIGMA5_SIGMA5_Msk            (_UINT32_(0x3FFF) << PMERRLOC_SIGMA5_SIGMA5_Pos)     /* (PMERRLOC_SIGMA5) Coefficient of Degree x in the SIGMA Polynomial. Mask */
-#define PMERRLOC_SIGMA5_SIGMA5(value)         (PMERRLOC_SIGMA5_SIGMA5_Msk & (_UINT32_(value) << PMERRLOC_SIGMA5_SIGMA5_Pos)) /* Assignment of value for SIGMA5 in the PMERRLOC_SIGMA5 register */
+#define PMERRLOC_SIGMA5_SIGMA_Pos             _UINT32_(0)                                          /* (PMERRLOC_SIGMA5) Coefficient of Degree x in the SIGMA Polynomial. Position */
+#define PMERRLOC_SIGMA5_SIGMA_Msk             (_UINT32_(0x3FFF) << PMERRLOC_SIGMA5_SIGMA_Pos)      /* (PMERRLOC_SIGMA5) Coefficient of Degree x in the SIGMA Polynomial. Mask */
+#define PMERRLOC_SIGMA5_SIGMA(value)          (PMERRLOC_SIGMA5_SIGMA_Msk & (_UINT32_(value) << PMERRLOC_SIGMA5_SIGMA_Pos)) /* Assignment of value for SIGMA in the PMERRLOC_SIGMA5 register */
 #define PMERRLOC_SIGMA5_Msk                   _UINT32_(0x00003FFF)                                 /* (PMERRLOC_SIGMA5) Register Mask  */
 
 
 /* -------- PMERRLOC_SIGMA6 : (PMERRLOC Offset: 0x40) (R/W 32) SIGMA6 Register -------- */
 #define PMERRLOC_SIGMA6_RESETVALUE            _UINT32_(0x00)                                       /*  (PMERRLOC_SIGMA6) SIGMA6 Register  Reset Value */
 
-#define PMERRLOC_SIGMA6_SIGMA6_Pos            _UINT32_(0)                                          /* (PMERRLOC_SIGMA6) Coefficient of Degree x in the SIGMA Polynomial. Position */
-#define PMERRLOC_SIGMA6_SIGMA6_Msk            (_UINT32_(0x3FFF) << PMERRLOC_SIGMA6_SIGMA6_Pos)     /* (PMERRLOC_SIGMA6) Coefficient of Degree x in the SIGMA Polynomial. Mask */
-#define PMERRLOC_SIGMA6_SIGMA6(value)         (PMERRLOC_SIGMA6_SIGMA6_Msk & (_UINT32_(value) << PMERRLOC_SIGMA6_SIGMA6_Pos)) /* Assignment of value for SIGMA6 in the PMERRLOC_SIGMA6 register */
+#define PMERRLOC_SIGMA6_SIGMA_Pos             _UINT32_(0)                                          /* (PMERRLOC_SIGMA6) Coefficient of Degree x in the SIGMA Polynomial. Position */
+#define PMERRLOC_SIGMA6_SIGMA_Msk             (_UINT32_(0x3FFF) << PMERRLOC_SIGMA6_SIGMA_Pos)      /* (PMERRLOC_SIGMA6) Coefficient of Degree x in the SIGMA Polynomial. Mask */
+#define PMERRLOC_SIGMA6_SIGMA(value)          (PMERRLOC_SIGMA6_SIGMA_Msk & (_UINT32_(value) << PMERRLOC_SIGMA6_SIGMA_Pos)) /* Assignment of value for SIGMA in the PMERRLOC_SIGMA6 register */
 #define PMERRLOC_SIGMA6_Msk                   _UINT32_(0x00003FFF)                                 /* (PMERRLOC_SIGMA6) Register Mask  */
 
 
 /* -------- PMERRLOC_SIGMA7 : (PMERRLOC Offset: 0x44) (R/W 32) SIGMA7 Register -------- */
 #define PMERRLOC_SIGMA7_RESETVALUE            _UINT32_(0x00)                                       /*  (PMERRLOC_SIGMA7) SIGMA7 Register  Reset Value */
 
-#define PMERRLOC_SIGMA7_SIGMA7_Pos            _UINT32_(0)                                          /* (PMERRLOC_SIGMA7) Coefficient of Degree x in the SIGMA Polynomial. Position */
-#define PMERRLOC_SIGMA7_SIGMA7_Msk            (_UINT32_(0x3FFF) << PMERRLOC_SIGMA7_SIGMA7_Pos)     /* (PMERRLOC_SIGMA7) Coefficient of Degree x in the SIGMA Polynomial. Mask */
-#define PMERRLOC_SIGMA7_SIGMA7(value)         (PMERRLOC_SIGMA7_SIGMA7_Msk & (_UINT32_(value) << PMERRLOC_SIGMA7_SIGMA7_Pos)) /* Assignment of value for SIGMA7 in the PMERRLOC_SIGMA7 register */
+#define PMERRLOC_SIGMA7_SIGMA_Pos             _UINT32_(0)                                          /* (PMERRLOC_SIGMA7) Coefficient of Degree x in the SIGMA Polynomial. Position */
+#define PMERRLOC_SIGMA7_SIGMA_Msk             (_UINT32_(0x3FFF) << PMERRLOC_SIGMA7_SIGMA_Pos)      /* (PMERRLOC_SIGMA7) Coefficient of Degree x in the SIGMA Polynomial. Mask */
+#define PMERRLOC_SIGMA7_SIGMA(value)          (PMERRLOC_SIGMA7_SIGMA_Msk & (_UINT32_(value) << PMERRLOC_SIGMA7_SIGMA_Pos)) /* Assignment of value for SIGMA in the PMERRLOC_SIGMA7 register */
 #define PMERRLOC_SIGMA7_Msk                   _UINT32_(0x00003FFF)                                 /* (PMERRLOC_SIGMA7) Register Mask  */
 
 
 /* -------- PMERRLOC_SIGMA8 : (PMERRLOC Offset: 0x48) (R/W 32) SIGMA8 Register -------- */
 #define PMERRLOC_SIGMA8_RESETVALUE            _UINT32_(0x00)                                       /*  (PMERRLOC_SIGMA8) SIGMA8 Register  Reset Value */
 
-#define PMERRLOC_SIGMA8_SIGMA8_Pos            _UINT32_(0)                                          /* (PMERRLOC_SIGMA8) Coefficient of Degree x in the SIGMA Polynomial. Position */
-#define PMERRLOC_SIGMA8_SIGMA8_Msk            (_UINT32_(0x3FFF) << PMERRLOC_SIGMA8_SIGMA8_Pos)     /* (PMERRLOC_SIGMA8) Coefficient of Degree x in the SIGMA Polynomial. Mask */
-#define PMERRLOC_SIGMA8_SIGMA8(value)         (PMERRLOC_SIGMA8_SIGMA8_Msk & (_UINT32_(value) << PMERRLOC_SIGMA8_SIGMA8_Pos)) /* Assignment of value for SIGMA8 in the PMERRLOC_SIGMA8 register */
+#define PMERRLOC_SIGMA8_SIGMA_Pos             _UINT32_(0)                                          /* (PMERRLOC_SIGMA8) Coefficient of Degree x in the SIGMA Polynomial. Position */
+#define PMERRLOC_SIGMA8_SIGMA_Msk             (_UINT32_(0x3FFF) << PMERRLOC_SIGMA8_SIGMA_Pos)      /* (PMERRLOC_SIGMA8) Coefficient of Degree x in the SIGMA Polynomial. Mask */
+#define PMERRLOC_SIGMA8_SIGMA(value)          (PMERRLOC_SIGMA8_SIGMA_Msk & (_UINT32_(value) << PMERRLOC_SIGMA8_SIGMA_Pos)) /* Assignment of value for SIGMA in the PMERRLOC_SIGMA8 register */
 #define PMERRLOC_SIGMA8_Msk                   _UINT32_(0x00003FFF)                                 /* (PMERRLOC_SIGMA8) Register Mask  */
 
 
 /* -------- PMERRLOC_SIGMA9 : (PMERRLOC Offset: 0x4C) (R/W 32) SIGMA9 Register -------- */
 #define PMERRLOC_SIGMA9_RESETVALUE            _UINT32_(0x00)                                       /*  (PMERRLOC_SIGMA9) SIGMA9 Register  Reset Value */
 
-#define PMERRLOC_SIGMA9_SIGMA9_Pos            _UINT32_(0)                                          /* (PMERRLOC_SIGMA9) Coefficient of Degree x in the SIGMA Polynomial. Position */
-#define PMERRLOC_SIGMA9_SIGMA9_Msk            (_UINT32_(0x3FFF) << PMERRLOC_SIGMA9_SIGMA9_Pos)     /* (PMERRLOC_SIGMA9) Coefficient of Degree x in the SIGMA Polynomial. Mask */
-#define PMERRLOC_SIGMA9_SIGMA9(value)         (PMERRLOC_SIGMA9_SIGMA9_Msk & (_UINT32_(value) << PMERRLOC_SIGMA9_SIGMA9_Pos)) /* Assignment of value for SIGMA9 in the PMERRLOC_SIGMA9 register */
+#define PMERRLOC_SIGMA9_SIGMA_Pos             _UINT32_(0)                                          /* (PMERRLOC_SIGMA9) Coefficient of Degree x in the SIGMA Polynomial. Position */
+#define PMERRLOC_SIGMA9_SIGMA_Msk             (_UINT32_(0x3FFF) << PMERRLOC_SIGMA9_SIGMA_Pos)      /* (PMERRLOC_SIGMA9) Coefficient of Degree x in the SIGMA Polynomial. Mask */
+#define PMERRLOC_SIGMA9_SIGMA(value)          (PMERRLOC_SIGMA9_SIGMA_Msk & (_UINT32_(value) << PMERRLOC_SIGMA9_SIGMA_Pos)) /* Assignment of value for SIGMA in the PMERRLOC_SIGMA9 register */
 #define PMERRLOC_SIGMA9_Msk                   _UINT32_(0x00003FFF)                                 /* (PMERRLOC_SIGMA9) Register Mask  */
 
 
 /* -------- PMERRLOC_SIGMA10 : (PMERRLOC Offset: 0x50) (R/W 32) SIGMA10 Register -------- */
 #define PMERRLOC_SIGMA10_RESETVALUE           _UINT32_(0x00)                                       /*  (PMERRLOC_SIGMA10) SIGMA10 Register  Reset Value */
 
-#define PMERRLOC_SIGMA10_SIGMA10_Pos          _UINT32_(0)                                          /* (PMERRLOC_SIGMA10) Coefficient of Degree x in the SIGMA Polynomial. Position */
-#define PMERRLOC_SIGMA10_SIGMA10_Msk          (_UINT32_(0x3FFF) << PMERRLOC_SIGMA10_SIGMA10_Pos)   /* (PMERRLOC_SIGMA10) Coefficient of Degree x in the SIGMA Polynomial. Mask */
-#define PMERRLOC_SIGMA10_SIGMA10(value)       (PMERRLOC_SIGMA10_SIGMA10_Msk & (_UINT32_(value) << PMERRLOC_SIGMA10_SIGMA10_Pos)) /* Assignment of value for SIGMA10 in the PMERRLOC_SIGMA10 register */
+#define PMERRLOC_SIGMA10_SIGMA_Pos            _UINT32_(0)                                          /* (PMERRLOC_SIGMA10) Coefficient of Degree x in the SIGMA Polynomial. Position */
+#define PMERRLOC_SIGMA10_SIGMA_Msk            (_UINT32_(0x3FFF) << PMERRLOC_SIGMA10_SIGMA_Pos)     /* (PMERRLOC_SIGMA10) Coefficient of Degree x in the SIGMA Polynomial. Mask */
+#define PMERRLOC_SIGMA10_SIGMA(value)         (PMERRLOC_SIGMA10_SIGMA_Msk & (_UINT32_(value) << PMERRLOC_SIGMA10_SIGMA_Pos)) /* Assignment of value for SIGMA in the PMERRLOC_SIGMA10 register */
 #define PMERRLOC_SIGMA10_Msk                  _UINT32_(0x00003FFF)                                 /* (PMERRLOC_SIGMA10) Register Mask  */
 
 
 /* -------- PMERRLOC_SIGMA11 : (PMERRLOC Offset: 0x54) (R/W 32) SIGMA11 Register -------- */
 #define PMERRLOC_SIGMA11_RESETVALUE           _UINT32_(0x00)                                       /*  (PMERRLOC_SIGMA11) SIGMA11 Register  Reset Value */
 
-#define PMERRLOC_SIGMA11_SIGMA11_Pos          _UINT32_(0)                                          /* (PMERRLOC_SIGMA11) Coefficient of Degree x in the SIGMA Polynomial. Position */
-#define PMERRLOC_SIGMA11_SIGMA11_Msk          (_UINT32_(0x3FFF) << PMERRLOC_SIGMA11_SIGMA11_Pos)   /* (PMERRLOC_SIGMA11) Coefficient of Degree x in the SIGMA Polynomial. Mask */
-#define PMERRLOC_SIGMA11_SIGMA11(value)       (PMERRLOC_SIGMA11_SIGMA11_Msk & (_UINT32_(value) << PMERRLOC_SIGMA11_SIGMA11_Pos)) /* Assignment of value for SIGMA11 in the PMERRLOC_SIGMA11 register */
+#define PMERRLOC_SIGMA11_SIGMA_Pos            _UINT32_(0)                                          /* (PMERRLOC_SIGMA11) Coefficient of Degree x in the SIGMA Polynomial. Position */
+#define PMERRLOC_SIGMA11_SIGMA_Msk            (_UINT32_(0x3FFF) << PMERRLOC_SIGMA11_SIGMA_Pos)     /* (PMERRLOC_SIGMA11) Coefficient of Degree x in the SIGMA Polynomial. Mask */
+#define PMERRLOC_SIGMA11_SIGMA(value)         (PMERRLOC_SIGMA11_SIGMA_Msk & (_UINT32_(value) << PMERRLOC_SIGMA11_SIGMA_Pos)) /* Assignment of value for SIGMA in the PMERRLOC_SIGMA11 register */
 #define PMERRLOC_SIGMA11_Msk                  _UINT32_(0x00003FFF)                                 /* (PMERRLOC_SIGMA11) Register Mask  */
 
 
 /* -------- PMERRLOC_SIGMA12 : (PMERRLOC Offset: 0x58) (R/W 32) SIGMA12 Register -------- */
 #define PMERRLOC_SIGMA12_RESETVALUE           _UINT32_(0x00)                                       /*  (PMERRLOC_SIGMA12) SIGMA12 Register  Reset Value */
 
-#define PMERRLOC_SIGMA12_SIGMA12_Pos          _UINT32_(0)                                          /* (PMERRLOC_SIGMA12) Coefficient of Degree x in the SIGMA Polynomial. Position */
-#define PMERRLOC_SIGMA12_SIGMA12_Msk          (_UINT32_(0x3FFF) << PMERRLOC_SIGMA12_SIGMA12_Pos)   /* (PMERRLOC_SIGMA12) Coefficient of Degree x in the SIGMA Polynomial. Mask */
-#define PMERRLOC_SIGMA12_SIGMA12(value)       (PMERRLOC_SIGMA12_SIGMA12_Msk & (_UINT32_(value) << PMERRLOC_SIGMA12_SIGMA12_Pos)) /* Assignment of value for SIGMA12 in the PMERRLOC_SIGMA12 register */
+#define PMERRLOC_SIGMA12_SIGMA_Pos            _UINT32_(0)                                          /* (PMERRLOC_SIGMA12) Coefficient of Degree x in the SIGMA Polynomial. Position */
+#define PMERRLOC_SIGMA12_SIGMA_Msk            (_UINT32_(0x3FFF) << PMERRLOC_SIGMA12_SIGMA_Pos)     /* (PMERRLOC_SIGMA12) Coefficient of Degree x in the SIGMA Polynomial. Mask */
+#define PMERRLOC_SIGMA12_SIGMA(value)         (PMERRLOC_SIGMA12_SIGMA_Msk & (_UINT32_(value) << PMERRLOC_SIGMA12_SIGMA_Pos)) /* Assignment of value for SIGMA in the PMERRLOC_SIGMA12 register */
 #define PMERRLOC_SIGMA12_Msk                  _UINT32_(0x00003FFF)                                 /* (PMERRLOC_SIGMA12) Register Mask  */
 
 
 /* -------- PMERRLOC_SIGMA13 : (PMERRLOC Offset: 0x5C) (R/W 32) SIGMA13 Register -------- */
 #define PMERRLOC_SIGMA13_RESETVALUE           _UINT32_(0x00)                                       /*  (PMERRLOC_SIGMA13) SIGMA13 Register  Reset Value */
 
-#define PMERRLOC_SIGMA13_SIGMA13_Pos          _UINT32_(0)                                          /* (PMERRLOC_SIGMA13) Coefficient of Degree x in the SIGMA Polynomial. Position */
-#define PMERRLOC_SIGMA13_SIGMA13_Msk          (_UINT32_(0x3FFF) << PMERRLOC_SIGMA13_SIGMA13_Pos)   /* (PMERRLOC_SIGMA13) Coefficient of Degree x in the SIGMA Polynomial. Mask */
-#define PMERRLOC_SIGMA13_SIGMA13(value)       (PMERRLOC_SIGMA13_SIGMA13_Msk & (_UINT32_(value) << PMERRLOC_SIGMA13_SIGMA13_Pos)) /* Assignment of value for SIGMA13 in the PMERRLOC_SIGMA13 register */
+#define PMERRLOC_SIGMA13_SIGMA_Pos            _UINT32_(0)                                          /* (PMERRLOC_SIGMA13) Coefficient of Degree x in the SIGMA Polynomial. Position */
+#define PMERRLOC_SIGMA13_SIGMA_Msk            (_UINT32_(0x3FFF) << PMERRLOC_SIGMA13_SIGMA_Pos)     /* (PMERRLOC_SIGMA13) Coefficient of Degree x in the SIGMA Polynomial. Mask */
+#define PMERRLOC_SIGMA13_SIGMA(value)         (PMERRLOC_SIGMA13_SIGMA_Msk & (_UINT32_(value) << PMERRLOC_SIGMA13_SIGMA_Pos)) /* Assignment of value for SIGMA in the PMERRLOC_SIGMA13 register */
 #define PMERRLOC_SIGMA13_Msk                  _UINT32_(0x00003FFF)                                 /* (PMERRLOC_SIGMA13) Register Mask  */
 
 
 /* -------- PMERRLOC_SIGMA14 : (PMERRLOC Offset: 0x60) (R/W 32) SIGMA14 Register -------- */
 #define PMERRLOC_SIGMA14_RESETVALUE           _UINT32_(0x00)                                       /*  (PMERRLOC_SIGMA14) SIGMA14 Register  Reset Value */
 
-#define PMERRLOC_SIGMA14_SIGMA14_Pos          _UINT32_(0)                                          /* (PMERRLOC_SIGMA14) Coefficient of Degree x in the SIGMA Polynomial. Position */
-#define PMERRLOC_SIGMA14_SIGMA14_Msk          (_UINT32_(0x3FFF) << PMERRLOC_SIGMA14_SIGMA14_Pos)   /* (PMERRLOC_SIGMA14) Coefficient of Degree x in the SIGMA Polynomial. Mask */
-#define PMERRLOC_SIGMA14_SIGMA14(value)       (PMERRLOC_SIGMA14_SIGMA14_Msk & (_UINT32_(value) << PMERRLOC_SIGMA14_SIGMA14_Pos)) /* Assignment of value for SIGMA14 in the PMERRLOC_SIGMA14 register */
+#define PMERRLOC_SIGMA14_SIGMA_Pos            _UINT32_(0)                                          /* (PMERRLOC_SIGMA14) Coefficient of Degree x in the SIGMA Polynomial. Position */
+#define PMERRLOC_SIGMA14_SIGMA_Msk            (_UINT32_(0x3FFF) << PMERRLOC_SIGMA14_SIGMA_Pos)     /* (PMERRLOC_SIGMA14) Coefficient of Degree x in the SIGMA Polynomial. Mask */
+#define PMERRLOC_SIGMA14_SIGMA(value)         (PMERRLOC_SIGMA14_SIGMA_Msk & (_UINT32_(value) << PMERRLOC_SIGMA14_SIGMA_Pos)) /* Assignment of value for SIGMA in the PMERRLOC_SIGMA14 register */
 #define PMERRLOC_SIGMA14_Msk                  _UINT32_(0x00003FFF)                                 /* (PMERRLOC_SIGMA14) Register Mask  */
 
 
 /* -------- PMERRLOC_SIGMA15 : (PMERRLOC Offset: 0x64) (R/W 32) SIGMA15 Register -------- */
 #define PMERRLOC_SIGMA15_RESETVALUE           _UINT32_(0x00)                                       /*  (PMERRLOC_SIGMA15) SIGMA15 Register  Reset Value */
 
-#define PMERRLOC_SIGMA15_SIGMA15_Pos          _UINT32_(0)                                          /* (PMERRLOC_SIGMA15) Coefficient of Degree x in the SIGMA Polynomial. Position */
-#define PMERRLOC_SIGMA15_SIGMA15_Msk          (_UINT32_(0x3FFF) << PMERRLOC_SIGMA15_SIGMA15_Pos)   /* (PMERRLOC_SIGMA15) Coefficient of Degree x in the SIGMA Polynomial. Mask */
-#define PMERRLOC_SIGMA15_SIGMA15(value)       (PMERRLOC_SIGMA15_SIGMA15_Msk & (_UINT32_(value) << PMERRLOC_SIGMA15_SIGMA15_Pos)) /* Assignment of value for SIGMA15 in the PMERRLOC_SIGMA15 register */
+#define PMERRLOC_SIGMA15_SIGMA_Pos            _UINT32_(0)                                          /* (PMERRLOC_SIGMA15) Coefficient of Degree x in the SIGMA Polynomial. Position */
+#define PMERRLOC_SIGMA15_SIGMA_Msk            (_UINT32_(0x3FFF) << PMERRLOC_SIGMA15_SIGMA_Pos)     /* (PMERRLOC_SIGMA15) Coefficient of Degree x in the SIGMA Polynomial. Mask */
+#define PMERRLOC_SIGMA15_SIGMA(value)         (PMERRLOC_SIGMA15_SIGMA_Msk & (_UINT32_(value) << PMERRLOC_SIGMA15_SIGMA_Pos)) /* Assignment of value for SIGMA in the PMERRLOC_SIGMA15 register */
 #define PMERRLOC_SIGMA15_Msk                  _UINT32_(0x00003FFF)                                 /* (PMERRLOC_SIGMA15) Register Mask  */
 
 
 /* -------- PMERRLOC_SIGMA16 : (PMERRLOC Offset: 0x68) (R/W 32) SIGMA16 Register -------- */
 #define PMERRLOC_SIGMA16_RESETVALUE           _UINT32_(0x00)                                       /*  (PMERRLOC_SIGMA16) SIGMA16 Register  Reset Value */
 
-#define PMERRLOC_SIGMA16_SIGMA16_Pos          _UINT32_(0)                                          /* (PMERRLOC_SIGMA16) Coefficient of Degree x in the SIGMA Polynomial. Position */
-#define PMERRLOC_SIGMA16_SIGMA16_Msk          (_UINT32_(0x3FFF) << PMERRLOC_SIGMA16_SIGMA16_Pos)   /* (PMERRLOC_SIGMA16) Coefficient of Degree x in the SIGMA Polynomial. Mask */
-#define PMERRLOC_SIGMA16_SIGMA16(value)       (PMERRLOC_SIGMA16_SIGMA16_Msk & (_UINT32_(value) << PMERRLOC_SIGMA16_SIGMA16_Pos)) /* Assignment of value for SIGMA16 in the PMERRLOC_SIGMA16 register */
+#define PMERRLOC_SIGMA16_SIGMA_Pos            _UINT32_(0)                                          /* (PMERRLOC_SIGMA16) Coefficient of Degree x in the SIGMA Polynomial. Position */
+#define PMERRLOC_SIGMA16_SIGMA_Msk            (_UINT32_(0x3FFF) << PMERRLOC_SIGMA16_SIGMA_Pos)     /* (PMERRLOC_SIGMA16) Coefficient of Degree x in the SIGMA Polynomial. Mask */
+#define PMERRLOC_SIGMA16_SIGMA(value)         (PMERRLOC_SIGMA16_SIGMA_Msk & (_UINT32_(value) << PMERRLOC_SIGMA16_SIGMA_Pos)) /* Assignment of value for SIGMA in the PMERRLOC_SIGMA16 register */
 #define PMERRLOC_SIGMA16_Msk                  _UINT32_(0x00003FFF)                                 /* (PMERRLOC_SIGMA16) Register Mask  */
 
 
 /* -------- PMERRLOC_SIGMA17 : (PMERRLOC Offset: 0x6C) (R/W 32) SIGMA17 Register -------- */
 #define PMERRLOC_SIGMA17_RESETVALUE           _UINT32_(0x00)                                       /*  (PMERRLOC_SIGMA17) SIGMA17 Register  Reset Value */
 
-#define PMERRLOC_SIGMA17_SIGMA17_Pos          _UINT32_(0)                                          /* (PMERRLOC_SIGMA17) Coefficient of Degree x in the SIGMA Polynomial. Position */
-#define PMERRLOC_SIGMA17_SIGMA17_Msk          (_UINT32_(0x3FFF) << PMERRLOC_SIGMA17_SIGMA17_Pos)   /* (PMERRLOC_SIGMA17) Coefficient of Degree x in the SIGMA Polynomial. Mask */
-#define PMERRLOC_SIGMA17_SIGMA17(value)       (PMERRLOC_SIGMA17_SIGMA17_Msk & (_UINT32_(value) << PMERRLOC_SIGMA17_SIGMA17_Pos)) /* Assignment of value for SIGMA17 in the PMERRLOC_SIGMA17 register */
+#define PMERRLOC_SIGMA17_SIGMA_Pos            _UINT32_(0)                                          /* (PMERRLOC_SIGMA17) Coefficient of Degree x in the SIGMA Polynomial. Position */
+#define PMERRLOC_SIGMA17_SIGMA_Msk            (_UINT32_(0x3FFF) << PMERRLOC_SIGMA17_SIGMA_Pos)     /* (PMERRLOC_SIGMA17) Coefficient of Degree x in the SIGMA Polynomial. Mask */
+#define PMERRLOC_SIGMA17_SIGMA(value)         (PMERRLOC_SIGMA17_SIGMA_Msk & (_UINT32_(value) << PMERRLOC_SIGMA17_SIGMA_Pos)) /* Assignment of value for SIGMA in the PMERRLOC_SIGMA17 register */
 #define PMERRLOC_SIGMA17_Msk                  _UINT32_(0x00003FFF)                                 /* (PMERRLOC_SIGMA17) Register Mask  */
 
 
 /* -------- PMERRLOC_SIGMA18 : (PMERRLOC Offset: 0x70) (R/W 32) SIGMA18 Register -------- */
 #define PMERRLOC_SIGMA18_RESETVALUE           _UINT32_(0x00)                                       /*  (PMERRLOC_SIGMA18) SIGMA18 Register  Reset Value */
 
-#define PMERRLOC_SIGMA18_SIGMA18_Pos          _UINT32_(0)                                          /* (PMERRLOC_SIGMA18) Coefficient of Degree x in the SIGMA Polynomial. Position */
-#define PMERRLOC_SIGMA18_SIGMA18_Msk          (_UINT32_(0x3FFF) << PMERRLOC_SIGMA18_SIGMA18_Pos)   /* (PMERRLOC_SIGMA18) Coefficient of Degree x in the SIGMA Polynomial. Mask */
-#define PMERRLOC_SIGMA18_SIGMA18(value)       (PMERRLOC_SIGMA18_SIGMA18_Msk & (_UINT32_(value) << PMERRLOC_SIGMA18_SIGMA18_Pos)) /* Assignment of value for SIGMA18 in the PMERRLOC_SIGMA18 register */
+#define PMERRLOC_SIGMA18_SIGMA_Pos            _UINT32_(0)                                          /* (PMERRLOC_SIGMA18) Coefficient of Degree x in the SIGMA Polynomial. Position */
+#define PMERRLOC_SIGMA18_SIGMA_Msk            (_UINT32_(0x3FFF) << PMERRLOC_SIGMA18_SIGMA_Pos)     /* (PMERRLOC_SIGMA18) Coefficient of Degree x in the SIGMA Polynomial. Mask */
+#define PMERRLOC_SIGMA18_SIGMA(value)         (PMERRLOC_SIGMA18_SIGMA_Msk & (_UINT32_(value) << PMERRLOC_SIGMA18_SIGMA_Pos)) /* Assignment of value for SIGMA in the PMERRLOC_SIGMA18 register */
 #define PMERRLOC_SIGMA18_Msk                  _UINT32_(0x00003FFF)                                 /* (PMERRLOC_SIGMA18) Register Mask  */
 
 
 /* -------- PMERRLOC_SIGMA19 : (PMERRLOC Offset: 0x74) (R/W 32) SIGMA19 Register -------- */
 #define PMERRLOC_SIGMA19_RESETVALUE           _UINT32_(0x00)                                       /*  (PMERRLOC_SIGMA19) SIGMA19 Register  Reset Value */
 
-#define PMERRLOC_SIGMA19_SIGMA19_Pos          _UINT32_(0)                                          /* (PMERRLOC_SIGMA19) Coefficient of Degree x in the SIGMA Polynomial. Position */
-#define PMERRLOC_SIGMA19_SIGMA19_Msk          (_UINT32_(0x3FFF) << PMERRLOC_SIGMA19_SIGMA19_Pos)   /* (PMERRLOC_SIGMA19) Coefficient of Degree x in the SIGMA Polynomial. Mask */
-#define PMERRLOC_SIGMA19_SIGMA19(value)       (PMERRLOC_SIGMA19_SIGMA19_Msk & (_UINT32_(value) << PMERRLOC_SIGMA19_SIGMA19_Pos)) /* Assignment of value for SIGMA19 in the PMERRLOC_SIGMA19 register */
+#define PMERRLOC_SIGMA19_SIGMA_Pos            _UINT32_(0)                                          /* (PMERRLOC_SIGMA19) Coefficient of Degree x in the SIGMA Polynomial. Position */
+#define PMERRLOC_SIGMA19_SIGMA_Msk            (_UINT32_(0x3FFF) << PMERRLOC_SIGMA19_SIGMA_Pos)     /* (PMERRLOC_SIGMA19) Coefficient of Degree x in the SIGMA Polynomial. Mask */
+#define PMERRLOC_SIGMA19_SIGMA(value)         (PMERRLOC_SIGMA19_SIGMA_Msk & (_UINT32_(value) << PMERRLOC_SIGMA19_SIGMA_Pos)) /* Assignment of value for SIGMA in the PMERRLOC_SIGMA19 register */
 #define PMERRLOC_SIGMA19_Msk                  _UINT32_(0x00003FFF)                                 /* (PMERRLOC_SIGMA19) Register Mask  */
 
 
 /* -------- PMERRLOC_SIGMA20 : (PMERRLOC Offset: 0x78) (R/W 32) SIGMA20 Register -------- */
 #define PMERRLOC_SIGMA20_RESETVALUE           _UINT32_(0x00)                                       /*  (PMERRLOC_SIGMA20) SIGMA20 Register  Reset Value */
 
-#define PMERRLOC_SIGMA20_SIGMA20_Pos          _UINT32_(0)                                          /* (PMERRLOC_SIGMA20) Coefficient of Degree x in the SIGMA Polynomial. Position */
-#define PMERRLOC_SIGMA20_SIGMA20_Msk          (_UINT32_(0x3FFF) << PMERRLOC_SIGMA20_SIGMA20_Pos)   /* (PMERRLOC_SIGMA20) Coefficient of Degree x in the SIGMA Polynomial. Mask */
-#define PMERRLOC_SIGMA20_SIGMA20(value)       (PMERRLOC_SIGMA20_SIGMA20_Msk & (_UINT32_(value) << PMERRLOC_SIGMA20_SIGMA20_Pos)) /* Assignment of value for SIGMA20 in the PMERRLOC_SIGMA20 register */
+#define PMERRLOC_SIGMA20_SIGMA_Pos            _UINT32_(0)                                          /* (PMERRLOC_SIGMA20) Coefficient of Degree x in the SIGMA Polynomial. Position */
+#define PMERRLOC_SIGMA20_SIGMA_Msk            (_UINT32_(0x3FFF) << PMERRLOC_SIGMA20_SIGMA_Pos)     /* (PMERRLOC_SIGMA20) Coefficient of Degree x in the SIGMA Polynomial. Mask */
+#define PMERRLOC_SIGMA20_SIGMA(value)         (PMERRLOC_SIGMA20_SIGMA_Msk & (_UINT32_(value) << PMERRLOC_SIGMA20_SIGMA_Pos)) /* Assignment of value for SIGMA in the PMERRLOC_SIGMA20 register */
 #define PMERRLOC_SIGMA20_Msk                  _UINT32_(0x00003FFF)                                 /* (PMERRLOC_SIGMA20) Register Mask  */
 
 
 /* -------- PMERRLOC_SIGMA21 : (PMERRLOC Offset: 0x7C) (R/W 32) SIGMA21 Register -------- */
 #define PMERRLOC_SIGMA21_RESETVALUE           _UINT32_(0x00)                                       /*  (PMERRLOC_SIGMA21) SIGMA21 Register  Reset Value */
 
-#define PMERRLOC_SIGMA21_SIGMA21_Pos          _UINT32_(0)                                          /* (PMERRLOC_SIGMA21) Coefficient of Degree x in the SIGMA Polynomial. Position */
-#define PMERRLOC_SIGMA21_SIGMA21_Msk          (_UINT32_(0x3FFF) << PMERRLOC_SIGMA21_SIGMA21_Pos)   /* (PMERRLOC_SIGMA21) Coefficient of Degree x in the SIGMA Polynomial. Mask */
-#define PMERRLOC_SIGMA21_SIGMA21(value)       (PMERRLOC_SIGMA21_SIGMA21_Msk & (_UINT32_(value) << PMERRLOC_SIGMA21_SIGMA21_Pos)) /* Assignment of value for SIGMA21 in the PMERRLOC_SIGMA21 register */
+#define PMERRLOC_SIGMA21_SIGMA_Pos            _UINT32_(0)                                          /* (PMERRLOC_SIGMA21) Coefficient of Degree x in the SIGMA Polynomial. Position */
+#define PMERRLOC_SIGMA21_SIGMA_Msk            (_UINT32_(0x3FFF) << PMERRLOC_SIGMA21_SIGMA_Pos)     /* (PMERRLOC_SIGMA21) Coefficient of Degree x in the SIGMA Polynomial. Mask */
+#define PMERRLOC_SIGMA21_SIGMA(value)         (PMERRLOC_SIGMA21_SIGMA_Msk & (_UINT32_(value) << PMERRLOC_SIGMA21_SIGMA_Pos)) /* Assignment of value for SIGMA in the PMERRLOC_SIGMA21 register */
 #define PMERRLOC_SIGMA21_Msk                  _UINT32_(0x00003FFF)                                 /* (PMERRLOC_SIGMA21) Register Mask  */
 
 
 /* -------- PMERRLOC_SIGMA22 : (PMERRLOC Offset: 0x80) (R/W 32) SIGMA22 Register -------- */
 #define PMERRLOC_SIGMA22_RESETVALUE           _UINT32_(0x00)                                       /*  (PMERRLOC_SIGMA22) SIGMA22 Register  Reset Value */
 
-#define PMERRLOC_SIGMA22_SIGMA22_Pos          _UINT32_(0)                                          /* (PMERRLOC_SIGMA22) Coefficient of Degree x in the SIGMA Polynomial. Position */
-#define PMERRLOC_SIGMA22_SIGMA22_Msk          (_UINT32_(0x3FFF) << PMERRLOC_SIGMA22_SIGMA22_Pos)   /* (PMERRLOC_SIGMA22) Coefficient of Degree x in the SIGMA Polynomial. Mask */
-#define PMERRLOC_SIGMA22_SIGMA22(value)       (PMERRLOC_SIGMA22_SIGMA22_Msk & (_UINT32_(value) << PMERRLOC_SIGMA22_SIGMA22_Pos)) /* Assignment of value for SIGMA22 in the PMERRLOC_SIGMA22 register */
+#define PMERRLOC_SIGMA22_SIGMA_Pos            _UINT32_(0)                                          /* (PMERRLOC_SIGMA22) Coefficient of Degree x in the SIGMA Polynomial. Position */
+#define PMERRLOC_SIGMA22_SIGMA_Msk            (_UINT32_(0x3FFF) << PMERRLOC_SIGMA22_SIGMA_Pos)     /* (PMERRLOC_SIGMA22) Coefficient of Degree x in the SIGMA Polynomial. Mask */
+#define PMERRLOC_SIGMA22_SIGMA(value)         (PMERRLOC_SIGMA22_SIGMA_Msk & (_UINT32_(value) << PMERRLOC_SIGMA22_SIGMA_Pos)) /* Assignment of value for SIGMA in the PMERRLOC_SIGMA22 register */
 #define PMERRLOC_SIGMA22_Msk                  _UINT32_(0x00003FFF)                                 /* (PMERRLOC_SIGMA22) Register Mask  */
 
 
 /* -------- PMERRLOC_SIGMA23 : (PMERRLOC Offset: 0x84) (R/W 32) SIGMA23 Register -------- */
 #define PMERRLOC_SIGMA23_RESETVALUE           _UINT32_(0x00)                                       /*  (PMERRLOC_SIGMA23) SIGMA23 Register  Reset Value */
 
-#define PMERRLOC_SIGMA23_SIGMA23_Pos          _UINT32_(0)                                          /* (PMERRLOC_SIGMA23) Coefficient of Degree x in the SIGMA Polynomial. Position */
-#define PMERRLOC_SIGMA23_SIGMA23_Msk          (_UINT32_(0x3FFF) << PMERRLOC_SIGMA23_SIGMA23_Pos)   /* (PMERRLOC_SIGMA23) Coefficient of Degree x in the SIGMA Polynomial. Mask */
-#define PMERRLOC_SIGMA23_SIGMA23(value)       (PMERRLOC_SIGMA23_SIGMA23_Msk & (_UINT32_(value) << PMERRLOC_SIGMA23_SIGMA23_Pos)) /* Assignment of value for SIGMA23 in the PMERRLOC_SIGMA23 register */
+#define PMERRLOC_SIGMA23_SIGMA_Pos            _UINT32_(0)                                          /* (PMERRLOC_SIGMA23) Coefficient of Degree x in the SIGMA Polynomial. Position */
+#define PMERRLOC_SIGMA23_SIGMA_Msk            (_UINT32_(0x3FFF) << PMERRLOC_SIGMA23_SIGMA_Pos)     /* (PMERRLOC_SIGMA23) Coefficient of Degree x in the SIGMA Polynomial. Mask */
+#define PMERRLOC_SIGMA23_SIGMA(value)         (PMERRLOC_SIGMA23_SIGMA_Msk & (_UINT32_(value) << PMERRLOC_SIGMA23_SIGMA_Pos)) /* Assignment of value for SIGMA in the PMERRLOC_SIGMA23 register */
 #define PMERRLOC_SIGMA23_Msk                  _UINT32_(0x00003FFF)                                 /* (PMERRLOC_SIGMA23) Register Mask  */
 
 
 /* -------- PMERRLOC_SIGMA24 : (PMERRLOC Offset: 0x88) (R/W 32) SIGMA24 Register -------- */
 #define PMERRLOC_SIGMA24_RESETVALUE           _UINT32_(0x00)                                       /*  (PMERRLOC_SIGMA24) SIGMA24 Register  Reset Value */
 
-#define PMERRLOC_SIGMA24_SIGMA24_Pos          _UINT32_(0)                                          /* (PMERRLOC_SIGMA24) Coefficient of Degree x in the SIGMA Polynomial. Position */
-#define PMERRLOC_SIGMA24_SIGMA24_Msk          (_UINT32_(0x3FFF) << PMERRLOC_SIGMA24_SIGMA24_Pos)   /* (PMERRLOC_SIGMA24) Coefficient of Degree x in the SIGMA Polynomial. Mask */
-#define PMERRLOC_SIGMA24_SIGMA24(value)       (PMERRLOC_SIGMA24_SIGMA24_Msk & (_UINT32_(value) << PMERRLOC_SIGMA24_SIGMA24_Pos)) /* Assignment of value for SIGMA24 in the PMERRLOC_SIGMA24 register */
+#define PMERRLOC_SIGMA24_SIGMA_Pos            _UINT32_(0)                                          /* (PMERRLOC_SIGMA24) Coefficient of Degree x in the SIGMA Polynomial. Position */
+#define PMERRLOC_SIGMA24_SIGMA_Msk            (_UINT32_(0x3FFF) << PMERRLOC_SIGMA24_SIGMA_Pos)     /* (PMERRLOC_SIGMA24) Coefficient of Degree x in the SIGMA Polynomial. Mask */
+#define PMERRLOC_SIGMA24_SIGMA(value)         (PMERRLOC_SIGMA24_SIGMA_Msk & (_UINT32_(value) << PMERRLOC_SIGMA24_SIGMA_Pos)) /* Assignment of value for SIGMA in the PMERRLOC_SIGMA24 register */
 #define PMERRLOC_SIGMA24_Msk                  _UINT32_(0x00003FFF)                                 /* (PMERRLOC_SIGMA24) Register Mask  */
 
 

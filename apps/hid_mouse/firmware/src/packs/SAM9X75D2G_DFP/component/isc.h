@@ -1,7 +1,9 @@
 /*
  * Component description for ISC
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -428,10 +430,7 @@
 #define ISC_INTEN_GFOV_Pos                    _UINT32_(29)                                         /* (ISC_INTEN) Input FIFO Overflow Interrupt Enable Position */
 #define ISC_INTEN_GFOV_Msk                    (_UINT32_(0x1) << ISC_INTEN_GFOV_Pos)                /* (ISC_INTEN) Input FIFO Overflow Interrupt Enable Mask */
 #define ISC_INTEN_GFOV(value)                 (ISC_INTEN_GFOV_Msk & (_UINT32_(value) << ISC_INTEN_GFOV_Pos)) /* Assignment of value for GFOV in the ISC_INTEN register */
-#define ISC_INTEN_WPE_Pos                     _UINT32_(30)                                         /* (ISC_INTEN) Write Protection Error Enable Position */
-#define ISC_INTEN_WPE_Msk                     (_UINT32_(0x1) << ISC_INTEN_WPE_Pos)                 /* (ISC_INTEN) Write Protection Error Enable Mask */
-#define ISC_INTEN_WPE(value)                  (ISC_INTEN_WPE_Msk & (_UINT32_(value) << ISC_INTEN_WPE_Pos)) /* Assignment of value for WPE in the ISC_INTEN register */
-#define ISC_INTEN_Msk                         _UINT32_(0x7F113333)                                 /* (ISC_INTEN) Register Mask  */
+#define ISC_INTEN_Msk                         _UINT32_(0x3F113333)                                 /* (ISC_INTEN) Register Mask  */
 
 
 /* -------- ISC_INTDIS : (ISC Offset: 0x2C) ( /W 32) Interrupt Disable Register -------- */
@@ -483,10 +482,7 @@
 #define ISC_INTDIS_GFOV_Pos                   _UINT32_(29)                                         /* (ISC_INTDIS) FIFO Overflow Interrupt Disable Position */
 #define ISC_INTDIS_GFOV_Msk                   (_UINT32_(0x1) << ISC_INTDIS_GFOV_Pos)               /* (ISC_INTDIS) FIFO Overflow Interrupt Disable Mask */
 #define ISC_INTDIS_GFOV(value)                (ISC_INTDIS_GFOV_Msk & (_UINT32_(value) << ISC_INTDIS_GFOV_Pos)) /* Assignment of value for GFOV in the ISC_INTDIS register */
-#define ISC_INTDIS_WPE_Pos                    _UINT32_(30)                                         /* (ISC_INTDIS) Write Protection Error Disable Position */
-#define ISC_INTDIS_WPE_Msk                    (_UINT32_(0x1) << ISC_INTDIS_WPE_Pos)                /* (ISC_INTDIS) Write Protection Error Disable Mask */
-#define ISC_INTDIS_WPE(value)                 (ISC_INTDIS_WPE_Msk & (_UINT32_(value) << ISC_INTDIS_WPE_Pos)) /* Assignment of value for WPE in the ISC_INTDIS register */
-#define ISC_INTDIS_Msk                        _UINT32_(0x7F113333)                                 /* (ISC_INTDIS) Register Mask  */
+#define ISC_INTDIS_Msk                        _UINT32_(0x3F113333)                                 /* (ISC_INTDIS) Register Mask  */
 
 
 /* -------- ISC_INTMASK : (ISC Offset: 0x30) ( R/ 32) Interrupt Mask Register -------- */
@@ -540,10 +536,7 @@
 #define ISC_INTMASK_GFOV_Pos                  _UINT32_(29)                                         /* (ISC_INTMASK) FIFO Overflow Interrupt Mask Position */
 #define ISC_INTMASK_GFOV_Msk                  (_UINT32_(0x1) << ISC_INTMASK_GFOV_Pos)              /* (ISC_INTMASK) FIFO Overflow Interrupt Mask Mask */
 #define ISC_INTMASK_GFOV(value)               (ISC_INTMASK_GFOV_Msk & (_UINT32_(value) << ISC_INTMASK_GFOV_Pos)) /* Assignment of value for GFOV in the ISC_INTMASK register */
-#define ISC_INTMASK_WPE_Pos                   _UINT32_(30)                                         /* (ISC_INTMASK) Write Protection Error Mask Position */
-#define ISC_INTMASK_WPE_Msk                   (_UINT32_(0x1) << ISC_INTMASK_WPE_Pos)               /* (ISC_INTMASK) Write Protection Error Mask Mask */
-#define ISC_INTMASK_WPE(value)                (ISC_INTMASK_WPE_Msk & (_UINT32_(value) << ISC_INTMASK_WPE_Pos)) /* Assignment of value for WPE in the ISC_INTMASK register */
-#define ISC_INTMASK_Msk                       _UINT32_(0x7F113333)                                 /* (ISC_INTMASK) Register Mask  */
+#define ISC_INTMASK_Msk                       _UINT32_(0x3F113333)                                 /* (ISC_INTMASK) Register Mask  */
 
 
 /* -------- ISC_INTSR : (ISC Offset: 0x34) ( R/ 32) Interrupt Status Register -------- */
@@ -672,14 +665,7 @@
 #define   ISC_INTSR_GFOV_1_Val                _UINT32_(0x1)                                        /* (ISC_INTSR) A FIFO overflow has been detected.  */
 #define ISC_INTSR_GFOV_0                      (ISC_INTSR_GFOV_0_Val << ISC_INTSR_GFOV_Pos)         /* (ISC_INTSR) No FIFO overflow detected since the last read of the Interrupt Status register. Position */
 #define ISC_INTSR_GFOV_1                      (ISC_INTSR_GFOV_1_Val << ISC_INTSR_GFOV_Pos)         /* (ISC_INTSR) A FIFO overflow has been detected. Position */
-#define ISC_INTSR_WPE_Pos                     _UINT32_(30)                                         /* (ISC_INTSR) Write Protection Error Interrupt (cleared on read) Position */
-#define ISC_INTSR_WPE_Msk                     (_UINT32_(0x1) << ISC_INTSR_WPE_Pos)                 /* (ISC_INTSR) Write Protection Error Interrupt (cleared on read) Mask */
-#define ISC_INTSR_WPE(value)                  (ISC_INTSR_WPE_Msk & (_UINT32_(value) << ISC_INTSR_WPE_Pos)) /* Assignment of value for WPE in the ISC_INTSR register */
-#define   ISC_INTSR_WPE_0_Val                 _UINT32_(0x0)                                        /* (ISC_INTSR) No Write Protection error detected since the last read of the Interrupt Status register.  */
-#define   ISC_INTSR_WPE_1_Val                 _UINT32_(0x1)                                        /* (ISC_INTSR) A Write Protection error has been detected.  */
-#define ISC_INTSR_WPE_0                       (ISC_INTSR_WPE_0_Val << ISC_INTSR_WPE_Pos)           /* (ISC_INTSR) No Write Protection error detected since the last read of the Interrupt Status register. Position */
-#define ISC_INTSR_WPE_1                       (ISC_INTSR_WPE_1_Val << ISC_INTSR_WPE_Pos)           /* (ISC_INTSR) A Write Protection error has been detected. Position */
-#define ISC_INTSR_Msk                         _UINT32_(0x7F173333)                                 /* (ISC_INTSR) Register Mask  */
+#define ISC_INTSR_Msk                         _UINT32_(0x3F173333)                                 /* (ISC_INTSR) Register Mask  */
 
 
 /* -------- ISC_DPC_CTRL : (ISC Offset: 0x40) (R/W 32) Defective Pixel Correction Control Register -------- */
