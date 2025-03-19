@@ -1,7 +1,7 @@
 /*
  * Header file for ATSAMA7D65
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -91,13 +91,13 @@ typedef enum IRQn
   SGI15_IRQn                =  15, /* 15  Software Generated Interrupt 15     */
 
 /******  CORTEX-A7 Processor Exceptions Numbers ******************************/
+  VirtMaint_IRQn            =  25, /* 25  Virtual Maintenance Interrupt (PPI6) */
+  HyperVTimer_IRQn          =  26, /* 26  Hypervisor Timer event (PPI5)       */
+  VirtTimer_IRQn            =  27, /* 27  Virtual Timer event (PPI4)          */
   LegacynFIQ_IRQn           =  28, /* 28  Legacy nFIQ signal (PPI0)           */
   SecPhysTimer_IRQn         =  29, /* 29  Secure Physical Timer event (PPI1)  */
   NonSecPhysTimer_IRQn      =  30, /* 30  Non-secure Physical Timer event (PPI2) */
   LegacynIRQ_IRQn           =  31, /* 31  Legacy nIRQ signal (PPI3)           */
-  VirtTimer_IRQn            =  27, /* 27  Virtual Timer event (PPI4)          */
-  HyperVTimer_IRQn          =  26, /* 26  Hypervisor Timer event (PPI5)       */
-  VirtMaint_IRQn            =  25, /* 25  Virtual Maintenance Interrupt (PPI6) */
 
 /* ****************** SAMA7D65 specific Interrupt Numbers ******************* */
   DWDT_SW_IRQn              =  32, /* 32  Dual Watchdog Timer (DWDT)          */
@@ -191,8 +191,8 @@ typedef enum IRQn
   UHPHS_IRQn                = 133, /* 133 USB Host High Speed Port (UHPHS)    */
   DSI_IRQn                  = 135, /* 135 Display Serial Interface (DSI)      */
   I3CC_IRQn                 = 137, /* 137 I3C Host Controller (I3CC)          */
-  ARM_NPMUIRQ_IRQn          = 139, /* 139 ARM_NPMUIRQ (ARM)                   */
-  ARM_NAXIERRIRQ_IRQn       = 140, /* 140 ARM_NAXIERRIRQ (ARM)                */
+  ARM_NPMUIRQ_IRQn          = 139, /* 139 Cortex-A7 CPU (ARM)                 */
+  ARM_NAXIERRIRQ_IRQn       = 140, /* 140 Cortex-A7 CPU (ARM)                 */
   XDMAC0_SINT_IRQn          = 141, /* 141 Extensible DMA Controller (XDMAC0)  */
   XDMAC1_SINT_IRQn          = 142, /* 142 Extensible DMA Controller (XDMAC1)  */
   XDMAC2_SINT_IRQn          = 143, /* 143 Extensible DMA Controller (XDMAC2)  */
@@ -284,7 +284,6 @@ typedef enum IRQn
 #include "component/pio.h"
 #include "component/pit64b.h"
 #include "component/pmc.h"
-#include "component/pmonc.h"
 #include "component/puf.h"
 #include "component/pwm.h"
 #include "component/qspi.h"
@@ -378,7 +377,6 @@ typedef enum IRQn
 #include "instance/pit64b4.h"
 #include "instance/pit64b5.h"
 #include "instance/pmc.h"
-#include "instance/pmonc.h"
 #include "instance/puf.h"
 #include "instance/pwm.h"
 #include "instance/qspi0.h"
@@ -517,7 +515,7 @@ typedef enum IRQn
 #define ID_TCPCB         ( 90) /* USB Type-C Port Controller B (TCPCB) */
 #define ID_TDES          ( 91) /* Triple Data Encryption Standard (TDES) */
 #define ID_TRNG          ( 92) /* True Random Number Generator (TRNG) */
-#define ID_TZAESB_NS     ( 93) /* TrustZone Advanced Encryption Standard Bridge Non-Secure (Clocks & Interrupt) (TZAESB_NS) */
+#define ID_TZAESB_NS     ( 93) /* TrustZone Advanced Encryption Standard Bridge Non-Secure (Clocks and Interrupt) (TZAESB_NS) */
 #define ID_TZAESB_NS_SINT ( 94) /* TrustZone Advanced Encryption Standard Bridge Non-Secure (Interrupt only) (TZAESB_NS_SINT) */
 #define ID_TZAESB_S      ( 95) /* TrustZone Advanced Encryption Standard Bridge Secure (Interrupt only) (TZAESB_S) */
 #define ID_TZAESB_S_SINT ( 96) /* TrustZone Advanced Encryption Standard Bridge Secure (Interrupt only) (TZAESB_S_SINT) */
@@ -526,7 +524,6 @@ typedef enum IRQn
 #define ID_UDPHSA        ( 99) /* USB Device High Speed A (UDPHSA) */
 #define ID_UDPHSB        (100) /* USB Device High Speed B (UDPHSB) */
 #define ID_UHPHS         (101) /* USB Host Controller High Speed (UHPHS) */
-#define ID_PMONC         (102) /* Process monitor (PMONC) */
 #define ID_DSI           (103) /* Display Serial Interface Host interrupt and MIPI DPHY clock (DSI) */
 #define ID_LVDSC         (104) /* Display Serial Interface between LCDC and LVDS interface. Instance include LVDSC and LVDSPHY. (LVDSC) */
 #define ID_I3CC          (105) /* I3C Controller (I3CC) */
@@ -627,7 +624,6 @@ typedef enum IRQn
 #define PIT64B4_REGS                     ((pit64b_registers_t*)0xe2008000)             /* PIT64B4 Registers Address    */
 #define PIT64B5_REGS                     ((pit64b_registers_t*)0xe200c000)             /* PIT64B5 Registers Address    */
 #define PMC_REGS                         ((pmc_registers_t*)0xe0018000)                /* PMC Registers Address        */
-#define PMONC_REGS                       ((pmonc_registers_t*)0xe2828000)              /* PMONC Registers Address      */
 #define PUF_REGS                         ((puf_registers_t*)0xe0024000)                /* PUF Registers Address        */
 #define PWM_REGS                         ((pwm_registers_t*)0xe1818000)                /* PWM Registers Address        */
 #define QSPI0_REGS                       ((qspi_registers_t*)0xe080c000)               /* QSPI0 Registers Address      */
@@ -725,7 +721,6 @@ typedef enum IRQn
 #define PIT64B4_BASE_ADDRESS             _UINT32_(0xe2008000)                          /* PIT64B4 Base Address */
 #define PIT64B5_BASE_ADDRESS             _UINT32_(0xe200c000)                          /* PIT64B5 Base Address */
 #define PMC_BASE_ADDRESS                 _UINT32_(0xe0018000)                          /* PMC Base Address */
-#define PMONC_BASE_ADDRESS               _UINT32_(0xe2828000)                          /* PMONC Base Address */
 #define PUF_BASE_ADDRESS                 _UINT32_(0xe0024000)                          /* PUF Base Address */
 #define PWM_BASE_ADDRESS                 _UINT32_(0xe1818000)                          /* PWM Base Address */
 #define QSPI0_BASE_ADDRESS               _UINT32_(0xe080c000)                          /* QSPI0 Base Address */

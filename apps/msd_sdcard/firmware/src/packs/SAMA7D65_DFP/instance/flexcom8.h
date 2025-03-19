@@ -1,7 +1,7 @@
 /*
- * Instance header file for ATSAMA7D65D2G
+ * Instance header file for ATSAMA7D65D2GN8
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -29,8 +29,8 @@
 #define FLEXCOM8_DMAC_ID_RX                      (21)       
 #define FLEXCOM8_DMAC_ID_TX                      (22)       
 #define FLEXCOM8_INSTANCE_ID                     (42)       /* FLEXCOM8. Max Generic Clock Frequency = FPCLOCK  3. */
-#define FLEXCOM8_SPI_FIFO_SIZE                   (32)       
-#define FLEXCOM8_TWI_FIFO_SIZE                   (32)       
-#define FLEXCOM8_USART_FIFO_SIZE                 (32)       
+#define FLEXCOM8_SPI_FIFO_SIZE                   (32)       /* SPI FIFO size */
+#define FLEXCOM8_TWI_FIFO_SIZE                   (32)       /* TWI FIFO size */
+#define FLEXCOM8_USART_FIFO_SIZE                 (32)       /* USART FIFO size */
 
 #endif /* _SAMA7D6_FLEXCOM8_INSTANCE_ */

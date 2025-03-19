@@ -1,7 +1,7 @@
 /*
  * Component description for I3CC
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -26,6 +26,110 @@
 /* ************************************************************************** */
 /*                      SOFTWARE API DEFINITION FOR I3CC                      */
 /* ************************************************************************** */
+
+/* -------- I3CC_DCT0 : (I3CC Offset: 0x00) ( R/ 32) I3C Device Characteristic Table 0 Structure -------- */
+#define I3CC_DCT0_PID_HI_Pos                  _UINT32_(0)                                          /* (I3CC_DCT0) Device Provisional ID High Position */
+#define I3CC_DCT0_PID_HI_Msk                  (_UINT32_(0xFFFFFFFF) << I3CC_DCT0_PID_HI_Pos)       /* (I3CC_DCT0) Device Provisional ID High Mask */
+#define I3CC_DCT0_PID_HI(value)               (I3CC_DCT0_PID_HI_Msk & (_UINT32_(value) << I3CC_DCT0_PID_HI_Pos)) /* Assignment of value for PID_HI in the I3CC_DCT0 register */
+#define I3CC_DCT0_Msk                         _UINT32_(0xFFFFFFFF)                                 /* (I3CC_DCT0) Register Mask  */
+
+
+/* -------- I3CC_DCT1 : (I3CC Offset: 0x04) ( R/ 32) I3C Device Characteristic Table 1 Structure -------- */
+#define I3CC_DCT1_PID_LO_Pos                  _UINT32_(0)                                          /* (I3CC_DCT1) Device Provisional ID Low Position */
+#define I3CC_DCT1_PID_LO_Msk                  (_UINT32_(0xFFFF) << I3CC_DCT1_PID_LO_Pos)           /* (I3CC_DCT1) Device Provisional ID Low Mask */
+#define I3CC_DCT1_PID_LO(value)               (I3CC_DCT1_PID_LO_Msk & (_UINT32_(value) << I3CC_DCT1_PID_LO_Pos)) /* Assignment of value for PID_LO in the I3CC_DCT1 register */
+#define I3CC_DCT1_Msk                         _UINT32_(0x0000FFFF)                                 /* (I3CC_DCT1) Register Mask  */
+
+
+/* -------- I3CC_DCT2 : (I3CC Offset: 0x08) ( R/ 32) I3C Device Characteristic Table 2 Structure -------- */
+#define I3CC_DCT2_DCR_Pos                     _UINT32_(0)                                          /* (I3CC_DCT2) Device DCR Position */
+#define I3CC_DCT2_DCR_Msk                     (_UINT32_(0xFF) << I3CC_DCT2_DCR_Pos)                /* (I3CC_DCT2) Device DCR Mask */
+#define I3CC_DCT2_DCR(value)                  (I3CC_DCT2_DCR_Msk & (_UINT32_(value) << I3CC_DCT2_DCR_Pos)) /* Assignment of value for DCR in the I3CC_DCT2 register */
+#define I3CC_DCT2_BCR_Pos                     _UINT32_(8)                                          /* (I3CC_DCT2) Device BCR Position */
+#define I3CC_DCT2_BCR_Msk                     (_UINT32_(0xFF) << I3CC_DCT2_BCR_Pos)                /* (I3CC_DCT2) Device BCR Mask */
+#define I3CC_DCT2_BCR(value)                  (I3CC_DCT2_BCR_Msk & (_UINT32_(value) << I3CC_DCT2_BCR_Pos)) /* Assignment of value for BCR in the I3CC_DCT2 register */
+#define I3CC_DCT2_Msk                         _UINT32_(0x0000FFFF)                                 /* (I3CC_DCT2) Register Mask  */
+
+
+/* -------- I3CC_DCT3 : (I3CC Offset: 0x0C) ( R/ 32) I3C Device Characteristic Table 3 Structure -------- */
+#define I3CC_DCT3_DYNAMIC_ADDRESS_Pos         _UINT32_(0)                                          /* (I3CC_DCT3) Device I3C Dynamic Address Position */
+#define I3CC_DCT3_DYNAMIC_ADDRESS_Msk         (_UINT32_(0xFF) << I3CC_DCT3_DYNAMIC_ADDRESS_Pos)    /* (I3CC_DCT3) Device I3C Dynamic Address Mask */
+#define I3CC_DCT3_DYNAMIC_ADDRESS(value)      (I3CC_DCT3_DYNAMIC_ADDRESS_Msk & (_UINT32_(value) << I3CC_DCT3_DYNAMIC_ADDRESS_Pos)) /* Assignment of value for DYNAMIC_ADDRESS in the I3CC_DCT3 register */
+#define I3CC_DCT3_Msk                         _UINT32_(0x000000FF)                                 /* (I3CC_DCT3) Register Mask  */
+
+
+/* -------- I3CC_DAT0 : (I3CC Offset: 0x00) (R/W 32) I3C Device Address Table 0 Structure -------- */
+#define I3CC_DAT0_STATIC_ADDRESS_Pos          _UINT32_(0)                                          /* (I3CC_DAT0) Device Static Address Position */
+#define I3CC_DAT0_STATIC_ADDRESS_Msk          (_UINT32_(0x3F) << I3CC_DAT0_STATIC_ADDRESS_Pos)     /* (I3CC_DAT0) Device Static Address Mask */
+#define I3CC_DAT0_STATIC_ADDRESS(value)       (I3CC_DAT0_STATIC_ADDRESS_Msk & (_UINT32_(value) << I3CC_DAT0_STATIC_ADDRESS_Pos)) /* Assignment of value for STATIC_ADDRESS in the I3CC_DAT0 register */
+#define I3CC_DAT0_IBI_PAYLOAD_Pos             _UINT32_(12)                                         /* (I3CC_DAT0) Device IBI Payload Position */
+#define I3CC_DAT0_IBI_PAYLOAD_Msk             (_UINT32_(0x1) << I3CC_DAT0_IBI_PAYLOAD_Pos)         /* (I3CC_DAT0) Device IBI Payload Mask */
+#define I3CC_DAT0_IBI_PAYLOAD(value)          (I3CC_DAT0_IBI_PAYLOAD_Msk & (_UINT32_(value) << I3CC_DAT0_IBI_PAYLOAD_Pos)) /* Assignment of value for IBI_PAYLOAD in the I3CC_DAT0 register */
+#define   I3CC_DAT0_IBI_PAYLOAD_NO_PAYLOAD_Val _UINT32_(0x0)                                        /* (I3CC_DAT0) IBIs from this Device do not carry a Data Payload  */
+#define   I3CC_DAT0_IBI_PAYLOAD_PAYLOAD_Val   _UINT32_(0x1)                                        /* (I3CC_DAT0) IBIs from this Device do carry a Data Payload  */
+#define I3CC_DAT0_IBI_PAYLOAD_NO_PAYLOAD      (I3CC_DAT0_IBI_PAYLOAD_NO_PAYLOAD_Val << I3CC_DAT0_IBI_PAYLOAD_Pos) /* (I3CC_DAT0) IBIs from this Device do not carry a Data Payload Position */
+#define I3CC_DAT0_IBI_PAYLOAD_PAYLOAD         (I3CC_DAT0_IBI_PAYLOAD_PAYLOAD_Val << I3CC_DAT0_IBI_PAYLOAD_Pos) /* (I3CC_DAT0) IBIs from this Device do carry a Data Payload Position */
+#define I3CC_DAT0_IBI_REJECT_Pos              _UINT32_(13)                                         /* (I3CC_DAT0) Device In-Band Interrupt Request Reject Position */
+#define I3CC_DAT0_IBI_REJECT_Msk              (_UINT32_(0x1) << I3CC_DAT0_IBI_REJECT_Pos)          /* (I3CC_DAT0) Device In-Band Interrupt Request Reject Mask */
+#define I3CC_DAT0_IBI_REJECT(value)           (I3CC_DAT0_IBI_REJECT_Msk & (_UINT32_(value) << I3CC_DAT0_IBI_REJECT_Pos)) /* Assignment of value for IBI_REJECT in the I3CC_DAT0 register */
+#define   I3CC_DAT0_IBI_REJECT_ACK_Val        _UINT32_(0x0)                                        /* (I3CC_DAT0) ACK In-Band Interrupt Requests from this Target  */
+#define   I3CC_DAT0_IBI_REJECT_NACK_Val       _UINT32_(0x1)                                        /* (I3CC_DAT0) NACK any IBI, and send the auto-disable CCC  */
+#define I3CC_DAT0_IBI_REJECT_ACK              (I3CC_DAT0_IBI_REJECT_ACK_Val << I3CC_DAT0_IBI_REJECT_Pos) /* (I3CC_DAT0) ACK In-Band Interrupt Requests from this Target Position */
+#define I3CC_DAT0_IBI_REJECT_NACK             (I3CC_DAT0_IBI_REJECT_NACK_Val << I3CC_DAT0_IBI_REJECT_Pos) /* (I3CC_DAT0) NACK any IBI, and send the auto-disable CCC Position */
+#define I3CC_DAT0_CRR_REJECT_Pos              _UINT32_(14)                                         /* (I3CC_DAT0) Device In-Band Controller-role Request Reject Position */
+#define I3CC_DAT0_CRR_REJECT_Msk              (_UINT32_(0x1) << I3CC_DAT0_CRR_REJECT_Pos)          /* (I3CC_DAT0) Device In-Band Controller-role Request Reject Mask */
+#define I3CC_DAT0_CRR_REJECT(value)           (I3CC_DAT0_CRR_REJECT_Msk & (_UINT32_(value) << I3CC_DAT0_CRR_REJECT_Pos)) /* Assignment of value for CRR_REJECT in the I3CC_DAT0 register */
+#define I3CC_DAT0_DYNAMIC_ADDRESS_Pos         _UINT32_(16)                                         /* (I3CC_DAT0) Device I3C Dynamic Address Position */
+#define I3CC_DAT0_DYNAMIC_ADDRESS_Msk         (_UINT32_(0xFF) << I3CC_DAT0_DYNAMIC_ADDRESS_Pos)    /* (I3CC_DAT0) Device I3C Dynamic Address Mask */
+#define I3CC_DAT0_DYNAMIC_ADDRESS(value)      (I3CC_DAT0_DYNAMIC_ADDRESS_Msk & (_UINT32_(value) << I3CC_DAT0_DYNAMIC_ADDRESS_Pos)) /* Assignment of value for DYNAMIC_ADDRESS in the I3CC_DAT0 register */
+#define I3CC_DAT0_DEV_NACK_RETRY_CNT_Pos      _UINT32_(29)                                         /* (I3CC_DAT0) Device NACK Retry Count Position */
+#define I3CC_DAT0_DEV_NACK_RETRY_CNT_Msk      (_UINT32_(0x3) << I3CC_DAT0_DEV_NACK_RETRY_CNT_Pos)  /* (I3CC_DAT0) Device NACK Retry Count Mask */
+#define I3CC_DAT0_DEV_NACK_RETRY_CNT(value)   (I3CC_DAT0_DEV_NACK_RETRY_CNT_Msk & (_UINT32_(value) << I3CC_DAT0_DEV_NACK_RETRY_CNT_Pos)) /* Assignment of value for DEV_NACK_RETRY_CNT in the I3CC_DAT0 register */
+#define   I3CC_DAT0_DEV_NACK_RETRY_CNT_NO_RET_Val _UINT32_(0x0)                                        /* (I3CC_DAT0) No retries on NACK  */
+#define   I3CC_DAT0_DEV_NACK_RETRY_CNT_ONE_RET_Val _UINT32_(0x1)                                        /* (I3CC_DAT0) One retry on NACK  */
+#define   I3CC_DAT0_DEV_NACK_RETRY_CNT_TWO_RET_Val _UINT32_(0x2)                                        /* (I3CC_DAT0) Two retries on NACK  */
+#define   I3CC_DAT0_DEV_NACK_RETRY_CNT_THREE_RET_Val _UINT32_(0x3)                                        /* (I3CC_DAT0) Three retries on NACK  */
+#define I3CC_DAT0_DEV_NACK_RETRY_CNT_NO_RET   (I3CC_DAT0_DEV_NACK_RETRY_CNT_NO_RET_Val << I3CC_DAT0_DEV_NACK_RETRY_CNT_Pos) /* (I3CC_DAT0) No retries on NACK Position */
+#define I3CC_DAT0_DEV_NACK_RETRY_CNT_ONE_RET  (I3CC_DAT0_DEV_NACK_RETRY_CNT_ONE_RET_Val << I3CC_DAT0_DEV_NACK_RETRY_CNT_Pos) /* (I3CC_DAT0) One retry on NACK Position */
+#define I3CC_DAT0_DEV_NACK_RETRY_CNT_TWO_RET  (I3CC_DAT0_DEV_NACK_RETRY_CNT_TWO_RET_Val << I3CC_DAT0_DEV_NACK_RETRY_CNT_Pos) /* (I3CC_DAT0) Two retries on NACK Position */
+#define I3CC_DAT0_DEV_NACK_RETRY_CNT_THREE_RET (I3CC_DAT0_DEV_NACK_RETRY_CNT_THREE_RET_Val << I3CC_DAT0_DEV_NACK_RETRY_CNT_Pos) /* (I3CC_DAT0) Three retries on NACK Position */
+#define I3CC_DAT0_DEVICE_Pos                  _UINT32_(31)                                         /* (I3CC_DAT0) Device Type Position */
+#define I3CC_DAT0_DEVICE_Msk                  (_UINT32_(0x1) << I3CC_DAT0_DEVICE_Pos)              /* (I3CC_DAT0) Device Type Mask */
+#define I3CC_DAT0_DEVICE(value)               (I3CC_DAT0_DEVICE_Msk & (_UINT32_(value) << I3CC_DAT0_DEVICE_Pos)) /* Assignment of value for DEVICE in the I3CC_DAT0 register */
+#define   I3CC_DAT0_DEVICE_I3C_Val            _UINT32_(0x0)                                        /* (I3CC_DAT0) I3C Device  */
+#define   I3CC_DAT0_DEVICE_I2C_Val            _UINT32_(0x1)                                        /* (I3CC_DAT0) I2C Device  */
+#define I3CC_DAT0_DEVICE_I3C                  (I3CC_DAT0_DEVICE_I3C_Val << I3CC_DAT0_DEVICE_Pos)   /* (I3CC_DAT0) I3C Device Position */
+#define I3CC_DAT0_DEVICE_I2C                  (I3CC_DAT0_DEVICE_I2C_Val << I3CC_DAT0_DEVICE_Pos)   /* (I3CC_DAT0) I2C Device Position */
+#define I3CC_DAT0_Msk                         _UINT32_(0xE0FF703F)                                 /* (I3CC_DAT0) Register Mask  */
+
+
+/* -------- I3CC_DAT1 : (I3CC Offset: 0x04) (R/W 32) I3C Device Address Table 1 Structure -------- */
+#define I3CC_DAT1_AUTOCMD_MASK_Pos            _UINT32_(0)                                          /* (I3CC_DAT1) Device Auto-Command Mask Position */
+#define I3CC_DAT1_AUTOCMD_MASK_Msk            (_UINT32_(0xFF) << I3CC_DAT1_AUTOCMD_MASK_Pos)       /* (I3CC_DAT1) Device Auto-Command Mask Mask */
+#define I3CC_DAT1_AUTOCMD_MASK(value)         (I3CC_DAT1_AUTOCMD_MASK_Msk & (_UINT32_(value) << I3CC_DAT1_AUTOCMD_MASK_Pos)) /* Assignment of value for AUTOCMD_MASK in the I3CC_DAT1 register */
+#define I3CC_DAT1_AUTOCMD_VALUE_Pos           _UINT32_(8)                                          /* (I3CC_DAT1) Device Auto-Command IBI Mandatory Byte Value Position */
+#define I3CC_DAT1_AUTOCMD_VALUE_Msk           (_UINT32_(0xFF) << I3CC_DAT1_AUTOCMD_VALUE_Pos)      /* (I3CC_DAT1) Device Auto-Command IBI Mandatory Byte Value Mask */
+#define I3CC_DAT1_AUTOCMD_VALUE(value)        (I3CC_DAT1_AUTOCMD_VALUE_Msk & (_UINT32_(value) << I3CC_DAT1_AUTOCMD_VALUE_Pos)) /* Assignment of value for AUTOCMD_VALUE in the I3CC_DAT1 register */
+#define I3CC_DAT1_AUTOCMD_MODE_Pos            _UINT32_(16)                                         /* (I3CC_DAT1) Device Auto-Command Mode Position */
+#define I3CC_DAT1_AUTOCMD_MODE_Msk            (_UINT32_(0x7) << I3CC_DAT1_AUTOCMD_MODE_Pos)        /* (I3CC_DAT1) Device Auto-Command Mode Mask */
+#define I3CC_DAT1_AUTOCMD_MODE(value)         (I3CC_DAT1_AUTOCMD_MODE_Msk & (_UINT32_(value) << I3CC_DAT1_AUTOCMD_MODE_Pos)) /* Assignment of value for AUTOCMD_MODE in the I3CC_DAT1 register */
+#define   I3CC_DAT1_AUTOCMD_MODE_SDR0_Val     _UINT32_(0x0)                                        /* (I3CC_DAT1) I3C Standard SDR Speed, fSCL Max (up to 12.5 MHz)  */
+#define   I3CC_DAT1_AUTOCMD_MODE_SDR1_Val     _UINT32_(0x1)                                        /* (I3CC_DAT1) I3C SDR1 (8 MHz sustainable data rate)  */
+#define   I3CC_DAT1_AUTOCMD_MODE_SDR2_Val     _UINT32_(0x2)                                        /* (I3CC_DAT1) I3C SDR2 (6 MHz sustainable data rate)  */
+#define   I3CC_DAT1_AUTOCMD_MODE_SDR3_Val     _UINT32_(0x3)                                        /* (I3CC_DAT1) I3C SDR3 (4 MHz sustainable data rate)  */
+#define   I3CC_DAT1_AUTOCMD_MODE_SDR4_Val     _UINT32_(0x4)                                        /* (I3CC_DAT1) I3C SDR4 (2 MHz sustainable data rate)  */
+#define   I3CC_DAT1_AUTOCMD_MODE_HDR_DDR_Val  _UINT32_(0x6)                                        /* (I3CC_DAT1) HDR Double Data Rate Mode  */
+#define I3CC_DAT1_AUTOCMD_MODE_SDR0           (I3CC_DAT1_AUTOCMD_MODE_SDR0_Val << I3CC_DAT1_AUTOCMD_MODE_Pos) /* (I3CC_DAT1) I3C Standard SDR Speed, fSCL Max (up to 12.5 MHz) Position */
+#define I3CC_DAT1_AUTOCMD_MODE_SDR1           (I3CC_DAT1_AUTOCMD_MODE_SDR1_Val << I3CC_DAT1_AUTOCMD_MODE_Pos) /* (I3CC_DAT1) I3C SDR1 (8 MHz sustainable data rate) Position */
+#define I3CC_DAT1_AUTOCMD_MODE_SDR2           (I3CC_DAT1_AUTOCMD_MODE_SDR2_Val << I3CC_DAT1_AUTOCMD_MODE_Pos) /* (I3CC_DAT1) I3C SDR2 (6 MHz sustainable data rate) Position */
+#define I3CC_DAT1_AUTOCMD_MODE_SDR3           (I3CC_DAT1_AUTOCMD_MODE_SDR3_Val << I3CC_DAT1_AUTOCMD_MODE_Pos) /* (I3CC_DAT1) I3C SDR3 (4 MHz sustainable data rate) Position */
+#define I3CC_DAT1_AUTOCMD_MODE_SDR4           (I3CC_DAT1_AUTOCMD_MODE_SDR4_Val << I3CC_DAT1_AUTOCMD_MODE_Pos) /* (I3CC_DAT1) I3C SDR4 (2 MHz sustainable data rate) Position */
+#define I3CC_DAT1_AUTOCMD_MODE_HDR_DDR        (I3CC_DAT1_AUTOCMD_MODE_HDR_DDR_Val << I3CC_DAT1_AUTOCMD_MODE_Pos) /* (I3CC_DAT1) HDR Double Data Rate Mode Position */
+#define I3CC_DAT1_AUTOCMD_HDR_CODE_Pos        _UINT32_(19)                                         /* (I3CC_DAT1) Device Auto-Command HDR Command Code Position */
+#define I3CC_DAT1_AUTOCMD_HDR_CODE_Msk        (_UINT32_(0xFF) << I3CC_DAT1_AUTOCMD_HDR_CODE_Pos)   /* (I3CC_DAT1) Device Auto-Command HDR Command Code Mask */
+#define I3CC_DAT1_AUTOCMD_HDR_CODE(value)     (I3CC_DAT1_AUTOCMD_HDR_CODE_Msk & (_UINT32_(value) << I3CC_DAT1_AUTOCMD_HDR_CODE_Pos)) /* Assignment of value for AUTOCMD_HDR_CODE in the I3CC_DAT1 register */
+#define I3CC_DAT1_Msk                         _UINT32_(0x07FFFFFF)                                 /* (I3CC_DAT1) Register Mask  */
+
 
 /* -------- I3CC_HCI_VERSION : (I3CC Offset: 0x00) ( R/ 32) HCI Version Register -------- */
 #define I3CC_HCI_VERSION_RESETVALUE           _UINT32_(0x100)                                      /*  (I3CC_HCI_VERSION) HCI Version Register  Reset Value */
@@ -1058,6 +1162,12 @@
 
 
 /* I3CC register offsets definitions */
+#define I3CC_DCT0_REG_OFST             _UINT32_(0x00)      /* (I3CC_DCT0) I3C Device Characteristic Table 0 Structure Offset */
+#define I3CC_DCT1_REG_OFST             _UINT32_(0x04)      /* (I3CC_DCT1) I3C Device Characteristic Table 1 Structure Offset */
+#define I3CC_DCT2_REG_OFST             _UINT32_(0x08)      /* (I3CC_DCT2) I3C Device Characteristic Table 2 Structure Offset */
+#define I3CC_DCT3_REG_OFST             _UINT32_(0x0C)      /* (I3CC_DCT3) I3C Device Characteristic Table 3 Structure Offset */
+#define I3CC_DAT0_REG_OFST             _UINT32_(0x00)      /* (I3CC_DAT0) I3C Device Address Table 0 Structure Offset */
+#define I3CC_DAT1_REG_OFST             _UINT32_(0x04)      /* (I3CC_DAT1) I3C Device Address Table 1 Structure Offset */
 #define I3CC_HCI_VERSION_REG_OFST      _UINT32_(0x00)      /* (I3CC_HCI_VERSION) HCI Version Register Offset */
 #define I3CC_HC_CONTROL_REG_OFST       _UINT32_(0x04)      /* (I3CC_HC_CONTROL) Controller Control Register Offset */
 #define I3CC_CONTROLLER_DEVICE_ADDR_REG_OFST _UINT32_(0x08)      /* (I3CC_CONTROLLER_DEVICE_ADDR) Controller Device Address Register Offset */
@@ -1110,6 +1220,30 @@
 #define I3CC_CONTROLLER_CONFIG_REG_OFST _UINT32_(0x258)     /* (I3CC_CONTROLLER_CONFIG) Controller Configuration Register Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+/* I3CC_DCT_DSC register API structure */
+typedef struct
+{  /* I3C Device Characteristic Table Structure Descriptor */
+  __I   uint32_t                       I3CC_DCT0;          /* Offset: 0x00 (R/   32) I3C Device Characteristic Table 0 Structure */
+  __I   uint32_t                       I3CC_DCT1;          /* Offset: 0x04 (R/   32) I3C Device Characteristic Table 1 Structure */
+  __I   uint32_t                       I3CC_DCT2;          /* Offset: 0x08 (R/   32) I3C Device Characteristic Table 2 Structure */
+  __I   uint32_t                       I3CC_DCT3;          /* Offset: 0x0C (R/   32) I3C Device Characteristic Table 3 Structure */
+} i3cc_dct_dsc_registers_t
+#ifdef __GNUC__
+  __attribute__ ((aligned (4)))
+#endif
+;
+
+/* I3CC_DAT_DSC register API structure */
+typedef struct
+{  /* I3C Device Address Table Structure Descriptor */
+  __IO  uint32_t                       I3CC_DAT0;          /* Offset: 0x00 (R/W  32) I3C Device Address Table 0 Structure */
+  __IO  uint32_t                       I3CC_DAT1;          /* Offset: 0x04 (R/W  32) I3C Device Address Table 1 Structure */
+} i3cc_dat_dsc_registers_t
+#ifdef __GNUC__
+  __attribute__ ((aligned (4)))
+#endif
+;
+
 /* I3CC register API structure */
 typedef struct
 {  /* I3C Host Controller */
