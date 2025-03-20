@@ -158,7 +158,7 @@ bool FCW_SingleWordWrite( uint32_t *data, uint32_t address )
     }
 
     FCW_REGS->FCW_DATA[0] = *data;
-    data++;    
+    data++;
 
     FCW_StartOperationAtAddress( address,  SINGLE_WORD_PROGRAM_OPERATION);
 
@@ -179,7 +179,7 @@ bool FCW_QuadWordWrite( uint32_t *data, uint32_t address )
     FCW_REGS->FCW_DATA[2] = *data;
     data++;
     FCW_REGS->FCW_DATA[3] = *data;
-    data++;    
+    data++;
 
     FCW_StartOperationAtAddress( address,  QUAD_WORD_PROGRAM_OPERATION);
 

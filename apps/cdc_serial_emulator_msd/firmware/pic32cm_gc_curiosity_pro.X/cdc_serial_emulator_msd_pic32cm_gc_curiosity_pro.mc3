@@ -79,7 +79,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.3"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.4"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -8214,11 +8214,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cm_gc_curiosity_pro\definitions.h</file>
-         <hash>52e7dcdaefb08e66f6f6b99aa29ef82eb770261865f6cd0b0be6f845daf89a7c</hash>
+         <hash>0b671803345920fe31700d3dd7fa2745ce6b97899171f45cefabe381ae7fe677</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cm_gc_curiosity_pro\device.h</file>
-         <hash>1d2e241e6002c8311292a20f031ca39a31f9cdf26d66976860ffbecbac33cf6e</hash>
+         <hash>9a65b0d2091b44dbd418ae1fa394287ba8da90554f8b191696174f271de95e40</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cm_gc_curiosity_pro\device_cache.h</file>
@@ -8314,15 +8314,15 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cm_gc_curiosity_pro\initialization.c</file>
-         <hash>62e010da2fe29346940bae5fe0113d16eb6fc04a4f528deb246cee3a94ff10ed</hash>
+         <hash>6c62133faaa92c8186f209908f1bdd2d851143f5bb8074deef2b70254cf4dafd</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cm_gc_curiosity_pro\interrupts.c</file>
-         <hash>694a4016772c6b51f19dc74bdef98547db7dc23f4c0efca7414547f19b5d665a</hash>
+         <hash>16b1fa1955776a104f17f046b6b23d90bb1b5854379d82d16af6615a5b28a1ba</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cm_gc_curiosity_pro\interrupts.h</file>
-         <hash>5460fdca716fb7104771f0021f93cbc5004c0e83c9023e31b2a47c0452e797f7</hash>
+         <hash>e4f77eae2c467440bedf5542917871bfdb23e2f72181f894a294b91f8311c1d4</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cm_gc_curiosity_pro\libc_syscalls.c</file>
@@ -8342,7 +8342,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cm_gc_curiosity_pro\peripheral\clock\plib_clock.c</file>
-         <hash>fca2b96d0ad95d6410b8cfe35b292a3cce9cb6f405e5fa2fd8d8a0842bc325de</hash>
+         <hash>a535f8640a4bd4fd683c57b4943433b666088e3e8daa0ad9fc63f28efc295edb</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cm_gc_curiosity_pro\peripheral\clock\plib_clock.h</file>
@@ -8358,7 +8358,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cm_gc_curiosity_pro\peripheral\fcw\plib_fcw.c</file>
-         <hash>65c8816730f7af8102da0686f35732e0e6561905fadef1dff7c2cae7414b3783</hash>
+         <hash>0dc33a8ec37b4da9cfa984c0a595639c103f8242f0edb4b3d70d3edd35b76826</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cm_gc_curiosity_pro\peripheral\fcw\plib_fcw.h</file>
@@ -8390,7 +8390,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cm_gc_curiosity_pro\peripheral\sercom\usart\plib_sercom4_usart.c</file>
-         <hash>0c1cc6b6d9c4c3bf5e7ac799d69c59faf8f44cc366b5e74aeb2bc0b98ca85ae1</hash>
+         <hash>60b624607a007024dbb10272bac1c97f8e1ff3bd14ab964c7e1080398183f6e1</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cm_gc_curiosity_pro\peripheral\sercom\usart\plib_sercom4_usart.h</file>
