@@ -45,7 +45,7 @@
 #include "plib_rtc.h"
 #include <stdlib.h>
 
-volatile static RTC_OBJECT rtcObj;
+static volatile RTC_OBJECT rtcObj;
 
 
 void RTC_Initialize(void)
