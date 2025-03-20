@@ -14,7 +14,7 @@
 
 //DOM-IGNORE-BEGIN
 /*******************************************************************************
-* Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
+* Copyright (C) 2025 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -60,8 +60,8 @@
 #include "peripheral/pm/plib_pm.h"
 #include "usb/usb_chapter_9.h"
 #include "usb/usb_device.h"
-#include "bsp/bsp.h"
 #include "driver/sdspi/drv_sdspi.h"
+#include "bsp/bsp.h"
 #include "system/time/sys_time.h"
 #include "driver/usb/usbfsv1/drv_usbfsv1.h"
 #include "system/int/sys_int.h"
