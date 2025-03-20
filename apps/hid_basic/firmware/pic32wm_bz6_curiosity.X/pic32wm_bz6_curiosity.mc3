@@ -43,7 +43,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.3"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.4"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -5112,11 +5112,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32wm_bz6_curiosity\configuration.h</file>
-         <hash>47705f45d12205210d98164ae58fb0dd4c6a3914ebf521e77018f7b82a375058</hash>
+         <hash>0dc80507d94a00b143b53d7aced387c120ebc9165a53e91caa1bd518c3fafd7b</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32wm_bz6_curiosity\definitions.h</file>
-         <hash>92630d68d39cfb6d66b91417a336e4202b897ac8c0e150067fd465a5ac430e57</hash>
+         <hash>5df8b71bb8cc54b53c25423bc30e47489030fd6d3fb27393c7ed66361c759bd0</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32wm_bz6_curiosity\device.h</file>
@@ -5172,7 +5172,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32wm_bz6_curiosity\initialization.c</file>
-         <hash>ec43d2e1ab49180d4f1a7ec07bf8a4d9b0903bc7e09a26db34b1b4d2440cc002</hash>
+         <hash>b2ec22f03bd976a8d28d52584c79180580ff4e40323384de99bda17b4f52018b</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32wm_bz6_curiosity\interrupts.c</file>
@@ -5288,7 +5288,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32wm_bz6_curiosity\tasks.c</file>
-         <hash>c68e57e635fa50389a54cbe94cf7a25f16abf17e7e22b6ebfa75868737c73155</hash>
+         <hash>2e39cf49517830e5508fdda962752f8c78495bad0ffaf61b7a9a1b9f00976d69</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32wm_bz6_curiosity\toolchain_specifics.h</file>

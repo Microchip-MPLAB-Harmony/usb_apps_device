@@ -4,18 +4,18 @@
 
 
 project: hid_basic
-creation_date: 2025-03-19T10:57:45.302+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
-operating_system: Windows 11
-mcc_mode: IDE            # [IDE|Standalone|Headless]
+creation_date: 2025-03-20T11:11:45.769+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+operating_system: Windows 10
+mcc_mode: Headless            # [IDE|Standalone|Headless]
 mcc_version: v5.5.2
 mcc_core_version: v5.7.1
-mplabx_version: v6.25        # if MPLAB X plugin only
-harmony_version: v1.5.3
-compiler: XC32 4.60
+mplabx_version: NA        # if MPLAB X plugin only
+harmony_version: v1.5.4
+compiler: NA
 
 modules:
-    - {name: "csp", version: "v3.22.0"}
-    - {name: "core", version: "v3.15.0"}
+    - {name: "csp", version: "v3.22.1"}
+    - {name: "core", version: "v3.15.1"}
     - {name: "CMSIS_5", version: "5.9.0"}
     - {name: "usb", version: "v3.16.0"}
     - {name: "bsp", version: "v3.22.0"}
