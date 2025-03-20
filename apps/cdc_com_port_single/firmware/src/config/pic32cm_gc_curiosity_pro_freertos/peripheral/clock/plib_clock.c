@@ -81,6 +81,9 @@ static void PLL0_Initialize(void)
 static void GCLK0_Initialize(void)
 {
 
+    /* Clear Main Clock Ready bit */
+    MCLK_REGS->MCLK_INTFLAG = MCLK_INTFLAG_CKRDY_Msk;
+
     /* Selection of the Clock Domain Division Factor */
     MCLK_REGS->MCLK_CLKDIV[0] = MCLK_CLKDIV_DIV(1U);
 
