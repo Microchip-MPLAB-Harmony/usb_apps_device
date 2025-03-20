@@ -59,7 +59,7 @@
 
 static CACHE_ALIGN SDMMC_ADMA_DESCR sdmmc0DmaDescrTable[(SDMMC0_DMA_DESC_TABLE_SIZE_CACHE_ALIGN/8U)];
 
-volatile static SDMMC_OBJECT sdmmc0Obj;
+static volatile SDMMC_OBJECT sdmmc0Obj;
 
 static void SDMMC0_VariablesInit ( void )
 {
@@ -105,7 +105,7 @@ static void SDMMC0_TransferModeSet ( uint32_t opcode, SDMMC_DataTransferFlags tr
             {
                 transferMode |= SDMMC_TMR_DTDSEL_Msk;
             }
-            transferMode |= SDMMC_TMR_DMAEN_ENABLE; 
+            transferMode |= SDMMC_TMR_DMAEN_ENABLE;
             break;
         default: /* Do Nothing */
             break;
@@ -458,14 +458,14 @@ void SDMMC0_CommandSend (
     sdmmc0Obj.isCmdInProgress = false;
     sdmmc0Obj.isDataInProgress = false;
     sdmmc0Obj.errorStatus = 0U;
-    
+
     /* For R1B response, only TRFC interrupt is enabled. However, peripheral will set both CMDC and TRFC bits in the NISTR status register.
      * Now, when interrupt occurs, TRFC bit is set first and after sometime the CMDC bit is set. As a result, in the interrupt handler, only
      * the TRFC bit is cleared, leaving the CMDC bit set, which does not get cleared because the corresponding interrupt is not enabled for
-     * R1B responses. Enabling both TRFC and CMDC interrupts for R1B may lead to interrupt handler being called twice since these two bits 
+     * R1B responses. Enabling both TRFC and CMDC interrupts for R1B may lead to interrupt handler being called twice since these two bits
      * are set (and hence cleared) at slightly different times. Hence, clearing it before submitting a new command seems to be the best option.
      */
-     
+
      SDMMC0_REGS->SDMMC_NISTR = (SDMMC_NISTR_CMDC_Msk | SDMMC_NISTR_TRFC_Msk);
 
     /* Keep the card insertion and removal interrupts enabled */

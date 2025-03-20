@@ -43,7 +43,7 @@
 #include "plib_systick.h"
 #include "peripheral/nvic/plib_nvic.h"
 
-volatile static SYSTICK_OBJECT systick;
+static volatile SYSTICK_OBJECT systick;
 
 void SYSTICK_TimerInitialize ( void )
 {
