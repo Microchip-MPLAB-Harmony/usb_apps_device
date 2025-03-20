@@ -83,7 +83,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.3"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.4"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -8096,11 +8096,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\definitions.h</file>
-         <hash>5bf431681e7bdf7a1453c5392f3c3735be0a42b6abd743f6a4d6788f01634a37</hash>
+         <hash>5d03a6cd7368ecd3ee6e8d1c9d000845352ece9a7d1507ff5b1e70a201ad04e2</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\device.h</file>
-         <hash>8733fa97b5d94a6d9ce8b30fc669b79e9c523fb21bec807631773d76fd4a0a4e</hash>
+         <hash>16c68b32ace41533b1b0f8cffc704dfea71c361c40fbc7fdab13f96645707c9f</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\device_cache.h</file>
@@ -8300,15 +8300,15 @@
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\initialization.c</file>
-         <hash>02a35350424fa016debd5e88ee82425069715b0b0f8f48632bf34ec5e2edd449</hash>
+         <hash>cf905fe869f47cfe39a389b495f6060cb5b9ec498eeb31f54003f7a89934cb6d</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\interrupts.c</file>
-         <hash>46198b535fdb09ac2b910bdce5d7dec6558b192119f2c55e4b7ad9604f4880ba</hash>
+         <hash>c19d513dd68ea52ec012b1b571c644ae2c0c377ae2d3850dd53082be4f4cd3a2</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\interrupts.h</file>
-         <hash>d6dc8f449abd595067282287a09bfa0b2233b1283261825487543ad49dbd7111</hash>
+         <hash>9c219dc805d21f5544a67248fca732427037c429cd5b9faf35ddabfa190d6a1a</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\libc_syscalls.c</file>
@@ -8384,7 +8384,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\peripheral\sercom\usart\plib_sercom5_usart.c</file>
-         <hash>f1199ac22cd540619d35d145cb9d739793a6b99f74ad76e20d628788301895ee</hash>
+         <hash>98a3d21af30b28f42f231e08dfd807a49361696e20530b61435517e005872040</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\peripheral\sercom\usart\plib_sercom5_usart.h</file>
@@ -8548,7 +8548,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\usb_device_init_data_0.c</file>
-         <hash>e9946d4d0477ed2c7b6b90be7e27ebb22845d60c444e0d500c5bfae86ed44b47</hash>
+         <hash>8d827d6889a37aeca8ab152e8ededacf56d9b1353806b042f2ff3334ce61b2fe</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\user.h</file>
