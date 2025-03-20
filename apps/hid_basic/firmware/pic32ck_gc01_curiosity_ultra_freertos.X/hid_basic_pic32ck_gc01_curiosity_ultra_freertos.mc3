@@ -55,7 +55,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.3"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.4"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -5781,11 +5781,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra_freertos\definitions.h</file>
-         <hash>f1292c5e12b9c692918c2449eea622078a50a64f98bfbf15bfd72b8b1cff7bf3</hash>
+         <hash>c063f82e3112a6f2231acdce897b591d3fcd272a9799dfb7073040a2cee19c6d</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra_freertos\device.h</file>
-         <hash>8733fa97b5d94a6d9ce8b30fc669b79e9c523fb21bec807631773d76fd4a0a4e</hash>
+         <hash>16c68b32ace41533b1b0f8cffc704dfea71c361c40fbc7fdab13f96645707c9f</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra_freertos\device_cache.h</file>
@@ -5945,15 +5945,15 @@
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra_freertos\initialization.c</file>
-         <hash>bd8e2ae0e12d5df0ff890ef4eacd0dd37aad2aa74a44cda772b3d2f53c6141b0</hash>
+         <hash>2d23a5fa7ce31f34e2780f09d7664c2ca7fceaa7dc27a56584cfa206e8f3f289</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra_freertos\interrupts.c</file>
-         <hash>918f3ce5584278dd3f16ae044672c625d6a32c4b37463d7475bae6c7055a1031</hash>
+         <hash>da5ed4e2094af26b2b873f9875f50f506c317e7891418d3cb8ac364d5813babb</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra_freertos\interrupts.h</file>
-         <hash>0a7cfe3a3b0436422230308a186bf372860808a9bd4c76a7f35a392e99ab2be8</hash>
+         <hash>1503f6a6b97f4d1df55aacd3e92dc11dd3bc0250e6e396da2c4e25bd6d695e51</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra_freertos\libc_syscalls.c</file>
